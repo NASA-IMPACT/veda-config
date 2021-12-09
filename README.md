@@ -2,6 +2,11 @@
 
 This repo contains all the content and configuration needed to setup your own instance of [delta-ui](https://github.com/NASA-IMPACT/delta-ui).
 
+The `delta-config` relies on the `delta-ui` submodule. Use `--recursive` flag when cloning `delta-config`, or initialize the submodules with:
+```
+git submodule update --init --recursive
+```
+
 ## Installation
 To set up the development environment for this website, you'll need to install the following on your system:
 
