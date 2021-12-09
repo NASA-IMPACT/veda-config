@@ -1,0 +1,24 @@
+{
+  "name": "delta-config",
+  "description": "Configuration for Delta",
+  "version": "0.1.0",
+  "source": "./.delta/ui/app/index.html",
+  "license": "BSD-3-Clause",
+  "scripts": {
+    "serve": "NODE_ENV=development .delta/delta serve",
+    "build": "NODE_ENV=production .delta/delta",
+    "stage": "NODE_ENV=staging .delta/delta stage",
+    "clean": ".delta/delta clean"
+  },
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "engines": {
+    "node": "16.x"
+  },
+  "devDependencies": {
+    "dotenv": "^10.0.0"
+  },
+  "alias": {
+    "react": "./.delta/ui/node_modules/react",
+    "@mdx-js/react": "./.delta/ui/node_modules/@mdx-js/react"
+  }
+}

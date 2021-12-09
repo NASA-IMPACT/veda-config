@@ -1,0 +1,3 @@
+[submodule ".delta/ui"]
+	path = .delta/ui
+	url = git@github.com:NASA-IMPACT/delta-ui.git
