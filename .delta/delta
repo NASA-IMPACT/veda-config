@@ -16,6 +16,15 @@ process.env.DELTA_CONFIG_PATH = process.env.DELTA_CONFIG_PATH || configFile;
 
 const rootDir = path.join(__dirname, '../');
 
+if (inputCmd === 'test') {
+  const jestCli = path.join(__dirname, 'ui/node_modules/jest/bin/jest.js');
+  const jestConfig = path.join(__dirname, 'ui/jest.config.js');
+  const cmd = `node ${jestCli} ui/content-tests/* -c ${jestConfig}`;
+
+  execSync(cmd, { stdio: 'inherit', cwd: path.join(__dirname, 'ui') });
+  process.exit();
+}
+
 const gulpCli = path.join(__dirname, 'ui/node_modules/gulp-cli/bin/gulp.js');
 const gulpConfig = path.join(__dirname, 'ui/gulpfile.js');
 
