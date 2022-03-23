@@ -8,7 +8,8 @@
     "serve": "NODE_ENV=development .delta/delta serve",
     "build": "NODE_ENV=production .delta/delta",
     "stage": "NODE_ENV=staging .delta/delta stage",
-    "clean": ".delta/delta clean"
+    "clean": ".delta/delta clean",
+    "test": "NODE_ENV=test .delta/delta test"
   },
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "engines": {
@@ -20,5 +21,6 @@
   "alias": {
     "react": "./.delta/ui/node_modules/react",
     "@mdx-js/react": "./.delta/ui/node_modules/@mdx-js/react"
-  }
+  },
+  "dependencies": {}
 }
