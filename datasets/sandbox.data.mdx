@@ -1,9 +1,10 @@
 ---
-id: no2
-name: 'Carbon Dioxide or Some Other Cool Dataset Name'
-description: "Sed sed lectus vitae odio vestibulum mattis. Integer iaculis nisl lectus, vel aliquet nulla imperdiet in."
+featured: true
+id: sandbox
+name: Sandbox
+description: Travel restrictions and lockdown measures have disrupted the shipping industry and the global economy broadly. NASA researchers are using artificial intelligence to track shipping activities across major ports in the U.S.
 media:
-  src: ::file ./img-placeholder-3.jpg
+  src: ::file ./img-placeholder-4.jpg
   alt: Generic placeholder by Unsplash
   author:
     name: Unsplash
@@ -40,7 +41,21 @@ layers:
           const comparingDate = dateFns.sub(datetime, { years: 1 });
           return `${dateFns.format(datetime, 'LLL yyyy')} - ${dateFns.format(comparingDate, 'LLL yyyy')}`;
         }
+  - id: nightlights-hd-monthly
+    name: Nightlights Monthly
+    type: raster
+    description: The nightlights dataset
+    zoomExtent:
+      - 4
+      - 16
+    sourceParams:
+      bidx: 1
+      colormap_name: inferno
+      rescale:
+        - 0
+        - 255
+  - id: dev-fail
+    name: Failing layer
+    type: raster
 ---
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae ornare lectus, ac accumsan erat. Cras eget eleifend ligula. Curabitur ac nisi tempor, molestie lorem vitae, consectetur turpis. Etiam hendrerit et sapien ac interdum.
-
-Phasellus nec magna tristique, imperdiet mauris hendrerit, posuere sem. Vestibulum in lobortis tortor.
+# Nightlights
