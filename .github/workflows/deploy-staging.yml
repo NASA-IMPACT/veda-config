@@ -3,7 +3,7 @@ name: Deploy Staging - Surge.sh
 on:
   push:
     branches:
-    - 'feature/deploy'
+    - 'develop'
 
 env:
   NODE: 16
