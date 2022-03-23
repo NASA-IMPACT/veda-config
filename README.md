@@ -24,7 +24,11 @@ Setup the project
 ./.delta/setup
 ``` 
 
-## Content & Configuration
+## Configuration
+
+The base properties used by Delta are set through the `.env` file. This includes values like the application title, and contact email. These values are then used throughout the app.
+
+## Content
 
 Delta is divided into Thematic Areas, Datasets, and Discoveries.
 Each piece of content is written in [MDX](https://mdxjs.com/docs/what-is-mdx/#what-is-mdx) with configuration frontmatter between a set of `---`.
@@ -47,7 +51,7 @@ thematics: './thematic/*.thematic.mdx'
 datasets: './datasets/*.data.mdx'
 discoveries: './discoveries/*.discoveries.mdx'
 ```
-But the content can be stores wherever you'd like.
+But the content can be stored wherever you'd like.
 
 ### Thematic Areas
 TODO: info
@@ -61,7 +65,7 @@ TODO: info
 # Development
 There's not much development to be done in the config repo. The UI part of Delta is stored at [delta-ui](https://github.com/NASA-IMPACT/delta-ui), and connected to the config via a git submodule.
 
-**To avoid breaking changes you'll have to manually update the version of delta-ui your config uses.**
+**To avoid breaking changes, the version of `delta-ui` is pinned to a specific commit making use of a [git-submodule](https://www.atlassian.com/git/tutorials/git-submodule).** This allows development to continue without breaking existent instances.
 You can see the version running:
 ```
 ./.delta/delta --info
