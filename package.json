@@ -7,7 +7,7 @@
   "scripts": {
     "serve": "NODE_ENV=development .delta/delta serve",
     "build": "NODE_ENV=production .delta/delta",
-    "stage": "NODE_ENV=staging .delta/delta stage",
+    "stage": "NODE_ENV=staging .delta/delta",
     "clean": ".delta/delta clean",
     "test": "NODE_ENV=test .delta/delta test"
   },
@@ -16,7 +16,8 @@
     "node": "16.x"
   },
   "devDependencies": {
-    "dotenv": "^10.0.0"
+    "dotenv": "^10.0.0",
+    "surge": "^0.23.1"
   },
   "alias": {
     "react": "./.delta/ui/node_modules/react",
