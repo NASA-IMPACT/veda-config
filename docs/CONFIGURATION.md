@@ -10,7 +10,7 @@ The `.env` file contains a list of all available variables and comments explaini
 The `delta.config.js` file is an additional configuration file for delta.  
 It is through this file that you specify how the Delta content can be found.
 
-This is done by giving a glob path to each one of the [content types](./CONTENT.md) (Thematic areas, Datasets, Discoveries).  
+This is done by providing a glob path for each one of the [content types](./CONTENT.md). (Thematic areas, Datasets, Discoveries).  
 The default configuration is:
 ```js
 thematics: './thematic/*.thematic.mdx'

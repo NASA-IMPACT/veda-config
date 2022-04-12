@@ -1,6 +1,5 @@
 # Content
 
-Table of contents
 - [Content](#content)
   - [Thematic Areas](#thematic-areas)
   - [Datasets](#datasets)
@@ -17,7 +16,7 @@ name: Thematic area 1
 
 <Block>
   <Prose>
-    ## About theme 1
+    ## About thematic area
 
     Once upon a time there was a content string
   </Prose>
@@ -114,7 +113,7 @@ Image to identify this resource. See [media.md](./frontmatter/media.md).
 `string[]`  
 List of thematic areas ids this discovery belongs to. These values are used by the application to establish a relationship between thematic areas and discoveries.  
 Example:
-```
+```yaml
 thematics:
   - covid-19
   - agriculture
@@ -124,7 +123,7 @@ thematics:
 `string[]`  
 List of thematic areas ids where this discovery is featured. A featured discovery will show up in the thematic area homepage.  
 Example:
-```
+```yaml
 featuredOn:
   - covid-19
   - agriculture
@@ -192,7 +191,7 @@ Publication date for this discovery. Should be in YYYY-MM-DD format.
 `string[]`  
 List of thematic areas ids this discovery belongs to. These values are used by the application to establish a relationship between thematic areas and discoveries.  
 Example:
-```
+```yaml
 thematics:
   - covid-19
   - agriculture
@@ -202,7 +201,7 @@ thematics:
 `string[]`  
 List of thematic areas ids where this discovery is featured. A featured discovery will show up in the thematic area homepage.  
 Example:
-```
+```yaml
 featuredOn:
   - covid-19
   - agriculture
