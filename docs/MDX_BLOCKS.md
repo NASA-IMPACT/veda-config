@@ -8,6 +8,8 @@
       - [How to use local image (assets)](#how-to-use-local-image-assets)
   - [Chart](#chart)
   - [Map](#map)
+  - [Scrollytelling](#scrollytelling)
+    - [Chapter properties](#chapter-properties)
   - [Some gotchas](#some-gotchas)
 
 ## Background & Prerequisites
@@ -356,7 +358,6 @@ Syntax for Chart used in Wide Figure Block looks like this
     /> 
   </Figure>
 </Block>
-
 ```
 
 ## Map
@@ -380,6 +381,52 @@ Syntax for Map, which displays `nightlights-hd-monthly` layer from `sandbox` dat
   </Figure>
 </Block>
 ```
+
+## Scrollytelling
+
+> "Scrollytelling" was a term first coined to describe online longform stories characterised by audio, video and animation effects triggered by simply scrolling the page. - [An introduction to scrollytelling](https://shorthand.com/the-craft/an-introduction-to-scrollytelling/index.html).
+
+![](./media/scrollytelling.png)
+
+The Scrollytelling feature of Delta is map based and allows you to define different `Chapters` where each chapter corresponds to a map position and layer being displayed.  
+As the user scrolls the chapter content comes into view on top of the map which will animate to a specific position.
+
+The scrollytelling is defined as a series os `Chapters` inside the `ScrollytellingBlock`.
+
+```jsx
+<ScrollytellingBlock>
+  <Chapter
+    center={[0, 0]}
+    zoom={2}
+    datasetId='no2'
+    layerId='no2-monthly-diff'
+    datetime='2021-03-01'
+  >
+    ## Content of chapter 1
+
+    Markdown is supported
+  </Chapter>
+  <Chapter
+    center={[-30, 30]}
+    zoom={4}
+    datasetId='no2'
+    layerId='no2-monthly-diff'
+    datetime='2020-03-01'
+  >
+
+  Each chapter is a box where content appears.
+  </Chapter>
+</ScrollytellingBlock>
+```
+
+### Chapter properties
+| Option | Type | Description |
+|---|---|---|
+| center | [number, number] | Center coordinates for the map [Longitude, Latitude] |
+| zoom | number | Zoom value for the map |
+| datasetId | string | `id` of the Dataset to which the layer to to display belongs |
+| layerId | boolean | `id` of the dataset layer to display |
+| datetime | boolean | Optional. If the layer to display has a temporal extent, specify the datetime |
 
 ## Some gotchas
 
