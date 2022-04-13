@@ -6,7 +6,7 @@
   - [Discoveries](#discoveries)
 
 Delta is divided into Thematic Areas, Datasets, and Discoveries.
-Each piece of content is written in [MDX](https://mdxjs.com/docs/what-is-mdx/#what-is-mdx) with configuration frontmatter between a set of `---`.  
+Each piece of content is written in [MDX](https://mdxjs.com/docs/what-is-mdx/#what-is-mdx) with configuration frontmatter. Frontmatter is separate by a set of `---` from MDX content.  
 A file will look something like:
 ```yml
 ---
