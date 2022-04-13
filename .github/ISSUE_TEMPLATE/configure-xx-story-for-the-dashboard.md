@@ -2,7 +2,7 @@
 name: Configure XX story for the dashboard
 about: High-level steps for configuring a story for the dashboard
 title: Configure XX story for the dashboard
-labels: ''
+labels: 'stories'
 assignees: ''
 
 ---
