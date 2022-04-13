@@ -18,11 +18,15 @@ If you use [`nvm`](https://github.com/creationix/nvm), activate the desired Node
 
 ## Installation
 
+Install Node + package manager this repo depends on.
+
 ```
 nvm install
+npm -g install yarn
 ```
 
-Setup the project
+Then, setup the project by running the command below.
+
 ```
 ./.delta/setup
 ```
