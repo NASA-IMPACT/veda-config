@@ -7,7 +7,7 @@ on:
 
 env:
   NODE: 16
-  SURGE_STAGING_DOMAIN: https://vizex.surge.sh
+  SURGE_STAGING_DOMAIN: https://visex.surge.sh
 
 jobs:
   build:
