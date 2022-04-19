@@ -5,8 +5,10 @@
   - [Datasets](#datasets)
   - [Discoveries](#discoveries)
 
-Delta is divided into Thematic Areas, Datasets, and Discoveries.
+Delta is consist of Thematic Areas, Datasets, and Discoveries. Each dataset and discovery belongs to a thematic area (or multiple thematic areas), and discovery can use datasets. When you are adding contents using published datasets in Delta, you would need to know which thematic area it belongs to, and if you need to create a new thematic area.
+
 Each piece of content is written in [MDX](https://mdxjs.com/docs/what-is-mdx/#what-is-mdx) with configuration frontmatter. Frontmatter is separate by a set of `---` from MDX content.  
+
 A file will look something like:
 ```yml
 ---
@@ -29,6 +31,7 @@ Each `Block` comes with its own rules and needed props, so check the [MDX_BLOCK.
 ## Thematic Areas
 
 Frontmatter configuration for the Thematic Area
+
 ```yaml
 id: string
 name: string
@@ -67,6 +70,8 @@ Title for the about page.
 **about.description**  
 `string`  
 Description for the about page.
+
+MDX content for thematic areas will show up under /about page. For example, `air-quality` thematic area's MDX contents will show up under `/air-quality/about`.
 
 ## Datasets
 
@@ -141,7 +146,7 @@ layers:
   - id: anotherLayerId
     ... # more props
 ```
-
+MDX content for datasets will show up under /overview page. For example, `no2` dataset MDX accessed from `air-quality` thematic area will show up under `/air-quality/datasets/no2`.
 ## Discoveries
 
 Frontmatter configuration for the Discovery
@@ -208,3 +213,5 @@ featuredOn:
 ```
 
 ![](./media/fm-featured-discovery.png)
+
+MDX content for discovery will show up under its own page under `:thematic-area/discoveries/:discovery-id`. For example, `air-quality-and-covid-19` discovery, which belongs to `air-quality` thematic area will show up under `/air-quality/discoveries/air-quality-and-covid-19`

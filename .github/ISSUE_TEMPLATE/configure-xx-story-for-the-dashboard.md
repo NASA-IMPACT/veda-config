@@ -9,6 +9,6 @@ assignees: ''
 
 - [ ] Read the story
 - [ ] Make sure all datasets required have been published
-- [ ] Configure all datasets in delta-config
+- [ ] Configure all datasets in delta-config ([Content documentation](../../docs/CONTENT.md) is a good place to start)
 - [ ] Configure story content in delta-config and check preview (dependency on running the dashboard locally or https://github.com/NASA-IMPACT/delta-config/issues/12)
 - [ ] Preview story with story tellers
