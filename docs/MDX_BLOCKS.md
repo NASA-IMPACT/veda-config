@@ -434,7 +434,7 @@ The scrollytelling is defined as a series os `Chapters` inside the `Scrollytelli
 | datasetId | string | `id` of the Dataset to which the layer to to display belongs |
 | layerId | boolean | `id` of the dataset layer to display |
 | datetime | boolean | Optional. If the layer to display has a temporal extent, specify the datetime |
-
+| showBaseMap | boolean | Optional. If there is a need to show basemap without any additional layers ontop, pass `true`. (datasetId, layerId can be omitted when `showBaseMap` is `true`) |
 ## Some gotchas
 
 - Do not use h1(`# heading 1`) for your header. `h1` is reserved for page title.
