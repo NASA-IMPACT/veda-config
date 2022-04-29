@@ -36,7 +36,7 @@ Understanding of MDX is not required to write contents for Delta dashboard, but 
 </table>
 
 
-We currently (2022, March) have 8 types of Blocks for layout. Mind that only `Prose` and `Figure` can be direct children of Block. Any raw markdown contents can be wrapped with `Prose`. Any media contents or custom components (`Image`, `Map`, `Chart` ...) should be wrapped with `Figure`.
+We currently (2022, May) have 8 different `Block` combinations to construct a layout and a standalone `ScrollytellingBlock`. Mind that only `Prose` and `Figure` can be direct children of Block. Any raw markdown contents can be wrapped with `Prose`. Any media contents or custom components (`Image`, `Map`, `Chart` ...) should be wrapped with `Figure`.
 
 > If you are using a `Block` with more than one child element, mind that the order of children decides which one goes where. For example, in `FigureProse` Block, `<Figure>` comes before `<Prose>` in the syntax. In result, `Figure` shows up on the left, and `Prose` shows up on the right.
 
@@ -368,13 +368,20 @@ Syntax for Chart used in Wide Figure Block looks like this
 | layerId | string | `''` | `id` for layer to display. The layer should be a part of the dataset above. |
 | dateTime | string | `''` | Optional. This string should follow `yyyy-mm-dd` format. When omitted, the very first available dateTime for the dataset will be displayed |
 | isComparing | boolean | `false` | Optional. If the compare layer in the dataset needs to be turned on, pass `true`. |
+| compareDateTime | string | `''` | Optional. This string should follow `yyyy-mm-dd` format. The compare date is only relevant if `isComparing` is `true`. If not provided it will default to the value specified in the [dataset layer configuration](./frontmatter/layer.md#compare). |
+| compareLabel | string | `''` | Text to display over the map when the comparison is active. If is for example used to indicate what dates are being compared. If not provided it will default to the value specified in the [dataset layer configuration](./frontmatter/layer.md#compare) |
 
 Syntax for Map, which displays `nightlights-hd-monthly` layer from `sandbox` dataset in full figure block looks like this:
 
 ```jsx
 <Block type='full'>
   <Figure>
-    <Map datasetId='sandbox' layerId='nightlights-hd-monthly' dateTime='2020-03-01' isComparing={false} />
+    <Map
+      datasetId='sandbox'
+      layerId='nightlights-hd-monthly'
+      dateTime='2020-03-01'
+      isComparing={false}
+    />
     <Caption>
       The caption displays below the map.
     </Caption>
@@ -427,7 +434,7 @@ The scrollytelling is defined as a series os `Chapters` inside the `Scrollytelli
 | datasetId | string | `id` of the Dataset to which the layer to to display belongs |
 | layerId | boolean | `id` of the dataset layer to display |
 | datetime | boolean | Optional. If the layer to display has a temporal extent, specify the datetime |
-
+| showBaseMap | boolean | Optional. If there is a need to show basemap without any additional layers ontop, pass `true`. (datasetId, layerId can be omitted when `showBaseMap` is `true`) |
 ## Some gotchas
 
 - Do not use h1(`# heading 1`) for your header. `h1` is reserved for page title.
