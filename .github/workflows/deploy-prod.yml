@@ -1,17 +1,17 @@
 # Deploy the site to AWS S3 on a push to specific branches
 
-name: Deploy Staging - MCP (S3)
+name: Deploy Production - MCP (S3)
 
 on:
   push:
     branches:
-    - 'develop'
+    - 'main'
 
 env:
   NODE: 16
-  DOMAIN_STAGING: https://uat.earthdata.nasa.gov/dashboard
-  DEPLOY_BUCKET_STAGING: climatedashboard-uat
-  DEPLOY_BUCKET_STAGING_REGION: us-east-1
+  DOMAIN_PROD: https://earthdata.nasa.gov/dashboard
+  DEPLOY_BUCKET_PROD: climatedashboard
+  DEPLOY_BUCKET_PROD_REGION: us-east-1
 
 jobs:
   build:
@@ -57,8 +57,8 @@ jobs:
       - name: Install
         run: ./.delta/setup
 
-      - name: Build Staging
-        run: PUBLIC_URL="${{ env.DOMAIN_STAGING }}" yarn stage
+      - name: Build production
+        run: PUBLIC_URL="${{ env.DOMAIN_PROD }}" yarn build
 
   deploy:
     runs-on: ubuntu-latest
@@ -101,15 +101,15 @@ jobs:
           mv dist deploy/dashboard
           cp deploy/dashboard/index.html deploy/index.html
 
-      - name: Deploy to S3 Staging
+      - name: Deploy to S3 Production
         uses: jakejarvis/s3-sync-action@master
         with:
           # acl is not permitted with current credentials
           # args: --acl public-read --follow-symlinks --delete
           args: --follow-symlinks --delete
         env:
-          AWS_S3_BUCKET: ${{ env.DEPLOY_BUCKET_STAGING }}
-          AWS_REGION: ${{ env.DEPLOY_BUCKET_STAGING_REGION }}
+          AWS_S3_BUCKET: ${{ env.DEPLOY_BUCKET_PROD }}
+          AWS_REGION: ${{ env.DEPLOY_BUCKET_PROD_REGION }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           # When serving from a subpath:
