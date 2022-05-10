@@ -11,7 +11,7 @@ env:
 
 jobs:
   build:
-    if: ${{ false }}  # disable for now
+    # if: ${{ false }}  # disable for now
     runs-on: ubuntu-latest
 
     steps:
