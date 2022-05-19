@@ -87,6 +87,10 @@ thematics: string[]
 featuredOn: string[]
 
 layers: Layer[]
+related: Dataset || Discovery || Thematic []
+  - type: string
+    id: string
+    thematic: string
 ---
 
 <Block>
@@ -147,6 +151,29 @@ layers:
     ... # more props
 ```
 MDX content for datasets will show up under /overview page. For example, `no2` dataset MDX accessed from `air-quality` thematic area will show up under `/air-quality/datasets/no2`.
+
+**related**
+List of related contents. This list will be displayed at the bottom of dataset overview like below. 
+[screenshot]
+
+Each content should be formatted like below
+
+```yaml
+  # when related content is dataset
+  - type: dataset
+    id: dataset-id
+    thematic: thematic-dataset-belongs
+  # when related content is dataset
+  - type: discovery
+    id: discovery-id
+    thematic: thematic-discovery-belongs
+  # when related content is thematic (doesn't need thematic attribute)
+  - type: thematic
+    id: thematic-id
+```
+
+
+
 ## Discoveries
 
 Frontmatter configuration for the Discovery
