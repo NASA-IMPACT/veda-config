@@ -172,8 +172,6 @@ Each content should be formatted like below
     id: thematic-id
 ```
 
-
-
 ## Discoveries
 
 Frontmatter configuration for the Discovery
@@ -242,3 +240,25 @@ featuredOn:
 ![](./media/fm-featured-discovery.png)
 
 MDX content for discovery will show up under its own page under `:thematic-area/discoveries/:discovery-id`. For example, `air-quality-and-covid-19` discovery, which belongs to `air-quality` thematic area will show up under `/air-quality/discoveries/air-quality-and-covid-19`
+
+**related**
+
+List of related contents. This list will be displayed at the bottom of discovery page like below. 
+
+[screenshot]
+
+Each content should be formatted like below
+
+```yaml
+  # when related content is dataset
+  - type: dataset
+    id: dataset-id
+    thematic: thematic-dataset-belongs
+  # when related content is dataset
+  - type: discovery
+    id: discovery-id
+    thematic: thematic-discovery-belongs
+  # when related content is thematic (doesn't need thematic attribute)
+  - type: thematic
+    id: thematic-id
+```
