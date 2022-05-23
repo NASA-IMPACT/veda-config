@@ -153,10 +153,11 @@ layers:
 MDX content for datasets will show up under /overview page. For example, `no2` dataset MDX accessed from `air-quality` thematic area will show up under `/air-quality/datasets/no2`.
 
 **related**
-List of related contents. This list will be displayed at the bottom of dataset overview like below. 
-[screenshot]
+List of related contents. This list will be displayed at the bottom of dataset overview like below. (The screenshot shows the case when there are 2 related content entries.)
 
-Each content should be formatted like below
+![screenshot of related content component on the dashboard](./media/related-content-dataset.jpg)
+
+Each content should be formatted like below. 
 
 ```yaml
   # when related content is dataset
@@ -243,9 +244,9 @@ MDX content for discovery will show up under its own page under `:thematic-area/
 
 **related**
 
-List of related contents. This list will be displayed at the bottom of discovery page like below. 
+List of related contents. This list will be displayed at the bottom of discovery page like below.(The example shows the case when there are 3 related content entries.)
 
-[screenshot]
+![screenshot of related content component on discovery page](./media/related-content-discovery.jpg)
 
 Each content should be formatted like below
 
