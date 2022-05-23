@@ -164,7 +164,7 @@ Each content should be formatted like below.
   - type: dataset
     id: dataset-id
     thematic: thematic-dataset-belongs
-  # when related content is dataset
+  # when related content is discovery
   - type: discovery
     id: discovery-id
     thematic: thematic-discovery-belongs
@@ -255,7 +255,7 @@ Each content should be formatted like below
   - type: dataset
     id: dataset-id
     thematic: thematic-dataset-belongs
-  # when related content is dataset
+  # when related content is discovery
   - type: discovery
     id: discovery-id
     thematic: thematic-discovery-belongs
