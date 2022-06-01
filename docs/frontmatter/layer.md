@@ -160,27 +160,17 @@ compare:
     [key]: value | fn
 ```
 
+⚠️ Option 2 is not currently implemented.
+
 There are additional properties which are common to both ways of defining compare layers:
 ```yaml
 compare:
-  initialActive: boolean
   mapLabel: string | fn
-  datetime: string | fn
 ```
-- ⚠️ Option 2 is not currently implemented.
-
-**compare.initialActive**  
-`boolean`  
-Whether the compare feature should be enabled when the layer is toggled. If `true` the compare feature will be immediately enabled as soon as the user set the current layer as active.
- - ⚠️ Not yet implemented.
 
 **compare.mapLabel**  
 `string | fn(bag)`  
 When the comparison is enabled, the user should be informed about what is being shown. Could be a static string like “Modeled vs Real” or something dynamic computed from input parameters. It is often used for operations with dates.
-
-**compare.datetime**  
-`string | fn(bag)`  
-Whenever the layer we’re comparing to has a time extend it is possible to define which date to load. This can be a hardcoded value or a function which allows for dynamic date computation. An example would be comparing the current selected date with the previous year - the function accepts the selected date as input and we subtract 1 year.
 
 **compare.datasetId**  
 `string`  
@@ -214,6 +204,7 @@ Properties of `bag`:
 ```js
 {
   datetime: Date // The date that is currently selected
+  compareDatetime: Date // The date that the user selected to compare with. Null if nothing is selected.
   dateFns: Object // All the functions of https://date-fns.org/
   raw: Object // The unresolved layer data - kind of a self reference.
 }
@@ -227,11 +218,11 @@ property: |
   }
 ```
 
-Example of the `compare.datetime` being dynamically set as 1 year before the selected date:
+Example of the `compare.mapLabel` being dynamically set as "Date VS Date" (Ex: May 2020 VS May 2019`):
 ```yaml
 compare:
-  datetime: |
-    ::js ({ datetime, dateFns }) => {
-      return dateFns.sub(datetime, { years: 1 });
+  mapLabel: |
+    ::js ({ dateFns, datetime, compareDatetime }) => {
+      return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
     }
 ```
