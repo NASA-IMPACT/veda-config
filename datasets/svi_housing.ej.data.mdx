@@ -32,14 +32,9 @@ layers:
     compare:
       datasetId: svi-housing
       layerId: social-vulnerability-index-housing
-      datetime: |
-        ::js ({ datetime, dateFns }) => {
-          return dateFns.sub(datetime, { years: 2 });
-        }
       mapLabel: |
-        ::js ({ datetime, dateFns }) => {
-          const comparingDate = dateFns.sub(datetime, { years: 2 });
-          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(comparingDate, 'LLL yyyy')}`;
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }
     legend:
       type: gradient
@@ -69,14 +64,9 @@ layers:
     compare:
       datasetId: svi-housing
       layerId: social-vulnerability-index-housing-nopop
-      datetime: |
-        ::js ({ datetime, dateFns }) => {
-          return dateFns.sub(datetime, { years: 2 });
-        }
       mapLabel: |
-        ::js ({ datetime, dateFns }) => {
-          const comparingDate = dateFns.sub(datetime, { years: 2 });
-          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(comparingDate, 'LLL yyyy')}`;
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }
     legend:
       type: gradient
