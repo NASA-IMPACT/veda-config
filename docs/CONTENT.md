@@ -87,6 +87,10 @@ thematics: string[]
 featuredOn: string[]
 
 layers: Layer[]
+related: Related[]
+  - type: string
+    id: string
+    thematic: string
 ---
 
 <Block>
@@ -147,6 +151,30 @@ layers:
     ... # more props
 ```
 MDX content for datasets will show up under /overview page. For example, `no2` dataset MDX accessed from `air-quality` thematic area will show up under `/air-quality/datasets/no2`.
+
+**related**  
+`Related[]`  
+List of related contents. This list will be displayed at the bottom of dataset overview like below.  
+(The screenshot shows the case when there are 2 related content entries.)
+
+![screenshot of related content component on the dashboard](./media/related-content-dataset.jpg)
+
+Each content should be formatted like below. 
+
+```yaml
+  # when related content is dataset
+  - type: dataset
+    id: dataset-id
+    thematic: thematic-dataset-belongs
+  # when related content is discovery
+  - type: discovery
+    id: discovery-id
+    thematic: thematic-discovery-belongs
+  # when related content is thematic (doesn't need thematic attribute)
+  - type: thematic
+    id: thematic-id
+```
+
 ## Discoveries
 
 Frontmatter configuration for the Discovery
@@ -161,6 +189,10 @@ pubDate: string
 thematics: string[]
 featuredOn: string[]
 
+related: Related[]
+  - type: string
+    id: string
+    thematic: string
 ---
 
 <Block>
@@ -215,3 +247,26 @@ featuredOn:
 ![](./media/fm-featured-discovery.png)
 
 MDX content for discovery will show up under its own page under `:thematic-area/discoveries/:discovery-id`. For example, `air-quality-and-covid-19` discovery, which belongs to `air-quality` thematic area will show up under `/air-quality/discoveries/air-quality-and-covid-19`
+
+**related**  
+`Related[]`  
+List of related contents. This list will be displayed at the bottom of discovery page like below.  
+(The example shows the case when there are 3 related content entries.)
+
+![screenshot of related content component on discovery page](./media/related-content-discovery.jpg)
+
+Each content should be formatted like below
+
+```yaml
+  # when related content is dataset
+  - type: dataset
+    id: dataset-id
+    thematic: thematic-dataset-belongs
+  # when related content is discovery
+  - type: discovery
+    id: discovery-id
+    thematic: thematic-discovery-belongs
+  # when related content is thematic (doesn't need thematic attribute)
+  - type: thematic
+    id: thematic-id
+```

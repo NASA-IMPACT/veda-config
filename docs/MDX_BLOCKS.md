@@ -367,8 +367,7 @@ Syntax for Chart used in Wide Figure Block looks like this
 | datasetId | string | `''` | `id` defined in dataset mdx. |
 | layerId | string | `''` | `id` for layer to display. The layer should be a part of the dataset above. |
 | dateTime | string | `''` | Optional. This string should follow `yyyy-mm-dd` format. When omitted, the very first available dateTime for the dataset will be displayed |
-| isComparing | boolean | `false` | Optional. If the compare layer in the dataset needs to be turned on, pass `true`. |
-| compareDateTime | string | `''` | Optional. This string should follow `yyyy-mm-dd` format. The compare date is only relevant if `isComparing` is `true`. If not provided it will default to the value specified in the [dataset layer configuration](./frontmatter/layer.md#compare). |
+| compareDateTime | string | `''` | Optional. This string should follow `yyyy-mm-dd` format. A date should only be specified if you wish to display the comparison slider |
 | compareLabel | string | `''` | Text to display over the map when the comparison is active. If is for example used to indicate what dates are being compared. If not provided it will default to the value specified in the [dataset layer configuration](./frontmatter/layer.md#compare) |
 
 Syntax for Map, which displays `nightlights-hd-monthly` layer from `sandbox` dataset in full figure block looks like this:
@@ -380,7 +379,6 @@ Syntax for Map, which displays `nightlights-hd-monthly` layer from `sandbox` dat
       datasetId='sandbox'
       layerId='nightlights-hd-monthly'
       dateTime='2020-03-01'
-      isComparing={false}
     />
     <Caption>
       The caption displays below the map.
@@ -435,6 +433,7 @@ The scrollytelling is defined as a series os `Chapters` inside the `Scrollytelli
 | layerId | boolean | `id` of the dataset layer to display |
 | datetime | boolean | Optional. If the layer to display has a temporal extent, specify the datetime |
 | showBaseMap | boolean | Optional. If there is a need to show basemap without any additional layers ontop, pass `true`. (datasetId, layerId can be omitted when `showBaseMap` is `true`) |
+
 ## Some gotchas
 
 - Do not use h1(`# heading 1`) for your header. `h1` is reserved for page title.

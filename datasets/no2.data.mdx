@@ -33,14 +33,9 @@ layers:
     compare:
       datasetId: no2
       layerId: no2-monthly
-      datetime: |
-        ::js ({ datetime, dateFns }) => {
-          return dateFns.sub(datetime, { years: 1 });
-        }
       mapLabel: |
-        ::js ({ datetime, dateFns }) => {
-          const comparingDate = dateFns.sub(datetime, { years: 1 });
-          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(comparingDate, 'LLL yyyy')}`;
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }
     legend:
       type: gradient
@@ -70,14 +65,9 @@ layers:
     compare:
       datasetId: no2
       layerId: no2-monthly-diff
-      datetime: |
-        ::js ({ datetime, dateFns }) => {
-          return dateFns.sub(datetime, { years: 1 });
-        }
       mapLabel: |
-        ::js ({ datetime, dateFns }) => {
-          const comparingDate = dateFns.sub(datetime, { years: 1 });
-          return `${dateFns.format(datetime, 'LLL yyyy')} - ${dateFns.format(comparingDate, 'LLL yyyy')}`;
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }
     legend:
       type: gradient
@@ -93,16 +83,14 @@ layers:
 
 <Block type='full'>
   <Figure>
-    <Image
-    src='https://via.placeholder.com/960x640'
-    alt=' NO2 levels fell by as much as 30% over much of the Northeast U.S'
+    <CompareImage
+      leftImageSrc={new URL('./no2_east_coast_mar_avg.jpg', import.meta.url).href}
+      leftImageAlt='NO2 over South America'
+      leftImageLabel='March 2015-2019 Avg.'
+      rightImageSrc={new URL('./no2_east_coast_mar_20.jpg', import.meta.url).href}
+      rightImageAlt='NO2 over South America'
+      rightImageLabel='March 2020'
     />
-    <Caption 
-      attrAuthor='NASA Scientific Visualization Studio' 
-      attrUrl='https://svs.gsfc.nasa.gov/'
-    >
-      NO2 levels fell by as much as 30% over much of the Northeast U.S. 
-    </Caption> 
   </Figure>
 <Prose>
 Nitrogen dioxide (NO2) is a common air pollutant primarily emitted from the burning of fossil fuels in cars and power plants. Lower to the ground, nitrogen dioxide can directly irritate the lungs and contributes to the production of particulate pollution and smog when it reacts with sunlight.
