@@ -9,7 +9,8 @@ on:
 
 env:
   NODE: 16
-  DOMAIN_PROD: https://earthdata.nasa.gov/dashboard
+  # DOMAIN_PROD: https://www.earthdata.nasa.gov/dashboard
+  DOMAIN_PROD: /dashboard
   DEPLOY_BUCKET_PROD: climatedashboard
   DEPLOY_BUCKET_PROD_REGION: us-east-1
 
