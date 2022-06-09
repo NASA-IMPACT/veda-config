@@ -58,6 +58,8 @@ jobs:
         run: ./.delta/setup
 
       - name: Build Staging
+        env:
+          MAPBOX_TOKEN: ${{secrets.MAPBOX_TOKEN}}
         run: PUBLIC_URL="${{ env.DOMAIN_STAGING }}" yarn stage
 
   deploy:

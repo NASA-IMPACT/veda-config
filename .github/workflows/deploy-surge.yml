@@ -55,7 +55,10 @@ jobs:
         run: ./.delta/setup
 
       - name: Build staging
+        env:
+          MAPBOX_TOKEN: ${{secrets.MAPBOX_TOKEN}}
         run: yarn stage
+
 
   deploy:
     runs-on: ubuntu-latest
