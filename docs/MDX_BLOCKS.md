@@ -339,7 +339,7 @@ For example, if you put an image `image.jpg` inside of the folder where your mdx
 | highlightEnd | string | `''` | End point of x axis to draw highlighted area.
 | highlightLabel | string | `''` | Label for highlighted area. |
 
-Syntax for Chart used in Wide Figure Block looks like this
+Syntax for Chart used in Wide Figure Block looks like this. Check how the data is formatted in [example.csv](./media/example.csv).
 
 ```jsx
 <Block type='wide'>
