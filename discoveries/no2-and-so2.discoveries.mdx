@@ -26,7 +26,7 @@ thematics:
     </Prose>
 </Block>
 
-<Block type='full'>
+<Block>
   <Prose>
     ## United States
       For example, this image shows decreases in SO2 and NO2 in the Ohio River Valley region of the United States. 
@@ -37,14 +37,16 @@ thematics:
   <Figure>
     <Image
       src={new URL('./no2-and-so2-united-states-chart.png', import.meta.url).href}
+      alt="Line chart showing decreasing emissions in the United States over the last 15 years"
     />
   </Figure>
 </Block>
 
-<Block type='full'>
+<Block>
    <Figure>
     <Image
       src={new URL('./no2-and-so2-china-chart.png', import.meta.url).href}
+      alt="Line chart showing decreasing SO2 but steady NO2 in China over the last 15 years"
     />
   </Figure>
   <Prose>
@@ -55,7 +57,7 @@ thematics:
   </Prose>
 </Block>
 
-<Block type='full'>
+<Block>
    <Prose>
     ## India
       The time series charts for northeastern India show a steady increase for both NO2 and SO2 from 2005-2018, after which both leveled off, perhaps due to the deployment of air pollution control technology. The significant drop in both SO2 and NO2 in 2020 is most likely the result of the prolonged COVID-19 lockdown in India that resulted in a reduction in fossil fuel combustion.
@@ -64,6 +66,7 @@ thematics:
   <Figure>
   <Image
     src={new URL('./no2-and-so2-india-chart.png', import.meta.url).href}
+    alt="Line chart showing increasing emissions in India over the last 15 years"
   />
 </Figure>
 
