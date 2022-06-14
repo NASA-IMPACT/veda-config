@@ -326,6 +326,8 @@ For example, if you put an image `image.jpg` inside of the folder where your mdx
 
 ## Chart
 
+![Screenshot of chart component with sample data](./media/chart.png)
+
 | Option | Type | Default | Description|
 |---|---|---|---|
 | dataPath | string | `''` | Path for data. The data should be either in `csv` or `json` format. |
