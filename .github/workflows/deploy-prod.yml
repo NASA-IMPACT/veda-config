@@ -59,6 +59,8 @@ jobs:
         run: ./.delta/setup
 
       - name: Build production
+        env:
+          MAPBOX_TOKEN: ${{secrets.MAPBOX_TOKEN}}
         run: PUBLIC_URL="${{ env.DOMAIN_PROD }}" yarn build
 
   deploy:

@@ -31,6 +31,10 @@ Then, setup the project by running the command below.
 ./.delta/setup
 ```
 
+## Mapbox Token
+
+Get your Mapbox access token from Mapbox Dashboard. Put the key in `.env.local-sample` file. Copy the file and rename as `.env.local`. 
+
 ## Running the app
 
 To preview the app use:
