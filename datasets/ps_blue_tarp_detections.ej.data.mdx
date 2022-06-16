@@ -19,7 +19,7 @@ layers:
       - 14
       - 20
     sourceParams:
-      resampling_method: bilinear
+      resampling: cubic_spline 
       bidx: 1
       colormap_name: reds
       rescale:
@@ -31,8 +31,6 @@ layers:
     description: Planetscope input RGB imagery used for blue tarp detection
     zoomExtent:
       - 14
-    sourceParams:
-       resampling: cubic_spline 
     compare:
       datasetId: ps_blue_tarp_detections
       layerId: blue-tarp-detection
