@@ -19,12 +19,25 @@ layers:
       - 14
       - 20
     sourceParams:
-      resampling_method: bilinear
+      resampling: cubic_spline 
       bidx: 1
       colormap_name: reds
       rescale:
         - 0
         - 400
+  - id: blue-tarp-planetscope
+    name: Planetscope input RGB imagery used for blue tarp detection
+    type: raster
+    description: Planetscope input RGB imagery used for blue tarp detection
+    zoomExtent:
+      - 14
+    compare:
+      datasetId: ps_blue_tarp_detections
+      layerId: blue-tarp-detection
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
 ---
 
 <Block>
@@ -43,11 +56,12 @@ Detection of blue tarps from high resolution imagery can inform disaster respons
 <Block type='full'>
 <Figure>
   <Map
-    datasetId='facebook_population_density'
-    layerId='facebook_population_density'
-    zoom={11}
-    dateTime='2015-01-01'
-    center={[-73.983,40.761]}
+    datasetId='ps_blue_tarp_detections'
+    layerId='blue-tarp-planetscope'
+    zoom={18}
+    dateTime='2017-02-11'
+    compareDateTime='2017-02-11'
+    center={[-66.0412, 18.4129]}
   />
   <Caption
     attrAuthor='NASA'
