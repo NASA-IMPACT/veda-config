@@ -25,6 +25,21 @@ layers:
       rescale:
         - 0
         - 400
+  - id: blue-tarp-planetscope
+    name: Planetscope input RGB imagery used for blue tarp detection
+    type: raster
+    description: Planetscope input RGB imagery used for blue tarp detection
+    zoomExtent:
+      - 14
+    sourceParams:
+       resampling_method: cubic_spline 
+    compare:
+      datasetId: ps_blue_tarp_detections
+      layerId: blue-tarp-detection
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
 ---
 
 <Block>
@@ -43,10 +58,11 @@ Detection of blue tarps from high resolution imagery can inform disaster respons
 <Block type='full'>
 <Figure>
   <Map
-    datasetId='facebook_population_density'
-    layerId='facebook_population_density'
+    datasetId='ps_blue_tarp_detections'
+    layerId='blue-tarp-planetscope'
     zoom={11}
-    dateTime='2015-01-01'
+    dateTime='2017-02-11'
+    compareDateTime='2017-02-11'
     center={[-73.983,40.761]}
   />
   <Caption
