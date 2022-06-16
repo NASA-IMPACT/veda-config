@@ -35,19 +35,29 @@ thematics:
 
   </Prose>
   <Figure>
-    <Image
-      src={new URL('./no2-and-so2-united-states-chart.png', import.meta.url).href}
-      alt="Line chart showing decreasing emissions in the United States over the last 15 years"
+    <Chart
+      dataPath={new URL('./no2-and-so2-charts.csv', import.meta.url).href}
+      dateFormat="%Y" 
+      idKey='Data Type' 
+      xKey='Year' 
+      yKey='United States Change from 2005' 
     />
+    <Caption 
+    /> 
   </Figure>
 </Block>
 
 <Block>
-   <Figure>
-    <Image
-      src={new URL('./no2-and-so2-china-chart.png', import.meta.url).href}
-      alt="Line chart showing decreasing SO2 but steady NO2 in China over the last 15 years"
+  <Figure>
+    <Chart
+      dataPath={new URL('./no2-and-so2-charts.csv', import.meta.url).href}
+      dateFormat="%Y" 
+      idKey='Data Type' 
+      xKey='Year' 
+      yKey='China Change from 2005' 
     />
+    <Caption 
+    /> 
   </Figure>
   <Prose>
     ## China
@@ -62,14 +72,17 @@ thematics:
     ## India
       The time series charts for northeastern India show a steady increase for both NO2 and SO2 from 2005-2018, after which both leveled off, perhaps due to the deployment of air pollution control technology. The significant drop in both SO2 and NO2 in 2020 is most likely the result of the prolonged COVID-19 lockdown in India that resulted in a reduction in fossil fuel combustion.
   </Prose> 
-
   <Figure>
-  <Image
-    src={new URL('./no2-and-so2-india-chart.png', import.meta.url).href}
-    alt="Line chart showing increasing emissions in India over the last 15 years"
-  />
-</Figure>
-
+    <Chart
+      dataPath={new URL('./no2-and-so2-charts.csv', import.meta.url).href}
+      dateFormat="%Y" 
+      idKey='Data Type' 
+      xKey='Year' 
+      yKey='India Change from 2005' 
+    />
+    <Caption 
+    /> 
+  </Figure>
 </Block>
 
 <Block>
