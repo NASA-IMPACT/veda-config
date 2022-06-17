@@ -24,6 +24,13 @@ layers:
         - B07
         - B05
         - B04
+    compare:
+      datasetId: hls_events
+      layerId: hls-l30-002-ej
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
   - id: hls-s30-002-ej
     name: HLS Sentinel-2 SWIR
     type: raster
@@ -52,7 +59,23 @@ The production of atmospherically corrected HLS products is a collaborative effo
 </Prose>
 </Block>
 
-<Block>
+<Block type='full'>
+<Figure>
+  <Map
+    datasetId='hls_events'
+    layerId='hls-l30-002-ej'
+    dateTime='2017-08-25'
+    zoom={11}
+    center={[-65.97,18.41]}
+    compareDateTime='2017-09-26'
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+     Harmonized Landsat 8 SWIR image provides enhanced contrast to detect flood extent in Puerto Rico before and after Hurricane Maria in 2017.
+  </Caption>
+</Figure>
 <Prose>
 ## Interpreting the data
 HLS imagery in support of Environmental Justice shows the impact of flooding for Hurricanes Maria and Ida that made landfall in Puerto Rico (2017) and New Orleans, LA (2021) respectively. The imagery displayed is a shortwave infrared (SWIR) false color composite that provides enhanced contrast to detect flood extent. In SWIR false color composite imagery, water is identified by dark blue colors, vegetation is bright green, clouds are white, and ice is blue.
