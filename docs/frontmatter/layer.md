@@ -10,6 +10,7 @@
 id: string
 name: string
 type: string
+initialDatetime: 'oldest' | 'newest' | Date(YYYY-MM-DD) = 'newest'
 description: string
 zoomExtent: [int, int] | null | fn(bag)
 sourceParams:
@@ -39,6 +40,10 @@ The type of the layer will define how the data is displayed on the map.
 **description**  
 `string`  
 Brief description of the layer. Will be shown in an info box.
+
+**initialDatetime**  
+`'oldest' | 'newest' | Date(YYYY-MM-DD) = 'newest'`  
+Define the initial date that is shown when enabling a timeseries layer.
 
 **zoomExtent**  
 `[int, int] | fn(bag)`  
