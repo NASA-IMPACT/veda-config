@@ -32,6 +32,25 @@ thematics:
 </Block>
 
 <Block>
+  <Figure>
+    <Map
+      datasetId='ps_blue_tarp_detections'
+      layerId='blue-tarp-planetscope'
+      zoom={17}
+      dateTime='2022-02-12'
+      compareDateTime='2022-02-12'
+      center={[-90.0613, 29.914]}
+    />
+    <Caption
+      attrAuthor='NASA'
+      attrUrl='https://nasa.gov/'
+    >
+      Blue tarp detections in Jefferson Parish, LA on February 12, 2022.
+    </Caption>
+  </Figure>
+</Block>
+
+<Block>
   <Prose>
 
     ## Approach
@@ -80,9 +99,63 @@ thematics:
     However, when analyzing detected blue tarps as a percentage of total building footprints in each zip code, a similar pattern emerges that suggests the on-the-ground observations and damage assessments do not necessarily capture the complete picture.
 
     The graphs show a zip code in each of the areas affected by the hurricanes that were estimated as having sustained a low degree of storm damage: 70112 in New Orleans and 00901 in San Juan. As noted previously, in line with the on-the-ground reports, both rank low on the graphs showing the number of blue tarps detected.
+  </Prose>
+  <Figure>
+    <Chart
+      dataPath={new URL('./hurricane-maria-ida-chart1.csv', import.meta.url).href}
+      dateFormat="%m/%Y" 
+      idKey='Zip' 
+      xKey='Month' 
+      yKey='Number of Tarps' 
+    />
+    <Caption 
+    /> 
+  </Figure>
+</Block>
 
+<Block>
+  <Prose>
     When the zip codes are analyzed in terms of the number of detected blue tarps as a percentage of the total building footprints, a pattern emerges in each of the affected areas. Both 70112 and 00901 jump high up in the damage estimate, significantly higher than their low designation would have predicted (p=0.054 and p = 0.009 respectively).
   </Prose>
+  <Figure>
+    <Chart
+      dataPath={new URL('./hurricane-maria-ida-chart2.csv', import.meta.url).href}
+      dateFormat="%m/%Y" 
+      idKey='Zip' 
+      xKey='Month' 
+      yKey='Number of Tarps' 
+    />
+    <Caption 
+    /> 
+  </Figure>
+</Block>
+
+<Block>
+  <Figure>
+    <Chart
+      dataPath={new URL('./hurricane-maria-ida-chart3.csv', import.meta.url).href}
+      dateFormat="%m/%Y" 
+      idKey='Zip' 
+      xKey='Month' 
+      yKey='Percentage of Buildings' 
+    />
+    <Caption 
+    /> 
+  </Figure>
+</Block>
+
+<Block>
+  <Figure>
+    <Chart
+      dataPath={new URL('./hurricane-maria-ida-chart4.csv', import.meta.url).href}
+      dateFormat="%m/%Y" 
+      idKey='Zip' 
+      xKey='Month' 
+      yKey='Percentage of Buildings' 
+    />
+    <Caption 
+    /> 
+  </Figure>
 </Block>
 
 <Block>
