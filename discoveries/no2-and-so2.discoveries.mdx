@@ -27,7 +27,7 @@ thematics:
 </Block>
 
 <Block>
-  <Prose>
+   <Prose>
     ## United States
       For example, this image shows decreases in SO<sub>2</sub> and NO<sub>2</sub> in the Ohio River Valley region of the United States. 
       
@@ -48,6 +48,12 @@ thematics:
 </Block>
 
 <Block>
+  <Prose>
+    ## China
+      Satellite observations for northeastern China show a different story. The data for SO<sub>2</sub> (red) show a 90% reduction in this pollutant from 2005-2021. The atmospheric levels of NO<sub>2</sub> initially increased after 2005,   then started to decrease after 2011. As of 2021 the atmospheric NO<sub>2</sub> abundance is approximately 20% lower than at the start of the OMI record. 
+
+      This highlights the fact that it is a bit easier to remove SO<sub>2</sub> emissions via the installation of SO<sub>2</sub> scrubbers (or flue gas desulfurization systems) into the smokestacks of coal power plants. By comparison, NO<sub>2</sub> is released by all combustion sources (coal, oil, natural gas, gasoline, diesel, etc.), and as a result it is a bit more difficult to control.
+  </Prose>
   <Figure>
     <Chart
       dataPath={new URL('./no2-and-so2-charts.csv', import.meta.url).href}
@@ -59,12 +65,25 @@ thematics:
     <Caption 
     /> 
   </Figure>
-  <Prose>
-    ## China
-      Satellite observations for northeastern China show a different story. The data for SO<sub>2</sub> (red) show a 90% reduction in this pollutant from 2005-2021. The atmospheric levels of NO<sub>2</sub> initially increased after 2005,   then started to decrease after 2011. As of 2021 the atmospheric NO<sub>2</sub> abundance is approximately 20% lower than at the start of the OMI record. 
+</Block>
 
-      This highlights the fact that it is a bit easier to remove SO<sub>2</sub> emissions via the installation of SO<sub>2</sub> scrubbers (or flue gas desulfurization systems) into the smokestacks of coal power plants. By comparison, NO<sub>2</sub> is released by all combustion sources (coal, oil, natural gas, gasoline, diesel, etc.), and as a result it is a bit more difficult to control.
-  </Prose>
+<Block>
+  <Figure>
+    <Map
+      datasetId='so2'
+      layerId='OMSO2PCA-COG'
+      dateTime='2006-01-01'
+      zoom={4}
+      center={[117.22,35.66]}
+      compareDateTime='2021-01-01'
+    />
+    <Caption
+      attrAuthor='NASA'
+      attrUrl='https://nasa.gov/'
+    >
+    Comparison of total column SO2 for China for 2006 and 2021
+    </Caption>
+  </Figure>
 </Block>
 
 <Block>
@@ -82,6 +101,25 @@ thematics:
     />
     <Caption 
     /> 
+  </Figure>
+</Block>
+
+<Block>
+  <Figure>
+    <Map
+      datasetId='so2'
+      layerId='OMSO2PCA-COG'
+      dateTime='2005-01-01'
+      zoom={4}
+      center={[77.63,24.27]}
+      compareDateTime='2021-01-01'
+    />
+    <Caption
+      attrAuthor='NASA'
+      attrUrl='https://nasa.gov/'
+    >
+    Comparison of total column SO2 for India for 2005 and 2021
+    </Caption>
   </Figure>
 </Block>
 
