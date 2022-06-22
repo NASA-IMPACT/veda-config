@@ -43,7 +43,7 @@ Brief description of the layer. Will be shown in an info box.
 
 **initialDatetime**  
 `'oldest' | 'newest' | Date(YYYY-MM-DD) = 'newest'`  
-Define the initial date that is shown when enabling a timeseries layer.
+Define the initial date that is shown when enabling a timeseries layer. This value is used if no valid date is provided via the url parameters
 
 **zoomExtent**  
 `[int, int] | fn(bag)`  
