@@ -1,7 +1,7 @@
 ---
 featuredOn:
   - covid-19
-id: 'hurricane-maria-and-ida'
+id: "hurricane-maria-and-ida"
 name: Connecting Disaster Recovery with Environmental Justice
 description: "Featuring Hurricane María and Hurricane Ida"
 media:
@@ -10,6 +10,27 @@ media:
 thematics:
   - environmental-justice
 ---
+
+<style>{`
+  .hurricane-tables {
+    display: flex;
+    gap: 2rem
+  }
+  .hurricane-tables thead th,
+  .hurricane-tables tbody td {
+    text-align: center;
+  }
+  .high-val {
+    background: #F0DADE;
+  }
+  .mid-val {
+    background: #FAF4E1;
+  }
+  .low-val {
+    background: #E2EFE6;
+  }
+`}</style>
+
 <Block>
     <Prose>
         ## Connecting Disaster Recovery with Environmental Justice: Hurricane María
@@ -20,31 +41,29 @@ thematics:
 
         ## Connecting Disaster Recovery with Environmental Justice: Hurricane Ida
 
-        Known as the city that can barely catch its breath between storms, New Orleans experienced another devastating event on August 29, 2021 as Hurricane Ida made landfall as a Category 4 hurricane. The effects of the storm were widespread, causing millions of dollars worth of damage and affecting the lives and homes of millions of people. 
+        Known as the city that can barely catch its breath between storms, New Orleans experienced another devastating event on August 29, 2021 as Hurricane Ida made landfall as a Category 4 hurricane. The effects of the storm were widespread, causing millions of dollars worth of damage and affecting the lives and homes of millions of people.
 
-        [Disadvantaged communities](https://www.nature.com/articles/d41586-021-02520-8) in Louisiana and across the country already struggle with higher rates of asthma, cancer, and COVID-19 infections. These communities are often hardest-hit by storms like Ida. Research has shown that disadvantaged communities often receive less federal aid than other communities, only prolonging their hardships. NASA is prioritizing open access to environmental justice data such as the datasets in this dashboard in an effort to help communities better prepare for and respond to natural disasters and to help shed light on cases of environmental injustice. 
+        [Disadvantaged communities](https://www.nature.com/articles/d41586-021-02520-8) in Louisiana and across the country already struggle with higher rates of asthma, cancer, and COVID-19 infections. These communities are often hardest-hit by storms like Ida. Research has shown that disadvantaged communities often receive less federal aid than other communities, only prolonging their hardships. NASA is prioritizing open access to environmental justice data such as the datasets in this dashboard in an effort to help communities better prepare for and respond to natural disasters and to help shed light on cases of environmental injustice.
 
         ## The Data
 
         The Interagency Implementation and Advanced Concepts Team (IMPACT), based at NASA’s Marshall Space Flight Center in Huntsville, Alabama, undertook an experimental study to determine if the application of artificial intelligence to NASA satellite images could accurately detect the number of blue tarps deployed on rooftops in the aftermath of hurricanes such as María and Ida as a way of predicting the relative severity of damage experienced by the respective local communities. Correlating these detections over time by zip codes and cross-referencing socio-economic data (such as that contained in the Visualization, Exploration, and Data Analysis (VEDA) dashboard), relationships between socio-economic factors and disaster recovery can be identified.
 
     </Prose>
+
 </Block>
 
-<Block>
+<Block type='full'>
   <Figure>
     <Map
-      datasetId='ps_blue_tarp_detections'
-      layerId='blue-tarp-planetscope'
+      datasetId="ps_blue_tarp_detections"
+      layerId="blue-tarp-planetscope"
       zoom={17}
-      dateTime='2022-02-12'
-      compareDateTime='2022-02-12'
+      dateTime="2022-02-12"
+      compareDateTime="2022-02-12"
       center={[-90.0613, 29.914]}
     />
-    <Caption
-      attrAuthor='NASA'
-      attrUrl='https://nasa.gov/'
-    >
+    <Caption attrAuthor="NASA" attrUrl="https://nasa.gov/">
       Blue tarp detections in Jefferson Parish, LA on February 12, 2022.
     </Caption>
   </Figure>
@@ -63,37 +82,239 @@ thematics:
     * low impact (L) if the reported damages were minor (e.g. dangling boards or tree debris);
     * medium impact (M) if the damages were significant but did not lead to complete loss of structures; or
     * high impact (H) if the damages were severe and led to complete loss of structures.
-  </Prose>
-</Block>
 
-<Block>
-  <Figure>
-    <Image
-    src={new URL('./hurricane-maria-ida-estimated-damage.png', import.meta.url).href}
-    alt="Estimated damage by zip code"
-    />
-  </Figure>
-</Block>
+<div className='hurricane-tables'>
+<table>
+  <thead>
+    <tr>
+      <th colSpan="2">Hurricane Ida</th>
+    </tr>
+    <tr>
+      <th>Estimated Damage</th>
+      <th>Zip</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td className='high-val'>H</td>
+      <td>70001</td>
+    </tr>
+    <tr>
+      <td className='high-val'>H</td>
+      <td>70003</td>
+    </tr>
+    <tr>
+      <td className='high-val'>H</td>
+      <td>70094</td>
+    </tr>
+    <tr>
+      <td className='low-val'>L</td>
+      <td>70112</td>
+    </tr>
+    <tr>
+      <td className='mid-val'>M</td>
+      <td>70113</td>
+    </tr>
+    <tr>
+      <td className='high-val'>H</td>
+      <td>70114</td>
+    </tr>
+    <tr>
+      <td className='mid-val'>M</td>
+      <td>70117</td>
+    </tr>
+    <tr>
+      <td className='mid-val'>M</td>
+      <td>70119</td>
+    </tr>
+    <tr>
+      <td className='low-val'>L</td>
+      <td>70130</td>
+    </tr>
+  </tbody>
+</table>
 
-<Block>
-  <Prose>
+<table>
+  <thead>
+    <tr>
+      <th colSpan="2">Hurricane María</th>
+    </tr>
+    <tr>
+      <th>Estimated Damage</th>
+      <th>Zip</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td className='low-val'>L</td>
+      <td>00901</td>
+    </tr>
+    <tr>
+      <td className='low-val'>L</td>
+      <td>00911</td>
+    </tr>
+    <tr>
+      <td className='mid-val'>M</td>
+      <td>00912</td>
+    </tr>
+    <tr>
+      <td className='high-val'>H</td>
+      <td>00915</td>
+    </tr>
+    <tr>
+      <td className='mid-val'>M</td>
+      <td>00918</td>
+    </tr>
+    <tr>
+      <td className='mid-val'>M</td>
+      <td>00920</td>
+    </tr>
+    <tr>
+      <td className='high-val'>H</td>
+      <td>00956</td>
+    </tr>
+    <tr>
+      <td className='high-val'>H</td>
+      <td>00962</td>
+    </tr>
+    <tr>
+      <td className='mid-val'>M</td>
+      <td>00979</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
     A statistical analysis of the rankings demonstrates a high degree of correlation between the maximum number of detected blue tarp counts in each zip code and the level of estimated damage. The three instances where the order of rows should have been reversed, the difference in the blue tarp counts between each pair was not significant:
 
     * 70114(H) with 70119(M) p=0.177;
     * 70113(M) with 70130(L) p=0.452;
-    * 00912(M) with 00901(L) p=0.478. 
-    
-    Overall the number of detected blue tarps corresponded with the estimated amount of damage experienced by each zip code based on ground-level reports.
-  </Prose>
-</Block>
+    * 00912(M) with 00901(L) p=0.478.
 
-<Block>
-  <Figure>
-    <Image
-    src={new URL('./hurricane-maria-ida-max-tarps.png', import.meta.url).href}
-    alt="Estimated damage by zip code"
-    />
-  </Figure>
+    Overall the number of detected blue tarps corresponded with the estimated amount of damage experienced by each zip code based on ground-level reports.
+
+<div className='hurricane-tables'>
+<table>
+  <thead>
+    <tr>
+      <th colSpan="3">Hurricane Ida</th>
+    </tr>
+    <tr>
+      <th>Estimated Damage</th>
+      <th>Zip</th>
+      <th>Max. Tarps</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td className='high-val'>H</td>
+      <td>70003</td>
+      <td>2112</td>
+    </tr>
+    <tr>
+      <td className='high-val'>H</td>
+      <td>70094</td>
+      <td>2068</td>
+    </tr>
+    <tr>
+      <td className='high-val'>H</td>
+      <td>70001</td>
+      <td>1066</td>
+    </tr>
+    <tr>
+      <td className='mid-val'>M</td>
+      <td>70119</td>
+      <td>883</td>
+    </tr>
+    <tr>
+      <td className='high-val'>H</td>
+      <td>70114</td>
+      <td>632</td>
+    </tr>
+    <tr>
+      <td className='mid-val'>M</td>
+      <td>70117</td>
+      <td>543</td>
+    </tr>
+    <tr>
+      <td className='low-val'>L</td>
+      <td>70130</td>
+      <td>213</td>
+    </tr>
+    <tr>
+      <td className='mid-val'>M</td>
+      <td>70113</td>
+      <td>181</td>
+    </tr>
+    <tr>
+      <td className='low-val'>L</td>
+      <td>70112</td>
+      <td>102</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th colSpan="3">Hurricane María</th>
+    </tr>
+    <tr>
+      <th>Estimated Damage</th>
+      <th>Zip</th>
+      <th>Max. Tarps</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td className='high-val'>H</td>
+      <td>00915</td>
+      <td>308</td>
+    </tr>
+    <tr>
+      <td className='high-val'>H</td>
+      <td>00962</td>
+      <td>242</td>
+    </tr>
+    <tr>
+      <td className='high-val'>H</td>
+      <td>00956</td>
+      <td>240</td>
+    </tr>
+    <tr>
+      <td className='mid-val'>M</td>
+      <td>00979</td>
+      <td>137</td>
+    </tr>
+    <tr>
+      <td className='mid-val'>M</td>
+      <td>00920</td>
+      <td>110</td>
+    </tr>
+    <tr>
+      <td className='mid-val'>M</td>
+      <td>00918</td>
+      <td>88</td>
+    </tr>
+    <tr>
+      <td className='low-val'>L</td>
+      <td>00901</td>
+      <td>42</td>
+    </tr>
+    <tr>
+      <td className='mid-val'>M</td>
+      <td>00912</td>
+      <td>40</td>
+    </tr>
+    <tr>
+      <td className='low-val'>L</td>
+      <td>00911</td>
+      <td>23</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+  </Prose>
 </Block>
 
 <Block>
@@ -101,6 +322,7 @@ thematics:
     However, when analyzing detected blue tarps as a percentage of total building footprints in each zip code, a similar pattern emerges that suggests the on-the-ground observations and damage assessments do not necessarily capture the complete picture.
 
     The graphs show a zip code in each of the areas affected by the hurricanes that were estimated as having sustained a low degree of storm damage: 70112 in New Orleans and 00901 in San Juan. As noted previously, in line with the on-the-ground reports, both rank low on the graphs showing the number of blue tarps detected.
+
   </Prose>
   <Figure>
     <Chart
@@ -117,46 +339,53 @@ thematics:
 
 <Block>
   <Prose>
-    When the zip codes are analyzed in terms of the number of detected blue tarps as a percentage of the total building footprints, a pattern emerges in each of the affected areas. Both 70112 and 00901 jump high up in the damage estimate, significantly higher than their low designation would have predicted (p=0.054 and p = 0.009 respectively).
+    When the zip codes are analyzed in terms of the number of detected blue
+    tarps as a percentage of the total building footprints, a pattern emerges in
+    each of the affected areas. Both 70112 and 00901 jump high up in the damage
+    estimate, significantly higher than their low designation would have
+    predicted (p=0.054 and p = 0.009 respectively).
   </Prose>
   <Figure>
     <Chart
-      dataPath={new URL('./hurricane-maria-ida-chart2.csv', import.meta.url).href}
-      dateFormat="%m/%Y" 
-      idKey='Zip' 
-      xKey='Month' 
-      yKey='Number of Tarps' 
+      dataPath={
+        new URL("./hurricane-maria-ida-chart2.csv", import.meta.url).href
+      }
+      dateFormat="%m/%Y"
+      idKey="Zip"
+      xKey="Month"
+      yKey="Number of Tarps"
     />
-    <Caption 
-    /> 
+    <Caption />
   </Figure>
 </Block>
 
 <Block>
   <Figure>
     <Chart
-      dataPath={new URL('./hurricane-maria-ida-chart3.csv', import.meta.url).href}
-      dateFormat="%m/%Y" 
-      idKey='Zip' 
-      xKey='Month' 
-      yKey='Percentage of Buildings' 
+      dataPath={
+        new URL("./hurricane-maria-ida-chart3.csv", import.meta.url).href
+      }
+      dateFormat="%m/%Y"
+      idKey="Zip"
+      xKey="Month"
+      yKey="Percentage of Buildings"
     />
-    <Caption 
-    /> 
+    <Caption />
   </Figure>
 </Block>
 
 <Block>
   <Figure>
     <Chart
-      dataPath={new URL('./hurricane-maria-ida-chart4.csv', import.meta.url).href}
-      dateFormat="%m/%Y" 
-      idKey='Zip' 
-      xKey='Month' 
-      yKey='Percentage of Buildings' 
+      dataPath={
+        new URL("./hurricane-maria-ida-chart4.csv", import.meta.url).href
+      }
+      dateFormat="%m/%Y"
+      idKey="Zip"
+      xKey="Month"
+      yKey="Percentage of Buildings"
     />
-    <Caption 
-    /> 
+    <Caption />
   </Figure>
 </Block>
 
@@ -164,37 +393,30 @@ thematics:
   <Prose>
     ## Findings and Future Avenues of Research
 
-    The ability to detect blue tarp counts for the entirety of a zip code from satellite imagery holds the possibility of surfacing areas of relatively severe damage that may be obscured in ground-level observations. In both these zip codes the small absolute number of damaged buildings and significantly lower building footprint densities (i.e., 761.49/sq. km. in 70112 (p=0.0119) and 713.16/ sq. km. in 00901 (p=0.008)), may have caused these communities to be overlooked by on-the-ground coverage of the storm damage. However, as a percentage of total buildings, the damage sustained in both these zip codes was significantly underestimated by on-the-ground reports when compared to the highest ranked zip codes in medium damage estimate groupings (p=0.012 for 70112 and p=0.004 for 00901). 
+    The ability to detect blue tarp counts for the entirety of a zip code from satellite imagery holds the possibility of surfacing areas of relatively severe damage that may be obscured in ground-level observations. In both these zip codes the small absolute number of damaged buildings and significantly lower building footprint densities (i.e., 761.49/sq. km. in 70112 (p=0.0119) and 713.16/ sq. km. in 00901 (p=0.008)), may have caused these communities to be overlooked by on-the-ground coverage of the storm damage. However, as a percentage of total buildings, the damage sustained in both these zip codes was significantly underestimated by on-the-ground reports when compared to the highest ranked zip codes in medium damage estimate groupings (p=0.012 for 70112 and p=0.004 for 00901).
 
-    These findings have potential environmental justice implications as zip code 70112 and 00901 share similar demographic profiles. Both zip codes are minority majority. The median household income for zip code 70112 is $20,457, and for 00901 it is $14,720 (65.7% and 47.3% the national median respectively). Both zip codes contain a higher than average population density: 
+    These findings have potential environmental justice implications as zip code 70112 and 00901 share similar demographic profiles. Both zip codes are minority majority. The median household income for zip code 70112 is $20,457, and for 00901 it is $14,720 (65.7% and 47.3% the national median respectively). Both zip codes contain a higher than average population density:
     * 70112 contains 3,655 residents in a land area of 2.26 square kilometers (an effective density of 4,255/sq. mile).
     * 00901 contains 7,080 residents in a land area of 2.54 square kilometers (7,217/sq. mile).
 
     Both zip codes have indicators that suggest a high degree of multifamily housing. In zip code 70112, 2,563 housing units exist within 1,720 building footprints for an average ratio of 1.49 units per building. There are 4,990 housing units among the 1,810 building footprints in zip code 00901 for an average ratio of 2.76 units per building. In terms of population density, zip code 70112 has a ratio of 2.13 residents per building footprint, and zip code 00901 has 3.91 residents per building footprint. It follows from these residential densities that the number of people directly affected by even an apparently low number of damaged buildings (in terms of raw counts) is not insignificant.
 
     The environmental justice implications of being able to more quickly identify overlooked storm-damaged communities is considerable. Further research in this area can establish how satellite-based detections can inform and enhance disaster recovery efforts, especially in vulnerable communities.
+
   </Prose>
 </Block>
 
 <Block>
   <Prose>
     ## Sources
-
-    [https://www.wdsu.com/article/parish-to-parish-the-latest-on-what-we-know-ten-days-post-ida/37511472#](https://www.wdsu.com/article/parish-to-parish-the-latest-on-what-we-know-ten-days-post-ida/37511472#)
-
-    [https://www.nola.com/news/hurricane/article_bb0c2268-2144-11ec-8dce-672b7a624bed.html](https://www.nola.com/news/hurricane/article_bb0c2268-2144-11ec-8dce-672b7a624bed.html)
-
-    [https://www.nola.com/multimedia/photos/collection_59f4a7f4-0973-11ec-b836-cfb3d4ff5589.html#20](https://www.nola.com/multimedia/photos/collection_59f4a7f4-0973-11ec-b836-cfb3d4ff5589.html#20)
-
-    [https://www.nola.com/news/hurricane/article_ef41b052-0998-11ec-9c32-97779ca0847b.html](https://www.nola.com/news/hurricane/article_ef41b052-0998-11ec-9c32-97779ca0847b.html)
-
-    [https://www.diva-portal.org/smash/record.jsf?pid=diva2%3A1084218&dswid=9465](https://www.diva-portal.org/smash/record.jsf?pid=diva2%3A1084218&dswid=9465)
-
-    [https://digitalscholarship.tsu.edu/jpmsp/vol22/iss2/5/](https://digitalscholarship.tsu.edu/jpmsp/vol22/iss2/5/)
-
-    [https://www.unitedstateszipcodes.org/70112/](https://www.unitedstateszipcodes.org/70112/)
-    
-    [https://www.unitedstateszipcodes.org/00901/](https://www.unitedstateszipcodes.org/00901/)
+    - [https://www.wdsu.com/article/parish-to-parish-the-latest-on-what-we-know-ten-days-post-ida/37511472#](https://www.wdsu.com/article/parish-to-parish-the-latest-on-what-we-know-ten-days-post-ida/37511472#)
+    - [https://www.nola.com/news/hurricane/article_bb0c2268-2144-11ec-8dce-672b7a624bed.html](https://www.nola.com/news/hurricane/article_bb0c2268-2144-11ec-8dce-672b7a624bed.html)
+    - [https://www.nola.com/multimedia/photos/collection_59f4a7f4-0973-11ec-b836-cfb3d4ff5589.html#20](https://www.nola.com/multimedia/photos/collection_59f4a7f4-0973-11ec-b836-cfb3d4ff5589.html#20)
+    - [https://www.nola.com/news/hurricane/article_ef41b052-0998-11ec-9c32-97779ca0847b.html](https://www.nola.com/news/hurricane/article_ef41b052-0998-11ec-9c32-97779ca0847b.html)
+    - [https://www.diva-portal.org/smash/record.jsf?pid=diva2%3A1084218&dswid=9465](https://www.diva-portal.org/smash/record.jsf?pid=diva2%3A1084218&dswid=9465)
+    - [https://digitalscholarship.tsu.edu/jpmsp/vol22/iss2/5/](https://digitalscholarship.tsu.edu/jpmsp/vol22/iss2/5/)
+    - [https://www.unitedstateszipcodes.org/70112/](https://www.unitedstateszipcodes.org/70112/)
+    - [https://www.unitedstateszipcodes.org/00901/](https://www.unitedstateszipcodes.org/00901/)
 
   </Prose>
 </Block>
