@@ -37,28 +37,97 @@ thematics:
 `}</style>
 
 <Block>
-    <Prose>
-        ## Connecting Disaster Recovery with Environmental Justice: Hurricane María
+  <Prose>
+    ## Connecting Disaster Recovery with Environmental Justice: Hurricane María
 
-        Hurricane María made landfall in Puerto Rico as a Category 4 or 5 hurricane on September 20, 2017, leaving a path of destruction in its wake. [Over 1.5 million people on the island lost power, leading to the longest blackout in US history](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0218883). Although efforts to repair the damage on the island were extensive, the [areas with the most severe and prolonged impacts were areas of lower socioeconomic status](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0218883). These communities lacked the resources and the representation to repair damage quickly, leading to long-term lack of access to electricity, water, and other critical supplies.
+    Hurricane María made landfall in Puerto Rico as a Category 4 or 5 hurricane on September 20, 2017, leaving a path of destruction in its wake. [Over 1.5 million people on the island lost power, leading to the longest blackout in US history](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0218883). Although efforts to repair the damage on the island were extensive, the [areas with the most severe and prolonged impacts were areas of lower socioeconomic status](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0218883). These communities lacked the resources and the representation to repair damage quickly, leading to long-term lack of access to electricity, water, and other critical supplies.
 
-        NASA hosts a wide variety of continuous Earth observation data useful in environmental justice research. This dashboard features a selection of NASA datasets from across the Agency, including socioeconomic data, Earth observation analysis, and other combined datasets. These tools allow users to visualize and download data to understand the environmental issues brought on by Hurricane María. Merging Earth data and socioeconomic data can help communities like those in Puerto Rico to better prepare for and respond to future natural disasters.
+    NASA hosts a wide variety of continuous Earth observation data useful in environmental justice research. This dashboard features a selection of NASA datasets from across the Agency, including socioeconomic data, Earth observation analysis, and other combined datasets. These tools allow users to visualize and download data to understand the environmental issues brought on by Hurricane María. Merging Earth data and socioeconomic data can help communities like those in Puerto Rico to better prepare for and respond to future natural disasters.
 
-        ## Connecting Disaster Recovery with Environmental Justice: Hurricane Ida
+    ## Connecting Disaster Recovery with Environmental Justice: Hurricane Ida
 
-        Known as the city that can barely catch its breath between storms, New Orleans experienced another devastating event on August 29, 2021 as Hurricane Ida made landfall as a Category 4 hurricane. The effects of the storm were widespread, causing millions of dollars worth of damage and affecting the lives and homes of millions of people.
+    Known as the city that can barely catch its breath between storms, New Orleans experienced another devastating event on August 29, 2021 as Hurricane Ida made landfall as a Category 4 hurricane. The effects of the storm were widespread, causing millions of dollars worth of damage and affecting the lives and homes of millions of people.
 
-        [Disadvantaged communities](https://www.nature.com/articles/d41586-021-02520-8) in Louisiana and across the country already struggle with higher rates of asthma, cancer, and COVID-19 infections. These communities are often hardest-hit by storms like Ida. Research has shown that disadvantaged communities often receive less federal aid than other communities, only prolonging their hardships. NASA is prioritizing open access to environmental justice data such as the datasets in this dashboard in an effort to help communities better prepare for and respond to natural disasters and to help shed light on cases of environmental injustice.
-
-        ## The Data
-
-        The Interagency Implementation and Advanced Concepts Team (IMPACT), based at NASA’s Marshall Space Flight Center in Huntsville, Alabama, undertook an experimental study to determine if the application of artificial intelligence to NASA satellite images could accurately detect the number of blue tarps deployed on rooftops in the aftermath of hurricanes such as María and Ida as a way of predicting the relative severity of damage experienced by the respective local communities. Correlating these detections over time by zip codes and cross-referencing socio-economic data (such as that contained in the Visualization, Exploration, and Data Analysis (VEDA) dashboard), relationships between socio-economic factors and disaster recovery can be identified.
-
-    </Prose>
-
+    [Disadvantaged communities](https://www.nature.com/articles/d41586-021-02520-8) in Louisiana and across the country already struggle with higher rates of asthma, cancer, and COVID-19 infections. These communities are often hardest-hit by storms like Ida. Research has shown that disadvantaged communities often receive less federal aid than other communities, only prolonging their hardships. NASA is prioritizing open access to environmental justice data such as the datasets in this dashboard in an effort to help communities better prepare for and respond to natural disasters and to help shed light on cases of environmental injustice.
+    
+  </Prose>
 </Block>
 
-<Block>
+<Block type='full'>
+  <Prose>
+    ### Night Light Detection
+
+    **Shining Light on the Aftermath of Hurricanes**
+
+    30-meter resolution Black Marble HD nighttime lights were visualized for New Orleans, LA and Puerto Rico to highlight the impacts and recovery from the landfalls of Hurricane Ida and Hurricane Maria respectively. For each natural disaster, there is a pre-, during-, and post-event image for baseline comparisons. Within the night lights data layer, brighter areas indicate locations with higher light emissions. The observation data captures how the intensity and distribution of night lights changed during the recovery efforts.
+
+    **Additional Resources**
+
+    Explore the Missions
+    https://blackmarble.gsfc.nasa.gov/
+
+    NASA Features
+    https://www.earthobservatory.nasa.gov/images/144371/night-lights-show-slow-recovery-from-maria
+    https://earthobservatory.nasa.gov/images/148777/satellite-observes-power-outages-in-new-orleans
+  </Prose>
+  <Figure>
+    <Map
+      datasetId='nighttime-lights-ej'
+      layerId='nightlights-hd-1band'
+      zoom={9}
+      center={[-66.45,18.22]}
+      dateTime='2017-07-21'
+      compareDateTime='2017-09-20'
+    />
+    <Caption 
+      attrAuthor='NASA' 
+      attrUrl='https://nasa.gov/'
+    >
+      Comparison of nightlights data for Puerto Rico pre-landfall (17 July 2017) and post-landfall (20 September 2017) for Hurricane Maria.
+    </Caption> 
+  </Figure>
+</Block>
+
+<Block type='full'>
+  <Prose>
+    ### Flood Detection
+
+    **Watching the Waters Recede**
+    Harmonized Landsat Sentinel-2 (HLS) imagery shows the impact of flooding for Hurricanes Maria and Ida. This data supports disaster recovery and associated environmental justice issues as the degree and extent of flooding can be monitored in support of recovery efforts. The imagery displayed is a shortwave infrared (SWIR) false color composite that provides enhanced contrast to detect flood extent. In SWIR false color composite imagery, water is identified by dark blue colors, vegetation is bright green, clouds are white, and ice is blue.
+
+    **Additional Resources**
+    [HLSL30 Dataset Landing Page](https://lpdaac.usgs.gov/products/hlsl30v002/)
+    [HLSS30 Dataset Landing Page](https://lpdaac.usgs.gov/products/hlss30v002/)
+    [HLS Webinar with LPDAAC](https://www.youtube.com/watch?v=N2S4KGNo_XY)
+
+  </Prose>
+  <Figure>
+    <Map
+      datasetId='hls_events'
+      layerId='hls-l30-002-ej'
+      dateTime='2017-08-25'
+      zoom={11}
+      center={[-65.97,18.41]}
+      compareDateTime='2017-09-26'
+    />
+    <Caption
+      attrAuthor='NASA'
+      attrUrl='https://nasa.gov/'
+    >
+      Harmonized Landsat 8 SWIR image provides enhanced contrast to detect flood extent in Puerto Rico before and after Hurricane Maria in 2017.
+    </Caption>
+  </Figure>
+</Block>
+
+<Block type='full'>
+  <Prose>
+    ### Blue Tarp Detection
+
+    **Overview**
+
+    The Interagency Implementation and Advanced Concepts Team (IMPACT), based at NASA’s Marshall Space Flight Center in Huntsville, Alabama, undertook an experimental study to determine if the application of artificial intelligence to NASA satellite images could accurately detect the number of blue tarps deployed on rooftops in the aftermath of hurricanes such as María and Ida as a way of predicting the relative severity of damage experienced by the respective local communities. Correlating these detections over time by zip codes and cross-referencing socio-economic data (such as that contained in the Visualization, Exploration, and Data Analysis (VEDA) dashboard), relationships between socio-economic factors and disaster recovery can be identified.
+
+  </Prose>
   <Figure>
     <Map
       datasetId="ps_blue_tarp_detections"
