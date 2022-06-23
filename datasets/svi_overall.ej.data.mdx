@@ -30,7 +30,7 @@ layers:
       layerId: social-vulnerability-index-overall
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+          return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
         }
     legend:
       type: gradient
@@ -62,7 +62,7 @@ layers:
       layerId: social-vulnerability-index-overall-nopop
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+          return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
         }
     legend:
       type: gradient
@@ -97,16 +97,16 @@ The SVI Overall Score provides the overall, summed social vulnerability score fo
   <Map
     datasetId='svi-overall'
     layerId='social-vulnerability-index-overall'
-    dateTime='2018-01-01'
+    dateTime='2016-01-01'
     zoom={8}
     center={[-95.37,29.76]}
-    isComparing
+    compareDateTime='2018-01-01'
   />
   <Caption
     attrAuthor='NASA'
     attrUrl='https://nasa.gov/'
   >
-    Comparison of the overall social vulnerability index for Houston, TX between 2016 and 2018.
+    Comparison of the overall social vulnerability index for Houston, TX between 2016 and 2018. For this color scale, 0 corresponds to less vulnerable and 1 is most vulnerable.
   </Caption>
 </Figure>
 <Prose>

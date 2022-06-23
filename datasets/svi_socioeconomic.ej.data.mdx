@@ -30,7 +30,7 @@ layers:
       layerId: social-vulnerability-index-socioeconomic
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+          return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
         }
     legend:
       type: gradient
@@ -62,7 +62,7 @@ layers:
       layerId: social-vulnerability-index-socioeconomic-nopop
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+          return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
         }
     legend:
       type: gradient
@@ -102,7 +102,7 @@ The Economic Status Score, like the three other themes, is used in observing a c
     attrAuthor='NASA'
     attrUrl='https://nasa.gov/'
   >
-    Socioeconomic vulnerability score for Huntsville, AL for 2018.
+    Socioeconomic vulnerability score for Huntsville, AL for 2018. For this color scale, 0 corresponds to less vulnerable and 1 is most vulnerable.
   </Caption>
 </Figure>
 </Block>
@@ -112,10 +112,10 @@ The Economic Status Score, like the three other themes, is used in observing a c
   <Map
     datasetId='svi-socioeconomic'
     layerId='social-vulnerability-index-socioeconomic'
-    dateTime='2018-01-01'
+    dateTime='2016-01-01'
     zoom={10}
     center={[-122.36,37.77]}
-    isComparing
+    compareDateTime='2018-01-01'
   />
   <Caption
     attrAuthor='NASA'
@@ -138,17 +138,5 @@ The Socioeconomic Status score displays the vulnerability in a given county trac
 2. Center for International Earth Science Information Network, (CIESIN), Columbia University. 2021. Documentation for the U.S. Social Vulnerability Index Grids. Palisades, NY: NASA Socioeconomic Data and Applications Center (SEDAC). https://doi.org/10.7927/fjr9-a973. Accessed 13 May 2022.
 
 3. Flanagan, Barry E.; Gregory, Edward W.; Hallisey, Elaine J.; Heitgerd, Janet L.; and Lewis, Brian (2011) "A Social Vulnerability Index for Disaster Management," Journal of Homeland Security and Emergency Management: Vol. 8: Iss. 1, Article 3. DOI: 10.2202/1547-7355.1792 Available at: http://www.bepress.com/jhsem/vol8/iss1/3
-</Prose>
-</Block>
-
-<Block>
-<Prose>
-## Additional resources
-### NASA Features
-
-### Explore the data
-
-### Explore the Missions
-
 </Prose>
 </Block>

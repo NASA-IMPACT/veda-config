@@ -326,9 +326,11 @@ For example, if you put an image `image.jpg` inside of the folder where your mdx
 
 ## Chart
 
+![Screenshot of chart component with sample data](./media/chart.png)
+
 | Option | Type | Default | Description|
 |---|---|---|---|
-| dataPath | string | `''` | Path for data. The data should be either in `csv` or `json` format. |
+| dataPath | string | `''` | Path for data. The data should be either in `csv` or `json` format. Use parcel's URL builder to use local file. (Refer to the example below.) |
 | xKey | string | `''` | Attribute to be used for x axis. |
 | yKey | string | `''` | Attribute to be used for y axis |
 | idKey | string | `''` | Attribute for each data point |
@@ -337,13 +339,13 @@ For example, if you put an image `image.jpg` inside of the folder where your mdx
 | highlightEnd | string | `''` | End point of x axis to draw highlighted area.
 | highlightLabel | string | `''` | Label for highlighted area. |
 
-Syntax for Chart used in Wide Figure Block looks like this
+Syntax for Chart used in Wide Figure Block looks like this. Check how the data is formatted in [example.csv](./media/example.csv).
 
 ```jsx
 <Block type='wide'>
   <Figure>
     <Chart
-      dataPath='example.csv'
+      dataPath={new URL('./example.csv', import.meta.url).href}
       dateFormat="%m/%d/%Y" 
       idKey='County' 
       xKey='Test Date' 

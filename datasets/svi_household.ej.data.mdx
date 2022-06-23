@@ -30,7 +30,7 @@ layers:
       layerId: social-vulnerability-index-household
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+          return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
         }
     legend:
       type: gradient
@@ -62,7 +62,7 @@ layers:
       layerId: social-vulnerability-index-household-nopop
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+          return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
         }
     legend:
       type: gradient
@@ -97,16 +97,16 @@ The Household Composition & Disability Score (HCDS) is one of the four themes us
   <Map
     datasetId='svi-household'
     layerId='social-vulnerability-index-household'
-    dateTime='2016-01-01'
+    dateTime='2014-01-01'
     zoom={10}
     center={[-90.18,29.96]}
-    isComparing
+    compareDateTime='2016-01-01'
   />
   <Caption
     attrAuthor='NASA'
     attrUrl='https://nasa.gov/'
   >
-    Comparison of the household composition and disability score for New Orleans, LA between 2014 and 2016.
+    Comparison of the household composition and disability score for New Orleans, LA between 2014 and 2016. For this color scale, 0 corresponds to least vulnerable and 1 is most vulnerable.
   </Caption>
 </Figure>
 <Prose>

@@ -34,7 +34,7 @@ layers:
       layerId: social-vulnerability-index-housing
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+          return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
         }
     legend:
       type: gradient
@@ -66,7 +66,7 @@ layers:
       layerId: social-vulnerability-index-housing-nopop
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+          return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
         }
     legend:
       type: gradient
@@ -101,16 +101,16 @@ The Housing Type & Transportation Score (HTTS) is one of the four themes used in
   <Map
     datasetId='svi-housing'
     layerId='social-vulnerability-index-housing'
-    dateTime='2018-01-01'
+    dateTime='2016-01-01'
     zoom={9}
     center={[-75.32,39.98]}
-    isComparing
+    compareDateTime='2018-01-01'
   />
   <Caption
     attrAuthor='NASA'
     attrUrl='https://nasa.gov/'
   >
-    Comparison of the housing and transportation score for Philadelphia, PA between 2016 and 2018.
+    Comparison of the housing and transportation score for Philadelphia, PA between 2016 and 2018. For this color scale, 0 corresponds to least vulnerable and 1 is most vulnerable.
   </Caption>
 </Figure>
 <Prose>
