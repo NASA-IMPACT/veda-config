@@ -31,7 +31,7 @@ thematics:
   }
   @media only screen and (max-width: 544px) {
     .hurricane-tables {
-      display: block;
+      flex-flow: column;
     }
   }
 `}</style>
@@ -86,18 +86,6 @@ thematics:
 </Block>
 
 <Block type='full'>
-  <Prose>
-    ### Flood Detection
-
-    **Watching the Waters Recede**
-    Harmonized Landsat Sentinel-2 (HLS) imagery shows the impact of flooding for Hurricanes Maria and Ida. This data supports disaster recovery and associated environmental justice issues as the degree and extent of flooding can be monitored in support of recovery efforts. The imagery displayed is a shortwave infrared (SWIR) false color composite that provides enhanced contrast to detect flood extent. In SWIR false color composite imagery, water is identified by dark blue colors, vegetation is bright green, clouds are white, and ice is blue.
-
-    **Additional Resources**
-    [HLSL30 Dataset Landing Page](https://lpdaac.usgs.gov/products/hlsl30v002/)
-    [HLSS30 Dataset Landing Page](https://lpdaac.usgs.gov/products/hlss30v002/)
-    [HLS Webinar with LPDAAC](https://www.youtube.com/watch?v=N2S4KGNo_XY)
-
-  </Prose>
   <Figure>
     <Map
       datasetId='hls_events'
@@ -114,6 +102,18 @@ thematics:
       Harmonized Landsat 8 SWIR image provides enhanced contrast to detect flood extent in Puerto Rico before and after Hurricane Maria in 2017.
     </Caption>
   </Figure>
+  <Prose>
+    ### Flood Detection
+
+    **Watching the Waters Recede**
+    Harmonized Landsat Sentinel-2 (HLS) imagery shows the impact of flooding for Hurricanes Maria and Ida. This data supports disaster recovery and associated environmental justice issues as the degree and extent of flooding can be monitored in support of recovery efforts. The imagery displayed is a shortwave infrared (SWIR) false color composite that provides enhanced contrast to detect flood extent. In SWIR false color composite imagery, water is identified by dark blue colors, vegetation is bright green, clouds are white, and ice is blue.
+
+    **Additional Resources**
+    [HLSL30 Dataset Landing Page](https://lpdaac.usgs.gov/products/hlsl30v002/)
+    [HLSS30 Dataset Landing Page](https://lpdaac.usgs.gov/products/hlss30v002/)
+    [HLS Webinar with LPDAAC](https://www.youtube.com/watch?v=N2S4KGNo_XY)
+
+  </Prose>
 </Block>
 
 <Block type='full'>
@@ -256,12 +256,8 @@ thematics:
 </table>
 
 </div>
-    <Caption 
-      attrAuthor='NASA' 
-      attrUrl='https://nasa.gov/'
-    >
-      Estimated damage by zip code
-    </Caption> 
+  _Estimated damage by zip code_
+
     A statistical analysis of the rankings demonstrates a high degree of correlation between the maximum number of detected blue tarp counts in each zip code and the level of estimated damage. The three instances where the order of rows should have been reversed, the difference in the blue tarp counts between each pair was not significant:
 
     * 70114(H) with 70119(M) p=0.177;
@@ -391,12 +387,8 @@ thematics:
   </tbody>
 </table>
 </div>
-    <Caption 
-      attrAuthor='NASA' 
-      attrUrl='https://nasa.gov/'
-    >
-      Estimated damage based on number of tarps detected
-    </Caption> 
+  
+  _Estimated damage based on number of tarps detected_
   </Prose>
 </Block>
 
