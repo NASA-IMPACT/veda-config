@@ -12,6 +12,7 @@ thematics:
   - environmental-justice
 layers:
   - id: hls-l30-002-ej
+    stacCol: hls-l30-002-ej
     name: HLS Landsat SWIR
     type: raster
     description: 'Harmonized Landsat SWIR: small subset near Puerto Rico'
@@ -32,6 +33,7 @@ layers:
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }
   - id: hls-s30-002-ej
+    stacCol: hls-s30-002-ej
     name: HLS Sentinel-2 SWIR
     type: raster
     description: 'Harmonized Sentinel-2 SWIR: small subset near Puerto Rico'
