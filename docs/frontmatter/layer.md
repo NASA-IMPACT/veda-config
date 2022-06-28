@@ -26,7 +26,8 @@ legend: Legend
 
 **id**  
 `string`  
-Id of the layer. Must be unique in a dataset.  
+Id of the layer, using lowercase characters and dashes (Example: `no2-monthly-diff`).  
+Must be unique in a dataset.  
 
 **stacCol**  
 `string`  
