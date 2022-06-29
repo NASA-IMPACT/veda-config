@@ -8,6 +8,7 @@
 
 ```yaml
 id: string
+stacCol: string
 name: string
 type: string
 initialDatetime: 'oldest' | 'newest' | Date(YYYY-MM-DD) = 'newest'
@@ -25,8 +26,12 @@ legend: Legend
 
 **id**  
 `string`  
-Id of the layer. Must be unique.  
-⚠️ The id of a layer must match the STAC collection.
+Id of the layer, using lowercase characters and dashes (Example: `no2-monthly-diff`).  
+Must be unique in a dataset.  
+
+**stacCol**  
+`string`  
+The stac collection that this layer should load.
 
 **name**  
 `string`  
