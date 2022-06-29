@@ -55,6 +55,18 @@ Name of this thematic area. This is used to reference to this thematic area in t
 `string`  
 Brief description of this thematic area. This is displayed on cards and the header of a thematic area.
 
+**usage**
+`object`
+Link to examples for how to use this dataset.
+
+**usage.url**
+`string`
+URL for example on how to use this dataset.
+
+**usage.title**
+`string`
+Title of the page linked to for an example of how to use this dataset.
+
 **media**  
 `Media`  
 Image to identify this resource. See [media.md](./frontmatter/media.md).
