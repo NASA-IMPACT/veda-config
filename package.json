@@ -16,8 +16,7 @@
     "node": "16.x"
   },
   "devDependencies": {
-    "dotenv": "^10.0.0",
-    "surge": "^0.23.1"
+    "dotenv": "^10.0.0"
   },
   "alias": {
     "react": "./.delta/ui/node_modules/react",
