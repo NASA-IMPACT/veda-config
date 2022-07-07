@@ -332,12 +332,18 @@ For example, if you put an image `image.jpg` inside of the folder where your mdx
 |---|---|---|---|
 | dataPath | string | `''` | Path for data. The data should be either in `csv` or `json` format. Use parcel's URL builder to use local file. (Refer to the example below.) |
 | xKey | string | `''` | Attribute to be used for x axis. |
-| yKey | string | `''` | Attribute to be used for y axis |
-| idKey | string | `''` | Attribute for each data point |
+| yKey | string | `''` | Attribute to be used for y axis. |
+| idKey | string | `''` | Attribute for each data point. (The data will be sorted alphabetical order.) |
 | dateFormat | string | `''` | Template for how temporal date is formatted. This follows [d3's convention for date format](https://github.com/d3/d3-time-format#locale_format) |
+| xAxisLabel | string | `''` | Label for x axis. |
+| yAxisLabel | string | `''` | Label for y axis. Use this attribute if the value needs unit such as `%`. |
+| altTitle | string | `''` | Title of the chart. The title will be used for users that can't access the chart visually, such as screen reader users. |
+| altDesc | string | `''` | Description of the chart. Put the findings from the chart. (Avoid a description that can be accessed through caption or title such as 'covid case chart'. Put what you are trying to deliver through the chart such as 'covid case spiked throughout all the counties in New York state.') |
+| colors | array | `undefined` | Colors to use for lines. css color name, hex value are allowed. The order of colors need to match to the number of lines. (Mind that the data is sorted alphabetically. So if you want to give `red` color for `apple` and `yellow` for `lemon`, you will need to pass [`red`,`yellow`] for color values. ) |
+| colorScheme | string | `'viridis'` | One of [d3 chromatic diverging](https://github.com/d3/d3-scale-chromatic#diverging) or [Sequential color scheme](https://github.com/d3/d3-scale-chromatic#sequential-multi-hue). Use only the name of the scheme. ex. if you want `schemePuOr`, use `puOr`. If `colors` is defined, this attribute will be ignored.|
 | highlightStart | string | `''` | Start point for x axis to draw highlighted area. |
 | highlightEnd | string | `''` | End point of x axis to draw highlighted area.
-| highlightLabel | string | `''` | Label for highlighted area. |
+| highlightLabel | string | `''` | Label for highlighted area. This label will sit on top of the legend.|
 
 Syntax for Chart used in Wide Figure Block looks like this. Check how the data is formatted in [example.csv](./media/example.csv).
 
