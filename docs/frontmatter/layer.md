@@ -2,6 +2,7 @@
 
 - [layer](#layer)
   - [Properties](#properties)
+    - [Projection](#projection)
     - [Legend](#legend)
     - [Compare](#compare)
   - [Function values](#function-values)
@@ -78,15 +79,15 @@ center: [int, int]
 parallels: [int, int]
 ```
 
-**legend.name**  
+**projection.name**  
 `albers | equalEarth | equirectangular | lambertConformalConic | mercator | naturalEarth | winkelTripel | globe`  
 The name of the projection to set.
 
-**legend.center**  
+**projection.center**  
 `[int, int]`  
 Projection center. Required for Conic projections like `lambertConformalConic` and `albers`.
 
-**legend.parallels**  
+**projection.parallels**  
 `[int, int]`  
 Projection parallels. Required for Conic projections like `lambertConformalConic` and `albers`.
 

@@ -446,8 +446,8 @@ The scrollytelling is defined as a series os `Chapters` inside the `Scrollytelli
 | datetime | boolean | Optional. If the layer to display has a temporal extent, specify the datetime |
 | showBaseMap | boolean | Optional. If there is a need to show basemap without any additional layers ontop, pass `true`. (datasetId, layerId can be omitted when `showBaseMap` is `true`) |
 | projectionName | string | `mercator` | The name of the [projection](./frontmatter/layer.md#projections) to load. |
-| projectionCenter | [int, int] | `''` | Projection center for Conic projections |
-| projectionParallels | [int, int] | `''` | Projection parallels for Conic projections |
+| projectionCenter | [int, int] | Projection center for Conic projections |
+| projectionParallels | [int, int] | Projection parallels for Conic projections |
 
 
 🧑‍🎓 **Notes on projections**  
