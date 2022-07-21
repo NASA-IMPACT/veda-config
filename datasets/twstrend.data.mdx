@@ -25,24 +25,40 @@ layers:
       rescale:
         - -1
         - 1
+      nodata: -9999
     legend:
       type: gradient
       label: Trend in TWS Anomaly 
       min: "-1"
       max: "1"
       stops:
-      - "#313695"
-      - "#74add1"
-      - "#e0f3f8"
-      - "#fee090"
-      - "#f46d43"
       - "#a50026"
+      - "#f46d43"
+      - "#fee090"
+      - "#e0f3f8"
+      - "#74add1"
+      - "#313695"
 ---
-<Block>
+<Block type='full'>
 <Prose>
 ## Overview
 Terrestrial water storage (TWS) is defined as the summation of all water on the land surface and in the subsurface. It includes surface soil moisture, root zone soil moisture, groundwater, snow, ice, water stored in the vegetation, river and lake water. 
 </Prose>
+  <Figure>
+  <Map
+    datasetId='tws-trend'
+    layerId='lis-tws-trend'
+    dateTime='2001-01-01'
+    zoom={4}
+    center={[-116,36]}
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+  Depleting TWS over CA captured by negative TWS anomaly trends
+</Caption>
+  </Figure>
 </Block>
 
 <Block>
@@ -65,7 +81,7 @@ TWS is modeled using Noah-MP land surface model (LSM) within LIS framework by as
     attrAuthor='NASA'
     attrUrl='https://nasa.gov/'
   >
-  Trend in TWS anomalies over India 
+  Trend in TWS anomalies over India showing large groundwater extraction leading to depleting TWS
 </Caption>
   </Figure>
 <Prose>
@@ -78,6 +94,8 @@ The TWS anomalies are calculated as differences of raw TWS with the climatology 
 <Block>
 <Prose>
 ## Additional resources
+* [EIS Freshwater](https://freshwater.eis.smce.nasa.gov/)
+
 * [Land Information System](https://lis.gsfc.nasa.gov/)
 
 ### Explore the Missions
