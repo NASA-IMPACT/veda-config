@@ -1,15 +1,21 @@
 # media
 `object`  
-Controls the image used to identify this resource. This image will show up in the cards and whenever there’s the need to visually identify the resource. Consider optimizing your image by adjusting quality resizing the size with  before using it. You can use the tools like below to optimize your image.
+Controls the image used to identify this resource. This image will show up in the cards and whenever there’s the need to visually identify the resource. 
+
+Consider optimizing your image by adjusting quality resizing the size with  before using it. 
+
+
+You can use the tools like below to optimize your image.
 
 ### GUI
 - [ImageOptim](https://imageoptim.com/mac)
+- [Compressor.io](https://compressor.io/)
 
 ### CLI
 - [imagemagick](https://imagemagick.org/index.php)
 - [pngquant](https://pngquant.org/)
   
-This is a one liner command that resizes `example.png` to 70% of the original size, and drops the quality then compress it  (using  both `imagemagick` and `pngquant`).
+This is an example one liner command that resizes `example.png` to 70% of the original size, drops the quality then compresses it  (using  both `imagemagick` and `pngquant`). Tweak the parameters as needed. 
 
 `mogrify -resize 70% -quality 70 example.png && pngquant example.png --ext .png --force`
 
