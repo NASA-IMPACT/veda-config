@@ -5,7 +5,7 @@
   - [Datasets](#datasets)
   - [Discoveries](#discoveries)
 
-Delta is consist of Thematic Areas, Datasets, and Discoveries. Each dataset and discovery belongs to a thematic area (or multiple thematic areas), and discovery can use datasets. When you are adding contents using published datasets in Delta, you would need to know which thematic area it belongs to, and if you need to create a new thematic area.
+Delta consists of Thematic Areas, Datasets, and Discoveries. Each dataset and discovery belongs to a thematic area (or multiple thematic areas), and discovery can use datasets. When you are adding contents using published datasets in Delta, you would need to know which thematic area it belongs to, and if you need to create a new thematic area.
 
 Each piece of content is written in [MDX](https://mdxjs.com/docs/what-is-mdx/#what-is-mdx) with configuration frontmatter. Frontmatter is separate by a set of `---` from MDX content.  
 
@@ -54,6 +54,18 @@ Name of this thematic area. This is used to reference to this thematic area in t
 **description**  
 `string`  
 Brief description of this thematic area. This is displayed on cards and the header of a thematic area.
+
+**usage**
+`object`
+Link to examples for how to use this dataset.
+
+**usage.url**
+`string`
+URL for example on how to use this dataset.
+
+**usage.title**
+`string`
+Title of the page linked to for an example of how to use this dataset.
 
 **media**  
 `Media`  

@@ -4,6 +4,9 @@ name: 'Nitrogen Dioxide'
 featuredOn:
   - covid-19
 description: "Since the outbreak of the novel coronavirus, atmospheric concentrations of nitrogen dioxide have changed by as much as 60% in some regions."
+usage:
+  url: 'https://nasa-impact.github.io/veda-documentation/timeseries-rioxarray-stackstac.html'
+  title: 'Time series using STAC API statistics endpoints'
 media:
   src: ::file ./no2--dataset-cover.jpg
   alt: Power plant shooting steam at the sky.
@@ -16,6 +19,7 @@ thematics:
   - covid-19
 layers:
   - id: no2-monthly
+    stacCol: no2-monthly
     name: No2
     type: raster
     description: 'Global nitrogen dioxide data organized into monthly metrics'
@@ -48,6 +52,7 @@ layers:
         - "#FDDCC9"
         - "#DD7059"
   - id: no2-monthly-diff
+    stacCol: no2-monthly-diff
     name: No2 (Diff)
     type: raster
     description: 'Global nitrogen dioxide data which displays the difference from the same time 1 year ago'
