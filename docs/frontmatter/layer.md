@@ -2,6 +2,7 @@
 
 - [layer](#layer)
   - [Properties](#properties)
+    - [Projection](#projection)
     - [Legend](#legend)
     - [Compare](#compare)
   - [Function values](#function-values)
@@ -13,6 +14,7 @@ name: string
 type: string
 initialDatetime: 'oldest' | 'newest' | Date(YYYY-MM-DD) = 'newest'
 description: string
+projection: Projection
 zoomExtent: [int, int] | null | fn(bag)
 sourceParams:
   [key]: value | fn(bag)
@@ -64,6 +66,30 @@ These values may vary greatly depending on the layer being added but some may be
 - **colormap_name**  
   `string`  
   The colormap to use for the layer. One of https://cogeotiff.github.io/rio-tiler/colormap/#default-rio-tilers-colormaps
+
+### Projection
+
+**projection**  
+`object`  
+Define the starting [projection](https://docs.mapbox.com/mapbox-gl-js/guides/projections/) to use for this layer. The user will still be able to change the projection as they explore the map, but an initial one may be defined.
+
+```yaml
+name: 'albers' | 'equalEarth' | 'equirectangular' | 'lambertConformalConic' | 'mercator' | 'naturalEarth' | 'winkelTripel' | 'globe'
+center: [int, int]
+parallels: [int, int]
+```
+
+**projection.name**  
+`albers | equalEarth | equirectangular | lambertConformalConic | mercator | naturalEarth | winkelTripel | globe`  
+The name of the projection to set.
+
+**projection.center**  
+`[int, int]`  
+Projection center. Required for Conic projections like `lambertConformalConic` and `albers`.
+
+**projection.parallels**  
+`[int, int]`  
+Projection parallels. Required for Conic projections like `lambertConformalConic` and `albers`.
 
 ### Legend
 
