@@ -49,7 +49,7 @@ thematics:
 <Block>
   <Figure>
     <Image
-      src={new URL('.//cyan-product.png', import.meta.url).href}
+      src={new URL('./cyan-product.png', import.meta.url).href}
       alt='CyAN product for August and September 2021 for the Great Lakes region'
     />
     <Caption attrAuthor='Bridget Seegers, NASA' attrUrl='https://nasa.gov/'>
@@ -62,3 +62,20 @@ thematics:
     Satellite data and models can be combined with water samples to identify and eventually predict HAB occurrences to help us understand why they happen and to mitigate the effects. Ultimately, this is also important to better understand exchange of carbon and nutrients between the land, the atmosphere, and aquatic environments.
   </Prose>
 </Block>
+
+<Block>
+  <Figure>
+    <CompareImage 
+      leftImageSrc={new URL('./ocean-true-color.png', import.meta.url).href}
+      leftImageAlt='True color lake view from satellite'
+      leftImageLabel='True color'
+      rightImageSrc={new URL('./ocean-cyan.png', import.meta.url).href}
+      rightImageAlt='CyAN satellite product'
+      rightImageLabel='CyAN satellite product'
+    />
+    <Caption attrAuthor='Development Seed' attrUrl='https://developmentseed.org'>
+      True color and CyAN satellite product estimating cyanobacteria in the water from September 2, 2021. Images are produced by the Cyanobacteria Assessment Network (CyAN) using data from OLCI on Sentinel-3A and 3B.
+    </Caption>
+  </Figure>
+</Block>
+
