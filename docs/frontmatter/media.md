@@ -2,8 +2,8 @@
 `object`  
 Controls the image used to identify this resource. This image will show up in the cards and whenever there’s the need to visually identify the resource. 
 
-Consider optimizing your image by adjusting quality resizing the size with  before using it. 
-
+Consider optimizing your image by adjusting the quality and resizing it before using it.  
+It is important that the images are produced with a 2:1 ratio and a size of at least (2000x1000 px). Images should not weigh more than 500KB.
 
 You can use the tools like below to optimize your image.
 
