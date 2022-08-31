@@ -377,7 +377,7 @@ Syntax for Chart used in Wide Figure Block looks like this. Check how the data i
 | dateTime | string | `''` | Optional. This string should follow `yyyy-mm-dd` format. When omitted, the very first available dateTime for the dataset will be displayed |
 | compareDateTime | string | `''` | Optional. This string should follow `yyyy-mm-dd` format. A date should only be specified if you wish to display the comparison slider |
 | compareLabel | string | `''` | Text to display over the map when the comparison is active. If is for example used to indicate what dates are being compared. If not provided it will default to the value specified in the [dataset layer configuration](./frontmatter/layer.md#compare) |
-| projectionName | string | `mercator` | The name of the [projection](./frontmatter/layer.md#projections) to load. |
+| projectionId | string | `mercator` | The id of the [projection](./frontmatter/layer.md#projections) to load. |
 | projectionCenter | [int, int] | `''` | Projection center for Conic projections |
 | projectionParallels | [int, int] | `''` | Projection parallels for Conic projections |
 | allowProjectionChange | boolean | `true` | Whether or not the user can change the position using a projection selector dropdown added to the map |
