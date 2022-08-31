@@ -1,0 +1,64 @@
+---
+id: grdi-v1
+name: "GRDI V1"
+description: "Global Gridded Relative Deprivation Index (GRDI) V1"
+media:
+  src: ::file ./zz_placeholder.png
+  alt: alt property text
+  # author:
+  #   name:
+  #   url:
+thematics:
+  - environmental-justice
+layers:
+  - id: grdi-v1-built
+    stacCol: grdi-v1-built
+    name: GRDI v1 built-up area
+    type: raster
+    description: "Global Gridded Relative Deprivation Index (GRDI) built-up area (BUILT) Constituent raster, indexed 0 to 100"
+    zoomExtent:
+      - 0
+      - 16
+    # sourceParams:
+    #   colormap_name: inferno
+    #   rescale:
+    #     - 0
+    #     - 255
+    # legend:
+    #   type: gradient
+    #   min: Less
+    #   max: More
+    #   stops:
+    #     - '#08041d'
+    #     - '#1f0a46'
+    #     - '#52076c'
+    #     - '#f57c16'
+    #     - '#f7cf39'
+  - id: grdi-v1-raster
+    stacCol: grdi-v1-raster
+    name: GRDI v1 raster
+    type: raster
+    description: "Global Gridded Relative Deprivation Index (GRDI), V1 raster"
+    zoomExtent:
+      - 0
+      - 16
+    # sourceParams:
+    #   colormap_name: inferno
+    #   rescale:
+    #     - 0
+    #     - 255
+    # legend:
+    #   type: gradient
+    #   min: Less
+    #   max: More
+    #   stops:
+    #     - '#08041d'
+    #     - '#1f0a46'
+    #     - '#52076c'
+    #     - '#f57c16'
+    #     - '#f7cf39'
+---
+
+<Block>
+  <Prose>Add dataset information</Prose>
+</Block>
