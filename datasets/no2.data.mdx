@@ -86,25 +86,24 @@ layers:
     stacCol: OMI_trno2-COG
     name: OMI_trno2 Annual
     type: raster
-    description: "OMI_trno2 - 0.10 x 0.10 Annual as Cloud-Optimized GeoTIFFs (COGs)"
+    description: "NASA OMI/Aura Nitrogen Dioxide (NO2) Total and Tropospheric Column"
     zoomExtent:
       - 0
       - 16
-    # sourceParams:
-    #   colormap_name: inferno
-    #   rescale:
-    #     - 0
-    #     - 255
-    # legend:
-    #   type: gradient
-    #   min: Less
-    #   max: More
-    #   stops:
-    #     - '#08041d'
-    #     - '#1f0a46'
-    #     - '#52076c'
-    #     - '#f57c16'
-    #     - '#f7cf39'
+    sourceParams:
+      colormap_name: reds
+      rescale:
+        - 0
+        - 30E14
+    legend:
+      type: gradient
+      min: 0
+      max: 30e14 mol/cm2
+      stops:
+        - '#ffffff'
+        - '#fdd1bf'
+        - '#e02d26'
+        - '#67000c'
 ---
 
 <Block type='full'>

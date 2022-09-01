@@ -19,23 +19,26 @@ layers:
     zoomExtent:
       - 0
       - 16
-    # sourceParams:
-    #   colormap_name: inferno
-    #   rescale:
-    #     - 0
-    #     - 255
-    # legend:
-    #   type: gradient
-    #   min: Less
-    #   max: More
-    #   stops:
-    #     - '#08041d'
-    #     - '#1f0a46'
-    #     - '#52076c'
-    #     - '#f57c16'
-    #     - '#f7cf39'
+    sourceParams:
+      colormap_name: jet
+      rescale:
+        - 0
+        - 1500
+    legend:
+      type: gradient
+      min: 0
+      max: 1500
+      stops:
+        - "#000083"
+        - "#003caa"
+        - "#05ffff"
+        - "#ffff00"
+        - "#fa0000"
+        - "#800000"
 ---
 
 <Block>
-  <Prose>Add dataset information</Prose>
+  <Prose>
+    Find information at the [Ocean Productivity website](https://sites.science.oregonstate.edu/ocean.productivity/index.php)
+  </Prose>
 </Block>
