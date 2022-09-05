@@ -20,10 +20,12 @@ layers:
       - 0
       - 16
     sourceParams:
-      colormap_name: gray
-      rescale:
-        - 1
-        - 15
+      colormap: '{"1": [120, 120, 120], "2": [130, 65, 0], "3": [66, 207, 56], "4": [245, 239, 0], "5": [241, 89, 32], "6": [168, 0, 0], "7": [0, 143, 201]}'
+      bidx: 1
+      unscale: false
+      resampling: nearest
+      max_size: 1024
+      return_mask: true
     legend:
       type: categorical
       stops:
