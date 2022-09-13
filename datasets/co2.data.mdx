@@ -14,9 +14,10 @@ thematics:
 layers:
   - id: co2-mean
     stacCol: co2-mean
-    name: Mean CO2 concentration
+    name: Mean CO2
     type: raster
     description: "The average background concentration of carbon dioxide (CO₂) in our atmosphere."
+    initialDatetime: newest
     zoomExtent:
       - 0
       - 20
@@ -39,9 +40,10 @@ layers:
         - "#d73027"
   - id: co2-diff
     stacCol: co2-diff
-    name: CO2 diff
+    name: Difference CO2
     type: raster
     description: "The changes in carbon dioxide (CO₂) levels in our atmosphere versus previous years."
+    initialDatetime: newest
     zoomExtent:
       - 0
       - 20
