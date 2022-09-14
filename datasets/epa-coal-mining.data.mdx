@@ -1,0 +1,87 @@
+---
+id: epa-coal-mining
+name: epa-coal-mining
+description: Add dataset description
+media:
+  src: '::file ./zz_placeholder.png'
+  alt: alt property text
+thematics:
+  - eis
+layers:
+  - id: epa-annual-emissions_1b1a_coal_mining_underground
+    stacCol: EPA-annual-emissions_1B1a_Coal_Mining_Underground
+    name: Gridded 2012 EPA Methane Emissions - Underground Coal Mines
+    type: raster
+    description: Emissions from sector 1B1a from underground coal mining.
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      colormap_name: rainbow
+      rescale:
+        - 0
+        - 202263465295872
+    legend:
+      type: gradient
+      min: 0
+      max: 202263465295872
+      stops:
+        - '#60007d'
+        - '#30137d'
+        - '#1960ae'
+        - '#7ac300'
+        - '#f2ce00'
+        - '#ef6a01'
+        - '#cc0019'
+  - id: epa-annual-emissions_1b1a_coal_mining_surface
+    stacCol: EPA-annual-emissions_1B1a_Coal_Mining_Surface
+    name: Gridded 2012 EPA Methane Emissions - Surface Coal Mines
+    type: raster
+    description: Emissions from sector 1B1a from surface coal mining.
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      colormap_name: rainbow
+      rescale:
+        - 0
+        - 100246608674816
+    legend:
+      type: gradient
+      min: 0
+      max: 100246608674816
+      stops:
+        - '#60007d'
+        - '#30137d'
+        - '#1960ae'
+        - '#7ac300'
+        - '#f2ce00'
+        - '#ef6a01'
+        - '#cc0019'
+  - id: epa-annual-emissions_1b1a_abandoned_coal
+    stacCol: EPA-annual-emissions_1B1a_Abandoned_Coal
+    name: Gridded 2012 EPA Methane Emissions - Abandoned Coal Mines
+    type: raster
+    description: Emissions from sector 1B1a from abandoned coal mines.
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      colormap_name: rainbow
+      rescale:
+        - 0
+        - 9016389402624
+    legend:
+      type: gradient
+      min: 0
+      max: 9016389402624
+      stops:
+        - '#60007d'
+        - '#30137d'
+        - '#1960ae'
+        - '#7ac300'
+        - '#f2ce00'
+        - '#ef6a01'
+        - '#cc0019'
+
+---

@@ -1,0 +1,97 @@
+---
+id: epa-combustion
+name: epa-combustion
+description: Add dataset description
+media:
+  src: '::file ./zz_placeholder.png'
+  alt: alt property text
+thematics:
+  - eis
+layers:
+  - id: epa-annual-emissions_1a_combustion_mobile
+    stacCol: EPA-annual-emissions_1A_Combustion_Mobile
+    name: Gridded 2012 EPA Methane Emissions - Mobile Combustion
+    type: raster
+    description: >-
+      Mobile emissions from sector 1A, including on-road and non-road vehicles,
+      waterborne, rail, and air.
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      colormap_name: rainbow
+      rescale:
+        - 0
+        - 112680968192
+    legend:
+      type: gradient
+      min: 0
+      max: 112680968192
+      stops:
+        - '#60007d'
+        - '#30137d'
+        - '#1960ae'
+        - '#7ac300'
+        - '#f2ce00'
+        - '#ef6a01'
+        - '#cc0019'
+  - id: epa-annual-emissions_1a_combustion_stationary
+    stacCol: EPA-annual-emissions_1A_Combustion_Stationary
+    name: Gridded 2012 EPA Methane Emissions - Stationary Combustion
+    type: raster
+    description: >-
+      Stationary (non-mobile) emissions from sector 1A,  including boilers,
+      heaters, furnaces, kilns, ovens, flares, thermal oxidizers, dryers, and
+      any other equipment or machinery that combusts carbon bearing fuels or
+      waste stream materials.
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      colormap_name: rainbow
+      rescale:
+        - 0
+        - 1169998479360
+    legend:
+      type: gradient
+      min: 0
+      max: 1169998479360
+      stops:
+        - '#60007d'
+        - '#30137d'
+        - '#1960ae'
+        - '#7ac300'
+        - '#f2ce00'
+        - '#ef6a01'
+        - '#cc0019'
+  - id: epa-monthly-emissions_1a_combustion_stationary
+    stacCol: EPA-monthly-emissions_1A_Combustion_Stationary
+    name: Gridded 2012 EPA Methane Emissions - Stationary Combustion (monthly)
+    type: raster
+    description: >-
+      Stationary (non-mobile) emissions from sector 1A,  including boilers,
+      heaters, furnaces, kilns, ovens, flares, thermal oxidizers, dryers, and
+      any other equipment or machinery that combusts carbon bearing fuels or
+      waste stream materials.
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      colormap_name: rainbow
+      rescale:
+        - 0
+        - 1179256356864
+    legend:
+      type: gradient
+      min: 0
+      max: 1179256356864
+      stops:
+        - '#60007d'
+        - '#30137d'
+        - '#1960ae'
+        - '#7ac300'
+        - '#f2ce00'
+        - '#ef6a01'
+        - '#cc0019'
+
+---
