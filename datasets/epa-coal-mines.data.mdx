@@ -1,16 +1,19 @@
 ---
-id: epa-coal-mining
-name: epa-coal-mining
+id: epa-coal-mines
+name: EPA - Coal Mines
 description: Add dataset description
 media:
-  src: '::file ./zz_placeholder.png'
-  alt: alt property text
+  src: ::file ./epa-coal-mines--cover.jpg
+  alt: Machinery working a very large coal mine
+  author:
+    name: Dominik Vanyi
+    url: https://unsplash.com/photos/Mk2ls9UBO2E
 thematics:
   - eis
 layers:
   - id: epa-annual-emissions_1b1a_coal_mining_underground
     stacCol: EPA-annual-emissions_1B1a_Coal_Mining_Underground
-    name: Gridded 2012 EPA Methane Emissions - Underground Coal Mines
+    name: Underground Coal Mines
     type: raster
     description: Emissions from sector 1B1a from underground coal mining.
     zoomExtent:
@@ -35,7 +38,7 @@ layers:
         - '#cc0019'
   - id: epa-annual-emissions_1b1a_coal_mining_surface
     stacCol: EPA-annual-emissions_1B1a_Coal_Mining_Surface
-    name: Gridded 2012 EPA Methane Emissions - Surface Coal Mines
+    name: Surface Coal Mines
     type: raster
     description: Emissions from sector 1B1a from surface coal mining.
     zoomExtent:
@@ -60,7 +63,7 @@ layers:
         - '#cc0019'
   - id: epa-annual-emissions_1b1a_abandoned_coal
     stacCol: EPA-annual-emissions_1B1a_Abandoned_Coal
-    name: Gridded 2012 EPA Methane Emissions - Abandoned Coal Mines
+    name: Abandoned Coal Mines
     type: raster
     description: Emissions from sector 1B1a from abandoned coal mines.
     zoomExtent:
@@ -85,3 +88,16 @@ layers:
         - '#cc0019'
 
 ---
+
+<Block>
+  <Prose>
+    ## Gridded 2012 Methane Emissions
+
+    A team at Harvard University along with EPA and other coauthors developed a gridded inventory of U.S. anthropogenic methane emissions with 0.1° x 0.1° spatial resolution, monthly temporal resolution, and detailed scale-dependent error characterization. The inventory is designed to be consistent with the 2016 U.S. [EPA Inventory of U.S. Greenhouse Gas Emissions and Sinks](https://www.epa.gov/ghgemissions/us-greenhouse-gas-inventory-report-1990-2014) estimates for the year 2012, which presents national totals for different source types. The gridded inventory was developed using a wide range of databases at the state, county, local, and point source level to allocate the spatial and temporal distribution of emissions for individual source types.
+
+    This data can be used by researchers to better compare the national-level inventory with measurement results that may be at other scales. Users of this gridded inventory are asked to cite the original reference (Maasakkers et al., 2016) in their publications. Error estimates are given in that reference.
+
+    Paper: [Maasakkers et. al. 2016, A Gridded National Inventory of U.S. Methane Emissions](https://www.epa.gov/ghgemissions/gridded-2012-methane-emissions#paper)
+
+  </Prose>
+</Block>
