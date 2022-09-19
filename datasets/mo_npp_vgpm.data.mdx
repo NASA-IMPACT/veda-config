@@ -1,0 +1,44 @@
+---
+id: npp
+name: "Ocean Net Primary Production"
+description: "Ocean Net Primary Production (NPP)"
+media:
+  src: ::file ./ocean-production--dataset-cover.jpg
+  alt: Rocky ocean shore
+  author:
+    name: Karl Callwood
+    url: https://unsplash.com/photos/Ko1sGLhZm5w
+thematics:
+  - water-quality
+layers:
+  - id: MO_NPP_npp_vgpm
+    stacCol: MO_NPP_npp_vgpm
+    name: Ocean Net Primary Production
+    type: raster
+    description: "Ocean Net Primary Production (NPP)"
+    zoomExtent:
+      - 0
+      - 16
+    sourceParams:
+      colormap_name: jet
+      rescale:
+        - 0
+        - 1500
+    legend:
+      type: gradient
+      min: 0
+      max: 1500
+      stops:
+        - "#000083"
+        - "#003caa"
+        - "#05ffff"
+        - "#ffff00"
+        - "#fa0000"
+        - "#800000"
+---
+
+<Block>
+  <Prose>
+    Find information at the [Ocean Productivity website](https://sites.science.oregonstate.edu/ocean.productivity/index.php)
+  </Prose>
+</Block>
