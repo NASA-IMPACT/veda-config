@@ -1,0 +1,20 @@
+<Block>
+   <Prose>
+    ## Sea level rise off the coast of Bangladesh
+      This chart shows the increase in sea level off the coast of Bangladesh over time.
+      
+      [PLACEHOLDER -- DENIS WILL FILL IN WITH TEXT ABOUT THE CHART]
+
+  </Prose>
+  <Figure>
+    <Chart
+      dataPath={new URL('./ECCO_and_MEaSUREs_SSH.csv', import.meta.url).href}
+      dateFormat="%m/%Y" 
+      idKey='source' 
+      xKey='date' 
+      yKey='SSH (m)' 
+    />
+    <Caption 
+    /> 
+  </Figure>
+</Block>
