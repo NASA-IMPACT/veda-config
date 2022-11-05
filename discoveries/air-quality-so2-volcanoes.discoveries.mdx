@@ -46,7 +46,7 @@ thematics:
       datasetId='so2'
       layerId='OMSO2PCA-COG'
       dateTime='2005-01-01'
-      zoom={5}
+      zoom={3}
       center={[-90.74,14.54]}
       compareDateTime='2021-01-01'
     />
@@ -56,5 +56,24 @@ thematics:
     >
     SO₂ emissions change 2005 and 2021
     </Caption>
+  </Figure>
+</Block>
+
+<Block type='wide'>
+  <Figure>
+    <Chart
+      dataPath={new URL('./Catalogue_SO2_2022.csv', import.meta.url).href}
+      dateFormat="%Y" 
+      idKey='Type' 
+      xKey='Year' 
+      yKey='Total Estimated Emissions' 
+      highlightStart = '01/01/2005'
+      highlightEnd = '01/20/2022'
+      highlightLabel = 'Total Estimated SO2 Emissions by Type'
+    />
+    <Caption 
+      attrAuthor='attribution for wide figure block, chart' 
+      attrUrl='https://developmentseed.org'
+    /> 
   </Figure>
 </Block>
