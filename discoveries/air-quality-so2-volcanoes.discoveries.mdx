@@ -62,7 +62,7 @@ thematics:
 <Block type='wide'>
   <Figure>
     <Chart
-      dataPath={new URL('./Catalogue_SO2_2022.csv', import.meta.url).href}
+      dataPath={new URL('./so2-emissions.csv', import.meta.url).href}
       dateFormat="%Y" 
       idKey='Type' 
       xKey='Year' 
@@ -72,8 +72,8 @@ thematics:
       highlightLabel = 'Total Estimated SO2 Emissions by Type'
     />
     <Caption 
-      attrAuthor='attribution for wide figure block, chart' 
-      attrUrl='https://developmentseed.org'
+      attrAuthor='NASA' 
+      attrUrl='https://so2.gsfc.nasa.gov/measures.html'
     /> 
   </Figure>
 </Block>
