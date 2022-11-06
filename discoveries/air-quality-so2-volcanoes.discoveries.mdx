@@ -59,17 +59,20 @@ thematics:
   </Figure>
 </Block>
 
-<Block type='wide'>
+<Block>
+  <Prose>
+    My markdown contents
+  </Prose>
   <Figure>
     <Chart
       dataPath={new URL('./so2-emissions.csv', import.meta.url).href}
       dateFormat="%Y" 
       idKey='Type' 
       xKey='Year' 
-      yKey='Total Estimated Emissions' 
-      highlightStart = '01/01/2005'
-      highlightEnd = '01/20/2022'
-      highlightLabel = 'Total Estimated SO2 Emissions by Type'
+      yKey='Emissions' 
+      highlightStart = '2005'
+      highlightEnd = '2022'
+      highlightLabel = 'SO2 Emissions'
     />
     <Caption 
       attrAuthor='NASA' 
