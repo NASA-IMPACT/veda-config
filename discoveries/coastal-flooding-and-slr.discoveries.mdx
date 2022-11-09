@@ -16,6 +16,66 @@ thematics:
 ---
 <Block>
    <Prose>
+    ## Terrestrial water storage for Bangladesh
+      This chart shows the terrestrial water storage averaged over Bangladesh.
+
+      [PLACEHOLDER -- MORE TEXT COMING]
+
+  </Prose>
+  <Figure>
+    <Chart
+      dataPath={new URL('./TWS_time_series.csv', import.meta.url).href}
+      dateFormat="%b-%Y"
+      xKey='date'
+      yKey='TWS'
+    />
+    <Caption
+    />
+  </Figure>
+</Block>
+
+<Block>
+   <Prose>
+    ## Groundwater at selected location in northwestern Bangladesh
+      This chart shows groundwater at selected location in northwestern Bangladesh.
+
+      [PLACEHOLDER -- MORE TEXT COMING]
+
+  </Prose>
+  <Figure>
+    <Chart
+      dataPath={new URL('./groundwater_time_series.csv', import.meta.url).href}
+      dateFormat="%b-%Y"
+      xKey='date'
+      yKey='groundwater'
+    />
+    <Caption
+    />
+  </Figure>
+</Block>
+
+<Block>
+   <Prose>
+    ## Annual coastal land loss from 2001 to 2020
+      This chart shows annual coastal land loss from 2001 to 2020.
+
+      [PLACEHOLDER -- MORE TEXT COMING]
+
+  </Prose>
+  <Figure>
+    <Chart
+      dataPath={new URL('./coastal_land_loss_time_series.csv', import.meta.url).href}
+      dateFormat="%Y"
+      xKey='date'
+      yKey='coastal land loss'
+    />
+    <Caption
+    />
+  </Figure>
+</Block>
+
+<Block>
+   <Prose>
     ## Sea level rise off the coast of Bangladesh
       This chart shows the increase in sea level off the coast of Bangladesh over time.
       
