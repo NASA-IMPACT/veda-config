@@ -64,14 +64,18 @@ Name of this thematic area. This is used to reference to this thematic area in t
 Brief description of this thematic area. This is displayed on cards and the header of a thematic area.
 
 **usage**
-`object`
-Link to examples for how to use this dataset.
+`object[]`
+Links to examples for how to use this dataset.
 
-**usage.url**
+**usage[].url**
 `string`
 URL for example on how to use this dataset.
 
-**usage.title**
+**usage[].label**
+`string`
+A label for the type of interface this link opens. Currently, typical interfaces include a static notebook or a notebook hub.
+
+**usagep[].title**
 `string`
 Title of the page linked to for an example of how to use this dataset.
 
