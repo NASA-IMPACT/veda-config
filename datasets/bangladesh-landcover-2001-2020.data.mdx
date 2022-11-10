@@ -14,26 +14,28 @@ layers:
     type: raster
     description: 'Annual land cover maps for 2001 and 2020 (Bangladesh)'
     zoomExtent:
-      - 10
+      - 6
       - 20
     sourceParams:
-      resampling_method: bilinear
+      resampling_method: nearest
       bidx: 1
-      colormap_name: ylorrd
+      colormap_name: terrain
       rescale:
         - 0
-        - 69
+        - 400 
     legend:
-      type: gradient
-      min: "0"
-      max: "400"
+      type: categorical
       stops:
-      - "#ffffcc"
-      - "#fee187"
-      - "#feab49"
-      - "#fc5b2e"
-      - "#d41020"
-      - "#800026"
+      - color: "#333399"
+        label: Class 1
+      - color: "#7B5F54"
+        label: Class 2
+      - color: "#01CA6A"
+        label: Class 3
+      - color: "#FDFE98"
+        label: Class 4
+      - color: "#FFFFFF"
+        label: Class 5
 ---
 
 <Block>
