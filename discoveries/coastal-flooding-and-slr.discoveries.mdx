@@ -26,6 +26,7 @@ thematics:
     <Chart
       dataPath={new URL('./TWS_time_series.csv', import.meta.url).href}
       dateFormat="%b-%Y"
+      idKey='type'
       xKey='date'
       yKey='TWS'
     />
@@ -46,6 +47,7 @@ thematics:
     <Chart
       dataPath={new URL('./groundwater_time_series.csv', import.meta.url).href}
       dateFormat="%b-%Y"
+      idKey='type'
       xKey='date'
       yKey='groundwater'
     />
@@ -66,6 +68,7 @@ thematics:
     <Chart
       dataPath={new URL('./coastal_land_loss_time_series.csv', import.meta.url).href}
       dateFormat="%Y"
+      idKey='type'
       xKey='date'
       yKey='coastal land loss'
     />
