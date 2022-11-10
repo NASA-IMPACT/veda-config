@@ -70,3 +70,6 @@ temp
 tmp
 .tmp
 dist
+
+Makefile
+.hypothesis
