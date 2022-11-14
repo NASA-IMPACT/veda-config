@@ -1,21 +1,21 @@
-year,type,coastal land loss
-2001,CLL,0
-2002,CLL,36.5
-2003,CLL,68.5
-2004,CLL,117.75
-2005,CLL,165
-2006,CLL,220.25
-2007,CLL,257
-2008,CLL,291
-2009,CLL,324
-2010,CLL,344
-2011,CLL,370.5
-2012,CLL,387.75
-2013,CLL,425.75
-2014,CLL,437.5
-2015,CLL,452.75
-2016,CLL,426.75
-2017,CLL,457.75
-2018,CLL,440.5
-2019,CLL,450.75
-2020,CLL,491.75
+year,type,CLL
+2001,coastal land loss,0
+2002,coastal land loss,36.5
+2003,coastal land loss,68.5
+2004,coastal land loss,117.75
+2005,coastal land loss,165
+2006,coastal land loss,220.25
+2007,coastal land loss,257
+2008,coastal land loss,291
+2009,coastal land loss,324
+2010,coastal land loss,344
+2011,coastal land loss,370.5
+2012,coastal land loss,387.75
+2013,coastal land loss,425.75
+2014,coastal land loss,437.5
+2015,coastal land loss,452.75
+2016,coastal land loss,426.75
+2017,coastal land loss,457.75
+2018,coastal land loss,440.5
+2019,coastal land loss,450.75
+2020,coastal land loss,491.75
