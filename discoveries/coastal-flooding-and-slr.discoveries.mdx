@@ -2,7 +2,7 @@
 featuredOn:
   - eis
 id: 'eis-coastal-risks'
-name: Coastal risks from sea-level change and the changing water cycle
+name: Risks to coasts from from sea level rise compounded by water cycle intensification
 description: "NASA measurements and models shed light on present and future coastal risks"
 media:
   src: ::file ./don-lodge-P8PuYidUYMw-unsplash_v2.jpg
@@ -18,14 +18,6 @@ thematics:
   <Prose>
   ## Introduction
   The Earth Information System (EIS) provides a platform for collaborative analysis and decision support for adapting to sea level changes, human-caused water cycle intensification, and their impacts. The full potential of these individual efforts are realized through the EIS collaborative framework to support new transdisciplinary connections.
-
-  </Prose>
-</Block>
-
-<Block>
-  <Prose>
-  ## Evidence of Global Water Cycle Intensification 
-  Terrestrial water storage (TWS), corresponding to integrated changes in surface water across rivers, lakes, wetlands, soil moisture, groundwater and snow, is a critical component of the global water and energy budget. The warming climate and other human disturbances are leading to more non-regular changes in terrestrial water storage, imposing emerging threats to water and food security.
   </Prose>
 </Block>
 
@@ -47,10 +39,8 @@ thematics:
     </Caption> 
   </Figure>
   <Prose>
-    ## Heading
-  
-    Prose
-    
+  ## Evidence of Global Water Cycle Intensification 
+  Terrestrial water storage (TWS), corresponding to integrated changes in surface water across rivers, lakes, wetlands, soil moisture, groundwater and snow, is a critical component of the global water and energy budget. The warming climate and other human disturbances are leading to more non-regular changes in terrestrial water storage, imposing emerging threats to water and food security.
   </Prose>
 </Block>
 
@@ -61,18 +51,9 @@ thematics:
 </Block>
 
 <Block>
-  <Prose>
-  Bangladesh is one of the hot spots regions that is experiencing non-stationary water cycle change, which is mainly evidenced by groundwater depletion from agricultural pumping. Averaged across the country, TWS has depleted at a rate of  almost 13mm/year during 2002-2021, or about 2 billion cubic meters per year countrywide.
-  </Prose>
-</Block>
-
-<Block>
    <Prose>
     ## Terrestrial water storage for Bangladesh
-      This chart shows the terrestrial water storage averaged over Bangladesh.
-
-      [PLACEHOLDER -- MORE TEXT COMING]
-
+  Bangladesh is one of the hot spots regions that is experiencing non-stationary water cycle change, which is mainly evidenced by groundwater depletion from agricultural pumping. Averaged across the country, TWS has depleted at a rate of  almost 13mm/year during 2002-2021, or about 2 billion cubic meters per year countrywide.
   </Prose>
   <Figure>
     <Chart
@@ -81,6 +62,7 @@ thematics:
       idKey='type'
       xKey='date'
       yKey='TWS'
+      yAxisLabel='units'
     />
     <Caption
     />
@@ -88,15 +70,8 @@ thematics:
 </Block>
 
 <Block>
-  <Prose>
-  ## Human activities change Bangladesh’s water cycle and landscape
-
-  </Prose>
-</Block>
-
-<Block>
    <Prose>
-
+    ## Human activities change Bangladesh’s water cycle and landscape
     ### Depleting aquifers
     Ground measurements show the impacts of heavy pumping for irrigation on groundwater levels in northwestern Bangladesh
 
@@ -110,6 +85,7 @@ thematics:
       idKey='type'
       xKey='date'
       yKey='groundwater'
+      yAxisLabel='units'
     />
     <Caption
     />
@@ -142,6 +118,7 @@ thematics:
       idKey='type'
       xKey='year'
       yKey='CLL'
+      yAxisLabel='km^3'
     />
     <Caption
     />
@@ -151,11 +128,11 @@ thematics:
 <Block>
    <Prose>
     ## Changing sea level
-    
-      This chart shows the increase in sea level off the coast of Bangladesh over time.
-      
-      [PLACEHOLDER -- DENIS WILL FILL IN WITH TEXT ABOUT THE CHART]
 
+    Off the coast of Bangladesh (latitude 21.45 deg N; longitude 91.83 deg E), the ECCO model shows the variation of sea level from 1992 to 2017. There are seasonal variations and a background increase of 3.6 mm/yr over time. Sea-level rise compounds the risk of coastal flooding by raising the water level at river mouths and increasing flood magnitudes.
+
+    The ECCO model separates total sea-level change into two components: extra water mass added to the ocean (barystatic) and ocean temperature and salinity changes (steric). At this location, the steric component remains steady over time, while the barystatic component is increasing. This means that sea-level rise off the coast of Bangladesh is driven by extra water mass added to the ocean from the ice sheets, glaciers, and changes to land-water storage. Understanding the sources of past sea-level rise helps researchers create better projections of future sea-level rise.
+    
   </Prose>
   <Figure>
     <Chart
@@ -164,6 +141,7 @@ thematics:
       idKey='source' 
       xKey='date' 
       yKey='SSH (m)' 
+      yAxisLabel='meters'
     />
     <Caption 
     /> 
