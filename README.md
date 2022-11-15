@@ -13,3 +13,7 @@ Discoveries are long form pieces of content that tell a story about some interes
 3) Check [CONTENT](./docs/CONTENT.md) for how to structure the content pieces.
 
 If you plan to add features to `delta-config` check [DEVELOPMENT](./docs/DEVELOPMENT.md).
+
+# License
+This project is licensed under **Apache 2**, see the [LICENSE](LICENSE) file for more details.
+
