@@ -1,0 +1,165 @@
+---
+featuredOn:
+  - eis
+id: 'tws-trends'
+name: Global Water Cycle Variability
+description: "Two decades of global water cycle variability assessed by land data assimilation"
+media:
+  src: ::file ./air-quality-and-covid-19--discovery-cover.jpg
+  alt: Clear nightsky with crescent moon above the mountains
+  author:
+    name: EIS Freshwater Team
+    url: https://unsplash.com/photos/U-Kty6HxcQc
+pubDate: 2020-12-01
+thematics:
+  - eis
+---
+
+<ScrollytellingBlock>
+  <Chapter
+    center={[77.63,24.27]}
+    zoom={2}
+    datasetId='tws-trend'
+    layerId='lis-tws-trend'
+    datetime='2001-01-01'
+  >
+    ## Going through changes
+    Stationarity is gone for global hydrological water cycle under the warming climate and human disturbances. This imposes challenges in systems for hydrological forecasting and water management as those were designed and operated under the assumption of stationarity.
+  </Chapter>
+  <Chapter
+    center={[-116,36]}
+    zoom={4.5}
+    datasetId='tws-trend'
+    layerId='lis-tws-trend'
+    datetime='2001-01-01'
+  >
+    Identifying the nature of non-stationarity of global water cycle is essential to understand the global distribution of water availability, changes in extremes, and to provide support on optimizing water systems. 
+  </Chapter>
+  <Chapter
+    center={[117.5001, 28.7899]}
+    zoom={4}
+    datasetId='tws-trend'
+    layerId='lis-tws-trend'
+    datetime='2001-01-01'
+  >
+	  We develop a 10 km global gridded product of hydrological fluxes by assimilating satellite observed surface soil moisture, leaf area index, and terrestrial water storage anomalies into a land surface model within NASA Land Information System Framework. 
+  </Chapter>
+  <Chapter
+    center={[6.7151, 47.3183]}
+    zoom={4}
+    datasetId='tws-trend'
+    layerId='lis-tws-trend'
+    datetime='2001-01-01'
+  >
+    ## Seasonal Changes in TWS
+    We provide a global assessment of the non-stationarity patterns in hydrological variables, including terrestrial water storage, evapotranspiration, and runoff.
+  </Chapter>
+  <Chapter
+    center={[0, 0]}
+    zoom={2}
+    datasetId='tws-trend'
+    layerId='lis-tws-trend'
+    datetime='2001-01-01'
+  >
+    ## Where are the hotspots of nonstationarity?
+    Evidence indicates a wide extent of seasonality shifts, long-term trends, variability intensifications and frequency changes in these fluxes. Our findings identify the hot spot regions that are experiencing strong non-stationary changes and discuss the associated attribution factors. 
+  </Chapter>
+  <Chapter
+    center={[-74.0236, 40.7234]}
+    zoom={12}
+    showBaseMap={true}
+  >
+    We highlight the impact of human water use on water cycle non-stationarity and the need to incorporate satellite observation constraints in assessing the shifts in global water storage variabilities.
+  </Chapter>
+</ScrollytellingBlock>
+
+<Block>
+  <Prose>
+    ## Modeling TWS
+    TWS is modeled using Noah-MP land surface model (LSM) within LIS framework by assimilating NASA earth observations of soil moisture from ESA CCI, leaf area index from MODIS sensor, and TWS from GRACE/GRACE-FO. The modeled TWS is produced over global domain at a resolution of 10 km.
+  </Prose>
+</Block>
+
+<Block type='full'>
+  <Figure>
+    <Map
+      datasetId='tws-anomaly'
+      layerId='lis-tws-anomaly'
+      dateTime='2002-12-01'
+      zoom={4}
+      center={[77.63,24.27]}
+      compareDateTime='2021-12-01'
+    />
+    <Caption
+      attrAuthor='NASA'
+      attrUrl='https://nasa.gov/'
+    >
+      TWS anomalies over India compared between Dec 2002 (left) and Dec 2021 (right)
+    </Caption>
+  </Figure>
+  <Prose>
+    ## Interpreting the data
+    The TWS anomalies are calculated as differences of raw TWS with the climatology obtained over 2001-2021. Negative anomalies denote lower than normal TWS and vice-versa. The trend over time is thus deseasonalized and reflective of changes due to human impacts.
+  </Prose>
+</Block>
+
+<Block type='full'>
+  <Prose>
+    ## Declining trends, depleting storage!  
+    Terrestrial water storage (TWS) is defined as the summation of all water on the land surface and in the subsurface. It includes surface soil moisture, root zone soil moisture, groundwater, snow, ice, water stored in the vegetation, river and lake water.
+  </Prose>
+  <Figure>
+    <Map
+      datasetId='tws-anomaly'
+      layerId='lis-tws-anomaly'
+      dateTime='2002-12-01'
+      zoom={4}
+      center={[-116,36]}
+      compareDateTime='2021-12-01'
+    />
+    <Caption
+      attrAuthor='NASA'
+      attrUrl='https://nasa.gov/'
+    >
+      Depleting TWS over CA between 2002 (left) and 2021 (right), captured by LIS modeled TWS anomalies
+    </Caption>
+  </Figure>
+</Block>
+
+<Block type='full'>
+  <Figure>
+    <Map
+      datasetId='tws-trend'
+      layerId='lis-tws-trend'
+      dateTime='2001-01-01'
+      zoom={4}
+      center={[77.63,24.27]}
+    />
+    <Caption
+      attrAuthor='NASA'
+      attrUrl='https://nasa.gov/'
+    >
+      Trend in TWS anomalies over India showing large groundwater extraction leading to depleting TWS
+    </Caption>
+  </Figure>
+  <Prose>
+    ## Interpreting the data
+    The TWS anomalies are calculated as differences of raw TWS with the climatology obtained over 2001-2021. Negative anomalies denote lower than normal TWS and vice-versa. The trend over time is thus deseasonalized and reflective of changes due to human impacts.
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    ## Additional resources
+    * [EIS Freshwater](https://freshwater.eis.smce.nasa.gov/)
+
+    * [Land Information System](https://lis.gsfc.nasa.gov/)
+
+    ### Explore the Missions
+    * [GRACE-FO](https://gracefo.jpl.nasa.gov/data/grace-fo-data/)
+
+    * [SMAP](https://smap.jpl.nasa.gov/)
+
+    * [MODIS](https://modis.gsfc.nasa.gov/)
+  </Prose>
+</Block>
