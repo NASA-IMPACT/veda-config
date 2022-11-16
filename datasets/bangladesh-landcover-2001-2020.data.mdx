@@ -18,24 +18,22 @@ layers:
       - 20
     sourceParams:
       resampling_method: nearest
+      colormap: '{"0":[0,0,0,128],"100":[0,130,0,255],"200":[17,131,226,255],"300":[199,43,32,255],"400":[98,234,37,255]}'
       bidx: 1
-      colormap_name: terrain
-      rescale:
-        - 0
-        - 400 
+      return_mask: true
     legend:
       type: categorical
       stops:
-      - color: "#333399"
-        label: Class 1
-      - color: "#7B5F54"
-        label: Class 2
-      - color: "#01CA6A"
-        label: Class 3
-      - color: "#FDFE98"
-        label: Class 4
-      - color: "#FFFFFF"
-        label: Class 5
+      - color: "#000000"
+        label: No Data
+      - color: "#008200"
+        label: Native Vegetation
+      - color: "#1183e2"
+        label: Open water
+      - color: "#c72b20"
+        label: Urban areas
+      - color: "#62ea25"
+        label: Cropland
 ---
 
 <Block>
