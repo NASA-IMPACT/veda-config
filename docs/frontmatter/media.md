@@ -2,10 +2,16 @@
 `object`  
 Controls the image used to identify this resource. This image will show up in the cards and whenever there’s the need to visually identify the resource. 
 
-Consider optimizing your image by adjusting the quality and resizing it before using it.  
-It is important that the images are produced with a 2:1 ratio and a size of at least (2000x1000 px). Images should not weigh more than 500KB.
+💡 [Unsplash](https://unsplash.com/) is a repository where great images can be found. Images are free, just make sure to reference the author (explained below).  
 
-You can use the tools like below to optimize your image.
+🧙‍♀️Consider optimizing your image by adjusting the quality and resizing it before using it.  
+It is important that the images are produced with a 2:1 ratio and a size of at least **(2000x1000px)**. Images should not weigh more than **500KB**.
+
+The [Image resizer](https://imageresizer.com/) webtool is a great resource for this task. The following video shows the process:
+
+https://user-images.githubusercontent.com/1090606/202161004-85060cfd-0e94-426e-9385-cda73841a019.mov
+
+Other tools that may be useful to optimize your image.
 
 ### GUI
 - [ImageOptim](https://imageoptim.com/mac)
@@ -15,9 +21,9 @@ You can use the tools like below to optimize your image.
 - [imagemagick](https://imagemagick.org/index.php)
 - [pngquant](https://pngquant.org/)
   
-This is an example one liner command that resizes `example.png` to 70% of the original size, drops the quality then compresses it  (using  both `imagemagick` and `pngquant`). Tweak the parameters as needed. 
+This is an example one liner command that resizes `example.png` to a max width/height, drops the quality then compresses it  (using  both `imagemagick` and `pngquant`). Tweak the parameters as needed. 
 
-`mogrify -resize 70% -quality 70 example.png && pngquant example.png --ext .png --force`
+`mogrify -resize "2000x1000>" -quality 70 example.png && pngquant example.png --ext .png --force`
 
 **src**  
 `string | fileSrc`  
