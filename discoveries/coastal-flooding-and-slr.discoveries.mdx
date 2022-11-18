@@ -43,9 +43,6 @@ thematics:
 </Block>
 
 <Block type='full'>
-  <Prose>
-  Identifying hot spot regions under non-stationary water cycle changes and exploring the drivers are important issues that may provide information to improve hydrological forecasting and water management. Through interdisciplinary research and data assimilation, the EIS team developed a novel metric to quantify the non-stationarity of the global water cycle, integrating data about long term trends, seasonal shifts, and interannual to sub-seasonal scale variabilities.
-  </Prose>
   <Figure>
     <Map
       datasetId='lis-tws-nonstationarity-index'
@@ -59,6 +56,9 @@ thematics:
       attrUrl='https://nasa.gov/'
     />
   </Figure>
+  <Prose>
+  Identifying hot spot regions under non-stationary water cycle changes and exploring the drivers are important issues that may provide information to improve hydrological forecasting and water management. Through interdisciplinary research and data assimilation, the EIS team developed a novel metric to quantify the non-stationarity of the global water cycle, integrating data about long term trends, seasonal shifts, and interannual to sub-seasonal scale variabilities.
+  </Prose>
 </Block>
 
 <Block>
@@ -140,11 +140,27 @@ thematics:
    <Prose>
     ## Changing sea level
 
+
+  <Figure>
+    <Map
+      datasetId='ecco-surface-height-change'
+      layerId='ecco-surface-height-change'
+      dateTime='1992-01-01'
+      zoom={1}
+      center={[0,0]}
+    />
+    <Caption 
+      attrAuthor='NASA' 
+      attrUrl='https://nasa.gov/'
+    />
+  </Figure>
+  
+  
     Off the coast of Bangladesh (latitude 21.45 deg N; longitude 91.83 deg E), the ECCO model shows the variation of sea level from 1992 to 2017. There are seasonal variations and a background increase of **3.6 mm/yr** over time. Sea-level rise compounds the risk of coastal flooding by raising the water level at river mouths and increasing flood magnitudes.
 
     The ECCO model separates total sea-level change into two components: extra water mass added to the ocean (barystatic) and ocean temperature and salinity changes (steric). At this location, the steric component remains steady over time, while the barystatic component is increasing. This means that sea-level rise off the coast of Bangladesh is driven by extra water mass added to the ocean from the ice sheets, glaciers, and changes to land-water storage. Understanding the sources of past sea-level rise helps researchers create better projections of future sea-level rise.
     
-    https://github.com/dfelikson/veda-data-processing/blob/main/ECCO_NetCDF_to_COG/create_ECCO_SSH_timeseries.ipynb
+    [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7335607.svg)](https://doi.org/10.5281/zenodo.7335607)
   </Prose>
   <Figure>
     <Chart
