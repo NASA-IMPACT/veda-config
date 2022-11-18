@@ -1,0 +1,51 @@
+---
+id: mtbs-burn-severity
+name: "MTBS Burn Severity"
+description: "Burn severities and extents of fires from Monitoring Trends in Burn Severity (MTBS) program during the years 2016-2020 over Western US"
+media:
+  src: ::file ./mtbs-burn-severity--dataset-cover.jpg
+  alt: Hillside engulfed by wildfire
+  author:
+    name: Mike Newbry
+    url: https://unsplash.com/photos/DwtX9mMHBJ0
+thematics:
+  - eis
+layers:
+  - id: mtbs-burn-severity
+    stacCol: mtbs-burn-severity
+    name: MTBS Burn Severity
+    type: raster
+    description: "Burn severities and extents of fires from Monitoring Trends in Burn Severity (MTBS) program during the years 2016-2020 over Western US"
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      colormap_name: inferno_r
+      rescale:
+        - 0
+        - 6
+    legend:
+      type: categorical
+      stops:
+        - color: "#000000"
+          label: "1"
+        - color: "#FBB41A"
+          label: "2"
+        - color: "#ED6825"
+          label: "3"
+        - color: "#BB3754"
+          label: "4"
+        - color: "#781D6D"
+          label: "5"
+        - color: "#34095F"
+          label: "6"
+
+---
+
+<Block>
+  <Prose>
+    ## About
+
+    MTBS Burn Severity Data
+  </Prose>
+</Block>
