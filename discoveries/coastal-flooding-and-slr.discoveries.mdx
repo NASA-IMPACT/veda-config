@@ -111,10 +111,28 @@ thematics:
 </Block>
 
 <Block>
+  <Figure>
+    <Map
+      datasetId='bangladesh-landcover-2001-2020'
+      layerId='bangladesh-landcover-2001-2020'
+      dateTime='2001-01-01'
+      compareDateTime='2020-01-01'
+      zoom={8}
+      center={[90.43,23.74]}
+    />
+    <Caption
+      attrAuthor='NASA'
+      attrUrl='https://nasa.gov/'
+    >
+    Comparison of MODIS-derived land cover in Bangladesh between 2001 and 2020.
+    </Caption>
+  </Figure>
+  
   <Prose>
   ### Changing landscape
   MODIS sensors can also inform us about how land cover has changed over the past two decades. Cropland expansion has resulted in reduced native vegetation across the country. Satellite data also shows coastal land loss since 2001.
   </Prose>
+
 </Block>
 
 <Block>
@@ -130,8 +148,6 @@ thematics:
       xKey='year'
       yKey='CLL'
       yAxisLabel='square kilometers'
-    />
-    <Caption
     />
   </Figure>
 </Block>
