@@ -11,7 +11,7 @@ media:
 thematics:
   - eis
 layers:
-  - id: lis-tws-nonstationarity-index
+  - id: tws-nonstationarity-index
     stacCol: lis-tws-nonstationarity-index
     name: 'TWS Non-Stationarity Index'
     type: raster
@@ -39,42 +39,13 @@ layers:
       - "#74add1"
       - "#313695"
 ---
-<Block type='full'>
-<Prose>
-## Overview
-Terrestrial water storage (TWS) is defined as the summation of all water on the land surface and in the subsurface. It includes surface soil moisture, root zone soil moisture, groundwater, snow, ice, water stored in the vegetation, river and lake water. 
-
-The global Terrestrial Water Storage (TWS) non-stationarity index integrates the trend, seasonal shifts, and variability change of TWS for the period of 2003 - 2020. TWS is derived by jointly assimilating the MODIS Leaf Area Index, the ESA CCI surface soil moisture, and the GSFC GRACE mascon-based TWS anomalies into the Noah-MP land surface model within the NASA Land Information System (LIS) at 10 km spatial resolution forced by the combination of MERRA2 and IMERG meteorological fields. The smaller the non-stationarity index is, the more the water cycle is under a non-stationary process. Glaciers and Greenland are excluded from the analysis.
-</Prose>
-  <Figure>
-  <Map
-    datasetId='tws-nonstationarity-inex'
-    layerId='lis-tws-nonstationarity-inex'
-    dateTime='2003-01-01'
-    zoom={4}
-    center={[-116,36]}
-  />
-  <Caption
-    attrAuthor='NASA'
-    attrUrl='https://nasa.gov/'
-  >
-</Caption>
-  </Figure>
-</Block>
 
 <Block>
-<Prose>
-## Additional resources
-* [EIS Freshwater](https://freshwater.eis.smce.nasa.gov/)
+  <Prose>
+    ## Overview
+    Terrestrial water storage (TWS) is defined as the summation of all water on the land surface and in the subsurface. It includes surface soil moisture, root zone soil moisture, groundwater, snow, ice, water stored in the vegetation, river and lake water. 
 
-* [Land Information System](https://lis.gsfc.nasa.gov/)
-
-### Explore the Missions
-* [GRACE-FO](https://gracefo.jpl.nasa.gov/data/grace-fo-data/)
-
-* [SMAP](https://smap.jpl.nasa.gov/)
-
-* [MODIS](https://modis.gsfc.nasa.gov/)
-</Prose>
+    The global Terrestrial Water Storage (TWS) non-stationarity index integrates the trend, seasonal shifts, and variability change of TWS for the period of 2003 - 2020. TWS is derived by jointly assimilating the MODIS Leaf Area Index, the ESA CCI surface soil moisture, and the GSFC GRACE mascon-based TWS anomalies into the Noah-MP land surface model within the NASA Land Information System (LIS) at 10 km spatial resolution forced by the combination of MERRA2 and IMERG meteorological fields. The smaller the non-stationarity index is, the more the water cycle is under a non-stationary process. Glaciers and Greenland are excluded from the analysis.
+  </Prose>
 </Block>
 
