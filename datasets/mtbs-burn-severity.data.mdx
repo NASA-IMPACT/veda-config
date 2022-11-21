@@ -1,0 +1,58 @@
+---
+id: mtbs-burn-severity
+name: "MTBS Burn Severity"
+description: "Burn Severities and extents of fires"
+media:
+  src: ::file ./mtbs-burn-severity--dataset-cover.jpg
+  alt: Hillside engulfed by wildfire
+  author:
+    name: Mike Newbry
+    url: https://unsplash.com/photos/DwtX9mMHBJ0
+thematics:
+  - eis
+layers:
+  - id: mtbs-burn-severity
+    stacCol: mtbs-burn-severity
+    name: MTBS Burn Severity
+    type: raster
+    description: "Burn severities and extents of fires from Monitoring Trends in Burn Severity (MTBS) program during the years 2016-2020 over Western US"
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      colormap_name: inferno_r
+      rescale:
+        - 0
+        - 6
+    legend:
+      type: categorical
+      stops:
+        - color: "#000000"
+          label: "1"
+        - color: "#FBB41A"
+          label: "2"
+        - color: "#ED6825"
+          label: "3"
+        - color: "#BB3754"
+          label: "4"
+        - color: "#781D6D"
+          label: "5"
+        - color: "#34095F"
+          label: "6"
+
+---
+
+<Block>
+  <Prose>
+    ## About
+    
+    Burn severities and extents of fires from Monitoring Trends in Burn Severity (MTBS) program during the years 2016-2020 over Western US.
+    
+    MTBS is an interagency program whose goal is to consistently map the burn severity and extent of large fires across all lands of the United States from 1984 to present. This includes all fires 1000 acres or greater in the western United States and 500 acres or greater in the eastern Unites States. The extent of coverage includes the continental U.S., Alaska, Hawaii and Puerto Rico. 
+
+    ## Additional Resources
+
+    * [MTBS - Project overview](https://www.mtbs.gov/project-overview)
+    * [Interactive Viewer for Continental US](https://www.mtbs.gov/viewer/?region=conus)
+  </Prose>
+</Block>

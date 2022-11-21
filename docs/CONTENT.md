@@ -1,3 +1,11 @@
+📇 **Shortcuts:**
+
+- Check the [MDX_BLOCK.md](./MDX_BLOCKS.md) for information on the different blocks that can be used to compose the content layout.
+- Check [layer.md](./frontmatter/layer.md) for details on the different properties of a dataset layer.
+- Check [media.md](./frontmatter/media.md) for information on the images needed for the content's covers.
+
+----
+
 # Content
 
 - [Content](#content)
@@ -56,14 +64,18 @@ Name of this thematic area. This is used to reference to this thematic area in t
 Brief description of this thematic area. This is displayed on cards and the header of a thematic area.
 
 **usage**
-`object`
-Link to examples for how to use this dataset.
+`object[]`
+Links to examples for how to use this dataset.
 
-**usage.url**
+**usage[].url**
 `string`
 URL for example on how to use this dataset.
 
-**usage.title**
+**usage[].label**
+`string`
+A label for the type of interface this link opens. Currently, typical interfaces include a static notebook or a notebook hub.
+
+**usage[].title**
 `string`
 Title of the page linked to for an example of how to use this dataset.
 
