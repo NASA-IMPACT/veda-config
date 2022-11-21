@@ -13,25 +13,25 @@ thematics:
 layers:
   - id: ecco-surface-height-change
     stacCol: ecco-surface-height-change
-    name: ECCO sea-surface height change
+    name: ECCO sea-surface height change (m)
     type: raster
     description: "Gridded global sea-surface height change from 1992 to 2017 from the Estimating the Circulation and Climate of the Ocean (ECCO) ocean state estimate."
     zoomExtent:
       - 0
       - 20
     sourceParams:
-      colormap_name: ocean
+      colormap_name: rdbu
       rescale:
-        - -0.09822296351194382
-        - 0.3127937912940979
+        - -0.313
+        - 0.313
     legend:
       type: gradient
-      min: "-0.1"
-      max: 0.35
+      min: "-0.31"
+      max: "0.31"
       stops:
-        - "#0000FF"
-        - "#00FFFF"
-        - "#00FF00"
+        - "#EF8A62"
+        - "#F7F7F7"
+        - "#67A9CF"
 
 ---
 
