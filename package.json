@@ -1,15 +1,15 @@
 {
-  "name": "delta-config",
-  "description": "Configuration for Delta",
+  "name": "veda-config",
+  "description": "Configuration for Veda",
   "version": "0.3.0",
-  "source": "./.delta/ui/app/index.html",
-  "license": "BSD-3-Clause",
+  "source": "./.veda/ui/app/index.html",
+  "license": "Apache-2.0",
   "scripts": {
-    "serve": "NODE_ENV=development .delta/delta serve",
-    "build": "NODE_ENV=production .delta/delta",
-    "stage": "NODE_ENV=staging .delta/delta",
-    "clean": ".delta/delta clean",
-    "test": "NODE_ENV=test .delta/delta test"
+    "serve": "NODE_ENV=development .veda/veda serve",
+    "build": "NODE_ENV=production .veda/veda",
+    "stage": "NODE_ENV=staging .veda/veda",
+    "clean": ".veda/veda clean",
+    "test": "NODE_ENV=test .veda/veda test"
   },
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "engines": {
@@ -19,8 +19,8 @@
     "dotenv": "^10.0.0"
   },
   "alias": {
-    "react": "./.delta/ui/node_modules/react",
-    "@mdx-js/react": "./.delta/ui/node_modules/@mdx-js/react"
+    "react": "./.veda/ui/node_modules/react",
+    "@mdx-js/react": "./.veda/ui/node_modules/@mdx-js/react"
   },
   "dependencies": {}
 }

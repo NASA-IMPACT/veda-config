@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-
-echo "Installing delta-config dependencies"
-yarn
-
-echo "Installing delta-ui dependencies"
-cd .delta/ui
-yarn

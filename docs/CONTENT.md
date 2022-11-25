@@ -13,7 +13,7 @@
   - [Datasets](#datasets)
   - [Discoveries](#discoveries)
 
-Delta consists of Thematic Areas, Datasets, and Discoveries. Each dataset and discovery belongs to a thematic area (or multiple thematic areas), and discovery can use datasets. When you are adding contents using published datasets in Delta, you would need to know which thematic area it belongs to, and if you need to create a new thematic area.
+Veda consists of Thematic Areas, Datasets, and Discoveries. Each dataset and discovery belongs to a thematic area (or multiple thematic areas), and discovery can use datasets. When you are adding contents using published datasets in Veda, you would need to know which thematic area it belongs to, and if you need to create a new thematic area.
 
 Each piece of content is written in [MDX](https://mdxjs.com/docs/what-is-mdx/#what-is-mdx) with configuration frontmatter. Frontmatter is separate by a set of `---` from MDX content.  
 

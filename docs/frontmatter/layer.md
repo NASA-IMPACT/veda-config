@@ -81,7 +81,7 @@ parallels: [int, int]
 
 **projection.id**  
 `albers | equalEarth | equirectangular | lambertConformalConic | mercator | naturalEarth | winkelTripel | globe | polarNorth | polarSouth`  
-The id of the projection to set. Besides all the projections offered by mapbox, delta supports two additional ones `polarNorth | polarSouth`. These are not true polar projections but are achieved using specific `center` and `parallels` values of the `lambertConformalConic` projection.
+The id of the projection to set. Besides all the projections offered by mapbox, veda supports two additional ones `polarNorth | polarSouth`. These are not true polar projections but are achieved using specific `center` and `parallels` values of the `lambertConformalConic` projection.
 
 **projection.center**  
 `[int, int]`  

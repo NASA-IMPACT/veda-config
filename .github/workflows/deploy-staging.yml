@@ -44,7 +44,7 @@ jobs:
         with:
           path: |
             node_modules
-            .delta/ui/node_modules
+            .veda/ui/node_modules
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package.json') }}
 
       - name: Cache dist
@@ -55,7 +55,7 @@ jobs:
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ github.workflow }}-${{ github.sha }}
 
       - name: Install
-        run: ./.delta/setup
+        run: ./.veda/setup
 
       - name: Build Staging
         env:
@@ -82,7 +82,7 @@ jobs:
         with:
           path: |
             node_modules
-            .delta/ui/node_modules
+            .veda/ui/node_modules
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package.json') }}
 
       - name: Restore dist cache
