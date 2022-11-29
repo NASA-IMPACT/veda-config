@@ -4,7 +4,7 @@ backend:
   # uncomment the line below to test local, and not to save the change
   # name: test-repo
   name: git-gateway
-  branch: develop
+  branch: netlify-cms
 publish_mode: editorial_workflow
 media_folder: "datasets"
 collections:
@@ -65,6 +65,23 @@ collections:
           - id
           - name
         multiple: true
+      - label: Usage
+        name: usage
+        widget: 'object'
+        required: false
+        fields:
+          - label: 'url'
+            name: 'url'
+            widget: string
+            required: false
+          - label: 'Label'
+            name: 'label'
+            widget: string
+            required: false
+          - label: 'Title'
+            name: 'title'
+            widget: string
+            required: false
       - {label: "ID", name: "id", widget: "string"}
       - {label: "Name", name: "name", widget: "string"}
       - {label: "Description", name: "description", widget: "text"}

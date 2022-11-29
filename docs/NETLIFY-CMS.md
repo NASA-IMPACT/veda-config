@@ -2,7 +2,11 @@
 
 ### Sign up
 
-You can access to Veda dashboard configuration editor at https://visex.netlify.app/admin/index.html Follow the steps on the page to sign up as a user for CMS.
+You can access to Veda dashboard configuration editor at https://visex.netlify.app/admin/index.html You should be able to see a promt like below if it is your first time.
+
+![Editor showing login prompt](./media/netlify-cms-landing.png)
+
+Follow the steps on the page to sign up as a user for CMS.
 
 ### Configure dataset 
 
