@@ -136,6 +136,19 @@ collections:
           - label: "Zoom Extent (minZoom, maxZoom ex. 6,20 )"
             name: zoomExtent
             widget: list
+          - label: Layer to compare
+            name: compare
+            widget: object
+            required: false
+            fields:
+              - label: Dataset ID
+                name: datasetId
+                required: false
+                widget: string
+              - label: Layer ID
+                name: layerId
+                required: false
+                widget: string
           - label: 'Source parameter'
             name: sourceParams
             widget: object
