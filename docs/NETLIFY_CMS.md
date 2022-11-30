@@ -13,9 +13,11 @@ Follow the steps on the page to sign up as a user for CMS.
 ### 'Save' with preview
 
 Once you 'save' your post through a toolbar, cofiguration editor will show 'Check for preview' button on the top right corner of the page.
+
 ![Editor showing 'check for preview' button](./media/check-for-preview.png)
 
 The button will change its text to 'View preview' once the preview is ready as you click upon it. You can click on the button to see your change on preview page.
+
 ![Editor showing 'view preview' button](./media/view-preview.png)
 
 #### Behind the scene
@@ -34,12 +36,15 @@ You can find the posts generated through Netlify CMS on this page.
 
 ![Highlighting workflow button](./media/workflow-sample.png)
 
-### Publish 
-you can merge the PR, or hit 'publish' button through the editor UI. We recommend using the first method since the current version of CMS still requires manual edits. 
+Moving the post through columns will change the label of the pr. For example, two prs below were generated through Netlify CMS. `Create test-dataset.data` is in 'review' column while `Create no2-test.data` is in 'draft' column. You do not have to use this workflow, but it is there if you want to signal your collaborator about where your post is.
 
+![Highlighting workflow button](./media/example-workflow-label.png)
+
+### Publish 
+you can merge the PR, or hit 'publish' button through the editor UI. We recommend using the first method since the current version of CMS still requires some manual edits. 
 ### Caveats
 
 Some manual edits to mdx file are needed after the file is generated through Netlify CMS.
 
 - `media.src` : `::file` need to be put as prefix for the path.
-- `legend.color` for `categorical` type legend : Current CMS UI only supports `gradient` type legend. So if you use categorical legend, you need to edit mdx directly.
+- `legend.color` for `categorical` type legend : Current CMS UI only supports `gradient` type legend. If you are using categorical legend, you need to edit mdx directly.
