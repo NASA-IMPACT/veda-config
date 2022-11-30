@@ -9,7 +9,7 @@ publish_mode: editorial_workflow
 media_folder: "datasets"
 collections:
   - name: "thematic"
-    label: "thematic"
+    label: "Thematic"
     folder: "thematic"
     media_folder: "mock/thematic"
     create: true
