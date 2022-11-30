@@ -132,6 +132,7 @@ collections:
           - label: "Initial datetime"
             name: initialDatetime
             widget: "select"
+            required: false
             options: ['oldest','newest']
           - label: "Zoom Extent (minZoom, maxZoom ex. 6,20 )"
             name: zoomExtent
@@ -154,7 +155,7 @@ collections:
             widget: object
             required: false
             fields:
-              - label: rescale
+              - label: rescale (lowestValue, highestValue ex. 0, 150000000)
                 name: rescale
                 widget: list
                 required: false
