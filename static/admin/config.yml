@@ -43,8 +43,8 @@ collections:
               - {label: 'URL', name: 'url', widget: 'string'}
   - name: "dataset"
     label: "Dataset"
-    folder: "mock/datasets"
-    media_folder: "mock/datasets"
+    folder: "datasets"
+    media_folder: "datasets"
     editor:
       preview: false
     create: true
