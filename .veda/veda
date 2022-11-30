@@ -32,13 +32,13 @@ const path = require('path');
 const inputCmd = process.argv.slice(2).join(' ');
 if (inputCmd === '--info') {
   const uiPkg = require(path.join(__dirname, 'ui/package.json'))
-  console.log(`Current delta-ui: ${uiPkg.version}`);
+  console.log(`Current veda-ui: ${uiPkg.version}`);
 
   process.exit();
 }
 
-const configFile = path.join(__dirname, '../delta.config.js');
-process.env.DELTA_CONFIG_PATH = process.env.DELTA_CONFIG_PATH || configFile;
+const configFile = path.join(__dirname, '../veda.config.js');
+process.env.VEDA_CONFIG_PATH = process.env.VEDA_CONFIG_PATH || configFile;
 
 const rootDir = path.join(__dirname, '../');
 
@@ -54,6 +54,6 @@ if (inputCmd === 'test') {
 const gulpCli = path.join(__dirname, 'ui/node_modules/gulp-cli/bin/gulp.js');
 const gulpConfig = path.join(__dirname, 'ui/gulpfile.js');
 
-const cmd = `node ${gulpCli} --cwd ${rootDir} -f ${gulpConfig} ${inputCmd} --delta-config ${configFile}`;
+const cmd = `node ${gulpCli} --cwd ${rootDir} -f ${gulpConfig} ${inputCmd} --veda-config ${configFile}`;
 
 execSync(cmd, { stdio: 'inherit' });

@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+echo "Installing veda-config dependencies"
+yarn
+
+echo "Installing veda-ui dependencies"
+cd .veda/ui
+yarn
