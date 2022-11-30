@@ -68,7 +68,7 @@ collections:
         multiple: true
       - label: Usage
         name: usage
-        widget: 'object'
+        widget: list
         required: false
         fields:
           - label: 'url'
