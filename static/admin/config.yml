@@ -97,6 +97,7 @@ collections:
         widget: "relation"
         collection: thematic
         value_field: id
+        multiple: true
         search_fields:
           - id
           - name
