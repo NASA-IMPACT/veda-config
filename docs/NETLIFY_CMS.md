@@ -15,23 +15,23 @@ Click on New Dataset, or you can duplicate the existing dataset through left-top
 ![Editor showing 'new dataset' button](./media/new-data-set-btn.png)
 ![Editor showing 'duplicate' button](./media/duplicate-btn.png)
 
-Currently the UI requires bare minimum to display the data in Explorer tab, Mind that you need to fill up optional fields (ex. thematics) for VisEx Dashboard.
+Currently, all fields in the configuration editor must be filled out for the dataset to appear properly in the VEDA Dashboard, including optional fields like thematics.
 
 ### 'Save' with preview
 
-Once you 'save' your post through, cofiguration editor will show 'Check for preview' button on the top right corner of the page.
+Once you 'save' your dataset, the cofiguration editor will show 'Check for preview' button on the top right corner of the page.
 
 ![Editor showing 'check for preview' button](./media/check-for-preview.png)
 
-The button will change its text to 'View preview' once the preview is ready as you click upon it. You can click on the button to see your change on preview page. 
+The button will change its text to 'View preview' once the preview is ready as you click upon it. This can take upwards of a few minutes. If you continue to click 'Check for Preview' then it should change once a preview exists. You can click on the button to see your change on preview page. 
 
-If you are updating your post, the button will always say 'View preview', but you would need to wait to see your latest change through the preview.
+Currently, f you are updating your post, the button will continue to say 'View preview.' However, there is still a small time delay. If your most recent change does not appear, give it a few minutes and it should show up.
 
 ![Editor showing 'view preview' button](./media/view-preview.png)
 
 #### Behind the scene
 
-Think of configuration UI (Netlify CMS) as a thin wrapper on top of Git flow. When the post is saved, PR with the new change is generated to staging branch automatically by Netlify. You can treat it like other PRs.
+Think of configuration UI (Netlify CMS) as a thin wrapper on top of Git flow. When you are saving a new dataset, what the configuration editor is doing is creating a new branch with your changes. This generates a preview. By Publishing through the editor, you are essentially merging your branch into the main branch. The editor allows you to create, edit, and merge a branch without ever having to go to Github. Once created, you also have the ability to go to github and treat it like any other branch.
 
 ![Example PR generated through Netlify CMS](./media/example-pr-netlify-cms.png)
 
@@ -50,7 +50,12 @@ Moving the post through columns will change the label of the pr. For example, tw
 ![Highlighting workflow button](./media/example-workflow-label.png)
 
 ### Publish 
-you can merge the PR, or hit 'publish' button through the editor UI. We recommend using the first method since the current version of CMS still requires some manual edits. 
+To publish the dataset you are working to the [staging Dashboard](https://visex.netlify.app/), you have two options.
+1. You can go directly to the github repo NASA-IMPACT/veda-config, merge the pull request (PR) created for your branch.
+2. Click the 'publish' button through the editor UI. 
+
+We recommend using the first method since the current version of CMS still requires some manual edits. In the future, the Publish funcitonality through the configuration editor will be improved.
+
 ### Caveats
 
 Some manual edits to mdx file are needed after the file is generated through Netlify CMS.
