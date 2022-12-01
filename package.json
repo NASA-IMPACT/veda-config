@@ -9,6 +9,7 @@
     "build": "NODE_ENV=production .veda/veda",
     "stage": "NODE_ENV=staging .veda/veda",
     "clean": ".veda/veda clean",
+    "local-cms": "npx netlify-cms-proxy-server",
     "test": "NODE_ENV=test .veda/veda test"
   },
   "browserslist": "> 0.5%, last 2 versions, not dead",
@@ -16,7 +17,9 @@
     "node": "16.x"
   },
   "devDependencies": {
-    "dotenv": "^10.0.0"
+    "dotenv": "^10.0.0",
+    "netlify-cms": "^2.10.192",
+    "netlify-cms-proxy-server": "^1.3.24"
   },
   "alias": {
     "react": "./.veda/ui/node_modules/react",
