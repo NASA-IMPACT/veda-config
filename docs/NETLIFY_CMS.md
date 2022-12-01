@@ -29,7 +29,7 @@ The button will change its text to 'View preview' once the preview is ready as y
 
 #### Behind the scene
 
-When the post is saved, PR with the new change is generated to staging branch automatically by Netlify. You can treat it like other PRs.
+Think of configuration UI (Netlify CMS) as a thin wrapper on top of Git flow. When the post is saved, PR with the new change is generated to staging branch automatically by Netlify. You can treat it like other PRs.
 
 ![Example PR generated through Netlify CMS](./media/example-pr-netlify-cms.png)
 
@@ -55,3 +55,4 @@ Some manual edits to mdx file are needed after the file is generated through Net
 
 - `media.src` : `::file` need to be put as prefix for the path.
 - `legend.color` for `categorical` type legend : Current CMS UI only supports `gradient` type legend. If you are using categorical legend, you need to edit mdx directly.
+- body text: Mind that Configuration UI doesn't support the body text of dataset (used for about page).
