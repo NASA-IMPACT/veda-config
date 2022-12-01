@@ -2,7 +2,7 @@
 
 ### Sign up
 
-You can access to Veda dashboard configuration editor at https://visex.netlify.app/admin/index.html . You should be able to see a prompt like the one below if it is your first time.
+You can access to Veda dashboard configuration editor at https://visex.netlify.app/admin/index.html. You should be able to see a prompt like the one below if it is your first time.
 
 ![Editor showing sign-up prompt](./media/netlify-cms-landing.png)
 
@@ -10,6 +10,13 @@ Follow the steps on the page to sign up as a user for CMS.
 
 ### Configure dataset 
 
+Click on New Dataset, or you can duplicate the existing dataset through left-top toolbar. 
+
+![Editor showing 'new dataset' button](./media/new-data-set-btn.png)
+![Editor showing 'duplicate' button](./media/duplicate-btn.png)
+
+
+Currently the UI requires bare minimum to display the data in Explorer tab, Mind that you need to fill up optional fields (ex. thematics) for VisEx Dashboard.
 ### 'Save' with preview
 
 Once you 'save' your post through a toolbar, cofiguration editor will show 'Check for preview' button on the top right corner of the page.

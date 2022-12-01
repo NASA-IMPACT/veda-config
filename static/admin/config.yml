@@ -27,6 +27,7 @@ collections:
       - label: "Featured on"
         name: "featuredOn"
         widget: "relation"
+        required: false
         collection: thematic
         value_field: id
         search_fields:
@@ -56,6 +57,7 @@ collections:
       - label: "Thematics"
         name: "thematics"
         widget: "relation"
+        required: false
         collection: thematic
         value_field: id
         multiple: true
@@ -64,13 +66,20 @@ collections:
           - name
       - label: "Image"
         name: "media"
+        required: false
         widget: "object"
         fields:
-          - { label: "File", name: "src", widget: "image" }
-          - { label: "Alt text", name: "alt", widget: "string" }
+          - { label: "File", name: "src", required: false, widget: "image" }
+          - {
+              label: "Alt text",
+              name: "alt",
+              required: false,
+              widget: "string",
+            }
           - label: "Author"
             name: "author"
             widget: "object"
+            required: false
             fields:
               - {
                   label: "Name",
@@ -109,6 +118,7 @@ collections:
             options: ["oldest", "newest"]
           - label: "Zoom Extent (minZoom, maxZoom ex. 6,20 )"
             name: zoomExtent
+            required: false
             widget: number_list
           - label: Layer to compare
             name: compare
@@ -140,7 +150,8 @@ collections:
                 name: colormap_name
                 widget: select
                 options:
-                  ["accent",
+                  [
+                    "accent",
                     "accent_r",
                     "afmhot",
                     "afmhot_r",
@@ -316,8 +327,8 @@ collections:
               - {
                   label: "Type",
                   name: "type",
-                  widget: "select",
-                  options: ["categorical", "gradient"],
+                  widget: "string",
+                  default: "gradient",
                 }
               - { label: "Min value label", name: "min", widget: "string" }
               - { label: "Max value label", name: "max", widget: "string" }
