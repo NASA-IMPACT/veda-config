@@ -14,34 +14,40 @@ collections:
     folder: "thematic"
     media_folder: "mock/thematic"
     create: true
-    extension: 'mdx'
-    format: 'frontmatter'
+    extension: "mdx"
+    format: "frontmatter"
     title: fields.id
     identifier_field: fields.id
     slug: "{{fields.id}}.thematic"
     summary: "{{fields.name}}"
     fields:
-      - {label: "ID", name: "id", widget: "string"}
-      - {label: "Thematic name", name: "name", widget: "string"}
-      - {label: "Description", name: "description", widget: "text"}
+      - { label: "ID", name: "id", widget: "string" }
+      - { label: "Thematic name", name: "name", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
       - label: "About"
         name: "about"
-        widget: 'object'
+        widget: "object"
         fields:
-          - {label: 'Title', name: 'title', widget: 'string'}
-          - {label: 'Description', name: 'description', widget: 'string'}
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "string" }
       - label: "Image"
         name: "media"
-        widget: 'object'
+        widget: "object"
         fields:
-          - {label: 'File', name: 'src', widget: 'image'}
-          - {label: 'Alt text', name: 'alt', widget: 'string'}
-          - label: 'Author' 
-            name: 'author'
-            widget: 'object'
+          - { label: "File", name: "src", widget: "image" }
+          - { label: "Alt text", name: "alt", widget: "string" }
+          - label: "Author"
+            name: "author"
+            widget: "object"
+            required: false
             fields:
-              - {label: 'Name', name: 'name', widget: 'string'}
-              - {label: 'URL', name: 'url', widget: 'string'}
+              - {
+                  label: "Name",
+                  name: "name",
+                  required: false,
+                  widget: "string",
+                }
+              - { label: "URL", name: "url", required: false, widget: "string" }
   - name: "dataset"
     label: "Dataset"
     folder: "datasets"
@@ -49,8 +55,8 @@ collections:
     editor:
       preview: false
     create: true
-    extension: 'mdx'
-    format: 'frontmatter'
+    extension: "mdx"
+    format: "frontmatter"
     title: fields.id
     identifier_field: fields.id
     slug: "{{fields.id}}.data"
@@ -62,7 +68,7 @@ collections:
         widget: "relation"
         collection: thematic
         value_field: id
-        search_fields: 
+        search_fields:
           - id
           - name
         multiple: true
@@ -71,59 +77,59 @@ collections:
         widget: list
         required: false
         fields:
-          - label: 'url'
-            name: 'url'
+          - label: "url"
+            name: "url"
             widget: string
             required: false
-          - label: 'Label'
-            name: 'label'
+          - label: "Label"
+            name: "label"
             widget: string
             required: false
-          - label: 'Title'
-            name: 'title'
+          - label: "Title"
+            name: "title"
             widget: string
             required: false
-      - {label: "ID", name: "id", widget: "string"}
-      - {label: "Name", name: "name", widget: "string"}
-      - {label: "Description", name: "description", widget: "text"}
+      - { label: "ID", name: "id", widget: "string" }
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
       - label: "Thematics"
         name: "thematics"
         widget: "relation"
         collection: thematic
         value_field: id
-        search_fields: 
+        search_fields:
           - id
           - name
       - label: "Image"
         name: "media"
-        widget: 'object'
+        widget: "object"
         fields:
-          - {label: 'File', name: 'src', widget: 'image'}
-          - {label: 'Alt text', name: 'alt', widget: 'string'}
-          - label: 'Author' 
-            name: 'author'
-            widget: 'object'
+          - { label: "File", name: "src", widget: "image" }
+          - { label: "Alt text", name: "alt", widget: "string" }
+          - label: "Author"
+            name: "author"
+            widget: "object"
             fields:
-              - {label: 'Name', name: 'name', widget: 'string'}
-              - {label: 'URL', name: 'url', widget: 'string'}
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "URL", name: "url", widget: "string" }
       - label: "Layers"
         name: layers
         widget: list
-        fields: 
-          - {label: "ID", name: "id", widget: "string"}
+        fields:
+          - { label: "ID", name: "id", widget: "string" }
           - label: STAC ID
             name: stacCol
             widget: select-async
             # widget options:
             url: https://staging-stac.delta-backend.com/collections
-            data_path:  collections
+            data_path: collections
             value_field: id
             display_field: id
           - label: "Layer Name"
-            name: 'name'
+            name: "name"
             widget: "string"
           - label: "Description"
-            name: 'description'
+            name: "description"
             widget: "string"
           - label: "type"
             name: type
@@ -133,10 +139,11 @@ collections:
             name: initialDatetime
             widget: "select"
             required: false
-            options: ['oldest','newest']
+            options: ["oldest", "newest"]
           - label: "Zoom Extent (minZoom, maxZoom ex. 6,20 )"
             name: zoomExtent
             widget: list
+            valueType: "int"
           - label: Layer to compare
             name: compare
             widget: object
@@ -150,7 +157,7 @@ collections:
                 name: layerId
                 required: false
                 widget: string
-          - label: 'Source parameter'
+          - label: "Source parameter"
             name: sourceParams
             widget: object
             required: false
@@ -171,25 +178,57 @@ collections:
             name: "legend"
             widget: "object"
             fields:
-            - {label: "Type", name: "type", widget: "select", options: ['categorical','gradient'] }
-            - {label: "Min value label", name: "min", widget: "string" }
-            - {label: "Max value label", name: "max", widget: "string" }
-            - label: "Stops for Gradient (color1, color2, ... ex. #ff0000, #91bfdb, #e0f3f8)"
-              name: "stops"
-              widget: list
+              - {
+                  label: "Type",
+                  name: "type",
+                  widget: "select",
+                  options: ["categorical", "gradient"],
+                }
+              - { label: "Min value label", name: "min", widget: "string" }
+              - { label: "Max value label", name: "max", widget: "string" }
+              - label: "Stops for Gradient (color1, color2, ... ex. #ff0000, #91bfdb, #e0f3f8)"
+                name: "stops"
+                widget: list
           - label: Projection
             name: projection
             widget: object
             required: false
             fields:
-              - {label: "ID", name: "id", widget: "select", options: ['albers', 'equalEarth', 'equirectangular', 'lambertConformalConic', 'mercator', 'naturalEarth', 'winkelTripel', 'globe', 'polarNorth', 'polarSouth'], required: false }
-              - {label: "Center (float, float)", name: "center", widget: "list", required: false }
-              - {label: "Parallels (float, float) ", name: "parallels", widget: "list", required: false }
+              - {
+                  label: "ID",
+                  name: "id",
+                  widget: "select",
+                  options:
+                    [
+                      "albers",
+                      "equalEarth",
+                      "equirectangular",
+                      "lambertConformalConic",
+                      "mercator",
+                      "naturalEarth",
+                      "winkelTripel",
+                      "globe",
+                      "polarNorth",
+                      "polarSouth",
+                    ],
+                  required: false,
+                }
+              - {
+                  label: "Center (float, float)",
+                  name: "center",
+                  widget: "list",
+                  required: false,
+                }
+              - {
+                  label: "Parallels (float, float) ",
+                  name: "parallels",
+                  widget: "list",
+                  required: false,
+                }
         # - label: "Stops for Category"
         #   name: "stops"
         #   widget: "list"
         #   fields:
         #     - {label: "color", name: "", widget: "text" }
         #     - {label: "label", name: "label", widget: "text" }
-      - {label: "Body", name: "body", widget: "markdown"}
-
+      - { label: "Body", name: "body", widget: "markdown" }
