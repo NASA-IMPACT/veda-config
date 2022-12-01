@@ -1,5 +1,5 @@
 # uncomment the line below to test local
-# local_backend: true
+local_backend: true
 backend:
   # uncomment the line below to test local, and not to save the change
   # name: test-repo
@@ -111,8 +111,13 @@ collections:
             name: "author"
             widget: "object"
             fields:
-              - { label: "Name", name: "name", widget: "string" }
-              - { label: "URL", name: "url", widget: "string" }
+              - {
+                  label: "Name",
+                  name: "name",
+                  widget: "string",
+                  required: false,
+                }
+              - { label: "URL", name: "url", widget: "string", required: false }
       - label: "Layers"
         name: layers
         widget: list
@@ -143,8 +148,7 @@ collections:
             options: ["oldest", "newest"]
           - label: "Zoom Extent (minZoom, maxZoom ex. 6,20 )"
             name: zoomExtent
-            widget: list
-            valueType: "int"
+            widget: number_list
           - label: Layer to compare
             name: compare
             widget: object
@@ -165,7 +169,7 @@ collections:
             fields:
               - label: rescale (lowestValue, highestValue ex. 0, 150000000)
                 name: rescale
-                widget: list
+                widget: number_list
                 required: false
               - label: bidx
                 name: bidx
@@ -217,13 +221,13 @@ collections:
               - {
                   label: "Center (float, float)",
                   name: "center",
-                  widget: "list",
+                  widget: "number_list",
                   required: false,
                 }
               - {
                   label: "Parallels (float, float) ",
                   name: "parallels",
-                  widget: "list",
+                  widget: "number_list",
                   required: false,
                 }
         # - label: "Stops for Category"
