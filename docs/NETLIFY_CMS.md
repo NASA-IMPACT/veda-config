@@ -15,15 +15,17 @@ Click on New Dataset, or you can duplicate the existing dataset through left-top
 ![Editor showing 'new dataset' button](./media/new-data-set-btn.png)
 ![Editor showing 'duplicate' button](./media/duplicate-btn.png)
 
-
 Currently the UI requires bare minimum to display the data in Explorer tab, Mind that you need to fill up optional fields (ex. thematics) for VisEx Dashboard.
+
 ### 'Save' with preview
 
-Once you 'save' your post through a toolbar, cofiguration editor will show 'Check for preview' button on the top right corner of the page.
+Once you 'save' your post through, cofiguration editor will show 'Check for preview' button on the top right corner of the page.
 
 ![Editor showing 'check for preview' button](./media/check-for-preview.png)
 
-The button will change its text to 'View preview' once the preview is ready as you click upon it. You can click on the button to see your change on preview page.
+The button will change its text to 'View preview' once the preview is ready as you click upon it. You can click on the button to see your change on preview page. 
+
+If you are updating your post, the button will always say 'View preview', but you would need to wait to see your latest change through the preview.
 
 ![Editor showing 'view preview' button](./media/view-preview.png)
 
