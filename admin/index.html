@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Veda Configuration UI</title>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  </head>
+  <body>
+    <script src="https://unpkg.com/netlify-cms@^2.10.0/dist/netlify-cms.js"></script>
+    <script src="https://unpkg.com/@adamjkb/netlify-cms-widget-select-async/dist/index.umd.js"></script>
+    <script>
+      var NumberListControl = createClass({
+        handleChange: function (e) {
+          var value = e.target.value;
+          this.props.onChange(
+            value.split(",").map(function (val) {
+              var trimmed = val.trim();
+              var floatingPoint = val.slice(-1);
+
+              var floatingProcessing = floatingPoint == ".";
+              return trimmed && !floatingProcessing ? Number(trimmed) : trimmed;
+            })
+          );
+        },
+
+        render: function () {
+          var value = this.props.value;
+          return h("input", {
+            type: "text",
+            value: value ? value.join(", ") : "",
+            onChange: this.handleChange,
+            className: this.props.classNameWrapper,
+          });
+        },
+      });
+
+      var NumberListPreview = createClass({
+        render: function () {
+          return h(
+            "ul",
+            {},
+            this.props.value.map(function (val, index) {
+              return h("li", { key: index }, val);
+            })
+          );
+        },
+      });
+
+      CMS.registerWidget("number_list", NumberListControl, NumberListPreview);
+      cosnole.log('yaho')
+    </script>
+    <script>
+      CMS.registerWidget(AsyncSelectWidget.Widget);
+    </script>
+  </body>
+</html>
