@@ -6,11 +6,11 @@ backend:
   name: git-gateway
   branch: develop
 publish_mode: editorial_workflow
+media_folder: "datasets"
 collections:
   - name: "dataset"
     label: "Dataset"
     folder: "datasets"
-    media_folder: "datasets"
     editor:
       preview: false
     create: true
