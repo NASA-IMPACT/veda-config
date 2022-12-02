@@ -144,6 +144,14 @@ collections:
                 name: bidx
                 widget: string
                 required: false
+              - label: color formula
+                name: color_formula
+                widget: string
+                required: false
+              - label: colormap
+                name: colormap
+                widget: string
+                required: false
               - label: colormap name
                 name: colormap_name
                 widget: select
@@ -321,17 +329,24 @@ collections:
           - label: "Legend"
             name: "legend"
             widget: "object"
+            required: false
             fields:
-              - {
-                  label: "Type",
-                  name: "type",
-                  widget: "string",
-                  default: "gradient",
-                }
-              - { label: "Min value label", name: "min", widget: "string" }
-              - { label: "Max value label", name: "max", widget: "string" }
+              - label: "Type"
+                name: "type"
+                widget: "string"
+                required: false
+                default: "gradient"
+              - label: "Min value label"
+                name: min
+                required: false
+                widget: string
+              - label: "Max value label"
+                name: max
+                required: false
+                widget: string
               - label: "Stops for Gradient (color1, color2, ... ex. #ff0000, #91bfdb, #e0f3f8)"
                 name: "stops"
+                required: false
                 widget: list
           - label: Projection
             name: projection
@@ -364,7 +379,7 @@ collections:
                   required: false,
                 }
               - {
-                  label: "Parallels (float, float) ",
+                  label: "Parallels (float, float)",
                   name: "parallels",
                   widget: "number_list",
                   required: false,
