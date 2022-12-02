@@ -18,7 +18,6 @@
   },
   "devDependencies": {
     "dotenv": "^10.0.0",
-    "netlify-cms": "^2.10.192",
     "netlify-cms-proxy-server": "^1.3.24"
   },
   "alias": {
