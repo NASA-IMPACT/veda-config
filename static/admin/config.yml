@@ -1,13 +1,11 @@
 # uncomment the line below to test local
-local_backend: true
+# local_backend: true
 backend:
   # uncomment the line below to test local, and not to save the change
   # name: test-repo
   name: git-gateway
-  # TO DO: update branch name to staging
-  branch: netlify-cms
+  branch: develop
 publish_mode: editorial_workflow
-media_folder: "datasets"
 collections:
   - name: "dataset"
     label: "Dataset"
@@ -381,7 +379,7 @@ collections:
   - name: "thematic"
     label: "Thematic"
     folder: "thematic"
-    media_folder: "mock/thematic"
+    media_folder: "thematic"
     create: true
     extension: "mdx"
     format: "frontmatter"

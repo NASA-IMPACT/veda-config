@@ -25,7 +25,7 @@ Once you 'save' your dataset, the cofiguration editor will show 'Check for previ
 
 The button will change its text to 'View preview' once the preview is ready as you click upon it. This can take upwards of a few minutes. If you continue to click 'Check for Preview' then it should change once a preview exists. You can click on the button to see your change on preview page. 
 
-Currently, f you are updating your post, the button will continue to say 'View preview.' However, there is still a small time delay. If your most recent change does not appear, give it a few minutes and it should show up.
+Currently, when you are updating your post, the button will continue to say 'View preview.' However, there is still a small time delay. If your most recent change does not appear, give it a few minutes and it should show up.
 
 ![Editor showing 'view preview' button](./media/view-preview.png)
 
