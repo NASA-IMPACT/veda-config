@@ -1,5 +1,4 @@
 ## How to use Netlify CMS with Veda dashboard
-
 ### Sign up
 
 You can access to Veda dashboard configuration editor at https://visex.netlify.app/admin/index.html. You should be able to see a prompt like the one below if it is your first time.
@@ -63,3 +62,16 @@ Some manual edits to mdx file are needed after the file is generated through Net
 - `media.src` : `::file` need to be put as prefix for the path.
 - `legend.color` for `categorical` type legend : Current CMS UI only supports `gradient` type legend. If you are using categorical legend, you need to edit mdx directly.
 - body text: Mind that Configuration UI doesn't support the body text of dataset (used for about page).
+
+
+## How to test Netlify CMS on local
+
+1. Uncomment `local_backend` of config.yml (This will make netlify-cms to generate output locally.)
+2. run `yarn` to install dependencies if you haven't.
+3. run `yarn cms` to power netlify cms proxy server.
+4. Open a new tab, run `yarn serve`.
+
+* All the steps above are to generate files locally. If you don't need that, you can skip directly to 5.
+
+5. go to https://localhost:9000/admin/index.html
+6. If the login button prompts the url to put, use the netlify app url : https://visex.netlify.app. Follow the instruction to set up your account
