@@ -49,7 +49,12 @@ collections:
             name: "title"
             widget: string
             required: false
-      - { label: "Dataset ID", name: "id", widget: "string" }
+      - {
+          label: "Dataset ID",
+          name: "id",
+          hint: "ID for dataset",
+          widget: "string",
+        }
       - { label: "Name", name: "name", widget: "string" }
       - { label: "Description", name: "description", widget: "text" }
       - label: "Thematics"
@@ -114,7 +119,8 @@ collections:
             widget: "select"
             required: false
             options: ["oldest", "newest"]
-          - label: "Zoom Extent (minZoom, maxZoom ex. 6,20 )"
+          - label: "Zoom Extent"
+            hint: "minZoom(int), maxZoom(int) ex. 3, 17"
             name: zoomExtent
             required: false
             widget: number_list
@@ -136,8 +142,9 @@ collections:
             widget: object
             required: false
             fields:
-              - label: rescale (lowestValue, highestValue ex. 0, 150000000)
+              - label: rescale
                 name: rescale
+                hint: lowestValue, highestValue ex. 0, 150000000
                 widget: number_list
                 required: false
               - label: bidx
@@ -344,8 +351,9 @@ collections:
                 name: max
                 required: false
                 widget: string
-              - label: "Stops for Gradient (color1, color2, ... ex. #ff0000, #91bfdb, #e0f3f8)"
+              - label: "Stops for Gradient"
                 name: "stops"
+                hint: "ex. #ff0000, #91bfdb, #e0f3f8, ..."
                 required: false
                 widget: list
           - label: Projection
