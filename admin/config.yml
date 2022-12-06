@@ -4,7 +4,7 @@ backend:
   # uncomment the line below to test local, and not to save the change
   # name: test-repo
   name: git-gateway
-  branch: netlify-cms
+  branch: develop
 publish_mode: editorial_workflow
 media_folder: "datasets"
 collections:
