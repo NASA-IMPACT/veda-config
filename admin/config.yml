@@ -1,5 +1,5 @@
 # uncomment the line below to test local
-local_backend: true
+# local_backend: true
 backend:
   # uncomment the line below to test local, and not to save the change
   # name: test-repo

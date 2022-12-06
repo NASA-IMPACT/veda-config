@@ -78,6 +78,6 @@ Some manual edits to mdx file are needed after the file is generated through Net
 5. go to https://localhost:9000/admin/index.html
 6. If the login button prompts the url to put, use the netlify app url : https://visex.netlify.app. Follow the instruction to set up your account
 
-### Add/Remvoe widgets from CMS
+### Add/Remove widgets from CMS
 
 The schema for NetlifyCMS is defined in `config.yml`. [Netlify CMS Widget docs](https://www.netlifycms.org/docs/widgets/) can guide you in defining a schema for widgets.
