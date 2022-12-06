@@ -64,7 +64,9 @@ Some manual edits to mdx file are needed after the file is generated through Net
 - body text: Mind that Configuration UI doesn't support the body text of dataset (used for about page).
 
 
-## How to test Netlify CMS on local
+## How to develop Netlify CMS on local
+
+### Run local instance
 
 1. Uncomment `local_backend` of config.yml (This will make netlify-cms to generate output locally.)
 2. run `yarn` to install dependencies if you haven't.
@@ -75,3 +77,7 @@ Some manual edits to mdx file are needed after the file is generated through Net
 
 5. go to https://localhost:9000/admin/index.html
 6. If the login button prompts the url to put, use the netlify app url : https://visex.netlify.app. Follow the instruction to set up your account
+
+### Add/Remove widgets from CMS
+
+The schema for NetlifyCMS is defined in `config.yml`. [Netlify CMS Widget docs](https://www.netlifycms.org/docs/widgets/) can guide you in defining a schema for widgets.
