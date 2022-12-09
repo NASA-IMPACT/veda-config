@@ -1,6 +1,6 @@
 ---
 id: snow-projections-diff
-name: 'Projections of Snow Water Equivalent losses'
+name: 'Projections of Snow Water Equivalent Losses'
 description: "Percent-change to future snow water equivalent modeled using the Land Information System framework and CMIP6 projections"
 media:
   src: ::file ./snow-projections-median.jpg
@@ -13,12 +13,13 @@ thematics:
 layers:
   - id: snow-projections-diff
     stacCol: snow-projections-diff
-    name: 'Projections of Snow Water Equivalent losses'
+    name: 'Projections of Snow Water Equivalent Losses'
     type: raster
     description: 'Snow water equivalent modeled using the Land Information System framework and CMIP6 projections'
     sourceParams:
       resampling_method: bilinear
       bidx: 1
+      nodata: nan
       colormap_name: rdbu
       rescale:
         - -1
@@ -28,7 +29,7 @@ layers:
       layerId: snow-projections-diff
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `${dateFns.format(datetime, 'DD LLL yyyy')} VS ${dateFns.format(compareDatetime, 'DD LLL yyyy')}`;        
+          return `${dateFns.format(datetime, 'DD LLL yyyy')}`;        
         }
     legend:
       type: gradient
@@ -43,11 +44,12 @@ layers:
       - "#4393C3"
       - "#0D2F60"
 ---
-<Block type='full'>
+<Block>
 <Prose>
 ## Overview
 Snow water equivalent (SWE) is defined as the amount of water in the snow. Here, we present the projected fractional change to snow in future periods, relative to the historical period (1995 - 2014). Fractional changes of -1 represent total snow loss. 
 </Prose>
+
 </Block>
 
 
