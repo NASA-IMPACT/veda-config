@@ -11,11 +11,11 @@ media:
 thematics:
   - eis
 layers:
-  - id: snow-projections-diff
-    stacCol: snow-projections-diff
-    name: 'Projections of Snow Water Equivalent Losses'
+  - id: snow-projections-diff-scenario-245
+    stacCol: snow-projections-diff-245
+    name: 'SWE Losses, SSP2-4.5'
     type: raster
-    description: 'Snow water equivalent modeled using the Land Information System framework and CMIP6 projections'
+    description: 'Snow water equivalent (SWE) losses modeled using the Land Information System framework and CMIP6 SSP2-4.5 scenario projections'
     sourceParams:
       resampling_method: bilinear
       bidx: 1
@@ -26,7 +26,39 @@ layers:
         - 1
     compare:
       datasetId: snow-projections-diff
-      layerId: snow-projections-diff
+      layerId: snow-projections-diff-scenario-245
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'DD LLL yyyy')}`;        
+        }
+    legend:
+      type: gradient
+      label: Snow Water Equivalent change [fractional]
+      min: "-1"
+      max: "1"
+      stops:
+      - "#670220"
+      - "#D65F4D"
+      - "#FCDBC7"
+      - "#D1E5F0"
+      - "#4393C3"
+      - "#0D2F60"
+  - id: snow-projections-diff-scenario-585
+    stacCol: snow-projections-diff-585
+    name: 'SWE Losses, SSP5-8.5'
+    type: raster
+    description: 'Snow water equivalent (SWE) losses modeled using the Land Information System framework and CMIP SSP5-8.5 scenario projections'
+    sourceParams:
+      resampling_method: bilinear
+      bidx: 1
+      nodata: nan
+      colormap_name: rdbu
+      rescale:
+        - -1
+        - 1
+    compare:
+      datasetId: snow-projections-diff
+      layerId: snow-projections-diff-scenario-585
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           return `${dateFns.format(datetime, 'DD LLL yyyy')}`;        

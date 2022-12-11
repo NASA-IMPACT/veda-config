@@ -11,11 +11,11 @@ media:
 thematics:
   - eis
 layers:
-  - id: snow-projections-median
-    stacCol: snow-projections-median
-    name: 'Projections of Snow Water Equivalent'
+  - id: snow-projections-median-scenario-245
+    stacCol: snow-projections-median-245
+    name: 'SWE, SSP2-4.5'
     type: raster
-    description: 'Snow water equivalent modeled using the Land Information System framework and CMIP6 projections'
+    description: 'Snow water equivalent modeled using the Land Information System framework and CMIP6 SSP2-4.5 scenario projections'
     sourceParams:
       resampling_method: bilinear
       bidx: 1
@@ -25,7 +25,7 @@ layers:
         - 1000
     compare:
       datasetId: snow-projections-median
-      layerId: snow-projections-median
+      layerId: snow-projections-median-scenario-245
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           return `${dateFns.format(datetime, 'DD LLL yyyy')}`;        
@@ -34,7 +34,38 @@ layers:
       type: gradient
       label: Snow Water Equivalent [mm]
       min: "0"
-      max: "1000"
+      max: "1000 mm"
+      stops:
+      - "#F7FBFF"
+      - "#D0E1F2"
+      - "#94C4DF"
+      - "#4A98C9"
+      - "#2164AB"
+      - "#0E316B"
+  - id: snow-projections-median-scenario-585
+    stacCol: snow-projections-median-585
+    name: 'SWE, SSP5-8.5'
+    type: raster
+    description: 'Snow water equivalent modeled using the Land Information System framework and CMIP6 SSP5-8.5 scenario projections'
+    sourceParams:
+      resampling_method: bilinear
+      bidx: 1
+      colormap_name: blues
+      rescale:
+        - 0
+        - 1000
+    compare:
+      datasetId: snow-projections-median
+      layerId: snow-projections-median-scenario-585
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'DD LLL yyyy')}`;        
+        }
+    legend:
+      type: gradient
+      label: Snow Water Equivalent [mm]
+      min: "0"
+      max: "1000 mm"
       stops:
       - "#F7FBFF"
       - "#D0E1F2"
