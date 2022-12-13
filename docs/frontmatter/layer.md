@@ -99,6 +99,8 @@ Legend for this layer. This is shown in the interface as a visual guide to the u
 
 ```yaml
 type: categorical | gradient
+unit:
+  label: string
 min: string
 max: string
 stops: string[] | object[]
@@ -137,6 +139,14 @@ A `categorical` legend will display discreet color buckets according to the defi
 </td>
 </tr>
 </table>
+
+**legend.unit**  
+`object`  
+Settings for the unit.
+
+**legend.unit.label**  
+`string`  
+Unit label. Shown whenever a label for the values is needed. (Ex: The chart axis on the analysis page)
 
 **legend.min**  
 `string`  
