@@ -81,7 +81,7 @@ parallels: [int, int]
 
 **projection.id**  
 `albers | equalEarth | equirectangular | lambertConformalConic | mercator | naturalEarth | winkelTripel | globe | polarNorth | polarSouth`  
-The id of the projection to set. Besides all the projections offered by mapbox, delta supports two additional ones `polarNorth | polarSouth`. These are not true polar projections but are achieved using specific `center` and `parallels` values of the `lambertConformalConic` projection.
+The id of the projection to set. Besides all the projections offered by mapbox, veda supports two additional ones `polarNorth | polarSouth`. These are not true polar projections but are achieved using specific `center` and `parallels` values of the `lambertConformalConic` projection.
 
 **projection.center**  
 `[int, int]`  
@@ -99,6 +99,8 @@ Legend for this layer. This is shown in the interface as a visual guide to the u
 
 ```yaml
 type: categorical | gradient
+unit:
+  label: string
 min: string
 max: string
 stops: string[] | object[]
@@ -137,6 +139,14 @@ A `categorical` legend will display discreet color buckets according to the defi
 </td>
 </tr>
 </table>
+
+**legend.unit**  
+`object`  
+Settings for the unit.
+
+**legend.unit.label**  
+`string`  
+Unit label. Shown whenever a label for the values is needed. (Ex: The chart axis on the analysis page)
 
 **legend.min**  
 `string`  

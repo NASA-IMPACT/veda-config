@@ -1,6 +1,6 @@
-# Writing contents for Delta dashboard
+# Writing contents for Veda dashboard
 
-- [Writing contents for Delta dashboard](#writing-contents-for-delta-dashboard)
+- [Writing contents for Veda dashboard](#writing-contents-for-veda-dashboard)
   - [Background & Prerequisites](#background--prerequisites)
   - [Block](#block)
   - [Image](#image)
@@ -14,13 +14,13 @@
 
 ## Background & Prerequisites
 
-Delta dashboard content uses [MDX](https://mdxjs.com/docs/what-is-mdx/) for its content. To most simply put, MDX combines Javascript components and Markdown. By using MDX, Delta dashboard can offer editors rich experience with custom components while still having a way of writing text-based content with markdown syntax.
+Veda dashboard content uses [MDX](https://mdxjs.com/docs/what-is-mdx/) for its content. To most simply put, MDX combines Javascript components and Markdown. By using MDX, Veda dashboard can offer editors rich experience with custom components while still having a way of writing text-based content with markdown syntax.
 
-Understanding of MDX is not required to write contents for Delta dashboard, but you need to know how to write [Markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax), and to be familiar with the concept of [JSX](https://facebook.github.io/jsx/).
+Understanding of MDX is not required to write contents for Veda dashboard, but you need to know how to write [Markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax), and to be familiar with the concept of [JSX](https://facebook.github.io/jsx/).
 
 ## Block
 
-`Block` is a basic 'building block' for Delta dashboard contents. Any contents needs to be wrapped with `Block` component. The type of Block, and the combination of its children elements will decide the layout of the content block. When there is a layout change, you can assume that there is a change of block type. The image below shows what block was used for each layout.
+`Block` is a basic 'building block' for Veda dashboard contents. Any contents needs to be wrapped with `Block` component. The type of Block, and the combination of its children elements will decide the layout of the content block. When there is a layout change, you can assume that there is a change of block type. The image below shows what block was used for each layout.
 
 <table>
 <tr>
@@ -62,7 +62,7 @@ Layouts do work in any size of screen, but this documentation mainly addresses h
   </td> 
   <td>  
 
-  ![Screenshot of Default Prose Block](./media/delta-default-prose.jpg)   
+  ![Screenshot of Default Prose Block](./media/block-default-prose.jpg)   
   </td>
 </tr>
 
@@ -82,7 +82,7 @@ Layouts do work in any size of screen, but this documentation mainly addresses h
   </td> 
   <td>  
 
-  ![Screenshot of Wide Prose Block](./media/delta-wide-prose.jpg)
+  ![Screenshot of Wide Prose Block](./media/block-wide-prose.jpg)
   </td>
 </tr>
 
@@ -102,7 +102,7 @@ Layouts do work in any size of screen, but this documentation mainly addresses h
   </td> 
   <td>  
 
-  ![Screenshot of Wide Figure Block](./media/delta-wide-figure.jpg)
+  ![Screenshot of Wide Figure Block](./media/block-wide-figure.jpg)
   </td>
 </tr>
 
@@ -121,7 +121,7 @@ Layouts do work in any size of screen, but this documentation mainly addresses h
   </td> 
   <td>  
 
-  ![Screenshot of Full Figure Block](./media/delta-full-figure.jpg)
+  ![Screenshot of Full Figure Block](./media/block-full-figure.jpg)
   </td>
 </tr>
 
@@ -143,7 +143,7 @@ Layouts do work in any size of screen, but this documentation mainly addresses h
   </td> 
   <td>  
   
-  ![Screenshot of Prose Figure Block](./media/delta-prose-figure.jpg)
+  ![Screenshot of Prose Figure Block](./media/block-prose-figure.jpg)
   </td>
 </tr>
 
@@ -166,7 +166,7 @@ Layouts do work in any size of screen, but this documentation mainly addresses h
   </td> 
   <td>  
 
-  ![Screenshot of Figure Prose Block](./media/delta-figure-prose.jpg)
+  ![Screenshot of Figure Prose Block](./media/block-figure-prose.jpg)
   </td>
 </tr>
 
@@ -188,7 +188,7 @@ Layouts do work in any size of screen, but this documentation mainly addresses h
   </td> 
   <td>  
 
-  ![Screenshot of prose full figure Block](./media/delta-prose-full-figure.jpg)
+  ![Screenshot of prose full figure Block](./media/block-prose-full-figure.jpg)
   </td>
 </tr>
 
@@ -211,7 +211,7 @@ Layouts do work in any size of screen, but this documentation mainly addresses h
   </td> 
   <td>  
 
-  ![Screenshot of full figure prose Block](./media/delta-full-figure-prose.jpg)
+  ![Screenshot of full figure prose Block](./media/block-full-figure-prose.jpg)
   </td>
 </tr>
 </table>
@@ -219,7 +219,7 @@ Layouts do work in any size of screen, but this documentation mainly addresses h
 
 ## Image 
 
-To offer rich visual and better experience, Delta dashboard offers `Image` component, which is a wrapper for `<img/>` HTML tag. You can use `Image` component to display any kind of image. Depending on where Image is used (is it inside of `Prose` as an inline image? or inside of `Figure`?), there are additional attributes you need to pass.
+To offer rich visual and better experience, Veda dashboard offers `Image` component, which is a wrapper for `<img/>` HTML tag. You can use `Image` component to display any kind of image. Depending on where Image is used (is it inside of `Prose` as an inline image? or inside of `Figure`?), there are additional attributes you need to pass.
 
 Also you can pass any attribute that you can use with `<img />` HTML element and these will get passed down. Ex. you can pass width of image or height of image with `width`, `height`.
 
@@ -405,7 +405,7 @@ Syntax for Map, which displays `nightlights-hd-monthly` layer from `sandbox` dat
 
 ![](./media/scrollytelling.png)
 
-The Scrollytelling feature of Delta is map based and allows you to define different `Chapters` where each chapter corresponds to a map position and layer being displayed.  
+The Scrollytelling feature of Veda is map based and allows you to define different `Chapters` where each chapter corresponds to a map position and layer being displayed.  
 As the user scrolls the chapter content comes into view on top of the map which will animate to a specific position.
 
 The scrollytelling is defined as a series os `Chapters` inside the `ScrollytellingBlock`.

@@ -1,9 +1,9 @@
 # Setup
 
-This repo contains all the content and configuration needed to setup your own instance of [delta-ui](https://github.com/NASA-IMPACT/delta-ui).
+This repo contains all the content and configuration needed to setup your own instance of [veda-config](https://github.com/NASA-IMPACT/veda-config).
 
-The `delta-config` relies on the `delta-ui` submodule.  
-Use `--recursive` flag when cloning `delta-config`, or initialize the submodules with:
+The `veda-config` relies on the `veda-ui` submodule.  
+Use `--recursive` flag when cloning `veda-config`, or initialize the submodules with:
 ```
 git submodule update --init --recursive
 ```
@@ -28,12 +28,24 @@ npm -g install yarn
 Then, setup the project by running the command below.
 
 ```
-./.delta/setup
+./.veda/setup
 ```
 
-## Mapbox Token
+## Usage
 
-Get your Mapbox access token from Mapbox Dashboard. Put the key in `.env.local-sample` file. Copy the file and rename as `.env.local`. 
+### Config files
+Configuration is done using [dot.env](https://parceljs.org/features/node-emulation/#.env-files) files.
+
+These files are used to simplify the configuration of the app and should not contain sensitive information.
+
+Copy the `.env.local-sample` to `.env.local` to add your configuration variables.
+```sh
+cp .env.local-sample .env.local
+```
+
+### Mapbox Token
+
+Get your Mapbox access token from Mapbox Dashboard. Put the key in `.env.local` file.
 
 ## Running the app
 
@@ -45,4 +57,4 @@ yarn serve
 This will start the app and make it available at http://localhost:9000.
 
 If the application is not working properly or erroring when it starts, try cleaning the cache with `yarn clean`.  
-If the errors persist [open an issue](https://github.com/NASA-IMPACT/delta-config/issues/new) with the problem description.
+If the errors persist [open an issue](https://github.com/NASA-IMPACT/veda-config/issues/new) with the problem description.

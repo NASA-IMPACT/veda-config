@@ -1,3 +1,3 @@
-[submodule ".delta/ui"]
-	path = .delta/ui
-	url = https://github.com/NASA-IMPACT/delta-ui.git
+[submodule ".veda/ui"]
+	path = .veda/ui
+	url = https://github.com/NASA-IMPACT/veda-ui.git
