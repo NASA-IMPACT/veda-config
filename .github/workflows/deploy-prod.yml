@@ -120,3 +120,12 @@ jobs:
           # Otherwise use the build directory directly:
           # SOURCE_DIR: ./dist
           SOURCE_DIR: ./deploy
+
+      - name: Invalidate CloudFront cache
+        uses: chetan/invalidate-cloudfront-action@v2
+        env:
+          DISTRIBUTION: ${{ secrets.CLOUDFRONT_DISTRIBUTION_PROD }}
+          PATHS: "/*"
+          AWS_REGION: ${{ env.DEPLOY_BUCKET_PROD_REGION }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
