@@ -11,7 +11,7 @@ Check the [Content Documentation](https://github.com/NASA-IMPACT/veda-config/blo
 ### Any content
 - [ ] Cover image with proper attribution (when relevant) is present.
 - [ ] Cover images do not contain any text (they're used as a background and text may not be readable).
-- [ ] All images are not to big/heavy. As a general rule of thumb they should not weigh more than 500KB, or be larger than 2000px. See the [media guide](https://github.com/NASA-IMPACT/veda-config/blob/main/docs/frontmatter/media.md#media) for more info.
+- [ ] All images are not too big/heavy. As a general rule of thumb, they should not weigh more than 500KB, or be larger than 2000px. See the [media guide](https://github.com/NASA-IMPACT/veda-config/blob/main/docs/frontmatter/media.md#media) for more info.
 - [ ] Content was added using the available [MDX Blocks](https://github.com/NASA-IMPACT/veda-config/blob/main/docs/MDX_BLOCKS.md).
 
 ### Datasets
