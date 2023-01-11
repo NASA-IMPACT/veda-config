@@ -2,8 +2,8 @@
 featuredOn:
   - eis
 id: 'eis-coastal-risks'
-name: Risks to coasts from sea level rise compounded by water cycle intensification
-description: "NASA measurements and models shed light on present and future coastal risks"
+name: Is water cycle change compounding the risk of coastal flooding from sea-level rise?
+description: 'Is water cycle change compounding the risk of coastal flooding from sea-level rise?'
 media:
   src: ::file ./coastal-flooding-and-slr-cover.jpg
   alt: Flooding in York, UK - February 2020.
@@ -17,16 +17,28 @@ thematics:
 <Block>
   <Prose>
   ## Introduction
-  The Earth Information System (EIS) provides a platform for collaborative analysis and decision support for adapting to sea-level changes, human-caused water cycle intensification, and their impacts. The full potential of these individual efforts are realized through the EIS project, which supports Earth system science through transdisciplinary connections between researchers across traditional science disciplines, applied sciences, and data systems.
+  <Figure>
+    <Image
+      src={new URL("./warning.png", import.meta.url).href}
+      alt="Warning - this Discovery is not peer reviewed!"
+    />
+    <Caption
+      attrAuthor="Under construction icons created by wanicon - Flaticon"
+      attrUrl="https://www.flaticon.com/free-icons/under-construction"
+    />
+  </Figure>
+  This Discovery presents work in progress and not peer-reviewed results!
+
+  The Earth Information System (EIS) provides a platform for collaborative analysis and decision support for adapting to sea-level changes, human-caused water cycle change, and their impacts. The full potential of these individual efforts are realized through the EIS project, which supports Earth system science through transdisciplinary connections between researchers across traditional science disciplines, applied sciences, and data systems.
   </Prose>
 </Block>
 
 <Block type='full'>
   <Prose>
-  ## Evidence of Global Water Cycle Intensification 
+  ## Evidence of Global Water Cycle Change
   Terrestrial water storage (TWS), corresponding to integrated changes in surface water across rivers, lakes, wetlands, soil moisture, groundwater and snow, is a critical component of the global water and energy budget. The warming climate and other human disturbances are leading to more non-regular changes in terrestrial water storage, imposing emerging threats to water and food security.
   </Prose>
-  
+
   <Figure>
     <Map
       datasetId='tws-anomaly'
@@ -36,12 +48,12 @@ thematics:
       center={[0,0]}
       compareDateTime='2021-12-01'
     />
-    <Caption 
-      attrAuthor='NASA' 
+    <Caption
+      attrAuthor='NASA'
       attrUrl='https://nasa.gov/'
     />
   </Figure>
-  
+
 </Block>
 
 <Block type='full'>
@@ -53,8 +65,8 @@ thematics:
       zoom={1}
       center={[0,0]}
     />
-    <Caption 
-      attrAuthor='NASA' 
+    <Caption
+      attrAuthor='NASA'
       attrUrl='https://nasa.gov/'
     />
   </Figure>
@@ -120,10 +132,23 @@ thematics:
     Comparison of MODIS-derived land cover in Bangladesh between 2001 and 2020.
     </Caption>
   </Figure>
-  
+
   <Prose>
   ### Changing landscape
   MODIS sensors can inform us about how land cover has changed over the past two decades. Cropland expansion has resulted in reduced native vegetation across the country. Satellite data also shows coastal land loss since 2001.
+
+  <Figure>
+    <Image
+      src={new URL("./caution.png", import.meta.url).href}
+      alt="Caution - this is disputed in the literature!"
+    />
+    <Caption
+      attrAuthor="Warning icons created by Smashicons - Flaticon"
+      attrUrl="https://www.flaticon.com/free-icons/warning"
+    />
+  </Figure>
+  Previous results show coastal land gain.
+
   </Prose>
 
 </Block>
@@ -155,8 +180,8 @@ thematics:
       zoom={4}
       center={[87.67,14.63]}
     />
-    <Caption 
-      attrAuthor='NASA' 
+    <Caption
+      attrAuthor='NASA'
       attrUrl='https://nasa.gov/'
     >
     Change in sea surface height (m) between 1992 and 2017 as estimated from the ECCO model.
@@ -172,17 +197,23 @@ thematics:
 <Block>
    <Prose>
     The ECCO model shows that there are seasonal variations in sea-level change and a background increase of **3.6 mm/yr** over time. Sea-level rise compounds the risk of coastal flooding by raising the water level at river mouths and increasing flood magnitudes.separates total sea-level change into two components: extra water mass added to the ocean (barystatic) and ocean temperature and salinity changes (steric). At this location, the steric component remains steady over time, while the barystatic component is increasing, meaning that **sea-level rise off the coast of Bangladesh is driven by extra water mass added to the ocean from the ice sheets, glaciers, and changes to land-water storage**. Understanding the sources of past sea-level rise helps researchers create better projections of future sea-level rise.
-    
+
     Link to Jupyter notebook to calculate sea-level change from ECCO: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7335607.svg)](https://doi.org/10.5281/zenodo.7335607)
   </Prose>
   <Figure>
     <Chart
       dataPath={new URL('./ecco_ssh.csv', import.meta.url).href}
-      dateFormat="%m/%Y" 
-      idKey='source' 
-      xKey='date' 
-      yKey='SSH (m)' 
+      dateFormat="%m/%Y"
+      idKey='source'
+      xKey='date'
+      yKey='SSH (m)'
       yAxisLabel='meters'
     />
   </Figure>
+</Block>
+
+<Block>
+   <Prose>
+   Join the discussion and provide comments on this Discovery at https://github.com/Earth-Information-System/.
+   </Prose>
 </Block>
