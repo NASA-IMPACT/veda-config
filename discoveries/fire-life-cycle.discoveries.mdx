@@ -1,0 +1,222 @@
+---
+featuredOn:
+  - eis
+id: "fire-life-cycle"
+name: Life Cycle of a Fire
+description: "NASA EIS Transdisciplinary Science from Pre-Fire to Post-Fire"
+media:
+  src: ::file ./fire-cover.png
+  alt: Satellite imagery (false color) of East Troublesome fire spreading to the Rockies
+  author:
+    name: Lauren Dauphin/Landsat 8
+    url: https://eoimages.gsfc.nasa.gov/images/imagerecords/147000/147452/coloradofire752_oli_2020296_lrg.jpg
+pubDate: 2023-01-25
+thematics:
+  - eis
+---
+
+<Block>
+  <Prose>
+  ## Introduction
+  <mark>🚧 This Discovery presents work in progress and not peer-reviewed results! 🚧</mark>
+
+    Fires are an integral part of the Earth system and have a large human dimension. Society's interaction with the Earth system affects fire risk, fire spread, and fire impacts (e.g. property destruction, emissions, mud slides). NASA data products and models provide real-time information on active fires, smoke, air quality, and forecasts of changing fire weather and seasonal fire risk. 
+    
+    EIS provides a platform for collaborative analysis of and decision support for pre-fire risk, active fire situational awareness, and managing post-fire impacts. The full potential of these individual efforts are realized through the EIS collaborative framework to support new transdisciplinary connections and fire-related management activities.
+    
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    ## Fires in Western US
+    The Western United States is experiencing an increase of catastrophic wildfires. While fires historically constituted an important rangeland disturbance process in the semi-arid ecosystems of the Western US, climate change and intensifying droughts have increased the frequency and vigor of wildfire occurrences. 
+  </Prose>
+  <Figure>
+    <Image
+      src={new URL("./wus_burns.png", import.meta.url).href}
+      alt="fires in western US"
+    />
+    <Caption
+      attrAuthor="NASA EIS Freshwater"
+      attrUrl="https://freshwater.eis.smce.nasa.gov/"
+    />
+  </Figure>
+</Block>
+
+<Block type="full">
+  <Figure>
+    <Image
+      src={new URL("./ca-fires.jpeg", import.meta.url).href}
+      alt="fires in western US"
+    />
+    <Caption
+      attrAuthor='NASA'
+      attrUrl='https://nasa.gov/'
+    >
+      More information about Fires in Oregon and California can be found in NASA's article (Fires in Oregon and California Grow in Size and Intensity)[https://www.nasa.gov/image-feature/goddard/2018/fires-in-oregon-and-california-grow-in-size-and-intensity] 
+    </Caption>
+  </Figure>
+</Block>
+
+
+
+
+<Block>
+  <Prose>
+    ## Drought conditions set the stage for an intense fire season in California in 2021
+
+	The 2021 wildfire season in California started amid an ongoing drought and historically low rainfall and reservoir levels. By August, seasonal deficits of rainfall result in anomalously dry soils in large parts of the Western US. Eventually, the vegetation dries out as the roots can’t provide moisture to meet atmospheric demand. This vegetation stress is captured by thermal imaging satellites and by the model as reduced plant growth.
+  </Prose>
+  <Figure>
+    <Image
+      src={new URL("./historicdrought2021.gif", import.meta.url).href}
+      alt="historicdrought2021"
+    />
+    <Caption
+      attrAuthor='NASA'
+      attrUrl='https://nasa.gov/'
+    >
+      NASA’s Earth Information System (EIS) analysis captures the onset of drought and heightened fire conditions in mid-August 2021, with seasonal deficits of rainfall, exceptionally dry soils, onset of acute vegetation stress, and reduced plant growth
+    </Caption>
+  </Figure>
+</Block>
+
+
+<Block>
+  <Prose>
+    ## New developments in fire risk modeling
+
+	Dry, windy weather combines with the dry vegetation to create perfect conditions for WildFires across much of Northern California in the summer of 2021. The Fire Weather Index (FWI) is a globally used tool to track the developing risk of fire. The FWI tracks closely with the Burning Index of the US-focused National Fire Danger Rating System (NFDRS). Traditionally based only on weather data, these fire risk indices have limited spatial detail. 
+
+EIS can connect more detailed land surface information with existing weather-based fire-risk indices. This comparison shows the potential for a land surface model informed index compared to a pure weather-based index. 
+
+  </Prose>
+  <Figure>
+    <Image
+      src={new URL("./lis_fwi.png", import.meta.url).href}
+      alt="FWI compared to LIS-based FWI"
+    />
+    <Caption
+      attrAuthor='NASA'
+      attrUrl='https://nasa.gov/'
+    >
+      FWI compared to LIS-based FWI (swipe/slider) for Aug 14th, 2021
+    </Caption>
+  </Figure>
+</Block>
+
+
+<Block>
+  <Prose>
+    ## NRT Detection, Tracking, and Emissions |TBD by 618 led group|
+
+	Real-time global fire event monitoring: Tracking every fire on Earth, every 12 hours, using an automated algorithm that converts satellite measurements of fire occurrence and energy output on a pixel-by-pixel basis to maps of the active fire perimeter and cumulative burned area (dataset #6)
+
+	Improve representation of fires and fire emissions in atmospheric models: Update model information related to emissions from different land cover types, improve the representation of the diurnal cycle of fires, and evaluate new model predictions against satellite, airborne, and ground-based measurements of atmospheric composition and air quality (dataset #7)
+
+	GHG emissions (dataset #8)
+
+  </Prose>
+</Block>
+
+
+
+
+
+
+<Block>
+  <Prose>
+    ## Vegetation Responds with Reduced Transpiration
+
+    Fire leads to an immediate and lasting reduction in evapotranspiration (ET) over burned areas. This can be tracked over the post-fire years using the OpenET archive. OpenET produces ET estimates based on high-resolution Landsat observations and according to several different modeling approaches. 
+    
+    By  comparing the annual ET of the post-fire year with the pre-fire 5-year mean value, we get a map that compares strikingly well with the burn area and severity maps (MTBS: Monitoring Trends in Burn Severity).
+
+  </Prose>
+</Block>
+
+<Block type="full">
+  <Figure>
+    <Image
+      src={new URL("./et_suppression.png", import.meta.url).href}
+      alt="fires in western US"
+    />
+    <Caption
+      attrAuthor='NASA'
+      attrUrl='https://nasa.gov/'
+    >
+      Impact of fires on reduction of evapotranspiration, shown in high resolution datasets from OpenET over 2020 fires in Western US
+    </Caption>
+  </Figure>
+
+</Block>
+
+
+
+
+
+
+
+<Block>
+  <Prose>
+    ## Assessing Downstream Effects on Hydrology and Water Quality
+
+   Fire radiative power is an early observational indicator of interest to emergency response providers to prioritize areas with increased risk of mud-slides. 
+   
+   >> Tracing Hydrological impacts of wildfires to understand downstream landslide risks
+  </Prose>
+</Block>
+
+<Block>
+  <Figure>
+    <Image
+      src={new URL("./thomas_et.png", import.meta.url).href}
+      alt="impact on ET in post-fire seasons"
+    />
+    <Caption
+      attrAuthor='NASA'
+      attrUrl='https://nasa.gov/'
+    >
+      Impacts on ET over the 2017 Thomas Fire, Southern California
+    </Caption>
+  </Figure>
+
+  <Figure>
+    <Image
+      src={new URL("./thomas_debris.png", import.meta.url).href}
+      alt="debris flow in post-fire seasons"
+    />
+    <Caption
+      attrAuthor='NASA'
+      attrUrl='https://nasa.gov/'
+    >
+      Debris Flow for Thomas fire
+    </Caption>
+  </Figure>
+
+</Block>
+
+
+
+
+
+
+
+
+
+<Block>
+  <Prose>
+    ## Additional resources
+
+    - [EIS Freshwater](https://freshwater.eis.smce.nasa.gov/)
+    - [Land Information System](https://lis.gsfc.nasa.gov/)
+
+    ### Explore the Missions
+
+    - [GRACE-FO](https://gracefo.jpl.nasa.gov/data/grace-fo-data/)
+    - [SMAP](https://smap.jpl.nasa.gov/)
+    - [MODIS](https://modis.gsfc.nasa.gov/)
+  </Prose>
+</Block>
+
