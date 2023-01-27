@@ -17,11 +17,12 @@ thematics:
 
 <Block>
   <Prose>
-  ## Introduction
   <mark>🚧 This Discovery presents work in progress and not peer-reviewed results! 🚧</mark>
 
-    Fires are an integral part of the Earth system and have a large human dimension. Society's interaction with the Earth system affects fire risk, fire spread, and fire impacts (e.g. property destruction, emissions, mud slides). NASA data products and models provide real-time information on active fires, smoke, air quality, and forecasts of changing fire weather and seasonal fire risk. 
-    
+  ## Introduction
+    Fires are an integral part of the Earth system and have a large human dimension. Society's interaction with the Earth system affects fire risk, fire spread, and fire impacts (e.g. property destruction, emissions, mud slides). NASA data products and models provide real-time information on active fires, smoke, air quality, and forecasts of changing fire weather and seasonal fire risk.
+
+     
     EIS provides a platform for collaborative analysis of and decision support for pre-fire risk, active fire situational awareness, and managing post-fire impacts. The full potential of these individual efforts are realized through the EIS collaborative framework to support new transdisciplinary connections and fire-related management activities.
     
   </Prose>
@@ -30,16 +31,21 @@ thematics:
 <Block>
   <Prose>
     ## Fires in Western US
-    The Western United States is experiencing an increase of catastrophic wildfires. While fires historically constituted an important rangeland disturbance process in the semi-arid ecosystems of the Western US, climate change and intensifying droughts have increased the frequency and vigor of wildfire occurrences. 
+
+    The Western United States is experiencing an increase of catastrophic wildfires. While fires historically constituted an important rangeland disturbance process in the semi-arid ecosystems of the Western US, climate change and intensifying droughts have increased the frequency and vigor of wildfire occurrences.
+
+    This chart shows total area burnt from 2001 to 2021 in Western US. 
   </Prose>
   <Figure>
-    <Image
-      src={new URL("./wus_burns.png", import.meta.url).href}
-      alt="fires in western US"
+    <Chart
+      dataPath={new URL('./Burnarea_time_series.csv', import.meta.url).href}
+      dateFormat="%Y"
+      idKey='type'
+      xKey='year'
+      yKey='CLL'
+      yAxisLabel='Burn area, acres'
     />
     <Caption
-      attrAuthor="NASA EIS Freshwater"
-      attrUrl="https://freshwater.eis.smce.nasa.gov/"
     />
   </Figure>
 </Block>
@@ -94,7 +100,7 @@ EIS can connect more detailed land surface information with existing weather-bas
   </Prose>
   <Figure>
     <Image
-      src={new URL("./lis_fwi.png", import.meta.url).href}
+      src={new URL("./fwi_lis.png", import.meta.url).href}
       alt="FWI compared to LIS-based FWI"
     />
     <Caption
@@ -119,6 +125,7 @@ EIS can connect more detailed land surface information with existing weather-bas
 
   </Prose>
 </Block>
+
 
 
 
@@ -158,6 +165,7 @@ EIS can connect more detailed land surface information with existing weather-bas
 
 
 
+
 <Block>
   <Prose>
     ## Assessing Downstream Effects on Hydrology and Water Quality
@@ -181,7 +189,9 @@ EIS can connect more detailed land surface information with existing weather-bas
       Impacts on ET over the 2017 Thomas Fire, Southern California
     </Caption>
   </Figure>
+</Block>
 
+<Block>
   <Figure>
     <Image
       src={new URL("./thomas_debris.png", import.meta.url).href}
@@ -219,4 +229,5 @@ EIS can connect more detailed land surface information with existing weather-bas
     - [MODIS](https://modis.gsfc.nasa.gov/)
   </Prose>
 </Block>
+
 
