@@ -1,0 +1,209 @@
+---
+featuredOn:
+  - eis
+id: 'eis-snow-projections'
+name: Future projections of Western US montane snowpack
+description: "NASA climate projections and NASA models are combined to infer the future state of snow water resources in the Rocky Mountains and North Cascades Mountain ranges"
+media:
+  src: ::file ./snow-projections-median.jpg
+  alt: Matterhorn glacier field
+  author:
+    name: Justin Pflug
+    url: 
+pubDate: 2023-02-01
+thematics:
+  - eis
+---
+<Block>
+  <Prose>
+  ## Introduction
+  Over half of the annual runoff in the Western United States originates from seasonal snowpack. However, seasonal snowpack is threatened by future changes to climate. The impacts of climate change on snowpack are particularly important in mountainous regions, which behave like “water towers”, storing water in the winter, and releasing water through snowmelt in the spring and summer. In this Discovery, we combine [NASA-downscaled climate projections](https://www.nccs.nasa.gov/services/data-collections/land-based-products/nex-gddp-cmip6) and [NASA land surface modeling tools](https://lis.gsfc.nasa.gov/) to investigate how climate change could impact snow water resources. We look at five mountainous domains in the Western U.S., and infer how changes to snow water resources could change the availability of wildlife habitat. This research was performed in collaboration with the U.S. Fish and Wildlife Service and Cooperative Institute for Research in Environmental Sciences.
+  This Discovery presents work in progress and not peer-reviewed results
+  </Prose>
+</Block>
+
+<Block type='full'>
+  <Prose>
+  ## Climate change projections
+   Future climate projections came from the [Climate Model Intercomparison Project, Phase 6](https://www.wcrp-climate.org/wgcm-cmip/wgcm-cmip6). CMIP6 Projections of air temperature, precipitation, relative humidity, wind speed, and radiation were downscaled to finer-spatial resolutions by the NASA Earth Exchange Global Daily Downscaled Projections (NEX-GDDP). Projections show that most of the Western US average winter air temperature and precipitation are expected to increase by the end of the century (2076 - 2095), relative to the historical timeframe (1995 - 2016).
+  </Prose>
+
+  <Figure>
+    <Map
+      datasetId='CMIP-winter-median'
+      layerId='lis-tws-nonstationarity-index'
+      dateTime='2003-01-01'
+      zoom={1}
+      center={[0,0]}
+    />
+    <Caption
+      attrAuthor='NASA'
+      attrUrl='https://nasa.gov/'
+    />
+  </Figure>
+</Block>
+
+
+
+
+
+  
+  <Figure>
+    <Map
+      datasetId='tws-anomaly'
+      layerId='lis-tws-anomaly'
+      dateTime='2002-12-01'
+      zoom={1}
+      center={[0,0]}
+      compareDateTime='2021-12-01'
+    />
+    <Caption 
+      attrAuthor='NASA' 
+      attrUrl='https://nasa.gov/'
+    />
+  </Figure>
+  
+</Block>
+
+<Block type='full'>
+  <Figure>
+    <Map
+      datasetId='lis-tws-nonstationarity-index'
+      layerId='lis-tws-nonstationarity-index'
+      dateTime='2003-01-01'
+      zoom={1}
+      center={[0,0]}
+    />
+    <Caption 
+      attrAuthor='NASA' 
+      attrUrl='https://nasa.gov/'
+    />
+  </Figure>
+  <Prose>
+  Identifying hot spot regions under non-stationary water cycle changes and exploring the drivers are important issues that may provide information to improve hydrological forecasting and water management. Through interdisciplinary research and data assimilation, the EIS team developed a **novel metric to quantify the non-stationarity of the global water cycle**, integrating data about long term trends, seasonal shifts, and interannual to sub-seasonal scale variabilities.
+  </Prose>
+</Block>
+
+<Block>
+   <Prose>
+    ## Terrestrial water storage for Bangladesh
+  Bangladesh is one of the hot spots regions that is experiencing non-stationary water cycle change, which is mainly evidenced by groundwater depletion from agricultural pumping. Averaged across the country, **TWS has depleted at a rate of almost 13 mm/year** during 2002-2021, or about 2 billion cubic meters per year countrywide.
+  </Prose>
+  <Figure>
+    <Chart
+      dataPath={new URL('./TWS_time_series.csv', import.meta.url).href}
+      dateFormat="%b-%Y"
+      idKey='type'
+      xKey='date'
+      yKey='TWS'
+      yAxisLabel='mm'
+    />
+    <Caption
+    />
+  </Figure>
+</Block>
+
+<Block>
+   <Prose>
+    ## Human activities change Bangladesh’s water cycle and landscape
+    ### Depleting aquifers
+    Ground measurements show the impacts of heavy pumping for irrigation on groundwater levels in northwestern Bangladesh. This chart shows the **drop of almost 20 m in groundwater table elevation** at selected location in northwestern Bangladesh.
+
+  </Prose>
+  <Figure>
+    <Chart
+      dataPath={new URL('./groundwater_time_series.csv', import.meta.url).href}
+      dateFormat="%b-%y"
+      idKey='type'
+      xKey='date'
+      yKey='groundwater'
+      yAxisLabel='meters'
+    />
+    <Caption
+    />
+  </Figure>
+</Block>
+
+<Block>
+  <Figure>
+    <Map
+      datasetId='bangladesh-landcover-2001-2020'
+      layerId='bangladesh-landcover-2001-2020'
+      dateTime='2001-01-01'
+      compareDateTime='2020-01-01'
+      zoom={7}
+      center={[90.43,23.74]}
+    />
+    <Caption
+      attrAuthor='NASA'
+      attrUrl='https://nasa.gov/'
+    >
+    Comparison of MODIS-derived land cover in Bangladesh between 2001 and 2020.
+    </Caption>
+  </Figure>
+  
+  <Prose>
+  ### Changing landscape
+  MODIS sensors can inform us about how land cover has changed over the past two decades. Cropland expansion has resulted in reduced native vegetation across the country. Satellite data also shows coastal land loss since 2001.
+  </Prose>
+
+</Block>
+
+<Block>
+   <Prose>
+   Bangladesh lost about **490 square kilometers** of coastal land between 2001 and 2020, mainly caused by human-induced climate change combined with land subsidence. This chart shows annual coastal land loss from 2001 to 2020.
+
+  </Prose>
+  <Figure>
+    <Chart
+      dataPath={new URL('./coastal_land_loss_time_series.csv', import.meta.url).href}
+      dateFormat="%Y"
+      idKey='type'
+      xKey='year'
+      yKey='CLL'
+      yAxisLabel='square kilometers'
+    />
+  </Figure>
+</Block>
+
+
+<Block type='full'>
+  <Figure>
+    <Map
+      datasetId='ecco-surface-height-change'
+      layerId='ecco-surface-height-change'
+      dateTime='1992-01-01'
+      zoom={4}
+      center={[87.67,14.63]}
+    />
+    <Caption 
+      attrAuthor='NASA' 
+      attrUrl='https://nasa.gov/'
+    >
+    Change in sea surface height (m) between 1992 and 2017 as estimated from the ECCO model.
+    </Caption>
+  </Figure>
+  <Prose>
+  ## Changing sea level
+  Off the coast of Bangladesh, NASA's Estimating the Circulation and Climate of the Ocean (ECCO) model shows the change in sea level from 1992 to 2017. This model uses information about ocean physics to fill in the gaps between satellite observations for a complete map of how sea-level change varies around the globe over time.
+  </Prose>
+</Block>
+
+
+<Block>
+   <Prose>
+    The ECCO model shows that there are seasonal variations in sea-level change and a background increase of **3.6 mm/yr** over time. Sea-level rise compounds the risk of coastal flooding by raising the water level at river mouths and increasing flood magnitudes.separates total sea-level change into two components: extra water mass added to the ocean (barystatic) and ocean temperature and salinity changes (steric). At this location, the steric component remains steady over time, while the barystatic component is increasing, meaning that **sea-level rise off the coast of Bangladesh is driven by extra water mass added to the ocean from the ice sheets, glaciers, and changes to land-water storage**. Understanding the sources of past sea-level rise helps researchers create better projections of future sea-level rise.
+    
+    Link to Jupyter notebook to calculate sea-level change from ECCO: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7335607.svg)](https://doi.org/10.5281/zenodo.7335607)
+  </Prose>
+  <Figure>
+    <Chart
+      dataPath={new URL('./ecco_ssh.csv', import.meta.url).href}
+      dateFormat="%m/%Y" 
+      idKey='source' 
+      xKey='date' 
+      yKey='SSH (m)' 
+      yAxisLabel='meters'
+    />
+  </Figure>
+</Block>
