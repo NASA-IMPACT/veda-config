@@ -2,8 +2,8 @@
 featuredOn:
   - eis
 id: 'tws-trends'
-name: Global Water Cycle Variability
-description: "Two decades of global water cycle variability assessed by land data assimilation"
+name: A Global Water Cycle Reanalyses (2003-2021)
+description: "The integration of state-of-the art model and remote sensing observations to reveal human water footprint on water-energy-carbon nexus"
 media:
   src: ::file ./tws-trend--discovery-cover.png
   alt: Body of water with cloud backdrop
@@ -14,6 +14,24 @@ pubDate: 2020-12-01
 thematics:
   - eis
 ---
+<Block>
+  <Prose>
+  ## Section 1: Introduction
+  🚧 This Discovery presents work in progress and not peer-reviewed results! 🚧
+
+  Para 1: Motivation of the global water cycle reanalysis [capture human water footprint]
+  
+  Para 2: A brief ntro on methodology [TWS is modeled using Noah-MP land surface model (LSM) within LIS framework by assimilating NASA earth observations of soil moisture from ESA CCI, leaf area index from MODIS sensor, and TWS from GRACE/GRACE-FO. The modeled TWS is produced over global domain at a resolution of 10 km.
+].
+
+  Para 3: A brief intro to the output dataset [provide link to the VEDA Datasets]
+
+  Join the discussion and provide comments on this Discovery at https://github.com/orgs/Earth-Information-System/discussions.
+
+  Authors: Wanshu Nie, Melissa Wrzesien, Shahryar Ahmad, Sujay Kumar, Kim Locke
+
+  </Prose>
+</Block>
 
 <ScrollytellingBlock>
   <Chapter
@@ -75,77 +93,55 @@ thematics:
 
 <Block>
   <Prose>
-    ## Modeling TWS
-    TWS is modeled using Noah-MP land surface model (LSM) within LIS framework by assimilating NASA earth observations of soil moisture from ESA CCI, leaf area index from MODIS sensor, and TWS from GRACE/GRACE-FO. The modeled TWS is produced over global domain at a resolution of 10 km.
+  ## Section 2: Scrollytelling Block 
+
+  Refer to Shahryar's design for TWS trends...
+
+  [Key points: Switching between TWS_trend and GPP_trend, zoom in and out for a few locations that are under depletion and greening and explain why with reference links]
+
   </Prose>
 </Block>
 
-<Block type='full'>
-  <Figure>
-    <Map
-      datasetId='tws-anomaly'
-      layerId='lis-tws-anomaly'
-      dateTime='2002-12-01'
-      zoom={4}
-      center={[77.63,24.27]}
-      compareDateTime='2021-12-01'
-    />
-    <Caption
-      attrAuthor='NASA'
-      attrUrl='https://nasa.gov/'
-    >
-      TWS anomalies over India compared between Dec 2002 (left) and Dec 2021 (right)
-    </Caption>
-  </Figure>
-  <Prose>
-    ## Interpreting the data
-    The TWS anomalies are calculated as differences of raw TWS with the climatology obtained over 2001-2021. Negative anomalies denote lower than normal TWS and vice-versa. The trend over time is thus deseasonalized and reflective of changes due to human impacts.
-  </Prose>
-</Block>
 
-<Block type='full'>
+<Block>
+
   <Prose>
-    ## Declining trends, depleting storage!  
-    Terrestrial water storage (TWS) is defined as the summation of all water on the land surface and in the subsurface. It includes surface soil moisture, root zone soil moisture, groundwater, snow, ice, water stored in the vegetation, river and lake water.
+  ## Section 3: Sliding Window Block 
+
+  [Key point: 1) explain methods how the trend is calculated, 2) link to coastal discoveriy and non-stationarity slides, 3) engage users to interact and compare]
+
   </Prose>
+
   <Figure>
-    <Map
-      datasetId='tws-anomaly'
-      layerId='lis-tws-anomaly'
-      dateTime='2002-12-01'
-      zoom={4}
-      center={[-116,36]}
-      compareDateTime='2021-12-01'
+    <CompareImage
+      leftImageSrc={new URL('./Global_Reanalysis_Fig1a.png', import.meta.url).href}
+      leftImageAlt='Theil-Sen Slope estimation of TWS from global reanalyses'
+      leftImageLabel='TWS trend'
+      rightImageSrc={new URL('./Global_Reanalysis_Fig1b.png', import.meta.url).href}
+      rightImageAlt='Theil-Sen Slope estimation of GPP from global reanalyses'
+      rightImageLabel='GPP trend'
     />
-    <Caption
-      attrAuthor='NASA'
-      attrUrl='https://nasa.gov/'
-    >
-      Depleting TWS over CA between 2002 (left) and 2021 (right), captured by LIS modeled TWS anomalies
+    <Caption attrAuthor='Wanshu Nie, JHU' attrUrl='TBD'>
+      Theil-Sen Slope estimation of terrestrial water storage and gross primary production for 2003-2021 from global reanalysis dataset.
     </Caption>
   </Figure>
 </Block>
 
-<Block type='full'>
+<Block>
+  <Prose>
+  ## Section 4: Time series Block
+
+      [Key point: We highlighted places that TWS and GPP show the opposite sign of trend and explore the changes in ET. A closer look at the places with mutual effect on ET.]
+  </Prose>
   <Figure>
-    <Map
-      datasetId='tws-trend'
-      layerId='lis-tws-trend'
-      dateTime='2001-01-01'
-      zoom={4}
-      center={[77.63,24.27]}
+    <Image
+      src={new URL('./Global_Reanalysis_Fig2.png', import.meta.url).href}
+      alt='Mutural effect of TWS depletion and greening on ET'
     />
-    <Caption
-      attrAuthor='NASA'
-      attrUrl='https://nasa.gov/'
-    >
-      Trend in TWS anomalies over India showing large groundwater extraction leading to depleting TWS
+    <Caption attrAuthor='Wanshu Nie' attrUrl='TBD'>
+      Mutural effect of TWS depletion and greening on ET.
     </Caption>
   </Figure>
-  <Prose>
-    ## Interpreting the data
-    The TWS anomalies are calculated as differences of raw TWS with the climatology obtained over 2001-2021. Negative anomalies denote lower than normal TWS and vice-versa. The trend over time is thus deseasonalized and reflective of changes due to human impacts.
-  </Prose>
 </Block>
 
 <Block>
