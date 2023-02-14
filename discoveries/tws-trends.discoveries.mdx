@@ -5,18 +5,18 @@ id: 'tws-trends'
 name: A Global Water Cycle Reanalyses (2003-2021)
 description: "The integration of state-of-the art model and remote sensing observations to reveal human water footprint on water-energy-carbon nexus"
 media:
-  src: ::file ./tws-trend--discovery-cover.png
-  alt: Body of water with cloud backdrop
+  src: ::file ./jordan_image.jpg
+  alt: Meandering wadis combine to form dense, branching networks across the stark, arid landscape of southeastern Jordan. The Arabic word "wadi" means a gulley or streambed that typically remains dry except after drenching, seasonal rains.
   author:
-    name: Ryan Loughlin
-    url: https://unsplash.com/photos/J2V5PUUDYR8
-pubDate: 2020-12-01
+    name: USGS/NASA
+    url: https://eros.usgs.gov/media-gallery/earth-as-art/2/jordan
+pubDate: unknown
 thematics:
   - eis
 ---
 <Block>
   <Prose>
-  ## Section 1: Introduction
+  ## Introduction
   🚧 This Discovery presents work in progress and not peer-reviewed results! 🚧
 
   Freshwater is what makes Earth habitable, sustaining ecosystems and human civilization. The global water cycle enables the supply of water and regulation of weather patterns. The cycling of water links the changes on land with the ocean and atmosphere. Challenges exist regarding the understanding of freshwater variability and availability because multiple earth systems interact with each other including processes that govern precipitation, ground soil moisture retention, snow cover, depth and melt, evapotranspiration and vegetation dynamics. Such processes become even more complex under human water intervention.
@@ -86,12 +86,14 @@ thematics:
 <Block>
 
   <Prose>
-  ## Section 3: Sliding Window Block 
+  ## Comparing the trends in water and carbon cycles
 
-  [Key point: 1) explain methods how the trend is calculated, 2) link to coastal discoveriy and non-stationarity slides, 3) engage users to interact and compare]
+  We applied a seasonal and trend decomposition algorithm to get the trend estimates for terrestrial water storage and gross primary production. The method can better help to deal with nonstationarities [LINK TO Coastal Discovery] and seasonal shifts and provide a more robust estimate of trends. These trend data sets are also provided in the VEDA dataset page [LINK].
 
   </Prose>
+<Block>
 
+<Block>
   <Figure>
     <CompareImage
       leftImageSrc={new URL('./Global_Reanalysis_Fig1a.png', import.meta.url).href}
