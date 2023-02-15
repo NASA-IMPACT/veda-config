@@ -17,8 +17,13 @@ thematics:
 <Block>
   <Prose>
   ## Introduction
+  🚧 This Discovery presents work in progress and not peer-reviewed results! 🚧
+
   Over half of the annual runoff in the Western United States originates from seasonal snowpack. However, seasonal snowpack is threatened by future changes to climate. The impacts of climate change on snowpack are particularly important in mountainous regions, which behave like “water towers”, storing water in the winter, and releasing water through snowmelt in the spring and summer. In this discovery, we combine NASA-downscaled climate projections and [NASA land surface modeling tools](https://lis.gsfc.nasa.gov/) to investigate how climate change could impact snow water resources. We look at five mountainous domains in the Western U.S., and infer how changes to snow water resources could change the availability of wildlife habitat. This research was performed in collaboration with the U.S. Fish and Wildlife Service and Cooperative Institute for Research in Environmental Sciences.
-  This discovery presents work in progress and not peer-reviewed results
+
+  Join the discussion and provide comments on this Discovery at https://github.com/orgs/Earth-Information-System/discussions.
+
+  Authors: Justin Pflug, Sujay Kumar, Ben Livneh, Melissa Wrzesien, Kim Locke
   </Prose>
 </Block>
 
@@ -27,43 +32,43 @@ thematics:
   ## Climate change projections
    Climate projections came from the [Climate Model Intercomparison Project, Phase 6](https://www.wcrp-climate.org/wgcm-cmip/wgcm-cmip6). CMIP6 Projections of air temperature, precipitation, relative humidity, wind speed, and radiation were downscaled to finer spatial resolutions by the NASA Earth Exchange Global Daily Downscaled Projections ([NEX-GDDP](https://www.nccs.nasa.gov/services/data-collections/land-based-products/nex-gddp-cmip6)). Projections show that most of the Western US average winter air temperature and precipitation are expected to increase by the end of the century (2076 - 2095), relative to the historical timeframe (1995 - 2016).
   </Prose>
-  <Figure>
-    <Map
-      datasetId='CMIP-winter-median-ta'
-      layerId='CMIP245-winter-median-ta'
-      dateTime='2085-02-14'
-      zoom={4.5}
-      center={[-113.,40.]}
-      compareDateTime='2099-01-01'
-    />
-    <Caption
-      attrAuthor='NASA'
-      attrUrl='https://nasa.gov/'
-    />
-  </Figure>
-  <Figure>
-    <Map
-      datasetId='CMIP-winter-median-pr'
-      layerId='CMIP245-winter-median-pr'
-      dateTime='2085-02-14'
-      zoom={4.5}
-      center={[-113.,40.]}
-      compareDateTime='2099-01-01'
-    />
-    <Caption
-      attrAuthor='NASA'
-      attrUrl='https://nasa.gov/'
-    />
-  </Figure>
+//  <Figure>
+//    <Map
+//      datasetId='CMIP-winter-median-ta'
+//      layerId='CMIP245-winter-median-ta'
+//      dateTime='2085-02-14'
+//      zoom={4.5}
+//      center={[-113.,40.]}
+//      compareDateTime='2099-01-01'
+//    />
+//    <Caption
+//      attrAuthor='NASA'
+//      attrUrl='https://nasa.gov/'
+//    />
+//  </Figure>
+//  <Figure>
+//    <Map
+//      datasetId='CMIP-winter-median-pr'
+//      layerId='CMIP245-winter-median-pr'
+//      dateTime='2085-02-14'
+//      zoom={4.5}
+//      center={[-113.,40.]}
+//      compareDateTime='2099-01-01'
+//    />
+//    <Caption
+//      attrAuthor='NASA'
+//      attrUrl='https://nasa.gov/'
+//    />
+//  </Figure>
 </Block>
 
 <Block>
    <Figure>
     <Chart
-      dataPath={new URL('./CSCD_projected_ta.csv', import.meta.url).href}
+      dataPath={new URL('./CSCD_projected_ta_historicalOnly.csv', import.meta.url).href}
       dateFormat="%Y-%m"
       idKey='Projection'
-      xKey='date'
+      xKey='Date'
       yKey='Air Temperature[C]'
       yAxisLabel='Air temperature [C]'
     />
@@ -75,13 +80,14 @@ thematics:
 
 <ScrollytellingBlock>
   <Chapter
-    center={[-119.70,47.60]}
-    zoom={8}
+    center={[-119.70,48.40]}
+    zoom={7.5}
     datasetId='snow-projections-diff'
     layerId='snow-projections-diff-scenario-245'
     datetime='2077-05-01'
   >
-    ## Washington Cascades
+    ## The Washington Cascades
+    Montane snow in the pacific northwest is among the most sensitive in the Western US. As compared to internal US mountain ranges, this region is at lower elevations and has warmer temperatures and more-frequent winter rainfall.<STATS> 
   </Chapter>
   <Chapter
     center={[-114.80,47.40]}
@@ -91,14 +97,31 @@ thematics:
     datetime='2077-05-01'
   >
     ## Northern Rocky Mountains
+    Although at higher elevations and colder temperatures, average changes to end-of-century snowpack are as large as <STATS>
   </Chapter>
   <Chapter
     center={[-108.90,40.70]}
-    zoom={5}
+    zoom={5.5}
     datasetId='snow-projections-diff'
     layerId='snow-projections-diff-scenario-245'
     datetime='2077-05-01'
   >
     ## Central and Southern Rocky Mountains
+    Although temperatures are projected to increase by <STAT> by the end of the century, end-of-century winter precipitation is projected to increase, and winter temperatures may be sufficiently cold enough to sustain snowfall at high elevations. This could result in high-elevation increases in May 15 snowpack, particularly in Wyoming. However, projections often disagree on the direction of future snow changes in this region, and high elevation increases are not large enough to offset lower-elevation decreases in snow volume.  
   </Chapter>
-</ScrollytellingBlock>   
+</ScrollytellingBlock> 
+<Block>
+   <Figure>
+    <Chart
+      dataPath={new URL('./noRocky_west_hab.csv', import.meta.url).href}
+      idKey='Period'
+      xKey='Percent-change'
+      yKey='Elevation'
+      yAxisLabel='Elevation [m]'
+      xAxisLabel='Percent-change [%]
+    />
+   </Figure>
+   <Prose>
+   INSERT TEXT
+   </Prose>
+</Block>  
