@@ -247,6 +247,19 @@ EIS can connect more detailed land surface information with existing weather-bas
     showBaseMap={true}
   >
     We highlight why the post-fire recovery assessment needs to incorporate widely varying vegetation response to landcover type and climate disturbances.
+    <Figure>
+    <Chart
+      dataPath={new URL('./ThomasFireET_time_series.csv', import.meta.url).href}
+      dateFormat="%b-%Y" 
+      idKey='source' 
+      xKey='date' 
+      yKey='ET (mm)' 
+      yAxisLabel='ET (mm)'
+      highlightStart = 'Dec-2017'
+      highlightEnd = 'Jan-2018'
+      highlightLabel = 'Fire Ignition'
+    />
+    </Figure>
     </Chapter>
 
 </ScrollytellingBlock>
