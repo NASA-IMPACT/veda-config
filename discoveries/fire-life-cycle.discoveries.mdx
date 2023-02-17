@@ -217,55 +217,89 @@ EIS can connect more detailed land surface information with existing weather-bas
     ## A journey through fires 
      
     Response of vegetation to fire disturbances is a complex interplay of climate conditions, landcover, and burn severity. To explore such inter-relationships, we present here a few fire events and the progression of ET before and beyond the burn.
+    
+    OpenET observations of ET (DisALEXI model) capture the changes in ET after the fire events. Progression of spatially-averaged ET over the burned and control regions (unimpacted from fire) in the charts show the post-fire recovery of transpiration. 
 </Prose>
 </Block>
 
 <ScrollytellingBlock>
   <Chapter
-    center={[-119.650,38.839]}
+    center={[-119.650,39.839]}
     zoom={10}
     datasetId='mtbs-burn-severity'
     layerId='mtbs-burn-severity'
     datetime='2017-01-01'
   >
-    ## 2017 fire in NV (NV3885411961720170724)
-    This fire burnt ~5000 ac of grassland with moderate severity. Vegetation responded with declining ET but the recovery happened rapidly within a couple of post-fire seasons.
+    ## 2017 Preacher fire in NV
+    Ignited on July 24, 2017, Preacher fire burnt ~5000 ac of grassland in Nevada with moderate severity. Vegetation responded with declining ET but the transpiration recovery happened rapidly within a couple of post-fire seasons.
+    
+    <Chart
+      dataPath={new URL('./ET_timeseries_PreacherNV.csv', import.meta.url).href}
+      dateFormat="%m/%d/%Y" 
+      idKey='source' 
+      xKey='Date' 
+      yKey='ET (mm)' 
+      yAxisLabel='ET (mm)'
+      highlightStart = '7/1/2017'
+      highlightEnd = '8/1/2017'
+      highlightLabel = 'Fire Ignition'
+    />
   </Chapter>
   <Chapter
-    center={[-123.773,41.697]}
+    center={[-123.773,42.697]}
     zoom={10}
     datasetId='mtbs-burn-severity'
     layerId='mtbs-burn-severity'
     datetime='2018-01-01'
   >
     ## 2018 Natchez fire in CA 
-    This fire burnt ~X ac primarily in the forested landscape of CA with high severity. The impact on reduced post-fire ET sustained for a longer period of time, with an incomplete recovery even after three post-fire seasons. 
-    </Chapter>
-  <Chapter
-    center={[-74.0236, 40.7234]}
-    zoom={2}
-    showBaseMap={true}
-  >
-    We highlight why the post-fire recovery assessment needs to incorporate widely varying vegetation response to landcover type and climate disturbances.
+    Natchez fire started on July 15, 2018 to burn a massive 38,800 ac of forested landscape in Northern CA with high severity. Vegetation sustained the impact on reduced post-fire ET for a longer period of time, showing incomplete recovery even after three post-fire seasons. 
+    
     <Chart
-      dataPath={new URL('./ThomasFireET_time_series.csv', import.meta.url).href}
-      dateFormat="%b-%Y" 
+      dataPath={new URL('./ET_timeseries_NatchezCA.csv', import.meta.url).href}
+      dateFormat="%m/%d/%Y" 
       idKey='source' 
-      xKey='date' 
+      xKey='Date' 
       yKey='ET (mm)' 
       yAxisLabel='ET (mm)'
-      highlightStart = 'Dec-2017'
-      highlightEnd = 'Jan-2018'
+      highlightStart = '7/1/2017'
+      highlightEnd = '8/1/2017'
       highlightLabel = 'Fire Ignition'
     />
+  </Chapter>
+    <Chapter
+    center={[-119.35416749037454,34.325706]}
+    zoom={10}
+    datasetId='mtbs-burn-severity'
+    layerId='mtbs-burn-severity'
+    datetime='2018-01-01'
+  >
+    ## 2017 Thomas fire in Southern CA 
+    
+    Thoms fire, that started on Dec 4, 2017, burned 281,982 acres surpassing all the preceding wildfires in modern California history and caused over $2.2 billion USD in damages. A mix of savannas and grasslands were affected with moderate severity burns, resulting in an incomplete recovery by the end of 2021.
+    
+    <Chart
+      dataPath={new URL('./ET_timeseries_ThomasCA.csv', import.meta.url).href}
+      dateFormat="%m/%d/%Y" 
+      idKey='source' 
+      xKey='Date' 
+      yKey='ET (mm)' 
+      yAxisLabel='ET (mm)'
+      highlightStart = '12/1/2017'
+      highlightEnd = '1/1/2018'
+      highlightLabel = 'Fire Ignition'
+    />
+  </Chapter>
+  <Chapter
+    center={[-118,42]}
+    zoom={4}
+    showBaseMap={true}
+  >
+     The response of ecosystem to fires is complex!
+    Post-fire management and risk assessment thus needs to include the control of landcover, fire properties,  and climate disturbances in modeling the hydrology of burnt and surrounding regions.
     </Chapter>
 
 </ScrollytellingBlock>
-
-
-
-
-
 
 
 
@@ -279,28 +313,6 @@ EIS can connect more detailed land surface information with existing weather-bas
    >> Tracing Hydrological impacts of wildfires to understand downstream landslide risks
   </Prose>
 </Block>
-
-
-<Block>
-   <Prose>
-    Open ET observations of ET (using DisALEXI model) capture suppression after the fire event ignited on Dec 4, 2017. Spatially-averaged ET over the burned and control regions (unimpacted from fire) in the chart here show the recovery of vegetation transpiration in the post-fire regime. 
-
-  </Prose>
-  <Figure>
-    <Chart
-      dataPath={new URL('./ThomasFireET_time_series.csv', import.meta.url).href}
-      dateFormat="%b-%Y" 
-      idKey='source' 
-      xKey='date' 
-      yKey='ET (mm)' 
-      yAxisLabel='ET (mm)'
-      highlightStart = 'Dec-2017'
-      highlightEnd = 'Jan-2018'
-      highlightLabel = 'Fire Ignition'
-    />
-  </Figure>
-</Block>
-
 
 
 
