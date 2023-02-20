@@ -26,9 +26,22 @@ thematics:
     EIS provides a platform for collaborative analysis of and decision support for pre-fire risk, active fire situational awareness, and managing post-fire impacts. The full potential of these individual efforts are realized through the EIS collaborative framework to support new transdisciplinary connections and fire-related management activities.
     
   </Prose>
+  <Figure>
+    <Image
+      src={new URL("./dixie_eo.jpeg", import.meta.url).href}
+      alt="dixie fire Aug 4, 2021"
+    />
+    <Caption
+      attrAuthor='NASA'
+      attrUrl='https://nasa.gov/'
+    >
+     Dixie fire’s thick smoke plume captured by an astronaut on the International Space Station on August 4, 2021 (https://earthobservatory.nasa.gov/images/148669/californias-dixie-fire-keeps-on-growing)
+    </Caption>
+  </Figure>
+
 </Block>
 
-<Block type="full">
+<Block>
   <Prose>
     ## Fires in Western US
 
@@ -36,6 +49,9 @@ thematics:
 
     This chart shows total area burnt from 1984 to 2020 in Western US. 
   </Prose>
+</Block>
+
+<Block type="wide">
   <Figure>
     <Chart
       dataPath={new URL('./Burnarea_timeseries_WUS.csv', import.meta.url).href}
@@ -49,7 +65,6 @@ thematics:
     />
   </Figure>
 </Block>
-
 
 
 <Block type='full'>
