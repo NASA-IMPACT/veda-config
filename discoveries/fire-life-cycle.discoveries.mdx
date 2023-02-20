@@ -28,22 +28,22 @@ thematics:
   </Prose>
 </Block>
 
-<Block>
+<Block type="wide">
   <Prose>
     ## Fires in Western US
 
     The Western United States is experiencing an increase of catastrophic wildfires. While fires historically constituted an important rangeland disturbance process in the semi-arid ecosystems of the Western US, climate change and intensifying droughts have increased the frequency and vigor of wildfire occurrences.
 
-    This chart shows total area burnt from 2001 to 2021 in Western US. 
+    This chart shows total area burnt from 1984 to 2020 in Western US. 
   </Prose>
   <Figure>
     <Chart
-      dataPath={new URL('./Burn_time_series2.csv', import.meta.url).href}
+      dataPath={new URL('./Burnarea_timeseries_WUS.csv', import.meta.url).href}
       dateFormat="%Y"
-      idKey='type'
+      idKey='source'
       xKey='year'
-      yKey='CLL'
-      yAxisLabel='Burn area, acres'
+      yKey='Burn Area (million ac)'
+      yAxisLabel='Burned area (million ac)'
     />
     <Caption
     />
