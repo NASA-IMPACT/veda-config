@@ -1,0 +1,58 @@
+---
+id: disalexi-etsuppression
+name: "DisALEXI ET Suppression"
+description: "Change in ET using DisALEXI model of OpenET observations for 2017-20 fires, calculated as the difference of ET in the immediate post-fire water year from ET in the immediate pre-fire water year"
+media:
+  src: ::file ./mtbs-burn-severity--dataset-cover.jpg
+  alt: Hillside engulfed by wildfire
+  author:
+    name: Mike Newbry
+    url: https://unsplash.com/photos/DwtX9mMHBJ0
+thematics:
+  - eis
+layers:
+  - id: disalexi-etsuppression
+    stacCol: disalexi-etsuppression
+    name: DisALEXI ET Suppression
+    type: raster
+    description: "Change in ET using DisALEXI model of OpenET observations for 2017-20 fires, calculated as the difference of ET in the immediate post-fire water year from ET in the immediate pre-fire water year. The difference is normalized by pre-fire ET and negative values denote vegetation disturbance induced by fire or by a climatological anomaly resulting in the decline in ET"
+    zoomExtent:
+      - 0
+      - 12
+    sourceParams:
+      bidx: 1
+      colormap_name: rdylbu
+      rescale:
+        - -0.5
+        - 0.5
+      nodata: -9999
+    legend:
+      type: gradient
+      label: ET Suppression 
+      min: "-0.5"
+      max: "0.5"
+      stops:
+      - "#a50026"
+      - "#f46d43"
+      - "#fee090"
+      - "#e0f3f8"
+      - "#74add1"
+      - "#313695"
+
+---
+
+<Block>
+  <Prose>
+    ## About
+    
+    Impact of fires on changes in evapotranspiration, obtained OpenET observations (DisALEXI model) for 2017-20 fires
+    
+    Changes in ET are calculated as the difference of ET in the immediate post-fire water year from ET in the immediate pre-fire water year. The difference is normalized by pre-fire ET and negative values denote vegetation disturbance induced by fire or by a climatological anomaly resulting in the decline in ET 
+
+    ## Additional Resources
+
+    * [OpenET Product](https://openetdata.org/)
+    * [MTBS - Project overview](https://www.mtbs.gov/project-overview)
+    * [Interactive MTBS Viewer for Continental US](https://www.mtbs.gov/viewer/?region=conus)
+  </Prose>
+</Block>
