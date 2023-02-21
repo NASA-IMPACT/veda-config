@@ -107,6 +107,24 @@ thematics:
 </Block>
 
 <Block>
+    <Figure>
+     <Chart
+       dataPath={new URL('./SouthAsia_WaterComponents_annual_data.csv', import.meta.url).href}
+       dateFormat="%Y-%m"
+       idKey='source'
+       xKey='Date'
+       yKey='WaterComponents(mm)'
+       yAxisLabel='Water Components Annual Change (mm)'
+     />
+    </Figure>
+    <Prose>
+    ## Annual Changes for the South Asia Hotspot
+    In order to take a closerclose look at the water, energy, and carbon cycle changes for the hot spot region, we take South Asia as an example and the time series here show the annual average anomalies for terrestrial water storage and evapotranspiration, as well as the annual total anomalies for gross primary production. The region is found to have water storage depletion at a rate of -3.6 mm/yr and gross primary production increase at a rate of 4.4 gC/m2/yr. The drying of the groundwater storage may inhibit deep soil evaporation while the enhanced vegetation growth may lead to increased transpiration. The two oppositely affected ET, resulting in a stable ET with no significant long-term trend. 
+
+    </Prose>
+ </Block>
+
+<Block>
   <Prose>
   ## Section 4: Time series Blocks
 
