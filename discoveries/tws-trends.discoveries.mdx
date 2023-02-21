@@ -108,6 +108,14 @@ thematics:
 
 <Block>
     <Figure>
+    <Chart
+      dataPath={new URL('./no2-and-so2-charts.csv', import.meta.url).href}
+      dateFormat="%Y"
+      idKey='Data Type'
+      xKey='Year'
+      yKey='United States Change from 2005'
+    />
+
      <Chart
        dataPath={new URL('./SouthAsia_WaterComponents_annual_data.csv', import.meta.url).href}
        dateFormat="%Y"
