@@ -19,7 +19,7 @@ thematics:
   ## Introduction
   🚧 This Discovery presents work in progress and not peer-reviewed results! 🚧
 
-  Over half of the annual runoff in the Western United States originates from seasonal snowpack. However, seasonal snowpack is threatened by future changes to climate. The impacts of climate change on snowpack are particularly important in mountainous regions, which behave like “water towers”, storing water in the winter, and releasing water through snowmelt in the spring and summer. In this discovery, we combine NASA-downscaled climate projections and [NASA land surface modeling tools](https://lis.gsfc.nasa.gov/) to investigate how climate change could impact snow water resources. We look at five mountainous domains in the Western U.S., and infer how changes to snow water resources could change the availability of wildlife habitat. This research was performed in collaboration with the U.S. Fish and Wildlife Service and Cooperative Institute for Research in Environmental Sciences.
+  Over half of the annual runoff in the Western United States originates from seasonal snowpack. However, seasonal snowpack is threatened by future changes to climate. The impacts of climate change on snowpack are particularly important in mountainous regions, which behave like “water towers”, storing water in the winter, and releasing water through snowmelt in the spring and summer. In this discovery, we combine [NASA-downscaled climate projections](https://www.nasa.gov/nex/gddp) and [NASA land surface modeling tools](https://lis.gsfc.nasa.gov/) to investigate how climate change could impact snow water resources (datasets available [here](https://www.earthdata.nasa.gov/dashboard/eis/datasets)). We look at five mountainous domains in the Western U.S., and infer how changes to snow water resources could change the availability of wildlife habitat. This research was performed in collaboration with the Cooperative Institute for Research in Environmental Sciences, with feedback from the US Fish and Wildlife Service.
 
   Join the discussion and provide comments on this Discovery at https://github.com/orgs/Earth-Information-System/discussions.
 
@@ -46,6 +46,8 @@ thematics:
       attrUrl='https://nasa.gov/'
     />
   </Figure>
+</Block>
+<Block>
   <Figure>
     <Map
       datasetId='CMIP-winter-median-pr'
@@ -65,16 +67,16 @@ thematics:
 <Block>
    <Figure>
     <Chart
-      dataPath={new URL('./CSCD_projected_ta.csv', import.meta.url).href}
+      dataPath={new URL('./CSCD_projected_taDiff.csv', import.meta.url).href}
       dateFormat="%Y-%m"
       idKey='Projection'
       xKey='Date'
-      yKey='Air Temperature[C]'
-      yAxisLabel='Air temperature [C]'
+      yKey='Air Temperature difference [C]'
+      yAxisLabel='Air temperature difference [C]'
     />
    </Figure>
    <Prose>
-    Average climate change signals were aggregated across 20-year periods at monthly timesteps. This was repeated for 23 different CMIP6 climate models, using two representations of future climate: 1) a “middle of the road” projection with small progressions in environmental sustainability (Shared Socioeconomic Pathway, SSP 2-4.5), and 2) a worst-case-scenario fossil-fueled future (SSP 5-8.5). The 23-model average monthly projected changes to the Washington North Cascades are shown in this chart.
+    Average climate change signals were aggregated across 20-year periods at monthly timesteps. This was repeated for 23 different CMIP6 climate models, using two representations of future climate: 1) a “middle of the road” projection with small progressions in environmental sustainability (Shared Socioeconomic Pathway, SSP 2-4.5), and 2) a worst-case-scenario fossil-fueled future (SSP 5-8.5). This chart presents the average monthly increases in temperautre in the Washington North Cascades.
    </Prose>
 </Block>
 
@@ -84,10 +86,10 @@ thematics:
     zoom={7.5}
     datasetId='snow-projections-diff'
     layerId='snow-projections-diff-scenario-245'
-    datetime='2077-05-01'
+    datetime='2077-04-01'
   >
     ## The Washington Cascades
-    Montane snow in the pacific northwest is among the most sensitive in the Western US. As compared to internal US mountain ranges, this region is at lower elevations and has warmer temperatures and more-frequent winter rainfall.STATS 
+    Montane snow in the pacific northwest is among the most sensitive in the Western US. As compared to US mountain ranges in the US interior, this region is at lower elevations and has warmer winter temperatures. This results in a larger portion of precipitation that transitions to rain and earlier snowmelt onset in future climates. By the end of the century, May 1st SWE is projected to disappear at elevations of less than 600m, with greater than 50% decreases at elevations less than 1400m. Only at elevations greater than 1900m (30% of the domain's snowpack) is climate change projected to either increase or change snow by small amounts.    
   </Chapter>
   <Chapter
     center={[-114.80,47.40]}
@@ -112,13 +114,11 @@ thematics:
 </ScrollytellingBlock> 
 <Block>
    <Figure>
-    <Chart
-      dataPath={new URL('./noRocky_west_hab.csv', import.meta.url).href}
-      idKey='Period'
-      xKey='Percent-change'
-      yKey='Elevation'
-      yAxisLabel='Elevation [m]'
-      xAxisLabel='Percent-change [%]'
-    />
+     <Image 
+       src="habitat_spaghettiPlots.jpg" 
+      />
    </Figure>
+   <Prose>
+   The snow projections developed here can be used for multiple scientific and operational applications. For example, previous wolverine habitat assessments performed by the US Fish and Wildlife Service found that locations were more likely to support denning if mid-spring (e.g., May 15) snow depth exceeded 0.5m. Using these projections, we could identify the percent-change to the amount of area that had snow depth exceeding that threshold for different elevation bands. The plots shown here show the changes across elevation bands for the four future periods (emissions scenario SSP2-4.5), for three domains, accounting for both the ensemble mean (line) and spread (shaded) across 23 different climate models. 
+   </Prose>
 </Block>  
