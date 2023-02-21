@@ -109,20 +109,21 @@ thematics:
 <Block>
     <Figure>
     <Chart
-      dataPath={new URL('./testSA.csv', import.meta.url).href}
+      dataPath={new URL('./SouthAsia_WaterComponents_annual_data.csv', import.meta.url).href}
       dateFormat="%Y"
       idKey='Data Type'
       xKey='Year'
       yKey='Water Components'
+      yAxisLabel='Water Component Annual Change (mm)'
     />
 
      <Chart
-       dataPath={new URL('./SouthAsia_WaterComponents_annual_data.csv', import.meta.url).href}
+       dataPath={new URL('./SouthAsia_GPP_annual_data.csv', import.meta.url).href}
        dateFormat="%Y"
-       idKey='source'
-       xKey='Date'
-       yKey='WaterComponents(mm)'
-       yAxisLabel='Water Components Annual Change (mm)'
+       idKey='Data Type'
+       xKey='Year'
+       yKey='GPP'
+       yAxisLabel='GPP Annual Change (gC/m2/yr)'
      />
     </Figure>
     <Prose>
