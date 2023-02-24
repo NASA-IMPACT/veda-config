@@ -26,6 +26,13 @@ layers:
         - -0.5
         - 0.5
       nodata: -9999
+    compare:
+      datasetId: mtbs-burn-severity  
+      layerId: mtbs-burn-severity  
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
+        }
     legend:
       type: gradient
       label: ET Suppression 
