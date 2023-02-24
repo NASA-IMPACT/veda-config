@@ -182,9 +182,6 @@ EIS can connect more detailed land surface information with existing weather-bas
 
 
 <Block type='full'>
-<Prose>
-    High resolution observations of ET from OpenET product captures the impact of fires on ET. Large declines in post-fire ET are observed that correspond to burn scars from high severity fires during the fire year 2020.
-</Prose>
 <Figure>
   <Map
     datasetId='disalexi-etsuppression'
@@ -198,29 +195,10 @@ EIS can connect more detailed land surface information with existing weather-bas
     attrAuthor='NASA'
     attrUrl='https://nasa.gov/'
   >
-    Change in ET using DisALEXI model of OpenET for 2020 fires, calculated as the normalized difference of ET in the immediate post-fire water year from the pre-fire water year.
+    High resolution observations of ET from OpenET (DisALEXI model) captures the impact of fires on vegetation. Large declines in post-fire ET are observed (left) that correspond well with burn scars from the MTBS burn severity dataset (right) during the fire year 2020. 
   </Caption>
 </Figure>
 </Block>
-
-
-
-<Block>
-  <Figure>
-    <Image
-      src={new URL("./et_suppression.png", import.meta.url).href}
-      alt="fires in western US"
-    />
-    <Caption
-      attrAuthor='NASA'
-      attrUrl='https://nasa.gov/'
-    >
-      Impact of fires on reduction of evapotranspiration, shown in high resolution datasets from OpenET over 2020 fires in Western US
-    </Caption>
-  </Figure>
-
-</Block>
-
 
 
 
