@@ -24,6 +24,13 @@ layers:
       rescale:
         - 0
         - 6
+    compare:
+      datasetId: mtbs-burn-severity  
+      layerId: mtbs-burn-severity  
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
+        }
     legend:
       type: categorical
       stops:
