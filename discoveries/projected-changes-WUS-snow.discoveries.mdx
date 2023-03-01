@@ -44,7 +44,9 @@ thematics:
     <Caption
       attrAuthor='NASA'
       attrUrl='https://nasa.gov/'
-    />
+    >
+    Median projected changes to end-of-century winter air temperature from a 23-member ensemble of CMIP6 models (SSP2-4.5).
+</Caption>
   </Figure>
 </Block>
 <Block>
@@ -60,24 +62,31 @@ thematics:
     <Caption
       attrAuthor='NASA'
       attrUrl='https://nasa.gov/'
-    />
+    >
+    Median projected percent-changes to end-of-century total winter precipitation from a 23-member ensemble of CMIP6 models (SSP2-4.5).
+</Caption>  
   </Figure>
 </Block>
 
-<Block>
-   <Figure>
-    <Chart
-      dataPath={new URL('./CSCD_projected_taDiff.csv', import.meta.url).href}
-      dateFormat="%Y-%m"
-      idKey='Projection'
-      xKey='Date'
-      yKey='Air Temperature difference [C]'
-      yAxisLabel='Air temperature difference [C]'
-    />
-   </Figure>
+<Block type='wide'>
    <Prose>
     Average climate change signals were aggregated across 20-year periods at monthly timesteps. This was repeated for 23 different CMIP6 climate models, using two representations of future climate: 1) a “middle of the road” projection with small progressions in environmental sustainability (Shared Socioeconomic Pathway, SSP 2-4.5), and 2) a worst-case-scenario fossil-fueled future (SSP 5-8.5). This chart presents the average monthly increases in temperautre in the Washington North Cascades.
    </Prose>
+</Block>
+
+<Block type='wide'>
+  <Figure>
+    <Image
+       src={new URL("./aggregated_climateDeltas.jpg", import.meta.url).href}
+       alt="changes to thresholded habitat across elevation bands"
+    />
+    <Caption
+      attrAuthor='NASA'
+      attrUrl='https://nasa.gov/'
+    >
+    Monthly climate change signals in air temperature (left) and precipitation (right) for 20-year periods and two emissions scenarios (colors). Individual climate models are shown by transparent scatter points and ensemble-medians are shown by the bolded scatter points.  
+</Caption>
+  </Figure>
 </Block>
 
 <ScrollytellingBlock>
