@@ -1,0 +1,110 @@
+---
+id: tws-anomaly
+name: 'A Global Reanalysis for Water and Energy Cycle Variables'
+description: "A high-resolution (10 km) global data product that integrates NASA’s state-of-the-art model with satellite observations"
+media:
+  src: ::file ./jordan_image.jpg
+  alt: Meandering wadis combine to form dense, branching networks across the stark, arid landscape of southeastern Jordan. The Arabic word "wadi" means a gulley or streambed that typically remains dry except after drenching, seasonal rains.
+  author:
+    name: USGS/NASA
+    url: https://eros.usgs.gov/media-gallery/earth-as-art/2/jordan
+pubDate: 2023-03-01
+thematics:
+  - eis
+layers:
+  - id: lis-tws-anomaly
+    stacCol: lis-tws-anomaly
+    name: 'TWS Anomaly'
+    type: raster
+    description: 'TWS anomalies modeled using data assimilation within Land Information System framework'
+    zoomExtent:
+      - 0
+      - 11
+    sourceParams:
+      resampling: bilinear
+      bidx: 1
+      colormap_name: rdylbu
+      rescale:
+        - -200
+        - 200
+    compare:
+      datasetId: tws-anomaly
+      layerId: lis-tws-anomaly
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'DD LLL yyyy')} VS ${dateFns.format(compareDatetime, 'DD LLL yyyy')}`;        
+        }
+    legend:
+      type: gradient
+      label: TWS Anomaly
+      min: "-200"
+      max: "200"
+      stops:
+      - "#a50026"
+      - "#f46d43"
+      - "#fee090"
+      - "#e0f3f8"
+      - "#74add1"
+      - "#313695"
+---
+<Block>
+<Prose>
+## Introduction
+🚧 This Dataset presents work in progress and not a peer-reviewed data product! 🚧
+
+Realistic estimates of water and energy cycle variables are necessary for accurate understanding of earth system processes. Land surface models can provide spatiotemporal estimates of a whole suite of variables like precipitation, soil moisture, and evapotranspiration. However, models often have biases that cause high uncertainties in important water budget variables. Therefore, tools like data assimilation, where observations are used to constrain model simulations, are often used.
+
+This dataset is a new global reanalysis that includes variables to help quantify the water and energy budget. As of the present, the model reanalysis output is available at 10 km spatial resolution and a daily temporal resolution from January 1, 2003 through December 31, 2021. Details on the model setup are provided below, as well as links to how the reanalysis output can be used to address key science questions.
+
+Authors: Melissa Wrzesien, Wanshu Nie, Sujay Kumar, Kim Locke
+
+</Prose>
+</Block>
+
+<Block>
+<Prose>
+## Modeling Setup
+The reanalysis product is created using the NASA Land Information System modeling framework (cite, link) to merge land surface model simulations with observations from satellites through data assimilation. The team uses the Noah-MP land surface model and assimilates soil moisture from the European Space Agency’s Climate Change Initiative Program (ESA CCI), leaf area index from the Moderate Resolution Imaging Spectroradiometer (MODIS), and terrestrial water storage anomalies from the Gravity Recovery and Climate Experiment and the follow-on missions (GRACE/GRACE-FO). 
+
+The output variables available on VEDA include evapotranspiration (ET), gross primary productivity (GPP), groundwater storage (GWS), snow water equivalent (SWE), streamflow, surface runoff, subsurface runoff, terrestrial water storage (TWS), and total precipitation. See the [VEDA Analysis tool](https://www.earthdata.nasa.gov/dashboard/eis/analysis) to make interactive plots of the variables over a user-specified domain and time period.
+
+</Prose>
+</Block>
+
+<Block type='full'>
+## Explore the Data
+The global reanalysis is a large dataset with nearly two decades of daily output. Here we show a comparison of two dates for a single variable. We encourage users to Explore the Data (link) to look at different dates and to compare variables.
+
+To see an example of how trends calculated from the global reanalysis model output can be used to understand changes in TWS, GPP, and ET, click here (link).
+
+  <Figure>
+  <Map
+    datasetId='tws-anomaly'
+    layerId='lis-tws-anomaly'
+    dateTime='2002-12-01'
+    zoom={4}
+    center={[-116,36]}
+    compareDateTime='2021-12-01'
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+  Depleting TWS over CA between 2002 (left) and 2021 (right), captured by LIS modeled TWS anomalies
+</Caption>
+  </Figure>
+</Block>
+
+<Block>
+<Prose>
+## Explore the modeling framework:
+* [Land Information System](https://lis.gsfc.nasa.gov/)
+
+## Explore the remote sensing datasets:
+* [GRACE-FO](https://gracefo.jpl.nasa.gov/data/grace-fo-data/)
+
+* [ESA CCI]()
+
+* [MODIS](https://modis.gsfc.nasa.gov/)
+</Prose>
+</Block>
