@@ -1,0 +1,54 @@
+---
+id: barc-thomasfire
+name: "Burn Area Reflectance Classification for Thomas Fire"
+description: "Burn Area Reflectance Classification (BARC) from the Burned Area Emergency Response (BAER) program for the Thomas Fire of 2017"
+media:
+  src: ::file ./mtbs-burn-severity--dataset-cover.jpg
+  alt: Hillside engulfed by wildfire
+  author:
+    name: Mike Newbry
+    url: https://unsplash.com/photos/DwtX9mMHBJ0
+thematics:
+  - eis
+layers:
+  - id: barc-thomasfire
+    stacCol: barc-thomasfire
+    name: Burn Area Reflectance Classification for Thomas Fire
+    type: raster
+    description: "Burn Area Reflectance Classification (BARC) from the Burned Area Emergency Response (BAER) program for the Thomas Fire of 2017"
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      colormap_name: inferno_r
+      rescale:
+        - 0
+        - 3
+    compare:
+      datasetId: frp-max-thomasfire  
+      layerId: frp-max-thomasfire  
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `BARC ${dateFns.format(datetime, 'yyyy')} VS Max FRP ${dateFns.format(compareDatetime, 'yyyy')}`;
+        }
+    legend:
+      type: categorical
+      stops:
+        - color: "#000000"
+          label: "Unburned to Low"
+        - color: "#FBB41A"
+          label: "Low"
+        - color: "#ED6825"
+          label: "Moderate"
+        - color: "#BB3754"
+          label: "High"
+
+---
+
+<Block>
+  <Prose>
+    ## About
+    
+    Burn Area Reflectance Classification (BARC) from the Burned Area Emergency Response (BAER) program for the Thomas Fire of 2017  
+  </Prose>
+</Block>
