@@ -1,0 +1,50 @@
+---
+id: frp-max-thomasfire
+name: "Maximum Fire Radiative Power for Thomas Fire"
+description: "Maximum Fire Radiative Power recorded by the Suomi NPP VIIRS sensor per 12hr fire line segment for the Thomas Fire of 2017"
+media:
+  src: ::file ./mtbs-burn-severity--dataset-cover.jpg
+  alt: Hillside engulfed by wildfire
+  author:
+    name: Mike Newbry
+    url: https://unsplash.com/photos/DwtX9mMHBJ0
+thematics:
+  - eis
+layers:
+  - id: frp-max-thomasfire
+    stacCol: frp-max-thomasfire
+    name: Maximum Fire Radiative Power for Thomas Fire
+    type: raster
+    description: "Maximum Fire Radiative Power recorded by the Suomi NPP VIIRS sensor per 12hr fire line segment for the Thomas Fire of 2017"
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      asset_bidx: cog_default|1
+      colormap_name: rdylbu
+      rescale:
+        - 0
+        - 1100
+    legend:
+      type: gradient
+      label: Maximum FRP 
+      min: "0"
+      max: "1100"
+      stops:
+      - "#a50026"
+      - "#f46d43"
+      - "#fee090"
+      - "#e0f3f8"
+      - "#74add1"
+      - "#313695"
+---
+
+<Block>
+  <Prose>
+    ## About
+    
+    Maximum Fire Radiative Power recorded by the Suomi NPP VIIRS sensor per 12hr fire line segment for the Thomas Fire of 2017
+     
+ 
+  </Prose>
+</Block>
