@@ -21,7 +21,7 @@ thematics:
   
   Freshwater is what makes Earth habitable, sustaining ecosystems and human civilization. The global water cycle supplies water and regulates weather patterns. The cycling of water links the changes on land with the ocean and atmosphere. Understanding the variability and availability of freshwater is challenging because of multiple earth processes that continually interact with each other, including those that govern precipitation, ground soil moisture retention, snow accumulation and melt, evapotranspiration and vegetation dynamics. Such processes become even more complex under human water resources management.
 
-  The EIS team integrates the Noah-MP land surface model within [NASA’s LIS framework] (https://lis.gsfc.nasa.gov/) and Earth observations by assimilating soil moisture from the Climate Change Initiative Program released by European Space Agency  ([ESA CCI](https://esa-soilmoisture-cci.org/)), leaf area index from Moderate Resolution Imaging Spectroradiometer ([MODIS](https://lpdaac.usgs.gov/products/mcd15a2hv006/)), and terrestrial water storage anomalies from Gravity Recovery and Climate Experiment and the follow-on satellites ([GRACE/GRACE-FO](https://earth.gsfc.nasa.gov/geo/data/grace-mascons)). Using this data assimilation approach, the team provides a daily global water cycle reanalysis product for 2003-2021 at a 10 km spatial resolution. This allows us to better quantify surface variables and groundwater, human management influence, and hydrological extremes. These resulting reanalysis datasets are publicly available and interactable via this NASA VEDA platform, including key water, energy, and carbon fluxes such as terrestrial water storage (TWS) and gross primary production (GPP). For more information, please visit the corresponding [VEDA dataset page](https://www.earthdata.nasa.gov/dashboard/eis/datasets).
+  The EIS team integrates the Noah-MP land surface model within [NASA’s LIS framework](https://lis.gsfc.nasa.gov/) and Earth observations by assimilating soil moisture from the Climate Change Initiative Program released by European Space Agency  ([ESA CCI](https://esa-soilmoisture-cci.org/)), leaf area index from Moderate Resolution Imaging Spectroradiometer ([MODIS](https://lpdaac.usgs.gov/products/mcd15a2hv006/)), and terrestrial water storage anomalies from Gravity Recovery and Climate Experiment and the follow-on satellites ([GRACE/GRACE-FO](https://earth.gsfc.nasa.gov/geo/data/grace-mascons)). Using this data assimilation approach, the team provides a daily global water cycle reanalysis product for 2003-2021 at a 10 km spatial resolution. This allows us to better quantify surface variables and groundwater, human management influence, and hydrological extremes. These resulting reanalysis datasets are publicly available and interactable via this NASA VEDA platform, including key water, energy, and carbon fluxes such as terrestrial water storage (TWS) and gross primary production (GPP). For more information, please visit the corresponding [VEDA dataset page](https://www.earthdata.nasa.gov/dashboard/eis/datasets).
 
   Join the discussion and provide comments on this Discovery at https://github.com/orgs/Earth-Information-System/discussions.
 
@@ -83,7 +83,7 @@ thematics:
   </Prose>
 </Block>
 
-<Block type='full'>
+<Block type='wide'>
   <Figure>
     <CompareImage
       leftImageSrc={new URL('./Global_Reanalysis_Fig1a.png', import.meta.url).href}
@@ -102,12 +102,12 @@ thematics:
 <Block>
     <Figure>
     <Chart
-      dataPath={new URL('./SouthAsia_WaterComponents_annual_data.csv', import.meta.url).href}
+      dataPath={new URL('./SouthAsia_TWS_annual_data.csv', import.meta.url).href}
       dateFormat="%Y"
       idKey='Data Type'
       xKey='Year'
       yKey='Water Components'
-      yAxisLabel='Water Component Annual Change (mm)'
+      yAxisLabel='TWS Annual Change (mm)'
     />
 
      <Chart
@@ -118,10 +118,19 @@ thematics:
        yKey='GPP'
        yAxisLabel='GPP Annual Change (gC/m2/yr)'
      />
+
+    <Chart
+      dataPath={new URL('./SouthAsia_ET_annual_data.csv', import.meta.url).href}
+      dateFormat="%Y"
+      idKey='Data Type'
+      xKey='Year'
+      yKey='Water Components'
+      yAxisLabel='ET Annual Change (mm)'
+    />
     </Figure>
     <Prose>
     ## Annual Changes for the South Asia Hotspot
-    In order to take a closer look at the water, energy, and carbon cycle changes for the hot spot region, we take South Asia as an example. The time series here shows the annual average anomalies for terrestrial water storage and evapotranspiration, as well as the annual total anomalies for gross primary production. The region has a TWS decrease at a rate of -3.6 mm/yr and gross primary production increase at a rate of 4.4 gC/m2/yr. The depletion of groundwater is reducing the interaction between the groundwater reservoir and deep layer soil moisture, leading to reduced deep soil evaporation. Enhanced vegetation growth may lead to increased transpiration. The TWS and GPP trends oppositely impact ET, resulting in ET with no significant long-term trend for these regions. Assimilating multi-source remote sensing products has constrained both freshwater changes and the human impact on water-vegetation interactions.
+    In order to take a closer look at the water, energy, and carbon cycle changes for the hot spot region, we take South Asia as an example. The time series here shows the annual average anomalies for terrestrial water storage and evapotranspiration, as well as the annual total anomalies for gross primary production. The region has a TWS decrease at a rate of -3.6 mm/yr and GPP increase at a rate of 4.4 gC/m2/yr. The depletion of groundwater is reducing the interaction between the groundwater reservoir and deep layer soil moisture, leading to reduced deep soil evaporation. Enhanced vegetation growth may lead to increased transpiration. The TWS and GPP trends oppositely impact ET, resulting in ET with no significant long-term trend for these regions. Assimilating multi-source remote sensing products has constrained both freshwater changes and the human impact on water-vegetation interactions.
 
     </Prose>
  </Block>
