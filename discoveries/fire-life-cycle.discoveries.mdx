@@ -304,6 +304,36 @@ EIS can connect more detailed land surface information with existing weather-bas
 
 </ScrollytellingBlock>
 
+<Block>
+  <Prose>
+    ## Modeling Post-fire Vegetation Response
+
+    NASA Land Information System (LIS) framework synthesizes multiple remote sensing observations within the Noah-MP land surface model, able to capture changes in ET as observed from OpenET observations.
+
+  </Prose>
+</Block>
+
+
+<Block>
+<Figure>
+  <Map
+    datasetId='lis-etsuppression'
+    layerId='lis-etsuppression'
+    dateTime='2020-01-01'
+    compareDateTime='2020-01-01'
+    zoom={4}
+    center={[-116,36]}
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+    Modeled ET using NASA-LIS framework also captures the impact of fires on vegetation. Large declines in post-fire ET (left) correspond well with burn scars from the MTBS burn severity dataset (right) during the fire year 2020. 
+  </Caption>
+</Figure>
+</Block>
+
+
 
 
 
@@ -311,29 +341,30 @@ EIS can connect more detailed land surface information with existing weather-bas
   <Prose>
     ## Assessing Downstream Effects on Water Quality
 
-   Fire radiative power is an early observational indicator of interest to emergency response providers to prioritize areas with increased risk of mud-slides. 
+   Fire Radiative Power (FRP) is an early observational indicator of interest to emergency response providers to prioritize areas with increased risk of mud-slides. 
    
-   >> Tracing Hydrological impacts of wildfires to understand downstream landslide risks
+   Burn Area Reflectance Classification (BARC) from the Burned Area Emergency Response (BAER) program is the typical product used to assess post-fire debris flow risk. Maximum FRP per 12hr fire line segment shows strong spatial relationship with BARC for the Thomas Fire of 2017 in the maps below.
+   
   </Prose>
 </Block>
 
 
 <Block>
-  <Figure>
-    <Image
-      src={new URL("./thomas_debris.png", import.meta.url).href}
-      alt="debris flow in post-fire seasons"
-    />
-    <Caption
-      attrAuthor='NASA'
-      attrUrl='https://nasa.gov/'
-    >
-      Debris Flow for Thomas fire
-    </Caption>
-  </Figure>
-
+<Figure>
+  <Map
+    datasetId='frp-max-thomasfire'
+    layerId='frp-max-thomasfire'
+    dateTime='2017-01-01'
+    compareDateTime='2017-01-01'
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+  Maximum Fire Radiative Power per 12hr fire line segment (left) and Burn Area Reflectance Classification (BARC) for the Thomas Fire of 2017 
+  </Caption>
+</Figure>
 </Block>
-
 
 
 
