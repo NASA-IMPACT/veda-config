@@ -27,8 +27,8 @@ layers:
         - 1080
       nodata: -9999
     compare:
-      datasetId: mtbs-burn-severity  
-      layerId: mtbs-burn-severity  
+      datasetId: barc-thomasfire  
+      layerId: barc-thomasfire
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           return `FRP: ${dateFns.format(datetime, 'yyyy')} VS BARC: ${dateFns.format(compareDatetime, 'yyyy')}`;
@@ -54,7 +54,7 @@ layers:
     sourceParams:
       colormap_name: inferno_r
       rescale:
-        - 1
+        - 0
         - 3
       nodata: -9999
     legend:
@@ -66,6 +66,8 @@ layers:
           label: "Low"
         - color: "#ED6825"
           label: "Moderate"
+        - color: "#BB3754"
+          label: "High"
 
 ---
 
