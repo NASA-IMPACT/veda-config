@@ -26,6 +26,13 @@ layers:
         - 1.0
         - 1080
       nodata: -9999
+    compare:
+      datasetId: mtbs-burn-severity  
+      layerId: mtbs-burn-severity  
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `FRP: ${dateFns.format(datetime, 'yyyy')} VS BARC: ${dateFns.format(compareDatetime, 'yyyy')}`;
+        }
     legend:
       type: gradient
       label: Maximum FRP 
@@ -36,6 +43,30 @@ layers:
         - "#BB3754"
         - "#781D6D"
         - "#34095F"
+  - id: barc-thomasfire
+    stacCol: barc-thomasfire
+    name: Burn Area Reflectance Classification for Thomas Fire
+    type: raster
+    description: "Burn Area Reflectance Classification (BARC) from the Burned Area Emergency Response (BAER) program for the Thomas Fire of 2017"
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      colormap_name: inferno_r
+      rescale:
+        - 1
+        - 3
+      nodata: -9999
+    legend:
+      type: categorical
+      stops:
+        - color: "#000000"
+          label: "Unburned to Low"
+        - color: "#FBB41A"
+          label: "Low"
+        - color: "#ED6825"
+          label: "Moderate"
+
 ---
 
 <Block>
