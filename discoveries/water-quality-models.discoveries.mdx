@@ -8,9 +8,9 @@ media:
   src: ::file ./CONUS_Nitrate_07012018.png
   alt: A map showing nitrate loads in the rivers of the United States on 07/01/2018
   author:
-    name: H2I Labs
-    url: https://www.adnanrajib.com/
-pubDate: 2023-03-01
+    name:
+    url:
+pubDate: 2023-03-03
 thematics:
   - eis
 ---
@@ -22,7 +22,7 @@ thematics:
   
   Join the discussion and provide comments on this Discovery at https://github.com/orgs/Earth-Information-System/discussions.
 
-  Authors: Adnan Rajib.... 
+  Authors: Adnan Rajib, Sujay Kumar, Christopher Hain, Qianjin Zheng, Krutikkumar Patel, Kim Locke 
   </Prose>
 </Block>
 
@@ -112,7 +112,7 @@ thematics:
       attrAuthor='USGS'
       attrUrl='https://waterwatch.usgs.gov/wqwatch/?pcode=00630'
     >
-      Continuius Real Time Surface Water Quality Measurement Sites for Nitrate in the United States
+      Continuius Real Time Surface Water Quality Measurement Sites in the United States
     </Caption>
   </Figure>
   <Prose>
@@ -133,19 +133,17 @@ thematics:
     Comparing model results with ground observations shows the ability of this framework to predict water quality at high resolution river network-scales across the Mississippi River Basin. With a generalizable open science design, this framework can be reproduced for other major basins of the world. 
 
   </Prose>
-</Block>
-
-<Block type='wide'>
   <Figure>
-    <Image
-      src={new URL("./Nitrate_Evaluation.png", import.meta.url).href}
-      alt="Real Time USGS Nitrate Monitoring Stations"
+    <iframe
+      width="100%"
+      height="100%"
+      style={{ aspectRatio: "80/50" }}
+      src="https://storymaps.arcgis.com/stories/3a4f28b98019402a95dedc02fdcc9a5e"
+      title="Model Evaluation for Nitrate Estimates"
+      frameborder="0"
     />
-    <Caption
-      attrAuthor='USGS'
-      attrUrl='https://waterwatch.usgs.gov/wqwatch/?pcode=00630'
-    >
-      Continuius Real Time Surface Water Quality Measurement Sites for Nitrate in the United States
+    <Caption>
+      Location of USGS Real Time Water Quality Monitoring Sites Used for Model Evaluation.
     </Caption>
   </Figure>
 </Block>
@@ -155,16 +153,13 @@ thematics:
     ## The First Spatially Distributed & Temporally Continuous Water Quality Estimates for US Rivers
   </Prose>
 </Block>
-<Block type='full'>
+<Block>
   <Figure>
     <Image
       src={new URL("./Animated_NO3_2018.discoveries.gif", import.meta.url).href}
       alt="Nitrate Loads across the United States in 2018"
     />
     <Caption
-      attrAuthor='H2I Labs'
-      attrUrl='https://www.adnanrajib.com/'
-    >
       Nitrate loads across the rivers of United States in 2018
     </Caption>
   </Figure>
@@ -177,16 +172,15 @@ thematics:
     ## Dramatic Shifts in Water Quality Hotspots Following Mega Floods
   </Prose>
 </Block>
-<Block type='wide'>
+<Block>
   <Figure>
-    <Image
-      src={new URL("./pre-post_flood.png", import.meta.url).href}
-      alt="Changes in nitrate loads after flooding in 2016"
+    <CompareImage
+      leftImageSrc={new URL("./pre_flood.png", import.meta.url).href}
+      leftImageAlt="Changes in nitrate loads before flooding in 2016"
+      rightImageSrc={new URL("./post_flood.png", import.meta.url).href}
+      rightImageAlt="Changes in nitrate loads after flooding in 2016"
     />
     <Caption
-      attrAuthor='H2I Labs'
-      attrUrl='https://www.adnanrajib.com/'
-    >
       Increase in nitrate loads in Mississippi River following flood event in 2016
     </Caption>
   </Figure>
@@ -199,9 +193,6 @@ thematics:
       alt="Stream Temperature Trends of the rivers of Western US"
     />
     <Caption
-      attrAuthor='H2I Labs'
-      attrUrl='https://www.adnanrajib.com/'
-    >
       Stream Temperature Trends in the Rivers of Western United States
     </Caption>
   </Figure>
@@ -243,5 +234,3 @@ thematics:
     - [MODIS](https://modis.gsfc.nasa.gov/)
   </Prose>
 </Block>
-
-
