@@ -23,14 +23,7 @@ layers:
       colormap_name: inferno_r
       rescale:
         - 0
-        - 3
-    compare:
-      datasetId: frp-max-thomasfire  
-      layerId: frp-max-thomasfire  
-      mapLabel: |
-        ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
-        }
+        - 6
     legend:
       type: categorical
       stops:
@@ -53,13 +46,7 @@ layers:
   <Prose>
     ## About
     
-    Burn severities and extents of fires from Monitoring Trends in Burn Severity (MTBS) program during the years 2016-2020 over Western US.
+    Burn Area Reflectance Classification (BARC) from the Burned Area Emergency Response (BAER) program for the Thomas Fire of 2017.
     
-    MTBS is an interagency program whose goal is to consistently map the burn severity and extent of large fires across all lands of the United States from 1984 to present. This includes all fires 1000 acres or greater in the western United States and 500 acres or greater in the eastern Unites States. The extent of coverage includes the continental U.S., Alaska, Hawaii and Puerto Rico. 
-
-    ## Additional Resources
-
-    * [MTBS - Project overview](https://www.mtbs.gov/project-overview)
-    * [Interactive Viewer for Continental US](https://www.mtbs.gov/viewer/?region=conus)
   </Prose>
 </Block>
