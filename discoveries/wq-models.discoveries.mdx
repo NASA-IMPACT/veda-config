@@ -22,7 +22,7 @@ thematics:
   
   Join the discussion and provide comments on this Discovery at https://github.com/orgs/Earth-Information-System/discussions.
 
-  Authors: Adnan Rajib, Sujay Kumar, Christopher Hain, Qianjin Zheng, Krutikkumar Patel, Kim Locke 
+  Authors: Adnan Rajib, Sujay Kumar, Christopher Hain, Qianjin Zheng, Krutikkumar Patel and Kim Locke 
   </Prose>
 </Block>
 
@@ -103,6 +103,15 @@ thematics:
 
 
 <Block>
+    <Prose>
+    ## Barrier to Solving Water Quality Problems ‒ Limited or No Data
+
+	Across the more than two million rivers and streams in the Continental U.S., there are only a few hundred continuous water quality monitoring sites. This data gap limits our ability to understand where, when, and how worsening water quality will adversely impact human uses and aquatic health.
+
+  </Prose>
+</Block>
+
+<Block type='wide'>
   <Figure>
     <Image
       src={new URL("./USGS_WQSites.png", import.meta.url).href}
@@ -115,38 +124,74 @@ thematics:
       Continuous Real Time Surface Water Quality Measurement Sites in the United States
     </Caption>
   </Figure>
-  <Prose>
-    ## Barrier to Solving Water Quality Problems ‒ Limited or No Data
-
-	Across the more than two million rivers and streams in the Continental U.S., there are only a few hundred continuous water quality monitoring sites. This data gap limits our ability to understand where, when, and how worsening water quality will adversely impact human uses and aquatic health.
-
-  </Prose>
 </Block>
 
+<ScrollytellingBlock>
+  <Chapter
+    center={[-94.1511, 41.5904]}
+    zoom={14}
+    showBaseMap={true}
+  >
+    <Figure>
+      <Image
+        src={new URL("./TS1.png", import.meta.url).href}
+        alt="Model performance at USGS Gage 05484000"
+      />
+      <Caption>
+        Model performance at USGS Gage 05484000
+      </Caption>
+    </Figure>
+  </Chapter>
 
-<Block type='wide'>
-  <Prose>
-    ## A New NASA Model Brings Open Science to Target Water Quality Problems
+  <Chapter
+    center={[-87.6644, 38.7236]}
+    zoom={4}
+    showBaseMap={true}
+  >
+    <Figure>
+      <Image
+        src={new URL("./TS2.png", import.meta.url).href}
+        alt="Model performance at USGS Gage 03346500"
+      />
+      <Caption>
+        Model performance at USGS Gage 03346500
+      </Caption>
+    </Figure>
+  </Chapter>
 
-    This EIS project is the first effort to integrate NASA’s Land Information System with a globally used process-based water quality simulation model - Soil & Water Assessment Tool.
+  <Chapter
+    center={[-87.5972, 40.1008]}
+    zoom={4}
+    showBaseMap={true}
+  >
+    <Figure>
+      <Image
+        src={new URL("./TS3.png", import.meta.url).href}
+        alt="Model performance at USGS Gage 03339000"
+      />
+      <Caption>
+        Model performance at USGS Gage 03339000
+      </Caption>
+    </Figure>
+  </Chapter>
 
-    Comparing model results with ground observations shows the ability of this framework to predict water quality at high resolution river network-scales across the Mississippi River Basin. With a generalizable open science design, this framework can be reproduced for other major basins of the world. 
+  <Chapter
+    center={[-91.4385, 38.7098]}
+    zoom={14}
+    showBaseMap={true}
+  >
+    <Figure>
+      <Image
+        src={new URL("./TS4.png", import.meta.url).href}
+        alt="Model performance at USGS Gage 06934500"
+      />
+      <Caption>
+        Model performance at USGS Gage 06934500
+      </Caption>
+    </Figure>
+  </Chapter>
 
-  </Prose>
-  <Figure>
-    <iframe
-      width="100%"
-      height="100%"
-      style={{ aspectRatio: "4/3" }}
-      src="https://storymaps.arcgis.com/stories/3a4f28b98019402a95dedc02fdcc9a5e"
-      title="Model Evaluation for Nitrate Estimates"
-      frameborder="0"
-    />
-    <Caption>
-      Location of USGS Real Time Water Quality Monitoring Sites Used for Model Evaluation.
-    </Caption>
-  </Figure>
-</Block>
+</ScrollytellingBlock>
 
 
 <Block>
@@ -166,9 +211,6 @@ thematics:
 
 
 <Block>
-  <Prose>
-    ## Dramatic Shifts in Water Quality Hotspots Following Mega Floods
-  </Prose>
   <Figure>
     <CompareImage
       leftImageSrc={new URL("./pre_flood.png", import.meta.url).href}
@@ -180,9 +222,17 @@ thematics:
       Increase in nitrate loads in Mississippi River following flood event in 2016
     </Caption>
   </Figure>
+  <Prose>
+    ## Dramatic Shifts in Water Quality Hotspots Following Mega Floods
+  </Prose>
 </Block>
 
 <Block>
+  <Prose>
+    ## Droughts and Wildfires are Warming the Rivers of the West
+
+
+  </Prose>
   <Figure>
     <Image
       src={new URL("./StreamTemp_WesternUS.png", import.meta.url).href}
@@ -193,11 +243,7 @@ thematics:
     </Caption>
   </Figure>
 
-  <Prose>
-    ## Droughts and Wildfires are Warming the Rivers of the West
 
-
-  </Prose>
 </Block>
 
 
