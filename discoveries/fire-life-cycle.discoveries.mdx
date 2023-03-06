@@ -315,7 +315,12 @@ EIS can connect more detailed land surface information with existing weather-bas
 </Block>
 
 
-<Block>
+
+<Block type='full'>
+<Prose>
+ 
+    Modeled ET at 1 km resolution using NASA-LIS framework also captures the impact of fires on vegetation. Large declines in post-fire ET (left) correspond well with burn scars from the MTBS burn severity dataset (right) during the fire year 2020.    
+</Prose>
 <Figure>
   <Map
     datasetId='lis-etsuppression'
@@ -329,16 +334,20 @@ EIS can connect more detailed land surface information with existing weather-bas
     attrAuthor='NASA'
     attrUrl='https://nasa.gov/'
   >
-    Modeled ET using NASA-LIS framework also captures the impact of fires on vegetation. Large declines in post-fire ET (left) correspond well with burn scars from the MTBS burn severity dataset (right) during the fire year 2020. 
+    Change in modeled ET (left) compared with MTBS severity maps for 2020 fire season. Zoom in for a closer look at these burned areas.
   </Caption>
 </Figure>
 </Block>
 
-<Block>
+<Block type='full'>
+<Prose>
+ 
+    Transpiration modeled using LIS framework shows even stronger patterns with burn scars with large declines due to 2020 fires.
+</Prose>
 <Figure>
   <Map
-    datasetId='lis-tvegsuppression'
-    layerId='lis-tvegsuppression'
+    datasetId='lis-etsuppression'
+    layerId='lis-etsuppression'
     dateTime='2020-01-01'
     compareDateTime='2020-01-01'
     zoom={4}
@@ -348,11 +357,10 @@ EIS can connect more detailed land surface information with existing weather-bas
     attrAuthor='NASA'
     attrUrl='https://nasa.gov/'
   >
-    Modeled ET using NASA-LIS framework also captures the impact of fires on vegetation. Large declines in post-fire ET (left) correspond well with burn scars from the MTBS burn severity dataset (right) during the fire year 2020. 
+    Change in modeled transpiration (left) compared with MTBS severity maps for 2020 fire season. Zoom in for a closer look at these burned areas.
   </Caption>
 </Figure>
 </Block>
-
 
 
 
