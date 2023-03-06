@@ -84,9 +84,8 @@ thematics:
 <Block type='full'>
 <Prose>
     ## Intensifying Fire Severity and Increasing Burned Area
-    
-     COMPLETE ..
-    Monitoring Trends in Burn Severity ([MTBS] (https://www.mtbs.gov/)) program...
+   
+    Monitoring Trends in Burn Severity ([MTBS] (https://www.mtbs.gov/)) program provides long record of CONUS wildland fires during 1984-2021, mapping burn area extents, date of ignition, and burn severity at 30 m resolution. The intensifying fire season can be seen with larger and more intense fires in 2020 when compared to 2016.   
 </Prose>
 <Figure>
   <Map
@@ -295,11 +294,13 @@ EIS can connect more detailed land surface information with existing weather-bas
     layerId='mtbs-burn-severity'
     datetime='2020-01-01'
   >
-    ## The response of ecosystem to fires is complex!
+    ## Ecosystem response to fires is complex!
     
-     COMPLETE ..
-    
+    Recovery of severely burnt forests is slowest and can sustain damage over multiple seasons, even in near normal or wet conditions. 
+    High severity fires caused highest ET suppression with slowest recovery over three post-fire years
+
     Post-fire management and risk assessment thus need to include the control of landcover, fire properties,  and climate disturbances in studying the hydrology of burnt and surrounding regions.
+    
     </Chapter>
 
 </ScrollytellingBlock>
@@ -333,6 +334,24 @@ EIS can connect more detailed land surface information with existing weather-bas
 </Figure>
 </Block>
 
+<Block>
+<Figure>
+  <Map
+    datasetId='lis-tvegsuppression'
+    layerId='lis-tvegsuppression'
+    dateTime='2020-01-01'
+    compareDateTime='2020-01-01'
+    zoom={4}
+    center={[-116,36]}
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+    Modeled ET using NASA-LIS framework also captures the impact of fires on vegetation. Large declines in post-fire ET (left) correspond well with burn scars from the MTBS burn severity dataset (right) during the fire year 2020. 
+  </Caption>
+</Figure>
+</Block>
 
 
 
