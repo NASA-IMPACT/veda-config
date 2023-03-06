@@ -27,8 +27,8 @@ layers:
         - 20
       nodata: -9999
     compare:
-       datasetId: lis-da-trends
-       layerId: lis-da-gpp-trend  
+       datasetId: lis-global-da-trends
+       layerId: lis-global-da-gpp-trend  
        mapLabel: |
          ::js ({ dateFns, datetime, compareDatetime }) => {
            return `TWS trend: ${dateFns.format(datetime, 'yyyy')} VS GPP trend: ${dateFns.format(compareDatetime, 'yyyy')}`;
@@ -60,13 +60,6 @@ layers:
         - -40
         - 40
       nodata: -9999
-    compare:
-       datasetId: lis-da-trends
-       layerId: lis-da-gpp-trend  
-       mapLabel: |
-         ::js ({ dateFns, datetime, compareDatetime }) => {
-           return `TWS trend: ${dateFns.format(datetime, 'yyyy')} VS GPP trend: ${dateFns.format(compareDatetime, 'yyyy')}`;
-         }
     legend:
       type: gradient
       label: GPP Trend (gC/m2/yr)
