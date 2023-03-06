@@ -46,7 +46,7 @@ thematics:
     zoom={3.8}
     datasetId='lis-global-da-trends'
     layerId='lis-global-da-tws-trend'
-    datetime='2001-01-01'
+    datetime='2003-01-01'
   >
     ## Irrigation induced groundwater depletion
     The vast agricultural regions such as the North China Plain and Northwestern India rely heavily on groundwater pumping for irrigation. By integrating GRACE/GRACE-FO terrestrial water storage anomaly data into the global reanalysis, we are able to identify these “hotspot” depletion areas.
@@ -84,6 +84,23 @@ thematics:
 </Block>
 
 <Block type='wide'>
+  <Figure>
+     <Map
+     datasetId='lis-global-da-trends'
+     layerId='lis-global-da-tws-trend'
+     dateTime='2003-01-01'
+     compareDateTime='2003-01-01'
+     zoom={2}
+     center={[77.63,24.27]}
+     />
+    <Caption
+     attrAuthor='NASA'
+     attrUrl='https://nasa.gov/'
+   >
+    Theil-Sen Slope estimation of terrestrial water storage and gross primary production for 2003-2021 from global reanalysis dataset.
+    </Caption>
+  </Figure>
+
   <Figure>
     <CompareImage
       leftImageSrc={new URL('./Global_Reanalysis_Fig1a.png', import.meta.url).href}
