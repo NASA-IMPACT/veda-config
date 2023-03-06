@@ -31,13 +31,13 @@ layers:
        layerId: lis-global-da-gpp-trend  
        mapLabel: |
          ::js ({ dateFns, datetime, compareDatetime }) => {
-           return `TWS trend: ${dateFns.format(datetime, 'yyyy')} VS GPP trend: ${dateFns.format(compareDatetime, 'yyyy')}`;
+           return `TWS trend (2003-2021) VS GPP trend (2003-2021)`;
          }
     legend:
       type: gradient
       label: TWS Trend (mm/yr)
       min: "-20"
-      max: "20"
+      max: "20 (mm/yr)"
       stops:
       - "#a50026"
       - "#f46d43"
@@ -64,7 +64,7 @@ layers:
       type: gradient
       label: GPP Trend (gC/m2/yr)
       min: "-40"
-      max: "40"
+      max: "40 (gC/m2/yr)"
       stops:
       - "#a50026"
       - "#f46d43"
