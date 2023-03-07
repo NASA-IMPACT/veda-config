@@ -28,8 +28,8 @@ layers:
         - 0
         - 500
     compare:
-      datasetId: swe-LIS-DA
-      layerId: lis-global-data-SWE
+      datasetId: global-reanalysis-da
+      layerId: lis-global-da-swe
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           return `${dateFns.format(datetime, 'DD LLL yyyy')}`;  
@@ -47,7 +47,7 @@ layers:
       - "#2164AB"
       - "#0E316B"
 ---
-<Block type='full'>
+<Block>
 <Prose>
 ## Introduction
 🚧 This Dataset presents work in progress and not a peer-reviewed data product! 🚧
