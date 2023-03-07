@@ -1,5 +1,5 @@
 ---
-id: tws-anomaly
+id: swe-lis-da
 name: 'A Global Reanalysis for Water and Energy Cycle Variables'
 description: "A high-resolution (10 km) global data product that integrates NASA’s state-of-the-art model with satellite observations"
 media:
@@ -12,40 +12,40 @@ pubDate: 2023-03-01
 thematics:
   - eis
 layers:
-  - id: lis-tws-anomaly
-    stacCol: lis-tws-anomaly
-    name: 'TWS Anomaly'
+  - id: lis-global-da-swe
+    stacCol: lis-global-da-swe
+    name: 'Snow Water Equivalent - LIS 10km Global DA'
     type: raster
-    description: 'TWS anomalies modeled using data assimilation within Land Information System framework'
+    description: 'Gridded snow water equivalent (in kg m-2) from 10km global LIS with assimilation'
     zoomExtent:
       - 0
       - 11
     sourceParams:
       resampling: bilinear
       bidx: 1
-      colormap_name: rdylbu
+      colormap_name: blues
       rescale:
-        - -200
-        - 200
+        - 0
+        - 500
     compare:
-      datasetId: tws-anomaly
-      layerId: lis-tws-anomaly
+      datasetId: swe-LIS-DA
+      layerId: lis-global-data-SWE
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `${dateFns.format(datetime, 'DD LLL yyyy')} VS ${dateFns.format(compareDatetime, 'DD LLL yyyy')}`;        
+          return `${dateFns.format(datetime, 'DD LLL yyyy')}`;  
         }
     legend:
       type: gradient
-      label: TWS Anomaly
-      min: "-200"
-      max: "200"
+      label: Snow Water Equivalent
+      min: "0"
+      max: "500 mm"
       stops:
-      - "#a50026"
-      - "#f46d43"
-      - "#fee090"
-      - "#e0f3f8"
-      - "#74add1"
-      - "#313695"
+      - "#F7FBFF"
+      - "#D0E1F2"
+      - "#94C4DF"
+      - "#4A98C9"
+      - "#2164AB"
+      - "#0E316B"
 ---
 <Block type='full'>
 <Prose>
@@ -80,32 +80,30 @@ To see an example of how trends calculated from the global reanalysis model outp
 </Prose>
   <Figure>
   <Map
-    datasetId='tws-anomaly'
-    layerId='lis-tws-anomaly'
-    dateTime='2002-12-01'
+    datasetId='swe-lis-da'
+    layerId='lis-global-da-swe'
+    dateTime='2005-12-01'
     zoom={4}
     center={[-116,36]}
-    compareDateTime='2021-12-01'
+    compareDateTime='2020-12-01'
   />
   <Caption
     attrAuthor='NASA'
     attrUrl='https://nasa.gov/'
   >
-  Depleting TWS over CA between 2002 (left) and 2021 (right), captured by LIS modeled TWS anomalies
+  Snow water equivalent compared over CA on December 1, 2005 (left) and December 1, 2020 (right), captured by LIS.
 </Caption>
   </Figure>
 </Block>
 
 <Block>
 <Prose>
-## Explore the modeling framework:
+### Explore the modeling framework:
 * [Land Information System](https://lis.gsfc.nasa.gov/)
 
-## Explore the remote sensing datasets:
-* [GRACE-FO](https://gracefo.jpl.nasa.gov/data/grace-fo-data/)
-
-* [ESA CCI]()
-
-* [MODIS](https://modis.gsfc.nasa.gov/)
+### Explore the remote sensing datasets:
+    * [GRACE-FO](https://gracefo.jpl.nasa.gov/data/grace-fo-data/)
+    * [ESA CCI](https://esa-soilmoisture-cci.org/)
+    * [MODIS](https://modis.gsfc.nasa.gov/)
 </Prose>
 </Block>
