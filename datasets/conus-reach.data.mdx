@@ -3,11 +3,11 @@ id: conus-reach
 name: "Stream network across the Contiguous United States"
 description: "This dataset describes the Stream network across the Contiguous United States delineated using Soil and Water Assessment Tool"
 media:
-  src: ::file ./CONUS_Nitrate_07012018.png
-  alt: A map showing nitrate loads in the rivers of the United States on 07/01/2018
+  src: ::file ./mtbs-burn-severity--dataset-cover.jpg
+  alt: Hillside engulfed by wildfire
   author:
-    name: NASA
-    url: https://www.nasa.gov
+    name: Mike Newbry
+    url: https://unsplash.com/photos/DwtX9mMHBJ0
 thematics:
   - eis
 layers:
@@ -20,10 +20,15 @@ layers:
       - 0
       - 20
     sourceParams:
+      asset_bidx: cog_default|1
       colormap_name: inferno_r
+      rescale:
+        - 1.0
+        - 1080
+      nodata: nan
     legend:
       type: gradient
-      label: CONUS reach 
+      label: CONUS Reach 
       min: "1"
       max: "1100"
       stops:
