@@ -36,7 +36,7 @@ layers:
         }
     legend:
       type: gradient
-      label: Snow Water Equivalent
+      label: Snow Water Equivalent [mm]
       min: "0"
       max: "500 mm"
       stops:
@@ -46,11 +46,45 @@ layers:
       - "#4A98C9"
       - "#2164AB"
       - "#0E316B"
+
+  - id: lis-global-da-tws
+    stacCol: lis-global-da-tws
+    name: 'Terrestrial Water Storage - LIS 10km Global DA'
+    type: raster
+    description: 'Gridded terrestrial water storage (in mm) from 10km global LIS with assimilation'
+    zoomExtent:
+      - 0
+      - 11
+    sourceParams:
+      resampling: bilinear
+      bidx: 1
+      colormap_name: viridis
+      rescale:
+        - 5000
+        - 5800
+    compare:
+      datasetId: global-reanalysis-da
+      layerId: lis-global-da-tws
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'DD LLL yyyy')}`;
+        }
+    legend:
+      type: gradient
+      label: Terrestrial Water Storage [mm]
+      min: "5000"
+      max: "5800 mm"
+      stops:
+        - '#440154'
+        - '#3b528b'
+        - '#21918c'
+        - '#5ec962'
+        - '#fde725'
 ---
 <Block>
 <Prose>
 ## Introduction
-🚧 This Dataset presents work in progress and not a peer-reviewed data product! 🚧
+🚧 This page presents work in progress and not a peer-reviewed data product! 🚧
 
 Realistic estimates of water, energy, and carbon cycle variables are necessary for accurate understanding of earth system processes. Land surface models simulate processes at the Earth’s surface and can provide spatiotemporal estimates of a whole suite of variables like precipitation, soil moisture, and evapotranspiration. However, models often have biases that cause high uncertainties in important water budget variables. Therefore, tools like data assimilation, where observations are used to constrain model simulations, are often used.
 
