@@ -1,7 +1,7 @@
 ---
 id: conus-reach
 name: "Stream network across the Contiguous United States"
-description: "This dataset describes the Stream network across the Contiguous United States delineated using Soil and Water Assessment Tool"
+description: "Burn Severities and extents of fires"
 media:
   src: ::file ./mtbs-burn-severity--dataset-cover.jpg
   alt: Hillside engulfed by wildfire
@@ -15,27 +15,33 @@ layers:
     stacCol: conus-reach
     name: Stream network across the Contiguous United States
     type: raster
-    description: "This dataset describes the Stream network across the Contiguous United States delineated using Soil and Water Assessment Tool"
+    description: "Burn severities and extents of fires from Monitoring Trends in Burn Severity (MTBS) program during the years 2016-2021 over Western US"
     zoomExtent:
       - 0
       - 20
     sourceParams:
-      asset_bidx: cog_default|1
-      colormap_name: inferno_r
+      colormap_name: rdylgn_r
       rescale:
-        - 1.0
-        - 1080
-      nodata: nan
+        - 1
+        - 4
+    compare:
+      datasetId: mtbs-burn-severity  
+      layerId: mtbs-burn-severity  
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
+        }
     legend:
-      type: gradient
-      label: CONUS Reach 
-      min: "1"
-      max: "1100"
+      type: categorical
       stops:
-        - "#FBB41A"
-        - "#BB3754"
-        - "#781D6D"
-        - "#34095F"
+        - color: "#94c772"
+          label: "Unburned"
+        - color: "#faf88e"
+          label: "Low"
+        - color: "#ea915e"
+          label: "Moderate"
+        - color: "#971d2b"
+          label: "High"
 
 ---
 
@@ -43,6 +49,13 @@ layers:
   <Prose>
     ## About
     
-	This dataset describes the Stream network across the Contiguous United States delineated using Soil and Water Assessment Tool
+    Burn severities and extents of fires from Monitoring Trends in Burn Severity (MTBS) program during the years 2016-2020 over Western US.
+    
+    MTBS is an interagency program whose goal is to consistently map the burn severity and extent of large fires across all lands of the United States from 1984 to present. This includes all fires 1000 acres or greater in the western United States and 500 acres or greater in the eastern Unites States. The extent of coverage includes the continental U.S., Alaska, Hawaii and Puerto Rico. 
+
+    ## Additional Resources
+
+    * [MTBS - Project overview](https://www.mtbs.gov/project-overview)
+    * [Interactive Viewer for Continental US](https://www.mtbs.gov/viewer/?region=conus)
   </Prose>
 </Block>
