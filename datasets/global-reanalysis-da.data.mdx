@@ -1,6 +1,6 @@
 ---
-id: swe-lis-da
-name: 'A Global Reanalysis for Water and Energy Cycle Variables'
+id: global-reanalysis-da
+name: 'A Global Reanalysis for Water, Energy, and Carbon Cycle Variables'
 description: "A high-resolution (10 km) global data product that integrates NASA’s state-of-the-art model with satellite observations"
 media:
   src: ::file ./jordan_image.jpg
@@ -52,9 +52,9 @@ layers:
 ## Introduction
 🚧 This Dataset presents work in progress and not a peer-reviewed data product! 🚧
 
-Realistic estimates of water and energy cycle variables are necessary for accurate understanding of earth system processes. Land surface models can provide spatiotemporal estimates of a whole suite of variables like precipitation, soil moisture, and evapotranspiration. However, models often have biases that cause high uncertainties in important water budget variables. Therefore, tools like data assimilation, where observations are used to constrain model simulations, are often used.
+Realistic estimates of water, energy, and carbon cycle variables are necessary for accurate understanding of earth system processes. Land surface models simulate processes at the Earth’s surface and can provide spatiotemporal estimates of a whole suite of variables like precipitation, soil moisture, and evapotranspiration. However, models often have biases that cause high uncertainties in important water budget variables. Therefore, tools like data assimilation, where observations are used to constrain model simulations, are often used.
 
-This dataset is a new global reanalysis that includes variables to help quantify the water and energy budget. As of the present, the model reanalysis output is available at 10 km spatial resolution and a daily temporal resolution from January 1, 2003 through December 31, 2021. Details on the model setup are provided below, as well as links to how the reanalysis output can be used to address key science questions.
+This dataset is a new global reanalysis that includes variables – such as terrestrial water storage, snow water equivalent, and gross primary productivity – to help quantify the water and energy budget. At the present time, the model reanalysis output is available at 10 km spatial resolution and a daily temporal resolution from January 1, 2003 through December 31, 2021. Details on the model setup are provided below, as well as links to how the reanalysis output can be used to address key science questions.
 
 Authors: Melissa Wrzesien, Wanshu Nie, Sujay Kumar, Kim Locke
 
@@ -66,7 +66,7 @@ Authors: Melissa Wrzesien, Wanshu Nie, Sujay Kumar, Kim Locke
 ## Modeling Setup
 The reanalysis product is created using the NASA Land Information System modeling framework (cite, link) to merge land surface model simulations with observations from satellites through data assimilation. The team uses the Noah-MP land surface model and assimilates soil moisture from the European Space Agency’s Climate Change Initiative Program (ESA CCI), leaf area index from the Moderate Resolution Imaging Spectroradiometer (MODIS), and terrestrial water storage anomalies from the Gravity Recovery and Climate Experiment and the follow-on missions (GRACE/GRACE-FO). 
 
-The output variables available on VEDA include evapotranspiration (ET), gross primary productivity (GPP), groundwater storage (GWS), snow water equivalent (SWE), streamflow, surface runoff, subsurface runoff, terrestrial water storage (TWS), and total precipitation. See the [VEDA Analysis tool](https://www.earthdata.nasa.gov/dashboard/eis/analysis) to make interactive plots of the variables over a user-specified domain and time period.
+The output variables available on VEDA include evapotranspiration (ET), gross primary productivity (GPP), groundwater storage (GWS), snow water equivalent (SWE), streamflow, surface runoff, subsurface runoff, terrestrial water storage (TWS), and total precipitation. See the VEDA Analysis tool (link) to make interactive plots of the variables over a user-specified domain and time period.
 
 </Prose>
 </Block>
@@ -80,7 +80,7 @@ To see an example of how trends calculated from the global reanalysis model outp
 </Prose>
   <Figure>
   <Map
-    datasetId='swe-lis-da'
+    datasetId='global-reanalysis-da'
     layerId='lis-global-da-swe'
     dateTime='2005-12-01'
     zoom={4}
