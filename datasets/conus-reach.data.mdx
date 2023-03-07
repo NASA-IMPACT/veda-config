@@ -1,0 +1,43 @@
+---
+id: conus-reach
+name: "Stream network across the Contiguous United States"
+description: "This dataset describes the Stream network across the Contiguous United States delineated using Soil and Water Assessment Tool"
+media:
+  src: ::file ./CONUS_Nitrate_07012018.png
+  alt: A map showing nitrate loads in the rivers of the United States on 07/01/2018
+  author:
+    name: NASA
+    url: https://www.nasa.gov
+thematics:
+  - eis
+layers:
+  - id: conus-reach
+    stacCol: conus-reach
+    name: Stream network across the Contiguous United States
+    type: raster
+    description: "This dataset describes the Stream network across the Contiguous United States delineated using Soil and Water Assessment Tool"
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      colormap_name: inferno_r
+    legend:
+      type: gradient
+      label: CONUS reach 
+      min: "1"
+      max: "1100"
+      stops:
+        - "#FBB41A"
+        - "#BB3754"
+        - "#781D6D"
+        - "#34095F"
+
+---
+
+<Block>
+  <Prose>
+    ## About
+    
+	This dataset describes the Stream network across the Contiguous United States delineated using Soil and Water Assessment Tool
+  </Prose>
+</Block>
