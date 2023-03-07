@@ -1,10 +1,11 @@
 # Writing contents for Veda dashboard
 
 - [Writing contents for Veda dashboard](#writing-contents-for-veda-dashboard)
-  - [Background & Prerequisites](#background--prerequisites)
+  - [Background \& Prerequisites](#background--prerequisites)
   - [Block](#block)
+  - [Notebook Connect Callout](#notebook-connect-callout)
   - [Image](#image)
-    - [Inline image & Figure image](#inline-image--figure-image)
+    - [Inline image \& Figure image](#inline-image--figure-image)
       - [How to use local image (assets)](#how-to-use-local-image-assets)
   - [Chart](#chart)
   - [Map](#map)
@@ -216,6 +217,46 @@ Layouts do work in any size of screen, but this documentation mainly addresses h
 </tr>
 </table>
 
+
+## Notebook Connect Callout
+
+⚠️ This feature is still under development and may change at any time. ⚠️
+
+When necessary, it is possible to include a callout to link to a dataset usage. This callout allows the user to add some custom text and define which dataset the callout is for. **Note that the linked dataset must have a [usage configuration](./CONTENT.md#datasets) defined on its file**.  
+
+When the user clicks the button a modal will appear with the usage information.
+
+| Option | Type | Description|
+|---|---|---|
+| datasetId | string | Id of the dataset to link to, as defined by the `id` property on the dataset MDX file. |
+
+<table>
+  <tr>
+    <th>Syntax</th>
+    <th>How it looks on the page</th>
+  </tr>
+
+  <tr>
+  <td>
+
+  ```jsx
+    <NotebookConnectCallout datasetId='no2'>
+      The No2 dataset is a great example of
+      what this data can be used for, and
+      you can also explore it on your own.
+    </NotebookConnectCallout>
+  ```
+  </td>
+  <td> 
+ 
+  ![Screenshot of notebook callout](./media/dataset-usage-callout.png)
+
+  The information on the modal is derived from the [usage configuration](./CONTENT.md#datasets) and it is not customizable.  
+
+  ![Screenshot of notebook callout modal](./media/dataset-usage-callout-modal.png)
+  </td>
+  </tr>
+</table>
 
 ## Image 
 
