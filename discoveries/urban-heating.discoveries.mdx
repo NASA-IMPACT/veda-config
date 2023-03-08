@@ -15,16 +15,13 @@ thematics:
 
 <Block type="wide">
   <Figure>
-    <Map
-      datasetId='urban-heating'
-      layerId='houston-lst-diff'
-      dateTime='2000-01-01'
-      compareDateTime='2018-01-01'
-      compareLabel='decadal LST diff / SVI socioeconomic'
+    <Image
+      src={new URL('./lst-vs-svi.png', import.meta.url).href}
+      alt='LST vs SVI socioeconomic (Houston)'
     />
     <Caption>
       Comparison of decadally-averaged temperature difference from 2000-2009 and 2010-2019 with socioeconomic vulnerability from 2018. For the temperature plot, reds indicate warming and blues indicate cooling. For socioeconomic vulnerability, greens indicate more vulnerable and whites less vulnerable.
-    </Caption>
+    </Caption> 
   </Figure>
 </Block>
 
