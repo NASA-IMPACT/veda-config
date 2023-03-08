@@ -1,7 +1,7 @@
 ---
 id: conus-reach
 name: "Stream network across the Contiguous United States"
-description: "Burn Severities and extents of fires"
+description: "This dataset describes the Stream network across the Contiguous United States delineated using Soil and Water Assessment Tool"
 media:
   src: ::file ./mtbs-burn-severity--dataset-cover.jpg
   alt: Hillside engulfed by wildfire
@@ -15,34 +15,21 @@ layers:
     stacCol: conus-reach
     name: Stream network across the Contiguous United States
     type: raster
-    description: "Burn severities and extents of fires from Monitoring Trends in Burn Severity (MTBS) program during the years 2016-2021 over Western US"
+    description: "This dataset describes the Stream network across the Contiguous United States delineated using Soil and Water Assessment Tool"
     zoomExtent:
       - 0
       - 20
     sourceParams:
-      colormap_name: pubu_r
+      colormap_name: rdylbu_r
       rescale:
         - 1
         - 1
       nodata: 65535
-    compare:
-      datasetId: mtbs-burn-severity  
-      layerId: mtbs-burn-severity  
-      mapLabel: |
-        ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
-        }
     legend:
       type: categorical
       stops:
-        - color: "#94c772"
-          label: "Unburned"
-        - color: "#faf88e"
-          label: "Low"
-        - color: "#ea915e"
-          label: "Moderate"
-        - color: "#971d2b"
-          label: "High"
+        - color: "blue"
+          label: "Stream Network"
 
 ---
 
@@ -50,13 +37,7 @@ layers:
   <Prose>
     ## About
     
-    Burn severities and extents of fires from Monitoring Trends in Burn Severity (MTBS) program during the years 2016-2020 over Western US.
-    
-    MTBS is an interagency program whose goal is to consistently map the burn severity and extent of large fires across all lands of the United States from 1984 to present. This includes all fires 1000 acres or greater in the western United States and 500 acres or greater in the eastern Unites States. The extent of coverage includes the continental U.S., Alaska, Hawaii and Puerto Rico. 
+	This dataset describes the Stream network across the Contiguous United States delineated using Soil and Water Assessment Tool
 
-    ## Additional Resources
-
-    * [MTBS - Project overview](https://www.mtbs.gov/project-overview)
-    * [Interactive Viewer for Continental US](https://www.mtbs.gov/viewer/?region=conus)
   </Prose>
 </Block>
