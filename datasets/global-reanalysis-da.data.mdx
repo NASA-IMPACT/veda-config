@@ -162,8 +162,8 @@ layers:
       bidx: 1
       colormap_name: viridis
       rescale:
-        - 0
-        - 0.0001
+        - 4500
+        - 5000
     compare:
       datasetId: global-reanalysis-da
       layerId: lis-global-da-gws
@@ -265,7 +265,7 @@ layers:
       colormap_name: viridis
       rescale:
         - 0
-        - 0.0001
+        - 2500
     compare:
       datasetId: global-reanalysis-da
       layerId: lis-global-da-streamflow
@@ -277,7 +277,7 @@ layers:
       type: gradient
       label: Streamflow [m3 s-1]
       min: "0"
-      max: "0.00001 m3 s-1"
+      max: "2500 m3 s-1"
       stops:
         - '#440154'
         - '#3b528b'
@@ -355,16 +355,16 @@ To see an example of how trends calculated from the global reanalysis model outp
   <Map
     datasetId='global-reanalysis-da'
     layerId='lis-global-da-swe'
-    dateTime='2005-12-01'
+    dateTime='2005-03-01'
     zoom={4}
-    center={[-116,36]}
-    compareDateTime='2020-12-01'
+    center={[-114,38]}
+    compareDateTime='2020-03-01'
   />
   <Caption
     attrAuthor='NASA'
     attrUrl='https://nasa.gov/'
   >
-  Snow water equivalent compared over CA on December 1, 2005 (left) and December 1, 2020 (right), captured by LIS.
+  Snow water equivalent compared over the western United States on March 1, 2005 (left) and March 1, 2020 (right), captured by LIS.
 </Caption>
   </Figure>
 </Block>
