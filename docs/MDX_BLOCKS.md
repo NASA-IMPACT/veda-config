@@ -258,6 +258,25 @@ When the user clicks the button a modal will appear with the usage information.
   </tr>
 </table>
 
+The `NotebookConnectCallout` is meant to be used in a `<Prose>` component like any other text element. For example:
+```jsx
+<Block>
+  <Prose>
+    #### Pellentesque pretium
+
+    Donec est tellus, finibus lobortis vestibulum tincidunt, egestas id nunc.
+
+    <NotebookConnectCallout datasetId='no2'>
+      The No2 dataset is a great example of what this data can be used for, and you can also explore it on your own.
+    </NotebookConnectCallout>
+
+    Maecenas placerat felis vel nisi lobortis, quis blandit mauris accumsan. Donec
+    vehicula ipsum orci, sit amet interdum est commodo sed.
+
+  </Prose>
+</Block>
+```
+
 ## Image 
 
 To offer rich visual and better experience, Veda dashboard offers `Image` component, which is a wrapper for `<img/>` HTML tag. You can use `Image` component to display any kind of image. Depending on where Image is used (is it inside of `Prose` as an inline image? or inside of `Figure`?), there are additional attributes you need to pass.
