@@ -11,8 +11,8 @@ media:
 thematics:
   - eis
 layers:
-  - id: lis-global-da-tws-trend-airflow
-    stacCol: lis-global-da-tws-trend-airflow
+  - id: lis-global-da-tws-trend
+    stacCol: lis-global-da-tws-trend
     name: 'LIS DA TWS Trend'
     type: raster
     description: 'Trends in TWS from LIS data assimilation output'
@@ -25,7 +25,6 @@ layers:
       rescale:
         - -20
         - 20
-      nodata: -9999.
     compare:
        datasetId: lis-global-da-trends
        layerId: lis-global-da-gpp-trend  
@@ -59,7 +58,6 @@ layers:
       rescale:
         - -40
         - 40
-      nodata: -9999.
     legend:
       type: gradient
       label: GPP Trend (gC/m2/yr)
