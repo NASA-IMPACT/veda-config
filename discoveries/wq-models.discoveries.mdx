@@ -216,17 +216,13 @@ thematics:
 </ScrollytellingBlock>
 
 <Block>
-  <Prose>
-    ## The First Spatially Distributed & Temporally Continuous Water Quality Estimates for US Rivers
-  </Prose>
-</Block>
-
-<Block type='wide'>
   <Figure>
-    <Image
-      src={new URL("./Animated_NO3_2018.discoveries.gif", import.meta.url).href}
-      alt="Nitrate Loads across the United States in 2018"
-    />
+     <video style={{ width: '100%', aspectRatio: "16/9" }} controls>
+      <source
+        src={new URL('./Animated_NO3_2018.mp4', import.meta.url).href} type="video/mp4"
+      />
+      Your browser does not support the video tag.
+    </video>
     <Caption>
       Nitrate loads across the rivers of United States in 2018
     </Caption>
