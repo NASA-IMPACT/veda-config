@@ -1,0 +1,90 @@
+---
+id: lis-global-da-trends
+name: 'Global Water Cycle Reanalysis Trends'
+description: "Trend in TWS and GPP modeled using data assimilation within Land Information System framework"
+media:
+  src: ::file ./twsanomaly-globe.png
+  alt: TWS trend of anomalies from LIS outputs.
+  author:
+    name: NASA LIS
+    url:
+thematics:
+  - eis
+layers:
+  - id: lis-global-da-tws-trend
+    stacCol: lis-global-da-tws-trend
+    name: 'LIS DA TWS Trend'
+    type: raster
+    description: 'Trends in TWS from LIS data assimilation output'
+    zoomExtent:
+      - 0
+      - 11
+    sourceParams:
+      bidx: 1
+      colormap_name: rdbu
+      rescale:
+        - -20
+        - 20
+      nodata: -9999.
+    compare:
+       datasetId: lis-global-da-trends
+       layerId: lis-global-da-gpp-trend  
+       mapLabel: |
+         ::js ({ dateFns, datetime, compareDatetime }) => {
+           return `TWS trend (2003-2021) VS GPP trend (2003-2021)`;
+         }
+    legend:
+      type: gradient
+      label: TWS Trend (mm/yr)
+      min: "-20"
+      max: "20 (mm/yr)"
+      stops:
+      - "#a50026"
+      - "#f46d43"
+      - "#fee090"
+      - "#e0f3f8"
+      - "#74add1"
+      - "#313695"
+  - id: lis-global-da-gpp-trend
+    stacCol: lis-global-da-gpp-trend
+    name: 'LIS DA GPP Trend'
+    type: raster
+    description: 'Trends in GPP from LIS data assimilation output'
+    zoomExtent:
+      - 0
+      - 11
+    sourceParams:
+      bidx: 1
+      colormap_name: rdbu
+      rescale:
+        - -40
+        - 40
+      nodata: -9999.
+    legend:
+      type: gradient
+      label: GPP Trend (gC/m2/yr)
+      min: "-40"
+      max: "40 (gC/m2/yr)"
+      stops:
+      - "#a50026"
+      - "#f46d43"
+      - "#fee090"
+      - "#e0f3f8"
+      - "#74add1"
+      - "#313695"
+---
+
+<Block>
+   <Prose>
+     ## About
+
+     Realistic estimates of water and energy cycle variables are necessary for accurate understanding of earth system processes. We develop a 10 km global reanalysis product of water, energy, and carbon fluxes by assimilating satellite observed surface soil moisture, leaf area index, and terrestrial water storage anomalies into a land surface model within NASA Land Information System Framework. We applied a seasonal and trend decomposition algorithm to get the trend estimates for terrestrial water storage and gross primary production. The method can better help to deal with [nonstationarities](https://github.com/Earth-Information-System/sea-level-and-coastal-risk/blob/main/AMS_2023_Wanshu_Nie_for_VEDA_Discovery.pdf) and seasonal shifts and provide a more robust estimate of trends.
+
+     ## Additional Resources
+
+     * [EIS Freshwater](https://freshwater.eis.smce.nasa.gov/)
+     * [Land Information System](https://lis.gsfc.nasa.gov/)
+     * [Global Reanalysis Dataset page](https://www.earthdata.nasa.gov/dashboard/eis/datasets)
+   </Prose>
+ </Block>
+

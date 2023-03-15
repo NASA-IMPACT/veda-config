@@ -1,10 +1,11 @@
 {
   "name": "veda-config",
   "description": "Configuration for Veda",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "source": "./.veda/ui/app/index.html",
   "license": "Apache-2.0",
   "scripts": {
+    "dev": "yarn clean && yarn serve",
     "serve": "NODE_ENV=development .veda/veda serve",
     "build": "NODE_ENV=production .veda/veda",
     "stage": "NODE_ENV=staging .veda/veda",

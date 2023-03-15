@@ -36,6 +36,8 @@ name: Thematic area 1
 There are different types of `Block` components that can be used to create engaging content pieces.  
 Each `Block` comes with its own rules and needed props, so check the [MDX_BLOCK.md](./MDX_BLOCKS.md) for the full details.
 
+---
+
 ## Thematic Areas
 
 Frontmatter configuration for the Thematic Area
@@ -81,6 +83,8 @@ Description for the about page.
 
 MDX content for thematic areas will show up under /about page. For example, `air-quality` thematic area's MDX contents will show up under `/air-quality/about`.
 
+---
+
 ## Datasets
 
 Frontmatter configuration for the Dataset
@@ -99,6 +103,10 @@ related: Related[]
   - type: string
     id: string
     thematic: string
+usage: Usage[]
+  - url: string
+    label: string
+    title: string
 ---
 
 <Block>
@@ -128,7 +136,7 @@ Image to identify this resource. See [media.md](./frontmatter/media.md).
 
 **thematics**  
 `string[]`  
-List of thematic areas ids this discovery belongs to. These values are used by the application to establish a relationship between thematic areas and discoveries.  
+List of thematic areas ids this dataset belongs to. These values are used by the application to establish a relationship between thematic areas and datasets.  
 Example:
 ```yaml
 thematics:
@@ -138,14 +146,14 @@ thematics:
 
 **featuredOn**  
 `string[]`  
-List of thematic areas ids where this discovery is featured. A featured discovery will show up in the thematic area homepage.  
+List of thematic areas ids where this dataset is featured. A featured dataset will show up in the thematic area homepage.  
 Example:
 ```yaml
 featuredOn:
   - covid-19
   - agriculture
 ```
-![](./media/fm-featured-discovery.png)
+![](./media/fm-featured-dataset.png)
 
 **layers**  
 `Layer[]`  
@@ -183,22 +191,37 @@ Each content should be formatted like below.
     id: thematic-id
 ```
 
-**usage**
-`object[]`
-Links to examples for how to use this dataset.
+**usage**  
+`Usage[]`  
+Links to examples for how to use this dataset.  
+The usage information will be accessible from the header of a dataset page (via the _Analyze data (Python)_ button), from the explore page, and from any long form content through the use of the [NotebookConnectCallout](./MDX_BLOCKS.md#notebook-connect-callout).
 
-**usage[].url**
-`string`
+![](./media/dataset-header.png)
+
+**usage[].url**  
+`string`  
 URL for example on how to use this dataset.
 
-**usage[].label**
-`string`
+**usage[].label**  
+`string`  
 A label for the type of interface this link opens. Currently, typical interfaces include a static notebook or a notebook hub.
 
-**usage[].title**
-`string`
-Title of the page linked to for an example of how to use this dataset.
+**usage[].title**  
+`string`  
+Title of the page linked to for an example of how to use this dataset.  
 
+Example:
+```yaml
+usage:
+  - url: 'https://github.com/NASA-IMPACT'
+    label: View example notebook
+    title: 'Static view in VEDA documentation'
+  - url: "https://nasa-veda.2i2c.cloud/"
+    label: Run example notebook
+    title: 'Interactive session in VEDA 2i2c JupyterHub (requires account)'
+```
+
+---
 
 ## Discoveries
 
