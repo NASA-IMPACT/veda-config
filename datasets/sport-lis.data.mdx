@@ -1,16 +1,16 @@
 ---
 featuredOn: []
 id: soil-moisture
-name: SPoRT Land Information System Soil Moisture
+name: SPoRT Land Information System
 description: SPoRT’s real-time instance of the Land Information System provides low-latency soil moisture analyses that help diagnose rapid drought onset and elevated wildfire threat.
 media:
-  src: ::file ./urban-heat.jpg
-  alt: Sunset over Tokyo
+  src: ::file ./soil-moisture-main.jpg
+  alt: Dry Clay Wall with Cracks
   author:
-    name: Arto Marttinen
-    url: https://unsplash.com/photos/6xh7H5tWj9c
+    name: Clay Banks
+    url: https://unsplash.com/photos/EdscD_R28bM
 thematics:
-  - agriculture
+  - eis
 layers:
   - sourceParams:
       resampling: bilinear
@@ -97,11 +97,21 @@ layers:
 
     A variety of output variables are used to depict soil moisture in the SPoRT-LIS analyses. Volumetric soil moisture shows the fraction of volume of water occupying the total soil volume and typically ranges from ~0.03 to 0.45, depending on the defined sand-silt-clay soil classification defined at a given grid point. The volumetric soil moisture is often spatially correlated to the pattern of soil classification; therefore, the relative soil moisture (or percent saturation) can be a preferred method to analyze the soil moisture based on the water-holding capacity of the soils. The relative soil moisture (RSM) is defined as the ratio of the modeled volumetric soil moisture (θ) between the wilting and saturation reference values for a given soil classification:
 
+    *RSM=((θ - θ<sub>wilt</sub>)/(θ<sub>sat</sub>  - θ<sub>wilt</sub> ))  x 100%.				      ...	(1)*
+
     The RSM essentially normalizes the volumetric soil moisture based on the specified characteristics of each unique soil texture classification (sand-silt-clay composition). Meanwhile, the soil moisture percentiles depict where the current analysis value lies within the histogram distribution of historical soil moisture values. An example of the 0-2 meter soil moisture percentile over Napa County, California shows how the wet 2022-23 winter over central California has contributed to historically high soil moisture values, averaged over all SPoRT-LIS points lying within Napa County, yielding a soil moisture percentile value of 92.9 for 23 March 2023:
 
-    < picture here >
+    <Image
+      src={new URL('./soil-moisture-histogram.png', import.meta.url).href}
+      alt='SPoRT LIS Soil Moisture Histogram for 23rd march 2023'
+    />
 
-    < picture here >
+    The national soil moisture percentile map on 23 March 2023 is shown below:
+
+    <Image
+      src={new URL('./soil-moisture-percentile.png', import.meta.url).href}
+      alt='SPoRT-LIS 0-200 cm Soil Moisture percentile valid 24 March 2023'
+    />
 
   </Prose>
 </Block>
