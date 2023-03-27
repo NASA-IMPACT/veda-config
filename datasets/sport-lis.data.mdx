@@ -1,0 +1,121 @@
+---
+featuredOn: []
+id: soil-moisture
+name: SPoRT Land Information System Soil Moisture
+description: SPoRT’s real-time instance of the Land Information System provides low-latency soil moisture analyses that help diagnose rapid drought onset and elevated wildfire threat.
+media:
+  src: ::file ./urban-heat.jpg
+  alt: Sunset over Tokyo
+  author:
+    name: Arto Marttinen
+    url: https://unsplash.com/photos/6xh7H5tWj9c
+thematics:
+  - agriculture
+layers:
+  - sourceParams:
+      resampling: bilinear
+      bidx: 1
+      colormap_name: rdbu
+      rescale:
+        - 0
+        - 100
+      nodata: 9999.0
+    name: 0-100 cm Volumetric Soil Moisture (%)
+    legend:
+      type: gradient
+      min: "0"
+      max: "100"
+      stops:
+        - "#EF8A62"
+        - "#F7F7F7"
+        - "#67A9CF"
+    type: raster
+    id: sport-lis-vsm0_100cm-percentile
+    description: "The NASA Short-term Prediction Research and Transition (SPoRT) Center has developed a Real-Time Land Information System (LIS). The Volumetric Soil Moisture product represents the actual moisture in a soil column from 0-100cm in depth."
+    stacCol: sport-lis-vsm0_100cm-percentile
+    zoomExtent:
+      - 2
+      - 16
+    compare:
+      datasetId: soil-moisture
+      layerId: sport-lis-vsm0_100cm-percentile
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
+        }
+---
+
+<Block>
+  <Prose>
+    The NASA LIS is a high-performance land surface modeling and data
+    assimilation system that can be used to run a variety of LSMs through the
+    integration of satellite-derived datasets, ground-based observations and
+    model re-analyses to characterize land surface states and fluxes (Kumar et
+    al. 2006; Peters-Lidard et al. 2007). The NASA SPoRT Center at MSFC
+    developed an in-house configuration of the LIS (i.e., “SPoRT-LIS”) for use
+    in experimental operations by both domestic and international weather
+    forecasters (Case 2016; Zavodsky et al. 2013; Case and Zavodsky 2018;
+    McDonough et al. 2018). The SPoRT-LIS is an observations-driven, historical
+    and real-time configuration of LIS that runs of the Noah land surface model
+    over a full CONUS domain. SPoRT-LIS provides modeled soil moisture estimates
+    at approximately 3-km horizontal grid spacing over a 2-meter deep soil
+    column, and has been validated for regional applications (e.g., McDonough et
+    al. 2018). The basis of the SPoRT-LIS is a 33-year soil moisture climatology
+    spanning 19812013, which is extended to the present time and forced by
+    atmospheric analyses from the operational North American Land Data
+    Assimilation System-Phase 2 (NLDAS-2; Xia et al. 2012). The 4-day latency
+    gap in NLDAS-2 atmospheric forcing input for the SPoRT-LIS is bridged by
+    incorporating forcing from the National Centers for Environmental Prediction
+    (NCEP) Global Data Assimilation System (GDAS; Wang et al. 2013) in
+    combination with hourly MRMS QPE. The real-time component of the SPoRT-LIS
+    updates on a six-hourly cycle following the initialization schedule and
+    availability of surface flux output files from the GDAS/Global Forecast
+    System (GFS; Zhou et al. 2019) NWP model. Besides the minimal data latency,
+    another unique feature of SPoRT-LIS is the incorporation since 2012 of
+    daily, real-time satellite retrievals of Green Vegetation Fraction (GVF)
+    from the NOAA/National Environmental Satellite, Data, and Information
+    Service (NESDIS) global 4-km resolution product, derived from the Visible
+    Infrared Imaging Radiometer Suite (VIIRS) instrument aboard the
+    Suomi-National Polar-orbiting Partnership and the Joint Polar Satellite
+    System satellites (Vargas et al. 2015). The 33-year soil moisture
+    climatology also provides the database for real-time soil moisture
+    percentiles (Zavodsky et al. 2016; Case and Zavodsky 2018) evaluated for all
+    U.S. counties and at each model grid point. The current-day soil moisture
+    analyses are compared to daily historical distributions to place the present
+    conditions into context to determine the soil wet/dry anomalies for the
+    specific time of year, similar to that described in Xia et al. (2014).
+    Thereafter, soil moisture percentile maps are constructed for the model
+    integrated layers, and these data are frequently referenced by scientists
+    and operational agencies contributing to the weekly U.S. Drought Monitor
+    product.
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    # Interpreting the Data
+
+    A variety of output variables are used to depict soil moisture in the SPoRT-LIS analyses. Volumetric soil moisture shows the fraction of volume of water occupying the total soil volume and typically ranges from ~0.03 to 0.45, depending on the defined sand-silt-clay soil classification defined at a given grid point. The volumetric soil moisture is often spatially correlated to the pattern of soil classification; therefore, the relative soil moisture (or percent saturation) can be a preferred method to analyze the soil moisture based on the water-holding capacity of the soils. The relative soil moisture (RSM) is defined as the ratio of the modeled volumetric soil moisture (θ) between the wilting and saturation reference values for a given soil classification:
+
+    The RSM essentially normalizes the volumetric soil moisture based on the specified characteristics of each unique soil texture classification (sand-silt-clay composition). Meanwhile, the soil moisture percentiles depict where the current analysis value lies within the histogram distribution of historical soil moisture values. An example of the 0-2 meter soil moisture percentile over Napa County, California shows how the wet 2022-23 winter over central California has contributed to historically high soil moisture values, averaged over all SPoRT-LIS points lying within Napa County, yielding a soil moisture percentile value of 92.9 for 23 March 2023:
+
+    < picture here >
+
+    < picture here >
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    ## Additional Resources
+
+    - [Real-time SPoRT-LIS viewer](https://weather.ndc.nasa.gov/sport/viewer/?dataset=lis_conus&amp;product=rsoim0-100)
+    - [Access to real-time rolling archive of digital data and in various
+    formats](https://geo.nsstc.nasa.gov/SPoRT/modeling/lis/conus3km/) - [Daily
+    animations of experimental 2-week forecasts of SPoRT-LIS soil moisture
+    percentiles](https://geo.nsstc.nasa.gov/SPoRT/modeling/lis/conus3km/forecasts/)
+    - [NASA Land Information System project page](https://lis.gsfc.nasa.gov/)
+
+  </Prose>
+</Block>
