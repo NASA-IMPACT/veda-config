@@ -1,0 +1,151 @@
+---
+id: 'water-quality-and-covid-19'
+name: Water Quality and COVID-19
+description: "When governments began implementing shutdowns at the start of the COVID-19 pandemic, scientists wondered how the water would respond to the sudden change in human behavior."
+media:
+  src: ::file ./water-quality-and-covid-19--cover.jpg
+  alt: Aerial view of wakling path in a lush green lake
+  author:
+    name: Tomas Horak
+    url: https://unsplash.com/photos/hZM0bee-WZU
+pubDate: 2021-01-01
+thematics:
+  - covid-19
+  - water-quality
+---
+<Block>
+  <Prose>
+    ## Water Quality during the COVID-19 Pandemic
+
+    Human activity influences water quality, and our behavior changes during the COVID-19 pandemic may be affecting local and regional water quality around the world. Runoff from agriculture and cities can overload coastal waters with excess nutrients, ships in ports and other waterways can mix up sediment and increase turbidity, and even air pollution can end up in the water.
+    
+    Although there are various indications that overall water quality is improving in many places during pandemic-related shutdowns, the cause of these changes and their long-term effects are under investigation by researchers using satellite-based observations and on-the-ground validation.
+  </Prose>
+</Block>
+
+<Block type='wide'>
+  <Figure>
+      <Image
+        src={new URL('./turbidity-sf.png', import.meta.url).href}
+        alt='Satellite view of San Francisco bay displaying water turidity'
+      />
+    <Caption >
+      Turbidity refers to the amount of sediment or particles suspended in water. Darker colors indicate more sediment and murkier water. Lighter colors indicate less sediment and clearer water.
+    </Caption> 
+  </Figure>
+</Block>
+
+<Block type='full'>
+  <Prose>
+    ## Air Quality, Water Quality and COVID-19
+
+  California was one of the first places in the United States to impose COVID-19 related restrictions. A shelter-in-place mandate went into effect for six counties in the San Francisco metropolitan area on March 17, 2020.
+  
+  NASA scientists are using satellite data to investigate the connection between observed changes in air and water quality since the mandate began. Nitrogen compounds, commonly found in air pollutants, can contribute to the formation of algal blooms in water and cause water bodies to become more acidic.
+  
+  Research using satellite data to detect changes in levels of algae (chlorophyll-a) and total suspended solids across multiple sites, including the San Francisco Bay, have shown improvements in water quality during recent shutdowns. The lessons learned from this work will help inform similar work in other coastal cities.
+  </Prose>
+  <Figure>
+    <Map
+      datasetId='no2'
+      layerId='no2-monthly-diff'
+      center={[-122.097, 37.573]}
+      zoom={9}
+      dateTime='2015-01-01'
+      compareDateTime='2020-04-01'
+    />
+    <Caption 
+      attrAuthor='NASA' 
+      attrUrl='https://nasa.gov/'
+    >
+      Darker colors indicate higher nitrogen dioxide (NO₂) levels associated and more activity. Lighter colors indicate lower levels of NO₂ and less activity.
+    </Caption> 
+  </Figure>
+</Block>
+
+<Block type='full'>
+  <Figure>
+      <Image
+        src={new URL('./chlorophyll-chesapeake.png', import.meta.url).href}
+        alt='Satellite view of the Chesapeake bay displaying Chlorophyll-a Anomaly'
+      />
+    <Caption >
+      Chlorophyll-a is an indicator of algae growth. Redder color indicate increases chlorophyll-a and worse water quality. Bluer colors indicate decreases in chlorophyll-a and improved water quality. White areas indicate no change.
+    </Caption> 
+  </Figure>
+  <Prose>
+    ## Examining the Chesapeake Bay during COVID-19
+
+    Chlorophyll-a concentrations and water turbidity fluctuate based on a variety of factors, including natural geography and the weather, making it difficult to identify changes due to COVID-19 restrictions.
+    
+    In coastal areas like the Chesapeake Bay, which is strongly influenced by human activities like agricultural practices, higher chlorophyll-a concentrations can result from the discharge of fertilizers. Agricultural run-off may mask any improvements in water quality from pandemic-related shutdowns.
+  </Prose>
+</Block>
+
+<Block type='full'>
+  <Prose>
+    ## Shades of green in the Great Lakes
+
+    Similarly, researchers are using NASA satellites to observe changes in water quality within the Great Lakes region. Comparing data from April-June 2020 to a baseline average for 2010-2019, researchers observed slight increases in chlorophyll-a and suspended sediment concentrations in the Western Basin of Lake Erie, the portion of the lake most affected by humans and agriculture.
+    
+    Research is ongoing, however, as scientists are unsure whether these changes are due to COVID-19 related behavioral changes, since they still fall within the historical range of chlorophyll-a and suspended sediment levels in the lake.
+  </Prose>
+  <Figure>
+      <Image
+        src={new URL('./chlorophyll-great-lakes.png', import.meta.url).href}
+        alt='Satellite view of the Great Lakes displaying Chlorophyll-a Anomaly'
+      />
+    <Caption >
+      Chlorophyll-a is an indicator of algae growth. Redder color indicate increases chlorophyll-a and worse water quality. Bluer colors indicate decreases in chlorophyll-a and improved water quality. White areas indicate no change.
+    </Caption> 
+  </Figure>
+</Block>
+
+<Block>
+  <Prose>
+    ## A GLAMorous tool to assess COVID's effects
+
+    During the pandemic, resources such as the Group on Earth Observations Global Agricultural Monitoring (GEOGLAM) tool help assess whether crops have adequate access to water and nutrients.
+    
+    
+    Typically used to increase agricultural market transparency and bolster food security by producing timely, actionable information on agricultural conditions, GEOGLAM safely monitors and tracks agricultural conditions from space when local curfews and stay-at-home orders have prevented people from performing these duties on the ground.
+    
+    For example, the Togolese government has used GEOGLAM during the pandemic to safely track agricultural conditions throughout the country and distribute aid to small farmers.
+  </Prose>
+</Block>
+
+<Block type='full'>
+  <Figure>
+    <Map
+      datasetId='geoglam'
+      layerId='geoglam'
+      center={[0, 0]}
+      zoom={1}
+      dateTime='2021-01-01'
+    />
+    <Caption 
+      attrAuthor='NASA' 
+      attrUrl='https://nasa.gov/'
+    />
+  </Figure>
+</Block>
+
+<Block>
+  <Prose>
+    ## Counting Crops During a Lockdown
+
+    Earth-observing satellites have been critical to filling in information about crop planting and conditions, particularly where social distancing and shutdowns have made it difficult to collect ground data.
+    
+    NASA Harvest researchers at the University of Maryland in College Park are using data from U.S. and European satellites to supplement data collected on the ground by the U.S. Department of Agriculture.
+    
+    Using satellite data and machine learning, the researchers are monitoring key commodity crops that have high impacts on markets and food security, including corn and soybeans in the U.S. and winter wheat in Russia.
+
+    ## Monitoring Water Quality in Belize
+
+    A team from the University of Alabama in Huntsville is using satellite and ground-based data to monitor water quality off the coast of Belize to understand how the pandemic is affecting sources of urban and agricultural pollutants, such as nitrogen and phosphorus.
+
+    By observing land-use changes from shutdowns and decreased tourism, researchers are tracking the production of pollutants that reach water bodies and ecosystems. While Belize experienced similar declines in tourism to other locations, so far researchers have not found vast improvements in water quality. Research conducted during this pandemic will help guide future land-use planners and coastal development.
+
+    During the COVID-19 pandemic, scientists will continue to use remote sensing data to observe any changes in water quality due to changes in human behavior.
+  </Prose>
+</Block>
