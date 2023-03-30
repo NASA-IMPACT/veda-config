@@ -36,10 +36,10 @@ thematics:
     <Map
       datasetId="no2"
       layerId="no2-monthly"
-      center={[0, 0]}
+      center={[0, 30]}
       zoom={1.5}
       dateTime="2020-03-01"
-      compareDateTime="2018-03-01"
+      compareDateTime="2019-03-01"
     />
     <Caption attrAuthor="NASA" attrUrl="https://nasa.gov/">
       This layer shows changes in nitrogen dioxide (NO₂) levels in µmol/m₂.
@@ -54,7 +54,7 @@ thematics:
     <Map
       datasetId="co2"
       layerId="co2-diff"
-      center={[0, 0]}
+      center={[0, 30]}
       zoom={1.5}
       dateTime="2020-03-31"
     />
@@ -85,19 +85,19 @@ thematics:
     <Map
       datasetId="no2"
       layerId="no2-monthly"
-      center={[0, 0]}
+      center={[0, 30]}
       zoom={1.5}
       dateTime="2020-03-01"
     />
     <Map
       datasetId="co2"
       layerId="co2-mean"
-      center={[0, 0]}
+      center={[0, 30]}
       zoom={1.5}
       dateTime="2020-03-01"
     />
     <Caption attrAuthor="NASA" attrUrl="https://nasa.gov/">
-      Top: darker colors indicate higher nitrogen dioxide (NO₂) levels associated and more activity. Lighter colors indicate lower levels of NO₂ and less activity. Bottom: redder colors indicate more CO₂. Bluer colors indicate less CO₂.
+      Top: redder colors indicate higher nitrogen dioxide (NO₂) levels associated and more activity. Bluer colors indicate lower levels of NO₂ and less activity. Bottom: redder colors indicate more CO₂. Bluer colors indicate less CO₂.
     </Caption>
   </Figure>
 </Block>
@@ -132,13 +132,13 @@ thematics:
     <Map
       datasetId="co2"
       layerId="co2-mean"
-      center={[0, 0]}
+      center={[0, 30]}
       zoom={1.5}
       dateTime="2020-03-01"
-      compareDateTime="2015-03-01"
+      compareDateTime="2019-03-01"
     />
     <Caption attrAuthor="NASA" attrUrl="https://nasa.gov/">
-      This layer shows the average background concentration of carbon dioxide (CO₂) in our atmosphere for 2020. Redder colors indicate more CO₂. Whiter colors indicate less CO₂.
+      This layer shows the average background concentration of carbon dioxide (CO₂) in our atmosphere for 2020. Redder colors indicate more CO₂. Bluer colors indicate less CO₂.
     </Caption>
   </Figure>
   <Prose>
@@ -162,13 +162,19 @@ thematics:
     <Map
       datasetId="co2"
       layerId="co2-mean"
-      center={[0, 0]}
+      center={[0, 30]}
       zoom={1.5}
-      dateTime="2020-03-01"
-      compareDateTime="2015-03-01"
+      dateTime="2020-04-01"
+    />
+    <Map
+      datasetId="co2"
+      layerId="co2-diff"
+      center={[0, 30]}
+      zoom={1.5}
+      dateTime="2020-04-01"
     />
     <Caption attrAuthor="NASA" attrUrl="https://nasa.gov/">
-      Average: redder colors indicate more CO₂. Bluer colors indicate less CO₂. Difference: redder colors indicate increases in CO₂ in relation to the baseline. Bluer colors indicate lower levels of CO₂.
+      Mean: redder colors indicate more CO₂. Bluer colors indicate less CO₂. Difference: redder colors indicate increases in CO₂ in relation to the baseline. Bluer colors indicate lower levels of CO₂.
     </Caption>
   </Figure>
 
@@ -176,7 +182,9 @@ thematics:
 
 <Block>
   <Prose>
-    ## Not all Changes Observed in CO₂ Were Related to the Pandemic Scientists
+    ## Not all Changes Observed in CO₂ Were Related to the Pandemic 
+    
+    Scientists
     were also able to infer regional-scale differences in carbon dioxide that
     were completely unrelated to the pandemic using these new techniques.
     Increased carbon dioxide observed over Australia early in the year was
@@ -212,12 +220,14 @@ thematics:
       alt="Redder colors indicate increased CO2 enhancements. Bluer colors indicate decreased CO2 enhancements."
     />
     <Caption attrAuthor="NASA" attrUrl="https://nasa.gov/">
-      Redder colors indicate increased CO2 enhancements. Bluer colors indicate
+      Redder colors indicate increased CO2 enhancements. Greener colors indicate
       decreased CO2 enhancements.
     </Caption>
   </Figure>
   <Prose>
-    ## CO₂ Changes Over Large Urban Areas The most severe changes in economic
+    ## CO₂ Changes Over Large Urban Areas 
+    
+    The most severe changes in economic
     activity associated with the pandemic - and, subsequently, the largest
     reductions in fossil fuel emissions - occurred in large urban areas.
     Tracking these changes from space is challenging. Spacecraft don't fly
@@ -256,7 +266,7 @@ thematics:
       layerId="co2-diff"
       center={[0, 0]}
       zoom={1.5}
-      dateTime="2022-03-01"
+      dateTime="2021-01-12"
     />
     <Caption attrAuthor="NASA" attrUrl="https://nasa.gov/">
       This layer shows changes in carbon dioxide (CO₂) levels during coronavirus lockdowns versus previous years. Redder colors indicate increases in CO₂. Bluer colors indicate lower levels of CO₂.
