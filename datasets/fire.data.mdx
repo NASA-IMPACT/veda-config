@@ -1,0 +1,29 @@
+---
+id: fire
+name: 'EIS Fire'
+description: "EIS Fire."
+media:
+  src: ::file ./fire--dataset-cover.jpg
+  alt: Forest burning at night
+  author:
+    name: Matt Howard
+    url: https://unsplash.com/photos/eAKDzK4lo4o
+thematics:
+  - eis
+layers:
+  - id: eis_fire_perimeter
+    stacCol: eis_fire_perimeter
+    name: Fire Perimeter
+    type: vector
+    description: eis_fire_perimeter
+    zoomExtent:
+      - 5
+      - 20
+---
+<Block>
+  <Prose>
+    ## EIS Fire
+
+    Some information abou this dataset
+  </Prose>
+</Block>
