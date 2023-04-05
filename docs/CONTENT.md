@@ -3,6 +3,7 @@
 - Check the [MDX_BLOCK.md](./MDX_BLOCKS.md) for information on the different blocks that can be used to compose the content layout.
 - Check [layer.md](./frontmatter/layer.md) for details on the different properties of a dataset layer.
 - Check [media.md](./frontmatter/media.md) for information on the images needed for the content's covers.
+- Check [GH_CODESPACES.md](./GH_CODESPACES.md) for a video walktrhough of adding content to VEDA with github codespaces.
 
 ----
 
