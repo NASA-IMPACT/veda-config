@@ -10,10 +10,9 @@ The `.env` file contains a list of all available variables and comments explaini
 The `veda.config.js` file is an additional configuration file for veda.  
 It is through this file that you specify how the Veda content can be found.
 
-This is done by providing a glob path for each one of the [content types](./CONTENT.md). (Thematic areas, Datasets, Discoveries).  
+This is done by providing a glob path for each one of the [content types](./CONTENT.md). (Datasets, Discoveries).  
 The default configuration is:
 ```js
-thematics: './thematic/*.thematic.mdx'
 datasets: './datasets/*.data.mdx'
 discoveries: './discoveries/*.discoveries.mdx'
 ```
@@ -22,7 +21,7 @@ discoveries: './discoveries/*.discoveries.mdx'
 To adapt the Veda dashboard to the individual needs of you instance, some content/component overrides are provided. These overrides allow you to alter certain parts of the application, or inject code without having to fork the UI part of veda.
 
 There are essentially 2 types of possible overrides:
-- `Content Overrides` - allow you to change the default content of a page. Like with the different content types (discoveries, datasets, and thematic areas), you'll have access to all [MDX_BLOCK.md](./MDX_BLOCKS.md). Depending on the content override you'll also be able to provide some frontmatter variables. The name of the override config variable will follow the `<name>Content` scheme.
+- `Content Overrides` - allow you to change the default content of a page. Like with the different content types (discoveries, datasets), you'll have access to all [MDX_BLOCK.md](./MDX_BLOCKS.md). Depending on the content override you'll also be able to provide some frontmatter variables. The name of the override config variable will follow the `<name>Content` scheme.
 - `Component Overrides` - allow you to alter a specific component of the app, by providing new javascript code for it (advanced usage). No Mdx Blocks are available.
 
 The overrides are defined in the `veda.config.js` under `pageOverrides` by specifying the path to the mdx file to load.  
@@ -30,8 +29,6 @@ These are the current available overrides:
 
 ```js
   pageOverrides: {
-    // Content for the root about page. This is the global about page, before
-    // entering a thematic area.
     // Type: Content override
     aboutContent: '<file path>.mdx'
 
