@@ -1,7 +1,7 @@
 {
   "name": "veda-config",
   "description": "Configuration for Veda",
-  "version": "0.6.1",
+  "version": "0.7.0",
   "source": "./.veda/ui/app/index.html",
   "license": "Apache-2.0",
   "scripts": {
@@ -18,6 +18,8 @@
     "node": "16.x"
   },
   "devDependencies": {
+    "@parcel/packager-raw-url": "2.7.0",
+    "@parcel/transformer-webmanifest": "2.7.0",
     "dotenv": "^10.0.0",
     "netlify-cms-proxy-server": "^1.3.24"
   },
