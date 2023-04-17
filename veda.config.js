@@ -1,10 +1,5 @@
 module.exports = {
   /**
-   * Glob path for the thematic areas.
-   */
-  thematics: './thematic/*.thematic.mdx',
-
-  /**
    * Glob path for the datasets.
    */
   datasets: './datasets/*.data.mdx',
@@ -17,8 +12,7 @@ module.exports = {
   // App component and content overrides.
   // See docs/CONFIGURATION.md for more information.
   pageOverrides: {
-    // Content for the root about page. This is the global about page, before
-    // entering a thematic area.
+    // Content for the about page.
     // Type: Content override
     aboutContent: './overrides/about.mdx'
   }
