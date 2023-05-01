@@ -16,7 +16,7 @@ Follow the steps in this ticket to get Datasets and Discoveries published to the
 First, identify what type of content you are wanting to publish. There are three main options:
 
 1. New data that does not yet exist in VEDA
-2. New Discoveries that only involve graphics or maps of [data already in VEDA](https://radiantearth.github.io/stac-browser/#/external/staging-stac.delta-backend.com/?.language=en)
+2. New Discoveries that only involve graphics or maps of [data already in VEDA](http://veda-staging-stac-browser.s3-website-us-west-2.amazonaws.com/)
 3. New Discoveries that involve datasets that don't yet exist in VEDA
 
 If your content falls into option 1, fill in Dataset in the Title of this ticket. If it is option 2, fill in Discovery. If option 3, fill in Both. This means you will have to ingest the data before completing the configuration of the discovery.
