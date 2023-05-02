@@ -17,6 +17,15 @@ datasets: './datasets/*.data.mdx'
 discoveries: './discoveries/*.discoveries.mdx'
 ```
 
+### Taxonomy Index file
+
+Links to a `json` or `yml` file containing a list of [taxonomies](./TAXONOMY.md) to be used in the app.  
+
+The default configuration is:
+```js
+  taxonomiesIndex: './taxonomies.yml',
+```
+
 ### Page overrides
 To adapt the Veda dashboard to the individual needs of you instance, some content/component overrides are provided. These overrides allow you to alter certain parts of the application, or inject code without having to fork the UI part of veda.
 

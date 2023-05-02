@@ -48,6 +48,7 @@ description: string
 media: Media
 
 thematics: string[]
+sources: string[]
 featured: boolean
 
 layers: Layer[]
@@ -90,12 +91,23 @@ Image to identify this resource. See [media.md](./frontmatter/media.md).
 
 **thematics**  
 `string[]`  
-List of thematic areas this dataset belongs to.
+List of thematic areas this dataset belongs to.  
+Must be a list of ids as defined in the [taxonomies index file](./TAXONOMY.md).
 Example:
 ```yaml
 thematics:
   - covid-19
   - agriculture
+```
+
+**sources**  
+`string[]`  
+List of sources for this dataset.  
+Must be a list of ids as defined in the [taxonomies index file](./TAXONOMY.md).
+Example:
+```yaml
+sources:
+  - devseed
 ```
 
 **featured**  
@@ -175,6 +187,7 @@ media: Media
 pubDate: string
 
 thematics: string[]
+sources: string[]
 featured: boolean
 
 related: Related[]
@@ -217,11 +230,22 @@ Publication date for this discovery. Should be in YYYY-MM-DD format.
 **thematics**  
 `string[]`  
 List of thematic areas this discovery belongs to.
+Must be a list of ids as defined in the [taxonomies index file](./TAXONOMY.md).
 Example:
 ```yaml
 thematics:
   - covid-19
   - agriculture
+```
+
+**sources**  
+`string[]`  
+List of sources for this discovery.  
+Must be a list of ids as defined in the [taxonomies index file](./TAXONOMY.md).
+Example:
+```yaml
+sources:
+  - devseed
 ```
 
 **featured**  
