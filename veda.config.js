@@ -9,6 +9,11 @@ module.exports = {
    */
   discoveries: './discoveries/*.discoveries.mdx',
 
+  /**
+   * File path for the taxonomy index file.
+   */
+  taxonomiesIndex: './taxonomies.yml',
+
   // App component and content overrides.
   // See docs/CONFIGURATION.md for more information.
   pageOverrides: {
