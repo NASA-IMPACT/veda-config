@@ -1,0 +1,47 @@
+---
+id: houston-aod
+name: "Houston Aerosol Optical Depth"
+description: "The impact of Aerosol over the Houston-metro"
+media:
+  src: ::file ./smog-national-geographic-cover.jpg
+  alt: Smog over a city.
+  author:
+    name: Trent Cowna
+    url: https://unsplash.com/photos/3EapJzVMWHM
+thematics:
+  - air-quality
+  - eis
+
+---
+
+<Block type='wide'>
+<Prose>
+  ## Tracking AOD
+
+  Aerosols and pollution in a major metropolitan area such as Houston, TX, can impact the general public. It is important to examine the changes in values of aerosol quantity. Aerosol Optical Depth (AOD) is a measure the amount
+
+aerosols within a particular depth of the atmosphere. The measurement comes from inhibition of the solar radiation reaching the surface of the Earth. 
+
+
+</Prose>
+</Block>
+
+<Block>
+<Figure>
+  <Image
+  src={new URL('./Harris_AOD_00_09_county.jpg', import.meta.url).href}
+  alt='Atmospheric Aerosol Optical Depth'
+  />
+  <Image
+  src={new URL('./Harris_AOD_10_19_county.jpg', import.meta.url).href}
+  alt='Atmospheric Aerosol Optical Depth'
+  />
+  <Caption 
+    attrAuthor='Harris County with Roads Overlayed to show the difference in AOD over the shapefiles' 
+  >
+    **Top row**: 2000-2009 Harris County Aerosol Optical Depth  
+    **Bottom row**: 2010-2019 Harris County Aerosol Optical Depth
+  </Caption> 
+</Figure>
+</Block>
+
