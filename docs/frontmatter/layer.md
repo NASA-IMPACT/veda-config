@@ -41,8 +41,8 @@ Name of the layer for display purposes.
 
 **type**  
 `raster | vector`  
-The type of the layer will define how the data is displayed on the map.
-- ⚠️ Only raster is currently supported.
+The type of the layer will define how the data is displayed on the map.  
+⚠️ Vector datasets are should be in vector titles format with a source layer named `default`. It is currently not possible to customize the style of the dataset's features.
 
 **description**  
 `string`  

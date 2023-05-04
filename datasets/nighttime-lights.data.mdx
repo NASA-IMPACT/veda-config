@@ -25,6 +25,13 @@ layers:
       rescale:
         - 0
         - 255
+    compare:
+      datasetId: nighttime-lights
+      layerId: nightlights-hd-monthly
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
     legend:
       type: gradient
       min: Less

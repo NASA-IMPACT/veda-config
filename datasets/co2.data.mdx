@@ -26,6 +26,13 @@ layers:
       rescale:
         - 0.000408
         - 0.000419
+    compare:
+      datasetId: co2
+      layerId: co2-mean
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
     legend:
       type: gradient
       min: "< 408 ppm"
