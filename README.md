@@ -2,11 +2,9 @@
 
 ![VEDA logo](./static/graphics/nasa-veda-logo-pos.svg)
 
-​  
+​VEDA is a dashboard to explore data.
 
-VEDA is a dashboard to explore data.
-
-VEDA is organized around the concept of Thematic areas. Each thematic area explores a topic in detail via datasets and discoveries.  
+VEDA is organized around datasets and discoveries.
 A Dataset represents a piece of geo-referenced data displayed as a set of related layers on a map.  
 Discoveries are long form pieces of content that tell a story about some interesting portion of the data.
 

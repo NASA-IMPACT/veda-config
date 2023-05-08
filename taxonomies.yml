@@ -1,0 +1,25 @@
+thematics:
+  - id: eis
+    name: EIS
+  - id: air-quality
+    name: Air Quality
+  - id: water-quality
+    name: Water Quality
+  - id: environmental-justice
+    name: Environmental Justice
+  - id: covid-19
+    name: Covid 19
+  - id: agriculture
+    name: Agriculture
+  - id: biomass
+    name: Biomass
+
+sources:
+  - id: meta-pop
+    name: Meta Data for Good
+  - id: epa-ghg
+    name: EPA
+  - id: nasa-ciesin-grdi
+    name: NASA CIESIN
+  - id: atsdr-svi
+    name: ATSDR

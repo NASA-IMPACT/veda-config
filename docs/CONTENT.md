@@ -3,31 +3,29 @@
 - Check the [MDX_BLOCK.md](./MDX_BLOCKS.md) for information on the different blocks that can be used to compose the content layout.
 - Check [layer.md](./frontmatter/layer.md) for details on the different properties of a dataset layer.
 - Check [media.md](./frontmatter/media.md) for information on the images needed for the content's covers.
-- Check [GH_CODESPACES.md](./GH_CODESPACES.md) for a video walktrhough of adding content to VEDA with github codespaces.
+- Check [GH_CODESPACES.md](./GH_CODESPACES.md) for a video walkthrough of adding content to VEDA with github codespaces.
 
 ----
 
 # Content
 
 - [Content](#content)
-  - [Thematic Areas](#thematic-areas)
   - [Datasets](#datasets)
   - [Discoveries](#discoveries)
 
-Veda consists of Thematic Areas, Datasets, and Discoveries. Each dataset and discovery belongs to a thematic area (or multiple thematic areas), and discovery can use datasets. When you are adding contents using published datasets in Veda, you would need to know which thematic area it belongs to, and if you need to create a new thematic area.
-
+Veda consists of Datasets, and Discoveries.
 Each piece of content is written in [MDX](https://mdxjs.com/docs/what-is-mdx/#what-is-mdx) with configuration frontmatter. Frontmatter is separate by a set of `---` from MDX content.  
 
 A file will look something like:
 ```yml
 ---
-id: theme1
-name: Thematic area 1
+id: discovery1
+name: Example discovery
 ---
 
 <Block>
   <Prose>
-    ## About thematic area
+    ## About this discovery
 
     Once upon a time there was a content string
   </Prose>
@@ -36,53 +34,6 @@ name: Thematic area 1
 
 There are different types of `Block` components that can be used to create engaging content pieces.  
 Each `Block` comes with its own rules and needed props, so check the [MDX_BLOCK.md](./MDX_BLOCKS.md) for the full details.
-
----
-
-## Thematic Areas
-
-Frontmatter configuration for the Thematic Area
-
-```yaml
-id: string
-name: string
-description: string
-media: Media
-
-about:
-  title: string
-  description: string
-```
-
-**id**  
-`string`  
-Id of this thematic area. Must be unique in the whole application.
-
-**name**  
-`string`  
-Name of this thematic area. This is used to reference to this thematic area in the application.
-
-**description**  
-`string`  
-Brief description of this thematic area. This is displayed on cards and the header of a thematic area.
-
-**media**  
-`Media`  
-Image to identify this resource. See [media.md](./frontmatter/media.md).
-
-**about**  
-`object`  
-Information for the Thematic area about page.
-
-**about.title**  
-`string`  
-Title for the about page.
-
-**about.description**  
-`string`  
-Description for the about page.
-
-MDX content for thematic areas will show up under /about page. For example, `air-quality` thematic area's MDX contents will show up under `/air-quality/about`.
 
 ---
 
@@ -97,7 +48,8 @@ description: string
 media: Media
 
 thematics: string[]
-featuredOn: string[]
+sources: string[]
+featured: boolean
 
 layers: Layer[]
 related: Related[]
@@ -119,6 +71,8 @@ usage: Usage[]
 </Block>
 ```
 
+MDX content for datasets will show up on its own page under `/data-catalog/:dataset-id`. For example, `no2` dataset MDX will show up under `/data-catalog/no2`.
+
 **id**  
 `string`  
 Id of this dataset. Must be unique in the whole application
@@ -137,7 +91,8 @@ Image to identify this resource. See [media.md](./frontmatter/media.md).
 
 **thematics**  
 `string[]`  
-List of thematic areas ids this dataset belongs to. These values are used by the application to establish a relationship between thematic areas and datasets.  
+List of thematic areas this dataset belongs to.  
+Must be a list of ids as defined in the [taxonomies index file](./TAXONOMY.md).
 Example:
 ```yaml
 thematics:
@@ -145,15 +100,19 @@ thematics:
   - agriculture
 ```
 
-**featuredOn**  
+**sources**  
 `string[]`  
-List of thematic areas ids where this dataset is featured. A featured dataset will show up in the thematic area homepage.  
+List of sources for this dataset.  
+Must be a list of ids as defined in the [taxonomies index file](./TAXONOMY.md).
 Example:
 ```yaml
-featuredOn:
-  - covid-19
-  - agriculture
+sources:
+  - devseed
 ```
+
+**featured**  
+`boolean`  
+Whether this dataset is featured
 ![](./media/fm-featured-dataset.png)
 
 **layers**  
@@ -167,7 +126,6 @@ layers:
   - id: anotherLayerId
     ... # more props
 ```
-MDX content for datasets will show up under /overview page. For example, `no2` dataset MDX accessed from `air-quality` thematic area will show up under `/air-quality/datasets/no2`.
 
 **related**  
 `Related[]`  
@@ -179,17 +137,10 @@ List of related contents. This list will be displayed at the bottom of dataset o
 Each content should be formatted like below. 
 
 ```yaml
-  # when related content is dataset
   - type: dataset
     id: dataset-id
-    thematic: thematic-dataset-belongs
-  # when related content is discovery
   - type: discovery
     id: discovery-id
-    thematic: thematic-discovery-belongs
-  # when related content is thematic (doesn't need thematic attribute)
-  - type: thematic
-    id: thematic-id
 ```
 
 **usage**  
@@ -236,7 +187,8 @@ media: Media
 pubDate: string
 
 thematics: string[]
-featuredOn: string[]
+sources: string[]
+featured: boolean
 
 related: Related[]
   - type: string
@@ -252,6 +204,8 @@ related: Related[]
   </Prose>
 </Block>
 ```
+
+MDX content for discoveries will show up on its own page under `/discoveries/:discovery-id`. For example, `air-quality-and-covid-19` discovery MDX will show up under `/discoveries/air-quality-and-covid-19`.
 
 **id**  
 `string`  
@@ -275,7 +229,8 @@ Publication date for this discovery. Should be in YYYY-MM-DD format.
 
 **thematics**  
 `string[]`  
-List of thematic areas ids this discovery belongs to. These values are used by the application to establish a relationship between thematic areas and discoveries.  
+List of thematic areas this discovery belongs to.
+Must be a list of ids as defined in the [taxonomies index file](./TAXONOMY.md).
 Example:
 ```yaml
 thematics:
@@ -283,19 +238,21 @@ thematics:
   - agriculture
 ```
 
-**featuredOn**  
+**sources**  
 `string[]`  
-List of thematic areas ids where this discovery is featured. A featured discovery will show up in the thematic area homepage.  
+List of sources for this discovery.  
+Must be a list of ids as defined in the [taxonomies index file](./TAXONOMY.md).
 Example:
 ```yaml
-featuredOn:
-  - covid-19
-  - agriculture
+sources:
+  - devseed
 ```
 
-![](./media/fm-featured-discovery.png)
+**featured**  
+`boolean`  
+Whether this discovery is featured
 
-MDX content for discovery will show up under its own page under `:thematic-area/discoveries/:discovery-id`. For example, `air-quality-and-covid-19` discovery, which belongs to `air-quality` thematic area will show up under `/air-quality/discoveries/air-quality-and-covid-19`
+![](./media/fm-featured-discovery.png)
 
 **related**  
 `Related[]`  
@@ -307,15 +264,8 @@ List of related contents. This list will be displayed at the bottom of discovery
 Each content should be formatted like below
 
 ```yaml
-  # when related content is dataset
   - type: dataset
     id: dataset-id
-    thematic: thematic-dataset-belongs
-  # when related content is discovery
   - type: discovery
     id: discovery-id
-    thematic: thematic-discovery-belongs
-  # when related content is thematic (doesn't need thematic attribute)
-  - type: thematic
-    id: thematic-id
 ```
