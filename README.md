@@ -1,6 +1,4 @@
-# Welcome to Veda
-
-![VEDA logo](./static/graphics/nasa-veda-logo-pos.svg)
+# Welcome to Veda GHG
 
 ​VEDA is a dashboard to explore data.
 
@@ -19,7 +17,7 @@ If you plan to do development on `veda-config` or update the `veda-ui` version 
 
 The configuration and content options for VEDA will depend on the `veda-ui` (the actual interface code) version that `veda-config` is running.
 
-**The documentation for the current version can be viewed at [169ea81 of veda-ui](https://github.com/NASA-IMPACT/veda-ui/tree/169ea81629ebae74c2d9e46a7b416f784b025fdf/README.md).
+**The documentation for the current version can be viewed at [169ea81 of veda-ui](https://github.com/NASA-IMPACT/veda-ui/tree/169ea81629ebae74c2d9e46a7b416f784b025fdf/README.md).**
 
 ## License
 This project is licensed under **Apache 2**, see the [LICENSE](LICENSE) file for more details.
