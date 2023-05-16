@@ -23,6 +23,9 @@
     "dotenv": "^10.0.0",
     "netlify-cms-proxy-server": "^1.3.24"
   },
+  "parcelIgnore": [
+    ".*/meta/"
+  ],
   "alias": {
     "react": "./.veda/ui/node_modules/react",
     "@mdx-js/react": "./.veda/ui/node_modules/@mdx-js/react",
