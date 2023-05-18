@@ -11,7 +11,34 @@ media:
 thematics:
   - air-quality
   - eis
-
+layers:
+  - id: houston-aod
+    stacCol: houston-aod
+    name: mean AOD
+    type: raster
+    description: "The average Aerosol Optical Depth in our atmosphere."
+    initialDatetime: newest
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      colormap_name: rdylbu_r
+      rescale:
+        - 0.000408
+        - 0.000419
+    legend:
+      type: gradient
+      min: "< 408 ppm"
+      max: "> 419 ppm"
+      stops:
+        - "#4575b4"
+        - "#91bfdb"
+        - "#e0f3f8"
+        - "#ffffbf"
+        - "#fee090"
+        - "#fc8d59"
+        - "#d73027"
+  
 ---
 
 <Block type='wide'>
