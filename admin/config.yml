@@ -19,19 +19,13 @@ collections:
     title: fields.id
     identifier_field: fields.id
     slug: "{{fields.id}}.data"
-    preview_path: "{{fields.thematics[0]}}/datasets/{{fields.id}}/explore"
+    preview_path: "data-catalog/{{fields.id}}/explore"
     summary: "{{fields.name}}"
     fields:
-      - label: "Featured on"
-        name: "featuredOn"
-        widget: "relation"
-        required: false
-        collection: thematic
-        value_field: id
-        search_fields:
-          - id
-          - name
-        multiple: true
+      - label: "Featured"
+        name: "featured"
+        widget: boolean
+        default: false
       - label: Usage
         name: usage
         widget: list
@@ -54,14 +48,7 @@ collections:
       - { label: "Description", name: "description", widget: "text" }
       - label: "Thematics"
         name: "thematics"
-        widget: "relation"
-        required: false
-        collection: thematic
-        value_field: id
-        multiple: true
-        search_fields:
-          - id
-          - name
+        widget: list
       - label: "Image"
         name: "media"
         required: false
@@ -391,42 +378,3 @@ collections:
         #     - {label: "color", name: "", widget: "text" }
         #     - {label: "label", name: "label", widget: "text" }
       - { label: "Body", name: "body", widget: "markdown" }
-  - name: "thematic"
-    label: "Thematic"
-    folder: "thematic"
-    media_folder: "thematic"
-    create: true
-    extension: "mdx"
-    format: "frontmatter"
-    title: fields.id
-    identifier_field: fields.id
-    slug: "{{fields.id}}.thematic"
-    summary: "{{fields.name}}"
-    fields:
-      - { label: "ID", name: "id", widget: "string" }
-      - { label: "Thematic name", name: "name", widget: "string" }
-      - { label: "Description", name: "description", widget: "text" }
-      - label: "About"
-        name: "about"
-        widget: "object"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Description", name: "description", widget: "string" }
-      - label: "Image"
-        name: "media"
-        widget: "object"
-        fields:
-          - { label: "File", name: "src", widget: "image" }
-          - { label: "Alt text", name: "alt", widget: "string" }
-          - label: "Author"
-            name: "author"
-            widget: "object"
-            required: false
-            fields:
-              - {
-                  label: "Name",
-                  name: "name",
-                  required: false,
-                  widget: "string",
-                }
-              - { label: "URL", name: "url", required: false, widget: "string" }
