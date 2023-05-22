@@ -1,7 +1,7 @@
 ---
 id: houston-aod
 name: Aerosol
-description: "The Impact of Aerosol on the Houston, TX Metro"
+description: "The Impact of Aerosols on the Houston, TX Metro"
 media:
   src: ::file ./steam-power-plant.jpg
   alt: Sunset over Tokyo
@@ -28,10 +28,34 @@ thematics:
 
 <Block>
   <Prose>
-    ## Implications for Aerosol Optical Depth
+    ### Implications for Aerosol Optical Depth
 
-   Aerosols can have a variety of implications for the general public. In terms of air quality, aerosols can affect the air quality from high concentrations of pollutants that may pose a risk to public health. The highest risk comes from the power plants where the level of emissions are the highest. However, in recent years, pollutions sources have been regulated by the EPA and has found ways to reduce the amount of emissions.
+   Aerosols can have a variety of implications for the general public. In terms of air quality, aerosols can affect the air quality from high concentrations of pollutants that may pose a risk to public health. The highest risk comes from the power plants where the level of emissions are the highest. However, in recent years, pollutions sources have been regulated by the Environmental Protection Agency (EPA) and has found ways to reduce the amount of emissions.
 
    Using satellite data from the MODIS Terra and Aqua instruments that observe Earth at different times of the day and provide a global view 1-2 days. This satellite provides crucial information such as Aerosol thickness that aides in determing the trend in aerosol patterns to help determine the track for future pollution. 
+  </Prose>
+</Block>
+
+<Block type="full">
+  <Figure>
+    <Map
+      datasetId='aerosol-dataset'
+      layerId='houston-landcover'
+      dateTime='2001-02-01'
+      compareDateTime='2019-12-31'
+    />
+    <Caption>
+      Figure. Aerosol Opitcal Depth Compared Decadally from 2000-2009 & 2010-2019. The map shown shows the change in AOD over the last 20 years over the Houston metropolitan area.
+    </Caption>
+  </Figure>
+  <Prose>
+    ### Using satellite data to study Aerosol Optical Depth
+
+    Using satellite data from the MODIS TERRA & AQUA platform, we can illustrate the change in the aerosol emissions across the Houston, TX. For this discovery, not only is satellite data used to show the aforementioned changes but socioeconomic data is import to show the impacts on less economically fortunate individuals.
+    
+    The change in AOD across the region is subtle and shows neither a significant increase or decrease in aerosol emissions in the last 20 years. The Environmental Protection Agency (EPA) has implemented regulations such as scrubbers to help mitigate an increase in emissions from power plants and other refineries. 
+
+    
+
   </Prose>
 </Block>
