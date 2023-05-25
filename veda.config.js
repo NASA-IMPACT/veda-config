@@ -32,7 +32,7 @@ module.exports = {
 
   theme: {
     color: {
-      primary: "#109356",
+      primary: "#2E7D32",
     },
   },
 };
