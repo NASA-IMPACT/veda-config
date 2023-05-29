@@ -15,7 +15,7 @@ layers:
     stacCol: disalexi-etsuppression
     name: DisALEXI ET Suppression
     type: raster
-    description: "Change in ET using DisALEXI model of OpenET observations for 2017-20 fires, calculated as the difference of ET in the immediate post-fire water year from ET in the immediate pre-fire water year. The difference is normalized by pre-fire ET and negative values denote vegetation disturbance induced by fire or by a climatological anomaly resulting in the decline in ET"
+    description: "ET anomaly using DisALEXI model of OpenET observations for 2017-20 fires, calculated as the difference of ET in the immediate post-fire water year from ET in the immediate pre-fire water year. The difference is normalized by pre-fire ET and negative values denote vegetation disturbance induced by fire or by a climatological anomaly resulting in the decline in ET"
     zoomExtent:
       - 0
       - 20
@@ -36,8 +36,8 @@ layers:
     legend:
       type: gradient
       label: ET Suppression 
-      min: "-0.5"
-      max: "0.5"
+      min: "-1.0"
+      max: "1.0"
       stops:
       - "#a50026"
       - "#f46d43"
