@@ -31,11 +31,11 @@ layers:
       layerId: mtbs-burn-severity  
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `ET Suppression: ${dateFns.format(datetime, 'yyyy')} VS MTBS: ${dateFns.format(compareDatetime, 'yyyy')}`;
+          return `ET Anomalies: ${dateFns.format(datetime, 'yyyy')} VS MTBS: ${dateFns.format(compareDatetime, 'yyyy')}`;
         }
     legend:
       type: gradient
-      label: ET Suppression 
+      label: ET Anomalies 
       min: "-0.6"
       max: "0.6"
       stops:

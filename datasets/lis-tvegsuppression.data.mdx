@@ -15,7 +15,7 @@ layers:
     stacCol: lis-tvegsuppression
     name: LIS Transpiration Suppression
     type: raster
-    description: "Transpiration anomaly for 2020 fires using model outputs from Land Information System (LIS) framework that synthesizes multiple remote sensing observations within the Noah-MP land surface model."
+    description: "Standardized transpiration anomalies for 2020 fires using model outputs from Land Information System (LIS) framework that synthesizes multiple remote sensing observations within the Noah-MP land surface model."
     zoomExtent:
       - 0
       - 20
@@ -31,11 +31,11 @@ layers:
       layerId: mtbs-burn-severity  
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `ET Suppression: ${dateFns.format(datetime, 'yyyy')} VS MTBS: ${dateFns.format(compareDatetime, 'yyyy')}`;
+          return `Transpiration Anomalies: ${dateFns.format(datetime, 'yyyy')} VS MTBS: ${dateFns.format(compareDatetime, 'yyyy')}`;
         }
     legend:
       type: gradient
-      label: Transpiration Suppression 
+      label: Transpiration Anomalies 
       min: "-0.6"
       max: "0.6"
       stops:
