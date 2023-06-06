@@ -13,9 +13,9 @@ thematics:
 layers:
   - id: lis-etsuppression
     stacCol: lis-etsuppression
-    name: LIS ET Suppression
+    name: LIS ET Anomalies
     type: raster
-    description: "Change in ET for 2020 fires using model outputs from Land Information System (LIS) framework that synthesizes multiple remote sensing observations within the Noah-MP land surface model."
+    description: "ET anomaly for 2020 fires using model outputs from Land Information System (LIS) framework that synthesizes multiple remote sensing observations within the Noah-MP land surface model."
     zoomExtent:
       - 0
       - 20
@@ -23,21 +23,20 @@ layers:
       asset_bidx: cog_default|1
       colormap_name: rdylbu
       rescale:
-        - -0.5
-        - 0.5
-      nodata: -9999
+        - -0.6
+        - 0.6
     compare:
       datasetId: mtbs-burn-severity  
       layerId: mtbs-burn-severity  
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `ET Suppression: ${dateFns.format(datetime, 'yyyy')} VS MTBS: ${dateFns.format(compareDatetime, 'yyyy')}`;
+          return `ET Anomalies: ${dateFns.format(datetime, 'yyyy')} VS MTBS: ${dateFns.format(compareDatetime, 'yyyy')}`;
         }
     legend:
       type: gradient
-      label: ET Suppression 
-      min: "-0.5"
-      max: "0.5"
+      label: ET Anomalies 
+      min: "-0.6"
+      max: "0.6"
       stops:
       - "#a50026"
       - "#f46d43"
