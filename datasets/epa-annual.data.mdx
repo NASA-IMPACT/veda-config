@@ -178,34 +178,34 @@ layers:
         - '#f2ce00'
         - '#ef6a01'
         - '#cc0019'
-  - id: oil-and-gas
-    stacCol: epa-gridded-annual-emissions
-    name: Oil and Gas
-    type: raster
-    description: Includes emissions from Natural Gas and Petroleum.
-    zoomExtent:
-      - 0
-      - 20
-    sourceParams:
-      assets: 1b2b-natural-gas-production, 1b2a-petroleum
-      # expression: 1b2b-natural-gas-production + 1b2a-petroleum
-      colormap_name: rainbow
-      rescale:
-        - 0
-        - 963867416985
-      nodata: 0
-    legend:
-      type: gradient
-      min: 0
-      max: 963867416985
-      stops:
-        - '#60007d'
-        - '#30137d'
-        - '#1960ae'
-        - '#7ac300'
-        - '#f2ce00'
-        - '#ef6a01'
-        - '#cc0019'
+  # - id: oil-and-gas
+  #   stacCol: epa-gridded-annual-emissions
+  #   name: Oil and Gas
+  #   type: raster
+  #   description: Includes emissions from Natural Gas and Petroleum.
+  #   zoomExtent:
+  #     - 0
+  #     - 20
+  #   sourceParams:
+  #     assets: 1b2b-natural-gas-production, 1b2a-petroleum
+  #     # expression: 1b2b-natural-gas-production + 1b2a-petroleum
+  #     colormap_name: rainbow
+  #     rescale:
+  #       - 0
+  #       - 963867416985
+  #     nodata: 0
+  #   legend:
+  #     type: gradient
+  #     min: 0
+  #     max: 963867416985
+  #     stops:
+  #       - '#60007d'
+  #       - '#30137d'
+  #       - '#1960ae'
+  #       - '#7ac300'
+  #       - '#f2ce00'
+  #       - '#ef6a01'
+  #       - '#cc0019'
 ---
 
 <Block>
