@@ -1,18 +1,18 @@
 ---
-id: epa-emissions-annual
-name: EPA Emissions 2012 (Annual)
+id: epa-emissions-monthly
+name: EPA Emissions 2012 (Monthly)
 description: Gridded inventory of US anthropogenic methane emissions with 0.1° × 0.1° spatial resolution,
 media:
-  src: ::file ./epa-annual--cover.jpg
-  alt: Orange Ford truck leaving a Union Carbide ferro-alloy plant. Shot on May 1975
+  src: ::file ./epa-monthly--cover.jpg
+  alt: Power plant shooting steam at the sky.
   author:
-    name: Harry Schaefer / Documerica
-    url: https://unsplash.com/photos/EjSw6WdnLRA
+    name: Marek Piwnicki
+    url: https://unsplash.com/photos/WiZOyYqzUss
 sources:
   - epa-ghg
 layers:
   - id: 1b2a-petroleum
-    stacCol: epa-gridded-annual-emissions
+    stacCol: epa-gridded-monthly-emissions
     name: Petroleum
     type: raster
     description: >-
@@ -40,7 +40,7 @@ layers:
         - '#ef6a01'
         - '#cc0019'
   - id: 4f-field-burning
-    stacCol: epa-gridded-annual-emissions
+    stacCol: epa-gridded-monthly-emissions
     name: Field Burning
     type: raster
     description: Emissions from sector 4F from agricultural field burning.
@@ -67,7 +67,7 @@ layers:
         - "#ef6a01"
         - "#cc0019"
   - id: 4c-rice-cultivation
-    stacCol: epa-gridded-annual-emissions
+    stacCol: epa-gridded-monthly-emissions
     name: Rice Cultivation
     type: raster
     description: Emissions from sector 4C from rice cultivation.
@@ -94,7 +94,7 @@ layers:
         - "#ef6a01"
         - "#cc0019"
   - id: 4b-manure-management
-    stacCol: epa-gridded-annual-emissions
+    stacCol: epa-gridded-monthly-emissions
     name: Manure Management
     type: raster
     description: Emissions from sector 4B from manure management.
@@ -121,7 +121,7 @@ layers:
         - "#ef6a01"
         - "#cc0019"
   - id: 1a-combustion-stationary
-    stacCol: epa-gridded-annual-emissions
+    stacCol: epa-gridded-monthly-emissions
     name: Stationary Combustion
     type: raster
     description: >-
@@ -152,7 +152,7 @@ layers:
         - '#ef6a01'
         - '#cc0019'
   - id: 1b2b-natural-gas-production
-    stacCol: epa-gridded-annual-emissions
+    stacCol: epa-gridded-monthly-emissions
     name: Natural Gas Production
     type: raster
     description: Non-combustion emissions from sector 1B2b for natural gas production.
@@ -179,7 +179,7 @@ layers:
         - '#ef6a01'
         - '#cc0019'
   - id: oil-and-gas
-    stacCol: epa-gridded-annual-emissions
+    stacCol: epa-gridded-monthly-emissions
     name: Oil and Gas
     type: raster
     description: Includes emissions from Natural Gas and Petroleum.
