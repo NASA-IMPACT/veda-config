@@ -11,7 +11,7 @@ media:
 sources:
   - epa-ghg
 layers:
-  - id: 1b2a-petroleum
+  - id: 5-forest-fires
     stacCol: epa-gridded-daily-emissions
     name: Petroleum
     type: raster
@@ -27,6 +27,13 @@ layers:
         - 0
         - 282207914557
       nodata: 0
+    compare:
+      datasetId: epa-emissions-daily
+      layerId: 5-forest-fires
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
     legend:
       type: gradient
       min: 0

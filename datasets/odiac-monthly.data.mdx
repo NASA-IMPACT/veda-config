@@ -26,10 +26,17 @@ layers:
         - -3
         - 7
       nodata: 0
+    compare:
+      datasetId: odiac-fossil-fuel-co2-emissions
+      layerId: odiac-fossil-fuel-co2-emissions-land
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
     legend:
       type: gradient
-      min: -3
-      max: 7
+      min: -3 gC/m²/d
+      max: 7 gC/m²/d
       stops:
         - '#60007d'
         - '#30137d'
@@ -53,6 +60,13 @@ layers:
         - 0
         - 0.1
       # nodata: 0
+    compare:
+      datasetId: odiac-fossil-fuel-co2-emissions
+      layerId: odiac-fossil-fuel-co2-emissions-intl-bunker
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
     legend:
       unit: 
         label: gC/m²/d
