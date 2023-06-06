@@ -34,6 +34,8 @@ layers:
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }
     legend:
+      unit: 
+        label: gC/m²/d
       type: gradient
       min: -3 gC/m²/d
       max: 7 gC/m²/d
@@ -55,11 +57,11 @@ layers:
       - 20
     sourceParams:
       assets: intl-bunker
-      colormap_name: rainbow
+      colormap_name: gist_earth
       rescale:
         - 0
-        - 0.1
-      # nodata: 0
+        - 0.17897793650627136
+      nodata: 0.11
     compare:
       datasetId: odiac-fossil-fuel-co2-emissions
       layerId: odiac-fossil-fuel-co2-emissions-intl-bunker
@@ -68,19 +70,20 @@ layers:
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }
     legend:
-      unit: 
-        label: gC/m²/d
       type: gradient
-      min: 0.12 PgC
-      max: 0.18 PgC
+      min: 0
+      max: 0.17
       stops:
-        - "#60007d"
-        - "#30137d"
-        - "#1960ae"
-        - "#7ac300"
-        - "#f2ce00"
-        - "#ef6a01"
-        - "#cc0019"
+        - '#ffffff'
+        - '#e5c7bb'
+        - '#ceab84'
+        - '#b5b65d'
+        - '#86a954'
+        - '#43974c'
+        - '#30817d'
+        - '#1f567b'
+        - '#080e74'
+        - '#000000'
 ---
 
 <Block>
