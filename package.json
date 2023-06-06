@@ -1,7 +1,7 @@
 {
   "name": "veda-config",
   "description": "Configuration for Veda",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "source": "./.veda/ui/app/index.html",
   "license": "Apache-2.0",
   "scripts": {
@@ -25,7 +25,12 @@
   },
   "alias": {
     "react": "./.veda/ui/node_modules/react",
-    "@mdx-js/react": "./.veda/ui/node_modules/@mdx-js/react"
+    "@mdx-js/react": "./.veda/ui/node_modules/@mdx-js/react",
+    "$veda-ui": "./.veda/ui/node_modules",
+    "$veda-ui-scripts": "./.veda/ui/app/scripts"
   },
+  "parcelIgnore": [
+    ".*/meta/"
+  ],
   "dependencies": {}
 }
