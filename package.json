@@ -29,5 +29,8 @@
     "$veda-ui": "./.veda/ui/node_modules",
     "$veda-ui-scripts": "./.veda/ui/app/scripts"
   },
+  "parcelIgnore": [
+    ".*/meta/"
+  ],
   "dependencies": {}
 }
