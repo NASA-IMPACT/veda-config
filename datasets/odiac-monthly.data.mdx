@@ -1,0 +1,95 @@
+---
+id: odiac-fossil-fuel-co2-emissions
+name: ODIAC Fossil Fuel CO₂ Emissions Version 2020b
+description: ODIAC is a high-spatial resolution global emission data product of CO₂ emissions
+media:
+  src: ::file ./odiac--dataset-cover.jpeg
+  alt: White smoke coming from building
+  author:
+    name: Marcin Jozwiak
+    url: https://unsplash.com/photos/T-eDxGcn-Ok
+sources:
+  - nies
+layers:
+  - id: odiac-fossil-fuel-co2-emissions-land
+    stacCol: odiac-fossil-fuel-co2-emissions
+    name: Fossil Fuel CO₂ Emissions
+    type: raster
+    description: Fossil Fuel CO₂ Emissions
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: land
+      colormap_name: rainbow
+      rescale:
+        - -3
+        - 7
+      nodata: 0
+    compare:
+      datasetId: odiac-fossil-fuel-co2-emissions
+      layerId: odiac-fossil-fuel-co2-emissions-land
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit: 
+        label: gC/m²/d
+      type: gradient
+      min: -3 gC/m²/d
+      max: 7 gC/m²/d
+      stops:
+        - '#60007d'
+        - '#30137d'
+        - '#1960ae'
+        - '#7ac300'
+        - '#f2ce00'
+        - '#ef6a01'
+        - '#cc0019'
+  - id: odiac-fossil-fuel-co2-emissions-intl-bunker
+    stacCol: odiac-fossil-fuel-co2-emissions
+    name: International Bunker CO₂ Emissions
+    type: raster
+    description: International Bunker CO₂ Emissions
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: intl-bunker
+      colormap_name: gist_earth
+      rescale:
+        - 0
+        - 0.17897793650627136
+      nodata: 0.11
+    compare:
+      datasetId: odiac-fossil-fuel-co2-emissions
+      layerId: odiac-fossil-fuel-co2-emissions-intl-bunker
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      type: gradient
+      min: 0
+      max: 0.17
+      stops:
+        - '#ffffff'
+        - '#e5c7bb'
+        - '#ceab84'
+        - '#b5b65d'
+        - '#86a954'
+        - '#43974c'
+        - '#30817d'
+        - '#1f567b'
+        - '#080e74'
+        - '#000000'
+---
+
+<Block>
+  <Prose>
+    ## ODIAC Fossil Fuel CO₂ Emissions
+    The Open-Data Inventory for Anthropogenic Carbon dioxide (ODIAC) is a high-spatial resolution global emission data product of CO2 emissions from fossil fuel combustion (Oda and Maksyutov, 2011). ODIAC pioneered the combined use of space-based nighttime light data and individual power plant emission/location profiles to estimate the global spatial extent of fossil fuel CO2 emissions. With the innovative emission modeling approach, ODIAC achieved the fine picture of global fossil fuel CO2 emissions at a 1x1km.
+
+  </Prose>
+</Block>

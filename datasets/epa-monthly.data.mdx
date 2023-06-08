@@ -1,0 +1,264 @@
+---
+id: epa-emissions-monthly
+name: EPA Emissions 2012 (Monthly)
+description: Gridded inventory of US anthropogenic methane emissions with 0.1° × 0.1° spatial resolution,
+media:
+  src: ::file ./epa-monthly--cover.jpg
+  alt: Power plant shooting steam at the sky.
+  author:
+    name: Marek Piwnicki
+    url: https://unsplash.com/photos/WiZOyYqzUss
+sources:
+  - epa-ghg
+layers:
+  - id: 1b2a-petroleum
+    stacCol: epa-gridded-monthly-emissions
+    name: Petroleum
+    type: raster
+    description: >-
+      Non-combustion emissions from sector 1B2a for petroleum systems, including production, transportation, and refining.
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: 1b2a-petroleum
+      colormap_name: rainbow
+      rescale:
+        - 0
+        - 282207914557
+      nodata: 0
+    compare:
+      datasetId: epa-emissions-monthly
+      layerId: 1b2a-petroleum
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      type: gradient
+      min: 0
+      max: 282207914557
+      stops:
+        - '#60007d'
+        - '#30137d'
+        - '#1960ae'
+        - '#7ac300'
+        - '#f2ce00'
+        - '#ef6a01'
+        - '#cc0019'
+  - id: 4f-field-burning
+    stacCol: epa-gridded-monthly-emissions
+    name: Field Burning
+    type: raster
+    description: Emissions from sector 4F from agricultural field burning.
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: 4f-field-burning
+      colormap_name: rainbow
+      rescale:
+        - 0
+        - 800788398
+      nodata: 0
+    compare:
+      datasetId: epa-emissions-monthly
+      layerId: 4f-field-burning
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      type: gradient
+      min: 0
+      max: 800788398
+      stops:
+        - "#60007d"
+        - "#30137d"
+        - "#1960ae"
+        - "#7ac300"
+        - "#f2ce00"
+        - "#ef6a01"
+        - "#cc0019"
+  - id: 4c-rice-cultivation
+    stacCol: epa-gridded-monthly-emissions
+    name: Rice Cultivation
+    type: raster
+    description: Emissions from sector 4C from rice cultivation.
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: 4c-rice-cultivation
+      colormap_name: rainbow
+      rescale:
+        - 0
+        - 38327875010
+      nodata: 0
+    compare:
+      datasetId: epa-emissions-monthly
+      layerId: 4c-rice-cultivation
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      type: gradient
+      min: 0
+      max: 38327875010
+      stops:
+        - "#60007d"
+        - "#30137d"
+        - "#1960ae"
+        - "#7ac300"
+        - "#f2ce00"
+        - "#ef6a01"
+        - "#cc0019"
+  - id: 4b-manure-management
+    stacCol: epa-gridded-monthly-emissions
+    name: Manure Management
+    type: raster
+    description: Emissions from sector 4B from manure management.
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: 4b-manure-management
+      colormap_name: rainbow
+      rescale:
+        - 0
+        - 46428019752
+      nodata: 0
+    compare:
+      datasetId: epa-emissions-monthly
+      layerId: 4b-manure-management
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      type: gradient
+      min: 0
+      max: 46428019752
+      stops:
+        - "#60007d"
+        - "#30137d"
+        - "#1960ae"
+        - "#7ac300"
+        - "#f2ce00"
+        - "#ef6a01"
+        - "#cc0019"
+  - id: 1a-combustion-stationary
+    stacCol: epa-gridded-monthly-emissions
+    name: Stationary Combustion
+    type: raster
+    description: >-
+      Stationary (non-mobile) emissions from sector 1A,  including boilers,
+      heaters, furnaces, kilns, ovens, flares, thermal oxidizers, dryers, and
+      any other equipment or machinery that combusts carbon bearing fuels or
+      waste stream materials.
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: 1a-combustion-stationary
+      colormap_name: rainbow
+      rescale:
+        - 0
+        - 11699984793
+      nodata: 0
+    compare:
+      datasetId: epa-emissions-monthly
+      layerId: 1a-combustion-stationary
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      type: gradient
+      min: 0
+      max: 11699984793
+      stops:
+        - '#60007d'
+        - '#30137d'
+        - '#1960ae'
+        - '#7ac300'
+        - '#f2ce00'
+        - '#ef6a01'
+        - '#cc0019'
+  - id: 1b2b-natural-gas-production
+    stacCol: epa-gridded-monthly-emissions
+    name: Natural Gas Production
+    type: raster
+    description: Non-combustion emissions from sector 1B2b for natural gas production.
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: 1b2b-natural-gas-production
+      colormap_name: rainbow
+      rescale:
+        - 0
+        - 963867416985
+      nodata: 0
+    compare:
+      datasetId: epa-emissions-monthly
+      layerId: 1b2b-natural-gas-production
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      type: gradient
+      min: 0
+      max: 963867416985
+      stops:
+        - '#60007d'
+        - '#30137d'
+        - '#1960ae'
+        - '#7ac300'
+        - '#f2ce00'
+        - '#ef6a01'
+        - '#cc0019'
+  # - id: oil-and-gas
+  #   stacCol: epa-gridded-monthly-emissions
+  #   name: Oil and Gas
+  #   type: raster
+  #   description: Includes emissions from Natural Gas and Petroleum.
+  #   zoomExtent:
+  #     - 0
+  #     - 20
+  #   sourceParams:
+  #     assets: 1b2b-natural-gas-production, 1b2a-petroleum
+  #     # expression: 1b2b-natural-gas-production + 1b2a-petroleum
+  #     colormap_name: rainbow
+  #     rescale:
+  #       - 0
+  #       - 963867416985
+  #     nodata: 0
+  #   legend:
+  #     type: gradient
+  #     min: 0
+  #     max: 963867416985
+  #     stops:
+  #       - '#60007d'
+  #       - '#30137d'
+  #       - '#1960ae'
+  #       - '#7ac300'
+  #       - '#f2ce00'
+  #       - '#ef6a01'
+  #       - '#cc0019'
+---
+
+<Block>
+  <Prose>
+    ## Gridded 2012 Methane Emissions (Monthly)
+
+    A team at Harvard University along with EPA and other coauthors developed a gridded inventory of U.S. anthropogenic methane emissions with 0.1° x 0.1° spatial resolution, monthly temporal resolution, and detailed scale-dependent error characterization. The inventory is designed to be consistent with the 2016 U.S. [EPA Inventory of U.S. Greenhouse Gas Emissions and Sinks](https://www.epa.gov/ghgemissions/us-greenhouse-gas-inventory-report-1990-2014) estimates for the year 2012, which presents national totals for different source types. The gridded inventory was developed using a wide range of databases at the state, county, local, and point source level to allocate the spatial and temporal distribution of emissions for individual source types.
+
+    This data can be used by researchers to better compare the national-level inventory with measurement results that may be at other scales. Users of this gridded inventory are asked to cite the original reference (Maasakkers et al., 2016) in their publications. Error estimates are given in that reference.
+
+    Paper: [Maasakkers et. al. 2016, A Gridded National Inventory of U.S. Methane Emissions](https://www.epa.gov/ghgemissions/gridded-2012-methane-emissions#paper)
+
+  </Prose>
+</Block>
