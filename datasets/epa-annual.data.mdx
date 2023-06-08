@@ -1,6 +1,6 @@
 ---
 id: epa-emissions-annual
-name: EPA Emissions 2012 (Annual)
+name: Methane Emissions 2012 (Annual)
 description: Gridded inventory of US anthropogenic methane emissions with 0.1° × 0.1° spatial resolution,
 media:
   src: ::file ./epa-annual--cover.jpg
@@ -11,35 +11,7 @@ media:
 sources:
   - epa-ghg
 layers:
-  - id: 1b2a-petroleum
-    stacCol: epa-gridded-annual-emissions
-    name: Petroleum
-    type: raster
-    description: >-
-      Non-combustion emissions from sector 1B2a for petroleum systems, including production, transportation, and refining.
-    zoomExtent:
-      - 0
-      - 20
-    sourceParams:
-      assets: 1b2a-petroleum
-      colormap_name: rainbow
-      rescale:
-        - 0
-        - 282207914557
-      nodata: 0
-    legend:
-      type: gradient
-      min: 0
-      max: 282207914557
-      stops:
-        - '#60007d'
-        - '#30137d'
-        - '#1960ae'
-        - '#7ac300'
-        - '#f2ce00'
-        - '#ef6a01'
-        - '#cc0019'
-  - id: 4f-field-burning
+    - id: 4f-field-burning
     stacCol: epa-gridded-annual-emissions
     name: Field Burning
     type: raster
@@ -109,6 +81,8 @@ layers:
         - 46428019752
       nodata: 0
     legend:
+      unit: 
+       label: molecule/cm²/s
       type: gradient
       min: 0
       max: 46428019752
@@ -140,6 +114,8 @@ layers:
         - 11699984793
       nodata: 0
     legend:
+      unit: 
+       label: molecule/cm²/s
       type: gradient
       min: 0
       max: 11699984793
@@ -178,6 +154,36 @@ layers:
         - '#f2ce00'
         - '#ef6a01'
         - '#cc0019'
+    - id: 1b2a-petroleum
+    stacCol: epa-gridded-annual-emissions
+    name: Petroleum
+    type: raster
+    description: >-
+      Non-combustion emissions from sector 1B2a for petroleum systems, including production, transportation, and refining.
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: 1b2a-petroleum
+      colormap_name: rainbow
+      rescale:
+        - 0
+        - 282207914557
+      nodata: 0
+    legend:
+      unit: 
+       label: molecule/cm²/s
+      type: gradient
+      min: 0
+      max: 282207914557
+      stops:
+        - '#60007d'
+        - '#30137d'
+        - '#1960ae'
+        - '#7ac300'
+        - '#f2ce00'
+        - '#ef6a01'
+        - '#cc0019'
   # - id: oil-and-gas
   #   stacCol: epa-gridded-annual-emissions
   #   name: Oil and Gas
@@ -195,7 +201,9 @@ layers:
   #       - 963867416985
   #     nodata: 0
   #   legend:
-  #     type: gradient
+  #     unit: 
+         label: molecule/cm²/s
+        type: gradient
   #     min: 0
   #     max: 963867416985
   #     stops:
@@ -210,7 +218,7 @@ layers:
 
 <Block>
   <Prose>
-    ## Gridded 2012 Methane Emissions (Annual)
+    ## Annual Methane Emissions
 
     A team at Harvard University along with EPA and other coauthors developed a gridded inventory of U.S. anthropogenic methane emissions with 0.1° x 0.1° spatial resolution, monthly temporal resolution, and detailed scale-dependent error characterization. The inventory is designed to be consistent with the 2016 U.S. [EPA Inventory of U.S. Greenhouse Gas Emissions and Sinks](https://www.epa.gov/ghgemissions/us-greenhouse-gas-inventory-report-1990-2014) estimates for the year 2012, which presents national totals for different source types. The gridded inventory was developed using a wide range of databases at the state, county, local, and point source level to allocate the spatial and temporal distribution of emissions for individual source types.
 
