@@ -21,15 +21,8 @@ const Brand = styled.div`
       color: inherit;
       text-decoration: none;
     }
-    span:first-of-type {
-      font-size: 0.875rem;
-      line-height: 1rem;
-      font-weight: ${themeVal('type.base.extrabold')};
-      text-transform: uppercase;
-    }
 
-    span:last-of-type {
-      grid-row: 2;
+    span {
       font-size: 1.25rem;
       line-height: 1.5rem;
       font-weight: ${themeVal('type.base.regular')};
@@ -42,7 +35,7 @@ export default function HeaderComponent() {
   return (
     <Brand>
       <Link to='/'>
-        <span>VEDA</span> <span>GHG Center</span>
+        <span>GHG Center</span>
       </Link>
     </Brand>
   );
