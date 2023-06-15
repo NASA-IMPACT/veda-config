@@ -10,6 +10,18 @@ cover:
 ---
 
 import FeaturedDiscoveries from "$veda-ui-scripts/components/home/featured-discoveries";
+import styled from "$veda-ui/styled-components";
+
+export const LogoWrapper = styled.div`
+  display: flex;
+  flex-flow: wrap;
+  gap: 1rem;
+  align-items: center;
+
+  > * {
+    flex-shrink: 0;
+  }
+`;
 
 <Block type='wide'>
   <Prose>
@@ -27,6 +39,46 @@ import FeaturedDiscoveries from "$veda-ui-scripts/components/home/featured-disco
 
     At the GHG Center, we're committed to promoting awareness and action on climate change. We believe that data is a powerful tool for informing policies and driving meaningful change. Our website is open to everyone, and we encourage you to explore our datasets and share your findings with others. Together, we can work towards a more sustainable future and reduce our impact on the environment. Join us in the fight against climate change today!
 
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    ## Our partners
+
+    <LogoWrapper>
+      <a href="https://www.nasa.gov/">
+        <Image
+          src={new URL("./media/nasa.png", import.meta.url).href}
+          alt="NASA logo"
+          width="150"
+        />
+      </a>
+
+      <a href="https://www.nist.gov/">
+        <Image
+          src={new URL("./media/nist.png", import.meta.url).href}
+          alt="NIST logo"
+          width="200"
+        />
+      </a>
+
+      <a href="https://www.noaa.gov/">
+        <Image
+          src={new URL("./media/noaa.png", import.meta.url).href}
+          alt="NOAA logo"
+          width="150"
+        />
+      </a>
+
+      <a href="https://www.epa.gov/">
+        <Image
+          src={new URL("./media/epa.svg", import.meta.url).href}
+          alt="epa logo"
+          width="150"
+        />
+      </a>
+    </LogoWrapper>
   </Prose>
 </Block>
 
