@@ -47,11 +47,19 @@ export const LogoWrapper = styled.div`
     ## Our partners
 
     <LogoWrapper>
+      <a href="https://www.epa.gov/">
+        <Image
+          src={new URL("./media/epa.svg", import.meta.url).href}
+          alt="EPA logo"
+          width="80"
+        />
+      </a>
+
       <a href="https://www.nasa.gov/">
         <Image
           src={new URL("./media/nasa.png", import.meta.url).href}
           alt="NASA logo"
-          width="150"
+          width="105"
         />
       </a>
 
@@ -59,7 +67,7 @@ export const LogoWrapper = styled.div`
         <Image
           src={new URL("./media/nist.png", import.meta.url).href}
           alt="NIST logo"
-          width="200"
+          width="250"
         />
       </a>
 
@@ -67,19 +75,11 @@ export const LogoWrapper = styled.div`
         <Image
           src={new URL("./media/noaa.png", import.meta.url).href}
           alt="NOAA logo"
-          width="150"
-        />
-      </a>
-
-      <a href="https://www.epa.gov/">
-        <Image
-          src={new URL("./media/epa.svg", import.meta.url).href}
-          alt="epa logo"
-          width="150"
+          width="95"
         />
       </a>
     </LogoWrapper>
   </Prose>
 </Block>
 
-<FeaturedDiscoveries />
+{/* <FeaturedDiscoveries /> */}
