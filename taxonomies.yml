@@ -13,15 +13,17 @@ thematics:
     name: Agriculture
   - id: biomass
     name: Biomass
+  - id: co2
+    name: CO2
 
 sources:
-  - id: meta-pop
-    name: Meta Data for Good
+  - id: nasa
+    name: NASA
   - id: epa-ghg
     name: EPA
-  - id: nasa-ciesin-grdi
-    name: NASA CIESIN
-  - id: atsdr-svi
-    name: ATSDR
-  - id: nies
-    name: NIES
+  - id: noaa
+    name: NOAA
+  - id: nist
+    name: NIST
+  - id: others
+    name: Others

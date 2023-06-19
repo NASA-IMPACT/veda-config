@@ -9,6 +9,6 @@ assignees: ''
 
 - [ ] Read the story
 - [ ] Make sure all datasets required have been published
-- [ ] Configure all datasets in veda-config ([Content documentation](../../docs/CONTENT.md) is a good place to start)
-- [ ] Configure story content in veda-config and check preview (dependency on running the dashboard locally or https://github.com/NASA-IMPACT/veda-config/issues/12)
+- [ ] Configure all datasets in veda-config-ghg ([Content documentation](../../docs/CONTENT.md) is a good place to start)
+- [ ] Configure story content in veda-config-ghg and check preview (dependency on running the dashboard locally or https://github.com/NASA-IMPACT/veda-config-ghg/issues/12)
 - [ ] Preview story with story tellers
