@@ -31,10 +31,12 @@ layers:
           return `${dateFns.format(datetime, 'DD LLL yyyy')}`;        
         }
     legend:
+      unit:
+        label: mm
       type: gradient
       label: Snow Water Equivalent [mm]
       min: "0"
-      max: "1000 mm"
+      max: "1000"
       stops:
       - "#F7FBFF"
       - "#D0E1F2"
@@ -62,10 +64,12 @@ layers:
           return `${dateFns.format(datetime, 'DD LLL yyyy')}`;        
         }
     legend:
+      unit:
+        label: mm
       type: gradient
       label: Snow Water Equivalent [mm]
       min: "0"
-      max: "1000 mm"
+      max: "1000"
       stops:
       - "#F7FBFF"
       - "#D0E1F2"

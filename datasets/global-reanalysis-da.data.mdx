@@ -35,10 +35,12 @@ layers:
           return `${dateFns.format(datetime, 'DD LLL yyyy')}`;
         }
     legend:
+      unit:
+        label: kg m-2 s-1
       type: gradient
       label: Evapotranspiration [kg m-2 s-1]
       min: "0"
-      max: "0.0001 kg m-2 s-1"
+      max: "0.0001"
       stops:
         - '#440154'
         - '#3b528b'
@@ -69,10 +71,12 @@ layers:
           return `${dateFns.format(datetime, 'DD LLL yyyy')}`;
         }
     legend:
+      unit:
+        label: g m-2 s-1
       type: gradient
       label: Gross primary productivity [g m-2 s-1]
       min: "0"
-      max: "0.0001 g m-2 s-1"
+      max: "0.0001"
       stops:
         - '#440154'
         - '#3b528b'
@@ -103,10 +107,12 @@ layers:
           return `${dateFns.format(datetime, 'DD LLL yyyy')}`;
         }
     legend:
+      unit:
+        label: mm
       type: gradient
       label: Groundwater storage [mm]
       min: "4500"
-      max: "5000 mm"
+      max: "5000"
       stops:
         - '#440154'
         - '#3b528b'
@@ -137,10 +143,12 @@ layers:
           return `${dateFns.format(datetime, 'DD LLL yyyy')}`;
         }
     legend:
+      unit:
+        label: mm
       type: gradient
       label: Snow Water Equivalent [mm]
       min: "0"
-      max: "500 mm"
+      max: "500"
       stops:
         - "#F7FBFF"
         - "#D0E1F2"
@@ -172,10 +180,12 @@ layers:
           return `${dateFns.format(datetime, 'DD LLL yyyy')}`;
         }
     legend:
+      unit:
+        label: m3 s-1
       type: gradient
       label: Streamflow [m3 s-1]
       min: "0"
-      max: "2500 m3 s-1"
+      max: "2500"
       stops:
         - '#440154'
         - '#3b528b'
@@ -206,10 +216,12 @@ layers:
           return `${dateFns.format(datetime, 'DD LLL yyyy')}`;
         }
     legend:
+      unit:
+        label: kg m-2 s-1
       type: gradient
       label: Surface runoff [kg m-2 s-1]
       min: "0"
-      max: "0.00001 kg m-2 s-1"
+      max: "0.00001"
       stops:
         - '#440154'
         - '#3b528b'
@@ -240,10 +252,12 @@ layers:
           return `${dateFns.format(datetime, 'DD LLL yyyy')}`;
         }
     legend:
+      unit:
+        label: kg m-2 s-1
       type: gradient
       label: Subsurface runoff [kg m-2 s-1]
       min: "0"
-      max: "0.0001 kg m-2 s-1"
+      max: "0.0001"
       stops:
         - '#440154'
         - '#3b528b'
@@ -274,10 +288,12 @@ layers:
           return `${dateFns.format(datetime, 'DD LLL yyyy')}`;
         }
     legend:
+      unit:
+        label: mm
       type: gradient
       label: Terrestrial Water Storage [mm]
       min: "5000"
-      max: "5800 mm"
+      max: "5800"
       stops:
         - '#440154'
         - '#3b528b'
@@ -308,10 +324,12 @@ layers:
           return `${dateFns.format(datetime, 'DD LLL yyyy')}`;
         }
     legend:
+      unit:
+        label: kg m-2 s-1
       type: gradient
       label: Total precipitation [kg m-2 s-1]
       min: "0"
-      max: "0.00001 kg m-2 s-1"
+      max: "0.00001"
       stops:
         - "#F7FBFF"
         - "#D0E1F2"
