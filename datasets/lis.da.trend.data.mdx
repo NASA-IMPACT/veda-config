@@ -34,10 +34,12 @@ layers:
            return `TWS trend (2003-2021) VS GPP trend (2003-2021)`;
          }
     legend:
+      unit:
+        label: (mm/yr)
       type: gradient
       label: TWS Trend (mm/yr)
       min: "-20"
-      max: "20 (mm/yr)"
+      max: "20"
       stops:
       - "#a50026"
       - "#f46d43"
@@ -61,10 +63,12 @@ layers:
         - 40
       nodata: -9999.
     legend:
+      unit:
+        label: (gC/m2/yr)
       type: gradient
       label: GPP Trend (gC/m2/yr)
       min: "-40"
-      max: "40 (gC/m2/yr)"
+      max: "40"
       stops:
       - "#a50026"
       - "#f46d43"
