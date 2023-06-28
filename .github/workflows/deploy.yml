@@ -11,7 +11,6 @@ on:
     branches:
     - main
     - develop
-    - update-cicd
 
 env:
   NODE: 16
@@ -29,8 +28,6 @@ jobs:
             echo "env_name=production" >> $GITHUB_OUTPUT
           elif [ "${{ github.ref }}" = "refs/heads/develop" ]; then
             echo "env_name=staging" >> $GITHUB_OUTPUT
-          elif [ "${{ github.ref }}" = "refs/heads/update-cicd" ]; then
-            echo "env_name=development" >> $GITHUB_OUTPUT
           fi
       - name: Print the environment
         run: echo "The environment is ${{ steps.define_environment.outputs.env_name }}"
