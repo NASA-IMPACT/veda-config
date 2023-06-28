@@ -85,7 +85,8 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
-    needs: build
+    needs: [build, define-environment]
+    environment: needs.define-environment.outputs.env_name
     steps:
       # See comment on checks.yml - prep step
       - name: Checkout
