@@ -41,6 +41,11 @@ jobs:
     needs: define-environment
     environment: ${{ needs.define-environment.outputs.env_name }}
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          submodules: recursive
+
       - name: Cancel Previous Runs
         uses: styfle/cancel-workflow-action@0.8.0
         with:
