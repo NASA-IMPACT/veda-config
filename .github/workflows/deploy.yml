@@ -124,22 +124,9 @@ jobs:
           role-session-name: "ghgc-dashboard-${{ needs.define-environment.outputs.env_name }}-deployment"
           aws-region: "us-west-2"
 
-      - name: Deploy to S3
-        uses: jakejarvis/s3-sync-action@master
-        with:
-          # acl is not permitted with current credentials
-          # args: --acl public-read --follow-symlinks --delete
-          args: --follow-symlinks --delete
-        env:
-          AWS_S3_BUCKET: ${{ secrets.S3_BUCKET }}
-          AWS_REGION: us-west-2
-          AWS_ACCESS_KEY_ID: ${{ env.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ env.AWS_SECRET_ACCESS_KEY }}
-          # When serving from a subpath:
-          # SOURCE_DIR: ./deploy
-          # Otherwise use the build directory directly:
-          # SOURCE_DIR: ./dist
-          SOURCE_DIR: ./dist
+      - name: Deploy to S3 Production
+        run: |
+          aws s3 sync ./dist s3://${{ secrets.S3_BUCKET }}
 
       # - name: Request Invalidation to AWS Cloudfront
       #   uses: oneyedev/aws-cloudfront-invalidation@v1
