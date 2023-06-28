@@ -128,7 +128,7 @@ jobs:
         run: |
           aws s3 sync ./dist s3://${{ secrets.S3_BUCKET }}
 
-      # - name: Request Invalidation to AWS Cloudfront
-      #   uses: oneyedev/aws-cloudfront-invalidation@v1
-      #   with:
-      #     distribution-id: ${{ secrets.CF_DISTRIBUTION_ID }}
+      - name: Request Invalidation to AWS Cloudfront
+        uses: oneyedev/aws-cloudfront-invalidation@v1
+        with:
+          distribution-id: ${{ secrets.CF_DISTRIBUTION_ID }}
