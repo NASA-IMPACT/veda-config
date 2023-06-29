@@ -4,10 +4,10 @@ name: 'Nitrogen Dioxide'
 featured: true
 description: "Since the outbreak of the novel coronavirus, atmospheric concentrations of nitrogen dioxide have changed by as much as 60% in some regions."
 usage:
-  - url: 'https://github.com/NASA-IMPACT/veda-docs/blob/no2-single-item-viz/example-notebooks/no2-single-item-vizualization.ipynb'
+  - url: 'https://github.com/NASA-IMPACT/veda-docs/blob/main/notebooks/quickstarts/no2-map-plot.ipynb'
     label: View example notebook
     title: 'Static view in VEDA documentation'
-  - url: "https://nasa-veda.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FNASA-IMPACT%2Fveda-docs&urlpath=lab%2Ftree%2Fveda-docs%2Fexample-notebooks%2Fno2-single-item-vizualization.ipynb&branch=no2-single-item-viz"
+  - url: "https://nasa-veda.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FNASA-IMPACT%2Fveda-docs&urlpath=lab%2Ftree%2Fveda-docs%2Fnotebooks%2Fquickstarts%2Fno2-map-plot.ipynb&branch=main"
     label: Run example notebook
     title: 'Interactive session in VEDA 2i2c JupyterHub (requires account)'
 media:
@@ -99,9 +99,11 @@ layers:
         - 0
         - 30E14
     legend:
+      unit:
+        label: mol/cm2
       type: gradient
       min: 0
-      max: 30e14 mol/cm2
+      max: 30e14
       stops:
         - '#ffffff'
         - '#fdd1bf'
