@@ -14,7 +14,6 @@ on:
 
 env:
   NODE: 16
-  DOMAIN: /
 
 jobs:
   define-environment:
@@ -80,7 +79,7 @@ jobs:
           GOOGLE_TAG_MANAGER_ID: ${{secrets.GOOGLE_TAG_MANAGER_ID}}
           GOOGLE_TAG_AUTH: ${{secrets.GOOGLE_TAG_AUTH}}
           GOOGLE_TAG_PREVIEW: ${{secrets.GOOGLE_TAG_PREVIEW}}
-        run: PUBLIC_URL="${{ env.DOMAIN }}" yarn build
+        run: PUBLIC_URL="${{ vars.DOMAIN }}" yarn build
 
   deploy:
     runs-on: ubuntu-latest
