@@ -1,0 +1,107 @@
+---
+id: jpl-ch4-plume-emissions
+name: Methane plumes
+description: High-spatial resolution CH4 emissions data product
+usage:
+  - url: 'https://github.com/NASA-IMPACT/GHGC_docs/blob/main/cog_transformation_scripts/NASA_GSFC_wetlands_transformation.py'
+    label: Notebook to trasnform netcdf to COG
+    title: 'Methane emission from EMIT transformation notebook'
+  - url: 'https://github.com/NASA-IMPACT/GHGC_docs/blob/main/user_data_notebooks/methane_plumes_emit..ipynb'
+    label: Notebook to read, visualize, and explore data statistics
+    title: 'Methane emission from EMIT data notebook'
+media:
+  src: ::file ./emit-plume--cover.jpg
+  alt: emission from industry
+  author:
+    name: Chris Leboutillier
+thematics:
+  - air-quality
+  - ch4
+sources:
+  - nasa
+product:
+  - satellite
+layers:
+  - id: ch4-plume-emissions
+    stacCol: ch4-plumes-emissions
+    name: CH4 plumes emissions
+    type: raster
+    description: Methane plumes from point source emitters.
+    zoomExtent:
+      - 8
+      - 20
+    sourceParams:
+      resampling: bilinear
+      bidx: 1
+      assets: ch4-plume-emissions
+      colormap_name: plasma
+      rescale:
+        - 1
+        - 1500
+      nodata: -9999
+    compare:
+      datasetId: jpl-ch4-plume-emissions
+      layerId: ch4-plume-emissions
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit: 
+        label: ppm m
+      type: gradient
+      min: 1
+      max: +1500
+      stops:
+        - '#310597'
+        - '#4c02a1'
+        - '#6600a7'
+        - '#7e03a8'
+        - '#9511a1'
+        - '#aa2395'
+        - '#bc3587'
+        - '#cc4778'
+        - '#da5a6a'
+        - '#e66c5c'
+        - '#f0804e'
+        - '#f89540'
+        - '#fdac33'
+        - '#fdc527'
+        - '#f8df25'
+---
+
+<Block>
+  <Prose>
+    The EMIT instrument builds upon NASA’s long history of developing advanced imaging spectrometers for new science and applications. EMIT launched to the International Space Station (ISS) on July 14, 2022.
+    The data shows high-confidence research grade methane plumes from point source emitters - updated as they are identified - in keeping with JPL Open Science and Open Data policy.
+
+    - **Temporal extent:** 2022/08/01 to 2023/05/31  
+    - **Temporal resolution:** Daily    
+    - **Spatial extent:** Global    
+    - **Spatial resolution:**    
+    - **Data units:** ppm m   
+    - **Data type:** Research
+
+    ## Data Product Citation
+  
+    ## Relevant Publications
+      
+    ## License
+    CC BY 1.0 (Creative Commons Attribution 1.0 International)
+    
+    ## Contact
+    - Dr. Robert O. Green (NASA contact point)
+
+    ## Acknowledgment
+    
+    ## Disclaimer
+    All data provided in the U.S. GHG Center has been transformed from the original format into Cloud Optimized GeoTIFF (COG). Careful quality checks are used to ensure data transformation has been performed correctly.[Link](https://github.com/NASA-IMPACT/veda-docs/blob/no2-single-item-viz/example-notebooks/no2-single-item-vizualization.ipynb)
+    
+    ## Data Stewardship
+    - [Data Management Report]
+    - [Data Transformation Process](https://github.com/NASA-IMPACT/GHGC_docs/blob/main/cog_transformation_scripts/NASA_GSFC_wetlands_transformation.py)
+    - [U.S. GHG Center Data Intake Processing and Verification Report](https://github.com/NASA-IMPACT/GHGC_docs/blob/main/processing_and_confirmation_reports/ODIAC_Processing%20and%20Confirmation%20Report%20.pdf)
+    - [Notes]
+
+  </Prose>
+</Block>

@@ -1,0 +1,281 @@
+---
+id: land-atmoshphere-co2-emissions-monthly-2022
+name: GEOS-Carb CASA-GFED3 Land Carbon Flux Products
+description: This product provides Monthly average Net Primary Production (NPP), heterotrophic respiration (Rh), wildfire emissions (FIRE), and fuel wood burning emissions (FUEL) derived from the Carnegie-Ames-Stanford-Approach – Global Fire Emissions Database version 3 (CASA-GFED3) model.
+usage:
+  - url: 'https://github.com/NASA-IMPACT/GHGC_docs/blob/main/cog_transformation_scripts/NASA_GSFC_wetlands_transformation.py'
+    label: Notebook to trasnform netcdf to COG
+    title: 'Carbon natural flux data transformation notebook'
+  - url: 'https://github.com/NASA-IMPACT/GHGC_docs/blob/main/user_data_notebooks/land_carbon_flux_casa_gfed.ipynb'
+    label: Notebook to read, visualize, and explore data statistics
+    title: 'Carbon natural flux data notebook'
+media:
+  src: ::file ./geos-casa-gfed--cover.jpg
+  alt: windmills
+  author:
+    name: Dan Meyers
+thematics:
+  - air-quality
+  - co2
+sources:
+  - nasa
+product:
+  - satellite
+layers:
+  - id: casa-gfed-co2-flux
+    stacCol: nasa-casa-gfed-co2-flux
+    name: Net Primary Production
+    type: raster
+    description: Monthly average net primary production
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: npp
+      colormap_name: plasma
+      rescale:
+        - -0.1
+        - 0.2
+      nodata: 0
+    compare:
+      datasetId: land-atmoshphere-co2-emissions-monthly-2022
+      layerId: casa-gfed-co2-flux
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit:
+        label: kg m-2 mon-1
+      type: gradient
+      min: -0.1
+      max: 0.2
+      stops:
+        - '#310597'
+        - '#4c02a1'
+        - '#6600a7'
+        - '#7e03a8'
+        - '#9511a1'
+        - '#aa2395'
+        - '#bc3587'
+        - '#cc4778'
+        - '#da5a6a'
+        - '#e66c5c'
+        - '#f0804e'
+        - '#f89540'
+        - '#fdac33'
+        - '#fdc527'
+        - '#f8df25'
+  - id: casa-gfed-co2-flux-hr
+    stacCol: nasa-casa-gfed-co2-flux
+    name: Heterotrophic Respiration
+    type: raster
+    description: Monthly average heterotrophic respiration
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: rh
+      colormap_name: plasma
+      rescale:
+        - -0.1
+        - 0.3
+      nodata: 0
+    compare:
+      datasetId: land-atmoshphere-co2-emissions-monthly-2022
+      layerId: casa-gfed-co2-flux-hr
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit:
+        label: kg m<sup>-2</sup> mon<sup>-1</sup>
+      type: gradient
+      min: -0.1
+      max: 0.3
+      stops:
+        - '#310597'
+        - '#4c02a1'
+        - '#6600a7'
+        - '#7e03a8'
+        - '#9511a1'
+        - '#aa2395'
+        - '#bc3587'
+        - '#cc4778'
+        - '#da5a6a'
+        - '#e66c5c'
+        - '#f0804e'
+        - '#f89540'
+        - '#fdac33'
+        - '#fdc527'
+        - '#f8df25'     
+  - id: casa-gfed-co2-flux-nee
+    stacCol: nasa-casa-gfed-co2-flux
+    name: Net Ecosystem Exchange
+    type: raster
+    description: Monthly average net ecosystem exchange
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: nee
+      colormap_name: plasma
+      rescale:
+        - -0.1
+        - 0.2
+      nodata: 0
+    compare:
+      datasetId: land-atmoshphere-co2-emissions-monthly-2022
+      layerId: casa-gfed-co2-flux-nee
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit:
+        label: kg m-2 mon-1
+      type: gradient
+      min: -0.1
+      max: 0.2
+      stops:
+        - '#310597'
+        - '#4c02a1'
+        - '#6600a7'
+        - '#7e03a8'
+        - '#9511a1'
+        - '#aa2395'
+        - '#bc3587'
+        - '#cc4778'
+        - '#da5a6a'
+        - '#e66c5c'
+        - '#f0804e'
+        - '#f89540'
+        - '#fdac33'
+        - '#fdc527'
+        - '#f8df25'     
+  - id: casa-gfed-co2-flux-fe
+    stacCol: nasa-casa-gfed-co2-flux
+    name: Fire Emissions
+    type: raster
+    description: Monthly average fire emissions
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: fire
+      colormap_name: plasma
+      rescale:
+        - -0.1
+        - 0.3
+      nodata: 0
+    compare:
+      datasetId: land-atmoshphere-co2-emissions-monthly-2022
+      layerId: casa-gfed-co2-flux-fe
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit:
+        label: kg m-2 mon-1
+      type: gradient
+      min: -0.1
+      max: 0.3
+      stops:
+        - '#310597'
+        - '#4c02a1'
+        - '#6600a7'
+        - '#7e03a8'
+        - '#9511a1'
+        - '#aa2395'
+        - '#bc3587'
+        - '#cc4778'
+        - '#da5a6a'
+        - '#e66c5c'
+        - '#f0804e'
+        - '#f89540'
+        - '#fdac33'
+        - '#fdc527'
+        - '#f8df25'     
+  - id: casa-gfed-co2-flux-fuel
+    stacCol: nasa-casa-gfed-co2-flux
+    name: Fuel Emissions
+    type: raster
+    description: Monthly average fuel emissions
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: fuel
+      colormap_name: plasma
+      rescale:
+        - 0
+        - 0.01
+      nodata: 0
+    compare:
+      datasetId: land-atmoshphere-co2-emissions-monthly-2022
+      layerId: casa-gfed-co2-flux-fuel
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit:
+        label: kg m-2 mon-1
+      type: gradient
+      min: 0
+      max: 0.01
+      stops:
+        - '#310597'
+        - '#4c02a1'
+        - '#6600a7'
+        - '#7e03a8'
+        - '#9511a1'
+        - '#aa2395'
+        - '#bc3587'
+        - '#cc4778'
+        - '#da5a6a'
+        - '#e66c5c'
+        - '#f0804e'
+        - '#f89540'
+        - '#fdac33'
+        - '#fdc527'
+        - '#f8df25'                      
+---
+
+<Block>
+  <Prose>
+    ## GEOS-Carb CASA-GFED Monthly Fire Fuel NPP Rh NEE Fluxes
+    The NASA Carbon Monitoring System (CMS) is designed to make significant contributions in characterizing, quantifying, understanding, and predicting the evolution of global carbon sources and sinks through improved monitoring of carbon stocks and fluxes. The System will use the full range of NASA satellite observations and modeling/analysis capabilities to establish the accuracy, quantitative uncertainties, and utility of products for supporting national and international policy, regulatory, and management activities. CMS will maintain a global emphasis while providing finer scale regional information, utilizing space-based and surface-based data and will rapidly initiate generation and distribution of products both for user evaluation and to inform near-term policy development and planning.
+    
+    - **Temporal extent:** 2003/01/01 - 2017/12/31    
+    - **Temporal resolution:** Monthly    
+    - **Spatial extent:** Global    
+    - **Spatial resolution:** 0.5 deg x 0. 5deg    
+    - **Data units:**     
+    - **Data type:** Research
+    
+    ## Source Data Product Citation
+    Lesley Ott (2020), GEOS-Carb CASA-GFED Monthly Fire Fuel NPP Rh NEE Fluxes 0.5 degree x 0.5 degree V3, Greenbelt, MD, USA, Goddard Earth Sciences Data and Information Services Center (GES DISC), Accessed: [Data Access Date], 10.5067/03147VMJE8J9
+
+    ## Contact
+    - Dr. Lesley Ott (NASA contact point)
+    
+    ## Relevant Publications
+    
+    ## License
+    CC BY 4.0 (Creative Commons Attribution 4.0 International)
+
+    ## Acknowledgment
+
+    ## Disclaimer
+    All data provided in the U.S. GHG Center has been transformed from the original format into Cloud Optimized GeoTIFF (COG). Careful quality checks are used to ensure data transformation has been performed correctly.
+    
+    ## Data Stewardship
+    - [Data Management Report]
+    - [Data Transformation Process](https://github.com/NASA-IMPACT/GHGC_docs/blob/main/cog_transformation_scripts/NASA_GSFC_wetlands_transformation.py)
+    - [U.S. GHG Center Data Intake Processing and Verification Report](https://github.com/NASA-IMPACT/GHGC_docs/blob/main/processing_and_confirmation_reports/ODIAC_Processing%20and%20Confirmation%20Report%20.pdf)
+    - [Notes]
+  </Prose>
+</Block>

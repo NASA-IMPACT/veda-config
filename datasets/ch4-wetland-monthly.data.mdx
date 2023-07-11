@@ -1,0 +1,133 @@
+---
+id: wetland-ch4-emissions
+name: CH4 Wetland Emissions (LPJ-wsl)
+description: These daily and monthly wetland methane (CH4) emissions estimates are produced using the Lund–Potsdam–Jena-Wald, Schnee and Landschaft model (LPJ-wsl), version 2022.  The LPJ-wsl model is a prognostic, process-based Dynamic Global Vegetation Model (DGVM) used in carbon cycle applications. The model is independently verified using remote sensing data.
+usage:
+  - url: 'https://github.com/NASA-IMPACT/GHGC_docs/blob/main/cog_transformation_scripts/NASA_GSFC_wetlands_transformation.py'
+    label: Notebook to trasnform netcdf to COG
+    title: 'Wetlands CH4 emissions data transformation notebook'
+  - url: 'https://github.com/NASA-IMPACT/GHGC_docs/blob/main/user_data_notebooks/wetland_methane_emissions.ipynb'
+    label: Notebook to read, visualize, and explore data statistics
+    title: 'Wetlands CH4 emissions data visualization notebook'
+media:
+  src: ::file ./ch4-wetland--cover.jpeg
+  alt: svs visualiztion
+  author:
+    name: Mark SubbaRao (NASA/GSFC)
+    url: https://svs.gsfc.nasa.gov/5054
+thematics:
+  - air-quality
+  - agriculture
+  - ch4
+sources:
+  - nasa
+product:
+  - satellite
+layers:
+  - id: ch4-wetlands-emissions
+    stacCol: nasa-gsfc-ch4-wetlands-emissions
+    name: Wetlands CH4 Emissions (Monthly)
+    type: raster
+    description: Monthly CH4 emissions from wetlands constructed using the LBJ-wsl model, version 2022 
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: ch4-wetlands-emissions
+      colormap_name: magma
+      rescale:
+        - 0
+        - 2
+      nodata: 0
+    compare:
+      datasetId: wetland-ch4-emissions
+      layerId: ch4-wetlands-emissions
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit: g m-2 mon-1
+      type: gradient
+      min: 0
+      max: 2
+      stops:
+        - '#2c115f'
+        - '#721f81'
+        - '#b73779'
+        - '#f1605d'
+        - '#feb078'
+
+  - id: ch4-wetlands-emissions-d
+    stacCol: nasa-gsfc-ch4-wetlands-daily-emissions
+    name: Wetlands CH4 Emissions (Daily)
+    type: raster
+    description: Daily CH4 emissions from wetlands constructed using the LBJ-wsl model, version 2022
+
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: ch4-wetlands-emissions
+      colormap_name: magma
+      rescale:
+        - 0
+        - 0.2
+      nodata: 0
+    compare:
+      datasetId: wetland-ch4-emissions
+      layerId: ch4-wetlands-emissions-d
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit:
+        label: g m-2 daily-1
+      type: gradient
+      min: 0
+      max: 0.2
+      stops:
+        - '#2c115f'
+        - '#721f81'
+        - '#b73779'
+        - '#f1605d'
+        - '#feb078'     
+---
+
+<Block>
+  <Prose>
+    ## Wetland
+    Estimates of wetland methane emissions produced by the Lund–Potsdam–Jena Dynamic Global Vegetation Model (LPJ-DGVM) Wald Schnee und Landscaft version (LPJ-wsl). LPJ-wsl is a prognostic model, meaning that it can be used to simulate future changes in wetland emissions and independently verified with remote sensing data products. The model includes a complex, topography dependent model of near surface hydrology, and a permafrost and dynamic snow model, allowing it to produce realistic distributions of inundated area. Highlighted areas show concentrated methane sources from tropical and high latitude ecosystems. The LPJ-wsl model is regularly used in conjunction with NASA’s GEOS model to simulate the impact of wetlands and other methane sources on atmospheric methane concentrations, compare against satellite and airborne data, and to improve understanding and prediction of wetland emissions.
+    
+    - **Temporal extent:** 1980/01/01 - 2021/12/31    
+    - **Temporal resolution:** Monthly and Daily    
+    - **Spatial extent:** Global    
+    - **Spatial resolution:** 0.5 deg x 0. 5deg    
+    - **Data units:** g m<sup>-2</sup> mon<sup>-1</sup> and  g m<sup>-2</sup> daily<sup>-1</sup>      
+    - **Data type:** Research
+    
+    ## Source Data Product Citation
+
+    ## Contact
+    - Dr. Lesley Ott (NASA contact point)
+    
+    ## Relevant Publications
+    Zhang, Z., Zimmermann, N. E., Stenke, A., Li, X., Hodson, E. L., Zhu, G., ... & Poulter, B. (2017). Emerging role of wetland methane emissions in driving 21st century climate change. Proceedings of the National Academy of Sciences, 114(36), 9647-9652.
+    
+    ## License
+    CC BY 4.0 (Creative Commons Attribution 4.0 International)
+
+    ## Acknowledgment
+
+    ## Disclaimer
+    All data provided in the U.S. GHG Center has been transformed from the original format into Cloud Optimized GeoTIFF (COG). Careful quality checks are used to ensure data transformation has been performed correctly.
+    
+    ## Data Stewardship
+    - [Data Management Report]
+    - [Data Transformation Process](https://github.com/NASA-IMPACT/GHGC_docs/blob/main/cog_transformation_scripts/NASA_GSFC_wetlands_transformation.py)
+    - [U.S. GHG Center Data Intake Processing and Verification Report](https://github.com/NASA-IMPACT/GHGC_docs/blob/main/processing_and_confirmation_reports/ODIAC_Processing%20and%20Confirmation%20Report%20.pdf)
+    - [Notes]
+
+  </Prose>
+</Block>

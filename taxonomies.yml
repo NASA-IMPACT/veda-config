@@ -7,14 +7,18 @@ thematics:
     name: Water Quality
   - id: environmental-justice
     name: Environmental Justice
-  - id: covid-19
-    name: Covid 19
+  - id: soceco
+    name: Socioeconomic
   - id: agriculture
     name: Agriculture
   - id: biomass
     name: Biomass
   - id: co2
     name: CO2
+  - id: ch4
+    name: CH4    
+  - id: no2
+    name: N02     
 
 sources:
   - id: nasa

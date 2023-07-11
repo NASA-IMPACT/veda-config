@@ -1,0 +1,102 @@
+---
+id: nasa-sedac-gridded-population-density-yearly
+name: Gridded Population of the World (GPW), v4
+description: Provide estimates of population density for the years 2000, 2005, 2010, 2015, and 2020, based on counts consistent with national censuses and population registers, as raster data to facilitate data integration.
+usage:
+  - url: 'https://github.com/NASA-IMPACT/GHGC_docs/blob/main/cog_transformation_scripts/NASA_GSFC_wetlands_transformation.py'
+    label: Notebook to trasnform netcdf to COG
+    title: 'ODIAC CO2 emissions data transformation notebook'
+  - url: 'https://github.com/NASA-IMPACT/veda-docs/blob/no2-single-item-viz/example-notebooks/no2-single-item-vizualization.ipynb'
+    label: View example notebook
+    title: 'Static view in VEDA documentation'
+media:
+  src: ::file ./gpw-yearly--cover.png
+  alt: aa
+  author:
+    name: Columbia University
+thematics:
+  - soceco
+sources:
+  - nasa
+product:
+  - satellite
+layers:
+  - id: nasa-sedac-population
+    stacCol: nasa-sedac-population-density
+    name: Population Density
+    type: raster
+    description: Gridded population of the world (2000,2005,2010,2015,2020)
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: population-density
+      colormap_name: plasma
+      rescale:
+        - 0
+        - 1000
+      nodata: 0
+    compare:
+      datasetId: nasa-sedac-gridded-population-density-yearly
+      layerId: nasa-sedac-population
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit:
+        label: persons per sq km
+      type: gradient
+      min: 0
+      max: 1000
+      stops:
+        - '#310597'
+        - '#4c02a1'
+        - '#6600a7'
+        - '#7e03a8'
+        - '#9511a1'
+        - '#aa2395'
+        - '#bc3587'
+        - '#cc4778'
+        - '#da5a6a'
+        - '#e66c5c'
+        - '#f0804e'
+        - '#f89540'
+        - '#fdac33'
+        - '#fdc527'
+        - '#f8df25'    
+---
+
+<Block>
+  <Prose>
+    ## Population Density, v4.11 (2000, 2005, 2010, 2015, 2020)
+    The Gridded Population of the World, Version 4 (GPWv4): Population Density, Revision 11 consists of estimates of human population density (number of persons per square kilometer) based on counts consistent with national censuses and population registers, for the years 2000, 2005, 2010, 2015, and 2020. A proportional allocation gridding algorithm, utilizing approximately 13.5 million national and sub-national administrative units, was used to assign population counts to 30 arc-second grid cells. The population density rasters were created by dividing the population count raster for a given target year by the land area raster. The data files were produced as global rasters at 30 arc-second (~1 km at the equator) resolution. To enable faster global processing, and in support of research communities, the 30 arc-second count data were aggregated to 2.5 arc-minute, 15 arc-minute, 30 arc-minute and 1 degree resolutions to produce density rasters at these resolutions.    
+    - **Temporal extent:** 2000/07/01 - 2020/07/01 
+    - **Temporal resolution:** Yearly (5)   
+    - **Spatial extent:** Global    
+    - **Spatial resolution:** 0.5 deg x 0. 5deg    
+    - **Data units:** persons per sq km     
+    - **Data type:** Research
+    
+    ## Source Data Product Citation
+
+    ## Contact
+    
+    ## Relevant Publications
+    
+    ## License
+    CC BY 4.0 (Creative Commons Attribution 4.0 International)
+
+    ## Acknowledgment
+
+    ## Disclaimer
+    All data provided in the U.S. GHG Center has been transformed from the original format into Cloud Optimized GeoTIFF (COG). Careful quality checks are used to ensure data transformation has been performed correctly.
+    
+    ## Data Stewardship
+    - [Data Management Report]
+    - [Data Transformation Process](https://github.com/NASA-IMPACT/GHGC_docs/blob/main/cog_transformation_scripts/NASA_GSFC_wetlands_transformation.py)
+    - [U.S. GHG Center Data Intake Processing and Verification Report](https://github.com/NASA-IMPACT/GHGC_docs/blob/main/processing_and_confirmation_reports/ODIAC_Processing%20and%20Confirmation%20Report%20.pdf)
+    - [Notes]
+
+  </Prose>
+</Block>

@@ -8,7 +8,7 @@ export default function PageFooter(props) {
   return (
     <p>
       <a href="https://earthdata.nasa.gov/">
-        <span>By</span> <strong>GHG Center</strong> <span>on</span>{" "}
+        <span>By</span> <strong>U.S. GHG Center</strong> <span>on</span>{" "}
         <time dateTime={String(nowDate.getFullYear())}>
           {nowDate.getFullYear()}
         </time>
