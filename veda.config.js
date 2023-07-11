@@ -35,7 +35,12 @@ module.exports = {
 
   theme: {
     color: {
-      primary: "#2E7D32",
+      primary: "#0B3D91",
     },
+    type: {
+      base: {
+        family: '"Inter", sans-serif'
+      }
+    }
   },
 };
