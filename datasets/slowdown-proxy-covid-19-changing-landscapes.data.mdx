@@ -11,23 +11,13 @@ layers:
     zoomExtent:
       - 0
       - 20
-    # sourceParams:
-    #   colormap_name: rdylgn_r
-    #   rescale:
-    #     - 1
-    #     - 4
-    #   nodata: nan
-    # legend:
-    #   type: categorical
-    #   stops:
-    #     - color: "#94c772"
-    #       label: "Unburned"
-    #     - color: "#faf88e"
-    #       label: "Low"
-    #     - color: "#ea915e"
-    #       label: "Moderate"
-    #     - color: "#971d2b"
-    #       label: "High"
+    legend:
+      type: gradient
+      min: "Less Slowdown"
+      max: "Greater Slowdown"
+      stops:
+        - "#0223c9"
+        - "#011161"
 
 ---
 
