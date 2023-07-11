@@ -1,9 +1,10 @@
-import React from "$veda-ui/react";
+import React, { useLayoutEffect } from "$veda-ui/react";
 import styled from "$veda-ui/styled-components";
 import { glsp, themeVal } from "$veda-ui/@devseed-ui/theme-provider";
 import { Link } from "$veda-ui/react-router-dom";
+import { Helmet } from "$veda-ui/react-helmet";
 
-import ghgLogo from "./ghg-logo.png";
+import GHGLogo from "./ghg-logo";
 
 const Brand = styled.div`
   display: flex;
@@ -13,7 +14,7 @@ const Brand = styled.div`
   a {
     display: flex;
     align-items: center;
-    gap: ${glsp(0.5)};
+    gap: ${glsp(0.25)};
 
     &,
     &:visited {
@@ -22,9 +23,9 @@ const Brand = styled.div`
     }
 
     span {
-      font-size: 1.25rem;
+      font-size: 1.5rem;
       line-height: 1.5rem;
-      font-weight: ${themeVal("type.base.regular")};
+      font-weight: ${themeVal("type.base.bold")};
       letter-spacing: -0.025em;
     }
   }
@@ -35,11 +36,21 @@ const Brand = styled.div`
 `;
 
 export default function HeaderComponent() {
+  useLayoutEffect(() => {
+    const link = document.createElement("link");
+    link.setAttribute(
+      "href",
+      "https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&display=swap"
+    );
+    link.setAttribute("rel", "stylesheet");
+    document.head.appendChild(link);
+  }, []);
+
   return (
     <Brand>
       <Link to="/">
-        <img src={ghgLogo} />
-        <span>GHG Center</span>
+        <GHGLogo />
+        <span>U.S. GHG Center</span>
       </Link>
     </Brand>
   );
