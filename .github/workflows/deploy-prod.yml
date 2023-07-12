@@ -9,8 +9,7 @@ on:
 
 env:
   NODE: 16
-  # DOMAIN_PROD: https://www.earthdata.nasa.gov/dashboard
-  DOMAIN_PROD: /dashboard
+  DOMAIN_PROD: https://www.earthdata.nasa.gov/dashboard
   DEPLOY_BUCKET_PROD: climatedashboard
   DEPLOY_BUCKET_PROD_REGION: us-east-1
 
@@ -24,15 +23,10 @@ jobs:
         with:
           access_token: ${{ github.token }}
 
-      # See comment on checks.yml - prep step
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Get submodules
-        env:
-          SSH_KEY_SUBMODULE: ${{secrets.DELTA_UI_FETCH_KEY}}
-        run: |
-          eval `ssh-agent -s`
-          ssh-add - <<< "${SSH_KEY_SUBMODULE}"; git submodule update --init --recursive
+        with:
+          submodules: recursive
 
       - name: Use Node.js ${{ env.NODE }}
         uses: actions/setup-node@v1
@@ -71,15 +65,11 @@ jobs:
     needs: build
 
     steps:
-      # See comment on checks.yml - prep step
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Get submodules
-        env:
-          SSH_KEY_SUBMODULE: ${{secrets.DELTA_UI_FETCH_KEY}}
-        run: |
-          eval `ssh-agent -s`
-          ssh-add - <<< "${SSH_KEY_SUBMODULE}"; git submodule update --init --recursive
+        with:
+          submodules: recursive
+
       - name: Restore node_modules
         uses: actions/cache@v2
         id: cache-node-modules
