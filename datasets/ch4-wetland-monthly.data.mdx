@@ -1,7 +1,7 @@
 ---
 id: wetland-ch4-emissions
-name: CH4 Wetland Emissions (LPJ-wsl)
-description: These daily and monthly wetland methane (CH4) emissions estimates are produced using the Lund–Potsdam–Jena-Wald, Schnee and Landschaft model (LPJ-wsl), version 2022.  The LPJ-wsl model is a prognostic, process-based Dynamic Global Vegetation Model (DGVM) used in carbon cycle applications. The model is independently verified using remote sensing data.
+name: Wetland Methane Emissions, LPJ-wsl Model
+description: Global, daily and monthly 0.5 degree resolution methane emission estimates from wetlands, LPJ-wsl model.
 usage:
   - url: 'https://github.com/NASA-IMPACT/GHGC_docs/blob/main/cog_transformation_scripts/NASA_GSFC_wetlands_transformation.py'
     label: Notebook to trasnform netcdf to COG
@@ -47,7 +47,8 @@ layers:
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }
     legend:
-      unit: g m-2 mon-1
+      unit:
+        label: g m-2 mon-1
       type: gradient
       min: 0
       max: 2
