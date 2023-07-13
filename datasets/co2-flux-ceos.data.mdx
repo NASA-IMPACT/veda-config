@@ -1,0 +1,105 @@
+---
+id: nasa-ceos-co2-flux-annual
+name: CEOS National Top-Down CO₂ Budgets
+description: Global, 1 degree resolution pilot top-down budgets of carbon dioxide emissions at 5 year intervals and national scales, version 1.
+usage:
+  - url: 'https://github.com/NASA-IMPACT/GHGC_docs/blob/main/cog_transformation_scripts/ODIAC_fossil_fuel_geotiff_transformation.py'
+    label: Notebook to trasnform GeoTIFF to COG
+    title: 'ODIAC CO2 emissions data transformation notebook'
+  - url: 'https://github.com/NASA-IMPACT/GHGC_docs/blob/main/user_data_notebooks/fossil_fuel_co2_emissions.ipynb'
+    label: Notebook to read, visualize, and explore data statistics
+    title: 'ODIAC CO2 emissions data notebook'
+  - url: "https://nasa-veda.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FNASA-IMPACT%2Fveda-docs&urlpath=lab%2Ftree%2Fveda-docs%2Fnotebooks%2Fquickstarts%2Fno2-map-plot.ipynb&branch=main"
+    label: Run example notebook
+    title: 'Interactive session in U.S.GHG Centre 2i2c JupyterHub (requires account)'   
+media:
+  src: ::file ./co2-flux-ceos--cover.jpg
+  alt: White smoke coming from building
+  author:
+    name: Marcin Jozwiak
+    url: https://unsplash.com/photos/T-eDxGcn-Ok
+thematics:
+  - air-quality
+  - co2
+sources:
+  - nasa
+product:
+  - satellite
+layers:
+  - id: co2-emissions
+    stacCol: nasa-ceos-co2-flux
+    name: Fossil Fuel CO₂ Emissions
+    type: raster
+    description: Monthly, 1 km CO₂ emissions from fossil fuel combustion, cement production and gas flaring.
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: co2-emissions
+      colormap_name: rainbow
+      rescale:
+        - -10
+        - 300
+      nodata: 0
+    compare:
+      datasetId: odiac-fossil-fuel-co2-emissions-2022
+      layerId: co2-emissions
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit: 
+        label: gC m-2 day-1
+      type: gradient
+      min: -10
+      max: 300
+      stops:
+        - '#60007d'
+        - '#30137d'
+        - '#1960ae'
+        - '#7ac300'
+        - '#f2ce00'
+        - '#ef6a01'
+        - '#cc0019'
+---
+
+<Block>
+  <Prose>
+    The Committee on Earth Observation Satellites (CEOS) Atmospheric Composition – Virtual Constellation (AC-VC) GHG team has generated national top-down CO2 budgets. This dataset is described by Byrne et al. (2022) and consists of:
+    - Top-down annual net land-atmosphere CO2 fluxes (NCE) from an ensemble of atmospheric CO2 inversions.
+    - Bottom-up estimates of fossil fuel emissions and lateral carbon fluxes due to crop trade, wood trade, and river export.
+    - Annual changes (loss) in terrestrial carbon stocks (ΔCloss) obtained by combining top-down and bottom-up estimates
+    
+    - **Temporal extent:** 2015 – 2020    
+    - **Temporal resolution:** Monthly    
+    - **Spatial extent:** Global    
+    - **Spatial resolution:** 1 degree x 1 degree    
+    - **Data units:** 
+    - **Data type:** Research
+
+    ## Source Data Product Citation
+    Byrne, B., Baker, D. F., Basu, S., Bertolacci, M., Bowman, K. W., Carroll, D., Chatterjee, A., Chevallier, F., Ciais, P., Cressie, N., Crisp, D., Crowell, S., Deng, F., Deng, Z., Deutscher, N. M., Dubey, M. K., Feng, S., García, O. E., Herkommer, B., Hu, L., Jacobson, A. R., Janardanan, R., Jeong, S., Johnson, M. S., Jones, D. B. A., Kivi, R., Liu, J., Liu, Z., Maksyutov, S., Miller, J. B., Miller, S. M., Morino, I., Notholt, J., Oda, T., O’Dell, C. W., Oh, Y.-S., Ohyama, H., Patra, P. K., Peiro, H., Petri, C., Philip, S., Pollard, D. F., Poulter, B., Remaud, M., Schuh, A., Sha, M. K., Shiomi, K., Strong, K., Sweeney, C., Té, Y., Tian, H., Velazco, V. A., Vrekoussis, M., Warneke, T., Worden, J. R., Wunch, D., Yao, Y., Yun, J., Zammit-Mangion, A., and Zeng, N.: Pilot top-down CO2 Budget constrained by the v10 OCO-2 MIP Version 1, Committee on Earth Observing Satellites, https://doi.org/10.48588/npf6-sw92, Version 1.0, 2022    
+    
+    ## Contact
+    - Brendan Byrne (NASA/JPL)
+    
+    ## Relevant Publications
+    
+    ## License
+    CC BY 4.0 (Creative Commons Attribution 4.0 International)
+    
+    ## Acknowledgment
+    The research carried out at the Jet Propulsion Laboratory, California Institute of Technology, was under a contract with the National Aeronautics and Space Administration. The OCO-2 MIP activity was supported by the NASA OCO Science Team program.
+    
+    ## Disclaimer
+    All data provided in the U.S. GHG Center has been transformed from the original format into Cloud Optimized GeoTIFF (COG). Careful quality checks are used to ensure data transformation has been performed correctly.
+    
+    ## Data Stewardship
+    - [Data Management Report]
+    - [Data Transformation](https://github.com/NASA-IMPACT/GHGC_docs/blob/main/cog_transformation_scripts/ODIAC_fossil_fuel_geotiff_transformation.py)
+    - [U.S. GHG Center Data Intake Processing and Verification Report](https://github.com/NASA-IMPACT/GHGC_docs/blob/main/processing_and_confirmation_reports/ODIAC_Processing%20and%20Confirmation%20Report%20.pdf)
+    - [Notes]
+
+  </Prose>
+</Block>
