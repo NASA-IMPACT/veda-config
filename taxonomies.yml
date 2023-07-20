@@ -1,10 +1,6 @@
 thematics:
   - id: soceco
-    name: Socioeconomic
-  - id: agriculture
-    name: Agriculture
-  - id: biomass
-    name: Biomass  
+    name: Socioeconomic 
   - id: ae
     name: Anthropogenic Emissions         
   - id: nes
