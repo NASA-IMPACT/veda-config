@@ -1,25 +1,18 @@
 thematics:
-  - id: eis
-    name: EIS
-  - id: air-quality
-    name: Air Quality
-  - id: water-quality
-    name: Water Quality
-  - id: environmental-justice
-    name: Environmental Justice
   - id: soceco
     name: Socioeconomic
   - id: agriculture
     name: Agriculture
   - id: biomass
-    name: Biomass
-  - id: co2
-    name: CO2
-  - id: ch4
-    name: CH4    
-  - id: no2
-    name: N02     
-
+    name: Biomass  
+  - id: ae
+    name: Anthropogenic Emissions         
+  - id: nes
+    name: Natural Emissions and Sinks  
+  - id: cane
+    name: Combined Anthropogenic and Natural Emissions
+ - id: lee
+    name: Large Emission Events
 sources:
   - id: nasa
     name: NASA
@@ -31,3 +24,5 @@ sources:
     name: NIST
   - id: others
     name: Others
+  - id: nies
+    name: NIES    
