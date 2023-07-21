@@ -25,34 +25,34 @@ sources:
 product:
   - satellite
 layers:
-  - id: co2-emissions
+  - id: co2-emissions-crop
     stacCol: nasa-ceos-co2-flux
-    name: Fossil Fuel CO₂ Emissions
+    name: Lateral crop flux (Fcrop trade)
     type: raster
-    description: Monthly, 1 km CO₂ emissions from fossil fuel combustion, cement production and gas flaring.
+    description: The lateral flux of carbon in (positive) or out (negative) of a region due to agriculture.
     zoomExtent:
       - 0
       - 20
     sourceParams:
-      assets: co2-emissions
+      assets: Crop
       colormap_name: rainbow
       rescale:
-        - -10
-        - 300
+        - -800
+        - 1500
       nodata: 0
     compare:
-      datasetId: odiac-fossil-fuel-co2-emissions-2022
-      layerId: co2-emissions
+      datasetId: nasa-ceos-co2-flux-annual
+      layerId: co2-emissions-crop
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }
     legend:
       unit: 
-        label: gC m-2 day-1
+        label: gC m-2 year-1
       type: gradient
-      min: -10
-      max: 300
+      min: -80
+      max: 1500
       stops:
         - '#60007d'
         - '#30137d'
@@ -61,6 +61,186 @@ layers:
         - '#f2ce00'
         - '#ef6a01'
         - '#cc0019'
+  - id: co2-emissions-wood
+    stacCol: nasa-ceos-co2-flux
+    name:  Lateral wood flux (Fwood trade)
+    type: raster
+    description: The lateral flux of carbon in (positive) or out (negative) of a region due to wood product harvesting and usage.
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: Wood
+      colormap_name: rainbow
+      rescale:
+        - -900
+        - 900
+      nodata: 0
+    compare:
+      datasetId: nasa-ceos-co2-flux-annual
+      layerId: co2-emissions-wood
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit: 
+        label: gC m-2 year-1
+      type: gradient
+      min: -900
+      max: 900
+      stops:
+        - '#60007d'
+        - '#30137d'
+        - '#1960ae'
+        - '#7ac300'
+        - '#f2ce00'
+        - '#ef6a01'
+        - '#cc0019'
+  - id: co2-emissions-river
+    stacCol: nasa-ceos-co2-flux
+    name: Lateral river flux (Frivers export)
+    type: raster
+    description: The lateral flux of carbon in (positive) or out (negative) of a region transported by the water cycle.
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: River
+      colormap_name: rainbow
+      rescale:
+        - -120
+        - 240
+      nodata: 0
+    compare:
+      datasetId: nasa-ceos-co2-flux-annual
+      layerId: co2-emissions-river
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit: 
+        label: gC m-2 year-1
+      type: gradient
+      min: -120
+      max: 240
+      stops:
+        - '#60007d'
+        - '#30137d'
+        - '#1960ae'
+        - '#7ac300'
+        - '#f2ce00'
+        - '#ef6a01'
+        - '#cc0019'
+  - id: co2-emissions-ff
+    stacCol: nasa-ceos-co2-flux
+    name: Fossil fuel and cement emissions (FF)
+    type: raster
+    description: The burning of fossil fuels and release of carbon due to cement production, representing a flux of carbon from the land surface (geologic reservoir) to the atmosphere..
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: FF
+      colormap_name: rainbow
+      rescale:
+        - 50
+        - 450
+      nodata: 0
+    compare:
+      datasetId: nasa-ceos-co2-flux-annual
+      layerId: co2-emissions-ff
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit: 
+        label: gC m-2 year-1
+      type: gradient
+      min: 50
+      max: 450
+      stops:
+        - '#60007d'
+        - '#30137d'
+        - '#1960ae'
+        - '#7ac300'
+        - '#f2ce00'
+        - '#ef6a01'
+        - '#cc0019'      
+  - id: co2-emissions-is-nbe
+    stacCol: nasa-ceos-co2-flux
+    name: In Situ Net biosphere exchange (IS NBE)
+    type: raster
+    description: Net flux of carbon from the terrestrial biosphere to the atmosphere due to biomass burning (BB) and Reco minus gross primary production (GPP).
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: IS_NBE
+      colormap_name: rainbow
+      rescale:
+        - -1400
+        - 1200
+      nodata: 0
+    compare:
+      datasetId: nasa-ceos-co2-flux-annual
+      layerId: co2-emissions-is-nbe
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit: 
+        label: gC m-2 year-1
+      type: gradient
+      min: -1400
+      max: 1200
+      stops:
+        - '#60007d'
+        - '#30137d'
+        - '#1960ae'
+        - '#7ac300'
+        - '#f2ce00'
+        - '#ef6a01'
+        - '#cc0019'                           
+ - id: co2-emissions-is-nce
+    stacCol: nasa-ceos-co2-flux
+    name: In Situ Terrestrial net carbon exchange (IS NCE)
+    type: raster
+    description: Net flux of carbon from the surface to the atmosphere. For land, NCE can be defined as sum of NBE and FF.
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: IS_NBE
+      colormap_name: rainbow
+      rescale:
+        - -1220
+        - 25700
+      nodata: 0
+    compare:
+      datasetId: nasa-ceos-co2-flux-annual
+      layerId: co2-emissions-is-nce
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit: 
+        label: gC m-2 year-1
+      type: gradient
+      min: -1220
+      max: 25700
+      stops:
+        - '#60007d'
+        - '#30137d'
+        - '#1960ae'
+        - '#7ac300'
+        - '#f2ce00'
+        - '#ef6a01'
+        - '#cc0019'                                   
 ---
 
 <Block>
@@ -71,7 +251,7 @@ layers:
     3. Annual changes (loss) in terrestrial carbon stocks (ΔCloss) obtained by combining top-down and bottom-up estimates
     
     - **Temporal extent:** 2015 – 2020    
-    - **Temporal resolution:** Monthly    
+    - **Temporal resolution:** Yearly    
     - **Spatial extent:** Global    
     - **Spatial resolution:** 1 degree x 1 degree    
     - **Data units:** 
