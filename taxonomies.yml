@@ -1,14 +1,14 @@
-thematics:
-  - id: soceco
-    name: Socioeconomic 
+thematics: 
   - id: ae
-    name: Anthropogenic Emissions         
+    name: Anthropogenic Emissions    
+  - id: cane
+    name: Combined Anthropogenic and Natural Emissions  
+  - id: lee
+    name: Large Emission Events          
   - id: nes
     name: Natural Emissions and Sinks  
-  - id: cane
-    name: Combined Anthropogenic and Natural Emissions
-  - id: lee
-    name: Large Emission Events
+  - id: soceco
+    name: Socioeconomic    
 
 sources:
   - id: nasa
