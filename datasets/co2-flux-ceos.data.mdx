@@ -350,41 +350,41 @@ layers:
         - '#ef6a01'
         - '#cc0019'                  
   - id: co2-emissions-lnlgis-nbe-std
-      stacCol: nasa-ceos-co2-flux
-      name: Land Nadir and Land Glint In situ Net biosphere exchange -std (LNLGIS NBE) 
-      type: raster
-      description: Net flux of carbon from the terrestrial biosphere to the atmosphere due to biomass burning (BB) and Reco minus gross primary production (GPP).
-      zoomExtent:
-        - 0
-        - 20
-      sourceParams:
-        assets: lngis-nbe-std
-        colormap_name: rainbow
-        rescale:
-          - -1400
-          - 1200
-        nodata: 0
-      compare:
-        datasetId: nasa-ceos-co2-flux-annual
-        layerId: co2-emissions-is-nbe-std
-        mapLabel: |
-          ::js ({ dateFns, datetime, compareDatetime }) => {
-            return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
-          }
-      legend:
-        unit: 
-          label: gC m-2 year-1
-        type: gradient
-        min: -1400
-        max: 1200
-        stops:
-          - '#60007d'
-          - '#30137d'
-          - '#1960ae'
-          - '#7ac300'
-          - '#f2ce00'
-          - '#ef6a01'
-          - '#cc0019'                                  
+    stacCol: nasa-ceos-co2-flux
+    name: Land Nadir and Land Glint In situ Net biosphere exchange -std (LNLGIS NBE) 
+    type: raster
+    description: Net flux of carbon from the terrestrial biosphere to the atmosphere due to biomass burning (BB) and Reco minus gross primary production (GPP).
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: lngis-nbe-std
+      colormap_name: rainbow
+      rescale:
+        - -1400
+        - 1200
+      nodata: 0
+    compare:
+      datasetId: nasa-ceos-co2-flux-annual
+      layerId: co2-emissions-is-nbe-std
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit: 
+        label: gC m-2 year-1
+      type: gradient
+      min: -1400
+      max: 1200
+      stops:
+        - '#60007d'
+        - '#30137d'
+        - '#1960ae'
+        - '#7ac300'
+        - '#f2ce00'
+        - '#ef6a01'
+        - '#cc0019'                                   
   - id: co2-emissions-lnlgis-nce
     stacCol: nasa-ceos-co2-flux
     name: Land Nadir and Land Glint In situ Terrestrial net carbon exchange (LNLGIS NCE)
