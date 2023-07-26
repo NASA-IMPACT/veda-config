@@ -1,0 +1,259 @@
+---
+id: ceos-co2-flux
+name: CEOS National Top-Down CO₂ Budgets
+description: Global, 1 degree resolution pilot top-down budgets of carbon dioxide emissions at 5 year intervals and national scales, version 1.
+media:
+  src: ::file ./co2-flux-ceos--cover.jpg
+  alt: White smoke coming from building
+  author:
+    name: Chris LeBoutillier 
+    url: https://unsplash.com/photos/OD8hvYhJ1yQ
+thematics:
+  - air-quality
+sources:
+  - ceos
+layers:
+  - id: co2-emissions-crop
+    stacCol: ceos-co2-flux-budgets
+    name: Lateral crop flux (Fcrop trade)
+    type: raster
+    description: The lateral flux of carbon in (positive) or out (negative) of a region due to agriculture.
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: crop
+      colormap_name: rainbow
+      rescale:
+        - -800
+        - 1500
+      nodata: 0
+    compare:
+      datasetId: ceos-co2-flux
+      layerId: co2-emissions-crop
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit: 
+        label: gC m-2 year-1
+      type: gradient
+      min: -80
+      max: 1500
+      stops:
+        - '#60007d'
+        - '#30137d'
+        - '#1960ae'
+        - '#7ac300'
+        - '#f2ce00'
+        - '#ef6a01'
+        - '#cc0019'
+  - id: co2-emissions-wood
+    stacCol: ceos-co2-flux-budgets
+    name:  Lateral wood flux (Fwood trade)
+    type: raster
+    description: The lateral flux of carbon in (positive) or out (negative) of a region due to wood product harvesting and usage.
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: wood
+      colormap_name: rainbow
+      rescale:
+        - -900
+        - 900
+      nodata: 0
+    compare:
+      datasetId: ceos-co2-flux
+      layerId: co2-emissions-wood
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit: 
+        label: gC m-2 year-1
+      type: gradient
+      min: -900
+      max: 900
+      stops:
+        - '#60007d'
+        - '#30137d'
+        - '#1960ae'
+        - '#7ac300'
+        - '#f2ce00'
+        - '#ef6a01'
+        - '#cc0019'
+  - id: co2-emissions-river
+    stacCol: ceos-co2-flux-budgets
+    name: Lateral river flux (Frivers export)
+    type: raster
+    description: The lateral flux of carbon in (positive) or out (negative) of a region transported by the water cycle.
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: river
+      colormap_name: rainbow
+      rescale:
+        - -120
+        - 240
+      nodata: 0
+    compare:
+      datasetId: ceos-co2-flux
+      layerId: co2-emissions-river
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit: 
+        label: gC m-2 year-1
+      type: gradient
+      min: -120
+      max: 240
+      stops:
+        - '#60007d'
+        - '#30137d'
+        - '#1960ae'
+        - '#7ac300'
+        - '#f2ce00'
+        - '#ef6a01'
+        - '#cc0019'
+  - id: co2-emissions-ff
+    stacCol: ceos-co2-flux-budgets
+    name: Fossil fuel and cement emissions (FF)
+    type: raster
+    description: The burning of fossil fuels and release of carbon due to cement production, representing a flux of carbon from the land surface (geologic reservoir) to the atmosphere..
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: ff
+      colormap_name: rainbow
+      rescale:
+        - 50
+        - 450
+      nodata: 0
+    compare:
+      datasetId: ceos-co2-flux
+      layerId: co2-emissions-ff
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit: 
+        label: gC m-2 year-1
+      type: gradient
+      min: 50
+      max: 450
+      stops:
+        - '#60007d'
+        - '#30137d'
+        - '#1960ae'
+        - '#7ac300'
+        - '#f2ce00'
+        - '#ef6a01'
+        - '#cc0019'      
+  - id: co2-emissions-is-nbe
+    stacCol: ceos-co2-flux-budgets
+    name: In Situ Net biosphere exchange (IS NBE)
+    type: raster
+    description: Net flux of carbon from the terrestrial biosphere to the atmosphere due to biomass burning (BB) and Reco minus gross primary production (GPP).
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: is-nbe
+      colormap_name: rainbow
+      rescale:
+        - -1400
+        - 1200
+      nodata: 0
+    compare:
+      datasetId: ceos-co2-flux
+      layerId: co2-emissions-is-nbe
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit: 
+        label: gC m-2 year-1
+      type: gradient
+      min: -1400
+      max: 1200
+      stops:
+        - '#60007d'
+        - '#30137d'
+        - '#1960ae'
+        - '#7ac300'
+        - '#f2ce00'
+        - '#ef6a01'
+        - '#cc0019'                           
+  - id: co2-emissions-is-nce
+    stacCol: ceos-co2-flux-budgets
+    name: In Situ Terrestrial net carbon exchange (IS NCE)
+    type: raster
+    description: Net flux of carbon from the surface to the atmosphere. For land, NCE can be defined as sum of NBE and FF.
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: is-nce
+      colormap_name: rainbow
+      rescale:
+        - -1220
+        - 25700
+      nodata: 0
+    compare:
+      datasetId: ceos-co2-flux
+      layerId: co2-emissions-is-nce
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit: 
+        label: gC m-2 year-1
+      type: gradient
+      min: -1220
+      max: 25700
+      stops:
+        - '#60007d'
+        - '#30137d'
+        - '#1960ae'
+        - '#7ac300'
+        - '#f2ce00'
+        - '#ef6a01'
+        - '#cc0019'                                  
+---
+
+<Block>
+  <Prose>
+    The Committee on Earth Observation Satellites (CEOS) Atmospheric Composition – Virtual Constellation (AC-VC) GHG team has generated national top-down CO₂ budgets. This dataset is described by Byrne et al. (2022) and consists of:
+    1. Top-down annual net land-atmosphere CO2 fluxes (NCE) from an ensemble of atmospheric CO₂ inversions.
+    2. Bottom-up estimates of fossil fuel emissions and lateral carbon fluxes due to crop trade, wood trade, and river export.
+    3. Annual changes (loss) in terrestrial carbon stocks (ΔCloss) obtained by combining top-down and bottom-up estimates
+    
+    - **Temporal extent:** 2015 – 2020    
+    - **Temporal resolution:** Yearly    
+    - **Spatial extent:** Global    
+    - **Spatial resolution:** 1 degree x 1 degree    
+    - **Data units:** Grams of carbon per meters squared per year (gC m<sup>-2</sup> year<sup>-1</sup>) 
+    - **Data type:** Research
+
+    ## Source Data Product Citation
+    Byrne, B., Baker, D. F., Basu, S., Bertolacci, M., Bowman, K. W., Carroll, D., Chatterjee, A., Chevallier, F., Ciais, P., Cressie, N., Crisp, D., Crowell, S., Deng, F., Deng, Z., Deutscher, N. M., Dubey, M. K., Feng, S., García, O. E., Herkommer, B., Hu, L., Jacobson, A. R., Janardanan, R., Jeong, S., Johnson, M. S., Jones, D. B. A., Kivi, R., Liu, J., Liu, Z., Maksyutov, S., Miller, J. B., Miller, S. M., Morino, I., Notholt, J., Oda, T., O’Dell, C. W., Oh, Y.-S., Ohyama, H., Patra, P. K., Peiro, H., Petri, C., Philip, S., Pollard, D. F., Poulter, B., Remaud, M., Schuh, A., Sha, M. K., Shiomi, K., Strong, K., Sweeney, C., Té, Y., Tian, H., Velazco, V. A., Vrekoussis, M., Warneke, T., Worden, J. R., Wunch, D., Yao, Y., Yun, J., Zammit-Mangion, A., and Zeng, N.: Pilot top-down CO2 Budget constrained by the v10 OCO-2 MIP Version 1, Committee on Earth Observing Satellites, https://doi.org/10.48588/npf6-sw92, Version 1.0, 2022    
+    
+    ## Contact
+    - Brendan Byrne (NASA/JPL)
+    
+    ## Relevant Publications
+    
+    ## License
+    CC0-1.0 (Creative Commons Zero v1.0 Universal)
+  </Prose>
+</Block>

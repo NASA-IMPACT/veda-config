@@ -25,3 +25,5 @@ sources:
     name: ATSDR
   - id: geoglam
     name: GEOGLAM
+  - id: ceos
+    name: CEOS
