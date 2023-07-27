@@ -25,9 +25,369 @@ sources:
 product:
   - satellite
 layers:
+  - id: co2-emissions-river
+    stacCol: nasa-ceos-co2-flux
+    name: Lateral river flux
+    type: raster
+    description: The lateral flux of carbon in (positive) or out (negative) of a region transported by the water cycle.
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: river
+      colormap_name: rainbow
+      rescale:
+        - -120
+        - 240
+      nodata: 0
+    compare:
+      datasetId: nasa-ceos-co2-flux-annual
+      layerId: co2-emissions-river
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit: 
+        label: gC m-2 year-1
+      type: gradient
+      min: -120
+      max: 240
+      stops:
+        - '#60007d'
+        - '#30137d'
+        - '#1960ae'
+        - '#7ac300'
+        - '#f2ce00'
+        - '#ef6a01'
+        - '#cc0019'
+  - id: co2-emissions-river-std
+    stacCol: nasa-ceos-co2-flux
+    name: Lateral river flux - std
+    type: raster
+    description: The lateral flux of carbon in (positive) or out (negative) of a region transported by the water cycle.
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: river
+      colormap_name: rainbow
+      rescale:
+        - -120
+        - 240
+      nodata: 0
+    compare:
+      datasetId: nasa-ceos-co2-flux-annual
+      layerId: co2-emissions-river-std
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit: 
+        label: gC m-2 year-1
+      type: gradient
+      min: -120
+      max: 240
+      stops:
+        - '#60007d'
+        - '#30137d'
+        - '#1960ae'
+        - '#7ac300'
+        - '#f2ce00'
+        - '#ef6a01'
+        - '#cc0019'         
+  - id: co2-emissions-ff
+    stacCol: nasa-ceos-co2-flux
+    name: Fossil fuel and cement emissions
+    type: raster
+    description: The burning of fossil fuels and release of carbon due to cement production, representing a flux of carbon from the land surface (geologic reservoir) to the atmosphere..
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: ff
+      colormap_name: rainbow
+      rescale:
+        - 50
+        - 450
+      nodata: 0
+    compare:
+      datasetId: nasa-ceos-co2-flux-annual
+      layerId: co2-emissions-ff
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit: 
+        label: gC m-2 year-1
+      type: gradient
+      min: 50
+      max: 450
+      stops:
+        - '#60007d'
+        - '#30137d'
+        - '#1960ae'
+        - '#7ac300'
+        - '#f2ce00'
+        - '#ef6a01'
+        - '#cc0019'      
+  - id: co2-emissions-ff-std
+    stacCol: nasa-ceos-co2-flux
+    name: Fossil fuel and cement emissions - std
+    type: raster
+    description: The burning of fossil fuels and release of carbon due to cement production, representing a flux of carbon from the land surface (geologic reservoir) to the atmosphere..
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: ff-std
+      colormap_name: rainbow
+      rescale:
+        - 50
+        - 450
+      nodata: 0
+    compare:
+      datasetId: nasa-ceos-co2-flux-annual
+      layerId: co2-emissions-ff-std
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit: 
+        label: gC m-2 year-1
+      type: gradient
+      min: 50
+      max: 450
+      stops:
+        - '#60007d'
+        - '#30137d'
+        - '#1960ae'
+        - '#7ac300'
+        - '#f2ce00'
+        - '#ef6a01'
+        - '#cc0019'             
+  - id: co2-emissions-lnlgis-nbe
+    stacCol: nasa-ceos-co2-flux
+    name:LNLGIS Net biosphere exchange
+    type: raster
+    description: Net flux of carbon from the terrestrial biosphere to the atmosphere due to biomass burning (BB) and Reco minus gross primary production (GPP).
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: lnlgis-nbe
+      colormap_name: rainbow
+      rescale:
+        - -1400
+        - 1200
+      nodata: 0
+    compare:
+      datasetId: nasa-ceos-co2-flux-annual
+      layerId: co2-emissions-lnlgis-nbe
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit: 
+        label: gC m-2 year-1
+      type: gradient
+      min: -1400
+      max: 1200
+      stops:
+        - '#60007d'
+        - '#30137d'
+        - '#1960ae'
+        - '#7ac300'
+        - '#f2ce00'
+        - '#ef6a01'
+        - '#cc0019'                  
+  - id: co2-emissions-lnlgis-nbe-std
+    stacCol: nasa-ceos-co2-flux
+    name: LNLGIS Net biosphere exchange - std
+    type: raster
+    description: Net flux of carbon from the terrestrial biosphere to the atmosphere due to biomass burning (BB) and Reco minus gross primary production (GPP).
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: lngis-nbe-std
+      colormap_name: rainbow
+      rescale:
+        - -1400
+        - 1200
+      nodata: 0
+    compare:
+      datasetId: nasa-ceos-co2-flux-annual
+      layerId: co2-emissions-lnlgis-nbe-std
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit: 
+        label: gC m-2 year-1
+      type: gradient
+      min: -1400
+      max: 1200
+      stops:
+        - '#60007d'
+        - '#30137d'
+        - '#1960ae'
+        - '#7ac300'
+        - '#f2ce00'
+        - '#ef6a01'
+        - '#cc0019'                                   
+  - id: co2-emissions-lnlgis-nce
+    stacCol: nasa-ceos-co2-flux
+    name: LNLGIS Terrestrial net carbon exchange
+    type: raster
+    description: Net flux of carbon from the surface to the atmosphere. For land, NCE can be defined as sum of NBE and fossil fuel and cement emissions.
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: lnlgis-nce
+      colormap_name: rainbow
+      rescale:
+        - -1220
+        - 25700
+      nodata: 0
+    compare:
+      datasetId: nasa-ceos-co2-flux-annual
+      layerId: co2-emissions-lnlgis-nce
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit: 
+        label: gC m-2 year-1
+      type: gradient
+      min: -1220
+      max: 25700
+      stops:
+        - '#60007d'
+        - '#30137d'
+        - '#1960ae'
+        - '#7ac300'
+        - '#f2ce00'
+        - '#ef6a01'
+        - '#cc0019'             
+  - id: co2-emissions-lnlgis-nce-std
+    stacCol: nasa-ceos-co2-flux
+    name: LNLGIS Terrestrial net carbon exchange - std
+    type: raster
+    description: Net flux of carbon from the surface to the atmosphere. For land, NCE can be defined as sum of NBE and fossil fuel and cement emissions.
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: lnlgis-nce-std
+      colormap_name: rainbow
+      rescale:
+        - -1220
+        - 25700
+      nodata: 0
+    compare:
+      datasetId: nasa-ceos-co2-flux-annual
+      layerId: co2-emissions-lnlgis-nce-std
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit: 
+        label: gC m-2 year-1
+      type: gradient
+      min: -1220
+      max: 25700
+      stops:
+        - '#60007d'
+        - '#30137d'
+        - '#1960ae'
+        - '#7ac300'
+        - '#f2ce00'
+        - '#ef6a01'
+        - '#cc0019'                                         
+  - id: co2-emissions-lnlgis-dc-loss
+    stacCol: nasa-ceos-co2-flux
+    name: LNLGIS Net terrestrial carbon stock loss
+    type: raster
+    description: Positive values indicate a loss (decrease) of terrestrial carbon stocks (organic matter stored on land), including above- and below-ground biomass in ecosystems and biomass contained in anthropogenic products (lumber, cattle, etc.).
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: lnlgis-dc-loss
+      colormap_name: rainbow
+      rescale:
+        - -1220
+        - 25700
+      nodata: 0
+    compare:
+      datasetId: nasa-ceos-co2-flux-annual
+      layerId: co2-emissions-lnlgis-dc-loss
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit: 
+        label: gC m-2 year-1
+      type: gradient
+      min: -1220
+      max: 25700
+      stops:
+        - '#60007d'
+        - '#30137d'
+        - '#1960ae'
+        - '#7ac300'
+        - '#f2ce00'
+        - '#ef6a01'
+        - '#cc0019'             
+  - id: co2-emissions-lnlgis-dc-loss-std
+    stacCol: nasa-ceos-co2-flux
+    name:  LNLGIS Net terrestrial carbon stock loss - std
+    type: raster
+    description: Positive values indicate a loss (decrease) of terrestrial carbon stocks (organic matter stored on land), including above- and below-ground biomass in ecosystems and biomass contained in anthropogenic products (lumber, cattle, etc.).
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: lnlgis-dc-loss-std
+      colormap_name: rainbow
+      rescale:
+        - -1220
+        - 25700
+      nodata: 0
+    compare:
+      datasetId: nasa-ceos-co2-flux-annual
+      layerId: co2-emissions-lnlgis-dc-loss-std
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit: 
+        label: gC m-2 year-1
+      type: gradient
+      min: -1220
+      max: 25700
+      stops:
+        - '#60007d'
+        - '#30137d'
+        - '#1960ae'
+        - '#7ac300'
+        - '#f2ce00'
+        - '#ef6a01'
+        - '#cc0019' 
   - id: co2-emissions-crop
     stacCol: nasa-ceos-co2-flux
-    name: Lateral crop flux (Fcrop trade)
+    name: Lateral crop flux
     type: raster
     description: The lateral flux of carbon in (positive) or out (negative) of a region due to agriculture.
     zoomExtent:
@@ -63,7 +423,7 @@ layers:
         - '#cc0019'
   - id: co2-emissions-crop-std
     stacCol: nasa-ceos-co2-flux
-    name: Lateral crop flux - std (Fcrop trade)
+    name: Lateral crop flux - std
     type: raster
     description: The lateral flux of carbon in (positive) or out (negative) of a region due to agriculture.
     zoomExtent:
@@ -99,7 +459,7 @@ layers:
         - '#cc0019'        
   - id: co2-emissions-wood
     stacCol: nasa-ceos-co2-flux
-    name:  Lateral wood flux (Fwood trade)
+    name:  Lateral wood flux
     type: raster
     description: The lateral flux of carbon in (positive) or out (negative) of a region due to wood product harvesting and usage.
     zoomExtent:
@@ -143,7 +503,7 @@ layers:
         - '#800000'
   - id: co2-emissions-wood-std
     stacCol: nasa-ceos-co2-flux
-    name:  Lateral wood flux - std (Fwood trade)
+    name:  Lateral wood flux - std
     type: raster
     description: The lateral flux of carbon in (positive) or out (negative) of a region due to wood product harvesting and usage.
     zoomExtent:
@@ -176,367 +536,7 @@ layers:
         - '#7ac300'
         - '#f2ce00'
         - '#ef6a01'
-        - '#cc0019'      
-  - id: co2-emissions-river
-    stacCol: nasa-ceos-co2-flux
-    name: Lateral river flux (Frivers export)
-    type: raster
-    description: The lateral flux of carbon in (positive) or out (negative) of a region transported by the water cycle.
-    zoomExtent:
-      - 0
-      - 20
-    sourceParams:
-      assets: river
-      colormap_name: rainbow
-      rescale:
-        - -120
-        - 240
-      nodata: 0
-    compare:
-      datasetId: nasa-ceos-co2-flux-annual
-      layerId: co2-emissions-river
-      mapLabel: |
-        ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
-        }
-    legend:
-      unit: 
-        label: gC m-2 year-1
-      type: gradient
-      min: -120
-      max: 240
-      stops:
-        - '#60007d'
-        - '#30137d'
-        - '#1960ae'
-        - '#7ac300'
-        - '#f2ce00'
-        - '#ef6a01'
-        - '#cc0019'
-  - id: co2-emissions-river-std
-    stacCol: nasa-ceos-co2-flux
-    name: Lateral river flux - std (Frivers export)
-    type: raster
-    description: The lateral flux of carbon in (positive) or out (negative) of a region transported by the water cycle.
-    zoomExtent:
-      - 0
-      - 20
-    sourceParams:
-      assets: river
-      colormap_name: rainbow
-      rescale:
-        - -120
-        - 240
-      nodata: 0
-    compare:
-      datasetId: nasa-ceos-co2-flux-annual
-      layerId: co2-emissions-river-std
-      mapLabel: |
-        ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
-        }
-    legend:
-      unit: 
-        label: gC m-2 year-1
-      type: gradient
-      min: -120
-      max: 240
-      stops:
-        - '#60007d'
-        - '#30137d'
-        - '#1960ae'
-        - '#7ac300'
-        - '#f2ce00'
-        - '#ef6a01'
-        - '#cc0019'       
-  - id: co2-emissions-ff
-    stacCol: nasa-ceos-co2-flux
-    name: Fossil fuel and cement emissions (FF)
-    type: raster
-    description: The burning of fossil fuels and release of carbon due to cement production, representing a flux of carbon from the land surface (geologic reservoir) to the atmosphere..
-    zoomExtent:
-      - 0
-      - 20
-    sourceParams:
-      assets: ff
-      colormap_name: rainbow
-      rescale:
-        - 50
-        - 450
-      nodata: 0
-    compare:
-      datasetId: nasa-ceos-co2-flux-annual
-      layerId: co2-emissions-ff
-      mapLabel: |
-        ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
-        }
-    legend:
-      unit: 
-        label: gC m-2 year-1
-      type: gradient
-      min: 50
-      max: 450
-      stops:
-        - '#60007d'
-        - '#30137d'
-        - '#1960ae'
-        - '#7ac300'
-        - '#f2ce00'
-        - '#ef6a01'
-        - '#cc0019'      
-  - id: co2-emissions-ff-std
-    stacCol: nasa-ceos-co2-flux
-    name: Fossil fuel and cement emissions - std (FF)
-    type: raster
-    description: The burning of fossil fuels and release of carbon due to cement production, representing a flux of carbon from the land surface (geologic reservoir) to the atmosphere..
-    zoomExtent:
-      - 0
-      - 20
-    sourceParams:
-      assets: ff-std
-      colormap_name: rainbow
-      rescale:
-        - 50
-        - 450
-      nodata: 0
-    compare:
-      datasetId: nasa-ceos-co2-flux-annual
-      layerId: co2-emissions-ff-std
-      mapLabel: |
-        ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
-        }
-    legend:
-      unit: 
-        label: gC m-2 year-1
-      type: gradient
-      min: 50
-      max: 450
-      stops:
-        - '#60007d'
-        - '#30137d'
-        - '#1960ae'
-        - '#7ac300'
-        - '#f2ce00'
-        - '#ef6a01'
-        - '#cc0019'             
-  - id: co2-emissions-lnlgis-nbe
-    stacCol: nasa-ceos-co2-flux
-    name: Land Nadir and Land Glint In situ Net biosphere exchange (LNLGIS NBE)
-    type: raster
-    description: Net flux of carbon from the terrestrial biosphere to the atmosphere due to biomass burning (BB) and Reco minus gross primary production (GPP).
-    zoomExtent:
-      - 0
-      - 20
-    sourceParams:
-      assets: lnlgis-nbe
-      colormap_name: rainbow
-      rescale:
-        - -1400
-        - 1200
-      nodata: 0
-    compare:
-      datasetId: nasa-ceos-co2-flux-annual
-      layerId: co2-emissions-lnlgis-nbe
-      mapLabel: |
-        ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
-        }
-    legend:
-      unit: 
-        label: gC m-2 year-1
-      type: gradient
-      min: -1400
-      max: 1200
-      stops:
-        - '#60007d'
-        - '#30137d'
-        - '#1960ae'
-        - '#7ac300'
-        - '#f2ce00'
-        - '#ef6a01'
-        - '#cc0019'                  
-  - id: co2-emissions-lnlgis-nbe-std
-    stacCol: nasa-ceos-co2-flux
-    name: Land Nadir and Land Glint In situ Net biosphere exchange -std (LNLGIS NBE) 
-    type: raster
-    description: Net flux of carbon from the terrestrial biosphere to the atmosphere due to biomass burning (BB) and Reco minus gross primary production (GPP).
-    zoomExtent:
-      - 0
-      - 20
-    sourceParams:
-      assets: lngis-nbe-std
-      colormap_name: rainbow
-      rescale:
-        - -1400
-        - 1200
-      nodata: 0
-    compare:
-      datasetId: nasa-ceos-co2-flux-annual
-      layerId: co2-emissions-lnlgis-nbe-std
-      mapLabel: |
-        ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
-        }
-    legend:
-      unit: 
-        label: gC m-2 year-1
-      type: gradient
-      min: -1400
-      max: 1200
-      stops:
-        - '#60007d'
-        - '#30137d'
-        - '#1960ae'
-        - '#7ac300'
-        - '#f2ce00'
-        - '#ef6a01'
-        - '#cc0019'                                   
-  - id: co2-emissions-lnlgis-nce
-    stacCol: nasa-ceos-co2-flux
-    name: Land Nadir and Land Glint In situ Terrestrial net carbon exchange (LNLGIS NCE)
-    type: raster
-    description: Net flux of carbon from the surface to the atmosphere. For land, NCE can be defined as sum of NBE and fossil fuel and cement emissions.
-    zoomExtent:
-      - 0
-      - 20
-    sourceParams:
-      assets: lnlgis-nce
-      colormap_name: rainbow
-      rescale:
-        - -1220
-        - 25700
-      nodata: 0
-    compare:
-      datasetId: nasa-ceos-co2-flux-annual
-      layerId: co2-emissions-lnlgis-nce
-      mapLabel: |
-        ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
-        }
-    legend:
-      unit: 
-        label: gC m-2 year-1
-      type: gradient
-      min: -1220
-      max: 25700
-      stops:
-        - '#60007d'
-        - '#30137d'
-        - '#1960ae'
-        - '#7ac300'
-        - '#f2ce00'
-        - '#ef6a01'
-        - '#cc0019'             
-  - id: co2-emissions-lnlgis-nce-std
-    stacCol: nasa-ceos-co2-flux
-    name:  Land Nadir and Land Glint In situ Terrestrial net carbon exchange - std (LNLGIS NCE)
-    type: raster
-    description: Net flux of carbon from the surface to the atmosphere. For land, NCE can be defined as sum of NBE and fossil fuel and cement emissions.
-    zoomExtent:
-      - 0
-      - 20
-    sourceParams:
-      assets: lnlgis-nce-std
-      colormap_name: rainbow
-      rescale:
-        - -1220
-        - 25700
-      nodata: 0
-    compare:
-      datasetId: nasa-ceos-co2-flux-annual
-      layerId: co2-emissions-lnlgis-nce-std
-      mapLabel: |
-        ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
-        }
-    legend:
-      unit: 
-        label: gC m-2 year-1
-      type: gradient
-      min: -1220
-      max: 25700
-      stops:
-        - '#60007d'
-        - '#30137d'
-        - '#1960ae'
-        - '#7ac300'
-        - '#f2ce00'
-        - '#ef6a01'
-        - '#cc0019'                                         
-  - id: co2-emissions-lnlgis-dc-loss
-    stacCol: nasa-ceos-co2-flux
-    name: Land Nadir, Land Glint and In situ Net terrestrial carbon stock loss (LNLGIS DC LOSS)
-    type: raster
-    description: Positive values indicate a loss (decrease) of terrestrial carbon stocks (organic matter stored on land), including above- and below-ground biomass in ecosystems and biomass contained in anthropogenic products (lumber, cattle, etc.).
-    zoomExtent:
-      - 0
-      - 20
-    sourceParams:
-      assets: lnlgis-dc-loss
-      colormap_name: rainbow
-      rescale:
-        - -1220
-        - 25700
-      nodata: 0
-    compare:
-      datasetId: nasa-ceos-co2-flux-annual
-      layerId: co2-emissions-lnlgis-dc-loss
-      mapLabel: |
-        ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
-        }
-    legend:
-      unit: 
-        label: gC m-2 year-1
-      type: gradient
-      min: -1220
-      max: 25700
-      stops:
-        - '#60007d'
-        - '#30137d'
-        - '#1960ae'
-        - '#7ac300'
-        - '#f2ce00'
-        - '#ef6a01'
-        - '#cc0019'             
-  - id: co2-emissions-lnlgis-dc-loss-std
-    stacCol: nasa-ceos-co2-flux
-    name:  Land Nadir, Land Glint and In situ Net terrestrial carbon stock loss - std (LNLGIS DC LOSS)
-    type: raster
-    description: Positive values indicate a loss (decrease) of terrestrial carbon stocks (organic matter stored on land), including above- and below-ground biomass in ecosystems and biomass contained in anthropogenic products (lumber, cattle, etc.).
-    zoomExtent:
-      - 0
-      - 20
-    sourceParams:
-      assets: lnlgis-dc-loss-std
-      colormap_name: rainbow
-      rescale:
-        - -1220
-        - 25700
-      nodata: 0
-    compare:
-      datasetId: nasa-ceos-co2-flux-annual
-      layerId: co2-emissions-lnlgis-dc-loss-std
-      mapLabel: |
-        ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
-        }
-    legend:
-      unit: 
-        label: gC m-2 year-1
-      type: gradient
-      min: -1220
-      max: 25700
-      stops:
-        - '#60007d'
-        - '#30137d'
-        - '#1960ae'
-        - '#7ac300'
-        - '#f2ce00'
-        - '#ef6a01'
-        - '#cc0019'                                                
+        - '#cc0019'                                                           
 ---
 
 <Block>
