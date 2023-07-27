@@ -27,17 +27,10 @@ jobs:
         with:
           access_token: ${{ github.token }}
 
-      # Both veda-ui and veda-config are private repos. Since the token issued
-      # to GH does not have access to the veda-ui submodule, we have to
-      # manually check it out using a ssh deploy key.
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Get submodules
-        env:
-          SSH_KEY_SUBMODULE: ${{secrets.DELTA_UI_FETCH_KEY}}
-        run: |
-          eval `ssh-agent -s`
-          ssh-add - <<< "${SSH_KEY_SUBMODULE}"; git submodule update --init --recursive
+        with:
+          submodules: recursive
 
       - name: Use Node.js ${{ env.NODE }}
         uses: actions/setup-node@v1
@@ -63,16 +56,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-
-      # See comment on checks-yml - prep step
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Get submodules
-        env:
-          SSH_KEY_SUBMODULE: ${{secrets.DELTA_UI_FETCH_KEY}}
-        run: |
-          eval `ssh-agent -s`
-          ssh-add - <<< "${SSH_KEY_SUBMODULE}"; git submodule update --init --recursive
+        with:
+          submodules: recursive
 
       - name: Use Node.js ${{ env.NODE }}
         uses: actions/setup-node@v1
