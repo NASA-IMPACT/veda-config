@@ -2,6 +2,10 @@
 
 name: Deploy Production - MCP (S3)
 
+permissions:
+  id-token: write
+  contents: read
+
 on:
   push:
     branches:
@@ -97,28 +101,18 @@ jobs:
           mv dist deploy/dashboard
           cp deploy/dashboard/index.html deploy/index.html
 
-      - name: Deploy to S3 Production
-        uses: jakejarvis/s3-sync-action@master
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v2
         with:
-          # acl is not permitted with current credentials
-          # args: --acl public-read --follow-symlinks --delete
-          args: --follow-symlinks --delete
-        env:
-          AWS_S3_BUCKET: ${{ env.DEPLOY_BUCKET_PROD }}
-          AWS_REGION: ${{ env.DEPLOY_BUCKET_PROD_REGION }}
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          # When serving from a subpath:
-          # SOURCE_DIR: ./deploy
-          # Otherwise use the build directory directly:
-          # SOURCE_DIR: ./dist
-          SOURCE_DIR: ./deploy
+          role-to-assume: ${{ secrets.DEPLOYMENT_ROLE_ARN }}
+          role-session-name: "veda-dashboard-prod-deployment"
+          aws-region: ${{ env.DEPLOY_BUCKET_PROD_REGION }}
+
+      - name: Deploy to S3 Production
+        run: |
+          aws s3 sync ./deploy s3://${{ env.DEPLOY_BUCKET_PROD }}  --delete
 
       - name: Invalidate CloudFront cache
-        uses: chetan/invalidate-cloudfront-action@v2
-        env:
-          DISTRIBUTION: ${{ secrets.CLOUDFRONT_DISTRIBUTION_PROD }}
-          PATHS: "/*"
-          AWS_REGION: ${{ env.DEPLOY_BUCKET_PROD_REGION }}
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        uses: oneyedev/aws-cloudfront-invalidation@v1
+        with:
+          distribution-id: ${{ secrets.CLOUDFRONT_DISTRIBUTION_PROD }}
