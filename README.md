@@ -4,9 +4,9 @@
 
 ​VEDA is a dashboard to explore data.
 
-VEDA is organized around datasets and discoveries.
+VEDA is organized around datasets and data stories.
 A Dataset represents a piece of geo-referenced data displayed as a set of related layers on a map.  
-Discoveries are long form pieces of content that tell a story about some interesting portion of the data.
+Data Stories are long form pieces of content that tell a story about some interesting portion of the data.
 
 ## Getting started
 
@@ -19,7 +19,7 @@ If you plan to do development on `veda-config` or update the `veda-ui` version 
 
 The configuration and content options for VEDA will depend on the `veda-ui` (the actual interface code) version that `veda-config` is running.
 
-**The documentation for the current version can be viewed at [169ea81 of veda-ui](https://github.com/NASA-IMPACT/veda-ui/tree/169ea81629ebae74c2d9e46a7b416f784b025fdf/README.md).
+**The documentation for the current version can be viewed at [v2.0.0 of veda-ui](https://github.com/NASA-IMPACT/veda-ui/blob/v2.0.0/README.md).
 
 ## License
 This project is licensed under **Apache 2**, see the [LICENSE](LICENSE) file for more details.
