@@ -5,14 +5,9 @@ module.exports = {
   datasets: "./datasets/*.data.mdx",
 
   /**
-   * Glob path for the discoveries.
+   * Glob path for the stories.
    */
-  discoveries: "./discoveries/*.discoveries.mdx",
-
-  /**
-   * File path for the taxonomy index file.
-   */
-  taxonomiesIndex: "./taxonomies.yml",
+  stories: "./stories/*.stories.mdx",
 
   // App component and content overrides.
   // See docs/CONFIGURATION.md for more information.
@@ -31,6 +26,13 @@ module.exports = {
 
     // Custom pages:
     '/partnership': './overrides/partnership.mdx'
+  },
+
+  strings: {
+    stories: {
+      one: ' Data Story',
+      other: 'Data Stories'
+    }
   },
 
   theme: {

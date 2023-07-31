@@ -19,5 +19,5 @@ Check the [Content Documentation](https://github.com/NASA-IMPACT/veda-ui/blob/ma
 - [ ] [Layer legend](https://github.com/NASA-IMPACT/veda-ui/blob/main/docs/content/frontmatter/layer.md#legend) is setup.
 - [ ] The Dataset is showing up on the map correctly
 
-### Discoveries
-- [ ] [Publication date](https://github.com/NASA-IMPACT/veda-ui/blob/main/docs/content/CONTENT.md#discoveries) value is set
+### Stories
+- [ ] [Publication date](https://github.com/NASA-IMPACT/veda-ui/blob/main/docs/content/CONTENT.md#stories) value is set
