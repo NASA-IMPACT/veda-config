@@ -1,6 +1,6 @@
 ---
 id: epa-emissions-v2
-name: EPA 2012 Gridded Methane Emissions
+name: Gridded Methane Emissions v2
 description: Annual, monthly, and daily 0.1 degree resolution estimates of anthropogenic methane emissions for the U.S. region for 2015-2018.
 usage:
   - url: 'https://github.com/NASA-IMPACT/GHGC_docs/blob/main/cog_transformation_scripts/epa_methane_nc_transformation.py'
@@ -30,7 +30,7 @@ taxonomy:
       - Ground Measurements      
 layers:
   - id: enteric-fermentation
-    stacCol: epa-ch4-v2-annual-2018
+    stacCol: epa-ch4-v2-annual
     name: Enteric Fermentation (annual)
     type: raster
     description: Emissions from sector 4F from agricultural field burning.
@@ -64,7 +64,7 @@ layers:
         - "#ef6a01"
         - "#cc0019"
   - id: manure-management
-    stacCol: epa-gridded-annual-emissions
+    stacCol: epa-ch4-v2-annual
     name: Manure Management (annual)
     type: raster
     description: Emissions from sector 4B from manure management.
@@ -89,8 +89,8 @@ layers:
       unit: 
        label: molecule/cm²/s
       type: gradient
-      min: 0 molecule/cm²/s
-      max: 46428019752 molecule/cm²/s
+      min: 0 
+      max: 46428019752
       stops:
         - "#60007d"
         - "#30137d"
@@ -100,7 +100,7 @@ layers:
         - "#ef6a01"
         - "#cc0019"
   - id: 4c-rice-cultivation
-    stacCol: epa-gridded-annual-emissions
+    stacCol: epa-ch4-v2-annual
     name: Rice Cultivation (annual)
     type: raster
     description: Emissions from sector 4C from rice cultivation.
@@ -134,7 +134,7 @@ layers:
         - "#ef6a01"
         - "#cc0019"
   - id: 4f-field-burning
-    stacCol: epa-ch4-v2-annual-2018
+    stacCol: epa-ch4-v2-annual
     name: Field Burning (annual)
     type: raster
     description: Emissions from sector 4F from agricultural field burning.
@@ -168,7 +168,7 @@ layers:
         - "#ef6a01"
         - "#cc0019"
   - id: 1B2b-exploration
-    stacCol: epa-ch4-v2-annual-2018
+    stacCol: epa-ch4-v2-annual
     name: Exploration (annual)
     type: raster
     description: Emissions from sector 4F from agricultural field burning.
@@ -202,7 +202,7 @@ layers:
         - "#ef6a01"
         - "#cc0019"
   - id: 1B2b-exploration-ngs
-    stacCol: epa-ch4-v2-annual-2018
+    stacCol: epa-ch4-v2-annual
     name: Natural Gas Exploration (annual)
     type: raster
     description: Emissions from sector 4F from agricultural field burning.
@@ -236,7 +236,7 @@ layers:
         - "#ef6a01"
         - "#cc0019"
   - id: 1B2b-production-ngs
-    stacCol: epa-ch4-v2-annual-2018
+    stacCol: epa-ch4-v2-annual
     name: Natural Gas Production (annual)
     type: raster
     description: Emissions from sector 4F from agricultural field burning.
@@ -270,7 +270,7 @@ layers:
         - "#ef6a01"
         - "#cc0019"
   - id: 1B2b-transmission-storage-ngs
-    stacCol: epa-ch4-v2-annual-2018
+    stacCol: epa-ch4-v2-annual
     name: Transmission and Storage (annual)
     type: raster
     description: Emissions from sector 4F from agricultural field burning.
@@ -304,7 +304,7 @@ layers:
         - "#ef6a01"
         - "#cc0019"
   - id: 1B2b-processing-ngs
-    stacCol: epa-ch4-v2-annual-2018
+    stacCol: epa-ch4-v2-annual
     name: Processing Natural Gas Production (annual)
     type: raster
     description: Emissions from sector 4F from agricultural field burning.
@@ -338,7 +338,7 @@ layers:
         - "#ef6a01"
         - "#cc0019"
   - id: 1B2b-distribution-ngs
-    stacCol: epa-ch4-v2-annual-2018
+    stacCol: epa-ch4-v2-annual
     name: Distribution Natural Gas (annual)
     type: raster
     description: Emissions from sector 4F from agricultural field burning.
