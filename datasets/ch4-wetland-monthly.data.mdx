@@ -102,7 +102,7 @@ layers:
         - '#feb078'     
 ---
 
-<Block>
+<Block type='wide'>
   <Prose>
     ## Wetland
     Estimates of wetland methane emissions produced by the Lund–Potsdam–Jena Dynamic Global Vegetation Model (LPJ-DGVM) Wald Schnee und Landscaft version (LPJ-wsl). LPJ-wsl is a prognostic model, meaning that it can be used to simulate future changes in wetland emissions and independently verified with remote sensing data products. The model includes a complex, topography dependent model of near surface hydrology, and a permafrost and dynamic snow model, allowing it to produce realistic distributions of inundated area. Highlighted areas show concentrated methane sources from tropical and high latitude ecosystems. The LPJ-wsl model is regularly used in conjunction with NASA’s GEOS model to simulate the impact of wetlands and other methane sources on atmospheric methane concentrations, compare against satellite and airborne data, and to improve understanding and prediction of wetland emissions.
@@ -113,23 +113,25 @@ layers:
     - **Spatial resolution:** 0.5 deg x 0. 5deg    
     - **Data units:** g m<sup>-2</sup> mon<sup>-1</sup> and  g m<sup>-2</sup> daily<sup>-1</sup>      
     - **Data type:** Research
-    
+  </Prose>
+</Block>
+<Block>
+  <Prose>
     ## Source Data Product Citation
-
-    ## Contact
-    - Dr. Lesley Ott (NASA contact point)
-    
-    ## Relevant Publications
-    Zhang, Z., Zimmermann, N. E., Stenke, A., Li, X., Hodson, E. L., Zhu, G., ... & Poulter, B. (2017). Emerging role of wetland methane emissions in driving 21st century climate change. Proceedings of the National Academy of Sciences, 114(36), 9647-9652
-    
-    ## License
-    [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/legalcode) (CC BY 4.0) 
-
-    ## Acknowledgment
 
     ## Disclaimer
     All data provided in the U.S. GHG Center has been transformed from the original format into Cloud Optimized GeoTIFF (COG). Careful quality checks are used to ensure data transformation has been performed correctly.
     
+    ## Key Publications
+    Zhang, Z., Zimmermann, N. E., Stenke, A., Li, X., Hodson, E. L., Zhu, G., ... & Poulter, B. (2017). Emerging role of wetland methane emissions in driving 21st century climate change. Proceedings of the National Academy of Sciences, 114(36), 9647-9652
+ 
+    ## Other Relevant Publications
+
+    ## Acknowledgment
+
+    ## License
+    [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/legalcode) (CC BY 4.0) 
+   
     ## Data Stewardship
     - [Data Workflow] 
     - [Data Transformation Code](https://github.com/US-GHG-Center/ghgc-docs/blob/main/cog_transformation_scripts/NASA_GSFC_wetlands_transformation.py)
