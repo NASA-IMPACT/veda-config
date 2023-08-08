@@ -1,0 +1,956 @@
+---
+id: epa-emissions-v2
+name: Gridded Methane Emissions v2
+description: Annual, monthly, and daily 0.1 degree resolution estimates of anthropogenic methane emissions for the U.S. region for 2015-2018
+usage:
+  - url: 'https://github.com/NASA-IMPACT/GHGC_docs/blob/main/cog_transformation_scripts/epa_methane_nc_transformation.py'
+    label: Notebook to trasnform GeoTIFF to COG
+    title: 'EPA methane emissions data transformation notebook'
+  - url: 'https://github.com/NASA-IMPACT/GHGC_docs/blob/main/user_data_notebooks/epa_ch4_data_notebook.ipynb'
+    label: Notebook to read, visualize, and explore data statistics
+    title: 'EPA methane emissions data notebook'
+media:
+  src: ::file ./epa-annual--cover.jpg
+  alt: emission from industry
+  author:
+    name: Patrick Hendry
+taxonomy:
+  - name: Topics
+    values:
+      - Anthropogenic Emissions
+  - name: Source
+    values:
+      - EPA
+  - name: Gas
+    values:
+      - CH₄
+  - name: Product Type
+    values:
+      - Satellite Measured
+      - Ground Measurements      
+layers:
+  - id: enteric-fermentation
+    stacCol: epa-ch4-v2-annual
+    name: Enteric Fermentation (annual)
+    type: raster
+    description: Emissions from sector 4F from agricultural field burning.
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: enteric-fermentation
+      colormap_name: rainbow
+      rescale:
+        - 0
+        - 4182634135552
+      nodata: 0
+    compare:
+      datasetId: epa-emissions-v2
+      layerId: enteric-fermentation
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }      
+    legend:
+      type: gradient
+      min: 0
+      max: 4182634135552
+      stops:
+        - "#60007d"
+        - "#30137d"
+        - "#1960ae"
+        - "#7ac300"
+        - "#f2ce00"
+        - "#ef6a01"
+        - "#cc0019"
+  - id: manure-management
+    stacCol: epa-ch4-v2-annual
+    name: Manure Management (annual)
+    type: raster
+    description: Emissions from sector 4B from manure management.
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: manure-management
+      colormap_name: rainbow
+      rescale:
+        - 0
+        - 3062094888960
+      nodata: 0
+    compare:
+      datasetId: epa-emissions-v2
+      layerId: manure-management
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }      
+    legend:
+      unit: 
+       label: molecule/cm²/s
+      type: gradient
+      min: 0 
+      max: 3062094888960
+      stops:
+        - "#60007d"
+        - "#30137d"
+        - "#1960ae"
+        - "#7ac300"
+        - "#f2ce00"
+        - "#ef6a01"
+        - "#cc0019"
+  - id: 4c-rice-cultivation
+    stacCol: epa-ch4-v2-annual
+    name: Rice Cultivation (annual)
+    type: raster
+    description: Emissions from sector 4C from rice cultivation.
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: rice-cultivation
+      colormap_name: rainbow
+      rescale:
+        - 0
+        - 6309977522176
+      nodata: 0
+    compare:
+      datasetId: epa-emissions-v2
+      layerId: 4c-rice-cultivation
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }      
+    legend:
+      type: gradient
+      min: 0
+      max: 6309977522176
+      stops:
+        - "#60007d"
+        - "#30137d"
+        - "#1960ae"
+        - "#7ac300"
+        - "#f2ce00"
+        - "#ef6a01"
+        - "#cc0019"
+  - id: 4f-field-burning
+    stacCol: epa-ch4-v2-annual
+    name: Field Burning (annual)
+    type: raster
+    description: Emissions from sector 4F from agricultural field burning.
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: field-burning
+      colormap_name: rainbow
+      rescale:
+        - 0
+        - 27056996352
+      nodata: 0
+    compare:
+      datasetId: epa-emissions-v2
+      layerId: 4f-field-burning
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }      
+    legend:
+      type: gradient
+      min: 0
+      max: 27056996352
+      stops:
+        - "#60007d"
+        - "#30137d"
+        - "#1960ae"
+        - "#7ac300"
+        - "#f2ce00"
+        - "#ef6a01"
+        - "#cc0019"
+  - id: 1B2b-exploration-ngs
+    stacCol: epa-ch4-v2-annual
+    name: Natural Gas Exploration (annual)
+    type: raster
+    description: Emissions from sector 4F from agricultural field burning.
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: exploration-ngs
+      colormap_name: rainbow
+      rescale:
+        - 0
+        - 2611559792640
+      nodata: 0
+    compare:
+      datasetId: epa-emissions-v2
+      layerId: 1B2b-exploration-ngs
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }      
+    legend:
+      type: gradient
+      min: 0
+      max: 2611559792640
+      stops:
+        - "#60007d"
+        - "#30137d"
+        - "#1960ae"
+        - "#7ac300"
+        - "#f2ce00"
+        - "#ef6a01"
+        - "#cc0019"
+  - id: 1B2b-production-ngs
+    stacCol: epa-ch4-v2-annual
+    name: Natural Gas Production (annual)
+    type: raster
+    description: Emissions from sector 4F from agricultural field burning.
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: production-ngs
+      colormap_name: rainbow
+      rescale:
+        - 0
+        - 13900969934848
+      nodata: 0
+    compare:
+      datasetId: epa-emissions-v2
+      layerId: 1B2b-production-ngs
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }      
+    legend:
+      type: gradient
+      min: 0
+      max: 13900969934848
+      stops:
+        - "#60007d"
+        - "#30137d"
+        - "#1960ae"
+        - "#7ac300"
+        - "#f2ce00"
+        - "#ef6a01"
+        - "#cc0019"
+  - id: 1B2b-transmission-storage-ngs
+    stacCol: epa-ch4-v2-annual
+    name: Transmission and Storage (annual)
+    type: raster
+    description: Emissions from sector 4F from agricultural field burning.
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: transmission-storage-ngs
+      colormap_name: rainbow
+      rescale:
+        - 0
+        - 19360041140224
+      nodata: 0
+    compare:
+      datasetId: epa-emissions-v2
+      layerId: 1B2b-transmission-storage-ngs
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }      
+    legend:
+      type: gradient
+      min: 0
+      max: 19360041140224
+      stops:
+        - "#60007d"
+        - "#30137d"
+        - "#1960ae"
+        - "#7ac300"
+        - "#f2ce00"
+        - "#ef6a01"
+        - "#cc0019"
+  - id: 1B2b-processing-ngs
+    stacCol: epa-ch4-v2-annual
+    name: Processing Natural Gas Production (annual)
+    type: raster
+    description: Emissions from sector 4F from agricultural field burning.
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: processing-ngs
+      colormap_name: rainbow
+      rescale:
+        - 0
+        - 63448557813760
+      nodata: 0
+    compare:
+      datasetId: epa-emissions-v2
+      layerId: 1B2b-processing-ngs
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }      
+    legend:
+      type: gradient
+      min: 0
+      max: 63448557813760
+      stops:
+        - "#60007d"
+        - "#30137d"
+        - "#1960ae"
+        - "#7ac300"
+        - "#f2ce00"
+        - "#ef6a01"
+        - "#cc0019"
+  - id: 1B2b-distribution-ngs
+    stacCol: epa-ch4-v2-annual
+    name: Distribution Natural Gas (annual)
+    type: raster
+    description: Emissions from sector 4F from agricultural field burning.
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: distribution-ngs
+      colormap_name: rainbow
+      rescale:
+        - 0
+        - 3239707148288
+      nodata: 0
+    compare:
+      datasetId: epa-emissions-v2
+      layerId: 1B2b-distribution-ngs
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }      
+    legend:
+      type: gradient
+      min: 0
+      max: 3239707148288
+      stops:
+        - "#60007d"
+        - "#30137d"
+        - "#1960ae"
+        - "#7ac300"
+        - "#f2ce00"
+        - "#ef6a01"
+        - "#cc0019"
+  - id: 1B2a-exploration-ps
+    stacCol: epa-ch4-v2-annual
+    name: Exploration Petroleum (annual)
+    type: raster
+    description: Emissions from sector 4F from agricultural field burning.
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: exploration-ps
+      colormap_name: rainbow
+      rescale:
+        - 0
+        - 185182912512
+      nodata: 0
+    compare:
+      datasetId: epa-emissions-v2
+      layerId: 1B2a-exploration-ps
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }      
+    legend:
+      type: gradient
+      min: 0
+      max: 185182912512
+      stops:
+        - "#60007d"
+        - "#30137d"
+        - "#1960ae"
+        - "#7ac300"
+        - "#f2ce00"
+        - "#ef6a01"
+        - "#cc0019"        
+  - id: 1B2a-production-ps
+    stacCol: epa-ch4-v2-annual
+    name: Production Petroleum (annual)
+    type: raster
+    description: Emissions from sector 4F from agricultural field burning.
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: production-ps
+      colormap_name: rainbow
+      rescale:
+        - 0
+        - 14142707597312
+      nodata: 0
+    compare:
+      datasetId: epa-emissions-v2
+      layerId: 1B2a-production-ps
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }      
+    legend:
+      type: gradient
+      min: 0
+      max: 14142707597312
+      stops:
+        - "#60007d"
+        - "#30137d"
+        - "#1960ae"
+        - "#7ac300"
+        - "#f2ce00"
+        - "#ef6a01"
+        - "#cc0019"        
+  - id: 1B2a-transport-ps
+    stacCol: epa-ch4-v2-annual
+    name: Transportation Petroleum (annual)
+    type: raster
+    description: Emissions from sector 4F from agricultural field burning.
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: transport-ps
+      colormap_name: rainbow
+      rescale:
+        - 0
+        - 321039630336
+      nodata: 0
+    compare:
+      datasetId: epa-emissions-v2
+      layerId: 1B2a-transport-ps
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }      
+    legend:
+      type: gradient
+      min: 0
+      max: 321039630336
+      stops:
+        - "#60007d"
+        - "#30137d"
+        - "#1960ae"
+        - "#7ac300"
+        - "#f2ce00"
+        - "#ef6a01"
+        - "#cc0019"        
+  - id: 1B2a-refining-ps
+    stacCol: epa-ch4-v2-annual
+    name: Refining Petroleum (annual)
+    type: raster
+    description: Emissions from sector 4F from agricultural field burning.
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: refining-ps
+      colormap_name: rainbow
+      rescale:
+        - 0
+        - 2642320293888
+      nodata: 0
+    compare:
+      datasetId: epa-emissions-v2
+      layerId: 1B2a-refining-ps
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }      
+    legend:
+      type: gradient
+      min: 0
+      max: 2642320293888
+      stops:
+        - "#60007d"
+        - "#30137d"
+        - "#1960ae"
+        - "#7ac300"
+        - "#f2ce00"
+        - "#ef6a01"
+        - "#cc0019"   
+  - id: 5A1-msw-landfill-waste
+    stacCol: epa-ch4-v2-annual
+    name: Municipal Solid Waste (MSW) Landfills (annual)
+    type: raster
+    description: Emissions from sector 4F from agricultural field burning.
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: msw-landfill-waste
+      colormap_name: rainbow
+      rescale:
+        - 0
+        - 45878274424832
+      nodata: 0
+    compare:
+      datasetId: epa-emissions-v2
+      layerId: 5A1-msw-landfill-waste
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }      
+    legend:
+      type: gradient
+      min: 0
+      max: 45878274424832
+      stops:
+        - "#60007d"
+        - "#30137d"
+        - "#1960ae"
+        - "#7ac300"
+        - "#f2ce00"
+        - "#ef6a01"
+        - "#cc0019"           
+  - id: 5A1-industrial-landfill-waste
+    stacCol: epa-ch4-v2-annual
+    name: Industrial Landfills (annual)
+    type: raster
+    description: Emissions from sector 4F from agricultural field burning.
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: industrial-landfill-waste
+      colormap_name: rainbow
+      rescale:
+        - 0
+        - 43219505119232
+      nodata: 0
+    compare:
+      datasetId: epa-emissions-v2
+      layerId: 5A1-industrial-landfill-waste
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }      
+    legend:
+      type: gradient
+      min: 0
+      max: 43219505119232
+      stops:
+        - "#60007d"
+        - "#30137d"
+        - "#1960ae"
+        - "#7ac300"
+        - "#f2ce00"
+        - "#ef6a01"
+        - "#cc0019"                
+  - id: 5A1-dwtd-waste
+    stacCol: epa-ch4-v2-annual
+    name: Domestic Wastewater Treatment & Discharge (annual)
+    type: raster
+    description: Emissions from sector 4F from agricultural field burning.
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: dwtd-waste
+      colormap_name: rainbow
+      rescale:
+        - 0
+        - 13170276040704
+      nodata: 0
+    compare:
+      datasetId: epa-emissions-v2
+      layerId: 5A1-dwtd-waste
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }      
+    legend:
+      type: gradient
+      min: 0
+      max: 13170276040704
+      stops:
+        - "#60007d"
+        - "#30137d"
+        - "#1960ae"
+        - "#7ac300"
+        - "#f2ce00"
+        - "#ef6a01"
+        - "#cc0019"            
+  - id: 5A1-iwtd-waste
+    stacCol: epa-ch4-v2-annual
+    name: Industrial Wastewater Treatment & Discharge (annual)
+    type: raster
+    description: Emissions from sector 4F from agricultural field burning.
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: iwtd-waste
+      colormap_name: rainbow
+      rescale:
+        - 0
+        - 62315768578048
+      nodata: 0
+    compare:
+      datasetId: epa-emissions-v2
+      layerId: 5A1-iwtd-waste
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }      
+    legend:
+      type: gradient
+      min: 0
+      max: 62315768578048
+      stops:
+        - "#60007d"
+        - "#30137d"
+        - "#1960ae"
+        - "#7ac300"
+        - "#f2ce00"
+        - "#ef6a01"
+        - "#cc0019"            
+  - id: 5A1-composting-waste
+    stacCol: epa-ch4-v2-annual
+    name: Composting (annual)
+    type: raster
+    description: Emissions from sector 4F from agricultural field burning.
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: composting-waste
+      colormap_name: rainbow
+      rescale:
+        - 0
+        - 726430777344
+      nodata: 0
+    compare:
+      datasetId: epa-emissions-v2
+      layerId: 5A1-composting-waste
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }      
+    legend:
+      type: gradient
+      min: 0
+      max: 726430777344
+      stops:
+        - "#60007d"
+        - "#30137d"
+        - "#1960ae"
+        - "#7ac300"
+        - "#f2ce00"
+        - "#ef6a01"
+        - "#cc0019"            
+  - id: 1B1a-underground-coal
+    stacCol: epa-ch4-v2-annual
+    name: Underground Coal Mining (annual)
+    type: raster
+    description: Emissions from sector 4F from agricultural field burning.
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: underground-coal
+      colormap_name: rainbow
+      rescale:
+        - 0
+        - 195221799305216
+      nodata: 0
+    compare:
+      datasetId: epa-emissions-v2
+      layerId: 1B1a-underground-coal
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }      
+    legend:
+      type: gradient
+      min: 0
+      max: 195221799305216
+      stops:
+        - "#60007d"
+        - "#30137d"
+        - "#1960ae"
+        - "#7ac300"
+        - "#f2ce00"
+        - "#ef6a01"
+        - "#cc0019"            
+  - id: 1B1a-abn-underground-coal
+    stacCol: epa-ch4-v2-annual
+    name: Abandoned Underground Coal Mines Coal Mining (annual)
+    type: raster
+    description: Emissions from sector 4F from agricultural field burning.
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: abn-underground-coal
+      colormap_name: rainbow
+      rescale:
+        - 0
+        - 11779458465792
+      nodata: 0
+    compare:
+      datasetId: epa-emissions-v2
+      layerId: 1B1a-abn-underground-coal
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }      
+    legend:
+      type: gradient
+      min: 0
+      max: 11779458465792
+      stops:
+        - "#60007d"
+        - "#30137d"
+        - "#1960ae"
+        - "#7ac300"
+        - "#f2ce00"
+        - "#ef6a01"
+        - "#cc0019"            
+  - id: 1B1a-surface-coal
+    stacCol: epa-ch4-v2-annual
+    name: Surface Coal Mining (annual)
+    type: raster
+    description: Emissions from sector 4F from agricultural field burning.
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: surface-coal
+      colormap_name: rainbow
+      rescale:
+        - 0
+        - 97066218946560
+      nodata: 0
+    compare:
+      datasetId: epa-emissions-v2
+      layerId: 1B1a-surface-coal
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }      
+    legend:
+      type: gradient
+      min: 0
+      max: 97066218946560
+      stops:
+        - "#60007d"
+        - "#30137d"
+        - "#1960ae"
+        - "#7ac300"
+        - "#f2ce00"
+        - "#ef6a01"
+        - "#cc0019"          
+  - id: 1A-stationary-combustion-other
+    stacCol: epa-ch4-v2-annual
+    name: Stationary combustion (annual)
+    type: raster
+    description: Emissions from sector 4F from agricultural field burning.
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: stationary-combustion-other
+      colormap_name: rainbow
+      rescale:
+        - 0
+        - 1096969945088
+      nodata: 0
+    compare:
+      datasetId: epa-emissions-v2
+      layerId: 1A-stationary-combustion-other
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }      
+    legend:
+      type: gradient
+      min: 0
+      max: 1096969945088
+      stops:
+        - "#60007d"
+        - "#30137d"
+        - "#1960ae"
+        - "#7ac300"
+        - "#f2ce00"
+        - "#ef6a01"
+        - "#cc0019"            
+  - id: 1A-mobile-combustion-othe
+    stacCol: epa-ch4-v2-annual
+    name: Mobile combustion (annual)
+    type: raster
+    description: Emissions from sector 4F from agricultural field burning.
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: mobile-combustion-othe
+      colormap_name: rainbow
+      rescale:
+        - 0
+        - 356184489984
+      nodata: 0
+    compare:
+      datasetId: epa-emissions-v2
+      layerId: 1A-mobile-combustion-othe
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }      
+    legend:
+      type: gradient
+      min: 0
+      max: 356184489984
+      stops:
+        - "#60007d"
+        - "#30137d"
+        - "#1960ae"
+        - "#7ac300"
+        - "#f2ce00"
+        - "#ef6a01"
+        - "#cc0019"            
+  - id: 1A-abn-ong-other
+    stacCol: epa-ch4-v2-annual
+    name: Abandoned Oil and Gas Wells (annual)
+    type: raster
+    description: Emissions from sector 4F from agricultural field burning.
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: abn-ong-other
+      colormap_name: rainbow
+      rescale:
+        - 0
+        - 4824812748800
+      nodata: 0
+    compare:
+      datasetId: epa-emissions-v2
+      layerId: 1A-abn-ong-other
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }      
+    legend:
+      type: gradient
+      min: 0
+      max: 4824812748800
+      stops:
+        - "#60007d"
+        - "#30137d"
+        - "#1960ae"
+        - "#7ac300"
+        - "#f2ce00"
+        - "#ef6a01"
+        - "#cc0019"            
+  - id: 1A-petro-production-other
+    stacCol: epa-ch4-v2-annual
+    name: Petrochemical Production (annual)
+    type: raster
+    description: Emissions from sector 4F from agricultural field burning.
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: petro-production-other
+      colormap_name: rainbow
+      rescale:
+        - 0
+        - 4687914860544
+      nodata: 0
+    compare:
+      datasetId: epa-emissions-v2
+      layerId: 1A-petro-production-other
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }      
+    legend:
+      type: gradient
+      min: 0
+      max: 4687914860544
+      stops:
+        - "#60007d"
+        - "#30137d"
+        - "#1960ae"
+        - "#7ac300"
+        - "#f2ce00"
+        - "#ef6a01"
+        - "#cc0019"            
+  - id: 1A-ferroalloy-production-other
+    stacCol: epa-ch4-v2-annual
+    name: Ferroalloy Production (annual)
+    type: raster
+    description: Emissions from sector 4F from agricultural field burning.
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: ferroalloy-production-other
+      colormap_name: rainbow
+      rescale:
+        - 0
+        - 99607961600
+      nodata: 0
+    compare:
+      datasetId: epa-emissions-v2
+      layerId: 1A-ferroalloy-production-other
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }      
+    legend:
+      type: gradient
+      min: 0
+      max: 99607961600
+      stops:
+        - "#60007d"
+        - "#30137d"
+        - "#1960ae"
+        - "#7ac300"
+        - "#f2ce00"
+        - "#ef6a01"
+        - "#cc0019"                   
+---
+
+<Block>
+  <Prose>
+    ## Methane Emissions
+
+    A team at Harvard University along with EPA and other coauthors developed a gridded inventory of U.S. anthropogenic methane emissions with 0.1° x 0.1° spatial resolution, monthly temporal resolution, and detailed scale-dependent error characterization. The inventory is designed to be consistent with the 2016 U.S. [EPA Inventory of U.S. Greenhouse Gas Emissions and Sinks](https://www.epa.gov/ghgemissions/us-greenhouse-gas-inventory-report-1990-2014) estimates for the year 2012, which presents national totals for different source types. The gridded inventory was developed using a wide range of databases at the state, county, local, and point source level to allocate the spatial and temporal distribution of emissions for individual source types.
+    This data can be used by researchers to better compare the national-level inventory with measurement results that may be at other scales. Users of this gridded inventory are asked to cite the original reference (Maasakkers et al., 2016) in their publications. Error estimates are given in that reference.
+    
+    - **Temporal extent:** 2015/01/01 - 2018/12/31    
+    - **Temporal resolution:** Annual/Monthly/Daily    
+    - **Spatial extent:** US   
+    - **Spatial resolution:** 0.1 deg x 0. 1 deg    
+    - **Data units:** Mg a-1 km-2     
+    - **Data type:** Research
+
+    ## Source Data Product Citation
+
+    ## Disclaimer
+    All data provided in the U.S. GHG Center has been transformed from the original format into Cloud Optimized GeoTIFF (COG). Careful quality checks are used to ensure data transformation has been performed correctly.  
+
+    ## Key Publications
+    Maasakkers, J. D., Jacob, D. J., Sulprizio, M. P., Turner, A. J., Weitz, M., Wirth, T., ... & Fischer, M. L. (2016). Gridded national inventory of US methane emissions. Environmental science & technology, 50(23), 13123-13133.
+    
+    ## Other Relevant Publications
+
+    ## Acknowledgment
+
+    ## License
+    CC BY 4.0 (Creative Commons Attribution 4.0 International)  
+    
+    ## Data Stewardship
+    - [Data Workflow]
+    - [Data Transformation Code](https://github.com/NASA-IMPACT/GHGC_docs/blob/main/cog_transformation_scripts/NASA_GSFC_wetlands_transformation.py)
+    - [U.S. GHG Center Data Intake Processing and Verification Report](https://github.com/NASA-IMPACT/GHGC_docs/blob/main/processing_and_confirmation_reports/ODIAC_Processing%20and%20Confirmation%20Report%20.pdf)
+    - [Notes]
+
+  </Prose>
+</Block>

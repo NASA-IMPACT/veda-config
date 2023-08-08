@@ -1,12 +1,12 @@
 ---
 id: nasa-sedac-gridded-population-density-yearly
 name: SEDAC Gridded World Population Data
-description: Global, 1 km resolution human population density estimates based on national censuses and population registers, version 4.11.
+description: Global, 1 km resolution human population density estimates based on national censuses and population registers, version 4.11
 usage:
-  - url: 'https://github.com/NASA-IMPACT/GHGC_docs/blob/main/cog_transformation_scripts/nasa_sedac_tiff_transformation.py'
-    label: Notebook to trasnform tiff to COG
+  - url: 'https://github.com/US-GHG-Center/ghgc-docs/blob/main/cog_transformation_scripts/nasa_sedac_tiff_transformation.py'
+    label: Notebook to transform TIFF to COG
     title: 'SEDAC data transformation notebook'
-  - url: 'https://github.com/NASA-IMPACT/GHGC_docs/blob/main/user_data_notebooks/sedac_population.ipynb'
+  - url: 'https://github.com/US-GHG-Center/ghgc-docs/blob/main/user_data_notebooks/sedac_population.ipynb'
     label: Notebook to read, visualize, and explore data statistics
     title: 'SEDAC Population data notebook'
 media:
@@ -21,9 +21,9 @@ taxonomy:
   - name: Source
     values:
       - NASA
-  - name: Product
+  - name: Product Type
     values:
-      - Satellite
+      - Satellite Measured
 layers:
   - id: nasa-sedac-population
     stacCol: nasa-sedac-population-density
@@ -83,22 +83,22 @@ layers:
     - **Data type:** Research
     
     ## Source Data Product Citation
-
-    ## Contact
-    
-    ## Relevant Publications
-    
-    ## License
-    CC BY 4.0 (Creative Commons Attribution 4.0 International)
-
-    ## Acknowledgment
-
+  
     ## Disclaimer
     All data provided in the U.S. GHG Center has been transformed from the original format into Cloud Optimized GeoTIFF (COG). Careful quality checks are used to ensure data transformation has been performed correctly.
+ 
+    ## Key Publications
+
+    ## Other Relevant Publications    
     
+    ## Acknowledgment
+    
+    ## License
+    [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/legalcode) (CC BY 4.0) 
+  
     ## Data Stewardship
-    - [Data Management Report]
-    - [Data Transformation Process](https://github.com/NASA-IMPACT/GHGC_docs/blob/main/cog_transformation_scripts/NASA_GSFC_wetlands_transformation.py)
+    - [Data Workflow]
+    - [Data Transformation Code](https://github.com/US-GHG-Center/ghgc-docs/blob/main/cog_transformation_scripts/nasa_sedac_tiff_transformation.py)
     - [U.S. GHG Center Data Intake Processing and Verification Report](https://github.com/NASA-IMPACT/GHGC_docs/blob/main/processing_and_confirmation_reports/ODIAC_Processing%20and%20Confirmation%20Report%20.pdf)
     - [Notes]
 

@@ -3,8 +3,8 @@ id: jpl-ch4-plume-emissions
 name: EMIT Methane Emission Plumes
 description: Daily aggregated, global point source methane emission plume estimates from the EMIT instrument on the International Space Station (ISS)
 usage:
-  - url: 'https://github.com/NASA-IMPACT/GHGC_docs/blob/main/cog_transformation_scripts/NASA_CH4_plumes_data_conversion.py'
-    label: Notebook to trasnform netcdf to COG
+  - url: 'https://github.com/US-GHG-Center/ghgc-docs/blob/main/cog_transformation_scripts/NASA_CH4_plumes_data_conversion.py'
+    label: Notebook to transform GeoTIFF to COG
     title: 'Methane emission from EMIT transformation notebook'
   - url: 'https://github.com/NASA-IMPACT/GHGC_docs/blob/main/user_data_notebooks/methane_plumes_emit.ipynb'
     label: Notebook to read, visualize, and explore data statistics
@@ -17,19 +17,19 @@ media:
 taxonomy:
   - name: Topics
     values:
-      - Air Quality
+      - Large Emission Events
   - name: Source
     values:
       - NASA
-  - name: Gas Emission
+  - name: Gas
     values:
-      - CH4
-  - name: Product
+      - CH₄
+  - name: Product Type
     values:
-      - Satellite
+      - Satellite Measured
 layers:
   - id: ch4-plume-emissions
-    stacCol: ch4-plumes-emissions
+    stacCol: nasa-jpl-plumes-emissions-updated
     name: CH4 plumes emissions
     type: raster
     description: Methane plumes from point source emitters.
@@ -88,24 +88,23 @@ layers:
     - **Data units:** ppm m   
     - **Data type:** Research
 
-    ## Data Product Citation
-  
-    ## Relevant Publications
-      
-    ## License
-    CC BY 1.0 (Creative Commons Attribution 1.0 International)
-    
-    ## Contact
-    - Dr. Robert O. Green (NASA contact point)
+    ## Source Data Product Citation
 
-    ## Acknowledgment
-    
     ## Disclaimer
     All data provided in the U.S. GHG Center has been transformed from the original format into Cloud Optimized GeoTIFF (COG). Careful quality checks are used to ensure data transformation has been performed correctly.[Link](https://github.com/NASA-IMPACT/veda-docs/blob/no2-single-item-viz/example-notebooks/no2-single-item-vizualization.ipynb)
-    
+   
+    ## Key Relevant Publications
+
+    ## Other Relevant Publications 
+
+    ## Acknowledgment       
+      
+    ## License
+    [Creative Commons Attribution 1.0 International](https://creativecommons.org/licenses/by/1.0/legalcode) (CC BY 1.0) 
+   
     ## Data Stewardship
-    - [Data Management Report]
-    - [Data Transformation Process](https://github.com/NASA-IMPACT/GHGC_docs/blob/main/cog_transformation_scripts/NASA_GSFC_wetlands_transformation.py)
+    - [Data Workflow]
+    - [Data Transformation Code](https://github.com/US-GHG-Center/ghgc-docs/blob/main/cog_transformation_scripts/NASA_CH4_plumes_data_conversion.py)
     - [U.S. GHG Center Data Intake Processing and Verification Report](https://github.com/NASA-IMPACT/GHGC_docs/blob/main/processing_and_confirmation_reports/ODIAC_Processing%20and%20Confirmation%20Report%20.pdf)
     - [Notes]
 
