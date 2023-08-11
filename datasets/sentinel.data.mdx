@@ -1,0 +1,71 @@
+---
+id: sentinel
+name: Sentinel
+description: Global, 1 degree resolution pilot top-down budgets of carbon dioxide emissions at 5 year intervals and national scales, version 1.
+usage:
+  - url: 'https://github.com/US-GHG-Center/ghgc-docs/blob/main/cog_transformation_scripts/nasa_ceos_co2_flux_data_transformation.py'
+    label: Notebook to transform GeoTIFF to COG
+    title: 'CO₂ Flux data transformation notebook'
+  - url: 'https://github.com/US-GHG-Center/ghgc-docs/blob/main/user_data_notebooks/nasa_ceos_co2_flux.ipynb'
+    label: Notebook to read, visualize, and explore data statistics
+    title: 'CO₂ Flux data notebook'
+  - url: "https://nasa-veda.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FNASA-IMPACT%2Fveda-docs&urlpath=lab%2Ftree%2Fveda-docs%2Fnotebooks%2Fquickstarts%2Fno2-map-plot.ipynb&branch=main"
+    label: Run example notebook
+    title: 'Interactive session in U.S.GHG Centre 2i2c JupyterHub (requires account)'   
+media:
+  src: ::file ./co2-flux-ceos--cover.jpg
+  alt: White smoke coming from building
+  author:
+    name: Zoya Loonohod
+    url: https://unsplash.com/photos/OUc7GsYU2k4
+thematics:
+  - cane
+sources:
+  - nasa
+product:
+  - satellite
+layers:
+  - id: sentinel-2-l2a
+    stacCol: sentinel-2-l2a
+    catalogId: earthsearch
+    name: Sentinel 2 l2a
+    type: raster
+    description: sentinel
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: aot
+      colormap_name: rainbow
+      rescale:
+        - -120
+        - 240
+      nodata: 0
+    # compare:
+    #   datasetId: nasa-ceos-co2-flux-annual
+    #   layerId: co2-emissions-river
+    #   mapLabel: |
+    #     ::js ({ dateFns, datetime, compareDatetime }) => {
+    #       return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+    #     }
+    legend:
+      unit: 
+        label: gC m-2 year-1
+      type: gradient
+      min: -120
+      max: 240
+      stops:
+        - '#60007d'
+        - '#30137d'
+        - '#1960ae'
+        - '#7ac300'
+        - '#f2ce00'
+        - '#ef6a01'
+        - '#cc0019'                                                
+---
+
+<Block>
+  <Prose>
+    # Sentinel
+  </Prose>
+</Block>
