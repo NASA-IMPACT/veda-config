@@ -1,0 +1,55 @@
+---
+id: global-forest-change
+name: Global Forest Change
+description: Global, 1 degree resolution pilot top-down budgets of carbon dioxide emissions at 5 year intervals and national scales, version 1.
+media:
+  src: ::file ./co2-flux-ceos--cover.jpg
+  alt: White smoke coming from building
+  author:
+    name: Zoya Loonohod
+    url: https://unsplash.com/photos/OUc7GsYU2k4
+thematics:
+  - cane
+sources:
+  - nasa
+product:
+  - satellite
+layers:
+  - id: global-forest-change
+    stacCol: Global_Forest_Change_2000-2017
+    catalogId: maap
+    name: Global Forest Change
+    type: raster
+    description: Global Forest Change
+    isPeriodic: false
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: data
+      colormap_name: rainbow
+      rescale:
+        - -120
+        - 240
+      nodata: 0
+    legend:
+      unit: 
+        label: gC m-2 year-1
+      type: gradient
+      min: -120
+      max: 240
+      stops:
+        - '#60007d'
+        - '#30137d'
+        - '#1960ae'
+        - '#7ac300'
+        - '#f2ce00'
+        - '#ef6a01'
+        - '#cc0019'                                                
+---
+
+<Block>
+  <Prose>
+    # Global Forest Change
+  </Prose>
+</Block>
