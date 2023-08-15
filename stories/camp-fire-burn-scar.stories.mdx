@@ -28,8 +28,11 @@ taxonomy:
 
 <Block type='wide'>
   <Figure>
-    <Image ... ./camp-fire-sentinel-20181111.jpg>
-    <Caption ...>
+      <Image
+      src={new URL('./camp-fire-sentinel-20181111.jpg', import.meta.url).href}
+      alt='Camp Fire on November 11, 2018'
+    />
+    <Caption>
     Sentinel-2 imagery from November 11th, 2018 of the Camp Fire impacting the Paradise, CA area. The black outline is the extent of the burn scar on November 25th, 2018 once the fire was 100% contained.
     </Caption>
   </Figure>
