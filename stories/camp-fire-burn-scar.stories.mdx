@@ -160,10 +160,13 @@ taxonomy:
 
   <Prose>
   <Figure>
-      <Image
-      src={new URL('./camp-fire-oroville-ndti.gif', import.meta.url).href}
-      alt='Lake Oroville, CA NDTI 2017-2022'
-    />
+     <video style={{ width: '100%', aspectRatio: "16/9" }} controls>
+      <source
+        src={new URL('./camp-fire-oroville-ndti.mp4', import.meta.url).href} type="video/mp4"
+      />
+      Your browser does not support the video tag.
+    </video>
+
     <Caption>
     HLS computed Normalized Difference Turbidity Index values over Lake Oroville, CA from 2017 to 2022. This lake is just downstream of the Camp Fire, which occurred from November 8-25th, 2018.
     </Caption>
