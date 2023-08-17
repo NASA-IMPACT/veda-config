@@ -52,10 +52,13 @@ taxonomy:
 
 <Block>
   <Figure>
-      <Image
-      src={new URL('./camp-fire-perimeter-progression.mp4', import.meta.url).href}
-      alt='Camp Fire Perimeter Expansion November 11-25, 2018'
-    />
+     <video style={{ width: '100%', aspectRatio: "16/9" }} controls>
+      <source
+        src={new URL('./camp-fire-perimeter-progression.mp4', import.meta.url).href} type="video/mp4"
+      />
+      Your browser does not support the video tag.
+    </video>
+
     <Caption>
     The expansion of the perimeter of the 2018 Camp Fire from it's inception on November 8th to 100% containment on November 25th.
     </Caption>
