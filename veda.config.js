@@ -17,7 +17,7 @@ module.exports = {
     aboutContent: "./overrides/about.mdx",
     // Content for the home page.
     // Type: Content override
-    homeContent: './overrides/home.mdx',
+    homeContent: './overrides/home/index.mdx',
 
     // Component for the header brand.
     headerBrand: "./overrides/components/header-brand/index.mdx",
