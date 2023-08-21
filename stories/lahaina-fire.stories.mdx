@@ -1,0 +1,57 @@
+---
+id: lahaina-fire
+name: The Devastating August 8th, 2023 Lahaina, Hawai'i Wildfire
+description: "A Satellite-Based Overview"
+media:
+  src: ::file ./lahaina-fire-background.jpg
+  alt: Artistic photo of a hot fire.
+  author:
+    name: Matthew Thayer/AP
+    url: https://www.sfchronicle.com/travel/article/hawaii-fire-maui-lahaina-18289213.php
+pubDate: 2023-08-21
+taxonomy:
+  - name: Topics
+    values:
+      - EIS
+---
+
+<Block>
+  <Prose>
+    ## Introduction
+    On August 8th, 2023, a devastating wildfire roared through the city of Lahaina, Hawai’i, located on the island of Maui and home to over 13,000 residents. This wildfire was reported sparked by a downed powerline on Lahainaluna Road, and though was initially put out was reinvigorated by intense wind gusts that prevailed throughout the day. The National Weather Service reported measured wind gusts as high as 67 mph in the area, which helped quickly spread the wildfire across much of Lahaina in the afternoon hours of August 8th. 
+    
+    Per the Glossary of Meteorology, a gap wind is “a strong, low-level wind through either a relatively level channel between two mountain ranges or a gap in a mountain barrier”. In the case of the Lahaina Fire, a strong gap wind set up between the islands of Maui and Molokai. This intense northeasterly wind was funneled through the two islands due to a sharp pressure gradient set up by Category 4 Hurricane Dora, which was passing approximately 500 miles south of the islands during the ignition of the fire. The strong gap wind persisted from August 7th-9th, fueling the spread of the initially small brush fire that quickly overtook much of Lahaina.
+    
+    As reported by the Pacific Disaster Center (PDC) and Federal Emergency Management Agency (FEMA), 2,170 acres were burned by the Lahaina Fire, destroying 2,207 structures- 86% of which were residential buildings. The fire is estimated to have caused $5.52 billion USD in damages, and as of August 17th 111 fatalities have been confirmed as a direct result of the fire. The Lahaina Fire now ranks as the deadliest wildfire in US history since 1918. Severe drought conditions on the island of Maui were present leading up to the wildfire- the worst drought conditions out of the entire island chain. Additionally, Maui is more prevalent to experiencing drought conditions than the rest of the Hawaiian Islands. These drought conditions supported the amount of dry fuel the Lahaina Fire had access to when it raged across fields and into the city. 
+  </Prose>
+</Block>
+
+<Block>
+<Figure>
+      <Image
+      src={new URL('./lahaina-fire-drought-monitor.jpg', import.meta.url).href}
+      alt='US Drought Monitor, August 8th, 2023.'
+    />
+    <Caption>
+    US Drought Monitor Index on August 8th, 2023 over the Hawaiian Islands. The island of Maui is experiencing the worst conditions in the hours leading up to the fire.
+    </Caption>
+  </Figure>
+</Block>
+
+<Block>
+  <Prose>
+    ## Satellite Analysis of the Lahaina Wildfire
+    Landsat-8 thermal imagery detected ongoing fires across much of the city of Lahaina during its overpass at 10:35 PM LST on August 8th. An experimental burned area index was then calculated from HLS imagery taken after the fire on August 13th, 2023. This index, known as BAIS2, highlighted the burned area quite well compared to the more traditional Normalized Burn Ratio Indices 1 and 2, and had the highest ‘probabilities’ of burned area over the severely scorched fields just uphill from the city. Additionally, a three-band composite using the shortwave infrared, narrow near-infrared, and red bands of post-fire HLS data revealed excellently the extent of the burned area from the Lahaina Fire. 
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    ## Additional Resources
+  HLS: https://hls.gsfc.nasa.gov/
+  
+  PDC/FEMA report: https://www.mauicounty.gov/CivicAlerts.aspx?AID=12683 
+  
+  Glossary of Meteorology on gap wind: https://glossary.ametsoc.org/wiki/Gap_wind 
+  </Prose>
+</Block>
