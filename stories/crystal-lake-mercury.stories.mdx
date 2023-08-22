@@ -40,6 +40,22 @@ taxonomy:
   </Prose>
 </Block>
 
+<Block type="wide">
+  <Figure>
+    <Chart
+      dataPath={new URL('./smoke_count_crystal.csv', import.meta.url).href}
+      dateFormat="%Y-%m-%d"
+      idKey='source'
+      xKey='Date'
+      yKey=smoke'
+      yAxisLabel='Smoke Count'
+    />
+    <Caption>
+      Figure 2. Time series of monthly occurrence of smoke over Crystal Lake, LA County, CA.
+    </Caption>
+  </Figure>
+</Block>
+
 <Block>
   <Prose>
     ## Satellite Analysis of Crystal Lake, Los Angeles County, CA
