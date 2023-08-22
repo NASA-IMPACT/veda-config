@@ -31,6 +31,22 @@ taxonomy:
   </Prose>
 </Block>
 
+<Block type="wide">
+  <Figure>
+    <Chart
+      dataPath={new URL('./aod_crystal_config.csv', import.meta.url).href}
+      dateFormat="%Y-%m"
+      idKey='source'
+      xKey='Date'
+      yKey='Mean AOD'
+      yAxisLabel='Aerosol Optical Depth'
+    />
+    <Caption>
+      Figure 1. Time series of monthly and spatially averaged MODIS AOD over Crystal Lake, LA County, CA.
+    </Caption>
+  </Figure>
+</Block>
+
 <Block>
   <Prose>
     ## Consequences of Mercury Deposition
