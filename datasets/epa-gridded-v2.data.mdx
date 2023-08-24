@@ -1,14 +1,17 @@
 ---
 id: epa-emissions-v2
-name: Gridded Methane Emissions v2
-description: Annual, monthly, and daily 0.1 degree resolution estimates of anthropogenic methane emissions for the U.S. region for 2015-2018
+name: EPA Anthropogenic Methane Emissions
+description: Annual, monthly, and daily 0.1° resolution estimates of anthropogenic methane emissions for the contiguous U.S. from 2012 - 2018, version 2.
 usage:
   - url: 'https://github.com/NASA-IMPACT/GHGC_docs/blob/main/cog_transformation_scripts/epa_methane_nc_transformation.py'
     label: Notebook to trasnform GeoTIFF to COG
-    title: 'EPA methane emissions data transformation notebook'
+    title: 'EPA Anthropogenic Methane Emissions data transformation notebook'
   - url: 'https://github.com/NASA-IMPACT/GHGC_docs/blob/main/user_data_notebooks/epa_ch4_data_notebook.ipynb'
     label: Notebook to read, visualize, and explore data statistics
-    title: 'EPA methane emissions data notebook'
+    title: 'EPA Anthropogenic Methane Emissions data notebook'
+  - url: 'https://hub.ghg.center/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FUS-GHG-Center%2Fghgc-docs&urlpath=tree%2Fghgc-docs%2Fuser_data_notebooks%2Fepa-ch4emission-grid-v2_User_Notebook.ipynb&branch=main'
+    label: Run example notebook
+    title: Interactive session in the U.S. GHG Center 2i2c JupyterHub (requires account)    
 media:
   src: ::file ./epa-annual--cover.jpg
   alt: emission from industry
@@ -26,8 +29,7 @@ taxonomy:
       - CH₄
   - name: Product Type
     values:
-      - Satellite Measured
-      - Ground Measurements      
+      - Ground Data      
 layers:
   - id: enteric-fermentation
     stacCol: epa-ch4-v2-annual
@@ -52,6 +54,8 @@ layers:
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }      
     legend:
+      unit: 
+       label: molecule/cm²/s      
       type: gradient
       min: 0
       max: 4182634135552
@@ -67,7 +71,7 @@ layers:
     stacCol: epa-ch4-v2-annual
     name: Manure Management (annual)
     type: raster
-    description: Emissions from sector 4B from manure management.
+    description: Emissions from sector 3B from manure management.
     zoomExtent:
       - 0
       - 20
@@ -99,6 +103,42 @@ layers:
         - "#f2ce00"
         - "#ef6a01"
         - "#cc0019"
+  - id: manure-management-monthly
+    stacCol: epa-ch4-v2-monthly
+    name: Manure Management (monthly)
+    type: raster
+    description: Emissions from sector 3B from manure management.
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: manure-management
+      colormap_name: rainbow
+      rescale:
+        - 0
+        - 2
+      nodata: 0
+    compare:
+      datasetId: epa-emissions-v2
+      layerId: manure-management-monthly
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }      
+    legend:
+      unit: 
+       label: molecule/cm²/s
+      type: gradient
+      min: 0 
+      max: 2
+      stops:
+        - "#60007d"
+        - "#30137d"
+        - "#1960ae"
+        - "#7ac300"
+        - "#f2ce00"
+        - "#ef6a01"
+        - "#cc0019"        
   - id: 4c-rice-cultivation
     stacCol: epa-ch4-v2-annual
     name: Rice Cultivation (annual)
@@ -133,6 +173,42 @@ layers:
         - "#f2ce00"
         - "#ef6a01"
         - "#cc0019"
+  - id: 4c-rice-cultivation-monthly
+    stacCol: epa-ch4-v2-monthly
+    name: Rice Cultivation (monthly)
+    type: raster
+    description: Emissions from sector 4C from rice cultivation.
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: rice-cultivation
+      colormap_name: rainbow
+      rescale:
+        - 0
+        - 1
+      nodata: 0
+    compare:
+      datasetId: epa-emissions-v2
+      layerId: 4c-rice-cultivation-monthly
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }      
+    legend:
+      unit: 
+       label: molecule/cm²/s
+      type: gradient
+      min: 0
+      max: 1
+      stops:
+        - "#60007d"
+        - "#30137d"
+        - "#1960ae"
+        - "#7ac300"
+        - "#f2ce00"
+        - "#ef6a01"
+        - "#cc0019"        
   - id: 4f-field-burning
     stacCol: epa-ch4-v2-annual
     name: Field Burning (annual)
@@ -156,6 +232,8 @@ layers:
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }      
     legend:
+      unit: 
+       label: molecule/cm²/s
       type: gradient
       min: 0
       max: 27056996352
@@ -167,6 +245,42 @@ layers:
         - "#f2ce00"
         - "#ef6a01"
         - "#cc0019"
+  - id: 4f-field-burning-monthly
+    stacCol: epa-ch4-v2-monthly
+    name: Field Burning (monthly)
+    type: raster
+    description: Emissions from sector 4F from agricultural field burning.
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: field-burning
+      colormap_name: rainbow
+      rescale:
+        - 0
+        - 15
+      nodata: 0
+    compare:
+      datasetId: epa-emissions-v2
+      layerId: 4f-field-burning-monthly
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }      
+    legend:
+      unit: 
+       label: molecule/cm²/s
+      type: gradient
+      min: 0
+      max: 15
+      stops:
+        - "#60007d"
+        - "#30137d"
+        - "#1960ae"
+        - "#7ac300"
+        - "#f2ce00"
+        - "#ef6a01"
+        - "#cc0019"        
   - id: 1B2b-exploration-ngs
     stacCol: epa-ch4-v2-annual
     name: Natural Gas Exploration (annual)
@@ -190,6 +304,8 @@ layers:
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }      
     legend:
+      unit: 
+       label: molecule/cm²/s
       type: gradient
       min: 0
       max: 2611559792640
@@ -201,6 +317,42 @@ layers:
         - "#f2ce00"
         - "#ef6a01"
         - "#cc0019"
+  - id: 1B2b-exploration-ngs-monthly
+    stacCol: epa-ch4-v2-monthly
+    name: Natural Gas Exploration (monthly)
+    type: raster
+    description: Emissions from sector 4F from agricultural field burning.
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: exploration-ngs
+      colormap_name: rainbow
+      rescale:
+        - 0
+        - 15
+      nodata: 0
+    compare:
+      datasetId: epa-emissions-v2
+      layerId: 1B2b-exploration-ngs-monthly
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }      
+    legend:
+      unit: 
+       label: molecule/cm²/s
+      type: gradient
+      min: 0
+      max: 15
+      stops:
+        - "#60007d"
+        - "#30137d"
+        - "#1960ae"
+        - "#7ac300"
+        - "#f2ce00"
+        - "#ef6a01"
+        - "#cc0019"        
   - id: 1B2b-production-ngs
     stacCol: epa-ch4-v2-annual
     name: Natural Gas Production (annual)
@@ -224,6 +376,8 @@ layers:
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }      
     legend:
+      unit: 
+       label: molecule/cm²/s
       type: gradient
       min: 0
       max: 13900969934848
@@ -234,7 +388,43 @@ layers:
         - "#7ac300"
         - "#f2ce00"
         - "#ef6a01"
-        - "#cc0019"
+        - "#cc0019"  
+  - id: 1B2b-production-ngs-monthly
+    stacCol: epa-ch4-v2-monthly
+    name: Natural Gas Production (monthly)
+    type: raster
+    description: Emissions from sector 4F from agricultural field burning.
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: production-ngs
+      colormap_name: rainbow
+      rescale:
+        - 0
+        - 15
+      nodata: 0
+    compare:
+      datasetId: epa-emissions-v2
+      layerId: 1B2b-production-ngs-monthly
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }      
+    legend:
+      unit: 
+       label: molecule/cm²/s
+      type: gradient
+      min: 0
+      max: 15
+      stops:
+        - "#60007d"
+        - "#30137d"
+        - "#1960ae"
+        - "#7ac300"
+        - "#f2ce00"
+        - "#ef6a01"
+        - "#cc0019"              
   - id: 1B2b-transmission-storage-ngs
     stacCol: epa-ch4-v2-annual
     name: Transmission and Storage (annual)
@@ -258,6 +448,8 @@ layers:
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }      
     legend:
+      unit: 
+       label: molecule/cm²/s
       type: gradient
       min: 0
       max: 19360041140224
@@ -292,6 +484,8 @@ layers:
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }      
     legend:
+      unit: 
+       label: molecule/cm²/s
       type: gradient
       min: 0
       max: 63448557813760
@@ -326,6 +520,8 @@ layers:
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }      
     legend:
+      unit: 
+       label: molecule/cm²/s
       type: gradient
       min: 0
       max: 3239707148288
@@ -360,6 +556,8 @@ layers:
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }      
     legend:
+      unit: 
+       label: molecule/cm²/s
       type: gradient
       min: 0
       max: 185182912512
@@ -371,6 +569,42 @@ layers:
         - "#f2ce00"
         - "#ef6a01"
         - "#cc0019"        
+  - id: 1B2a-exploration-ps-monthly
+    stacCol: epa-ch4-v2-monthly
+    name: Exploration Petroleum (monthly)
+    type: raster
+    description: Emissions from sector 4F from agricultural field burning.
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: exploration-ps
+      colormap_name: rainbow
+      rescale:
+        - 0
+        - 15
+      nodata: 0
+    compare:
+      datasetId: epa-emissions-v2
+      layerId: 1B2a-exploration-ps-monthly
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }      
+    legend:
+      unit: 
+       label: molecule/cm²/s
+      type: gradient
+      min: 0
+      max: 15
+      stops:
+        - "#60007d"
+        - "#30137d"
+        - "#1960ae"
+        - "#7ac300"
+        - "#f2ce00"
+        - "#ef6a01"
+        - "#cc0019"                
   - id: 1B2a-production-ps
     stacCol: epa-ch4-v2-annual
     name: Production Petroleum (annual)
@@ -394,6 +628,8 @@ layers:
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }      
     legend:
+      unit: 
+       label: molecule/cm²/s
       type: gradient
       min: 0
       max: 14142707597312
@@ -404,7 +640,41 @@ layers:
         - "#7ac300"
         - "#f2ce00"
         - "#ef6a01"
-        - "#cc0019"        
+        - "#cc0019"     
+  - id: 1B2a-production-ps-monthly
+    stacCol: epa-ch4-v2-monthly
+    name: Production Petroleum (monthly)
+    type: raster
+    description: Emissions from sector 4F from agricultural field burning.
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: production-ps
+      colormap_name: rainbow
+      rescale:
+        - 0
+        - 14
+      nodata: 0
+    compare:
+      datasetId: epa-emissions-v2
+      layerId: 1B2a-production-ps-monthly
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }      
+    legend:
+      type: gradient
+      min: 0
+      max: 14
+      stops:
+        - "#60007d"
+        - "#30137d"
+        - "#1960ae"
+        - "#7ac300"
+        - "#f2ce00"
+        - "#ef6a01"
+        - "#cc0019"               
   - id: 1B2a-transport-ps
     stacCol: epa-ch4-v2-annual
     name: Transportation Petroleum (annual)
@@ -428,6 +698,8 @@ layers:
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }      
     legend:
+      unit: 
+       label: molecule/cm²/s
       type: gradient
       min: 0
       max: 321039630336
@@ -439,6 +711,42 @@ layers:
         - "#f2ce00"
         - "#ef6a01"
         - "#cc0019"        
+  - id: 1B2a-transport-ps-monthly
+    stacCol: epa-ch4-v2-monthly
+    name: Transportation Petroleum (monthly)
+    type: raster
+    description: Emissions from sector 4F from agricultural field burning.
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: transport-ps
+      colormap_name: rainbow
+      rescale:
+        - 0
+        - 15
+      nodata: 0
+    compare:
+      datasetId: epa-emissions-v2
+      layerId: 1B2a-transport-ps-monthly
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }      
+    legend:
+      unit: 
+       label: molecule/cm²/s
+      type: gradient
+      min: 0
+      max: 15
+      stops:
+        - "#60007d"
+        - "#30137d"
+        - "#1960ae"
+        - "#7ac300"
+        - "#f2ce00"
+        - "#ef6a01"
+        - "#cc0019"                
   - id: 1B2a-refining-ps
     stacCol: epa-ch4-v2-annual
     name: Refining Petroleum (annual)
@@ -462,6 +770,8 @@ layers:
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }      
     legend:
+      unit: 
+       label: molecule/cm²/s
       type: gradient
       min: 0
       max: 2642320293888
@@ -473,6 +783,42 @@ layers:
         - "#f2ce00"
         - "#ef6a01"
         - "#cc0019"   
+  - id: 1B2a-refining-ps-monthly
+    stacCol: epa-ch4-v2-monthly
+    name: Refining Petroleum (monthly)
+    type: raster
+    description: Emissions from sector 4F from agricultural field burning.
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: refining-ps
+      colormap_name: rainbow
+      rescale:
+        - 0
+        - 2
+      nodata: 0
+    compare:
+      datasetId: epa-emissions-v2
+      layerId: 1B2a-refining-ps-monthly
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }      
+    legend:
+      unit: 
+       label: molecule/cm²/s
+      type: gradient
+      min: 0
+      max: 2
+      stops:
+        - "#60007d"
+        - "#30137d"
+        - "#1960ae"
+        - "#7ac300"
+        - "#f2ce00"
+        - "#ef6a01"
+        - "#cc0019"           
   - id: 5A1-msw-landfill-waste
     stacCol: epa-ch4-v2-annual
     name: Municipal Solid Waste (MSW) Landfills (annual)
@@ -496,6 +842,8 @@ layers:
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }      
     legend:
+      unit: 
+       label: molecule/cm²/s
       type: gradient
       min: 0
       max: 45878274424832
@@ -530,6 +878,8 @@ layers:
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }      
     legend:
+      unit: 
+       label: molecule/cm²/s
       type: gradient
       min: 0
       max: 43219505119232
@@ -564,6 +914,8 @@ layers:
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }      
     legend:
+      unit: 
+       label: molecule/cm²/s
       type: gradient
       min: 0
       max: 13170276040704
@@ -598,6 +950,8 @@ layers:
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }      
     legend:
+      unit: 
+       label: molecule/cm²/s
       type: gradient
       min: 0
       max: 62315768578048
@@ -632,6 +986,8 @@ layers:
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }      
     legend:
+      unit: 
+       label: molecule/cm²/s
       type: gradient
       min: 0
       max: 726430777344
@@ -666,6 +1022,8 @@ layers:
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }      
     legend:
+      unit: 
+       label: molecule/cm²/s
       type: gradient
       min: 0
       max: 195221799305216
@@ -700,6 +1058,8 @@ layers:
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }      
     legend:
+      unit: 
+       label: molecule/cm²/s
       type: gradient
       min: 0
       max: 11779458465792
@@ -734,6 +1094,8 @@ layers:
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }      
     legend:
+      unit: 
+       label: molecule/cm²/s
       type: gradient
       min: 0
       max: 97066218946560
@@ -768,6 +1130,8 @@ layers:
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }      
     legend:
+      unit: 
+       label: molecule/cm²/s
       type: gradient
       min: 0
       max: 1096969945088
@@ -779,6 +1143,42 @@ layers:
         - "#f2ce00"
         - "#ef6a01"
         - "#cc0019"            
+  - id: 1A-stationary-combustion-other-monthly
+    stacCol: epa-ch4-v2-monthly
+    name: Stationary combustion (monthly)
+    type: raster
+    description: Emissions from sector 4F from agricultural field burning.
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: stationary-combustion-other
+      colormap_name: rainbow
+      rescale:
+        - 0
+        - 6
+      nodata: 0
+    compare:
+      datasetId: epa-emissions-v2
+      layerId: 1A-stationary-combustion-other-monthly
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }      
+    legend:
+      unit: 
+       label: molecule/cm²/s
+      type: gradient
+      min: 0
+      max: 6
+      stops:
+        - "#60007d"
+        - "#30137d"
+        - "#1960ae"
+        - "#7ac300"
+        - "#f2ce00"
+        - "#ef6a01"
+        - "#cc0019"                    
   - id: 1A-mobile-combustion-othe
     stacCol: epa-ch4-v2-annual
     name: Mobile combustion (annual)
@@ -802,6 +1202,8 @@ layers:
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }      
     legend:
+      unit: 
+       label: molecule/cm²/s
       type: gradient
       min: 0
       max: 356184489984
@@ -836,6 +1238,8 @@ layers:
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }      
     legend:
+      unit: 
+       label: molecule/cm²/s
       type: gradient
       min: 0
       max: 4824812748800
@@ -870,6 +1274,8 @@ layers:
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }      
     legend:
+      unit: 
+       label: molecule/cm²/s
       type: gradient
       min: 0
       max: 4687914860544
@@ -904,6 +1310,8 @@ layers:
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }      
     legend:
+      unit: 
+       label: molecule/cm²/s
       type: gradient
       min: 0
       max: 99607961600
@@ -917,40 +1325,52 @@ layers:
         - "#cc0019"                   
 ---
 
+<Block type='wide'>
+  <Prose>
+    The EPA 2012-2018 Gridded Anthropogenic Methane Emissions V2 data product reflects the activity and emission factor data underlying the EPA’s Inventory of U.S. Greenhouse Gas Emissions and Sinks (GHGI). To be consistent with the national U.S. GHGI published in 2020, this data product is an update to EPA’s gridded GHGI version 1 dataset. The version 2 updated dataset provides an annual inventory of anthropogenic methane emissions over the contiguous United States over the period from 2012-2018 on a  0.1 x 0.1 degree grid. Emissions are provided in molecules CH4cm-2s-1, and data are collected from 26 individual source categories relating to agriculture, natural gas systems, petroleum systems, waste, and coal mines among others. The data have been converted from NetCDF to Cloud-Optimized GeoTIFF (COG) for use in the U.S. GHG Center, enabling robust comparisons of emissions and their trends.
+   
+    - **Temporal Extent:** 2012 - 2018   
+    - **Temporal Resolution:** Annual,Monthly and Daily    
+    - **Spatial Extent:** Contiguous United States  
+    - **Spatial Resolution:** 0.1° x 0.1°    
+    - **Data Units:** Molecules of methane per square centimeter per second (Molecules CH₄ cm²/s)    
+    - **Data type:** Regulatory
+    - **Data Latency:** N/A
+
+    **Scientific Details:** The annual files include a ‘Grid_cell_area’ variable to help users convert the emission fluxes to emission mass totals. The variable also includes a time dimension to make it suitable (COARDS-compliant) for use in atmospheric models. In addition to annual emission flux files, the main gridded dataset also includes monthly source-specific methane emission scaling factors for sources with strong interannual variability. For these select sources, the scaling factors can be multiplied with the data in the annual emission files to obtain monthly methane emission fluxes. Monthly data is not included in the GHG Center.  
+  </Prose>
+</Block>
 <Block>
   <Prose>
-    ## Methane Emissions
-
-    A team at Harvard University along with EPA and other coauthors developed a gridded inventory of U.S. anthropogenic methane emissions with 0.1° x 0.1° spatial resolution, monthly temporal resolution, and detailed scale-dependent error characterization. The inventory is designed to be consistent with the 2016 U.S. [EPA Inventory of U.S. Greenhouse Gas Emissions and Sinks](https://www.epa.gov/ghgemissions/us-greenhouse-gas-inventory-report-1990-2014) estimates for the year 2012, which presents national totals for different source types. The gridded inventory was developed using a wide range of databases at the state, county, local, and point source level to allocate the spatial and temporal distribution of emissions for individual source types.
-    This data can be used by researchers to better compare the national-level inventory with measurement results that may be at other scales. Users of this gridded inventory are asked to cite the original reference (Maasakkers et al., 2016) in their publications. Error estimates are given in that reference.
-    
-    - **Temporal extent:** 2015/01/01 - 2018/12/31    
-    - **Temporal resolution:** Annual/Monthly/Daily    
-    - **Spatial extent:** US   
-    - **Spatial resolution:** 0.1 deg x 0. 1 deg    
-    - **Data units:** Mg a-1 km-2     
-    - **Data type:** Research
-
     ## Source Data Product Citation
+    McDuffie, Erin, E., Maasakkers, Joannes, D., Sulprizio, Melissa, P., Chen, Candice, Schultz, Maggie, Brunelle, Lily, Thrush, Ryan, Steller, John, Sherry, Christopher, Jacob, Daniel, J., Jeong, Seongeun, Irving, Bill, & Weitz, Melissa. (2023). Gridded EPA U.S. Anthropogenic Methane Greenhouse Gas Inventory (gridded GHGI) (Preprint) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.7672124
 
+    ## Dataset Accuracy
+    Using inverse analysis, uncertainty and error variances are estimated by comparing source- specific 2012 gridded estimates to those from an external detailed bottom-up inventory for the Barnett region in Texas that was compiled in 2015 and matches atmospheric measurements. For more information on uncertainty estimates, refer to the Maasakkers et al. (2023) paper.	 
+    
     ## Disclaimer
-    All data provided in the U.S. GHG Center has been transformed from the original format into Cloud Optimized GeoTIFF (COG). Careful quality checks are used to ensure data transformation has been performed correctly.  
+    All data provided in the U.S. GHG Center has been transformed from the original format (NetCDF) into Cloud Optimized GeoTIFF ([COG] (https://www.cogeo.org/)). Careful quality checks are used to ensure data transformation has been performed correctly. 
+
+    Note that this dataset does not currently include emissions from the Land Use, Land Use Change, and Forestry (LULUCF) category of the national U.S. GHGI. Methane emissions from these sources include but are not limited to emissions from fires and flooded lands. 
+
+    The EPA Anthropogenic Methane Emissions (Express Extension) data is considered an extension of the main gridded GHGI dataset that’s consistent with the 2020 U.S. GHGI Report. The express extension dataset is not a full update to the main gridded GHGI dataset, and instead uses annual source-specific spatial patterns from 2012-2018 from the main dataset to quickly incorporate more recent national methane emission estimates. Regardless of application, users should not combine emissions data from the main gridded dataset with the express extension. Additionally, for years after 2018, monthly scaling factors should only be applied to the express extension for manure management, rice cultivation, and field burning of agricultural residue emissions. For more information on the differences between the main gridded GHGI dataset and the express extension, visit the Gridded EPA U.S. Anthropogenic Methane Greenhouse Gas Inventory.
 
     ## Key Publications
-    Maasakkers, J. D., Jacob, D. J., Sulprizio, M. P., Turner, A. J., Weitz, M., Wirth, T., ... & Fischer, M. L. (2016). Gridded national inventory of US methane emissions. Environmental science & technology, 50(23), 13123-13133.
+    Maasakkers, J., McDuffie, E., Sulprizio, M., Chen, C., Schultz, M., Brunelle, L., Thrush, R., Steller, J., Sherry, C., Jacob, D., Jeong, S., Irving, B., & Weitz, M. (2023). A gridded inventory of annual 2012-2018 U.S. anthropogenic methane emissions. EarthArXiv (California Digital Library). https://doi.org/10.31223/x5rq3m
     
     ## Other Relevant Publications
-
+    Maasakkers, J., Jacob, D., Sulprizio, M., Turner, A., Weitz, M., Wirth, T., Hight, C., DeFigueiredo, M., Desai, M., Schmeltz, R., Hockstad, L., Bloom, A., Bowman, K., Jeong, S., Fischer, M. (2016). Gridded National Inventory of U.S. Methane Emissions. Environmental Science & Technology, 50(23), 13123-13133. https://doi.org/10.1021/acs.est.6b02878
+    
     ## Acknowledgment
-
+    The EPA team was supported in part by an American Association for the Advancement of Science (AAAS) Science and Technology Policy Fellowship and the NASA Carbon Monitoring System. Additional members of the EPA GHG Inventory Team and NEI oil and gas inventory team provided data and support while developing the gridded estimates. D.R. Lyon, D. Zavala-Araiza, and S.P. Hamburg provided the methane emissions data for the Barnett Shale Basin developed by the Environmental Defense Fund.
+    
     ## License
-    CC BY 4.0 (Creative Commons Attribution 4.0 International)  
+    [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/legalcode) (CC BY 4.0) 
     
     ## Data Stewardship
-    - [Data Workflow]
-    - [Data Transformation Code](https://github.com/NASA-IMPACT/GHGC_docs/blob/main/cog_transformation_scripts/NASA_GSFC_wetlands_transformation.py)
-    - [U.S. GHG Center Data Intake Processing and Verification Report](https://github.com/NASA-IMPACT/GHGC_docs/blob/main/processing_and_confirmation_reports/ODIAC_Processing%20and%20Confirmation%20Report%20.pdf)
-    - [Notes]
+    - [Data Workflow](https://github.com/US-GHG-Center/ghgc-docs/blob/main/data_workflow/epa-ch4emission-grid-v2_Data_Flow.png)
+    - [Data Transformation Code](https://github.com/US-GHG-Center/ghgc-docs/blob/main/cog_transformation_scripts/epa-ch4emission-grid-v2_Transformation_Code.py)
+    - [U.S. GHG Center Data Intake Processing and Verification Report](https://github.com/US-GHG-Center/ghgc-docs/blob/main/processing_and_verification_reports/epa-ch4emission-grid-v2_Processing%20and%20Verification%20Report.pdf)
 
   </Prose>
 </Block>

@@ -1,0 +1,121 @@
+---
+id: eccodarwin-co2flux-month
+name: Air-Sea CO2 Flux, ECCO-Darwin Model v5
+description: Global, monthly average air-sea CO2 flux at ~1/3° resolution from 2020 to 2022
+usage:
+  - url: 'https://github.com/US-GHG-Center/ghgc-docs/blob/main/cog_transformation_scripts/eccodarwin-co2flux-monthgrid-v5_Transformation_Code.py'
+    label: Notebook to transform GeoTIFF to COG
+    title: 'Air-Sea CO2 Flux, ECCO-Darwin Model data transformation notebook'
+  - url: 'https://github.com/US-GHG-Center/ghgc-docs/blob/main/user_data_notebooks/eccodarwin-co2flux-monthgrid-v5_User_Notebook.ipynb'
+    label: Notebook to read, visualize, and explore data statistics
+    title: 'Air-Sea CO2 Flux, ECCO-Darwin Model data notebook'
+  - url: 'https://hub.ghg.center/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FUS-GHG-Center%2Fghgc-docs&urlpath=tree%2Fghgc-docs%2Fuser_data_notebooks%2Feccodarwin-co2flux-monthgrid-v5_User_Notebook.ipynb&branch=main'
+    label: Run example notebook
+    title: Interactive session in the U.S. GHG Center 2i2c JupyterHub (requires account)
+media:
+  src: ::file ./eccodarwin--dataset-cover.jpg
+  alt: A factory with smoke
+  author:
+    name: Tim van der Kuip
+    url: https://unsplash.com/photos/ELbnYDoxido
+taxonomy:
+  - name: Topics
+    values:
+      - Natural Emissions and Sinks
+  - name: Source
+    values:
+      - NASA
+  - name: Gas
+    values:
+      - CO₂
+  - name: Product Type
+    values:
+      - Model Output
+layers:
+  - id: air-sea-co2
+    stacCol: eccodarwin-co2flux-monthgrid-v5
+    name: Air-Sea CO₂ Flux
+    type: raster
+    description: Monthly mean air-sea CO2 Flux (negative into ocean)
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: co2
+      colormap_name: rainbow
+      rescale:
+        - -0.0015 
+        - 0.0002 
+      nodata: 0
+    compare:
+      datasetId: eccodarwin-co2flux-month
+      layerId: air-sea-co2
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit: 
+        label: mmol m²/s
+      type: gradient
+      min: -0.01  
+      max: 0.01  
+      stops:
+        - '#60007d'
+        - '#30137d'
+        - '#1960ae'
+        - '#7ac300'
+        - '#f2ce00'
+        - '#ef6a01'
+        - '#cc0019'
+---
+
+<Block type='wide'>
+  <Prose>
+    The ocean is a major sink for atmospheric carbon dioxide (CO2), largely due to the presence of phytoplankton that use the CO2 to grow. Studies have shown that global ocean CO2 uptake has increased over recent decades however there is uncertainty in the various mechanisms that affect ocean CO2 flux and storage and how the ocean carbon sink will respond to future climate change. Because CO2 fluxes can vary significantly across space and time, combined with deficiencies in ocean and atmosphere CO2 observations, there is a need for models that can thoroughly represent these processes. Ocean biogeochemical models (OBMs) have the ability to resolve the physical and biogeochemical mechanisms contributing to spatial and temporal variations in air-sea CO2 fluxes but previous OBMs do not integrate observations to improve model accuracy and have not be able to operate on the seasonal and multi-decadal timescales needed to adequately characterize these processes. The ECCO-Darwin model is an OBM that assimilates Estimating the Circulation and Climate of the Ocean (ECCO) consortium ocean circulation estimates and biogeochemical processes from the Massachusetts Institute of Technology (MIT) Darwin Project. A pilot study using ECCO-Darwin was completed by [Brix et al. (2015)](https://doi.org/10.1016/j.ocemod.2015.07.008) however an improved version of the model was developed by [Carroll et al. (2020)](https://doi.org/10.1029/2019MS001888) in which issues present in the first model were addressed using data assimilation and adjustments were made to initial conditions and biogeochemical parameters. The updated ECCO-Darwin model was compared with interpolation-based products to estimate surface ocean partial pressure (pCO2) and air-sea CO2 flux. This dataset contains the gridded global, monthly mean air-sea CO2 fluxes from version 5 of the ECCO-Darwin model. The data are available at ~1/3° horizontal resolution at the equator (~18 km at high latitudes) from January 2020 through December 2022.
+    - **Temporal Extent:** January 2020 - December 2022
+    - **Temporal Resolution:** Monthly    
+    - **Spatial Extent:** Global    
+    - **Spatial Resolution:** Approximately 1/3° x  1/3° (at the equator)    
+    - **Data Units:** Millimoles of CO2 per meter squared per second (mmol m²/s)
+    - **Data Type:** Research
+    - **Data Latency:** 
+    
+
+    **Scientific Details:** The data assimilation techniques used for the physical and biogeochemical components of the ECCO-Darwin model are both linearized least squares minimization approaches. For ocean physics, ocean-ice state estimates from the ECCO LLC270 model were fit to observations including sea level anomalies, ocean bottom pressure anomalies, sea surface temperature, sea ice concentration, and ocean temperature and salinity profiles using an adjoint method. For ocean biogeochemistry, the MIT Darwin Project ecosystem model used low-dimensional Green’s function optimization to adjust initial conditions and biogeochemical parameters. Using the paired ocean physics and biogeochemistry, air-sea CO2 flux was calculated using the [Wanninkhof (1992)](https://doi.org/10.1029/92JC00188) parameterization for determining gas exchange across the air-sea interface.
+
+  </Prose>
+</Block>
+<Block>
+  <Prose>
+    ## Source Data Product Citation
+    
+    ## Dataset Accuracy
+    The techniques used for optimization of the ECCO-Darwin model, including assimilation of physical and biogeochemical observations, provide physically consistent and property-conserving ocean state estimates. The ECCO-Darwin model air-sea CO2 fluxes showed general agreement with interpolation-based models, especially in subtropical and equatorial regions. The ECCO-Darwin time-mean global ocean CO2 sink of −2.47 ± 0.50 Pg C year−1 (1995 - 2017) fits within the uncertainty of the Global Carbon Project estimate of −2.24 ± 0.76 Pg C year−1 for the same period and agrees in magnitude and temporal variability with the interpolation-based models.
+    
+    ## Disclaimer
+    All data provided in the U.S. GHG Center has been transformed from the original format (NetCDF) into Cloud Optimized GeoTIFF ([COG](https://www.cogeo.org/)). Careful quality checks are used to ensure data transformation has been performed correctly.
+  
+    ## Key Publications  
+    Carroll, D., Menemenlis, D., Adkins, J. F., Bowman, K. W., Brix, H., Dutkiewicz, S., Fenty, I., Gierach, M. M., Hill, C., Jahn, O., Landschützer, P., Lauderdale, J. M., Liu, J., Manizza, M., Naviaux, J. D., Rödenbeck, C., Schimel, D. S., Van der Stocken, T., & Zhang, H. (2020). The ECCO-Darwin data-assimilative global ocean biogeochemistry model: Estimates of seasonal to multidecadal surface ocean pCO2 and air-sea CO2 flux. Journal of Advances in Modeling Earth Systems, 12(10), e2019MS001888. [https://doi.org/10.1029/2019MS001888](https://doi.org/10.1029/2019MS001888)
+
+    ## Other Relevant Publications
+    Brix, H., Menemenlis, D., Hill, C., Dutkiewicz, S., Jahn, O., Wang, D., & Zhang, H. (2015). Using Green's functions to initialize and adjust a global, eddying ocean biogeochemistry general circulation model. Ocean Modelling, 95, 1–14. [https://doi.org/10.1016/j.ocemod.2015.07.008](https://doi.org/10.1016/j.ocemod.2015.07.008)
+
+    Friedlingstein, P., Jones, M. W., O’Sullivan, M., Andrew, R. M., Hauck, J., Peters, G. P., Peters, W., Pongratz, J., Sitch, S., Le Quéré, C., Bakker, D. C. E., Canadell, J. G., Ciais, P., Jackson, R. B., Anthoni, P., Barbero, L., Bastos, A., Bastrikov, V., Becker, M., … Zaehle, S. (2019). Global carbon budget 2019. Earth System Science Data, 11(4), 1783–1838. [https://doi.org/10.5194/essd-11-1783-2019](https://doi.org/10.5194/essd-11-1783-2019)
+
+    Wanninkhof, R. (1992). Relationship between wind speed and gas exchange over the ocean. Journal of Geophysical Research: Oceans, 97(C5), 7373-7382. [https://doi.org/10.1029/92jc00188](https://doi.org/10.1029/92jc00188)
+
+    ## Acknowledgment
+    This dataset was produced by researchers at the NASA Jet Propulsion Laboratory, California Institute of Technology. High-end computing resources were provided by the NASA Advanced Supercomputing (NAS) Division. Additional support and funding were provided by the NASA Biological Diversity Program, NASA Physical Oceanography Program, NASA Modeling, Analysis, and Prediction Program, NASA ROSES, and the U.S. National Science Foundation.
+ 
+    ## License
+    [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/legalcode) (CC BY 4.0) 
+      
+    ## Data Stewardship
+    - [Data Workflow](https://github.com/US-GHG-Center/ghgc-docs/blob/main/data_workflow/eccodarwin-co2flux-monthgrid-v5_Data_Flow.png)
+    - [Data Transformation Code](https://github.com/US-GHG-Center/ghgc-docs/blob/main/cog_transformation_scripts/eccodarwin-co2flux-monthgrid-v5_Transformation_Code.py)
+    - [U.S. GHG Center Data Intake Processing and Verification Report](https://github.com/US-GHG-Center/ghgc-docs/blob/main/processing_and_verification_reports/eccodarwin-co2flux-monthgrid-v5_Processing%20and%20Verification%20Report.pdf)
+  
+  </Prose>
+</Block>
