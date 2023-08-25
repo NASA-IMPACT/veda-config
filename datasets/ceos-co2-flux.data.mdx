@@ -6,7 +6,7 @@ media:
   src: ::file ./co2-flux-ceos--cover.jpg
   alt: White smoke coming from building
   author:
-    name: Chris LeBoutillier 
+    name: Chris LeBoutillier
     url: https://unsplash.com/photos/OD8hvYhJ1yQ
 thematics:
   - air-quality
@@ -36,7 +36,7 @@ layers:
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }
     legend:
-      unit: 
+      unit:
         label: gC m-2 year-1
       type: gradient
       min: -80
@@ -72,7 +72,7 @@ layers:
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }
     legend:
-      unit: 
+      unit:
         label: gC m-2 year-1
       type: gradient
       min: -900
@@ -108,7 +108,7 @@ layers:
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }
     legend:
-      unit: 
+      unit:
         label: gC m-2 year-1
       type: gradient
       min: -120
@@ -144,7 +144,7 @@ layers:
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }
     legend:
-      unit: 
+      unit:
         label: gC m-2 year-1
       type: gradient
       min: 50
@@ -156,7 +156,7 @@ layers:
         - '#7ac300'
         - '#f2ce00'
         - '#ef6a01'
-        - '#cc0019'      
+        - '#cc0019'
   - id: co2-emissions-is-nbe
     stacCol: ceos-co2-flux-budgets
     name: In Situ Net biosphere exchange (IS NBE)
@@ -180,7 +180,7 @@ layers:
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }
     legend:
-      unit: 
+      unit:
         label: gC m-2 year-1
       type: gradient
       min: -1400
@@ -192,7 +192,7 @@ layers:
         - '#7ac300'
         - '#f2ce00'
         - '#ef6a01'
-        - '#cc0019'                           
+        - '#cc0019'
   - id: co2-emissions-is-nce
     stacCol: ceos-co2-flux-budgets
     name: In Situ Terrestrial net carbon exchange (IS NCE)
@@ -216,7 +216,7 @@ layers:
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }
     legend:
-      unit: 
+      unit:
         label: gC m-2 year-1
       type: gradient
       min: -1220
@@ -228,7 +228,7 @@ layers:
         - '#7ac300'
         - '#f2ce00'
         - '#ef6a01'
-        - '#cc0019'                                  
+        - '#cc0019'
 ---
 
 <Block>
@@ -237,17 +237,17 @@ layers:
     1. Top-down annual net land-atmosphere CO2 fluxes (NCE) from an ensemble of atmospheric CO₂ inversions.
     2. Bottom-up estimates of fossil fuel emissions and lateral carbon fluxes due to crop trade, wood trade, and river export.
     3. Annual changes (loss) in terrestrial carbon stocks (ΔCloss) obtained by combining top-down and bottom-up estimates
-    
-    - **Temporal extent:** 2015 – 2020    
-    - **Temporal resolution:** Yearly    
-    - **Spatial extent:** Global    
-    - **Spatial resolution:** 1 degree x 1 degree    
-    - **Data units:** Grams of carbon per meters squared per year (gC m<sup>-2</sup> year<sup>-1</sup>) 
+
+    - **Temporal extent:** 2015 – 2020
+    - **Temporal resolution:** Yearly
+    - **Spatial extent:** Global
+    - **Spatial resolution:** 1 degree x 1 degree
+    - **Data units:** Grams of carbon per meters squared per year (gC m<sup>-2</sup> year<sup>-1</sup>)
     - **Data type:** Research
 
     ## Source Data Product Citation
-    Byrne, B., Baker, D. F., Basu, S., Bertolacci, M., Bowman, K. W., Carroll, D., Chatterjee, A., Chevallier, F., Ciais, P., Cressie, N., Crisp, D., Crowell, S., Deng, F., Deng, Z., Deutscher, N. M., Dubey, M. K., Feng, S., García, O. E., Herkommer, B., Hu, L., Jacobson, A. R., Janardanan, R., Jeong, S., Johnson, M. S., Jones, D. B. A., Kivi, R., Liu, J., Liu, Z., Maksyutov, S., Miller, J. B., Miller, S. M., Morino, I., Notholt, J., Oda, T., O’Dell, C. W., Oh, Y.-S., Ohyama, H., Patra, P. K., Peiro, H., Petri, C., Philip, S., Pollard, D. F., Poulter, B., Remaud, M., Schuh, A., Sha, M. K., Shiomi, K., Strong, K., Sweeney, C., Té, Y., Tian, H., Velazco, V. A., Vrekoussis, M., Warneke, T., Worden, J. R., Wunch, D., Yao, Y., Yun, J., Zammit-Mangion, A., and Zeng, N.: Pilot top-down CO2 Budget constrained by the v10 OCO-2 MIP Version 1, Committee on Earth Observing Satellites, https://doi.org/10.48588/npf6-sw92, Version 1.0, 2022    
-    
+    Byrne, B., Baker, D. F., Basu, S., Bertolacci, M., Bowman, K. W., Carroll, D., Chatterjee, A., Chevallier, F., Ciais, P., Cressie, N., Crisp, D., Crowell, S., Deng, F., Deng, Z., Deutscher, N. M., Dubey, M. K., Feng, S., García, O. E., Herkommer, B., Hu, L., Jacobson, A. R., Janardanan, R., Jeong, S., Johnson, M. S., Jones, D. B. A., Kivi, R., Liu, J., Liu, Z., Maksyutov, S., Miller, J. B., Miller, S. M., Morino, I., Notholt, J., Oda, T., O’Dell, C. W., Oh, Y.-S., Ohyama, H., Patra, P. K., Peiro, H., Petri, C., Philip, S., Pollard, D. F., Poulter, B., Remaud, M., Schuh, A., Sha, M. K., Shiomi, K., Strong, K., Sweeney, C., Té, Y., Tian, H., Velazco, V. A., Vrekoussis, M., Warneke, T., Worden, J. R., Wunch, D., Yao, Y., Yun, J., Zammit-Mangion, A., and Zeng, N.: Pilot top-down CO2 Budget constrained by the v10 OCO-2 MIP Version 1, Committee on Earth Observing Satellites, https://doi.org/10.48588/npf6-sw92, Version 1.0, 2022
+
     ## Contact
     - Brendan Byrne (NASA/JPL)
 
