@@ -19,6 +19,9 @@ module.exports = {
     // Type: Content override
     homeContent: './overrides/home/index.mdx',
 
+    // Component for the home hero banner.
+    homeHero: "./overrides/components/home-hero/index.mdx",
+
     // Component for the header brand.
     headerBrand: "./overrides/components/header-brand/index.mdx",
     // Component for the footer.
@@ -37,7 +40,7 @@ module.exports = {
 
   theme: {
     color: {
-      primary: "#0B3D91",
+      primary: "#082a64",
     },
     type: {
       base: {

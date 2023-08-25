@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "strictNullChecks": true,
+    "baseUrl": "./.veda/ui",
+    "jsx": "react",
+    "paths": {
+      "$veda-ui-scripts/*": ["./app/scripts/*"],
+      "$veda-ui/*": ["./node_modules/*"],
+    }
+  }
+}
