@@ -1,5 +1,5 @@
 ---
-id: odiac-fossil-fuel-co2-emissions-2022
+id: odiac-ffco2-monthgrid-v2022
 name: ODIAC Fossil Fuel CO₂ Emissions
 description: Global, monthly 1 km resolution dataset of fossil fuel carbon dioxide emissions, version 2022
 usage:
@@ -35,7 +35,7 @@ taxonomy:
       - Model Derived
 layers:
   - id: co2-emissions
-    stacCol: odiac-fossil-fuel-co2-emissions-2022
+    stacCol: odiac-ffco2-monthgrid-v2022
     name: Fossil Fuel CO₂ Emissions
     type: raster
     description: Monthly, 1 km CO₂ emissions from fossil fuel combustion, cement production and gas flaring.
@@ -50,7 +50,7 @@ layers:
         - 300
       nodata: 0
     compare:
-      datasetId: odiac-fossil-fuel-co2-emissions-2022
+      datasetId: odiac-ffco2-monthgrid-v2022
       layerId: co2-emissions
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {

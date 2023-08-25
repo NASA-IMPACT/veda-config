@@ -1,5 +1,5 @@
 ---
-id: nasa-ceos-co2-flux-annual
+id: ceos-co2budget-yeargrid-v1-annual
 name: CEOS National Top-Down CO₂ Budgets
 description: Global, 1 degree resolution pilot top-down budgets of carbon dioxide emissions at 5 year intervals and national scales, version 1
 usage:
@@ -34,7 +34,7 @@ taxonomy:
       - Model Derived
 layers:
   - id: co2-emissions-river
-    stacCol: nasa-ceos-co2-flux
+    stacCol: ceos-co2budget-yeargrid-v1
     name: Lateral river flux
     type: raster
     description: The lateral flux of carbon in (positive) or out (negative) of a region transported by the water cycle.
@@ -49,7 +49,7 @@ layers:
         - 240
       nodata: 0
     compare:
-      datasetId: nasa-ceos-co2-flux-annual
+      datasetId: ceos-co2budget-yeargrid-v1-annual
       layerId: co2-emissions-river
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -70,7 +70,7 @@ layers:
         - '#ef6a01'
         - '#cc0019'
   - id: co2-emissions-river-std
-    stacCol: nasa-ceos-co2-flux
+    stacCol: ceos-co2budget-yeargrid-v1
     name: Lateral river flux - std
     type: raster
     description: The lateral flux of carbon in (positive) or out (negative) of a region transported by the water cycle.
@@ -85,7 +85,7 @@ layers:
         - 140
       nodata: 0
     compare:
-      datasetId: nasa-ceos-co2-flux-annual
+      datasetId: ceos-co2budget-yeargrid-v1-annual
       layerId: co2-emissions-river-std
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -106,7 +106,7 @@ layers:
         - '#ef6a01'
         - '#cc0019'         
   - id: co2-emissions-ff
-    stacCol: nasa-ceos-co2-flux
+    stacCol: ceos-co2budget-yeargrid-v1
     name: Fossil fuel and cement emissions
     type: raster
     description: The burning of fossil fuels and release of carbon due to cement production, representing a flux of carbon from the land surface (geologic reservoir) to the atmosphere..
@@ -121,7 +121,7 @@ layers:
         - 450
       nodata: 0
     compare:
-      datasetId: nasa-ceos-co2-flux-annual
+      datasetId: ceos-co2budget-yeargrid-v1-annual
       layerId: co2-emissions-ff
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -142,7 +142,7 @@ layers:
         - '#ef6a01'
         - '#cc0019'      
   - id: co2-emissions-ff-std
-    stacCol: nasa-ceos-co2-flux
+    stacCol: ceos-co2budget-yeargrid-v1
     name: Fossil fuel and cement emissions - std
     type: raster
     description: The burning of fossil fuels and release of carbon due to cement production, representing a flux of carbon from the land surface (geologic reservoir) to the atmosphere..
@@ -157,7 +157,7 @@ layers:
         - 25000
       nodata: 0
     compare:
-      datasetId: nasa-ceos-co2-flux-annual
+      datasetId: ceos-co2budget-yeargrid-v1-annual
       layerId: co2-emissions-ff-std
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -178,7 +178,7 @@ layers:
         - '#ef6a01'
         - '#cc0019'             
   - id: co2-emissions-lnlgis-nbe
-    stacCol: nasa-ceos-co2-flux
+    stacCol: ceos-co2budget-yeargrid-v1
     name: LNLGIS Net biosphere exchange
     type: raster
     description: Net flux of carbon from the terrestrial biosphere to the atmosphere due to biomass burning (BB) and Reco minus gross primary production (GPP).
@@ -193,7 +193,7 @@ layers:
         - 2500
       nodata: 0
     compare:
-      datasetId: nasa-ceos-co2-flux-annual
+      datasetId: ceos-co2budget-yeargrid-v1-annual
       layerId: co2-emissions-lnlgis-nbe
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -214,7 +214,7 @@ layers:
         - '#ef6a01'
         - '#cc0019'                  
   - id: co2-emissions-lnlgis-nbe-std
-    stacCol: nasa-ceos-co2-flux
+    stacCol: ceos-co2budget-yeargrid-v1
     name: LNLGIS Net biosphere exchange - std
     type: raster
     description: Net flux of carbon from the terrestrial biosphere to the atmosphere due to biomass burning (BB) and Reco minus gross primary production (GPP).
@@ -222,14 +222,14 @@ layers:
       - 0
       - 20
     sourceParams:
-      assets: lngis-nbe-std
+      assets: lnlgis-nbe-std
       colormap_name: rainbow
       rescale:
         - 0
         - 25000
       nodata: 0
     compare:
-      datasetId: nasa-ceos-co2-flux-annual
+      datasetId: ceos-co2budget-yeargrid-v1-annual
       layerId: co2-emissions-lnlgis-nbe-std
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -250,7 +250,7 @@ layers:
         - '#ef6a01'
         - '#cc0019'                                   
   - id: co2-emissions-lnlgis-nce
-    stacCol: nasa-ceos-co2-flux
+    stacCol: ceos-co2budget-yeargrid-v1
     name: LNLGIS Terrestrial net carbon exchange
     type: raster
     description: Net flux of carbon from the surface to the atmosphere. For land, NCE can be defined as sum of NBE and fossil fuel and cement emissions.
@@ -265,7 +265,7 @@ layers:
         - 25300
       nodata: 0
     compare:
-      datasetId: nasa-ceos-co2-flux-annual
+      datasetId: ceos-co2budget-yeargrid-v1-annual
       layerId: co2-emissions-lnlgis-nce
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -286,7 +286,7 @@ layers:
         - '#ef6a01'
         - '#cc0019'             
   - id: co2-emissions-lnlgis-nce-std
-    stacCol: nasa-ceos-co2-flux
+    stacCol: ceos-co2budget-yeargrid-v1
     name: LNLGIS Terrestrial net carbon exchange - std
     type: raster
     description: Net flux of carbon from the surface to the atmosphere. For land, NCE can be defined as sum of NBE and fossil fuel and cement emissions.
@@ -301,7 +301,7 @@ layers:
         - 1400
       nodata: 0
     compare:
-      datasetId: nasa-ceos-co2-flux-annual
+      datasetId: ceos-co2budget-yeargrid-v1-annual
       layerId: co2-emissions-lnlgis-nce-std
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -322,7 +322,7 @@ layers:
         - '#ef6a01'
         - '#cc0019'                                         
   - id: co2-emissions-lnlgis-dc-loss
-    stacCol: nasa-ceos-co2-flux
+    stacCol: ceos-co2budget-yeargrid-v1
     name: LNLGIS Net terrestrial carbon stock loss
     type: raster
     description: Positive values indicate a loss (decrease) of terrestrial carbon stocks (organic matter stored on land), including above- and below-ground biomass in ecosystems and biomass contained in anthropogenic products (lumber, cattle, etc.).
@@ -337,7 +337,7 @@ layers:
         - 25700
       nodata: 0
     compare:
-      datasetId: nasa-ceos-co2-flux-annual
+      datasetId: ceos-co2budget-yeargrid-v1-annual
       layerId: co2-emissions-lnlgis-dc-loss
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -358,7 +358,7 @@ layers:
         - '#ef6a01'
         - '#cc0019'             
   - id: co2-emissions-lnlgis-dc-loss-std
-    stacCol: nasa-ceos-co2-flux
+    stacCol: ceos-co2budget-yeargrid-v1
     name:  LNLGIS Net terrestrial carbon stock loss - std
     type: raster
     description: Positive values indicate a loss (decrease) of terrestrial carbon stocks (organic matter stored on land), including above- and below-ground biomass in ecosystems and biomass contained in anthropogenic products (lumber, cattle, etc.).
@@ -373,7 +373,7 @@ layers:
         - 25000
       nodata: 0
     compare:
-      datasetId: nasa-ceos-co2-flux-annual
+      datasetId: ceos-co2budget-yeargrid-v1-annual
       layerId: co2-emissions-lnlgis-dc-loss-std
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -394,7 +394,7 @@ layers:
         - '#ef6a01'
         - '#cc0019' 
   - id: co2-emissions-crop
-    stacCol: nasa-ceos-co2-flux
+    stacCol: ceos-co2budget-yeargrid-v1
     name: Lateral crop flux
     type: raster
     description: The lateral flux of carbon in (positive) or out (negative) of a region due to agriculture.
@@ -409,7 +409,7 @@ layers:
         - 1500
       nodata: 0
     compare:
-      datasetId: nasa-ceos-co2-flux-annual
+      datasetId: ceos-co2budget-yeargrid-v1-annual
       layerId: co2-emissions-crop
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -430,7 +430,7 @@ layers:
         - '#ef6a01'
         - '#cc0019'
   - id: co2-emissions-crop-std
-    stacCol: nasa-ceos-co2-flux
+    stacCol: ceos-co2budget-yeargrid-v1
     name: Lateral crop flux - std
     type: raster
     description: The lateral flux of carbon in (positive) or out (negative) of a region due to agriculture.
@@ -445,7 +445,7 @@ layers:
         - 450
       nodata: 0
     compare:
-      datasetId: nasa-ceos-co2-flux-annual
+      datasetId: ceos-co2budget-yeargrid-v1-annual
       layerId: co2-emissions-crop-std
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -466,7 +466,7 @@ layers:
         - '#ef6a01'
         - '#cc0019'        
   - id: co2-emissions-wood
-    stacCol: nasa-ceos-co2-flux
+    stacCol: ceos-co2budget-yeargrid-v1
     name:  Lateral wood flux
     type: raster
     description: The lateral flux of carbon in (positive) or out (negative) of a region due to wood product harvesting and usage.
@@ -481,7 +481,7 @@ layers:
         - 900
       nodata: 0
     compare:
-      datasetId: nasa-ceos-co2-flux-annual
+      datasetId: ceos-co2budget-yeargrid-v1-annual
       layerId: co2-emissions-wood
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -510,7 +510,7 @@ layers:
         - '#D10000'
         - '#800000'
   - id: co2-emissions-wood-std
-    stacCol: nasa-ceos-co2-flux
+    stacCol: ceos-co2budget-yeargrid-v1
     name:  Lateral wood flux - std
     type: raster
     description: The lateral flux of carbon in (positive) or out (negative) of a region due to wood product harvesting and usage.
@@ -525,7 +525,7 @@ layers:
         - 600
       nodata: 0
     compare:
-      datasetId: nasa-ceos-co2-flux-annual
+      datasetId: ceos-co2budget-yeargrid-v1-annual
       layerId: co2-emissions-wood-std
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
