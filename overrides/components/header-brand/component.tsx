@@ -12,26 +12,27 @@ const Brand = styled.div`
   gap: ${glsp()};
 
   a {
-    display: flex;
-    align-items: center;
-    gap: ${glsp(0.25)};
-
     &,
     &:visited {
       color: inherit;
       text-decoration: none;
     }
-
-    span {
-      font-size: 1.5rem;
-      line-height: 1.5rem;
-      font-weight: ${themeVal("type.base.bold")};
-      letter-spacing: -0.025em;
-    }
   }
+`;
 
-  img {
-    width: 3rem;
+const Logo = styled.div`
+  display: flex;
+  flex-flow: column;
+  padding: ${glsp(0.5, 0.875)};
+  background: ${themeVal("color.surface")};
+  color: ${themeVal("color.primary")};
+  
+  span {
+    font-weight: ${themeVal("type.base.bold")};
+    text-transform: uppercase;
+    letter-spacing: -0.025em;
+    font-size: 1rem;
+    line-height: 1.125rem;
   }
 `;
 
@@ -49,8 +50,11 @@ export default function HeaderComponent() {
   return (
     <Brand>
       <Link to="/">
-        <GHGLogo />
-        <span>U.S. Greenhouse Gas Center</span>
+        <Logo>
+          <span>U.S.</span>
+          <span>GHG</span>
+          <span>Center</span>
+        </Logo>
       </Link>
     </Brand>
   );
