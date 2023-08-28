@@ -31,6 +31,24 @@ taxonomy:
   </Prose>
 </Block>
 
+<Block>
+  <Prose>
+    ## Consequences of Mercury Deposition
+    Heavy metal pollution in water bodies caused by wet and dry deposition can have serious consequences. Once the mercury present in smoke emissions enters water bodies, they are absorbed by plankton in the water. As the plankton is consumed by aquatic animals, mercury accumulates in concentrations proportionate to the level of hierarchy that the animal occupies in the food chain. Thus mercury concentrations are high in fish and other aquatic animals consumed by humans which generally occupy the top levels of the aquatic food chain. Mercury is especially toxic to humans during the gestational period and can cause serious disabilities during the early stages of development. For this reason, mercury contamination of fish is a serious concern. 
+    
+    Water quality monitoring in the US has at times revealed high mercury concentrations in water bodies at locations far removed from human sources of mercury emissions such as coal-fired power plants. Transport of mercury by smoke plumes from wildfires and prescribed burning has been suspected to be the source of heavy metal pollution on such occasions. Crystal Lake, located in Los Angeles County, California is one such water body that is affected by mercury transported by wildland fires. Analysis of 150 years of sediment deposit from the lake bed shows episodic spikes in mercury concentration. Since there are no known sources of mercury emissions in the vicinity of the lake, wildland fire emission is thought to be the primary source of mercury contamination.
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    ## Satellite Analysis of Crystal Lake, Los Angeles County, CA
+    We utilized the NASA MODIS aerosol optical depth (AOD) product over the time period of the last two decades to examine if Crystal Lake is indeed affected by smoke plumes from wildland fires. AOD is an indicator of the total amount of particulate matter present in an aerosol column over a given location observed by the satellite sensor. Higher values of AOD are indicative of the occurrence of particulate matter in the region. The time series of AOD averaged over the Crystal Lake region for the last two decades (Figure 1) does show seasonally varying values with the maximum occurring during summertime. While the long-term trend of AOD shows a statistically insignificant decreasing trend in AOD, anomalously high values have occurred in recent years. 
+    
+    While the summertime increase in atmospheric particulate matter is indicative of smoke pollution, the role of human-induced particulate pollution cannot be ruled out. Therefore, we utilized smoke plumes tracked by the Geostationary Operational Environmental Satellite (GOES) sensors to confirm if the high particulate matter loading observed from NASA MODIS sensors coincides with occurrences of smoke plumes over the lake. Using the smoke plumes detected by GOES and made available through the Hazard Mapping System (HMS) product, we plotted the monthly occurrences of smoke plumes over the lake (Figure 2). The time series of smoke occurrences available since the year 2005 shows the frequent occurrence of smoke plumes over the lake during summer months when the particulate matter load is maximized. The time series of smoke occurrences show a statistically significant increasing trend with anomalously high values of particulate matter loading occurring over the lake in recent years. 
+  </Prose>
+</Block>
+
 <Block type="wide">
   <Figure>
     <Chart
@@ -45,15 +63,6 @@ taxonomy:
       Figure 1. Time series of monthly and spatially averaged MODIS AOD over Crystal Lake, LA County, CA.
     </Caption>
   </Figure>
-</Block>
-
-<Block>
-  <Prose>
-    ## Consequences of Mercury Deposition
-    Heavy metal pollution in water bodies caused by wet and dry deposition can have serious consequences. Once the mercury present in smoke emissions enters water bodies, they are absorbed by plankton in the water. As the plankton is consumed by aquatic animals, mercury accumulates in concentrations proportionate to the level of hierarchy that the animal occupies in the food chain. Thus mercury concentrations are high in fish and other aquatic animals consumed by humans which generally occupy the top levels of the aquatic food chain. Mercury is especially toxic to humans during the gestational period and can cause serious disabilities during the early stages of development. For this reason, mercury contamination of fish is a serious concern. 
-    
-    Water quality monitoring in the US has at times revealed high mercury concentrations in water bodies at locations far removed from human sources of mercury emissions such as coal-fired power plants. Transport of mercury by smoke plumes from wildfires and prescribed burning has been suspected to be the source of heavy metal pollution on such occasions. Crystal Lake, located in Los Angeles County, California is one such water body that is affected by mercury transported by wildland fires. Analysis of 150 years of sediment deposit from the lake bed shows episodic spikes in mercury concentration. Since there are no known sources of mercury emissions in the vicinity of the lake, wildland fire emission is thought to be the primary source of mercury contamination.
-  </Prose>
 </Block>
 
 <Block type="wide">
@@ -73,12 +82,18 @@ taxonomy:
 </Block>
 
 <Block>
-  <Prose>
-    ## Satellite Analysis of Crystal Lake, Los Angeles County, CA
-    We utilized the NASA MODIS aerosol optical depth (AOD) product over the time period of the last two decades to examine if Crystal Lake is indeed affected by smoke plumes from wildland fires. AOD is an indicator of the total amount of particulate matter present in an aerosol column over a given location observed by the satellite sensor. Higher values of AOD are indicative of the occurrence of particulate matter in the region. The time series of AOD averaged over the Crystal Lake region for the last two decades (Figure 1) does show seasonally varying values with the maximum occurring during summertime. While the long-term trend of AOD shows a statistically insignificant decreasing trend in AOD, anomalously high values have occurred in recent years. 
-    
-    While the summertime increase in atmospheric particulate matter is indicative of smoke pollution, the role of human-induced particulate pollution cannot be ruled out. Therefore, we utilized smoke plumes tracked by the Geostationary Operational Environmental Satellite (GOES) sensors to confirm if the high particulate matter loading observed from NASA MODIS sensors coincides with occurrences of smoke plumes over the lake. Using the smoke plumes detected by GOES and made available through the Hazard Mapping System (HMS) product, we plotted the monthly occurrences of smoke plumes over the lake (Figure 2). The time series of smoke occurrences available since the year 2005 shows the frequent occurrence of smoke plumes over the lake during summer months when the particulate matter load is maximized. The time series of smoke occurrences show a statistically significant increasing trend with anomalously high values of particulate matter loading occurring over the lake in recent years. 
-  </Prose>
+  <Figure>
+     <video style={{ width: '100%', aspectRatio: "16/9" }} controls>
+      <source
+        src={new URL('./crystal-lake-sept2020.mp4', import.meta.url).href} type="video/mp4"
+      />
+      Your browser does not support the video tag.
+    </video>
+
+    <Caption>
+      GOES-17 TrueColor imagery the morning of September 9, 2020 of ongoing wildfires in California's Central Valley. These fires led to extensive smoke cover in the vicinity of Crystal Lake.
+    </Caption>
+  </Figure>
 </Block>
 
 <Block>
