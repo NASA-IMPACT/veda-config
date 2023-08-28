@@ -11,11 +11,7 @@ import {
   FigureAttribution,
 } from "$veda-ui-scripts/components/common/figure";
 
-import epaImg from "../../media/epa.svg";
-import nasaImg from "../../media/nasa.png";
-import nistImg from "../../media/nist.png";
-import noaaImg from "../../media/noaa.png";
-
+import Partners from "../../home/partners";
 import coverSrc from "./earth.png";
 
 const Hero = styled.div`
@@ -40,21 +36,10 @@ const HeroHeadline = styled.div`
   align-items: center;
 
   p {
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
 `;
 
-export const LogoWrapper = styled.div`
-  grid-column: 1 / -1;
-  display: flex;
-  flex-flow: wrap;
-  gap: 1rem;
-  align-items: center;
-
-  > * {
-    flex-shrink: 0;
-  }
-`;
 
 const PageHeroCover = styled(Figure)`
   height: 20rem;
@@ -81,41 +66,19 @@ export default function HomeHero(props) {
               Solutions
             </p>
           </HeroHeadline>
-          <Partners />
+          <Partners variation="negative" />
         </PageHeroHGroup>
       </Constrainer>
       <PageHeroCover>
         <img src={coverSrc} alt="Earth seen from space" />
         <Figcaption>
           <FigureAttribution
-            author="NASA"
-            url="https://www.nasa.gov/"
+            author="Helen-Nicole Kostis"
+            url="https://svs.gsfc.nasa.gov/5115"
             position="bottom-right"
           />
         </Figcaption>
       </PageHeroCover>
     </Hero>
-  );
-}
-
-function Partners() {
-  return (
-    <LogoWrapper>
-      <a href="https://www.epa.gov/">
-        <Image src={epaImg} alt="EPA logo" height="80" />
-      </a>
-
-      <a href="https://www.nasa.gov/">
-        <Image src={nasaImg} alt="NASA logo" height="80" />
-      </a>
-
-      <a href="https://www.nist.gov/">
-        <Image src={nistImg} alt="NIST logo" height="80" />
-      </a>
-
-      <a href="https://www.noaa.gov/">
-        <Image src={noaaImg} alt="NOAA logo" height="80" />
-      </a>
-    </LogoWrapper>
   );
 }
