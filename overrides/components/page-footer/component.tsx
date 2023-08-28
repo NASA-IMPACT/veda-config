@@ -30,13 +30,18 @@ const FooterInner = styled.div`
 
 const FooterContent = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  gap: ${glsp(1)};
+  flex-flow: column;
   box-shadow: inset 0 -1px 0 0 ${themeVal("color.base-100a")};
   padding: ${variableGlsp(1.5, 1)};
+
+  ${media.mediumUp`
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+  `}
 `;
 
-const FooterNav = styled.nav``;
 
 const FooterBrand = styled.p`
   font-weight: ${themeVal("type.base.bold")};
@@ -49,11 +54,10 @@ const Credits = styled.div`
 const FooterMenu = styled.ul`
   ${listReset()}
   display: flex;
-  flex-flow: column nowrap;
-  gap: ${glsp(0.5)};
+  flex-flow: row wrap;
+  gap: ${glsp(0.5, 1)};
 
-  ${media.largeUp`
-    flex-direction: row;
+  ${media.mediumUp`
     justify-content: flex-start;
     align-items: center;
     gap: ${glsp(3)};
@@ -79,7 +83,7 @@ export default function PageFooter(props) {
     <FooterInner>
       <FooterContent>
         <FooterBrand>U.S. GHG Center</FooterBrand>
-        <FooterNav>
+        <nav>
           <FooterMenu>
             <li>
               <FooterMenuLink to={DATASETS_PATH}>Data Catalog</FooterMenuLink>
@@ -108,7 +112,7 @@ export default function PageFooter(props) {
               </FooterMenuLink>
             </li>
           </FooterMenu>
-        </FooterNav>
+        </nav>
       </FooterContent>
       <Credits>
         <a href="https://earthdata.nasa.gov/">
