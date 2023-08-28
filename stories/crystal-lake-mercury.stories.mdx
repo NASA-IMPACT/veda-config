@@ -68,15 +68,15 @@ taxonomy:
 <Block type="wide">
   <Figure>
     <Chart
-      dataPath={new URL('./smoke_count_crystal.csv', import.meta.url).href}
-      dateFormat="%Y-%m-%d"
+      dataPath={new URL('./crystal-lake-hms-year.csv', import.meta.url).href}
+      dateFormat="%Y"
       idKey='source'
       xKey='Date'
-      yKey='smoke'
-      yAxisLabel='Smoke Count'
+      yKey='Count'
+      yAxisLabel='Smoke Count (Days)'
     />
     <Caption>
-      Figure 2. Time series of monthly occurrence of smoke over Crystal Lake, LA County, CA.
+      Figure 2. Time series of total number of days with smoke over Crystal Lake, LA County, CA by year.
     </Caption>
   </Figure>
 </Block>
