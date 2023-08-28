@@ -1,14 +1,51 @@
 import React from "$veda-ui/react";
-import Block from "$veda-ui-scripts/components/common/blocks";
+import { NavLink } from "$veda-ui/react-router-dom";
 import styled from "$veda-ui/styled-components";
 import { glsp, themeVal, media } from "$veda-ui/@devseed-ui/theme-provider";
+import { Button } from "$veda-ui/@devseed-ui/button";
+import { CollecticonArrowRight } from "$veda-ui/@devseed-ui/collecticons";
 import Hug from "$veda-ui-scripts/styles/hug";
 import { VarHeading } from "$veda-ui-scripts/styles/variable-components";
 import { variableGlsp } from "$veda-ui-scripts/styles/variable-utils";
 
-import Audience from "./audience";
-import ValueProposition from "./value-proposition";
 import Partners from "./partners";
+import Keypoints from "./keypoints";
+
+const HomeContent = styled(Hug)`
+  padding: ${variableGlsp(2.5, 0)};
+  grid-row-gap: ${variableGlsp(2)};
+
+  ${media.mediumUp`
+    grid-row-gap: ${variableGlsp(3)};
+  `}
+`;
+
+const IntroHeadline = styled.div`
+  display: flex;
+  flex-flow: column;
+  gap: ${glsp(2)};
+  align-items: center;
+  grid-column: content-start / content-end;
+
+  p {
+    font-size: 1.25rem;
+  }
+
+  ${media.mediumUp`
+    grid-column: content-start /content-7;
+  `}
+
+  ${media.largeUp`
+    grid-column: content-start / content-9;
+  `}
+`;
+
+const ActionsBlock = styled.div`
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+`;
+
 const InfoCallout = styled(Hug)`
   background: ${themeVal("color.base-50")};
   box-shadow: inset 0 -1px 0 0 ${themeVal("color.base-100a")};
@@ -51,22 +88,30 @@ const InfoCalloutHeadline = styled.div`
 export default function HomeComponent() {
   return (
     <>
-      <Block>
-        <ContentBlockProse>
-          <h2>Welcome</h2>
-          
-          <Partners />
-
+      <HomeContent>
+        <IntroHeadline>
+          <VarHeading size="xxlarge">
+            Start exploring scientist-curated GHG datasets on a map environment
+          </VarHeading>
           <p>
             The U.S. GHG Center is a one-stop data and analysis system for
             exploring and analyzing U.S. government and other curated datasets.
             Three primary demonstration areas are used to organize and introduce
             the data included in the center for this release.
           </p>
-        </ContentBlockProse>
-      </Block>
-      <Audience />
-      <ValueProposition />
+        </IntroHeadline>
+        <Keypoints />
+        <ActionsBlock>
+          <Button
+            forwardedAs={NavLink}
+            to="/data-catalog"
+            size="large"
+            variation="primary-fill"
+          >
+            Browse the Data Catalog <CollecticonArrowRight />
+          </Button>
+        </ActionsBlock>
+      </HomeContent>
       <InfoCallout>
         <InfoCalloutInner>
           <InfoCalloutHeadline>
