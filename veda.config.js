@@ -43,6 +43,12 @@ module.exports = {
       base: {
         family: '"Inter", sans-serif'
       }
+    },
+    button: {
+      type: {
+        case: "uppercase",
+        weight: 400
+      }
     }
   },
 };

@@ -105,7 +105,7 @@ export default function HomeComponent() {
           <Button
             forwardedAs={NavLink}
             to="/data-catalog"
-            size="large"
+            size="xlarge"
             variation="primary-fill"
           >
             Browse the Data Catalog <CollecticonArrowRight />
@@ -130,7 +130,7 @@ export default function HomeComponent() {
           <Button
             forwardedAs={NavLink}
             to="/about"
-            size="large"
+            size="xlarge"
             variation="primary-outline"
           >
             Learn More <CollecticonArrowRight />

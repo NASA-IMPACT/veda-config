@@ -45,6 +45,7 @@ const FooterContent = styled.div`
 
 const FooterBrand = styled.p`
   font-weight: ${themeVal("type.base.bold")};
+  text-transform: uppercase;
 `;
 
 const Credits = styled.div`
@@ -68,6 +69,7 @@ const FooterMenuLink = styled(NavLink)`
   font-weight: ${themeVal("type.base.regular")};
   text-decoration: none;
   font-size: 0.875rem;
+  text-transform: ${themeVal('button.type.case')};
 
   &:hover {
     text-decoration: underline;
