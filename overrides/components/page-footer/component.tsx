@@ -42,7 +42,6 @@ const FooterContent = styled.div`
   `}
 `;
 
-
 const FooterBrand = styled.p`
   font-weight: ${themeVal("type.base.bold")};
   text-transform: uppercase;
@@ -69,7 +68,7 @@ const FooterMenuLink = styled(NavLink)`
   font-weight: ${themeVal("type.base.regular")};
   text-decoration: none;
   font-size: 0.875rem;
-  text-transform: ${themeVal('button.type.case')};
+  text-transform: ${themeVal("button.type.case")};
 
   &:hover {
     text-decoration: underline;
@@ -84,7 +83,6 @@ export default function PageFooter(props) {
   return (
     <FooterInner>
       <FooterContent>
-        <FooterBrand>U.S. GHG Center</FooterBrand>
         <nav>
           <FooterMenu>
             <li>
@@ -98,6 +96,13 @@ export default function PageFooter(props) {
                 {getString("stories").other}
               </FooterMenuLink>
             </li>
+            {!!process.env.HUB_URL && !!process.env.HUB_NAME && (
+              <li>
+                <FooterMenuLink as="a" href={process.env.HUB_URL}>
+                  {process.env.HUB_NAME}
+                </FooterMenuLink>
+              </li>
+            )}
             <li>
               <FooterMenuLink to={ABOUT_PATH}>About</FooterMenuLink>
             </li>

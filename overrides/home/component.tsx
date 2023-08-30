@@ -10,6 +10,7 @@ import { variableGlsp } from "$veda-ui-scripts/styles/variable-utils";
 
 import Partners from "./partners";
 import Keypoints from "./keypoints";
+import { ArrowLink } from "./arrow-link";
 
 const HomeContent = styled(Hug)`
   padding: ${variableGlsp(2.5, 0)};
@@ -24,7 +25,6 @@ const IntroHeadline = styled.div`
   display: flex;
   flex-flow: column;
   gap: ${glsp(2)};
-  align-items: center;
   grid-column: content-start / content-end;
 
   p {
@@ -90,15 +90,22 @@ export default function HomeComponent() {
     <>
       <HomeContent>
         <IntroHeadline>
-          <VarHeading size="xxlarge">
-            Start exploring scientist-curated GHG datasets on a map environment
-          </VarHeading>
+          <VarHeading size="xxlarge">Welcome</VarHeading>
           <p>
-            The U.S. GHG Center is a one-stop data and analysis system for
-            exploring and analyzing U.S. government and other curated datasets.
-            Three primary demonstration areas are used to organize and introduce
-            the data included in the center for this release.
+            The U.S. Greenhouse Gas Center (US GHG Center) is a multi-agency
+            effort to integrate greenhouse gas data from observations and models
+            into credible, authoritative, trusted consensus greenhouse gas
+            emissions and flux products for use in decision-making.
           </p>
+          <p>
+            The initial two-year demonstration phase includes the development of
+            a one-stop data and analysis system that provides a means to explore
+            and analyze U.S. government and other datasets. Three demonstration
+            areas are used to organize and introduce the data included, and
+            stakeholders are encouraged to help scope and prioritize the
+            evolution and maturation of the US GHG Center capabilities.
+          </p>
+          <ArrowLink to="/stories">The U.S. GHG Center Story</ArrowLink>
         </IntroHeadline>
         <Keypoints />
         <ActionsBlock>
