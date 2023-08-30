@@ -133,7 +133,7 @@ export default function PageFooter(props) {
       </FooterContent>
       <FooterContacts>
         <div>
-          <a href="https://earthdata.nasa.gov/">
+          <a href="/">
             <span>By</span> <strong>U.S. GHG Center</strong> <span>on</span>{" "}
             <time dateTime={String(nowDate.getFullYear())}>
               {nowDate.getFullYear()}
