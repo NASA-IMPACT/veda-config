@@ -10,6 +10,9 @@ import {
 
 import { ArrowLink } from "./arrow-link";
 
+import { DATASETS_PATH } from "$veda-ui-scripts/utils/routes";
+import { Actions } from "$veda-ui-scripts/components/common/browse-controls/use-browse-controls";
+
 import featureEmissions from "./media/factory.png";
 import featureSources from "./media/swamp.png";
 import featureMethane from "./media/plume.png";
@@ -36,7 +39,13 @@ export default function Keypoints() {
             imgSrc={featureEmissions}
             imgAlt="Emissions"
             footerContent={
-              <ArrowLink to="/datasets">Check out relevant datasets</ArrowLink>
+              <ArrowLink
+                to={`${DATASETS_PATH}?${Actions.TAXONOMY}=${encodeURIComponent(
+                  JSON.stringify({ Topics: "anthropogenic-emissions" })
+                )}`}
+              >
+                Check out relevant datasets
+              </ArrowLink>
             }
           />
         </li>
@@ -49,7 +58,13 @@ export default function Keypoints() {
             imgSrc={featureSources}
             imgAlt="Emissions"
             footerContent={
-              <ArrowLink to="/datasets">Check out relevant datasets</ArrowLink>
+              <ArrowLink
+                to={`${DATASETS_PATH}?${Actions.TAXONOMY}=${encodeURIComponent(
+                  JSON.stringify({ Topics: "natural-emissions-and-fluxes" })
+                )}`}
+              >
+                Check out relevant datasets
+              </ArrowLink>
             }
           />
         </li>
@@ -62,7 +77,13 @@ export default function Keypoints() {
             imgSrc={featureMethane}
             imgAlt="Emissions"
             footerContent={
-              <ArrowLink to="/datasets">Check out relevant datasets</ArrowLink>
+              <ArrowLink
+                to={`${DATASETS_PATH}?${Actions.TAXONOMY}=${encodeURIComponent(
+                  JSON.stringify({ Topics: "large-emission-events" })
+                )}`}
+              >
+                Check out relevant datasets
+              </ArrowLink>
             }
           />
         </li>
