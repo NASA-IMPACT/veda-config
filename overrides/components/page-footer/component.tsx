@@ -42,15 +42,6 @@ const FooterContent = styled.div`
   `}
 `;
 
-const FooterBrand = styled.p`
-  font-weight: ${themeVal("type.base.bold")};
-  text-transform: uppercase;
-`;
-
-const Credits = styled.div`
-  padding: ${variableGlsp(0.75, 1)};
-`;
-
 const FooterMenu = styled.ul`
   ${listReset()}
   display: flex;
@@ -74,6 +65,25 @@ const FooterMenuLink = styled(NavLink)`
     text-decoration: underline;
   }
 `;
+
+const FooterContacts = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: ${variableGlsp(1)};
+
+  p {
+    display: flex;
+    justify-content: space-between;
+  }
+`;
+
+const CreditsInfo = styled.div`
+  display: flex;
+  flex-flow: column;
+  gap: ${glsp(0.25)};
+`;
+
 
 export default function PageFooter(props) {
   const nowDate = new Date();
@@ -121,23 +131,31 @@ export default function PageFooter(props) {
           </FooterMenu>
         </nav>
       </FooterContent>
-      <Credits>
-        <a href="https://earthdata.nasa.gov/">
-          <span>By</span> <strong>U.S. GHG Center</strong> <span>on</span>{" "}
-          <time dateTime={String(nowDate.getFullYear())}>
-            {nowDate.getFullYear()}
-          </time>
-        </a>
-        {" • "}
-        <Tip
-          content={`Released on ${format(
-            new Date(+props.appBuildTime),
-            "PPPP"
-          )} (veda-ui v${props.appUiVersion})`}
-        >
-          <span>v{props.appVersion}</span>
-        </Tip>
-      </Credits>
+      <FooterContacts>
+        <div>
+          <a href="https://earthdata.nasa.gov/">
+            <span>By</span> <strong>U.S. GHG Center</strong> <span>on</span>{" "}
+            <time dateTime={String(nowDate.getFullYear())}>
+              {nowDate.getFullYear()}
+            </time>
+          </a>
+          {" • "}
+          <Tip
+            content={`Released on ${format(
+              new Date(+props.appBuildTime),
+              "PPPP"
+            )} (veda-ui v${props.appUiVersion})`}
+          >
+            <span>v{props.appVersion}</span>
+          </Tip>
+        </div>
+        <CreditsInfo>
+          <p>U.S. Greenhouse Gas Center Responsible Official</p>
+          <p>
+            <span>(800) CALL-GOVT</span> <a href="mailto:info@agency.gov">info@agency.gov</a>
+          </p>
+        </CreditsInfo>
+      </FooterContacts>
     </FooterInner>
   );
 }
