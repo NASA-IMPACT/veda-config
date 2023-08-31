@@ -3,60 +3,50 @@ import styled from "$veda-ui/styled-components";
 
 import Image from "$veda-ui-scripts/components/common/blocks/images";
 
-export const LogoWrapper = styled.div`
+import epaImg from "../media/epa.svg";
+import nasaImg from "../media/nasa.png";
+import nistImg from "../media/nist.png";
+import nistImgNeg from "../media/nist-neg.png";
+import noaaImg from "../media/noaa.png";
+
+const LogoWrapper = styled.div`
+  grid-column: 1 / -1;
   display: flex;
   flex-flow: wrap;
-  gap: 1rem;
+  gap: 2rem;
   align-items: center;
+  justify-content: center;
 
   > * {
     flex-shrink: 0;
   }
 `;
 
-export const Hr = styled.hr`
-  border: 0;
-  width: 100%;
-  max-width: 2rem;
-  height: 0.25rem;
-  background: grey;
-  opacity: 0.32;
-  border-radius: 900rem;
-`;
+export default function Partners(props: {
+  variation: "positive" | "negative";
+}) {
+  const { variation } = props;
 
-export default function Partners() {
   return (
     <LogoWrapper>
       <a href="https://www.epa.gov/">
-        <Image
-          src={new URL("../media/epa.svg", import.meta.url).href}
-          alt="EPA logo"
-          width="80"
-        />
+        <Image src={epaImg} alt="EPA logo" height="80" />
       </a>
 
       <a href="https://www.nasa.gov/">
-        <Image
-          src={new URL("../media/nasa.png", import.meta.url).href}
-          alt="NASA logo"
-          width="105"
-        />
+        <Image src={nasaImg} alt="NASA logo" height="80" />
       </a>
 
       <a href="https://www.nist.gov/">
-        <Image
-          src={new URL("../media/nist.png", import.meta.url).href}
-          alt="NIST logo"
-          width="250"
-        />
+        {variation === "positive" ? (
+          <Image src={nistImg} alt="NIST logo" height="28" />
+        ) : (
+          <Image src={nistImgNeg} alt="NIST logo" height="28" />
+        )}
       </a>
 
       <a href="https://www.noaa.gov/">
-        <Image
-          src={new URL("../media/noaa.png", import.meta.url).href}
-          alt="NOAA logo"
-          width="95"
-        />
+        <Image src={noaaImg} alt="NOAA logo" height="80" />
       </a>
     </LogoWrapper>
   );
