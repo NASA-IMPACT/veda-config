@@ -1,0 +1,48 @@
+---
+id: landsat-thermal-hls-bais2
+name: 'Landsat-8 thermal and HLS BAIS2 calculated.'
+description: "x"
+media:
+  src: ::file ./lahaina-fire-background.jpg
+  alt: Wildfire erupting over Lahaina, HI, August 8, 2023.
+  author:
+    name: Matthew Thayer/AP
+    url: https://www.sfchronicle.com/travel/article/hawaii-fire-maui-lahaina-18289213.php
+taxonomy:
+  - name: Topics
+    values:
+      - EIS
+layers:
+  - id: landsat-nighttime-thermal
+    stacCol: landsat-nighttime-thermal
+    name: Landsat 8 Nighttime Thermal
+    type: raster
+    description: 'x'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      colormap_name: rdylbu_r
+      nodata: 0
+    legend:
+      type: gradient
+      min: "0"
+      max: "255"
+      stops:
+        - "#4575b4"
+        - "#91bfdb"
+        - "#e0f3f8"
+        - "#ffffbf"
+        - "#fee090"
+        - "#fc8d59"
+        - "#d73027" 
+
+---
+<Block>
+<Prose>
+## Overview
+  On August 8th, 2023, a devastating wildfire roared through the city of Lahaina, Hawai’i, located on the island of Maui and home to over 13,000 residents. This wildfire was reported sparked by a downed powerline on Lahainaluna Road, and though was initially put out was reinvigorated by intense wind gusts that prevailed throughout the day. The National Weather Service reported measured wind gusts as high as 67 mph in the area, which helped quickly spread the wildfire across much of Lahaina in the afternoon hours of August 8th. 
+  
+  x
+</Prose>
+</Block>
