@@ -1,0 +1,199 @@
+---
+id: 'discovering-large-methane-emissions'
+name: Discovering Large Methane Emission Events with Remote Measurement
+description: 'A new generation of satellite and airborne instruments can now map methane emissions from the energy, waste, and agriculture sectors.'
+media:
+  src: ::file ./emit_above_planet_v4-1.png
+  alt: New remote measurement technologies like the EMIT can identify large methane emissions across the globe.
+  author:
+    name: JPL
+    url: ""
+pubDate: 2023-08-24
+taxonomy:
+  - name: Topics
+    values:
+      - Methane
+---
+<Block>
+    <Prose>
+    ## Introduction
+    Relative to carbon dioxide, methane is estimated to be 80 times more effective at trapping heat in the atmosphere in the 20 years after release. Moreover, where carbon dioxide lingers for centuries, methane persists for about a decade, meaning that if emissions are reduced, the atmosphere will respond in a similar timeframe, leading to slower near-term warming.
+
+    Methane is a flammable gas that is invisible to the human eye. Natural gas has a methane content of around 95% and because it is used widely for heating and cooking there are distribution systems for natural gas throughout our cities and towns. Methane emissions can occur during the production, transport, and processing of oil and natural gas. Methane is also released from coal mining, the waste sector (landfills, wastewater treatment), and agriculture (livestock and rice farming).
+
+    When methane is burned it becomes CO2 and water, substantially decreasing the amount of heat that is trapped compared to direct release of methane. Increasingly, sectors such as landfills and wastewater management capture the methane that is produced and burn it either for electricity generation or simply to prevent the methane from entering the atmosphere. This can also reduce toxic gasses like benzene that often occur with methane.
+    </Prose>
+    </Block>
+
+    <Block>
+        <Figure>
+            <Image 
+                src={new URL('./historic-methane.png', import.meta.url).href}
+                alt="Media example" 
+                align="left"
+                attrAuthor="example author"
+                attrUrl="https://www.nilu.com/2022/04/how-achievable-is-the-methane-pledge/"
+                width="256"
+            />
+            <Caption> Methane emissions from human activities continue to grow and include contributions from the energy (oil, gas, and coal), waste, and agriculture sectors. Figure from https://www.nilu.com/2022/04/how-achievable-is-the-methane-pledge/ </Caption>
+        </Figure>
+    </Block>
+
+    <Block>
+        <Prose>
+            Large methane emissions, typically referred to as point source emissions, represent a significant proportion of total methane emissions across different emission sectors. Identifying methane point source emissions improves our understanding of greenhouse gas budgets, offers the potential to inform mitigation strategies, and has resulted in emission mitigation. 
+
+            Today we have new remote measurement technologies to map these methane emissions from space and aircraft.
+        </Prose>
+    </Block>
+
+    <Block>
+        <Figure>
+            <Image 
+                src={new URL('./summary-emissions.png', import.meta.url).href}
+                alt="Media example" 
+                align="left" 
+                attrAuthor="example author"
+                attrUrl="https://example.com"
+                width="256"
+            />
+            <Caption> Methane point source emissions (measured by aircraft) represent a significant portion of total emissions (derived from TROPOMI satellite products) across different emission sectors. Figure from [Cusworth et al., 2022](https://doi.org/10.1073/pnas.2202338119) </Caption>
+        </Figure>
+    </Block>
+
+    <Block>
+        <Prose>
+            ## Methane point source examples
+
+            Satellite and aircraft remote measurements are increasingly being used to locate and characterize methane point source emissions. At the oilfield scale, observed methane plumes can be attributed to specific locations, often associated with visible infrastructure (well pads, tanks, compressor stations) or even buried gathering lines. These plumes reflect a mixture of expected and unintended emissions (leaks). 
+
+            Below is an example of an intermittent methane plume observed from space with EMIT in the Permian Basin, which is the largest petroleum-producing basin in the United States. The plume was observed on Feb. 5, 2023 but in subsequent observations methane plumes were not visible at this location.
+        </Prose>
+    </Block>
+
+    <Block>
+    <Figure>
+        <CompareImage
+            leftImageSrc={new URL('./plume1.png', import.meta.url).href}
+            rightImageSrc={new URL('./plume2.png', import.meta.url).href}
+            width="100"
+        />
+        <Caption>
+        Methane plume observed from space near Carlsbad, New Mexico associated with the Permian Basin.
+        </Caption>
+    </Figure>
+    </Block>
+
+
+    <Block>
+        <Prose>
+            When organic material is thrown away and buried in landfills it begins to decompose. If this material decomposes in conditions with limited oxygen, considerable methane can be produced, enough that the methane emissions can be seen from space. Waste sector emissions represent around 18% of global human related methane emissions (Saunois et al., 2020). The EMIT example on the right from Apr. 23, 2023 shows a prominent methane plume from a landfill outside of Phoenix, Arizona.
+        </Prose>
+        <Figure>
+        <CompareImage
+            leftImageSrc={new URL('./plume3.png', import.meta.url).href}
+            rightImageSrc={new URL('./plume4.png', import.meta.url).href}
+            width="100"
+        />
+        <Caption> Methane plume observed from a space from a landfill outside of Phoenix, Arizona. </Caption>
+        </Figure>
+    </Block>
+
+     <Block>
+        <Figure>
+            <Image 
+                src={new URL('./PIA22467_modest.jpg', import.meta.url).href}
+                alt="Media example" 
+                align="left" 
+                attrAuthor="example author"
+                attrUrl="https://photojournal.jpl.nasa.gov/catalog/PIA22467"
+                width="256"
+            />
+            <Caption> Methane plumes observed using the airborne AVIRIS-NG instrument for a neighborhood gas leak. Methane plume images and coordinates were shared with the gas utility, resulting in verification of the leak and repair. After the repair, AVIRIS-NG returned to the location and no methane plumes were observed. </Caption>
+        </Figure>
+        <Prose>
+            Methane leaks in populated areas can be a danger to public safety. Detecting plumes at high spatial resolution can help locate specific emission sources providing actionable information to utilities so that they can fix these dangerous leaks. The example provided below shows methane plumes observed using the Airborne Visible InfraRed Imaging Spectrometer - Next Generation (AVIRIS-NG) as part of the California Methane Survey (Duren et al., 2019). Multiple flights on the same day observed methane from this residential location. Sharing methane plume images and coordinates with the gas utility resulted in verification and repair of this leak from a natural gas distribution pipeline in a residential neighborhood. 
+
+        </Prose>
+    </Block>
+
+    <Block>
+        <Prose>
+            ## How does it work?
+
+            New remote measurement technologies can map methane plumes by measuring the methane spectral fingerprint in reflected solar energy beyond wavelengths the human eye can see. Methane absorbs energy uniquely in specific wavelengths. By measuring these wavelengths with advanced instruments we can map methane based on its spectral fingerprint. The strength of the absorption can tell us how much methane is in the atmosphere below the instrument.
+
+            Advanced airborne and satellite imaging spectrometers measure solar energy that passes through the Earth’s atmosphere and is reflected off of Earth’s surface at hundreds of different wavelengths. These instruments have an array of detectors so that they can capture images of the Earth. The methane spectral fingerprint for EMIT is shown in the figure below. In addition to permit mapping of methane plume strengths, these spectral fingerprints also enable estimates of methane amounts and rate of release into the atmosphere.
+        </Prose>
+        <Figure>
+            <Image 
+                src={new URL('./spectrometer.png', import.meta.url).href}
+                alt="Media example" 
+                align="left" 
+                attrAuthor="example author"
+                attrUrl="https://photojournal.jpl.nasa.gov/catalog/PIA22467"
+                width="256"
+            />
+            <Caption> Imaging spectrometers measure hundreds of spectral wavelengths from the visible through shortwave infrared, where the methane spectral fingerprint can be measured. </Caption>
+        </Figure>
+
+    </Block>
+
+    <Block>
+
+        <Prose>
+            [EMIT](https://earth.jpl.nasa.gov/emit) was launched on 14 July 2022 and is currently operating on the International Space Station (ISS). It provides wide coverage ~80 km swath at ~60 m spatial resolution with typical daily coverage equivalent to the area of Texas. EMIT is a NASA mission with all data and algorithms publicly available as part of NASA’s commitment to open data science.  This allows anyone to test the data, algorithms, and results and work for improvements.
+        </Prose>
+        <Figure>
+            <Image 
+                src={new URL('./emit-satellite.png', import.meta.url).href}
+                alt="Media example" 
+                align="left" 
+                attrAuthor="example author"
+                attrUrl="https://photojournal.jpl.nasa.gov/catalog/PIA22467"
+                width="256"
+            />
+            <Caption> EMIT was launched on 14 July 2022 and is currently operating on the International Space Station (ISS). </Caption>
+        </Figure>
+    </Block>
+
+     <Block>
+        <Prose>
+            Methane plumes identified by EMIT are currently visible <Link to='data-catalog/jpl-ch4-plume-emissions/explore'></Link>
+        </Prose>
+    </Block>
+
+    <Block>
+        <Figure>
+            <Image 
+                src={new URL('./Combined_AVIRIS-3.png', import.meta.url).href}
+                alt="Media example" 
+                align="left" 
+                attrAuthor="example author"
+                attrUrl="https://example.com"
+                width="256"
+            />
+            <Caption> The AVIRIS-3 airborne imaging spectrometer in the lab and integrated into an aircraft for methane flights. (https://microdevices.jpl.nasa.gov/capabilities/imaging-spectroscopy/aviris-ng/) </Caption>
+        </Figure>
+        <Prose>
+
+        ## The Path Forward
+        These results from EMIT and AVIRIS-NG are offered as examples. There are other current missions and more are coming and needed to gain a comprehensive picture of large methane emissions in the United States and around the world and to provide information to policy and decision makers.
+
+        Airborne instruments will remain important as they can observe smaller emissions that can not be observed with satellites. The JPL Airborne Visible InfraRed Imaging Spectrometer (AVIRIS) program generates publicly available, airborne data that has been used for mapping methane across the western hemisphere. Methane observations from this platform provide high resolution observations over targeted areas, and will be incorporated into the GHG Center’s available data. 
+        </Prose>
+    </Block>
+
+    <Block>
+        <Prose>
+        ## Resources / References
+        M. Saunois, A. R. Stavert, B. Poulter, P. Bousquet, J. G. Canadell, R. B. Jackson, P. A. Raymond, E. J. Dlugokencky, S. Houweling, P. K. Patra, P. Ciais, V. K. Arora, D. Bastviken, P. Bergamaschi, D. R. Blake, G. Brailsford, L. Bruhwiler, K. M. Carlson, M. Carrol, S. Castaldi, N. Chandra, C. Crevoisier, P. M. Crill, K. Covey, C. L. Curry, G. Etiope, C. Frankenberg, N. Gedney, M. I. Hegglin, L. Höglund-Isaksson, G. Hugelius, M. Ishizawa, A. Ito, G. Janssens-Maenhout, K. M. Jensen, F. Joos, T. Kleinen, P. B. Krummel, R. L. Langenfelds, G. G. Laruelle, L. Liu, T. Machida, S. Maksyutov, K. C. McDonald, J. McNorton, P. A. Miller, J. R. Melton, I. Morino, J. Müller, F. Murguia-Flores, V. Naik, Y. Niwa, S. Noce, S. O’Doherty, R. J. Parker, C. Peng, S. Peng, G. P. Peters, C. Prigent, R. Prinn, M. Ramonet, P. Regnier, W. J. Riley, J. A. Rosentreter, A. Segers, I. J. Simpson, H. Shi, S. J. Smith, L. P. Steele, B. F. Thornton, H. Tian, Y. Tohjima, F. N. Tubiello, A. Tsuruta, N. Viovy, A. Voulgarakis, T. S. Weber, M. van Weele, G. R. van der Werf, R. F. Weiss, D. Worthy, D. Wunch, Y. Yin, Y. Yoshida, W. Zhang, Z. Zhang, Y. Zhao, B. Zheng, Q. Zhu, Q. Zhu, Q. Zhuang, The Global Methane Budget 2000–2017. Earth System Science Data. 12, 1561–1623 (2020).
+        </Prose>
+    </Block>
+
+    <Block>
+        <Prose>
+        ## Disclaimers
+        Disclaimers
+        </Prose>
+    </Block>

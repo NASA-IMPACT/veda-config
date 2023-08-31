@@ -1,0 +1,101 @@
+---
+id: 'how-ghg-center-tracks-carbon'
+name: How the Greenhouse Gas Center data center tracks carbon
+description: Description/subtitle goes here
+media:
+#   src: ::file ./use-case-2cover.png
+  alt: Aerial view of city with smoke
+  author:
+    name: NASA Scientific Visualization Studio
+    url: "https://svs.gsfc.nasa.gov/5110"
+pubDate: 2023-08-30
+taxonomy:
+  - name: Topics
+    values:
+      - Carbon
+---
+<Block>
+    <Prose>
+    ## The Carbon Cycle
+    The carbon cycle is one of the pillars of the Earth System that represents complex transfer processes between  land, ocean, and atmospheric carbon.  Atmospheric CO2 and CH4 play a crucial role in governing global temperatures through absorption of infrared radiation. On land, cCarbon is the currency shared between plants, microbes, and the atmosphere. Through photosynthesis, plants remove carbon dioxide (CO2) from the air and convert it to sugars and starches for growth. When plants die or leaves fall to the ground, microbes living in the soil use this carbon for energy, returning the CO2 back to the atmosphere through respiration. In flooded wetland soils, where no oxygen is available, microbes known as methanogens produce and release methane gas (CH4) rather than CO2. These processes are similar in the ocean, except that CO2 first dissolves from the atmosphere into the upper surface of the ocean before it is used in photosynthesis by phytoplankton. In addition, oceanic physical processes can sequester carbon in lower layers or emit back into the atmosphere. The rate and balance of carbon cycling between land, ocean, and atmosphere is modulated by climate and its evolution.
+
+    Greenhouse Gas (GHG) Center datasets combine information from ground and space-based observation networks with terrestrial and ocean carbon-cycle models to track the net balance between CO2 uptake (carbon sink) and losses (carbon source) to the atmosphere. The land and ocean CO2 and CH4 flux datasets accessible from the GHG Center help us understand how both human activities and climate variations are changing atmospheric CO2 and CH4 concentrations. This information is needed to support national GHG inventories and assess the efficacy of to monitor the reduction of fossil fuel emissions commitments in a changing climate in support of the Paris Agreement. 
+    </Prose>
+    <Figure>
+        <Image 
+            src={new URL('./carbon-cycle.jpeg', import.meta.url).href}
+            alt="pictoral representation of carbon cycle" 
+            align="left"
+            attrAuthor="IPCC AR5"
+            attrUrl="#"
+        />
+        <Caption> The carbon cycle </Caption>
+    </Figure>
+</Block>
+
+<Block>
+    <Prose>
+    ## Land/Ocean CO2 sinks
+    The land and ocean currently maintain a positive balance in favor of net CO2 removals from the atmosphere, gaining ~5 billion metric tons (Pg) of carbon each year (or in units of CO2, 18 Pg). This amount of carbon is equivalent to around half a year’s worth of CO2 emitted from burning coal, oil, and gas and cement production. Without the annual land and ocean removals of carbon from the atmosphere, CO2 concentrations would rise twice as fast and thus more rapidly reduce the time society has to avoid more severe impacts of climate change expected at 1.5°- or 2°C warming. 
+
+    On land, the atmospheric CO2 removal processes are maintained by forest regrowth, increasing growing season length in the boreal region, and from elevated CO2 in the atmosphere stimulating photosynthesis. In the ocean,carbon uptake is controlled by a  combination of physical and biogeochemical processes.  The primary response increases in productivity are due simply to the increasing rate of CO2 growth rate is the dissolutionving of carbon into the surface waters as atmospheric concentrations increase. Recent research shows land and ocean sinks are weakening as increasing air temperatures stress vegetation in the tropics, cause widespread fires in the boreal region, and decrease the ocean’s capacity to remove CO2 as it warms. 
+
+    These changes are cause for concern and can be monitored using measurements of CO2 concentrations made at observatories or GHG satellites to track sources and sinks over land and ocean, building long-term time series to document trends. Such datasets are accessible at the GHG Center. 
+    </Prose>
+    <Figure>
+        <CompareImage
+            leftImageSrc={new URL('./nee-1.png', import.meta.url).href}
+            rightImageSrc={new URL('./nee-2.png', import.meta.url).href}
+            width="100"
+        />
+        <Caption> Net Ecosystem CO2 Exchange: Jan 2011 vs July 2011 </Caption>
+    </Figure>
+</Block>
+
+<Block>
+    <Prose>
+        ## Natural Emissions of Methane
+        Methane is a potent greenhouse gas and while less abundant than CO2, the increase in atmospheric CH4 is responsible for about one third of present-day climate change. Methane sources are plentiful, from oil, gas, and coal activities, livestock production, rice farming, and waste management, and natural sources such as wetlands, wildfires, termites, and the ocean. Wetlands are responsible for about 30% of natural and human-caused CH4 emissions annually. Tropical wetlands in Amazonia, the Congo Basin, and Southeast Asia produce about 60% of these emissions, with wetlands in temperate and permafrost regions producing the remaining 40%. The methane produced in wetlands has a distinctively lighter mass, or isotope, compared to fossil fuel sources, and the increasing abundance of the lighter CH4 isotope in the atmosphere suggests that wetlands are producing more methane as part of climate-change feedback linked to warming and changing precipitation patterns. Most wetland methane increases appear to be from tropical wetlands, while permafrost thawing is not yet linked to atmospheric CH4 growth.
+    </Prose>
+</Block>
+
+<Block>
+    <Prose>
+        ## Response of natural sources and sinks to climate change
+        Climate change and other human activities are impacting CO2 sources and sinks and wetland CH4 emissions in complex ways. Wildfires in forested ecosystems release massive amounts of CO2 to the atmosphere with the 2020 Australian bushfires and the 2021 boreal wildfires substantially reducing the net global land sink. Since the early 1700s, deforestation and land-use change have led to a loss of 140 to 265 billion metric tonnes of carbon over land ecosystems, which is partly why reforestation has a large potential to remove CO2 from the atmosphere. However, heatwaves and droughts are causing a decline in plant productivity in tropical and temperate ecosystems also leading to a decline in the carbon sink. Over oceans, changing circulation patterns and ocean heat waves appear to be causing weakened carbon uptake, particularly over the Southern Ocean, where wind patterns are changing. Precipitation extremes, especially those linked to the La Niña phase of the El Niño Southern Oscillation (ENSO), may be linked to increased wetland methane emissions over parts of South America and other tropical regions experiencing increasing warming trends. GHG satellites, direct air-sample measurements, and land and ocean models are helping to calculate how the sources and sinks of CO2 and the emissions of CH4 are changing around the globe year to year.
+    </Prose>
+    <Figure>
+        <CompareImage
+            leftImageSrc={new URL('./drought-africa-2005.png', import.meta.url).href}
+            rightImageSrc={new URL('./africa-normal.png', import.meta.url).href}
+            width="100"
+        />
+        <Caption> Severe drought in Africa in 2005 reduced regional and global NPP, compared with a regular year </Caption>
+    </Figure>
+</Block>
+
+<Block>
+    <Prose>
+        ## Uncertainty
+
+        Monitoring and documenting carbon sources and sinks is complex as they cannot be directly observed at global scales. The exchanges of carbon currencies between the land, ocean, and atmosphere operate across timescales of seconds to centuries and spatially from single leaves to the entire planet, the uncertainties of the sources and sinks also need to be estimated. For example, methane emissions can be assessed from the combination of air samples, retrievals made from radiances emitted by the atmosphere, and complex models developed with satellite data leveraging principles of plant physiology and meteorology. These uncertainties across models and empirical data can be estimated using multiple approaches, including comparing how well land and ocean models match the least uncertain satellite and in-situ atmospheric data, and by using multiple models, to compare where there are agreements and disagreements in sources, sinks, and emissions.
+    </Prose>
+    <Figure>
+        <Image 
+            src={new URL('./ssp.png', import.meta.url).href}
+            alt="Media example" 
+            align="left"
+            attrAuthor="example author"
+            attrUrl="https://gmd.copernicus.org/articles/13/3571/2020/"
+        />
+        <Caption> Meinshausen, Malte, et al. "The shared socio-economic pathway (SSP) greenhouse gas concentrations and their extensions to 2500." Geoscientific Model Development 13.8 (2020): 3571-3605. </Caption>
+    </Figure>
+</Block>
+
+<Block>
+    <Prose>
+    ## What is the U.S. GHG Center doing?
+
+    The land and ocean CO2 flux datasets and the wetland CH4 dataset provided by the GHG Center data portal represent some of the most advanced approaches to estimating natural sources and sinks and their changes over time. These datasets combine observations with modeling approaches, and include various ways to quantify uncertainties and assess performance through benchmarking. With well-estimated land and ocean sink and source estimates, these data are compatible with monitoring and verification support for GHGs to support inventories, inform climate-carbon feedback monitoring, and guide future research to reduce uncertainties.
+    </Prose>
+</Block>
