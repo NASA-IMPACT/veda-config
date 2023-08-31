@@ -15,7 +15,7 @@ taxonomy:
 layers:
   - id: landsat-nighttime-thermal
     stacCol: landsat-nighttime-thermal
-    name: Landsat 8 Nighttime Thermal
+    name: x
     type: raster
     description: 'x'
     zoomExtent:
@@ -24,6 +24,13 @@ layers:
     sourceParams:
       colormap_name: rdylbu_r
       nodata: 0
+    compare:
+      datasetId: hls-bais2
+      layerId: hls-bais2
+      mapLabel: |
+        ::js ({dateFns, datetime, compareDatetime}) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
     legend:
       type: gradient
       min: "0"
