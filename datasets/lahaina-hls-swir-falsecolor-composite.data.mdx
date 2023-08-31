@@ -17,7 +17,7 @@ layers:
     stacCol: hls-swir-falsecolor-composite
     name: HLS SWIR FalseColor Composite
     type: raster
-    description: 'HLS falsecolor composite imagery using S30 Bands 12, 8A, and 4. Scene taken hours before the Lahaina Fire began.'
+    description: 'HLS falsecolor composite imagery using S30 Bands 12, 8A, and 4, over Lahaina, HI.'
     zoomExtent:
       - 4
       - 20
@@ -32,7 +32,7 @@ layers:
       layerId: hls-swir-falsecolor-composite
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `${dateFns.format(datetime, 'DD LLL yyyy')}`;        
+          return `${dateFns.format(datetime, 'LLL yyyy')} vs ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }
 
 ---
