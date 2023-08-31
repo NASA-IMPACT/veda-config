@@ -23,7 +23,11 @@ layers:
       - 60
       - 60
     sourceParams:
-      nodata: nan
+      post_process: swir
+      assets:
+        - B12
+        - B8A
+        - B04
     compare:
       datasetId: hls-swir-falsecolor-composite
       layerId: hls-swir-falsecolor-composite
