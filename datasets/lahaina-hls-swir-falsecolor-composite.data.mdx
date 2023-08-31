@@ -32,7 +32,7 @@ layers:
       layerId: hls-swir-falsecolor-composite
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `${dateFns.format(datetime, 'LLL yyyy')} vs ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+          return `${dateFns.format(datetime, 'DD LLL yyyy')}`;        
         }
 
 ---
