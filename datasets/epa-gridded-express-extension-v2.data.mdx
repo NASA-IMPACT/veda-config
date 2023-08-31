@@ -1,15 +1,15 @@
 ---
-id: epa-express-extension-gridded-emissions-v2
-name: Express EPA Gridded Anthropogenic Methane Emissions (Express Extension)
-description: Annual, 0.1° resolution estimates of anthropogenic methane emissions for the contiguous U.S. from 2012 - 2020, version 2 express extension (preprint).
+id: epa-ch4emission-yeargrid-v2express-ghgc
+name: Gridded Anthropogenic Methane Emissions Inventory
+description: Spatially disaggregated 0.1°x 0.1° annual maps of U.S. anthropogenic methane emissions, consistent with the U.S. Inventory of Greenhouse Gas Emissions and Sinks
 usage:
-  - url: 'https://github.com/NASA-IMPACT/GHGC_docs/blob/main/cog_transformation_scripts/epa-ch4emission-grid-v2_Transformation_Code.py'
+  - url: 'https://github.com/NASA-IMPACT/GHGC_docs/blob/main/cog_transformation/scripts/epa-ch4emission-grid-v2express_Transformation_Code.py'
     label: Notebook to trasnform GeoTIFF to COG
     title: 'Express EPA Gridded Anthropogenic Methane Emissions data transformation notebook'
-  - url: 'https://github.com/US-GHG-Center/ghgc-docs/blob/main/user_data_notebooks/epa-ch4emission-grid-v2_User_Notebook.ipynb'
+  - url: 'https://github.com/US-GHG-Center/ghgc-docs/blob/main/user_data_notebooks/epa-ch4emission-grid-v2express_User_Notebook.ipynb'
     label: Notebook to read, visualize, and explore data statistics
     title: 'Express EPA Gridded Anthropogenic Methane Emissions data notebook'
-  - url: 'https://hub.ghg.center/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FUS-GHG-Center%2Fghgc-docs&urlpath=tree%2Fghgc-docs%2Fuser_data_notebooks%2Fepa-ch4emission-grid-v2_User_Notebook.ipynb&branch=main'
+  - url: 'https://hub.ghg.center/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FUS-GHG-Center%2Fghgc-docs&urlpath=tree%2Fghgc-docs%2Fuser_data_notebooks%2Fepa-ch4emission-grid-v2express_User_Notebook.ipynb&branch=main'
     label: Run example notebook
     title: Interactive session in the U.S. GHG Center 2i2c JupyterHub (requires account)    
 media:
@@ -31,11 +31,65 @@ taxonomy:
     values:
       - Ground Data     
 layers:
+  - id: total-agriculture
+    stacCol: epa-ch4emission-yeargrid-v2express
+    name: Total Agriculture (annual)
+    type: raster
+    description: Total annual methane emission fluxes from Agriculture sources (sum of inventory categories 3A, 3B, 3C, 3F)
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: total-agriculture
+      colormap_name: rainbow
+      rescale:
+        - 0
+        - 7656391
+      nodata: 0
+    compare:
+      datasetId: epa-ch4emission-yeargrid-v2express-ghgc
+      layerId: total-agriculture
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }      
+    legend:
+      unit: 
+       label: Molecules CH₄/cm²/s
+      type: gradient
+      min: 0
+      max: 7656391
+      stops:
+        - "#6F4C9B"
+        - "#6059A9"
+        - "#5568B8"
+        - "#4D8AC6"
+        - "#4E96BC"
+        - "#549EB3"
+        - "#59A5A9"
+        - "#60AB9E"
+        - "#69B190"
+        - "#77B77D"
+        - "#8CBC68"
+        - "#A6BE54"
+        - "#BEBC48"
+        - "#D1B541"       
+        - "#DDAA3C"
+        - "#E49C39"
+        - "#E78C35"
+        - "#E67932"
+        - "#E4632D"
+        - "#DF4828"
+        - "#DA2222"  
+        - "#B8221E"
+        - "#95211B"
+        - "#721E17"
+        - "#521A13"     
   - id: enteric-fermentation
     stacCol: epa-ch4emission-yeargrid-v2express
-    name: Enteric Fermentation (annual)
+    name: Agriculture Enteric Fermentation (annual)
     type: raster
-    description: Annual methane emissions from enteric fermentation (digestive process of ruminants) developed from state-level GHGI livestock methane emission data and livestock occurrence probability
+    description: Annual methane emission fluxes from livestock Enteric Fermentation (inventory Agriculture category 3A) 
     zoomExtent:
       - 0
       - 20
@@ -45,9 +99,9 @@ layers:
       rescale:
         - 0
         - 4182634135552
-      nodata: 0
+      nodata: 0      
     compare:
-      datasetId: epa-emissions-v2
+      datasetId: epa-ch4emission-yeargrid-v2express-ghgc
       layerId: enteric-fermentation
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -60,18 +114,36 @@ layers:
       min: 0
       max: 4182634135552
       stops:
-        - "#60007d"
-        - "#30137d"
-        - "#1960ae"
-        - "#7ac300"
-        - "#f2ce00"
-        - "#ef6a01"
-        - "#cc0019"
+        - "#6F4C9B"
+        - "#6059A9"
+        - "#5568B8"
+        - "#4D8AC6"
+        - "#4E96BC"
+        - "#549EB3"
+        - "#59A5A9"
+        - "#60AB9E"
+        - "#69B190"
+        - "#77B77D"
+        - "#8CBC68"
+        - "#A6BE54"
+        - "#BEBC48"
+        - "#D1B541"       
+        - "#DDAA3C"
+        - "#E49C39"
+        - "#E78C35"
+        - "#E67932"
+        - "#E4632D"
+        - "#DF4828"
+        - "#DA2222"  
+        - "#B8221E"
+        - "#95211B"
+        - "#721E17"
+        - "#521A13"           
   - id: manure-management
     stacCol: epa-ch4emission-yeargrid-v2express
-    name: Manure Management (annual)
+    name: Agriculture Manure Management (annual)
     type: raster
-    description: Annual contributions of methane from manure management developed from monthly state-level GHGI emissions as a function of animal type and waste management system
+    description: Annual methane emission fluxes from Manure Management (inventory Agriculture category 3B)
     zoomExtent:
       - 0
       - 20
@@ -83,7 +155,7 @@ layers:
         - 3062094888960
       nodata: 0
     compare:
-      datasetId: epa-emissions-v2
+      datasetId: epa-ch4emission-yeargrid-v2express-ghgc
       layerId: manure-management
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -96,18 +168,36 @@ layers:
       min: 0 
       max: 3062094888960
       stops:
-        - "#60007d"
-        - "#30137d"
-        - "#1960ae"
-        - "#7ac300"
-        - "#f2ce00"
-        - "#ef6a01"
-        - "#cc0019"
-  - id: 4c-rice-cultivation
+        - "#6F4C9B"
+        - "#6059A9"
+        - "#5568B8"
+        - "#4D8AC6"
+        - "#4E96BC"
+        - "#549EB3"
+        - "#59A5A9"
+        - "#60AB9E"
+        - "#69B190"
+        - "#77B77D"
+        - "#8CBC68"
+        - "#A6BE54"
+        - "#BEBC48"
+        - "#D1B541"       
+        - "#DDAA3C"
+        - "#E49C39"
+        - "#E78C35"
+        - "#E67932"
+        - "#E4632D"
+        - "#DF4828"
+        - "#DA2222"  
+        - "#B8221E"
+        - "#95211B"
+        - "#721E17"
+        - "#521A13"     
+  - id: rice-cultivation-l
     stacCol: epa-ch4emission-yeargrid-v2express
-    name: Rice Cultivation (annual)
+    name: Agriculture Rice Cultivation (annual)
     type: raster
-    description: Annual rice cultivation methane emissions produced from annual GHGI state-level estimates distributed to counties
+    description: Annual methane emission fluxes from Rice Cultivation (inventory Agriculture category 3C)
     zoomExtent:
       - 0
       - 20
@@ -119,8 +209,8 @@ layers:
         - 6309977522176
       nodata: 0
     compare:
-      datasetId: epa-emissions-v2
-      layerId: 4c-rice-cultivation
+      datasetId: epa-ch4emission-yeargrid-v2express-ghgc
+      layerId: rice-cultivation-l
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
@@ -132,18 +222,36 @@ layers:
       min: 0
       max: 6309977522176
       stops:
-        - "#60007d"
-        - "#30137d"
-        - "#1960ae"
-        - "#7ac300"
-        - "#f2ce00"
-        - "#ef6a01"
-        - "#cc0019"
-  - id: 4f-field-burning
+        - "#6F4C9B"
+        - "#6059A9"
+        - "#5568B8"
+        - "#4D8AC6"
+        - "#4E96BC"
+        - "#549EB3"
+        - "#59A5A9"
+        - "#60AB9E"
+        - "#69B190"
+        - "#77B77D"
+        - "#8CBC68"
+        - "#A6BE54"
+        - "#BEBC48"
+        - "#D1B541"       
+        - "#DDAA3C"
+        - "#E49C39"
+        - "#E78C35"
+        - "#E67932"
+        - "#E4632D"
+        - "#DF4828"
+        - "#DA2222"  
+        - "#B8221E"
+        - "#95211B"
+        - "#721E17"
+        - "#521A13"     
+  - id: field-burning-l
     stacCol: epa-ch4emission-yeargrid-v2express
-    name: Field Burning (annual)
+    name: Agriculture Field Burning (annual)
     type: raster
-    description: Annual field burning methane emissions created from annual state GHGI emissions as a function of 21 crop types gridded using a monthly climatology of agricultural fire emissions for six crop categories
+    description: Annual methane emission fluxes from Field Burning of Agriculture Residues (inventory Agriculture category 3F)
     zoomExtent:
       - 0
       - 20
@@ -155,8 +263,8 @@ layers:
         - 27056996352
       nodata: 0
     compare:
-      datasetId: epa-emissions-v2
-      layerId: 4f-field-burning
+      datasetId: epa-ch4emission-yeargrid-v2express-ghgc
+      layerId: field-burning-l
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
@@ -168,18 +276,90 @@ layers:
       min: 0
       max: 27056996352
       stops:
-        - "#60007d"
-        - "#30137d"
-        - "#1960ae"
-        - "#7ac300"
-        - "#f2ce00"
-        - "#ef6a01"
-        - "#cc0019"
-  - id: 1B2b-exploration-ngs
+        - "#6F4C9B"
+        - "#6059A9"
+        - "#5568B8"
+        - "#4D8AC6"
+        - "#4E96BC"
+        - "#549EB3"
+        - "#59A5A9"
+        - "#60AB9E"
+        - "#69B190"
+        - "#77B77D"
+        - "#8CBC68"
+        - "#A6BE54"
+        - "#BEBC48"
+        - "#D1B541"       
+        - "#DDAA3C"
+        - "#E49C39"
+        - "#E78C35"
+        - "#E67932"
+        - "#E4632D"
+        - "#DF4828"
+        - "#DA2222"  
+        - "#B8221E"
+        - "#95211B"
+        - "#721E17"
+        - "#521A13"     
+  - id: total-natural-gas
+    stacCol: epa-ch4emission-yeargrid-v2express
+    name: Total Natural Gas Systems (annual)
+    type: raster
+    description: Total annual methane emission fluxes from Natural Gas Systems (sum of inventory Energy 1B2b sub-categories)
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: total-natural-gas-systems
+      colormap_name: rainbow
+      rescale:
+        - 0
+        - 64092710
+      nodata: 0
+    compare:
+      datasetId: epa-ch4emission-yeargrid-v2express-ghgc
+      layerId: total-natural-gas
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }      
+    legend:
+      unit: 
+       label: Molecules CH₄/cm²/s
+      type: gradient
+      min: 0
+      max: 64092710
+      stops:
+        - "#6F4C9B"
+        - "#6059A9"
+        - "#5568B8"
+        - "#4D8AC6"
+        - "#4E96BC"
+        - "#549EB3"
+        - "#59A5A9"
+        - "#60AB9E"
+        - "#69B190"
+        - "#77B77D"
+        - "#8CBC68"
+        - "#A6BE54"
+        - "#BEBC48"
+        - "#D1B541"       
+        - "#DDAA3C"
+        - "#E49C39"
+        - "#E78C35"
+        - "#E67932"
+        - "#E4632D"
+        - "#DF4828"
+        - "#DA2222"  
+        - "#B8221E"
+        - "#95211B"
+        - "#721E17"
+        - "#521A13"     
+  - id: exploration-ngs-l
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Natural Gas Exploration (annual)
     type: raster
-    description: Annual methane emissions from natural gas exploration gridded using the Enverus well-level dataset
+    description: Annual methane emission fluxes from Natural Gas Exploration (inventory Energy 1B2b sub-category)
     zoomExtent:
       - 0
       - 20
@@ -191,8 +371,8 @@ layers:
         - 2611559792640
       nodata: 0
     compare:
-      datasetId: epa-emissions-v2
-      layerId: 1B2b-exploration-ngs
+      datasetId: epa-ch4emission-yeargrid-v2express-ghgc
+      layerId: exploration-ngs-l
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
@@ -204,18 +384,36 @@ layers:
       min: 0
       max: 2611559792640
       stops:
-        - "#60007d"
-        - "#30137d"
-        - "#1960ae"
-        - "#7ac300"
-        - "#f2ce00"
-        - "#ef6a01"
-        - "#cc0019"  
-  - id: 1B2b-production-ngs
+        - "#6F4C9B"
+        - "#6059A9"
+        - "#5568B8"
+        - "#4D8AC6"
+        - "#4E96BC"
+        - "#549EB3"
+        - "#59A5A9"
+        - "#60AB9E"
+        - "#69B190"
+        - "#77B77D"
+        - "#8CBC68"
+        - "#A6BE54"
+        - "#BEBC48"
+        - "#D1B541"       
+        - "#DDAA3C"
+        - "#E49C39"
+        - "#E78C35"
+        - "#E67932"
+        - "#E4632D"
+        - "#DF4828"
+        - "#DA2222"  
+        - "#B8221E"
+        - "#95211B"
+        - "#721E17"
+        - "#521A13"     
+  - id: production-ngs-l
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Natural Gas Production (annual)
     type: raster
-    description: Annual methane emissions from natural gas exploration gridded using the Enverus well-level dataset
+    description: Annual methane emission fluxes from Natural Gas Production (inventory Energy 1B2b sub-category)
     zoomExtent:
       - 0
       - 20
@@ -227,8 +425,8 @@ layers:
         - 13900969934848
       nodata: 0
     compare:
-      datasetId: epa-emissions-v2
-      layerId: 1B2b-production-ngs
+      datasetId: epa-ch4emission-yeargrid-v2express-ghgc
+      layerId: production-ngs-l
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
@@ -240,18 +438,36 @@ layers:
       min: 0
       max: 13900969934848
       stops:
-        - "#60007d"
-        - "#30137d"
-        - "#1960ae"
-        - "#7ac300"
-        - "#f2ce00"
-        - "#ef6a01"
-        - "#cc0019"        
+        - "#6F4C9B"
+        - "#6059A9"
+        - "#5568B8"
+        - "#4D8AC6"
+        - "#4E96BC"
+        - "#549EB3"
+        - "#59A5A9"
+        - "#60AB9E"
+        - "#69B190"
+        - "#77B77D"
+        - "#8CBC68"
+        - "#A6BE54"
+        - "#BEBC48"
+        - "#D1B541"       
+        - "#DDAA3C"
+        - "#E49C39"
+        - "#E78C35"
+        - "#E67932"
+        - "#E4632D"
+        - "#DF4828"
+        - "#DA2222"  
+        - "#B8221E"
+        - "#95211B"
+        - "#721E17"
+        - "#521A13"          
   - id: 1B2b-transmission-storage-ngs
     stacCol: epa-ch4emission-yeargrid-v2express
-    name: Transmission and Storage (annual)
+    name: Natural Gas Transmission and Storage (annual)
     type: raster
-    description: Annual transmission and storage methane estimates derived using emissions at Liquified Natural Gas (LNG) Import and Export terminals and datasets from PHMSA, Enverus, FracTracker Alliance, EIA, GHGI, and GHGRP
+    description: Annual methane emission fluxes from Natural Gas Transmission and Storage (inventory Energy 1B2b sub-category)
     zoomExtent:
       - 0
       - 20
@@ -263,7 +479,7 @@ layers:
         - 19360041140224
       nodata: 0
     compare:
-      datasetId: epa-emissions-v2
+      datasetId: epa-ch4emission-yeargrid-v2express-ghgc
       layerId: 1B2b-transmission-storage-ngs
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -276,18 +492,36 @@ layers:
       min: 0
       max: 19360041140224
       stops:
-        - "#60007d"
-        - "#30137d"
-        - "#1960ae"
-        - "#7ac300"
-        - "#f2ce00"
-        - "#ef6a01"
-        - "#cc0019"
+        - "#6F4C9B"
+        - "#6059A9"
+        - "#5568B8"
+        - "#4D8AC6"
+        - "#4E96BC"
+        - "#549EB3"
+        - "#59A5A9"
+        - "#60AB9E"
+        - "#69B190"
+        - "#77B77D"
+        - "#8CBC68"
+        - "#A6BE54"
+        - "#BEBC48"
+        - "#D1B541"       
+        - "#DDAA3C"
+        - "#E49C39"
+        - "#E78C35"
+        - "#E67932"
+        - "#E4632D"
+        - "#DF4828"
+        - "#DA2222"  
+        - "#B8221E"
+        - "#95211B"
+        - "#721E17"
+        - "#521A13"     
   - id: 1B2b-processing-ngs
     stacCol: epa-ch4emission-yeargrid-v2express
-    name: Processing Natural Gas Production (annual)
+    name: Natural Gas Processing (annual)
     type: raster
-    description: Annual methane emissions from processing plants estimated using annual data from the U.S. GHGRP and the Enverus Midstream infrastructure dataset
+    description: Annual methane emission fluxes from Natural Gas Processing (inventory Energy 1B2b sub-category)
     zoomExtent:
       - 0
       - 20
@@ -299,7 +533,7 @@ layers:
         - 63448557813760
       nodata: 0
     compare:
-      datasetId: epa-emissions-v2
+      datasetId: epa-ch4emission-yeargrid-v2express-ghgc
       layerId: 1B2b-processing-ngs
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -312,18 +546,36 @@ layers:
       min: 0
       max: 63448557813760
       stops:
-        - "#60007d"
-        - "#30137d"
-        - "#1960ae"
-        - "#7ac300"
-        - "#f2ce00"
-        - "#ef6a01"
-        - "#cc0019"
+        - "#6F4C9B"
+        - "#6059A9"
+        - "#5568B8"
+        - "#4D8AC6"
+        - "#4E96BC"
+        - "#549EB3"
+        - "#59A5A9"
+        - "#60AB9E"
+        - "#69B190"
+        - "#77B77D"
+        - "#8CBC68"
+        - "#A6BE54"
+        - "#BEBC48"
+        - "#D1B541"       
+        - "#DDAA3C"
+        - "#E49C39"
+        - "#E78C35"
+        - "#E67932"
+        - "#E4632D"
+        - "#DF4828"
+        - "#DA2222"  
+        - "#B8221E"
+        - "#95211B"
+        - "#721E17"
+        - "#521A13"     
   - id: 1B2b-distribution-ngs
     stacCol: epa-ch4emission-yeargrid-v2express
-    name: Distribution Natural Gas (annual)
+    name: Natural Gas Distribution (annual)
     type: raster
-    description: Annual methane emissions from the distribution of natural gas developed by distributing pipeline and service leak emissions to the state-level and then gridding using population
+    description: Annual methane emission fluxes from Natural Gas Distribution (inventory Energy 1B2b sub-category).
     zoomExtent:
       - 0
       - 20
@@ -335,7 +587,7 @@ layers:
         - 3239707148288
       nodata: 0
     compare:
-      datasetId: epa-emissions-v2
+      datasetId: epa-ch4emission-yeargrid-v2express-ghgc
       layerId: 1B2b-distribution-ngs
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -348,18 +600,144 @@ layers:
       min: 0
       max: 3239707148288
       stops:
-        - "#60007d"
-        - "#30137d"
-        - "#1960ae"
-        - "#7ac300"
-        - "#f2ce00"
-        - "#ef6a01"
-        - "#cc0019"
+        - "#6F4C9B"
+        - "#6059A9"
+        - "#5568B8"
+        - "#4D8AC6"
+        - "#4E96BC"
+        - "#549EB3"
+        - "#59A5A9"
+        - "#60AB9E"
+        - "#69B190"
+        - "#77B77D"
+        - "#8CBC68"
+        - "#A6BE54"
+        - "#BEBC48"
+        - "#D1B541"       
+        - "#DDAA3C"
+        - "#E49C39"
+        - "#E78C35"
+        - "#E67932"
+        - "#E4632D"
+        - "#DF4828"
+        - "#DA2222"  
+        - "#B8221E"
+        - "#95211B"
+        - "#721E17"
+        - "#521A13"     
+  - id: post-meter-ng
+    stacCol: epa-ch4emission-yeargrid-v2express
+    name: Natural Gas Post-Meter (annual)
+    type: raster
+    description: Annual methane emission fluxes from Natural Gas Post-Meter sources (inventory Energy 1B2b sub-category)
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: post-meter
+      colormap_name: rainbow
+      rescale:
+        - 0
+        - 99607961600
+      nodata: 0
+    compare:
+      datasetId: epa-ch4emission-yeargrid-v2express-ghgc
+      layerId: post-meter-ng
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }      
+    legend:
+      unit: 
+       label: Molecules CH₄/cm²/s
+      type: gradient
+      min: 0
+      max: 4006183357440
+      stops:
+        - "#6F4C9B"
+        - "#6059A9"
+        - "#5568B8"
+        - "#4D8AC6"
+        - "#4E96BC"
+        - "#549EB3"
+        - "#59A5A9"
+        - "#60AB9E"
+        - "#69B190"
+        - "#77B77D"
+        - "#8CBC68"
+        - "#A6BE54"
+        - "#BEBC48"
+        - "#D1B541"       
+        - "#DDAA3C"
+        - "#E49C39"
+        - "#E78C35"
+        - "#E67932"
+        - "#E4632D"
+        - "#DF4828"
+        - "#DA2222"  
+        - "#B8221E"
+        - "#95211B"
+        - "#721E17"
+        - "#521A13"         
+  - id: total-petroleum
+    stacCol: epa-ch4emission-yeargrid-v2express
+    name: Total Petroleum Systems (annual)
+    type: raster
+    description: Total annual methane emission fluxes from Petroleum Systems (sum of inventory Energy 1B2a sub-categories)
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: total-petroleum-systems
+      colormap_name: rainbow
+      rescale:
+        - 0
+        - 16646540
+      nodata: 0
+    compare:
+      datasetId: epa-ch4emission-yeargrid-v2express-ghgc
+      layerId: total-petroleum
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }      
+    legend:
+      unit: 
+       label: Molecules CH₄/cm²/s
+      type: gradient
+      min: 0
+      max: 16646540
+      stops:
+        - "#6F4C9B"
+        - "#6059A9"
+        - "#5568B8"
+        - "#4D8AC6"
+        - "#4E96BC"
+        - "#549EB3"
+        - "#59A5A9"
+        - "#60AB9E"
+        - "#69B190"
+        - "#77B77D"
+        - "#8CBC68"
+        - "#A6BE54"
+        - "#BEBC48"
+        - "#D1B541"       
+        - "#DDAA3C"
+        - "#E49C39"
+        - "#E78C35"
+        - "#E67932"
+        - "#E4632D"
+        - "#DF4828"
+        - "#DA2222"  
+        - "#B8221E"
+        - "#95211B"
+        - "#721E17"
+        - "#521A13"                
   - id: 1B2a-exploration-ps
     stacCol: epa-ch4emission-yeargrid-v2express
-    name: Exploration Petroleum (annual)
+    name: Petroleum Exploration (annual)
     type: raster
-    description: Annual methane emissions from petroleum exploration developed using GHGI-consistent Enverus well-level data to spatially allocate many of the individual emission sources
+    description: Annual methane emission fluxes from Petroleum Exploration (inventory Energy 1B2a sub-category).
     zoomExtent:
       - 0
       - 20
@@ -371,7 +749,7 @@ layers:
         - 185182912512
       nodata: 0
     compare:
-      datasetId: epa-emissions-v2
+      datasetId: epa-ch4emission-yeargrid-v2express-ghgc
       layerId: 1B2a-exploration-ps
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -384,18 +762,36 @@ layers:
       min: 0
       max: 185182912512
       stops:
-        - "#60007d"
-        - "#30137d"
-        - "#1960ae"
-        - "#7ac300"
-        - "#f2ce00"
-        - "#ef6a01"
-        - "#cc0019"             
+        - "#6F4C9B"
+        - "#6059A9"
+        - "#5568B8"
+        - "#4D8AC6"
+        - "#4E96BC"
+        - "#549EB3"
+        - "#59A5A9"
+        - "#60AB9E"
+        - "#69B190"
+        - "#77B77D"
+        - "#8CBC68"
+        - "#A6BE54"
+        - "#BEBC48"
+        - "#D1B541"       
+        - "#DDAA3C"
+        - "#E49C39"
+        - "#E78C35"
+        - "#E67932"
+        - "#E4632D"
+        - "#DF4828"
+        - "#DA2222"  
+        - "#B8221E"
+        - "#95211B"
+        - "#721E17"
+        - "#521A13"                
   - id: 1B2a-production-ps
     stacCol: epa-ch4emission-yeargrid-v2express
-    name: Production Petroleum (annual)
+    name: Petroleum Production (annual)
     type: raster
-    description: Annual methane emissions from petroleum production developed using GHGI-consistent Enverus well-level data to spatially allocate many of the individual emission sources
+    description: Annual methane emission fluxes from Petroleum Production (inventory Energy 1B2a sub-category).
     zoomExtent:
       - 0
       - 20
@@ -407,7 +803,7 @@ layers:
         - 14142707597312
       nodata: 0
     compare:
-      datasetId: epa-emissions-v2
+      datasetId: epa-ch4emission-yeargrid-v2express-ghgc
       layerId: 1B2a-production-ps
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -420,18 +816,36 @@ layers:
       min: 0
       max: 14142707597312
       stops:
-        - "#60007d"
-        - "#30137d"
-        - "#1960ae"
-        - "#7ac300"
-        - "#f2ce00"
-        - "#ef6a01"
-        - "#cc0019"              
+        - "#6F4C9B"
+        - "#6059A9"
+        - "#5568B8"
+        - "#4D8AC6"
+        - "#4E96BC"
+        - "#549EB3"
+        - "#59A5A9"
+        - "#60AB9E"
+        - "#69B190"
+        - "#77B77D"
+        - "#8CBC68"
+        - "#A6BE54"
+        - "#BEBC48"
+        - "#D1B541"       
+        - "#DDAA3C"
+        - "#E49C39"
+        - "#E78C35"
+        - "#E67932"
+        - "#E4632D"
+        - "#DF4828"
+        - "#DA2222"  
+        - "#B8221E"
+        - "#95211B"
+        - "#721E17"
+        - "#521A13"                  
   - id: 1B2a-transport-ps
     stacCol: epa-ch4emission-yeargrid-v2express
-    name: Transportation Petroleum (annual)
+    name: Petroleum Transportation (annual)
     type: raster
-    description: Annual methane emissions from petroleum transport are gridded based on annual relative oil refinery methane emissions from the GHGRP
+    description: Annual methane emission fluxes from Petroleum Transportation (inventory Energy 1B2a sub-category).
     zoomExtent:
       - 0
       - 20
@@ -443,7 +857,7 @@ layers:
         - 321039630336
       nodata: 0
     compare:
-      datasetId: epa-emissions-v2
+      datasetId: epa-ch4emission-yeargrid-v2express-ghgc
       layerId: 1B2a-transport-ps
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -456,18 +870,36 @@ layers:
       min: 0
       max: 321039630336
       stops:
-        - "#60007d"
-        - "#30137d"
-        - "#1960ae"
-        - "#7ac300"
-        - "#f2ce00"
-        - "#ef6a01"
-        - "#cc0019"        
+        - "#6F4C9B"
+        - "#6059A9"
+        - "#5568B8"
+        - "#4D8AC6"
+        - "#4E96BC"
+        - "#549EB3"
+        - "#59A5A9"
+        - "#60AB9E"
+        - "#69B190"
+        - "#77B77D"
+        - "#8CBC68"
+        - "#A6BE54"
+        - "#BEBC48"
+        - "#D1B541"       
+        - "#DDAA3C"
+        - "#E49C39"
+        - "#E78C35"
+        - "#E67932"
+        - "#E4632D"
+        - "#DF4828"
+        - "#DA2222"  
+        - "#B8221E"
+        - "#95211B"
+        - "#721E17"
+        - "#521A13"           
   - id: 1B2a-refining-ps
     stacCol: epa-ch4emission-yeargrid-v2express
-    name: Refining Petroleum (annual)
+    name: Petroleum Refining (annual)
     type: raster
-    description: Annual methane emissions from petroleum refinement are gridded based on annual relative oil refinery methane emissions from the GHGRP
+    description: Annual methane emission fluxes from Petroleum Refining (inventory Energy 1B2a sub-category).
     zoomExtent:
       - 0
       - 20
@@ -479,7 +911,7 @@ layers:
         - 2642320293888
       nodata: 0
     compare:
-      datasetId: epa-emissions-v2
+      datasetId: epa-ch4emission-yeargrid-v2express-ghgc
       layerId: 1B2a-refining-ps
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -492,18 +924,90 @@ layers:
       min: 0
       max: 2642320293888
       stops:
-        - "#60007d"
-        - "#30137d"
-        - "#1960ae"
-        - "#7ac300"
-        - "#f2ce00"
-        - "#ef6a01"
-        - "#cc0019"   
+        - "#6F4C9B"
+        - "#6059A9"
+        - "#5568B8"
+        - "#4D8AC6"
+        - "#4E96BC"
+        - "#549EB3"
+        - "#59A5A9"
+        - "#60AB9E"
+        - "#69B190"
+        - "#77B77D"
+        - "#8CBC68"
+        - "#A6BE54"
+        - "#BEBC48"
+        - "#D1B541"       
+        - "#DDAA3C"
+        - "#E49C39"
+        - "#E78C35"
+        - "#E67932"
+        - "#E4632D"
+        - "#DF4828"
+        - "#DA2222"  
+        - "#B8221E"
+        - "#95211B"
+        - "#721E17"
+        - "#521A13"       
+  - id: total-waste
+    stacCol: epa-ch4emission-yeargrid-v2express
+    name: Total Waste (annual)
+    type: raster
+    description: Total annual methane emission fluxes from Waste (sum of inventory Waste categories 5A1, 5B1, 5D)
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: total-waste
+      colormap_name: rainbow
+      rescale:
+        - 0
+        - 65644057
+      nodata: 0
+    compare:
+      datasetId: epa-ch4emission-yeargrid-v2express-ghgc
+      layerId: total-waste
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }      
+    legend:
+      unit: 
+       label: Molecules CH₄/cm²/s
+      type: gradient
+      min: 0
+      max: 65644057
+      stops:
+        - "#6F4C9B"
+        - "#6059A9"
+        - "#5568B8"
+        - "#4D8AC6"
+        - "#4E96BC"
+        - "#549EB3"
+        - "#59A5A9"
+        - "#60AB9E"
+        - "#69B190"
+        - "#77B77D"
+        - "#8CBC68"
+        - "#A6BE54"
+        - "#BEBC48"
+        - "#D1B541"       
+        - "#DDAA3C"
+        - "#E49C39"
+        - "#E78C35"
+        - "#E67932"
+        - "#E4632D"
+        - "#DF4828"
+        - "#DA2222"  
+        - "#B8221E"
+        - "#95211B"
+        - "#721E17"
+        - "#521A13"           
   - id: 5A1-msw-landfill-waste
     stacCol: epa-ch4emission-yeargrid-v2express
-    name: Municipal Solid Waste (MSW) Landfills (annual)
+    name: Waste Municipal Solid Waste (MSW) Landfills (annual)
     type: raster
-    description: Annual methane emissions from municipal solid waste landfills gridded using annual relative MSW landfall emissions reported to the GHGRP 
+    description: Annual methane emissions fluxes from Municipal Solid Waste Landfills (inventory Waste 5A1 sub-category).
     zoomExtent:
       - 0
       - 20
@@ -515,7 +1019,7 @@ layers:
         - 45878274424832
       nodata: 0
     compare:
-      datasetId: epa-emissions-v2
+      datasetId: epa-ch4emission-yeargrid-v2express-ghgc
       layerId: 5A1-msw-landfill-waste
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -528,18 +1032,36 @@ layers:
       min: 0
       max: 45878274424832
       stops:
-        - "#60007d"
-        - "#30137d"
-        - "#1960ae"
-        - "#7ac300"
-        - "#f2ce00"
-        - "#ef6a01"
-        - "#cc0019"           
+        - "#6F4C9B"
+        - "#6059A9"
+        - "#5568B8"
+        - "#4D8AC6"
+        - "#4E96BC"
+        - "#549EB3"
+        - "#59A5A9"
+        - "#60AB9E"
+        - "#69B190"
+        - "#77B77D"
+        - "#8CBC68"
+        - "#A6BE54"
+        - "#BEBC48"
+        - "#D1B541"       
+        - "#DDAA3C"
+        - "#E49C39"
+        - "#E78C35"
+        - "#E67932"
+        - "#E4632D"
+        - "#DF4828"
+        - "#DA2222"  
+        - "#B8221E"
+        - "#95211B"
+        - "#721E17"
+        - "#521A13"              
   - id: 5A1-industrial-landfill-waste
     stacCol: epa-ch4emission-yeargrid-v2express
-    name: Industrial Landfills (annual)
+    name: Waste Industrial Landfills (annual)
     type: raster
-    description: Annual industrial landfill methane emissions associated with pulp & paper and food & beverage manufacturing are allocated using a combination of annual GHGRP data, 2016 pulp and paper plant locations, amounts of excess food waste, and facility locations from the U.S. EPA Facility Registry Service (FRS)
+    description: Annual methane emissions fluxes from Industrial Landfills (inventory Waste 5A1 sub-category).
     zoomExtent:
       - 0
       - 20
@@ -551,7 +1073,7 @@ layers:
         - 43219505119232
       nodata: 0
     compare:
-      datasetId: epa-emissions-v2
+      datasetId: epa-ch4emission-yeargrid-v2express-ghgc
       layerId: 5A1-industrial-landfill-waste
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -564,18 +1086,36 @@ layers:
       min: 0
       max: 43219505119232
       stops:
-        - "#60007d"
-        - "#30137d"
-        - "#1960ae"
-        - "#7ac300"
-        - "#f2ce00"
-        - "#ef6a01"
-        - "#cc0019"                
+        - "#6F4C9B"
+        - "#6059A9"
+        - "#5568B8"
+        - "#4D8AC6"
+        - "#4E96BC"
+        - "#549EB3"
+        - "#59A5A9"
+        - "#60AB9E"
+        - "#69B190"
+        - "#77B77D"
+        - "#8CBC68"
+        - "#A6BE54"
+        - "#BEBC48"
+        - "#D1B541"       
+        - "#DDAA3C"
+        - "#E49C39"
+        - "#E78C35"
+        - "#E67932"
+        - "#E4632D"
+        - "#DF4828"
+        - "#DA2222"  
+        - "#B8221E"
+        - "#95211B"
+        - "#721E17"
+        - "#521A13"                    
   - id: 5A1-dwtd-waste
     stacCol: epa-ch4emission-yeargrid-v2express
-    name: Domestic Wastewater Treatment & Discharge (annual)
+    name: Waste Domestic Wastewater Treatment & Discharge (annual)
     type: raster
-    description: Annual domestic wastewater methane emissions from septic systems are gridded using population while publicly owned treatment works are gridded using facility-level locations, annual wastewater flow rates, and flow capacities from EPA’s ECHO dataset
+    description: Annual methane emissions fluxes from Domestic Wastewater Treatment and Discharge (inventory Waste 5D sub-category).
     zoomExtent:
       - 0
       - 20
@@ -587,7 +1127,7 @@ layers:
         - 13170276040704
       nodata: 0
     compare:
-      datasetId: epa-emissions-v2
+      datasetId: epa-ch4emission-yeargrid-v2express-ghgc
       layerId: 5A1-dwtd-waste
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -600,18 +1140,36 @@ layers:
       min: 0
       max: 13170276040704
       stops:
-        - "#60007d"
-        - "#30137d"
-        - "#1960ae"
-        - "#7ac300"
-        - "#f2ce00"
-        - "#ef6a01"
-        - "#cc0019"            
+        - "#6F4C9B"
+        - "#6059A9"
+        - "#5568B8"
+        - "#4D8AC6"
+        - "#4E96BC"
+        - "#549EB3"
+        - "#59A5A9"
+        - "#60AB9E"
+        - "#69B190"
+        - "#77B77D"
+        - "#8CBC68"
+        - "#A6BE54"
+        - "#BEBC48"
+        - "#D1B541"       
+        - "#DDAA3C"
+        - "#E49C39"
+        - "#E78C35"
+        - "#E67932"
+        - "#E4632D"
+        - "#DF4828"
+        - "#DA2222"  
+        - "#B8221E"
+        - "#95211B"
+        - "#721E17"
+        - "#521A13"                
   - id: 5A1-iwtd-waste
     stacCol: epa-ch4emission-yeargrid-v2express
-    name: Industrial Wastewater Treatment & Discharge (annual)
+    name: Waste Industrial Wastewater Treatment & Discharge (annual)
     type: raster
-    description: Annual industrial wastewater methane emissions gridded using annual GHGRP emissions and annual locations and wastewater flow rates
+    description: Annual methane emissions fluxes from Industrial Wastewater Treatment and Discharge (inventory Waste 5D sub-category). 
     zoomExtent:
       - 0
       - 20
@@ -623,7 +1181,7 @@ layers:
         - 62315768578048
       nodata: 0
     compare:
-      datasetId: epa-emissions-v2
+      datasetId: epa-ch4emission-yeargrid-v2express-ghgc
       layerId: 5A1-iwtd-waste
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -636,18 +1194,36 @@ layers:
       min: 0
       max: 62315768578048
       stops:
-        - "#60007d"
-        - "#30137d"
-        - "#1960ae"
-        - "#7ac300"
-        - "#f2ce00"
-        - "#ef6a01"
-        - "#cc0019"            
+        - "#6F4C9B"
+        - "#6059A9"
+        - "#5568B8"
+        - "#4D8AC6"
+        - "#4E96BC"
+        - "#549EB3"
+        - "#59A5A9"
+        - "#60AB9E"
+        - "#69B190"
+        - "#77B77D"
+        - "#8CBC68"
+        - "#A6BE54"
+        - "#BEBC48"
+        - "#D1B541"       
+        - "#DDAA3C"
+        - "#E49C39"
+        - "#E78C35"
+        - "#E67932"
+        - "#E4632D"
+        - "#DF4828"
+        - "#DA2222"  
+        - "#B8221E"
+        - "#95211B"
+        - "#721E17"
+        - "#521A13"              
   - id: 5A1-composting-waste
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Composting (annual)
     type: raster
-    description: Annual composting methane emissions derived from GHGI state-level emissions gridded using facility location information
+    description: Annual methane emissions fluxes from Composting (inventory Waste category 5B1). 
     zoomExtent:
       - 0
       - 20
@@ -659,7 +1235,7 @@ layers:
         - 726430777344
       nodata: 0
     compare:
-      datasetId: epa-emissions-v2
+      datasetId: epa-ch4emission-yeargrid-v2express-ghgc
       layerId: 5A1-composting-waste
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -672,18 +1248,90 @@ layers:
       min: 0
       max: 726430777344
       stops:
-        - "#60007d"
-        - "#30137d"
-        - "#1960ae"
-        - "#7ac300"
-        - "#f2ce00"
-        - "#ef6a01"
-        - "#cc0019"            
+        - "#6F4C9B"
+        - "#6059A9"
+        - "#5568B8"
+        - "#4D8AC6"
+        - "#4E96BC"
+        - "#549EB3"
+        - "#59A5A9"
+        - "#60AB9E"
+        - "#69B190"
+        - "#77B77D"
+        - "#8CBC68"
+        - "#A6BE54"
+        - "#BEBC48"
+        - "#D1B541"       
+        - "#DDAA3C"
+        - "#E49C39"
+        - "#E78C35"
+        - "#E67932"
+        - "#E4632D"
+        - "#DF4828"
+        - "#DA2222"  
+        - "#B8221E"
+        - "#95211B"
+        - "#721E17"
+        - "#521A13"                
+  - id: total-coal-mines
+    stacCol: epa-ch4emission-yeargrid-v2express
+    name: Total Coal Mines (annual)
+    type: raster
+    description: Total annual methane emission fluxes from Coal Mines (sum of inventory 1B1a sub-categories)
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: total-coal-mines
+      colormap_name: rainbow
+      rescale:
+        - 0
+        - 155862064
+      nodata: 0
+    compare:
+      datasetId: epa-ch4emission-yeargrid-v2express-ghgc
+      layerId: total-coal-mines
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }      
+    legend:
+      unit: 
+       label: Molecules CH₄/cm²/s
+      type: gradient
+      min: 0
+      max: 155862064
+      stops:
+        - "#6F4C9B"
+        - "#6059A9"
+        - "#5568B8"
+        - "#4D8AC6"
+        - "#4E96BC"
+        - "#549EB3"
+        - "#59A5A9"
+        - "#60AB9E"
+        - "#69B190"
+        - "#77B77D"
+        - "#8CBC68"
+        - "#A6BE54"
+        - "#BEBC48"
+        - "#D1B541"       
+        - "#DDAA3C"
+        - "#E49C39"
+        - "#E78C35"
+        - "#E67932"
+        - "#E4632D"
+        - "#DF4828"
+        - "#DA2222"  
+        - "#B8221E"
+        - "#95211B"
+        - "#721E17"
+        - "#521A13"                  
   - id: 1B1a-underground-coal
     stacCol: epa-ch4emission-yeargrid-v2express
-    name: Underground Coal Mining (annual)
+    name: Coal Mining Underground Mining (annual)
     type: raster
-    description: Annual methane emissions from underground coal mines developed from annual net state-level GHGI emissions gridded based on annual mine-specific relative emissions
+    description: Annual methane emission fluxes from active Underground Coal Mining (inventory Energy 1B1a sub-category)
     zoomExtent:
       - 0
       - 20
@@ -695,7 +1343,7 @@ layers:
         - 195221799305216
       nodata: 0
     compare:
-      datasetId: epa-emissions-v2
+      datasetId: epa-ch4emission-yeargrid-v2express-ghgc
       layerId: 1B1a-underground-coal
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -708,18 +1356,36 @@ layers:
       min: 0
       max: 195221799305216
       stops:
-        - "#60007d"
-        - "#30137d"
-        - "#1960ae"
-        - "#7ac300"
-        - "#f2ce00"
-        - "#ef6a01"
-        - "#cc0019"            
+        - "#6F4C9B"
+        - "#6059A9"
+        - "#5568B8"
+        - "#4D8AC6"
+        - "#4E96BC"
+        - "#549EB3"
+        - "#59A5A9"
+        - "#60AB9E"
+        - "#69B190"
+        - "#77B77D"
+        - "#8CBC68"
+        - "#A6BE54"
+        - "#BEBC48"
+        - "#D1B541"       
+        - "#DDAA3C"
+        - "#E49C39"
+        - "#E78C35"
+        - "#E67932"
+        - "#E4632D"
+        - "#DF4828"
+        - "#DA2222"  
+        - "#B8221E"
+        - "#95211B"
+        - "#721E17"
+        - "#521A13"                
   - id: 1B1a-abn-underground-coal
     stacCol: epa-ch4emission-yeargrid-v2express
-    name: Abandoned Underground Coal Mines Coal Mining (annual)
+    name: Coal Mining Abandoned Underground Mines (annual)
     type: raster
-    description: Annual methane emissions from abandoned underground coal mining derived from GHGI emission decay curves
+    description: Annual methane emission fluxes from Abandoned Underground Coal Mines (inventory Energy 1B1a sub-category)
     zoomExtent:
       - 0
       - 20
@@ -731,7 +1397,7 @@ layers:
         - 11779458465792
       nodata: 0
     compare:
-      datasetId: epa-emissions-v2
+      datasetId: epa-ch4emission-yeargrid-v2express-ghgc
       layerId: 1B1a-abn-underground-coal
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -744,18 +1410,36 @@ layers:
       min: 0
       max: 11779458465792
       stops:
-        - "#60007d"
-        - "#30137d"
-        - "#1960ae"
-        - "#7ac300"
-        - "#f2ce00"
-        - "#ef6a01"
-        - "#cc0019"            
+        - "#6F4C9B"
+        - "#6059A9"
+        - "#5568B8"
+        - "#4D8AC6"
+        - "#4E96BC"
+        - "#549EB3"
+        - "#59A5A9"
+        - "#60AB9E"
+        - "#69B190"
+        - "#77B77D"
+        - "#8CBC68"
+        - "#A6BE54"
+        - "#BEBC48"
+        - "#D1B541"       
+        - "#DDAA3C"
+        - "#E49C39"
+        - "#E78C35"
+        - "#E67932"
+        - "#E4632D"
+        - "#DF4828"
+        - "#DA2222"  
+        - "#B8221E"
+        - "#95211B"
+        - "#721E17"
+        - "#521A13"             
   - id: 1B1a-surface-coal
     stacCol: epa-ch4emission-yeargrid-v2express
-    name: Surface Coal Mining (annual)
+    name: Coal Mining Surface Mining (annual)
     type: raster
-    description: Annual methane emissions from surface coal mining developed from annual net GHGI state-level emissions gridded using mine-specific coal production
+    description: Annual methane emission fluxes from active Surface Coal Mining (inventory Energy 1B1a sub-category)
     zoomExtent:
       - 0
       - 20
@@ -767,7 +1451,7 @@ layers:
         - 97066218946560
       nodata: 0
     compare:
-      datasetId: epa-emissions-v2
+      datasetId: epa-ch4emission-yeargrid-v2express-ghgc
       layerId: 1B1a-surface-coal
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -780,18 +1464,90 @@ layers:
       min: 0
       max: 97066218946560
       stops:
-        - "#60007d"
-        - "#30137d"
-        - "#1960ae"
-        - "#7ac300"
-        - "#f2ce00"
-        - "#ef6a01"
-        - "#cc0019"          
+        - "#6F4C9B"
+        - "#6059A9"
+        - "#5568B8"
+        - "#4D8AC6"
+        - "#4E96BC"
+        - "#549EB3"
+        - "#59A5A9"
+        - "#60AB9E"
+        - "#69B190"
+        - "#77B77D"
+        - "#8CBC68"
+        - "#A6BE54"
+        - "#BEBC48"
+        - "#D1B541"       
+        - "#DDAA3C"
+        - "#E49C39"
+        - "#E78C35"
+        - "#E67932"
+        - "#E4632D"
+        - "#DF4828"
+        - "#DA2222"  
+        - "#B8221E"
+        - "#95211B"
+        - "#721E17"
+        - "#521A13"           
+  - id: total-other
+    stacCol: epa-ch4emission-yeargrid-v2express
+    name: Total Other (annual)
+    type: raster
+    description: Total annual methane emission fluxes from ‘other’ remaining sources (sum of inventory categories 1A (energy combustion), 2B8 & 2C2 (petrochemical & ferroalloy production) and 1B2a & 1B2b (abandoned O&G well emissions))
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: total-other
+      colormap_name: rainbow
+      rescale:
+        - 0
+        - 5674509
+      nodata: 0
+    compare:
+      datasetId: epa-ch4emission-yeargrid-v2express-ghgc
+      layerId: total-other
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }      
+    legend:
+      unit: 
+       label: Molecules CH₄/cm²/s
+      type: gradient
+      min: 0
+      max: 5674509
+      stops:
+        - "#6F4C9B"
+        - "#6059A9"
+        - "#5568B8"
+        - "#4D8AC6"
+        - "#4E96BC"
+        - "#549EB3"
+        - "#59A5A9"
+        - "#60AB9E"
+        - "#69B190"
+        - "#77B77D"
+        - "#8CBC68"
+        - "#A6BE54"
+        - "#BEBC48"
+        - "#D1B541"       
+        - "#DDAA3C"
+        - "#E49C39"
+        - "#E78C35"
+        - "#E67932"
+        - "#E4632D"
+        - "#DF4828"
+        - "#DA2222"  
+        - "#B8221E"
+        - "#95211B"
+        - "#721E17"
+        - "#521A13"                 
   - id: 1A-stationary-combustion-other
     stacCol: epa-ch4emission-yeargrid-v2express
-    name: Stationary combustion (annual)
+    name: Other Stationary combustion (annual)
     type: raster
-    description: Annual methane emissions from stationary combustion calculated as a function of fuel type and sector
+    description: Annual methane emission fluxes from Stationary Combustion (inventory Energy 1A sub-category)
     zoomExtent:
       - 0
       - 20
@@ -803,7 +1559,7 @@ layers:
         - 1096969945088
       nodata: 0
     compare:
-      datasetId: epa-emissions-v2
+      datasetId: epa-ch4emission-yeargrid-v2express-ghgc
       layerId: 1A-stationary-combustion-other
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -816,30 +1572,48 @@ layers:
       min: 0
       max: 1096969945088
       stops:
-        - "#60007d"
-        - "#30137d"
-        - "#1960ae"
-        - "#7ac300"
-        - "#f2ce00"
-        - "#ef6a01"
-        - "#cc0019"                
+        - "#6F4C9B"
+        - "#6059A9"
+        - "#5568B8"
+        - "#4D8AC6"
+        - "#4E96BC"
+        - "#549EB3"
+        - "#59A5A9"
+        - "#60AB9E"
+        - "#69B190"
+        - "#77B77D"
+        - "#8CBC68"
+        - "#A6BE54"
+        - "#BEBC48"
+        - "#D1B541"       
+        - "#DDAA3C"
+        - "#E49C39"
+        - "#E78C35"
+        - "#E67932"
+        - "#E4632D"
+        - "#DF4828"
+        - "#DA2222"  
+        - "#B8221E"
+        - "#95211B"
+        - "#721E17"
+        - "#521A13"                   
   - id: 1A-mobile-combustion-othe
     stacCol: epa-ch4emission-yeargrid-v2express
-    name: Mobile combustion (annual)
+    name: Other Mobile combustion (annual)
     type: raster
-    description: Annual mobile combustion methane emissions are calculated from state-level emissions for on-road vehicles and from national emissions for other mobile sources (e.g. ships, trains, etc.)
+    description: Annual methane emission fluxes from Mobile Combustion (inventory Energy 1A sub-category) 
     zoomExtent:
       - 0
       - 20
     sourceParams:
-      assets: mobile-combustion-othe
+      assets: mobile-combustion-other
       colormap_name: rainbow
       rescale:
         - 0
         - 356184489984
       nodata: 0
     compare:
-      datasetId: epa-emissions-v2
+      datasetId: epa-ch4emission-yeargrid-v2express-ghgc
       layerId: 1A-mobile-combustion-othe
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -852,18 +1626,36 @@ layers:
       min: 0
       max: 356184489984
       stops:
-        - "#60007d"
-        - "#30137d"
-        - "#1960ae"
-        - "#7ac300"
-        - "#f2ce00"
-        - "#ef6a01"
-        - "#cc0019"            
+        - "#6F4C9B"
+        - "#6059A9"
+        - "#5568B8"
+        - "#4D8AC6"
+        - "#4E96BC"
+        - "#549EB3"
+        - "#59A5A9"
+        - "#60AB9E"
+        - "#69B190"
+        - "#77B77D"
+        - "#8CBC68"
+        - "#A6BE54"
+        - "#BEBC48"
+        - "#D1B541"       
+        - "#DDAA3C"
+        - "#E49C39"
+        - "#E78C35"
+        - "#E67932"
+        - "#E4632D"
+        - "#DF4828"
+        - "#DA2222"  
+        - "#B8221E"
+        - "#95211B"
+        - "#721E17"
+        - "#521A13"                
   - id: 1A-abn-ong-other
     stacCol: epa-ch4emission-yeargrid-v2express
-    name: Abandoned Oil and Gas Wells (annual)
+    name: Other Abandoned Oil and Gas Wells (annual)
     type: raster
-    description: Annual methane emissions from abandoned oil and gas wells are derived from state-level emissions and then gridded as a function of well type
+    description: Annual methane emission fluxes from Abandoned Oil and Gas Wells (inventory Energy 1B2a and 1B2b sub-categories)
     zoomExtent:
       - 0
       - 20
@@ -875,7 +1667,7 @@ layers:
         - 4824812748800
       nodata: 0
     compare:
-      datasetId: epa-emissions-v2
+      datasetId: epa-ch4emission-yeargrid-v2express-ghgc
       layerId: 1A-abn-ong-other
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -888,18 +1680,36 @@ layers:
       min: 0
       max: 4824812748800
       stops:
-        - "#60007d"
-        - "#30137d"
-        - "#1960ae"
-        - "#7ac300"
-        - "#f2ce00"
-        - "#ef6a01"
-        - "#cc0019"            
+        - "#6F4C9B"
+        - "#6059A9"
+        - "#5568B8"
+        - "#4D8AC6"
+        - "#4E96BC"
+        - "#549EB3"
+        - "#59A5A9"
+        - "#60AB9E"
+        - "#69B190"
+        - "#77B77D"
+        - "#8CBC68"
+        - "#A6BE54"
+        - "#BEBC48"
+        - "#D1B541"       
+        - "#DDAA3C"
+        - "#E49C39"
+        - "#E78C35"
+        - "#E67932"
+        - "#E4632D"
+        - "#DF4828"
+        - "#DA2222"  
+        - "#B8221E"
+        - "#95211B"
+        - "#721E17"
+        - "#521A13"                
   - id: 1A-petro-production-other
     stacCol: epa-ch4emission-yeargrid-v2express
-    name: Petrochemical Production (annual)
+    name: Other Petrochemical Production (annual)
     type: raster
-    description: Annual methane emissions from petrochemical production gridded using annual facility-level GHGRP methane emissions and locations
+    description: Annual methane emission fluxes from Petrochemical Production (inventory Industrial Processes and Product Use category 2B8)
     zoomExtent:
       - 0
       - 20
@@ -911,7 +1721,7 @@ layers:
         - 4687914860544
       nodata: 0
     compare:
-      datasetId: epa-emissions-v2
+      datasetId: epa-ch4emission-yeargrid-v2express-ghgc
       layerId: 1A-petro-production-other
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -924,18 +1734,36 @@ layers:
       min: 0
       max: 4687914860544
       stops:
-        - "#60007d"
-        - "#30137d"
-        - "#1960ae"
-        - "#7ac300"
-        - "#f2ce00"
-        - "#ef6a01"
-        - "#cc0019"            
+        - "#6F4C9B"
+        - "#6059A9"
+        - "#5568B8"
+        - "#4D8AC6"
+        - "#4E96BC"
+        - "#549EB3"
+        - "#59A5A9"
+        - "#60AB9E"
+        - "#69B190"
+        - "#77B77D"
+        - "#8CBC68"
+        - "#A6BE54"
+        - "#BEBC48"
+        - "#D1B541"       
+        - "#DDAA3C"
+        - "#E49C39"
+        - "#E78C35"
+        - "#E67932"
+        - "#E4632D"
+        - "#DF4828"
+        - "#DA2222"  
+        - "#B8221E"
+        - "#95211B"
+        - "#721E17"
+        - "#521A13"                
   - id: 1A-ferroalloy-production-other
     stacCol: epa-ch4emission-yeargrid-v2express
-    name: Ferroalloy Production (annual)
+    name: Other Ferroalloy Production (annual)
     type: raster
-    description: Annual methane emissions from ferroalloy production gridded using annual facility-level GHGRP methane emissions and locations
+    description: Annual methane emission fluxes from Ferroalloy Production (inventory Industrial Processes and Product Use category 2C2)
     zoomExtent:
       - 0
       - 20
@@ -947,7 +1775,7 @@ layers:
         - 99607961600
       nodata: 0
     compare:
-      datasetId: epa-emissions-v2
+      datasetId: epa-ch4emission-yeargrid-v2express-ghgc
       layerId: 1A-ferroalloy-production-other
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -960,61 +1788,99 @@ layers:
       min: 0
       max: 99607961600
       stops:
-        - "#60007d"
-        - "#30137d"
-        - "#1960ae"
-        - "#7ac300"
-        - "#f2ce00"
-        - "#ef6a01"
-        - "#cc0019"                   
+        - "#6F4C9B"
+        - "#6059A9"
+        - "#5568B8"
+        - "#4D8AC6"
+        - "#4E96BC"
+        - "#549EB3"
+        - "#59A5A9"
+        - "#60AB9E"
+        - "#69B190"
+        - "#77B77D"
+        - "#8CBC68"
+        - "#A6BE54"
+        - "#BEBC48"
+        - "#D1B541"       
+        - "#DDAA3C"
+        - "#E49C39"
+        - "#E78C35"
+        - "#E67932"
+        - "#E4632D"
+        - "#DF4828"
+        - "#DA2222"  
+        - "#B8221E"
+        - "#95211B"
+        - "#721E17"
+        - "#521A13"                    
+                      
 ---
 
 <Block type='wide'>
   <Prose>
-    The EPA Anthropogenic Methane Emissions (Express Extension) data product contains a gridded inventory of annual anthropogenic methane emissions for 2012-2020, consistent with the EPA’s Inventory of U.S. Greenhouse Gas Emissions and Sinks (GHGI) published in 2022. The extension dataset was developed to incorporate updates that the EPA has made to the U.S. GHGI since the publication of the 2020 U.S. GHGI Report. It uses the same gridding methodology as the main gridded GHGI dataset but emissions are scaled to be consistent with those from the 2022 U.S. GHGI Report, allowing for comparison with more recent methane emissions estimates. The data are provided over the contiguous United States on a 0.1 x 0.1 degree grid for 27 source categories relating to agriculture, natural gas systems, petroleum systems, waste, and coal mines among others. The data have been converted from NetCDF to Cloud-Optimized GeoTIFF (COG) for use in the U.S. GHG Center, enabling robust comparisons of emissions and their trends.
+    The gridded EPA U.S. anthropogenic methane greenhouse gas inventory (gridded GHGI) includes spatially disaggregated ( 0.1°×0.1° or ~10 x10 km resolution) maps of annual anthropogenic methane emissions for the contiguous United States (CONUS), consistent with national annual U.S. anthropogenic methane emissions reported in the U.S. EPA [Inventory of U.S. Greenhouse Gas Emissions and Sinks](https://www.epa.gov/ghgemissions/inventory-us-greenhouse-gas-emissions-and-sinks) (U.S. GHGI). Emissions are provided as fluxes, in units of molecules of methane per cm per second, for over 25 individual emission source categories, including from agriculture, petroleum and natural gas systems, coal mining, and waste. The data have been converted from their original NetCDF format to Cloud-Optimized GeoTIFF (COG) for use in the US GHG Center, enabling user exploration of spatial anthropogenic methane emissions and their trends.
+    
+    **Data Version Details**
+    The gridded GHGI is continually updated to capture ongoing updates and improvements to the U.S. National GHG Inventory. The gridded GHGI currently includes 3 versions, each covering different emission years, and with methane emissions consistent with a different U.S. National Inventory Reports. 
+    1.Gridded GHGI Version 1 (0.1°×0.1° emission maps for 2012, consistent with the 2016 GHGI Report)
+    2.Gridded GHGI Version 2 (0.1°×0.1° emission maps for 2012-2018, consistent with the 2020 GHGI Report)
+    3.Gridded GHGI Version 2 Express Extension (0.1°×0.1° emission maps for 2012-2020, consistent with the 2022 GHGI Report)
+    
+    Data in the U.S. GHG Center Data Explorer correspond to the V2 Express Extension dataset (#3 above). 
+    
+    For more information Version 2 and the Express Extension (#2 & #3), visit the latest Data Repository on Zenodo: [https://zenodo.org/record/7672124](https://zenodo.org/record/7672124)
    
     - **Temporal Extent:** 2012 - 2020    
     - **Temporal Resolution:** Annual    
     - **Spatial Extent:** Contiguous United States  
     - **Spatial Resolution:** 0.1° x 0.1°    
     - **Data Units:** Molecules of methane per square centimeter per second (Molecules CH₄ cm²/s)    
-    - **Data type:** Regulatory
+    - **Data type:** Research (v2 express extension)
     - **Data Latency:** N/A
 
-    **Scientific Details:** The annual files include a ‘Grid_cell_area’ variable to help users convert the emission fluxes to emission mass totals. The variable also includes a time dimension to make it suitable (COARDS-compliant) for use in atmospheric models. In addition to annual emission flux files, the main gridded dataset also includes monthly source-specific methane emission scaling factors for sources with strong interannual variability. For these select sources, the scaling factors can be multiplied with the data in the annual emission files to obtain monthly methane emission fluxes. Monthly data is not included in the GHG Center.  
+    **Scientific Details:** The gridded GHGI is developed by spatially allocating national annual methane emissions from over 160 individual source categories from the Inventory of U.S. Greenhouse Gas Emissions and Sinks (U.S. GHGI) to a 0.1x0.1 (~10x10km) grid using a series of spatial and temporal proxy datasets at the state, county, and grid levels. Proxy data are chosen to best align with the available activity and reported emissions data underlying a particular version of the U.S. GHGI. Where possible, the proxy data are the same as those used to develop the GHGI, so that the gridded emissions can be, as closely as possible, a spatial and temporal representation of those in the national-level U.S. GHGI Report. 
+    
+    The development of the gridded GHGI enables more direct comparisons between the methane emissions reported in the annual U.S. GHGI and those derived from atmospheric methane observations, such as through inverse analyses, with the aim of improving national inventory estimates and better understanding uncertain sources of methane emissions. 
+    
+    Details of the methodological development of this dataset are described in the paper Maasakkers et al., [preprint] 2023, currently available as a non-peer-reviewed pre-print at: [https://eartharxiv.org/repository/view/5623/](https://eartharxiv.org/repository/view/5623/) 
+
   </Prose>
 </Block>
 <Block>
   <Prose>
     ## Source Data Product Citation
-    McDuffie, Erin, E., Maasakkers, Joannes, D., Sulprizio, Melissa, P., Chen, Candice, Schultz, Maggie, Brunelle, Lily, Thrush, Ryan, Steller, John, Sherry, Christopher, Jacob, Daniel, J., Jeong, Seongeun, Irving, Bill, & Weitz, Melissa. (2023). Gridded EPA U.S. Anthropogenic Methane Greenhouse Gas Inventory (gridded GHGI) (Preprint) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.7672124
-
+    Gridded GHGI V2 & Express Extension: 
+    McDuffie, Erin, E., Maasakkers, Joannes, D., Sulprizio, Melissa, P., Chen, Candice, Schultz, Maggie, Brunelle, Lily, Thrush, Ryan, Steller, John, Sherry, Christopher, Jacob, Daniel, J., Jeong, Seongeun, Irving, Bill, & Weitz, Melissa. (2023). Gridded EPA U.S. Anthropogenic Methane Greenhouse Gas Inventory (gridded GHGI) (Preprint) [Data set]. *Zenodo*. https://doi.org/10.5281/zenodo.7672124
+    
+    Gridded GHGI Version 1
+    Maasakkers, J. D., Jacob, D. J., Sulprizio, M. P., Turner, A. J., Weitz, M., Wirth, T., Hight, C., DeFigueiredo, M., Desai, M., Schmeltz, R., Hockstad, L., Bloom, A. A., Bowman, K. W., Jeong, S., Fischer, M. L. (2016) A Gridded National Inventory of U.S. Methane Emissions [Data set]. Available at: [https://www.epa.gov/ghgemissions/gridded-2012-methane-emissions#data](https://www.epa.gov/ghgemissions/gridded-2012-methane-emissions#data) 
+    
     ## Dataset Accuracy
-    Using inverse analysis, uncertainty and error variances are estimated by comparing source- specific 2012 gridded estimates to those from an external detailed bottom-up inventory for the Barnett region in Texas that was compiled in 2015 and matches atmospheric measurements. For more information on uncertainty estimates, refer to the Maasakkers et al. (2023) paper.	 
+    Uncertainties underlying the development of national methane emission estimates are discussed in each annual U.S. GHGI Report. Additional characterization of resolution-dependent uncertainties are discussed in [Maasakkers et al. (2023)](https://doi.org/10.31223/X5RQ3M).    
     
     ## Disclaimer
     All data provided in the U.S. GHG Center has been transformed from the original format (NetCDF) into Cloud Optimized GeoTIFF ([COG] (https://www.cogeo.org/)). Careful quality checks are used to ensure data transformation has been performed correctly. 
-
-    Note that this dataset does not currently include emissions from the Land Use, Land Use Change, and Forestry (LULUCF) category of the national U.S. GHGI. Methane emissions from these sources include but are not limited to emissions from fires and flooded lands. 
-
-    The EPA Anthropogenic Methane Emissions (Express Extension) data is considered an extension of the main gridded GHGI dataset that’s consistent with the 2020 U.S. GHGI Report. The express extension dataset is not a full update to the main gridded GHGI dataset, and instead uses annual source-specific spatial patterns from 2012-2018 from the main dataset to quickly incorporate more recent national methane emission estimates. Regardless of application, users should not combine emissions data from the main gridded dataset with the express extension. Additionally, for years after 2018, monthly scaling factors should only be applied to the express extension for manure management, rice cultivation, and field burning of agricultural residue emissions. For more information on the differences between the main gridded GHGI dataset and the express extension, visit the Gridded EPA U.S. Anthropogenic Methane Greenhouse Gas Inventory.
-
+    
+    The Version 2 & Express Extension Datasets have not been peer-reviewed. The dataset and Zenodo data repository will be updated upon peer-review and final publication of the associated manuscript. 
+    
+    Users of these datasets are asked to cite the original references ([Maasakkers, et al., (2016)](https://pubs.acs.org/doi/10.1021/acs.est.6b02878) or [Maasakkers et al. (2023)](https://doi.org/10.31223/X5RQ3M)) in their publications and are encouraged to reach out to the development team with further questions. 
+    
     ## Key Publications
-    Maasakkers, J., McDuffie, E., Sulprizio, M., Chen, C., Schultz, M., Brunelle, L., Thrush, R., Steller, J., Sherry, C., Jacob, D., Jeong, S., Irving, B., & Weitz, M. (2023). A gridded inventory of annual 2012-2018 U.S. anthropogenic methane emissions. EarthArXiv (California Digital Library). https://doi.org/10.31223/x5rq3m
+    Maasakkers, J., McDuffie, E., Sulprizio, M., Chen, C., Schultz, M., Brunelle, L., Thrush, R., Steller, J., Sherry, C., Jacob, D., Jeong, S., Irving, B., & Weitz, M. (2023). A gridded inventory of annual 2012-2018 U.S. anthropogenic methane emissions. *EarthArXiv (California Digital Library)*. https://doi.org/10.31223/x5rq3m
     
     ## Other Relevant Publications
-    Maasakkers, J., Jacob, D., Sulprizio, M., Turner, A., Weitz, M., Wirth, T., Hight, C., DeFigueiredo, M., Desai, M., Schmeltz, R., Hockstad, L., Bloom, A., Bowman, K., Jeong, S., Fischer, M. (2016). Gridded National Inventory of U.S. Methane Emissions. Environmental Science & Technology, 50(23), 13123-13133. https://doi.org/10.1021/acs.est.6b02878
+    Maasakkers, J., Jacob, D., Sulprizio, M., Turner, A., Weitz, M., Wirth, T., Hight, C., DeFigueiredo, M., Desai, M., Schmeltz, R., Hockstad, L., Bloom, A., Bowman, K., Jeong, S., Fischer, M. (2016). Gridded National Inventory of U.S. Methane Emissions. *Environmental Science & Technology*, 50(23), 13123-13133. https://doi.org/10.1021/acs.est.6b02878
     
     ## Acknowledgment
-    The EPA team was supported in part by an American Association for the Advancement of Science (AAAS) Science and Technology Policy Fellowship and the NASA Carbon Monitoring System. Additional members of the EPA GHG Inventory Team and NEI oil and gas inventory team provided data and support while developing the gridded estimates. D.R. Lyon, D. Zavala-Araiza, and S.P. Hamburg provided the methane emissions data for the Barnett Shale Basin developed by the Environmental Defense Fund.
+    This dataset was developed in collaboration between researchers at the U.S. EPA, Netherlands Institute for Space Research (SRON), Harvard University, and Lawrence Berkeley National Laboratory.     
     
     ## License
     [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/legalcode) (CC BY 4.0) 
     
     ## Data Stewardship
-    - [Data Workflow](https://github.com/US-GHG-Center/ghgc-docs/blob/main/data_workflow/epa-ch4emission-grid-v2_Data_Flow.png)
-    - [Data Transformation Code](https://github.com/US-GHG-Center/ghgc-docs/blob/main/cog_transformation_scripts/epa-ch4emission-grid-v2_Transformation_Code.py)
-    - [U.S. GHG Center Data Intake Processing and Verification Report](https://github.com/US-GHG-Center/ghgc-docs/blob/main/processing_and_verification_reports/epa-ch4emission-grid-v2_Processing%20and%20Verification%20Report.pdf)
+    - [Data Workflow](https://github.com/US-GHG-Center/ghgc-docs/blob/main/data_workflow/media/epa-ch4emission-grid-v2express_Data_Flow.png)
+    - [Data Transformation Code](https://github.com/US-GHG-Center/ghgc-docs/blob/main/cog_transformation/scripts/epa-ch4emission-grid-v2express_Transformation_Code.py)
+    - [U.S. GHG Center Data Intake Processing and Verification Report](https://github.com/US-GHG-Center/ghgc-docs/blob/main/processing_and_verification_reports/reports/epa-ch4emission-grid-v2express_Processing%20and%20Verification%20Report.pdf)
 
   </Prose>
 </Block>

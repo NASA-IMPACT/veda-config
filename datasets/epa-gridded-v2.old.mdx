@@ -1,12 +1,12 @@
 ---
-id: epa-emissions-v2
+id: epa-ch4-v2-ghgc
 name: EPA Anthropogenic Methane Emissions
 description: Annual, monthly, and daily 0.1° resolution estimates of anthropogenic methane emissions for the contiguous U.S. from 2012 - 2018, version 2.
 usage:
-  - url: 'https://github.com/NASA-IMPACT/GHGC_docs/blob/main/cog_transformation_scripts/epa_methane_nc_transformation.py'
+  - url: 'https://github.com/NASA-IMPACT/GHGC_docs/blob/main/cog_transformation/scripts/epa-ch4emission-grid-v2express_Transformation_Code.py'
     label: Notebook to trasnform GeoTIFF to COG
     title: 'EPA Anthropogenic Methane Emissions data transformation notebook'
-  - url: 'https://github.com/NASA-IMPACT/GHGC_docs/blob/main/user_data_notebooks/epa_ch4_data_notebook.ipynb'
+  - url: 'https://github.com/US-GHG-Center/ghgc-docs/blob/main/user_data_notebooks/epa-ch4emission-grid-v2express_User_Notebook.ipynb'
     label: Notebook to read, visualize, and explore data statistics
     title: 'EPA Anthropogenic Methane Emissions data notebook'
   - url: 'https://hub.ghg.center/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FUS-GHG-Center%2Fghgc-docs&urlpath=tree%2Fghgc-docs%2Fuser_data_notebooks%2Fepa-ch4emission-grid-v2_User_Notebook.ipynb&branch=main'
@@ -47,7 +47,7 @@ layers:
         - 4182634135552
       nodata: 0
     compare:
-      datasetId: epa-emissions-v2
+      datasetId: epa-ch4-v2-ghgc
       layerId: enteric-fermentation
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -83,7 +83,7 @@ layers:
         - 3062094888960
       nodata: 0
     compare:
-      datasetId: epa-emissions-v2
+      datasetId: epa-ch4-v2-ghgc
       layerId: manure-management
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -119,7 +119,7 @@ layers:
         - 2
       nodata: 0
     compare:
-      datasetId: epa-emissions-v2
+      datasetId: epa-ch4-v2-ghgc
       layerId: manure-management-monthly
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -155,7 +155,7 @@ layers:
         - 6309977522176
       nodata: 0
     compare:
-      datasetId: epa-emissions-v2
+      datasetId: epa-ch4-v2-ghgc
       layerId: 4c-rice-cultivation
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -189,7 +189,7 @@ layers:
         - 1
       nodata: 0
     compare:
-      datasetId: epa-emissions-v2
+      datasetId: epa-ch4-v2-ghgc
       layerId: 4c-rice-cultivation-monthly
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -225,7 +225,7 @@ layers:
         - 27056996352
       nodata: 0
     compare:
-      datasetId: epa-emissions-v2
+      datasetId: epa-ch4-v2-ghgc
       layerId: 4f-field-burning
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -261,7 +261,7 @@ layers:
         - 15
       nodata: 0
     compare:
-      datasetId: epa-emissions-v2
+      datasetId: epa-ch4-v2-ghgc
       layerId: 4f-field-burning-monthly
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -297,7 +297,7 @@ layers:
         - 2611559792640
       nodata: 0
     compare:
-      datasetId: epa-emissions-v2
+      datasetId: epa-ch4-v2-ghgc
       layerId: 1B2b-exploration-ngs
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -333,7 +333,7 @@ layers:
         - 15
       nodata: 0
     compare:
-      datasetId: epa-emissions-v2
+      datasetId: epa-ch4-v2-ghgc
       layerId: 1B2b-exploration-ngs-monthly
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -369,7 +369,7 @@ layers:
         - 13900969934848
       nodata: 0
     compare:
-      datasetId: epa-emissions-v2
+      datasetId: epa-ch4-v2-ghgc
       layerId: 1B2b-production-ngs
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -405,7 +405,7 @@ layers:
         - 15
       nodata: 0
     compare:
-      datasetId: epa-emissions-v2
+      datasetId: epa-ch4-v2-ghgc
       layerId: 1B2b-production-ngs-monthly
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -441,7 +441,7 @@ layers:
         - 19360041140224
       nodata: 0
     compare:
-      datasetId: epa-emissions-v2
+      datasetId: epa-ch4-v2-ghgc
       layerId: 1B2b-transmission-storage-ngs
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -477,7 +477,7 @@ layers:
         - 63448557813760
       nodata: 0
     compare:
-      datasetId: epa-emissions-v2
+      datasetId: epa-ch4-v2-ghgc
       layerId: 1B2b-processing-ngs
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -513,7 +513,7 @@ layers:
         - 3239707148288
       nodata: 0
     compare:
-      datasetId: epa-emissions-v2
+      datasetId: epa-ch4-v2-ghgc
       layerId: 1B2b-distribution-ngs
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -549,7 +549,7 @@ layers:
         - 185182912512
       nodata: 0
     compare:
-      datasetId: epa-emissions-v2
+      datasetId: epa-ch4-v2-ghgc
       layerId: 1B2a-exploration-ps
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -585,7 +585,7 @@ layers:
         - 15
       nodata: 0
     compare:
-      datasetId: epa-emissions-v2
+      datasetId: epa-ch4-v2-ghgc
       layerId: 1B2a-exploration-ps-monthly
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -621,7 +621,7 @@ layers:
         - 14142707597312
       nodata: 0
     compare:
-      datasetId: epa-emissions-v2
+      datasetId: epa-ch4-v2-ghgc
       layerId: 1B2a-production-ps
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -657,7 +657,7 @@ layers:
         - 14
       nodata: 0
     compare:
-      datasetId: epa-emissions-v2
+      datasetId: epa-ch4-v2-ghgc
       layerId: 1B2a-production-ps-monthly
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -691,7 +691,7 @@ layers:
         - 321039630336
       nodata: 0
     compare:
-      datasetId: epa-emissions-v2
+      datasetId: epa-ch4-v2-ghgc
       layerId: 1B2a-transport-ps
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -727,7 +727,7 @@ layers:
         - 15
       nodata: 0
     compare:
-      datasetId: epa-emissions-v2
+      datasetId: epa-ch4-v2-ghgc
       layerId: 1B2a-transport-ps-monthly
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -763,7 +763,7 @@ layers:
         - 2642320293888
       nodata: 0
     compare:
-      datasetId: epa-emissions-v2
+      datasetId: epa-ch4-v2-ghgc
       layerId: 1B2a-refining-ps
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -799,7 +799,7 @@ layers:
         - 2
       nodata: 0
     compare:
-      datasetId: epa-emissions-v2
+      datasetId: epa-ch4-v2-ghgc
       layerId: 1B2a-refining-ps-monthly
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -835,7 +835,7 @@ layers:
         - 45878274424832
       nodata: 0
     compare:
-      datasetId: epa-emissions-v2
+      datasetId: epa-ch4-v2-ghgc
       layerId: 5A1-msw-landfill-waste
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -871,7 +871,7 @@ layers:
         - 43219505119232
       nodata: 0
     compare:
-      datasetId: epa-emissions-v2
+      datasetId: epa-ch4-v2-ghgc
       layerId: 5A1-industrial-landfill-waste
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -907,7 +907,7 @@ layers:
         - 13170276040704
       nodata: 0
     compare:
-      datasetId: epa-emissions-v2
+      datasetId: epa-ch4-v2-ghgc
       layerId: 5A1-dwtd-waste
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -943,7 +943,7 @@ layers:
         - 62315768578048
       nodata: 0
     compare:
-      datasetId: epa-emissions-v2
+      datasetId: epa-ch4-v2-ghgc
       layerId: 5A1-iwtd-waste
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -979,7 +979,7 @@ layers:
         - 726430777344
       nodata: 0
     compare:
-      datasetId: epa-emissions-v2
+      datasetId: epa-ch4-v2-ghgc
       layerId: 5A1-composting-waste
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -1015,7 +1015,7 @@ layers:
         - 195221799305216
       nodata: 0
     compare:
-      datasetId: epa-emissions-v2
+      datasetId: epa-ch4-v2-ghgc
       layerId: 1B1a-underground-coal
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -1051,7 +1051,7 @@ layers:
         - 11779458465792
       nodata: 0
     compare:
-      datasetId: epa-emissions-v2
+      datasetId: epa-ch4-v2-ghgc
       layerId: 1B1a-abn-underground-coal
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -1087,7 +1087,7 @@ layers:
         - 97066218946560
       nodata: 0
     compare:
-      datasetId: epa-emissions-v2
+      datasetId: epa-ch4-v2-ghgc
       layerId: 1B1a-surface-coal
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -1123,7 +1123,7 @@ layers:
         - 1096969945088
       nodata: 0
     compare:
-      datasetId: epa-emissions-v2
+      datasetId: epa-ch4-v2-ghgc
       layerId: 1A-stationary-combustion-other
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -1159,7 +1159,7 @@ layers:
         - 6
       nodata: 0
     compare:
-      datasetId: epa-emissions-v2
+      datasetId: epa-ch4-v2-ghgc
       layerId: 1A-stationary-combustion-other-monthly
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -1195,7 +1195,7 @@ layers:
         - 356184489984
       nodata: 0
     compare:
-      datasetId: epa-emissions-v2
+      datasetId: epa-ch4-v2-ghgc
       layerId: 1A-mobile-combustion-othe
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -1231,7 +1231,7 @@ layers:
         - 4824812748800
       nodata: 0
     compare:
-      datasetId: epa-emissions-v2
+      datasetId: epa-ch4-v2-ghgc
       layerId: 1A-abn-ong-other
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -1267,7 +1267,7 @@ layers:
         - 4687914860544
       nodata: 0
     compare:
-      datasetId: epa-emissions-v2
+      datasetId: epa-ch4-v2-ghgc
       layerId: 1A-petro-production-other
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -1303,7 +1303,7 @@ layers:
         - 99607961600
       nodata: 0
     compare:
-      datasetId: epa-emissions-v2
+      datasetId: epa-ch4-v2-ghgc
       layerId: 1A-ferroalloy-production-other
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -1368,9 +1368,9 @@ layers:
     [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/legalcode) (CC BY 4.0) 
     
     ## Data Stewardship
-    - [Data Workflow](https://github.com/US-GHG-Center/ghgc-docs/blob/main/data_workflow/epa-ch4emission-grid-v2_Data_Flow.png)
-    - [Data Transformation Code](https://github.com/US-GHG-Center/ghgc-docs/blob/main/cog_transformation_scripts/epa-ch4emission-grid-v2_Transformation_Code.py)
-    - [U.S. GHG Center Data Intake Processing and Verification Report](https://github.com/US-GHG-Center/ghgc-docs/blob/main/processing_and_verification_reports/epa-ch4emission-grid-v2_Processing%20and%20Verification%20Report.pdf)
+    - [Data Workflow](https://github.com/US-GHG-Center/ghgc-docs/blob/main/data_workflow/media/epa-ch4emission-grid-v2express_Data_Flow.png)
+    - [Data Transformation Code](https://github.com/US-GHG-Center/ghgc-docs/blob/main/cog_transformation/scripts/"epa-ch4emission-grid-v2express_Transformation_Code.py)
+    - [U.S. GHG Center Data Intake Processing and Verification Report](https://github.com/US-GHG-Center/ghgc-docs/blob/main/processing_and_verification_reports/reports/epa-ch4emission-grid-v2express_Processing%20and%20Verification%20Report.pdf)
 
   </Prose>
 </Block>

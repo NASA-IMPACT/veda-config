@@ -1,9 +1,9 @@
 ---
-id: oco2-gridded-daily
+id: oco2geos-co2-daygrid-v10r-ghgc
 name: OCO-2 GEOS Assimilated CO₂ Concentrations
 description: Daily, global 0.5 x 0.625 degree assimilated CO₂ concentrations derived from OCO-2 satellite data, version 10r
 usage:
-  - url: 'https://github.com/US-GHG-Center/ghgc-docs/blob/main/cog_transformation_scripts/oco2geos-co2-daygrid-v10r_Transformation_Code.py'
+  - url: 'https://github.com/US-GHG-Center/ghgc-docs/blob/main/cog_transformation/scripts/oco2geos-co2-daygrid-v10r_Transformation_Code.py'
     label:  Notebook showing data transformation to COG
     title: 'OCO-2 GEOS CO₂ data transformation notebook'
   - url: 'https://github.com/US-GHG-Center/ghgc-docs/blob/main/user_data_notebooks/oco2geos-co2-daygrid-v10r_User_Notebook.ipynb'
@@ -47,10 +47,10 @@ layers:
       colormap_name: magma
       rescale:
         - 0.00040152
-        - 0.00042850
+        - 0.00040285
       nodata: 0
     compare:
-      datasetId: oco2-gridded-daily
+      datasetId: oco2geos-co2-daygrid-v10r-ghgc
       layerId: oco2-dryair-column
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -61,7 +61,7 @@ layers:
         label: mol CO₂/mol dry
       type: gradient
       min: 0.00040152
-      max: 0.00042850
+      max: 0.00041550
       stops:
         - '#2c115f'
         - '#721f81'
@@ -76,6 +76,7 @@ layers:
     zoomExtent:
       - 0
       - 20
+    bounds: [-124.7844079,24.7433195,-66.9513812,49.3457868]  
     sourceParams:
       assets: xco2prec
       colormap_name: magma
@@ -84,7 +85,7 @@ layers:
         - 0.0000015
       nodata: 0
     compare:
-      datasetId: oco2-gridded-daily
+      datasetId: oco2geos-co2-daygrid-v10r-ghgc
       layerId: oco2-dryair-column-prec
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -160,9 +161,9 @@ layers:
     [Creative Commons Zero v1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC0 1.0)   
 
     ## Data Stewardship
-    - [Data Workflow](https://github.com/US-GHG-Center/ghgc-docs/blob/main/data_workflow/oco2geos-co2-daygrid-v10r_Data_Flow.png)
-    - [Data Transformation Code](https://github.com/US-GHG-Center/ghgc-docs/blob/main/cog_transformation_scripts/oco2geos-co2-daygrid-v10r_Transformation_Code.py)
-    - [U.S. GHG Center Data Intake Processing and Verification Report](https://github.com/US-GHG-Center/ghgc-docs/blob/main/processing_and_verification_reports/oco2geos-co2-daygrid-v10r_Processing%20and%20Verification%20Report.pdf)
+    - [Data Workflow](https://github.com/US-GHG-Center/ghgc-docs/blob/main/data_workflow/media/oco2geos-co2-daygrid-v10r_Data_Flow.png)
+    - [Data Transformation Code](https://github.com/US-GHG-Center/ghgc-docs/blob/main/cog_transformation/scripts/oco2geos-co2-daygrid-v10r_Transformation_Code.py)
+    - [U.S. GHG Center Data Intake Processing and Verification Report](https://github.com/US-GHG-Center/ghgc-docs/blob/main/processing_and_verification_reports/reports/oco2geos-co2-daygrid-v10r_Processing%20and%20Verification%20Report.pdf)
 
   </Prose>
 </Block>
