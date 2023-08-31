@@ -39,6 +39,8 @@ layers:
     name: Average Dry-Air Column CO₂ (XCO₂)
     type: raster
     description: Daily dry air column-averaged mole fractions of carbon dioxide created from data assimilations of OCO-2 satellite retrievals. 
+    projection:
+      id: 'equirectangular'
     zoomExtent:
       - 0
       - 20
@@ -73,6 +75,8 @@ layers:
     name: Average Dry-Air Column CO₂ Precision (XCO₂PREC)
     type: raster
     description: Random errors for daily dry air column-averaged mole fractions of carbon dioxide calculated using a posteriori diagnostics
+    projection:
+      id: 'equirectangular'
     zoomExtent:
       - 0
       - 20
