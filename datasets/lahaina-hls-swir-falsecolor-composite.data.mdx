@@ -18,10 +18,14 @@ layers:
     name: '"HLS SWIR FalseColor Composite: 8-8-2023.'
     type: raster
     description: 'HLS falsecolor composite imagery using S30 Bands 12, 8A, and 4. Scene taken hours before the Lahaina Fire began.'
+    initialDatetime: newest
+    zoomExtent:
+      - 0
+      - 20
     sourceParams:
+      colormap_name: none
       resampling: bilinear
       nodata: nan
-      colormap_name: none
     compare:
       datasetId: hls-swir-falsecolor-composite
       layerId: hls-swir-falsecolor-composite
