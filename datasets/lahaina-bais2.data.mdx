@@ -17,12 +17,15 @@ layers:
     stacCol: hls-bais2
     name: BAIS-2 Burned Area
     type: raster
-    description: 'Experimental burned-area calculation from the HLS scene taken on August 13,2023 over Lahaina, HI.x'
+    description: 'Experimental burned-area calculation from the HLS scene taken on August 13,2023 over Lahaina, HI.'
     zoomExtent:
       - 0
       - 20
+
     sourceParams:
-      colormap_name: rdylbu_r
+      colormap_name: rdylbu
+      nodata: nan
+
     legend:
       type: gradient
       min: "1.28"
