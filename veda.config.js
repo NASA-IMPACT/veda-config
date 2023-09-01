@@ -30,8 +30,8 @@ module.exports = {
 
   strings: {
     stories: {
-      one: ' Data Story',
-      other: 'Data Stories'
+      one: 'Data Insights',
+      other: 'Data Insights'
     }
   },
 
