@@ -30,6 +30,11 @@ layers:
     compare:
       datasetId: hls-swir-falsecolor-composite
       layerId: hls-swir-falsecolor-composite
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'DD LLL yyyy')}`;        
+        }
+
 
 ---
 <Block>
