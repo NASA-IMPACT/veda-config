@@ -22,13 +22,14 @@ layers:
       - 4
       - 20
     sourceParams:
+      post_process: swir
+      assets:
+        - B12
+        - B8A
+        - B04
     compare:
       datasetId: hls-swir-falsecolor-composite
       layerId: hls-swir-falsecolor-composite
-      mapLabel: |
-        ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `${dateFns.format(datetime, 'DD LLL yyyy')}`;        
-        }
 
 ---
 <Block>
