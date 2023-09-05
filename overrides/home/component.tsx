@@ -105,7 +105,7 @@ export default function HomeComponent() {
             stakeholders are encouraged to help scope and prioritize the
             evolution and maturation of the US GHG Center capabilities.
           </p>
-          <ArrowLink to="/stories">The U.S. GHG Center Story</ArrowLink>
+          <ArrowLink to="/stories/intro-us-ghg-center">Introduction to the U.S. GHG Center</ArrowLink>
         </IntroHeadline>
         <Keypoints />
         <ActionsBlock>
