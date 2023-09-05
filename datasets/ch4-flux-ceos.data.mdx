@@ -1,15 +1,15 @@
 ---
-id: ceos-ch4budget-yeargrid-v1-ghgc
-name: CEOS Methane Budgets 
+id: gosat-based-ch4budget-yeargrid-v1-ghgc
+name: GOSAT-based Top-down Methane Budgets  
 description: Annual methane emissions gridded globally at 1° resolution for 2019, version
 usage:
-  - url: 'https://github.com/US-GHG-Center/ghgc-docs/blob/main/cog_transformation/scripts/ceos-ch4budget-yeargrid-v1_Transformation_Code.py'
+  - url: 'https://us-ghg-center.github.io/ghgc-docs/cog_transformation/ceos-ch4budget-yeargrid-v1.html'
     label: Notebook to transform GeoTIFF to COG
-    title: 'CEOS Methane Budgets data transformation notebook'
-  - url: 'https://github.com/US-GHG-Center/ghgc-docs/blob/main/user_data_notebooks/ceos-ch4budget-yeargrid-v1_User_Notebook.ipynb'
+    title: 'GOSAT-based Top-down Methane Budgets data transformation notebook'
+  - url: 'https://us-ghg-center.github.io/ghgc-docs/user_data_notebooks/gosat-based-ch4budget-yeargrid-v1_User_Notebook.ipynb.html'
     label: Notebook to read, visualize, and explore data statistics
-    title: 'CEOS Methane Budgets data notebook'
-  - url: 'https://hub.ghg.center/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FUS-GHG-Center%2Fghgc-docs&urlpath=tree%2Fghgc-docs%2Fuser_data_notebooks%2Fceos-ch4budget-yeargrid-v1_User_Notebook.ipynb&branch=main'
+    title: 'GOSAT-based Top-down Methane Budgets data notebook'
+  - url: 'https://hub.ghg.center/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FUS-GHG-Center%2Fghgc-docs&urlpath=tree%2Fghgc-docs%2Fuser_data_notebooks%2Fgosat-based-ch4budget-yeargrid-v1_User_Notebook.ipynb&branch=main'
     label: Run example notebook
     title: Interactive session in the U.S. GHG Center 2i2c JupyterHub (requires account)
 media:
@@ -21,7 +21,8 @@ media:
 taxonomy:
   - name: Topics
     values:
-      - Anthropogenic Emissions, Natural Emissions and Sinks
+      - Anthropogenic Emissions
+      - Natural Emissions and Sinks
   - name: Source
     values:
       - NASA
@@ -33,7 +34,7 @@ taxonomy:
       - Model Output
 layers:
   - id: post-total-id
-    stacCol: ceos-ch4budget-yeargrid-v1
+    stacCol: gosat-based-ch4budget-yeargrid-v1
     name: Post Total
     type: raster
     description: Post Total
@@ -121,9 +122,9 @@ layers:
     [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/legalcode) (CC BY 4.0) 
           
     ## Data Stewardship
-    - [Data Workflow](https://github.com/US-GHG-Center/ghgc-docs/blob/main/data_workflow/media/ceos-ch4budget-yeargrid-v1_Data_Flow.png)
-    - [Data Transformation Code](https://github.com/US-GHG-Center/ghgc-docs/blob/main/cog_transformation/scripts/ceos-ch4budget-yeargrid-v1_Transformation_Code.py)
-    - [U.S. GHG Center Data Intake Processing and Verification Report](https://github.com/US-GHG-Center/ghgc-docs/blob/main/processing_and_verification_reports/reports/ceos-ch4budget-yeargrid-v1_Processing%20and%20Verification%20Report.pdf)
+    - [Data Workflow](https://github.com/US-GHG-Center/ghgc-docs/blob/main/data_workflow/media/gosat-based-ch4budget-yeargrid-v1_Data_Flow.png)
+    - [Data Transformation Code](https://us-ghg-center.github.io/ghgc-docs/cog_transformation/ceos-ch4budget-yeargrid-v1.html)
+    - [U.S. GHG Center Data Intake Processing and Verification Report](https://github.com/US-GHG-Center/ghgc-docs/blob/main/processing_and_verification_reports/reports/gosat-based-ch4budget-yeargrid-v1_Processing%20and%20Verification%20Report.pdf)
 
   </Prose>
 </Block>
