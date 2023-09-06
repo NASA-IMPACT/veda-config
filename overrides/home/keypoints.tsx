@@ -33,7 +33,7 @@ export default function Keypoints() {
         <li>
           <Card
             linkLabel="View more"
-            linkTo="/stories"
+            linkTo="/stories/anthropogenic-methane-emissions-distribution"
             title="Anthropogenic GHG Emissions"
             description="Human-related carbon dioxide or methane gas emissions from activities in various sectors such as energy, agriculture, waste, and industry."
             imgSrc={featureEmissions}
@@ -52,7 +52,7 @@ export default function Keypoints() {
         <li>
           <Card
             linkLabel="View more"
-            linkTo="/stories"
+            linkTo="/stories/how-ghg-center-tracks-carbon"
             title="Natural GHG Sources and Sinks"
             description="Natural environment greenhouse gas emissions and fluxes from land, ocean and atmosphere."
             imgSrc={featureSources}
@@ -71,7 +71,7 @@ export default function Keypoints() {
         <li>
           <Card
             linkLabel="View more"
-            linkTo="/stories"
+            linkTo="/stories/discovering-large-methane-emissions"
             title="Large Methane Emission Events"
             description="Identify and quantify emissions from, large methane (CH4) leak events leveraging aircraft and satellite data."
             imgSrc={featureMethane}
