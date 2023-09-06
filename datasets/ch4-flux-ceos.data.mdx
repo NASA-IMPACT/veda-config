@@ -6,7 +6,7 @@ usage:
   - url: 'https://us-ghg-center.github.io/ghgc-docs/cog_transformation/ceos-ch4budget-yeargrid-v1.html'
     label: Notebook to transform GeoTIFF to COG
     title: 'GOSAT-based Top-down Methane Budgets data transformation notebook'
-  - url: 'https://hub.ghg.center/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FUS-GHG-Center%2Fghgc-docs&urlpath=tree%2Fghgc-docs%2Fuser_data_notebooks%2Fceos-ch4budget-yeargrid-v1_User_Notebook.ipynb&branch=main'
+  - url: 'https://us-ghg-center.github.io/ghgc-docs/user_data_notebooks/gosat-based-ch4budget-yeargrid-v1_User_Notebook.ipynb.html'
     label: Notebook to read, visualize, and explore data statistics
     title: 'GOSAT-based Top-down Methane Budgets data notebook'
   - url: 'https://hub.ghg.center/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FUS-GHG-Center%2Fghgc-docs&urlpath=tree%2Fghgc-docs%2Fuser_data_notebooks%2Fgosat-based-ch4budget-yeargrid-v1_User_Notebook.ipynb&branch=main'
@@ -36,13 +36,11 @@ taxonomy:
     values:
       - Model Output
 layers:
-  - id: post-total-id
+  - id: prior-total-id
     stacCol: gosat-based-ch4budget-yeargrid-v1
-    name: Post Total
+    name: Prior Total
     type: raster
-    description: Post Total
-    projection:
-      id: 'equirectangular'
+    description: Prior Total
     zoomExtent:
       - 0
       - 20
@@ -50,11 +48,47 @@ layers:
       assets: post-total
       colormap_name: rainbow
       rescale:
-        - -120
-        - 240
+        - 0
+        - 2.122
       nodata: 0
     compare:
-      datasetId: ceos-co2budget-yeargrid-v1-ghgc
+      datasetId: gosat-based-ch4budget-yeargrid-v1-ghgc
+      layerId: prior-total-id
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit: 
+        label: Tg CH₄/yr
+      type: gradient
+      min: 0
+      max: 2.122
+      stops:
+        - '#60007d'
+        - '#30137d'
+        - '#1960ae'
+        - '#7ac300'
+        - '#f2ce00'
+        - '#ef6a01'
+        - '#cc0019'    
+  - id: post-total-id
+    stacCol: gosat-based-ch4budget-yeargrid-v1
+    name: Post Total
+    type: raster
+    description: Post Total
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: post-total
+      colormap_name: rainbow
+      rescale:
+        - -1.158
+        - 3.622
+      nodata: 0
+    compare:
+      datasetId: gosat-based-ch4budget-yeargrid-v1-ghgc
       layerId: post-total-id
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -64,8 +98,8 @@ layers:
       unit: 
         label: Tg CH₄/yr
       type: gradient
-      min: -120
-      max: 240
+      min: -1.158
+      max: 3.622
       stops:
         - '#60007d'
         - '#30137d'
@@ -73,7 +107,151 @@ layers:
         - '#7ac300'
         - '#f2ce00'
         - '#ef6a01'
-        - '#cc0019'                                 
+        - '#cc0019'    
+  - id: prior-wetland-id
+    stacCol: gosat-based-ch4budget-yeargrid-v1
+    name: Prior Wetlands
+    type: raster
+    description: Prior Wetlands
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: post-wetland
+      colormap_name: rainbow
+      rescale:
+        - 0
+        - 1.222
+      nodata: 0
+    compare:
+      datasetId: gosat-based-ch4budget-yeargrid-v1-ghgc
+      layerId: post-total-id
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit: 
+        label: Tg CH₄/yr
+      type: gradient
+      min: 0
+      max: 1.222
+      stops:
+        - '#60007d'
+        - '#30137d'
+        - '#1960ae'
+        - '#7ac300'
+        - '#f2ce00'
+        - '#ef6a01'
+        - '#cc0019'                          
+  - id: post-wetland-id
+    stacCol: gosat-based-ch4budget-yeargrid-v1
+    name: Post Wetlands
+    type: raster
+    description: Post Wetlands
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: post-wetland
+      colormap_name: rainbow
+      rescale:
+        - -0.838
+        -  2.036
+      nodata: 0
+    compare:
+      datasetId: gosat-based-ch4budget-yeargrid-v1-ghgc
+      layerId: post-total-id
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit: 
+        label: Tg CH₄/yr
+      type: gradient
+      min: -0.838
+      max:  2.036
+      stops:
+        - '#60007d'
+        - '#30137d'
+        - '#1960ae'
+        - '#7ac300'
+        - '#f2ce00'
+        - '#ef6a01'
+        - '#cc0019'      
+  - id: prior-wetland-uncertainty-id
+    stacCol: gosat-based-ch4budget-yeargrid-v1
+    name: Prior Wetlands Uncertainty
+    type: raster
+    description: Prior Wetlands Uncertainty
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: prior-wetland-uncertainty
+      colormap_name: rainbow
+      rescale:
+        - 0
+        - 1.53
+      nodata: 0
+    compare:
+      datasetId: gosat-based-ch4budget-yeargrid-v1-ghgc
+      layerId: prior-wetland-uncertainty-id
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit: 
+        label: Tg CH₄/yr
+      type: gradient
+      min: 0
+      max: 1.53
+      stops:
+        - '#60007d'
+        - '#30137d'
+        - '#1960ae'
+        - '#7ac300'
+        - '#f2ce00'
+        - '#ef6a01'
+        - '#cc0019'                          
+  - id: post-wetland-uncertainty-id
+    stacCol: gosat-based-ch4budget-yeargrid-v1
+    name: Post Wetlands Uncertainty
+    type: raster
+    description: Post Wetlands Uncertainty
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: post-wetland-uncertainty
+      colormap_name: rainbow
+      rescale:
+        - 0
+        -  0.367
+      nodata: 0
+    compare:
+      datasetId: gosat-based-ch4budget-yeargrid-v1-ghgc
+      layerId: post-wetland-uncertainty-id
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit: 
+        label: Tg CH₄/yr
+      type: gradient
+      min: 0
+      max:  0.367
+      stops:
+        - '#60007d'
+        - '#30137d'
+        - '#1960ae'
+        - '#7ac300'
+        - '#f2ce00'
+        - '#ef6a01'
+        - '#cc0019'                                                 
 ---
 
 <Block type='wide'>

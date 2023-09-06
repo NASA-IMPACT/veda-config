@@ -3,13 +3,13 @@ id: eccodarwin-co2flux-monthgrid-v5-ghgc
 name: Air-Sea CO₂ Flux, ECCO-Darwin Model v5
 description: Global, monthly average air-sea CO₂ flux at ~1/3° resolution from 2020 to 2022
 usage:
-  - url: 'https://us-ghg-center.github.io/ghgc-docs/cog_transformation/eccodarwin-co2flux-monthgrid-v5.html'
+  - url: "https://us-ghg-center.github.io/ghgc-docs/cog_transformation/eccodarwin-co2flux-monthgrid-v5.html"
     label: Notebook to transform GeoTIFF to COG
-    title: 'Air-Sea CO₂ Flux, ECCO-Darwin Model data transformation notebook'
-  - url: 'https://us-ghg-center.github.io/ghgc-docs/user_data_notebooks/eccodarwin-co2flux-monthgrid-v5_User_Notebook.html'
+    title: "Air-Sea CO₂ Flux, ECCO-Darwin Model data transformation notebook"
+  - url: "https://us-ghg-center.github.io/ghgc-docs/user_data_notebooks/eccodarwin-co2flux-monthgrid-v5_User_Notebook.html"
     label: Notebook to read, visualize, and explore data statistics
-    title: 'Air-Sea CO₂ Flux, ECCO-Darwin Model data notebook'
-  - url: 'https://hub.ghg.center/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FUS-GHG-Center%2Fghgc-docs&urlpath=tree%2Fghgc-docs%2Fuser_data_notebooks%2Feccodarwin-co2flux-monthgrid-v5_User_Notebook.ipynb&branch=main'
+    title: "Air-Sea CO₂ Flux, ECCO-Darwin Model data notebook"
+  - url: "https://hub.ghg.center/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FUS-GHG-Center%2Fghgc-docs&urlpath=tree%2Fghgc-docs%2Fuser_data_notebooks%2Feccodarwin-co2flux-monthgrid-v5_User_Notebook.ipynb&branch=main"
     label: Run example notebook
     title: Interactive session in the U.S. GHG Center 2i2c JupyterHub (requires account)
   - url: https://dljsq618eotzp.cloudfront.net/browseui/index.html#eccodarwin-co2flux-monthgrid-v5/
@@ -41,7 +41,7 @@ layers:
     type: raster
     description: Monthly mean air-sea CO₂ Flux (negative into ocean)
     projection:
-      id: 'equirectangular'
+      id: "equirectangular"
     zoomExtent:
       - 0
       - 20
@@ -49,9 +49,9 @@ layers:
       assets: co2
       colormap_name: rainbow
       rescale:
-        - -0.0015 
-        - 0.0002 
-      nodata: 0
+        - -0.0015
+        - 0.0002
+      nodata: nan
     compare:
       datasetId: eccodarwin-co2flux-monthgrid-v5-ghgc
       layerId: air-sea-co2
@@ -60,19 +60,19 @@ layers:
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }
     legend:
-      unit: 
+      unit:
         label: mmol m²/s
       type: gradient
-      min: -0.01  
-      max: 0.01  
+      min: -0.01
+      max: 0.01
       stops:
-        - '#60007d'
-        - '#30137d'
-        - '#1960ae'
-        - '#7ac300'
-        - '#f2ce00'
-        - '#ef6a01'
-        - '#cc0019'       
+        - "#60007d"
+        - "#30137d"
+        - "#1960ae"
+        - "#7ac300"
+        - "#f2ce00"
+        - "#ef6a01"
+        - "#cc0019"
 ---
 
 <Block type='wide'>
@@ -86,7 +86,7 @@ layers:
     - **Data Units:** Millimoles of CO₂ per meter squared per second (mmol m²/s)
     - **Data Type:** Research
     - **Data Latency:** 
-    
+
 
     **Scientific Details:** The data assimilation techniques used for the physical and biogeochemical components of the ECCO-Darwin model are both linearized least squares minimization approaches. For ocean physics, ocean-ice state estimates from the ECCO LLC270 model were fit to observations including sea level anomalies, ocean bottom pressure anomalies, sea surface temperature, sea ice concentration, and ocean temperature and salinity profiles using an adjoint method. For ocean biogeochemistry, the MIT Darwin Project ecosystem model used low-dimensional Green’s function optimization to adjust initial conditions and biogeochemical parameters. Using the paired ocean physics and biogeochemistry, air-sea CO₂ flux was calculated using the Wanninkhof (1992) parameterization for determining gas exchange across the air-sea interface.
 
@@ -114,14 +114,14 @@ layers:
 
     ## Acknowledgment
     This dataset was produced by researchers at the NASA Jet Propulsion Laboratory, California Institute of Technology. High-end computing resources were provided by the NASA Advanced Supercomputing (NAS) Division. Additional support and funding were provided by the NASA Biological Diversity Program, NASA Physical Oceanography Program, NASA Modeling, Analysis, and Prediction Program, NASA ROSES, and the U.S. National Science Foundation.
- 
+
     ## License
-    [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/legalcode) (CC BY 4.0) 
-      
+    [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/legalcode) (CC BY 4.0)
+
     ## Data Stewardship
     - [Data Workflow](https://github.com/US-GHG-Center/ghgc-docs/blob/main/data_workflow/media/eccodarwin-co2flux-monthgrid-v5_Data_Flow.png)
     - [Data Transformation Code](https://us-ghg-center.github.io/ghgc-docs/cog_transformation/eccodarwin-co2flux-monthgrid-v5.html)
     - [U.S. GHG Center Data Intake Processing and Verification Report](https://github.com/US-GHG-Center/ghgc-docs/blob/main/processing_and_verification_reports/reports/eccodarwin-co2flux-monthgrid-v5_Processing%20and%20Verification%20Report.pdf)
-  
+
   </Prose>
 </Block>
