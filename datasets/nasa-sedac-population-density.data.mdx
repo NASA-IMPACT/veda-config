@@ -3,15 +3,15 @@ id: sedac-popdensity-yeargrid5yr-v4.11-ghgc
 name: SEDAC Gridded World Population Data
 description: Global, 1 km resolution human population density estimates based on national censuses and population registers, version 4.11
 usage:
-  - url: 'https://us-ghg-center.github.io/ghgc-docs/cog_transformation/sedac-popdensity-yeargrid5yr-v4.11.html'
+  - url: "https://us-ghg-center.github.io/ghgc-docs/cog_transformation/sedac-popdensity-yeargrid5yr-v4.11.html"
     label: Notebook to transform TIFF to COG
-    title: 'SEDAC data transformation notebook'
-  - url: 'https://us-ghg-center.github.io/ghgc-docs/user_data_notebooks/sedac-popdensity-yeargrid5yr-v4.11_User_Notebook.html'
+    title: "SEDAC data transformation notebook"
+  - url: "https://us-ghg-center.github.io/ghgc-docs/user_data_notebooks/sedac-popdensity-yeargrid5yr-v4.11_User_Notebook.html"
     label: Notebook to read, visualize, and explore data statistics
-    title: 'SEDAC Population data notebook'
-  - url: 'https://hub.ghg.center/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FUS-GHG-Center%2Fghgc-docs&urlpath=tree%2Fghgc-docs%2Fuser_data_notebooks%2Fsedac-popdensity-yeargrid5yr-v4.11_User_Notebook.ipynb&branch=main'
+    title: "SEDAC Population data notebook"
+  - url: "https://hub.ghg.center/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FUS-GHG-Center%2Fghgc-docs&urlpath=tree%2Fghgc-docs%2Fuser_data_notebooks%2Fsedac-popdensity-yeargrid5yr-v4.11_User_Notebook.ipynb&branch=main"
     label: Run example notebook
-    title: Interactive session in the U.S. GHG Center 2i2c JupyterHub (requires account)    
+    title: Interactive session in the U.S. GHG Center 2i2c JupyterHub (requires account)
 media:
   src: ::file ./gpw-yearly--cover.png
   alt: aa
@@ -34,7 +34,7 @@ layers:
     type: raster
     description: Gridded population of the world (2000,2005,2010,2015,2020)
     projection:
-      id: 'equirectangular'
+      id: "equirectangular"
     zoomExtent:
       - 0
       - 20
@@ -44,7 +44,7 @@ layers:
       rescale:
         - 0
         - 1000
-      nodata: 0
+      nodata: -3.402823e+38
     compare:
       datasetId: sedac-popdensity-yeargrid5yr-v4.11-ghgc
       layerId: nasa-sedac-population
@@ -59,21 +59,21 @@ layers:
       min: 0
       max: 1000
       stops:
-        - '#310597'
-        - '#4c02a1'
-        - '#6600a7'
-        - '#7e03a8'
-        - '#9511a1'
-        - '#aa2395'
-        - '#bc3587'
-        - '#cc4778'
-        - '#da5a6a'
-        - '#e66c5c'
-        - '#f0804e'
-        - '#f89540'
-        - '#fdac33'
-        - '#fdc527'
-        - '#f8df25'    
+        - "#310597"
+        - "#4c02a1"
+        - "#6600a7"
+        - "#7e03a8"
+        - "#9511a1"
+        - "#aa2395"
+        - "#bc3587"
+        - "#cc4778"
+        - "#da5a6a"
+        - "#e66c5c"
+        - "#f0804e"
+        - "#f89540"
+        - "#fdac33"
+        - "#fdc527"
+        - "#f8df25"
 ---
 
 <Block>
@@ -94,16 +94,17 @@ layers:
  
     ## Key Publications
 
-    ## Other Relevant Publications    
-    
+    ## Other Relevant Publications
+
     ## Acknowledgment
-    
+
     ## License
-    [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/legalcode) (CC BY 4.0) 
-  
+    [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/legalcode) (CC BY 4.0)
+
     ## Data Stewardship
     - [Data Workflow](https://github.com/US-GHG-Center/ghgc-docs/blob/main/data_workflow/media/sedac-popdensity-yeargrid5yr-v4.11_Data_Flow.png)
     - [Data Transformation Code](https://us-ghg-center.github.io/ghgc-docs/cog_transformation/sedac-popdensity-yeargrid5yr-v4.11.html)
     - [U.S. GHG Center Data Intake Processing and Verification Report](https://github.com/US-GHG-Center/ghgc-docs/blob/main/processing_and_verification_reports/reports/sedac-popdensity-yeargrid5yr-v4.11_Processing%20and%20Verification%20Report.pdf)
+
   </Prose>
 </Block>
