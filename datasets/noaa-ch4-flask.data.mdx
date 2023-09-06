@@ -20,53 +20,53 @@ taxonomy:
   - name: Gas
     values:
       - CH4
-# layers:
-#   - id: nasa-sedac-population
-#     stacCol: sedac-popdensity-yeargrid5yr-v4.11
-#     name: Population Density
-#     type: raster
-#     description: Gridded population of the world (2000,2005,2010,2015,2020)
-#     projection:
-#       id: 'equirectangular'
-#     zoomExtent:
-#       - 0
-#       - 20
-#     sourceParams:
-#       assets: population-density
-#       colormap_name: plasma
-#       rescale:
-#         - 0
-#         - 1000
-#       nodata: 0
-#     compare:
-#       datasetId: sedac-popdensity-yeargrid5yr-v4.11-ghgc
-#       layerId: nasa-sedac-population
-#       mapLabel: |
-#         ::js ({ dateFns, datetime, compareDatetime }) => {
-#           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
-#         }
-#     legend:
-#       unit:
-#         label: persons per sq km
-#       type: gradient
-#       min: 0
-#       max: 1000
-#       stops:
-#         - '#310597'
-#         - '#4c02a1'
-#         - '#6600a7'
-#         - '#7e03a8'
-#         - '#9511a1'
-#         - '#aa2395'
-#         - '#bc3587'
-#         - '#cc4778'
-#         - '#da5a6a'
-#         - '#e66c5c'
-#         - '#f0804e'
-#         - '#f89540'
-#         - '#fdac33'
-#         - '#fdc527'
-#         - '#f8df25'    
+layers:
+  - id: noaa-ch4-flask
+    stacCol: noaa-ch4-flask
+    name: CO2 flask
+    type: vector
+    description: Values of carbon dioxide (CO2) from flask air samples collected over time at specific locations
+    projection:
+      id: 'equirectangular'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: noaa-ch4-flask
+      colormap_name: plasma
+      rescale:
+        - 0
+        - 1000
+      nodata: 0
+    compare:
+      datasetId: noaa-ch4-flask
+      layerId: noaa-ch4-flask
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit:
+        label: nmol/mol
+      type: gradient
+      min: 0
+      max: 1000
+      stops:
+        - '#310597'
+        - '#4c02a1'
+        - '#6600a7'
+        - '#7e03a8'
+        - '#9511a1'
+        - '#aa2395'
+        - '#bc3587'
+        - '#cc4778'
+        - '#da5a6a'
+        - '#e66c5c'
+        - '#f0804e'
+        - '#f89540'
+        - '#fdac33'
+        - '#fdc527'
+        - '#f8df25'  
 ---
 
 <Block type='wide'>
