@@ -60,7 +60,7 @@ export default function Keypoints() {
             footerContent={
               <ArrowLink
                 to={`${DATASETS_PATH}?${Actions.TAXONOMY}=${encodeURIComponent(
-                  JSON.stringify({ Topics: "natural-emissions-and-fluxes" })
+                  JSON.stringify({ Topics: "natural-emissions-and-sinks" })
                 )}`}
               >
                 Check out relevant datasets
