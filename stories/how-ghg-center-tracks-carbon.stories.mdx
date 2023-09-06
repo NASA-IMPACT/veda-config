@@ -16,7 +16,7 @@ taxonomy:
 ---
 <Block>
     <Prose>
-    ## The Carbon Cycle
+    ## The role of carbon in the Earth System
     The movement of carbon between land, ocean, and atmospheres is one of the foundations that governs how Earth functions.  Atmospheric CO2 and CH4 play a crucial role in governing global temperatures through absorption of infrared radiation. On land, carbon is the currency shared between plants, microbes, and the atmosphere. Through photosynthesis, plants remove CO2 from the air to support their growth. When plants die or leaves fall to the ground, soil microbes returning much of this CO2 back to the atmosphere through respiration. In flooded wetland soils, where no oxygen is available, microbes known as methanogens produce and release methane gas CH4 rather than CO2. These processes are similar in the ocean, except that atmospheric CO2 first dissolves into the ocean surface before it is used in photosynthesis by tiny plants called phytoplankton. The rate and balance of carbon cycling between land, ocean, and atmosphere is modulated by climate, which includes natural variability and changes driven by warming. 
     </Prose>
     <Figure>
@@ -50,7 +50,7 @@ taxonomy:
 
 <Block>
     <Prose>
-    ## Land/Ocean CO2 sinks
+    ## Natural sources and sinks of CO₂
     The land and ocean currently absorb around 5 billion metric tons (Pg) of carbon each year from the atmosphere. This amount of carbon is equivalent to around half a year’s worth of CO2 emitted from burning coal, oil, and gas and cement production [any plain language equivalent to highlight?]. Without this assistance from the natural world, CO2 concentrations could rise twice as fast as has been recorded, reducing the time society has to avoid more severe impacts of climate change.
     
     On land, the atmospheric CO2 removal processes are maintained by forest regrowth, increasing growing season length in the high latitude regions that are warmly more rapidly than the rest of the planet, and from elevated concentrations of CO2 in the atmosphere stimulating photosynthesis. In the ocean, carbon uptake is controlled by a combination of physical and biogeochemical processes. Absorption in surface waters tends to increase with rising atmospheric concentrations, but this can be influenced by changes in ocean temperature and circulation.
@@ -60,10 +60,33 @@ taxonomy:
             leftImageSrc={new URL('./nee-1.png', import.meta.url).href}
             rightImageSrc={new URL('./nee-2.png', import.meta.url).href}
             width="100"
+            attrAuthor="NASA"
+            alt="Differences between January and July NEE"
         />
         <Caption> Scientists use a combination of satellite data and numerical models to estimate sources and sinks over land and ocean, building long-term time series to document changes from day-to-day, season-to-season, and year-to-year. This example illustrates the difference between winter and summer net ecosystem exchange, which represents the balance of absorption by photosynthesis (negative) and release during respiration (positive). </Caption>
     </Figure>
 </Block>
+
+<ScrollytellingBlock>
+    <Chapter
+        center={[-26.262383, -1.342390]}
+        zoom={3}
+        datasetId='lpjwsl-wetlandch4-grid-v1-ghgc'
+        layerId='ch4-wetlands-emissions'
+        datetime='2021-08-01'
+    >
+        Tropical wetlands in Amazonia, the Congo Basin, and Southeast Asia produce about 60% of global wetland emissions and have been linked to increasing methane concentrations in recent years.
+    </Chapter>
+    <Chapter
+        center={[-99.513843, 55.655443]}
+        zoom={3}
+        datasetId='lpjwsl-wetlandch4-grid-v1-ghgc'
+        layerId='ch4-wetlands-emissions'
+        datetime='2021-08-01'
+    >
+        Wetlands across temperate and high latitude systems produce less methane than the tropics. Scientists are closely monitoring changes in the high latitudes, which are warming more rapidly than the rest of the planet and store massive amounts of carbon in permafrost.
+    </Chapter>
+    </ScrollytellingBlock>
 
 <Block>
     <Prose>
