@@ -141,10 +141,7 @@ taxonomy:
   
     An increase in runoff and soil erosion following a wildfire can cause enhancement in sediment flows to water bodies present within or surrounding the region affected by the wildfire. Turbidity or cloudiness of a water body can be affected by sediment flows into it from the surrounding regions. Lake Oroville is a prominent water body located downstream of the location where the Camp Fire occurred and was potentially affected by subsequent changes in sediment flows.
   
-    We utilized the normalized difference turbidity index (NDTI) computed using the NASA Harmonized Landsat Sentinel-2 dataset to examine if the turbidity of this lake was affected following the Camp Fire. NDTI is computed using the reflectance of the surface at a geographical location estimated from satellite sensor observations at red and green wavelengths of light. Denoting the reflectance values at red and green wavelengths as r and g, the NDTI is given by the ratio of (r-g) to (r+g). The reflectance of clear water is higher in green than red wavelengths; however, when the water is turbid, the reflectance of water in the red wavelengths becomes higher than in the green wavelengths. Thus NDTI has negative values when the water is clear and becomes positive when it is turbid. However, the above-described interpretation of NDTI is valid only for water bodies and thus it needs to be determined if water is indeed present at a location.
-  
-    We used the normalized difference water index (NDWI) to determine if water is present at a given location in an HLS scene. The NDWI is computed using reflectance at the green (g) and near-infrared (nir) wavelengths as the ratio of (g-nir) and (g+nir). The near-infrared reflectance of water is lower compared to that at the green wavelength where the opposite is true for vegetation and bare ground. Thus, the NDWI values are positive for water bodies, and locations in the satellite imagery with values greater than 0.03 were identified as water for this analysis. We then computed NDTI for water bodies present in the cloud-free HLS scenes over the study area between the years 2017-2022. A time series of mean NDTI for Lake Oroville was then dervied for this time period, which shows a noticeable increase in NDTI following the Camp Fire event, before returning to a more typical variability after approximately one year. 
-  </Prose>
+ </Prose>
 
   <Figure>
     <video style={{ width: '100%', aspectRatio: "16/9" }} controls>
@@ -158,8 +155,16 @@ taxonomy:
       Location of Lake Oroville compared to the Camp Fire burn scar (black outline), from a regional to local view.
     </Caption>
   </Figure>
-
 </Block>
+
+<Block>
+  <Prose>
+    We utilized the normalized difference turbidity index (NDTI) computed using the NASA Harmonized Landsat Sentinel-2 dataset to examine if the turbidity of this lake was affected following the Camp Fire. NDTI is computed using the reflectance of the surface at a geographical location estimated from satellite sensor observations at red and green wavelengths of light. Denoting the reflectance values at red and green wavelengths as r and g, the NDTI is given by the ratio of (r-g) to (r+g). The reflectance of clear water is higher in green than red wavelengths; however, when the water is turbid, the reflectance of water in the red wavelengths becomes higher than in the green wavelengths. Thus NDTI has negative values when the water is clear and becomes positive when it is turbid. However, the above-described interpretation of NDTI is valid only for water bodies and thus it needs to be determined if water is indeed present at a location.
+  
+    We used the normalized difference water index (NDWI) to determine if water is present at a given location in an HLS scene. The NDWI is computed using reflectance at the green (g) and near-infrared (nir) wavelengths as the ratio of (g-nir) and (g+nir). The near-infrared reflectance of water is lower compared to that at the green wavelength where the opposite is true for vegetation and bare ground. Thus, the NDWI values are positive for water bodies, and locations in the satellite imagery with values greater than 0.03 were identified as water for this analysis. We then computed NDTI for water bodies present in the cloud-free HLS scenes over the study area between the years 2017-2022. A time series of mean NDTI for Lake Oroville was then dervied for this time period, which shows a noticeable increase in NDTI following the Camp Fire event, before returning to a more typical variability after approximately one year. 
+  </Prose>
+</Block>
+
 
 <Block>
   <Figure>
