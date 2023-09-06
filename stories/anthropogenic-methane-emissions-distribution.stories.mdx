@@ -1,13 +1,13 @@
 ---
 id: 'anthropogenic-methane-emissions-distribution'
 name: Distribution of Methane Emissions from Anthropogenic Sources in the U.S. 
-description: 'New research to spatially allocate (or grid) U.S. national methane emissions provides insight into sources of anthropogenic methane and recent trends in emissions. This geographic representation also enables new comparisons with spatially-localized emission estimates that are informed by atmospheric observations, with the aim of improving national and state-level methane emission inventory estimates.'
+description: 'New research to spatially allocate (or grid) U.S. national methane emissions provides insight into sources of anthropogenic methane and recent emission trends. This geographic representation also enables new comparisons with spatially-localized emission estimates that are informed by atmospheric observations, with the aim of improving national and state-level methane emission inventory estimates.'
 media:
-  src: ::file ./use-case-1-cover.jpg
-  alt: Aerial view of city with smoke
+  src: ::file ./total-methane-2020.png
+  alt: Map of total U.S. gridded methane emissions in the year 2020
   author:
-    name: Ivan Shemereko
-    url: "https://unsplash.com/photos/QZIiIbwiSns"
+    name: Environmental Protection Agency
+    url: "https://www.epa.gov"
 pubDate: 2023-08-25
 taxonomy:
   - name: Topics
@@ -22,12 +22,12 @@ taxonomy:
     <Figure>
         <Image 
             src={new URL('./global-mean-methane.png', import.meta.url).href}
-            alt="Media example" 
+            alt="time series from 1984 to 2022 of global monthly mean atmospheric methane" 
             align="left"
-            attrAuthor="example author"
-            attrUrl="https://www.nilu.com/2022/04/how-achievable-is-the-methane-pledge/"
+            attrAuthor="Global Monitoring Laboratory, NOAA"
+            attrUrl="https://gml.noaa.gov/ccgg/trends_ch4/"
         />
-        <Caption> NOAA CH4 concentration map </Caption>
+        <Caption> Globally-averaged, monthly mean atmospheric methane abundance determined from marine surface sites, last updated Aug 05, 2023. </Caption>
     </Figure>
     </Block>
 
@@ -40,13 +40,13 @@ taxonomy:
     <Block>
         <Figure>
             <Image 
-                src={new URL('./power-plant.jpeg', import.meta.url).href}
-                alt="Media example" 
+                src={new URL('./gas-flaring.png', import.meta.url).href}
+                alt="colorful gas flare from chimney against blue sky" 
                 align="left"
-                attrAuthor="example author"
-                attrUrl="https://www.nilu.com/2022/04/how-achievable-is-the-methane-pledge/"
+                attrAuthor="Leslie Von Pless"
+                attrUrl="https://www.nasa.gov/sites/default/files/thumbnails/image/1-permian-methane-von-pless-gas-flaring-photo-hi-rez-1041.jpg"
             />
-            {/* <Caption> NOAA CH4 concentration map </Caption> */}
+            <Caption> Gas flaring during oil and gas production is a known source of methane emissions </Caption>
         </Figure>
         <Prose>
             ### National greenhouse gas inventories are a fundamental tool for promoting international cooperation to address climate change
@@ -63,13 +63,13 @@ taxonomy:
         </Prose>
         <Figure>
             <Image 
-                src={new URL('./conference.jpeg', import.meta.url).href}
-                alt="Media example" 
+                src={new URL('./UN-COP15.jpeg', import.meta.url).href}
+                alt="The opening session of UN COP15" 
                 align="left"
-                attrAuthor="example author"
-                attrUrl="https://www.nilu.com/2022/04/how-achievable-is-the-methane-pledge/"
+                attrAuthor="UN Biodiversity"
+                attrUrl=""
             />
-            {/* <Caption> NOAA CH4 concentration map </Caption> */}
+            <Caption> The opening session of UN COP15 </Caption>
         </Figure>
     </Block>
 
@@ -77,12 +77,12 @@ taxonomy:
         <Figure>
             <Image 
                 src={new URL('./ghgi.png', import.meta.url).href}
-                alt="Media example" 
+                alt="Time series of annual U.S. anthropogenic GHG emissions, by GHG" 
                 align="left"
-                attrAuthor="example author"
-                attrUrl="https://www.nilu.com/2022/04/how-achievable-is-the-methane-pledge/"
+                attrAuthor="U.S. EPA’s GHG Data Explorer"
+                attrUrl="https://cfpub.epa.gov/ghgdata/inventoryexplorer/#iallsectors/allsectors/allgas/gas/all"
             />
-            <Caption> Caption: Image from GHGI Explorer </Caption>
+            <Caption> Time series of Annual U.S. Anthropogenic GHG Emissions, by GHG </Caption>
         </Figure>
         <Prose>
             ### Inventory of U.S. Greenhouse Gas Emissions and Sinks 
@@ -112,7 +112,7 @@ taxonomy:
     <Block>
         <Figure>
             <Map
-                datasetId='epa-express-extension-gridded-emissions-v2'
+                datasetId='epa-ch4emission-yeargrid-v2express-ghgc'
                 layerId='enteric-fermentation'
                 dateTime='2020-01-01'
             />
@@ -140,8 +140,8 @@ taxonomy:
     <Chapter
         center={[-119.4179, 36.7783]}
         zoom={6}
-        datasetId='epa-express-extension-gridded-emissions-v2'
-        layerId='4c-rice-cultivation'
+        datasetId='epa-ch4emission-yeargrid-v2express-ghgc'
+        layerId='rice-cultivation-l'
         datetime='2020-01-01'
     >
         ## Emissions from Agriculture
@@ -150,8 +150,8 @@ taxonomy:
     <Chapter
         center={[-74.0060, 40.7128]}
         zoom={5}
-        datasetId='epa-express-extension-gridded-emissions-v2'
-        layerId='1B2b-production-ngs'
+        datasetId='epa-ch4emission-yeargrid-v2express-ghgc'
+        layerId='production-ngs-l'
         datetime='2020-01-01'
     >
         ## Emissions from Natural Gas and Petroleum
@@ -161,7 +161,7 @@ taxonomy:
     <Chapter
         center={[-82.7862, 36.9142]}
         zoom={6}
-        datasetId='epa-express-extension-gridded-emissions-v2'
+        datasetId='epa-ch4emission-yeargrid-v2express-ghgc'
         layerId='1B1a-underground-coal'
         datetime='2020-01-01'
     >
@@ -172,7 +172,7 @@ taxonomy:
     <Chapter
         center={[-98.5795, 39.8283]}
         zoom={3}
-        datasetId='epa-express-extension-gridded-emissions-v2'
+        datasetId='epa-ch4emission-yeargrid-v2express-ghgc'
         layerId='5A1-msw-landfill-waste'
         datetime='2020-01-01'
     >
@@ -183,7 +183,7 @@ taxonomy:
     <Chapter
         center={[-98.5795, 39.8283]}
         zoom={4}
-        datasetId='epa-express-extension-gridded-emissions-v2'
+        datasetId='epa-ch4emission-yeargrid-v2express-ghgc'
         layerId='1B2a-transport-ps'
         datetime='2020-01-01'
     >
@@ -194,9 +194,94 @@ taxonomy:
 
     <Block>
         <Prose>
-        ## Summary & Potential Uses of the Data
-        This new spatial distribution of U.S. inventory methane emissions can enable a better understanding of the different sources, spatial patterns, and spatial trends in emissions. By directly using U.S. GHGI data, this new research dataset enables a more direct comparison and evaluation of inventory methane emission estimates to those derived from atmospheric observations, with the aim of improving the information that allows us to track progress towards our collective climate goals.
+        ## The spatial patterns of some emission sources change overtime
+        While national total methane emissions in the U.S. GHGI declined between 2012 and 2020, the gridded dataset reveals that these trends are not the same across all regions or emission sources.
         </Prose>
+        <Figure>
+            <Map
+            datasetId='epa-ch4emission-yeargrid-v2express-ghgc'
+            layerId='total-methane'
+            dateTime='2012-01-01'
+            compareDateTime='2020-01-01'
+            align="left"
+            />
+            <Caption>
+            The caption displays below the map.
+            </Caption>
+        </Figure>
+    </Block>
+
+    <Block>
+     <Figure>
+            <Map
+            datasetId='epa-ch4emission-yeargrid-v2express-ghgc'
+            layerId='total-agriculture'
+            dateTime='2012-01-01'
+            compareDateTime='2020-01-01'
+            align="left"
+            />
+            <Caption>
+            The caption displays below the map.
+            </Caption>
+        </Figure>
+        <Prose>
+        For example, total U.S. agriculture methane emissions fell between 2012 and 2020. However, emissions in some regions increased, largely depending on how animal populations and manure management systems changed in these locations.
+        </Prose>
+       
+    </Block>
+
+    <Block>
+        <Prose>
+        National total methane emissions from natural gas and petroleum systems decreased between 2012 and 2020 due to reduced emission well completions, increased use of low-emitting production equipment, and transition to less-leaky distribution pipeline materials. However, methane emissions still increased in some regions, in part due to changes in production volumes, and processing, refining, and transport and storage emissions.
+        </Prose>
+        <Figure>
+            <Map
+            datasetId='epa-ch4emission-yeargrid-v2express-ghgc'
+            layerId='total-petroleum'
+            dateTime='2012-01-01'
+            compareDateTime='2020-01-01'
+            align="left"
+            />
+            <Caption>
+            The caption displays below the map.
+            </Caption>
+        </Figure>
+    </Block>
+
+    <Block>
+        <Figure>
+            <Map
+            datasetId='epa-ch4emission-yeargrid-v2express-ghgc'
+            layerId='total-coal-mines'
+            dateTime='2012-01-01'
+            compareDateTime='2020-01-01'
+            align="left"
+            />
+            <Caption>
+            The caption displays below the map.
+            </Caption>
+        </Figure>
+        <Prose>
+        In another example, national methane emissions from coal mines fell between 2012 and 2020, which was largely due to reduced coal production and increased use of gas recovery systems at individual mines.
+        </Prose>
+        
+    </Block>
+
+    <Block>
+        <Prose>
+        ## Summary & Potential Uses of the Data
+        Detailed maps of methane emissions help us to better understand the different sources, spatial patterns, and spatial trends in U.S. methane emissions. This particular gridded dataset is unique in that it allows for a more direct comparison of methane emission estimates in the U.S. inventory to those derived from atmospheric observations, thereby helping to improve the emissions information that allows us to track progress towards our collective climate goals.
+        </Prose>
+        <Figure>
+            <Image 
+                src={new URL('./blue-heron.jpeg', import.meta.url).href}
+                alt="photo of great blue heron standing in pond of water lilies" 
+                align="left"
+                attrAuthor="NASA/Dimitri Gerondidakis"
+                attrUrl="https://images.nasa.gov/details/KSC-08pd3162"
+            />
+            <Caption> CAPE CANAVERAL, Fla. - A great blue heron stands watch among a pond of water lilies on NASA's Kennedy Space Center in Florida. </Caption>
+        </Figure>
     </Block>
 
     <Block>

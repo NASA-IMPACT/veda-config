@@ -34,6 +34,62 @@ taxonomy:
     values:
       - Ground Data     
 layers:
+  - id: total-methane
+    stacCol: epa-ch4emission-yeargrid-v2express
+    name: Total Methane (annual)
+    type: raster
+    description: Total annual methane emission fluxes from all Agriculture, Energy, Waste, and ‘Other’ sources included in this dataset.
+    projection:
+      id: 'equirectangular'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: total-methane
+      colormap_name: rainbow
+      rescale:
+        - 0
+        - 7656391
+      nodata: 0
+    compare:
+      datasetId: epa-ch4emission-yeargrid-v2express-ghgc
+      layerId: total-methane
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }      
+    legend:
+      unit: 
+       label: Molecules CH₄/cm²/s
+      type: gradient
+      min: 0
+      max: 7656391
+      stops:
+        - "#6F4C9B"
+        - "#6059A9"
+        - "#5568B8"
+        - "#4D8AC6"
+        - "#4E96BC"
+        - "#549EB3"
+        - "#59A5A9"
+        - "#60AB9E"
+        - "#69B190"
+        - "#77B77D"
+        - "#8CBC68"
+        - "#A6BE54"
+        - "#BEBC48"
+        - "#D1B541"       
+        - "#DDAA3C"
+        - "#E49C39"
+        - "#E78C35"
+        - "#E67932"
+        - "#E4632D"
+        - "#DF4828"
+        - "#DA2222"  
+        - "#B8221E"
+        - "#95211B"
+        - "#721E17"
+        - "#521A13"
   - id: total-agriculture
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Total Agriculture (annual)
