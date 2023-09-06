@@ -20,25 +20,20 @@ export default function Component() {
   return (
     <FoldProse>
       <p>
-        The current GHG Center Dashboard reflects an initial (v
-        {process.env.APP_VERSION}) release of the platform that is subject to
-        change with subsequent releases and updates.
+        The current US GHG Center platform reflects an initial (v
+        {process.env.APP_VERSION}) release that is subject to enhancements
+        through future releases and updates.
       </p>
-
       <p>
-        This GHG Center dashboard is built by the{" "}
-        <a href="https://earthdata.nasa.gov/">
-          NASA Earth Science Data Systems program
-        </a>{" "}
-        in collaboration with science teams and data providers from EPA, NIST,
-        and NOAA. We are grateful for the many third-party open source projects
-        that have been used to develop and contribute to the GHG Center.
+        This US GHG Center platform is a collaborative effort involving equal
+        contributions from EPA, NASA, NIST, and NOAA. We are grateful for the
+        many third-party open source projects that have been used to develop and
+        contribute to the US GHG Center.
       </p>
-
       <p>
-        We welcome your feedback to help improve the GHG Center Dashboard. To do
-        so, select the feedback button below or navigate to the Feedback button
-        throughout the website.
+        We welcome your feedback to help improve the platform. To share your
+        thoughts, please click on the feedback button below or find the Feedback
+        button available across the website.
       </p>
       <ContributeCta>
         <Button
