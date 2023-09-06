@@ -18,6 +18,9 @@ module.exports = {
     // Content for the home page.
     // Type: Content override
     homeContent: './overrides/home/index.mdx',
+    // Content for the development page.
+    // Type: Content override
+    developmentContent: './overrides/development/index.mdx',
 
     // Component for the home hero banner.
     homeHero: "./overrides/components/home-hero/index.mdx",
