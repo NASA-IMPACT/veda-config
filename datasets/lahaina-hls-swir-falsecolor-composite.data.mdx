@@ -13,7 +13,7 @@ taxonomy:
     values:
       - EIS
 layers:
-  - id: lahaina-hls-swir-falsecolor-composite
+  - id: hls-swir-falsecolor-composite
     stacCol: hls-swir-falsecolor-composite
     name: HLS SWIR FalseColor Composite
     type: raster
@@ -28,7 +28,7 @@ layers:
         - B8A
         - B04
     compare:
-      datasetId: hls-swir-falsecolor-composite
+      datasetId: lahaina-hls-swir-falsecolor-composite
       layerId: hls-swir-falsecolor-composite
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
