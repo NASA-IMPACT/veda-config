@@ -30,7 +30,14 @@ layers:
       rescale:
         - 140
         - 240
-
+    compare:
+          datasetId: lahaina-bais2
+          layerId: lahaina-bais2
+          mapLabel: |
+            ::js ({ dateFns, datetime, compareDatetime }) => {
+              return `${dateFns.format(datetime, 'DD LLL yyyy')}`;        
+            }
+            
     legend:
       type: gradient
       min: "0.0"
