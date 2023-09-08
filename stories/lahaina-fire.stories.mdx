@@ -39,13 +39,6 @@ taxonomy:
 </Block>
 
 <Block>
-  <Prose>
-    ## Satellite Analysis of the Lahaina Wildfire
-    Landsat-8 thermal imagery detected ongoing fires across much of the city of Lahaina during its overpass at 10:35 PM LST on August 8th. An experimental burned area index was then calculated from HLS imagery taken after the fire on August 13th, 2023. This index, known as BAIS2, highlighted the burned area quite well compared to the more traditional Normalized Burn Ratio Indices 1 and 2, and had the highest ‘probabilities’ of burned area over the severely scorched fields just uphill from the city. Additionally, a three-band composite using the shortwave infrared, narrow near-infrared, and red bands of post-fire HLS data revealed excellently the extent of the burned area from the Lahaina Fire. 
-  </Prose>
-</Block>
-
-<Block type="full">
   <Figure>
     <Map
       datasetId='lahaina-hls-swir-falsecolor-composite'
@@ -57,6 +50,11 @@ taxonomy:
       Harmonized Landsat-Sentinel satellite falsecolor composites of the Lahaina fire domain before and after the fire.
     </Caption>
   </Figure>
+
+  <Prose>
+    ## Satellite Analysis of the Lahaina Wildfire
+    Landsat-8 thermal imagery detected ongoing fires across much of the city of Lahaina during its overpass at 10:35 PM LST on August 8th. An experimental burned area index was then calculated from HLS imagery taken after the fire on August 13th, 2023. This index, known as BAIS2, highlighted the burned area quite well compared to the more traditional Normalized Burn Ratio Indices 1 and 2, and had the highest ‘probabilities’ of burned area over the severely scorched fields just uphill from the city. Additionally, a three-band composite using the shortwave infrared, narrow near-infrared, and red bands of post-fire HLS data revealed excellently the extent of the burned area from the Lahaina Fire. 
+  </Prose>
 </Block>
 
 <Block type="full">
@@ -65,6 +63,8 @@ taxonomy:
       datasetId='lahaina-landsat-thermal'
       layerId='landsat-nighttime-thermal'
       dateTime='2023-08-08'
+      compareDateTime='2023-08-13'
+
     />
     <Caption>
       Landsat-8 nighttime thermal imagery from August 8, 2023 compared to computed BAIS2 burned area from the August 13, 2023 HLS scene.
