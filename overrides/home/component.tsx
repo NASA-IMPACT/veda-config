@@ -121,11 +121,7 @@ export default function HomeComponent() {
               Joining forces for a better future
             </VarHeading>
             <p>
-              The U.S. Greenhouse Gas Center is a multi-agency effort to extend
-              accessible and integrated GHG data and modeling capabilities from
-              the U.S government and non-public sources for scalable impact. We
-              are grateful for the support and expertise of our valued partners,
-              including NASA, NIST, NOAA, and EPA.
+            The US GHG Center is grateful for the support and expertise of our valued, multi-agency collaborators: EPA, NASA, NIST, and NOAA.
             </p>
           </InfoCalloutHeadline>
           <Partners variation="positive" />
