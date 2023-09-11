@@ -92,18 +92,13 @@ export default function HomeComponent() {
         <IntroHeadline>
           <VarHeading size="xxlarge">Welcome</VarHeading>
           <p>
-            The U.S. Greenhouse Gas Center (US GHG Center) is a multi-agency
-            effort to integrate greenhouse gas data from observations and models
-            into credible, authoritative, trusted consensus greenhouse gas
-            emissions and flux products for use in decision-making.
+          The U.S. Greenhouse Gas Center opens up access to trusted, authoritative data.
+          This multi-agency effort consolidates greenhouse gas information from observations and models.
+          The goal of the US GHG Center is providing decision-makers with one stop for data and analysis.
           </p>
           <p>
-            The initial two-year demonstration phase includes the development of
-            a one-stop data and analysis system that provides a means to explore
-            and analyze U.S. government and other datasets. Three demonstration
-            areas are used to organize and introduce the data included, and
-            stakeholders are encouraged to help scope and prioritize the
-            evolution and maturation of the US GHG Center capabilities.
+          This initial two-year demonstration phase creates a way to explore and analyze U.S. government and other datasets.
+          The US GHG Center also encourages stakeholder feedback and ideas for future expansion.
           </p>
           <ArrowLink to="/stories">The U.S. GHG Center Story</ArrowLink>
         </IntroHeadline>
