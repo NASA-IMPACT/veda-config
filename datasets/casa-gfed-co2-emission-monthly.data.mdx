@@ -41,16 +41,16 @@ layers:
     description: Model-estimated net primary production (NPP), which is the amount of carbon available from plants
     projection:
       id: 'equirectangular'
+    basemapId: 'light'
     zoomExtent:
       - 0
       - 20
     sourceParams:
       assets: npp
-      colormap_name: coolwarm
+      colormap_name: purd
       rescale:
-        - -0.2
-        - 0.2
-      nodata: 0
+        - 0
+        - 0.3
     compare:
       datasetId: casagfed-carbonflux-monthgrid-v3-ghgc
       layerId: casa-gfed-co2-flux
@@ -62,19 +62,19 @@ layers:
       unit:
         label: kg Carbon m²/mon
       type: gradient
-      min: -0.2
-      max: 0.2
+      min: 0
+      max: 0.3
       stops:
-        - '#3B4CC0'
-        - '#5D7CE6'
-        - '#82A6FB'
-        - '#AAC7FD'
-        - '#CDD9EC'
-        - '#EAD4C8'
-        - '#F7B89C'
-        - '#F18D6F'
-        - '#D95847'
-        - '#B40426'
+        - '#F7F4F9'
+        - '#E9E3F0'
+        - '#D9C3DF'
+        - '#CDA0CD'
+        - '#D57ABA'
+        - '#E34A9F'
+        - '#DF2179'
+        - '#C10E51'
+        - '#92003F'
+        - '#67001F'
   - id: casa-gfed-co2-flux-hr
     stacCol: casagfed-carbonflux-monthgrid-v3
     name: Heterotrophic Respiration (Rh)
@@ -82,6 +82,7 @@ layers:
     description: Model-estimated heterotrophic respiration (Rh), which is the flux of carbon from the soil to the atmosphere
     projection:
       id: 'equirectangular'
+    basemapId: 'light' 
     zoomExtent:
       - 0
       - 20
@@ -91,7 +92,6 @@ layers:
       rescale:
         - 0
         - 0.3
-      nodata: 0
     compare:
       datasetId: casagfed-carbonflux-monthgrid-v3-ghgc
       layerId: casa-gfed-co2-flux-hr
@@ -123,16 +123,16 @@ layers:
     description:  Model-estimated net ecosystem exchange (NEE), which is the net carbon flux to the atmosphere
     projection:
       id: 'equirectangular'
+    basemapId: 'light'
     zoomExtent:
       - 0
       - 20
     sourceParams:
       assets: nee
-      colormap_name: purd
+      colormap_name: rdbu
       rescale:
-        - 0
-        - 0.2
-      nodata: 0
+        - -0.03
+        - 0.02
     compare:
       datasetId: casagfed-carbonflux-monthgrid-v3-ghgc
       layerId: casa-gfed-co2-flux-nee
@@ -144,19 +144,17 @@ layers:
       unit:
         label: kg Carbon m²/mon
       type: gradient
-      min: 0
-      max: 0.2
+      min: -0.3
+      max: 0.3
       stops:
-        - '#F7F4F9'
-        - '#E9E3F0'
-        - '#D9C3DF'
-        - '#CDA0CD'
-        - '#D57ABA'
-        - '#E34A9F'
-        - '#DF2179'
-        - '#C10E51'
-        - '#92003F'
         - '#67001F'
+        - '#C13639'
+        - '#F09C7B'
+        - '#FBE3D4'
+        - '#DBEAF2'
+        - '#87BEDA'
+        - '#2F79B5'
+        - '#053061'
   - id: casa-gfed-co2-flux-fe
     stacCol: casagfed-carbonflux-monthgrid-v3
     name: Fire Emissions (FIRE)
@@ -164,16 +162,16 @@ layers:
     description: Model-estimated flux of carbon to the atmosphere from wildfires
     projection:
       id: 'equirectangular'
+    basemapId: 'light' 
     zoomExtent:
       - 0
       - 20
     sourceParams:
       assets: fire
-      colormap_name: plasma
+      colormap_name: purd
       rescale:
         - 0
         - 0.3
-      nodata: 0
     compare:
       datasetId: casagfed-carbonflux-monthgrid-v3-ghgc
       layerId: casa-gfed-co2-flux-fe
@@ -188,21 +186,16 @@ layers:
       min: 0
       max: 0.3
       stops:
-        - '#310597'
-        - '#4c02a1'
-        - '#6600a7'
-        - '#7e03a8'
-        - '#9511a1'
-        - '#aa2395'
-        - '#bc3587'
-        - '#cc4778'
-        - '#da5a6a'
-        - '#e66c5c'
-        - '#f0804e'
-        - '#f89540'
-        - '#fdac33'
-        - '#fdc527'
-        - '#f8df25'
+        - '#F7F4F9'
+        - '#E9E3F0'
+        - '#D9C3DF'
+        - '#CDA0CD'
+        - '#D57ABA'
+        - '#E34A9F'
+        - '#DF2179'
+        - '#C10E51'
+        - '#92003F'
+        - '#67001F'
   - id: casa-gfed-co2-flux-fuel
     stacCol: casagfed-carbonflux-monthgrid-v3
     name: Wood Fuel Emissions (FUEL)
@@ -210,16 +203,16 @@ layers:
     description: Model-estimated flux of carbon to the atmosphere from wood burned for fuel
     projection:
       id: 'equirectangular'
+    basemapId: 'light'
     zoomExtent:
       - 0
       - 20
     sourceParams:
       assets: fuel
-      colormap_name: plasma
+      colormap_name: bupu
       rescale:
         - 0
-        - 0.01
-      nodata: 0
+        - 0.03
     compare:
       datasetId: casagfed-carbonflux-monthgrid-v3-ghgc
       layerId: casa-gfed-co2-flux-fuel
@@ -232,23 +225,16 @@ layers:
         label: kg Carbon m²/mon
       type: gradient
       min: 0
-      max: 0.01
+      max: 0.03
       stops:
-        - '#310597'
-        - '#4c02a1'
-        - '#6600a7'
-        - '#7e03a8'
-        - '#9511a1'
-        - '#aa2395'
-        - '#bc3587'
-        - '#cc4778'
-        - '#da5a6a'
-        - '#e66c5c'
-        - '#f0804e'
-        - '#f89540'
-        - '#fdac33'
-        - '#fdc527'
-        - '#f8df25'
+        - '#F7FCFD'
+        - '#DCE9F2'
+        - '#B5CCE3'
+        - '#96ACD2'
+        - '#8C7DBA'
+        - '#894DA3'
+        - '#821580'
+        - '#4D004B'
 ---
 
 <Block type='wide'>
