@@ -23,9 +23,9 @@ layers:
       - 20
 
     sourceParams:
-      nodata: 0
-      resampling: bilinear
-      bidx: 1
+      rescale:
+        - 0
+        - 255
 
     compare:
       datasetId: lahaina-hls-swir-falsecolor-composite
