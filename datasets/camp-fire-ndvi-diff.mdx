@@ -1,0 +1,56 @@
+---
+id: camp-fire-ndvi-diff
+name: "Camp Fire burn scar NDVI difference"
+description: "3-year average difference (2018-2022) - (2015-2018) MODIS-derived NDVI over the 2018 Camp Fire burn scar domain." 
+media:
+  src: ::file ./camp-fire-background.jpg
+  alt: Engulfed hillside in California, 2021.
+  author:
+    name: Mike Newbry
+    url: https://unsplash.com/photos/DwtX9mMHBJ0
+taxonomy:
+  - name: Topics
+    values:
+      - EIS
+
+
+layers:
+  - id: camp-fire-ndvi-diff
+    stacCol: campfire_ndvi_difference_2015_2022
+    name: NDVI Difference (2010-2019) - (2000-2009)
+    type: raster
+    description: "3-year average difference (2018-2022) - (2015-2018) MODIS-derived NDVI over the 2018 Camp Fire burn scar domain."
+    initialDatetime: newest
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      colormap_name: bwr
+      rescale:
+        - -0.4
+        - 0.4
+      nodata: 0
+    legend:
+      type: gradient
+      min: "-0.4"
+      max: "0.4"
+      stops:
+        - "#4575b4"
+        - "#91bfdb"
+        - "#e0f3f8"
+        - "#ffffff"
+        - "#fee090"
+        - "#fc8d59"
+        - "#d73027"
+
+
+  
+---
+
+<Block>
+  <Prose>
+    x
+  </Prose>
+</Block>
+
+
