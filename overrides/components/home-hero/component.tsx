@@ -70,10 +70,10 @@ export default function HomeHero(props) {
         </PageHeroHGroup>
       </Constrainer>
       <PageHeroCover>
-        <img src={coverSrc} alt="Earth seen from space" />
+        <img src={coverSrc} alt="image of northern hemisphere of earth with gas in atmosphere shown in red hues" />
         <Figcaption>
           <FigureAttribution
-            author="Helen-Nicole Kostis"
+            author="Global Atmospheric Carbon Dioxide (CO₂), January 2021, produced by NASA's Scientific Visualization Studio, Helen-Nicole Kostis, Lead Visualizer"
             url="https://svs.gsfc.nasa.gov/5115"
             position="bottom-right"
           />
