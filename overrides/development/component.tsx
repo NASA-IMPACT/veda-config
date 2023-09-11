@@ -25,15 +25,10 @@ export default function Component() {
         through future releases and updates.
       </p>
       <p>
-        This US GHG Center platform is a collaborative effort involving equal
-        contributions from EPA, NASA, NIST, and NOAA. We are grateful for the
-        many third-party open source projects that have been used to develop and
-        contribute to the US GHG Center.
+      The current US GHG Center platform reflects an initial (v0.8.0) release available as of October 2nd, 2023. Newly added data, feature changes and content updates will continue via an iterative process throughout the coming year.  
       </p>
       <p>
-        We welcome your feedback to help improve the platform. To share your
-        thoughts, please click on the feedback button below or find the Feedback
-        button available across the website.
+      We welcome your feedback to help improve the US GHG Center! To share your thoughts, please click on the Help/Feedback button below or use the button available at the top of any of the Center website pages.
       </p>
       <ContributeCta>
         <Button
@@ -44,7 +39,7 @@ export default function Component() {
             showFeedbackModal();
           }}
         >
-          <CollecticonSpeechBalloon /> Feedback
+          <CollecticonSpeechBalloon /> Help/Feedback
         </Button>
         <Button
           size="large"
