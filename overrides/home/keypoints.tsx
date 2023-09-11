@@ -35,13 +35,13 @@ export default function Keypoints() {
             linkLabel="View more"
             linkTo="/stories/anthropogenic-methane-emissions-distribution"
             title="Anthropogenic GHG Emissions"
-            description="Human-related carbon dioxide or methane gas emissions from activities in various sectors such as energy, agriculture, waste, and industry."
+            description="Carbon dioxide and methane gas emissions from human activities in areas such as energy, agriculture, waste, and industry."
             imgSrc={featureEmissions}
-            imgAlt="Emissions"
+            imgAlt="image of smokestacks releasing gases against a blue sky"
             footerContent={
               <ArrowLink
                 to={`${DATASETS_PATH}?${Actions.TAXONOMY}=${encodeURIComponent(
-                  JSON.stringify({ Topics: "anthropogenic-emissions" })
+                  JSON.stringify({ Topics: "Read more about Anthropogenic GHG Emissions" })
                 )}`}
               >
                 Check out relevant datasets
@@ -53,14 +53,14 @@ export default function Keypoints() {
           <Card
             linkLabel="View more"
             linkTo="/stories/how-ghg-center-tracks-carbon"
-            title="Natural GHG Sources and Sinks"
-            description="Natural environment greenhouse gas emissions and fluxes from land, ocean and atmosphere."
+            title="Environmental GHG Sources and Sinks"
+            description="Naturally-occurring greenhouse gas emissions and fluxes from land, ocean, and atmosphere"
             imgSrc={featureSources}
-            imgAlt="Emissions"
+            imgAlt="image of green wetlands"
             footerContent={
               <ArrowLink
                 to={`${DATASETS_PATH}?${Actions.TAXONOMY}=${encodeURIComponent(
-                  JSON.stringify({ Topics: "natural-emissions-and-sinks" })
+                  JSON.stringify({ Topics: "Read more about Natural GHG Sources and Sinks" })
                 )}`}
               >
                 Check out relevant datasets
@@ -72,14 +72,14 @@ export default function Keypoints() {
           <Card
             linkLabel="View more"
             linkTo="/stories/discovering-large-methane-emissions"
-            title="Large Methane Emission Events"
+            title="Methane emissions from large events."
             description="Identify and quantify emissions from, large methane (CH4) leak events leveraging aircraft and satellite data."
             imgSrc={featureMethane}
-            imgAlt="Emissions"
+            imgAlt="image of colorful polygon against satellite landscape surface in brown"
             footerContent={
               <ArrowLink
                 to={`${DATASETS_PATH}?${Actions.TAXONOMY}=${encodeURIComponent(
-                  JSON.stringify({ Topics: "large-emission-events" })
+                  JSON.stringify({ Topics: "Read more about how Large Methane Emission Events are identified" })
                 )}`}
               >
                 Check out relevant datasets
