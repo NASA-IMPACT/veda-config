@@ -18,6 +18,7 @@ taxonomy:
 <Block>
     <Prose>
         <div style={{'background-color': '#ecf0f1', padding: '16px', 'font-size': '24px', 'font-weight': 500}}>
+
             Methane is a potent greenhouse gas. While there are some naturally-occurring emission sources, most methane in our atmosphere comes from the production, processing, transmission and use of natural gas and petroleum. When released into the Earth’s atmosphere, methane is the second most important anthropogenic greenhouse gas after carbon dioxide contributing to climate change. Because methane traps more heat than carbon dioxide and it has a shorter ‘lifespan’ in our atmosphere, finding and limiting methane emissions is an ideal target for short-term action on slowing climate change. 
             
             New technologies can now detect and quantify large methane release events. This information from airborne and space instruments can help decision makers to reduce the contribution of methane to climate change and inform future greenhouse gas inventories.
@@ -168,7 +169,13 @@ taxonomy:
     </Block>
 
      <Block>
-        <Figure>
+        <Prose>
+            Methane plumes identified by EMIT are currently visible [here](data-catalog/jpl-ch4-plume-emissions/explore)
+        </Prose>
+    </Block>
+
+    <Block>
+     <Figure>
             <Image 
                 src={new URL('./emit-plume-map.png', import.meta.url).href}
                 alt="A map of the world with points representing methane plume locations distributed across all continents except antarctica." 
@@ -179,9 +186,6 @@ taxonomy:
             />
             <Caption> Locations of methane plumes observed with EMIT. </Caption>
         </Figure>
-        <Prose>
-            Methane plumes identified by EMIT are currently visible [here](data-catalog/jpl-ch4-plume-emissions/explore)
-        </Prose>
     </Block>
 
     <Block>
