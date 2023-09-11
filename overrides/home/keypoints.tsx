@@ -52,7 +52,7 @@ export default function Keypoints() {
         <li>
           <Card
             linkLabel="View more"
-            linkTo="/stories/how-ghg-center-tracks-carbon"
+            linkTo="/stories/tracking-greenhouse-gas-cycles"
             title="Natural GHG Sources and Sinks"
             description="Natural environment greenhouse gas emissions and fluxes from land, ocean and atmosphere."
             imgSrc={featureSources}
