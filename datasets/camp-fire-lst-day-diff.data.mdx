@@ -1,0 +1,57 @@
+---
+id: campfire_lst_day_difference_2015_2022
+name: "Camp Fire burn scar LST Day difference"
+description: "3-year average difference (2018-2022) - (2015-2018) MODIS-derived LST Day over the 2018 Camp Fire burn scar domain." 
+media:
+  src: ::file ./hous_lst.jpg
+  alt: Engulfed hillside in California, 2021.
+  author:
+    name: Mike Newbry
+    url: https://unsplash.com/photos/DwtX9mMHBJ0
+taxonomy:
+  - name: Topics
+    values:
+      - EIS
+
+
+layers:
+  - id: modis-lst-day-diff-2015-2022
+    stacCol: modis-lst-day-diff-2015-2022
+    name: MODIS LST Day Difference
+    type: raster
+    description: "3-year average difference (2018-2022) - (2015-2018) MODIS-derived LST Day over the 2018 Camp Fire burn scar domain."
+    initialDatetime: newest
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      colormap_name: bwr
+      rescale:
+        - 5.0
+        - -5.0
+      nodata: -9999
+    legend:
+      type: gradient
+      min: "-5.0"
+      max: "5.0"
+      stops:
+        - "#4575b4"
+        - "#91bfdb"
+        - "#e0f3f8"
+        - "#ffffff"
+        - "#fee090"
+        - "#fc8d59"
+        - "#d73027"
+
+
+
+  
+---
+
+<Block>
+  <Prose>
+    x
+  </Prose>
+</Block>
+
+
