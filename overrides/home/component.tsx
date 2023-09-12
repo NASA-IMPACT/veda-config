@@ -23,6 +23,7 @@ const HomeContent = styled(Hug)`
 
 const IntroHeadline = styled.div`
   display: flex;
+  align-items: center;
   flex-flow: column;
   gap: ${glsp(2)};
   grid-column: content-start / content-end;
@@ -30,14 +31,6 @@ const IntroHeadline = styled.div`
   p {
     font-size: 1.25rem;
   }
-
-  ${media.mediumUp`
-    grid-column: content-start /content-7;
-  `}
-
-  ${media.largeUp`
-    grid-column: content-start / content-9;
-  `}
 `;
 
 const ActionsBlock = styled.div`

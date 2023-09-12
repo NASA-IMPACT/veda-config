@@ -150,9 +150,17 @@ export default function PageFooter(props) {
           </Tip>
         </div>
         <CreditsInfo>
-          <p>U.S. Greenhouse Gas Center Responsible Official</p>
+          <p>U.S. Greenhouse Gas Center Responsible Official: Argyro Kavvada</p>
           <p>
-            <span>(800) CALL-GOVT</span> <a href="mailto:info@agency.gov">info@agency.gov</a>
+            <a
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  show();
+                }}
+              >
+                User form to ask a question or provide feedback
+            </a>
           </p>
         </CreditsInfo>
       </FooterContacts>
