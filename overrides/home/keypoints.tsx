@@ -26,6 +26,12 @@ const KeypointsWrapper = styled(Hug)`
   }
 `;
 
+
+const ReadMore = styled.div`
+  padding-bottom: 12px;
+  font-size: 14px;
+`;
+
 export default function Keypoints() {
   return (
     <KeypointsWrapper>
@@ -35,17 +41,20 @@ export default function Keypoints() {
             linkLabel="View more"
             linkTo="/stories/anthropogenic-methane-emissions-distribution"
             title="Anthropogenic GHG Emissions"
-            description="Carbon dioxide and methane gas emissions from human activities in areas such as energy, agriculture, waste, and industry."
+            description="Carbon dioxide and methane gas emissions from human activities in areas such as energy, agriculture, waste, and industry"
             imgSrc={featureEmissions}
             imgAlt="image of smokestacks releasing gases against a blue sky"
             footerContent={
-              <ArrowLink
-                to={`${DATASETS_PATH}?${Actions.TAXONOMY}=${encodeURIComponent(
-                  JSON.stringify({ Topics: "Read more about Anthropogenic GHG Emissions" })
-                )}`}
-              >
-                Check out relevant datasets
-              </ArrowLink>
+              <div>
+                <ReadMore> Read more about Anthropogenic GHG Emissions </ReadMore>
+                <ArrowLink
+                  to={`${DATASETS_PATH}?${Actions.TAXONOMY}=${encodeURIComponent(
+                    JSON.stringify({ Topics: "anthropogenic-emissions" })
+                  )}`}
+                >
+                  Check out relevant datasets
+                </ArrowLink>
+              </div>
             }
           />
         </li>
@@ -58,13 +67,16 @@ export default function Keypoints() {
             imgSrc={featureSources}
             imgAlt="image of green wetlands"
             footerContent={
-              <ArrowLink
-                to={`${DATASETS_PATH}?${Actions.TAXONOMY}=${encodeURIComponent(
-                  JSON.stringify({ Topics: "Read more about Natural GHG Sources and Sinks" })
-                )}`}
-              >
-                Check out relevant datasets
-              </ArrowLink>
+              <div>
+                <ReadMore>Read more about Natural GHG Sources and Sinks</ReadMore>
+                <ArrowLink
+                  to={`${DATASETS_PATH}?${Actions.TAXONOMY}=${encodeURIComponent(
+                    JSON.stringify({ Topics: "natural-emissions-and-sinks" })
+                  )}`}
+                >
+                  Check out relevant datasets
+                </ArrowLink>
+              </div>
             }
           />
         </li>
@@ -72,18 +84,21 @@ export default function Keypoints() {
           <Card
             linkLabel="View more"
             linkTo="/stories/discovering-large-methane-emissions"
-            title="Methane emissions from large events."
-            description="Identify and quantify emissions from, large methane (CH4) leak events leveraging aircraft and satellite data."
+            title="Large Methane Emission Events"
+            description="Identify and quantify emissions from, large methane (CH4) leak events leveraging aircraft and satellite data"
             imgSrc={featureMethane}
             imgAlt="image of colorful polygon against satellite landscape surface in brown"
             footerContent={
-              <ArrowLink
-                to={`${DATASETS_PATH}?${Actions.TAXONOMY}=${encodeURIComponent(
-                  JSON.stringify({ Topics: "Read more about how Large Methane Emission Events are identified" })
-                )}`}
-              >
-                Check out relevant datasets
-              </ArrowLink>
+              <div>
+                <ReadMore>Read more about how Large Methane Emission Events are identified</ReadMore>
+                <ArrowLink
+                  to={`${DATASETS_PATH}?${Actions.TAXONOMY}=${encodeURIComponent(
+                    JSON.stringify({ Topics: "large-emission-events" })
+                    )}`}
+                    >
+                  Check out relevant datasets
+                </ArrowLink>
+              </div>
             }
           />
         </li>
