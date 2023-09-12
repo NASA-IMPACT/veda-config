@@ -1,7 +1,7 @@
 ---
-id: campfire_lst_day_difference_2015_2022
-name: "Camp Fire burn scar LST Day difference"
-description: "3-year average difference (2018-2022) - (2015-2018) MODIS-derived LST Day over the 2018 Camp Fire burn scar domain." 
+id: campfire_lst_night_difference_2015_2022
+name: "Camp Fire burn scar LST Night difference"
+description: "3-year average difference (2018-2022) - (2015-2018) MODIS-derived LST Night over the 2018 Camp Fire burn scar domain." 
 media:
   src: ::file ./hous_lst.jpg
   alt: Engulfed hillside in California, 2021.
@@ -15,11 +15,11 @@ taxonomy:
 
 
 layers:
-  - id: modis-lst-day-diff-2015-2022
-    stacCol: modis-lst-day-diff-2015-2022
-    name: MODIS LST Day Difference
+  - id: modis-lst-night-diff-2015-2022
+    stacCol: modis-lst-night-diff-2015-2022
+    name: MODIS LST Night Difference
     type: raster
-    description: "3-year average difference (2018-2022) - (2015-2018) MODIS-derived LST Day over the 2018 Camp Fire burn scar domain."
+    description: "3-year average difference (2018-2022) - (2015-2018) MODIS-derived LST Night over the 2018 Camp Fire burn scar domain."
     initialDatetime: newest
     zoomExtent:
       - 0
@@ -27,13 +27,13 @@ layers:
     sourceParams:
       colormap_name: bwr
       rescale:
-        - -5.0
-        - 5.0
+        - -0.5
+        - 0.5
       nodata: -9999
     legend:
       type: gradient
-      min: "-5.0"
-      max: "5.0"
+      min: "-0.5"
+      max: "0.5"
       stops:
         - "#4575b4"
         - "#91bfdb"
