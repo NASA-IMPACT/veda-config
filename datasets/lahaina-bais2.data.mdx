@@ -24,13 +24,26 @@ layers:
 
 
     sourceParams:
-
+      colormap_name: rdylbu_r
       rescale:
         - 0.0
         - 1.0
       nodata: -9999
+      resampling: bilinear
+      bidx: 1
 
-
+    legend:
+      type: gradient
+      min: "Low Burn Confidence"
+      max: "High Burn Confidence"
+      stops:
+        - "#4575b4"
+        - "#91bfdb"
+        - "#e0f3f8"
+        - "#ffffbf"
+        - "#fee090"
+        - "#fc8d59"
+        - "#d73027" 
 
 ---
 <Block>
