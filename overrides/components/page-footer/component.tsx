@@ -7,6 +7,7 @@ import {
   listReset,
   media,
 } from "$veda-ui/@devseed-ui/theme-provider";
+import { Button } from "$veda-ui/@devseed-ui/button";
 import { format } from "$veda-ui/date-fns";
 import { getString } from "veda";
 
@@ -19,6 +20,7 @@ import {
   ABOUT_PATH,
 } from "$veda-ui-scripts/utils/routes";
 import { useFeedbackModal } from "$veda-ui-scripts/components/common/layout-root";
+import { useMediaQuery } from "$veda-ui-scripts/utils/use-media-query";
 
 const FooterInner = styled.div`
   display: flex;
@@ -29,17 +31,8 @@ const FooterInner = styled.div`
 `;
 
 const FooterContent = styled.div`
-  display: flex;
-  gap: ${glsp(1)};
-  flex-flow: column;
   box-shadow: inset 0 -1px 0 0 ${themeVal("color.base-100a")};
   padding: ${variableGlsp(1.5, 1)};
-
-  ${media.mediumUp`
-    flex-flow: row nowrap;
-    align-items: center;
-    justify-content: space-between;
-  `}
 `;
 
 const FooterMenu = styled.ul`
@@ -53,6 +46,12 @@ const FooterMenu = styled.ul`
     align-items: center;
     gap: ${glsp(3)};
   `}
+
+  li:last-child {
+    ${media.mediumUp`
+      margin-left: auto;
+    `}
+  }
 `;
 
 const FooterMenuLink = styled(NavLink)`
@@ -87,6 +86,7 @@ const CreditsInfo = styled.div`
 
 export default function PageFooter(props) {
   const nowDate = new Date();
+  const { isMediumUp } = useMediaQuery();
 
   const { show } = useFeedbackModal();
 
@@ -117,16 +117,29 @@ export default function PageFooter(props) {
               <FooterMenuLink to={ABOUT_PATH}>About</FooterMenuLink>
             </li>
             <li>
-              <FooterMenuLink
-                as="a"
-                href="#"
-                onClick={(e) => {
-                  e.preventDefault();
-                  show();
-                }}
-              >
-                Give Feedback
-              </FooterMenuLink>
+              {isMediumUp ? (
+                <Button
+                  variation="primary-outline"
+                  size="large"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    show();
+                  }}
+                >
+                  Contact Us
+                </Button>
+              ) : (
+                <FooterMenuLink
+                  as="a"
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    show();
+                  }}
+                >
+                  Contact Us
+                </FooterMenuLink>
+              )}
             </li>
           </FooterMenu>
         </nav>
@@ -151,13 +164,11 @@ export default function PageFooter(props) {
         </div>
         <CreditsInfo>
           <p>
-            U.S. Greenhouse Gas Center Responsible Official:{' '}
+            U.S. Greenhouse Gas Center Responsible Official:{" "}
             <a
-              href="#"
-              onClick={(e) => {
-                e.preventDefault();
-                show();
-              }}
+              href="https://appliedsciences.nasa.gov/about/our-team/argyro-kavvada"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <strong>Argyro Kavvada</strong>
             </a>
