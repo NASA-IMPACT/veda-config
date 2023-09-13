@@ -23,10 +23,17 @@ const HomeContent = styled(Hug)`
 
 const IntroHeadline = styled.div`
   display: flex;
-  align-items: center;
   flex-flow: column;
   gap: ${glsp(2)};
   grid-column: content-start / content-end;
+
+  ${media.mediumUp`
+    grid-column: content-2 / content-8;
+  `}
+
+  ${media.largeUp`
+    grid-column: content-3 / content-11;
+  `}
 
   p {
     font-size: 1.25rem;
@@ -85,15 +92,20 @@ export default function HomeComponent() {
         <IntroHeadline>
           <VarHeading size="xxlarge">Welcome</VarHeading>
           <p>
-          The U.S. Greenhouse Gas Center opens up access to trusted, authoritative data.
-          This multi-agency effort consolidates greenhouse gas information from observations and models.
-          The goal of the US GHG Center is providing decision-makers with one stop for data and analysis.
+            The U.S. Greenhouse Gas Center opens up access to trusted,
+            authoritative data. This multi-agency effort consolidates greenhouse
+            gas information from observations and models. The goal of the US GHG
+            Center is providing decision-makers with one stop for data and
+            analysis.
           </p>
           <p>
-          This initial two-year demonstration phase creates a way to explore and analyze U.S. government and other datasets.
-          The US GHG Center also encourages stakeholder feedback and ideas for future expansion.
+            This initial two-year demonstration phase creates a way to explore
+            and analyze U.S. government and other datasets. The US GHG Center
+            also encourages stakeholder feedback and ideas for future expansion.
           </p>
-          <ArrowLink to="/stories/intro-us-ghg-center">Introduction to the U.S. GHG Center</ArrowLink>
+          <ArrowLink to="/stories/intro-us-ghg-center">
+            Introduction to the U.S. GHG Center
+          </ArrowLink>
         </IntroHeadline>
         <Keypoints />
         <ActionsBlock>
@@ -114,7 +126,8 @@ export default function HomeComponent() {
               Joining forces for a better future
             </VarHeading>
             <p>
-            The US GHG Center is grateful for the support and expertise of our valued, multi-agency collaborators: EPA, NASA, NIST, and NOAA.
+              The US GHG Center is grateful for the support and expertise of our
+              valued, multi-agency collaborators: EPA, NASA, NIST, and NOAA.
             </p>
           </InfoCalloutHeadline>
           <Partners variation="positive" />
