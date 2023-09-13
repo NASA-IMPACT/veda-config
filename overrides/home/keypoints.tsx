@@ -40,13 +40,13 @@ export default function Keypoints() {
           <Card
             linkLabel="View more"
             linkTo="/stories/anthropogenic-methane-emissions-distribution"
-            title="Anthropogenic GHG Emissions"
+            title="Anthropogenic Greenhouse Gas Emissions"
             description="Carbon dioxide and methane gas emissions from human activities in areas such as energy, agriculture, waste, and industry"
             imgSrc={featureEmissions}
             imgAlt="image of smokestacks releasing gases against a blue sky"
             footerContent={
               <div>
-                <ReadMore> Read more about Anthropogenic GHG Emissions </ReadMore>
+                <ReadMore> Read more about Anthropogenic GHG Emissions <br/><br/></ReadMore>
                 <ArrowLink
                   to={`${DATASETS_PATH}?${Actions.TAXONOMY}=${encodeURIComponent(
                     JSON.stringify({ Topics: "anthropogenic-emissions" })
@@ -62,13 +62,13 @@ export default function Keypoints() {
           <Card
             linkLabel="View more"
             linkTo="/stories/tracking-greenhouse-gas-cycles"
-            title="Natural GHG Sources and Sinks"
+            title="Natural Greenhouse Gas Sources and Sinks"
             description="Naturally-occurring greenhouse gas emissions and fluxes from land, ocean, and atmosphere"
             imgSrc={featureSources}
             imgAlt="image of green wetlands"
             footerContent={
               <div>
-                <ReadMore>Read more about Natural GHG Sources and Sinks</ReadMore>
+                <ReadMore>Read more about Natural GHG Sources and Sinks <br/><br/></ReadMore>
                 <ArrowLink
                   to={`${DATASETS_PATH}?${Actions.TAXONOMY}=${encodeURIComponent(
                     JSON.stringify({ Topics: "natural-emissions-and-sinks" })
@@ -85,7 +85,7 @@ export default function Keypoints() {
             linkLabel="View more"
             linkTo="/stories/discovering-large-methane-emissions"
             title="Large Methane Emission Events"
-            description="Identify and quantify emissions from, large methane (CH4) leak events leveraging aircraft and satellite data"
+            description="Identify and quantify emissions from, large methane (CH₄) leak events leveraging aircraft and satellite data"
             imgSrc={featureMethane}
             imgAlt="image of colorful polygon against satellite landscape surface in brown"
             footerContent={

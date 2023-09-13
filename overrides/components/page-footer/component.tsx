@@ -82,6 +82,10 @@ const CreditsInfo = styled.div`
   display: flex;
   flex-flow: column;
   gap: ${glsp(0.25)};
+
+  a {
+    margin-left: 4px;
+  }
 `;
 
 
@@ -150,7 +154,15 @@ export default function PageFooter(props) {
           </Tip>
         </div>
         <CreditsInfo>
-          <p>U.S. Greenhouse Gas Center Responsible Official: Argyro Kavvada</p>
+          <p>U.S. Greenhouse Gas Center Responsible Official:
+            <a
+                href="https://appliedsciences.nasa.gov/about/our-team/argyro-kavvada"
+                target="_blank"
+                rel="noopener"
+            >
+              Argyro Kavvada
+            </a>
+          </p>
           <p>
             <a
                 href="#"
