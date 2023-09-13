@@ -12,8 +12,8 @@ usage:
   - url: 'https://hub.ghg.center/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FUS-GHG-Center%2Fghgc-docs&urlpath=tree%2Fghgc-docs%2Fuser_data_notebooks%2Femit-ch4plume-v1_User_Notebook.ipynb&branch=main'
     label: Run example notebook
     title: Interactive session in the U.S. GHG Center 2i2c JupyterHub (requires account)
-  - url: https://dljsq618eotzp.cloudfront.net/browseui/index.html#emit-ch4plume-v1/
-    label: Browse and download the raw dataset data
+  - url: https://search.earthdata.nasa.gov/search/granules?p=C2748088093-LPCLOUD&pg[0][v]=f&pg[0][gsk]=-start_date&q=emit%20plume&tl=1694622854.77!3!!
+    label: Download data from NASA Distributed Active Archive Center
     title: Data Browser
 media:
   src: ::file ./emit-plume--cover.jpg
@@ -35,7 +35,7 @@ taxonomy:
       - Satellite Data
 layers:
   - id: ch4-plume-emissions
-    stacCol: emit-ch4plume-v1-lpdaac
+    stacCol: emit-ch4plume-v1
     name: CH4 point source plume complexes
     type: raster
     description: Methane point source plume complex extents with methane enhancements
