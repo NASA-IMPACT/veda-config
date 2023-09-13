@@ -71,23 +71,19 @@ const FooterContacts = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: ${variableGlsp(1)};
+  gap: ${glsp()};
+  flex-flow: column;
 
-  p {
-    display: flex;
-    justify-content: space-between;
-  }
+  ${media.mediumUp`
+    flex-flow: row nowrap;
+  `}
 `;
 
 const CreditsInfo = styled.div`
   display: flex;
   flex-flow: column;
   gap: ${glsp(0.25)};
-
-  a {
-    margin-left: 4px;
-  }
 `;
-
 
 export default function PageFooter(props) {
   const nowDate = new Date();
@@ -154,24 +150,16 @@ export default function PageFooter(props) {
           </Tip>
         </div>
         <CreditsInfo>
-          <p>U.S. Greenhouse Gas Center Responsible Official:
-            <a
-                href="https://appliedsciences.nasa.gov/about/our-team/argyro-kavvada"
-                target="_blank"
-                rel="noopener"
-            >
-              Argyro Kavvada
-            </a>
-          </p>
           <p>
+            U.S. Greenhouse Gas Center Responsible Official:{' '}
             <a
-                href="#"
-                onClick={(e) => {
-                  e.preventDefault();
-                  show();
-                }}
-              >
-                User form to ask a question or provide feedback
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                show();
+              }}
+            >
+              <strong>Argyro Kavvada</strong>
             </a>
           </p>
         </CreditsInfo>

@@ -1,6 +1,6 @@
 import React from "$veda-ui/react";
 import styled from "$veda-ui/styled-components";
-import { glsp } from "$veda-ui/@devseed-ui/theme-provider";
+import { glsp, media } from "$veda-ui/@devseed-ui/theme-provider";
 import Hug from "$veda-ui-scripts/styles/hug";
 import {
   Card,
@@ -26,18 +26,18 @@ const KeypointsWrapper = styled(Hug)`
   }
 `;
 
-
-const ReadMore = styled.div`
-  padding-bottom: 12px;
-  font-size: 14px;
-`;
+const KeypointCard = styled(Card)`
+  ${media.mediumUp`
+    font-size: 1.125rem;
+  `}
+`
 
 export default function Keypoints() {
   return (
     <KeypointsWrapper>
       <CardList>
         <li>
-          <Card
+          <KeypointCard
             linkLabel="View more"
             linkTo="/stories/anthropogenic-methane-emissions-distribution"
             title="Anthropogenic Greenhouse Gas Emissions"
@@ -46,7 +46,6 @@ export default function Keypoints() {
             imgAlt="image of smokestacks releasing gases against a blue sky"
             footerContent={
               <div>
-                <ReadMore> Read more about Anthropogenic GHG Emissions <br/><br/></ReadMore>
                 <ArrowLink
                   to={`${DATASETS_PATH}?${Actions.TAXONOMY}=${encodeURIComponent(
                     JSON.stringify({ Topics: "anthropogenic-emissions" })
@@ -59,7 +58,7 @@ export default function Keypoints() {
           />
         </li>
         <li>
-          <Card
+          <KeypointCard
             linkLabel="View more"
             linkTo="/stories/tracking-greenhouse-gas-cycles"
             title="Natural Greenhouse Gas Sources and Sinks"
@@ -68,7 +67,6 @@ export default function Keypoints() {
             imgAlt="image of green wetlands"
             footerContent={
               <div>
-                <ReadMore>Read more about Natural GHG Sources and Sinks <br/><br/></ReadMore>
                 <ArrowLink
                   to={`${DATASETS_PATH}?${Actions.TAXONOMY}=${encodeURIComponent(
                     JSON.stringify({ Topics: "natural-emissions-and-sinks" })
@@ -81,7 +79,7 @@ export default function Keypoints() {
           />
         </li>
         <li>
-          <Card
+          <KeypointCard
             linkLabel="View more"
             linkTo="/stories/discovering-large-methane-emissions"
             title="Large Methane Emission Events"
@@ -90,7 +88,6 @@ export default function Keypoints() {
             imgAlt="image of colorful polygon against satellite landscape surface in brown"
             footerContent={
               <div>
-                <ReadMore>Read more about how Large Methane Emission Events are identified</ReadMore>
                 <ArrowLink
                   to={`${DATASETS_PATH}?${Actions.TAXONOMY}=${encodeURIComponent(
                     JSON.stringify({ Topics: "large-emission-events" })
