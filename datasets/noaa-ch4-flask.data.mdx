@@ -1,7 +1,7 @@
 ---
 id: noaa-ch4-flask
-name: Atmospheric Methane Concentrations from the NOAA Global Monitoring Laboratory, 1983-2022
-description: Atmospheric concentrations of methane (CH₄) from flask air samples collected over time at specific locations
+name: Atmospheric Methane Concentrations from the NOAA Global Monitoring Laboratory
+description: Atmospheric concentrations of methane (CH₄) from discrete air samples collected over time at globally distributed surface sites
 media:
   src: ::file ./noaa-air-samples--cover.png
   alt: aa
@@ -23,9 +23,9 @@ taxonomy:
 layers:
   - id: noaa-ch4-flask
     stacCol: noaa-ch4-flask
-    name: Methane (Air Sample) 
+    name: Methane (Air Sample)  
     type: vector
-    description: Atmospheric concentrations of methane (CH₄) from flask air samples collected over time at specific locations
+    description: Atmospheric concentrations of methane (CH₄) from discrete air samples collected over time at globally distributed surface sites
     projection:
       id: 'equirectangular'
     zoomExtent:
@@ -47,7 +47,7 @@ layers:
         }
     legend:
       unit:
-        label: nmol/mol
+        label: ppb
       type: gradient
       min: 0
       max: 1000
@@ -71,19 +71,20 @@ layers:
 
 <Block type='wide'>
   <Prose>
-    The Global Greenhouse Gas Reference Network for the Carbon Cycle and Greenhouse Gases (CCGG) Group is part of NOAA'S Global Monitoring Laboratory (GML) in Boulder, CO. The Reference Network measures the atmospheric distribution and trends of the three main long-term drivers of climate change, carbon dioxide (CO2), methane (CH4), and nitrous oxide (N2O), as well as carbon monoxide (CO) which is an important indicator of air pollution. The Reference Network measurement program includes continuous in-situ measurements at 4 baseline observatories (global background sites) and 8 tall towers, as well as flask-air samples collected by volunteers at over 50 additional regional background sites and from small aircraft. The air samples are returned to ESRL for analysis where measurements of about 55 trace gases are done. NOAA's Global Greenhouse Gas Reference Network maintains the World Meteorological Organization international calibration scales for CO2, CH4, CO, N2O, and SF6 in air. The measurements of the Global Greenhouse Gas Reference Network serve as a comparison with measurements made by many other international laboratories, and with regional studies. They are widely used in studies inferring space-time patterns of emissions and removals of greenhouse gases that are optimally consistent with the atmospheric observations. They serve as an early warning for climate "surprises". The measurements are also helpful for the ongoing evaluation of remote sensing technologies.
+    The Global Greenhouse Gas Reference Network (GGGRN) for the Carbon Cycle and Greenhouse Gases (CCGG) Group is part of NOAA'S Global Monitoring Laboratory (GML) in Boulder, CO. The Reference Network measures the atmospheric distribution and trends of the three main long-term drivers of climate change, carbon dioxide (CO₂), methane (CH₄), and nitrous oxide (N<sub>2</sub>O), as well as carbon monoxide (CO) and many other trace gases which help interpretation of the main GHGs. The Reference Network measurement program includes continuous in-situ measurements at 4 baseline observatories (global background sites) and 8 tall towers, as well as flask-air samples collected by volunteers at over 50 additional regional background sites and from small aircraft conducting regular vertical profiles. The air samples are returned to GML for analysis where measurements of about 55 trace gases are done. NOAA's GGGRN maintains the World Meteorological Organization international calibration scales for CO2, CH₄, CO, N<sub>2</sub>O, and SF<sub>6</sub> in air. The measurements from the GGGRN serve as a comparison with measurements made by many other international laboratories, and with regional studies. They are widely used in modeling studies that infer space-time patterns of emissions and removals of greenhouse gases that are optimally consistent with the atmospheric observations, given wind patterns. These data serve as an early warning for climate "surprises". The measurements are also helpful for the ongoing evaluation of remote sensing technologies.
 
-    The CCGG cooperative air sampling network effort began in 1967 at Niwot Ridge, Colorado. Today, the network is an international effort which includes regular discrete samples from the NOAA GML baseline observatories, cooperative fixed sites, and commercial ships. Air samples are collected approximately weekly from a globally distributed network of sites. Samples are analyzed for Carbon Dioxide (CO2), Methane (CH4), Carbon Monoxide (CO), Hydrogen Gas (H2), Nitrous Oxide (N2O), and Sulfur Hexafluoride (SF6); and by INSTAAR for the stable isotopes of CO2 and CH4. From 2004 to 2016, air samples were also analyzed by INSTAAR for a few volatile organic compounds (VOC), including ethane (C2H6) and propane (C3H8). Measurement data are used to identify long-term trends, seasonal variability, and spatial distribution of carbon cycle gases.
-
-    Presented here are CH4 dry air mole fractions from flask data from 90 NOAA GML Carbon Cycle Cooperative Global Air Sampling Network sites across the globe. Samples were analyzed using a gas chromatography with flame ionization (GC/FID) or a cavity ring-down spectrometer (CRDS). Note: the switch from GC/FID to CRDS happened in August 2019. Data are provided in NetCDF and ASCII text and were sampled from 1983-2021. Measurements are reported in units of nanomol/mol (10^-9 mol CH4 per mol of dry air (nmol/mol) or parts per billion (ppb)) relative to the NOAA 2004A CH4 standard scale. The readme for the dataset can be found here:  https://gml.noaa.gov/aftp/data/trace_gases/ch4/flask/surface/README_surface_flask_ch4.html, and sampling locations can be viewed here: https://gml.noaa.gov/dv/site/?program=ccgg.     
-
-    - **Temporal Extent:** 1976 - present, with varying availability per station    
-    - **Temporal Resolution:** Varies by station   
+    The readme for the dataset can be found [here](https://gml.noaa.gov/aftp/data/greenhouse_gases/ch4/flask/surface/README_ch4_surface-flask_ccgg.html) and sampling locations can be viewed [here](https://gml.noaa.gov/dv/site/?program=ccgg).   
+    
+    - **Temporal Extent:** 1976 - present, varies by station    
+    - **Temporal Resolution:**  Irregular, varies by station    
     - **Spatial Extent:** United States   
     - **Spatial Resolution:** Point location samples    
-    - **Data Units:** 10<sup>-9</sup> moles of CH₄ per mole of dry air = nanomol/mol (nmol/mol)
-    - **Data Type:** 
+    - **Data Units:** Parts CH₄ per billion (ppb)
+    - **Data Type:** Operational
     - **Data Latency:** 
+
+    **Scientific Details:** CH₄ measurements are formally reported in mole fraction units of nanomol (10<sup>-9</sup> mole) of CH₄ per mol of dry air.  However, for clarity here we refer to mole fraction as “concentration” in units of parts per billion (ppb).  The CH₄ data set provides CH₄ dry air mole fractions from more than 80 NOAA GML GGGRN sites across the globe. Measurements have been made using a highly-calibrated gas chromatography with a flame ionization (GC/FID, before August 2019) system or a cavity ring-down spectrometer (CRDS, after August 2019).
+
 
   </Prose>
 </Block>
@@ -101,7 +102,7 @@ layers:
     Lan, X., J.W. Mund, A.M. Crotwell, M.J. Crotwell, E. Moglia, M. Madronich, D. Neff and K.W. Thoning (2023), Atmospheric Methane Dry Air Mole Fractions from the NOAA GML Carbon Cycle Cooperative Global Air Sampling Network, 1983-2022, Version: 2023-08-28, https://doi.org/10.15138/VNCZ-M766 
 
     ## Dataset Accuracy
-    The uncertainty of the CH4 standard scale (NOAA 2004A) near 1800 ppb is estimated at +/- 0.2%, or about 3 nmol/mol.
+    The uncertainty of the CH₄ standard scale (WMO 2004A) near 1800 ppb is estimated at +/- 0.2%, or about 3 ppb.
 
     ## Disclaimer
     Every effort is made to produce the most accurate and precise measurements possible.  However, NOAA reserves the right to make corrections to the data based on recalibration of standard gases or for other reasons deemed scientifically justified.  NOAA is not responsible for results and conclusions based on use of these data without regard to this warning.
@@ -109,17 +110,46 @@ layers:
     These data are made freely available to the public and the scientific community in the belief that their wide dissemination will lead to greater understanding and new scientific insights. To ensure that GML receives fair credit for their work please include relevant citation text in publications. We encourage users to contact the data providers, who can provide detailed information about the measurements and scientific insight.  In cases where the data are central to a publication, co-authorship for data providers may be appropriate.
  
     ## Key Publications
+    Lan X, Nisbet EG, Dlugokencky EJ, Michel SE. 2021, What do we know about the global methane budget? Results from four decades of atmospheric CH4 observations and the way forward. *Phil. Trans. R. Soc. A* 379:20200440. https://doi.org/10.1098/rsta.2020.0440
+
+    Dlugokencky, E.J., et al. 2009, Observational constraints on recent increases in the atmospheric CH4 burden, *Geophys. Res. Lett*., 36, L18803, doi:10.1029/2009GL039780.
+
+    Dlugokencky, E.J., B.P. Walter, K.A. Masarie, P.M. Lang, and E.S. Kasischke, 2001, Measurements of an anomalous global methane increase during 1998, *Geophys. Res. Lett*., 28, 499-502.  
+
+    Dlugokencky, E.J., K.A. Masarie, P.M. Lang, and P.P. Tans, 1998, Continuing decline in the growth rate of atmospheric methane, *Nature*, 393, 447-450.
 
     ## Other Relevant Publications    
-    
+    Lan, X., Basu, S., Schwietzke, S., Bruhwiler, L. M. P., Dlugokencky, E. J., Michel, S. E., et al. 2021, Improved constraints on global methane emissions and sinks using δ13C-CH4. *Global Biogeochemical Cycles*, 35, e2021GB007000. https://doi.org/10.1029/2021GB007000
+
+    Dlugokencky, E.J., R.C. Myers, P.M. Lang, K.A. Masarie, A.M. Crotwell, K.W. Thoning, B.D. Hall, J.W. Elkins, and L.P. Steele, 2005, Conversion of NOAA atmospheric dry air methane mole fractions to a gravimetrically-prepared standard scale, *J. Geophys. Res*., 110, D18306, doi:10.1029/2005JD006035.
+
+    Dlugokencky, E.J., K.A. Masarie, P.M. Lang, P.P. Tans, L.P. Steele, and E.G. Nisbet, 1994a, A dramatic decrease in the growth rate of atmospheric methane in the northern hemisphere during 1992, *Geophys. Res. Lett*., 21, 45-48.
+
+    Dlugokencky, E.J., L.P. Steele, P.M. Lang, and K.A. Masarie, 1994b, The growth rate and distribution of atmospheric methane, *J. Geophys. Res*., 99, 17,021-17,043.
+
+    Lang, P.M., L.P. Steele, R.C. Martin, and K.A. Masarie, 1990a, Atmospheric methane data for the period 1983-1985 from the NOAA/GMCC global cooperative flask sampling network, NOAA Technical Memorandum ERL CMDL-1.
+
+    Lang, P.M., L.P. Steele, and R.C. Martin, 1990b, Atmospheric methane data for the period 1986-1988 from the NOAA/CMDL global cooperative flask sampling network, NOAA Technical Memorandum ERL CMDL-2.
+
+    Lang, P.M., L.P. Steele, L.S. Waterman, R.C. Martin, K.A. Masarie, and E.J. Dlugokencky, 1992, NOAA/CMDL Atmospheric methane data for the period 1983-1990 from shipboard flask sampling, NOAA Technical Memorandum ERL CMDL-4.
+
+    Steele, L.P., P.J. Fraser, R.A. Rasmussen, M.A.K. Khalil, T.J. Conway, A.J. Crawford, R.H. Gammon, K.A. Masarie, and K.W. Thoning, 1987, The global distribution of methane in the troposphere, *J. Atmos. Chem*, 5, 125-171.
+
+    Steele, L.P. and P.M. Lang, 1991, Atmospheric methane concentrations-the NOAA/CMDL global cooperative flask sampling network, 1983-1988, ORNL/CDIAC-42, NDP-038.
+
+    Steele, L.P., E.J. Dlugokencky, P.M. Lang, P.P. Tans, R.C. Martin, and K.A. Masarie, 1992, Slowing down of the global accumulation of atmospheric methane during the 1980's, *Nature*, 358, 313.
+
+    Thoning, K.W., P.P. Tans, and W.D. Komhyr, 1989,  Atmospheric carbon dioxide at Mauna Loa Observatory 2.  Analysis of the NOAA GMCC Data, 1974-1985, *J. Geophys. Res*., 94, 8549-8565.
+
     ## Acknowledgment
+    We thank the cooperating agencies and individuals throughout the world who collect air samples and enable the operation of the Global Greenhouse Gas Reference Network.
     
     ## License
     [Creative Commons Zero v1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC0 1.0)
   
     ## Data Stewardship
-    - [Data Workflow]()
-    - [Data Transformation Code]()
-    - [U.S. GHG Center Data Intake Processing and Verification Report]()
+    - [Data Workflow](https://us-ghg-center.github.io/ghgc-docs/)
+    - [Data Transformation Code](https://us-ghg-center.github.io/ghgc-docs/)
+    - [U.S. GHG Center Data Intake Processing and Verification Report](https://us-ghg-center.github.io/ghgc-docs/)
     </Prose>
 </Block>
