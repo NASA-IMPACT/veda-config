@@ -147,7 +147,7 @@ export default function PageFooter(props) {
       <FooterContacts>
         <div>
           <a href="/">
-            <span>By</span> <strong>U.S. GHG Center</strong> <span>on</span>{" "}
+            <span>By</span> <strong>US GHG Center</strong> <span>on</span>{" "}
             <time dateTime={String(nowDate.getFullYear())}>
               {nowDate.getFullYear()}
             </time>

@@ -104,7 +104,7 @@ export default function HomeComponent() {
             also encourages stakeholder feedback and ideas for future expansion.
           </p>
           <ArrowLink to="/stories/intro-us-ghg-center">
-            Introduction to the U.S. GHG Center
+            Introduction to the US GHG Center
           </ArrowLink>
         </IntroHeadline>
         <Keypoints />

@@ -73,7 +73,7 @@ export default function HomeHero(props) {
         <img src={coverSrc} alt="image of northern hemisphere of earth with gas in atmosphere shown in red hues" />
         <Figcaption>
           <FigureAttribution
-            author="Helen-Nicole Kostis, Lead Visualizer, Scientific Visualization Studio. Image of January 2021 Global Atmospheric Carbon Dioxide (CO2)"
+            author="Helen-Nicole Kostis, Lead Visualizer, Scientific Visualization Studio. Image of January 2021 Global Atmospheric Carbon Dioxide (CO₂)"
             url="https://svs.gsfc.nasa.gov/5115"
             position="bottom-right"
           />

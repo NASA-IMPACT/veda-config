@@ -1,5 +1,5 @@
 ---
-id: gosat-based-ch4budget-yeargrid-v1-ghgc
+id: gosat-based-ch4budget-yeargrid-v1
 name: GOSAT-based Top-down Methane Budgets  
 description: Annual methane emissions gridded globally at 1° resolution for 2019, version
 usage:
@@ -52,7 +52,7 @@ layers:
         - 2.122
       nodata: 0
     compare:
-      datasetId: gosat-based-ch4budget-yeargrid-v1-ghgc
+      datasetId: gosat-based-ch4budget-yeargrid-v1
       layerId: prior-total-id
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -91,7 +91,7 @@ layers:
         - 3.622
       nodata: 0
     compare:
-      datasetId: gosat-based-ch4budget-yeargrid-v1-ghgc
+      datasetId: gosat-based-ch4budget-yeargrid-v1
       layerId: post-total-id
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -128,7 +128,7 @@ layers:
         - 1.222
       nodata: 0
     compare:
-      datasetId: gosat-based-ch4budget-yeargrid-v1-ghgc
+      datasetId: gosat-based-ch4budget-yeargrid-v1
       layerId: post-total-id
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -167,7 +167,7 @@ layers:
         -  2.036
       nodata: 0
     compare:
-      datasetId: gosat-based-ch4budget-yeargrid-v1-ghgc
+      datasetId: gosat-based-ch4budget-yeargrid-v1
       layerId: post-total-id
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -204,7 +204,7 @@ layers:
         - 1.53
       nodata: 0
     compare:
-      datasetId: gosat-based-ch4budget-yeargrid-v1-ghgc
+      datasetId: gosat-based-ch4budget-yeargrid-v1
       layerId: prior-wetland-uncertainty-id
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -243,7 +243,7 @@ layers:
         -  0.367
       nodata: 0
     compare:
-      datasetId: gosat-based-ch4budget-yeargrid-v1-ghgc
+      datasetId: gosat-based-ch4budget-yeargrid-v1
       layerId: post-wetland-uncertainty-id
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -270,7 +270,7 @@ layers:
 
 <Block type='wide'>
   <Prose>
-    The NASA Carbon Monitoring System Flux (CMS-Flux) team analyzed remote sensing observations from Japan’s Greenhouse gases Observing SATellite (GOSAT) to produce the global Committee on Earth Observation Satellites (CEOS) CH4 Emissions data product. They used an analytic Bayesian inversion approach and the GEOS-Chem global chemistry transport model to quantify annual methane (CH4) emissions and their uncertainties at a spatial resolution of 1° by 1° and then projected these to each country for 2019. Unlike the pilot CO2 inventories, these CH4 budgets optimize emissions from both anthropogenic and natural sources including fossil fuel extraction, transport, wetlands, inland freshwaters, agriculture, waste, and fires. These estimates are expressed in Tg CH4 yr-1, and they are intended as a pilot dataset for the global stock take (GST) in support of the Paris Agreement.
+    The NASA Carbon Monitoring System Flux (CMS-Flux) team analyzed remote sensing observations from Japan’s Greenhouse gases Observing SATellite (GOSAT) to produce the global Committee on Earth Observation Satellites (CEOS) CH₄ Emissions data product. They used an analytic Bayesian inversion approach and the GEOS-Chem global chemistry transport model to quantify annual methane (CH₄) emissions and their uncertainties at a spatial resolution of 1° by 1° and then projected these to each country for 2019. Unlike the pilot CO₂ inventories, these CH₄ budgets optimize emissions from both anthropogenic and natural sources including fossil fuel extraction, transport, wetlands, inland freshwaters, agriculture, waste, and fires. These estimates are expressed in Tg CH₄ yr-1, and they are intended as a pilot dataset for the global stock take (GST) in support of the Paris Agreement.
    
     - **Temporal Extent:** 2019   
     - **Temporal Resolution:** Annual   
@@ -280,7 +280,7 @@ layers:
     - **Data Type:** Research
     - **Data Latency:** 
 
-    **Scientific Details:** As part of the GST, countries are asked to provide a record of their greenhouse gas emissions (such as methane) to inform decisions on how to reduce these emissions. To ensure that reported changes are actually occurring, this optimal estimation study was conducted to show how satellite methane observations could be used to evaluate reported emissions. In a bottom-up approach, methane emissions from activity reports were projected through the GEOS-Chem global chemistry transport model to obtain the expected atmospheric concentrations. In a top-down approach, observed atmospheric methane concentrations from the GOSAT satellite were compared with those modeled from reports. Using an inverse method, the methane flux was quantified on a 2 x 2.5 grid based on the differences between the two concentrations. Analytic Jacobian matrices relating emissions to concentrations were derived from the GEOS-Chem model and used to calculate the prior and posterior flux error covariance. Methane fluxes were then linearly projected to emissions by sector at 1 degree resolution. The derivation used to project top-down fluxes back to emissions by region is described in [Cusworth et al. (2021)](https://doi.org/10.1038/s43247-021-00312-6). The CEOS CH4 Emissions dataset includes the prior and posterior emissions and their associated uncertainties. 
+    **Scientific Details:** As part of the GST, countries are asked to provide a record of their greenhouse gas emissions (such as methane) to inform decisions on how to reduce these emissions. To ensure that reported changes are actually occurring, this optimal estimation study was conducted to show how satellite methane observations could be used to evaluate reported emissions. In a bottom-up approach, methane emissions from activity reports were projected through the GEOS-Chem global chemistry transport model to obtain the expected atmospheric concentrations. In a top-down approach, observed atmospheric methane concentrations from the GOSAT satellite were compared with those modeled from reports. Using an inverse method, the methane flux was quantified on a 2 x 2.5 grid based on the differences between the two concentrations. Analytic Jacobian matrices relating emissions to concentrations were derived from the GEOS-Chem model and used to calculate the prior and posterior flux error covariance. Methane fluxes were then linearly projected to emissions by sector at 1 degree resolution. The derivation used to project top-down fluxes back to emissions by region is described in [Cusworth et al. (2021)](https://doi.org/10.1038/s43247-021-00312-6). The CEOS CH₄ Emissions dataset includes the prior and posterior emissions and their associated uncertainties. 
   </Prose>
 </Block>
 <Block>
@@ -289,7 +289,7 @@ layers:
     Worden, J., Cusworth, D., Qu, Z., Yin, Y., Zhang, Y., Bloom, A. A., Ma, S., Byrne, B., Scarpelli, T. R., Maasakkers, J., Crisp, D., Duren, R., and Jacob, D.: The 2019 Methane Budget And Uncertainties At 1 Degree Resolution And Each Country Through Bayesian Integration Of GOSAT Total Column Methane Data And A Priori Inventory Estimates, *Atmos. Chem. Phys. Discuss*. [preprint], [https://doi.org/10.5194/acp-2021-955](https://doi.org/10.5194/acp-2021-955), in review, 2021.
    
     ## Dataset Accuracy
-    Bottom-up uncertainties are generally calculated by comparing how emissions attributions to each sector differ across studies, comparing emission models and remote sensing data, and using expert opinion when uncertainties are especially challenging to estimate. Recent studies show that there could be larger than expected emissions from aquatic and fossil sources. This means that current methane budgets estimated from both bottom-up and top-down models are either inaccurate in their emissions allocations to existing sectors or that the atmospheric methane removal mechanisms (sinks) are not fully understood. For top-down uncertainties, recent studies also show that there can be considerable errors in the models used by remote sensing instruments to relate measurements to concentrations. Model transport errors can add additional uncertainty when inverting concentrations to fluxes. The flux inversion used for this dataset reduces the impact of variability in the hydroxyl radical (OH), the main driver of methane removal, on methane emissions by jointly estimating OH and CH4 emissions. A latitudinal correction is used to reduce the impacts of stratospheric chemistry and transport errors. Other systematic errors in model transport and chemistry were not characterized but it is not expected that these errors are significant. Additionally, the Bayesian approach used for this dataset enables the quantification of smoothing error, which can be a significant contributor to emission uncertainty, and reduces the potential for introducing additional uncertainty and biases when fluxes are projected back to emissions.
+    Bottom-up uncertainties are generally calculated by comparing how emissions attributions to each sector differ across studies, comparing emission models and remote sensing data, and using expert opinion when uncertainties are especially challenging to estimate. Recent studies show that there could be larger than expected emissions from aquatic and fossil sources. This means that current methane budgets estimated from both bottom-up and top-down models are either inaccurate in their emissions allocations to existing sectors or that the atmospheric methane removal mechanisms (sinks) are not fully understood. For top-down uncertainties, recent studies also show that there can be considerable errors in the models used by remote sensing instruments to relate measurements to concentrations. Model transport errors can add additional uncertainty when inverting concentrations to fluxes. The flux inversion used for this dataset reduces the impact of variability in the hydroxyl radical (OH), the main driver of methane removal, on methane emissions by jointly estimating OH and CH₄ emissions. A latitudinal correction is used to reduce the impacts of stratospheric chemistry and transport errors. Other systematic errors in model transport and chemistry were not characterized but it is not expected that these errors are significant. Additionally, the Bayesian approach used for this dataset enables the quantification of smoothing error, which can be a significant contributor to emission uncertainty, and reduces the potential for introducing additional uncertainty and biases when fluxes are projected back to emissions.
 
     ## Disclaimer
     All data provided in the U.S. GHG Center has been transformed from the original format into Cloud Optimized GeoTIFF (COG). Careful quality checks are used to ensure data transformation has been performed correctly.

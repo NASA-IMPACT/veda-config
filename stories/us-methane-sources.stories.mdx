@@ -1,5 +1,5 @@
 ---
-id: "anthropogenic-methane-emissions-distribution"
+id: "us-methane-sources"
 name: US Methane Sources
 description: "Mapping human-caused sources of methane across the U.S. provides insight into sources and emission trends. This geographic representation enables new comparisons between emission locations and includes methane estimates informed by atmospheric observations. The aim is improving national and state-level methane emission estimates."
 media:
@@ -12,13 +12,16 @@ pubDate: 2023-08-25
 taxonomy:
   - name: Topics
     values:
-      - Methane
+      - Anthropogenic Emissions
+  - name: Gas
+    values:
+      - CH₄
 ---
 
 <Block>
     <Prose>
     ## What is methane and why is it important?
-    Methane is the second most abundant greenhouse gas, behind carbon dioxide CO2 and is a ‘potent’ greenhouse gas that traps heat in the atmosphere. It is responsible for about one third of all warming resulting from human emissions. Also, methane has a shorter lifetime than carbon dioxide, meaning it leaves the atmosphere much faster. These factors make reducing methane emissions one of the best opportunities for reducing near term global warming.
+    Methane is the second most abundant greenhouse gas, behind carbon dioxide CO₂ and is a ‘potent’ greenhouse gas that traps heat in the atmosphere. It is responsible for about one third of all warming resulting from human emissions. Also, methane has a shorter lifetime than carbon dioxide, meaning it leaves the atmosphere much faster. These factors make reducing methane emissions one of the best opportunities for reducing near term global warming.
 
     Over the last two centuries, methane concentrations in the atmosphere have more than doubled. While some methane emissions come from natural sources, many sources are from human-related activities including agriculture, oil and natural gas systems, landfills, coal mining, stationary and mobile combustion, wastewater treatment, and certain industrial processes. Follow these links for more information on the <a href="https://www.epa.gov/gmi/importance-methane" target="_blank" rel="noopener" style={{ color: '#0000EE' }}>importance of methane↗</a>, <a href="https://www.globalcarbonproject.org/methanebudget/index.htm" target="_blank" rel="noopener" style={{ color: '#0000EE' }}>global methane budget↗</a>, and <a href="https://gml.noaa.gov/ccgg/trends_ch4/" target="_blank" rel="noopener" style={{ color: '#0000EE' }}>observed trends↗</a> in global atmospheric concentrations.
     </Prose>
@@ -86,7 +89,7 @@ taxonomy:
         <Prose>
             ### Inventory of U.S. Greenhouse Gas Emissions and Sinks
 
-             As a Party to the UNFCCC, the U.S. submits a national inventory of anthropogenic sources and sinks of GHGs by April 15th each year, called the <a href="https://www.epa.gov/ghgemissions/inventory-us-greenhouse-gas-emissions-and-sinks" target="_blank" rel="noopener" style={{"color": "#0000EE"}}>Inventory of U.S. Greenhouse Gas Emissions and Sinks (GHGI)↗</a>. The EPA has prepared this report since the early 1990s. It uses IPCC Guidelines to calculate the annual time series of anthropogenic emissions and sinks by source, economic sector, and GHG (including methane). Separately through the <a href="https://www.epa.gov/ghgreporting" target="_blank" rel="noopener" style={{ color: '#0000EE' }}>Greenhouse Gas Reporting Program (GHGRP)↗</a>, the EPA also collects annual GHG emissions data (including methane) from individual facilities and suppliers of certain fossil fuels and industrial gases that emit more than 25,000 metric tons or more of CO2 equivalent per year. The GHGRP does not provide full coverage of total annual anthropogenic U.S. GHG emissions, but both data sets are complementary to each other and the GHGRP data is included in the inventory data.
+            As a Party to the UNFCCC, the U.S. submits a national inventory of anthropogenic sources and sinks of GHGs by April 15th each year, called the <a href="https://www.epa.gov/ghgemissions/inventory-us-greenhouse-gas-emissions-and-sinks" target="_blank" rel="noopener" style={{"color": "#0000EE"}}><em>Inventory of U.S. Greenhouse Gas Emissions and Sinks</em> (GHGI)↗</a>. The EPA has prepared this report since the early 1990s. It uses IPCC Guidelines to calculate the annual time series of anthropogenic emissions and sinks by source, economic sector, and GHG (including methane). Separately through the <a href="https://www.epa.gov/ghgreporting" target="_blank" rel="noopener" style={{ color: '#0000EE' }}>Greenhouse Gas Reporting Program (GHGRP)↗</a>, the EPA also collects annual GHG emissions data (including methane) from individual facilities and suppliers of certain fossil fuels and industrial gases that emit more than 25,000 metric tons or more of CO₂ equivalent per year. The GHGRP does not provide full coverage of total annual anthropogenic U.S. GHG emissions, but both data sets are complementary to each other and the GHGRP data is included in the inventory data.
         </Prose>
     </Block>
 
@@ -111,7 +114,7 @@ taxonomy:
     <Block>
         <Figure>
             <Map
-                datasetId='epa-ch4emission-yeargrid-v2express-ghgc'
+                datasetId='epa-ch4emission-yeargrid-v2express'
                 layerId='enteric-fermentation'
                 dateTime='2020-01-01'
             />
@@ -137,7 +140,7 @@ taxonomy:
     <Chapter
         center={[-98.5795, 39.8283]}
         zoom={4}
-        datasetId='epa-ch4emission-yeargrid-v2express-ghgc'
+        datasetId='epa-ch4emission-yeargrid-v2express'
         layerId='rice-cultivation-l'
         datetime='2020-01-01'
     >
@@ -148,7 +151,7 @@ taxonomy:
     <Chapter
         center={[-98.5795, 39.8283]}
         zoom={4}
-        datasetId='epa-ch4emission-yeargrid-v2express-ghgc'
+        datasetId='epa-ch4emission-yeargrid-v2express'
         layerId='production-ngs-l'
         datetime='2020-01-01'
     >
@@ -159,7 +162,7 @@ taxonomy:
     <Chapter
         center={[-98.5795, 39.8283]}
         zoom={4}
-        datasetId='epa-ch4emission-yeargrid-v2express-ghgc'
+        datasetId='epa-ch4emission-yeargrid-v2express'
         layerId='1B1a-underground-coal'
         datetime='2020-01-01'
     >
@@ -170,7 +173,7 @@ taxonomy:
     <Chapter
         center={[-98.5795, 39.8283]}
         zoom={4}
-        datasetId='epa-ch4emission-yeargrid-v2express-ghgc'
+        datasetId='epa-ch4emission-yeargrid-v2express'
         layerId='5A1-msw-landfill-waste'
         datetime='2020-01-01'
     >
@@ -181,7 +184,7 @@ taxonomy:
     <Chapter
         center={[-98.5795, 39.8283]}
         zoom={4}
-        datasetId='epa-ch4emission-yeargrid-v2express-ghgc'
+        datasetId='epa-ch4emission-yeargrid-v2express'
         layerId='1B2a-transport-ps'
         datetime='2020-01-01'
     >
@@ -198,7 +201,7 @@ taxonomy:
         </Prose>
         <Figure>
             <Map
-            datasetId='epa-ch4emission-yeargrid-v2express-ghgc'
+            datasetId='epa-ch4emission-yeargrid-v2express'
             layerId='total-methane'
             dateTime='2012-01-01'
             compareDateTime='2020-01-01'
@@ -213,7 +216,7 @@ taxonomy:
     <Block>
      <Figure>
             <Map
-            datasetId='epa-ch4emission-yeargrid-v2express-ghgc'
+            datasetId='epa-ch4emission-yeargrid-v2express'
             layerId='total-agriculture'
             dateTime='2012-01-01'
             compareDateTime='2020-01-01'
@@ -235,7 +238,7 @@ taxonomy:
         </Prose>
         <Figure>
             <Map
-            datasetId='epa-ch4emission-yeargrid-v2express-ghgc'
+            datasetId='epa-ch4emission-yeargrid-v2express'
             layerId='total-petroleum'
             dateTime='2012-01-01'
             compareDateTime='2020-01-01'
@@ -250,7 +253,7 @@ taxonomy:
     <Block>
         <Figure>
             <Map
-            datasetId='epa-ch4emission-yeargrid-v2express-ghgc'
+            datasetId='epa-ch4emission-yeargrid-v2express'
             layerId='total-coal-mines'
             dateTime='2012-01-01'
             compareDateTime='2020-01-01'
@@ -301,6 +304,6 @@ taxonomy:
     <Block>
         <Prose>
         ## Disclaimers
-        This gridded methane emissions dataset is currently under peer-review and will be updated upon peer-review and final publication of the associated manuscript. Please see <a href="/data-catalog/emit-ch4plume-v1-ghgc" style={{ color: '#0000EE' }}>GHG Gridded dataset Landing Page</a> and and links in the resources for additional details.
+        This gridded methane emissions dataset is currently under peer-review and will be updated upon peer-review and final publication of the associated manuscript. Please see <a href="/data-catalog/emit-ch4plume-v1" style={{ color: '#0000EE' }}>GHG Gridded dataset Landing Page</a> and and links in the resources for additional details.
         </Prose>
     </Block>

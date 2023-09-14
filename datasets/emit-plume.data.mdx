@@ -1,5 +1,5 @@
 ---
-id: emit-ch4plume-v1-ghgc
+id: emit-ch4plume-v1
 name: EMIT Methane Point Source Plume Complexes
 description: Methane point source plume complexes measured by the EMIT imaging spectrometer on the International Space Station (ISS)
 usage:
@@ -36,7 +36,7 @@ taxonomy:
 layers:
   - id: ch4-plume-emissions
     stacCol: emit-ch4plume-v1
-    name: CH4 point source plume complexes
+    name: CH₄ point source plume complexes
     type: raster
     description: Methane point source plume complex extents with methane enhancements
     zoomExtent:
@@ -52,7 +52,7 @@ layers:
         - 1500
       nodata: -9999
     compare:
-      datasetId: emit-ch4plume-v1-ghgc
+      datasetId: emit-ch4plume-v1
       layerId: ch4-plume-emissions
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {

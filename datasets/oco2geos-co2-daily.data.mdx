@@ -1,5 +1,5 @@
 ---
-id: oco2geos-co2-daygrid-v10r-ghgc
+id: oco2geos-co2-daygrid-v10r
 name: OCO-2 GEOS Assimilated CO₂ Concentrations
 description: Daily, global 0.5 x 0.625 degree assimilated CO₂ concentrations derived from OCO-2 satellite data, version 10r
 usage:
@@ -55,7 +55,7 @@ layers:
         - 0.00040285
       nodata: 0
     compare:
-      datasetId: oco2geos-co2-daygrid-v10r-ghgc
+      datasetId: oco2geos-co2-daygrid-v10r
       layerId: oco2-dryair-column
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -92,7 +92,7 @@ layers:
         - 0.0000015
       nodata: 0
     compare:
-      datasetId: oco2geos-co2-daygrid-v10r-ghgc
+      datasetId: oco2geos-co2-daygrid-v10r
       layerId: oco2-dryair-column-prec
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -125,7 +125,7 @@ layers:
     - **Data Latency:** 2-3 months
 
 
-    **Scientific Details:**  Though the OCO-2 mission provides high quality space-based XCO₂ retrievals, the data are characterized by large gaps in coverage due to the narrow 10 km OCO-2 ground track and an inability to measure through clouds and thick aerosols. Several different methods have been explored to produce spatially complete L3 (gridded) XCO₂ fields from the satellite data, including averaging, kriging, and data assimilation. Data assimilation synthesizes simulations and observations, adjusting the state of atmospheric constituents like CO₂ to reflect observed values, thus gap-filling the observations when and where none are unavailable based on previous observations. Compared to other methods, data assimilation has the advantage that it results in estimates based on the collective scientific understanding, notably of the Earth’s carbon cycle and atmospheric transport. For additional details on how this data was derived, please refer to Section 2 of the [OCO-2 GEOS L3 XCO2 Product User’s Guide](https://docserver.gesdisc.eosdis.nasa.gov/public/project/OCO/OCO2_GEOS_L3_User_Guide.pdf).  
+    **Scientific Details:**  Though the OCO-2 mission provides high quality space-based XCO₂ retrievals, the data are characterized by large gaps in coverage due to the narrow 10 km OCO-2 ground track and an inability to measure through clouds and thick aerosols. Several different methods have been explored to produce spatially complete L3 (gridded) XCO₂ fields from the satellite data, including averaging, kriging, and data assimilation. Data assimilation synthesizes simulations and observations, adjusting the state of atmospheric constituents like CO₂ to reflect observed values, thus gap-filling the observations when and where none are unavailable based on previous observations. Compared to other methods, data assimilation has the advantage that it results in estimates based on the collective scientific understanding, notably of the Earth’s carbon cycle and atmospheric transport. For additional details on how this data was derived, please refer to Section 2 of the [OCO-2 GEOS L3 XCO₂ Product User’s Guide](https://docserver.gesdisc.eosdis.nasa.gov/public/project/OCO/OCO2_GEOS_L3_User_Guide.pdf).  
   </Prose>
 </Block>
 <Block>
@@ -146,7 +146,7 @@ layers:
     ## Key Publications
     Weir, B., Oda, T., Ott, L., & Schmidt, G. A. (2022). Assessing progress toward the Paris climate agreement from space. Environmental Research Letters, 17(11), 111002. [https://doi.org/10.1088/1748-9326/ac998c](https://doi.org/10.1088/1748-9326/ac998c)
     
-    Ott, L. and Weir, B. (2022). OCO-2 GEOS L3 XCO2 Product User’s Guide. GES DISC. [https://docserver.gesdisc.eosdis.nasa.gov/public/project/OCO/OCO2_GEOS_L3_User_Guide.pdf](https://docserver.gesdisc.eosdis.nasa.gov/public/project/OCO/OCO2_GEOS_L3_User_Guide.pdf)
+    Ott, L. and Weir, B. (2022). OCO-2 GEOS L3 XCO₂ Product User’s Guide. GES DISC. [https://docserver.gesdisc.eosdis.nasa.gov/public/project/OCO/OCO2_GEOS_L3_User_Guide.pdf](https://docserver.gesdisc.eosdis.nasa.gov/public/project/OCO/OCO2_GEOS_L3_User_Guide.pdf)
     
     Crisp, D., O’Dell, C., Eldering, A., Fisher, B., Oyafuso, F., Payne, V., Drouin, B., Toon, G., Laughner, J., Somkuti, P., McGarragh, G., Merrelli, A., Nelson, R., Gunson, M., Frankenburg, C., Osterman, G., Boesch, H., Brown, L., Castano, R., Christi, M., Connor, B., McDuffie, J., Miller, C., Natraj, V., O’Brien, D., Polonski, I., Smyth, M., Thompson, D., Granat, R. (2021). Orbiting Carbon Observatory (OCO) - 2 Level 2 Full Physics Algorithm Theoretical Basis Document. GES DISC. [https://docserver.gesdisc.eosdis.nasa.gov/public/project/OCO/OCO_L2_ATBD.pdf](https://docserver.gesdisc.eosdis.nasa.gov/public/project/OCO/OCO_L2_ATBD.pdf)
 
@@ -155,7 +155,7 @@ layers:
     
     Liu, J. and Yuen, K. (2023). Publications. OCO-2. [https://ocov2.jpl.nasa.gov/science/publications/](https://ocov2.jpl.nasa.gov/science/publications/)
     
-    Morgan, K. and Savtchenko, A. (2022). README Document for OCO-2 GEOS L3 XCO2 Products. GES DISC. [https://docserver.gesdisc.eosdis.nasa.gov/public/project/OCO/README_OCO2_GEOS.pdf](https://docserver.gesdisc.eosdis.nasa.gov/public/project/OCO/README_OCO2_GEOS.pdf)
+    Morgan, K. and Savtchenko, A. (2022). README Document for OCO-2 GEOS L3 XCO₂ Products. GES DISC. [https://docserver.gesdisc.eosdis.nasa.gov/public/project/OCO/README_OCO2_GEOS.pdf](https://docserver.gesdisc.eosdis.nasa.gov/public/project/OCO/README_OCO2_GEOS.pdf)
     
     O'Dell, C. W., Eldering, A., Wennberg, P. O., Crisp, D., Gunson, M. R., Fisher, B., Frankenberg, C., Kiel, M., Lindqvist, H., Mandrake, L., Merrelli, A., Natraj, V., Nelson, R. R., Osterman, G. B., Payne, V. H., Taylor, T. E., Wunch, D., Drouin, B. J., Oyafuso, F., Chang, A., McDuffie, J., Smyth, M., Baker, D. F., Basu, S., Chevallier, F., Crowell, S. M. R., Feng, L., Palmer, P. I., Dubey, M., García, O. E., Griffith, D. W. T., Hase, F., Iraci, L. T., Kivi, R., Morino, I., Notholt, J., Ohyama, H., Petri, C., Roehl, C. M., Sha, M. K., Strong, K., Sussmann, R., Te, Y., Uchino, O., and Velazco, V. A. (2018). Improved retrievals of carbon dioxide from Orbiting Carbon Observatory-2 with the version 8 ACOS algorithm. Atmos. Meas. Tech., 11, 6539–6576. [https://doi.org/10.5194/amt-11-6539-2018](https://doi.org/10.5194/amt-11-6539-2018)
     

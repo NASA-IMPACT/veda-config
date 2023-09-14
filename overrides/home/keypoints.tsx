@@ -39,7 +39,7 @@ export default function Keypoints() {
         <li>
           <KeypointCard
             linkLabel="View more"
-            linkTo="/stories/anthropogenic-methane-emissions-distribution"
+            linkTo="/stories/us-methane-sources"
             title="Anthropogenic Greenhouse Gas Emissions"
             description="Carbon dioxide and methane gas emissions from human activities in areas such as energy, agriculture, waste, and industry"
             imgSrc={featureEmissions}

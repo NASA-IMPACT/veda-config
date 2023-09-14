@@ -1,5 +1,5 @@
 ---
-id: odiac-ffco2-monthgrid-v2022-ghgc
+id: odiac-ffco2-monthgrid-v2022
 name: ODIAC Fossil Fuel CO₂ Emissions
 description: Global, monthly 1 km resolution dataset of fossil fuel carbon dioxide emissions, version 2022
 usage:
@@ -54,7 +54,7 @@ layers:
         - 300
       nodata: 0
     compare:
-      datasetId: odiac-ffco2-monthgrid-v2022-ghgc
+      datasetId: odiac-ffco2-monthgrid-v2022
       layerId: co2-emissions
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -78,7 +78,7 @@ layers:
 
 <Block type='wide'>
   <Prose>
-    The Open-source Data Inventory for Anthropogenic CO2 (ODIAC) data product is a monthly high-resolution global data product of modeled fossil fuel carbon dioxide (CO2) emissions. A complex model incorporates and combines space-based nighttime light data and individual power plant emission/location profiles from the latest country fossil fuel CO2 estimates (2000-2019) made by the Carbon Dioxide Information Analysis Center (CDIAC) team at the Appalachian State University (CDIAC at AppState, Gilfillan et al. 2021, Hefner et al. 2022). The ODIAC estimated global spatial extent of fossil fuel CO2 emissions is produced on a 1 km by 1 km grid that details variations in urban regions where emissions are most intense. The ODIAC CO2 emission data is widely used by the international research community for applications such as CO2 flux inversion, urban emission estimation, and observing system design experiments.  The ODIAC product was first created in 2009 by Dr. Tomohiro Oda with support from  the National Institute for Environmental Studies (NIES) GOSAT project. The ODIAC team is now supported by NASA Goddard Space Flight Center, NASA Carbon Monitoring System program, the NASA Orbiting Carbon Observatory mission and NIES.  The U.S. GHG Center displays the ODIAC 2022 version containing monthly data from January 2000 to December 2021 that replaces all previous versions.
+    The Open-source Data Inventory for Anthropogenic CO₂ (ODIAC) data product is a monthly high-resolution global data product of modeled fossil fuel carbon dioxide (CO₂) emissions. A complex model incorporates and combines space-based nighttime light data and individual power plant emission/location profiles from the latest country fossil fuel CO₂ estimates (2000-2019) made by the Carbon Dioxide Information Analysis Center (CDIAC) team at the Appalachian State University (CDIAC at AppState, Gilfillan et al. 2021, Hefner et al. 2022). The ODIAC estimated global spatial extent of fossil fuel CO₂ emissions is produced on a 1 km by 1 km grid that details variations in urban regions where emissions are most intense. The ODIAC CO₂ emission data is widely used by the international research community for applications such as CO₂ flux inversion, urban emission estimation, and observing system design experiments.  The ODIAC product was first created in 2009 by Dr. Tomohiro Oda with support from  the National Institute for Environmental Studies (NIES) GOSAT project. The ODIAC team is now supported by NASA Goddard Space Flight Center, NASA Carbon Monitoring System program, the NASA Orbiting Carbon Observatory mission and NIES.  The U.S. GHG Center displays the ODIAC 2022 version containing monthly data from January 2000 to December 2021 that replaces all previous versions.
     - **Temporal Extent:** January 2000 - December 2021
     - **Temporal Resolution:** Monthly
     - **Spatial Extent:** Global
@@ -94,7 +94,7 @@ layers:
 <Block>
   <Prose>
     ## Source Data Product Citation
-    Oda, Tomohiro., Maksyutov, Shamil. 2015. ODIAC Fossil Fuel CO2 Emissions Dataset (Version name: ODIAC2022), Center for Global Environmental Research, National Institute for Environmental Studies, https://doi.org/10.17595/20170411.001. (Reference date: 2023/06/14)
+    Oda, Tomohiro., Maksyutov, Shamil. 2015. ODIAC Fossil Fuel CO₂ Emissions Dataset (Version name: ODIAC2022), Center for Global Environmental Research, National Institute for Environmental Studies, https://doi.org/10.17595/20170411.001. (Reference date: 2023/06/14)
 
     ## Dataset Accuracy
     Evaluating the accuracy and uncertainty of gridded emissions data is challenging because of the lack of direct physical measurements on grid scales. Proxies such as point source locations and satellite observations of nighttime lights are used to spatially estimate emissions to a grid rather than include actual measurements. The uncertainties associated with this approach for estimated emissions is unquantified at this time. Details about current limitations and caveats of the data can be found in Section 7 of [Oda, Maksyutov & Andres 2018](https://essd.copernicus.org/articles/10/87/2018/essd-10-87-2018.pdf).
@@ -104,16 +104,16 @@ layers:
     In addition to the 1 x 1 km data presented here, the source dataset also includes a coarser 1 x 1 degree data layer in units of gram of carbon/m2/day. For more information about the source dataset, visit the [ODIAC website](https://www.nies.go.jp/doi/10.17595/20170411.001-e.html).
 
     ## Key Publications
-    Oda, T. and Maksyutov, S. 2011. A very high-resolution (1 km x 1 km) global fossil fuel CO2 emission inventory derived using a point source database and satellite observations of nighttime lights, Atmos. Chem. Phys., 11, 543-556, https://doi.org/10.5194/acp-11-543-2011
+    Oda, T. and Maksyutov, S. 2011. A very high-resolution (1 km x 1 km) global fossil fuel CO₂ emission inventory derived using a point source database and satellite observations of nighttime lights, Atmos. Chem. Phys., 11, 543-556, https://doi.org/10.5194/acp-11-543-2011
 
-    Oda, T., Maksyutov, S., and Andres, R. J. 2018. The Open-source Data Inventory for Anthropogenic CO2, version 2016 (ODIAC2016): a global monthly fossil fuel CO2 gridded emissions data product for tracer transport simulations and surface flux inversions, Earth Syst. Sci. Data, 10, 87-107, https://doi.org/10.5194/essd-10-87-2018
+    Oda, T., Maksyutov, S., and Andres, R. J. 2018. The Open-source Data Inventory for Anthropogenic CO₂, version 2016 (ODIAC2016): a global monthly fossil fuel CO₂ gridded emissions data product for tracer transport simulations and surface flux inversions, Earth Syst. Sci. Data, 10, 87-107, https://doi.org/10.5194/essd-10-87-2018
 
     ## Other Relevant Publications
     Andres, R.J., Gregg, J.S., Losey, L., Marland, G. and Boden, T. 2011. Monthly, global emissions of carbon dioxide from fossil fuel consumption, Tellus, 63 (3), 309-327, https://doi.org/10.1111/j.1600-0889.2011.00530.x
 
-    Gilfillan, D. and Marland, G. 2021. CDIAC-FF: global and national CO2 emissions from fossil fuel combustion and cement manufacture: 1751-2017, Earth Syst. Sci. Data, 13, 1667-1680, https://doi.org/10.5194/essd-13-1667-2021, 2021
+    Gilfillan, D. and Marland, G. 2021. CDIAC-FF: global and national CO₂ emissions from fossil fuel combustion and cement manufacture: 1751-2017, Earth Syst. Sci. Data, 13, 1667-1680, https://doi.org/10.5194/essd-13-1667-2021, 2021
 
-    Hefner, M., Marland, G., Boden, T. and Andres, R. 2022. Global, Regional, and National Fossil-Fuel CO2 Emissions: 1751-2019 CDIAC-FF, Research Institute for Environment, Energy, and Economics, Appalachian State University. https://energy.appstate.edu/cdiac-appstate/data-products
+    Hefner, M., Marland, G., Boden, T. and Andres, R. 2022. Global, Regional, and National Fossil-Fuel CO₂ Emissions: 1751-2019 CDIAC-FF, Research Institute for Environment, Energy, and Economics, Appalachian State University. https://energy.appstate.edu/cdiac-appstate/data-products
 
     ## Acknowledgment
     The ODIAC team is supported by NASA Goddard Space Flight Center, NASA Carbon Monitoring System program, NASA Orbiting Carbon Observatory mission and NIES GOSAT project.​
