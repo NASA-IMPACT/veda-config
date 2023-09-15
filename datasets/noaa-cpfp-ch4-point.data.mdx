@@ -1,5 +1,5 @@
 ---
-id: noaa-ch4-flask
+id: noaa-cpfp-ch4-point
 name: Atmospheric Methane Concentrations from the NOAA Global Monitoring Laboratory
 description: Atmospheric concentrations of methane (CH₄) from discrete air samples collected over time at globally distributed surface sites
 media:
@@ -21,8 +21,8 @@ taxonomy:
     values:
       - CH₄
 layers:
-  - id: noaa-ch4-flask
-    stacCol: noaa-ch4-flask
+  - id: noaa-cpfp-ch4-point
+    stacCol: noaa-cpfp-ch4-point
     name: Methane (Air Sample)  
     type: vector
     description: Atmospheric concentrations of methane (CH₄) from discrete air samples collected over time at globally distributed surface sites
@@ -32,15 +32,15 @@ layers:
       - 0
       - 20
     sourceParams:
-      assets: noaa-ch4-flask
+      assets: noaa-cpfp-ch4-point
       colormap_name: plasma
       rescale:
         - 0
         - 1000
       nodata: 0
     compare:
-      datasetId: noaa-ch4-flask
-      layerId: noaa-ch4-flask
+      datasetId: noaa-cpfp-ch4-point
+      layerId: noaa-cpfp-ch4-point
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;

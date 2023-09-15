@@ -1,22 +1,22 @@
 ---
-id: ceos-co2budget-yeargrid-v1
+id: oco2-mip-co2budget-yeargrid-v1
 name: OCO-2 MIP-based Top-Down CO₂ Budgets
 description: Global, 1 degree resolution pilot top-down budgets of carbon dioxide emissions at 5 year intervals and national scales, version 1
 usage:
   - url: 'https://us-ghg-center.github.io/ghgc-docs/cog_transformation/oco2-based-co2budget-yeargrid-v1.html'
-    label: Notebook showing data transformation to COG for ingest to the US GHG Cente
+    label: Notebook showing data transformation to COG for ingest to the US GHG Center
     title: 'Data Transformation Notebook'
   - url: 'https://us-ghg-center.github.io/ghgc-docs/user_data_notebooks/oco2-based-co2budget-yeargrid-v1_User_Notebook.html'
     label: Notebook to read, visualize, and explore data statistics
     title: 'Sample Data Notebook'
-  - url: 'https://hub.ghg.center/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FUS-GHG-Center%2Fghgc-docs&urlpath=tree%2Fghgc-docs%2Fuser_data_notebooks%2Fceos-co2budget-yeargrid-v1_User_Notebook.ipynb&branch=main'
+  - url: 'https://hub.ghg.center/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FUS-GHG-Center%2Fghgc-docs&urlpath=tree%2Fghgc-docs%2Fuser_data_notebooks%2Foco2-mip-co2budget-yeargrid-v1_User_Notebook.ipynb&branch=main'
     label: Run example notebook
     title: Interactive Session in the US GHG Center JupyterHub (requires account)
-  - url: https://dljsq618eotzp.cloudfront.net/browseui/index.html#ceos-co2budget-yeargrid-v1/
+  - url: https://dljsq618eotzp.cloudfront.net/browseui/index.html#oco2-mip-co2budget-yeargrid-v1/
     label: Browse and download the data
     title: Data Browser
 media:
-  src: ::file ./co2-flux-ceos--cover.jpg
+  src: ::file ./oco2-mip-co2budget-yeargrid-v1--cover.jpg
   alt: White smoke coming from building
   author:
     name: Zoya Loonohod
@@ -37,7 +37,7 @@ taxonomy:
       - Model Output
 layers:
   - id: co2-emissions-river
-    stacCol: ceos-co2budget-yeargrid-v1
+    stacCol: oco2-mip-co2budget-yeargrid-v1
     name: Lateral river flux
     type: raster
     description: The lateral flux of carbon in (positive) or out (negative) of a region transported by the water cycle.
@@ -54,7 +54,7 @@ layers:
         - 240
       nodata: 0
     compare:
-      datasetId: ceos-co2budget-yeargrid-v1
+      datasetId: oco2-mip-co2budget-yeargrid-v1
       layerId: co2-emissions-river
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -78,7 +78,7 @@ layers:
         - '#D95847'
         - '#B40426'
   - id: co2-emissions-river-std
-    stacCol: ceos-co2budget-yeargrid-v1
+    stacCol: oco2-mip-co2budget-yeargrid-v1
     name: Lateral river flux - std
     type: raster
     description: The lateral flux of carbon in (positive) or out (negative) of a region transported by the water cycle.
@@ -95,7 +95,7 @@ layers:
         - 140
       nodata: 0
     compare:
-      datasetId: ceos-co2budget-yeargrid-v1
+      datasetId: oco2-mip-co2budget-yeargrid-v1
       layerId: co2-emissions-river-std
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -119,7 +119,7 @@ layers:
         - '#92003F'
         - '#67001F'
   - id: co2-emissions-ff
-    stacCol: ceos-co2budget-yeargrid-v1
+    stacCol: oco2-mip-co2budget-yeargrid-v1
     name: Fossil fuel and cement emissions
     type: raster
     description: The burning of fossil fuels and release of carbon due to cement production, representing a flux of carbon from the land surface (geologic reservoir) to the atmosphere.
@@ -136,7 +136,7 @@ layers:
         - 450
       nodata: 0
     compare:
-      datasetId: ceos-co2budget-yeargrid-v1
+      datasetId: oco2-mip-co2budget-yeargrid-v1
       layerId: co2-emissions-ff
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -157,7 +157,7 @@ layers:
         - '#ef6a01'
         - '#cc0019'
   - id: co2-emissions-ff-std
-    stacCol: ceos-co2budget-yeargrid-v1
+    stacCol: oco2-mip-co2budget-yeargrid-v1
     name: Fossil fuel and cement emissions - std
     type: raster
     description: The burning of fossil fuels and release of carbon due to cement production, representing a flux of carbon from the land surface (geologic reservoir) to the atmosphere.
@@ -174,7 +174,7 @@ layers:
         - 25000
       nodata: 0
     compare:
-      datasetId: ceos-co2budget-yeargrid-v1
+      datasetId: oco2-mip-co2budget-yeargrid-v1
       layerId: co2-emissions-ff-std
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -198,7 +198,7 @@ layers:
         - '#92003F'
         - '#67001F'
   - id: co2-emissions-lnlgis-nbe
-    stacCol: ceos-co2budget-yeargrid-v1
+    stacCol: oco2-mip-co2budget-yeargrid-v1
     name: LNLGIS Net biosphere exchange
     type: raster
     description: Net flux of carbon from the terrestrial biosphere to the atmosphere due to biomass burning (BB) and Reco minus gross primary production (GPP).
@@ -215,7 +215,7 @@ layers:
         - 2500
       nodata: 0
     compare:
-      datasetId: ceos-co2budget-yeargrid-v1
+      datasetId: oco2-mip-co2budget-yeargrid-v1
       layerId: co2-emissions-lnlgis-nbe
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -239,7 +239,7 @@ layers:
         - '#D95847'
         - '#B40426'
   - id: co2-emissions-lnlgis-nbe-std
-    stacCol: ceos-co2budget-yeargrid-v1
+    stacCol: oco2-mip-co2budget-yeargrid-v1
     name: LNLGIS Net biosphere exchange - std
     type: raster
     description: Net flux of carbon from the terrestrial biosphere to the atmosphere due to biomass burning (BB) and Reco minus gross primary production (GPP).
@@ -256,7 +256,7 @@ layers:
         - 25000
       nodata: 0
     compare:
-      datasetId: ceos-co2budget-yeargrid-v1
+      datasetId: oco2-mip-co2budget-yeargrid-v1
       layerId: co2-emissions-lnlgis-nbe-std
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -280,7 +280,7 @@ layers:
         - '#92003F'
         - '#67001F'
   - id: co2-emissions-lnlgis-nce
-    stacCol: ceos-co2budget-yeargrid-v1
+    stacCol: oco2-mip-co2budget-yeargrid-v1
     name: LNLGIS Terrestrial net carbon exchange
     type: raster
     description: Net flux of carbon from the surface to the atmosphere. For land, NCE can be defined as sum of NBE and fossil fuel and cement emissions.
@@ -297,7 +297,7 @@ layers:
         - 25300
       nodata: 0
     compare:
-      datasetId: ceos-co2budget-yeargrid-v1
+      datasetId: oco2-mip-co2budget-yeargrid-v1
       layerId: co2-emissions-lnlgis-nce
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -321,7 +321,7 @@ layers:
         - '#D95847'
         - '#B40426'
   - id: co2-emissions-lnlgis-nce-std
-    stacCol: ceos-co2budget-yeargrid-v1
+    stacCol: oco2-mip-co2budget-yeargrid-v1
     name: LNLGIS Terrestrial net carbon exchange - std
     type: raster
     description: Net flux of carbon from the surface to the atmosphere. For land, NCE can be defined as sum of NBE and fossil fuel and cement emissions.
@@ -338,7 +338,7 @@ layers:
         - 1400
       nodata: 0
     compare:
-      datasetId: ceos-co2budget-yeargrid-v1
+      datasetId: oco2-mip-co2budget-yeargrid-v1
       layerId: co2-emissions-lnlgis-nce-std
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -359,7 +359,7 @@ layers:
         - '#ef6a01'
         - '#cc0019'
   - id: co2-emissions-lnlgis-dc-loss
-    stacCol: ceos-co2budget-yeargrid-v1
+    stacCol: oco2-mip-co2budget-yeargrid-v1
     name: LNLGIS Net terrestrial carbon stock loss
     type: raster
     description: Positive values indicate a loss (decrease) of terrestrial carbon stocks (organic matter stored on land), including above- and below-ground biomass in ecosystems and biomass contained in anthropogenic products (lumber, cattle, etc.).
@@ -376,7 +376,7 @@ layers:
         - 25700
       nodata: 0
     compare:
-      datasetId: ceos-co2budget-yeargrid-v1
+      datasetId: oco2-mip-co2budget-yeargrid-v1
       layerId: co2-emissions-lnlgis-dc-loss
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -400,7 +400,7 @@ layers:
         - '#D95847'
         - '#B40426'
   - id: co2-emissions-lnlgis-dc-loss-std
-    stacCol: ceos-co2budget-yeargrid-v1
+    stacCol: oco2-mip-co2budget-yeargrid-v1
     name:  LNLGIS Net terrestrial carbon stock loss - std
     type: raster
     description: Positive values indicate a loss (decrease) of terrestrial carbon stocks (organic matter stored on land), including above- and below-ground biomass in ecosystems and biomass contained in anthropogenic products (lumber, cattle, etc.).
@@ -417,7 +417,7 @@ layers:
         - 25000
       nodata: 0
     compare:
-      datasetId: ceos-co2budget-yeargrid-v1
+      datasetId: oco2-mip-co2budget-yeargrid-v1
       layerId: co2-emissions-lnlgis-dc-loss-std
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -441,7 +441,7 @@ layers:
         - '#92003F'
         - '#67001F'
   - id: co2-emissions-crop
-    stacCol: ceos-co2budget-yeargrid-v1
+    stacCol: oco2-mip-co2budget-yeargrid-v1
     name: Lateral crop flux
     type: raster
     description: The lateral flux of carbon in (positive) or out (negative) of a region due to agriculture.
@@ -458,7 +458,7 @@ layers:
         - 1500
       nodata: 0
     compare:
-      datasetId: ceos-co2budget-yeargrid-v1
+      datasetId: oco2-mip-co2budget-yeargrid-v1
       layerId: co2-emissions-crop
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -482,7 +482,7 @@ layers:
         - '#D95847'
         - '#B40426'
   - id: co2-emissions-crop-std
-    stacCol: ceos-co2budget-yeargrid-v1
+    stacCol: oco2-mip-co2budget-yeargrid-v1
     name: Lateral crop flux - std
     type: raster
     description: The lateral flux of carbon in (positive) or out (negative) of a region due to agriculture.
@@ -499,7 +499,7 @@ layers:
         - 450
       nodata: 0
     compare:
-      datasetId: ceos-co2budget-yeargrid-v1
+      datasetId: oco2-mip-co2budget-yeargrid-v1
       layerId: co2-emissions-crop-std
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -520,7 +520,7 @@ layers:
         - '#ef6a01'
         - '#cc0019'
   - id: co2-emissions-wood
-    stacCol: ceos-co2budget-yeargrid-v1
+    stacCol: oco2-mip-co2budget-yeargrid-v1
     name:  Lateral wood flux
     type: raster
     description: The lateral flux of carbon in (positive) or out (negative) of a region due to wood product harvesting and usage.
@@ -537,7 +537,7 @@ layers:
         - 900
       nodata: 0
     compare:
-      datasetId: ceos-co2budget-yeargrid-v1
+      datasetId: oco2-mip-co2budget-yeargrid-v1
       layerId: co2-emissions-wood
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -561,7 +561,7 @@ layers:
         - '#D95847'
         - '#B40426'
   - id: co2-emissions-wood-std
-    stacCol: ceos-co2budget-yeargrid-v1
+    stacCol: oco2-mip-co2budget-yeargrid-v1
     name:  Lateral wood flux - std
     type: raster
     description: The lateral flux of carbon in (positive) or out (negative) of a region due to wood product harvesting and usage.
@@ -578,7 +578,7 @@ layers:
         - 600
       nodata: 0
     compare:
-      datasetId: ceos-co2budget-yeargrid-v1
+      datasetId: oco2-mip-co2budget-yeargrid-v1
       layerId: co2-emissions-wood-std
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -667,9 +667,9 @@ layers:
     [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/legalcode) (CC BY 4.0)
 
     ## Data Stewardship
-    - [Data Workflow](https://us-ghg-center.github.io/ghgc-docs/data_workflow/ceos-co2budget-yeargrid-v1_Data_Flow.html)
-    - [Data Transformation Code](https://us-ghg-center.github.io/ghgc-docs/cog_transformation/oco2-based-co2budget-yeargrid-v1.html)
-    - [US GHG Center Data Intake Processing and Verification Report](https://us-ghg-center.github.io/ghgc-docs/processing_and_verification_reports/ceos-co2budget-yeargrid-v1_Processing%20and%20Verification%20Report.html)
+    - [Data Workflow](https://us-ghg-center.github.io/ghgc-docs/data_workflow/oco2-mip-co2budget-yeargrid-v1_Data_Flow.html)
+    - [Data Transformation Code](https://us-ghg-center.github.io/ghgc-docs/cog_transformation/oco2-mip-co2budget-yeargrid-v1.html)
+    - [US GHG Center Data Intake Processing and Verification Report](https://us-ghg-center.github.io/ghgc-docs/processing_and_verification_reports/oco2-mip-co2budget-yeargrid-v1_Processing%20and%20Verification%20Report.html)
 
   </Prose>
 </Block>

@@ -99,7 +99,7 @@ export default function PageFooter(props) {
               <FooterMenuLink to={DATASETS_PATH}>Data Catalog</FooterMenuLink>
             </li>
             <li>
-              <FooterMenuLink to={ANALYSIS_PATH}>Analysis</FooterMenuLink>
+              <FooterMenuLink to={ANALYSIS_PATH}>Data Analysis</FooterMenuLink>
             </li>
             <li>
               <FooterMenuLink to={STORIES_PATH}>

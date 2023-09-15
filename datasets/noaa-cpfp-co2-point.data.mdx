@@ -1,5 +1,5 @@
 ---
-id: noaa-co2-flask
+id: noaa-cpfp-co2-point
 name: Atmospheric Carbon Dioxide Concentrations from the NOAA Global Monitoring Laboratory
 description: Atmospheric concentrations of carbon dioxide (CO₂) from discrete air samples collected over time at globally distributed surface sites 
 media:
@@ -21,8 +21,8 @@ taxonomy:
     values:
       - CO₂
 layers:
-  - id: noaa-co2-flask
-    stacCol: noaa-co2-flask
+  - id: noaa-cpfp-co2-point
+    stacCol: noaa-cpfp-co2-point
     name: Carbon Dioxide (Air Sample)
     type: vector
     description: Atmospheric concentrations of carbon dioxide (CO₂) from discrete air samples collected over time at globally distributed surface sites
@@ -32,15 +32,15 @@ layers:
       - 0
       - 20
     sourceParams:
-      assets: noaa-co2-flask
+      assets: noaa-cpfp-co2-point
       colormap_name: plasma
       rescale:
         - 0
         - 1000
       nodata: 0
     compare:
-      datasetId: noaa-co2-flask
-      layerId: noaa-co2-flask
+      datasetId: noaa-cpfp-co2-point
+      layerId: noaa-cpfp-co2-point
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
