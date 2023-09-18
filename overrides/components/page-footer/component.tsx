@@ -21,6 +21,7 @@ import {
 } from "$veda-ui-scripts/utils/routes";
 import { useFeedbackModal } from "$veda-ui-scripts/components/common/layout-root";
 import { useMediaQuery } from "$veda-ui-scripts/utils/use-media-query";
+import Partners from "../../home/partners"
 
 const FooterInner = styled.div`
   display: flex;
@@ -83,6 +84,15 @@ const CreditsInfo = styled.div`
   flex-flow: column;
   gap: ${glsp(0.25)};
 `;
+
+const TintBox = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  filter: grayscale(100%);
+  ${media.smallDown`
+    justify-content: center;
+  `}
+`
 
 export default function PageFooter(props) {
   const nowDate = new Date();
@@ -163,6 +173,9 @@ export default function PageFooter(props) {
           </Tip>
         </div>
         <CreditsInfo>
+          <TintBox>
+            <Partners variation="positive" size="small" />
+          </TintBox>
           <p>
             U.S. Greenhouse Gas Center Responsible Official:{" "}
             <a
