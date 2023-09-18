@@ -38,12 +38,13 @@ layers:
     description: Gridded population of the world (2000,2005,2010,2015,2020)
     projection:
       id: "equirectangular"
+    basemapId: 'light'
     zoomExtent:
       - 0
       - 20
     sourceParams:
       assets: population-density
-      colormap_name: plasma
+      colormap_name: ylorrd
       rescale:
         - 0
         - 1000
@@ -62,21 +63,13 @@ layers:
       min: 0
       max: 1000
       stops:
-        - "#310597"
-        - "#4c02a1"
-        - "#6600a7"
-        - "#7e03a8"
-        - "#9511a1"
-        - "#aa2395"
-        - "#bc3587"
-        - "#cc4778"
-        - "#da5a6a"
-        - "#e66c5c"
-        - "#f0804e"
-        - "#f89540"
-        - "#fdac33"
-        - "#fdc527"
-        - "#f8df25"
+        - "#FFFFB2"
+        - "#FFDDA0"
+        - "#FFC381"
+        - "#FFA354"
+        - "#FF8524"
+        - "#FF6715"
+        - "#FF0000"
 ---
 
 <Block>
