@@ -1,0 +1,146 @@
+---
+id: cygnss_watermask
+name: 'Surface Water Monitoring using CYGNSS Observations'
+description: "Observations from the Cyclone Global Navigation Satellite System (CYGNSS) constellation provide information on surface water coverage. Researchers are using novel techniques to generate observational data products of surface water coverage at various temporal and spatial resolutions."
+media:
+  src: ::file ./cygnss-ucar-inundation-fraction.png
+  alt: Example of inundation fraction covering the South Asia region.
+  author:
+    name: Clara Chew
+    url:
+pubDate: 2023-09-06
+taxonomy:
+  - name: Topics
+    values:
+      - CYGNSS
+layers:
+  - id: cygnss_watermask_ucar
+    stacCol: cygnss_watermask_ucar
+    name: 'Daily Inundation Fraction, UCAR'
+    type: raster
+    description: 'Daily 3KM Surface Water Inundation (%) from UCAR'
+    zoomExtent:
+      - 0
+      - 11
+    sourceParams:
+      resampling: mode
+      bidx: 1
+      colormap_name: viridis
+      rescale:
+        - 0
+        - 100
+    compare:
+      datasetId: cygnss_watermask
+      layerId: cygnss_watermask_ucar
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'DD LLL yyyy')}`;
+        }
+    legend:
+      unit:
+        label: %
+      type: gradient
+      label: Inundation Fraction [%]
+      min: "0"
+      max: "100"
+      stops:
+        - '#440154'
+        - '#3b528b'
+        - '#21918c'
+        - '#5ec962'
+        - '#fde725'
+
+  - id: cygnss_watermask_ucberkeley
+    stacCol: cygnss_watermask_ucberkeley
+    name: 'Monthly Surface Water Mask, UC Berkeley'
+    type: raster
+    description: 'Monthly 1KM Surface Water Mask from UC Berkeley'
+    zoomExtent:
+      - 0
+      - 11
+    sourceParams:
+      resampling: mode
+      bidx: 1
+      colormap_name: viridis
+      rescale:
+        - 1
+        - 3
+    compare:
+      datasetId: cygnss_watermask
+      layerId: cygnss_watermask_ucberkeley
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'DD LLL yyyy')}`;
+        }
+    legend:
+      unit:
+        label: Class ['Land=1, Surface Water=2, Ocean=3']
+      type: gradient
+      label: Surface Water Mask
+      min: "1"
+      max: "3"
+      stops:
+        - '#440154'
+        - '#3b528b'
+        - '#21918c'
+---
+<Block>
+<Prose>
+## Background
+🚧 Here, the CYGNSS Inundation Working Group is working to visualize and assess different surface water mapping products developed by multiple teams. Porducts are developed using a variety of techniques at different spatial and temporal resolutions. 🚧
+
+Surface water mapping is a critical obseravtional need to support not only effective disaster response but also effective water resource management through better understanding of water availability and variability.
+Observations from the bistatic L-band CYGNSS observing system are enabling new approaches to estimate properties of surface water coverage especially in regions of dense vegetation. The CYGNSS inundation working group is leveraging
+the VEDA dashboard and analytics to better understand tradeoffs between algorithmic approaches and the quality of data products.
+
+Current data products include those produced by the following teams contributing to the CYGNSS Inundation Working Group:
+UCAR, PI Clara Chew (currently at Muon Space)
+UC Berkeley, PI Cynthia Gerlein-Safdi
+</Prose>
+</Block>
+
+<Block>
+<Prose>
+## Modeling Setup
+The reanalysis product is created using the [NASA Land Information System](https://lis.gsfc.nasa.gov/) modeling framework to merge land surface model simulations with observations from satellites through data assimilation. The team uses the Noah-MP land surface model and assimilates soil moisture from the European Space Agency’s Climate Change Initiative Program (ESA CCI), leaf area index from the Moderate Resolution Imaging Spectroradiometer (MODIS), and terrestrial water storage anomalies from the Gravity Recovery and Climate Experiment and the follow-on missions (GRACE/GRACE-FO). 
+
+The output variables available on VEDA include evapotranspiration (ET), gross primary productivity (GPP), groundwater storage (GWS), snow water equivalent (SWE), streamflow, surface runoff, subsurface runoff, terrestrial water storage (TWS), and total precipitation. See the [VEDA Analysis tool](https://www.earthdata.nasa.gov/dashboard/eis/analysis) to make interactive plots of the variables over a user-specified domain and time period.
+
+</Prose>
+</Block>
+
+<Block>
+<Prose>
+## Explore the Data
+Mutliple datasets are being created under the auspices of the CYGNSS Science Team and specifically the Inundation Working Group. Here we show a comparison of two dates for a single variable from a single product,
+the surface water inundation fraction. We encourage users to <Link to='/datasets/cygnss_watermask_ucar/explore'>Explore the UCAR 3km Daily Dataset</Link> to look at different daily dates and to compare variables. Or, users
+may be interested in examining the  <Link to='/datasets/cygnss_watermask_ucberkeley/explore'> UC Berkeley 1km Monthly Dataset</Link>.
+
+</Prose>
+  <Figure>
+  <Map
+    datasetId='cygnss_watermask'
+    layerId='cygnss_watermask_ucar'
+    dateTime='2020-07-01'
+    zoom={2}
+    center={[-112,40]}
+    compareDateTime='2021-07-01'
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+  Surface water inundation fraction over North America compared on July 1, 2020 (left) and July 1, 2021 (right), as estimate by the UCAR Daily 3km surface inundation fraction.
+</Caption>
+  </Figure>
+</Block>
+
+<Block>
+<Prose>
+### Explore the CYGNSS Mission:
+* [CYGNSS, University of Michigan](https://cygnss.engin.umich.edu/)
+
+### Explore the remote sensing data:
+* [CYGNSS,Physical Oceanography Distributed Active Archive Center](https://podaac.jpl.nasa.gov/CYGNSS)
+</Prose>
+</Block>
