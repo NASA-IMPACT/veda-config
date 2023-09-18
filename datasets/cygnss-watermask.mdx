@@ -14,8 +14,8 @@ taxonomy:
     values:
       - CYGNSS
 layers:
-  - id: cygnss_watermask_ucar
-    stacCol: cygnss_watermask_ucar
+  - id: cygnss-watermask-ucar
+    stacCol: cygnss-watermask-ucar
     name: 'Daily Inundation Fraction, UCAR'
     type: raster
     description: 'Daily 3KM Surface Water Inundation (%) from UCAR'
@@ -30,8 +30,8 @@ layers:
         - 0
         - 100
     compare:
-      datasetId: cygnss_watermask
-      layerId: cygnss_watermask_ucar
+      datasetId: cygnss-watermask
+      layerId: cygnss-watermask-ucar
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           return `${dateFns.format(datetime, 'DD LLL yyyy')}`;
@@ -50,8 +50,8 @@ layers:
         - '#5ec962'
         - '#fde725'
 
-  - id: cygnss_watermask_ucberkeley
-    stacCol: cygnss_watermask_ucberkeley
+  - id: cygnss-watermask-ucberkeley
+    stacCol: cygnss-watermask-ucberkeley
     name: 'Monthly Surface Water Mask, UC Berkeley'
     type: raster
     description: 'Monthly 1KM Surface Water Mask from UC Berkeley'
@@ -66,8 +66,8 @@ layers:
         - 1
         - 3
     compare:
-      datasetId: cygnss_watermask
-      layerId: cygnss_watermask_ucberkeley
+      datasetId: cygnss-watermask
+      layerId: cygnss-watermask-ucberkeley
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           return `${dateFns.format(datetime, 'DD LLL yyyy')}`;
@@ -119,8 +119,8 @@ may be interested in examining the  <Link to='/datasets/cygnss_watermask_ucberke
 </Prose>
   <Figure>
   <Map
-    datasetId='cygnss_watermask'
-    layerId='cygnss_watermask_ucar'
+    datasetId='cygnss-watermask'
+    layerId='cygnss-watermask-ucar'
     dateTime='2020-07-01'
     zoom={2}
     center={[-112,40]}
