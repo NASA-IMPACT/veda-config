@@ -7,21 +7,25 @@ media:
   alt: Example of inundation fraction covering the South Asia region.
   author:
     name: Clara Chew
-    url:
+    url: http://geode.colorado.edu/~small/CChew.html
 pubDate: 2023-09-06
 taxonomy:
   - name: Topics
     values:
       - CYGNSS
+      - Surface Water
+  - name: Source
+    values:
+      - NASA
 layers:
   - id: cygnss-watermask-ucar
     stacCol: cygnss-watermask-ucar
-    name: 'Daily Inundation Fraction, UCAR'
+    name: Daily Inundation Fraction, UCAR
     type: raster
     description: 'Daily 3KM Surface Water Inundation (%) from UCAR'
     zoomExtent:
-      - 0
-      - 11
+      - 1
+      - 16
     sourceParams:
       resampling: mode
       bidx: 1
@@ -37,18 +41,16 @@ layers:
           return `${dateFns.format(datetime, 'DD LLL yyyy')}`;
         }
     legend:
-      unit:
-        label: %
       type: gradient
       label: Inundation Fraction [%]
       min: "0"
       max: "100"
       stops:
-        - '#440154'
-        - '#3b528b'
-        - '#21918c'
-        - '#5ec962'
-        - '#fde725'
+        - "#440154"
+        - "#3b528b"
+        - "#21918c"
+        - "#5ec962"
+        - "#fde725"
 
   - id: cygnss-watermask-ucberkeley
     stacCol: cygnss-watermask-ucberkeley
@@ -56,8 +58,8 @@ layers:
     type: raster
     description: 'Monthly 1KM Surface Water Mask from UC Berkeley'
     zoomExtent:
-      - 0
-      - 11
+      - 1
+      - 16
     sourceParams:
       resampling: mode
       bidx: 1
@@ -73,10 +75,8 @@ layers:
           return `${dateFns.format(datetime, 'DD LLL yyyy')}`;
         }
     legend:
-      unit:
-        label: Class ['Land=1, Surface Water=2, Ocean=3']
       type: gradient
-      label: Surface Water Mask
+      label: Surface Water Mask [Land=1, Surface Water=2, Ocean=3]
       min: "1"
       max: "3"
       stops:
