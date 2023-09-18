@@ -17,10 +17,10 @@ usage:
     title: Data Browser
 media:
   src: ::file ./eccodarwin--dataset-cover.jpg
-  alt: A factory with smoke
+  alt: Air-Sea CO₂ Flux
   author:
-    name: Tim van der Kuip
-    url: https://unsplash.com/photos/ELbnYDoxido
+    name: NA
+    url: https://storymaps.arcgis.com/stories/d5e5062c864447228e6f157a1d925876
 taxonomy:
   - name: Topics
     values:
@@ -47,9 +47,9 @@ layers:
       - 20
     sourceParams:
       assets: co2
-      colormap_name: rainbow
+      colormap_name: bwr
       rescale:
-        - -0.0015
+        - -0.0007
         - 0.0002
       nodata: nan
     compare:
@@ -63,16 +63,16 @@ layers:
       unit:
         label: mmol m²/s
       type: gradient
-      min: -0.01
-      max: 0.01
+      min: -0.0007
+      max: 0.0002
       stops:
-        - "#60007d"
-        - "#30137d"
-        - "#1960ae"
-        - "#7ac300"
-        - "#f2ce00"
-        - "#ef6a01"
-        - "#cc0019"
+        - "#0000FF"
+        - "#3399FF"
+        - "#66CCFF"
+        - "#FFFFFF"
+        - "#FF66CC"
+        - "#FF3399"
+        - "#FF0000"
 ---
 
 <Block type='wide'>

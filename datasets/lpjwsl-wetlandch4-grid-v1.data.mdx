@@ -38,7 +38,7 @@ taxonomy:
 layers:
   - id: ch4-wetlands-emissions
     stacCol: lpjwsl-wetlandch4-monthgrid-v1
-    name: LPJ-wsl Model Wetland CH₄ Emissions (Monthly)
+    name: (Monthly) LPJ-wsl Model Wetland CH₄ Emissions
     type: raster
     description:  Monthly CH₄ emissions from wetlands constructed using the LPJ-wsl model
     projection:
@@ -62,7 +62,7 @@ layers:
         }
     legend:
       unit:
-        label: g CH₄ m²/mon
+        label: g CH₄/m²/mon
       type: gradient
       min: 0
       max: 2
@@ -75,7 +75,7 @@ layers:
 
   - id: ch4-wetlands-emissions-d
     stacCol: lpjwsl-wetlandch4-daygrid-v1
-    name: LPJ-wsl Model Wetland CH₄ Emissions (Daily)
+    name: (Daily) LPJ-wsl Model Wetland CH₄ Emissions
     type: raster
     description: Daily CH₄ emissions from wetlands constructed using the LPJ-wsl model
     projection:
@@ -99,7 +99,7 @@ layers:
         }
     legend:
       unit:
-        label: g CH₄ m²/day
+        label: g CH₄/m²/day
       type: gradient
       min: 0
       max: 0.2
@@ -113,12 +113,12 @@ layers:
 
 <Block type='wide'>
   <Prose>
-    Methane (CH₄) emissions from wetlands are estimated to be the largest natural source of methane in the global CH₄ budget, contributing to roughly one third of the total of natural and anthropogenic emissions. Wetland CH₄ is produced by microbes breaking down organic matter in the oxygen deprived environment of inundated soils. Due to limited data availability, the details of the role of wetland CH₄ emissions has thus far been underrepresented. Using the Wald Schnee und Landschaft version (LPJ-wsl) of the Lund-Potsdam-Jena Dynamic Global Vegetation Model (LPJ-DGVM) global CH₄ emissions from wetlands are estimated at 0.5 x 0.5 degree resolution by simulating wetland extent and using characteristics of these inundated areas, such as soil moisture, temperature, and carbon content, to estimate CH₄ quantities emitted into the atmosphere. Highlighted areas displayed in this dataset show concentrated methane sources from tropical and high latitude ecosystems. The LPJ-wsl Wetland Methane Emissions data product presented here consists of global daily and monthly model estimates of terrestrial wetland CH₄ emissions from 1980 - 2021. These data are regularly used in conjunction with NASA’s Goddard Earth Observing System (GEOS) model to simulate the impact of wetlands and other methane sources on atmospheric methane concentrations, to compare against satellite and airborne data, and to improve understanding and prediction of wetland emissions.  
+    Methane (CH₄) emissions from vegetated wetlands are estimated to be the largest natural source of methane in the global CH₄ budget, contributing to roughly one third of the total of natural and anthropogenic emissions. Wetland CH₄ is produced by microbes breaking down organic matter in the oxygen deprived environment of inundated soils. Due to limited data availability, the details of the role of wetland CH₄ emissions has thus far been underrepresented. Using the Wald Schnee und Landschaft version (LPJ-wsl) of the Lund-Potsdam-Jena Dynamic Global Vegetation Model (LPJ-DGVM) global CH₄ emissions from wetlands are estimated at 0.5 x 0.5 degree resolution by simulating wetland extent and using characteristics of these inundated areas, such as soil moisture, temperature, and carbon content, to estimate CH₄ quantities emitted into the atmosphere. Highlighted areas displayed in this dataset show concentrated methane sources from tropical and high latitude ecosystems. The LPJ-wsl Wetland Methane Emissions data product presented here consists of global daily and monthly model estimates of terrestrial wetland CH₄ emissions from 1980 - 2021. These data are regularly used in conjunction with NASA’s Goddard Earth Observing System (GEOS) model to simulate the impact of wetlands and other methane sources on atmospheric methane concentrations, to compare against satellite and airborne data, and to improve understanding and prediction of wetland emissions.  
     - **Temporal extent:** January 1, 1980 - December 31, 2021 
     - **Temporal resolution:** Monthly and Daily      
     - **Spatial extent:** Global    
     - **Spatial resolution:** 0.5° x 0.5°   
-    - **Data units:** Grams of methane per meter squared per month (g CH₄ m²/mon) and Grams of methane per meter squared per day (g CH₄ m²/day)       
+    - **Data units:** Grams of methane per meter squared per month (g CH₄/m²/mon) and Grams of methane per meter squared per day (g CH₄/m²/day)       
     - **Data type:** Research
     - **Data Latency:** Updated monthly with a 2 month latency
 
@@ -139,17 +139,21 @@ layers:
     - [Monthly data](https://gmao.gsfc.nasa.gov/gmaoftp/lott/CH4/wetlands/) 
     - [Daily data](https://gmao.gsfc.nasa.gov/gmaoftp/lott/CH4/wetlands/daily/)  
 
-    Note that the source dataset is provided in units of kilograms of methane per meter squared per month (kg CH₄ m2/mon) or day (kg CH₄ m2/day) but has been converted to **grams** of methane per meter squared per month (g CH₄ m2/mon) and day (g CH₄ m2/day) in the COG format provided in the GHG Center for the purpose of improved visualization.     
+    Note that the source dataset is provided in units of kilograms of methane per meter squared per month (kg CH₄/m²/mon) or day (kg CH₄/m²/day) but has been converted to **grams** of methane per meter squared per month (g CH₄/m²/mon) and day (g CH₄/m²/day) in the COG format provided in the GHG Center for the purpose of improved visualization.     
     
     ## Key Publications
     Zhang, Z., Zimmermann, N.E., Stenke, A., Li, X., Hodson, E.L., Zhu, G., Huang, C., & Poulter, B. (2017). Emerging role of wetland methane emissions in driving 21st century climate change. *Proceedings of the National Academy of Sciences, 114(36), 9647–9652*. [https://doi.org/10.1073/pnas.1618765114](https://doi.org/10.1073/pnas.1618765114)
 
     ## Other Relevant Publications
-    Sitch, S., Smith, B., Prentice, I.C., Arneth, A., Bondeau, A., Cramer, W., Kaplan, J.O., Levis, S., Lucht, W., Sykes, M.T., Thonicke, K. & Venevsky, S. (2003). *Evaluation of ecosystem dynamics, plant geography and terrestrial carbon cycling in the LPJ dynamic global vegetation model. Global Change Biology, 9(2), 161-185*. [https://doi.org/10.1046/j.1365-2486.2003.00569.x](https://doi.org/10.1046/j.1365-2486.2003.00569.x)
+    Poulter, B., Bousquet, P., Canadell, J. G., Ciais, P., Peregon, A., Saunois, M., Arora, V. K., Beerling, D. J., Brovkin, V., Jones, C.D., Joos, F., Gedney, N., Ito, A., Kleinen, T., Koven, C. D., McDonald, K., Melton, J. R., Peng, C., Peng, S., … Qiuan, Z. (2017). Global wetland contribution to 2000-2012 atmospheric methane growth rate dynamics. *Environmental Research Letters, 12*(9), 094013. [https://doi.org/10.1088/1748-9326/aa8391](https://doi.org/10.1088/1748-9326/aa8391)
 
-    Zhang, Z., Zimmermann, N.E., Calle, L., Hurtt, G., Chatterjee, A., & Poulter, B. (2018). *Enhanced response of global wetland methane emissions to the 2015–2016 El Niño-Southern Oscillation event. Environmental Research Letters, 13(7), 074009*. [https://doi.org/10.1088/1748-9326/aac939](https://doi.org/10.1088/1748-9326/aac939)
+    Saunois, M., Stavert, A.R., Poulter, B., Bousquet, P., Canadell, J. G., Jackson, R.B., Raymond, P. A., Dlugokencky, E. J., Houweling, S., Patra, P. K., Ciais, P., Arora, V. K., Bastviken, D., Bergamaschi, P., Blake, D. R., Brailsford, G., Bruhwiler, L., Carlson, K. M., Carrol, M., … Q Zhuang. 2020. The Global Methane Budget 2000–2017. *Earth System Science Data, 12*(3), 561–1623. [https://doi.org/10.5194/essd-12-1561-2020](https://doi.org/10.5194/essd-12-1561-2020)
 
-    Zhang, Z., Zimmermann, N. E., Kaplan, J. O., & Poulter, B. (2016). *Modeling spatiotemporal dynamics of global wetlands: comprehensive evaluation of a new sub-grid TOPMODEL parameterization and uncertainties. Biogeosciences, 13(5), 1387–1408*. [https://doi.org/10.5194/bg-13-1387-2016](https://doi.org/10.5194/bg-13-1387-2016)
+    Sitch, S., Smith, B., Prentice, I.C., Arneth, A., Bondeau, A., Cramer, W., Kaplan, J.O., Levis, S., Lucht, W., Sykes, M.T., Thonicke, K. & Venevsky, S. (2003). Evaluation of ecosystem dynamics, plant geography and terrestrial carbon cycling in the LPJ dynamic global vegetation model. *Global Change Biology, 9*(2), 161-185. [https://doi.org/10.1046/j.1365-2486.2003.00569.x](https://doi.org/10.1046/j.1365-2486.2003.00569.x)
+
+    Zhang, Z., Zimmermann, N.E., Calle, L., Hurtt, G., Chatterjee, A., & Poulter, B. (2018). Enhanced response of global wetland methane emissions to the 2015–2016 El Niño-Southern Oscillation event. *Environmental Research Letters, 13*(7), 074009. [https://doi.org/10.1088/1748-9326/aac939](https://doi.org/10.1088/1748-9326/aac939)
+
+    Zhang, Z., Zimmermann, N. E., Kaplan, J. O., & Poulter, B. (2016). Modeling spatiotemporal dynamics of global wetlands: comprehensive evaluation of a new sub-grid TOPMODEL parameterization and uncertainties. *Biogeosciences, 13*(5), 1387–1408. [https://doi.org/10.5194/bg-13-1387-2016](https://doi.org/10.5194/bg-13-1387-2016)
     
     ## Acknowledgment
     The LPJ-wsl model is based on the development of the Lund-Potsdam-Jena Dynamic Global Vegetation Model (LPJ-DGVM) [by researchers at institutions in Germany and Sweden](https://doi.org/10.1046/j.1365-2486.2003.00569.x) (Potsdam and Jena, Germany & Lund, Sweden). The Wald Schnee und Landschaft version (LPJ-wsl) is associated with the [Swiss Federal Institute for Forest, Snow and Landscape Research](https://www.wsl.ch/en/index.html) (Eidgenössische Forschungsanstalt für Wald, Schnee und Landschaft).    
@@ -159,7 +163,7 @@ layers:
 
     ## Data Stewardship
     - [Data Workflow](https://us-ghg-center.github.io/ghgc-docs/data_workflow/lpjwsl-wetlandch4-grid-v1_Data_Flow.html)
-    - Data Transformation Code (i)[Monthly Data](https://us-ghg-center.github.io/ghgc-docs/cog_transformation/lpjwsl-wetlandch4-monthgrid-v1.html)  (ii)[Daily data](https://us-ghg-center.github.io/ghgc-docs/cog_transformation/lpjwsl-wetlandch4-daygrid-v1.html)
+    - Data Transformation Code [Monthly Data](https://us-ghg-center.github.io/ghgc-docs/cog_transformation/lpjwsl-wetlandch4-monthgrid-v1.html),[Daily data](https://us-ghg-center.github.io/ghgc-docs/cog_transformation/lpjwsl-wetlandch4-daygrid-v1.html)
     - [US GHG Center Data Intake Processing and Verification Report](https://us-ghg-center.github.io/ghgc-docs/processing_and_verification_reports/lpjwsl-wetlandch4-grid-v1_Processing%20and%20Verification%20Report.html)
 
   </Prose>
