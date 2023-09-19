@@ -1,6 +1,9 @@
-import React from "$veda-ui/react";
+import React, { useState, useEffect, useCallback } from "$veda-ui/react";
+import { useLocation } from "$veda-ui/react-router-dom";
 import styled from "$veda-ui/styled-components";
 import { NavLink } from "$veda-ui/react-router-dom";
+import { Modal, ModalHeadline, ModalFooter } from "$veda-ui/@devseed-ui/modal";
+import { FormCheckable } from "$veda-ui/@devseed-ui/form";
 import {
   themeVal,
   glsp,
@@ -84,97 +87,222 @@ const CreditsInfo = styled.div`
   gap: ${glsp(0.25)};
 `;
 
+const ModalBodyInner = styled.div`
+  display: flex;
+  flex-flow: column nowrap;
+  gap: ${variableGlsp()};
+`;
+
+const DisclaimerModalFooter = styled(ModalFooter)`
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row nowrap;
+  margin-top: ${glsp(2)};
+`;
+
+const MODALS_DISMISSED_KEY = "modalsDismissedKey";
+
+const MODALS_CONTENT = {
+  explore: {
+    headline: "Disclaimer",
+    body: (
+      <p>
+        This US GHG Center Explore visualization environment is an interactive
+        space for users to explore center data within a mapping environment.
+        Currently only one dataset at a time can be used within the environment.
+        Users are advised to review the material on the Overview page to better
+        understand the documentation pertaining to the data they are viewing.
+      </p>
+    ),
+  },
+  analysis: {
+    headline: "Disclaimer",
+    body: (
+      <p>
+        This US GHG Center analysis environment is an interactive space for
+        users to review time series of basic statistics for each dataset. All
+        users are advised to review the information provided on the dataset
+        landing page to better understand the data they are viewing. This
+        environment is intended to provide a means to explore temporal patterns
+        and is not intended for use in rigorous scientific data analysis.
+      </p>
+    ),
+  },
+};
+
 export default function PageFooter(props) {
   const nowDate = new Date();
   const { isMediumUp } = useMediaQuery();
 
   const { show } = useFeedbackModal();
 
+  // Open that disclaimer modal here
+  const { pathname } = useLocation();
+  const currentPage = (pathname.match(/[^/]+$/)?.[0] as string) || "";
+  const [modalRevealed, setModalRevealed] = useState(true);
+  const [dontShowAgain, setDontShowAgain] = useState(true);
+  const [modalsDismissed, setModalsDismissed] = useState({
+    explore: false,
+    analysis: false,
+  });
+
+  useEffect(() => {
+    const modalsDismissedRaw = localStorage.getItem(MODALS_DISMISSED_KEY);
+    try {
+      if (modalsDismissedRaw) {
+        setModalsDismissed(JSON.parse(modalsDismissedRaw));
+      }
+    } catch (e) {
+      /* eslint-disable-next-line no-console */
+      console.error(e);
+    }
+  }, []);
+
+  const onConfirmClick = useCallback(() => {
+    setModalRevealed(false);
+    const newModalsDismissed = {
+      ...modalsDismissed,
+      [currentPage]: dontShowAgain,
+    };
+    setModalsDismissed(newModalsDismissed);
+    localStorage.setItem(
+      MODALS_DISMISSED_KEY,
+      JSON.stringify(newModalsDismissed)
+    );
+  }, [modalRevealed, dontShowAgain]);
+
+  const showModal = modalRevealed && modalsDismissed[currentPage] === false;
+
   return (
-    <FooterInner>
-      <FooterContent>
-        <nav>
-          <FooterMenu>
-            <li>
-              <FooterMenuLink to={DATASETS_PATH}>Data Catalog</FooterMenuLink>
-            </li>
-            <li>
-              <FooterMenuLink to={ANALYSIS_PATH}>Data Analysis</FooterMenuLink>
-            </li>
-            <li>
-              <FooterMenuLink to={STORIES_PATH}>
-                {getString("stories").other}
-              </FooterMenuLink>
-            </li>
-            {!!process.env.HUB_URL && !!process.env.HUB_NAME && (
+    <>
+      {MODALS_CONTENT[currentPage] && (
+        <Modal
+          id="disclaimer"
+          size="medium"
+          revealed={showModal}
+          onCloseClick={(e) => {
+            setModalRevealed(false);
+          }}
+          renderHeadline={() => (
+            <ModalHeadline>
+              <h2>{MODALS_CONTENT[currentPage].headline}</h2>
+            </ModalHeadline>
+          )}
+          content={
+            <ModalBodyInner>{MODALS_CONTENT[currentPage].body}</ModalBodyInner>
+          }
+          renderFooter={() => (
+            <DisclaimerModalFooter>
+              <FormCheckable
+                type="checkbox"
+                id="dontShowAgain"
+                name="dontShowAgain"
+                checked={dontShowAgain}
+                value="dontShowAgain"
+                onChange={(e) => {
+                  setDontShowAgain(e.target.checked);
+                }}
+              >
+                Don't show again
+              </FormCheckable>
+              <Button
+                variation="primary-fill"
+                // disabled={!featureCollection}
+                onClick={onConfirmClick}
+              >
+                I understand
+              </Button>
+            </DisclaimerModalFooter>
+          )}
+        />
+      )}
+      <FooterInner>
+        <FooterContent>
+          <nav>
+            <FooterMenu>
               <li>
-                <FooterMenuLink as="a" href={process.env.HUB_URL}>
-                  {process.env.HUB_NAME}
+                <FooterMenuLink to={DATASETS_PATH}>Data Catalog</FooterMenuLink>
+              </li>
+              <li>
+                <FooterMenuLink to={ANALYSIS_PATH}>
+                  Data Analysis
                 </FooterMenuLink>
               </li>
-            )}
-            <li>
-              <FooterMenuLink to={ABOUT_PATH}>About</FooterMenuLink>
-            </li>
-            <li>
-              {isMediumUp ? (
-                <Button
-                  variation="primary-outline"
-                  size="large"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    show();
-                  }}
-                >
-                  Contact Us
-                </Button>
-              ) : (
-                <FooterMenuLink
-                  as="a"
-                  href="#"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    show();
-                  }}
-                >
-                  Contact Us
+              <li>
+                <FooterMenuLink to={STORIES_PATH}>
+                  {getString("stories").other}
                 </FooterMenuLink>
+              </li>
+              {!!process.env.HUB_URL && !!process.env.HUB_NAME && (
+                <li>
+                  <FooterMenuLink as="a" href={process.env.HUB_URL}>
+                    {process.env.HUB_NAME}
+                  </FooterMenuLink>
+                </li>
               )}
-            </li>
-          </FooterMenu>
-        </nav>
-      </FooterContent>
-      <FooterContacts>
-        <div>
-          <a href="/">
-            <span>By</span> <strong>US GHG Center</strong> <span>on</span>{" "}
-            <time dateTime={String(nowDate.getFullYear())}>
-              {nowDate.getFullYear()}
-            </time>
-          </a>
-          {" • "}
-          <Tip
-            content={`Released on ${format(
-              new Date(+props.appBuildTime),
-              "PPPP"
-            )} (veda-ui v${props.appUiVersion})`}
-          >
-            <span>v{props.appVersion}</span>
-          </Tip>
-        </div>
-        <CreditsInfo>
-          <p>
-            U.S. Greenhouse Gas Center Responsible Official:{" "}
-            <a
-              href="https://appliedsciences.nasa.gov/about/our-team/argyro-kavvada"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <strong>Argyro Kavvada</strong>
+              <li>
+                <FooterMenuLink to={ABOUT_PATH}>About</FooterMenuLink>
+              </li>
+              <li>
+                {isMediumUp ? (
+                  <Button
+                    variation="primary-outline"
+                    size="large"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      show();
+                    }}
+                  >
+                    Contact Us
+                  </Button>
+                ) : (
+                  <FooterMenuLink
+                    as="a"
+                    href="#"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      show();
+                    }}
+                  >
+                    Contact Us
+                  </FooterMenuLink>
+                )}
+              </li>
+            </FooterMenu>
+          </nav>
+        </FooterContent>
+        <FooterContacts>
+          <div>
+            <a href="/">
+              <span>By</span> <strong>US GHG Center</strong> <span>on</span>{" "}
+              <time dateTime={String(nowDate.getFullYear())}>
+                {nowDate.getFullYear()}
+              </time>
             </a>
-          </p>
-        </CreditsInfo>
-      </FooterContacts>
-    </FooterInner>
+            {" • "}
+            <Tip
+              content={`Released on ${format(
+                new Date(+props.appBuildTime),
+                "PPPP"
+              )} (veda-ui v${props.appUiVersion})`}
+            >
+              <span>v{props.appVersion}</span>
+            </Tip>
+          </div>
+          <CreditsInfo>
+            <p>
+              U.S. Greenhouse Gas Center Responsible Official:{" "}
+              <a
+                href="https://appliedsciences.nasa.gov/about/our-team/argyro-kavvada"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <strong>Argyro Kavvada</strong>
+              </a>
+            </p>
+          </CreditsInfo>
+        </FooterContacts>
+      </FooterInner>
+    </>
   );
 }
