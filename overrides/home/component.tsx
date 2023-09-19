@@ -130,7 +130,7 @@ export default function HomeComponent() {
               valued, multi-agency collaborators: EPA, NASA, NIST, and NOAA.
             </p>
           </InfoCalloutHeadline>
-          <Partners variation="positive" />
+          <Partners variation="positive" size="big"/>
           <Button
             forwardedAs={NavLink}
             to="/about"
