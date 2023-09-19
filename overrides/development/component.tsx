@@ -23,7 +23,7 @@ export default function Component() {
       The current US GHG Center platform reflects an initial (v{process.env.APP_VERSION}) release available as of October 2nd, 2023. Newly added data, feature changes and content updates will continue via an iterative process throughout the coming year.  
       </p>
       <p>
-      We welcome your feedback to help improve the US GHG Center! To share your thoughts, please click on the Help/Feedback button below or use the button available at the top of any of the Center website pages.
+      We welcome your feedback to help improve the US GHG Center! To share your thoughts, please click on the Contact Us button below or use the button available at the top of any of the Center website pages.
       </p>
       <ContributeCta>
         <Button
@@ -34,7 +34,7 @@ export default function Component() {
             showFeedbackModal();
           }}
         >
-          <CollecticonSpeechBalloon /> Help/Feedback
+          <CollecticonSpeechBalloon /> Contact Us
         </Button>
         <Button
           size="large"
