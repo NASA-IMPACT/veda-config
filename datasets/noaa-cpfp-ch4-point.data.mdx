@@ -23,9 +23,9 @@ taxonomy:
 layers:
   - id: noaa-cpfp-ch4-point
     stacCol: noaa-cpfp-ch4-point
-    name: Methane (Air Sample)  
+    name: Methane Concentration (Air Sample) 
     type: vector
-    description: Atmospheric concentrations of methane (CH₄) from discrete air samples collected over time at globally distributed surface sites
+    description: Discrete air sample measurements of methane (CH₄)
     initialDatetime: newest
     projection:
       id: 'equirectangular'
@@ -82,7 +82,7 @@ layers:
     - **Spatial Resolution:** Point location samples    
     - **Data Units:** Parts CH₄ per billion (ppb)
     - **Data Type:** Operational
-    - **Data Latency:** 
+    - **Data Latency:** Updated annually
 
     **Scientific Details:** CH₄ measurements are formally reported in mole fraction units of nanomol (10<sup>-9</sup> mole) of CH₄ per mol of dry air.  However, for clarity here we refer to mole fraction as “concentration” in units of parts per billion (ppb).  The CH₄ data set provides CH₄ dry air mole fractions from more than 80 NOAA GML GGGRN sites across the globe. Measurements have been made using a highly-calibrated gas chromatography with a flame ionization (GC/FID, before August 2019) system or a cavity ring-down spectrometer (CRDS, after August 2019).
 
@@ -106,47 +106,48 @@ layers:
     The uncertainty of the CH₄ standard scale (WMO 2004A) near 1800 ppb is estimated at +/- 0.2%, or about 3 ppb.
 
     ## Disclaimer
-    Every effort is made to produce the most accurate and precise measurements possible.  However, NOAA reserves the right to make corrections to the data based on recalibration of standard gases or for other reasons deemed scientifically justified.  NOAA is not responsible for results and conclusions based on use of these data without regard to this warning.
-
-    These data are made freely available to the public and the scientific community in the belief that their wide dissemination will lead to greater understanding and new scientific insights. To ensure that GML receives fair credit for their work please include relevant citation text in publications. We encourage users to contact the data providers, who can provide detailed information about the measurements and scientific insight.  In cases where the data are central to a publication, co-authorship for data providers may be appropriate.
+    Every effort is made to produce the most accurate and precise measurements possible.  However, NOAA reserves the right to make corrections to the data based on recalibration of standard gases or for other reasons deemed scientifically justified.  NOAA is not responsible for results and conclusions based on the use of these data without regard to this warning.
  
     ## Key Publications
-    Lan X, Nisbet EG, Dlugokencky EJ, Michel SE. 2021, What do we know about the global methane budget? Results from four decades of atmospheric CH4 observations and the way forward. *Phil. Trans. R. Soc. A* 379:20200440. https://doi.org/10.1098/rsta.2020.0440
+    Lan, X., Nisbet, E.G., Dlugokencky, E.J., & Michel, S.E. (2021). What do we know about the global methane budget? Results from four decades of atmospheric CH4 observations and the way forward. *Phil. Trans. R. Soc. A 379*:20200440. [https://doi.org/10.1098/rsta.2020.0440](https://doi.org/10.1098/rsta.2020.0440)
 
-    Dlugokencky, E.J., et al. 2009, Observational constraints on recent increases in the atmospheric CH4 burden, *Geophys. Res. Lett*., 36, L18803, doi:10.1029/2009GL039780.
+    Dlugokencky, E.J., et al. (2009). Observational constraints on recent increases in the atmospheric CH4 burden. *Geophys. Res. Lett., 36*, L18803, [https://doi.org/10.1029/2009GL039780](https://doi.org/10.1029/2009GL039780)
 
-    Dlugokencky, E.J., B.P. Walter, K.A. Masarie, P.M. Lang, and E.S. Kasischke, 2001, Measurements of an anomalous global methane increase during 1998, *Geophys. Res. Lett*., 28, 499-502.  
+    Dlugokencky, E.J., Walter, B.P., Masarie, K.A., Lang, P.M., & Kasischke, E.S. (2001). Measurements of an anomalous global methane increase during 1998. *Geophys. Res. Lett., 28*, 499-502.  [https://doi.org/10.1029/2000GL012119](https://doi.org/10.1029/2000GL012119)                                         
 
-    Dlugokencky, E.J., K.A. Masarie, P.M. Lang, and P.P. Tans, 1998, Continuing decline in the growth rate of atmospheric methane, *Nature*, 393, 447-450.
+    Dlugokencky, E.J., Masarie, K.A., Lang, P.M., & Tans, P.P. (1998). Continuing decline in the growth rate of atmospheric methane, *Nature, 393*, 447-450. [https://doi.org/10.1038/30934](https://doi.org/10.1038/30934)
 
     ## Other Relevant Publications    
-    Lan, X., Basu, S., Schwietzke, S., Bruhwiler, L. M. P., Dlugokencky, E. J., Michel, S. E., et al. 2021, Improved constraints on global methane emissions and sinks using δ13C-CH4. *Global Biogeochemical Cycles*, 35, e2021GB007000. https://doi.org/10.1029/2021GB007000
+    Lan, X., Basu, S., Schwietzke, S., Bruhwiler, L. M. P., Dlugokencky, E. J., Michel, S. E., Sherwood, O.A., Tans, P.P., Thoning, K.W., Etiope, G., Zhuang, Q., Liu, L., Oh, Y., Miller, J.B., Petron, G., Vaughn, B.H., Crippa, M. (2021). Improved constraints on global methane emissions and sinks using δ13C-CH4. *Global Biogeochemical Cycles, 35*, e2021GB007000. [https://doi.org/10.1029/2021GB007000](https://doi.org/10.1029/2021GB007000)
 
-    Dlugokencky, E.J., R.C. Myers, P.M. Lang, K.A. Masarie, A.M. Crotwell, K.W. Thoning, B.D. Hall, J.W. Elkins, and L.P. Steele, 2005, Conversion of NOAA atmospheric dry air methane mole fractions to a gravimetrically-prepared standard scale, *J. Geophys. Res*., 110, D18306, doi:10.1029/2005JD006035.
+    Dlugokencky, E.J., Myers, R.C., Lang,  P.M., Masarie, K.A., Crotwell, A.M., Thoning, K.W., Hall, B.D., Elkins, J.W., & Steele, L.P. (2005). Conversion of NOAA atmospheric dry air methane mole fractions to a gravimetrically-prepared standard scale, *J. Geophys. Res., 110*, D18306, [https://doi.org/10.1029/2005JD006035](https://doi.org/10.1029/2005JD006035)
 
-    Dlugokencky, E.J., K.A. Masarie, P.M. Lang, P.P. Tans, L.P. Steele, and E.G. Nisbet, 1994a, A dramatic decrease in the growth rate of atmospheric methane in the northern hemisphere during 1992, *Geophys. Res. Lett*., 21, 45-48.
+    Dlugokencky, E.J., Masarie, K.A., Lang,  P.M., Tans, P.P., Steele, L.P., & Nisbet, E.G. (1994a). A dramatic decrease in the growth rate of atmospheric methane in the northern hemisphere during 1992. *Geophys. Res. Lett., 21*, 45-48. [https://doi.org/10.1029/93GL03070](https://doi.org/10.1029/93GL03070)
 
-    Dlugokencky, E.J., L.P. Steele, P.M. Lang, and K.A. Masarie, 1994b, The growth rate and distribution of atmospheric methane, *J. Geophys. Res*., 99, 17,021-17,043.
+    Dlugokencky, E.J., Steele, L.P., Lang,  P.M., & Masarie, K.A. (1994b), The growth rate and distribution of atmospheric methane. *J. Geophys. Res., 99*, 17,021-17,043.[https://doi.org/10.1029/94JD01245](https://doi.org/10.1029/94JD01245)
 
-    Lang, P.M., L.P. Steele, R.C. Martin, and K.A. Masarie, 1990a, Atmospheric methane data for the period 1983-1985 from the NOAA/GMCC global cooperative flask sampling network, NOAA Technical Memorandum ERL CMDL-1.
+    Lang, P.M., Steele, L.P., Martin, R.C., & Masarie, K.A. (1990). *Atmospheric methane data for the period 1983-1985 from the NOAA/GMCC global cooperative flask sampling network*, NOAA Technical Memorandum ERL CMDL-1.
 
-    Lang, P.M., L.P. Steele, and R.C. Martin, 1990b, Atmospheric methane data for the period 1986-1988 from the NOAA/CMDL global cooperative flask sampling network, NOAA Technical Memorandum ERL CMDL-2.
+    Lang, P.M., Steele, L.P., & Martin, R.C. (1990). *Atmospheric methane data for the period 1986-1988 from the NOAA/CMDL global cooperative flask sampling network*, NOAA Technical Memorandum ERL CMDL-2. [ https://repository.library.noaa.gov/view/noaa/21230]( https://repository.library.noaa.gov/view/noaa/21230)
 
-    Lang, P.M., L.P. Steele, L.S. Waterman, R.C. Martin, K.A. Masarie, and E.J. Dlugokencky, 1992, NOAA/CMDL Atmospheric methane data for the period 1983-1990 from shipboard flask sampling, NOAA Technical Memorandum ERL CMDL-4.
+    Lang, P.M., Steele, L.P., Waterman, L.S., Martin, R.C., Masarie, K.A., & Dlugokencky, E.J. (1992). *NOAA/CMDL Atmospheric methane data for the period 1983-1990 from shipboard flask sampling*, NOAA Technical Memorandum ERL CMDL-4. [https://repository.library.noaa.gov/view/noaa/21231](https://repository.library.noaa.gov/view/noaa/21231)
 
-    Steele, L.P., P.J. Fraser, R.A. Rasmussen, M.A.K. Khalil, T.J. Conway, A.J. Crawford, R.H. Gammon, K.A. Masarie, and K.W. Thoning, 1987, The global distribution of methane in the troposphere, *J. Atmos. Chem*, 5, 125-171.
+    Steele, L.P., Fraser,P.J., Rasmussen, R.A., Khalil, M.A.K., Conway, T.J., Crawford, A.J., Gammon, R.H., Masarie, K.A., & Thoning, K.W. (1987). The global distribution of methane in the troposphere, *J. Atmos. Chem, 5*, 125-171. [https://doi.org/10.1007/BF00048857](https://doi.org/10.1007/BF00048857)
 
-    Steele, L.P. and P.M. Lang, 1991, Atmospheric methane concentrations-the NOAA/CMDL global cooperative flask sampling network, 1983-1988, ORNL/CDIAC-42, NDP-038.
+    Steele, L.P., & Lang, P.M. (1991). *Atmospheric methane concentrations-the NOAA/CMDL global cooperative flask sampling network*, 1983-1988. ORNL/CDIAC-42, NDP-038. United States.
 
-    Steele, L.P., E.J. Dlugokencky, P.M. Lang, P.P. Tans, R.C. Martin, and K.A. Masarie, 1992, Slowing down of the global accumulation of atmospheric methane during the 1980's, *Nature*, 358, 313.
+    Steele, L.P., Dlugokencky, E.J., Lang, P.M., Tans, P.P., Martin, R.C., & Masarie, K.A. (1992). Slowing down of the global accumulation of atmospheric methane during the 1980's, *Nature, 358*, 313. [https://doi.org/10.1038/358313a0](https://doi.org/10.1038/358313a0)
 
-    Thoning, K.W., P.P. Tans, and W.D. Komhyr, 1989,  Atmospheric carbon dioxide at Mauna Loa Observatory 2.  Analysis of the NOAA GMCC Data, 1974-1985, *J. Geophys. Res*., 94, 8549-8565.
+    Thoning, K.W., Tans, P.P., & Komhyr, W.D. (1989). Atmospheric carbon dioxide at Mauna Loa Observatory 2.  Analysis of the NOAA GMCC Data, 1974-1985, *J. Geophys. Res., 94*, 8549-8565. [https://doi.org/10.1029/JD094iD06p08549](https://doi.org/10.1029/JD094iD06p08549)
 
     ## Acknowledgment
-    We thank the cooperating agencies and individuals throughout the world who collect air samples and enable the operation of the Global Greenhouse Gas Reference Network.
+    This dataset would not be possible without the cooperating agencies and individuals throughout the world who collect air samples and enable the operation of the Global Greenhouse Gas Reference Network.    
     
     ## License
-    [Creative Commons Zero v1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC0 1.0)
-    
+    This dataset was produced by NOAA and is not subject to copyright protection in the United States. NOAA waives any potential copyright and related rights in these data worldwide through the[Creative Commons Zero v1.0 Universal Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC0 1.0)
+
+    ## Data Stewardship
+    - [Data Workflow](https://us-ghg-center.github.io/ghgc-docs/data_workflow/noaa-insitu_Data_Flow.html)
+
     </Prose>
 </Block>
