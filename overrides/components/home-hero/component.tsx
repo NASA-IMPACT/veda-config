@@ -66,7 +66,7 @@ export default function HomeHero(props) {
               Solutions
             </p>
           </HeroHeadline>
-          <Partners variation="negative" />
+          <Partners variation="negative" size="big" />
         </PageHeroHGroup>
       </Constrainer>
       <PageHeroCover>
