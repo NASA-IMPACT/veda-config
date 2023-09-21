@@ -1,6 +1,6 @@
 import React from "$veda-ui/react";
 import styled from "$veda-ui/styled-components";
-import { glsp, themeVal } from "$veda-ui/@devseed-ui/theme-provider";
+import { glsp, themeVal, media } from "$veda-ui/@devseed-ui/theme-provider";
 
 import Constrainer from "$veda-ui-scripts/styles/constrainer";
 import { VarHeading } from "$veda-ui-scripts/styles/variable-components";
@@ -12,7 +12,10 @@ import {
 } from "$veda-ui-scripts/components/common/figure";
 
 import Partners from "../../home/partners";
-import coverSrc from "./earth.png";
+import { useMediaQuery } from "$veda-ui-scripts/utils/use-media-query";
+
+import coverImgSrc from "./earth.png";
+import coverVideoSrc from "url:./earth-gas.mp4";
 
 const Hero = styled.div`
   background: ${themeVal("color.primary")};
@@ -40,12 +43,22 @@ const HeroHeadline = styled.div`
   }
 `;
 
-
 const PageHeroCover = styled(Figure)`
-  height: 20rem;
+  height: 16rem;
   width: 100%;
 
-  img {
+  ${media.mediumUp`
+    margin-top: -4rem;
+    height: 23rem;
+  `}
+
+  ${media.largeUp`
+    height: 28rem;
+    margin-top: -6rem;
+  `}
+
+  img,
+  video {
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -55,6 +68,8 @@ const PageHeroCover = styled(Figure)`
 `;
 
 export default function HomeHero(props) {
+  const { isMediumUp } = useMediaQuery();
+
   return (
     <Hero>
       <Constrainer>
@@ -70,7 +85,23 @@ export default function HomeHero(props) {
         </PageHeroHGroup>
       </Constrainer>
       <PageHeroCover>
-        <img src={coverSrc} alt="image of northern hemisphere of earth with gas in atmosphere shown in red hues" />
+        {isMediumUp ? (
+          <video
+            autoPlay
+            loop
+            muted
+            disablePictureInPicture
+            disableRemotePlayback
+          >
+            <source src={coverVideoSrc} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        ) : (
+          <img
+            src={coverImgSrc}
+            alt="Image of northern hemisphere of earth with gas in atmosphere shown in red hues"
+          />
+        )}
         <Figcaption>
           <FigureAttribution
             author="Helen-Nicole Kostis, Lead Visualizer, Scientific Visualization Studio. Image of January 2021 Global Atmospheric Carbon Dioxide (CO₂)"
