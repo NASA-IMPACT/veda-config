@@ -1,9 +1,9 @@
 ---
-id: camp-fire-nlcd
-name: "Camp Fire burn scar NDVI difference"
-description: "3-year average difference (2018-2022) - (2015-2018) MODIS-derived NDVI over the 2018 Camp Fire burn scar domain." 
+id: campfire-nlcd
+name: "NLCD Land Cover identification 2016 vs 2019"
+description: "Land Use-Land Cover (LULC) is a product derived from Landsat NLCD (national Land Cover Database) data, who’s most recent iteration is from 2019 satellite imagery."
 media:
-  src: ::file ./hous_lst.jpg
+  src: ::file ./camp-fire-background.jpg
   alt: Engulfed hillside in California, 2021.
   author:
     name: Mike Newbry
@@ -15,8 +15,8 @@ taxonomy:
 
 
 layers:
-  - id: CampFire_NLCD_2016_cog
-    stacCol: CampFire_NLCD_2016_cog
+  - id: campfire-nlcd
+    stacCol: campfire-nlcd
     name: NLCD Land Cover identification 2016
     type: raster
     description: "30 meter LULC classification provided by the NLCD."
@@ -32,14 +32,7 @@ layers:
         nodata: -999
         rescale:
             - 0
-            - 255
-    compare:
-        datasetId: camp-fire-nlcd
-        layerId: CampFire_NLCD_2019_cog
-        mapLabel: |
-            ::js ({dateFns, datetime, compareDatetime}) => {
-            return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
-            }    
+            - 255   
     legend:
         type: categorical
         min: "0"
@@ -87,7 +80,9 @@ layers:
             #   label: "Woody Wetlands"
             # - color: "#71A4C1"
             #   label: "Emergent Herbaceous Wetlands"
-
+    compare:
+        datasetId: campfire-nlcd
+        layerId: campfire-nlcd
 
 
   
