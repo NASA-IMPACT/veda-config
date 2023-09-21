@@ -110,10 +110,11 @@ const DisclaimerModalFooter = styled(ModalFooter)`
   margin-top: ${glsp(2)};
 `;
 
-const MODALS_DISMISSED_KEY = "modalsDismissedKey";
+const DISCLAIMER_MODALS_DISMISSED_KEY = "disclaimerModalsDismissedKey";
+const EXPLORE_PATH = "/explore";
 
 const MODALS_CONTENT = {
-  explore: {
+  [EXPLORE_PATH]: {
     headline: "Disclaimer",
     body: (
       <p>
@@ -125,7 +126,7 @@ const MODALS_CONTENT = {
       </p>
     ),
   },
-  analysis: {
+  [ANALYSIS_PATH]: {
     headline: "Disclaimer",
     body: (
       <p>
@@ -148,16 +149,22 @@ export default function PageFooter(props) {
 
   // Open that disclaimer modal here
   const { pathname } = useLocation();
-  const currentPage = (pathname.match(/[^/]+$/)?.[0] as string) || "";
+  const currentPage = (pathname.match(/\/[^/]+$/)?.[0] as string) || "";
+
   const [modalRevealed, setModalRevealed] = useState(true);
+  useEffect(() => {
+    setModalRevealed(true);
+  }, [currentPage]);
   const [dontShowAgain, setDontShowAgain] = useState(true);
   const [modalsDismissed, setModalsDismissed] = useState({
-    explore: false,
-    analysis: false,
+    [EXPLORE_PATH]: false,
+    [ANALYSIS_PATH]: false,
   });
 
   useEffect(() => {
-    const modalsDismissedRaw = localStorage.getItem(MODALS_DISMISSED_KEY);
+    const modalsDismissedRaw = localStorage.getItem(
+      DISCLAIMER_MODALS_DISMISSED_KEY
+    );
     try {
       if (modalsDismissedRaw) {
         setModalsDismissed(JSON.parse(modalsDismissedRaw));
@@ -166,7 +173,7 @@ export default function PageFooter(props) {
       /* eslint-disable-next-line no-console */
       console.error(e);
     }
-  }, []);
+  }, [currentPage]);
 
   const onConfirmClick = useCallback(() => {
     setModalRevealed(false);
@@ -176,10 +183,10 @@ export default function PageFooter(props) {
     };
     setModalsDismissed(newModalsDismissed);
     localStorage.setItem(
-      MODALS_DISMISSED_KEY,
+      DISCLAIMER_MODALS_DISMISSED_KEY,
       JSON.stringify(newModalsDismissed)
     );
-  }, [modalRevealed, dontShowAgain]);
+  }, [modalRevealed, dontShowAgain, currentPage]);
 
   const showModal = modalRevealed && modalsDismissed[currentPage] === false;
 
