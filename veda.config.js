@@ -36,14 +36,10 @@ module.exports = {
       one: "Data Insights",
       other: "Data Insights",
     },
-    storiesBanner: {
-      other:
+    storiesBanner:
         "Explore the guided narratives below to learn more about greenhouse gas measurement, changes over time, events and human-related causes and contributions.",
-    },
-    dataCatalogBanner: {
-      other:
+    dataCatalogBanner:
         "This dashboard is for exploring key datasets that provide insight into greenhouse gas sources, sinks, emissions, fluxes, and events.",
-    },
   },
 
   theme: {
