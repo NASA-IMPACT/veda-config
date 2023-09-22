@@ -17,10 +17,10 @@ module.exports = {
     aboutContent: "./overrides/about.mdx",
     // Content for the home page.
     // Type: Content override
-    homeContent: './overrides/home/index.mdx',
+    homeContent: "./overrides/home/index.mdx",
     // Content for the development page.
     // Type: Content override
-    developmentContent: './overrides/development/index.mdx',
+    developmentContent: "./overrides/development/index.mdx",
 
     // Component for the home hero banner.
     homeHero: "./overrides/components/home-hero/index.mdx",
@@ -28,14 +28,18 @@ module.exports = {
     // Component for the header brand.
     headerBrand: "./overrides/components/header-brand/index.mdx",
     // Component for the footer.
-    pageFooter: "./overrides/components/page-footer/index.mdx"
+    pageFooter: "./overrides/components/page-footer/index.mdx",
   },
 
   strings: {
     stories: {
-      one: 'Data Insights',
-      other: 'Data Insights'
-    }
+      one: "Data Insights",
+      other: "Data Insights",
+    },
+    storiesBanner:
+        "Explore the guided narratives below to learn more about greenhouse gas measurement, changes over time, events and human-related causes and contributions.",
+    dataCatalogBanner:
+        "This dashboard is for exploring key datasets that provide insight into greenhouse gas sources, sinks, emissions, fluxes, and events.",
   },
 
   theme: {
@@ -44,14 +48,14 @@ module.exports = {
     },
     type: {
       base: {
-        family: '"Inter", sans-serif'
-      }
+        family: '"Inter", sans-serif',
+      },
     },
     button: {
       type: {
         case: "uppercase",
-        weight: 400
-      }
-    }
+        weight: 400,
+      },
+    },
   },
 };
