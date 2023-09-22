@@ -4,13 +4,33 @@ name: Intro to the US GHG Center
 description: The U.S. Greenhouse Gas Center (US GHG Center) is a multi-agency effort to integrate greenhouse gas data from observations and models into credible, authoritative, trusted consensus greenhouse gas emissions and flux products for use in decision-making.
 media:
   src: ::file ./intro-to-ghg-center--cover.png
-  alt: Aerial view of city with smoke
+  alt: Screenshot of the US GHG Center website homepage
   author:
-    name: NASA Scientific Visualization Studio
-    url: "https://svs.gsfc.nasa.gov/5110"
+    name: US GHG Center
+    url: "https://ghg.center/"
 pubDate: 2023-08-30
 featured: true
 ---
+<Block>
+    <Prose>
+    ## Why be concerned about Greenhouse Gases?
+
+    Multiple agencies within the U.S. Federal Government and partners are able to observe the changing planet.  The data shows trends and patterns in carbon dioxide (CO₂) and methane (CH₄) from anthropogenic (human-related) and natural sources that can be used to inform decisions.  NOAA has tracked the <a href="https://www.ncei.noaa.gov/access/billions/" target="_blank" rel="noopener" style={{ color: '#0000EE' }}> increase in billion dollar disasters in the USA↗</a> which can be linked to the changing environment. 
+
+    </Prose>
+</Block>
+<Block>
+<Figure>
+        <Image 
+            src={new URL('./2023-billion-dollar-disaster-map.png', import.meta.url).href}
+            alt="Map presenting billion-dollar events"
+            align="left"
+            attrAuthor="NOAA"
+            attrUrl="https://www.ncei.noaa.gov/access/billions/"
+        />
+        <Caption> The U.S. has sustained 371 weather and climate disasters since 1980 where overall damages/costs reached or exceeded $1 billion (including CPI adjustment to 2023). The total cost of these 371 events exceeds $2.615 trillion. </Caption>
+    </Figure>
+</Block>
 <Block>
     <Prose>
     ## The US GHG Center Purpose
@@ -20,37 +40,34 @@ featured: true
     The US GHG Center is built on open source principles and techniques that allow users to access, analyze, visualize and apply data and products to their own usage.
     
     With this wealth of data pertaining to greenhouse gases, greenhouse gas emissions, and related ancillary information, the US GHG Center can be used to increase understanding of the types of GHG data and measurement platforms to facilitate wider and appropriate usage of GHG information.
-
     </Prose>
     <Figure>
         <Image 
-            src={new URL('./carbon-cycle.jpeg', import.meta.url).href}
-            alt="pictoral representation of carbon cycle" 
-            align="left"
-            attrAuthor="IPCC AR5"
-            attrUrl="#"
+            src={new URL('./cop-biden.jpeg', import.meta.url).href}
+            alt="Map presenting billion-dollar events"
+            height="500px"
+            align="right"
+            attrAuthor="Presidencia de la República Mexicana (Flikr)"
+            attrUrl="https://www.flickr.com/photos/presidenciamx/22802505643/in/photostream/"
         />
-        <Caption> The carbon cycle </Caption>
+        <Caption>President Biden addressing the crowd at COP27. The image is licensed under https://creativecommons.org/licenses/by/2.0/legalcode </Caption>
     </Figure>
 </Block>
 
 <Block>
     <Prose>
     ## Who’s behind the US GHG Center?
+    <Image
+        src={new URL("logos.png", import.meta.url).href}
+        alt="logos"
+        align="left"
+    />
     The U.S. Greenhouse Gas Center is a partnership of EPA, NASA, NIST and NOAA. These agencies are collaborating to prototype development of the center with the goal of accelerating the production and delivery of actionable, quality vetted greenhouse gas (GHG) information, including a curated collection of GHG datasets, workflows and visualizations from the federal government and non-public sector, NASA, EPA, NOAA and NIST. 
     
     The Center acts as an enabler of collaboration with networks of interagency, international, intergovernmental and private sector partners to increase confidence in setting, assessing, and meeting climate mitigation goals.
     
     The US GHG Center is more than just a funnel for greenhouse gas datasets packaged into a user interface. The US GHG Center also includes and reports on various efforts to engage stakeholders, increase understanding with webinars and training events, inform communities, empower users with decision insights.
-
     </Prose>
-    <Figure>
-        <Image
-          src={new URL("logos.png", import.meta.url).href}
-          alt="logos"
-          width="80"
-        />
-    </Figure>
 </Block>
 
 <Block>
@@ -87,7 +104,14 @@ featured: true
     The initial 2-yr demonstration phase or the project  targets three GHG areas of study in order to  
         - Provide more accessible anthropogenic gas emission inventories; 
         - Complement anthropogenic GHG emissions with natural GHG emissions and fluxes; and,  
-        - Identify and quantify emissions from large methane (CH₄) leak events leveraging aircraft and space-borne instruments. 
+        - Identify and quantify emissions from large methane (CH₄) leak events leveraging aircraft and space-borne instruments.
+
+    <video style={{ width: '100%', aspectRatio: "16/9" }} controls poster="https://svs.gsfc.nasa.gov/vis/a010000/a014200/a014257/Screen_Shot_2022-12-09_at_1.10.12_PM_print.jpg" autoplay muted>
+      <source
+        src="https://svs.gsfc.nasa.gov/vis/a010000/a014200/a014257/Methane.mp_Wetalnds_Final.mp4" type="video/mp4"
+      />
+      Your browser does not support the video tag.
+    </video> 
 
     </Prose>
     {/* <Figure>
@@ -154,16 +178,17 @@ featured: true
     <Prose>
     ## We Want Your Help!  Please share your ideas and feedback!
 
-    Please fill out the feedback form [here](https://docs.google.com/forms/d/e/1FAIpQLSeZrDYP6W3fVOJBwncsLINTdhYsUl9XyoTjNvl7PLBQLV5A0Q/viewform)
+    Please contact us by filling out <a href="https://docs.google.com/forms/d/e/1FAIpQLSeZrDYP6W3fVOJBwncsLINTdhYsUl9XyoTjNvl7PLBQLV5A0Q/viewform" target="_blank">this form↗</a>
+
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeZrDYP6W3fVOJBwncsLINTdhYsUl9XyoTjNvl7PLBQLV5A0Q/viewform" target="_blank">
+    <Image 
+        src={new URL('./feedback-form.png', import.meta.url).href}
+        alt="feedback form for US GHG Center" 
+        align="center"
+        attrAuthor="US GHG Center"
+        attrUrl="https://ghg.center"
+        caption="US GHG Center Contact Form"
+    />
+    </a>
     </Prose>
-    {/* <Figure>
-        <Image 
-            src={new URL('./carbon-cycle.jpeg', import.meta.url).href}
-            alt="pictoral representation of carbon cycle" 
-            align="left"
-            attrAuthor="IPCC AR5"
-            attrUrl="#"
-        />
-        <Caption> The carbon cycle </Caption>
-    </Figure> */}
 </Block>
