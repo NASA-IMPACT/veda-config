@@ -45,9 +45,11 @@ module.exports = {
   theme: {
     color: {
       primary: "#082a64",
+      link: '#1565EF'
     },
     type: {
       base: {
+        color: '#1B2631',
         family: '"Inter", sans-serif',
       },
     },
