@@ -13,7 +13,7 @@ import { ArrowLink } from "./arrow-link";
 import { DATASETS_PATH } from "$veda-ui-scripts/utils/routes";
 import { Actions } from "$veda-ui-scripts/components/common/browse-controls/use-browse-controls";
 
-import featureEmissions from "./media/factory.png";
+import featureEmissions from "./media/refinery.png";
 import featureSources from "./media/swamp.png";
 import featureMethane from "./media/plume.png";
 
@@ -43,7 +43,7 @@ export default function Keypoints() {
             title="Anthropogenic Greenhouse Gas Emissions"
             description="Carbon dioxide and methane gas emissions from human activities in areas such as energy, agriculture, waste, and industry"
             imgSrc={featureEmissions}
-            imgAlt="image of smokestacks releasing gases against a blue sky"
+            imgAlt="image of oil refinery"
             footerContent={
               <div>
                 <ArrowLink
@@ -62,7 +62,7 @@ export default function Keypoints() {
             linkLabel="View more"
             linkTo="/stories/tracking-greenhouse-gas-cycles"
             title="Natural Greenhouse Gas Sources and Sinks"
-            description="Naturally-occurring greenhouse gas emissions and fluxes from land, ocean, and atmosphere"
+            description="Naturally-occurring greenhouse gas fluxes from land, ocean, and atmosphere"
             imgSrc={featureSources}
             imgAlt="image of green wetlands"
             footerContent={
