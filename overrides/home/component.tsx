@@ -92,11 +92,11 @@ export default function HomeComponent() {
         <IntroHeadline>
           <VarHeading size="xxlarge">Welcome</VarHeading>
           <p>
-            The U.S. Greenhouse Gas Center opens up access to trusted,
-            authoritative data. This multi-agency effort consolidates greenhouse
-            gas information from observations and models. The goal of the US GHG
-            Center is providing decision-makers with one stop for data and
-            analysis.
+            The U.S. Greenhouse Gas Center opens up access to trusted data on
+            greenhouse gases. This&nbsp;multi-agency effort consolidates
+            greenhouse gas information from observations and models.
+            The&nbsp;goal of the US GHG Center is providing decision-makers with
+            one stop for data and analysis.
           </p>
           <p>
             This initial two-year demonstration phase creates a way to explore
@@ -130,7 +130,7 @@ export default function HomeComponent() {
               valued, multi-agency collaborators: EPA, NASA, NIST, and NOAA.
             </p>
           </InfoCalloutHeadline>
-          <Partners variation="positive" size="big"/>
+          <Partners variation="positive" size="big" />
           <Button
             forwardedAs={NavLink}
             to="/about"
