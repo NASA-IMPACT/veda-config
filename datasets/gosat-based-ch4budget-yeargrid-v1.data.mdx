@@ -1,0 +1,352 @@
+---
+id: gosat-based-ch4budget-yeargrid-v1
+name: GOSAT-based Top-down Total and Natural Methane Emissions
+description: Total and natural methane emissions derived using the GEOS-Chem global chemistry transport model with inclusion of GOSAT data.  Methane emission values for both before and after adding GOSAT to the model are mapped to a 1° resolution grid.  Version 1.0 contains data only for 2019
+usage:
+  - url: 'https://us-ghg-center.github.io/ghgc-docs/cog_transformation/gosat-based-ch4budget-yeargrid-v1.html'
+    label: Notebook showing data transformation to COG for ingest to the US GHG Center
+    title: 'Data Transformation Notebook'
+  - url: 'https://us-ghg-center.github.io/ghgc-docs/user_data_notebooks/gosat-based-ch4budget-yeargrid-v1_User_Notebook.html'
+    label: Notebook to read, visualize, and explore data statistics
+    title: 'Sample Data Notebook'
+  - url: 'https://hub.ghg.center/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FUS-GHG-Center%2Fghgc-docs&urlpath=tree%2Fghgc-docs%2Fuser_data_notebooks%2Fgosat-based-ch4budget-yeargrid-v1_User_Notebook.ipynb&branch=main'
+    label: Run example notebook
+    title: Interactive Session in the US GHG Center JupyterHub (requires account) 
+  - url: https://dljsq618eotzp.cloudfront.net/browseui/index.html#gosat-based-ch4budget-yeargrid-v1/
+    label: Browse and download the data
+    title: Data Browser
+media:
+  src: ::file ./oco2-mip-ch4budget-yeargrid-v1--cover.jpg
+  alt: Dried/Burned trees
+  author:
+    name: Mark Landman
+    url: https://unsplash.com/photos/S5xbizGotY0
+taxonomy:
+  - name: Topics
+    values:
+      - Natural Emissions and Sinks
+  - name: Source
+    values:
+      - NASA
+  - name: Gas
+    values:
+      - CH₄
+  - name: Product Type
+    values:
+      - Model Output
+layers:
+  - id: prior-total-id
+    stacCol: gosat-based-ch4budget-yeargrid-v1
+    name: Priori Total
+    type: raster
+    description: Total methane emissions per grid cell derived from the GEOS-Chem global chemistry transport model
+    initialDatetime: newest
+    projection:
+      id: 'equirectangular'
+    basemapId: 'light'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: prior-total
+      colormap_name: jet
+      rescale:
+        - 0
+        - 0.3
+      nodata: 9.96921e+36
+    compare:
+      datasetId: gosat-based-ch4budget-yeargrid-v1
+      layerId: prior-total-id
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit: 
+        label: Tg CH₄/yr
+      type: gradient
+      min: 0
+      max: 0.3
+      stops:
+        - '#000080'
+        - '#0000FF'
+        - '#0080FF'
+        - '#00FFFF'
+        - '#00FF80'
+        - '#FFFF00'
+        - '#FF8000'
+        - '#FF0000' 
+        - '#800000' 
+        - '#4C0000' 
+  - id: post-total-id
+    stacCol: gosat-based-ch4budget-yeargrid-v1
+    name: Posterior Total
+    type: raster
+    description: Total methane emissions per grid cell derived using GOSAT data in the GEOS-Chem global chemistry transport model
+    initialDatetime: newest
+    projection:
+      id: 'equirectangular'
+    basemapId: 'light'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: post-total
+      colormap_name: jet
+      rescale:
+        - 0
+        - 0.3
+      nodata: 9.96921e+36
+    compare:
+      datasetId: gosat-based-ch4budget-yeargrid-v1
+      layerId: post-total-id
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit: 
+        label: Tg CH₄/yr
+      type: gradient
+      min: 0
+      max: 0.3
+      stops:
+        - '#000080'
+        - '#0010FF'
+        - '#00A4FF'
+        - '#40FFB7'
+        - '#B7FF40'
+        - '#FFB900'
+        - '#FF3000'
+        - '#800000' 
+  - id: prior-wetland-id
+    stacCol: gosat-based-ch4budget-yeargrid-v1
+    name: Priori Wetlands
+    type: raster
+    description: Total wetland methane emissions per grid cell derived from the GEOS-Chem global chemistry transport model
+    initialDatetime: newest
+    projection:
+      id: 'equirectangular'
+    basemapId: 'light'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: prior-wetland
+      colormap_name: jet
+      rescale:
+        - 0
+        - 0.10
+      nodata: 9.96921e+36
+    compare:
+      datasetId: gosat-based-ch4budget-yeargrid-v1
+      layerId: post-total-id
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit: 
+        label: Tg CH₄/yr
+      type: gradient
+      min: 0
+      max: 0.10
+      stops:
+        - '#000080'
+        - '#0000FF'
+        - '#0080FF'
+        - '#00FFFF'
+        - '#00FF80'
+        - '#FFFF00'
+        - '#FF8000'
+        - '#FF0000' 
+        - '#800000' 
+        - '#4C0000'                       
+  - id: post-wetland-id
+    stacCol: gosat-based-ch4budget-yeargrid-v1
+    name: Posterior Wetlands
+    type: raster
+    description: Total wetland methane emissions per grid cell derived using GOSAT data in the GEOS-Chem global chemistry transport model
+    initialDatetime: newest
+    projection:
+      id: 'equirectangular'
+    basemapId: 'light'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: post-wetland
+      colormap_name: jet
+      rescale:
+        - 0
+        - 0.10
+      nodata: 9.96921e+36
+    compare:
+      datasetId: gosat-based-ch4budget-yeargrid-v1
+      layerId: post-total-id
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit: 
+        label: Tg CH₄/yr
+      type: gradient
+      min: 0
+      max: 0.10
+      stops:
+        - '#000080'
+        - '#0000FF'
+        - '#0080FF'
+        - '#00FFFF'
+        - '#00FF80'
+        - '#FFFF00'
+        - '#FF8000'
+        - '#FF0000' 
+        - '#800000' 
+        - '#4C0000'    
+  - id: prior-wetland-uncertainty-id
+    stacCol: gosat-based-ch4budget-yeargrid-v1
+    name: Priori Wetlands Uncertainty
+    type: raster
+    description: Model uncertainty for wetland emissions
+    initialDatetime: newest
+    projection:
+      id: 'equirectangular'
+    basemapId: 'light'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: prior-wetland-uncertainty
+      colormap_name: purd
+      rescale:
+        - 0
+        - 0.05
+      nodata: 9.96921e+36
+    compare:
+      datasetId: gosat-based-ch4budget-yeargrid-v1
+      layerId: prior-wetland-uncertainty-id
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit: 
+        label: Tg CH₄/yr
+      type: gradient
+      min: 0
+      max: 0.05
+      stops:
+        - '#F7F4F9'
+        - '#E9E3F0'
+        - '#D9C3DF'
+        - '#CDA0CD'
+        - '#D57ABA'
+        - '#E34A9F'
+        - '#DF2179'
+        - '#C10E51'
+        - '#92003F'
+        - '#67001F'                        
+  - id: post-wetland-uncertainty-id
+    stacCol: gosat-based-ch4budget-yeargrid-v1
+    name: Posterior Wetlands Uncertainty
+    type: raster
+    description: Model uncertainty for wetland emissions when GOSAT data included in model
+    initialDatetime: newest
+    projection:
+      id: 'equirectangular'
+    basemapId: 'light'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: post-wetland-uncertainty
+      colormap_name: purd
+      rescale:
+        - 0
+        - 0.05
+      nodata: 9.96921e+36
+    compare:
+      datasetId: gosat-based-ch4budget-yeargrid-v1
+      layerId: post-wetland-uncertainty-id
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit: 
+        label: Tg CH₄/yr
+      type: gradient
+      min: 0
+      max:  0.05
+      stops:
+        - '#F7F4F9'
+        - '#E9E3F0'
+        - '#D9C3DF'
+        - '#CDA0CD'
+        - '#D57ABA'
+        - '#E34A9F'
+        - '#DF2179'
+        - '#C10E51'
+        - '#92003F'
+        - '#67001F'                                                
+---
+
+<Block type='wide'>
+  <Prose>
+    As part of the global stock take (GST), countries are asked to provide a record of their greenhouse gas emissions to inform decisions on how to reduce GHG emissions.  The NASA Carbon Monitoring System Flux (CMS-Flux) team has used remote sensing observations from Japan’s Greenhouse gases Observing SATellite (GOSAT) to produce modeled total methane (CH₄) emissions and uncertainties on a 1 degree by 1 degree resolution grid for the year 2019. The GOSAT data is used in the model to inform total emission estimates, as well as wetland (the primary natural source of methane), and various human-related sources such as fossil fuel extraction, transport, agriculture, waste, and fires.  An advanced mathematical approach is used with a global chemistry transport model to quantify annual CH₄ emissions and uncertainties. These estimates are expressed in teragrams of CH₄ per year (Tg/yr).  Only the total and wetlands model-derived emissions are included in the US GHG Center.  The source dataset contains emissions data for all other anthropogenic sources.  
+   
+    - **Temporal Extent:** 2019   
+    - **Temporal Resolution:** Annual   
+    - **Spatial Extent:** Global    
+    - **Spatial Resolution:** 1° x 1°    
+    - **Data Units:** Teragrams of methane per year (Tg CH₄/yr)
+    - **Data Type:** Research
+    - **Data Latency:** Updated yearly 
+
+    **Scientific Details:** A study was conducted to show how satellite methane observations could be used to evaluate reported methane emissions. In a bottom-up approach, methane emissions from activity reports were projected through the GEOS-Chem global chemistry transport model to obtain the expected atmospheric concentrations. In a top-down approach, observed atmospheric methane concentrations from the GOSAT satellite are compared with those modeled from reports. An analytic Bayesian inversion approach is used to determine the methane flux on a 2 x 2.5 degree grid based on the differences between the two concentrations (bottom-up vs top-down). Analytic Jacobian matrices relating emissions to concentrations are derived from the GEOS-Chem model and used to calculate the prior and posterior flux error covariance. Methane fluxes are then linearly projected to emissions by sector at 1 degree resolution. The derivation used to project top-down fluxes back to emissions by region is described in [Cusworth et al. (2021)](https://doi.org/10.1038/s43247-021-00312-6). This GOSAT-based Top-down CH₄ Emissions dataset includes the total prior and posterior CH₄ emissions, wetland prior and posterior CH₄ emissions and associated uncertainties. More information is located in the [source dataset document](https://zenodo.org/record/8306874). 
+  </Prose>
+</Block>
+<Block>
+  <Prose>
+    ## Source Data Product Citation
+    Worden, J. (2022). The 2019 methane budget and uncertainties at 1° resolution and each country through Bayesian integration of GOSAT total column methane data and a priori inventory estimates. [https://doi.org/10.5281/zenodo.8306874](https://doi.org/10.5281/zenodo.8306874)
+   
+    ## Dataset Accuracy
+    Data accuracy is determined by understanding the uncertainties in the model emissions. Bottom-up uncertainties are generally calculated by comparing how emissions attributions to each sector differ across studies, by comparing emission models and remote sensing data, and using expert opinion when uncertainties are especially challenging to estimate. Recent studies show that there could be larger than expected emissions from aquatic and fossil fuel sources. This means that current methane budgets estimated from both bottom-up and top-down models are either inaccurate in their allocations to existing sectors or that the atmospheric methane removal mechanisms (sinks) are not fully understood. For top-down uncertainties, recent studies also show that there can be considerable errors in the models used by remote sensing instruments to relate measurements to concentrations. Model transport errors can add additional uncertainty when inverting concentrations to fluxes. The flux inversion used for this top-down dataset reduces the impact of variability in the hydroxyl radical (OH), the main driver of methane removal, on methane emissions by jointly estimating OH and CH₄ emissions. A latitudinal correction is used to reduce the impacts of stratospheric chemistry and transport errors. Other systematic errors in model transport and chemistry were not characterized but it is not expected that these errors are significant. Additionally, the Bayesian approach used for this dataset enables the quantification of smoothing error, which can be a significant contributor to emission uncertainty, and reduces the potential for introducing additional uncertainty and biases when fluxes are projected back to emissions.  Note that uncertainties are only appropriate at the 1-degree grid cell resolution. 
+
+    ## Disclaimer
+    All data provided in the US GHG Center has been transformed from the original format (NetCDF) into Cloud Optimized GeoTIFF ([COG](https://www.cogeo.org/)). Careful quality checks are used to ensure data transformation has been performed correctly.  
+
+    The source dataset contains CH₄ emissions layers for various anthropogenic sources that are not presented in the US GHG Center.  The original source data also contains a .csv text format file with CH₄ emissions listed by country. Note that uncertainties are only appropriate for use at the grid cell  (i.e. 1 degree) resolution.  Care must be taken when using or interpreting this data.
+
+    ## Key Publications
+    Worden, J. R., Cusworth, D. H., Qu, Z., Yin, Y., Zhang, Y., Bloom, A. A., Ma, S., Byrne, B. K., Scarpelli, T., Maasakkers, J. D., Crisp, D., Duren, R., and Jacob, D. J. (2022). The 2019 methane budget and uncertainties at 1° resolution and each country through Bayesian integration Of GOSAT total column methane data and a priori inventory estimates. *Atmos. Chem. Phys*., 22, 6811–6841. [https://doi.org/10.5194/acp-22-6811-2022](https://doi.org/10.5194/acp-22-6811-2022)
+
+    ## Other Relevant Publications
+    Cusworth, D. H., Bloom, A. A., Ma, S., Miller, C. E., Bowman, K., Yin, Y., Maasakkers, J. D., Zhang, Y., Scarpelli, T. R., Qu, Z., Jacob, D. J., & Worden, J. R. (2021). A Bayesian framework for deriving sector-based methane emissions from top-down fluxes. *Communications Earth & Environment, 2*, 242. [https://doi.org/10.1038/s43247-021-00312-6](https://doi.org/10.1038/s43247-021-00312-6)
+
+    Jet Propulsion Laboratory California Institute of Technology (n.d.). *2019 Methane Budget and Uncertainties Data ReadMe. CMS-Flux*. [https://cmsflux.jpl.nasa.gov/data/ReadMe.pdf](https://cmsflux.jpl.nasa.gov/data/ReadMe.pdf)
+
+    Maasakkers, J. D., Jacob, D. J., Sulprizio, M. P., Scarpelli, T. R., Nesser, H., Sheng, J., Zhang, Y., Lu, X., Bloom, A. A., Bowman, K. W., Worden, J. R., & Parker, R. J. (2021). 2010–2015 North American methane emissions, sectoral contributions, and trends: a high-resolution inversion of GOSAT observations of atmospheric methane. *Atmos. Chem. Phys., 21*, 4339–4356. [https://doi.org/10.5194/acp-21-4339-2021](https://doi.org/10.5194/acp-21-4339-2021)
+
+    Qu, Z., Jacob, D. J., Shen, L., Lu, X., Zhang, Y., Scarpelli, T. R., Nesser, H., Sulprizio, M. P., Maasakkers, J. D., Bloom, A. A., Worden, J. R., Parker, R. J., & Delgado, A. L. (2021). Global distribution of methane emissions: a comparative inverse analysis of observations from the TROPOMI and GOSAT satellite instruments. *Atmos. Chem. Phys., 21*, 14159–14175. [https://doi.org/10.5194/acp-21-14159-2021](https://doi.org/10.5194/acp-21-14159-2021)
+
+    United Nations Climate Change. (n.d.). *Global Stocktake*. [https://unfccc.int/topics/global-stocktake](https://unfccc.int/topics/global-stocktake)
+    
+    Zhang, Y., Jacob, D. J., Lu, X., Maasakkers, J. D., Scarpelli, T. R., Sheng, J.-X., Shen, L., Qu, Z., Sulprizio, M. P., Chang, J., Bloom, A. A., Ma, S., Worden, J., Parker, R. J., and Boesch, H. (2021). Attribution of the accelerating increase in atmospheric methane during 2010–2018 by inverse analysis of GOSAT observations. *Atmos. Chem. Phys., 21*, 3643–3666. [https://doi.org/10.5194/acp-21-3643-2021](https://doi.org/10.5194/acp-21-3643-2021)
+    
+    ## Acknowledgment
+    Part of this research was carried out at the Jet Propulsion Laboratory, California Institute of Technology, under a contract with NASA. This research was motivated by Committee on Earth Observation Satellites (CEOS) activities related to quantifying greenhouse gas emissions. This research was supported by funding from NASA's Carbon Monitoring System (CMS) and National Institute of Advanced Industrial Science and Technology (AIST) programs. Additional funding from the National Natural Science Foundation of China (NSFC) was also provided.
+    
+    ## License
+    [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/legalcode) (CC BY 4.0) 
+          
+    ## Data Stewardship
+    - [Data Workflow](https://us-ghg-center.github.io/ghgc-docs/data_workflow/gosat-based-ch4budget-yeargrid-v1_Data_Flow.html)
+    - [Data Transformation Code](https://us-ghg-center.github.io/ghgc-docs/cog_transformation/gosat-based-ch4budget-yeargrid-v1.html)
+    - [US GHG Center Data Intake Processing and Verification Report](https://us-ghg-center.github.io/ghgc-docs/processing_and_verification_reports/gosat-based-ch4budget-yeargrid-v1_Processing%20and%20Verification%20Report.html)
+
+  </Prose>
+</Block>

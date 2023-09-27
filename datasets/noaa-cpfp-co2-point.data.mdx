@@ -1,0 +1,153 @@
+---
+id: noaa-cpfp-co2-point
+name: Atmospheric Carbon Dioxide Concentrations from NOAA Global Monitoring Laboratory
+description: Atmospheric concentrations of carbon dioxide (CO₂) from discrete air samples collected since 1968 at globally distributed surface sites
+media:
+  src: ::file ./noaa-air-samples--cover.png
+  alt: aa
+  author:
+    name: Columbia University
+taxonomy:
+  - name: Topics
+    values:
+      - GHG Concentrations
+  - name: Source
+    values:
+      - NOAA
+  - name: Product Type
+    values:
+      - Ground Measurements
+  - name: Gas
+    values:
+      - CO₂
+disableExplore: true
+layers:
+  - id: noaa-cpfp-co2-point
+    stacCol: noaa-cpfp-co2-point
+    name: Carbon Dioxide (Air Sample)
+    type: vector
+    description: Atmospheric concentrations of carbon dioxide (CO₂) from discrete air samples collected since 1968 at globally distributed surface sites
+    initialDatetime: newest
+    analysis:
+      exclude: true
+    projection:
+      id: 'equirectangular'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: noaa-cpfp-co2-point
+      colormap_name: plasma
+      rescale:
+        - 0
+        - 1000
+      nodata: 0
+    compare:
+      datasetId: noaa-cpfp-co2-point
+      layerId: noaa-cpfp-co2-point
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit:
+        label: ppm
+      type: gradient
+      min: 0
+      max: 1000
+      stops:
+        - '#310597'
+        - '#4c02a1'
+        - '#6600a7'
+        - '#7e03a8'
+        - '#9511a1'
+        - '#aa2395'
+        - '#bc3587'
+        - '#cc4778'
+        - '#da5a6a'
+        - '#e66c5c'
+        - '#f0804e'
+        - '#f89540'
+        - '#fdac33'
+        - '#fdc527'
+        - '#f8df25'    
+---
+
+<Block type='wide'>
+  <Prose>
+    The Global Greenhouse Gas Reference Network (GGGRN) for the Carbon Cycle and Greenhouse Gases (CCGG) Group is part of NOAA'S Global Monitoring Laboratory (GML) in Boulder, CO. The Reference Network measures the atmospheric distribution and trends of the three main long-term drivers of climate change, carbon dioxide (CO₂), methane (CH₄), and nitrous oxide (N<sub>2</sub>O), as well as carbon monoxide (CO) and many other trace gases which help interpretation of the main GHGs. The Reference Network measurement program includes continuous in-situ measurements at 4 baseline observatories (global background sites) and 8 tall towers, as well as flask-air samples collected by volunteers at over 50 additional regional background sites and from small aircraft conducting regular vertical profiles. The air samples are returned to GML for analysis where measurements of about 55 trace gases are done. NOAA's GGGRN maintains the World Meteorological Organization international calibration scales for CO₂, CH₄, CO, N<sub>2</sub>O, and SF<sub>6</sub> in air. The measurements from the GGGRN serve as a comparison with measurements made by many other international laboratories, and with regional studies. They are widely used in modeling studies that infer space-time patterns of emissions and removals of greenhouse gases that are optimally consistent with the atmospheric observations, given wind patterns. These data serve as an early warning for climate "surprises". The measurements are also helpful for the ongoing evaluation of remote sensing technologies.
+
+    For more information refer to the [dataset documentation](https://gml.noaa.gov/aftp/data/greenhouse_gases/co2/flask/surface/README_co2_surface-flask_ccgg.html) and [sampling location information](https://gml.noaa.gov/dv/site/?program=ccgg).
+
+    - **Temporal Extent:** 1968 - 2022, varies by station   
+    - **Temporal Resolution:** Varies by station, can be daily up to weekly
+    - **Spatial Extent:** United States   
+    - **Spatial Resolution:** Point location samples    
+    - **Data Units:**  parts CO₂ per million (ppm)
+    - **Data Type:** Operational
+    - **Data Latency:** Updated annually
+
+    **Scientific Details:** CO₂ measurements are formally reported in mole fraction units of micromol (10<sup>-6</sup> mole) of CO₂ per mol of dry air.  However, for communicating with broader audiences we refer to mole fraction as “concentration” in units of parts per million (ppm). This CO₂ data set provides CO₂ dry air mole fractions from more than 80 NOAA GML GGGRN sites across the globe. Measurements have been made using a highly-calibrated nondispersive infrared absorption analyzer (NDIR, before August 2019) or a cavity ring-down spectrometer (CRDS, since August 2019).
+
+  </Prose>
+</Block>
+<Block type="wide">
+  <Figure>
+    <Embed
+      height="800"
+      src="https://nasa-impact.github.io/noaa-viz?ghg=co2&type=flask"
+    />
+  </Figure>
+</Block>
+<Block>
+    <Prose>
+    ## Source Data Product Citation
+    Lan, X., Mund, J.W., Crotwell, A.M., Crotwell, M.J., Moglia,  E.,  Madronich, M., Neff, D, Thoning, K.W. (2023). Atmospheric Carbon Dioxide Dry Air Mole Fractions from the NOAA GML Carbon Cycle Cooperative Global Air Sampling Network, 1968-2022, Version: 2023-08-28. [https://doi.org/10.15138/wkgj-f215](https://doi.org/10.15138/wkgj-f215)    
+    
+    ## Dataset Accuracy
+    Measurements are reported on the WMO X2019 CO₂ mole fraction scale. More information on this scale is available at https://gml.noaa.gov/ccl/co2_scale.html.  Accuracy is approximately 0.1 ppm.  For details, see
+
+    Hall, B. D., Crotwell, A. M., Kitzis, D. R., Mefford, T., Miller, B. R., Schibig, M. F., and Tans, P. P (2021). Revision of the World Meteorological Organization Global Atmosphere Watch (WMO/GAW) CO₂ calibration scale. *Atmos. Meas. Tech., 14*, 3015–3032. [https://doi.org/10.5194/amt-14-3015-2021](https://doi.org/10.5194/amt-14-3015-2021)
+
+    ## Disclaimer
+    Every effort is made to produce the most accurate and precise measurements possible.  However, NOAA reserves the right to make corrections to the data based on recalibration of standard gases or for other reasons deemed scientifically justified.  NOAA is not responsible for results and conclusions based on use of these data without regard to this warning.
+ 
+    ## Key Publications
+    Ballantyne, A. P., Alden, C. B.,  Miller,J. B., Tans, P., & White, J. W. C. (2012).  Increase in observed net carbon dioxide uptake by land and oceans during the past 50 years. *Nature, 488*,7409. [https://doi.org/10.1038/nature11299](https://doi.org/10.1038/nature11299)
+
+    Conway, T.J., Tans, P.P., Waterman, L.S., Thoning, K.W., Kitzis, D.R., Masarie, K.A., & Zhang, N. (1994). Evidence for interannual variability of the carbon cycle from the NOAA/CMDL global air sampling network. *J. Geophys. Res.,99*, 22831-22855. [ https://doi.org/10.1029/94JD01951]( https://doi.org/10.1029/94JD01951)
+
+    ## Other Relevant Publications    
+    Conway, T.J., Tans, P., Waterman, L.S., Thoning, K.W., Masarie, K.A., & Gammon, R.H. (1988). Atmospheric carbon dioxide measurements in the remote global troposphere, 1981-1984.  *Tellus, 40B*, 81-115. [https://doi.org/10.3402/tellusb.v40i2.15631](https://doi.org/10.3402/tellusb.v40i2.15631)
+
+    Komhyr, W.D., Waterman, L.S., & Taylor, W.R. (1983).  Semiautomatic nondispersive infrared analyzer apparatus for CO₂ air sample analyses. *J. Geophys. Res., 88*, 1315-1322. [https://doi.org/10.1029/JC088iC02p01315](https://doi.org/10.1029/JC088iC02p01315)
+
+    Komhyr, W.D., Gammon, R.H., Harris,T.B., Waterman, L.S., Conway, T.J., Taylor, W.R., & Thoning, K.W. (1985). Global atmospheric CO₂ distribution and variations from 1968-1982 NOAA/GMCC CO₂ flask sample data, *J. Geophys. Res., 90*, 5567-5596. [https://doi.org/10.1029/JD090iD03p05567](https://doi.org/10.1029/JD090iD03p05567)
+
+    Tans, P.P., Conway, T.J. & Nakazawa, T. (1989a). Latitudinal distribution of the sources and sinks of atmospheric carbon dioxide from surface observations and an atmospheric transport model, J*. Geophys. Res., 94*, 5151-5172. [https://doi.org/10.1029/JD094iD04p05151](https://doi.org/10.1029/JD094iD04p05151)
+
+    Tans, P.P, Thoning, K.W., Elliott, W.P., & Conway, T.J. (1989b). Background atmospheric CO₂ patterns from weekly flask samples at Barrow, Alaska:  Optimal signal recovery and error estimates, in NOAA Tech. Memo. (ERL ARL-173). Environmental Research Laboratories, Boulder, CO, 131 pp.
+
+    Tans, P.P.,Fung,  I.Y., & Takahashi, T. (1990). Observational Constraints on the global atmospheric CO₂ budget. *Science, 247*, 1431-1438. [https://www.jstor.org/stable/2874222](https://www.jstor.org/stable/2874222)
+
+    Tans, P.P., Crotwell, A.M., & Thoning, K.W. (2017). Abundances of isotopologues and calibration of CO₂ greenhouse gas measurements. *Atmospheric Measurement Techniques, 10*, 7, 2669-2685. [https://doi.org/10.5194/amt-10-2669-2017[(https://doi.org/10.5194/amt-10-2669-2017) 
+
+    Thoning, K.W., Tans, P.P., Conway, T.J., & Waterman, L.S. (1987). NOAA/GMCC calibrations of CO₂-in-air reference gases:  1979-1985.  NOAA Tech. Memo. (ERL ARL-150).  Environmental Research Laboratories, Boulder, CO, 63 pp.
+
+    Thoning, K.W., Tans, P.P. , & Komhyr, W.D. (1989). Atmospheric carbon dioxide at Mauna Loa Observatory 2. Analysis of the NOAA GMCC data, 1974-1985.  *J. Geophys. Res., 94*, 8549-8565.[https://doi.org/10.1029/JD094iD06p08549](https://doi.org/10.1029/JD094iD06p08549)
+
+    Thoning, K.W., Conway, T.J., Zhang, N., & Kitzis, D. (1995). Analysis system for measurement of CO₂ mixing ratios in flask air samples.  J*. Atmos. and Oceanic Tech., 12*, 1349-1356. [https://doi.org/10.1175/1520-0426(1995)012%3C1349:ASFMOC%3E2.0.CO;2](https://doi.org/10.1175/1520-0426(1995)012%3C1349:ASFMOC%3E2.0.CO;2)
+
+    Zhao, C., & Tans,P.P. (2006). Estimating uncertainty of the WMO Mole Fraction Scale for carbon dioxide in air. *J. Geophys. Res. 111*, D08S09, doi: 10.1029/2005JD006003. [https://doi.org/10.1029/2005JD006003](https://doi.org/10.1029/2005JD006003)
+
+    ## Acknowledgment
+    This dataset would not be possible without the cooperating agencies and individuals throughout the world who collect air samples and enable the operation of the Global Greenhouse Gas Reference Network.
+    
+    ## License
+    This dataset was produced by NOAA and is not subject to copyright protection in the United States. NOAA waives any potential copyright and related rights in these data worldwide through the [Creative Commons Zero v1.0 Universal Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC0 1.0)
+
+    ## Data Stewardship
+    - [Data Workflow](https://us-ghg-center.github.io/ghgc-docs/data_workflow/noaa-insitu_Data_Flow.html)
+
+    </Prose>
+</Block>

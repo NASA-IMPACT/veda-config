@@ -1,0 +1,166 @@
+---
+id: 'tracking-greenhouse-gas-cycles'
+name: Tracking Greenhouse Gas Cycles
+description: 'Understanding carbon transfers between land, ocean, and atmosphere'
+media:
+  src: ::file ./tracking-ghg-cycles--cover.jpeg
+  alt: Satellite view of wetland area
+  author:
+    name: NASA Earth Observatory/Michael Taylor and Adam Voiland
+    url: "https://climate.nasa.gov/news/3230/satellites-help-scientists-track-dramatic-wetlands-loss-in-louisiana/"
+pubDate: 2023-08-30
+taxonomy:
+  - name: Topics
+    values:
+      - Natural Emissions and Sinks
+  - name: Gas
+    values:
+      - CO₂
+      - CH₄
+---
+<Block>
+    <Prose>
+        <div style={{'background-color': '#ecf0f1', padding: '16px', 'font-size': '24px', 'font-weight': 500}}>
+            In our atmosphere, greenhouse gases like carbon dioxide and methane act like a blanket. They keep heat in and warm the Earth. Carbon and methane ‘cycles’ or moves to and from the atmosphere. These cycles include emissions from human activities and natural sources, to the atmosphere, to ‘sinks’ like plants and oceans that absorb these chemical components. Understanding how these sources and sinks are changing is critically important for policymakers, local environmental managers, and scientists working to predict climate in coming decades.
+        </div>
+    </Prose>
+</Block>
+<Block>
+    <Prose>
+    ## The Role of Carbon in the Earth System
+    The movement of carbon between land, ocean, and atmospheres is one of the foundations that governs how Earth functions. Carbon dioxide (CO₂) and methane (CH₄) play a crucial role in governing global temperatures through absorption of infrared radiation. On land, carbon is the currency shared between plants, microbes, and the atmosphere. Through photosynthesis, plants remove CO₂ from the air to support their growth. When plants die or leaves fall to the ground, soil microbes return much of this CO₂ back to the atmosphere through respiration. In flooded wetland soils, where no oxygen is available, microbes known as methanogens produce and release methane gas (CH₄) rather than CO₂. These processes are similar in the ocean, except that atmospheric CO₂ first dissolves into the ocean surface before it is used in photosynthesis by tiny plants called phytoplankton. The rate and balance of carbon cycling between land, ocean, and atmosphere is modulated by the Earth’s climate, which includes environmental variability and changes driven by global warming. 
+    </Prose>
+    <Figure>
+        <Chart
+            dataPath={new URL('./co2_mm_mlo.csv', import.meta.url).href}
+            dateFormat="%Y-%m"
+            idKey='gas'
+            xKey='year month'
+            yKey='average'
+            yAxisLabel='Atmostpheric CO₂ concentrations (ppm)'
+            xAxisLabel='Time'
+            altDesc='Time series graph showing increase in atmospheric CO₂ over time as measured at Mauna Loa observatory in Hawaii'
+        />
+        <Caption>
+            NOAA’s observations at the Mauna Loa observatory in Hawaii have allowed scientists to track the build up of atmospheric concentrations of CO₂ in recent decades from all sources, natural and human-caused. It also records the imprint of the seasonal cycle of vegetation in the northern hemisphere. The Mauna Loa CO₂ data is the longest record and was started by C. David Keeling of the Scripps Institution of Oceanography in March 1958 at a NOAA facility [Keeling, 1976](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.2153-3490.1976.tb00701.x). *Credit:  NOAA GML*
+        </Caption>
+    </Figure>
+</Block>
+
+<Block>
+    <Figure>
+        <video style={{ width: '100%', aspectRatio: "16/9" }} poster={new URL('./screenshot-co2-explainer.png', import.meta.url).href} controls autoplay muted>
+            <source src="https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005110/CO2explainer_1080p30.mp4" type="video/mp4"/>
+            Your browser does not support the video tag.
+        </video> 
+        {/* <iframe src="https://svs.gsfc.nasa.gov/prepub/mark/drafts/CO2explainer.mp4" width="800" height="480" allow="autoplay"></iframe> */}
+        <Caption> This animation combines information from NASA models and datasets featured on the US GHG Center to track the influences on atmospheric CO₂ over the course of a year. Global views highlight the influence of fossil fuel and fire emissions in the atmosphere and land and ocean sinks at the surface using different colors. The waterfall diagram shows estimates of the global contributions of major sources and sinks and illustrates how their balance shifts with the season. At the end of the year, the land and ocean have absorbed nearly half of CO₂ emissions. *Video Credit: NASA Science Visualization Studio/Anansa Keaton-Ashanti and Mark SubbaRao* </Caption>
+    </Figure>
+    <Prose>
+        US GHG Center datasets include both space and ground based information. They use advanced numerical models to track the net balance between CO₂ uptake (sink) and release (source) to the atmosphere. The land and ocean CO₂ and CH₄ flux datasets accessible from the US GHG Center help us understand how both human activities and climate variations are changing atmospheric CO₂ and CH₄ concentrations. This information is needed to support national GHG inventories. These large-scale assessments relay information about the aggregated effects of fossil fuel emission reduction policies and regions.
+    </Prose>
+</Block>
+
+<Block>
+    <Prose>
+    ## Natural Sources and Sinks of Carbon Dioxide
+    The land and ocean currently absorb around 5 billion metric tons of carbon each year from the atmosphere. This amount of carbon is equal to around half a year’s worth of CO₂ emitted from burning coal, oil, and gas and cement production. These numbers show the importance of these natural carbon sinks, since without them CO₂ concentrations could rise twice as fast, speeding up global warming.
+    
+    On land, several factors combine to allow plants to absorb more carbon than they release. When forests regrow, as they are across much of the northern hemisphere, younger trees absorb more carbon during photosynthesis.  Forests are currently regrowing across the northern hemisphere because most of the deforestation and CO₂ emissions occurred about 100-150 years ago, so regrowth in this area is in some aspects a recovery. In some of these areas, more rapid warming in high latitude regions is also increasing the growing season length. Higher concentrations of CO₂ in the atmosphere can also stimulate even more photosynthesis. In the ocean, carbon uptake is controlled by a combination of physical and biogeochemical processes. Absorption in surface waters tends to increase with rising atmospheric concentrations, but this can be influenced by changes in ocean temperature and circulation. 
+    </Prose>
+    <Figure>
+        <div style={{"background-color": "black"}}>
+        <CompareImage
+            leftImageSrc={new URL('./nee-1.png', import.meta.url).href}
+            rightImageSrc={new URL('./nee-2.png', import.meta.url).href}
+            width="100"
+            attrAuthor="NASA Science Visualization Studio, Mark SubbaRao"
+            alt="Differences between January and July Net Ecosystem Exchange (NEE)"
+        />
+        </div>
+        <Caption> Scientists use a combination of satellite data and numerical models to estimate sources and sinks over land and ocean, building long-term time series to document changes from day-to-day, season-to-season, and year-to-year. This example illustrates the difference between winter and summer net ecosystem exchange, which represents the balance of absorption by photosynthesis (negative) and release during respiration (positive). </Caption>
+    </Figure>
+</Block>
+
+<Block>
+    <Figure>
+        <iframe src="https://drive.google.com/file/d/1I5gzchr0fouvFlR9sFRDlNnXkgkTTjLC/preview" width="800" height="480" allow="autoplay"></iframe>
+        {/* <iframe src="https://svs.gsfc.nasa.gov/prepub/mark/drafts/CO2explainer.mp4" width="800" height="480" allow="autoplay"></iframe> */}
+        <Caption> Though satellites provide valuable observations of ocean temperature, salinity, and productivity from a unique, global perspective, they can not directly measure ocean-atmosphere exchange of CO₂. Models provide additional information that can be used to track how different factors like ocean biology, freshwater input, and changes in heating influence the overall absorption of carbon. Models also predict how these influences may change over time. Animation by NASA </Caption>
+    </Figure>
+</Block>
+
+<Block>
+    <Prose>
+    The US GHG Center portal streamlines the analysis and visualization of CO₂ observations from ground and space alongside model-based estimates of land and ocean sinks.
+        * [NOAA station-based CO₂ observations](/data-catalog/noaa-cpfp-co2-point)
+        * [Daily gap-filled OCO-2 satellite data](/data-catalog/oco2geos-co2-daygrid-v10r)
+        * [Net ecosystem exchange and fire emissions](/data-catalog/casagfed-carbonflux-monthgrid-v3)
+        * [Ocean-atmosphere exchange](/data-catalog/eccodarwin-co2flux-monthgrid-v5)
+        * [Alternate estimates of land-atmosphere exchange based on atmospheric observations](/data-catalog/oco2-mip-co2budget-yeargrid-v1)
+    </Prose>
+</Block>
+
+<Block>
+    <Prose>
+        ## Natural Sources of Methane
+        Methane is a potent greenhouse gas. While less abundant than CO₂, the increase in atmospheric CH₄ is responsible for about one third of present-day climate change by some estimates. Methane sources are plentiful and represent a mix of [human activities](/stories/us-methane-sources) and natural sources. Depending on the context and specific GHG analysis, the definition of natural versus anthropogenic sources and sinks of emissions will vary, but can include such things as managed/unmanaged wetlands, wildfires, termites, and the ocean, for example. About 30% of total CH₄ emissions each year are from wetlands. The methane produced in wetlands has a distinctively lighter mass, or isotope, compared to fossil fuel sources. The increasing abundance of the lighter CH₄ isotope in the atmosphere suggests that wetlands are producing more methane as part of climate-change feedback linked to warming and changing precipitation patterns.
+    </Prose>
+</Block>
+
+<ScrollytellingBlock>
+    <Chapter
+        center={[-26.262383, -1.342390]}
+        zoom={3}
+        datasetId='lpjwsl-wetlandch4-grid-v1'
+        layerId='ch4-wetlands-emissions'
+        datetime='2021-08-01'
+    >
+        Tropical wetlands in Amazonia, the Congo Basin, and Southeast Asia produce about 60% of global wetland emissions and have been linked to increasing methane concentrations in recent years.
+    </Chapter>
+    <Chapter
+        center={[-99.513843, 55.655443]}
+        zoom={3}
+        datasetId='lpjwsl-wetlandch4-grid-v1'
+        layerId='ch4-wetlands-emissions'
+        datetime='2021-08-01'
+    >
+        Wetlands across temperate and high latitude systems produce less methane than the tropics. Scientists are closely monitoring changes in the high latitudes, which are warming more rapidly than the rest of the planet and store massive amounts of carbon in permafrost.
+    </Chapter>
+</ScrollytellingBlock>
+
+<Block>
+    <Prose>
+        The US GHG Center datasets show: Changes in CH₄ detected at surface stations around the world, model-based estimates of wetland emissions, and estimates of environmental fluxes based on atmospheric data that can be used to refine wetland models. 
+            * [NOAA station-based CH₄ observations](/data-catalog/noaa-cpfp-ch4-point)
+            * [Daily and monthly wetland emissions](/data-catalog/lpjwsl-wetlandch4-grid-v1)
+            * [Alternate estimates of CH₄ emissions using data from Japan’s GOSAT](/data-catalog/gosat-based-ch4budget-yeargrid-v1)
+            * [Estimates of CH₄ emissions based on isotopic data collected at surface stations](/data-catalog/tm54dvar-ch4flux-monthgrid-v1)
+    </Prose>
+</Block>
+
+<Block>
+    <Figure>
+        <Image 
+            src={new URL('./net-carbon-emissions.gif', import.meta.url).href}
+            alt="NASA animation of country-level CO₂ emissions inferred from atmospheric observations " 
+            align="left"
+            attrAuthor=" NASA Science Visualization Studio/Greg Shirah and Helen-Nicole Kostis"
+            attrUrl="https://svs.gsfc.nasa.gov/vis/a000000/a005000/a005081/NetCarbonEmissions_Light_1920x1080_30fps.mp4"
+        />
+        <Caption> Models use observations from NOAA’s network of surface stations and NASA’s OCO-2 satellite to estimate net emissions and removals of CO₂, which reflect the combined impact of fossil fuel emissions and absorption by land and ocean sinks. Variability highlights the role of the 2015-2016 El Nino that resulted in increased emissions from tropical ecosystems as well as large fire events like those in Australia during 2020. </Caption>
+    </Figure>
+    <Prose>
+        ## Natural GHG Sources and Sinks in a Changing Climate
+        Climate change and other human activities impact greenhouse gas sources and sinks in complex ways. For example, wildfires in forested ecosystems release massive amounts of CO₂ to the atmosphere and thus events such as the 2020 Australian fires substantially reduced the net global land sink. Heatwaves and droughts cause a decline in plant productivity in tropical and temperate ecosystems. This can also lead to a decline in the carbon sink, though in some areas longer growing seasons and changes in vegetation type can increase local carbon uptake. Over oceans, changing circulation patterns and ocean heat waves may be causing weaker carbon uptake in key regions like the Southern Ocean. Precipitation extremes may be linked to increased wetland methane emissions over parts of South America and other tropical regions experiencing increasing warming trends.
+
+        Understanding this complex mix of influences requires a combination of observations that track subtle changes over the course of decades and their impact across land, ocean, and atmosphere. In addition to land and ocean models highlighted above, scientists track recent changes and estimate total emissions using a combination of atmospheric data and circulation models. 
+    </Prose>
+</Block>
+
+<Block>
+    <Prose>
+    ## How the US GHG Center Improves Understanding of GHG Sources and Sinks
+    Though the datasets included in the US GHG Center illustrate some of the most advanced approaches to estimating environmental sources and sinks, quantifying their contributions to atmospheric CO₂ and CH₄ changes remains a challenging area of active scientific research. The US GHG Center catalog will grow over time, gathering innovative, observationally-based methods for estimating environmental sources and sinks. The goal is that scientists can easily compare, evaluate, and improve the data. In addition, a subset of US GHG Center datasets will be updated frequently, providing an early warning of changes that could influence the trajectory of climate change.
+    </Prose>
+</Block>

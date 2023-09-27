@@ -1,0 +1,723 @@
+---
+id: oco2-mip-co2budget-yeargrid-v1
+name: OCO-2 MIP Top-down CO₂ Budgets
+description: Annual carbon dioxide emissions and removals on a 1° resolution global grid from 2015-2020, version 1
+usage:
+  - url: 'https://us-ghg-center.github.io/ghgc-docs/cog_transformation/oco2-mip-co2budget-yeargrid-v1.html'
+    label: Notebook showing data transformation to COG for ingest to the US GHG Center
+    title: 'Data Transformation Notebook'
+  - url: 'https://us-ghg-center.github.io/ghgc-docs/user_data_notebooks/oco2-based-co2budget-yeargrid-v1_User_Notebook.html'
+    label: Notebook to read, visualize, and explore data statistics
+    title: 'Sample Data Notebook'
+  - url: 'https://hub.ghg.center/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FUS-GHG-Center%2Fghgc-docs&urlpath=tree%2Fghgc-docs%2Fuser_data_notebooks%2Foco2-mip-co2budget-yeargrid-v1_User_Notebook.ipynb&branch=main'
+    label: Run example notebook
+    title: Interactive Session in the US GHG Center JupyterHub (requires account)
+  - url: https://dljsq618eotzp.cloudfront.net/browseui/index.html#oco2-mip-co2budget-yeargrid-v1/
+    label: Browse and download the data
+    title: Data Browser
+media:
+  src: ::file ./oco2-mip-co2budget-yeargrid-v1--cover.jpg
+  alt: mean net emissions and removals of carbon dioxide
+  author:
+    name: NASA/JPL
+    url: https://www.jpl.nasa.gov/news/nasa-space-mission-takes-stock-of-carbon-dioxide-emissions-by-countries
+taxonomy:
+  - name: Topics
+    values:
+      - Anthropogenic Emissions
+      - Natural Emissions and Sinks
+  - name: Source
+    values:
+      - NASA
+      - NOAA
+  - name: Gas
+    values:
+      - CO₂
+  - name: Product Type
+    values:
+      - Model Output
+layers:
+  - id: co2-emissions-lnlgis-nbe
+    stacCol: oco2-mip-co2budget-yeargrid-v1
+    name: LNLGIS Net Biosphere Exchange (LNLGIS_NBE)
+    type: raster
+    description: CO₂ emissions from net flux of carbon from terrestrial biosphere to atmosphere (net biosphere exchange) estimated from the OCO-2 v10 MIP LNLGIS ensemble
+    initialDatetime: newest
+    projection:
+      id: 'equirectangular'
+    basemapId: 'light'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: lnlgis-nbe
+      colormap_name: coolwarm
+      rescale:
+        - -1200
+        - 1200
+      nodata: 0
+    compare:
+      datasetId: oco2-mip-co2budget-yeargrid-v1
+      layerId: co2-emissions-lnlgis-nbe
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit:
+        label: g CO₂/m²/yr
+      type: gradient
+      min: -1200
+      max: 1200
+      stops:
+        - '#3B4CC0'
+        - '#5D7CE6'
+        - '#82A6FB'
+        - '#AAC7FD'
+        - '#CDD9EC'
+        - '#EAD4C8'
+        - '#F7B89C'
+        - '#F18D6F'
+        - '#D95847'
+        - '#B40426'
+  - id: co2-emissions-lnlgis-nbe-std
+    stacCol: oco2-mip-co2budget-yeargrid-v1
+    name: Uncertainty - LNLGIS Net Biosphere Exchange (LNLGIS_NBE_std)
+    type: raster
+    description: Uncertainty in CO₂ emissions from net flux of carbon from terrestrial biosphere to atmosphere (net biosphere exchange) estimated from the OCO-2 v10 MIP LNLGIS ensemble
+    initialDatetime: newest
+    projection:
+      id: 'equirectangular'
+    basemapId: 'light'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: lnlgis-nbe-std
+      colormap_name: purd
+      rescale:
+        - 0
+        - 1000
+      nodata: 0
+    compare:
+      datasetId: oco2-mip-co2budget-yeargrid-v1
+      layerId: co2-emissions-lnlgis-nbe-std
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit:
+        label: g CO₂/m²/yr
+      type: gradient
+      min: 0
+      max: 300
+      stops:
+        - '#F7F4F9'
+        - '#E9E3F0'
+        - '#D9C3DF'
+        - '#CDA0CD'
+        - '#D57ABA'
+        - '#E34A9F'
+        - '#DF2179'
+        - '#C10E51'
+        - '#92003F'
+        - '#67001F'
+  - id: co2-emissions-lnlgis-nce
+    stacCol: oco2-mip-co2budget-yeargrid-v1
+    name: LNLGIS Net Carbon Exchange (LNLGIS_NCE)
+    type: raster
+    description: CO₂ emissions from net flux of carbon from surface to atmosphere (net carbon exchange) estimated from the OCO-2 v10 MIP LNLGIS ensemble
+    initialDatetime: newest
+    projection:
+      id: 'equirectangular'
+    basemapId: 'light'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: lnlgis-nce
+      colormap_name: coolwarm
+      rescale:
+        - -1200
+        - 1200
+      nodata: 0
+    compare:
+      datasetId: oco2-mip-co2budget-yeargrid-v1
+      layerId: co2-emissions-lnlgis-nce
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit:
+        label: g CO₂/m²/yr
+      type: gradient
+      min: -1200
+      max: 1200
+      stops:
+        - '#3B4CC0'
+        - '#5D7CE6'
+        - '#82A6FB'
+        - '#AAC7FD'
+        - '#CDD9EC'
+        - '#EAD4C8'
+        - '#F7B89C'
+        - '#F18D6F'
+        - '#D95847'
+        - '#B40426'
+  - id: co2-emissions-lnlgis-nce-std
+    stacCol: oco2-mip-co2budget-yeargrid-v1
+    name:  Uncertainty - LNLGIS Net Carbon Exchange (LNLGIS_NCE_std)
+    type: raster
+    description: Uncertainty in CO₂ emissions from net flux of carbon from surface to atmosphere (net carbon exchange) estimated from the OCO-2 v10 MIP LNLGIS ensemble
+    initialDatetime: newest
+    projection:
+      id: 'equirectangular'
+    basemapId: 'light'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: lnlgis-nce-std
+      colormap_name: purd
+      rescale:
+        - 0
+        - 1200
+      nodata: 0
+    compare:
+      datasetId: oco2-mip-co2budget-yeargrid-v1
+      layerId: co2-emissions-lnlgis-nce-std
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit:
+        label: g CO₂/m²/yr
+      type: gradient
+      min: 0
+      max: 1200
+      stops:
+        - '#F7F4F9'
+        - '#E9E3F0'
+        - '#D9C3DF'
+        - '#CDA0CD'
+        - '#D57ABA'
+        - '#E34A9F'
+        - '#DF2179'
+        - '#C10E51'
+        - '#92003F'
+        - '#67001F'
+  - id: co2-emissions-lnlgis-dc-loss
+    stacCol: oco2-mip-co2budget-yeargrid-v1
+    name: LNLGIS Net Land Carbon Stock Loss (LNLGIS_dC_loss)
+    type: raster
+    description: CO₂ emissions from net land carbon stock loss (decrease in land carbon) estimated from the OCO-2 v10 MIP LNLGIS ensemble
+    initialDatetime: newest
+    projection:
+      id: 'equirectangular'
+    basemapId: 'light'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: lnlgis-dc-loss
+      colormap_name: coolwarm
+      rescale:
+        - -600
+        - 600
+      nodata: 0
+    compare:
+      datasetId: oco2-mip-co2budget-yeargrid-v1
+      layerId: co2-emissions-lnlgis-dc-loss
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit:
+        label: g CO₂/m²/yr
+      type: gradient
+      min: -600
+      max: 600
+      stops:
+        - '#3B4CC0'
+        - '#5D7CE6'
+        - '#82A6FB'
+        - '#AAC7FD'
+        - '#CDD9EC'
+        - '#EAD4C8'
+        - '#F7B89C'
+        - '#F18D6F'
+        - '#D95847'
+        - '#B40426'
+  - id: co2-emissions-lnlgis-dc-loss-std
+    stacCol: oco2-mip-co2budget-yeargrid-v1
+    name:  LNLGIS Net Land Carbon Stock Loss (LNLGIS_dC_loss_std)
+    type: raster
+    description: Uncertainty in CO₂ emissions from net land carbon stock loss (decrease in land carbon) estimated from the OCO-2 v10 MIP LNLGIS  ensemble
+    initialDatetime: newest
+    projection:
+      id: 'equirectangular'
+    basemapId: 'light'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: lnlgis-dc-loss-std
+      colormap_name: purd
+      rescale:
+        - 0
+        - 800
+      nodata: 0
+    compare:
+      datasetId: oco2-mip-co2budget-yeargrid-v1
+      layerId: co2-emissions-lnlgis-dc-loss-std
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit:
+        label: g CO₂/m²/yr
+      type: gradient
+      min: 0
+      max: 800
+      stops:
+        - '#F7F4F9'
+        - '#E9E3F0'
+        - '#D9C3DF'
+        - '#CDA0CD'
+        - '#D57ABA'
+        - '#E34A9F'
+        - '#DF2179'
+        - '#C10E51'
+        - '#92003F'
+        - '#67001F'
+  - id: co2-emissions-crop
+    stacCol: oco2-mip-co2budget-yeargrid-v1
+    name: Lateral Crop CO₂ Flux (Crop)
+    type: raster
+    description: CO₂ emissions from lateral flux of carbon in (positive) or out (negative) from crops
+    initialDatetime: newest
+    projection:
+      id: 'equirectangular'
+    basemapId: 'light'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: crop
+      colormap_name: coolwarm
+      rescale:
+        - -100
+        - 100
+      nodata: 0
+    compare:
+      datasetId: oco2-mip-co2budget-yeargrid-v1
+      layerId: co2-emissions-crop
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit:
+        label: g CO₂/m²/yr
+      type: gradient
+      min: -100
+      max: 100
+      stops:
+        - '#3B4CC0'
+        - '#5D7CE6'
+        - '#82A6FB'
+        - '#AAC7FD'
+        - '#CDD9EC'
+        - '#EAD4C8'
+        - '#F7B89C'
+        - '#F18D6F'
+        - '#D95847'
+        - '#B40426'
+  - id: co2-emissions-crop-std
+    stacCol: oco2-mip-co2budget-yeargrid-v1
+    name: Uncertainty - Lateral Crop CO₂ Flux (Crop_std)
+    type: raster
+    description: Uncertainty in CO₂ emissions from lateral flux of carbon from crop
+    initialDatetime: newest
+    projection:
+      id: 'equirectangular'
+    basemapId: 'light'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: crop-std
+      colormap_name: purd
+      rescale:
+        - 0
+        - 50
+      nodata: 0
+    compare:
+      datasetId: oco2-mip-co2budget-yeargrid-v1
+      layerId: co2-emissions-crop-std
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit:
+        label: g CO₂/m²/yr
+      type: gradient
+      min: 0
+      max: 50
+      stops:
+        - '#F7F4F9'
+        - '#E9E3F0'
+        - '#D9C3DF'
+        - '#CDA0CD'
+        - '#D57ABA'
+        - '#E34A9F'
+        - '#DF2179'
+        - '#C10E51'
+        - '#92003F'
+        - '#67001F'
+  - id: co2-emissions-ff
+    stacCol: oco2-mip-co2budget-yeargrid-v1
+    name:  Fossil Fuel and Cement CO₂ Emissions (FF)
+    type: raster
+    description: CO₂ emissions from the burning of fossil fuels and release of carbon due to cement production (positive flux from land surface to the atmosphere)
+    initialDatetime: newest
+    projection:
+      id: 'equirectangular'
+    basemapId: 'light'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: ff
+      colormap_name: purd
+      rescale:
+        - 0
+        - 450
+      nodata: 0
+    compare:
+      datasetId: oco2-mip-co2budget-yeargrid-v1
+      layerId: co2-emissions-ff
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit:
+        label: g CO₂/m²/yr
+      type: gradient
+      min: 0
+      max: 450
+      stops:
+        - '#F7F4F9'
+        - '#E9E3F0'
+        - '#D9C3DF'
+        - '#CDA0CD'
+        - '#D57ABA'
+        - '#E34A9F'
+        - '#DF2179'
+        - '#C10E51'
+        - '#92003F'
+        - '#67001F'
+  - id: co2-emissions-ff-std
+    stacCol: oco2-mip-co2budget-yeargrid-v1
+    name: Uncertainty - Fossil Fuel and Cement CO₂ Emissions (FF_std)
+    type: raster
+    description: Uncertainty in CO₂ emissions from the burning of fossil fuels and release of carbon due to cement production
+    initialDatetime: newest
+    projection:
+      id: 'equirectangular'
+    basemapId: 'light'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: ff-std
+      colormap_name: purd
+      rescale:
+        - 0
+        - 100
+      nodata: 0
+    compare:
+      datasetId: oco2-mip-co2budget-yeargrid-v1
+      layerId: co2-emissions-ff-std
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit:
+        label: g CO₂/m²/yr
+      type: gradient
+      min: 0
+      max: 100
+      stops:
+        - '#F7F4F9'
+        - '#E9E3F0'
+        - '#D9C3DF'
+        - '#CDA0CD'
+        - '#D57ABA'
+        - '#E34A9F'
+        - '#DF2179'
+        - '#C10E51'
+        - '#92003F'
+        - '#67001F'
+  - id: co2-emissions-river
+    stacCol: oco2-mip-co2budget-yeargrid-v1
+    name: Lateral River CO₂ Flux (River)
+    type: raster
+    description: CO₂ emissions from lateral flux of carbon in (positive) or out (negative) from rivers
+    initialDatetime: newest
+    projection:
+      id: 'equirectangular'
+    basemapId: 'light'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: river
+      colormap_name: coolwarm
+      rescale:
+        - -50
+        - 50
+      nodata: 0
+    compare:
+      datasetId: oco2-mip-co2budget-yeargrid-v1
+      layerId: co2-emissions-river
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit:
+        label: g CO₂/m²/yr
+      type: gradient
+      min: -50
+      max: 50
+      stops:
+        - '#3B4CC0'
+        - '#5D7CE6'
+        - '#82A6FB'
+        - '#AAC7FD'
+        - '#CDD9EC'
+        - '#EAD4C8'
+        - '#F7B89C'
+        - '#F18D6F'
+        - '#D95847'
+        - '#B40426'
+  - id: co2-emissions-river-std
+    stacCol: oco2-mip-co2budget-yeargrid-v1
+    name: Uncertainty - Lateral River CO₂ Flux (River_std)
+    type: raster
+    description: Uncertainty in CO₂ emissions from lateral flux of carbon from rivers
+    initialDatetime: newest
+    projection:
+      id: 'equirectangular'
+    basemapId: 'light'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: river-std
+      colormap_name: purd
+      rescale:
+        - 0
+        - 60
+      nodata: 0
+    compare:
+      datasetId: oco2-mip-co2budget-yeargrid-v1
+      layerId: co2-emissions-river-std
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit:
+        label: g CO₂/m²/yr
+      type: gradient
+      min: 0
+      max: 60
+      stops:
+        - '#F7F4F9'
+        - '#E9E3F0'
+        - '#D9C3DF'
+        - '#CDA0CD'
+        - '#D57ABA'
+        - '#E34A9F'
+        - '#DF2179'
+        - '#C10E51'
+        - '#92003F'
+        - '#67001F'        
+  - id: co2-emissions-wood
+    stacCol: oco2-mip-co2budget-yeargrid-v1
+    name: Lateral Wood CO₂ Flux (Wood)
+    type: raster
+    description: CO₂ emissions from lateral flux of carbon due to wood product harvesting and usage
+    initialDatetime: newest
+    projection:
+      id: 'equirectangular'
+    basemapId: 'light'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: wood
+      colormap_name: coolwarm
+      rescale:
+        - -100
+        - 100
+      nodata: 0
+    compare:
+      datasetId: oco2-mip-co2budget-yeargrid-v1
+      layerId: co2-emissions-wood
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit:
+        label: g CO₂/m²/yr
+      type: gradient
+      min: -100
+      max: 100
+      stops:
+        - '#3B4CC0'
+        - '#5D7CE6'
+        - '#82A6FB'
+        - '#AAC7FD'
+        - '#CDD9EC'
+        - '#EAD4C8'
+        - '#F7B89C'
+        - '#F18D6F'
+        - '#D95847'
+        - '#B40426'
+  - id: co2-emissions-wood-std
+    stacCol: oco2-mip-co2budget-yeargrid-v1
+    name: Uncertainty - Lateral Wood CO₂ Flux (Wood_std)
+    type: raster
+    description: Uncertainty in CO₂ emissions from lateral flux of carbon due to wood product harvesting and usage
+    initialDatetime: newest
+    projection:
+      id: 'equirectangular'
+    basemapId: 'light'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: wood-std
+      colormap_name: purd
+      rescale:
+        - 0
+        - 50
+      nodata: 0
+    compare:
+      datasetId: oco2-mip-co2budget-yeargrid-v1
+      layerId: co2-emissions-wood-std
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit:
+        label: g CO₂/m²/yr
+      type: gradient
+      min: 0
+      max: 600
+      stops:
+        - '#F7F4F9'
+        - '#E9E3F0'
+        - '#D9C3DF'
+        - '#CDA0CD'
+        - '#D57ABA'
+        - '#E34A9F'
+        - '#DF2179'
+        - '#C10E51'
+        - '#92003F'
+        - '#67001F'
+---
+
+<Block type='wide'>
+  <Prose>
+    Inverse modeling (“top-down”) is used to enable estimation of annual net carbon dioxide (CO₂) emissions and removals (uptake) in units of grams of CO₂ per square meter per year (g CO₂/m²/yr).  This Orbiting Carbon Observatory (OCO-2) modeling intercomparison project (MIP) Top-down carbon dioxide (CO₂) Budget dataset is the result of a collaboration between an international group of over 60 researchers and atmospheric modelers to study the impact of assimilating OCO-2 retrieval data into atmospheric inverse models.  While the dataset is attributed to NASA, it was only made possible with significant global community effort.
+
+    This dataset contains annual net fluxes of CO₂ on a 1-degree grid for a six-year period (2015-2020), including: net carbon exchange (NCE), fossil fuel emissions (FF), and lateral fluxes due to crop trade, wood trade, and river export. Data is provided in units of grams of carbon dioxide per square meter per year (g CO₂/m2/yr). The following CO₂ emission variables and their uncertainties are displayed: net biosphere exchange (NBE), net carbon exchange (NCE) and net land carbon stock loss estimated by the LNLGIS ensemble (estimated using a combination of land OCO-2  dry-air mole fraction retrievals (XCO₂) and in situ CO₂ measurements); lateral crop flux, fossil fuel and cement emissions, lateral river flux, and lateral wood flux. Accurate accounting of net carbon exchange (NCE) is critical for supporting the Paris agreement, and this data aims to inform countries’ carbon budgets while supporting the [Global Stocktake](https://unfccc.int/topics/global-stocktake). 
+
+    - **Temporal Extent:** 2015 – 2020
+    - **Temporal Resolution:** Annual
+    - **Spatial Extent:** Global
+    - **Spatial Resolution:**  1° x 1°
+    - **Data Units:** Grams of carbon dioxide per square meter per year (g CO₂/m²/yr)
+    - **Data Type:** Research
+    - **Data Latency:** N/A
+
+    **Scientific Details:** Leveraging the OCO-2 MIP, the surface-atmosphere CO₂ fluxes are estimated from four standardized experiments using:
+
+    - IS: in situ CO₂ measurements in the National Oceanic and Atmospheric Administration (NOAA) Observation Package ([ObsPack](https://gml.noaa.gov/ccgg/obspack/))
+    - LNLG: column-averaged CO₂ dry air mole fraction (XCO₂) retrievals over land from NASA’s Orbiting Carbon Observatory-2 (OCO-2) Land Nadir and Land Glint data
+    - LNLGIS: both in situ CO₂ and OCO-2 land XCO₂ data
+    - LNLGOGIS: in situ CO₂, OCO-2 land XCO₂, and OCO-2 ocean XCO₂ data combined
+
+    The full dataset with all layers and derived national totals can be accessed on the [CEOS website](https://doi.org/10.48588/npf6-sw92).
+
+  </Prose>
+</Block>
+<Block>
+  <Prose>
+    ## Source Data Product Citation
+    Byrne, B., Baker, D. F., Basu, S., Bertolacci, M., Bowman, K. W., Carroll, D., Chatterjee, A., Chevallier, F., Ciais, P., Cressie, N., Crisp, D., Crowell, S., Deng, F., Deng, Z., Deutscher, N. M., Dubey, M. K., Feng, S., García, O. E., Herkommer, B., Hu, L., Jacobson, A. R., Janardanan, R., Jeong, S., Johnson, M. S., Jones, D. B. A., Kivi, R., Liu, J., Liu, Z., Maksyutov, S., Miller, J. B., Miller, S. M., Morino, I., Notholt, J., Oda, T., O’Dell, C. W., Oh, Y.-S., Ohyama, H., Patra, P. K., Peiro, H., Petri, C., Philip, S., Pollard, D. F., Poulter, B., Remaud, M., Schuh, A., Sha, M. K., Shiomi, K., Strong, K., Sweeney, C., Té, Y., Tian, H., Velazco, V. A., Vrekoussis, M., Warneke, T., Worden, J. R., Wunch, D., Yao, Y., Yun, J., Zammit-Mangion, A., and Zeng, N.: Pilot top-down CO₂ Budget constrained by the v10 OCO-2 MIP Version 1, *Committee on Earth Observing Satellites*, https://doi.org/10.48588/npf6-sw92, Version 1.0, 2022
+
+    ## Dataset Accuracy
+    The uncertainty in NCE is an estimate of the standard deviation of the v10 OCO-2 MIP ensemble members. This is meant to characterize uncertainties originating from the inversion configuration (such as the transport model, inversion method and prior constraints). However, there are also limitations to this method. First, there is only a small ensemble of 11 MIP ensemble members included in this analysis and an over-representation of inversions using two transport models: TM5 (3) and GEOS-Chem (5), which makes uncertainty quantification challenging. Second, the ensemble-based estimate does not capture some sources of uncertainty. In particular, Bayesian posterior uncertainties are not considered, due to the fact that many of the inversion systems participating in the v10 OCO-2 MIP do not calculate this uncertainty. For more information on the dataset’s uncertainty, refer to [Byrne et al. 2023](https://doi.org/10.5194/essd-15-963-2023).
+
+    ## Disclaimer
+    All data provided in the US GHG Center has been transformed from the original format into Cloud Optimized GeoTIFF (COG). Careful quality checks are used to ensure data transformation has been performed correctly.
+
+    Note that confidence in top-down estimates decreases at smaller spatial scales, so it is recommended to use the 1° x 1° CO₂ fluxes aggregated to larger spatial scales. For more information, refer to Section 6 of Byrne et al. [https://doi.org/10.5194/essd-15-963-2023](https://doi.org/10.5194/essd-15-963-2023).
+
+    As noted above, only a subset of the full dataset is available in the US GHG Center. The full dataset, including country-level totals, can be found on the [CEOS website](https://doi.org/10.48588/npf6-sw92). The full dataset can also be accessed via the [GHG Center Analysis hub (account required)](https://hub.ghg.center/hub/login?next=%2Fhub%2F). Two additional metrics are provided to help users interpret country-level data accessible from the full dataset:
+    - The Z-statistics, which characterize the differences between top-down NCE estimates
+    - The Fractional Uncertainty Reduction (FUR) values, which characterize the impact of assimilated CO₂ data on reducing NCE uncertainties
+
+
+    ## Key Publications
+    Byrne, B., Baker, D. F., Basu, S., Bertolacci, M., Bowman, K. W., Carroll, D., Chatterjee, A., Chevallier, F., Ciais, P., Cressie, N., Crisp, D., Crowell, S., Deng, F., Deng, Z., Deutscher, N. M., Dubey, M. K., Feng, S., García, O. E., Griffith, D. W. T., … Zeng, N. (2023). National CO₂ budgets (2015–2020) inferred from atmospheric CO₂ observations in support of the global stocktake. *Earth System Science Data, 15*, 963–1004. [https://doi.org/10.5194/essd-15-963-2023](https://doi.org/10.5194/essd-15-963-2023)
+
+    ## Other Relevant Publications
+    Byrne, B., Baker, D. F., Basu, S., Bertolacci, M., Bowman, K. W., Carroll, D., Chatterjee, A., Chevallier, F., Ciais, P., Cressie, N., Crisp, D., Crowell, S., Deng, F., Deng, Z., Deutscher, N. M., Dubey, M. K., Feng, S., García, O. E., Griffith, D. W. T., … Zeng, N. (2023). Supplement of National CO₂ budgets (2015–2020) inferred from atmospheric CO₂ observations in support of the global stocktake. *Earth System Science Data, 15*, 963–1004. [https://doi.org/10.5194/essd-15-963-2023-supplement](https://doi.org/10.5194/essd-15-963-2023-supplement)
+
+    CEOS. (2022). *Pilot top-down CO₂ Budget constrained by the v10 OCO-2 MIP Version 1 ReadMe*. [https://ceos.org/gst/files/ReadMe.txt](https://ceos.org/gst/files/ReadMe.txt)
+
+    NASA Jet Propulsion Laboratory California Institute of Technology. (n.d.). *National CO₂ Budgets informed by atmospheric CO₂ measurements.* OCO-2. [https://ocov2.jpl.nasa.gov/news/national-co2-budgets-informed-atmospheric-co2-measurements/](https://ocov2.jpl.nasa.gov/news/national-co2-budgets-informed-atmospheric-co2-measurements/)
+
+    NOAA. (n.d.). *The OCO-2 v10 MIP. Global Monitoring Laboratory*. [https://gml.noaa.gov/ccgg/OCO2_v10mip/](https://gml.noaa.gov/ccgg/OCO2_v10mip/)
+
+    United Nations Climate Change. (n.d.). *Global Stocktake*. [https://unfccc.int/topics/global-stocktake](https://unfccc.int/topics/global-stocktake)
+
+    ## Acknowledgment
+    The research for this dataset was supported by the following institutions and efforts:
+    - NASA (JPL; OCO, OCO-2 and OCO-3 Science Team Programs; ROSES; Earth Science Research and Analysis Program; Carbon Monitoring Program; and miscellaneous grants)
+    - NOAA
+    - Australian Research Council
+    - Copernicus Atmosphere Monitoring Service
+    - European Commission, Horizon 2020 Framework Programme
+    - Pacific Northwest National Laboratory, Battelle Memorial Institute
+    - Environmental Restoration and Conservation Agency of Japan
+    - Korea Meteorological Administration
+
+    A full accounting of acknowledgements can be found in the “Acknowledgements” section of the Byrne et al. publication: [https://doi.org/10.5194/essd-15-963-2023](https://doi.org/10.5194/essd-15-963-2023).
+
+    ## License
+    [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/legalcode) (CC BY 4.0)
+
+    ## Data Stewardship
+    - [Data Workflow](https://us-ghg-center.github.io/ghgc-docs/data_workflow/oco2-mip-co2budget-yeargrid-v1_Data_Flow.html)
+    - [Data Transformation Code](https://us-ghg-center.github.io/ghgc-docs/cog_transformation/oco2-mip-co2budget-yeargrid-v1.html)
+    - [US GHG Center Data Intake Processing and Verification Report](https://us-ghg-center.github.io/ghgc-docs/processing_and_verification_reports/oco2-mip-co2budget-yeargrid-v1_Processing%20and%20Verification%20Report.html)
+
+  </Prose>
+</Block>

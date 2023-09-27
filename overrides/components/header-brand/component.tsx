@@ -2,11 +2,9 @@ import React, { useLayoutEffect } from "$veda-ui/react";
 import styled from "$veda-ui/styled-components";
 import { glsp, themeVal } from "$veda-ui/@devseed-ui/theme-provider";
 import { Link } from "$veda-ui/react-router-dom";
-import { Helmet } from "$veda-ui/react-helmet";
-
-import GHGLogo from "./ghg-logo";
 
 const Brand = styled.div`
+  position: relative;
   display: flex;
   align-items: center;
   gap: ${glsp()};
@@ -26,13 +24,30 @@ const Logo = styled.div`
   padding: ${glsp(0.5, 0.875)};
   background: ${themeVal("color.surface")};
   color: ${themeVal("color.primary")};
-  
+
   span {
     font-weight: ${themeVal("type.base.bold")};
     text-transform: uppercase;
     letter-spacing: -0.025em;
     font-size: 1rem;
     line-height: 1.125rem;
+  }
+`;
+
+const VersionInfoLink = styled(Link)`
+  position: absolute;
+  top: 0;
+  right: -1rem;
+  transform: translateY(-50%);
+  background: ${themeVal("color.primary-700")};
+  color: ${themeVal("color.surface")};
+  padding: ${glsp(0.125, 0.5)};
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  transition: background 160ms ease-in-out;
+
+  &:hover {
+  background: ${themeVal("color.primary-900")};
   }
 `;
 
@@ -56,6 +71,7 @@ export default function HeaderComponent() {
           <span>Center</span>
         </Logo>
       </Link>
+      <VersionInfoLink to='/development'>Beta</VersionInfoLink>
     </Brand>
   );
 }

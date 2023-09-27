@@ -1,0 +1,127 @@
+---
+id: sedac-popdensity-yeargrid5yr-v4.11
+name: SEDAC Gridded World Population Density
+description: Global, 30 arc-seconds (~1km) resolution human population density estimates from the Gridded Population of the World (GPW), version 4, revision 11 dataset based on national censuses and population registers
+usage:
+  - url: "https://us-ghg-center.github.io/ghgc-docs/cog_transformation/sedac-popdensity-yeargrid5yr-v4.11.html"
+    label: Notebook showing data transformation to COG for ingest to the US GHG Center
+    title: 'Data Transformation Notebook'
+  - url: "https://us-ghg-center.github.io/ghgc-docs/user_data_notebooks/sedac-popdensity-yeargrid5yr-v4.11_User_Notebook.html"
+    label: Notebook to read, visualize, and explore data statistics
+    title: 'Sample Data Notebook'
+  - url: "https://hub.ghg.center/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FUS-GHG-Center%2Fghgc-docs&urlpath=tree%2Fghgc-docs%2Fuser_data_notebooks%2Fsedac-popdensity-yeargrid5yr-v4.11_User_Notebook.ipynb&branch=main"
+    label: Run example notebook
+    title: Interactive Session in the US GHG Center JupyterHub (requires account)
+  - url: https://dljsq618eotzp.cloudfront.net/browseui/index.html#sedac-popdensity-yeargrid5yr-v4.11/
+    label: Browse and download the data
+    title: Data Browser
+media:
+  src: ::file ./gpw-yearly--cover.jpg
+  alt: aa
+  author:
+    name: Columbia University
+taxonomy:
+  - name: Topics
+    values:
+      - Socioeconomic
+  - name: Source
+    values:
+      - NASA
+  - name: Product Type
+    values:
+      - Model Output
+layers:
+  - id: nasa-sedac-population
+    stacCol: sedac-popdensity-yeargrid5yr-v4.11
+    name: Population Density
+    type: raster
+    description: Gridded population density estimates for the years 2000, 2005, 2010, 2015, and 2020 from Gridded Population of the World (GPW) version 4, revision 11
+    initialDatetime: newest
+    projection:
+      id: "equirectangular"
+    basemapId: 'light'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: population-density
+      colormap_name: ylorrd
+      rescale:
+        - 0
+        - 1000
+      nodata: -3.402823e+38
+    compare:
+      datasetId: sedac-popdensity-yeargrid5yr-v4.11
+      layerId: nasa-sedac-population
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit:
+        label: persons/km²
+      type: gradient
+      min: 0
+      max: 1000
+      stops:
+        - "#FFFFB2"
+        - "#FFDDA0"
+        - "#FFC381"
+        - "#FFA354"
+        - "#FF8524"
+        - "#FF6715"
+        - "#FF0000"
+---
+
+<Block type='wide'>
+  <Prose>
+    The Socioeconomic Data and Applications Center (SEDAC) Gridded Population of the World (GPW), version 4, revision 11 source dataset contains a Population Density product that provides estimates of population density at five year intervals for the years 2000, 2005, 2010, 2015, and 2020 on a 30 arc-second (~1 km at the equator) grid.  The dataset can be used for assessing disaster impacts, risk mapping, and any other applications that include a human dimension. Population density is obtained by dividing the population count grid for a given target year by the gridded land area.  The GPW population count is generated using input from tabular census data that identifies the number of persons by administrative area and digital census administrative boundary data. The density values are based on the 2010 census results extrapolated to other years based on annual population growth rates. This dataset (v4.11) was built upon previous versions of the SEDAC global population dataset. 
+    
+    - **Temporal Extent:** 2000 - 2020
+    - **Temporal Resolution:** Annual, every 5 years   
+    - **Spatial Extent:** Global    
+    - **Spatial Resolution:** 30 arc-seconds (~1 km at equator)    
+    - **Data Units:** Number of persons per square kilometer (persons/km²)    
+    - **Data Type:** Research
+    - **Data Latency:** 5 years
+
+    **Scientific Details:** 
+    Population estimates are distributed to a 30 arc-second (~1km) grid using an areal-weighting method. The input geographic boundaries were obtained from multiple sources including national statistical offices, national mapping agencies, and the Global Administrative Areas, version 2.0 (GADMv2) dataset. A water mask was also applied to ensure that areas of water and permanent ice were not included in distributed population counts. The annual exponential growth rates applied to determine population estimates in the target years (2000, 2005, 2010, 2015, and 2020) were defined using the population count from the previous census, the population count from the current census, and the number of years between the two records.  Methodology details are available in the [GPWv4 Revision 11 documentation](https://sedac.ciesin.columbia.edu/binaries/web/sedac/collections/gpw-v4/gpw-v4-documentation-rev11.pdf). Additional FAQs about the data can be found on the [SEDAC User Feedback site](https://sedac.uservoice.com/knowledgebase/topics/110829-gpwv4). 
+  </Prose>
+</Block>
+<Block>
+  <Prose>    
+    ## Source Data Product Citation
+    Center For International Earth Science Information Network-CIESIN-Columbia University. (2018). Gridded Population of the World, Version 4 (GPWv4): Population Density, Revision 11 [dataset], Palisades, NY: Socioeconomic Data and Applications Center (SEDAC). Accessed: [Data Access Date], [https://doi.org/10.7927/H49C6VHW](https://doi.org/10.7927/H49C6VHW)
+    
+    ## Dataset Accuracy
+    The SEDAC Gridded Population of the World: Population Density, v4.11 dataset, as with other population products, is limited by the availability and quality of census data. For example, the census data from 2010 were not available for some countries and therefore older census data had to be used. Additionally, there may be small underestimates in the gridded population for some areas due to the decision to exclude geographically undefined populations such as the homeless or those with boat homes. More information on the data quality indicators included with the source dataset are available in the [GPWv4 Revision 11 documentation](https://sedac.ciesin.columbia.edu/binaries/web/sedac/collections/gpw-v4/gpw-v4-documentation-rev11.pdf).
+  
+    ## Disclaimer
+    All data provided in the US GHG Center has been transformed from the original format (GeoTIFF) into Cloud Optimized GeoTIFF ([COG](https://www.cogeo.org/)). Careful quality checks are used to ensure data transformation has been performed correctly.
+
+    Note that the gridded population densities included in this dataset are also available at four lower spatial resolutions: 2.4 arc-minute, 15 arc-minute, 30 arc-minute, and 1 degree. This lower spatial resolution data is not provided in the US GHG Center but is available from [SEDAC](https://sedac.ciesin.columbia.edu/data/set/gpw-v4-population-density-rev11/data-download). The full title of the source dataset, Gridded Population of the World, Version 4 (GPWv4): Population Density, Revision 11, has been shortened for display on the US GHG Center website. The short name of the source dataset is [CIESIN_SEDAC_GPWv4_POPDENS_R11](https://doi.org/10.7927/H49C6VHW), but it is referred to as sedac-popdensity-yeargrid5yr-v4.11 in the Center. 
+ 
+    ## Key Publications
+    Center for International Earth Science Information Network (CIESIN), Columbia University. (2018). *Documentation for the gridded population of the world, version 4 (GPWv4), revision 11 data sets*. NASA Socioeconomic Data and Applications Center (SEDAC). [https://doi.org/10.7927/H45Q4T5F](https://doi.org/10.7927/H45Q4T5F)
+    
+    Doxsey-Whitfield, E., MacManus, K., Adamo, S. B., Pistolesi, L., Squires, J., Borkovska, O., & Baptista, S. R. (2015). Taking advantage of the improved availability of census data: A first look at the gridded population of the world, version 4. *Papers in Applied Geography, 1*(3), 226-234. [https://doi.org/10.1080/23754931.2015.1014272](https://doi.org/10.1080/23754931.2015.1014272)
+
+    ## Other Relevant Publications
+    Center for International Earth Science Information Network (CIESIN), Columbia University. (2018). Gridded population of the world, version 4 (GPWv4): Country-level information and sources for revision 11 data sets [Microsoft Excel spreadsheet]. SEDAC. [https://sedac.ciesin.columbia.edu/binaries/web/sedac/collections/gpw-v4/gpw-v4-country-level-summary-rev11.xlsx](https://sedac.ciesin.columbia.edu/binaries/web/sedac/collections/gpw-v4/gpw-v4-country-level-summary-rev11.xlsx)
+
+    Center for International Earth Science Information Network (CIESIN), Columbia University. (2018). Gridded population of the world, version 4 (GPWv4): Log of changes to the data sets by version [text file]. SEDAC. [https://sedac.ciesin.columbia.edu/binaries/web/sedac/collections/gpw-v4/gpw-v4-change-log-rev11.txt](https://sedac.ciesin.columbia.edu/binaries/web/sedac/collections/gpw-v4/gpw-v4-change-log-rev11.txt)
+
+    ## Acknowledgment
+    This dataset was produced by CIESIN at Columbia University with primary support from the National Aeronautics and Space Administration for the Socioeconomic Data and Applications Distributed Active Archive Center (DAAC) for the Earth Observing System Data and Information System (EOSDIS). Many national statistics offices, mapping agencies, and other international organizations provided data and support for the production of this dataset.
+
+    ## License
+    [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/legalcode) (CC BY 4.0)
+
+    ## Data Stewardship
+    - [Data Workflow](https://us-ghg-center.github.io/ghgc-docs/data_workflow/sedac-popdensity-yeargrid5yr-v4.11_Data_Flow.html)
+    - [Data Transformation Code](https://us-ghg-center.github.io/ghgc-docs/cog_transformation/sedac-popdensity-yeargrid5yr-v4.11.html)
+    - [US GHG Center Data Intake Processing and Verification Report](https://us-ghg-center.github.io/ghgc-docs/processing_and_verification_reports/sedac-popdensity-yeargrid5yr-v4.11_Processing%20and%20Verification%20Report.html)
+
+  </Prose>
+</Block>

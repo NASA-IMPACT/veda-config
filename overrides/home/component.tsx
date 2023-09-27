@@ -27,17 +27,17 @@ const IntroHeadline = styled.div`
   gap: ${glsp(2)};
   grid-column: content-start / content-end;
 
-  p {
-    font-size: 1.25rem;
-  }
-
   ${media.mediumUp`
-    grid-column: content-start /content-7;
+    grid-column: content-2 / content-8;
   `}
 
   ${media.largeUp`
-    grid-column: content-start / content-9;
+    grid-column: content-3 / content-11;
   `}
+
+  p {
+    font-size: 1.25rem;
+  }
 `;
 
 const ActionsBlock = styled.div`
@@ -92,20 +92,20 @@ export default function HomeComponent() {
         <IntroHeadline>
           <VarHeading size="xxlarge">Welcome</VarHeading>
           <p>
-            The U.S. Greenhouse Gas Center (US GHG Center) is a multi-agency
-            effort to integrate greenhouse gas data from observations and models
-            into credible, authoritative, trusted consensus greenhouse gas
-            emissions and flux products for use in decision-making.
+            The U.S. Greenhouse Gas Center opens up access to trusted data on
+            greenhouse gases. This&nbsp;multi-agency effort consolidates
+            greenhouse gas information from observations and models.
+            The&nbsp;goal of the US GHG Center is providing decision-makers with
+            one stop for data and analysis.
           </p>
           <p>
-            The initial two-year demonstration phase includes the development of
-            a one-stop data and analysis system that provides a means to explore
-            and analyze U.S. government and other datasets. Three demonstration
-            areas are used to organize and introduce the data included, and
-            stakeholders are encouraged to help scope and prioritize the
-            evolution and maturation of the US GHG Center capabilities.
+            This initial two-year demonstration phase creates a way to explore
+            and analyze U.S. government and other datasets. The US GHG Center
+            also encourages stakeholder feedback and ideas for future expansion.
           </p>
-          <ArrowLink to="/stories">The U.S. GHG Center Story</ArrowLink>
+          <ArrowLink to="/stories/intro-us-ghg-center">
+            Introduction to the US GHG Center
+          </ArrowLink>
         </IntroHeadline>
         <Keypoints />
         <ActionsBlock>
@@ -126,14 +126,11 @@ export default function HomeComponent() {
               Joining forces for a better future
             </VarHeading>
             <p>
-              The U.S. Greenhouse Gas Center is a multi-agency effort to extend
-              accessible and integrated GHG data and modeling capabilities from
-              the U.S government and non-public sources for scalable impact. We
-              are grateful for the support and expertise of our valued partners,
-              including NASA, NIST, NOAA, and EPA.
+              The US GHG Center is grateful for the support and expertise of our
+              valued, multi-agency collaborators: EPA, NASA, NIST, and NOAA.
             </p>
           </InfoCalloutHeadline>
-          <Partners variation="positive" />
+          <Partners variation="positive" size="big" />
           <Button
             forwardedAs={NavLink}
             to="/about"
