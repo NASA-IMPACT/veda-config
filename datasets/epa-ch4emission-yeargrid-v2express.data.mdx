@@ -1,15 +1,15 @@
 ---
 id: epa-ch4emission-yeargrid-v2express
 name: Gridded Anthropogenic Methane Emissions Inventory
-description: Spatially disaggregated 0.1°x 0.1° annual maps of U.S. anthropogenic methane emissions, consistent with the U.S. Inventory of Greenhouse Gas Emissions and Sinks. This is the V2 Express Extension dataset
+description: Spatially disaggregated 0.1°x 0.1° annual maps of U.S. anthropogenic methane emissions, consistent with the U.S. Inventory of Greenhouse Gas Emissions and Sinks
 usage:
-  - url: 'https://us-ghg-center.github.io/ghgc-docs/cog_transformation/epa-ch4emission-grid-v2express.html'
+  - url: "https://us-ghg-center.github.io/ghgc-docs/cog_transformation/epa-ch4emission-grid-v2express.html"
     label: Notebook showing data transformation to COG for ingest to the US GHG Center
-    title: 'Data Transformation Notebook'
-  - url: 'https://us-ghg-center.github.io/ghgc-docs/user_data_notebooks/epa-ch4emission-grid-v2express_User_Notebook.html'
+    title: "Data Transformation Notebook"
+  - url: "https://us-ghg-center.github.io/ghgc-docs/user_data_notebooks/epa-ch4emission-grid-v2express_User_Notebook.html"
     label: Notebook to read, visualize, and explore data statistics
-    title: 'Sample Data Notebook'
-  - url: 'https://hub.ghg.center/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FUS-GHG-Center%2Fghgc-docs&urlpath=tree%2Fghgc-docs%2Fuser_data_notebooks%2Fepa-ch4emission-grid-v2express_User_Notebook.ipynb&branch=main'
+    title: "Sample Data Notebook"
+  - url: "https://hub.ghg.center/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FUS-GHG-Center%2Fghgc-docs&urlpath=tree%2Fghgc-docs%2Fuser_data_notebooks%2Fepa-ch4emission-grid-v2express_User_Notebook.ipynb&branch=main"
     label: Run example notebook
     title: Interactive Session in the US GHG Center JupyterHub (requires account)
   - url: https://dljsq618eotzp.cloudfront.net/browseui/index.html#epa-ch4emission-yeargrid-v2express/
@@ -18,7 +18,7 @@ usage:
 media:
   src: ::file ./epa-annual--cover.jpg
   alt: Total Gridded Methane Emissions from the U.S. Inventory of Greenhouse Gas Emissions and Sinks
-  author: 
+  author:
     name: Image by EPA
 taxonomy:
   - name: Topics
@@ -32,7 +32,6 @@ taxonomy:
       - CH₄
   - name: Product Type
     values:
-      - Ground Measurements
       - Gridded Inventory
 layers:
   - id: total-methane
@@ -42,8 +41,8 @@ layers:
     description: Total annual methane emission fluxes from all Agriculture, Energy, Waste, and ‘Other’ sources included in this dataset.
     initialDatetime: newest
     projection:
-      id: 'equirectangular'
-    basemapId: 'light' 
+      id: "equirectangular"
+    basemapId: "light"
     zoomExtent:
       - 0
       - 20
@@ -60,36 +59,36 @@ layers:
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
-        }      
+        }
     analysis:
       exclude: true
     legend:
-      unit: 
-       label: Billion molecules CH₄/cm²/s
+      unit:
+        label: Billion molecules CH₄/cm²/s
       type: gradient
       min: 0
       max: 500
       stops:
-        - '#000080'
-        - '#0000BB'
-        - '#0000F6'
-        - '#0020FF'
-        - '#0054FF'
-        - '#008CFF'
-        - '#00C0FF'
-        - '#0FF8E7' 
-        - '#39FFBE'  
-        - '#66FF90'
-        - '#90FF66'
-        - '#BEFF39'
-        - '#E7FF0F'
-        - '#FFD300'
-        - '#FFA300'
-        - '#FF6F00'
-        - '#FF3F00' 
-        - '#F60B00' 
-        - '#BB0000' 
-        - '#800000'                           
+        - "#000080"
+        - "#0000BB"
+        - "#0000F6"
+        - "#0020FF"
+        - "#0054FF"
+        - "#008CFF"
+        - "#00C0FF"
+        - "#0FF8E7"
+        - "#39FFBE"
+        - "#66FF90"
+        - "#90FF66"
+        - "#BEFF39"
+        - "#E7FF0F"
+        - "#FFD300"
+        - "#FFA300"
+        - "#FF6F00"
+        - "#FF3F00"
+        - "#F60B00"
+        - "#BB0000"
+        - "#800000"
   - id: total-agriculture
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Total Agriculture (annual)
@@ -97,8 +96,8 @@ layers:
     description: Total annual methane emission fluxes from Agriculture sources (sum of inventory categories 3A, 3B, 3C, 3F)
     initialDatetime: newest
     projection:
-      id: 'equirectangular'
-    basemapId: 'light' 
+      id: "equirectangular"
+    basemapId: "light"
     zoomExtent:
       - 0
       - 20
@@ -115,44 +114,44 @@ layers:
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
-        }      
+        }
     analysis:
       exclude: true
     legend:
-      unit: 
-       label: Billion molecules CH₄/cm²/s
+      unit:
+        label: Billion molecules CH₄/cm²/s
       type: gradient
       min: 0
       max: 500
       stops:
-        - '#0000BB'
-        - '#0000F6'
-        - '#0020FF'
-        - '#0054FF'
-        - '#008CFF'
-        - '#00C0FF'
-        - '#0FF8E7' 
-        - '#39FFBE'  
-        - '#66FF90'
-        - '#90FF66'
-        - '#BEFF39'
-        - '#E7FF0F'
-        - '#FFD300'
-        - '#FFA300'
-        - '#FF6F00'
-        - '#FF3F00' 
-        - '#F60B00' 
-        - '#BB0000' 
-        - '#800000'          
+        - "#0000BB"
+        - "#0000F6"
+        - "#0020FF"
+        - "#0054FF"
+        - "#008CFF"
+        - "#00C0FF"
+        - "#0FF8E7"
+        - "#39FFBE"
+        - "#66FF90"
+        - "#90FF66"
+        - "#BEFF39"
+        - "#E7FF0F"
+        - "#FFD300"
+        - "#FFA300"
+        - "#FF6F00"
+        - "#FF3F00"
+        - "#F60B00"
+        - "#BB0000"
+        - "#800000"
   - id: enteric-fermentation
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Agriculture - Enteric Fermentation (annual)
     type: raster
-    description: Annual methane emission fluxes from livestock Enteric Fermentation (inventory Agriculture category 3A) 
+    description: Annual methane emission fluxes from livestock Enteric Fermentation (inventory Agriculture category 3A)
     initialDatetime: newest
     projection:
-      id: 'equirectangular'
-    basemapId: 'light' 
+      id: "equirectangular"
+    basemapId: "light"
     zoomExtent:
       - 0
       - 20
@@ -162,42 +161,42 @@ layers:
       rescale:
         - 0
         - 500
-      nodata: 0      
+      nodata: 0
     compare:
       datasetId: epa-ch4emission-yeargrid-v2express
       layerId: enteric-fermentation
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
-        }      
+        }
     analysis:
       exclude: true
     legend:
-      unit: 
-       label: Billion molecules CH₄/cm²/s
+      unit:
+        label: Billion molecules CH₄/cm²/s
       type: gradient
       min: 0
       max: 500
       stops:
-        - '#0000BB'
-        - '#0000F6'
-        - '#0020FF'
-        - '#0054FF'
-        - '#008CFF'
-        - '#00C0FF'
-        - '#0FF8E7' 
-        - '#39FFBE'  
-        - '#66FF90'
-        - '#90FF66'
-        - '#BEFF39'
-        - '#E7FF0F'
-        - '#FFD300'
-        - '#FFA300'
-        - '#FF6F00'
-        - '#FF3F00' 
-        - '#F60B00' 
-        - '#BB0000' 
-        - '#800000' 
+        - "#0000BB"
+        - "#0000F6"
+        - "#0020FF"
+        - "#0054FF"
+        - "#008CFF"
+        - "#00C0FF"
+        - "#0FF8E7"
+        - "#39FFBE"
+        - "#66FF90"
+        - "#90FF66"
+        - "#BEFF39"
+        - "#E7FF0F"
+        - "#FFD300"
+        - "#FFA300"
+        - "#FF6F00"
+        - "#FF3F00"
+        - "#F60B00"
+        - "#BB0000"
+        - "#800000"
   - id: manure-management
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Agriculture - Manure Management (annual)
@@ -205,8 +204,8 @@ layers:
     description: Annual methane emission fluxes from Manure Management (inventory Agriculture category 3B)
     initialDatetime: newest
     projection:
-      id: 'equirectangular'
-    basemapId: 'light' 
+      id: "equirectangular"
+    basemapId: "light"
     zoomExtent:
       - 0
       - 20
@@ -223,35 +222,35 @@ layers:
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
-        }      
+        }
     analysis:
       exclude: true
     legend:
-      unit: 
-       label: Billion molecules CH₄/cm²/s
+      unit:
+        label: Billion molecules CH₄/cm²/s
       type: gradient
-      min: 0 
+      min: 0
       max: 500
       stops:
-        - '#0000BB'
-        - '#0000F6'
-        - '#0020FF'
-        - '#0054FF'
-        - '#008CFF'
-        - '#00C0FF'
-        - '#0FF8E7' 
-        - '#39FFBE'  
-        - '#66FF90'
-        - '#90FF66'
-        - '#BEFF39'
-        - '#E7FF0F'
-        - '#FFD300'
-        - '#FFA300'
-        - '#FF6F00'
-        - '#FF3F00' 
-        - '#F60B00' 
-        - '#BB0000' 
-        - '#800000'  
+        - "#0000BB"
+        - "#0000F6"
+        - "#0020FF"
+        - "#0054FF"
+        - "#008CFF"
+        - "#00C0FF"
+        - "#0FF8E7"
+        - "#39FFBE"
+        - "#66FF90"
+        - "#90FF66"
+        - "#BEFF39"
+        - "#E7FF0F"
+        - "#FFD300"
+        - "#FFA300"
+        - "#FF6F00"
+        - "#FF3F00"
+        - "#F60B00"
+        - "#BB0000"
+        - "#800000"
   - id: rice-cultivation-l
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Agriculture - Rice Cultivation (annual)
@@ -259,8 +258,8 @@ layers:
     description: Annual methane emission fluxes from Rice Cultivation (inventory Agriculture category 3C)
     initialDatetime: newest
     projection:
-      id: 'equirectangular'
-    basemapId: 'light' 
+      id: "equirectangular"
+    basemapId: "light"
     zoomExtent:
       - 0
       - 20
@@ -277,35 +276,35 @@ layers:
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
-        }      
+        }
     analysis:
       exclude: true
     legend:
-      unit: 
-       label: Billion molecules CH₄/cm²/s
+      unit:
+        label: Billion molecules CH₄/cm²/s
       type: gradient
       min: 0
       max: 500
       stops:
-        - '#0000BB'
-        - '#0000F6'
-        - '#0020FF'
-        - '#0054FF'
-        - '#008CFF'
-        - '#00C0FF'
-        - '#0FF8E7' 
-        - '#39FFBE'  
-        - '#66FF90'
-        - '#90FF66'
-        - '#BEFF39'
-        - '#E7FF0F'
-        - '#FFD300'
-        - '#FFA300'
-        - '#FF6F00'
-        - '#FF3F00' 
-        - '#F60B00' 
-        - '#BB0000' 
-        - '#800000'  
+        - "#0000BB"
+        - "#0000F6"
+        - "#0020FF"
+        - "#0054FF"
+        - "#008CFF"
+        - "#00C0FF"
+        - "#0FF8E7"
+        - "#39FFBE"
+        - "#66FF90"
+        - "#90FF66"
+        - "#BEFF39"
+        - "#E7FF0F"
+        - "#FFD300"
+        - "#FFA300"
+        - "#FF6F00"
+        - "#FF3F00"
+        - "#F60B00"
+        - "#BB0000"
+        - "#800000"
   - id: field-burning-l
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Agriculture - Field Burning (annual)
@@ -313,8 +312,8 @@ layers:
     description: Annual methane emission fluxes from Field Burning of Agriculture Residues (inventory Agriculture category 3F)
     initialDatetime: newest
     projection:
-      id: 'equirectangular'
-    basemapId: 'light' 
+      id: "equirectangular"
+    basemapId: "light"
     zoomExtent:
       - 0
       - 20
@@ -331,35 +330,35 @@ layers:
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
-        }      
+        }
     analysis:
       exclude: true
     legend:
-      unit: 
-       label: Billion molecules CH₄/cm²/s
+      unit:
+        label: Billion molecules CH₄/cm²/s
       type: gradient
       min: 0
       max: 500
       stops:
-        - '#0000BB'
-        - '#0000F6'
-        - '#0020FF'
-        - '#0054FF'
-        - '#008CFF'
-        - '#00C0FF'
-        - '#0FF8E7' 
-        - '#39FFBE'  
-        - '#66FF90'
-        - '#90FF66'
-        - '#BEFF39'
-        - '#E7FF0F'
-        - '#FFD300'
-        - '#FFA300'
-        - '#FF6F00'
-        - '#FF3F00' 
-        - '#F60B00' 
-        - '#BB0000' 
-        - '#800000'  
+        - "#0000BB"
+        - "#0000F6"
+        - "#0020FF"
+        - "#0054FF"
+        - "#008CFF"
+        - "#00C0FF"
+        - "#0FF8E7"
+        - "#39FFBE"
+        - "#66FF90"
+        - "#90FF66"
+        - "#BEFF39"
+        - "#E7FF0F"
+        - "#FFD300"
+        - "#FFA300"
+        - "#FF6F00"
+        - "#FF3F00"
+        - "#F60B00"
+        - "#BB0000"
+        - "#800000"
   - id: total-natural-gas
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Total Natural Gas Systems (annual)
@@ -367,8 +366,8 @@ layers:
     description: Total annual methane emission fluxes from Natural Gas Systems (sum of inventory Energy 1B2b sub-categories)
     initialDatetime: newest
     projection:
-      id: 'equirectangular'
-    basemapId: 'light' 
+      id: "equirectangular"
+    basemapId: "light"
     zoomExtent:
       - 0
       - 20
@@ -385,35 +384,35 @@ layers:
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
-        }      
+        }
     analysis:
       exclude: true
     legend:
-      unit: 
-       label: Billion molecules CH₄/cm²/s
+      unit:
+        label: Billion molecules CH₄/cm²/s
       type: gradient
       min: 0
       max: 500
       stops:
-        - '#0000BB'
-        - '#0000F6'
-        - '#0020FF'
-        - '#0054FF'
-        - '#008CFF'
-        - '#00C0FF'
-        - '#0FF8E7' 
-        - '#39FFBE'  
-        - '#66FF90'
-        - '#90FF66'
-        - '#BEFF39'
-        - '#E7FF0F'
-        - '#FFD300'
-        - '#FFA300'
-        - '#FF6F00'
-        - '#FF3F00' 
-        - '#F60B00' 
-        - '#BB0000' 
-        - '#800000'  
+        - "#0000BB"
+        - "#0000F6"
+        - "#0020FF"
+        - "#0054FF"
+        - "#008CFF"
+        - "#00C0FF"
+        - "#0FF8E7"
+        - "#39FFBE"
+        - "#66FF90"
+        - "#90FF66"
+        - "#BEFF39"
+        - "#E7FF0F"
+        - "#FFD300"
+        - "#FFA300"
+        - "#FF6F00"
+        - "#FF3F00"
+        - "#F60B00"
+        - "#BB0000"
+        - "#800000"
   - id: exploration-ngs-l
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Natural Gas - Exploration (annual)
@@ -421,8 +420,8 @@ layers:
     description: Annual methane emission fluxes from Natural Gas Exploration (inventory Energy 1B2b sub-category)
     initialDatetime: newest
     projection:
-      id: 'equirectangular'
-    basemapId: 'light' 
+      id: "equirectangular"
+    basemapId: "light"
     zoomExtent:
       - 0
       - 20
@@ -439,35 +438,35 @@ layers:
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
-        }      
+        }
     analysis:
       exclude: true
     legend:
-      unit: 
-       label: Billion molecules CH₄/cm²/s
+      unit:
+        label: Billion molecules CH₄/cm²/s
       type: gradient
       min: 0
       max: 500
       stops:
-        - '#0000BB'
-        - '#0000F6'
-        - '#0020FF'
-        - '#0054FF'
-        - '#008CFF'
-        - '#00C0FF'
-        - '#0FF8E7' 
-        - '#39FFBE'  
-        - '#66FF90'
-        - '#90FF66'
-        - '#BEFF39'
-        - '#E7FF0F'
-        - '#FFD300'
-        - '#FFA300'
-        - '#FF6F00'
-        - '#FF3F00' 
-        - '#F60B00' 
-        - '#BB0000' 
-        - '#800000'    
+        - "#0000BB"
+        - "#0000F6"
+        - "#0020FF"
+        - "#0054FF"
+        - "#008CFF"
+        - "#00C0FF"
+        - "#0FF8E7"
+        - "#39FFBE"
+        - "#66FF90"
+        - "#90FF66"
+        - "#BEFF39"
+        - "#E7FF0F"
+        - "#FFD300"
+        - "#FFA300"
+        - "#FF6F00"
+        - "#FF3F00"
+        - "#F60B00"
+        - "#BB0000"
+        - "#800000"
   - id: production-ngs-l
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Natural Gas - Production (annual)
@@ -475,8 +474,8 @@ layers:
     description: Annual methane emission fluxes from Natural Gas Production (inventory Energy 1B2b sub-category)
     initialDatetime: newest
     projection:
-      id: 'equirectangular'
-    basemapId: 'light' 
+      id: "equirectangular"
+    basemapId: "light"
     zoomExtent:
       - 0
       - 20
@@ -493,35 +492,35 @@ layers:
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
-        }      
+        }
     analysis:
       exclude: true
     legend:
-      unit: 
-       label: Billion molecules CH₄/cm²/s
+      unit:
+        label: Billion molecules CH₄/cm²/s
       type: gradient
       min: 0
       max: 500
       stops:
-        - '#0000BB'
-        - '#0000F6'
-        - '#0020FF'
-        - '#0054FF'
-        - '#008CFF'
-        - '#00C0FF'
-        - '#0FF8E7' 
-        - '#39FFBE'  
-        - '#66FF90'
-        - '#90FF66'
-        - '#BEFF39'
-        - '#E7FF0F'
-        - '#FFD300'
-        - '#FFA300'
-        - '#FF6F00'
-        - '#FF3F00' 
-        - '#F60B00' 
-        - '#BB0000' 
-        - '#800000'  
+        - "#0000BB"
+        - "#0000F6"
+        - "#0020FF"
+        - "#0054FF"
+        - "#008CFF"
+        - "#00C0FF"
+        - "#0FF8E7"
+        - "#39FFBE"
+        - "#66FF90"
+        - "#90FF66"
+        - "#BEFF39"
+        - "#E7FF0F"
+        - "#FFD300"
+        - "#FFA300"
+        - "#FF6F00"
+        - "#FF3F00"
+        - "#F60B00"
+        - "#BB0000"
+        - "#800000"
   - id: 1B2b-transmission-storage-ngs
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Natural Gas - Transmission and Storage (annual)
@@ -529,8 +528,8 @@ layers:
     description: Annual methane emission fluxes from Natural Gas Transmission and Storage (inventory Energy 1B2b sub-category)
     initialDatetime: newest
     projection:
-      id: 'equirectangular'
-    basemapId: 'light' 
+      id: "equirectangular"
+    basemapId: "light"
     zoomExtent:
       - 0
       - 20
@@ -547,35 +546,35 @@ layers:
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
-        }      
+        }
     analysis:
       exclude: true
     legend:
-      unit: 
-       label: Billion molecules CH₄/cm²/s
+      unit:
+        label: Billion molecules CH₄/cm²/s
       type: gradient
       min: 0
       max: 500
       stops:
-        - '#0000BB'
-        - '#0000F6'
-        - '#0020FF'
-        - '#0054FF'
-        - '#008CFF'
-        - '#00C0FF'
-        - '#0FF8E7' 
-        - '#39FFBE'  
-        - '#66FF90'
-        - '#90FF66'
-        - '#BEFF39'
-        - '#E7FF0F'
-        - '#FFD300'
-        - '#FFA300'
-        - '#FF6F00'
-        - '#FF3F00' 
-        - '#F60B00' 
-        - '#BB0000' 
-        - '#800000'  
+        - "#0000BB"
+        - "#0000F6"
+        - "#0020FF"
+        - "#0054FF"
+        - "#008CFF"
+        - "#00C0FF"
+        - "#0FF8E7"
+        - "#39FFBE"
+        - "#66FF90"
+        - "#90FF66"
+        - "#BEFF39"
+        - "#E7FF0F"
+        - "#FFD300"
+        - "#FFA300"
+        - "#FF6F00"
+        - "#FF3F00"
+        - "#F60B00"
+        - "#BB0000"
+        - "#800000"
   - id: 1B2b-processing-ngs
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Natural Gas - Processing (annual)
@@ -583,8 +582,8 @@ layers:
     description: Annual methane emission fluxes from Natural Gas Processing (inventory Energy 1B2b sub-category)
     initialDatetime: newest
     projection:
-      id: 'equirectangular'
-    basemapId: 'light' 
+      id: "equirectangular"
+    basemapId: "light"
     zoomExtent:
       - 0
       - 20
@@ -601,35 +600,35 @@ layers:
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
-        }      
+        }
     analysis:
       exclude: true
     legend:
-      unit: 
-       label: Billion molecules CH₄/cm²/s
+      unit:
+        label: Billion molecules CH₄/cm²/s
       type: gradient
       min: 0
       max: 500
       stops:
-        - '#0000BB'
-        - '#0000F6'
-        - '#0020FF'
-        - '#0054FF'
-        - '#008CFF'
-        - '#00C0FF'
-        - '#0FF8E7' 
-        - '#39FFBE'  
-        - '#66FF90'
-        - '#90FF66'
-        - '#BEFF39'
-        - '#E7FF0F'
-        - '#FFD300'
-        - '#FFA300'
-        - '#FF6F00'
-        - '#FF3F00' 
-        - '#F60B00' 
-        - '#BB0000' 
-        - '#800000'  
+        - "#0000BB"
+        - "#0000F6"
+        - "#0020FF"
+        - "#0054FF"
+        - "#008CFF"
+        - "#00C0FF"
+        - "#0FF8E7"
+        - "#39FFBE"
+        - "#66FF90"
+        - "#90FF66"
+        - "#BEFF39"
+        - "#E7FF0F"
+        - "#FFD300"
+        - "#FFA300"
+        - "#FF6F00"
+        - "#FF3F00"
+        - "#F60B00"
+        - "#BB0000"
+        - "#800000"
   - id: 1B2b-distribution-ngs
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Natural Gas - Distribution (annual)
@@ -637,8 +636,8 @@ layers:
     description: Annual methane emission fluxes from Natural Gas Distribution (inventory Energy 1B2b sub-category).
     initialDatetime: newest
     projection:
-      id: 'equirectangular'
-    basemapId: 'light' 
+      id: "equirectangular"
+    basemapId: "light"
     zoomExtent:
       - 0
       - 20
@@ -655,35 +654,35 @@ layers:
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
-        }      
+        }
     analysis:
       exclude: true
     legend:
-      unit: 
-       label: Billion molecules CH₄/cm²/s
+      unit:
+        label: Billion molecules CH₄/cm²/s
       type: gradient
       min: 0
       max: 500
       stops:
-        - '#0000BB'
-        - '#0000F6'
-        - '#0020FF'
-        - '#0054FF'
-        - '#008CFF'
-        - '#00C0FF'
-        - '#0FF8E7' 
-        - '#39FFBE'  
-        - '#66FF90'
-        - '#90FF66'
-        - '#BEFF39'
-        - '#E7FF0F'
-        - '#FFD300'
-        - '#FFA300'
-        - '#FF6F00'
-        - '#FF3F00' 
-        - '#F60B00' 
-        - '#BB0000' 
-        - '#800000'    
+        - "#0000BB"
+        - "#0000F6"
+        - "#0020FF"
+        - "#0054FF"
+        - "#008CFF"
+        - "#00C0FF"
+        - "#0FF8E7"
+        - "#39FFBE"
+        - "#66FF90"
+        - "#90FF66"
+        - "#BEFF39"
+        - "#E7FF0F"
+        - "#FFD300"
+        - "#FFA300"
+        - "#FF6F00"
+        - "#FF3F00"
+        - "#F60B00"
+        - "#BB0000"
+        - "#800000"
   - id: post-meter-ng
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Natural Gas - Post-Meter (annual)
@@ -691,8 +690,8 @@ layers:
     description: Annual methane emission fluxes from Natural Gas Post-Meter sources (inventory Energy 1B2b sub-category)
     initialDatetime: newest
     projection:
-      id: 'equirectangular'
-    basemapId: 'light' 
+      id: "equirectangular"
+    basemapId: "light"
     zoomExtent:
       - 0
       - 20
@@ -709,35 +708,35 @@ layers:
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
-        }      
+        }
     analysis:
       exclude: true
     legend:
-      unit: 
-       label: Billion molecules CH₄/cm²/s
+      unit:
+        label: Billion molecules CH₄/cm²/s
       type: gradient
       min: 0
       max: 500
       stops:
-        - '#0000BB'
-        - '#0000F6'
-        - '#0020FF'
-        - '#0054FF'
-        - '#008CFF'
-        - '#00C0FF'
-        - '#0FF8E7' 
-        - '#39FFBE'  
-        - '#66FF90'
-        - '#90FF66'
-        - '#BEFF39'
-        - '#E7FF0F'
-        - '#FFD300'
-        - '#FFA300'
-        - '#FF6F00'
-        - '#FF3F00' 
-        - '#F60B00' 
-        - '#BB0000' 
-        - '#800000'  
+        - "#0000BB"
+        - "#0000F6"
+        - "#0020FF"
+        - "#0054FF"
+        - "#008CFF"
+        - "#00C0FF"
+        - "#0FF8E7"
+        - "#39FFBE"
+        - "#66FF90"
+        - "#90FF66"
+        - "#BEFF39"
+        - "#E7FF0F"
+        - "#FFD300"
+        - "#FFA300"
+        - "#FF6F00"
+        - "#FF3F00"
+        - "#F60B00"
+        - "#BB0000"
+        - "#800000"
   - id: total-petroleum
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Total Petroleum Systems (annual)
@@ -745,8 +744,8 @@ layers:
     description: Total annual methane emission fluxes from Petroleum Systems (sum of inventory Energy 1B2a sub-categories)
     initialDatetime: newest
     projection:
-      id: 'equirectangular'
-    basemapId: 'light' 
+      id: "equirectangular"
+    basemapId: "light"
     zoomExtent:
       - 0
       - 20
@@ -763,35 +762,35 @@ layers:
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
-        }      
+        }
     analysis:
       exclude: true
     legend:
-      unit: 
-       label: Billion molecules CH₄/cm²/s
+      unit:
+        label: Billion molecules CH₄/cm²/s
       type: gradient
       min: 0
       max: 500
       stops:
-        - '#0000BB'
-        - '#0000F6'
-        - '#0020FF'
-        - '#0054FF'
-        - '#008CFF'
-        - '#00C0FF'
-        - '#0FF8E7' 
-        - '#39FFBE'  
-        - '#66FF90'
-        - '#90FF66'
-        - '#BEFF39'
-        - '#E7FF0F'
-        - '#FFD300'
-        - '#FFA300'
-        - '#FF6F00'
-        - '#FF3F00' 
-        - '#F60B00' 
-        - '#BB0000' 
-        - '#800000'  
+        - "#0000BB"
+        - "#0000F6"
+        - "#0020FF"
+        - "#0054FF"
+        - "#008CFF"
+        - "#00C0FF"
+        - "#0FF8E7"
+        - "#39FFBE"
+        - "#66FF90"
+        - "#90FF66"
+        - "#BEFF39"
+        - "#E7FF0F"
+        - "#FFD300"
+        - "#FFA300"
+        - "#FF6F00"
+        - "#FF3F00"
+        - "#F60B00"
+        - "#BB0000"
+        - "#800000"
   - id: 1B2a-exploration-ps
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Petroleum - Exploration (annual)
@@ -799,8 +798,8 @@ layers:
     description: Annual methane emission fluxes from Petroleum Exploration (inventory Energy 1B2a sub-category).
     initialDatetime: newest
     projection:
-      id: 'equirectangular'
-    basemapId: 'light' 
+      id: "equirectangular"
+    basemapId: "light"
     zoomExtent:
       - 0
       - 20
@@ -817,35 +816,35 @@ layers:
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
-        }      
+        }
     analysis:
       exclude: true
     legend:
-      unit: 
-       label: Billion molecules CH₄/cm²/s
+      unit:
+        label: Billion molecules CH₄/cm²/s
       type: gradient
       min: 0
       max: 500
       stops:
-        - '#0000BB'
-        - '#0000F6'
-        - '#0020FF'
-        - '#0054FF'
-        - '#008CFF'
-        - '#00C0FF'
-        - '#0FF8E7' 
-        - '#39FFBE'  
-        - '#66FF90'
-        - '#90FF66'
-        - '#BEFF39'
-        - '#E7FF0F'
-        - '#FFD300'
-        - '#FFA300'
-        - '#FF6F00'
-        - '#FF3F00' 
-        - '#F60B00' 
-        - '#BB0000' 
-        - '#800000'  
+        - "#0000BB"
+        - "#0000F6"
+        - "#0020FF"
+        - "#0054FF"
+        - "#008CFF"
+        - "#00C0FF"
+        - "#0FF8E7"
+        - "#39FFBE"
+        - "#66FF90"
+        - "#90FF66"
+        - "#BEFF39"
+        - "#E7FF0F"
+        - "#FFD300"
+        - "#FFA300"
+        - "#FF6F00"
+        - "#FF3F00"
+        - "#F60B00"
+        - "#BB0000"
+        - "#800000"
   - id: 1B2a-production-ps
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Petroleum - Production (annual)
@@ -853,8 +852,8 @@ layers:
     description: Annual methane emission fluxes from Petroleum Production (inventory Energy 1B2a sub-category).
     initialDatetime: newest
     projection:
-      id: 'equirectangular'
-    basemapId: 'light' 
+      id: "equirectangular"
+    basemapId: "light"
     zoomExtent:
       - 0
       - 20
@@ -871,35 +870,35 @@ layers:
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
-        }      
+        }
     analysis:
       exclude: true
     legend:
-      unit: 
-       label: Billion molecules CH₄/cm²/s
+      unit:
+        label: Billion molecules CH₄/cm²/s
       type: gradient
       min: 0
       max: 500
       stops:
-        - '#0000BB'
-        - '#0000F6'
-        - '#0020FF'
-        - '#0054FF'
-        - '#008CFF'
-        - '#00C0FF'
-        - '#0FF8E7' 
-        - '#39FFBE'  
-        - '#66FF90'
-        - '#90FF66'
-        - '#BEFF39'
-        - '#E7FF0F'
-        - '#FFD300'
-        - '#FFA300'
-        - '#FF6F00'
-        - '#FF3F00' 
-        - '#F60B00' 
-        - '#BB0000' 
-        - '#800000'           
+        - "#0000BB"
+        - "#0000F6"
+        - "#0020FF"
+        - "#0054FF"
+        - "#008CFF"
+        - "#00C0FF"
+        - "#0FF8E7"
+        - "#39FFBE"
+        - "#66FF90"
+        - "#90FF66"
+        - "#BEFF39"
+        - "#E7FF0F"
+        - "#FFD300"
+        - "#FFA300"
+        - "#FF6F00"
+        - "#FF3F00"
+        - "#F60B00"
+        - "#BB0000"
+        - "#800000"
   - id: 1B2a-transport-ps
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Petroleum - Transportation (annual)
@@ -907,8 +906,8 @@ layers:
     description: Annual methane emission fluxes from Petroleum Transportation (inventory Energy 1B2a sub-category).
     initialDatetime: newest
     projection:
-      id: 'equirectangular'
-    basemapId: 'light' 
+      id: "equirectangular"
+    basemapId: "light"
     zoomExtent:
       - 0
       - 20
@@ -925,35 +924,35 @@ layers:
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
-        }      
+        }
     analysis:
       exclude: true
     legend:
-      unit: 
-       label: Billion molecules CH₄/cm²/s
+      unit:
+        label: Billion molecules CH₄/cm²/s
       type: gradient
       min: 0
       max: 500
       stops:
-        - '#0000BB'
-        - '#0000F6'
-        - '#0020FF'
-        - '#0054FF'
-        - '#008CFF'
-        - '#00C0FF'
-        - '#0FF8E7' 
-        - '#39FFBE'  
-        - '#66FF90'
-        - '#90FF66'
-        - '#BEFF39'
-        - '#E7FF0F'
-        - '#FFD300'
-        - '#FFA300'
-        - '#FF6F00'
-        - '#FF3F00' 
-        - '#F60B00' 
-        - '#BB0000' 
-        - '#800000' 
+        - "#0000BB"
+        - "#0000F6"
+        - "#0020FF"
+        - "#0054FF"
+        - "#008CFF"
+        - "#00C0FF"
+        - "#0FF8E7"
+        - "#39FFBE"
+        - "#66FF90"
+        - "#90FF66"
+        - "#BEFF39"
+        - "#E7FF0F"
+        - "#FFD300"
+        - "#FFA300"
+        - "#FF6F00"
+        - "#FF3F00"
+        - "#F60B00"
+        - "#BB0000"
+        - "#800000"
   - id: 1B2a-refining-ps
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Petroleum - Refining (annual)
@@ -961,8 +960,8 @@ layers:
     description: Annual methane emission fluxes from Petroleum Refining (inventory Energy 1B2a sub-category).
     initialDatetime: newest
     projection:
-      id: 'equirectangular'
-    basemapId: 'light' 
+      id: "equirectangular"
+    basemapId: "light"
     zoomExtent:
       - 0
       - 20
@@ -979,26 +978,26 @@ layers:
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
-        }      
+        }
     analysis:
       exclude: true
     legend:
-      unit: 
-       label: Billion molecules CH₄/cm²/s
+      unit:
+        label: Billion molecules CH₄/cm²/s
       type: gradient
       min: 0
       max: 500
       stops:
-        - '#000080'
-        - '#0000FF'
-        - '#0080FF'
-        - '#00FFFF'
-        - '#00FF80'
-        - '#FFFF00'
-        - '#FF8000'
-        - '#FF0000' 
-        - '#800000' 
-        - '#4C0000' 
+        - "#000080"
+        - "#0000FF"
+        - "#0080FF"
+        - "#00FFFF"
+        - "#00FF80"
+        - "#FFFF00"
+        - "#FF8000"
+        - "#FF0000"
+        - "#800000"
+        - "#4C0000"
   - id: total-waste
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Total Waste (annual)
@@ -1006,8 +1005,8 @@ layers:
     description: Total annual methane emission fluxes from Waste (sum of inventory Waste categories 5A1, 5B1, 5D)
     initialDatetime: newest
     projection:
-      id: 'equirectangular'
-    basemapId: 'light' 
+      id: "equirectangular"
+    basemapId: "light"
     zoomExtent:
       - 0
       - 20
@@ -1024,35 +1023,35 @@ layers:
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
-        }      
+        }
     analysis:
       exclude: true
     legend:
-      unit: 
-       label: Billion molecules CH₄/cm²/s
+      unit:
+        label: Billion molecules CH₄/cm²/s
       type: gradient
       min: 0
       max: 500
       stops:
-        - '#0000BB'
-        - '#0000F6'
-        - '#0020FF'
-        - '#0054FF'
-        - '#008CFF'
-        - '#00C0FF'
-        - '#0FF8E7' 
-        - '#39FFBE'  
-        - '#66FF90'
-        - '#90FF66'
-        - '#BEFF39'
-        - '#E7FF0F'
-        - '#FFD300'
-        - '#FFA300'
-        - '#FF6F00'
-        - '#FF3F00' 
-        - '#F60B00' 
-        - '#BB0000' 
-        - '#800000'         
+        - "#0000BB"
+        - "#0000F6"
+        - "#0020FF"
+        - "#0054FF"
+        - "#008CFF"
+        - "#00C0FF"
+        - "#0FF8E7"
+        - "#39FFBE"
+        - "#66FF90"
+        - "#90FF66"
+        - "#BEFF39"
+        - "#E7FF0F"
+        - "#FFD300"
+        - "#FFA300"
+        - "#FF6F00"
+        - "#FF3F00"
+        - "#F60B00"
+        - "#BB0000"
+        - "#800000"
   - id: 5A1-msw-landfill-waste
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Waste - Municipal Solid Waste (MSW) Landfills (annual)
@@ -1060,8 +1059,8 @@ layers:
     description: Annual methane emissions fluxes from Municipal Solid Waste Landfills (inventory Waste 5A1 sub-category).
     initialDatetime: newest
     projection:
-      id: 'equirectangular'
-    basemapId: 'light' 
+      id: "equirectangular"
+    basemapId: "light"
     zoomExtent:
       - 0
       - 20
@@ -1078,35 +1077,35 @@ layers:
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
-        }      
+        }
     analysis:
       exclude: true
     legend:
-      unit: 
-       label: Billion molecules CH₄/cm²/s
+      unit:
+        label: Billion molecules CH₄/cm²/s
       type: gradient
       min: 0
       max: 500
       stops:
-        - '#0000BB'
-        - '#0000F6'
-        - '#0020FF'
-        - '#0054FF'
-        - '#008CFF'
-        - '#00C0FF'
-        - '#0FF8E7' 
-        - '#39FFBE'  
-        - '#66FF90'
-        - '#90FF66'
-        - '#BEFF39'
-        - '#E7FF0F'
-        - '#FFD300'
-        - '#FFA300'
-        - '#FF6F00'
-        - '#FF3F00' 
-        - '#F60B00' 
-        - '#BB0000' 
-        - '#800000'            
+        - "#0000BB"
+        - "#0000F6"
+        - "#0020FF"
+        - "#0054FF"
+        - "#008CFF"
+        - "#00C0FF"
+        - "#0FF8E7"
+        - "#39FFBE"
+        - "#66FF90"
+        - "#90FF66"
+        - "#BEFF39"
+        - "#E7FF0F"
+        - "#FFD300"
+        - "#FFA300"
+        - "#FF6F00"
+        - "#FF3F00"
+        - "#F60B00"
+        - "#BB0000"
+        - "#800000"
   - id: 5A1-industrial-landfill-waste
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Waste - Industrial Landfills (annual)
@@ -1114,8 +1113,8 @@ layers:
     description: Annual methane emissions fluxes from Industrial Landfills (inventory Waste 5A1 sub-category).
     initialDatetime: newest
     projection:
-      id: 'equirectangular'
-    basemapId: 'light' 
+      id: "equirectangular"
+    basemapId: "light"
     zoomExtent:
       - 0
       - 20
@@ -1132,35 +1131,35 @@ layers:
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
-        }      
+        }
     analysis:
       exclude: true
     legend:
-      unit: 
-       label: Billion molecules CH₄/cm²/s
+      unit:
+        label: Billion molecules CH₄/cm²/s
       type: gradient
       min: 0
       max: 500
       stops:
-        - '#0000BB'
-        - '#0000F6'
-        - '#0020FF'
-        - '#0054FF'
-        - '#008CFF'
-        - '#00C0FF'
-        - '#0FF8E7' 
-        - '#39FFBE'  
-        - '#66FF90'
-        - '#90FF66'
-        - '#BEFF39'
-        - '#E7FF0F'
-        - '#FFD300'
-        - '#FFA300'
-        - '#FF6F00'
-        - '#FF3F00' 
-        - '#F60B00' 
-        - '#BB0000' 
-        - '#800000'               
+        - "#0000BB"
+        - "#0000F6"
+        - "#0020FF"
+        - "#0054FF"
+        - "#008CFF"
+        - "#00C0FF"
+        - "#0FF8E7"
+        - "#39FFBE"
+        - "#66FF90"
+        - "#90FF66"
+        - "#BEFF39"
+        - "#E7FF0F"
+        - "#FFD300"
+        - "#FFA300"
+        - "#FF6F00"
+        - "#FF3F00"
+        - "#F60B00"
+        - "#BB0000"
+        - "#800000"
   - id: 5A1-dwtd-waste
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Waste - Domestic Wastewater Treatment & Discharge (annual)
@@ -1168,8 +1167,8 @@ layers:
     description: Annual methane emissions fluxes from Domestic Wastewater Treatment and Discharge (inventory Waste 5D sub-category).
     initialDatetime: newest
     projection:
-      id: 'equirectangular'
-    basemapId: 'light' 
+      id: "equirectangular"
+    basemapId: "light"
     zoomExtent:
       - 0
       - 20
@@ -1186,44 +1185,44 @@ layers:
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
-        }      
+        }
     analysis:
       exclude: true
     legend:
-      unit: 
-       label: Billion molecules CH₄/cm²/s
+      unit:
+        label: Billion molecules CH₄/cm²/s
       type: gradient
       min: 0
       max: 500
       stops:
-        - '#0000BB'
-        - '#0000F6'
-        - '#0020FF'
-        - '#0054FF'
-        - '#008CFF'
-        - '#00C0FF'
-        - '#0FF8E7' 
-        - '#39FFBE'  
-        - '#66FF90'
-        - '#90FF66'
-        - '#BEFF39'
-        - '#E7FF0F'
-        - '#FFD300'
-        - '#FFA300'
-        - '#FF6F00'
-        - '#FF3F00' 
-        - '#F60B00' 
-        - '#BB0000' 
-        - '#800000'            
+        - "#0000BB"
+        - "#0000F6"
+        - "#0020FF"
+        - "#0054FF"
+        - "#008CFF"
+        - "#00C0FF"
+        - "#0FF8E7"
+        - "#39FFBE"
+        - "#66FF90"
+        - "#90FF66"
+        - "#BEFF39"
+        - "#E7FF0F"
+        - "#FFD300"
+        - "#FFA300"
+        - "#FF6F00"
+        - "#FF3F00"
+        - "#F60B00"
+        - "#BB0000"
+        - "#800000"
   - id: 5A1-iwtd-waste
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Waste - Industrial Wastewater Treatment & Discharge (annual)
     type: raster
-    description: Annual methane emissions fluxes from Industrial Wastewater Treatment and Discharge (inventory Waste 5D sub-category). 
+    description: Annual methane emissions fluxes from Industrial Wastewater Treatment and Discharge (inventory Waste 5D sub-category).
     initialDatetime: newest
     projection:
-      id: 'equirectangular'
-    basemapId: 'light' 
+      id: "equirectangular"
+    basemapId: "light"
     zoomExtent:
       - 0
       - 20
@@ -1240,44 +1239,44 @@ layers:
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
-        }      
+        }
     analysis:
       exclude: true
     legend:
-      unit: 
-       label: Billion molecules CH₄/cm²/s
+      unit:
+        label: Billion molecules CH₄/cm²/s
       type: gradient
       min: 0
       max: 500
       stops:
-        - '#0000BB'
-        - '#0000F6'
-        - '#0020FF'
-        - '#0054FF'
-        - '#008CFF'
-        - '#00C0FF'
-        - '#0FF8E7' 
-        - '#39FFBE'  
-        - '#66FF90'
-        - '#90FF66'
-        - '#BEFF39'
-        - '#E7FF0F'
-        - '#FFD300'
-        - '#FFA300'
-        - '#FF6F00'
-        - '#FF3F00' 
-        - '#F60B00' 
-        - '#BB0000' 
-        - '#800000'            
+        - "#0000BB"
+        - "#0000F6"
+        - "#0020FF"
+        - "#0054FF"
+        - "#008CFF"
+        - "#00C0FF"
+        - "#0FF8E7"
+        - "#39FFBE"
+        - "#66FF90"
+        - "#90FF66"
+        - "#BEFF39"
+        - "#E7FF0F"
+        - "#FFD300"
+        - "#FFA300"
+        - "#FF6F00"
+        - "#FF3F00"
+        - "#F60B00"
+        - "#BB0000"
+        - "#800000"
   - id: 5A1-composting-waste
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Composting (annual)
     type: raster
-    description: Annual methane emissions fluxes from Composting (inventory Waste category 5B1). 
+    description: Annual methane emissions fluxes from Composting (inventory Waste category 5B1).
     initialDatetime: newest
     projection:
-      id: 'equirectangular'
-    basemapId: 'light' 
+      id: "equirectangular"
+    basemapId: "light"
     zoomExtent:
       - 0
       - 20
@@ -1294,35 +1293,35 @@ layers:
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
-        }      
+        }
     analysis:
       exclude: true
     legend:
-      unit: 
-       label: Billion molecules CH₄/cm²/s
+      unit:
+        label: Billion molecules CH₄/cm²/s
       type: gradient
       min: 0
       max: 500
       stops:
-        - '#0000BB'
-        - '#0000F6'
-        - '#0020FF'
-        - '#0054FF'
-        - '#008CFF'
-        - '#00C0FF'
-        - '#0FF8E7' 
-        - '#39FFBE'  
-        - '#66FF90'
-        - '#90FF66'
-        - '#BEFF39'
-        - '#E7FF0F'
-        - '#FFD300'
-        - '#FFA300'
-        - '#FF6F00'
-        - '#FF3F00' 
-        - '#F60B00' 
-        - '#BB0000' 
-        - '#800000'             
+        - "#0000BB"
+        - "#0000F6"
+        - "#0020FF"
+        - "#0054FF"
+        - "#008CFF"
+        - "#00C0FF"
+        - "#0FF8E7"
+        - "#39FFBE"
+        - "#66FF90"
+        - "#90FF66"
+        - "#BEFF39"
+        - "#E7FF0F"
+        - "#FFD300"
+        - "#FFA300"
+        - "#FF6F00"
+        - "#FF3F00"
+        - "#F60B00"
+        - "#BB0000"
+        - "#800000"
   - id: total-coal-mines
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Total Coal Mines (annual)
@@ -1330,8 +1329,8 @@ layers:
     description: Total annual methane emission fluxes from Coal Mines (sum of inventory 1B1a sub-categories)
     initialDatetime: newest
     projection:
-      id: 'equirectangular'
-    basemapId: 'light' 
+      id: "equirectangular"
+    basemapId: "light"
     zoomExtent:
       - 0
       - 20
@@ -1348,35 +1347,35 @@ layers:
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
-        }      
+        }
     analysis:
       exclude: true
     legend:
-      unit: 
-       label: Billion molecules CH₄/cm²/s
+      unit:
+        label: Billion molecules CH₄/cm²/s
       type: gradient
       min: 0
       max: 500
       stops:
-        - '#0000BB'
-        - '#0000F6'
-        - '#0020FF'
-        - '#0054FF'
-        - '#008CFF'
-        - '#00C0FF'
-        - '#0FF8E7' 
-        - '#39FFBE'  
-        - '#66FF90'
-        - '#90FF66'
-        - '#BEFF39'
-        - '#E7FF0F'
-        - '#FFD300'
-        - '#FFA300'
-        - '#FF6F00'
-        - '#FF3F00' 
-        - '#F60B00' 
-        - '#BB0000' 
-        - '#800000'                 
+        - "#0000BB"
+        - "#0000F6"
+        - "#0020FF"
+        - "#0054FF"
+        - "#008CFF"
+        - "#00C0FF"
+        - "#0FF8E7"
+        - "#39FFBE"
+        - "#66FF90"
+        - "#90FF66"
+        - "#BEFF39"
+        - "#E7FF0F"
+        - "#FFD300"
+        - "#FFA300"
+        - "#FF6F00"
+        - "#FF3F00"
+        - "#F60B00"
+        - "#BB0000"
+        - "#800000"
   - id: 1B1a-underground-coal
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Coal Mining - Underground Mining (annual)
@@ -1384,8 +1383,8 @@ layers:
     description: Annual methane emission fluxes from active Underground Coal Mining (inventory Energy 1B1a sub-category)
     initialDatetime: newest
     projection:
-      id: 'equirectangular'
-    basemapId: 'light' 
+      id: "equirectangular"
+    basemapId: "light"
     zoomExtent:
       - 0
       - 20
@@ -1402,35 +1401,35 @@ layers:
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
-        }      
+        }
     analysis:
       exclude: true
     legend:
-      unit: 
-       label: Billion molecules CH₄/cm²/s
+      unit:
+        label: Billion molecules CH₄/cm²/s
       type: gradient
       min: 0
       max: 500
       stops:
-        - '#0000BB'
-        - '#0000F6'
-        - '#0020FF'
-        - '#0054FF'
-        - '#008CFF'
-        - '#00C0FF'
-        - '#0FF8E7' 
-        - '#39FFBE'  
-        - '#66FF90'
-        - '#90FF66'
-        - '#BEFF39'
-        - '#E7FF0F'
-        - '#FFD300'
-        - '#FFA300'
-        - '#FF6F00'
-        - '#FF3F00' 
-        - '#F60B00' 
-        - '#BB0000' 
-        - '#800000'           
+        - "#0000BB"
+        - "#0000F6"
+        - "#0020FF"
+        - "#0054FF"
+        - "#008CFF"
+        - "#00C0FF"
+        - "#0FF8E7"
+        - "#39FFBE"
+        - "#66FF90"
+        - "#90FF66"
+        - "#BEFF39"
+        - "#E7FF0F"
+        - "#FFD300"
+        - "#FFA300"
+        - "#FF6F00"
+        - "#FF3F00"
+        - "#F60B00"
+        - "#BB0000"
+        - "#800000"
   - id: 1B1a-abn-underground-coal
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Coal Mining - Abandoned Underground Mines (annual)
@@ -1438,8 +1437,8 @@ layers:
     description: Annual methane emission fluxes from Abandoned Underground Coal Mines (inventory Energy 1B1a sub-category)
     initialDatetime: newest
     projection:
-      id: 'equirectangular'
-    basemapId: 'light' 
+      id: "equirectangular"
+    basemapId: "light"
     zoomExtent:
       - 0
       - 20
@@ -1456,35 +1455,35 @@ layers:
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
-        }      
+        }
     analysis:
       exclude: true
     legend:
-      unit: 
-       label: Billion molecules CH₄/cm²/s
+      unit:
+        label: Billion molecules CH₄/cm²/s
       type: gradient
       min: 0
       max: 500
       stops:
-        - '#0000BB'
-        - '#0000F6'
-        - '#0020FF'
-        - '#0054FF'
-        - '#008CFF'
-        - '#00C0FF'
-        - '#0FF8E7' 
-        - '#39FFBE'  
-        - '#66FF90'
-        - '#90FF66'
-        - '#BEFF39'
-        - '#E7FF0F'
-        - '#FFD300'
-        - '#FFA300'
-        - '#FF6F00'
-        - '#FF3F00' 
-        - '#F60B00' 
-        - '#BB0000' 
-        - '#800000'          
+        - "#0000BB"
+        - "#0000F6"
+        - "#0020FF"
+        - "#0054FF"
+        - "#008CFF"
+        - "#00C0FF"
+        - "#0FF8E7"
+        - "#39FFBE"
+        - "#66FF90"
+        - "#90FF66"
+        - "#BEFF39"
+        - "#E7FF0F"
+        - "#FFD300"
+        - "#FFA300"
+        - "#FF6F00"
+        - "#FF3F00"
+        - "#F60B00"
+        - "#BB0000"
+        - "#800000"
   - id: 1B1a-surface-coal
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Coal Mining - Surface Mining (annual)
@@ -1492,8 +1491,8 @@ layers:
     description: Annual methane emission fluxes from active Surface Coal Mining (inventory Energy 1B1a sub-category)
     initialDatetime: newest
     projection:
-      id: 'equirectangular'
-    basemapId: 'light' 
+      id: "equirectangular"
+    basemapId: "light"
     zoomExtent:
       - 0
       - 20
@@ -1510,35 +1509,35 @@ layers:
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
-        }      
+        }
     analysis:
       exclude: true
     legend:
-      unit: 
-       label: Billion molecules CH₄/cm²/s
+      unit:
+        label: Billion molecules CH₄/cm²/s
       type: gradient
       min: 0
       max: 500
       stops:
-        - '#0000BB'
-        - '#0000F6'
-        - '#0020FF'
-        - '#0054FF'
-        - '#008CFF'
-        - '#00C0FF'
-        - '#0FF8E7' 
-        - '#39FFBE'  
-        - '#66FF90'
-        - '#90FF66'
-        - '#BEFF39'
-        - '#E7FF0F'
-        - '#FFD300'
-        - '#FFA300'
-        - '#FF6F00'
-        - '#FF3F00' 
-        - '#F60B00' 
-        - '#BB0000' 
-        - '#800000' 
+        - "#0000BB"
+        - "#0000F6"
+        - "#0020FF"
+        - "#0054FF"
+        - "#008CFF"
+        - "#00C0FF"
+        - "#0FF8E7"
+        - "#39FFBE"
+        - "#66FF90"
+        - "#90FF66"
+        - "#BEFF39"
+        - "#E7FF0F"
+        - "#FFD300"
+        - "#FFA300"
+        - "#FF6F00"
+        - "#FF3F00"
+        - "#F60B00"
+        - "#BB0000"
+        - "#800000"
   - id: total-other
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Total Other (annual)
@@ -1546,8 +1545,8 @@ layers:
     description: Total annual methane emission fluxes from ‘other’ remaining sources (sum of inventory categories 1A (energy combustion), 2B8 & 2C2 (petrochemical & ferroalloy production) and 1B2a & 1B2b (abandoned O&G well emissions))
     initialDatetime: newest
     projection:
-      id: 'equirectangular'
-    basemapId: 'light' 
+      id: "equirectangular"
+    basemapId: "light"
     zoomExtent:
       - 0
       - 20
@@ -1564,35 +1563,35 @@ layers:
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
-        }      
+        }
     analysis:
       exclude: true
     legend:
-      unit: 
-       label: Billion molecules CH₄/cm²/s
+      unit:
+        label: Billion molecules CH₄/cm²/s
       type: gradient
       min: 0
       max: 500
       stops:
-        - '#0000BB'
-        - '#0000F6'
-        - '#0020FF'
-        - '#0054FF'
-        - '#008CFF'
-        - '#00C0FF'
-        - '#0FF8E7' 
-        - '#39FFBE'  
-        - '#66FF90'
-        - '#90FF66'
-        - '#BEFF39'
-        - '#E7FF0F'
-        - '#FFD300'
-        - '#FFA300'
-        - '#FF6F00'
-        - '#FF3F00' 
-        - '#F60B00' 
-        - '#BB0000' 
-        - '#800000'       
+        - "#0000BB"
+        - "#0000F6"
+        - "#0020FF"
+        - "#0054FF"
+        - "#008CFF"
+        - "#00C0FF"
+        - "#0FF8E7"
+        - "#39FFBE"
+        - "#66FF90"
+        - "#90FF66"
+        - "#BEFF39"
+        - "#E7FF0F"
+        - "#FFD300"
+        - "#FFA300"
+        - "#FF6F00"
+        - "#FF3F00"
+        - "#F60B00"
+        - "#BB0000"
+        - "#800000"
   - id: 1A-stationary-combustion-other
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Other - Stationary combustion (annual)
@@ -1600,8 +1599,8 @@ layers:
     description: Annual methane emission fluxes from Stationary Combustion (inventory Energy 1A sub-category)
     initialDatetime: newest
     projection:
-      id: 'equirectangular'
-    basemapId: 'light' 
+      id: "equirectangular"
+    basemapId: "light"
     zoomExtent:
       - 0
       - 20
@@ -1618,44 +1617,44 @@ layers:
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
-        }      
+        }
     analysis:
       exclude: true
     legend:
-      unit: 
-       label: Billion molecules CH₄/cm²/s
+      unit:
+        label: Billion molecules CH₄/cm²/s
       type: gradient
       min: 0
       max: 500
       stops:
-        - '#0000BB'
-        - '#0000F6'
-        - '#0020FF'
-        - '#0054FF'
-        - '#008CFF'
-        - '#00C0FF'
-        - '#0FF8E7' 
-        - '#39FFBE'  
-        - '#66FF90'
-        - '#90FF66'
-        - '#BEFF39'
-        - '#E7FF0F'
-        - '#FFD300'
-        - '#FFA300'
-        - '#FF6F00'
-        - '#FF3F00' 
-        - '#F60B00' 
-        - '#BB0000' 
-        - '#800000'              
+        - "#0000BB"
+        - "#0000F6"
+        - "#0020FF"
+        - "#0054FF"
+        - "#008CFF"
+        - "#00C0FF"
+        - "#0FF8E7"
+        - "#39FFBE"
+        - "#66FF90"
+        - "#90FF66"
+        - "#BEFF39"
+        - "#E7FF0F"
+        - "#FFD300"
+        - "#FFA300"
+        - "#FF6F00"
+        - "#FF3F00"
+        - "#F60B00"
+        - "#BB0000"
+        - "#800000"
   - id: 1A-mobile-combustion-othe
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Other - Mobile combustion (annual)
     type: raster
-    description: Annual methane emission fluxes from Mobile Combustion (inventory Energy 1A sub-category) 
+    description: Annual methane emission fluxes from Mobile Combustion (inventory Energy 1A sub-category)
     initialDatetime: newest
     projection:
-      id: 'equirectangular'
-    basemapId: 'light' 
+      id: "equirectangular"
+    basemapId: "light"
     zoomExtent:
       - 0
       - 20
@@ -1672,35 +1671,35 @@ layers:
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
-        }      
+        }
     analysis:
       exclude: true
     legend:
-      unit: 
-       label: Billion molecules CH₄/cm²/s
+      unit:
+        label: Billion molecules CH₄/cm²/s
       type: gradient
       min: 0
       max: 500
       stops:
-        - '#0000BB'
-        - '#0000F6'
-        - '#0020FF'
-        - '#0054FF'
-        - '#008CFF'
-        - '#00C0FF'
-        - '#0FF8E7' 
-        - '#39FFBE'  
-        - '#66FF90'
-        - '#90FF66'
-        - '#BEFF39'
-        - '#E7FF0F'
-        - '#FFD300'
-        - '#FFA300'
-        - '#FF6F00'
-        - '#FF3F00' 
-        - '#F60B00' 
-        - '#BB0000' 
-        - '#800000'         
+        - "#0000BB"
+        - "#0000F6"
+        - "#0020FF"
+        - "#0054FF"
+        - "#008CFF"
+        - "#00C0FF"
+        - "#0FF8E7"
+        - "#39FFBE"
+        - "#66FF90"
+        - "#90FF66"
+        - "#BEFF39"
+        - "#E7FF0F"
+        - "#FFD300"
+        - "#FFA300"
+        - "#FF6F00"
+        - "#FF3F00"
+        - "#F60B00"
+        - "#BB0000"
+        - "#800000"
   - id: 1A-abn-ong-other
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Other - Abandoned Oil and Gas Wells (annual)
@@ -1708,8 +1707,8 @@ layers:
     description: Annual methane emission fluxes from Abandoned Oil and Gas Wells (inventory Energy 1B2a and 1B2b sub-categories)
     initialDatetime: newest
     projection:
-      id: 'equirectangular'
-    basemapId: 'light' 
+      id: "equirectangular"
+    basemapId: "light"
     zoomExtent:
       - 0
       - 20
@@ -1726,35 +1725,35 @@ layers:
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
-        }      
+        }
     analysis:
       exclude: true
     legend:
-      unit: 
-       label: Billion molecules CH₄/cm²/s
+      unit:
+        label: Billion molecules CH₄/cm²/s
       type: gradient
       min: 0
       max: 500
       stops:
-        - '#0000BB'
-        - '#0000F6'
-        - '#0020FF'
-        - '#0054FF'
-        - '#008CFF'
-        - '#00C0FF'
-        - '#0FF8E7' 
-        - '#39FFBE'  
-        - '#66FF90'
-        - '#90FF66'
-        - '#BEFF39'
-        - '#E7FF0F'
-        - '#FFD300'
-        - '#FFA300'
-        - '#FF6F00'
-        - '#FF3F00' 
-        - '#F60B00' 
-        - '#BB0000' 
-        - '#800000'            
+        - "#0000BB"
+        - "#0000F6"
+        - "#0020FF"
+        - "#0054FF"
+        - "#008CFF"
+        - "#00C0FF"
+        - "#0FF8E7"
+        - "#39FFBE"
+        - "#66FF90"
+        - "#90FF66"
+        - "#BEFF39"
+        - "#E7FF0F"
+        - "#FFD300"
+        - "#FFA300"
+        - "#FF6F00"
+        - "#FF3F00"
+        - "#F60B00"
+        - "#BB0000"
+        - "#800000"
   - id: 1A-petro-production-other
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Other - Petrochemical Production (annual)
@@ -1762,8 +1761,8 @@ layers:
     description: Annual methane emission fluxes from Petrochemical Production (inventory Industrial Processes and Product Use category 2B8)
     initialDatetime: newest
     projection:
-      id: 'equirectangular'
-    basemapId: 'light' 
+      id: "equirectangular"
+    basemapId: "light"
     zoomExtent:
       - 0
       - 20
@@ -1780,35 +1779,35 @@ layers:
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
-        }      
+        }
     analysis:
       exclude: true
     legend:
-      unit: 
-       label: Billion molecules CH₄/cm²/s
+      unit:
+        label: Billion molecules CH₄/cm²/s
       type: gradient
       min: 0
       max: 500
       stops:
-        - '#0000BB'
-        - '#0000F6'
-        - '#0020FF'
-        - '#0054FF'
-        - '#008CFF'
-        - '#00C0FF'
-        - '#0FF8E7' 
-        - '#39FFBE'  
-        - '#66FF90'
-        - '#90FF66'
-        - '#BEFF39'
-        - '#E7FF0F'
-        - '#FFD300'
-        - '#FFA300'
-        - '#FF6F00'
-        - '#FF3F00' 
-        - '#F60B00' 
-        - '#BB0000' 
-        - '#800000'            
+        - "#0000BB"
+        - "#0000F6"
+        - "#0020FF"
+        - "#0054FF"
+        - "#008CFF"
+        - "#00C0FF"
+        - "#0FF8E7"
+        - "#39FFBE"
+        - "#66FF90"
+        - "#90FF66"
+        - "#BEFF39"
+        - "#E7FF0F"
+        - "#FFD300"
+        - "#FFA300"
+        - "#FF6F00"
+        - "#FF3F00"
+        - "#F60B00"
+        - "#BB0000"
+        - "#800000"
   - id: 1A-ferroalloy-production-other
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Other - Ferroalloy Production (annual)
@@ -1816,8 +1815,8 @@ layers:
     description: Annual methane emission fluxes from Ferroalloy Production (inventory Industrial Processes and Product Use category 2C2)
     initialDatetime: newest
     projection:
-      id: 'equirectangular'
-    basemapId: 'light' 
+      id: "equirectangular"
+    basemapId: "light"
     zoomExtent:
       - 0
       - 20
@@ -1834,101 +1833,100 @@ layers:
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
-        }      
+        }
     analysis:
       exclude: true
     legend:
-      unit: 
-       label: Billion molecules CH₄/cm²/s
+      unit:
+        label: Billion molecules CH₄/cm²/s
       type: gradient
       min: 0
       max: 500
       stops:
-        - '#0000BB'
-        - '#0000F6'
-        - '#0020FF'
-        - '#0054FF'
-        - '#008CFF'
-        - '#00C0FF'
-        - '#0FF8E7' 
-        - '#39FFBE'  
-        - '#66FF90'
-        - '#90FF66'
-        - '#BEFF39'
-        - '#E7FF0F'
-        - '#FFD300'
-        - '#FFA300'
-        - '#FF6F00'
-        - '#FF3F00' 
-        - '#F60B00' 
-        - '#BB0000' 
-        - '#800000'                  
-                      
+        - "#0000BB"
+        - "#0000F6"
+        - "#0020FF"
+        - "#0054FF"
+        - "#008CFF"
+        - "#00C0FF"
+        - "#0FF8E7"
+        - "#39FFBE"
+        - "#66FF90"
+        - "#90FF66"
+        - "#BEFF39"
+        - "#E7FF0F"
+        - "#FFD300"
+        - "#FFA300"
+        - "#FF6F00"
+        - "#FF3F00"
+        - "#F60B00"
+        - "#BB0000"
+        - "#800000"
 ---
 
 <Block type='wide'>
   <Prose>
-    The gridded EPA U.S. anthropogenic methane greenhouse gas inventory (gridded GHGI) includes spatially disaggregated (0.1 deg x 0.1 deg or approximately 10 x 10 km resolution) maps of annual anthropogenic methane emissions (for the contiguous United States (CONUS), consistent with national annual U.S. anthropogenic methane emissions reported in the U.S. EPA [Inventory of U.S. Greenhouse Gas Emissions and Sinks](https://www.epa.gov/ghgemissions/inventory-us-greenhouse-gas-emissions-and-sinks) (U.S. GHGI). This V2 Express Extension dataset contains methane emissions provided as fluxes, in units of molecules of methane per square cm per second, for over 25 individual emission source categories, including those from agriculture, petroleum and natural gas systems, coal mining, and waste. The data have been converted from their original NetCDF format to Cloud-Optimized GeoTIFF (COG) for use in the US GHG Center, thereby enabling user exploration of spatial anthropogenic methane emissions and their trends.
+    The gridded EPA U.S. anthropogenic methane greenhouse gas inventory (gridded GHGI) includes spatially disaggregated (0.1 deg x 0.1 deg or approximately 10 x 10 km resolution) maps of annual anthropogenic methane emissions for the contiguous United States (CONUS), consistent with national annual U.S. anthropogenic methane emissions reported in the U.S. EPA [Inventory of U.S. Greenhouse Gas Emissions and Sinks](https://www.epa.gov/ghgemissions/inventory-us-greenhouse-gas-emissions-and-sinks) (U.S. GHGI). This dataset contains methane emissions provided as fluxes, in units of molecules of methane per square cm per second, for over 25 individual emission source categories, including those from agriculture, petroleum and natural gas systems, coal mining, and waste. The data have been converted from their original NetCDF format to Cloud-Optimized GeoTIFF (COG) for use in the US GHG Center, thereby enabling user exploration of spatial anthropogenic methane emissions and their trends.
     
     **Data Version Details:**
-    The gridded methane GHGI is continually updated to capture ongoing improvements and updates to the U.S. GHG Inventory. The gridded methane GHGI currently includes 3 versions, each covering different emission years, and with sectoral methane emissions consistent with different versions of the U.S. GHGI Report. 
+    The gridded methane GHGI is continually updated to capture ongoing improvements and updates to the U.S. GHG Inventory. The gridded methane GHGI currently includes 3 versions, each covering different emission years, and with sectoral methane emissions consistent with different versions of the U.S. GHGI Report.
 
     1. Gridded methane GHGI Version 1 (0.1°×0.1° emission maps for 2012, consistent with the 2016 GHGI Report)
     2. Gridded methane GHGI Version 2 (0.1°×0.1° emission maps for 2012-2018, consistent with the 2020 GHGI Report)
     3. Gridded methane GHGI Version 2 Express Extension (0.1°×0.1° emission maps for 2012-2020, consistent with the 2022 GHGI Report)
-    
-    Data available in the US GHG Center Data Explorer corresponds to the V2 Express Extension dataset (version #3 listed above).  
-    
+
+    Data available in the US GHG Center Data Explorer corresponds to the V2 Express Extension dataset (version #3 listed above).
+
     For more information Version 2 and the Express Extension (#2 & #3), visit the latest Data Repository on Zenodo: [https://zenodo.org/record/7672124](https://zenodo.org/record/7672124)
-   
-    - **Temporal Extent:** 2012 - 2020    
-    - **Temporal Resolution:** Annual    
-    - **Spatial Extent:** Contiguous United States  
-    - **Spatial Resolution:** 0.1° x 0.1°    
-    - **Data Units:** Billion molecules of methane per square centimeter per second (Billion molecules CH₄/cm²/s)    
+
+    - **Temporal Extent:** 2012 - 2020
+    - **Temporal Resolution:** Annual
+    - **Spatial Extent:** Contiguous United States
+    - **Spatial Resolution:** 0.1° x 0.1°
+    - **Data Units:** Billion molecules of methane per square centimeter per second (Billion molecules CH₄/cm²/s)
     - **Data type:** Research (v2 express extension)
     - **Data Latency:** N/A
 
-    **Scientific Details:** The gridded methane GHGI is developed by spatially allocating national annual methane emissions from over 160 individual source categories from the Inventory of U.S. Greenhouse Gas Emissions and Sinks (U.S. GHGI) to a 0.1 deg x 0.1 deg (~10 x 10 km) grid using a series of spatial and temporal proxy datasets at the state, county, and grid levels. Proxy data are chosen to best align with the available activity and reported emissions data underlying a particular version of the U.S. GHGI. Where possible, the proxy data are the same as those used to develop the GHGI so that the gridded emissions can be, as closely as possible, a spatial and temporal representation of those in the national-level U.S. GHGI Report. 
+    **Scientific Details:** The gridded methane GHGI is developed by spatially allocating national annual methane emissions from individual source categories from the Inventory of U.S. Greenhouse Gas Emissions and Sinks (U.S. GHGI) to a 0.1 deg x 0.1 deg (~10 x 10 km) grid using a series of spatial and temporal proxy datasets at the state, county, and grid levels. Proxy data are chosen to best align with the available activity and reported emissions data underlying a particular version of the U.S. GHGI. Where possible, the proxy data are the same as those used to develop the GHGI so that the gridded emissions can be, as closely as possible, a spatial and temporal representation of those in the national-level U.S. GHGI Report.
 
-    The development of the gridded GHGI enables more direct comparisons between the methane emissions reported in the annual U.S. GHGI and those derived from atmospheric methane observations, such as through inverse analyses, with the aim of improving national inventory estimates and better understanding uncertain sources of methane emissions. 
+    The development of the gridded GHGI enables more direct comparisons between the methane emissions reported in the annual U.S. GHGI and those derived from atmospheric methane observations, such as through inverse analyses, with the aim of improving national inventory estimates and better understanding uncertain sources of methane emissions.
 
     Details of the methodological development of this dataset are described in the paper Maasakkers et al., [preprint] 2023, currently available as a pre-print at: [https://eartharxiv.org/repository/view/5623/](https://eartharxiv.org/repository/view/5623/)
+
   </Prose>
 </Block>
 <Block>
   <Prose>
     ## Source Data Product Citation
-    Gridded GHGI V2 & V2 Express Extension (this dataset in US GHG Center):
+    Gridded GHGI V2 & V2 Express Extension (this dataset in US GHG Center): 
+    McDuffie, E., Maasakkers, J., Sulprizio, M., Chen, C., Schultz, M., Brunelle, L., Thrush, R., Steller, J., Sherry, C., Jacob, D., J., Jeong, S., Irving, B., & Weitz, M. (2023). Gridded EPA U.S. Anthropogenic Methane Greenhouse Gas Inventory (gridded GHGI) (Preprint) [Data set]. Zenodo. [https://doi.org/10.5281/zenodo.7672124](https://doi.org/10.5281/zenodo.7672124)
 
-    McDuffie, Erin, E., Maasakkers, Joannes, D., Sulprizio, Melissa, P., Chen, Candice, Schultz, Maggie, Brunelle, Lily, Thrush, Ryan, Steller, John, Sherry, Christopher, Jacob, Daniel, J., Jeong, Seongeun, Irving, Bill, & Weitz, Melissa. (2023). Gridded EPA U.S. Anthropogenic Methane Greenhouse Gas Inventory (gridded GHGI) (Preprint) [Data set]. *Zenodo*. https://doi.org/10.5281/zenodo.7672124
-    
     Gridded GHGI Version 1:
 
-    Maasakkers, J. D., Jacob, D. J., Sulprizio, M. P., Turner, A. J., Weitz, M., Wirth, T., Hight, C., DeFigueiredo, M., Desai, M., Schmeltz, R., Hockstad, L., Bloom, A. A., Bowman, K. W., Jeong, S., Fischer, M. L. (2016) A Gridded National Inventory of U.S. Methane Emissions [Data set]. Available at: [https://www.epa.gov/ghgemissions/gridded-2012-methane-emissions#data](https://www.epa.gov/ghgemissions/gridded-2012-methane-emissions#data) 
-    
+    Maasakkers, J. D., Jacob, D. J., Sulprizio, M. P., Turner, A. J., Weitz, M., Wirth, T., Hight, C., DeFigueiredo, M., Desai, M., Schmeltz, R., Hockstad, L., Bloom, A. A., Bowman, K. W., Jeong, S., Fischer, M. L. (2016) A Gridded National Inventory of U.S. Methane Emissions [Data set]. Available at: [https://www.epa.gov/ghgemissions/gridded-2012-methane-emissions#data](https://www.epa.gov/ghgemissions/gridded-2012-methane-emissions#data)
+
     ## Dataset Accuracy
-    Uncertainties underlying the development of national methane emission estimates are discussed in each annual U.S. GHGI Report. Additional characterization of resolution-dependent uncertainties are discussed in [Maasakkers et al. (2023)](https://doi.org/10.31223/X5RQ3M).    
-    
+    Uncertainties underlying the development of national methane emission estimates are discussed in each annual U.S. GHGI Report. Additional characterization of resolution-dependent uncertainties are discussed in [Maasakkers et al. (2023)](https://doi.org/10.31223/X5RQ3M).
+
     ## Disclaimer
-    All data provided in the US GHG Center has been transformed from the original format (NetCDF) into Cloud Optimized GeoTIFF ([COG](https://www.cogeo.org/)). Careful quality checks are used to ensure data transformation has been performed correctly. 
-    
+    All data provided in the US GHG Center has been transformed from the original format (NetCDF) into Cloud Optimized GeoTIFF ([COG](https://www.cogeo.org/)). Careful quality checks are used to ensure data transformation has been performed correctly.
+
     The Version 2 & Express Extension datasets have been peer-reviewed as part of the associated manuscript Maasakkers et al., 2023, which will be published online shortly.
 
-    Users of these datasets are asked to cite the original references ([Maasakkers, et al., (2016)](https://pubs.acs.org/doi/10.1021/acs.est.6b02878) or [Maasakkers et al. (2023)](https://doi.org/10.31223/X5RQ3M)) in their publications and are encouraged to reach out to the development team with further questions. 
-    
+    Users of these datasets are asked to cite the original references ([Maasakkers, et al., (2016)](https://pubs.acs.org/doi/10.1021/acs.est.6b02878) or [Maasakkers et al. (2023)](https://doi.org/10.31223/X5RQ3M)) in their publications and are encouraged to reach out to the development team with further questions.
+
     ## Key Publications
     Maasakkers, J., McDuffie, E., Sulprizio, M., Chen, C., Schultz, M., Brunelle, L., Thrush, R., Steller, J., Sherry, C., Jacob, D., Jeong, S., Irving, B., & Weitz, M. (2023). A gridded inventory of annual 2012-2018 U.S. anthropogenic methane emissions. *EarthArXiv (California Digital Library)*. https://doi.org/10.31223/x5rq3m
-    
+
     ## Other Relevant Publications
     Maasakkers, J., Jacob, D., Sulprizio, M., Turner, A., Weitz, M., Wirth, T., Hight, C., DeFigueiredo, M., Desai, M., Schmeltz, R., Hockstad, L., Bloom, A., Bowman, K., Jeong, S., Fischer, M. (2016). Gridded National Inventory of U.S. Methane Emissions. *Environmental Science & Technology*, 50(23), 13123-13133. https://doi.org/10.1021/acs.est.6b02878
-    
+
     ## Acknowledgment
-    This dataset was developed in collaboration between researchers at the U.S. EPA, Netherlands Institute for Space Research (SRON), Harvard University, and Lawrence Berkeley National Laboratory.     
-    
+    This dataset was developed in collaboration between researchers at the U.S. EPA, SRON Netherlands Institute for Space Research, Harvard University, and Lawrence Berkeley National Laboratory.
+
     ## License
-    [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/legalcode) (CC BY 4.0) 
-    
+    [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/legalcode) (CC BY 4.0)
+
     ## Data Stewardship
     - [Data Workflow](https://github.com/US-GHG-Center/ghgc-docs/blob/main/data_workflow/media/epa-ch4emission-grid-v2express_Data_Flow.png)
     - [Data Transformation Code](https://us-ghg-center.github.io/ghgc-docs/cog_transformation/epa-ch4emission-grid-v2express.html)
@@ -1936,4 +1934,3 @@ layers:
 
   </Prose>
 </Block>
-
