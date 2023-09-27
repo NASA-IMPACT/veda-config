@@ -42,7 +42,7 @@ layers:
     description: Total methane emissions per grid cell derived from the GEOS-Chem global chemistry transport model
     initialDatetime: newest
     projection:
-      id: 'equirectangular'    
+      id: 'equirectangular'
     basemapId: 'light'
     zoomExtent:
       - 0
@@ -85,7 +85,7 @@ layers:
     description: Total methane emissions per grid cell derived using GOSAT data in the GEOS-Chem global chemistry transport model
     initialDatetime: newest
     projection:
-      id: 'equirectangular'    
+      id: 'equirectangular'
     basemapId: 'light'
     zoomExtent:
       - 0
@@ -126,7 +126,7 @@ layers:
     description: Total wetland methane emissions per grid cell derived from the GEOS-Chem global chemistry transport model
     initialDatetime: newest
     projection:
-      id: 'equirectangular'    
+      id: 'equirectangular'
     basemapId: 'light'
     zoomExtent:
       - 0
@@ -169,7 +169,7 @@ layers:
     description: Total wetland methane emissions per grid cell derived using GOSAT data in the GEOS-Chem global chemistry transport model
     initialDatetime: newest
     projection:
-      id: 'equirectangular'    
+      id: 'equirectangular'
     basemapId: 'light'
     zoomExtent:
       - 0
@@ -212,7 +212,7 @@ layers:
     description: Model uncertainty for wetland emissions
     initialDatetime: newest
     projection:
-      id: 'equirectangular'    
+      id: 'equirectangular'
     basemapId: 'light'
     zoomExtent:
       - 0
@@ -255,7 +255,7 @@ layers:
     description: Model uncertainty for wetland emissions when GOSAT data included in model
     initialDatetime: newest
     projection:
-      id: 'equirectangular'    
+      id: 'equirectangular'
     basemapId: 'light'
     zoomExtent:
       - 0
@@ -305,7 +305,7 @@ layers:
     - **Data Type:** Research
     - **Data Latency:** Updated yearly 
 
-    **Scientific Details:** An optimal estimation study was conducted to show how satellite methane observations could be used to evaluate reported methane emissions. In a bottom-up approach, methane emissions from activity reports were projected through the GEOS-Chem global chemistry transport model to obtain the expected atmospheric concentrations. In a top-down approach, observed atmospheric methane concentrations from the GOSAT satellite are compared with those modeled from reports. An analytic Bayesian inversion approach is used to determine the methane flux on a 2 x 2.5 degree grid based on the differences between the two concentrations (bottom-up vs top-down). Analytic Jacobian matrices relating emissions to concentrations are derived from the GEOS-Chem model and used to calculate the prior and posterior flux error covariance. Methane fluxes are then linearly projected to emissions by sector at 1 degree resolution. The derivation used to project top-down fluxes back to emissions by region is described in [Cusworth et al. (2021)](https://doi.org/10.1038/s43247-021-00312-6). This GOSAT-based Top-down CH₄ Emissions dataset includes the total prior and posterior CH₄ emissions, wetland prior and posterior CH₄ emissions and associated uncertainties. More information is located in the [source dataset document](https://zenodo.org/record/8306874). 
+    **Scientific Details:** A study was conducted to show how satellite methane observations could be used to evaluate reported methane emissions. In a bottom-up approach, methane emissions from activity reports were projected through the GEOS-Chem global chemistry transport model to obtain the expected atmospheric concentrations. In a top-down approach, observed atmospheric methane concentrations from the GOSAT satellite are compared with those modeled from reports. An analytic Bayesian inversion approach is used to determine the methane flux on a 2 x 2.5 degree grid based on the differences between the two concentrations (bottom-up vs top-down). Analytic Jacobian matrices relating emissions to concentrations are derived from the GEOS-Chem model and used to calculate the prior and posterior flux error covariance. Methane fluxes are then linearly projected to emissions by sector at 1 degree resolution. The derivation used to project top-down fluxes back to emissions by region is described in [Cusworth et al. (2021)](https://doi.org/10.1038/s43247-021-00312-6). This GOSAT-based Top-down CH₄ Emissions dataset includes the total prior and posterior CH₄ emissions, wetland prior and posterior CH₄ emissions and associated uncertainties. More information is located in the [source dataset document](https://zenodo.org/record/8306874). 
   </Prose>
 </Block>
 <Block>
@@ -317,7 +317,7 @@ layers:
     Data accuracy is determined by understanding the uncertainties in the model emissions. Bottom-up uncertainties are generally calculated by comparing how emissions attributions to each sector differ across studies, by comparing emission models and remote sensing data, and using expert opinion when uncertainties are especially challenging to estimate. Recent studies show that there could be larger than expected emissions from aquatic and fossil fuel sources. This means that current methane budgets estimated from both bottom-up and top-down models are either inaccurate in their allocations to existing sectors or that the atmospheric methane removal mechanisms (sinks) are not fully understood. For top-down uncertainties, recent studies also show that there can be considerable errors in the models used by remote sensing instruments to relate measurements to concentrations. Model transport errors can add additional uncertainty when inverting concentrations to fluxes. The flux inversion used for this top-down dataset reduces the impact of variability in the hydroxyl radical (OH), the main driver of methane removal, on methane emissions by jointly estimating OH and CH₄ emissions. A latitudinal correction is used to reduce the impacts of stratospheric chemistry and transport errors. Other systematic errors in model transport and chemistry were not characterized but it is not expected that these errors are significant. Additionally, the Bayesian approach used for this dataset enables the quantification of smoothing error, which can be a significant contributor to emission uncertainty, and reduces the potential for introducing additional uncertainty and biases when fluxes are projected back to emissions.  Note that uncertainties are only appropriate at the 1-degree grid cell resolution. 
 
     ## Disclaimer
-    All data provided in the U.S. GHG Center has been transformed from the original format (NetCDF) into Cloud Optimized GeoTIFF ([COG](https://www.cogeo.org/)). Careful quality checks are used to ensure data transformation has been performed correctly.  
+    All data provided in the US GHG Center has been transformed from the original format (NetCDF) into Cloud Optimized GeoTIFF ([COG](https://www.cogeo.org/)). Careful quality checks are used to ensure data transformation has been performed correctly.  
 
     The source dataset contains CH₄ emissions layers for various anthropogenic sources that are not presented in the US GHG Center.  The original source data also contains a .csv text format file with CH₄ emissions listed by country. Note that uncertainties are only appropriate for use at the grid cell  (i.e. 1 degree) resolution.  Care must be taken when using or interpreting this data.
 
