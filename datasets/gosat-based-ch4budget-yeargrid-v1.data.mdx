@@ -1,7 +1,7 @@
 ---
 id: gosat-based-ch4budget-yeargrid-v1
 name: GOSAT-based Top-down Total and Natural Methane Emissions
-description: Total and natural methane emissions for 2019 summed to a 1° resolution grid.  Methane values for both prior to and after inclusion of GOSAT data to the GEOS-Chem global chemistry transport model, version 1.0
+description: Total and natural methane emissions derived using the GEOS-Chem global chemistry transport model with inclusion of GOSAT data.  Methane emission values for both before and after adding GOSAT to the model are mapped to a 1° resolution grid.  Version 1.0 contains data only for 2019
 usage:
   - url: 'https://us-ghg-center.github.io/ghgc-docs/cog_transformation/gosat-based-ch4budget-yeargrid-v1.html'
     label: Notebook showing data transformation to COG for ingest to the US GHG Center
@@ -24,7 +24,6 @@ media:
 taxonomy:
   - name: Topics
     values:
-      - Anthropogenic Emissions
       - Natural Emissions and Sinks
   - name: Source
     values:
@@ -40,7 +39,10 @@ layers:
     stacCol: gosat-based-ch4budget-yeargrid-v1
     name: Priori Total
     type: raster
-    description: Priori Total
+    description: Total methane emissions per grid cell derived from the GEOS-Chem global chemistry transport model
+    initialDatetime: newest
+    projection:
+      id: 'equirectangular'    
     basemapId: 'light'
     zoomExtent:
       - 0
@@ -51,7 +53,7 @@ layers:
       rescale:
         - 0
         - 0.3
-      nodata: 0
+      nodata: 9.96921e+36
     compare:
       datasetId: gosat-based-ch4budget-yeargrid-v1
       layerId: prior-total-id
@@ -80,7 +82,10 @@ layers:
     stacCol: gosat-based-ch4budget-yeargrid-v1
     name: Posterior Total
     type: raster
-    description: Posterior Total
+    description: Total methane emissions per grid cell derived using GOSAT data in the GEOS-Chem global chemistry transport model
+    initialDatetime: newest
+    projection:
+      id: 'equirectangular'    
     basemapId: 'light'
     zoomExtent:
       - 0
@@ -91,7 +96,7 @@ layers:
       rescale:
         - 0
         - 0.3
-      nodata: 0
+      nodata: 9.96921e+36
     compare:
       datasetId: gosat-based-ch4budget-yeargrid-v1
       layerId: post-total-id
@@ -118,7 +123,10 @@ layers:
     stacCol: gosat-based-ch4budget-yeargrid-v1
     name: Priori Wetlands
     type: raster
-    description: Priori Wetlands
+    description: Total wetland methane emissions per grid cell derived from the GEOS-Chem global chemistry transport model
+    initialDatetime: newest
+    projection:
+      id: 'equirectangular'    
     basemapId: 'light'
     zoomExtent:
       - 0
@@ -129,7 +137,7 @@ layers:
       rescale:
         - 0
         - 0.10
-      nodata: 0
+      nodata: 9.96921e+36
     compare:
       datasetId: gosat-based-ch4budget-yeargrid-v1
       layerId: post-total-id
@@ -158,7 +166,10 @@ layers:
     stacCol: gosat-based-ch4budget-yeargrid-v1
     name: Posterior Wetlands
     type: raster
-    description: Posterior Wetlands
+    description: Total wetland methane emissions per grid cell derived using GOSAT data in the GEOS-Chem global chemistry transport model
+    initialDatetime: newest
+    projection:
+      id: 'equirectangular'    
     basemapId: 'light'
     zoomExtent:
       - 0
@@ -169,7 +180,7 @@ layers:
       rescale:
         - 0
         - 0.10
-      nodata: 0
+      nodata: 9.96921e+36
     compare:
       datasetId: gosat-based-ch4budget-yeargrid-v1
       layerId: post-total-id
@@ -198,7 +209,10 @@ layers:
     stacCol: gosat-based-ch4budget-yeargrid-v1
     name: Priori Wetlands Uncertainty
     type: raster
-    description: Priori Wetlands Uncertainty
+    description: Model uncertainty for wetland emissions
+    initialDatetime: newest
+    projection:
+      id: 'equirectangular'    
     basemapId: 'light'
     zoomExtent:
       - 0
@@ -209,7 +223,7 @@ layers:
       rescale:
         - 0
         - 0.05
-      nodata: 0
+      nodata: 9.96921e+36
     compare:
       datasetId: gosat-based-ch4budget-yeargrid-v1
       layerId: prior-wetland-uncertainty-id
@@ -238,7 +252,10 @@ layers:
     stacCol: gosat-based-ch4budget-yeargrid-v1
     name: Posterior Wetlands Uncertainty
     type: raster
-    description: Posterior Wetlands Uncertainty
+    description: Model uncertainty for wetland emissions when GOSAT data included in model
+    initialDatetime: newest
+    projection:
+      id: 'equirectangular'    
     basemapId: 'light'
     zoomExtent:
       - 0
@@ -249,7 +266,7 @@ layers:
       rescale:
         - 0
         - 0.05
-      nodata: 0
+      nodata: 9.96921e+36
     compare:
       datasetId: gosat-based-ch4budget-yeargrid-v1
       layerId: post-wetland-uncertainty-id
