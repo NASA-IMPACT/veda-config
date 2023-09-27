@@ -169,7 +169,7 @@ layers:
     stacCol: tm54dvar-ch4flux-mask-monthgrid-v1
     name: Pyrogenic CH₄ Emission
     type: raster
-    description: Emission of methane from all sources of biomass burning, such as wildfires and crop burning.
+    description: Emission of methane from all sources of biomass burning, such as wildfires and crop residue burning.
     initialDatetime: newest
     projection:
       id: 'equirectangular'
@@ -222,7 +222,7 @@ layers:
     - **Data Latency:** Approximately 2 years
 
 
-    **Scientific Details:**  Surface emissions were derived using an atmospheric inverse model described in [Basu et al. 2022](https://doi.org/10.5194/acp-22-15351-2022). The modeling framework – including the transport model (Transport Model 5 – Four-Dimensional Variational model (TM5-4DVar)), the atmospheric chemistry setup, and the specification of spatiotemporally explicit source signatures – are described in [Lan et al. 2021](https://doi.org/10.1029/2021GB007000). Several different inversions were performed by [Basu et al. 2022](https://doi.org/10.5194/acp-22-15351-2022), both as sensitivity tests (for example to test the impact of assumed sources signatures and atmospheric chemistry on the results) and to test specific hypotheses (for example to attribute the post-2007 growth in methane). The emissions shown here correspond to the “best case” simulation from [Basu et al. 2022](https://doi.org/10.5194/acp-22-15351-2022), labeled as “CH₄+δ¹³CH₄” in that publication. 
+    **Scientific Details:**  Surface emissions were derived using an atmospheric inverse model described in [Basu et al. 2022](https://doi.org/10.5194/acp-22-15351-2022). The modeling framework – including the transport model (Tracer Model 5 – Four-Dimensional Variational model (TM5-4DVar)), the atmospheric chemistry setup, and the specification of spatiotemporally explicit source signatures – are described in [Lan et al. 2021](https://doi.org/10.1029/2021GB007000). Several different inversions were performed by [Basu et al. 2022](https://doi.org/10.5194/acp-22-15351-2022), both as sensitivity tests (for example to test the impact of assumed sources signatures and atmospheric chemistry on the results) and to test specific hypotheses (for example to attribute the post-2007 growth in methane). The emissions shown here correspond to the “best case” simulation from [Basu et al. 2022](https://doi.org/10.5194/acp-22-15351-2022), labeled as “CH₄+δ¹³CH₄” in that publication. 
 
     The atmospheric inverse model was run at 3° (longitude) x 2° (latitude) globally to estimate monthly surface emissions. The atmospheric inversion problem is under-constrained, and therefore inversely estimated emissions cannot be interpreted at the grid scale. Therefore, to present 1°x1° emission maps for the U.S. GHG Center, prior 1°x1° emissions were scaled to match the posterior continental and global totals for each source type and year.
   

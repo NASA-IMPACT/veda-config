@@ -34,26 +34,26 @@ taxonomy:
       - CO₂
   - name: Product Type
     values:
-      - Model Output
       - Gridded Inventory
 layers:
   - id: co2-emissions
     stacCol: odiac-ffco2-monthgrid-v2022
     name: Fossil Fuel CO₂ Emissions
     type: raster
-    description: Monthly, 1 km CO₂ emissions from fossil fuel combustion, cement production and gas flaring.
+    description: Model-estimated monthly, 1 km CO₂ emissions created using space-based nighttime light data and individual power plant emission/location profiles.
     initialDatetime: newest
     projection:
       id: 'equirectangular'
+    basemapId: 'light'       
     zoomExtent:
       - 0
       - 20
     sourceParams:
       assets: co2-emissions
-      colormap_name: rainbow
+      colormap_name: jet
       rescale:
         - -10
-        - 300
+        - 60
       nodata: 0
     compare:
       datasetId: odiac-ffco2-monthgrid-v2022
@@ -67,15 +67,28 @@ layers:
         label: tons C/month
       type: gradient
       min: -10
-      max: 300
+      max: 60
       stops:
-        - '#60007d'
-        - '#30137d'
-        - '#1960ae'
-        - '#7ac300'
-        - '#f2ce00'
-        - '#ef6a01'
-        - '#cc0019'
+        - '#000080'
+        - '#0000BB'
+        - '#0000F6'
+        - '#0020FF'
+        - '#0054FF'
+        - '#008CFF'
+        - '#00C0FF'
+        - '#0FF8E7' 
+        - '#39FFBE'  
+        - '#66FF90'
+        - '#90FF66'
+        - '#BEFF39'
+        - '#E7FF0F'
+        - '#FFD300'
+        - '#FFA300'
+        - '#FF6F00'
+        - '#FF3F00' 
+        - '#F60B00' 
+        - '#BB0000' 
+        - '#800000' 
 ---
 
 <Block type='wide'>
@@ -103,25 +116,27 @@ layers:
 
     ## Disclaimer
     All data provided in the U.S. GHG Center has been transformed from the original format (GeoTIFF) into Cloud Optimized GeoTIFF (COG). Careful quality checks are used to ensure data transformation has been performed correctly.
-    In addition to the 1 x 1 km data presented here, the source dataset also includes a coarser 1 x 1 degree data layer in units of gram of carbon/m2/day. For more information about the source dataset, visit the [ODIAC website](https://www.nies.go.jp/doi/10.17595/20170411.001-e.html).
+    In addition to the 1 x 1 km data presented here, the source dataset also includes a coarser 1 x 1 degree data layer in units of gram of carbon/m²/day. For more information about the source dataset, visit the [ODIAC website](https://www.nies.go.jp/doi/10.17595/20170411.001-e.html).
 
     ## Key Publications
-    Oda, T. and Maksyutov, S. 2011. A very high-resolution (1 km x 1 km) global fossil fuel CO₂ emission inventory derived using a point source database and satellite observations of nighttime lights, Atmos. Chem. Phys., 11, 543-556, https://doi.org/10.5194/acp-11-543-2011
-
-    Oda, T., Maksyutov, S., and Andres, R. J. 2018. The Open-source Data Inventory for Anthropogenic CO₂, version 2016 (ODIAC2016): a global monthly fossil fuel CO₂ gridded emissions data product for tracer transport simulations and surface flux inversions, Earth Syst. Sci. Data, 10, 87-107, https://doi.org/10.5194/essd-10-87-2018
+    Oda, T. and Maksyutov, S. (2011). A very high-resolution (1 km x 1 km) global fossil fuel CO2 emission inventory derived using a point source database and satellite observations of nighttime lights. *Atmospheric Chemistry and Physics, 11*(2), 543-556. [https://doi.org/10.5194/acp-11-543-2011](https://doi.org/10.5194/acp-11-543-2011)
+    
+    Oda, T., Maksyutov, S., and Andres, R. J. (2018). The Open-source Data Inventory for Anthropogenic CO2, version 2016 (ODIAC2016): a global monthly fossil fuel CO2 gridded emissions data product for tracer transport simulations and surface flux inversions. *Earth System Science Data, 10*(1), 87-107. [https://doi.org/10.5194/essd-10-87-2018](https://doi.org/10.5194/essd-10-87-2018)
 
     ## Other Relevant Publications
-    Andres, R.J., Gregg, J.S., Losey, L., Marland, G. and Boden, T. 2011. Monthly, global emissions of carbon dioxide from fossil fuel consumption, Tellus, 63 (3), 309-327, https://doi.org/10.1111/j.1600-0889.2011.00530.x
-
-    Gilfillan, D. and Marland, G. 2021. CDIAC-FF: global and national CO₂ emissions from fossil fuel combustion and cement manufacture: 1751-2017, Earth Syst. Sci. Data, 13, 1667-1680, https://doi.org/10.5194/essd-13-1667-2021, 2021
-
-    Hefner, M., Marland, G., Boden, T. and Andres, R. 2022. Global, Regional, and National Fossil-Fuel CO₂ Emissions: 1751-2019 CDIAC-FF, Research Institute for Environment, Energy, and Economics, Appalachian State University. https://energy.appstate.edu/cdiac-appstate/data-products
+    Andres, R. J., Gregg, J. S., Losey, L., Marland, G. and Boden, T. (2011). Monthly, global emissions of carbon dioxide from fossil fuel consumption. *Tellus, 63*(3), 309-327. [https://doi.org/10.1111/j.1600-0889.2011.00530.x](https://doi.org/10.1111/j.1600-0889.2011.00530.x)
+    
+    Gilfillan, D. and Marland, G. (2021). CDIAC-FF: global and national CO2 emissions from fossil fuel combustion and cement manufacture: 1751-2017. *Earth System Science Data, 13*(4), 1667-1680. [https://doi.org/10.5194/essd-13-1667-2021](https://doi.org/10.5194/essd-13-1667-2021)
+    
+    Hefner, M., Marland, G., Boden, T. and Andres, R. (2022). *Global, Regional, and National Fossil-Fuel CO2 Emissions: 1751-2019*. CDIAC-FF, Research Institute for Environment, Energy, and Economics, Appalachian State University. [https://energy.appstate.edu/cdiac-appstate/data-products](https://energy.appstate.edu/cdiac-appstate/data-products)
 
     ## Acknowledgment
     The ODIAC team is supported by NASA Goddard Space Flight Center, NASA Carbon Monitoring System program, NASA Orbiting Carbon Observatory mission and NIES GOSAT project.​
 
     ## License
     [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/legalcode) (CC BY 4.0)
+
+    Please view the [ODIAC Data Policy](https://db.cger.nies.go.jp/dataset/ODIAC/data_policy.html) for additional details. 
 
     ## Data Stewardship
     - [Data Workflow](https://us-ghg-center.github.io/ghgc-docs/data_workflow/odiac-ffco2-monthgrid-v2022_Data_Flow.html)
