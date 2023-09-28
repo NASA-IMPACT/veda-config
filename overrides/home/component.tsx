@@ -99,9 +99,10 @@ export default function HomeComponent() {
             one stop for data and analysis.
           </p>
           <p>
-            This initial two-year demonstration phase creates a way to explore
-            and analyze U.S. government and other datasets. The US GHG Center
-            also encourages stakeholder feedback and ideas for future expansion.
+          This initial two-year demonstration phase creates a way to explore 
+          and analyze U.S. government and other datasets, targeting three 
+          greenhouse gas areas of study, as shown below. The US GHG Center 
+          also encourages stakeholder feedback and ideas for future expansion.
           </p>
           <ArrowLink to="/stories/intro-us-ghg-center">
             Introduction to the US GHG Center
