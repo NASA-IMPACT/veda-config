@@ -1,7 +1,7 @@
 ---
 id: "us-methane-sources"
-name: US Methane Sources
-description: "Mapping human-caused sources of methane across the U.S. provides insight into sources and emission trends. This geographic representation enables new comparisons between emission locations and includes methane estimates informed by atmospheric observations. The aim is improving national and state-level methane emission estimates."
+name: Gridded Anthropogenic Greenhouse Gas Emissions
+description: "Mapping human-caused sources of methane across the U.S. provides insight into source and emission trends. This geographic representation enables new comparisons between emission locations and includes methane estimates informed by atmospheric observations. The aim is to improve national and state-level methane emission estimates."
 media:
   src: ::file ./total-methane-2020.png
   alt: Map of total U.S. gridded methane emissions in the year 2020
@@ -20,20 +20,31 @@ taxonomy:
 
 <Block>
     <Prose>
-    ## What is methane and why is it important?
-    Methane is the second most abundant greenhouse gas, behind carbon dioxide CO₂ and is a ‘potent’ greenhouse gas that traps heat in the atmosphere. It is responsible for about one third of all warming resulting from human emissions. Also, methane has a shorter lifetime than carbon dioxide, meaning it leaves the atmosphere much faster. These factors make reducing methane emissions one of the best opportunities for reducing near term global warming.
+        <div style={{'background-color': '#ecf0f1', padding: '16px', 'font-size': '24px', 'font-weight': 500}}>
 
-    Over the last two centuries, methane concentrations in the atmosphere have more than doubled. While some methane emissions come from natural sources, many sources are from human-related activities including agriculture, oil and natural gas systems, landfills, coal mining, stationary and mobile combustion, wastewater treatment, and certain industrial processes. Follow these links for more information on the <a href="https://www.epa.gov/gmi/importance-methane" style={{ color: '#1565EF' }}>importance of methane</a>, <a href="https://www.globalcarbonproject.org/methanebudget/index.htm" style={{ color: '#1565EF' }}>global methane budget</a>, and <a href="https://gml.noaa.gov/ccgg/trends_ch4/" style={{ color: '#1565EF' }}>observed trends</a> in global atmospheric concentrations.
+            A potent greenhouse gas, methane is responsible for about one third of all global warming that results from human activities. Methane also traps more heat than carbon dioxide and has a relatively shorter lifeline in our atmosphere. This makes finding and limiting methane emissions one of the best opportunities for reducing climate change. Locating and mapping U.S. sources of methane emissions can provide insights into emission trends and improve national and state-level estimates. Detailed maps also allow for more direct comparisons of methane emissions, thereby helping to improve the information used to track progress towards collective climate goals.
+
+        </div>
+    </Prose>
+</Block>
+
+<Block>
+    <Prose>
+    ## Tracking and Mapping Methane
+
+    Methane is the second most abundant greenhouse gas behind carbon dioxide (CO₂). Over the last two centuries, methane concentrations in the atmosphere have more than doubled, largely due to human-related activities. While there are natural sources of methane emissions, most methane comes from human activities in agriculture and water industries such as landfills, wastewater treatment, and other industrial processes. Additional human emissions of methane are coal mining, stationary and mobile combustion, and oil and natural gas systems. Because methane is a powerful GHG and has a relatively shorter lifetime in the atmosphere than CO₂, reducing methane emissions is one of the best opportunities for reducing near term global warming.
+
+    Follow these links for more information on the [importance of methane](https://www.epa.gov/gmi/importance-methane), [global methane budget](https://www.globalcarbonproject.org/methanebudget/index.htm), and [observed trends](https://gml.noaa.gov/ccgg/trends_ch4/) in global atmospheric concentrations. 
     </Prose>
     <Figure>
         <Image
-            src={new URL('./global-mean-methane.png', import.meta.url).href}
-            alt="time series from 1984 to 2022 of global monthly mean atmospheric methane"
+            src={new URL('./ch4_trend_all_gl.png', import.meta.url).href}
+            alt="time series from 1984 to 2023 of global monthly mean atmospheric methane"
             align="left"
             attrAuthor="Global Monitoring Laboratory, NOAA"
             attrUrl="https://gml.noaa.gov/ccgg/trends_ch4/"
         />
-        <Caption> Globally-averaged, monthly mean atmospheric methane abundance determined from marine surface sites, last updated Aug 05, 2023. </Caption>
+        <Caption> Globally-averaged, monthly mean atmospheric methane abundance determined from marine surface sites, last updated Sept 05, 2023. </Caption>
     </Figure>
     </Block>
 
@@ -49,32 +60,40 @@ taxonomy:
             <Caption> Gas flaring during oil and gas production is a known source of methane emissions </Caption>
         </Figure>
         <Prose>
-            ### GHG Inventories are a fundamental tool for promoting international cooperation to address climate change
+            ## GHG Inventories -  A Fundamental Tool Promoting International Climate Change Cooperation
 
-            The 1992 United Framework Convention on Climate Change is an international treaty that established a framework for international cooperation to achieve “stabilization of greenhouse gas concentrations in the atmosphere at a level that would prevent dangerous anthropogenic interference with the climate system” (Article 2). Towards this end, signatories to this U.N. framework (UNFCCC) are committed to developing and reporting “national inventories of anthropogenic emissions by sources and removals by sinks of all greenhouse gases” (Article 4). These inventories provide a scientific basis for tracking and planning emission mitigation efforts to achieve the long-term objective of the Convention. Inventory reporting is also a continued commitment under Article 13 of the 2015 U.N. Paris Agreement.
+            The [United Nations Framework Convention on Climate Change](https://www.google.com/url?q=https://unfccc.int/resource/docs/convkp/conveng.pdf&sa=D&source=docs&ust=1695419649511030&usg=AOvVaw2r_M3u40Dcb9U77HDrHNRx) (UNFCCC) is an international treaty that established a framework for international cooperation to achieve “stabilization of greenhouse gas concentrations in the atmosphere at a level that would prevent dangerous anthropogenic interference with the climate system” (Article 2). Towards this end, signatories to the UNFCCC are committed to developing and reporting “national inventories of anthropogenic emissions by sources and removals by sinks of all greenhouse gases” (Article 4). These inventories provide a scientific basis for tracking and planning emission mitigation efforts to achieve the long-term objective of the Convention. Inventory reporting is also a continued commitment under the 2015 U.N. Paris Agreement. 
         </Prose>
     </Block>
 
     <Block>
         <Prose>
-            ### Creating GHG Inventories with a Consistent Methodology
+            ## Creating GHG Inventories with a Consistent Methodology
 
-            The Intergovernmental Panel on Climate Change (IPCC) assesses the scientific, technical, and socio-economic information relevant to understanding the scientific basis of risk of human-induced climate change, its potential impacts, and options for adaptation and mitigation <a href="https://www.ipcc.ch/report/ar6/wg1/downloads/report/IPCC_AR6_WGI_SPM.pdf" style={{ color: '#1565EF' }}>(IPCC, 2021)</a>. To consistently create internationally acceptable inventories of greenhouse gases, the IPCC issues methodology reports. These methods are largely based on an approach that combines information on human activity data and factors that quantify the amount of emissions or removal per unit of activity. For example it has data on how much fuel is used by human activity as well as the amount of methane emissions released from using that fuel.
+            The Intergovernmental Panel on Climate Change (IPCC) issues GHG methodology reports to assist in the development of internationally consistent, transparent, accurate, complete, and comparable inventories of national GHG emissions and sinks ([2006, IPCC](https://www.ipcc-nggip.iges.or.jp/public/2006gl/index.html)). These methods are largely based on an approach that uses human activity data (e.g., tons of fuel used), combined with factors that quantify the amount of GHGs emitted or removed per unit of activity (e.g., tons of CO₂ emitted per tons of fuel used).These methods can be more or less complex depending on the type of data available for a given emissions source or GHG. 
 
-            These methods can be more or less complex depending on the type of data available for a given source or gas. Currently, national inventories reported to the UNFCCC are required to use methods consistent with the 2006 IPCC Guidelines for National Greenhouse Gas Inventories <a href="https://www.ipcc-nggip.iges.or.jp/public/2006gl/index.html" style={{ color: '#1565EF' }}>(2006, IPCC)</a>, and its subsequent supplements and refinements, where appropriate.
+            Currently, national inventories reported to the UNFCCC are required to use methods consistent with the 2006 IPCC Guidelines for National Greenhouse Gas Inventories ([2006, IPCC](https://www.ipcc-nggip.iges.or.jp/public/2006gl/index.html)), and its subsequent supplements and refinements, where appropriate. 
         </Prose>
         <Figure>
             <Image
-                src={new URL('./UN-COP15.jpeg', import.meta.url).href}
-                alt="A room of attendees at an opening session of UN COP15 "
+                src={new URL('./cop-biden.jpeg', import.meta.url).href}
+                alt="A room of attendees listening to President Biden speak at COP27"
                 align="left"
-                attrAuthor="UN Biodiversity"
-                attrUrl=""
+                attrAuthor="NASA"
             />
-            <Caption> United Nations photo of a meeting during the U.N. Climate Change Conference in 2015 (COP15) </Caption>
+            <Caption>  President Biden addressing the U.N. Climate Change Conference (COP27) in Egypt, November 2022.</Caption>
         </Figure>
     </Block>
 
+    <Block>
+        <Prose>
+            ## Inventory of U.S. Greenhouse Gas Emissions and Sinks
+
+            As a Party to the UNFCCC, the U.S. annually submits a national inventory of GHGs to the U.N. each year, called the <em>[Inventory of U.S. Greenhouse Gas Emissions and Sinks (GHGI)](https://www.epa.gov/ghgemissions/inventory-us-greenhouse-gas-emissions-and-sinks)</em>. The EPA has prepared this report since the early 1990s. The GHGI represents official U.S. Government data on national anthropogenic GHG emissions and uses IPCC Guidelines to calculate the annual time series of national emissions and sinks for seven GHGs (including methane), by source and economic sector. 
+
+            Separately through the [Greenhouse Gas Reporting Program (GHGRP)](https://www.epa.gov/ghgreporting), the EPA also collects annual GHG emissions data (including methane) from individual facilities and suppliers of certain fossil fuels and industrial gases that emit more than 25,000 metric tons or more of CO₂ equivalent per year. Unlike the national Inventory, the GHGRP does not provide full coverage of total annual anthropogenic U.S. GHG emissions, but is used in part to help develop the inventory. 
+        </Prose>
+    </Block>
     <Block>
         <Figure>
             <Image
@@ -86,26 +105,20 @@ taxonomy:
             />
             <Caption> Time series of Annual U.S. Anthropogenic GHG Emissions, by GHG </Caption>
         </Figure>
-        <Prose>
-            ### Inventory of U.S. Greenhouse Gas Emissions and Sinks
-
-            As a Party to the UNFCCC, the U.S. submits a national inventory of anthropogenic sources and sinks of GHGs by April 15th each year, called the <a href="https://www.epa.gov/ghgemissions/inventory-us-greenhouse-gas-emissions-and-sinks" style={{"color": "#1565EF"}}><em>Inventory of U.S. Greenhouse Gas Emissions and Sinks</em> (GHGI)</a>. The EPA has prepared this report since the early 1990s. It uses IPCC Guidelines to calculate the annual time series of anthropogenic emissions and sinks by source, economic sector, and GHG (including methane). Separately through the <a href="https://www.epa.gov/ghgreporting" style={{ color: '#1565EF' }}>Greenhouse Gas Reporting Program (GHGRP)</a>, the EPA also collects annual GHG emissions data (including methane) from individual facilities and suppliers of certain fossil fuels and industrial gases that emit more than 25,000 metric tons or more of CO₂ equivalent per year. The GHGRP does not provide full coverage of total annual anthropogenic U.S. GHG emissions, but both data sets are complementary to each other and the GHGRP data is included in the inventory data.
-        </Prose>
     </Block>
 
     <Block>
         <Prose>
-            ### Using atmospheric observations to identify areas for improvement in national methane estimates
+            ## Identifying Areas for Improvement in US Methane Estimates with Atmospheric Observations
 
-            Over the last two decades there have been advancements in measuring human-caused methane emissions using instruments on satellites, aircraft, and mobile platforms. Also, scientists use inverse modeling. This is a mathematical technique to infer emissions from concentrations and it has revolutionized the ability to estimate methane emissions such as from biological activity, leaks, and other fugitive sources. However, a more localized spatial representation of inventory emissions is needed to determine the types of direct comparisons that can enable these local and regional estimates to inform inventory improvements (2019 IPCC Refinements).
+            There have been important advancements over the last two decades in measuring atmospheric methane using instruments on satellites, aircraft, and mobile platforms. These observations can help to identify potential areas for improvement in the national inventory. For example, scientists can now use inverse modeling to estimate methane emissions from atmospheric observations. This is a mathematical technique to infer emissions from observed concentrations, which has revolutionized the ability to estimate methane emissions from relatively more uncertain sources, such as biological activity, leaks, and other fugitive events. However, it remains difficult to directly compare singlar observation-based estimates to the total annual U.S. emissions reported in the GHGI. Therefore a more localized spatial representation of inventory emissions is needed to enable these types of comparisons (2019 IPCC Refinements).
         </Prose>
         <Figure>
             <Image
                 src={new URL('./methane-obs.jpeg', import.meta.url).href}
-                alt="Media example"
+                alt="image of observations being made by satellite and aircraft"
                 align="left"
                 attrAuthor="Daniel Jacob, Harvard University"
-                attrUrl="https://www.nilu.com/2022/04/how-achievable-is-the-methane-pledge/"
             />
             {/* <Caption> NOAA CH₄ concentration map </Caption> */}
         </Figure>
@@ -115,24 +128,32 @@ taxonomy:
         <Figure>
             <Map
                 datasetId='epa-ch4emission-yeargrid-v2express'
-                layerId='enteric-fermentation'
+                layerId='total-methane'
                 dateTime='2020-01-01'
+                center={[-97.5, 39.8283]}
+                zoom={2.8}
             />
+            {/* <Image
+                src={new URL('./total-methane-emissions-2020.png', import.meta.url).href}
+                alt="visualization of total methane emissions from all sources shown on a map"
+                align="left"
+                attrAuthor="EPA"
+                attrUrl="/data-catalog/epa-ch4emission-yeargrid-v2express/explore"
+            /> */}
             <Caption>
-                EPA Gridded Express 2020 emission
+                EPA Gridded Express 2020 - Total Methane Emissions
             </Caption>
         </Figure>
         <Prose>
             ## A Spatial U.S. Methane Emissions Dataset for Research
 
-            Showing U.S. methane emissions across a map, spatially, enables more direct comparisons between atmospheric observations and U.S. inventory estimates. This dataset currently includes maps of U.S. methane emissions from human activity from over 25 individual sources, at the 10 x 10 km scale, for the years 2012 through 2020. Compared to other ‘gridded’ emission products, this dataset is uniquely consistent with the U.S. GHGI, meaning that when summed, gridded methane estimates will equal total contiguous U.S. methane emissions in the U.S. GHGI. As discussed in a recent <a href="https://eartharxiv.org/repository/view/5623/" style={{ color: '#1565EF' }}>paper</a>, this consistency is maintained by allocating U.S. GHGI methane emissions to each grid cell using, where available, the same activity data (e.g., animal counts, gas well locations and production volumes, etc.) that was used to calculate the national inventory estimates. This dataset was developed through a collaboration between researchers at the SRON Netherlands Institute for Space Research, Harvard University, Lawrence Berkeley National Lab (LBNL), and the EPA.
+            The gridded methane GHGI has been developed to enable more direct comparisons between atmospheric observations and U.S. inventory estimates. This dataset currently includes maps of U.S. methane emissions from human activity from over 25 individual sources, at the 10 x 10 km scale, for the years 2012 through 2020. In contrast to other ‘gridded’ emission products, this dataset is consistent with the U.S. GHGI, meaning that when summed, gridded methane estimates will equal the total methane emissions from the contiguous U.S. in the national GHGI. As discussed in a recent [paper](https://eartharxiv.org/repository/view/5623/), this consistency is maintained by allocating national GHGI methane emissions from each source category to each grid cell using, where available, the same activity data (e.g., animal counts, gas well locations and production volumes, etc.) that was used to calculate the original national inventory estimates. This dataset was developed in collaboration between researchers at the SRON Netherlands Institute for Space Research, Harvard University, Lawrence Berkeley National Lab (LBNL), and the EPA.
         </Prose>
-
     </Block>
 
     <Block type="wide">
         <Prose>
-            ## Different emission sources have different spatial patterns
+            ## Different Emission Sources have Different Spatial Patterns
         </Prose>
     </Block>
 
@@ -141,7 +162,7 @@ taxonomy:
         center={[-98.5795, 39.8283]}
         zoom={4}
         datasetId='epa-ch4emission-yeargrid-v2express'
-        layerId='rice-cultivation-l'
+        layerId='total-agriculture'
         datetime='2020-01-01'
     >
         ## Emissions from Agriculture
@@ -152,29 +173,29 @@ taxonomy:
         center={[-98.5795, 39.8283]}
         zoom={4}
         datasetId='epa-ch4emission-yeargrid-v2express'
-        layerId='production-ngs-l'
+        layerId='total-natural-gas'
         datetime='2020-01-01'
     >
         ## Emissions from Natural Gas and Petroleum
 
-        Methane emissions from natural gas and petroleum activities are primarily associated with activities in oil and gas production basins. Methane is also emitted from activities related to the transmission, storage, and distribution of natural gas and crude oil, with emissions largely distributed along pipelines or concentrated at storage sites, transport terminals, refineries, or in densely populated areas.
+        Methane emissions from natural gas and petroleum activities are primarily associated with activities in oil and gas production basins. Methane is also emitted from activities related to the transmission, storage, and distribution of natural gas and crude oil, with emissions largely distributed along pipelines or concentrated at storage sites, transport terminals, refineries, or in densely populated areas. <small>(Map shows total methane emissions from natural gas systems.)</small>
     </Chapter>
     <Chapter
         center={[-98.5795, 39.8283]}
         zoom={4}
         datasetId='epa-ch4emission-yeargrid-v2express'
-        layerId='1B1a-underground-coal'
+        layerId='total-coal-mines'
         datetime='2020-01-01'
     >
         ## Emissions from Coal Mining
 
-        Surface and underground coal mining activities and associated methane emissions are mainly centralized in Southwest Appalachia, as well as at mines located across other U.S. regions
+        Surface and underground coal mining activities and associated methane emissions are mainly centralized in Southwest Appalachia, as well as at mines located across other U.S. regions.
     </Chapter>
     <Chapter
         center={[-98.5795, 39.8283]}
         zoom={4}
         datasetId='epa-ch4emission-yeargrid-v2express'
-        layerId='5A1-msw-landfill-waste'
+        layerId='total-waste'
         datetime='2020-01-01'
     >
         ## Emissions from Waste Management
@@ -185,7 +206,7 @@ taxonomy:
         center={[-98.5795, 39.8283]}
         zoom={4}
         datasetId='epa-ch4emission-yeargrid-v2express'
-        layerId='1B2a-transport-ps'
+        layerId='total-other'
         datetime='2020-01-01'
     >
         ## Emissions from Other Sources
@@ -196,8 +217,8 @@ taxonomy:
 
     <Block>
         <Prose>
-        ## The spatial patterns of some emission sources change overtime
-        While national total methane emissions in the U.S. GHGI declined between 2012 and 2020, the gridded dataset reveals that these trends are not the same across all regions or emission sources.
+        ## The Spatial Patterns of Some Emission Sources Change Overtime
+        While total national methane emissions in the U.S. GHGI declined between 2012 and 2020, the gridded dataset reveals that these trends are not the same across all regions or emission sources.
         </Prose>
         <Figure>
             <Map
@@ -208,7 +229,7 @@ taxonomy:
             align="left"
             />
             <Caption>
-            The caption displays below the map.
+            Comparison of total yearly methane emissions from all sources between years 2012 and 2020
             </Caption>
         </Figure>
     </Block>
@@ -223,11 +244,11 @@ taxonomy:
             align="left"
             />
             <Caption>
-            The caption displays below the map.
+            Comparison of total yearly methane emissions from agriculture between years 2012 and 2020
             </Caption>
         </Figure>
         <Prose>
-        For example, total U.S. agriculture methane emissions fell between 2012 and 2020. However, emissions in some regions increased, largely depending on how animal populations and manure management systems changed in these locations.
+        For example, total U.S. agriculture methane emissions fell between 2012 and 2020. However, emissions in some regions increased, largely depending on how animal populations and manure management systems changed in specific locations.
         </Prose>
 
     </Block>
@@ -245,7 +266,7 @@ taxonomy:
             align="left"
             />
             <Caption>
-            The caption displays below the map.
+            Comparison of total yearly methane emissions from petroleum systems between years 2012 and 2020
             </Caption>
         </Figure>
     </Block>
@@ -260,7 +281,7 @@ taxonomy:
             align="left"
             />
             <Caption>
-            The caption displays below the map.
+            Comparison of total yearly methane emissions from coal mines between years 2012 and 2020
             </Caption>
         </Figure>
         <Prose>
@@ -276,7 +297,7 @@ taxonomy:
         </Prose>
         <Figure>
             <Image
-                src={new URL('./blue-heron.jpeg', import.meta.url).href}
+                src={new URL('./lillies.jpeg', import.meta.url).href}
                 alt="flowering water lilies in a pond on a nice day"
                 align="left"
                 attrAuthor="NASA/Ben Smegelsky"
@@ -289,14 +310,12 @@ taxonomy:
     <Block>
         <Prose>
         ## Resources / References
-        Notebook link that contains a means to generate the images used in the data
+        Users are directed to the following EPA links for more information on U.S. methane emissions:
 
-        Users are directed to the following links for more information on U.S. methane emissions:
-
-        - For U.S. National Methane Emissions → https://www.epa.gov/ghgemissions/inventory-us-greenhouse-gas-emissions-and-sinks
-        - For U.S. state-level methane emissions → https://www.epa.gov/ghgemissions/state-and-tribal-greenhouse-gas-data-and-resources
-        - For U.S. individual facility emissions → https://epa.gov/ghgreporting
-        - For the gridded methane emission research dataset → https://zenodo.org/record/7672124
+        - [U.S. national methane emissions](https://www.epa.gov/ghgemissions/inventory-us-greenhouse-gas-emissions-and-sinks) 
+        - [U.S. state-level methane emissions](https://www.epa.gov/ghgemissions/state-and-tribal-greenhouse-gas-data-and-resources) 
+        - [U.S. individual facility emissions](https://www.epa.gov/ghgreporting)   
+        - [The gridded methane emission research dataset from the EPA](https://zenodo.org/record/7672124)
 
         </Prose>
     </Block>
@@ -304,6 +323,6 @@ taxonomy:
     <Block>
         <Prose>
         ## Disclaimers
-        This gridded methane emissions dataset is currently under peer-review and will be updated upon peer-review and final publication of the associated manuscript. Please see <a href="/data-catalog/emit-ch4plume-v1" style={{ color: '#1565EF' }}>GHG Gridded dataset Landing Page</a> and and links in the resources for additional details.
+        This gridded methane emissions dataset has been peer-reviewed as part of the associated manuscript, Maasakkers et al., 2023. Please see the <a href="/data-catalog/epa-ch4emission-yeargrid-v2express" style={{ color: '#1565EF' }}>Gridded Anthropogenic Methane Emissions Inventory dataset landing page</a> and links in the resources for additional details.
         </Prose>
     </Block>

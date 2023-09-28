@@ -40,8 +40,8 @@ export default function Keypoints() {
           <KeypointCard
             linkLabel="View more"
             linkTo="/stories/us-methane-sources"
-            title="Anthropogenic Greenhouse Gas Emissions"
-            description="Carbon dioxide and methane gas emissions from human activities in areas such as energy, agriculture, waste, and industry"
+            title="Gridded Anthropogenic Greenhouse Gas Emissions"
+            description="Emission estimates from human activities including the energy, agriculture, waste, and industry sectors"
             imgSrc={featureEmissions}
             imgAlt="image of oil refinery"
             footerContent={
@@ -82,8 +82,8 @@ export default function Keypoints() {
           <KeypointCard
             linkLabel="View more"
             linkTo="/stories/discovering-large-methane-emissions"
-            title="Large Methane Emission Events"
-            description="Identify and quantify emissions from, large methane (CH₄) leak events leveraging aircraft and satellite data"
+            title="New Observations for Tracking Large Emission Events"
+            description="Identify and quantify large methane leak events leveraging aircraft and space-based data"
             imgSrc={featureMethane}
             imgAlt="image of colorful polygon against satellite landscape surface in brown"
             footerContent={
