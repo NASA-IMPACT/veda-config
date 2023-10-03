@@ -122,7 +122,7 @@ jobs:
 
       - name: Deploy to S3 Production
         run: |
-          aws s3 sync ./dist s3://${{ secrets.S3_BUCKET }}  --delete
+          aws s3 sync --cache-control max-age=604800 ./dist s3://${{ secrets.S3_BUCKET }}  --delete
 
       - name: Request Invalidation to AWS Cloudfront
         uses: oneyedev/aws-cloudfront-invalidation@v1
