@@ -21,7 +21,12 @@ layers:
     zoomExtent:
       - 0
       - 20
-        
+    sourceParams:
+      rescale:
+        - 0
+        - 5000
+      resampling: bilinear
+      bidx: [1,2,3]
     compare:
       datasetId: lahaina-hls-swir-falsecolor-composite
       layerId: hls-swir-falsecolor-composite
