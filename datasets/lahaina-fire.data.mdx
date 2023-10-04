@@ -109,7 +109,7 @@ layers:
 
 ---
 
-<Block>
+<Block type='full'>
 <Prose>
 ## Overview
   On August 8th, 2023, a devastating wildfire roared through the city of Lahaina, Hawai’i, located on the island of Maui and home to over 13,000 residents. This wildfire was reported sparked by a downed powerline on Lahainaluna Road, and though was initially put out was reinvigorated by intense wind gusts that prevailed throughout the day. The National Weather Service reported measured wind gusts as high as 67 mph in the area, which helped quickly spread the wildfire across much of Lahaina in the afternoon hours of August 8th.This dataset includes 3 layers supporting the Lahaina Fire.
@@ -122,12 +122,20 @@ layers:
 
 </Prose>
 
-    <Map
-      center={[-156.68018, 20.87542]}
-      zoom={15}
-      datasetId='lahaina-fire'
-      layerId='hls-swir-falsecolor-composite'
-      dateTime='2023-08-13'
-    />
+<Figure>
+  <Map
+    center={[-156.67934, 20.87459]}
+    zoom={15}
+    datasetId='lahaina-fire'
+    layerId='hls-swir-falsecolor-composite'
+    dateTime='2023-08-13'
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+    SWIR False color HLS imagery showing the burned area along Front Street in Lahaina, HI after the wildfire (2023 August 13).
+  </Caption>
+</Figure>
 
 </Block>
