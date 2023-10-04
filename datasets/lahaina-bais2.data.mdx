@@ -1,5 +1,5 @@
 ---
-id: hls-bais2-v2
+id: hls-bais2
 name: 'HLS BAIS2 calculated.'
 description: "Experimental burned-area calculation from the HLS scene taken on August 13,2023 over Lahaina, HI."
 media:
@@ -18,14 +18,13 @@ layers:
     name: BAIS-2 Burned Area
     type: raster
     description: 'Experimental burned-area calculation from the HLS scene taken on August 13,2023 over Lahaina, HI.'
-    initialDatetime: newest    
     zoomExtent:
-      - 0
+      - 4
       - 20
 
 
     sourceParams:
-      colormap_name: rdylbu_r
+      colormap_name: RdYlBu_r
       rescale:
         - 0.0
         - 1.0
@@ -38,13 +37,12 @@ layers:
       min: "Low Burn Confidence"
       max: "High Burn Confidence"
       stops:
-        - "#4575b4"
-        - "#91bfdb"
-        - "#e0f3f8"
-        - "#ffffbf"
-        - "#fee090"
-        - "#fc8d59"
-        - "#d73027" 
+          - "#313695"
+          - "#74add1"
+          - "#e0f3f8"
+          - "#fee090"
+          - "#f46d43"
+          - "#a50026"
 
 ---
 <Block>
