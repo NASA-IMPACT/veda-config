@@ -1,10 +1,10 @@
 ---
 id: hls-bais2
-name: 'HLS BAIS2 calculated.'
-description: "Experimental burned-area calculation from the HLS scene taken on August 13,2023 over Lahaina, HI."
+name: 'HLS BAIS2 calculated'
+description: "Experimental burned-area calculation from the HLS scene taken on August 13,2023 over Lahaina, HI"
 media:
   src: ::file ./lahaina-fire-background.jpg
-  alt: Wildfire erupting over Lahaina, HI, August 8, 2023.
+  alt: Wildfire erupting over Lahaina, HI, August 8, 2023
   author:
     name: Matthew Thayer/AP
     url: https://www.sfchronicle.com/travel/article/hawaii-fire-maui-lahaina-18289213.php
@@ -12,26 +12,25 @@ taxonomy:
   - name: Topics
     values:
       - EIS
+  - name: Source
+    values:
+      - UAH
 layers:
   - id: hls-bais2-v2
     stacCol: hls-bais2-v2
     name: BAIS-2 Burned Area
     type: raster
-    description: 'Experimental burned-area calculation from the HLS scene taken on August 13,2023 over Lahaina, HI.'
+    description: 'Experimental burned-area calculation from the HLS scene taken on August 13,2023 over Lahaina, HI'
     zoomExtent:
       - 4
       - 20
-
-
     sourceParams:
-      colormap_name: RdYlBu_r
+      colormap_name: rdylbu_r
       rescale:
-        - 0.0
-        - 1.0
-      nodata: -9999
+        - 0
+        - 1
       resampling: bilinear
       bidx: 1
-
     legend:
       type: gradient
       min: "Low Burn Confidence"
