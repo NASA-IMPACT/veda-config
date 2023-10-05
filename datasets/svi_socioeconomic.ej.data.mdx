@@ -69,7 +69,7 @@ layers:
       layerId: social-vulnerability-index-socioeconomic-nopop
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
         }
     legend:
       type: gradient
