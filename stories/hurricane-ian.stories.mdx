@@ -130,8 +130,15 @@ taxonomy:
     By calculating the z-scores of our data sources, we could pinpoint pixels with values that were either significantly higher or lower than expected based on the overall distribution of data. Areas with high positive z-scores represented regions where the change, whether it was in vegetation health or surface complexity, was much greater than the average change observed throughout the area of interest. Conversely, areas with high negative z-scores signified regions that were unusually stable or unchanged.
 
     The UCONN GERS lab’s ‘CONUS Disturbance Watcher’ offers a pioneering approach to near real-time land disturbance detection, utilizing the HLS dataset. By harnessing the capabilities of the Stochastic Continuous Change Detection (S-CCD), this platform constantly updates spectral change magnitudes and other pertinent disturbance features in response to the most recent imagery. Once these features are defined, the system predicts the probability of land disturbances by leveraging models pre-trained on historical disturbance datasets. In the context of Ian, this damage probability dataset serves as a valuable complement. While our primary assessments, including entropy changes and anomaly detection, provide direct insights into Ian’s impact, the ‘CONUS Disturbance Watcher’ augments our understanding by delivering probabilistic insights into areas most likely affected by disturbances. By integrating these data, we gain a more comprehensive view of Ian’s aftermath, combining direct observation with predictive analytics to determine areas of potential vulnerability and change. 
-
   </Prose>
+  <Figure>
+      <Image
+      src={new URL('./dpi.jpg', import.meta.url).href}
+    />
+    <Caption>
+      Figure 6: Damage Probability from UCONN GERS lab for Lee and Charlotte counties in Florida.  
+    </Caption>
+  </Figure>
 </Block>
 
 
