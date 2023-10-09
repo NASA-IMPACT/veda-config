@@ -33,7 +33,7 @@ layers:
       layerId: lis-tws-anomaly
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `${dateFns.format(datetime, 'DD LLL yyyy')} VS ${dateFns.format(compareDatetime, 'DD LLL yyyy')}`;        
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'DD LLL yyyy')} VS ${dateFns.format(compareDatetime, 'DD LLL yyyy')}`;        
         }
     legend:
       type: gradient

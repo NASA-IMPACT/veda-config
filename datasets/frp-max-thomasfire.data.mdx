@@ -33,7 +33,7 @@ layers:
       layerId: barc-thomasfire
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `FRP: ${dateFns.format(datetime, 'yyyy')} VS BARC: ${dateFns.format(compareDatetime, 'yyyy')}`;
+          if (dateFns && datetime && compareDatetime) return `FRP: ${dateFns.format(datetime, 'yyyy')} VS BARC: ${dateFns.format(compareDatetime, 'yyyy')}`;
         }
     legend:
       type: gradient
