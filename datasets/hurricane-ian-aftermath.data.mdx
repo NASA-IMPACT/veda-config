@@ -1,0 +1,32 @@
+---
+id: ndvi_diff_Ian_2022-09-30_2022-09-05
+name: "Harmonized Landsat and Sentinel-2 NDVI Difference"
+description: "Using Harmonized Landsat and Sentinel-2 to Analyze the Aftermath of Hurricane Ian in Lee and Charlotte Counties in Florida."
+media:
+  src: ::file ./smog-city.jpg
+  alt: Smog Located In City.
+  author:
+    name: Nick van den Berg
+    url: https://unsplash.com/photos/2vb-_3t6YCM
+thematics:
+  - eis
+layers:
+  - id: ndvi_diff_Ian_2022-09-30_2022-09-05
+    stacCol: ndvi_diff_Ian_2022-09-30_2022-09-05
+    name: NDVI Difference
+    type: raster
+    description: "x"
+    initialDatetime: newest
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      colormap_name: rdylbu_r
+      rescale:
+        - -1
+        - 1
+    legend:
+      type: gradient
+      min: "-1"
+      max: "1"
+---
