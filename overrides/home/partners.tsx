@@ -36,14 +36,12 @@ export default function Partners(props: {
 
   return (
     <LogoWrapper>
-      <a href="https://www.epa.gov/">
-        <Image src={epaImg} alt="EPA logo" height={squareLogoHeight} />
-      </a>
-
       <a href="https://www.nasa.gov/">
         <Image src={nasaImg} alt="NASA logo" height={squareLogoHeight} />
       </a>
-
+      <a href="https://www.epa.gov/">
+        <Image src={epaImg} alt="EPA logo" height={squareLogoHeight} />
+      </a>
       <a href="https://www.nist.gov/">
         {variation === "positive" ? (
           <Image src={nistImg} alt="NIST logo" height={wideLogoHeight} />
