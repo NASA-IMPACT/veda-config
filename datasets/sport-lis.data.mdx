@@ -45,7 +45,7 @@ layers:
       layerId: sport-lis-vsm0_100cm-percentile
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `${dateFns.format(datetime, 'MMM yyyy')} VS ${dateFns.format(compareDatetime, 'MMM yyyy')}`;
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'MMM yyyy')} VS ${dateFns.format(compareDatetime, 'MMM yyyy')}`;
         }
 ---
 

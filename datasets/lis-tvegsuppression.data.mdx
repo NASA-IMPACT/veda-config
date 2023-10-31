@@ -32,7 +32,7 @@ layers:
       layerId: mtbs-burn-severity  
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `Transpiration Anomalies: ${dateFns.format(datetime, 'yyyy')} VS MTBS: ${dateFns.format(compareDatetime, 'yyyy')}`;
+          if (dateFns && datetime && compareDatetime) return `Transpiration Anomalies: ${dateFns.format(datetime, 'yyyy')} VS MTBS: ${dateFns.format(compareDatetime, 'yyyy')}`;
         }
     legend:
       type: gradient

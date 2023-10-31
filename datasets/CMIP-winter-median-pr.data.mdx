@@ -31,7 +31,7 @@ layers:
       layerId: CMIP245-winter-median-pr
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `${dateFns.format(datetime, 'DD LLL yyyy')}`;        
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'DD LLL yyyy')}`;        
         }
     legend:
       type: gradient
@@ -66,7 +66,7 @@ layers:
       layerId: CMIP585-winter-median-pr
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `${dateFns.format(datetime, 'DD LLL yyyy')}`;
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'DD LLL yyyy')}`;
         }
     legend:
       type: gradient

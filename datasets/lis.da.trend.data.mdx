@@ -33,7 +33,7 @@ layers:
        layerId: lis-global-da-gpp-trend  
        mapLabel: |
          ::js ({ dateFns, datetime, compareDatetime }) => {
-           return `TWS trend (2003-2021) VS GPP trend (2003-2021)`;
+           if (dateFns && datetime && compareDatetime) return `TWS trend (2003-2021) VS GPP trend (2003-2021)`;
          }
     legend:
       unit:

@@ -30,7 +30,7 @@ layers:
       layerId: CMIP245-winter-median-ta
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `${dateFns.format(datetime, 'DD LLL yyyy')}`;        
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'DD LLL yyyy')}`;        
         }
     legend:
       unit:
@@ -66,7 +66,7 @@ layers:
       layerId: CMIP585-winter-median-ta
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `${dateFns.format(datetime, 'DD LLL yyyy')}`;
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'DD LLL yyyy')}`;
         }
     legend:
       unit:
