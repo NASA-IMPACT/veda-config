@@ -1,0 +1,40 @@
+---
+id: hls-ndvi
+name: "Harmonized Landsat and Sentinel-2 NDVI Before & After"
+description: "Using Harmonized Landsat and Sentinel-2 to Analyze the Aftermath of Hurricane Ian in Lee and Charlotte Counties in Florida."
+media:
+  src: ::file ./hurricane-front.jpg
+  alt: Smog Located In City.
+  author:
+    name: Unsplash+
+    url: https://unsplash.com/photos/an-image-of-a-circular-object-in-the-sky-vR1OW8lzxE4
+taxonomy:
+  - name: Topics
+    values:
+      - EIS
+layers:
+  - id: hls-ndvi
+    stacCol: hls-ndvi
+    name: NDVI
+    type: raster
+    description: "x"
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      colormap_name: rdylbu_r
+      rescale:
+        - -1
+        - 1
+    compare:
+      datasetId: hls-ndvi
+      layerId: hls-ndvi
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      type: gradient
+      min: "-1"
+      max: "1"
+---
