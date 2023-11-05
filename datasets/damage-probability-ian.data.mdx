@@ -1,0 +1,33 @@
+---
+id: damage_probability_2022-10-03
+name: "UCONN GERs Lab Damage Probability"
+description: "Damage Probability"
+media:
+  src: ::file ./hurricane-front.jpg
+  alt: Smog Located In City.
+  author:
+    name: Unsplash+
+    url: https://unsplash.com/photos/an-image-of-a-circular-object-in-the-sky-vR1OW8lzxE4
+taxonomy:
+  - name: Topics
+    values:
+      - EIS
+layers:
+  - id: damage_probability_2022-10-03
+    stacCol: damage_probability_2022-10-03
+    name: Damage Probability
+    type: raster
+    description: "x"
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      colormap_name: rdylbu_r
+      rescale:
+        - -1
+        - 1
+    legend:
+      type: gradient
+      min: "-1"
+      max: "1"
+---
