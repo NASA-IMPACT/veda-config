@@ -1,6 +1,6 @@
 ---
 id: entropy_difference_2022-09-05_2022-09-30
-name: "Harmonized Landsat and Sentinel-2 NDVI Difference"
+name: "Harmonized Landsat and Sentinel-2 Entropy Difference"
 description: "Using Harmonized Landsat and Sentinel-2 to Analyze the Aftermath of Hurricane Ian in Lee and Charlotte Counties in Florida."
 media:
   src: ::file ./hurricane-front.jpg
@@ -8,15 +8,16 @@ media:
   author:
     name: Unsplash+
     url: https://unsplash.com/photos/an-image-of-a-circular-object-in-the-sky-vR1OW8lzxE4
-thematics:
-  - eis
+taxonomy:
+  - name: Topics
+    values:
+      - EIS
 layers:
   - id: entropy_difference_2022-09-05_2022-09-30
     stacCol: entropy_difference_2022-09-05_2022-09-30
     name: Entropy Difference
     type: raster
     description: "x"
-    initialDatetime: newest
     zoomExtent:
       - 0
       - 20
