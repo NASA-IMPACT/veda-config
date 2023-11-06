@@ -31,7 +31,7 @@ layers:
       layerId: hls-ndvi
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+          return `FRP: ${dateFns.format(datetime, 'yyyy')} VS BARC: ${dateFns.format(compareDatetime, 'yyyy')}`;
         }
     legend:
       type: gradient
