@@ -1,6 +1,6 @@
 ---
 id: epa-ch4emission-yeargrid-v2express_mg_km
-name: Gridded Anthropogenic Methane Emissions Inventory
+name: Gridded Anthropogenic Methane Emissions Inventory (Mg/km2/yr)
 description: Spatially disaggregated 0.1°x 0.1° annual maps of U.S. anthropogenic methane emissions, consistent with the U.S. Inventory of Greenhouse Gas Emissions and Sinks.
 usage:
   - url: 'https://us-ghg-center.github.io/ghgc-docs/cog_transformation/epa-ch4emission-grid-v2express.html'
