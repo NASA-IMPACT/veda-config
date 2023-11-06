@@ -1,5 +1,5 @@
 ---
-id: hls-ndvi
+id: hls-ndvi-before-after
 name: "Harmonized Landsat and Sentinel-2 NDVI Before & After"
 description: "Using Harmonized Landsat and Sentinel-2 to Analyze the Aftermath of Hurricane Ian in Lee and Charlotte Counties in Florida."
 media:
@@ -18,6 +18,7 @@ layers:
     name: NDVI
     type: raster
     description: "x"
+    initialDatetime: newest
     zoomExtent:
       - 0
       - 20
@@ -27,11 +28,12 @@ layers:
         - -1
         - 1
     compare:
-      datasetId: hls-ndvi
+      datasetId: hls-ndvi-before-after
       layerId: hls-ndvi
       mapLabel: |
+      mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `FRP: ${dateFns.format(datetime, 'yyyy')} VS BARC: ${dateFns.format(compareDatetime, 'yyyy')}`;
+          return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
         }
     legend:
       type: gradient
