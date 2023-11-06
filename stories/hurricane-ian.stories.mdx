@@ -75,7 +75,7 @@ taxonomy:
       attrAuthor='NASA'
       attrUrl='https://nasa.gov/'
     >
-    Comparison of total column SO2 for India for 2005 and 2021
+    Comparison of NDVI before and after Hurricane Ian
     </Caption>
   </Figure>
 </Block>
@@ -112,13 +112,22 @@ taxonomy:
 
 <Block>
   <Figure>
-    <Image
-    src={new URL('./ndvi_difference.jpg', import.meta.url).href}
-  />
-    <Caption>
-      Figure 5: The difference taken of the before and after NDVI images.
+    <Map
+      datasetId='ndvi_diff_Ian_2022-09-30_2022-09-05'
+      layerId='ndvi_diff_Ian_2022-09-30_2022-09-05'
+      dateTime='2022-09-05'
+      zoom={10}
+    />
+    <Caption
+      attrAuthor='NASA'
+      attrUrl='https://nasa.gov/'
+    >
+    The difference taken of the before and after NDVI images.
     </Caption>
   </Figure>
+</Block>
+
+<Block>
   <Prose>
     Figure 4 shows a significant change in the vegetation landscape post-Hurricane. Note that we mentioned Pine and Sanibel Islands. Much of the vegetation seems to have been washed away by the storm surge. Punta Russa, located on the southwestern tip of Fort Myers beach along Sanibel Causeway, is another location that experienced catastrophic storm surge during Ian. Note the change in NDVI at the tip of Punta Russa. In addition to statistical analyses, the notable transformation of vegetation in these dispersed areas holds significant scientific importance, as it provides compelling evidence of the formidable impact exerted by this catastrophic hurricane. 
   </Prose>
