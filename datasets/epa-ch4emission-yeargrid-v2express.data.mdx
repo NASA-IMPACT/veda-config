@@ -1,7 +1,7 @@
 ---
 id: epa-ch4emission-yeargrid-v2express
 name: Gridded Anthropogenic Methane Emissions Inventory
-description: Spatially disaggregated 0.1°x 0.1° annual maps of U.S. anthropogenic methane emissions, consistent with the U.S. Inventory of Greenhouse Gas Emissions and Sinks.
+description: Spatially disaggregated 0.1°x 0.1° maps of annual U.S. anthropogenic methane emissions, consistent with the U.S. Inventory of Greenhouse Gas Emissions and Sinks.
 usage:
   - url: 'https://us-ghg-center.github.io/ghgc-docs/cog_transformation/epa-ch4emission-grid-v2express.html'
     label: Notebook showing data transformation to COG for ingest to the US GHG Center
@@ -1870,15 +1870,19 @@ layers:
     The gridded EPA U.S. anthropogenic methane greenhouse gas inventory (gridded GHGI) includes spatially disaggregated (0.1 deg x 0.1 deg or approximately 10 x 10 km resolution) maps of annual anthropogenic methane emissions for the contiguous United States (CONUS), consistent with national annual U.S. anthropogenic methane emissions reported in the U.S. EPA [Inventory of U.S. Greenhouse Gas Emissions and Sinks](https://www.epa.gov/ghgemissions/inventory-us-greenhouse-gas-emissions-and-sinks) (U.S. GHGI). This dataset contains methane emissions provided as fluxes, in units of molecules of methane per square cm per second, for over 25 individual emission source categories, including those from agriculture, petroleum and natural gas systems, coal mining, and waste. The data have been converted from their original NetCDF format to Cloud-Optimized GeoTIFF (COG) for use in the US GHG Center, thereby enabling user exploration of spatial anthropogenic methane emissions and their trends.
     
     **Data Version Details:**
-    The gridded methane GHGI is continually updated to capture ongoing improvements and updates to the U.S. GHG Inventory. The gridded methane GHGI currently includes 3 versions, each covering different emission years, and with sectoral methane emissions consistent with different versions of the U.S. GHGI Report.
-    1. Gridded methane GHGI Version 1 (0.1°×0.1° emission maps for 2012, consistent with the 2016 GHGI Report)
-    2. Gridded methane GHGI Version 2 (0.1°×0.1° emission maps for 2012-2018, consistent with the 2020 GHGI Report)
-    3. Gridded methane GHGI Version 2 Express Extension (0.1°×0.1° emission maps for 2012-2020, consistent with the 2022 GHGI Report)
+    The gridded methane GHGI is continually updated to capture ongoing improvements and updates to the U.S. GHG Inventory. The gridded methane GHGI currently includes 2 versions, which reflect sectoral methane emissions that are consistent with different versions of the U.S. GHGI. Versions include:
     
-    Data available in the US GHG Center Data Explorer corresponds to the V2 Express Extension dataset (version #3 listed above).
-
-    For more information Version 2 and the Express Extension (#2 & #3), visit the latest Data Repository on Zenodo: [https://zenodo.org/record/7672124](https://zenodo.org/record/7672124)
-   
+    Current Version(s)
+      - A. Gridded methane GHGI Version 2 (0.1°×0.1° annual emission maps for 2012-2018, consistent with the 2020 U.S. GHGI)
+      - B. Gridded methane GHGI Version 2 - Express Extension (0.1°×0.1° annual emission maps for 2012-2020, consistent with the 2022 U.S. GHGI) 
+    
+    Previous Versions
+      - A. Gridded methane GHGI Version 1 (0.1°×0.1° annual emission maps for 2012, consistent with the 2016 U.S. GHGI)
+  
+    Data available on the Data Explorer page correspond to the V2 Express Extension dataset . 
+    
+    For more information on the current data set versions , see the associated publication: [Massakkers et al., 2023.](https://pubs.acs.org/doi/full/10.1021/acs.est.3c05138) or visit the [EPA gridded inventory webpage](https://www.epa.gov/ghgemissions/us-gridded-methane-emissions). For more information on the previous version , see the associated publication: [Massakkers et al., 2016.](https://pubs.acs.org/doi/10.1021/acs.est.6b02878)   
+    
     - **Temporal Extent:** 2012 - 2020    
     - **Temporal Resolution:** Annual    
     - **Spatial Extent:** Contiguous United States  
@@ -1887,37 +1891,34 @@ layers:
     - **Data type:** Research (v2 express extension)
     - **Data Latency:** N/A
 
-    **Scientific Details:** The gridded methane GHGI is developed by spatially allocating national annual methane emissions from individual source categories from the Inventory of U.S. Greenhouse Gas Emissions and Sinks (U.S. GHGI) to a 0.1 deg x 0.1 deg (~10 x 10 km) grid using a series of spatial and temporal proxy datasets at the state, county, and grid levels. Proxy data are chosen to best align with the available activity and reported emissions data underlying a particular version of the U.S. GHGI. Where possible, the proxy data are the same as those used to develop the GHGI so that the gridded emissions can be, as closely as possible, a spatial and temporal representation of those in the national-level U.S. GHGI Report.
+    **Scientific Details:** The gridded methane GHGI is developed by spatially allocating national annual methane emissions from individual source categories from the Inventory of U.S. Greenhouse Gas Emissions and Sinks (U.S. GHGI) to a 0.1 deg x 0.1 deg (~10 x 10 km) grid using a series of spatial and temporal proxy datasets at the state, county, and grid levels. Where possible, the proxy data are the same as those used to develop the GHGI so that the gridded emissions can be, as closely as possible, a spatial and temporal representation of those in the national-level U.S. GHGI Report.
     
     The development of the gridded GHGI enables more direct comparisons between the methane emissions reported in the annual U.S. GHGI and those derived from atmospheric methane observations, such as through inverse analyses, with the aim of improving national inventory estimates and better understanding uncertain sources of methane emissions. 
 
-    Details of the methodological development of this dataset are described in the paper Maasakkers et al., [preprint] 2023, currently available as a pre-print at: [https://eartharxiv.org/repository/view/5623/](https://eartharxiv.org/repository/view/5623/)
+    Details of the methodological development of this dataset are described in the paper Maasakkers et al., 2023: [https://pubs.acs.org/doi/full/10.1021/acs.est.3c05138](https://pubs.acs.org/doi/full/10.1021/acs.est.3c05138)
   </Prose>
 </Block>
 <Block>
   <Prose>
     ## Source Data Product Citation
-    Gridded GHGI V2 & V2 Express Extension (this dataset in US GHG Center): 
-    
-    McDuffie, E., Maasakkers, J., Sulprizio, M., Chen, C., Schultz, M., Brunelle, L., Thrush, R., Steller, J., Sherry, C., Jacob, D., J., Jeong, S., Irving, B., & Weitz, M. (2023). Gridded EPA U.S. Anthropogenic Methane Greenhouse Gas Inventory (gridded GHGI) (Preprint) [Data set]. Zenodo. [https://doi.org/10.5281/zenodo.7672124](https://doi.org/10.5281/zenodo.7672124)
-    
+    Gridded GHGI Version 2 & Express Extension (this dataset in US GHG Center): 
+    McDuffie, E. E., Maasakkers, J. D., Sulprizio, M. P., Chen, C., Schultz, M., Brunelle, L., Thrush, R., Steller, J., Sherry, C., Jacob, Daniel, J., Jeong, S., Irving, B., & Weitz, M. (2023). Gridded EPA U.S. Anthropogenic Methane Greenhouse Gas Inventory (gridded GHGI) (v1.0) [Data set]. Zenodo. [https://doi.org/10.5281/zenodo.8367082](https://doi.org/10.5281/zenodo.8367082) 
+
     Gridded GHGI Version 1:
 
     Maasakkers, J. D., Jacob, D. J., Sulprizio, M. P., Turner, A. J., Weitz, M., Wirth, T., Hight, C., DeFigueiredo, M., Desai, M., Schmeltz, R., Hockstad, L., Bloom, A. A., Bowman, K. W., Jeong, S., Fischer, M. L. (2016) A Gridded National Inventory of U.S. Methane Emissions [Data set]. Available at: [https://www.epa.gov/ghgemissions/gridded-2012-methane-emissions#data](https://www.epa.gov/ghgemissions/gridded-2012-methane-emissions#data) 
     
     ## Dataset Accuracy
-    Uncertainties underlying the development of national methane emission estimates are discussed in each annual U.S. GHGI Report. Additional characterization of resolution-dependent uncertainties are discussed in [Maasakkers et al. (2023)](https://doi.org/10.31223/X5RQ3M).    
+    Uncertainties underlying the development of national methane emission estimates are discussed in each annual U.S. GHGI Report. Additional characterization of resolution-dependent uncertainties are discussed in [Maasakkers et al. (2023)](https://pubs.acs.org/doi/full/10.1021/acs.est.3c05138).    
     
     ## Disclaimer
-    All data provided in the US GHG Center has been transformed from the original format (NetCDF) into Cloud Optimized GeoTIFF ([COG](https://www.cogeo.org/)). Careful quality checks are used to ensure data transformation has been performed correctly. 
+    All data provided in the US GHG Center has been transformed from the original format (NetCDF) into Cloud Optimized GeoTIFF ([COG](https://www.cogeo.org/)). Careful quality checks are used to ensure data transformation has been performed correctly. The manuscript describing the gridded methane GHGI has been peer-reviewed, but is not part of the same annual expert and public review processes as the U.S. EPA National and State-level Inventory.    
     
-    The Version 2 & Express Extension datasets have been peer-reviewed as part of the associated manuscript Maasakkers et al., 2023, which will be published online shortly.
-
-    Users of these datasets are asked to cite the original references ([Maasakkers, et al., (2016)](https://pubs.acs.org/doi/10.1021/acs.est.6b02878) or [Maasakkers et al. (2023)](https://doi.org/10.31223/X5RQ3M)) in their publications and are encouraged to reach out to the development team with further questions. 
-    
+    Users of these datasets are asked to cite the original references  [Maasakkers et al. (2023)](https://pubs.acs.org/doi/full/10.1021/acs.est.3c05138) or [Maasakkers, et al., (2016)](https://pubs.acs.org/doi/10.1021/acs.est.6b02878) in their publications and are encouraged to reach out to the development team with further questions.     
+   
     ## Key Publications
-    Maasakkers, J., McDuffie, E., Sulprizio, M., Chen, C., Schultz, M., Brunelle, L., Thrush, R., Steller, J., Sherry, C., Jacob, D., Jeong, S., Irving, B., & Weitz, M. (2023). A gridded inventory of annual 2012-2018 U.S. anthropogenic methane emissions. *EarthArXiv (California Digital Library)*. https://doi.org/10.31223/x5rq3m
-    
+    Maasakkers, J. D., McDuffie, E. E.,, Sulprizio, M. P., Chen, C., Schultz, M., Brunelle, L., Thrush, R., Steller, J., Sherry, C., Jacob, D. J., Jeong, S., Irving, B., & Weitz, M. (2023). A gridded inventory of annual 2012-2018 U.S. anthropogenic methane emissions. Environmental Science & Technology, 57(43), 16276-16288. https://pubs.acs.org/doi/full/10.1021/acs.est.3c05138     
+   
     ## Other Relevant Publications
     Maasakkers, J., Jacob, D., Sulprizio, M., Turner, A., Weitz, M., Wirth, T., Hight, C., DeFigueiredo, M., Desai, M., Schmeltz, R., Hockstad, L., Bloom, A., Bowman, K., Jeong, S., Fischer, M. (2016). Gridded National Inventory of U.S. Methane Emissions. *Environmental Science & Technology*, 50(23), 13123-13133. https://doi.org/10.1021/acs.est.6b02878
     
