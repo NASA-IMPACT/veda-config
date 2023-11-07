@@ -92,7 +92,7 @@ taxonomy:
       datasetId='ndvi_diff_Ian_2022-09-30_2022-09-05'
       layerId='ndvi_diff_Ian_2022-09-30_2022-09-05'
       dateTime='2022-09-05'
-      zoom={10}
+      zoom={11}
       center={[-82.02000,26.45185]}
     />
     <Caption
@@ -114,17 +114,6 @@ taxonomy:
     Entropy, in the context of remote sensing and image analysis, is a measure of the randomness or disorder in an image. A high entropy value suggests a higher level of complexity and texture, while a lower value indicates uniformity and smoothness. By analyzing the entropy change associated with Hurricane Ian using our HLS datasets, we analyze alterations in surface patterns and characteristics. The observed increase in entropy in certain coastal regions post-Hurricane suggests that the once smooth and uniform beach areas become more complex in texture. This complexity could be attributed to the catastrophic storm surge that occurred in the hurricane that pushed the sand further inland. This not only altered the coastal terrain but also created a lot of disorder further inland where homes and businesses that were once present are not either destroyed or heavily damaged. The amount of sand and debris that is scattered throughout the area of interest created chaos within our entropy change from Hurricane Ian. These differences can be analyzed in Figure 9 where the areas in light to dark red represent the areas where the highest change occurred. 
   </Prose>
   <Figure>
-      <Image
-      src={new URL('./entropy_difference.jpg', import.meta.url).href}
-    />
-    <Caption>
-      Figure 5: The entropy difference of the same images used for our NDVI analysis along with Lee and Charlotte Counties. 
-    </Caption>
-  </Figure>
-</Block>
-
-<Block>
-  <Figure>
     <Map
       datasetId='entropy_difference_2022-09-05_2022-09-30'
       layerId='entropy_difference_2022-09-05_2022-09-30'
@@ -133,8 +122,8 @@ taxonomy:
       center={[-82.02000,26.45185]}
     />
     <Caption
-      attrAuthor='NASA'
-      attrUrl='https://nasa.gov/'
+      attrAuthor='Harmonized Landsat and Sentinel-2'
+      attrUrl='https://hls.gsfc.nasa.gov/'
     >
     The entropy difference of the same images used for our NDVI analysis along with Lee and Charlotte Counties. 
     </Caption>
@@ -150,14 +139,6 @@ taxonomy:
 
     The UCONN GERS lab’s ‘CONUS Disturbance Watcher’ offers a pioneering approach to near real-time land disturbance detection, utilizing the HLS dataset. By harnessing the capabilities of the Stochastic Continuous Change Detection (S-CCD), this platform constantly updates spectral change magnitudes and other pertinent disturbance features in response to the most recent imagery. Once these features are defined, the system predicts the probability of land disturbances by leveraging models pre-trained on historical disturbance datasets. In the context of Ian, this damage probability dataset serves as a valuable complement. While our primary assessments, including entropy changes and anomaly detection, provide direct insights into Ian’s impact, the ‘CONUS Disturbance Watcher’ augments our understanding by delivering probabilistic insights into areas most likely affected by disturbances. By integrating these data, we gain a more comprehensive view of Ian’s aftermath, combining direct observation with predictive analytics to determine areas of potential vulnerability and change. 
   </Prose>
-  <Figure>
-      <Image
-      src={new URL('./dpi.jpg', import.meta.url).href}
-    />
-    <Caption>
-      Figure 6: Damage Probability from UCONN GERS lab for Lee and Charlotte counties in Florida.  
-    </Caption>
-  </Figure>
 </Block>
 
 <Block>
