@@ -22,10 +22,12 @@ layers:
       - 0
       - 20
     sourceParams:
+      resampling: bilinear
+      bidx: 1
       colormap_name: viridis
       rescale:
-        - -100
-        - 100
+        - -1
+        - 1
     compare:
       datasetId: hls-ndvi-before-after
       layerId: hls-ndvi
