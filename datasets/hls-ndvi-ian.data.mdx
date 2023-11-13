@@ -22,16 +22,16 @@ layers:
       - 0
       - 20
     sourceParams:
-      colormap_name: rdylbu_r
+      colormap_name: viridis
       rescale:
-        - -1
-        - 1
+        - -100
+        - 100
     compare:
       datasetId: hls-ndvi-before-after
       layerId: hls-ndvi
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+          return `${dateFns.format(datetime, 'LLL DD yyyy')} VS ${dateFns.format(compareDatetime, 'LLL DD yyyy')}`;
         }
     legend:
       type: gradient
