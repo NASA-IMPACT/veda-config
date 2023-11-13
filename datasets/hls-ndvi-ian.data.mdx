@@ -22,19 +22,10 @@ layers:
       - 0
       - 20
     sourceParams:
-      resampling: bilinear
-      bidx: 1
       colormap_name: viridis
       rescale:
         - -1
         - 1
-    compare:
-      datasetId: hls-ndvi-before-after
-      layerId: hls-ndvi
-      mapLabel: |
-        ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `${dateFns.format(datetime, 'LLL DD yyyy')} VS ${dateFns.format(compareDatetime, 'LLL DD yyyy')}`;
-        }
     legend:
       type: gradient
       min: "-1"
