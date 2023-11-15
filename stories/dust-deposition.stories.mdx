@@ -64,3 +64,83 @@ taxonomy:
     Implications of our analysis are that the changes in climate occurring over the TNA region and the Sahel are leading to an increase in plankton growth in the TNA region. This in turn leads to the added removal of carbon dioxide from the atmosphere, which is a greenhouse and the major driver of human-induced climate change.
   </Prose>
 </Block>
+
+<Block type="wide">
+  <Figure>
+    <Chart
+      dataPath={new URL('./sst-dust.csv', import.meta.url).href}
+      dateFormat="%m-%d-%Y"
+      idKey='source'
+      xKey='Date'
+      yKey='Sea Surface Temperature'
+      yAxisLabel='Temperature (Celsius)'
+    />
+    <Caption>
+      Figure 2. Time series of monthly mean sea surface temperature over the Tropical North Atlantic (TNA) as measured from MERRA-2.
+    </Caption>
+  </Figure>
+</Block>
+
+<Block type="wide">
+  <Figure>
+    <Chart
+      dataPath={new URL('./cld-dust.csv', import.meta.url).href}
+      dateFormat="%m-%d-%Y"
+      idKey='source'
+      xKey='Date'
+      yKey='Cloud Cover'
+      yAxisLabel='Cloud Cover (0 to 1)'
+    />
+    <Caption>
+      Figure 3. Time series of monthly mean cloud cover over the Tropical North Atlantic (TNA) as derived from MERRA-2.
+    </Caption>
+  </Figure>
+</Block>
+
+<Block type="wide">
+  <Figure>
+    <Chart
+      dataPath={new URL('./dry-dust.csv', import.meta.url).href}
+      dateFormat="%m-%d-%Y"
+      idKey='source'
+      xKey='Date'
+      yKey='Dry Dust Deposition'
+      yAxisLabel='Dry Dust Deposition (mg/m^3)'
+    />
+    <Caption>
+      Figure 4. Time series of monthly mean dry dust deposition concentration over the Tropical North Atlantic (TNA) as derived from MODIS.
+    </Caption>
+  </Figure>
+</Block>
+
+<Block type="wide">
+  <Figure>
+    <Chart
+      dataPath={new URL('./wet-dust.csv', import.meta.url).href}
+      dateFormat="%m-%d-%Y"
+      idKey='source'
+      xKey='Date'
+      yKey='Wet Dust Deposition'
+      yAxisLabel='Wet Dust Deposition'
+    />
+    <Caption>
+      Figure 5. Time series of monthly mean wet dust deposition concentration over the Tropical North Atlantic (TNA) as derived from MODIS.
+    </Caption>
+  </Figure>
+</Block>
+
+<Block type="wide">
+  <Figure>
+    <Chart
+      dataPath={new URL('./rainfall-dust-dep.csv', import.meta.url).href}
+      dateFormat="%m-%d-%Y"
+      idKey='source'
+      xKey='Date'
+      yKey='Wet Dust Deposition'
+      yAxisLabel='Wet Dust Deposition'
+    />
+    <Caption>
+      Figure 6. Time series of total rainfall accumulation monthly mean over the Tropical North Atlantic (TNA) as derived from MERRA-2.
+    </Caption>
+  </Figure>
+</Block>
