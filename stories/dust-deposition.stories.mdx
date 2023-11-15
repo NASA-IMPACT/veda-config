@@ -36,9 +36,9 @@ taxonomy:
 <Block type="wide">
   <Figure>
     <Chart
-      dataPath={new URL('./dust-deposition-tna.csv', import.meta.url).href}
-      dateFormat="%m/%d/%Y"
-      idKey='Source'
+      dataPath={new URL('./dust-deposition-trendline.csv', import.meta.url).href}
+      dateFormat="%Y-%m-%d"
+      idKey='source'
       xKey='Date'
       yKey='Chlorophyll'
       yAxisLabel='Chlorophyll-a concentration (mg/m^3)'
