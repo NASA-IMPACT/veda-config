@@ -4,10 +4,10 @@ name: Intro to the US GHG Center
 description: The U.S. Greenhouse Gas Center (US GHG Center) is a multi-agency effort to compile greenhouse gas data from observations and models into a collection of trusted greenhouse gas emissions and flux products.
 media:
   src: ::file ./intro-to-ghg-center--cover.png
-  alt: Screenshot of the US GHG Center website homepage
+  alt: Global carbon dioxide visualization
   author:
     name: US GHG Center
-    url: "https://ghg.center/"
+    url: "https://earth.gov/ghgcenter"
 pubDate: 2023-08-23
 featured: true
 ---
@@ -53,11 +53,16 @@ featured: true
 
 <Block>
   <Prose>
-    **U.S. Government Resources on Climate Change and Impacts:** - **EPA**:
-    *Climate Change*: https://www.epa.gov/climate-change - **NASA**: *Global
-    Climate Change*: https://climate.nasa.gov/ - **NIST**: *Climate*:
-    https://www.nist.gov/climate - **NOAA**: *Climate Change Impacts*:
-    https://www.noaa.gov/education/resource-collections/climate/climate-change-impacts
+    **U.S. Government Resources on Climate Change and Impacts:**
+
+    **NASA**: *Global Climate Change*: https://climate.nasa.gov/
+    
+    **EPA**: *Climate Change*: https://www.epa.gov/climate-change
+    
+    **NIST**: *Climate*: https://www.nist.gov/climate
+    
+    **NOAA**: *Climate Change Impacts*: https://www.noaa.gov/education/resource-collections/climate/climate-change-impacts
+    
   </Prose>
 </Block>
 
@@ -102,34 +107,55 @@ featured: true
 
     With this wealth of data pertaining to greenhouse gases, greenhouse gas emissions, and related ancillary information, the US GHG Center can be used to increase understanding of the types of GHG data and measurement platforms to facilitate wider and appropriate usage of GHG information.
     </Prose>
-    {/* <Figure>
-        <Image
-            src={new URL('./cop-biden.jpeg', import.meta.url).href}
-            alt="President Biden addressing the crowd at COP27."
-            height="500px"
-            align="right"
-            attrAuthor="Presidencia de la República Mexicana (Flikr)"
-            attrUrl="https://www.flickr.com/photos/presidenciamx/22802505643/in/photostream/"
-        />
-        <Caption>President Biden addressing the crowd at COP27. The image is licensed under https://creativecommons.org/licenses/by/2.0/legalcode </Caption>
-    </Figure> */}
 
 </Block>
 
 <Block>
   <Prose>
     ## Who’s Behind the US GHG Center?
-    <Image
-      src={new URL("logos.png", import.meta.url).href}
-      align="left"
-      alt="logos for the four agencies: EPA, NASA, NIST, NOAA"
-    />
+    <div
+      style={{
+        display: "flex",
+        "align-items": "center",
+        "justify-content": "space-around",
+      }}
+    >
+      <figure
+        style={{ display: "inline-block", width: "130px", margin: "2px" }}
+      >
+        <img
+          src={new URL("./nasa.png", import.meta.url).href}
+          alt="nasa logo"
+        />
+      </figure>
+      <figure
+        style={{ display: "inline-block", width: "100px", margin: "2px" }}
+      >
+        <img src={new URL("./epa.svg", import.meta.url).href} alt="epa logo" />
+      </figure>
+      <figure
+        style={{ display: "inline-block", width: "200px", margin: "2px" }}
+      >
+        <img
+          src={new URL("./nist.png", import.meta.url).href}
+          alt="nist logo"
+        />
+      </figure>
+      <figure
+        style={{ display: "inline-block", width: "100px", margin: "2px" }}
+      >
+        <img
+          src={new URL("./noaa.png", import.meta.url).href}
+          alt="noaa logo"
+        />
+      </figure>
+    </div>
     The US GHG Center is coordinated by NASA in partnership with EPA, NIST and
     NOAA. These agencies are collaborating to prototype development of the
     center with the goal of accelerating the production and delivery of quality
     greenhouse gas (GHG) information, including a curated collection of GHG
     datasets, workflows and visualizations from the federal government and
-    non-public sector, NASA, EPA, NOAA and NIST. The Center acts as an
+    non-public sector, NASA, EPA, NIST and NOAA. The Center acts as an
     facilitator of collaboration with networks of interagency, intergovernmental
     and private sector partners to support setting, assessing, and meeting
     climate mitigation goals. The US GHG Center is more than just a funnel for
@@ -158,7 +184,7 @@ featured: true
     monitoring and information system based on well-defined requirements as well
     as planning and research and development efforts from Phase 1. The US GHG
     Center supports both phases of the implementation of the National Strategy,
-    following an iterative approach, which begins with input from EPA, NASA,
+    following an iterative approach, which begins with input from NASA, EPA,
     NIST, and NOAA, and is expected to expand and include other agency and
     non-federal capabilities in the future. The U.S. Greenhouse Gas Center plans
     to coordinate with networks of international organizations — including the
@@ -168,17 +194,8 @@ featured: true
     measurement, monitoring, reporting, and verification of GHGs. It also will
     establish criteria for thorough evaluation of the quality, accessibility,
     and transparency of new data and modeling products.
+
   </Prose>
-  {/* <Figure>
-        <Image 
-            src={new URL('./carbon-cycle.jpeg', import.meta.url).href}
-            alt="pictoral representation of carbon cycle" 
-            align="left"
-            attrAuthor="IPCC AR5"
-            attrUrl="#"
-        />
-        <Caption> The carbon cycle </Caption>
-    </Figure> */}
 </Block>
 
 <Block>
@@ -251,18 +268,7 @@ featured: true
         </figure>
     </div>
 
-
     </Prose>
-    {/* <Figure>
-        <Image
-            src={new URL('./carbon-cycle.jpeg', import.meta.url).href}
-            alt="pictoral representation of carbon cycle"
-            align="left"
-            attrAuthor="IPCC AR5"
-            attrUrl="#"
-        />
-        <Caption> The carbon cycle </Caption>
-    </Figure> */}
 
 </Block>
 
@@ -280,16 +286,6 @@ featured: true
     - More from existing partners plus contributions from new partners, including the private sector
 
     </Prose>
-    {/* <Figure>
-        <Image
-            src={new URL('./carbon-cycle.jpeg', import.meta.url).href}
-            alt="pictoral representation of carbon cycle"
-            align="left"
-            attrAuthor="IPCC AR5"
-            attrUrl="#"
-        />
-        <Caption> The carbon cycle </Caption>
-    </Figure> */}
 
 </Block>
 
