@@ -30,7 +30,7 @@ layers:
       layerId: snow-projections-median-scenario-245
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `${dateFns.format(datetime, 'DD LLL yyyy')}`;        
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'DD LLL yyyy')}`;        
         }
     legend:
       unit:
@@ -63,7 +63,7 @@ layers:
       layerId: snow-projections-median-scenario-585
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `${dateFns.format(datetime, 'DD LLL yyyy')}`;        
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'DD LLL yyyy')}`;        
         }
     legend:
       unit:

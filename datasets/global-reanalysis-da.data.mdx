@@ -34,7 +34,7 @@ layers:
       layerId: lis-global-da-evap
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `${dateFns.format(datetime, 'DD LLL yyyy')}`;
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'DD LLL yyyy')}`;
         }
     legend:
       unit:
@@ -70,7 +70,7 @@ layers:
       layerId: lis-global-da-gpp
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `${dateFns.format(datetime, 'DD LLL yyyy')}`;
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'DD LLL yyyy')}`;
         }
     legend:
       unit:
@@ -106,7 +106,7 @@ layers:
       layerId: lis-global-da-gws
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `${dateFns.format(datetime, 'DD LLL yyyy')}`;
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'DD LLL yyyy')}`;
         }
     legend:
       unit:
@@ -142,7 +142,7 @@ layers:
       layerId: lis-global-da-swe
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `${dateFns.format(datetime, 'DD LLL yyyy')}`;
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'DD LLL yyyy')}`;
         }
     legend:
       unit:
@@ -179,7 +179,7 @@ layers:
       layerId: lis-global-da-streamflow
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `${dateFns.format(datetime, 'DD LLL yyyy')}`;
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'DD LLL yyyy')}`;
         }
     legend:
       unit:
@@ -215,7 +215,7 @@ layers:
       layerId: lis-global-da-qs
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `${dateFns.format(datetime, 'DD LLL yyyy')}`;
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'DD LLL yyyy')}`;
         }
     legend:
       unit:
@@ -251,7 +251,7 @@ layers:
       layerId: lis-global-da-qsb
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `${dateFns.format(datetime, 'DD LLL yyyy')}`;
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'DD LLL yyyy')}`;
         }
     legend:
       unit:
@@ -287,7 +287,7 @@ layers:
       layerId: lis-global-da-tws
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `${dateFns.format(datetime, 'DD LLL yyyy')}`;
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'DD LLL yyyy')}`;
         }
     legend:
       unit:
@@ -323,7 +323,7 @@ layers:
       layerId: lis-global-da-totalprecip
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `${dateFns.format(datetime, 'DD LLL yyyy')}`;
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'DD LLL yyyy')}`;
         }
     legend:
       unit:
