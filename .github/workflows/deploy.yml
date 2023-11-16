@@ -79,7 +79,7 @@ jobs:
           GOOGLE_TAG_MANAGER_ID: ${{secrets.GOOGLE_TAG_MANAGER_ID}}
           GOOGLE_TAG_AUTH: ${{secrets.GOOGLE_TAG_AUTH}}
           GOOGLE_TAG_PREVIEW: ${{secrets.GOOGLE_TAG_PREVIEW}}
-        run: PUBLIC_URL="${{ vars.DOMAIN }}" yarn build
+        run: PUBLIC_URL="${{ vars.DOMAIN }}${{ vars.SUBPATH }}" yarn build  # vars.SUBPATH should include the preceeding slash /
 
   deploy:
     runs-on: ubuntu-latest
@@ -122,9 +122,11 @@ jobs:
 
       - name: Deploy to S3 Production
         run: |
-          aws s3 sync ./dist s3://${{ secrets.S3_BUCKET }} --cache-control max-age=604800 --delete
+          aws s3 sync ./dist s3://${{ secrets.S3_BUCKET }}${{ vars.SUBPATH }} --cache-control max-age=604800 --delete 
 
       - name: Request Invalidation to AWS Cloudfront
         uses: oneyedev/aws-cloudfront-invalidation@v1
         with:
           distribution-id: ${{ secrets.CF_DISTRIBUTION_ID }}
+          paths: |
+            ${{ vars.SUBPATH }}*
