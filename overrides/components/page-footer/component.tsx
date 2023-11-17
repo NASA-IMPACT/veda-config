@@ -261,6 +261,11 @@ export default function PageFooter(props) {
                 <FooterMenuLink to={ABOUT_PATH}>About</FooterMenuLink>
               </li>
               <li>
+                <FooterMenuLink as="a" href="https://docs.google.com/forms/d/e/1FAIpQLSfDxq_jR3z_006WkUnNKriGFlAdXhiZxC0ppkxV9fDXSM_FxQ/viewform">
+                  Subscribe
+                </FooterMenuLink>
+              </li>
+              <li>
                 {isMediumUp ? (
                   <Button
                     variation="primary-outline"
