@@ -60,8 +60,7 @@ layers:
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
         }
-    analysis:
-      exclude: true
+ 
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -96,9 +95,6 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
-    analysis:
-      metrics:
-        - mean
   - id: total-agriculture
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Total Agriculture (annual)
@@ -125,8 +121,7 @@ layers:
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
         }
-    analysis:
-      exclude: true
+ 
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -161,9 +156,6 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
-    analysis:
-      metrics:
-        - mean
   - id: enteric-fermentation
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Agriculture - Enteric Fermentation (annual)
@@ -191,7 +183,8 @@ layers:
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
         }
     analysis:
-      exclude: true
+      metrics:
+        - mean
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -226,9 +219,7 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
-    analysis:
-      metrics:
-        - mean
+ 
   - id: manure-management
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Agriculture - Manure Management (annual)
@@ -256,7 +247,8 @@ layers:
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
         }
     analysis:
-      exclude: true
+      metrics:
+        - mean
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -291,9 +283,7 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
-    analysis:
-      metrics:
-        - mean
+ 
   - id: rice-cultivation-l
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Agriculture - Rice Cultivation (annual)
@@ -321,7 +311,8 @@ layers:
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
         }
     analysis:
-      exclude: true
+      metrics:
+        - mean
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -356,9 +347,7 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
-    analysis:
-      metrics:
-        - mean
+ 
   - id: field-burning-l
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Agriculture - Field Burning (annual)
@@ -386,7 +375,8 @@ layers:
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
         }
     analysis:
-      exclude: true
+      metrics:
+        - mean
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -421,9 +411,7 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
-    analysis:
-      metrics:
-        - mean
+ 
   - id: total-natural-gas
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Total Natural Gas Systems (annual)
@@ -451,7 +439,8 @@ layers:
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
         }
     analysis:
-      exclude: true
+      metrics:
+        - mean
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -486,9 +475,7 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
-    analysis:
-      metrics:
-        - mean
+ 
   - id: exploration-ngs-l
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Natural Gas - Exploration (annual)
@@ -516,7 +503,8 @@ layers:
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
         }
     analysis:
-      exclude: true
+      metrics:
+        - mean
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -551,9 +539,7 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
-    analysis:
-      metrics:
-        - mean
+ 
   - id: production-ngs-l
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Natural Gas - Production (annual)
@@ -581,7 +567,8 @@ layers:
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
         }
     analysis:
-      exclude: true
+      metrics:
+        - mean
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -616,9 +603,7 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
-    analysis:
-      metrics:
-        - mean
+ 
   - id: 1B2b-transmission-storage-ngs
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Natural Gas - Transmission and Storage (annual)
@@ -646,7 +631,8 @@ layers:
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
         }
     analysis:
-      exclude: true
+      metrics:
+        - mean
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -681,9 +667,7 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
-    analysis:
-      metrics:
-        - mean
+ 
   - id: 1B2b-processing-ngs
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Natural Gas - Processing (annual)
@@ -711,7 +695,8 @@ layers:
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
         }
     analysis:
-      exclude: true
+      metrics:
+        - mean
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -746,9 +731,7 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
-    analysis:
-      metrics:
-        - mean
+ 
   - id: 1B2b-distribution-ngs
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Natural Gas - Distribution (annual)
@@ -776,7 +759,8 @@ layers:
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
         }
     analysis:
-      exclude: true
+      metrics:
+        - mean
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -811,9 +795,7 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
-    analysis:
-      metrics:
-        - mean
+ 
   - id: post-meter-ng
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Natural Gas - Post-Meter (annual)
@@ -841,7 +823,8 @@ layers:
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
         }
     analysis:
-      exclude: true
+      metrics:
+        - mean
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -876,9 +859,7 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
-    analysis:
-      metrics:
-        - mean
+ 
   - id: total-petroleum
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Total Petroleum Systems (annual)
@@ -906,7 +887,8 @@ layers:
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
         }
     analysis:
-      exclude: true
+      metrics:
+        - mean
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -941,9 +923,7 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
-    analysis:
-      metrics:
-        - mean
+ 
   - id: 1B2a-exploration-ps
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Petroleum - Exploration (annual)
@@ -971,7 +951,8 @@ layers:
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
         }
     analysis:
-      exclude: true
+      metrics:
+        - mean
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -1006,9 +987,7 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
-    analysis:
-      metrics:
-        - mean
+ 
   - id: 1B2a-production-ps
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Petroleum - Production (annual)
@@ -1036,7 +1015,8 @@ layers:
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
         }
     analysis:
-      exclude: true
+      metrics:
+        - mean
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -1071,9 +1051,7 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
-    analysis:
-      metrics:
-        - mean
+ 
   - id: 1B2a-transport-ps
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Petroleum - Transportation (annual)
@@ -1101,7 +1079,8 @@ layers:
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
         }
     analysis:
-      exclude: true
+      metrics:
+        - mean
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -1136,9 +1115,7 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
-    analysis:
-      metrics:
-        - mean
+ 
   - id: 1B2a-refining-ps
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Petroleum - Refining (annual)
@@ -1166,7 +1143,8 @@ layers:
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
         }
     analysis:
-      exclude: true
+      metrics:
+        - mean
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -1201,9 +1179,7 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
-    analysis:
-      metrics:
-        - mean
+ 
   - id: total-waste
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Total Waste (annual)
@@ -1231,7 +1207,8 @@ layers:
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
         }
     analysis:
-      exclude: true
+      metrics:
+        - mean
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -1266,9 +1243,7 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
-    analysis:
-      metrics:
-        - mean
+ 
   - id: 5A1-msw-landfill-waste
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Waste - Municipal Solid Waste (MSW) Landfills (annual)
@@ -1296,7 +1271,8 @@ layers:
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
         }
     analysis:
-      exclude: true
+      metrics:
+        - mean
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -1331,9 +1307,7 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
-    analysis:
-      metrics:
-        - mean
+ 
   - id: 5A1-industrial-landfill-waste
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Waste - Industrial Landfills (annual)
@@ -1361,7 +1335,8 @@ layers:
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
         }
     analysis:
-      exclude: true
+      metrics:
+        - mean
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -1396,9 +1371,7 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
-    analysis:
-      metrics:
-        - mean
+ 
   - id: 5A1-dwtd-waste
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Waste - Domestic Wastewater Treatment & Discharge (annual)
@@ -1426,7 +1399,8 @@ layers:
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
         }
     analysis:
-      exclude: true
+      metrics:
+        - mean
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -1461,9 +1435,7 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
-    analysis:
-      metrics:
-        - mean
+ 
   - id: 5A1-iwtd-waste
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Waste - Industrial Wastewater Treatment & Discharge (annual)
@@ -1491,7 +1463,8 @@ layers:
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
         }
     analysis:
-      exclude: true
+      metrics:
+        - mean
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -1526,9 +1499,7 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
-    analysis:
-      metrics:
-        - mean
+ 
   - id: 5A1-composting-waste
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Waste - Composting (annual)
@@ -1556,7 +1527,8 @@ layers:
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
         }
     analysis:
-      exclude: true
+      metrics:
+        - mean
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -1591,9 +1563,7 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
-    analysis:
-      metrics:
-        - mean
+ 
   - id: total-coal-mines
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Total Coal Mines (annual)
@@ -1621,7 +1591,8 @@ layers:
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
         }
     analysis:
-      exclude: true
+      metrics:
+        - mean
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -1656,9 +1627,7 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
-    analysis:
-      metrics:
-        - mean
+ 
   - id: 1B1a-underground-coal
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Coal Mining - Underground Mining (annual)
@@ -1686,7 +1655,8 @@ layers:
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
         }
     analysis:
-      exclude: true
+      metrics:
+        - mean
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -1721,9 +1691,7 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
-    analysis:
-      metrics:
-        - mean
+ 
   - id: 1B1a-abn-underground-coal
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Coal Mining - Abandoned Underground Mines (annual)
@@ -1751,7 +1719,8 @@ layers:
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
         }
     analysis:
-      exclude: true
+      metrics:
+        - mean
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -1786,9 +1755,7 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
-    analysis:
-      metrics:
-        - mean
+ 
   - id: 1B1a-surface-coal
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Coal Mining - Surface Mining (annual)
@@ -1816,7 +1783,8 @@ layers:
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
         }
     analysis:
-      exclude: true
+      metrics:
+        - mean
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -1851,9 +1819,7 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
-    analysis:
-      metrics:
-        - mean
+ 
   - id: total-other
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Total Other (annual)
@@ -1881,7 +1847,8 @@ layers:
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
         }
     analysis:
-      exclude: true
+      metrics:
+        - mean
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -1916,9 +1883,7 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
-    analysis:
-      metrics:
-        - mean
+ 
   - id: 1A-stationary-combustion-other
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Other - Stationary combustion (annual)
@@ -1946,7 +1911,8 @@ layers:
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
         }
     analysis:
-      exclude: true
+      metrics:
+        - mean
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -1981,9 +1947,7 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
-    analysis:
-      metrics:
-        - mean
+ 
   - id: 1A-mobile-combustion-othe
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Other - Mobile combustion (annual)
@@ -2011,7 +1975,8 @@ layers:
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
         }
     analysis:
-      exclude: true
+      metrics:
+        - mean
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -2046,9 +2011,7 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
-    analysis:
-      metrics:
-        - mean
+ 
   - id: 1A-abn-ong-other
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Other - Abandoned Oil and Gas Wells (annual)
@@ -2076,7 +2039,8 @@ layers:
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
         }
     analysis:
-      exclude: true
+      metrics:
+        - mean
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -2111,9 +2075,7 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
-    analysis:
-      metrics:
-        - mean
+ 
   - id: 1A-petro-production-other
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Other - Petrochemical Production (annual)
@@ -2141,7 +2103,8 @@ layers:
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
         }
     analysis:
-      exclude: true
+      metrics:
+        - mean
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -2176,9 +2139,7 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
-    analysis:
-      metrics:
-        - mean
+ 
   - id: 1A-ferroalloy-production-other
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Other - Ferroalloy Production (annual)
@@ -2206,7 +2167,8 @@ layers:
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
         }
     analysis:
-      exclude: true
+      metrics:
+        - mean
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -2241,9 +2203,7 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
-    analysis:
-      metrics:
-        - mean
+ 
 ---
 
 <Block type='wide'>
