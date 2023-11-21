@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from "$veda-ui/react";
 import { useLocation } from "$veda-ui/react-router-dom";
 import styled from "$veda-ui/styled-components";
-import { NavLink } from "$veda-ui/react-router-dom";
+import { NavLink, Link } from "$veda-ui/react-router-dom";
 import { Modal, ModalHeadline, ModalFooter } from "$veda-ui/@devseed-ui/modal";
 import { FormCheckable } from "$veda-ui/@devseed-ui/form";
 import {
@@ -295,12 +295,12 @@ export default function PageFooter(props) {
         </FooterContent>
         <FooterContacts>
           <div>
-            <a href="/">
+            <Link to="/">
               <span>By</span> <strong>US GHG Center</strong> <span>on</span>{" "}
               <time dateTime={String(nowDate.getFullYear())}>
                 {nowDate.getFullYear()}
               </time>
-            </a>
+            </Link>
             {" • "}
             <Tip
               content={`Released on ${format(
