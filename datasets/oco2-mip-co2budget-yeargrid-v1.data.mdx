@@ -81,7 +81,6 @@ layers:
         - '#D95847'
         - '#B40426'
     analysis:
-      exclude: true
       metrics:
         - mean
   - id: co2-emissions-lnlgis-nbe-std
@@ -128,7 +127,6 @@ layers:
         - '#92003F'
         - '#67001F'
     analysis:
-      exclude: true
       metrics:
         - mean
   - id: co2-emissions-lnlgis-nce
@@ -175,7 +173,6 @@ layers:
         - '#D95847'
         - '#B40426'
     analysis:
-      exclude: true
       metrics:
         - mean
   - id: co2-emissions-lnlgis-nce-std
@@ -222,7 +219,6 @@ layers:
         - '#92003F'
         - '#67001F'
     analysis:
-      exclude: true
       metrics:
         - mean
   - id: co2-emissions-lnlgis-dc-loss
@@ -269,7 +265,6 @@ layers:
         - '#D95847'
         - '#B40426'
     analysis:
-      exclude: true
       metrics:
         - mean
   - id: co2-emissions-lnlgis-dc-loss-std
@@ -316,7 +311,6 @@ layers:
         - '#92003F'
         - '#67001F'
     analysis:
-      exclude: true
       metrics:
         - mean
   - id: co2-emissions-crop
@@ -363,7 +357,6 @@ layers:
         - '#D95847'
         - '#B40426'
     analysis:
-      exclude: true
       metrics:
         - mean
   - id: co2-emissions-crop-std
@@ -410,7 +403,6 @@ layers:
         - '#92003F'
         - '#67001F'
     analysis:
-      exclude: true
       metrics:
         - mean
   - id: co2-emissions-ff
@@ -457,7 +449,6 @@ layers:
         - '#92003F'
         - '#67001F'
     analysis:
-      exclude: true
       metrics:
         - mean
   - id: co2-emissions-ff-std
@@ -504,7 +495,6 @@ layers:
         - '#92003F'
         - '#67001F'
     analysis:
-      exclude: true
       metrics:
         - mean
   - id: co2-emissions-river
@@ -551,7 +541,6 @@ layers:
         - '#D95847'
         - '#B40426'
     analysis:
-      exclude: true
       metrics:
         - mean
   - id: co2-emissions-river-std
@@ -598,7 +587,6 @@ layers:
         - '#92003F'
         - '#67001F'
     analysis:
-      exclude: true
       metrics:
         - mean
   - id: co2-emissions-wood
@@ -645,7 +633,6 @@ layers:
         - '#D95847'
         - '#B40426'
     analysis:
-      exclude: true
       metrics:
         - mean
   - id: co2-emissions-wood-std
@@ -692,7 +679,6 @@ layers:
         - '#92003F'
         - '#67001F'
     analysis:
-      exclude: true
       metrics:
         - mean
 ---
@@ -728,7 +714,7 @@ layers:
     Byrne, B., Baker, D. F., Basu, S., Bertolacci, M., Bowman, K. W., Carroll, D., Chatterjee, A., Chevallier, F., Ciais, P., Cressie, N., Crisp, D., Crowell, S., Deng, F., Deng, Z., Deutscher, N. M., Dubey, M. K., Feng, S., García, O. E., Herkommer, B., Hu, L., Jacobson, A. R., Janardanan, R., Jeong, S., Johnson, M. S., Jones, D. B. A., Kivi, R., Liu, J., Liu, Z., Maksyutov, S., Miller, J. B., Miller, S. M., Morino, I., Notholt, J., Oda, T., O’Dell, C. W., Oh, Y.-S., Ohyama, H., Patra, P. K., Peiro, H., Petri, C., Philip, S., Pollard, D. F., Poulter, B., Remaud, M., Schuh, A., Sha, M. K., Shiomi, K., Strong, K., Sweeney, C., Té, Y., Tian, H., Velazco, V. A., Vrekoussis, M., Warneke, T., Worden, J. R., Wunch, D., Yao, Y., Yun, J., Zammit-Mangion, A., and Zeng, N.: Pilot top-down CO₂ Budget constrained by the v10 OCO-2 MIP Version 1, *Committee on Earth Observing Satellites*, https://doi.org/10.48588/npf6-sw92, Version 1.0, 2022
 
     ## Dataset Accuracy
-    The uncertainty in NCE is an estimate of the standard deviation of the v10 OCO-2 MIP ensemble members. This is meant to characterize uncertainties originating from the inversion configuration (such as the transport model, inversion method and prior constraints). However, there are also limitations to this method. First, there is only a small ensemble of 11 MIP ensemble members included in this analysis and an over-representation of inversions using two transport models: TM5 (3) and GEOS-Chem (5), which makes uncertainty quantification challenging. Second, the ensemble-based estimate does not capture some sources of uncertainty. In particular, Bayesian posterior uncertainties are not considered, due to the fact that many of the inversion systems participating in the v10 OCO-2 MIP do not calculate this uncertainty. For more information on the dataset’s uncertainty, refer to [Byrne et al. 2023](https://doi.org/10.5194/essd-15-963-2023).
+    The uncertainty in NCE is an estimate of the standard deviation of the v10 OCO-2 MIP ensemble members. This is meant to characterize uncertainties originating from the inversion configuration (such as the transport model, inversion method and prior constraints). However, there are also limitations to this method. First, there is only a small ensemble of 11 MIP ensemble members included in thisanalysis and an over-representation of inversions using two transport models: TM5 (3) and GEOS-Chem (5), which makes uncertainty quantification challenging. Second, the ensemble-based estimate does not capture some sources of uncertainty. In particular, Bayesian posterior uncertainties are not considered, due to the fact that many of the inversion systems participating in the v10 OCO-2 MIP do not calculate this uncertainty. For more information on the dataset’s uncertainty, refer to [Byrne et al. 2023](https://doi.org/10.5194/essd-15-963-2023).
 
     ## Disclaimer
     All data provided in the US GHG Center has been transformed from the original format into Cloud Optimized GeoTIFF (COG). Careful quality checks are used to ensure data transformation has been performed correctly.
