@@ -91,7 +91,7 @@ layers:
     Methane is a strong greenhouse gas that is invisible to the human eye. Large methane emissions, typically referred to as point source emissions, represent a significant proportion of total methane emissions from the production, transport, and processing of oil and natural gas, landfills, and other sources. By measuring the spectral fingerprint of methane, EMIT can map areas of high methane concentration over background levels in the atmosphere, identifying plume complexes, and estimating the methane enhancements. This dataset includes methane plume complexes measured within the extent and timeframe of EMIT observations.
 
     - **Temporal Extent:** August 1, 2022 - Ongoing
-    - **Temporal Resolution:** Variable (based on ISS orbit, solar illumination, and target mask) 
+    - **Temporal Resolution:** Variable (based on ISS orbit, solar illumination, and target mask)
     - **Spatial Extent:** 52 °N to 52 °S latitude within target mask
     - **Spatial Resolution:** 60 m
     - **Data Units:** Parts per million meter (ppm-m)
@@ -99,6 +99,7 @@ layers:
     - **Data Latency:** EMIT plume complex identification primarily occurs about a week after the observation and can vary with ISS data downlink rates and the need for manual review. Some plume complexes may be identified rapidly, but with improving algorithms, additional older plume complexes may continue to appear in the dataset over time.
 
     **Scientific Details:** EMIT has demonstrated the capacity to characterize methane point source emissions by measuring gas absorption features in the shortwave infrared. The EMIT GHG point source plumes provided here build on a substantial history of remote greenhouse gas detections from airborne imaging spectrometers (Thorpe et al., 2013, 2014, 2017; Thompson et al., 2015; Frankenberg et al., 2016; Duren et al., 2019; Cusworth et al., 2022). We leverage a per-column adaptive matched filter for the primary detection, due to the speed and efficacy of identifying subtle signatures. Plumes are identified and assessed by scientists following a protocol in order to provide only instances with maximum confidence. For each EMIT point source plume  complex, methane enhancements in units of ppm-m are provided. See the [ATBD](https://lpdaac.usgs.gov/documents/1696/EMIT_GHG_ATBD_V1.pdf) for more details.
+
   </Prose>
 </Block>
 <Block type="wide">
@@ -115,11 +116,11 @@ layers:
     Green, R., Thorpe, A., Brodrick, P., Chadwick, D., Elder, C., Villanueva-Weeks, C., Fahlen, J., Coleman, R., Jensen, D., Olsen-Duvall, W., Lundeen, S., Lopez, A., Thompson, D. (2023). EMIT L2B Estimated Methane Plume Complexes 60 m V001 [Data set]. Distributed by NASA EOSDIS Land Processes Distributed Active Archive Center. Accessed from [https://doi.org/10.5067/EMIT/EMITL2BCH4PLM.001](https://doi.org/10.5067/EMIT/EMITL2BCH4PLM.001).
 
     ## Dataset Accuracy
-    Every effort is made to ensure the data displayed in the US GHG Center is accurate compared with the source data. For EMIT, the uncertainty for methane (ppm-m)  depends on many instruments, observation and surface factors. Estimated uncertainty is reported for every plume or plume complex and is provided in the data. 
+    Every effort is made to ensure the data displayed in the US GHG Center is accurate compared with the source data. For EMIT, the uncertainty for methane (ppm-m)  depends on many instruments, observation and surface factors. Estimated uncertainty is reported for every plume or plume complex and is provided in the data.
 
     ## Disclaimer
-    Plume complexes are identified only when EMIT acquires data over a region and the portion of the scene is cloud free. There are also plumes that are below the detection limit of the EMIT instrument. As such, the absence of a plume at a particular point and time should not be taken as strong evidence that a plume does not exist. 
-    
+    Plume complexes are identified only when EMIT acquires data over a region and the portion of the scene is cloud free. There are also plumes that are below the detection limit of the EMIT instrument. As such, the absence of a plume at a particular point and time should not be taken as strong evidence that a plume does not exist.
+
     ## Key Publications
     Thorpe, A.K., et al., Attribution of individual methane and carbon dioxide emission sources using EMIT observations from space, *Science Advances* (in review).
 
@@ -128,7 +129,7 @@ layers:
     D. R. Thompson, I. Leifer, H. Bovensmann, M. Eastwood, M. Fladeland, C. Frankenberg, K. Gerilowski, R. O. Green, S. Kratwurst, T. Krings, B. Luna, A. K. Thorpe, Real-time remote detection and measurement for airborne imaging spectroscopy: A case study with methane. *Atmospheric Measurement Techniques. 8*, 4383–4397 (2015).
 
     Brodrick, P. G. , Thorpe, A.K., Villaneuva-Weeks, C. S., Elder, C., Fahlen, J., Thompson, D.R. (2023). EMIT Greenhouse Gas Algorithms:  Greenhouse Gas Point Source Mapping and Related Products, Theoretical Basis, v1.0, August 2023, NASA Jet Propulsion Laboratory, California Institute of Technology, Pasadena, CA, [https://lpdaac.usgs.gov/documents/1696/EMIT_GHG_ATBD_V1.pdf](https://lpdaac.usgs.gov/documents/1696/EMIT_GHG_ATBD_V1.pdf)
-    
+
     ## Other Relevant Publications
     A. K. Thorpe, C. Frankenberg, D. R. Thompson, R. M. Duren, A. D. Aubrey, B. D. Bue, R. O. Green, K. Gerilowski, T. Krings, J. Borchardt, E. A. Kort, C. Sweeney, S. Conley, D. A. Roberts, P. E. Dennison, Airborne DOAS retrievals of methane, carbon dioxide, and water vapor concentrations at high spatial resolution: Application to AVIRIS-NG. *Atmospheric Measurement Techniques. 10*, 3833–3850 (2017).
 

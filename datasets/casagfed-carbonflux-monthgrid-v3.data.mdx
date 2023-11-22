@@ -11,7 +11,7 @@ usage:
     title: 'Sample Data Notebook'
   - url: 'https://hub.ghg.center/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FUS-GHG-Center%2Fghgc-docs&urlpath=tree%2Fghgc-docs%2Fuser_data_notebooks%2Fcasagfed-carbonflux-monthgrid-v3_User_Notebook.ipynb&branch=main'
     label: Run example notebook
-    title: Interactive Session in the US GHG Center JupyterHub (requires account) 
+    title: Interactive Session in the US GHG Center JupyterHub (requires account)
   - url: https://dljsq618eotzp.cloudfront.net/browseui/index.html#casagfed-carbonflux-monthgrid-v3/
     label: Browse and download the data
     title: Data Browser
@@ -76,6 +76,9 @@ layers:
         - '#C10E51'
         - '#92003F'
         - '#67001F'
+    analysis:
+      metrics:
+        - mean
   - id: casa-gfed-co2-flux-hr
     stacCol: casagfed-carbonflux-monthgrid-v3
     name: Heterotrophic Respiration (Rh)
@@ -84,7 +87,7 @@ layers:
     initialDatetime: newest
     projection:
       id: 'equirectangular'
-    basemapId: 'light' 
+    basemapId: 'light'
     zoomExtent:
       - 0
       - 20
@@ -118,11 +121,14 @@ layers:
         - '#C10E51'
         - '#92003F'
         - '#67001F'
+    analysis:
+      metrics:
+        - mean
   - id: casa-gfed-co2-flux-nee
     stacCol: casagfed-carbonflux-monthgrid-v3
     name: Net Ecosystem Exchange (NEE)
     type: raster
-    description:  Model-estimated net ecosystem exchange (NEE), which is the net carbon flux to the atmosphere
+    description: Model-estimated net ecosystem exchange (NEE), which is the net carbon flux to the atmosphere
     initialDatetime: newest
     projection:
       id: 'equirectangular'
@@ -158,6 +164,9 @@ layers:
         - '#F7A889'
         - '#E26952'
         - '#B40426'
+    analysis:
+      metrics:
+        - mean
   - id: casa-gfed-co2-flux-fe
     stacCol: casagfed-carbonflux-monthgrid-v3
     name: Fire Emissions (FIRE)
@@ -166,7 +175,7 @@ layers:
     initialDatetime: newest
     projection:
       id: 'equirectangular'
-    basemapId: 'light' 
+    basemapId: 'light'
     zoomExtent:
       - 0
       - 20
@@ -200,6 +209,9 @@ layers:
         - '#C10E51'
         - '#92003F'
         - '#67001F'
+    analysis:
+      metrics:
+        - mean
   - id: casa-gfed-co2-flux-fuel
     stacCol: casagfed-carbonflux-monthgrid-v3
     name: Wood Fuel Emissions (FUEL)
@@ -240,6 +252,9 @@ layers:
         - '#894DA3'
         - '#821580'
         - '#4D004B'
+    analysis:
+      metrics:
+        - mean
 ---
 
 <Block type='wide'>
@@ -296,5 +311,6 @@ layers:
     - [Data Workflow](https://us-ghg-center.github.io/ghgc-docs/data_workflow/casagfed-carbonflux-monthgrid-v3_Data_Flow.html)
     - [Data Transformation Code](https://us-ghg-center.github.io/ghgc-docs/cog_transformation/casagfed-carbonflux-monthgrid-v3.html)
     - [US GHG Center Data Intake Processing and Verification Report](https://us-ghg-center.github.io/ghgc-docs/processing_and_verification_reports/casagfed-carbonflux-monthgrid-v3_Processing%20and%20Verification%20Report.html)
+
   </Prose>
 </Block>

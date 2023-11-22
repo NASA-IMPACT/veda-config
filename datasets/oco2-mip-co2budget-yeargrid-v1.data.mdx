@@ -80,6 +80,9 @@ layers:
         - '#F18D6F'
         - '#D95847'
         - '#B40426'
+    analysis:
+      metrics:
+        - mean
   - id: co2-emissions-lnlgis-nbe-std
     stacCol: oco2-mip-co2budget-yeargrid-v1
     name: Uncertainty - LNLGIS Net Biosphere Exchange (LNLGIS_NBE_std)
@@ -123,6 +126,9 @@ layers:
         - '#C10E51'
         - '#92003F'
         - '#67001F'
+    analysis:
+      metrics:
+        - mean
   - id: co2-emissions-lnlgis-nce
     stacCol: oco2-mip-co2budget-yeargrid-v1
     name: LNLGIS Net Carbon Exchange (LNLGIS_NCE)
@@ -166,9 +172,12 @@ layers:
         - '#F18D6F'
         - '#D95847'
         - '#B40426'
+    analysis:
+      metrics:
+        - mean
   - id: co2-emissions-lnlgis-nce-std
     stacCol: oco2-mip-co2budget-yeargrid-v1
-    name:  Uncertainty - LNLGIS Net Carbon Exchange (LNLGIS_NCE_std)
+    name: Uncertainty - LNLGIS Net Carbon Exchange (LNLGIS_NCE_std)
     type: raster
     description: Uncertainty in CO₂ emissions from net flux of carbon from surface to atmosphere (net carbon exchange) estimated from the OCO-2 v10 MIP LNLGIS ensemble
     initialDatetime: newest
@@ -209,6 +218,9 @@ layers:
         - '#C10E51'
         - '#92003F'
         - '#67001F'
+    analysis:
+      metrics:
+        - mean
   - id: co2-emissions-lnlgis-dc-loss
     stacCol: oco2-mip-co2budget-yeargrid-v1
     name: LNLGIS Net Land Carbon Stock Loss (LNLGIS_dC_loss)
@@ -252,9 +264,12 @@ layers:
         - '#F18D6F'
         - '#D95847'
         - '#B40426'
+    analysis:
+      metrics:
+        - mean
   - id: co2-emissions-lnlgis-dc-loss-std
     stacCol: oco2-mip-co2budget-yeargrid-v1
-    name:  LNLGIS Net Land Carbon Stock Loss (LNLGIS_dC_loss_std)
+    name: LNLGIS Net Land Carbon Stock Loss (LNLGIS_dC_loss_std)
     type: raster
     description: Uncertainty in CO₂ emissions from net land carbon stock loss (decrease in land carbon) estimated from the OCO-2 v10 MIP LNLGIS  ensemble
     initialDatetime: newest
@@ -295,6 +310,9 @@ layers:
         - '#C10E51'
         - '#92003F'
         - '#67001F'
+    analysis:
+      metrics:
+        - mean
   - id: co2-emissions-crop
     stacCol: oco2-mip-co2budget-yeargrid-v1
     name: Lateral Crop CO₂ Flux (Crop)
@@ -338,6 +356,9 @@ layers:
         - '#F18D6F'
         - '#D95847'
         - '#B40426'
+    analysis:
+      metrics:
+        - mean
   - id: co2-emissions-crop-std
     stacCol: oco2-mip-co2budget-yeargrid-v1
     name: Uncertainty - Lateral Crop CO₂ Flux (Crop_std)
@@ -381,9 +402,12 @@ layers:
         - '#C10E51'
         - '#92003F'
         - '#67001F'
+    analysis:
+      metrics:
+        - mean
   - id: co2-emissions-ff
     stacCol: oco2-mip-co2budget-yeargrid-v1
-    name:  Fossil Fuel and Cement CO₂ Emissions (FF)
+    name: Fossil Fuel and Cement CO₂ Emissions (FF)
     type: raster
     description: CO₂ emissions from the burning of fossil fuels and release of carbon due to cement production (positive flux from land surface to the atmosphere)
     initialDatetime: newest
@@ -424,6 +448,9 @@ layers:
         - '#C10E51'
         - '#92003F'
         - '#67001F'
+    analysis:
+      metrics:
+        - mean
   - id: co2-emissions-ff-std
     stacCol: oco2-mip-co2budget-yeargrid-v1
     name: Uncertainty - Fossil Fuel and Cement CO₂ Emissions (FF_std)
@@ -467,6 +494,9 @@ layers:
         - '#C10E51'
         - '#92003F'
         - '#67001F'
+    analysis:
+      metrics:
+        - mean
   - id: co2-emissions-river
     stacCol: oco2-mip-co2budget-yeargrid-v1
     name: Lateral River CO₂ Flux (River)
@@ -510,6 +540,9 @@ layers:
         - '#F18D6F'
         - '#D95847'
         - '#B40426'
+    analysis:
+      metrics:
+        - mean
   - id: co2-emissions-river-std
     stacCol: oco2-mip-co2budget-yeargrid-v1
     name: Uncertainty - Lateral River CO₂ Flux (River_std)
@@ -552,7 +585,10 @@ layers:
         - '#DF2179'
         - '#C10E51'
         - '#92003F'
-        - '#67001F'        
+        - '#67001F'
+    analysis:
+      metrics:
+        - mean
   - id: co2-emissions-wood
     stacCol: oco2-mip-co2budget-yeargrid-v1
     name: Lateral Wood CO₂ Flux (Wood)
@@ -596,6 +632,9 @@ layers:
         - '#F18D6F'
         - '#D95847'
         - '#B40426'
+    analysis:
+      metrics:
+        - mean
   - id: co2-emissions-wood-std
     stacCol: oco2-mip-co2budget-yeargrid-v1
     name: Uncertainty - Lateral Wood CO₂ Flux (Wood_std)
@@ -639,13 +678,16 @@ layers:
         - '#C10E51'
         - '#92003F'
         - '#67001F'
+    analysis:
+      metrics:
+        - mean
 ---
 
 <Block type='wide'>
   <Prose>
     Inverse modeling (“top-down”) is used to enable estimation of annual net carbon dioxide (CO₂) emissions and removals (uptake) in units of grams of CO₂ per square meter per year (g CO₂/m²/yr).  This Orbiting Carbon Observatory (OCO-2) modeling intercomparison project (MIP) Top-down carbon dioxide (CO₂) Budget dataset is the result of a collaboration between an international group of over 60 researchers and atmospheric modelers to study the impact of assimilating OCO-2 retrieval data into atmospheric inverse models.  While the dataset is attributed to NASA, it was only made possible with significant global community effort.
 
-    This dataset contains annual net fluxes of CO₂ on a 1-degree grid for a six-year period (2015-2020), including: net carbon exchange (NCE), fossil fuel emissions (FF), and lateral fluxes due to crop trade, wood trade, and river export. Data is provided in units of grams of carbon dioxide per square meter per year (g CO₂/m2/yr). The following CO₂ emission variables and their uncertainties are displayed: net biosphere exchange (NBE), net carbon exchange (NCE) and net land carbon stock loss estimated by the LNLGIS ensemble (estimated using a combination of land OCO-2  dry-air mole fraction retrievals (XCO₂) and in situ CO₂ measurements); lateral crop flux, fossil fuel and cement emissions, lateral river flux, and lateral wood flux. Accurate accounting of net carbon exchange (NCE) is critical for supporting the Paris agreement, and this data aims to inform countries’ carbon budgets while supporting the [Global Stocktake](https://unfccc.int/topics/global-stocktake). 
+    This dataset contains annual net fluxes of CO₂ on a 1-degree grid for a six-year period (2015-2020), including: net carbon exchange (NCE), fossil fuel emissions (FF), and lateral fluxes due to crop trade, wood trade, and river export. Data is provided in units of grams of carbon dioxide per square meter per year (g CO₂/m2/yr). The following CO₂ emission variables and their uncertainties are displayed: net biosphere exchange (NBE), net carbon exchange (NCE) and net land carbon stock loss estimated by the LNLGIS ensemble (estimated using a combination of land OCO-2  dry-air mole fraction retrievals (XCO₂) and in situ CO₂ measurements); lateral crop flux, fossil fuel and cement emissions, lateral river flux, and lateral wood flux. Accurate accounting of net carbon exchange (NCE) is critical for supporting the Paris agreement, and this data aims to inform countries’ carbon budgets while supporting the [Global Stocktake](https://unfccc.int/topics/global-stocktake).
 
     - **Temporal Extent:** 2015 – 2020
     - **Temporal Resolution:** Annual
@@ -672,7 +714,7 @@ layers:
     Byrne, B., Baker, D. F., Basu, S., Bertolacci, M., Bowman, K. W., Carroll, D., Chatterjee, A., Chevallier, F., Ciais, P., Cressie, N., Crisp, D., Crowell, S., Deng, F., Deng, Z., Deutscher, N. M., Dubey, M. K., Feng, S., García, O. E., Herkommer, B., Hu, L., Jacobson, A. R., Janardanan, R., Jeong, S., Johnson, M. S., Jones, D. B. A., Kivi, R., Liu, J., Liu, Z., Maksyutov, S., Miller, J. B., Miller, S. M., Morino, I., Notholt, J., Oda, T., O’Dell, C. W., Oh, Y.-S., Ohyama, H., Patra, P. K., Peiro, H., Petri, C., Philip, S., Pollard, D. F., Poulter, B., Remaud, M., Schuh, A., Sha, M. K., Shiomi, K., Strong, K., Sweeney, C., Té, Y., Tian, H., Velazco, V. A., Vrekoussis, M., Warneke, T., Worden, J. R., Wunch, D., Yao, Y., Yun, J., Zammit-Mangion, A., and Zeng, N.: Pilot top-down CO₂ Budget constrained by the v10 OCO-2 MIP Version 1, *Committee on Earth Observing Satellites*, https://doi.org/10.48588/npf6-sw92, Version 1.0, 2022
 
     ## Dataset Accuracy
-    The uncertainty in NCE is an estimate of the standard deviation of the v10 OCO-2 MIP ensemble members. This is meant to characterize uncertainties originating from the inversion configuration (such as the transport model, inversion method and prior constraints). However, there are also limitations to this method. First, there is only a small ensemble of 11 MIP ensemble members included in this analysis and an over-representation of inversions using two transport models: TM5 (3) and GEOS-Chem (5), which makes uncertainty quantification challenging. Second, the ensemble-based estimate does not capture some sources of uncertainty. In particular, Bayesian posterior uncertainties are not considered, due to the fact that many of the inversion systems participating in the v10 OCO-2 MIP do not calculate this uncertainty. For more information on the dataset’s uncertainty, refer to [Byrne et al. 2023](https://doi.org/10.5194/essd-15-963-2023).
+    The uncertainty in NCE is an estimate of the standard deviation of the v10 OCO-2 MIP ensemble members. This is meant to characterize uncertainties originating from the inversion configuration (such as the transport model, inversion method and prior constraints). However, there are also limitations to this method. First, there is only a small ensemble of 11 MIP ensemble members included in thisanalysis and an over-representation of inversions using two transport models: TM5 (3) and GEOS-Chem (5), which makes uncertainty quantification challenging. Second, the ensemble-based estimate does not capture some sources of uncertainty. In particular, Bayesian posterior uncertainties are not considered, due to the fact that many of the inversion systems participating in the v10 OCO-2 MIP do not calculate this uncertainty. For more information on the dataset’s uncertainty, refer to [Byrne et al. 2023](https://doi.org/10.5194/essd-15-963-2023).
 
     ## Disclaimer
     All data provided in the US GHG Center has been transformed from the original format into Cloud Optimized GeoTIFF (COG). Careful quality checks are used to ensure data transformation has been performed correctly.
