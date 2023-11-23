@@ -30,7 +30,7 @@ taxonomy:
   - name: Source
     values:
       - NASA
-      - NOAA      
+      - NOAA
   - name: Gas
     values:
       - CH₄
@@ -80,7 +80,10 @@ layers:
         - '#DF2179'
         - '#C10E51'
         - '#92003F'
-        - '#67001F'                    
+        - '#67001F'
+    analysis:
+      metrics:
+        - mean
   - id: microbial-ch4
     stacCol: tm54dvar-ch4flux-mask-monthgrid-v1
     name: Microbial CH₄ Emission
@@ -122,7 +125,10 @@ layers:
         - '#DF2179'
         - '#C10E51'
         - '#92003F'
-        - '#67001F' 
+        - '#67001F'
+    analysis:
+      metrics:
+        - mean
   - id: fossil-ch4
     stacCol: tm54dvar-ch4flux-mask-monthgrid-v1
     name: Fossil CH₄ Emission
@@ -164,7 +170,10 @@ layers:
         - '#DF2179'
         - '#C10E51'
         - '#92003F'
-        - '#67001F'  
+        - '#67001F'
+    analysis:
+      metrics:
+        - mean
   - id: pyrogenic-ch4
     stacCol: tm54dvar-ch4flux-mask-monthgrid-v1
     name: Pyrogenic CH₄ Emission
@@ -206,7 +215,10 @@ layers:
         - '#DF2179'
         - '#C10E51'
         - '#92003F'
-        - '#67001F'         
+        - '#67001F'
+    analysis:
+      metrics:
+        - mean
 ---
 
 <Block type='wide'>
@@ -221,11 +233,10 @@ layers:
     - **Data Type:** Research
     - **Data Latency:** Approximately 2 years
 
-
-    **Scientific Details:**  Surface emissions were derived using an atmospheric inverse model described in [Basu et al. 2022](https://doi.org/10.5194/acp-22-15351-2022). The modeling framework – including the transport model (Tracer Model 5 – Four-Dimensional Variational model (TM5-4DVar)), the atmospheric chemistry setup, and the specification of spatiotemporally explicit source signatures – are described in [Lan et al. 2021](https://doi.org/10.1029/2021GB007000). Several different inversions were performed by [Basu et al. 2022](https://doi.org/10.5194/acp-22-15351-2022), both as sensitivity tests (for example to test the impact of assumed sources signatures and atmospheric chemistry on the results) and to test specific hypotheses (for example to attribute the post-2007 growth in methane). The emissions shown here correspond to the “best case” simulation from [Basu et al. 2022](https://doi.org/10.5194/acp-22-15351-2022), labeled as “CH₄+δ¹³CH₄” in that publication. 
+    **Scientific Details:**  Surface emissions were derived using an atmospheric inverse model described in [Basu et al. 2022](https://doi.org/10.5194/acp-22-15351-2022). The modeling framework – including the transport model (Tracer Model 5 – Four-Dimensional Variational model (TM5-4DVar)), the atmospheric chemistry setup, and the specification of spatiotemporally explicit source signatures – are described in [Lan et al. 2021](https://doi.org/10.1029/2021GB007000). Several different inversions were performed by [Basu et al. 2022](https://doi.org/10.5194/acp-22-15351-2022), both as sensitivity tests (for example to test the impact of assumed sources signatures and atmospheric chemistry on the results) and to test specific hypotheses (for example to attribute the post-2007 growth in methane). The emissions shown here correspond to the “best case” simulation from [Basu et al. 2022](https://doi.org/10.5194/acp-22-15351-2022), labeled as “CH₄+δ¹³CH₄” in that publication.
 
     The atmospheric inverse model was run at 3° (longitude) x 2° (latitude) globally to estimate monthly surface emissions. The atmospheric inversion problem is under-constrained, and therefore inversely estimated emissions cannot be interpreted at the grid scale. Therefore, to present 1°x1° emission maps for the U.S. GHG Center, prior 1°x1° emissions were scaled to match the posterior continental and global totals for each source type and year.
-  
+
   </Prose>
 </Block>
 <Block>
@@ -249,21 +260,21 @@ layers:
     ## Other Relevant Publications
     Lan, X., Nisbet, E. G., Dlugokencky, E. J., & Michel, S. E. (2021). What do we know about the global methane budget? Results from four decades of atmospheric CH₄ observations and the way forward. *Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences, 379*, 20200440. [https://doi.org/10.1098/rsta.2020.0440](https://doi.org/10.1098/rsta.2020.0440)
 
-    Nisbet, E. G., Dlugokencky, E. J., Manning, M. R., Lowry, D., Fisher, R. E., France, J. L., Michel, S. E., Miller, J. B., White, J. W. C., Vaughn, B., Bousquet, P., Pyle, J. A., Warwick, N. J., Cain, M., Brownlow, R., Zazzeri, G., Lanoisellé, M., Manning, A. C., Gloor, E., … Ganesan, A. L. (2016). Rising atmospheric methane: 2007–2014 growth and isotopic shift. *Global Biogeochemical Cycles, 30*, 1356–1370. [https://doi.org/10.1002/2016GB005406](https://doi.org/10.1002/2016GB005406) 
+    Nisbet, E. G., Dlugokencky, E. J., Manning, M. R., Lowry, D., Fisher, R. E., France, J. L., Michel, S. E., Miller, J. B., White, J. W. C., Vaughn, B., Bousquet, P., Pyle, J. A., Warwick, N. J., Cain, M., Brownlow, R., Zazzeri, G., Lanoisellé, M., Manning, A. C., Gloor, E., … Ganesan, A. L. (2016). Rising atmospheric methane: 2007–2014 growth and isotopic shift. *Global Biogeochemical Cycles, 30*, 1356–1370. [https://doi.org/10.1002/2016GB005406](https://doi.org/10.1002/2016GB005406)
 
     Saunois, M., Stavert, A. R., Poulter, B., Bousquet, P., Canadell, J. G., Jackson, R. B., Raymond, P. A., Dlugokencky, E. J., Houweling, S., Patra, P. K., Ciais, P., Arora, V. K., Bastviken, D., Bergamaschi, P., Blake, D. R., Brailsford, G., Bruhwiler, L., Carlson, K. M., Carrol, M., … Zhuang, Q. (2020). The Global Methane Budget 2000-2017. *Earth System Science Data, 12*, 1561–1623. [https://doi.org/10.5194/essd-12-1561-2020](https://doi.org/10.5194/essd-12-1561-2020)
 
     Schaefer, H., Fletcher, S. E. M., Veidt, C., Lassey, K. R., Brailsford, G. W., Bromley, T. M., Dlugokencky, E. J., Michel, S. E., Miller, J. B., Levin, I., Lowe, D. C., Martin, R. J., Vaughn, B. H., & White, J. W. C. (2016). A 21st century shift from fossil-fuel to biogenic methane emissions indicated by 13CH₄. *Science, 352*(6281), 80-84. [https://doi.org/10.1126/science.aad2705](https://doi.org/10.1126/science.aad2705)
 
-    Schwietzke, S., Sherwood, O. A., Bruhwiler, L. M. P., Miller, J. B., Etiope, G., Dlugokencky, E. J., Michel, S. E., Arling, V. A., Vaughn, B. H., White, J. W. C., & Tans, P. P. (2016). Upward revision of global fossil fuel methane emissions based on isotope database. *Nature, 538*, 88–91. [https://doi.org/10.1038/nature19797](https://doi.org/10.1038/nature19797) 
+    Schwietzke, S., Sherwood, O. A., Bruhwiler, L. M. P., Miller, J. B., Etiope, G., Dlugokencky, E. J., Michel, S. E., Arling, V. A., Vaughn, B. H., White, J. W. C., & Tans, P. P. (2016). Upward revision of global fossil fuel methane emissions based on isotope database. *Nature, 538*, 88–91. [https://doi.org/10.1038/nature19797](https://doi.org/10.1038/nature19797)
 
     Sherwood, O. A., Schwietzke, S., & Lan, X. (2021). Global Inventory of Fossil and Non-fossil δ13C-CH₄ Source Signature Measurements for Improved Atmospheric Modeling, Database DOI: [https://doi.org/10.15138/qn55-e011](https://doi.org/10.15138/qn55-e011)
-  
+
     ## Acknowledgment
-    This work was supported by funding from the National Aeronautics and Space Administration (NASA) and the National Oceanic and Atmospheric Administration (NOAA). Measurements of atmospheric methane and ¹³C of methane were supported by several partner agencies and laboratories globally as described in [Basu et al. 2022](https://doi.org/10.5194/acp-22-15351-2022).    
-    
+    This work was supported by funding from the National Aeronautics and Space Administration (NASA) and the National Oceanic and Atmospheric Administration (NOAA). Measurements of atmospheric methane and ¹³C of methane were supported by several partner agencies and laboratories globally as described in [Basu et al. 2022](https://doi.org/10.5194/acp-22-15351-2022).
+
     ## License
-    [Creative Commons Zero v1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC0 1.0)   
+    [Creative Commons Zero v1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC0 1.0)
 
     ## Data Stewardship
     - [Data Workflow](https://us-ghg-center.github.io/ghgc-docs/data_workflow/tm54dvar-ch4flux-monthgrid-v1_Data_Flow.html)

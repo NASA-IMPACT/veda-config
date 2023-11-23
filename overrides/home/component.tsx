@@ -128,7 +128,7 @@ export default function HomeComponent() {
             </VarHeading>
             <p>
               The US GHG Center is grateful for the support and expertise of our
-              valued, multi-agency collaborators: EPA, NASA, NIST, and NOAA.
+              valued, multi-agency collaborators: NASA, EPA, NIST, and NOAA.
             </p>
           </InfoCalloutHeadline>
           <Partners variation="positive" size="big" />
