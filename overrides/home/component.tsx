@@ -95,8 +95,8 @@ export default function HomeComponent() {
             The U.S. Greenhouse Gas Center opens up access to trusted data on
             greenhouse gases. This&nbsp;multi-agency effort consolidates
             greenhouse gas information from observations and models.
-            The&nbsp;goal of the US GHG Center is providing decision-makers with
-            one stop for data and analysis.
+            The&nbsp;goal of the US GHG Center is to provide decision-makers with
+            one location for data and analysis.
           </p>
           <p>
           This initial two-year demonstration phase creates a way to explore 
