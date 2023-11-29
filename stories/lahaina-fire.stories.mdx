@@ -23,20 +23,27 @@ taxonomy:
 </Block>  
 
 <Block>
+  <Figure>
+    <Map
+      center={[-156.68108, 20.88130]}
+      zoom={12}
+      datasetId='lahaina-fire'
+      layerId='hls-swir-falsecolor-composite'
+      dateTime='2023-08-08'
+      compareDateTime='2023-08-13'
+    />
+    <Caption>
+      Harmonized Landsat Sentinel-2 false color composite imagery of Maui before (August 8, 2013) and after the fire (August 13, 2013).
+    </Caption>
+  </Figure>
+</Block>
+
+<Block>
   <Prose>
     A primary driver for the Lahaina Fire was a strong [gap wind](https://glossary.ametsoc.org/wiki/Gap_wind) that developed between the islands of Maui and Molokai. A gap wind is “a strong, low-level wind through either a relatively level channel between two mountain ranges or a gap in a mountain barrier”. The intense winds funneling between the two islands were aided by a sharp pressure gradient caused by [Hurricane Dora](https://www.google.com/url?q=https://www.earthdata.nasa.gov/worldview/worldview-image-archive/hurricane-dora-6-aug-2023&sa=D&source=docs&ust=1698703849605505&usg=AOvVaw2v_a0o1c-R2PBY6AQEbNrB), a Category 4 hurricane approximately 500 miles south of the islands when the fire ignited. The strong gap wind persisted from August 7 to 9 and led to a rapid expansion of the fire front. What started as a small brush fire grew quickly and subsequently burned much of Lahaina.
     
     According to the Pacific Disaster Center (PDC) and Federal Emergency Management Agency (FEMA), 2,170 acres were burned by the Lahaina Fire, destroying 2,207 structures — 86% of which were residential buildings. The fire is estimated to have caused $5.52 billion in damages, and 97 fatalities have been confirmed as a direct result of the fire. The Lahaina Fire now ranks as the deadliest U.S. wildfire since 1918. Severe drought conditions on Maui were present leading up to the wildfire — the worst drought conditions in the entire Hawaiian Island chain. Additionally, Maui is more prone to experiencing drought conditions than the rest of the Hawaiian Islands, in part due to the mountainous portion of the island blocking beneficial rainfall from reaching the island. These drought conditions supported the amount of dry fuel the Lahaina Fire had access to when it raged across fields and into the city. 
   </Prose>
-<Figure>
-      <Image
-      src={new URL('./lahaina-fire-drought-monitor.jpg', import.meta.url).href}
-      alt='US Drought Monitor, August 8th, 2023.'
-    />
-    <Caption>
-    US Drought Monitor Index on August 8th, 2023 over the Hawaiian Islands, with darker colors indicating worse drought conditions.
-    </Caption>
-  </Figure>
 </Block>
 
 <Block>
@@ -62,17 +69,13 @@ taxonomy:
 </Block>
 
 <Block>
-  <Figure>
-    <Map
-      center={[-156.68108, 20.88130]}
-      zoom={12}
-      datasetId='lahaina-fire'
-      layerId='hls-swir-falsecolor-composite'
-      dateTime='2023-08-08'
-      compareDateTime='2023-08-13'
+<Figure>
+      <Image
+      src={new URL('./lahaina-fire-drought-monitor.jpg', import.meta.url).href}
+      alt='US Drought Monitor, August 8th, 2023.'
     />
     <Caption>
-      Harmonized Landsat Sentinel-2 false color composite imagery of Maui before (August 8, 2013) and after the fire (August 13, 2013).
+    US Drought Monitor Index on August 8th, 2023 over the Hawaiian Islands, with darker colors indicating worse drought conditions.
     </Caption>
   </Figure>
 </Block>
