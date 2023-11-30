@@ -42,7 +42,8 @@ The National Weather Service reported wind gusts as high as 67 mph in the area, 
   </Prose>
 </Block>  
 
-<Figure>
+<Block>
+  <Figure>
       <Image
       src={new URL('./lahaina-fire-drought-monitor.jpg', import.meta.url).href}
       alt='US Drought Monitor, August 8th, 2023.'
@@ -50,7 +51,9 @@ The National Weather Service reported wind gusts as high as 67 mph in the area, 
     <Caption>
     US Drought Monitor Index on August 8th, 2023 over the Hawaiian Islands, with darker colors indicating worse drought conditions.
     </Caption>
-</Figure>
+  </Figure>
+<Block>
+
 <Block>
   <Prose>
 Furthermore, a considerable portion of Maui is inherently more prone to drought conditions compared to the other Hawaiian Islands, mainly because the mountainous terrain obstructs beneficial rainfall. The US Drought Monitor Index on August 8th, 2023, underscores the prevalent dry conditions preceding the disaster. These drought conditions played a pivotal role in the accumulation of dry fuel that fueled the spread of the Lahaina Fire across fields and into the city. This event serves as a depiction of cascading or compounding disasters, where several independent disasters converge, amplifying the magnitude and impact of the crisis.
@@ -61,7 +64,7 @@ Furthermore, a considerable portion of Maui is inherently more prone to drought 
   <Figure>
     <Map
       center={[-156.6837, 20.8785]}
-      zoom={14}
+      zoom={16}
       datasetId='lahaina-fire'
       layerId='hls-swir-falsecolor-composite'
       dateTime='2023-08-08'
@@ -70,8 +73,10 @@ Furthermore, a considerable portion of Maui is inherently more prone to drought 
     <Caption>
       Harmonized Landsat Sentinel-2 false color composite imagery of Maui before (August 8, 2013) and after the fire (August 13, 2013).
     </Caption>
-</Figure>
+  </Figure>
+<Block>
 
+<Block>
   </Prose>
     ## Satellite Analysis of the Lahaina Wildfire
     Thermal imagery acquired by the Operational Land Imager (OLI) and Thermal Infrared Sensors (TIRS) aboard the joint NASA/USGS Landsat-8 satellite detected ongoing fires across much of the city of Lahaina during its overpass at 10:35 p.m., Local Standard Time, on August 8. TIRS and OLI take observations from several different wavelengths that can be used to better understand changes to land and vegetation from natural disasters. The Burned Area derived using NASA’s Harmonized Landsat and Sentinel-2 (HLS) products on August 13, 2023, clearly identifies the regions most affected by the fire. These areas, with the highest probability of being burned, are situated across severely scorched fields just uphill from the city.
