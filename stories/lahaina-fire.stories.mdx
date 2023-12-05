@@ -22,29 +22,13 @@ taxonomy:
 
     ## Introduction
     <mark>🚧 This Discovery presents work in progress and not peer-reviewed results! 🚧</mark>
-    On August 8, 2023, the city of Lahaina, Hawai’i located on the island of Maui faced a devastating wildfire, leaving destruction and despair in its wake. The city of over 13,000 residents bore witness to a tragedy that would go down as the deadliest U.S. wildfire since 1918. This wildfire was reportedly sparked by a downed powerline on Lahainaluna Road. Though initially extinguished, the fire was reinvigorated by intense wind gusts that prevailed throughout the day. The National Weather Service reported wind gusts as high as 67 mph in the area, which helped to quickly spread the wildfire across much of Lahaina during the afternoon hours of August 8.
+    On August 8, 2023, the city of Lahaina, Hawai’i located on the island of Maui faced a devastating wildfire, leaving destruction and despair in its wake. The city of over 13,000 residents bore witness to a tragedy that would go down as the deadliest U.S. wildfire since 1918. A downed powerline on Lahainaluna Road initiated the wildfire. Though initially extinguished, the fire was reinvigorated by a potent [gap wind](https://glossary.ametsoc.org/wiki/Gap_wind), intense winds near the surface caused by air funneling through the channel between Maui and Molokai.
   </Prose>
 </Block>  
-<Block>
-  <Figure>
-    <Map
-      datasetId='lahaina-fire'
-      layerId='landsat-nighttime-thermal'
-      dateTime='2023-08-08'
-      compareDateTime='2023-08-13'
-
-    />
-    <Caption>
-      Landsat-8 nighttime thermal imagery from August 8, 2023 shows fires while to BAIS2 burned area from the August 13, 2023 derived from Harmonized Landsat Sentinel-2 data.
-    </Caption>
-  </Figure>
-</Block>
 
 <Block>
   <Prose>
-    A primary driver for the Lahaina Fire was a strong [gap wind](https://glossary.ametsoc.org/wiki/Gap_wind) that developed between the islands of Maui and Molokai. A gap wind is “a strong, low-level wind through either a relatively level channel between two mountain ranges or a gap in a mountain barrier”. The intense winds funneling between the two islands were aided by a sharp pressure gradient caused by [Hurricane Dora](https://www.google.com/url?q=https://www.earthdata.nasa.gov/worldview/worldview-image-archive/hurricane-dora-6-aug-2023&sa=D&source=docs&ust=1698703849605505&usg=AOvVaw2v_a0o1c-R2PBY6AQEbNrB), a Category 4 hurricane approximately 500 miles south of the islands when the fire ignited. The strong gap wind persisted from August 7 to 9 and led to a rapid expansion of the fire front. What started as a small brush fire grew quickly and subsequently burned much of Lahaina.
-    
-    According to the Pacific Disaster Center (PDC) and Federal Emergency Management Agency (FEMA), 2,170 acres were burned by the Lahaina Fire, destroying 2,207 structures — 86% of which were residential buildings. The fire is estimated to have caused $5.52 billion in damages, and 97 fatalities have been confirmed as a direct result of the fire. The Lahaina Fire now ranks as the deadliest U.S. wildfire since 1918. Severe drought conditions on Maui were present leading up to the wildfire — the worst drought conditions in the entire Hawaiian Island chain. Additionally, Maui is more prone to experiencing drought conditions than the rest of the Hawaiian Islands, in part due to the mountainous portion of the island blocking beneficial rainfall from reaching the island. These drought conditions supported the amount of dry fuel the Lahaina Fire had access to when it raged across fields and into the city. 
+    The National Weather Service reported wind gusts as high as 67 mph in the area, which helped to quickly spread the wildfire across much of Lahaina during the afternoon hours of August 8. The intense winds was further aided by a sharp pressure gradient caused by [Hurricane Dora](https://www.google.com/url?q=https://www.earthdata.nasa.gov/worldview/worldview-image-archive/hurricane-dora-6-aug-2023&sa=D&source=docs&ust=1698703849605505&usg=AOvVaw2v_a0o1c-R2PBY6AQEbNrB), a Category 4 hurricane approximately 500 miles south of the islands when the fire began. As Hurricane Dora exerted its influence, the gap wind persisted from August 7 to 9, creating ideal conditions for the rapid expansion of a fire that began as a small brush fire but swiftly grew to consume much of Lahaina.
   </Prose>
 </Block>
 
@@ -59,10 +43,29 @@ taxonomy:
     </Caption>
   </Figure>
   <Prose>
-    ## Satellite Analysis of the Lahaina Wildfire
-    Thermal imagery acquired by the Operational Land Imager (OLI) and Thermal Infrared Sensors (TIRS) aboard the joint NASA/USGS Landsat-8 satellite detected ongoing fires across much of the city of Lahaina during its overpass at 10:35 p.m., Local Standard Time, on August 8. TIRS and OLI take observations from several different wavelengths that can be used to better understand changes to land and vegetation from natural disasters. With a simple calculation using two wavelength bands, scientists can derive burned area from satellite observations. Burned area derived using NASA’s Harmonized Landsat and Sentinel-2 (HLS) products on August 13, 2023, clearly show areas most impacted by the fire. The areas identified with the highest probability of having been burned were located across the severely scorched fields just uphill from the city. 
+    Furthermore, a considerable portion of Maui is inherently more prone to drought conditions compared to the other Hawaiian Islands, mainly because the mountainous terrain obstructs beneficial rainfall. The US Drought Monitor Index on August 8th, 2023, underscores the prevalent dry conditions preceding the disaster. These drought conditions played a pivotal role in the accumulation of dry fuel that fueled the spread of the Lahaina Fire across fields and into the city. This event serves as a depiction of cascading or compounding disasters, where several independent disasters converge, amplifying the magnitude and impact of the crisis.
+</Prose>
+</Block>
 
-    Another technique scientists use to identify the impacts of natural disasters are false-color composite images. False-color composite imagery replaces the traditional red, green, and blue wavelength bands that correspond to how our eyes see with other wavelength bands. Fires are particularly sensitive to the near infrared (IR) and shortwave IR wavelengths. When the red, green, and blue bands are replaced with the shortwave IR, near IR, and red bands, respectively, land areas most impacted by the fire are much darker in the image than unaffected areas. 
+<Block>
+  <Figure>
+    <Map
+      datasetId='lahaina-fire'
+      layerId='landsat-nighttime-thermal'
+      dateTime='2023-08-08'
+      compareDateTime='2023-08-13'
+
+    />
+    <Caption>
+      Landsat-8 nighttime thermal imagery captured on August 8, 2023 reveals fires in and around Lahaina. The Burned Area Index for Sentinel-2 (BAIS-2) derived from Harmonized Landsat Sentinel-2 data captured on the August 13, 2023 illustrates the extent of the damage.
+    </Caption>
+  </Figure>
+
+  <Prose>
+    ## Satellite Analysis of the Lahaina Wildfire
+    Thermal imagery acquired by the Operational Land Imager (OLI) and Thermal Infrared Sensors (TIRS) aboard the joint NASA/USGS Landsat-8 satellite detected ongoing fires across much of the city of Lahaina during its overpass at 11:35 PM Hawaiian Daylight Time on August 8 (shown above). The OLI and TIRS instruments aboard the Landsat satellites take observations from several different wavelengths that can be used to better understand changes to land and vegetation from natural disasters. The Burned Area derived using NASA’s Harmonized Landsat and Sentinel-2 (HLS) products on August 13, 2023, clearly identifies the regions most affected by the fire. These areas, with the highest probability of being burned, are situated across severely scorched fields just uphill from the city. Note that population centers typically have lower BAIS2 values because the change in the land surface characteristics isn't as distinct as land covered with vegetation.
+
+    Another technique used to identify the impacts of natural disasters are false-color composite images. False-color composite imagery replaces the traditional red, green, and blue wavelength bands that correspond to how our eyes see with other wavelength bands. Fires are particularly sensitive to the near infrared (IR) and shortwave IR wavelengths. When the red, green, and blue bands are replaced with the shortwave IR, near IR, and red bands, respectively, land areas most impacted by the fire are much darker in the image than unaffected areas. 
   </Prose>
 </Block>
 
@@ -80,6 +83,12 @@ taxonomy:
       Harmonized Landsat Sentinel-2 false color composite imagery of Maui before (August 8, 2013) and after the fire (August 13, 2013).
     </Caption>
   </Figure>
+</Block>
+
+<Block>
+  <Prose>
+    According to the Pacific Disaster Center (PDC) and Federal Emergency Management Agency (FEMA), 2,170 acres were burned by the Lahaina Fire, destroying 2,207 structures — 86% of which were residential buildings. The fire is estimated to have caused $5.52 billion in damages, and 97 fatalities have been confirmed as a direct result of the fire. As the city continues to recover from the wildfire tragedy, satellite data can be used to identify areas in need of resources and monitor precursor conditions such as drought in the future.
+  </Prose>
 </Block>
 
 <Block>
