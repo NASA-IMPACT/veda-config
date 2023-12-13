@@ -9,7 +9,8 @@ description: "
 ---
 
 import AnchorScroll from "./AnchorScroll";
-
+import { NewsComponent, EventsComponent } from './component'
+import { NEWS_ITEMS, EVENT_ITEMS } from './learn-page-content'
 
 <AnchorScroll />
 <Block >
@@ -27,7 +28,7 @@ import AnchorScroll from "./AnchorScroll";
 <Block>
   <Prose>
     <h2 id="news">News and Announcements</h2>
-
+    <NewsComponent items={NEWS_ITEMS} />
   </Prose>
 </Block>
 
@@ -36,7 +37,7 @@ import AnchorScroll from "./AnchorScroll";
 <Block>
   <Prose>
     ## Upcoming / Past Events 
-
+    <EventsComponent items={EVENT_ITEMS} />
   </Prose>
 </Block>
 
@@ -45,7 +46,10 @@ import AnchorScroll from "./AnchorScroll";
 <Block>
   <Prose>
     ## Learning Opportunities 
-
+    <Embed
+      src="https://www.youtube.com/embed/YQWespzOtzI?si=0T-HzC405nrLfsTp" 
+      height="400"
+    />
   </Prose>
 </Block>
 
