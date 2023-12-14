@@ -28,9 +28,3 @@ export const AccessibilityMenuItem = styled(NavLink)`
     text-decoration: underline;
   }
 `;
-
-export const AccessibilityExternalLinkButton = styled.a`
-`
-
-export const AccessibilityInternalLinkButton = styled(Link)`
-`
