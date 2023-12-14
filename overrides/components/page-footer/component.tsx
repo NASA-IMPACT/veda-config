@@ -61,13 +61,8 @@ const FooterMenu = styled.ul`
 
 const FooterMenuLink = styled(AccessibilityMenuItem)`
   font-weight: ${themeVal("type.base.regular")};
-  // text-decoration: none;
   font-size: 0.875rem;
   text-transform: ${themeVal("button.type.case")};
-
-  // &:hover {
-  //   text-decoration: underline;
-  // }
 `;
 
 const FooterContacts = styled.div`
