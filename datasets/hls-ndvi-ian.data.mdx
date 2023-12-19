@@ -1,6 +1,6 @@
 ---
 id: hls-ndvi-ian
-name: "Harmonized Landsat and Sentinel-2 NDVI Before & After"
+name: "Harmonized Landsat and Sentinel-2 Normalized Difference Vegetation Index"
 description: "Using Harmonized Landsat and Sentinel-2 to Analyze the Aftermath of Hurricane Ian in Lee and Charlotte Counties in Florida."
 media:
   src: ::file ./hurricane-front.jpg
@@ -41,4 +41,29 @@ layers:
     compare:
         datasetId: hls-ndvi-ian
         layerId: hls-ndvi
+  - id: ndvi_difference
+    stacCol: ndvi_diff_Ian_2022-09-30_2022-09-05
+    name: pre/post-Hurricane Ian NDVI Difference
+    type: raster
+    description: "x"
+    initialDatetime: newest
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      colormap_name: rdbu
+      rescale:
+        - -1
+        - 1
+    legend:
+      type: gradient
+      min: "-1"
+      max: "1"
+      stops:
+      - "#67001f"
+      - "#d6604d"
+      - "#fddbc7"
+      - "#d1e5f0"
+      - "#4393c3"
+      - "#053061"
 ---
