@@ -11,7 +11,8 @@ media:
 taxonomy:
   - name: Topics
     values:
-      - EIS
+      - Hurricane
+      - UAH
 layers:
   - id: hls-ndvi
     stacCol: hls-ndvi
@@ -22,7 +23,7 @@ layers:
       - 0
       - 20
     sourceParams:
-      colormap_name: viridis
+      colormap_name: rdylgn
       rescale:
         - -1
         - 1
@@ -31,8 +32,13 @@ layers:
       min: "-1"
       max: "1"
       stops:
-        - "#FBB41A"
-        - "#BB3754"
-        - "#781D6D"
-        - "#34095F"
+      - "#a50026"
+      - "#f46d43"
+      - "#fee08b"
+      - "#d9ef8b"
+      - "#66bd63"
+      - "#006837"
+    compare:
+        datasetId: hls-ndvi-before-after
+        layerId: hls-ndvi
 ---
