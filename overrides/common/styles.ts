@@ -1,8 +1,7 @@
-import { Link, NavLink } from "$veda-ui/react-router-dom";
-import styled from "$veda-ui/styled-components";
+import { NavLink } from "$veda-ui/react-router-dom";
+import styled, { css } from "$veda-ui/styled-components";
 
-export const AccessibilityLink = styled(NavLink)`
-  text-decoration: underline;
+const MouseEventStyle = css`
   &:hover {
     cursor: pointer;
   }
@@ -12,19 +11,20 @@ export const AccessibilityLink = styled(NavLink)`
   &:active {
     color: black;
   }
+`
+
+export const AccessibilityLink = styled(NavLink)`
+  text-decoration: underline;
+  ${MouseEventStyle}
 `;
 
 export const AccessibilityMenuItem = styled(NavLink)`
   text-decoration: none;
+  ${MouseEventStyle}
   &:hover {
-    cursor: pointer;
     text-decoration: underline;
   }
-  &:focus {
-    outline: 3px solid #1565EF;
-  }
   &:active {
-    color: black;
     text-decoration: underline;
   }
 `;

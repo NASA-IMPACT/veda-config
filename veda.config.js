@@ -56,7 +56,7 @@ module.exports = {
     button: {
       type: {
         case: "uppercase",
-        weight: 550,
+        weight: 500,
       },
     },
   },
