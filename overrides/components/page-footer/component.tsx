@@ -25,6 +25,7 @@ import {
 import { useFeedbackModal } from "$veda-ui-scripts/components/common/layout-root";
 import { useMediaQuery } from "$veda-ui-scripts/utils/use-media-query";
 import Partners from "../../home/partners";
+import { AccessibilityMenuItem } from "../../common/styles";
 
 const FooterInner = styled.div`
   display: flex;
@@ -58,15 +59,10 @@ const FooterMenu = styled.ul`
   }
 `;
 
-const FooterMenuLink = styled(NavLink)`
+const FooterMenuLink = styled(AccessibilityMenuItem)`
   font-weight: ${themeVal("type.base.regular")};
-  text-decoration: none;
   font-size: 0.875rem;
   text-transform: ${themeVal("button.type.case")};
-
-  &:hover {
-    text-decoration: underline;
-  }
 `;
 
 const FooterContacts = styled.div`
