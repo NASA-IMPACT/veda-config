@@ -89,7 +89,7 @@ export function EventsComponent ({items}) {
             // const topics = getTaxonomy(d, TAXONOMY_TOPICS)?.values;
             const timeStatus = (d.startDate && d.endDate)? getEventTemporalState(d.startDate, d.endDate): null
             return (
-              <ContinuumGridItem {...bag} key={d.id}>
+              <ContinuumGridItem {...bag} key={d.name}>
                 <StyledCard
                   onCardClickCapture={(e) => {
                     // If the user was scrolling and let go of the mouse on top of a
