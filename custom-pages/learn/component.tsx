@@ -4,10 +4,27 @@ import { glsp, media } from "$veda-ui/@devseed-ui/theme-provider";
 import { Fold, FoldBody } from "$veda-ui-scripts/components/common/fold";
 import {
   Card,
-  CardList
+  CardList,
+  CardTopicsList
 } from "$veda-ui-scripts/components/common/card";
 
+import {
+  Continuum,
+  ContinuumGridItem,
+  ContinuumCardsDragScrollWrapper,
+  ContinuumDragScroll
+} from '$veda-ui-scripts/styles/continuum';
+import { ContinuumScrollIndicator } from '$veda-ui-scripts/styles/continuum/continuum-scroll-indicator';
+import { useReactIndianaScrollControl } from '$veda-ui-scripts/styles/continuum/use-react-indiana-scroll-controls';
+import { continuumFoldStartCols } from '$veda-ui-scripts/components/common/featured-slider-section'
+import { Pill } from '$veda-ui-scripts/styles/pill';
 import AnchorScroll from './AnchorScroll'
+
+export const continuumFoldSpanCols = {
+  smallUp: 1,
+  mediumUp: 2,
+  largeUp: 4
+};
 
 const FoldSection = styled.div`
   grid-column: 1 / -1;
@@ -16,12 +33,6 @@ const FoldSection = styled.div`
   margin-bottom: ${glsp(2)};
 `;
 
-const FlexibleListWrapper = styled(CardList)`
-  ${media.largeUp`
-    grid-template-columns: ${(props) => (props.cardAmount %2 ==0 ? "repeat(2, 1fr)" : "repeat(3, 1fr)")}
-  `}
-`
-
 const StyledCard = styled(Card)`
   h3:first-child {
     margin-bottom: 0;
@@ -29,23 +40,8 @@ const StyledCard = styled(Card)`
       content: none;
     }
   }
-
-  h3 {
-    font-size: 1.125rem;
-  }
-  p {
-    font-size: 1rem;
-  }
-`
-
-const CardFooter = styled.div`
-  font-size: 1rem;
-`
-
-
-const StyledNewsItem = styled.div`
-  h3:first-child:before {
-    content: none;
+  img {
+    max-height: 250px;
   }
   h3 {
     font-size: 1.125rem;
@@ -53,56 +49,73 @@ const StyledNewsItem = styled.div`
   p {
     font-size: 1rem;
   }
-
-  border: 1px solid grey;
-  padding: ${glsp(1)}
 `
 
-function NewsItem({item}) {
-  return (<StyledNewsItem>
-    <a href={item.link}>
-      <h3>{item.title}</h3>
-    </a>
-    <p>{item.description}</p>
-  </StyledNewsItem>)
-}
+const StyledContinuum = styled(Continuum)`
+  ol {
+    margin-left: 0.5rem;
+  }
+`;
 
-export function NewsComponent ({items}) {
-  return (
-    <FlexibleListWrapper>
-      {items.map(item => {
-        return <NewsItem item={item} />
-      })}
-    </FlexibleListWrapper>
-  )
-}
 
-function EventItem({t}) {
-  return (
-    <StyledCard 
-      linkLabel="View more"
-      linkTo={t.asLink?.url?? `/stories/${t.id}`}
-      title={t.name}
-      description={t.date}
-      imgSrc={t.media.src}
-      imgAlt={t.media.alt}
-      footerContent= {
-        <CardFooter>{t.description}</CardFooter>
-      }
-    />
-  )
+function getEventTemporalState(startDate, endDate) {
+  // Convert start and end dates to Date objects
+  const startDateTime = new Date(startDate + 'T00:00:00-05:00'); // Assuming EST (UTC-5)
+  const endDateTime = new Date(endDate + 'T23:59:59-05:00'); // Assuming EST (UTC-5)
+
+  // Get current date and time in EST
+  const currentDate = new Date();
+  currentDate.setHours(currentDate.getHours() - 5);
+  // Check if current date is within the range
+  if (startDateTime <= currentDate && currentDate <= endDateTime) return 'Current'
+  else if (currentDate > endDateTime) return 'Past'
+  else return 'Upcoming'
 }
 
 export function EventsComponent ({items}) {
-  return (
-    <FlexibleListWrapper>
-      {items.map(item => {
-        const itemWithId = {
-          ...item,
-          id: item.name.replace(/\s+/g, '-').toLowerCase()
-        }
-        return <EventItem t={item} />
-      })}
-    </FlexibleListWrapper>
+  const { isScrolling, scrollProps } = useReactIndianaScrollControl();
+  
+  return (<ContinuumCardsDragScrollWrapper>
+    <ContinuumScrollIndicator />
+    <ContinuumDragScroll hideScrollbars={false} {...scrollProps}>
+      <StyledContinuum
+        id="continuum"
+        listAs='ol'
+        startCol={continuumFoldStartCols}
+        spanCols={continuumFoldSpanCols}
+        render={(bag) => {
+          return items.map((d) => {
+            // const date = new Date(d[dateProperty ?? '']);
+            // const topics = getTaxonomy(d, TAXONOMY_TOPICS)?.values;
+            const timeStatus = (d.startDate && d.endDate)? getEventTemporalState(d.startDate, d.endDate): null
+            return (
+              <ContinuumGridItem {...bag} key={d.id}>
+                <StyledCard
+                  onCardClickCapture={(e) => {
+                    // If the user was scrolling and let go of the mouse on top of a
+                    // card a click event is triggered. We capture the click on the
+                    // parent and never let it reach the link.
+                    if (isScrolling) {
+                      e.preventDefault();
+                    }
+                  }}
+                  linkLabel='View more'
+                  linkTo={d.asLink?.url}
+                  title={d.name}
+                  description={d.description}
+                  imgSrc={d.media?.src}
+                  imgAlt={d.media?.alt}
+                  footerContent=
+                    {timeStatus && 
+                      <Pill variation='primary'>{timeStatus}</Pill>
+                    }
+                />
+              </ContinuumGridItem>
+            );
+          });
+        }}
+      />
+    </ContinuumDragScroll>
+  </ContinuumCardsDragScrollWrapper>
   )
-}
+};
