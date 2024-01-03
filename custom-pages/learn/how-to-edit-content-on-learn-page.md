@@ -24,7 +24,7 @@
 ### Event Item
 
 1. Open 'learn-page-content.js' file in the same directory.
-2. Add an item to 'NEWS_ITEMS' by copying already existing items in the array.
+2. Add an item to 'EVENT_ITEMS' by copying already existing items in the array.
 3. Place necessary images in `./media/events` folder. (Let's say this image has a file name 'image-name.png')
 4. Edit the field as needed. Please follow the pattern like below. Note that startDate and endDate should follow 'yyyy-mm-dd' format. If it is a oneday event, put the same date for both.
 
@@ -35,11 +35,11 @@
       url: 'https://link-for-event.com'
     },
     media: {
-      src: new URL('./media/news/image-name.png', import.meta.url).href,
+      src: new URL('./media/events/image-name.png', import.meta.url).href,
       alt: 'Image description'
     },
     description: 'A short paragraph to describe the event',
     startDate: '2024-01-01',
-    endDate: '2024-01-02',
+    endDate: '2024-01-02'
   }
 ```
