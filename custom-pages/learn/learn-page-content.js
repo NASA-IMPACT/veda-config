@@ -64,7 +64,7 @@ export const EVENT_ITEMS = [
   {
     name: 'Launch of the US Greenhouse Gas Center at COP28 (12-4-23)',
     asLink : {
-      url: 'https://nasa.gov'
+      url: 'https://www.nasa.gov/news-release/nasa-partners-launch-us-greenhouse-gas-center-to-share-climate-data/'
     },
     media: {
       src: new URL('./media/nasa.png', import.meta.url).href,
