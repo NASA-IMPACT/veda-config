@@ -8,7 +8,7 @@ export const NEWS_ITEMS = [
       src: new URL('./media/news/cop28-uae.jpg', import.meta.url).href,
       alt: 'Cop 28 Logo'
     },
-    description: 'Agency partners release the US GHG Center at the 28th annual United Nations Climate Conference (COP28) on December 4, 2023.'
+    description: 'Agency partners released the US GHG Center at the 28th annual United Nations Climate Conference (COP28) on December 4, 2023.'
   },
   {
     name: 'New U.S. national strategy for measuring and monitoring GHG emissions',
@@ -16,18 +16,18 @@ export const NEWS_ITEMS = [
       url: 'https://www.whitehouse.gov/omb/briefing-room/2023/11/29/interagency-working-group-releases-national-strategy-enhance-nation-greenhouse-gas-measurement-monitoring-capabilities/'
     },
     media: {
-      src: new URL('./media/nasa.png', import.meta.url).href,
+      src: new URL('./media/US_GHG_MMIS_report_cover_screenshot.png', import.meta.url).href,
       alt: 'NASA logo'
     },
-    description: 'On November 29, 2023, the White House released the National Strategy to Advance an Integrated U.S. Greenhouse Gas Measurement, Monitoring, and Information System. This report outlines how federal agencies will collaborate to lead the federal government’s efforts to assess and reduce GHG emissions.'
+    description: 'On November 29, 2023, the White House released the [National Strategy](hello) to Advance an Integrated U.S. Greenhouse Gas Measurement, Monitoring, and Information System. This report outlines how federal agencies will collaborate to lead the federal government’s efforts to assess and reduce GHG emissions.'
   },
   {
-    name: ' The US GHG Center at the 2023 AGU Fall Meeting',
+    name: 'The US GHG Center at the 2023 AGU Fall Meeting',
     asLink : {
       url: 'https://www.youtube.com/watch?v=8_aFRPqiXGw&feature=youtu.be&ab_channel=NASAVideo'
     },
     media: {
-      src: new URL('./media/nasa.png', import.meta.url).href,
+      src: new URL('./media/Kavvada_2023_AGU_Hyperwall_Edited.png', import.meta.url).href,
       alt: 'NASA logo'
     },
     description: 'The US GHG Center was a new and prominent effort highlighted at the 2023 AGU Fall Meeting in San Francisco, December 11th - 15th. Several presentations and posters featured the Center’s content, design, and functionality.'
@@ -41,7 +41,7 @@ export const EVENT_ITEMS = [
       url: 'https://nasa.gov'
     },
     media: {
-      src: new URL('./media/events/AMS24_Logo.jpg', import.meta.url).href,
+      src: new URL('./media/events/AMS24_Logo.png', import.meta.url).href,
       alt: 'AMS 24 logo'
     },
     description: ' Join members of the GHG Center team for several events at the 2024 AMS Annual Meeting in Baltimore, January 28 - February 1.',
