@@ -38,7 +38,7 @@ export const EVENT_ITEMS = [
   {
     name: 'American Meteorological Society (AMS) Annual Meeting',
     asLink : {
-      url: 'https://nasa.gov'
+      url: 'https://us-ghg-center.github.io/ams-2024-workshop/ghg-center-at-ams-2024.html'
     },
     media: {
       src: new URL('./media/events/AMS24_Logo.png', import.meta.url).href,
