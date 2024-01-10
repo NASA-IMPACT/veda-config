@@ -16,7 +16,7 @@ export const NEWS_ITEMS = [
       url: 'https://www.whitehouse.gov/omb/briefing-room/2023/11/29/interagency-working-group-releases-national-strategy-enhance-nation-greenhouse-gas-measurement-monitoring-capabilities/'
     },
     media: {
-      src: new URL('./media/US_GHG_MMIS_report_cover_screenshot.png', import.meta.url).href,
+      src: new URL('./media/news/US_GHG_MMIS_report_cover_screenshot.png', import.meta.url).href,
       alt: 'NASA logo'
     },
     description: 'On November 29, 2023, the White House released the [National Strategy](hello) to Advance an Integrated U.S. Greenhouse Gas Measurement, Monitoring, and Information System. This report outlines how federal agencies will collaborate to lead the federal government’s efforts to assess and reduce GHG emissions.'
@@ -27,7 +27,7 @@ export const NEWS_ITEMS = [
       url: 'https://www.youtube.com/watch?v=8_aFRPqiXGw&feature=youtu.be&ab_channel=NASAVideo'
     },
     media: {
-      src: new URL('./media/Kavvada_2023_AGU_Hyperwall_Edited.png', import.meta.url).href,
+      src: new URL('./media/news/Kavvada_2023_AGU_Hyperwall_Edited.png', import.meta.url).href,
       alt: 'NASA logo'
     },
     description: 'The US GHG Center was a new and prominent effort highlighted at the 2023 AGU Fall Meeting in San Francisco, December 11th - 15th. Several presentations and posters featured the Center’s content, design, and functionality.'
@@ -48,19 +48,19 @@ export const EVENT_ITEMS = [
     startDate: '2024-01-28',
     endDate: '2024-02-01'
   },
-  // {
-  //   name: 'US GHG Center Summer School',
-  //   asLink : {
-  //     url: 'https://nasa.gov'
-  //   },
-  //   media: {
-  //     src: new URL('./media/nasa.png', import.meta.url).href,
-  //     alt: 'NASA logo'
-  //   },
-  //   description: 'The US GHG Center website is always evolving. New data and information is added monthly, and website features and capabilities continue to improve.',
-  //   startDate: '2023-12-04',
-  //   endDate: '2023-12-04'
-  // },
+  {
+    name: 'US GHG Center Summer School',
+    asLink : {
+      url: 'https://www.cira.colostate.edu/conferences/rmtgw/'
+    },
+    media: {
+      src: new URL('./media/events/summer-school.png', import.meta.url).href,
+      alt: 'Summer school info screenshot'
+    },
+    description: 'The US GHG Center is hosting a Summer School for Inverse Modeling of Greenhouse Gases (SSIM-GHG), June 11-21, 2024 at Fort Collins, CO, USA. The goal of the workshop is to present and provide guidance and instruction of the state of the art in atmospheric data assimilation techniques needed to support current and future GHG observing systems.',
+    startDate: '2023-06-11',
+    endDate: '2023-06-21'
+  },
   {
     name: 'Launch of the US Greenhouse Gas Center at COP28 (12-4-23)',
     asLink : {
