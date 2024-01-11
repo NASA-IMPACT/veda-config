@@ -1,11 +1,8 @@
 import React from "$veda-ui/react";
 import styled from "$veda-ui/styled-components";
-import { glsp, media } from "$veda-ui/@devseed-ui/theme-provider";
-import { Fold, FoldBody } from "$veda-ui-scripts/components/common/fold";
+import { glsp } from "$veda-ui/@devseed-ui/theme-provider";
 import {
-  Card,
-  CardList,
-  CardTopicsList
+  Card
 } from "$veda-ui-scripts/components/common/card";
 
 import {
@@ -18,7 +15,7 @@ import { ContinuumScrollIndicator } from '$veda-ui-scripts/styles/continuum/cont
 import { useReactIndianaScrollControl } from '$veda-ui-scripts/styles/continuum/use-react-indiana-scroll-controls';
 import { continuumFoldStartCols } from '$veda-ui-scripts/components/common/featured-slider-section'
 import { Pill } from '$veda-ui-scripts/styles/pill';
-import AnchorScroll from './AnchorScroll'
+
 
 export const continuumFoldSpanCols = {
   smallUp: 1,
