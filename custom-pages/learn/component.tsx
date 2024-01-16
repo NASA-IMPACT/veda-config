@@ -18,8 +18,8 @@ import { Pill } from '$veda-ui-scripts/styles/pill';
 
 
 export const continuumFoldSpanCols = {
-  smallUp: 1,
-  mediumUp: 2,
+  smallUp: 4,
+  mediumUp: 4,
   largeUp: 4
 };
 
