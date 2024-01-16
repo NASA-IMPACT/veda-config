@@ -8,7 +8,7 @@ export const NEWS_ITEMS = [
       src: new URL('./media/news/cop28-uae.jpg', import.meta.url).href,
       alt: 'Cop 28 Logo'
     },
-    description: 'Agency partners released the US GHG Center at the 28th annual United Nations Climate Conference (COP28) on December 4, 2023.'
+    description: 'Agency partners released the US GHG Center and portal at the 28th annual United Nations Climate Conference (COP28) on December 4, 2023.'
   },
   {
     name: 'New U.S. national strategy for measuring and monitoring GHG emissions',
@@ -19,7 +19,7 @@ export const NEWS_ITEMS = [
       src: new URL('./media/news/US_GHG_MMIS_report_cover_screenshot.png', import.meta.url).href,
       alt: 'NASA logo'
     },
-    description: 'On November 29, 2023, the White House released the [National Strategy](hello) to Advance an Integrated U.S. Greenhouse Gas Measurement, Monitoring, and Information System. This report outlines how federal agencies will collaborate to lead the federal government’s efforts to assess and reduce GHG emissions.'
+    description: 'On November 29, 2023, the White House released the National Strategy to Advance an Integrated U.S. Greenhouse Gas Measurement, Monitoring, and Information System to Advance an Integrated U.S. Greenhouse Gas Measurement, Monitoring, and Information System. This report outlines how federal agencies will collaborate to lead the federal government’s efforts to assess and reduce GHG emissions.'
   },
   {
     name: 'The US GHG Center at the 2023 AGU Fall Meeting',
@@ -30,7 +30,7 @@ export const NEWS_ITEMS = [
       src: new URL('./media/news/Kavvada_2023_AGU_Hyperwall_Edited.png', import.meta.url).href,
       alt: 'NASA logo'
     },
-    description: 'The US GHG Center was a new and prominent effort highlighted at the 2023 AGU Fall Meeting in San Francisco, December 11th - 15th. Several presentations and posters featured the Center’s content, design, and functionality.'
+    description: 'The US GHG Center and portal was a new and prominent effort highlighted at the 2023 AGU Fall Meeting in San Francisco, December 11th - 15th. Several presentations and posters featured the Center’s content, design, and functionality.'
   }
 ]
 
@@ -49,7 +49,7 @@ export const EVENT_ITEMS = [
     endDate: '2024-02-01'
   },
   {
-    name: 'US GHG Center Summer School',
+    name: 'US GHG Center Summer School Registration',
     asLink : {
       url: 'https://www.cira.colostate.edu/conferences/rmtgw/'
     },
@@ -57,7 +57,7 @@ export const EVENT_ITEMS = [
       src: new URL('./media/events/summer-school.png', import.meta.url).href,
       alt: 'Summer school info screenshot'
     },
-    description: 'The US GHG Center is hosting a Summer School for Inverse Modeling of Greenhouse Gases (SSIM-GHG), June 11-21, 2024 at Fort Collins, CO, USA. The goal of the workshop is to present and provide guidance and instruction of the state of the art in atmospheric data assimilation techniques needed to support current and future GHG observing systems.',
+    description: 'The US GHG Center announces a Summer School for Inverse Modeling of Greenhouse Gases (SSIM-GHG) that is planned for June 11-21, 2024 at Fort Collins, CO, USA.  Graduate students and early career post-docs are invited to apply by January 31st.',
     startDate: '2024-06-11',
     endDate: '2024-06-21'
   },
