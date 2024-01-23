@@ -28,7 +28,7 @@ module.exports = {
     // Component for the header brand.
     headerBrand: "./overrides/components/header-brand/index.mdx",
     // Component for the footer.
-    pageFooter: "./overrides/components/page-footer/index.mdx",
+    pageFooter: "./overrides/components/page-footer/index.mdx"
   },
 
   strings: {
@@ -40,6 +40,11 @@ module.exports = {
         "Explore the guided narratives below to learn more about greenhouse gas measurement, changes over time, events and human-related causes and contributions.",
     dataCatalogBanner:
         "This dashboard is for exploring key datasets that provide insight into greenhouse gas sources, sinks, emissions, fluxes, and events.",
+    // Temporary Banner Text/URL
+    tempBanner:
+        "Attending AMS Annual Meeting in Baltimore?  Join the GHG Center / VEDA workshop and learn about Greenhouse Gases using Open Source data and tools. Register Here!",
+    tempBannerUrl:
+        "https://www.ametsoc.org/index.cfm/ams/education-careers/careers/professional-development/short-courses/advancing-open-science-an-interactive-workshop-on-harnessing-veda-for-earth-science-research-at-the-u-s-greenhouse-gas-center/"
   },
 
   theme: {

@@ -11,6 +11,7 @@ import { variableGlsp } from "$veda-ui-scripts/styles/variable-utils";
 import Partners from "./partners";
 import Keypoints from "./keypoints";
 import { ArrowLink } from "./arrow-link";
+import AMSBanner from './ams-banner';
 
 const HomeContent = styled(Hug)`
   padding: ${variableGlsp(2.5, 0)};
@@ -88,6 +89,7 @@ const InfoCalloutHeadline = styled.div`
 export default function HomeComponent() {
   return (
     <>
+    <AMSBanner />
       <HomeContent>
         <IntroHeadline>
           <VarHeading size="xxlarge">Welcome</VarHeading>
