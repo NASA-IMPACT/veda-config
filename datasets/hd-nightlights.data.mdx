@@ -1,0 +1,107 @@
+---
+id: hd-blackmarble-nightlights
+name: High Definition Black Marble Nightlights for Disaster Support 
+description: The High Definition Nightlights dataset is a derived product for measuring light emissions for a given location. Darker colors indicate lower light emissions while lighter colors indicate high light emissions. 
+usage:
+  - url: 'https://nasa-impact.github.io/veda/notebooks/
+    label: Notebook to read, visualize, and explore data statistics
+    title: 'Sample Data Notebook'
+  - url: 'https://hub.openveda.cloud'
+    label: Run example notebook
+    title: Interactive Session in the US GHG Center JupyterHub (requires account)
+media:
+  src: ::file ./nighttime-lights-ej--dataset-cover-neworleans.jpeg
+  alt: high-definition nightlights for Hurricane Ida over New Orleans, LA
+taxonomy:
+  - name: Topics
+    values:
+      - Environmental Justice
+      - Natural Disasters
+  - name: Source
+    values:
+      - NASA
+  - name: Product Type
+    values:
+      - Nightlights
+disableExplore: false     
+layers:
+  - id: hd-nightlights
+    stacCol: hd-blackmarble-nightlights
+    name: High Definition Nighlights
+    type: raster
+    description: Satellite-derived light emissions at 30m resolution
+    initialDatetime: newest
+    analysis:
+      exclude: true
+    zoomExtent:
+      - 10
+      - 20
+    sourceParams:
+      resampling: bilinear
+      bidx: [1,2,3]
+      assets: hd-nightlights
+      colormap_name: magma
+      rescale:
+        - 0
+        - 255
+      nodata: -9999
+    compare:
+      datasetId: hd-blackmarble-nightlights
+      layerId: hd-nightlights
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      type: gradient
+      min: 0
+      max: 255
+      stops:
+        - "#000004"
+        - "#120d31"
+        - "#331067"
+        - "#59157e"
+        - "#7e2482"
+        - "#a3307e"
+        - "#c83e73"
+        - "#e95462"
+        - "#fa7d5e"
+        - "#fea973"
+        - "#fed395"
+        - "#fcfdbf"
+---
+
+<Block type='wide'>
+  <Prose>
+
+    - **Temporal Extent:** Ongoing
+    - **Temporal Resolution:** Variable (on-demand execution)
+    - **Spatial Extent:** Global
+    - **Spatial Resolution:** 30 m
+    - **Data Units:** None
+    - **Data Type:** Infomational
+    - **Data Latency:** N/A
+
+    **Scientific Details:**
+
+</Prose>
+<Block>
+  <Prose>
+    ## Source Data Product Citation
+
+    ## Dataset Accuracy
+
+    ## Disclaimer
+All data provided in VEDA has been transformed from GeoTIFF into Cloud Optimized GeoTIFF ([COG](https://www.cogeo.org/)). Careful quality checks are used to ensure data transformation has been performed correctly.
+
+    ## Key Publications
+
+    ## Acknowledgment
+
+    ## License
+    [Massachussetts Institute of Technology License](https://spdx.org/licenses/MIT.html)
+
+    ## Data Stewardship
+
+  </Prose>
+</Block>
