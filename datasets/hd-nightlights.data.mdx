@@ -30,9 +30,10 @@ layers:
     name: High Definition Nighlights
     type: raster
     description: Satellite-derived light emissions at 30m resolution
-    initialDatetime: newest
     analysis:
       exclude: true
+    rescale:
+      -0,255
     zoomExtent:
       - 8
       - 20
