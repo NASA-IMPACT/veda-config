@@ -1,92 +1,154 @@
 ---
 id: "ams-workshop-story"
-name: What I learned at AMS 2024 workshop on the US GHG Center
-description: 
+name: A very high-resolution (1 km×1 km) global fossil fuel CO2 emission inventory derived using a point source database and satellite observations of nighttime lights
+description: A very high-resolution (1 km×1 km) global fossil fuel CO2 emission inventory derived using a point source database and satellite observations of nighttime lights
 media:
   src: ::file ./intro-to-ghg-center--cover.png
   alt: Global carbon dioxide visualization
   author:
     name: US GHG Center
     url: "https://earth.gov/ghgcenter"
-pubDate: 2023-08-23
-featured: true
+pubDate: 2024-01-25
+taxonomy:
+  - name: Topics
+    values:
+      - Anthropogenic Emissions
+  - name: Gas
+    values:
+      - CO₂
 ---
 
 <Block>
     <Prose>
-    ## Author information
-
-    Author name: Slesa Adhikari
-
-    Author location: Huntsville, AL
+    ## Citation
+    Oda, T. and Maksyutov, S. (2011). A very high-resolution (1 km x 1 km) global fossil fuel CO2 emission inventory derived using a point source database and satellite observations of nighttime lights. Atmospheric Chemistry and Physics, 11(2), 543-556. https://doi.org/10.5194/acp-11-543-2011
     </Prose>
 </Block>
 
 <Block>
     <Prose>
-    ## US GHG Center and VEDA
+    ## Paragraph 1
 
-    The US GHG Center was built using the open-science platform VEDA.
+    Emissions of CO2 from fossil fuel combustion are a critical quantity that must be accurately given in established flux inversion frameworks. Work with emerging satellite-based inversions requires spatiotemporally detailed inventories that permit analysis of regional natural sources and sinks. Conventional approaches for disaggregating national emissions beyond the country and city levels based on population distribution have certain difficulties in their application. We developed a global 1 km×1 km annual fossil fuel CO2 emission inventory for the years 1980–2007 by combining a worldwide point source database and satellite observations of the global nightlight distribution.
+
     </Prose>
 </Block>
 
 <Block>
     <Prose>
-    ## Some Datasets I Learned About
+    ## National and regional CO2 Emissions
 
-    ### Natural Sources of Methane
-    LPJ Wetlands
+    Estimates of annual national CO2 emissions obtained in this work were based on worldwide energy statistics (2007 edition) compiled by the energy company BP p.l.c. (BP, 2008). The BP energy statistics were recently used to extend the established historical emission inventories (e.g. CDIAC) prior to updating the original inventories (e.g. Gregg et al., 2007; Myhre et al., 2009). The 2007 edition of the BP statistics, which covered the years 1965–2007, included the consumption of commercially traded primary fuels (e.g. oil, coal, and natural gas) in 65 countries and an administrative region.
+
+| Country name      | Code | Total  | Emissions Point source    | ( % )  | Other |
+| ----------------- | ---- | ------ | ------------------------- | ------ | ----- |
+| United States     | USA  | 1746.9 | 765.1                     | \-43.8 | 981.7 |
+| China             | CHN  | 1641.1 | 849.3                     | \-51.8 | 791.8 |
+| Russian           | RUS  | 458    | 130.2                     | \-28.5 | 327.5 |
+| Japan             | JPN  | 373.6  | 112.8                     | \-30.2 | 260.8 |
+| India             | IND  | 332.4  | 173.8                     | \-52.2 | 158.9 |
+| Germany           | DEU  | 242.8  | 116.9                     | \-48.1 | 125.9 |
+| Canada            | CAN  | 171.7  | 46.9                      | \-27.3 | 124.8 |
+| Republic of Korea | KOR  | 167.3  | 52.3                      | \-31.3 | 115   |
+| United Kingdom    | GBR  | 165.4  | 61.9                      | \-37.4 | 103.5 |
+| Italy             | ITA  | 134.9  | 45.8                      | \-33.9 | 89.1  |
+| Iran              | IRN  | 127    | 22.3                      | \-17.6 | 104.6 |
+| South Africa      | ZAF  | 122.6  | 59.4                      | \-48.5 | 63.2  |
+| Saudi Arabia      | SAU  | 118.8  | 19.3                      | \-16.2 | 99.7  |
+| France            | FRA  | 115.3  | 14.4                      | \-12.6 | 100.8 |
+| Mexico            | MEX  | 111.2  | 27.8                      | \-25   | 83.4  |
+| Australia         | AUS  | 109.8  | 61                        | \-55.6 | 48.8  |
+| Spain             | ESP  | 104.1  | 41.4                      | \-39.7 | 62.7  |
+| Brazil            | BRA  | 101.1  | 6.5                       | \-6.4  | 94.6  |
+| Ukraine           | UKR  | 94     | 19.9                      | \-21.3 | 74.1  |
 
     </Prose>
-    <Figure>
-        <Map
-        datasetId='lpjwsl-wetlandch4-grid-v1'
-        layerId='ch4-wetlands-emissions'
-        dateTime='2021-12-01'
+</Block>
+
+<Block>
+    <Prose>
+    ## CO2 emissions from point sources
+
+    In addition to national and regional emissions, we separately estimated emissions from point sources using a global power-plant database. We utilized the database CARMA (Carbon Monitoring and Action, http://carma.org), which was compiled using data from national publicly disclosed databases for the US, EU, Canada, and India, and a commercial database of the world’s power plants (Wheeler and Um- mel, 2008). The database included emission levels and locations of over 50 000 power plants worldwide for the years 2000 and 2007, including all types of power plants (fossil fuel, nuclear, hydro, and other renewable energy plants). Data for the fossil fuel-red power plants (emission >0) with valid location information (n=17668) were selected from the database.
+
+    <Image 
+        src={new URL('./point-source-emissions.png', import.meta.url).href}
+        alt="Global Spatial Distribution of Power Plants Emissions for the Year 2007" 
         align="left"
-        />
-        <Caption>
-        Comparison of total yearly methane emissions from all sources between years 2012 and 2020
-        </Caption>
-    </Figure>
+        attrAuthor="Oda, T. and Maksyutov, S."
+        attrUrl="https://acp.copernicus.org/articles/11/543/2011/acp-11-543-2011.pdf"
+        caption="Global Spatial Distribution of Power Plants Emissions for the Year 2007" 
+        width="800"
+    />
+
+    </Prose>
 </Block>
 
 <Block>
     <Prose>
-    ### Human Sources of Methane
-    EPA Methane Estimates
+    ## Spatial distribution of CO2 emissions at the global, regional, and city-level scales
+
+    Those maps were based on the native 30 arc s (1 km) resolution ODIAC inven- tory. As seen in Fig. 7, the local spatial structures of large cities were clearly depicted by the nightlight data. In addition, the spatial variability in CO2 emission levels could be seen even in city cores, where standard measurements from the DMSP-OLS instruments usually register saturation. Those spatial distributions may be similar in appearance to those expected from a population-based method, and they may not explain the emission patterns by sector
 
     </Prose>
-    <Figure>
-        <Map
-        datasetId='epa-ch4emission-yeargrid-v2express'
-        layerId='total-methane'
-        dateTime='2012-01-01'
-        compareDateTime='2020-01-01'
-        align="left"
-        />
-        <Caption>
-        Comparison of total yearly methane emissions from all sources between years 2012 and 2020
-        </Caption>
-    </Figure>
 </Block>
 
+<ScrollytellingBlock>
+    <Chapter
+        center={[-77.0364, 38.8951]}
+        zoom={7}
+        datasetId='odiac-ffco2-monthgrid-v2022'
+        layerId='co2-emissions'
+        datetime='2021-01-01'
+    >
+        ## Washington, DC
+
+        Lorem Ipsum
+    </Chapter>
+    <Chapter
+        center={[-118.2437, 34.0522]}
+        zoom={7}
+        datasetId='odiac-ffco2-monthgrid-v2022'
+        layerId='co2-emissions'
+        datetime='2021-01-01'
+    >
+        ## Los Angeles, CA
+
+        Lorem Ipsum
+    </Chapter>
+    <Chapter
+        center={[-96.7970, 32.7767]}
+        zoom={7}
+        datasetId='odiac-ffco2-monthgrid-v2022'
+        layerId='co2-emissions'
+        datetime='2021-01-01'
+    >
+        ## Dallas, TX
+
+        Lorem Ipsum
+    </Chapter>
+</ScrollytellingBlock>
+
+<Block>
+<Prose>
+    #### 2000 vs 2021
+</Prose>
+<Figure>
+    <Map
+    datasetId='odiac-ffco2-monthgrid-v2022'
+    layerId='co2-emissions'
+    dateTime='2000-01-01'
+    compareDateTime='2021-01-01'
+    align="center"
+    />
+    <Caption>
+    Comparison of total odiac co2 emissions from Jan, 2000 vs Jan, 2021
+    </Caption>
+</Figure>
+</Block>
 <Block>
     <Prose>
-    ### Large Methane Emissions
-    EMIT Plumes
-    // some description about the dataset and then map of each
+    ## Final remarks
+    We developed a global inventory of fossil fuel CO2 emissions (the ODIAC) for the years 1980–2007 by combining information from the global power-plant database CARMA and a special product of the DMSP-OSL satellite nightlight data. In this study, we focused on the disaggregation of national emissions using these two key components. For this purpose, we only considered land-based CO2 emissions, which are attributable to the combustion of fossil fuels. Emissions for international bunkers, fisheries, and gas flares were not considered due to their unique emission distribution and intensi- ties. The nightlight map was a good predictor of the spatial distribution of potential source regions up to the city level, and fossil fuel power plant emissions were placed directly at the locations indicated in the CARMA database. The resultant spatial distribution was somewhat different from that of previously described population-based inventories. Night-light was expected to function as a comprehensive surrogate for regional unique sources, such as population and transportation networks, beyond the features originally attributed to nightlights.
     </Prose>
-
-    <Figure>
-        <Map
-        datasetId='emit-ch4plume-v1'
-        layerId='ch4-plume-emissions'
-        dateTime='2022-12-12'
-        align="left"
-        />
-        <Caption>
-        Comparison of total yearly methane emissions from all sources between years 2012 and 2020
-        </Caption>
-    </Figure>
 </Block>
