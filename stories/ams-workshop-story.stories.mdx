@@ -1,7 +1,7 @@
 ---
 id: "ams-workshop-story"
-name: A very high-resolution (1 km×1 km) global fossil fuel CO2 emission inventory derived using a point source database and satellite observations of nighttime lights
-description: A very high-resolution (1 km×1 km) global fossil fuel CO2 emission inventory derived using a point source database and satellite observations of nighttime lights
+name: A very high-resolution (1 km×1 km) global fossil fuel CO₂ emission inventory derived using a point source database and satellite observations of nighttime lights
+description: A very high-resolution (1 km×1 km) global fossil fuel CO₂ emission inventory derived using a point source database and satellite observations of nighttime lights
 media:
   src: ::file ./odiac--dataset-cover.jpg
   alt: White smoke coming from building
@@ -20,25 +20,33 @@ taxonomy:
 
 <Block>
     <Prose>
+    ## Curator
+    - Name: YOUR_NAME
+    - Affiliation: YOUR_AFFILIATION
+    </Prose>
+</Block>
+
+<Block>
+    <Prose>
     ## Citation
-    Oda, T. and Maksyutov, S. (2011). A very high-resolution (1 km x 1 km) global fossil fuel CO2 emission inventory derived using a point source database and satellite observations of nighttime lights. Atmospheric Chemistry and Physics, 11(2), 543-556. https://doi.org/10.5194/acp-11-543-2011
+    Oda, T. and Maksyutov, S. (2011). A very high-resolution (1 km x 1 km) global fossil fuel CO₂ emission inventory derived using a point source database and satellite observations of nighttime lights. Atmospheric Chemistry and Physics, 11(2), 543-556. https://doi.org/10.5194/acp-11-543-2011
     </Prose>
 </Block>
 
 <Block>
     <Prose>
-    ## Paragraph 1
+    ## Introduction
 
-    Emissions of CO2 from fossil fuel combustion are a critical quantity that must be accurately given in established flux inversion frameworks. Work with emerging satellite-based inversions requires spatiotemporally detailed inventories that permit analysis of regional natural sources and sinks. Conventional approaches for disaggregating national emissions beyond the country and city levels based on population distribution have certain difficulties in their application. We developed a global 1 km×1 km annual fossil fuel CO2 emission inventory for the years 1980–2007 by combining a worldwide point source database and satellite observations of the global nightlight distribution.
+    Emissions of CO₂ from fossil fuel combustion are a critical quantity that must be accurately given in established flux inversion frameworks. Work with emerging satellite-based inversions requires spatiotemporally detailed inventories that permit analysis of regional natural sources and sinks. Conventional approaches for disaggregating national emissions beyond the country and city levels based on population distribution have certain difficulties in their application. We developed a global 1 km×1 km annual fossil fuel CO₂ emission inventory for the years 1980–2007 by combining a worldwide point source database and satellite observations of the global nightlight distribution.
 
     </Prose>
 </Block>
 
 <Block>
     <Prose>
-    ## National and regional CO2 Emissions
+    ## National and regional CO₂ Emissions
 
-    Estimates of annual national CO2 emissions obtained in this work were based on worldwide energy statistics (2007 edition) compiled by the energy company BP p.l.c. (BP, 2008). The BP energy statistics were recently used to extend the established historical emission inventories (e.g. CDIAC) prior to updating the original inventories (e.g. Gregg et al., 2007; Myhre et al., 2009). The 2007 edition of the BP statistics, which covered the years 1965–2007, included the consumption of commercially traded primary fuels (e.g. oil, coal, and natural gas) in 65 countries and an administrative region.
+    Estimates of annual national CO₂ emissions obtained in this work were based on worldwide energy statistics (2007 edition) compiled by the energy company BP p.l.c. (BP, 2008). The BP energy statistics were recently used to extend the established historical emission inventories (e.g. CDIAC) prior to updating the original inventories (e.g. Gregg et al., 2007; Myhre et al., 2009). The 2007 edition of the BP statistics, which covered the years 1965–2007, included the consumption of commercially traded primary fuels (e.g. oil, coal, and natural gas) in 65 countries and an administrative region.
 
 | Country name      | Code | Total  | Emissions Point source    | ( % )  | Other |
 | ----------------- | ---- | ------ | ------------------------- | ------ | ----- |
@@ -67,7 +75,7 @@ taxonomy:
 
 <Block>
     <Prose>
-    ## CO2 emissions from point sources
+    ## CO₂ emissions from point sources
 
     In addition to national and regional emissions, we separately estimated emissions from point sources using a global power-plant database. We utilized the database CARMA (Carbon Monitoring and Action, http://carma.org), which was compiled using data from national publicly disclosed databases for the US, EU, Canada, and India, and a commercial database of the world’s power plants (Wheeler and Um- mel, 2008). The database included emission levels and locations of over 50 000 power plants worldwide for the years 2000 and 2007, including all types of power plants (fossil fuel, nuclear, hydro, and other renewable energy plants). Data for the fossil fuel-red power plants (emission >0) with valid location information (n=17668) were selected from the database.
 
@@ -86,9 +94,9 @@ taxonomy:
 
 <Block>
     <Prose>
-    ## Spatial distribution of CO2 emissions at the global, regional, and city-level scales
+    ## Spatial distribution of CO₂ emissions at the global, regional, and city-level scales
 
-    Those maps were based on the native 30 arc s (1 km) resolution ODIAC inven- tory. As seen in Fig. 7, the local spatial structures of large cities were clearly depicted by the nightlight data. In addition, the spatial variability in CO2 emission levels could be seen even in city cores, where standard measurements from the DMSP-OLS instruments usually register saturation. Those spatial distributions may be similar in appearance to those expected from a population-based method, and they may not explain the emission patterns by sector
+    Those maps were based on the native 30 arc s (1 km) resolution ODIAC inven- tory. As seen in Fig. 7, the local spatial structures of large cities were clearly depicted by the nightlight data. In addition, the spatial variability in CO₂ emission levels could be seen even in city cores, where standard measurements from the DMSP-OLS instruments usually register saturation. Those spatial distributions may be similar in appearance to those expected from a population-based method, and they may not explain the emission patterns by sector
 
     </Prose>
 </Block>
@@ -101,9 +109,7 @@ taxonomy:
         layerId='co2-emissions'
         datetime='2021-01-01'
     >
-        ## Washington, DC
-
-        Lorem Ipsum
+        CO₂ emissions (ODIAC) in Washington, DC
     </Chapter>
     <Chapter
         center={[-118.2437, 34.0522]}
@@ -112,9 +118,7 @@ taxonomy:
         layerId='co2-emissions'
         datetime='2021-01-01'
     >
-        ## Los Angeles, CA
-
-        Lorem Ipsum
+        CO₂ emissions (ODIAC) in Los Angeles, CA
     </Chapter>
     <Chapter
         center={[-96.7970, 32.7767]}
@@ -123,16 +127,11 @@ taxonomy:
         layerId='co2-emissions'
         datetime='2021-01-01'
     >
-        ## Dallas, TX
-
-        Lorem Ipsum
+        CO₂ emissions (ODIAC) in Dallas, TX
     </Chapter>
 </ScrollytellingBlock>
 
 <Block>
-<Prose>
-    #### 2000 vs 2021
-</Prose>
 <Figure>
     <Map
     datasetId='odiac-ffco2-monthgrid-v2022'
@@ -142,13 +141,13 @@ taxonomy:
     align="center"
     />
     <Caption>
-    Comparison of total odiac co2 emissions from Jan, 2000 vs Jan, 2021
+    Comparison of total odiac CO₂ emissions from Jan, 2000 vs Jan, 2021
     </Caption>
 </Figure>
 </Block>
 <Block>
     <Prose>
     ## Final remarks
-    We developed a global inventory of fossil fuel CO2 emissions (the ODIAC) for the years 1980–2007 by combining information from the global power-plant database CARMA and a special product of the DMSP-OSL satellite nightlight data. In this study, we focused on the disaggregation of national emissions using these two key components. For this purpose, we only considered land-based CO2 emissions, which are attributable to the combustion of fossil fuels. Emissions for international bunkers, fisheries, and gas flares were not considered due to their unique emission distribution and intensi- ties. The nightlight map was a good predictor of the spatial distribution of potential source regions up to the city level, and fossil fuel power plant emissions were placed directly at the locations indicated in the CARMA database. The resultant spatial distribution was somewhat different from that of previously described population-based inventories. Night-light was expected to function as a comprehensive surrogate for regional unique sources, such as population and transportation networks, beyond the features originally attributed to nightlights.
+    We developed a global inventory of fossil fuel CO₂ emissions (the ODIAC) for the years 1980–2007 by combining information from the global power-plant database CARMA and a special product of the DMSP-OSL satellite nightlight data. In this study, we focused on the disaggregation of national emissions using these two key components. For this purpose, we only considered land-based CO₂ emissions, which are attributable to the combustion of fossil fuels. Emissions for international bunkers, fisheries, and gas flares were not considered due to their unique emission distribution and intensi- ties. The nightlight map was a good predictor of the spatial distribution of potential source regions up to the city level, and fossil fuel power plant emissions were placed directly at the locations indicated in the CARMA database. The resultant spatial distribution was somewhat different from that of previously described population-based inventories. Night-light was expected to function as a comprehensive surrogate for regional unique sources, such as population and transportation networks, beyond the features originally attributed to nightlights.
     </Prose>
 </Block>
