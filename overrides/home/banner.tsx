@@ -10,7 +10,7 @@ import {
 import Hug from "$veda-ui-scripts/styles/hug";
 import { getString } from 'veda';
 
-const AMS_BANNER_KEY = 'show-ams-banner'
+const BANNER_KEY = 'dismissedBannerUrl'
 
 const BannerBox = styled.div`
   position: absolute;
@@ -53,13 +53,14 @@ const BannerContent = styled.div`
 `
 
 export default function Banner() {
-  const showBanner = (localStorage.getItem(AMS_BANNER_KEY) !== 'false') && !!getString('tempBanner')?.other
+  const bannerUrl = getString('tempBannerUrl')?.other || "";
+  const showBanner = (localStorage.getItem(BANNER_KEY) !== bannerUrl) && !!getString('tempBanner')?.other
   const [ showTempBanner, setShowTempBanner ] = useState(showBanner);
 
   function onClick () {
     localStorage.setItem(
-      AMS_BANNER_KEY,
-      'false'
+      BANNER_KEY,
+      bannerUrl
     );
     setShowTempBanner(false);
   }

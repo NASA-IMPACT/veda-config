@@ -42,9 +42,9 @@ module.exports = {
         "This dashboard is for exploring key datasets that provide insight into greenhouse gas sources, sinks, emissions, fluxes, and events.",
     // Temporary Banner Text/URL
     tempBanner:
-        "Attending AMS Annual Meeting in Baltimore?  Join the GHG Center / VEDA workshop and learn about Greenhouse Gases using Open Source data and tools. Register Here!",
+        "Graduate students and early career post-docs are invited to apply for the Summer School for Inverse Modeling of Greenhouse Gases to be held June 11-21, 2024 in Fort Collins, CO. Applications due 1/31/2024.",
     tempBannerUrl:
-        "https://www.ametsoc.org/index.cfm/ams/education-careers/careers/professional-development/short-courses/advancing-open-science-an-interactive-workshop-on-harnessing-veda-for-earth-science-research-at-the-u-s-greenhouse-gas-center/"
+        "https://www.cira.colostate.edu/conferences/rmtgw/"
   },
 
   theme: {
