@@ -1,5 +1,7 @@
 import { test as base } from '@playwright/test';
 import AboutPage from './aboutPage';
+import AnalysisPage from './analysisPage';
+import AnalysisResultsPage from './analysisResultsPage';
 import HomePage from './homePage';
 import FooterComponent from './footerComponent';
 import HeaderComponent from './headerComponent';
@@ -9,6 +11,8 @@ import StoryPage from './storyPage';
 
 export const test = base.extend<{
   aboutPage: AboutPage;
+  analysisPage: AnalysisPage;
+  analysisResultsPage: AnalysisResultsPage;
   footerComponent: FooterComponent;
   headerComponent: HeaderComponent;
   homePage: HomePage;
@@ -18,6 +22,12 @@ export const test = base.extend<{
 }> ({
   aboutPage: async ({page}, use) => {
     await use(new AboutPage(page));
+  },
+  analysisPage: async ({page}, use) => {
+    await use(new AnalysisPage(page));
+  },
+  analysisResultsPage: async ({page}, use) => {
+    await use(new AnalysisResultsPage(page));
   },
   catalogPage: async ({page}, use) => {
     await use(new CatalogPage(page));
