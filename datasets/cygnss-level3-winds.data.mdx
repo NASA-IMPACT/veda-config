@@ -1,0 +1,174 @@
+---
+id: cygnss-level3-winds
+name: 'CYGNSS Level 3 Wind Observations'
+description: "The Cyclone Global Navigation Satellite System (CYGNSS), launched on 15 December 2016, is a NASA Earth System Science Pathfinder Mission that is intended to collect the first frequent space‐based measurements of surface wind speeds in the inner core of tropical cyclones. Made up of a constellation of eight micro-satellites, the observatories provide nearly gap-free Earth coverage using an orbital inclination of approximately 35° from the equator, with a mean (i.e., average) revisit time of seven hours and a median revisit time of three hours. This inclination allows CYGNSS to measure ocean surface winds between approximately 38° N and 38° S latitude. This range includes the critical latitude band for tropical cyclone formation and movement. Datasets provided here are gridded (Level 3) winds on a 0.2x0.2 degree latitude and longitude grid. Winds are provided at hourly and daily aggregations. Winds are estimated using either fully developed seas (FDS) or young seas limited fetch (YSLF) algorithms. Winds using the FDS algorithm are the most broadly applicable; winds using the YSLF are designed specifically for conditions present in tropical cyclone systems."
+media:
+  src: ::file ./cygnss-podaac.jpg
+  alt: Cyclone Globa l Navigation Satellite System (CYGNSS).
+  author:
+    name: PODAAC
+    url: https://podaac.jpl.nasa.gov/CYGNSS?sections=data
+pubDate: 2024-02-09
+taxonomy:
+  - name: Topics
+    values:
+      - CYGNSS
+layers:
+  - id: cygnss-l3-sdr-v31-wspd-fds-daily
+    stacCol: cygnss-l3-sdr-v31-wspd-fds-daily
+    name: 'SDR v3.1, Daily Wind Speed [FDS]'
+    type: raster
+    description: 'Daily averaged winds from the CYGNSS Science Data Record Version 3.1 dataset using fully developed seas algorithm'
+    zoomExtent:
+      - 0
+      - 11
+    sourceParams:
+      resampling: nearest
+      bidx: 1
+      colormap-name: viridis
+      rescale:
+        - 0
+        - 13
+    compare:
+      datasetId: cygnss-level3-winds
+      layerId: cygnss-l3-sdr-v31-wspd-fds-daily
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'DD LLL yyyy')}`;
+        }
+    legend:
+      unit:
+        label: m/s
+      type: gradient
+      label: Wind Speed [m/s]
+      min: "0"
+      max: "13"
+      stops:
+        - '#440154'
+        - '#3b528b'
+        - '#21918c'
+        - '#5ec962'
+        - '#fde725'
+
+  - id: cygnss-l3-sdr-v31-wspd-yslf-daily
+    stacCol: cygnss-l3-sdr-v31-wspd-yslf-daily
+    name: 'SDR v3.1, Daily Wind Speed [YSLF]'
+    type: raster
+    description: 'Daily averaged winds from the CYGNSS Science Data Record Version 3.1 dataset using young seas limited fetch algorithm'
+    zoomExtent:
+      - 0
+      - 11
+    sourceParams:
+      resampling: nearest
+      bidx: 1
+      colormap-name: viridis
+      rescale:
+        - 0
+        - 25
+    compare:
+      datasetId: cygnss-level3-winds
+      layerId: cygnss-l3-sdr-v31-wspd-yslf-daily
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'DD LLL yyyy')}`;
+        }
+    legend:
+      unit:
+        label: m/s
+      type: gradient
+      label: Wind Speed [m/s]
+      min: "0"
+      max: "25"
+      stops:
+        - '#440154'
+        - '#3b528b'
+        - '#21918c'
+        - '#5ec962'
+        - '#fde725'
+
+  - id: cygnss-l3-cdr-v12-wspd-fds-daily
+    stacCol: cygnss-l3-cdr-v12-wspd-fds-daily
+    name: 'CDR v1.2, Daily Wind Speed [FDS]'
+    type: raster
+    description: 'Daily averaged winds from the CYGNSS Science Data Record Version 1.2 dataset using fully developed seas algorithm with trackwise corrections'
+    zoomExtent:
+      - 0
+      - 11
+    sourceParams:
+      resampling: nearest
+      bidx: 1
+      colormap-name: viridis
+      rescale:
+        - 0
+        - 13
+    compare:
+      datasetId: cygnss-level3-winds
+      layerId: cygnss-l3-cdr-v12-wspd-fds-daily
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'DD LLL yyyy')}`;
+        }
+    legend:
+      unit:
+        label: m/s
+      type: gradient
+      label: Wind Speed [m/s]
+      min: "0"
+      max: "13"
+      stops:
+        - '#440154'
+        - '#3b528b'
+        - '#21918c'
+        - '#5ec962'
+        - '#fde725'
+
+
+---
+<Block>
+<Prose>
+## Background
+The Cyclone Global Navigation Satellite System (CYGNSS), launched on 15 December 2016, is a NASA Earth System Science Pathfinder Mission that is intended to collect the first frequent space‐based measurements of surface wind speeds in the inner core of tropical cyclones. Made up of a constellation of eight micro-satellites, the observatories provide nearly gap-free Earth coverage using an orbital inclination of approximately 35° from the equator, with a mean (i.e., average) revisit time of seven hours and a median revisit time of three hours. This inclination allows CYGNSS to measure ocean surface winds between approximately 38° N and 38° S latitude. This range includes the critical latitude band for tropical cyclone formation and movement.
+
+CYGNSS has the capability to measure the ocean surface wind field with unprecedented temporal resolution and spatial coverage, under all precipitating conditions, and over the full dynamic range of wind speeds experienced in a tropical cyclone. This mission intends to accomplish this through an innovative combination of all-weather performance Global Positioning System (GPS) ocean surface reflectometry with the sampling properties of a dense constellation of eight observatories.
+
+What makes CYGNSS unique is that it is NASA’s first mission to perform surface remote sensing using an existing Global Navigation Satellite System (GNSS)— a satellite constellation that is used to pinpoint the geographic location of a user’s receiver anywhere in the world. A number of GNSS systems are currently in operation, including: the United States’ Global Positioning System (GPS), the European Galileo, the Russian Federation’s Global Orbiting Navigation Satellite System (GLONASS), and the Chinese Beidou. CYGNSS has opted to use only the United States’ GPS constellation.
+
+Unlike radar scatterometers (e.g., ISS-RapidScat, QuikSCAT, and ASCAT) that both emit microwave radar pulses and receive their backscattered signals, CYGNSS functions as a constellation of passive sensors that receive the signal of surface-reflected GPS pulses. One of the most well-known limitations of traditional microwave scatterometry (particularly, Ku-band) is signal degradation of the microwave pulses when passing through intense rainfall as typically observed within hurricane eyewalls, thus limiting its utility in retrieving observations of high wind speeds in this critical region of the storm. Reflected GPS signals, on the other hand, operate at a much lower microwave frequency utilized by the GPS constellation that is able to penetrate thick clouds and precipitation around the eyewall and provide the first opportunity to remotely measure inner-core wind speeds.
+
+The goal of the mission is to study the relationship between ocean surface properties (i.e., surface wind speed), moist atmospheric thermodynamics, heat transfer, and convective dynamics in the inner core of a tropical cyclone. This will allow scientists to determine how a tropical cyclone forms, whether or not it will strengthen, and if so by how much. The successful completion of these goals will allow the mission to contribute to the advancement of tropical cyclone forecasting and tracking methods.
+</Prose>
+</Block>
+
+<Block>
+<Prose>
+## Explore the Data
+The CYGNSS mission team continues to advance the accuracy and utility of wind speed estimates leveraging its unique sampling approach. The constellation of observing platforms are providing all-weather estimates of near-surface winds with frequent temporal revisits. Here, the winds show two consecutive days of winds during the intensification of Hurricane Laura in August of 2020. We encourage users to <Link to='https://earthdata.nasa.gov/dashboard/datasets/cygnss-l3-sdr-v31-wspd-fds-hourly/explore'>Explore the UCAR 3km Daily Dataset</Link> to look at different dates and to compare different versions of wind products.
+
+</Prose>
+  <Figure>
+  <Map
+    datasetId='cygnss-level3-winds'
+    layerId='cygnss-l3-sdr-v31-wspd-yslf-daily'
+    dateTime='2020-08-25'
+    zoom={2}
+    center={[-91.25,26.5]}
+    compareDateTime='2020-08-26'
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+  CYGNSS Level 3 Daily Averaged Winds using young seas limited fetch algorithm.  Comparison on August 25, 2020 (left) and August 26, 2020 (right) during the intensification of Hurricane Laura.
+</Caption>
+  </Figure>
+</Block>
+
+<Block>
+<Prose>
+### Explore the CYGNSS Mission:
+* [CYGNSS, University of Michigan](https://cygnss.engin.umich.edu/)
+
+### Explore the remote sensing data:
+* [CYGNSS,Physical Oceanography Distributed Active Archive Center](https://podaac.jpl.nasa.gov/CYGNSS)
+</Prose>
+</Block>
