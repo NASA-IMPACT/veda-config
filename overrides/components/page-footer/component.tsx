@@ -27,6 +27,10 @@ import { useMediaQuery } from "$veda-ui-scripts/utils/use-media-query";
 import Partners from "../../home/partners";
 import { AccessibilityMenuItem } from "../../common/styles";
 
+
+const PRESS_PATH = '/learn#press';
+
+
 const FooterInner = styled.div`
   display: flex;
   flex-flow: column;
@@ -255,6 +259,9 @@ export default function PageFooter(props) {
               )}
               <li>
                 <FooterMenuLink to={ABOUT_PATH}>About</FooterMenuLink>
+              </li>
+              <li>
+                <FooterMenuLink to={PRESS_PATH}>Press Info</FooterMenuLink>
               </li>
               <li>
                 <FooterMenuLink as="a" href="https://docs.google.com/forms/d/e/1FAIpQLSfDxq_jR3z_006WkUnNKriGFlAdXhiZxC0ppkxV9fDXSM_FxQ/viewform">

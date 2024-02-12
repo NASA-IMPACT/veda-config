@@ -28,7 +28,8 @@ module.exports = {
     // Component for the header brand.
     headerBrand: "./overrides/components/header-brand/index.mdx",
     // Component for the footer.
-    pageFooter: "./overrides/components/page-footer/index.mdx"
+    pageFooter: "./overrides/components/page-footer/index.mdx",
+    "/learn": "./custom-pages/learn/index.mdx"
   },
 
   strings: {
@@ -41,10 +42,10 @@ module.exports = {
     dataCatalogBanner:
         "This dashboard is for exploring key datasets that provide insight into greenhouse gas sources, sinks, emissions, fluxes, and events.",
     // Temporary Banner Text/URL
-    tempBanner:
-        "Graduate students and early career post-docs are invited to apply for the Summer School for Inverse Modeling of Greenhouse Gases to be held June 11-21, 2024 in Fort Collins, CO. Applications due 1/31/2024.",
-    tempBannerUrl:
-        "https://www.cira.colostate.edu/conferences/rmtgw/"
+    // tempBanner:
+    //     "<Text for Notification Banner at the top of the Homepage>",
+    // tempBannerUrl:
+    //     "<URL to go to on clicking the Notification Banner>"
   },
 
   theme: {
