@@ -8,10 +8,10 @@ export const NEWS_ITEMS = [
       src: new URL('./media/news/cop28-uae.jpg', import.meta.url).href,
       alt: 'Cop 28 Logo'
     },
-    description: 'Agency partners released the US GHG Center and portal at the 28th annual United Nations Climate Conference (COP28) on December 4, 2023.'
-  },
+    description: 'Agency partners released the US GHG Center at the 28th annual United Nations Climate Conference (COP28) on December 4, 2023.'
+  },  
   {
-    name: 'New U.S. national strategy for measuring and monitoring GHG emissions',
+    name: 'A U.S. national strategy for measuring and monitoring GHG emissions',
     asLink : {
       url: 'https://www.whitehouse.gov/omb/briefing-room/2023/11/29/interagency-working-group-releases-national-strategy-enhance-nation-greenhouse-gas-measurement-monitoring-capabilities/'
     },
@@ -30,11 +30,37 @@ export const NEWS_ITEMS = [
       src: new URL('./media/news/Kavvada_2023_AGU_Hyperwall_Edited.png', import.meta.url).href,
       alt: 'NASA logo'
     },
-    description: 'The US GHG Center and portal was a new and prominent effort highlighted at the 2023 AGU Fall Meeting in San Francisco, December 11th - 15th. Several presentations and posters featured the Center’s content, design, and functionality.'
+    description: 'The US GHG Center and beta portal was a new and prominent effort highlighted at the 2023 AGU Fall Meeting in San Francisco, December 11th - 15th. Several presentations and posters featured the Center’s content, design, and functionality.'
   }
 ]
 
 export const EVENT_ITEMS = [
+  {
+    name: 'Policy Speaker Series: Implementing the U.S. Greenhouse Gas Center',
+    asLink : {
+      url: 'https://carbon.nasa.gov/pdfs/Feb%202024%20PSS%20Talk%20Announcement%20.pdf'
+    },
+    media: {
+      src: new URL('./media/events/GHGC_CMS_Joint_Policy_Speaker_Series_v1.png', import.meta.url).href,
+      alt: 'CMS speaker series screenshot'
+    },
+    description: 'The US GHG Center is joining with NASA’s Carbon Monitoring System (CMS) Initiative to present a webinar on Tuesday, February 20, 2024 from 12-1PM ET. Dr. Argyro Kavvada, Dr. Lesley Ott, and Dr. Erin McDuffie will discuss development and implementation for the multi-agency US GHG Center and links to the national GHG strategy. Participants can attend on-site at GSFC in Building 33, conference room H114 or virtually through WebEx. Attendees must register.',
+    startDate: '2024-06-11',
+    endDate: '2024-06-21'
+  },
+  {
+    name: 'US GHG Center Summer School',
+    asLink : {
+      url: 'https://www.cira.colostate.edu/conferences/rmtgw/'
+    },
+    media: {
+      src: new URL('./media/events/summer-school.png', import.meta.url).href,
+      alt: 'Summer school info screenshot'
+    },
+    description: 'The US GHG Center is hosting a Summer School for Inverse Modeling of Greenhouse Gases (SSIM-GHG), June 11-21, 2024 at Fort Collins, CO, USA. The goal of the summer school is to present and provide guidance and instruction of the state of the art in atmospheric data assimilation techniques needed to support current and future GHG observing systems.',
+    startDate: '2024-06-11',
+    endDate: '2024-06-21'
+  },
   {
     name: 'American Meteorological Society (AMS) Annual Meeting',
     asLink : {
@@ -44,22 +70,9 @@ export const EVENT_ITEMS = [
       src: new URL('./media/events/AMS24_Logo.png', import.meta.url).href,
       alt: 'AMS 24 logo'
     },
-    description: ' Join members of the GHG Center team for several events at the 2024 AMS Annual Meeting in Baltimore, January 28 - February 1.',
+    description: '  Members of the GHG Center team hosted a workshop, town hall, and several presentations at the 2024 AMS Annual Meeting in Baltimore, January 28 – February 1. Workshop participants analyzed and visualized data using open-source tools and datasets. At the town hall and multiple presentations AMS attendees shared feedback and saw demonstrations of the US GHG Center.',
     startDate: '2024-01-28',
     endDate: '2024-02-01'
-  },
-  {
-    name: 'US GHG Center Summer School Registration',
-    asLink : {
-      url: 'https://www.cira.colostate.edu/conferences/rmtgw/'
-    },
-    media: {
-      src: new URL('./media/events/summer-school.png', import.meta.url).href,
-      alt: 'Summer school info screenshot'
-    },
-    description: 'The US GHG Center announces a Summer School for Inverse Modeling of Greenhouse Gases (SSIM-GHG) that is planned for June 11-21, 2024 at Fort Collins, CO, USA.  Graduate students and early career post-docs are invited to apply by January 31st.',
-    startDate: '2024-06-11',
-    endDate: '2024-06-21'
   },
   {
     name: 'Launch of the US Greenhouse Gas Center at COP28 (12-4-23)',
@@ -70,14 +83,14 @@ export const EVENT_ITEMS = [
       src: new URL('./media/news/cop28-uae.jpg', import.meta.url).href,
       alt: 'COP 23 UAE logo'
     },
-    description: 'NASA Administrator Bill Nelson, U.S. Environmental Protection Agency (EPA) Administrator Michael Regan, and other United States government leaders unveiled the U.S. Greenhouse Gas Center.',
+    description: 'NASA Administrator Bill Nelson, U.S. Environmental Protection Agency (EPA) Administrator Michael Regan, and other United States government leaders unveiled the U.S. Greenhouse Gas Center  Monday, Dec. 4 during the 28th annual United Nations Climate Conference (COP28).',
     startDate: '2023-12-04',
     endDate: '2023-12-04'
   },
   {
     name: 'US GHG Center Stakeholder Forum',
     asLink : {
-      url: 'https://www.youtube.com/watch?v=HCG7lepiGPI'
+      url: 'https://www.youtube.com/playlist?list=PLiuUQ9asub3RDzYAZ3N7_6wIIgmvDpZq_'
     },
     media: {
       src: new URL('./media/events/stakeholder-forum.png', import.meta.url).href,

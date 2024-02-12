@@ -41,6 +41,11 @@ module.exports = {
         "Explore the guided narratives below to learn more about greenhouse gas measurement, changes over time, events and human-related causes and contributions.",
     dataCatalogBanner:
         "This dashboard is for exploring key datasets that provide insight into greenhouse gas sources, sinks, emissions, fluxes, and events.",
+    // Temporary Banner Text/URL
+    // tempBanner:
+    //     "<Text for Notification Banner at the top of the Homepage>",
+    // tempBannerUrl:
+    //     "<URL to go to on clicking the Notification Banner>"
   },
 
   theme: {
