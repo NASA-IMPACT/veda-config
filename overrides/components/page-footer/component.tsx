@@ -27,7 +27,9 @@ import { useMediaQuery } from "$veda-ui-scripts/utils/use-media-query";
 import Partners from "../../home/partners";
 import { AccessibilityMenuItem } from "../../common/styles";
 
+
 const PRESS_PATH = '/learn#press';
+
 
 const FooterInner = styled.div`
   display: flex;
