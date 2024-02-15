@@ -41,11 +41,13 @@ module.exports = {
         "Explore the guided narratives below to learn more about greenhouse gas measurement, changes over time, events and human-related causes and contributions.",
     dataCatalogBanner:
         "This dashboard is for exploring key datasets that provide insight into greenhouse gas sources, sinks, emissions, fluxes, and events.",
-    // Temporary Banner Text/URL
-    // tempBanner:
-    //     "<Text for Notification Banner at the top of the Homepage>",
-    // tempBannerUrl:
-    //     "<URL to go to on clicking the Notification Banner>"
+    // Temporary Banner Text/URL/expiry
+    tempBanner:
+        "Register for the upcoming Carbon Monitoring System webinar on the US Greenhouse Gas Center, Feb 20, 2024 at noon ET.",
+    tempBannerUrl:
+        "https://carbon.nasa.gov/pdfs/Feb%202024%20PSS%20Talk%20Announcement%20.pdf",
+    tempBannerExpires:
+        "2024-02-20T13:00:00-05:00" // Feb 20th, 1 PM EST
   },
 
   theme: {
