@@ -13,190 +13,196 @@ taxonomy:
     values:
       - CYGNSS
 layers:
-  -id: cygnss_l3_sdr_v32_wspd_fds_daily
-  stacCol: cygnss_l3_sdr_v32_wspd_fds_daily
-  name: SDR v3.2, Daily Wind Speed [FDS]
-  type: raster
-  description: 'Daily averaged winds from the CYGNSS Science Data Record Version 3.2 dataset using fully developed seas algorithm'
-  zoomExtent:
-    - 0
-    - 11
-  sourceParams:
-    resampling: nearest
-    bidx: 1
-    colormap_name: viridis
-    rescale:
+  - id: cygnss_l3_sdr_v32_wspd_fds_daily
+    stacCol: cygnss_l3_sdr_v32_wspd_fds_daily
+    name: SDR v3.2, Daily Wind Speed [FDS]
+    type: raster
+    description: 'Daily averaged winds from the CYGNSS Science Data Record Version 3.2 dataset using fully developed seas algorithm'
+    zoomExtent:
       - 0
-      - 15
-  compare:
-    datasetId: cygnss_v32_winds
-    layerId: cygnss_l3_sdr_v32_wspd_fds_daily
-    mapLabel: |
-      ::js ({ dateFns, datetime, compareDatetime }) => {
-        return `${dateFns.format(datetime, 'DD LLL yyyy')}`;
-      }
-  legend:
-    unit:
-      label: m/s
-    type: gradient
-    label: Wind Speed [m/s]
-    min: "0"
-    max: "15"
-    stops:
-    - "#440154"
-    - "#414487"
-    - "#2a788e"
-    - "#22a884"
-    - "#7ad151"
-    - "#fde725"
+      - 11
+    sourceParams:
+      resampling: nearest
+      bidx: 1
+      colormap_name: viridis
+      rescale:
+        - 0
+        - 15
+      nodata: -9999
+    compare:
+      datasetId: cygnss_v32_winds
+      layerId: cygnss_l3_sdr_v32_wspd_fds_daily
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'DD LLL yyyy')}`;
+        }
+    legend:
+      unit:
+        label: m/s
+      type: gradient
+      label: Wind Speed [m/s]
+      min: "0"
+      max: "15"
+      stops:
+          - "#440154"
+          - "#414487"
+          - "#2a788e"
+          - "#22a884"
+          - "#7ad151"
+          - "#fde725"
 
-  -id: cygnss_l3_merge_v32_idalia_daily
-  stacCol: cygnss_l3_merge_v32_idalia_daily
-  name: Idalia, L3 Merged Wind Speed
-  type: raster
-  description: Merged winds from the CYGNSS Science Data Record Version 3.2 dataset for Idalia
-  zoomExtent:
-    - 0
-    - 11
-  sourceParams:
-    resampling: nearest
-    bidx: 1
-    colormap_name: viridis
-    rescale:
+  - id: cygnss_l3_merge_v32_idalia_daily
+    stacCol: cygnss_l3_merge_v32_idalia_daily
+    name: Idalia, L3 Merged Wind Speed
+    type: raster
+    description: 'Merged winds from the CYGNSS Science Data Record Version 3.2 dataset for Idalia'
+    zoomExtent:
       - 0
-      - 25
-  compare:
-    datasetId: cygnss_v32_winds
-    layerId: cygnss_l3_merge_v32_idalia_daily
-    mapLabel: |
-      ::js ({ dateFns, datetime, compareDatetime }) => {
-        return `${dateFns.format(datetime, 'DD LLL yyyy')}`;
-      }
-  legend:
-    unit:
-      label: m/s
-    type: gradient
-    label: Wind Speed [m/s]
-    min: "0"
-    max: "25"
-    stops:
-    - "#440154"
-    - "#414487"
-    - "#2a788e"
-    - "#22a884"
-    - "#7ad151"
-    - "#fde725"
+      - 11
+    sourceParams:
+      resampling: nearest
+      bidx: 1
+      colormap_name: viridis
+      nodata: -9999
+      rescale:
+        - 0
+        - 25
+    compare:
+      datasetId: cygnss_v32_winds
+      layerId: cygnss_l3_merge_v32_idalia_daily
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'DD LLL yyyy')}`;
+        }
+    legend:
+      unit:
+        label: m/s
+      type: gradient
+      label: Wind Speed [m/s]
+      min: "0"
+      max: "25"
+      stops:
+          - "#440154"
+          - "#414487"
+          - "#2a788e"
+          - "#22a884"
+          - "#7ad151"
+          - "#fde725"
 
-  -id: cygnss_l3_merge_v32_lee_daily
-  stacCol: cygnss_l3_merge_v32_lee_daily
-  name: Lee, L3 Merged Wind Speed
-  type: raster
-  description: 'Merged winds from the CYGNSS Science Data Record Version 3.2 dataset for Lee'
-  zoomExtent:
-    - 0
-    - 11
-  sourceParams:
-    resampling: nearest
-    bidx: 1
-    colormap_name: viridis
-    rescale:
+  - id: cygnss_l3_merge_v32_lee_daily
+    stacCol: cygnss_l3_merge_v32_lee_daily
+    name: Lee, L3 Merged Wind Speed
+    type: raster
+    description: 'Merged winds from the CYGNSS Science Data Record Version 3.2 dataset for Lee'
+    zoomExtent:
       - 0
-      - 25
-  compare:
-    datasetId: cygnss_v32_winds
-    layerId: cygnss_l3_merge_v32_lee_daily
-    mapLabel: |
-      ::js ({ dateFns, datetime, compareDatetime }) => {
-        return `${dateFns.format(datetime, 'DD LLL yyyy')}`;
-      }
-  legend:
-    unit:
-      label: m/s
-    type: gradient
-    label: Wind Speed [m/s]
-    min: "0"
-    max: "25"
-    stops:
-    - "#440154"
-    - "#414487"
-    - "#2a788e"
-    - "#22a884"
-    - "#7ad151"
-    - "#fde725"
+      - 11
+    sourceParams:
+      resampling: nearest
+      bidx: 1
+      colormap_name: viridis
+      nodata: -9999
+      rescale:
+        - 0
+        - 25
+    compare:
+      datasetId: cygnss_v32_winds
+      layerId: cygnss_l3_merge_v32_lee_daily
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'DD LLL yyyy')}`;
+        }
+    legend:
+      unit:
+        label: m/s
+      type: gradient
+      label: Wind Speed [m/s]
+      min: "0"
+      max: "25"
+      stops:
+          - "#440154"
+          - "#414487"
+          - "#2a788e"
+          - "#22a884"
+          - "#7ad151"
+          - "#fde725"
 
-  -id: cygnss_l3_merge_v32_otis_daily
-  stacCol: cygnss_l3_merge_v32_otis_daily
-  name: Otis, L3 Merged Wind Speed
-  type: raster
-  description: 'Merged winds from the CYGNSS Science Data Record Version 3.2 dataset for Otis'
-  zoomExtent:
-    - 0
-    - 11
-  sourceParams:
-    resampling: nearest
-    bidx: 1
-    colormap_name: viridis
-    rescale:
+  - id: cygnss_l3_merge_v32_otis_daily
+    stacCol: cygnss_l3_merge_v32_otis_daily
+    name: Otis, L3 Merged Wind Speed
+    type: raster
+    description: 'Merged winds from the CYGNSS Science Data Record Version 3.2 dataset for Otis'
+    zoomExtent:
       - 0
-      - 25
-  compare:
-    datasetId: cygnss_v32_winds
-    layerId: cygnss_l3_merge_v32_otis_daily
-    mapLabel: |
-      ::js ({ dateFns, datetime, compareDatetime }) => {
-        return `${dateFns.format(datetime, 'DD LLL yyyy')}`;
-      }
-  legend:
-    unit:
-      label: m/s
-    type: gradient
-    label: Wind Speed [m/s]
-    min: "0"
-    max: "25"
-    stops:
-    - "#440154"
-    - "#414487"
-    - "#2a788e"
-    - "#22a884"
-    - "#7ad151"
-    - "#fde725"
-  -id: cygnss_l3_merge_v32_tammy_daily
-  stacCol: cygnss_l3_merge_v32_tammy_daily
-  name: 'Tammy, L3 Merged Wind Speed'
-  type: raster
-  description: 'Merged winds from the CYGNSS Science Data Record Version 3.2 dataset for Tammy'
-  zoomExtent:
-    - 0
-    - 11
-  sourceParams:
-    resampling: nearest
-    bidx: 1
-    colormap_name: viridis
-    rescale:
+      - 11
+    sourceParams:
+      resampling: nearest
+      bidx: 1
+      colormap_name: viridis
+      nodata: -9999
+      rescale:
+        - 0
+        - 25
+    compare:
+      datasetId: cygnss_v32_winds
+      layerId: cygnss_l3_merge_v32_otis_daily
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'DD LLL yyyy')}`;
+        }
+    legend:
+      unit:
+        label: m/s
+      type: gradient
+      label: Wind Speed [m/s]
+      min: "0"
+      max: "25"
+      stops:
+          - "#440154"
+          - "#414487"
+          - "#2a788e"
+          - "#22a884"
+          - "#7ad151"
+          - "#fde725"
+  - id: cygnss_l3_merge_v32_tammy_daily
+    stacCol: cygnss_l3_merge_v32_tammy_daily
+    name: 'Tammy, L3 Merged Wind Speed'
+    type: raster
+    description: 'Merged winds from the CYGNSS Science Data Record Version 3.2 dataset for Tammy'
+    zoomExtent:
       - 0
-      - 25
-  compare:
-    datasetId: cygnss_v32_winds
-    layerId: cygnss_l3_merge_v32_tammy_daily
-    mapLabel: |
-      ::js ({ dateFns, datetime, compareDatetime }) => {
-        return `${dateFns.format(datetime, 'DD LLL yyyy')}`;
-      }
-  legend:
-    unit:
-      label: m/s
-    type: gradient
-    label: Wind Speed [m/s]
-    min: "0"
-    max: "25"
-    stops:
-    - "#440154"
-    - "#414487"
-    - "#2a788e"
-    - "#22a884"
-    - "#7ad151"
-    - "#fde725"
+      - 11
+    sourceParams:
+      resampling: nearest
+      bidx: 1
+      colormap_name: viridis
+      nodata: -9999
+      rescale:
+        - 0
+        - 25
+    compare:
+      datasetId: cygnss_v32_winds
+      layerId: cygnss_l3_merge_v32_tammy_daily
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'DD LLL yyyy')}`;
+        }
+    legend:
+      unit:
+        label: m/s
+      type: gradient
+      label: Wind Speed [m/s]
+      min: "0"
+      max: "25"
+      stops:
+          - "#440154"
+          - "#414487"
+          - "#2a788e"
+          - "#22a884"
+          - "#7ad151"
+          - "#fde725"
 ---
+
 <Block>
 <Prose>
 ## Background
