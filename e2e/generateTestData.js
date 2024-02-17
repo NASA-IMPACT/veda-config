@@ -6,11 +6,14 @@ const fg = require('fast-glob');
 const catalogPaths = fg.globSync('**/datasets/*.mdx');
 const storyPaths = fg.globSync('**/stories/*.mdx');
 const catalogNames = [];
+const datasetIds = [];
 const storyNames = [];
 
 for (const catalog of catalogPaths) {
   const catalogData = matter.read(catalog).data;
   catalogNames.push(catalogData['name']);
+  datasetIds.push(catalogData['id']);
+
 }
 
 for (const story of storyPaths) {
@@ -19,11 +22,12 @@ for (const story of storyPaths) {
 }
 
 const testDataJson = {
-  "catalogs": catalogNames,
-  "stories": storyNames
+  catalogs: catalogNames,
+  datasetIds: datasetIds,
+  stories: storyNames
 }
 
-fs.writeFile(path.join(__dirname, 'playwrightTestData.json'), JSON.stringify(testDataJson), err => {
+fs.writeFile(path.join(__dirname, '../.veda/ui/e2e/playwrightTestData.json'), JSON.stringify(testDataJson), err => {
   if (err) {
     console.error(err);
   } else {
