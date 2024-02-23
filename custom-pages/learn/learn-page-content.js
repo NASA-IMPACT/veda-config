@@ -57,7 +57,7 @@ export const EVENT_ITEMS = [
       src: new URL('./media/events/summer-school.png', import.meta.url).href,
       alt: 'Summer school info screenshot'
     },
-    description: 'The US GHG Center is hosting a Summer School for Inverse Modeling of Greenhouse Gases (SSIM-GHG), June 11-21, 2024 at Fort Collins, CO, USA. The goal of the summer school is to present and provide guidance and instruction of the state of the art in atmospheric data assimilation techniques needed to support current and future GHG observing systems.',
+    description: 'The US GHG Center is hosting a Summer School for Inverse Modeling of Greenhouse Gases (SSIM-GHG), June 11-21, 2024 at Fort Collins, CO, USA. The goal of the summer school is to present and provide guidance and instruction in state-of-the-art atmospheric data assimilation techniques needed to support current and future GHG observing systems.',
     startDate: '2024-06-11',
     endDate: '2024-06-21'
   },
