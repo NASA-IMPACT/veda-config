@@ -63,23 +63,40 @@ taxonomy:
 </Block>
 
 <Block>
+  <Figure>
+    <Map
+      center={[-156.68108, 20.88130]}
+      zoom={12}
+      datasetId='lahaina-fire'
+      layerId='hls-swir-falsecolor-composite'
+      dateTime='2023-08-08'
+      compareDateTime='2023-08-13'
+    />
+    <Caption>
+      Harmonized Landsat Sentinel-2 false color composite imagery of Darnah before (September 7, 2023) and after the fire (September 22, 2023).
+    </Caption>
+  </Figure>
+
   <Prose>
     ## Satellite Analysis
-    x
+    NASA's Harmonized Landsat-Sentinel-2 datasets were acquired to showcase the before-and-after scenes of the Darnah, Libya area. The utilization of false-color composite imagery allowed for an exploration of the flood damage evident in the city. Instead of employing the conventional red, green, and blue (RGB) wavelength 'TrueColor' imagery, a false-color composite utilizing the near-infrared (IR) and shortwave IR channels was chosen. This involved substituting the traditional RGB composite with shortwave IR, near-IR, and red bands, respectively. As a result, areas most affected by the flood exhibited a distinct contrast to unaffected regions, with displaced sediments like sand becoming apparent in Darnah's streets through this band combination. While this specific band combination is commonly associated with wildfire detection due to its effectiveness in revealing darkened burned areas, it also proves capable of highlighting greenery after heavy rain events. This characteristic played a crucial role in enhancing the contrast of flood damage in and around Darnah.
   </Prose>
 </Block>
 
 <Block>
   <Prose>
     ## Building Footprint Analysis
-    x
+    Google's OpenBuildings dataset, spanning vast regions including Africa, South Asia, South-East Asia, Latin America, and the Caribbean with 1.8 billion building detections, holds significant potential for assessing urban challenges, especially in the aftermath of natural disasters like the devastating flood in Darnah. This dataset provides a detailed map of building footprints and their distribution, allowing for a broad understanding of the urban landscape. In the case of disaster response, such as identifying damaged buildings, the dataset's confidence scores can help prioritize areas for intervention. While it doesn't delve into specifics like building types or addresses, its comprehensive coverage and detailed information comprise a valuable resource for evaluating the impact of events on the built environment. Leveraging this data alongside other disaster response tools could greatly enhance our ability to assess and respond effectively to the aftermath of such events in Darnah and similar regions.
+
+    The [Humanitarian Data Exchange](https://experience.arcgis.com/experience/970d0cacd0c24b39b08d844b99a797ae/page/UNOSAT/) (HDX) generated a dataset of impacted buildings in the aftermath of the Darnah flood through satellite imagery building detection. A high-resolution overpass from the Pleiades satellite on September 13, 2023, with a spatial resolution of 0.5 meters, was employed for this purpose. This dataset established point locations for buildings identified as damaged or destroyed during the Darnah flood on September 11, 2023. These specific point locations were then cross-referenced with the OpenBuildings dataset for Darnah. The result is a comprehensive map highlighting which buildings were likely impacted by the floodwaters, providing valuable insights into the extent of the damage in the region.
+
   </Prose>
 </Block>
 
 <Block>
   <Prose>
     ## Aftermath and Implications
-    x
+    As of September 14th, the United Nations reported that as many as 884,000 people are in need of assistance in Libya, including nearly 300,000 children. Over 10,000 people remain missing, and portions of Darnah have been washed out into the Mediterranean Sea. At the time of Medicane Daniel’s impact, the Belad and Abu Mansour Dams were in subpar condition, lacking consistent upkeep. The two dams were first built in the mid 1970s to control the impacts of flooding, but had not been maintained regularly since 2002. The dams were damaged from a storm in 1986, with cracks observed as early as in 1998. A Turkish construction firm claims they were hired to replace the dams in 2007, having concluded preliminary work in 2012, but the Libyan government claims they ceased working in 2011 at the outbreak of the Libyan Civil War. Research as recent as 2022 warned of a high risk of flooding should the dams fail, pointing back to four previous major floods since 1942. European meteorological agencies also warned Libya of the impending potential major impacts from Daniel days in advance, and the World Meteorological Organization said that many of the casualties would have been prevented had Libya set up a functional weather service.
   </Prose>
 </Block>
 
