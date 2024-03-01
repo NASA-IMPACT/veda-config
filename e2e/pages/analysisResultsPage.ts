@@ -7,7 +7,7 @@ export default class AnalysisResultsPage {
 
   constructor(page: Page) {
     this.page = page;
-    this.analysisCards = this.page.getByTestId('analysisCards');
+    this.analysisCards = this.page.getByRole('article');
   }
 
 }
