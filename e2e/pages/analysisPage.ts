@@ -2,22 +2,26 @@ import { Locator, Page, test } from '@playwright/test';
 
 export default class AnalysisPage {
   readonly page: Page;
+  readonly selectDatasetsMessage: Locator;
   readonly mainContent: Locator;
   readonly header: Locator;
   readonly mapboxCanvas: Locator;
   readonly generateAnalysisButton: Locator;
-  readonly datasetOptions: Locator;
   readonly datasetCheckbox: Locator;
+  readonly moreOptionsButton: Locator;
+  readonly northAmericaOption: Locator;
 
 
   constructor(page: Page) {
     this.page = page;
+    this.selectDatasetsMessage = this.page.getByText(/To select datasets, please define an area and a date first/i);
     this.mainContent = this.page.getByRole('main');
     this.header = this.mainContent.getByRole('heading', {level: 1, name: /analysis/i });
     this.mapboxCanvas = this.page.getByLabel('Map', { exact: true });
     this.generateAnalysisButton = this.page.getByRole('link', { name: /Generate analysis/i });
-    this.datasetOptions = this.page.getByTestId('datasetOptions');
-    this.datasetCheckbox = this.datasetOptions.getByRole('checkbox');
+    this.datasetCheckbox = this.page.locator('label').filter({ hasText: /From:/i })
+    this.moreOptionsButton = this.page.getByRole('button', {name: /more options/i });
+    this.northAmericaOption = this.page.getByRole('button', {name: /north america/i });
   }
 
   async drawPolygon (polygonCorners: number[][]) {
@@ -49,7 +53,7 @@ export default class AnalysisPage {
 
   async clickDatasetOption (index: number) {
     test.step(`clicking dataset number ${index}`, async () => {
-      this.datasetCheckbox.nth(index).locator('..').click();
+      this.datasetCheckbox.nth(index).click();
     })
   }
 }
