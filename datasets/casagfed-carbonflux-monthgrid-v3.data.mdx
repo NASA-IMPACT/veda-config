@@ -33,6 +33,15 @@ taxonomy:
   - name: Product Type
     values:
       - Model Output
+infoDescription: |
+  ::markdown
+    - Temporal Extent: January 2003 - December 2017
+    - Temporal Resolution: Monthly
+    - Spatial Extent: Global
+    - Spatial Resolution: 0.5° x 0.5°
+    - Data Units:  Kilograms of carbon per square meter per month (kg Carbon/m²/mon)
+    - Data Type: Research
+    - Data Latency: Periodically updated when CASA-GFED model revised
 layers:
   - id: casa-gfed-co2-flux
     stacCol: casagfed-carbonflux-monthgrid-v3
@@ -79,6 +88,14 @@ layers:
     analysis:
       metrics:
         - mean
+    info:
+      source: NASA
+      spatialExtent: Global
+      latency: Monthly
+      unit: kg Carbon/m²/mon
+    media:
+      src: ::file ./casagfed-carbonflux-monthgrid-v3.thumbnails.npp.png
+      alt: Rendered Net Primary Production (NPP)
   - id: casa-gfed-co2-flux-hr
     stacCol: casagfed-carbonflux-monthgrid-v3
     name: Heterotrophic Respiration (Rh)
@@ -124,6 +141,14 @@ layers:
     analysis:
       metrics:
         - mean
+    info:
+      source: NASA
+      spatialExtent: Global
+      latency: Monthly
+      unit: kg Carbon/m²/mon
+    media:
+      src: ::file ./casagfed-carbonflux-monthgrid-v3.thumbnails.rh.png
+      alt: Rendered Heterotrophic Respiration (Rh)
   - id: casa-gfed-co2-flux-nee
     stacCol: casagfed-carbonflux-monthgrid-v3
     name: Net Ecosystem Exchange (NEE)
@@ -167,6 +192,14 @@ layers:
     analysis:
       metrics:
         - mean
+    info:
+      source: NASA
+      spatialExtent: Global
+      latency: Monthly
+      unit: kg Carbon/m²/mon
+    media:
+      src: ::file ./casagfed-carbonflux-monthgrid-v3.thumbnails.nee.png
+      alt: Rendered Net Ecosystem Exchange (NEE)
   - id: casa-gfed-co2-flux-fe
     stacCol: casagfed-carbonflux-monthgrid-v3
     name: Fire Emissions (FIRE)
@@ -212,6 +245,14 @@ layers:
     analysis:
       metrics:
         - mean
+    info:
+      source: NASA
+      spatialExtent: Global
+      latency: Monthly
+      unit: kg Carbon/m²/mon
+    media:
+      src: ::file ./casagfed-carbonflux-monthgrid-v3.thumbnails.fire.png
+      alt: Rendered Fire Emissions (FIRE)
   - id: casa-gfed-co2-flux-fuel
     stacCol: casagfed-carbonflux-monthgrid-v3
     name: Wood Fuel Emissions (FUEL)
@@ -255,6 +296,14 @@ layers:
     analysis:
       metrics:
         - mean
+    info:
+      source: NASA
+      spatialExtent: Global
+      latency: Monthly
+      unit: kg Carbon/m²/mon
+    media:
+      src: ::file ./casagfed-carbonflux-monthgrid-v3.thumbnails.fuel.png
+      alt: Rendered Wood Fuel Emissions (FUEL)
 ---
 
 <Block type='wide'>
