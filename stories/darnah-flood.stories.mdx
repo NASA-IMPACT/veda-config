@@ -26,6 +26,19 @@ taxonomy:
 
 
 <Block>
+
+  <Figure>
+    <Image
+      src={new URL('./darnah-flood-extent.jpg', import.meta.url).href}
+      alt='Estimated extent of floodwaters over Darnah, Libya.'
+      align='left'
+    />
+    <Caption>
+    Satellite-derived extent of floodwaters in Darnah, as determined from the Humanitarian Data Exchange.
+    </Caption>
+
+  </Figure>
+
   <Prose>
     ## Overview
     <mark>🚧 This Data Story presents work in progress and not peer-reviewed results! 🚧</mark>
@@ -91,6 +104,23 @@ taxonomy:
     The [Humanitarian Data Exchange](https://experience.arcgis.com/experience/970d0cacd0c24b39b08d844b99a797ae/page/UNOSAT/) (HDX) generated a dataset of impacted buildings in the aftermath of the Darnah flood through satellite imagery building detection. A high-resolution overpass from the Pleiades satellite on September 13, 2023, with a spatial resolution of 0.5 meters, was employed for this purpose. This dataset established point locations for buildings identified as damaged or destroyed during the Darnah flood on September 11, 2023. These specific point locations were then cross-referenced with the OpenBuildings dataset for Darnah. The result is a comprehensive map highlighting which buildings were likely impacted by the floodwaters, providing valuable insights into the extent of the damage in the region.
 
   </Prose>
+</Block>
+
+
+<Block>
+
+  <Figure>
+    <Image
+      src={new URL('./darnah-building-footprint.jpg', import.meta.url).href}
+      alt='Google OpenBuildings Footprint over Darnah, Libya.'
+      align='left'
+    />
+    <Caption>
+Building footprint detection over Darnah, Libya. Red-colored buildings were heavily impacted by floodwaters, orange-colored buildings were slightly impacted by floodwaters, and green-colored buildings were left largely undisturbed.  
+    </Caption>
+
+  </Figure>
+
 </Block>
 
 <Block>
