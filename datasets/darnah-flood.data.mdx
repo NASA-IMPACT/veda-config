@@ -17,8 +17,8 @@ taxonomy:
       - UAH
 
 layers:
-  - id: hls-swir-falsecolor-composite
-    stacCol: hls-swir-falsecolor-composite
+  - id: darnah-flood
+    stacCol: darnah-flood
     name: HLS SWIR FalseColor Composite
     type: raster
     description: 'HLS falsecolor composite imagery using S30 Bands 12, 8A, and 4, over Darnah, Libya.'
@@ -32,7 +32,7 @@ layers:
       bidx: [1,2,3]
     compare:
       datasetId: darnah-flood
-      layerId: hls-swir-falsecolor-composite
+      layerId: darnah-flood
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           return `${dateFns.format(datetime, 'DD LLL yyyy')}`;        
