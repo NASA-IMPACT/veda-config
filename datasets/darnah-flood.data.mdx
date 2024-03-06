@@ -1,5 +1,5 @@
 ---
-id: darnah-flood
+id: darnah-data
 name: 'Darnah, Libya Flood'
 description: "HLS (SWIR FalseColor composites) imagery supporting the Darnah Flood Story"
 media:
@@ -31,7 +31,7 @@ layers:
       resampling: bilinear
       bidx: [1,2,3]
     compare:
-      datasetId: darnah-flood
+      datasetId: darnah-data
       layerId: darnah-flood
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -63,8 +63,8 @@ This dataset supports ongoing scientific research and analysis of the Darnah flo
   <Map
     center={[22.6408, 32.7616]}
     zoom={12}
-    datasetId='darnah-flood'
-    layerId='hls-swir-falsecolor-composite'
+    datasetId='darnah-data'
+    layerId='darnah-flood'
     dateTime='2023-09-22'
   />
   <Caption
