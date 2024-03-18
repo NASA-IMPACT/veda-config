@@ -1,0 +1,31 @@
+---
+id: slowdown-proxy-covid-19-changing-landscapes
+name: "Covid 19 Slowdown Proxy Map"
+description: "Slowdown Proxy Maps show areas with the greatest reduction in car activity shaded in blue. Darker blues indicate areas of greater change."
+layers:
+  - id: slowdown-proxy-covid-19-changing-landscapes
+    stacCol: slowdown-proxy-covid-19-changing-landscapes
+    name: Covid 19 Slowdown Proxy Map
+    type: raster
+    description: "Slowdown Proxy Maps show areas with the greatest reduction in car activity shaded in blue. Darker blues indicate areas of greater change."
+    zoomExtent:
+      - 0
+      - 20
+    legend:
+      type: gradient
+      min: "Less Slowdown"
+      max: "Greater Slowdown"
+      stops:
+        - "#0223c9"
+        - "#011161"
+
+---
+
+<Block>
+  <Prose>
+    ## About
+    
+    Slowdown Proxy Maps show areas with the greatest reduction in car activity shaded in blue. Darker blues indicate areas of greater change.
+    
+  </Prose>
+</Block>
