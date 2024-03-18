@@ -22,5 +22,9 @@ module.exports = {
       one: ' Data Story',
       other: 'Data Stories'
     }
+  },
+
+  booleans: {
+    'externalLinksInNewTab': true,
   }
 };
