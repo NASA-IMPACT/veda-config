@@ -114,8 +114,9 @@ const AccessbilityStatementLink = styled.a`
   color: ${themeVal("color.link")} !important;
   text-decoration: underline;
   text-underline-offset: 2px;
-  display: inline-block;
-  margin-top: ${glsp(0.5)};
+  display: inline-flex;
+  align-items: center;
+  margin-top: ${glsp(1.0)};
 
   > svg {
     margin-left: ${glsp(0.5)};
