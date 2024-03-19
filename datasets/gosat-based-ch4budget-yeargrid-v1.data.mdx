@@ -81,6 +81,8 @@ layers:
     analysis:
       metrics:
         - mean
+      sourceParams:
+        nodata: 9.96921e+36
   - id: post-total-id
     stacCol: gosat-based-ch4budget-yeargrid-v1
     name: Posterior Total
@@ -127,6 +129,8 @@ layers:
     analysis:
       metrics:
         - mean
+      sourceParams:
+        nodata: 9.96921e+36
   - id: prior-wetland-id
     stacCol: gosat-based-ch4budget-yeargrid-v1
     name: Priori Wetlands
@@ -172,7 +176,9 @@ layers:
         - '#9e0142'
     analysis:
       metrics:
-        - mean        
+        - mean
+      sourceParams:
+        nodata: 9.96921e+36        
   - id: post-wetland-id
     stacCol: gosat-based-ch4budget-yeargrid-v1
     name: Posterior Wetlands
@@ -219,6 +225,8 @@ layers:
     analysis:
       metrics:
         - mean
+      sourceParams:
+        nodata: 9.96921e+36
   - id: prior-wetland-uncertainty-id
     stacCol: gosat-based-ch4budget-yeargrid-v1
     name: Priori Wetlands Uncertainty
@@ -264,7 +272,9 @@ layers:
         - '#67001F' 
     analysis:
       metrics:
-        - mean           
+        - mean
+      sourceParams:
+        nodata: 9.96921e+36           
   - id: post-wetland-uncertainty-id
     stacCol: gosat-based-ch4budget-yeargrid-v1
     name: Posterior Wetlands Uncertainty
@@ -310,7 +320,9 @@ layers:
         - '#67001F'       
     analysis:
       metrics:
-        - mean                              
+        - mean
+      sourceParams:
+        nodata: 9.96921e+36                              
 ---
 
 <Block type='wide'>
