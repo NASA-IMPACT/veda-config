@@ -24,6 +24,7 @@ import {
 } from "$veda-ui-scripts/utils/routes";
 import { useFeedbackModal } from "$veda-ui-scripts/components/common/layout-root";
 import { useMediaQuery } from "$veda-ui-scripts/utils/use-media-query";
+import { getLinkProps } from "$veda-ui-scripts/utils/url";
 import Partners from "../../home/partners";
 import { AccessibilityMenuItem } from "../../common/styles";
 
@@ -252,7 +253,7 @@ export default function PageFooter(props) {
               </li>
               {!!process.env.HUB_URL && !!process.env.HUB_NAME && (
                 <li>
-                  <FooterMenuLink as="a" href={process.env.HUB_URL}>
+                  <FooterMenuLink as="a" {...getLinkProps(process.env.HUB_URL)}>
                     {process.env.HUB_NAME}
                   </FooterMenuLink>
                 </li>
@@ -264,7 +265,7 @@ export default function PageFooter(props) {
                 <FooterMenuLink to={PRESS_PATH}>Press Info</FooterMenuLink>
               </li>
               <li>
-                <FooterMenuLink as="a" href="https://docs.google.com/forms/d/e/1FAIpQLSfDxq_jR3z_006WkUnNKriGFlAdXhiZxC0ppkxV9fDXSM_FxQ/viewform">
+                <FooterMenuLink as="a" {...getLinkProps("https://docs.google.com/forms/d/e/1FAIpQLSfDxq_jR3z_006WkUnNKriGFlAdXhiZxC0ppkxV9fDXSM_FxQ/viewform")}>
                   Subscribe
                 </FooterMenuLink>
               </li>
@@ -321,9 +322,7 @@ export default function PageFooter(props) {
             <p>
               U.S. Greenhouse Gas Center Responsible Official:{" "}
               <a
-                href="https://appliedsciences.nasa.gov/about/our-team/argyro-kavvada"
-                target="_blank"
-                rel="noopener noreferrer"
+                {...getLinkProps("https://appliedsciences.nasa.gov/about/our-team/argyro-kavvada")} 
               >
                 <strong>Argyro Kavvada</strong>
               </a>
