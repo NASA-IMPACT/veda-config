@@ -110,7 +110,7 @@ const DisclaimerModalFooter = styled(ModalFooter)`
   margin-top: ${glsp(2)};
 `;
 
-const AccessbilityStatementLink = styled.a`
+const AccessibilityStatementLink = styled.a`
   color: ${themeVal("color.link")} !important;
   text-decoration: underline;
   text-underline-offset: 2px;
@@ -328,9 +328,9 @@ export default function PageFooter(props) {
                 <span>v{props.appVersion}</span>
               </Tip>
             </div>
-            <AccessbilityStatementLink href="https://www.nasa.gov/accessibility/" target='_blank' rel='noopener'>
-              Our commitment to accessibility<CollecticonExpandTopRight />
-            </AccessbilityStatementLink>
+            <AccessibilityStatementLink href="https://www.nasa.gov/accessibility/" target='_blank' rel='noopener'>
+              Our commitment to accessibility <CollecticonExpandTopRight />
+            </AccessibilityStatementLink>
           </div>
           <CreditsInfo>
             <TintBox>
