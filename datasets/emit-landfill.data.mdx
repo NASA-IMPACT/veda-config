@@ -15,7 +15,7 @@ taxonomy:
 layers:
   - id: landfill-emit
     stacCol: landfill-emit
-    name: AOD Difference (2010-2019) - (2000-2009)
+    name: EMIT Landfill
     type: raster
     description: "FILL IN"
     initialDatetime: newest
@@ -23,10 +23,10 @@ layers:
       - 0
       - 20
     sourceParams:
-      colormap_name: viridis
+      colormap_name: bwr
       rescale:
-        - 1
-        - 255
+        - -2000
+        - 2000
       nodata: 0
     legend:
       type: gradient
