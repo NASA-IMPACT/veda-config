@@ -29,6 +29,8 @@ import { AccessibilityMenuItem } from "../../common/styles";
 import { CollecticonExpandTopRight } from '$veda-ui/@devseed-ui/collecticons';
 
 const PRESS_PATH = '/learn#press';
+const SUBSCRIPTION_PATH = '/public/subscription/index.html';
+const SUBSCRIPTION_URL = process.env.PUBLIC_URL ? process.env.PUBLIC_URL + SUBSCRIPTION_PATH : SUBSCRIPTION_PATH;
 
 
 const FooterInner = styled.div`
@@ -277,7 +279,7 @@ export default function PageFooter(props) {
                 <FooterMenuLink to={PRESS_PATH}>Press Info</FooterMenuLink>
               </li>
               <li>
-                <FooterMenuLink as="a" href="https://docs.google.com/forms/d/e/1FAIpQLSfDxq_jR3z_006WkUnNKriGFlAdXhiZxC0ppkxV9fDXSM_FxQ/viewform">
+                <FooterMenuLink as="a" href={SUBSCRIPTION_URL}>
                   Subscribe
                 </FooterMenuLink>
               </li>
