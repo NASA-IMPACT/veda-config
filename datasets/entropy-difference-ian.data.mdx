@@ -1,0 +1,39 @@
+---
+id: hls-entropy-difference
+name: "Harmonized Landsat and Sentinel-2 Entropy Difference"
+description: "Using Harmonized Landsat and Sentinel-2 to Analyze the Aftermath of Hurricane Ian in Lee and Charlotte Counties in Florida."
+media:
+  src: ::file ./hurricane-front.jpg
+  alt: Smog Located In City.
+  author:
+    name: Unsplash+
+    url: https://unsplash.com/photos/an-image-of-a-circular-object-in-the-sky-vR1OW8lzxE4
+taxonomy:
+  - name: Topics
+    values:
+      - EIS
+layers:
+  - id: hls-entropy-difference
+    stacCol: hls-entropy-difference
+    name: Entropy Difference
+    type: raster
+    description: "x"
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      colormap_name: bwr
+      rescale: -1,1
+    legend:
+      type: gradient
+      min: "-1"
+      max: "1"
+      stops:
+        - '#0000ff'
+        - '#6666ff'
+        - '#ccccff'
+        - '#ffffff'
+        - '#ffcccc'
+        - '#ff6666'
+        - '#ff0000'
+---
