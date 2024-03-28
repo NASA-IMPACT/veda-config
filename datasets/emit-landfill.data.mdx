@@ -1,0 +1,54 @@
+---
+id: landfill-emit
+name: "EMIT Landfill"
+description: "FILL IN"
+media:
+  src: ::file ./smog-city.png
+  alt: Smog Located In City.
+  author:
+    name: Nick van den Berg
+    url: https://unsplash.com/photos/2vb-_3t6YCM
+taxonomy:
+  - name: Topics
+    values:
+      - Environmental Justice
+layers:
+  - id: landfill-emit
+    stacCol: landfill-emit
+    name: AOD Difference (2010-2019) - (2000-2009)
+    type: raster
+    description: "FILL IN"
+    initialDatetime: newest
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      colormap_name: viridis
+      rescale:
+        - 1
+        - 255
+      nodata: 0
+    legend:
+      type: gradient
+      min: "1"
+      max: "255"
+      stops:
+        - "#4575b4"
+        - "#91bfdb"
+        - "#e0f3f8"
+        - "#ffffff"
+        - "#fee090"
+        - "#fc8d59"
+        - "#d73027"
+
+
+  
+---
+
+<Block>
+  <Prose>
+
+FILL IN
+
+  </Prose>
+</Block>
