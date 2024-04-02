@@ -28,6 +28,13 @@ layers:
         - 0
         - 255
       nodata: 0
+    compare:
+      datasetId: svi-overall
+      layerId: social-vulnerability-index-overall
+      mapLabel: |
+        ::js ({dateFns, datetime, compareDatetime}) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
     legend:
       type: gradient
       min: "-2000"
