@@ -34,6 +34,15 @@ taxonomy:
   - name: Product Type
     values:
       - Model Output
+infoDescription: |
+  ::markdown
+    - Temporal Extent: 2019   
+    - Temporal Resolution: Annual   
+    - Spatial Extent: Global    
+    - Spatial Resolution: 1° x 1°    
+    - Data Units: Teragrams of methane per year (Tg CH₄/yr)
+    - Data Type: Research
+    - Data Latency: Updated yearly         
 layers:
   - id: prior-total-id
     stacCol: gosat-based-ch4budget-yeargrid-v1
@@ -83,6 +92,14 @@ layers:
         - mean
       sourceParams:
         nodata: 9.96921e+36
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Annual
+      unit: Tg CH₄/yr                
+    media:
+      src: ::file ./gosat-based-ch4budget-yeargrid-v1.thumbnails.priori.total.png
+      alt: GOSAT-based Top-down Total and Natural Methane Emissions - Priori Total
   - id: post-total-id
     stacCol: gosat-based-ch4budget-yeargrid-v1
     name: Posterior Total
@@ -131,6 +148,14 @@ layers:
         - mean
       sourceParams:
         nodata: 9.96921e+36
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Annual
+      unit: Tg CH₄/yr                
+    media:
+      src: ::file ./gosat-based-ch4budget-yeargrid-v1.thumbnails.posterior.total.png
+      alt: GOSAT-based Top-down Total and Natural Methane Emissions - Posterior Total
   - id: prior-wetland-id
     stacCol: gosat-based-ch4budget-yeargrid-v1
     name: Priori Wetlands
@@ -178,7 +203,15 @@ layers:
       metrics:
         - mean
       sourceParams:
-        nodata: 9.96921e+36        
+        nodata: 9.96921e+36    
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Annual
+      unit: Tg CH₄/yr                
+    media:
+      src: ::file ./gosat-based-ch4budget-yeargrid-v1.thumbnails.priori.wetlands.png
+      alt: GOSAT-based Top-down Total and Natural Methane Emissions - Priori Wetlands      
   - id: post-wetland-id
     stacCol: gosat-based-ch4budget-yeargrid-v1
     name: Posterior Wetlands
@@ -227,6 +260,14 @@ layers:
         - mean
       sourceParams:
         nodata: 9.96921e+36
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Annual
+      unit: Tg CH₄/yr                
+    media:
+      src: ::file ./gosat-based-ch4budget-yeargrid-v1.thumbnails.posterior.wetlands.png
+      alt: GOSAT-based Top-down Total and Natural Methane Emissions - Posterior Wetlands
   - id: prior-wetland-uncertainty-id
     stacCol: gosat-based-ch4budget-yeargrid-v1
     name: Priori Wetlands Uncertainty
@@ -274,7 +315,15 @@ layers:
       metrics:
         - mean
       sourceParams:
-        nodata: 9.96921e+36           
+        nodata: 9.96921e+36 
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Annual
+      unit: Tg CH₄/yr                
+    media:
+      src: ::file ./gosat-based-ch4budget-yeargrid-v1.thumbnails.priori.wetlands.uncertainty.png
+      alt: GOSAT-based Top-down Total and Natural Methane Emissions - Priori Wetlands Uncertainty    
   - id: post-wetland-uncertainty-id
     stacCol: gosat-based-ch4budget-yeargrid-v1
     name: Posterior Wetlands Uncertainty
@@ -322,7 +371,16 @@ layers:
       metrics:
         - mean
       sourceParams:
-        nodata: 9.96921e+36                              
+        nodata: 9.96921e+36
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Annual
+      unit: Tg CH₄/yr                
+    media:
+      src: ::file ./gosat-based-ch4budget-yeargrid-v1.thumbnails.posterior.wetlands.uncertainty.png
+      alt: GOSAT-based Top-down Total and Natural Methane Emissions - Posterior Wetlands Uncertainty
+      
 ---
 
 <Block type='wide'>

@@ -19,7 +19,7 @@ media:
   src: ::file ./eccodarwin--dataset-cover.jpg
   alt: Static rendering of oceanic currents with arrow indicators for cycle direction and strength
   author:
-    name: NASA’s Science Visualization Studio (SVS)
+    name: NASA's Science Visualization Studio (SVS)
     url: https://svs.gsfc.nasa.gov/12629/
 taxonomy:
   - name: Topics
@@ -34,6 +34,15 @@ taxonomy:
   - name: Product Type
     values:
       - Model Output
+infoDescription: |
+  ::markdown
+    - Temporal Extent: January 2020 - December 2022
+    - Temporal Resolution: Monthly    
+    - Spatial Extent: Global    
+    - Spatial Resolution: Approximately 1/3° x  1/3° (at the equator)    
+    - Data Units: Millimoles of CO₂ per meter squared per second (mmol m²/s)
+    - Data Type: Research
+    - Data Latency: Updated annually 
 layers:
   - id: air-sea-co2
     stacCol: eccodarwin-co2flux-monthgrid-v5
@@ -78,12 +87,21 @@ layers:
       metrics:
         - mean
       sourceParams:
-        nodata: nan        
+        nodata: nan  
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Annual
+      unit: mmol m²/s
+    media:
+      src: ::file ./eccodarwin-co2flux-monthgrid-v5.thumbnail.co2.png
+      alt: Rendered Air-Sea CO₂ Flux
+      
 ---
 
 <Block type='wide'>
   <Prose>
-    Due to its immense size, the ocean’s carbon reservoir is roughly 20 times larger than the combined atmosphere and land reservoirs. The eventual fate of our atmospheric carbon emissions will be primarily in the oceans, as the ocean has absorbed roughly 40% of fossil fuel carbon dioxide (CO₂) since the beginning of the industrial era. How do we understand the details of how the ocean takes up carbon? It isn't easy — the ocean is vast, deep, and continually in motion. Even with ocean-observing satellites that orbit Earth 24/7, data from below the ocean surface is sparse. Data-driven estimates of how much carbon dioxide the ocean is absorbing (the so-called “ocean carbon sink”) have improved substantially in recent years. However, computational ocean models that include biogeochemistry continue to play a critical role as they allow us to fill critical gaps in data and understand the individual processes that control ocean carbon storage. The ideal scenario is a combination of the above two methods, where data are ingested and then used to improve a model's fit to the observed ocean, also known as “data assimilation”. While the physical oceanographic community has made great progress in developing data assimilation systems, for example, the Estimating the Circulation and Climate of the Ocean (ECCO) consortium, the biogeochemical community has generally lagged behind. The ECCO-Darwin model represents an important technological step forward as it is the first global ocean biogeochemistry model that (1) ingests both physical and biogeochemical observations into the model in a realistic manner and (2) considers how the nature of the ocean carbon sink has changed over multiple decades. As the ECCO ocean circulation estimates become more accurate and lengthen in time, ECCO-Darwin will become an ever more accurate and useful tool for climate-related ocean carbon cycle and mitigation studies.
+    Due to its immense size, the ocean's carbon reservoir is roughly 20 times larger than the combined atmosphere and land reservoirs. The eventual fate of our atmospheric carbon emissions will be primarily in the oceans, as the ocean has absorbed roughly 40% of fossil fuel carbon dioxide (CO₂) since the beginning of the industrial era. How do we understand the details of how the ocean takes up carbon? It isn't easy — the ocean is vast, deep, and continually in motion. Even with ocean-observing satellites that orbit Earth 24/7, data from below the ocean surface is sparse. Data-driven estimates of how much carbon dioxide the ocean is absorbing (the so-called “ocean carbon sink”) have improved substantially in recent years. However, computational ocean models that include biogeochemistry continue to play a critical role as they allow us to fill critical gaps in data and understand the individual processes that control ocean carbon storage. The ideal scenario is a combination of the above two methods, where data are ingested and then used to improve a model's fit to the observed ocean, also known as “data assimilation”. While the physical oceanographic community has made great progress in developing data assimilation systems, for example, the Estimating the Circulation and Climate of the Ocean (ECCO) consortium, the biogeochemical community has generally lagged behind. The ECCO-Darwin model represents an important technological step forward as it is the first global ocean biogeochemistry model that (1) ingests both physical and biogeochemical observations into the model in a realistic manner and (2) considers how the nature of the ocean carbon sink has changed over multiple decades. As the ECCO ocean circulation estimates become more accurate and lengthen in time, ECCO-Darwin will become an ever more accurate and useful tool for climate-related ocean carbon cycle and mitigation studies.
     
     - **Temporal Extent:** January 2020 - December 2022
     - **Temporal Resolution:** Monthly    
@@ -115,7 +133,7 @@ layers:
     Carroll, D., Menemenlis, D., Adkins, J. F., Bowman, K. W., Brix, H., Dutkiewicz, S., Fenty, I., Gierach, M. M., Hill, C., Jahn, O., Landschützer, P., Lauderdale, J. M., Liu, J., Manizza, M., Naviaux, J. D., Rödenbeck, C., Schimel, D. S., Van der Stocken, T., & Zhang, H. (2020). The ECCO-Darwin Data-Assimilative Global Ocean Biogeochemistry Model: Estimates of Seasonal to Multidecadal Surface Ocean pCO2 and Air-Sea CO2 Flux. *Journal of Advances in Modeling Earth Systems, 12*(10), e2019MS001888. [https://doi.org/10.1029/2019MS001888](https://doi.org/10.1029/2019MS001888)
 
     ## Other Relevant Publications
-    Brix, H., Menemenlis, D., Hill, C., Dutkiewicz, S., Jahn, O., Wang, D., & Zhang, H. (2015). Using Green's functions to initialize and adjust a global, eddying ocean biogeochemistry general circulation model. *Ocean Modelling, 95*, 1–14. [https://doi.org/10.1016/j.ocemod.2015.07.008](https://doi.org/10.1016/j.ocemod.2015.07.008)
+    Brix, H., Menemenlis, D., Hill, C., Dutkiewicz, S., Jahn, O., Wang, D., & Zhang, H. (2015). Using Green's functions to initialize and adjust a global, eddying ocean biogeochemistry general circulation model. *Ocean Modelling, 95*, 114. [https://doi.org/10.1016/j.ocemod.2015.07.008](https://doi.org/10.1016/j.ocemod.2015.07.008)
 
     Friedlingstein, P., Jones, M. W., O’Sullivan, M., Andrew, R. M., Hauck, J., Peters, G. P., Peters, W., Pongratz, J., Sitch, S., Le Quéré, C., Bakker, D. C. E., Canadell, J. G., Ciais, P., Jackson, R. B., Anthoni, P., Barbero, L., Bastos, A., Bastrikov, V., Becker, M., … Zaehle, S. (2019). Global carbon budget 2019. *Earth System Science Data, 11*(4), 1783–1838. [https://doi.org/10.5194/essd-11-1783-2019](https://doi.org/10.5194/essd-11-1783-2019)
 

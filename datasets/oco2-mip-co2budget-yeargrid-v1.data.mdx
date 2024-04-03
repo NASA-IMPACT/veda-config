@@ -36,6 +36,15 @@ taxonomy:
   - name: Product Type
     values:
       - Model Output
+infoDescription: |
+  ::markdown
+    - Temporal Extent: 2015 – 2020
+    - Temporal Resolution: Annual
+    - Spatial Extent: Global
+    - Spatial Resolution:  1° x 1°
+    - Data Units: Grams of carbon dioxide per square meter per year (g CO₂/m²/yr)
+    - Data Type: Research
+    - Data Latency: N/A        
 layers:
   - id: co2-emissions-lnlgis-nbe
     stacCol: oco2-mip-co2budget-yeargrid-v1
@@ -85,6 +94,14 @@ layers:
         - mean
       sourceParams:
         nodata: 0
+    info:
+      source: NASA / NOAA
+      spatialExtent: Global
+      temporalResolution: Annual 
+      unit: g CO₂/m²/yr              
+    media:
+      src: ::file ./oco2-mip-co2budget-yeargrid-v1.thumbnails.biosphere.exchange.png
+      alt: OCO-2 MIP Top-down CO₂ Budgets - LNLGIS Net Biosphere Exchange (LNLGIS_NBE)
   - id: co2-emissions-lnlgis-nbe-std
     stacCol: oco2-mip-co2budget-yeargrid-v1
     name: Uncertainty - LNLGIS Net Biosphere Exchange (LNLGIS_NBE_std)
@@ -133,6 +150,14 @@ layers:
         - mean
       sourceParams:
         nodata: 0
+    info:
+      source: NASA / NOAA
+      spatialExtent: Global
+      temporalResolution: Annual 
+      unit: g CO₂/m²/yr        
+    media:
+      src: ::file ./oco2-mip-co2budget-yeargrid-v1.thumbnails.biosphere.exchange.uncertainty.png
+      alt: OCO-2 MIP Top-down CO₂ Budgets - Uncertainty - LNLGIS Net Biosphere Exchange (LNLGIS_NBE_std)
   - id: co2-emissions-lnlgis-nce
     stacCol: oco2-mip-co2budget-yeargrid-v1
     name: LNLGIS Net Carbon Exchange (LNLGIS_NCE)
@@ -181,6 +206,14 @@ layers:
         - mean
       sourceParams:
         nodata: 0
+    info:
+      source: NASA / NOAA
+      spatialExtent: Global
+      temporalResolution: Annual 
+      unit: g CO₂/m²/yr        
+    media:
+      src: ::file ./oco2-mip-co2budget-yeargrid-v1.thumbnails.net.carbon.exchange.png
+      alt: OCO-2 MIP Top-down CO₂ Budgets - LNLGIS Net Carbon Exchange (LNLGIS_NCE)
   - id: co2-emissions-lnlgis-nce-std
     stacCol: oco2-mip-co2budget-yeargrid-v1
     name: Uncertainty - LNLGIS Net Carbon Exchange (LNLGIS_NCE_std)
@@ -229,6 +262,14 @@ layers:
         - mean
       sourceParams:
         nodata: 0
+    info:
+      source: NASA / NOAA
+      spatialExtent: Global
+      temporalResolution: Annual 
+      unit: g CO₂/m²/yr        
+    media:
+      src: ::file ./oco2-mip-co2budget-yeargrid-v1.thumbnails.net.carbon.exchange.uncertainty.png
+      alt: OCO-2 MIP Top-down CO₂ Budgets - Uncertainty - LNLGIS Net Carbon Exchange (LNLGIS_NCE_std)
   - id: co2-emissions-lnlgis-dc-loss
     stacCol: oco2-mip-co2budget-yeargrid-v1
     name: LNLGIS Net Land Carbon Stock Loss (LNLGIS_dC_loss)
@@ -277,6 +318,14 @@ layers:
         - mean
       sourceParams:
         nodata: 0
+    info:
+      source: NASA / NOAA
+      spatialExtent: Global
+      temporalResolution: Annual 
+      unit: g CO₂/m²/yr        
+    media:
+      src: ::file ./oco2-mip-co2budget-yeargrid-v1.thumbnails.net.land.carbon.stock.loss.png
+      alt: OCO-2 MIP Top-down CO₂ Budgets - LNLGIS Net Land Carbon Stock Loss (LNLGIS_dC_loss)
   - id: co2-emissions-lnlgis-dc-loss-std
     stacCol: oco2-mip-co2budget-yeargrid-v1
     name: LNLGIS Net Land Carbon Stock Loss (LNLGIS_dC_loss_std)
@@ -325,6 +374,14 @@ layers:
         - mean
       sourceParams:
         nodata: 0
+    info:
+      source: NASA / NOAA
+      spatialExtent: Global
+      temporalResolution: Annual 
+      unit: g CO₂/m²/yr        
+    media:
+      src: ::file ./oco2-mip-co2budget-yeargrid-v1.thumbnails.net.land.carbon.stock.loss.uncertainty.png
+      alt: OCO-2 MIP Top-down CO₂ Budgets - LNLGIS Net Land Carbon Stock Loss (LNLGIS_dC_loss_std)
   - id: co2-emissions-crop
     stacCol: oco2-mip-co2budget-yeargrid-v1
     name: Lateral Crop CO₂ Flux (Crop)
@@ -373,6 +430,14 @@ layers:
         - mean
       sourceParams:
         nodata: 0
+    info:
+      source: NASA / NOAA
+      spatialExtent: Global
+      temporalResolution: Annual 
+      unit: g CO₂/m²/yr        
+    media:
+      src: ::file ./oco2-mip-co2budget-yeargrid-v1.thumbnails.lateral.crop.co2.flux.png
+      alt: OCO-2 MIP Top-down CO₂ Budgets - Lateral Crop CO₂ Flux (Crop)
   - id: co2-emissions-crop-std
     stacCol: oco2-mip-co2budget-yeargrid-v1
     name: Uncertainty - Lateral Crop CO₂ Flux (Crop_std)
@@ -421,6 +486,14 @@ layers:
         - mean
       sourceParams:
         nodata: 0
+    info:
+      source: NASA / NOAA
+      spatialExtent: Global
+      temporalResolution: Annual 
+      unit: g CO₂/m²/yr        
+    media:
+      src: ::file ./oco2-mip-co2budget-yeargrid-v1.thumbnails.lateral.crop.co2.flux.uncertainty.png
+      alt: OCO-2 MIP Top-down CO₂ Budgets - Uncertainty - Lateral Crop CO₂ Flux (Crop_std)
   - id: co2-emissions-ff
     stacCol: oco2-mip-co2budget-yeargrid-v1
     name: Fossil Fuel and Cement CO₂ Emissions (FF)
@@ -469,6 +542,14 @@ layers:
         - mean
       sourceParams:
         nodata: 0
+    info:
+      source: NASA / NOAA
+      spatialExtent: Global
+      temporalResolution: Annual 
+      unit: g CO₂/m²/yr        
+    media:
+      src: ::file ./oco2-mip-co2budget-yeargrid-v1.thumbnails.fossil.fuel.cement.co2.emissions.png
+      alt: OCO-2 MIP Top-down CO₂ Budgets - Fossil Fuel and Cement CO₂ Emissions (FF)
   - id: co2-emissions-ff-std
     stacCol: oco2-mip-co2budget-yeargrid-v1
     name: Uncertainty - Fossil Fuel and Cement CO₂ Emissions (FF_std)
@@ -517,6 +598,14 @@ layers:
         - mean
       sourceParams:
         nodata: 0
+    info:
+      source: NASA / NOAA
+      spatialExtent: Global
+      temporalResolution: Annual 
+      unit: g CO₂/m²/yr        
+    media:
+      src: ::file ./oco2-mip-co2budget-yeargrid-v1.thumbnails.fossil.fuel.cement.co2.emissions.uncertainty.png
+      alt: OCO-2 MIP Top-down CO₂ Budgets - Uncertainty - Fossil Fuel and Cement CO₂ Emissions (FF_std)
   - id: co2-emissions-river
     stacCol: oco2-mip-co2budget-yeargrid-v1
     name: Lateral River CO₂ Flux (River)
@@ -565,6 +654,14 @@ layers:
         - mean
       sourceParams:
         nodata: 0
+    info:
+      source: NASA / NOAA
+      spatialExtent: Global
+      temporalResolution: Annual 
+      unit: g CO₂/m²/yr        
+    media:
+      src: ::file ./oco2-mip-co2budget-yeargrid-v1.thumbnails.lateral.river.co2.flux.png
+      alt: OCO-2 MIP Top-down CO₂ Budgets - Lateral River CO₂ Flux (River)
   - id: co2-emissions-river-std
     stacCol: oco2-mip-co2budget-yeargrid-v1
     name: Uncertainty - Lateral River CO₂ Flux (River_std)
@@ -613,6 +710,14 @@ layers:
         - mean
       sourceParams:
         nodata: 0
+    info:
+      source: NASA / NOAA
+      spatialExtent: Global
+      temporalResolution: Annual 
+      unit: g CO₂/m²/yr        
+    media:
+      src: ::file ./oco2-mip-co2budget-yeargrid-v1.thumbnails.lateral.river.co2.flux.uncertainty.png
+      alt: OCO-2 MIP Top-down CO₂ Budgets - Uncertainty - Lateral River CO₂ Flux (River_std)
   - id: co2-emissions-wood
     stacCol: oco2-mip-co2budget-yeargrid-v1
     name: Lateral Wood CO₂ Flux (Wood)
@@ -661,6 +766,14 @@ layers:
         - mean
       sourceParams:
         nodata: 0
+    info:
+      source: NASA / NOAA
+      spatialExtent: Global
+      temporalResolution: Annual 
+      unit: g CO₂/m²/yr        
+    media:
+      src: ::file ./oco2-mip-co2budget-yeargrid-v1.thumbnails.lateral.wood.co2.flux.png
+      alt: OCO-2 MIP Top-down CO₂ Budgets - Lateral Wood CO₂ Flux (Wood)
   - id: co2-emissions-wood-std
     stacCol: oco2-mip-co2budget-yeargrid-v1
     name: Uncertainty - Lateral Wood CO₂ Flux (Wood_std)
@@ -709,6 +822,14 @@ layers:
         - mean
       sourceParams:
         nodata: 0
+    info:
+      source: NASA / NOAA
+      spatialExtent: Global
+      temporalResolution: Annual 
+      unit: g CO₂/m²/yr        
+    media:
+      src: ::file ./oco2-mip-co2budget-yeargrid-v1.thumbnails.lateral.wood.co2.flux.uncertainty.png
+      alt: OCO-2 MIP Top-down CO₂ Budgets - Uncertainty - Lateral Wood CO₂ Flux (Wood_std)
 ---
 
 <Block type='wide'>

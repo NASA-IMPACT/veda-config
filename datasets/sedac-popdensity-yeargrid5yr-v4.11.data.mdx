@@ -30,6 +30,15 @@ taxonomy:
   - name: Product Type
     values:
       - Model Output
+infoDescription: |
+  ::markdown
+    - Temporal Extent: 2000 - 2020
+    - Temporal Resolution: Annual, every 5 years   
+    - Spatial Extent: Global    
+    - Spatial Resolution: 30 arc-seconds (~1 km at equator)    
+    - Data Units: Number of persons per square kilometer (persons/km²)    
+    - Data Type: Research
+    - Data Latency: 5 years        
 layers:
   - id: nasa-sedac-population
     stacCol: sedac-popdensity-yeargrid5yr-v4.11
@@ -75,7 +84,16 @@ layers:
       metrics:
         - mean
       sourceParams:
-        nodata: -3.402823e+38        
+        nodata: -3.402823e+38   
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Annual
+      unit: persons/km²         
+    media:
+      src: ::file ./sedac-popdensity-yeargrid5yr-v4.11.thumbnails.population.density.png
+      alt: SEDAC Gridded World Population Density - Population Density
+
 ---
 
 <Block type='wide'>

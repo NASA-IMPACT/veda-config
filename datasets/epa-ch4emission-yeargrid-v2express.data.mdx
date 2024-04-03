@@ -33,6 +33,15 @@ taxonomy:
   - name: Product Type
     values:
       - Gridded Inventory
+infoDescription: |
+  ::markdown
+    - Temporal Extent: 2012 - 2020    
+    - Temporal Resolution: Annual    
+    - Spatial Extent: Contiguous United States  
+    - Spatial Resolution: 0.1° x 0.1°    
+    - Data Units: Megagrams of methane per square kilometer per year (Mg CH₄/km²/yr)    
+    - Data type: Research (v2 express extension)
+    - Data Latency: N/A        
 layers:
   - id: total-methane
     stacCol: epa-ch4emission-yeargrid-v2express
@@ -66,6 +75,11 @@ layers:
       exclude: true
       metrics:
         - mean
+    info:
+      source: EPA
+      spatialExtent: Contiguous United States
+      temporalResolution: Annual
+      unit: Mg CH₄/km²/yr                         
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -100,6 +114,9 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
+    media:
+      src: ::file ./epa-ch4emission-yeargrid-v2express.thumbnails.total.methane.annual.png
+      alt: U.S. Gridded Anthropogenic Methane Emissions Inventory - Total Methane (annual)
   - id: total-agriculture
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Total Agriculture (annual)
@@ -132,6 +149,11 @@ layers:
       exclude: true
       metrics:
         - mean
+    info:
+      source: EPA
+      spatialExtent: Contiguous United States
+      temporalResolution: Annual
+      unit: Mg CH₄/km²/yr                   
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -166,6 +188,9 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
+    media:
+      src: ::file ./epa-ch4emission-yeargrid-v2express.thumbnails.total.agriculture.annual.png
+      alt: U.S. Gridded Anthropogenic Methane Emissions Inventory - Total Agriculture (annual)
   - id: enteric-fermentation
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Agriculture - Enteric Fermentation (annual)
@@ -198,6 +223,11 @@ layers:
       exclude: true
       metrics:
         - mean
+    info:
+      source: EPA
+      spatialExtent: Contiguous United States
+      temporalResolution: Annual 
+      unit: Mg CH₄/km²/yr                 
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -232,6 +262,9 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
+    media:
+      src: ::file ./epa-ch4emission-yeargrid-v2express.thumbnails.enteric.fermentation.annual.png
+      alt: U.S. Gridded Anthropogenic Methane Emissions Inventory - Agriculture - Enteric Fermentation (annual)
   - id: manure-management
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Agriculture - Manure Management (annual)
@@ -264,6 +297,11 @@ layers:
       exclude: true
       metrics:
         - mean
+    info:
+      source: EPA
+      spatialExtent: Contiguous United States
+      temporalResolution: Annual 
+      unit: Mg CH₄/km²/yr                 
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -298,6 +336,9 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
+    media:
+      src: ::file ./epa-ch4emission-yeargrid-v2express.thumbnails.agriculture.manure.management.anual.png
+      alt: U.S. Gridded Anthropogenic Methane Emissions Inventory - Agriculture - Manure Management (annual)
   - id: rice-cultivation-l
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Agriculture - Rice Cultivation (annual)
@@ -330,6 +371,11 @@ layers:
       exclude: true
       metrics:
         - mean
+    info:
+      source: EPA
+      spatialExtent: Contiguous United States
+      temporalResolution: Annual 
+      unit: Mg CH₄/km²/yr                 
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -364,6 +410,9 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
+    media:
+      src: ::file ./epa-ch4emission-yeargrid-v2express.thumbnails.agriculture.rice.cultivation.annual.png
+      alt: U.S. Gridded Anthropogenic Methane Emissions Inventory - Agriculture - Rice Cultivation (annual)
   - id: field-burning-l
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Agriculture - Field Burning (annual)
@@ -396,6 +445,11 @@ layers:
       exclude: true
       metrics:
         - mean
+    info:
+      source: EPA
+      spatialExtent: Contiguous United States
+      temporalResolution: Annual 
+      unit: Mg CH₄/km²/yr                 
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -430,6 +484,9 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
+    media:
+      src: ::file ./epa-ch4emission-yeargrid-v2express.thumbnails.agriculture.field.burning.annual.png
+      alt: U.S. Gridded Anthropogenic Methane Emissions Inventory - Agriculture - Field Burning (annual)
   - id: total-natural-gas
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Total Natural Gas Systems (annual)
@@ -462,6 +519,11 @@ layers:
       exclude: true
       metrics:
         - mean
+    info:
+      source: EPA
+      spatialExtent: Contiguous United States
+      temporalResolution: Annual 
+      unit: Mg CH₄/km²/yr                 
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -496,6 +558,9 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
+    media:
+      src: ::file ./epa-ch4emission-yeargrid-v2express.thumbnails.total.natural.gas.systems.annual.png
+      alt: U.S. Gridded Anthropogenic Methane Emissions Inventory - Total Natural Gas Systems (annual)
   - id: exploration-ngs-l
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Natural Gas - Exploration (annual)
@@ -528,6 +593,11 @@ layers:
       exclude: true
       metrics:
         - mean
+    info:
+      source: EPA
+      spatialExtent: Contiguous United States
+      temporalResolution: Annual 
+      unit: Mg CH₄/km²/yr                 
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -562,6 +632,9 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
+    media:
+      src: ::file ./epa-ch4emission-yeargrid-v2express.thumbnails.natural.gas.exploration.annual.png
+      alt: U.S. Gridded Anthropogenic Methane Emissions Inventory - Natural Gas - Exploration (annual)
   - id: production-ngs-l
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Natural Gas - Production (annual)
@@ -594,6 +667,11 @@ layers:
       exclude: true
       metrics:
         - mean
+    info:
+      source: EPA
+      spatialExtent: Contiguous United States
+      temporalResolution: Annual 
+      unit: Mg CH₄/km²/yr                 
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -628,6 +706,9 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
+    media:
+      src: ::file ./epa-ch4emission-yeargrid-v2express.thumbnails.natural.gas.production.annual.png
+      alt: U.S. Gridded Anthropogenic Methane Emissions Inventory - Natural Gas - Production (annual)
   - id: 1B2b-transmission-storage-ngs
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Natural Gas - Transmission and Storage (annual)
@@ -660,6 +741,11 @@ layers:
       exclude: true
       metrics:
         - mean
+    info:
+      source: EPA
+      spatialExtent: Contiguous United States
+      temporalResolution: Annual 
+      unit: Mg CH₄/km²/yr                 
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -694,6 +780,9 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
+    media:
+      src: ::file ./epa-ch4emission-yeargrid-v2express.thumbnails.natural.gas.transmission.and.storage.annual.png
+      alt: U.S. Gridded Anthropogenic Methane Emissions Inventory - Natural Gas - Transmission and Storage (annual)
   - id: 1B2b-processing-ngs
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Natural Gas - Processing (annual)
@@ -726,6 +815,11 @@ layers:
       exclude: true
       metrics:
         - mean
+    info:
+      source: EPA
+      spatialExtent: Contiguous United States
+      temporalResolution: Annual 
+      unit: Mg CH₄/km²/yr                 
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -760,6 +854,9 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
+    media:
+      src: ::file ./epa-ch4emission-yeargrid-v2express.thumbnails.natural.gas.processing.annual.png
+      alt: U.S. Gridded Anthropogenic Methane Emissions Inventory - Natural Gas - Processing (annual)
   - id: 1B2b-distribution-ngs
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Natural Gas - Distribution (annual)
@@ -792,6 +889,11 @@ layers:
       exclude: true
       metrics:
         - mean
+    info:
+      source: EPA
+      spatialExtent: Contiguous United States
+      temporalResolution: Annual 
+      unit: Mg CH₄/km²/yr                 
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -826,6 +928,9 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
+    media:
+      src: ::file ./epa-ch4emission-yeargrid-v2express.thumbnails.natural.gas.distribution.annual.png
+      alt: U.S. Gridded Anthropogenic Methane Emissions Inventory - Natural Gas - Distribution (annual)
   - id: post-meter-ng
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Natural Gas - Post-Meter (annual)
@@ -858,6 +963,11 @@ layers:
       exclude: true
       metrics:
         - mean
+    info:
+      source: EPA
+      spatialExtent: Contiguous United States
+      temporalResolution: Annual 
+      unit: Mg CH₄/km²/yr                 
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -892,6 +1002,9 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
+    media:
+      src: ::file ./epa-ch4emission-yeargrid-v2express.thumbnails.natural.gas.post-meter.annual.png
+      alt: U.S. Gridded Anthropogenic Methane Emissions Inventory - Natural Gas - Post-Meter (annual)
   - id: total-petroleum
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Total Petroleum Systems (annual)
@@ -924,6 +1037,11 @@ layers:
       exclude: true
       metrics:
         - mean
+    info:
+      source: EPA
+      spatialExtent: Contiguous United States
+      temporalResolution: Annual 
+      unit: Mg CH₄/km²/yr                 
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -958,6 +1076,9 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
+    media:
+      src: ::file ./epa-ch4emission-yeargrid-v2express.thumbnails.total.petroleum.systems.annual.png
+      alt: U.S. Gridded Anthropogenic Methane Emissions Inventory - Total Petroleum Systems (annual)
   - id: 1B2a-exploration-ps
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Petroleum - Exploration (annual)
@@ -990,6 +1111,11 @@ layers:
       exclude: true
       metrics:
         - mean
+    info:
+      source: EPA
+      spatialExtent: Contiguous United States
+      temporalResolution: Annual 
+      unit: Mg CH₄/km²/yr                 
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -1024,6 +1150,9 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
+    media:
+      src: ::file ./epa-ch4emission-yeargrid-v2express.thumbnails.petroleum.exploration.annual.png
+      alt: U.S. Gridded Anthropogenic Methane Emissions Inventory - Petroleum - Exploration (annual)
   - id: 1B2a-production-ps
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Petroleum - Production (annual)
@@ -1056,6 +1185,11 @@ layers:
       exclude: true
       metrics:
         - mean
+    info:
+      source: EPA
+      spatialExtent: Contiguous United States
+      temporalResolution: Annual 
+      unit: Mg CH₄/km²/yr                 
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -1090,6 +1224,9 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
+    media:
+      src: ::file ./epa-ch4emission-yeargrid-v2express.thumbnails.petroleum.production.annual.png
+      alt: U.S. Gridded Anthropogenic Methane Emissions Inventory - Petroleum - Production (annual)
   - id: 1B2a-transport-ps
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Petroleum - Transportation (annual)
@@ -1122,6 +1259,11 @@ layers:
       exclude: true
       metrics:
         - mean
+    info:
+      source: EPA
+      spatialExtent: Contiguous United States
+      temporalResolution: Annual 
+      unit: Mg CH₄/km²/yr                 
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -1156,6 +1298,9 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
+    media:
+      src: ::file ./epa-ch4emission-yeargrid-v2express.thumbnails.petroleum.transportation.annual.png
+      alt: U.S. Gridded Anthropogenic Methane Emissions Inventory - Petroleum - Transportation (annual)
   - id: 1B2a-refining-ps
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Petroleum - Refining (annual)
@@ -1188,6 +1333,11 @@ layers:
       exclude: true
       metrics:
         - mean
+    info:
+      source: EPA
+      spatialExtent: Contiguous United States
+      temporalResolution: Annual 
+      unit: Mg CH₄/km²/yr                 
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -1222,6 +1372,9 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
+    media:
+      src: ::file ./epa-ch4emission-yeargrid-v2express.thumbnails.petroleum.refining.annual.png
+      alt: U.S. Gridded Anthropogenic Methane Emissions Inventory - Petroleum - Refining (annual)
   - id: total-waste
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Total Waste (annual)
@@ -1254,6 +1407,11 @@ layers:
       exclude: true
       metrics:
         - mean
+    info:
+      source: EPA
+      spatialExtent: Contiguous United States
+      temporalResolution: Annual 
+      unit: Mg CH₄/km²/yr                 
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -1288,6 +1446,9 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
+    media:
+      src: ::file ./epa-ch4emission-yeargrid-v2express.thumbnails.total.waste.annual.png
+      alt: U.S. Gridded Anthropogenic Methane Emissions Inventory - Total Waste (annual)
   - id: 5A1-msw-landfill-waste
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Waste - Municipal Solid Waste (MSW) Landfills (annual)
@@ -1320,6 +1481,11 @@ layers:
       exclude: true
       metrics:
         - mean
+    info:
+      source: EPA
+      spatialExtent: Contiguous United States
+      temporalResolution: Annual 
+      unit: Mg CH₄/km²/yr                 
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -1354,6 +1520,9 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
+    media:
+      src: ::file ./epa-ch4emission-yeargrid-v2express.thumbnails.waste.municipal.landfills.annual.png
+      alt: U.S. Gridded Anthropogenic Methane Emissions Inventory - Waste - Municipal Solid Waste (MSW) Landfills (annual)
   - id: 5A1-industrial-landfill-waste
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Waste - Industrial Landfills (annual)
@@ -1386,6 +1555,11 @@ layers:
       exclude: true
       metrics:
         - mean
+    info:
+      source: EPA
+      spatialExtent: Contiguous United States
+      temporalResolution: Annual 
+      unit: Mg CH₄/km²/yr                 
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -1420,6 +1594,9 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
+    media:
+      src: ::file ./epa-ch4emission-yeargrid-v2express.thumbnails.waste.industrial.landfills.annual.png
+      alt: U.S. Gridded Anthropogenic Methane Emissions Inventory - Waste - Industrial Landfills (annual)
   - id: 5A1-dwtd-waste
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Waste - Domestic Wastewater Treatment & Discharge (annual)
@@ -1452,6 +1629,11 @@ layers:
       exclude: true
       metrics:
         - mean
+    info:
+      source: EPA
+      spatialExtent: Contiguous United States
+      temporalResolution: Annual 
+      unit: Mg CH₄/km²/yr                 
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -1486,6 +1668,9 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
+    media:
+      src: ::file ./epa-ch4emission-yeargrid-v2express.thumbnails.waste.domestic.wastewater.annual.png
+      alt: U.S. Gridded Anthropogenic Methane Emissions Inventory - Waste - Domestic Wastewater Treatment & Discharge (annual)
   - id: 5A1-iwtd-waste
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Waste - Industrial Wastewater Treatment & Discharge (annual)
@@ -1518,6 +1703,11 @@ layers:
       exclude: true
       metrics:
         - mean
+    info:
+      source: EPA
+      spatialExtent: Contiguous United States
+      temporalResolution: Annual 
+      unit: Mg CH₄/km²/yr                 
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -1552,6 +1742,9 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
+    media:
+      src: ::file ./epa-ch4emission-yeargrid-v2express.thumbnails.waste.industrial.wastewater.annual.png
+      alt: U.S. Gridded Anthropogenic Methane Emissions Inventory - Waste - Industrial Wastewater Treatment & Discharge (annual)
   - id: 5A1-composting-waste
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Waste - Composting (annual)
@@ -1584,6 +1777,11 @@ layers:
       exclude: true
       metrics:
         - mean
+    info:
+      source: EPA
+      spatialExtent: Contiguous United States
+      temporalResolution: Annual 
+      unit: Mg CH₄/km²/yr                 
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -1618,6 +1816,9 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
+    media:
+      src: ::file ./epa-ch4emission-yeargrid-v2express.thumbnails.composting.annual.png
+      alt: U.S. Gridded Anthropogenic Methane Emissions Inventory - Waste - Composting (annual)
   - id: total-coal-mines
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Total Coal Mines (annual)
@@ -1650,6 +1851,11 @@ layers:
       exclude: true
       metrics:
         - mean
+    info:
+      source: EPA
+      spatialExtent: Contiguous United States
+      temporalResolution: Annual 
+      unit: Mg CH₄/km²/yr                 
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -1684,6 +1890,9 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
+    media:
+      src: ::file ./epa-ch4emission-yeargrid-v2express.thumbnails.total.coal.mines.annual.png
+      alt: U.S. Gridded Anthropogenic Methane Emissions Inventory - Total Coal Mines (annual)
   - id: 1B1a-underground-coal
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Coal Mining - Underground Mining (annual)
@@ -1716,6 +1925,11 @@ layers:
       exclude: true
       metrics:
         - mean
+    info:
+      source: EPA
+      spatialExtent: Contiguous United States
+      temporalResolution: Annual 
+      unit: Mg CH₄/km²/yr                 
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -1750,6 +1964,9 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
+    media:
+      src: ::file ./epa-ch4emission-yeargrid-v2express.thumbnails.coal.mining.underground.annual.png
+      alt: U.S. Gridded Anthropogenic Methane Emissions Inventory - Coal Mining - Underground Mining (annual)
   - id: 1B1a-abn-underground-coal
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Coal Mining - Abandoned Underground Mines (annual)
@@ -1782,6 +1999,11 @@ layers:
       exclude: true
       metrics:
         - mean
+    info:
+      source: EPA
+      spatialExtent: Contiguous United States
+      temporalResolution: Annual 
+      unit: Mg CH₄/km²/yr                 
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -1816,6 +2038,9 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
+    media:
+      src: ::file ./epa-ch4emission-yeargrid-v2express.thumbnails.coal.mining.abandoned.annual.png
+      alt: U.S. Gridded Anthropogenic Methane Emissions Inventory - Coal Mining - Abandoned Underground Mines (annual)
   - id: 1B1a-surface-coal
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Coal Mining - Surface Mining (annual)
@@ -1848,6 +2073,11 @@ layers:
       exclude: true
       metrics:
         - mean
+    info:
+      source: EPA
+      spatialExtent: Contiguous United States
+      temporalResolution: Annual 
+      unit: Mg CH₄/km²/yr                 
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -1882,6 +2112,9 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
+    media:
+      src: ::file ./epa-ch4emission-yeargrid-v2express.thumbnails.coal.mining.surface.annual.png
+      alt: U.S. Gridded Anthropogenic Methane Emissions Inventory - Coal Mining - Surface Mining (annual)
   - id: total-other
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Total Other (annual)
@@ -1914,6 +2147,11 @@ layers:
       exclude: true
       metrics:
         - mean
+    info:
+      source: EPA
+      spatialExtent: Contiguous United States
+      temporalResolution: Annual 
+      unit: Mg CH₄/km²/yr                 
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -1948,6 +2186,9 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
+    media:
+      src: ::file ./epa-ch4emission-yeargrid-v2express.thumbnails.total.other.annual.png
+      alt: U.S. Gridded Anthropogenic Methane Emissions Inventory - Total Other (annual)
   - id: 1A-stationary-combustion-other
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Other - Stationary combustion (annual)
@@ -1980,6 +2221,11 @@ layers:
       exclude: true
       metrics:
         - mean
+    info:
+      source: EPA
+      spatialExtent: Contiguous United States
+      temporalResolution: Annual 
+      unit: Mg CH₄/km²/yr                 
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -2014,6 +2260,9 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
+    media:
+      src: ::file ./epa-ch4emission-yeargrid-v2express.thumbnails.other.stationary.combustion.annual.png
+      alt: U.S. Gridded Anthropogenic Methane Emissions Inventory - Other - Stationary combustion (annual)
   - id: 1A-mobile-combustion-othe
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Other - Mobile combustion (annual)
@@ -2046,6 +2295,11 @@ layers:
       exclude: true
       metrics:
         - mean
+    info:
+      source: EPA
+      spatialExtent: Contiguous United States
+      temporalResolution: Annual 
+      unit: Mg CH₄/km²/yr                 
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -2080,6 +2334,9 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
+    media:
+      src: ::file ./epa-ch4emission-yeargrid-v2express.thumbnails.other.mobile.combustion.annual.png
+      alt: U.S. Gridded Anthropogenic Methane Emissions Inventory - Other - Mobile combustion (annual)
   - id: 1A-abn-ong-other
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Other - Abandoned Oil and Gas Wells (annual)
@@ -2112,6 +2369,11 @@ layers:
       exclude: true
       metrics:
         - mean
+    info:
+      source: EPA
+      spatialExtent: Contiguous United States
+      temporalResolution: Annual 
+      unit: Mg CH₄/km²/yr                 
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -2146,6 +2408,9 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
+    media:
+      src: ::file ./epa-ch4emission-yeargrid-v2express.thumbnails.other.abandoned.oil.gas.annual.png
+      alt: U.S. Gridded Anthropogenic Methane Emissions Inventory - Other - Abandoned Oil and Gas Wells (annual)
   - id: 1A-petro-production-other
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Other - Petrochemical Production (annual)
@@ -2178,6 +2443,11 @@ layers:
       exclude: true
       metrics:
         - mean
+    info:
+      source: EPA
+      spatialExtent: Contiguous United States
+      temporalResolution: Annual 
+      unit: Mg CH₄/km²/yr                 
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -2212,6 +2482,9 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
+    media:
+      src: ::file ./epa-ch4emission-yeargrid-v2express.thumbnails.other.petrochemical.production.annual.png
+      alt: U.S. Gridded Anthropogenic Methane Emissions Inventory - Other - Petrochemical Production (annual)
   - id: 1A-ferroalloy-production-other
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Other - Ferroalloy Production (annual)
@@ -2242,6 +2515,11 @@ layers:
       exclude: true
       metrics:
         - mean
+    info:
+      source: EPA
+      spatialExtent: Contiguous United States
+      temporalResolution: Annual 
+      unit: Mg CH₄/km²/yr                 
     legend:
       unit:
         label: Mg CH₄/km²/yr
@@ -2276,6 +2554,9 @@ layers:
         - "#95211B"
         - "#721E17"
         - "#521A13"
+    media:
+      src: ::file ./epa-ch4emission-yeargrid-v2express.thumbnails.other.ferroalloy.production.annual.png
+      alt: U.S. Gridded Anthropogenic Methane Emissions Inventory - Other - Ferroalloy Production (annual)
 ---
 
 <Block type='wide'>
