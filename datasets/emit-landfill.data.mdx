@@ -15,7 +15,7 @@ taxonomy:
 layers:
   - id: landfill-emit
     stacCol: landfill-emit
-    name: EMIT Landfill
+    name: EMIT Landfill - CH4 (ppmm)
     type: raster
     description: "FILL IN"
     initialDatetime: newest
@@ -23,7 +23,7 @@ layers:
       - 0
       - 20
     sourceParams:
-      colormap_name: plasma
+      colormap_name: plasma_r
       rescale:
         - 0
         - 255
@@ -38,7 +38,7 @@ layers:
     legend:
       type: gradient
       min: "0"
-      max: "255"
+      max: "3100"
       stops:
         - '#08041d'
         - '#1f0a46'
