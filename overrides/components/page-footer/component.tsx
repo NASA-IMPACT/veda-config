@@ -26,7 +26,7 @@ import { useFeedbackModal } from "$veda-ui-scripts/components/common/layout-root
 import { useMediaQuery } from "$veda-ui-scripts/utils/use-media-query";
 import Partners from "../../home/partners";
 import { AccessibilityMenuItem } from "../../common/styles";
-
+import { CollecticonExpandTopRight } from '$veda-ui/@devseed-ui/collecticons';
 
 const PRESS_PATH = '/learn#press';
 
@@ -108,6 +108,19 @@ const DisclaimerModalFooter = styled(ModalFooter)`
   justify-content: space-between;
   flex-flow: row nowrap;
   margin-top: ${glsp(2)};
+`;
+
+const AccessibilityStatementLink = styled.a`
+  color: ${themeVal("color.link")} !important;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  display: inline-flex;
+  align-items: center;
+  margin-top: ${glsp(1.0)};
+
+  > svg {
+    margin-left: ${glsp(0.5)};
+  }
 `;
 
 const DISCLAIMER_MODALS_DISMISSED_KEY = "disclaimerModalsDismissedKey";
@@ -298,21 +311,26 @@ export default function PageFooter(props) {
         </FooterContent>
         <FooterContacts>
           <div>
-            <Link to="/">
-              <span>By</span> <strong>US GHG Center</strong> <span>on</span>{" "}
-              <time dateTime={String(nowDate.getFullYear())}>
-                {nowDate.getFullYear()}
-              </time>
-            </Link>
-            {" • "}
-            <Tip
-              content={`Released on ${format(
-                new Date(+props.appBuildTime),
-                "PPPP"
-              )} (veda-ui v${props.appUiVersion})`}
-            >
-              <span>v{props.appVersion}</span>
-            </Tip>
+            <div>
+              <Link to="/">
+                <span>By</span> <strong>US GHG Center</strong> <span>on</span>{" "}
+                <time dateTime={String(nowDate.getFullYear())}>
+                  {nowDate.getFullYear()}
+                </time>
+              </Link>
+              {" • "}
+              <Tip
+                content={`Released on ${format(
+                  new Date(+props.appBuildTime),
+                  "PPPP"
+                )} (veda-ui v${props.appUiVersion})`}
+              >
+                <span>v{props.appVersion}</span>
+              </Tip>
+            </div>
+            <AccessibilityStatementLink href="https://www.nasa.gov/accessibility/" target='_blank' rel='noopener'>
+              Our commitment to accessibility <CollecticonExpandTopRight />
+            </AccessibilityStatementLink>
           </div>
           <CreditsInfo>
             <TintBox>
