@@ -28,6 +28,9 @@ import Partners from "../../home/partners";
 import { AccessibilityMenuItem } from "../../common/styles";
 import { CollecticonExpandTopRight } from '$veda-ui/@devseed-ui/collecticons';
 
+import { SUBSCRIPTION_URL } from "../../../constants";
+
+
 const PRESS_PATH = '/learn#press';
 
 
@@ -277,7 +280,7 @@ export default function PageFooter(props) {
                 <FooterMenuLink to={PRESS_PATH}>Press Info</FooterMenuLink>
               </li>
               <li>
-                <FooterMenuLink as="a" href="https://docs.google.com/forms/d/e/1FAIpQLSfDxq_jR3z_006WkUnNKriGFlAdXhiZxC0ppkxV9fDXSM_FxQ/viewform">
+                <FooterMenuLink as="a" href={SUBSCRIPTION_URL}>
                   Subscribe
                 </FooterMenuLink>
               </li>
