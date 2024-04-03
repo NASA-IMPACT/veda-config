@@ -28,9 +28,10 @@ import Partners from "../../home/partners";
 import { AccessibilityMenuItem } from "../../common/styles";
 import { CollecticonExpandTopRight } from '$veda-ui/@devseed-ui/collecticons';
 
+import { SUBSCRIPTION_URL } from "../../../constants";
+
+
 const PRESS_PATH = '/learn#press';
-const SUBSCRIPTION_PATH = '/public/subscription/index.html';
-const SUBSCRIPTION_URL = process.env.PUBLIC_URL ? process.env.PUBLIC_URL + SUBSCRIPTION_PATH : SUBSCRIPTION_PATH;
 
 
 const FooterInner = styled.div`
