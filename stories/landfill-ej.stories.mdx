@@ -1,6 +1,6 @@
 ---
 id: 'landfill-ej'
-name: Disproportionate Environmental Burdens A Study of Landfills
+name: Disproportionate Environmental Burdens: A Study of Landfills
 media:
   src: ::file ./landfill.jpg
   alt: Garbage pile in landfill.
@@ -26,10 +26,41 @@ taxonomy:
     **Disclaimer**: This study demonstrates innovative and practical applications of NASA Earth science data to highlight existing environmental inequities. Please note that the results have not undergone peer review.
 
     Environmental Justice (EJ) advocates for a fair distribution of environmental benefits and risks, regardless of race, color, or socioeconomic status [1]. In places such as Dallas, where proximity to landfills significantly impact health outcomes, environmental justice principles become especially relevant. 
+  </Prose>
+</Block>
 
+<Block>
+  <Prose>
     Since the General Accounting Office (GAO) [2] published “Siting Hazardous Waste Landfills and Their Correlation with Racial and Economic Status of Surrounding Communities,”  researchers from various disciplines such as law, sociology, public policy, geosciences, and economics have explored such relationships, using various measures of exposure, spatial scales, and statistical controls. Consistently, these studies have shown that while air quality has improved in the United States over the past several decades, people of color (POC), particularly Black and Hispanic American populations, bear an unequal burden of the environmental impacts stemming from landfills. Moreover, research into the roles of race and income have highlighted race as the most significant factor in determining exposure to environmental hazards. As with other EJ concerns, the underlying causes of systemic disparities in racial/ethnic air pollution exposure are complex and intertwined with historical patterns of exclusion and discrimination, perpetuating cycles of injustice that manifest in impacts on health, urban planning, and real estate values.
 
+  </Prose>
+  <Figure>
+      <Image
+      src={new URL('./dallas_redline.jpeg', import.meta.url).href}
+    />
+    <Caption attrAuthor='Data.gov' attrUrl='https://catalog.data.gov/dataset/redlining-maps-from-the-home-owners-loan-corporation-1937'>
+      Redlining in the Dallas-Metro. 
+    </Caption>
+  </Figure>
+</Block>
+
+<Block>
+    <Figure>
+      <Image
+      src={new URL('./stockton_redlining.jpg', import.meta.url).href}
+    />
+    <Caption attrAuthor='Data.gov' attrUrl='https://catalog.data.gov/dataset/redlining-maps-from-the-home-owners-loan-corporation-1937'>
+      Redlining in Stockton, CA. 
+    </Caption>
+  </Figure>
+  <Prose>
     The disparities in environmental burdens stem from practices such as freeway construction, redlining, and other forms of discrimination that have marginalized communities of color, displacing them from their support networks and clustering them in neighborhoods lacking resources but rife with health hazards. Initiated by the federally sponsored Home Owners’ Loan Corporation (HOLC) in the 1930s, these maps categorized neighborhoods into four grades based on security for emergency home lending: A (most desirable), B (still desirable), C (declining), and D (hazardous, i.e., redlined). Racial redlining effectively marked Black and brown neighborhoods as risky and unsuitable for loans, depriving them of essential infrastructure such as sewer and water systems. Despite the Fair Housing Act banning racial discrimination in housing in 1968, the legacy of explicit racial discrimination persists, shaping patterns of racial residential segregation today.  For instance, redlining, a historically discriminatory federal mortgage appraisal policy from the 1930s, continues to correlate with present-day air pollution disparities across 202 U.S. cities. For example, in 64% of grade D neighborhoods, the majority (>50%) of the population comprises people of color (POC), and in 74% of these neighborhoods, the median income is low to moderate. Redlining designations correlate with various exposures, including greenspace prevalence, tree canopy coverage, urban-heat exposure disparities, and health effects such as asthma, cancer, adverse birth outcomes, and overall urban health.
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
 
     Landfills are created for responsible waste disposal, and operate under federal regulations. While hazardous waste is federally regulated, individual states are responsible for establishing criteria for how non-hazardous  landfills operate and for monitoring compliance. Despite these regulations, they contribute to air and water pollution, with toxic substances seeping into groundwater. Environmental impacts of landfills include air pollution, aesthetic degradation, soil contamination, and water quality reduction, as well as unintended hosting of wildlife. Additionally, landfills generate significant noise pollution from heavy machinery and truck traffic, which further diminishes property values. Heavy truck traffic noise lowers property value by 30 to 50 times more than car traffic, as trucks emit noise levels 16 times louder than cars from a distance of 50 feet. 
 
@@ -62,9 +93,17 @@ taxonomy:
     2. SVI maps from the CDC indicate areas of relatively higher social disparities, which can highlight areas with greater vulnerability of the population. SVI includes the following 4 themes: Socioeconomic Status (Below Poverty, Unemployed, Income, No High School Diploma), Household Composition & Disability (Aged 65 or Older, Aged 17 or Younger, Civilian with a Disability, Single-Parent Households), Minority Status & Language (Minority, Speaks English “Less than Well”), and Housing Type & Transportation (Multi-Unit Structures, Mobile Homes, Crowding, No Vehicle, Group Quarters). The raster layers store the SVI values, which range from 0 to 1. In the SVI, low values represent low vulnerability while high values represent high vulnerability. 
 
     We identified four significant methane plumes from EMIT from landfills in Stockton, California (1) and Dallas, Texas (3). Zooming in on a particular area of various figures below shows that landfills emitting large methane plumes are disproportionately located in vulnerable communities. These populations, both in Stockton and Dallas, are characterized by individuals below the poverty line, unemployed, with low income and no high school diploma, living in multi-unit structures or mobile homes, and facing language barriers.
-
+    <Figure>
+      <Image
+      src={new URL('./EPA_landfill.gif', import.meta.url).href}
+    />
+    <Caption attrAuthor='Environmental Protection Agency' attrUrl='https://www.epa.gov/lmop/project-and-landfill-data-state'>
+      Landfill Count on National Map from the EPA. 
+    </Caption>
+  </Figure>
   </Prose>
 </Block>
+
 <Block>
   <Prose>
     ### Dallas
