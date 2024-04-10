@@ -36,9 +36,9 @@ taxonomy:
   </Prose>
   <Figure>
       <Image
-      src={new URL('./dallas_redline.jpeg', import.meta.url).href}
+      src={new URL('./dallas_redlining.jpg', import.meta.url).href}
     />
-    <Caption attrAuthor='Data.gov' attrUrl='https://catalog.data.gov/dataset/redlining-maps-from-the-home-owners-loan-corporation-1937'>
+    <Caption attrAuthor='Data.gov' attrUrl='https://dsl.richmond.edu/panorama/redlining/map/TX/Dallas/area_descriptions/D9/#loc=10/32.7942/-96.6598&adview=full'>
       Redlining in the Dallas-Metro. 
     </Caption>
   </Figure>
@@ -49,7 +49,7 @@ taxonomy:
       <Image
       src={new URL('./stockton_redlining.jpg', import.meta.url).href}
     />
-    <Caption attrAuthor='Data.gov' attrUrl='https://catalog.data.gov/dataset/redlining-maps-from-the-home-owners-loan-corporation-1937'>
+    <Caption attrAuthor='Data.gov' attrUrl='https://dsl.richmond.edu/panorama/redlining/map/CA/Stockton/areas#loc=13/37.9554/-121.2884'>
       Redlining in Stockton, CA. 
     </Caption>
   </Figure>
@@ -133,6 +133,30 @@ taxonomy:
 
 <ScrollytellingBlock>
   <Chapter
+    center={[-96.76046, 32.59319]}
+    zoom={10}
+      datasetId='landfill-emit'
+      layerId='landfill-emit'
+    datetime='2023-08-25'
+  >
+    ## Dallas
+
+    Dallas is the largest metropolitan area in Texas and the fourth largest in the United States. The DFW has experienced a consistent increased rate in population growth and diversity. According to 2023 census data, [Dallas’s](https://www.census.gov/quickfacts/fact/table/) 1,299,544 residents are 42.2% Hispanic, 3.7% Asian, 28.3% non-Hispanic white, and 23.6% black.
+
+  </Chapter>
+  <Chapter
+    center={[-96.76046, 32.59319]}
+    zoom={10}
+      datasetId='svi-overall'
+      layerId='social-vulnerability-index-overall'
+    datetime='2018-01-01'
+  >
+    ## Dallas
+
+    A 2020 study “Poisoned by Zip Code” by [Evelyn Mayo](https://paulquinn.edu/urban-research-initiative/) reveals a 15-year life expectancy difference between predominantly white and wealthier zip codes and those inhabited by black and brown residents in southern Dallas. Zoning policies concentrating air pollution in communities of color contribute to this health disparity. Also, the finding reveals that the census tracts hosting landfill sites in the Dallas area have lower property values than the non-host areas. The affordability of these neighborhoods' properties associated with these reduced property values closer to the landfills may have attracted low-income minority populations.
+
+  </Chapter>
+  <Chapter
     center={[-121.25466, 37.83618]}
     zoom={11}
       datasetId='landfill-emit'
@@ -151,6 +175,8 @@ taxonomy:
       layerId='social-vulnerability-index-overall'
     datetime='2018-01-01'
   >
+
+    ## Stockton
 
     Stockton residents live with a significant air pollution burden and one of the highest childhood asthma rates in the state. By Clean Air Act National Ambient Air Quality Standards, the region is in “Serious Nonattainment” – the highest classification possible – for PM2.5 air concentrations, and “Extreme Nonattainment” – the highest classification possible – for ozone air concentrations. The human impacts of this negative air quality are substantial: a nationwide study placed Stockton 12th on a list of the top U.S. cities impacted by PM2.5 concentrations, responsible for 61 excess deaths and over 50,000 “adversely impacted days” (days where people missed school and work or otherwise needed to restrict their activity) in 2017 alone.
 
