@@ -8,7 +8,7 @@ description: "
 ---
 
 import { EventsComponent } from './component'
-import { NEWS_ITEMS, EVENT_ITEMS } from './learn-page-content'
+import { NEWS_ITEMS, EVENT_ITEMS, NEWSLETTER_ITEMS } from './learn-page-content'
 import AnchorScroll from './AnchorScroll'
 
 import { SUBSCRIPTION_URL } from "../../constants";
@@ -49,6 +49,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel nunc mauris
   </Prose>
 </Block>
 
+
+<Block>
+  <Prose>
+    ## Newsletters 
+    <EventsComponent items={NEWSLETTER_ITEMS} />
+  </Prose>
+</Block>
 
 {/* <Block>
   <Prose>
