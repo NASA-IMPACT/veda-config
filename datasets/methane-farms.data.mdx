@@ -18,16 +18,16 @@ layers:
     name: Methane Emissions (mol m^-2 s^-1)
     type: raster
     description: "Gridded Methane Emission data for 2020. Quantifies methane in unites of mol per sq. meter per sec. Measurement of the flux methane into atmosphere from different anthropogenic sources. For this case, measures methane from manure management."
-    initialDatetime: oldest
+    initialDatetime: newest
     zoomExtent:
       - 0
       - 20
     sourceParams:
-      colormap_name: plasma_r
+      colormap_name: plasma
       rescale:
         - 0
         - 1000000000000
-      nodata: -999
+      nodata: 0
     compare:
       datasetId: svi-overall
       layerId: social-vulnerability-index-overall
