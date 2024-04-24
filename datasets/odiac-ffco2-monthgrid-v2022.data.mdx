@@ -64,6 +64,7 @@ layers:
       rescale:
         - -10
         - 60
+      nodata: 0
     compare:
       datasetId: odiac-ffco2-monthgrid-v2022
       layerId: co2-emissions
@@ -101,6 +102,8 @@ layers:
     analysis:
       metrics:
         - mean
+      sourceParams:
+        nodata: 0
     info:
       source: NASA / NIES
       spatialExtent: Global
