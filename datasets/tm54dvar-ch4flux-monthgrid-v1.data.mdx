@@ -38,6 +38,15 @@ taxonomy:
     values:
       - Ground Measurements
       - Model Output
+infoDescription: |
+  ::markdown 
+    - Temporal Extent: January 1999 - December 2016
+    - Temporal Resolution: Monthly
+    - Spatial Extent: Global    
+    - Spatial Resolution: 1° x 1°   
+    - Data Units: Grams of methane per square meter per year (g CH₄/m²/year)       
+    - Data Type: Research
+    - Data Latency: Approximately 2 years       
 layers:
   - id: total-ch4
     stacCol: tm54dvar-ch4flux-mask-monthgrid-v1
@@ -84,6 +93,16 @@ layers:
     analysis:
       metrics:
         - mean
+      sourceParams:
+        nodata: 9.96921e+36
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Monthly
+      unit: g CH₄/m²/year                  
+    media:
+      src: ::file ./tm54dvar-ch4flux-monthgrid-v1.thumbnails.total.png
+      alt: TM5-4DVar Isotopic CH₄ Inverse Fluxes - Total CH₄ Emission
   - id: microbial-ch4
     stacCol: tm54dvar-ch4flux-mask-monthgrid-v1
     name: Microbial CH₄ Emission
@@ -129,6 +148,16 @@ layers:
     analysis:
       metrics:
         - mean
+      sourceParams:
+        nodata: 9.96921e+36
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Monthly
+      unit: g CH₄/m²/year               
+    media:
+      src: ::file ./tm54dvar-ch4flux-monthgrid-v1.thumbnails.microbial.png
+      alt: TM5-4DVar Isotopic CH₄ Inverse Fluxes - Microbial CH₄ Emission
   - id: fossil-ch4
     stacCol: tm54dvar-ch4flux-mask-monthgrid-v1
     name: Fossil CH₄ Emission
@@ -174,6 +203,16 @@ layers:
     analysis:
       metrics:
         - mean
+      sourceParams:
+        nodata: 9.96921e+36
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Monthly 
+      unit: g CH₄/m²/year               
+    media:
+      src: ::file ./tm54dvar-ch4flux-monthgrid-v1.thumbnails.fossil.png
+      alt: TM5-4DVar Isotopic CH₄ Inverse Fluxes - Fossil CH₄ Emission
   - id: pyrogenic-ch4
     stacCol: tm54dvar-ch4flux-mask-monthgrid-v1
     name: Pyrogenic CH₄ Emission
@@ -219,6 +258,17 @@ layers:
     analysis:
       metrics:
         - mean
+      sourceParams:
+        nodata: 9.96921e+36
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Monthly
+      unit: g CH₄/m²/year               
+    media:
+      src: ::file ./tm54dvar-ch4flux-monthgrid-v1.thumbnails.pyrogenic.png
+      alt: TM5-4DVar Isotopic CH₄ Inverse Fluxes - Pyrogenic CH₄ Emission
+
 ---
 
 <Block type='wide'>

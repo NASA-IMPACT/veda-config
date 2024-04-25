@@ -36,6 +36,15 @@ taxonomy:
     values:
       - Satellite Observations
       - Model Output
+infoDescription: |
+  ::markdown
+    - Temporal Extent: January 1, 2015 - February 28, 2022      
+    - Temporal Resolution: Daily
+    - Spatial extent: Global    
+    - Spatial resolution: 0.5° x 0.625°   
+    - Data units: Parts per million (ppm)       
+    - Data type: Research
+    - Data Latency: 2-3 months        
 layers:
   - id: oco2-dryair-column
     stacCol: oco2geos-co2-daygrid-v10r
@@ -77,6 +86,17 @@ layers:
     analysis:
       metrics:
         - mean
+      sourceParams:
+        nodata: 0        
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Daily
+      unit: ppm        
+    media:
+      src: ::file ./oco2geos-co2-daygrid-v10r.thumbnails.daily.png
+      alt: OCO-2 GEOS Column CO₂ Concentrations - Average Dry-Air Column CO₂ (XCO₂)
+
 ---
 
 <Block type='wide'>

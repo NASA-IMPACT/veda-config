@@ -1,3 +1,16 @@
+export const NEWSLETTER_ITEMS = [
+  {
+    name: 'The inaugural US GHG Center Newsletter',
+    asLink : {
+      url: 'https://myemail-api.constantcontact.com/US-GHG-Center-Newsletter.html?soid=1141171816352&aid=TCM2bjPR30g'
+    },
+    media: {
+      src: new URL('./media/news/newsletter.jpg', import.meta.url).href,
+      alt: 'March 2024'
+    },
+    description: 'Volume 1.1, March 2024'
+  }
+]
 export const NEWS_ITEMS = [
   {
     name: 'US GHG Center announced at COP28',

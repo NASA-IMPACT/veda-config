@@ -27,6 +27,9 @@ import { useMediaQuery } from "$veda-ui-scripts/utils/use-media-query";
 import { getLinkProps } from "$veda-ui-scripts/utils/url";
 import Partners from "../../home/partners";
 import { AccessibilityMenuItem } from "../../common/styles";
+import { CollecticonExpandTopRight } from '$veda-ui/@devseed-ui/collecticons';
+
+import { SUBSCRIPTION_URL } from "../../../constants";
 
 
 const PRESS_PATH = '/learn#press';
@@ -111,31 +114,33 @@ const DisclaimerModalFooter = styled(ModalFooter)`
   margin-top: ${glsp(2)};
 `;
 
+const AccessibilityStatementLink = styled.a`
+  color: ${themeVal("color.link")} !important;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  display: inline-flex;
+  align-items: center;
+  margin-top: ${glsp(1.0)};
+
+  > svg {
+    margin-left: ${glsp(0.5)};
+  }
+`;
+
 const DISCLAIMER_MODALS_DISMISSED_KEY = "disclaimerModalsDismissedKey";
-const EXPLORE_PATH = "/explore";
+const EXPLORATION_PATH = "/exploration";
 
 const MODALS_CONTENT = {
-  [EXPLORE_PATH]: {
+  [EXPLORATION_PATH]: {
     headline: "Disclaimer",
     body: (
       <p>
-        This US GHG Center Explore visualization environment is an interactive
-        space for users to explore center data within a mapping environment.
-        Currently only one dataset at a time can be used within the environment.
+        This US GHG Center Exploration and Analysis environment is an interactive
+        space for users to explore center data within a mapping environment 
+        and review time series of basic statistics for each dataset.
         Users are advised to review the material on the Overview page to better
         understand the documentation pertaining to the data they are viewing.
-      </p>
-    ),
-  },
-  [ANALYSIS_PATH]: {
-    headline: "Disclaimer",
-    body: (
-      <p>
-        This US GHG Center analysis environment is an interactive space for
-        users to review time series of basic statistics for each dataset. All
-        users are advised to review the information provided on the dataset
-        landing page to better understand the data they are viewing. This
-        environment is intended to provide a means to explore temporal patterns
+        This environment is intended to provide a means to explore temporal patterns
         and is not intended for use in rigorous scientific data analysis.
       </p>
     ),
@@ -158,8 +163,7 @@ export default function PageFooter(props) {
   }, [currentPage]);
   const [dontShowAgain, setDontShowAgain] = useState(true);
   const [modalsDismissed, setModalsDismissed] = useState({
-    [EXPLORE_PATH]: false,
-    [ANALYSIS_PATH]: false,
+    [EXPLORATION_PATH]: false,
   });
 
   useEffect(() => {
@@ -242,8 +246,8 @@ export default function PageFooter(props) {
                 <FooterMenuLink to={DATASETS_PATH}>Data Catalog</FooterMenuLink>
               </li>
               <li>
-                <FooterMenuLink to={ANALYSIS_PATH}>
-                  Data Analysis
+                <FooterMenuLink to={EXPLORATION_PATH}>
+                  Data Exploration
                 </FooterMenuLink>
               </li>
               <li>
@@ -265,7 +269,7 @@ export default function PageFooter(props) {
                 <FooterMenuLink to={PRESS_PATH}>Press Info</FooterMenuLink>
               </li>
               <li>
-                <FooterMenuLink as="a" {...getLinkProps("https://docs.google.com/forms/d/e/1FAIpQLSfDxq_jR3z_006WkUnNKriGFlAdXhiZxC0ppkxV9fDXSM_FxQ/viewform")}>
+                <FooterMenuLink as="a" href={SUBSCRIPTION_URL}>
                   Subscribe
                 </FooterMenuLink>
               </li>
@@ -299,21 +303,26 @@ export default function PageFooter(props) {
         </FooterContent>
         <FooterContacts>
           <div>
-            <Link to="/">
-              <span>By</span> <strong>US GHG Center</strong> <span>on</span>{" "}
-              <time dateTime={String(nowDate.getFullYear())}>
-                {nowDate.getFullYear()}
-              </time>
-            </Link>
-            {" • "}
-            <Tip
-              content={`Released on ${format(
-                new Date(+props.appBuildTime),
-                "PPPP"
-              )} (veda-ui v${props.appUiVersion})`}
-            >
-              <span>v{props.appVersion}</span>
-            </Tip>
+            <div>
+              <Link to="/">
+                <span>By</span> <strong>US GHG Center</strong> <span>on</span>{" "}
+                <time dateTime={String(nowDate.getFullYear())}>
+                  {nowDate.getFullYear()}
+                </time>
+              </Link>
+              {" • "}
+              <Tip
+                content={`Released on ${format(
+                  new Date(+props.appBuildTime),
+                  "PPPP"
+                )} (veda-ui v${props.appUiVersion})`}
+              >
+                <span>v{props.appVersion}</span>
+              </Tip>
+            </div>
+            <AccessibilityStatementLink href="https://www.nasa.gov/accessibility/" target='_blank' rel='noopener'>
+              Our commitment to accessibility <CollecticonExpandTopRight />
+            </AccessibilityStatementLink>
           </div>
           <CreditsInfo>
             <TintBox>

@@ -8,8 +8,11 @@ description: "
 ---
 
 import { EventsComponent } from './component'
-import { NEWS_ITEMS, EVENT_ITEMS } from './learn-page-content'
+import { NEWS_ITEMS, EVENT_ITEMS, NEWSLETTER_ITEMS } from './learn-page-content'
 import AnchorScroll from './AnchorScroll'
+
+import { SUBSCRIPTION_URL } from "../../constants";
+
 
 <AnchorScroll />
 <Block >
@@ -19,7 +22,7 @@ import AnchorScroll from './AnchorScroll'
 
     The US GHG Center website is always evolving with new data and information. This page highlights US GHG Center news, trainings, and workshop opportunities.  
 
-    If you would like to stay informed, please [subscribe to our email newsletter](https://docs.google.com/forms/d/e/1FAIpQLSfDxq_jR3z_006WkUnNKriGFlAdXhiZxC0ppkxV9fDXSM_FxQ/viewform).
+    If you would like to stay informed, please <a href={SUBSCRIPTION_URL}>subscribe to our email newsletter</a>.
   </Prose>
 </Block>
 
@@ -46,6 +49,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel nunc mauris
   </Prose>
 </Block>
 
+
+<Block>
+  <Prose>
+    ## Newsletters 
+    <EventsComponent items={NEWSLETTER_ITEMS} />
+  </Prose>
+</Block>
 
 {/* <Block>
   <Prose>
