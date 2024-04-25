@@ -127,30 +127,19 @@ const AccessibilityStatementLink = styled.a`
 `;
 
 const DISCLAIMER_MODALS_DISMISSED_KEY = "disclaimerModalsDismissedKey";
-const EXPLORE_PATH = "/explore";
+const EXPLORATION_PATH = "/exploration";
 
 const MODALS_CONTENT = {
-  [EXPLORE_PATH]: {
+  [EXPLORATION_PATH]: {
     headline: "Disclaimer",
     body: (
       <p>
-        This US GHG Center Explore visualization environment is an interactive
-        space for users to explore center data within a mapping environment.
-        Currently only one dataset at a time can be used within the environment.
+        This US GHG Center Exploration and Analysis environment is an interactive
+        space for users to explore center data within a mapping environment 
+        and review time series of basic statistics for each dataset.
         Users are advised to review the material on the Overview page to better
         understand the documentation pertaining to the data they are viewing.
-      </p>
-    ),
-  },
-  [ANALYSIS_PATH]: {
-    headline: "Disclaimer",
-    body: (
-      <p>
-        This US GHG Center analysis environment is an interactive space for
-        users to review time series of basic statistics for each dataset. All
-        users are advised to review the information provided on the dataset
-        landing page to better understand the data they are viewing. This
-        environment is intended to provide a means to explore temporal patterns
+        This environment is intended to provide a means to explore temporal patterns
         and is not intended for use in rigorous scientific data analysis.
       </p>
     ),
@@ -173,8 +162,7 @@ export default function PageFooter(props) {
   }, [currentPage]);
   const [dontShowAgain, setDontShowAgain] = useState(true);
   const [modalsDismissed, setModalsDismissed] = useState({
-    [EXPLORE_PATH]: false,
-    [ANALYSIS_PATH]: false,
+    [EXPLORATION_PATH]: false,
   });
 
   useEffect(() => {
@@ -257,8 +245,8 @@ export default function PageFooter(props) {
                 <FooterMenuLink to={DATASETS_PATH}>Data Catalog</FooterMenuLink>
               </li>
               <li>
-                <FooterMenuLink to={ANALYSIS_PATH}>
-                  Data Analysis
+                <FooterMenuLink to={EXPLORATION_PATH}>
+                  Data Exploration
                 </FooterMenuLink>
               </li>
               <li>
