@@ -24,6 +24,7 @@ import {
 } from "$veda-ui-scripts/utils/routes";
 import { useFeedbackModal } from "$veda-ui-scripts/components/common/layout-root";
 import { useMediaQuery } from "$veda-ui-scripts/utils/use-media-query";
+import { getLinkProps } from "$veda-ui-scripts/utils/url";
 import Partners from "../../home/partners";
 import { AccessibilityMenuItem } from "../../common/styles";
 import { CollecticonExpandTopRight } from '$veda-ui/@devseed-ui/collecticons';
@@ -256,7 +257,7 @@ export default function PageFooter(props) {
               </li>
               {!!process.env.HUB_URL && !!process.env.HUB_NAME && (
                 <li>
-                  <FooterMenuLink as="a" href={process.env.HUB_URL}>
+                  <FooterMenuLink as="a" {...getLinkProps(process.env.HUB_URL)}>
                     {process.env.HUB_NAME}
                   </FooterMenuLink>
                 </li>
@@ -330,9 +331,7 @@ export default function PageFooter(props) {
             <p>
               U.S. Greenhouse Gas Center Responsible Official:{" "}
               <a
-                href="https://appliedsciences.nasa.gov/about/our-team/argyro-kavvada"
-                target="_blank"
-                rel="noopener noreferrer"
+                {...getLinkProps("https://appliedsciences.nasa.gov/about/our-team/argyro-kavvada")} 
               >
                 <strong>Argyro Kavvada</strong>
               </a>
