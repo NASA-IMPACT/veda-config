@@ -6,9 +6,9 @@ usage:
   - url: 'https://us-ghg-center.github.io/ghgc-docs/cog_transformation/oco2geos-co2-daygrid-v10r.html'
     label: Notebook showing data transformation to COG for ingest to the US GHG Center
     title: 'Data Transformation Notebook'
-  - url: 'https://us-ghg-center.github.io/ghgc-docs/user_data_notebooks/oco2geos-co2-daygrid-v10r_User_Notebook.html'
-    label: Notebook to read, visualize, and explore data statistics
-    title: 'Sample User Notebook'
+  - url: 'https://us-ghg-center.github.io/ghgc-docs/datausage.html'
+    label: Notebooks to read, visualize, and explore data statistics
+    title: 'Data Usage Notebooks'
   - url: 'https://hub.ghg.center/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FUS-GHG-Center%2Fghgc-docs&urlpath=tree%2Fghgc-docs%2Fuser_data_notebooks%2Foco2geos-co2-daygrid-v10r_User_Notebook.ipynb&branch=main'
     label: Run example notebook
     title: Interactive Session in the US GHG Center JupyterHub (requires account)
@@ -99,20 +99,18 @@ layers:
 
 ---
 
-<Block type='wide'>
+<Block>
   <Prose>
+    **Temporal Extent:** January 1, 2015 - February 28, 2022      
+    **Temporal Resolution:** Daily<br /> 
+    **Spatial extent:** Global    
+    **Spatial resolution:** 0.5° x 0.625°   
+    **Data units:**  Parts per million (ppm)       
+    **Data type:** Research<br /> 
+    **Data Latency:** 2-3 months
+
     In July 2014, NASA successfully launched the first dedicated Earth remote sensing satellite to study atmospheric carbon dioxide (CO₂)  from space. The Orbiting Carbon Observatory-2 (OCO-2) is an exploratory science mission designed to collect space-based global measurements of atmospheric CO₂ with the precision, resolution, and coverage needed to characterize sources and sinks (fluxes) on regional scales (≥1000 km). This dataset provides global gridded, daily column-averaged carbon dioxide (XCO₂) concentrations from January 1, 2015 - February 28, 2022.  The data are  derived from OCO-2 observations that were input to the Goddard Earth Observing System (GEOS) Constituent Data Assimilation System (CoDAS), a modeling and data assimilation system maintained by NASA’s Global Modeling and Assimilation Office (GMAO). Concentrations are measured in moles of carbon dioxide per mole of dry air (mol CO₂/mol dry) at a spatial resolution of 0.5° x 0.625°. Data assimilation synthesizes simulations and observations, adjusting modeled atmospheric constituents like CO₂ to reflect observed values. With the support of NASA’s Carbon Monitoring System (CMS) Program and the OCO Science Team, this dataset was produced as part of the OCO-2 mission which provides the highest quality space-based XCO₂ retrievals to date.     
 
-    - **Temporal Extent:** January 1, 2015 - February 28, 2022      
-    - **Temporal Resolution:** Daily
-    - **Spatial extent:** Global    
-    - **Spatial resolution:** 0.5° x 0.625°   
-    - **Data units:**  Parts per million (ppm)       
-    - **Data type:** Research
-    - **Data Latency:** 2-3 months
-
-
-    **Scientific Details:**  Though the OCO-2 mission provides high quality space-based XCO₂ retrievals, the data are characterized by large gaps in coverage due to the narrow 10 km OCO-2 ground track and an inability to measure through clouds and thick aerosols. Several different methods have been explored to produce spatially complete L3 (gridded) XCO₂ fields from the satellite data, including averaging, kriging, and data assimilation. Data assimilation synthesizes simulations and observations, adjusting the state of atmospheric constituents like CO₂ to reflect observed values, thus gap-filling the observations when and where none are unavailable based on previous observations. Compared to other methods, data assimilation has the advantage that it results in estimates based on the collective scientific understanding, notably of the Earth’s carbon cycle and atmospheric transport. For additional details on how this data was derived, please refer to Section 2 of the [OCO-2 GEOS L3 XCO₂ Product User’s Guide](https://docserver.gesdisc.eosdis.nasa.gov/public/project/OCO/OCO2_GEOS_L3_User_Guide.pdf).  
   </Prose>
 </Block>
 <Block>
@@ -124,12 +122,15 @@ layers:
     Daily random error statistics (i.e. precisions) are calculated using [Desroziers et al. (2005) diagnostics](https://doi.org/10.1256/qj.05.108), and can be found in the precision data layer accompanying the XCO₂ data layer. For more information on how these diagnostics are used, please refer to the “Uncertainty quantification” section of the [OCO-2 GEOS L3 XCO₂ Product User’s Guide](https://docserver.gesdisc.eosdis.nasa.gov/public/project/OCO/OCO2_GEOS_L3_User_Guide.pdf). For estimating systematic errors, analyses against independent data are performed. For more information on these analyses, please refer to Section 3 of the [OCO-2 GEOS L3 XCO₂ Product User’s Guide](https://docserver.gesdisc.eosdis.nasa.gov/public/project/OCO/OCO2_GEOS_L3_User_Guide.pdf).
 
     ## Disclaimer
-    All data provided in the U.S. GHG Center has been transformed from the original format (NetCDF) into Cloud Optimized GeoTIFF ([COG](https://www.cogeo.org/)). Careful quality checks are used to ensure data transformation has been performed correctly. Apart from the data format, the OCO-2 GEOS Assimilated CO₂ Concentrations dataset is identical to the [OCO2_GEOS_L3CO2_DAY dataset available at GES DISC](https://doi.org/10.5067/Y9M4NM9MPCGH). 
-
+    This datasethas been transformed from the original format (NetCDF) into Cloud Optimized GeoTIFF ([COG](https://www.cogeo.org/)) for display in the US GHG Center. Careful quality checks are used to ensure data transformation has been performed correctly. Apart from the data format, the OCO-2 GEOS Assimilated CO₂ Concentrations dataset is identical to the [OCO2_GEOS_L3CO2_DAY dataset available at GES DISC](https://doi.org/10.5067/Y9M4NM9MPCGH). 
+    
     The full title of the dataset, [OCO-2 GEOS Level 3 daily, 0.5x0.625 assimilated CO2 V10r](https://doi.org/10.5067/Y9M4NM9MPCGH), has been shortened for display on the GHG Center website. The short name of the source dataset is [OCO2_GEOS_L3CO2_DAY](https://doi.org/10.5067/Y9M4NM9MPCGH), but it is referred to as oco2geos-co2-daygrid-v10r in the GHG Center system.  
 
     Users should understand that during Arctic and Antarctic nights and in cloudy conditions, there is no observational coverage from OCO-2. The data assimilation approach to gap filling ensures that when direct OCO-2 observations are unavailable, concentration estimates are informed by a combination of upwind OCO-2 observations, observations of land surface processes, and millions of meteorological observations that constrain atmospheric circulation.
     
+    ## Scientific Details
+    Though the OCO-2 mission provides high quality space-based XCO₂ retrievals, the data are characterized by large gaps in coverage due to the narrow 10 km OCO-2 ground track and an inability to measure through clouds and thick aerosols. Several different methods have been explored to produce spatially complete L3 (gridded) XCO₂ fields from the satellite data, including averaging, kriging, and data assimilation. Data assimilation synthesizes simulations and observations, adjusting the state of atmospheric constituents like CO₂ to reflect observed values, thus gap-filling the observations when and where none are unavailable based on previous observations. Compared to other methods, data assimilation has the advantage that it results in estimates based on the collective scientific understanding, notably of the Earth’s carbon cycle and atmospheric transport. For additional details on how this data was derived, please refer to Section 2 of the [OCO-2 GEOS L3 XCO₂ Product User’s Guide](https://docserver.gesdisc.eosdis.nasa.gov/public/project/OCO/OCO2_GEOS_L3_User_Guide.pdf).  
+
     ## Key Publications
     Weir, B., Oda, T., Ott, L., & Schmidt, G. A. (2022). Assessing progress toward the Paris climate agreement from space. *Environmental Research Letters, 17*(11), 111002. [https://doi.org/10.1088/1748-9326/ac998c](https://doi.org/10.1088/1748-9326/ac998c)
     
@@ -148,6 +149,10 @@ layers:
     
     Yuen, K. (n.d.). *Home*. Orbiting Carbon Observatory-2. [https://ocov2.jpl.nasa.gov/](https://ocov2.jpl.nasa.gov/)    
     
+    ## Learn More
+    - Learn more about how OCO-2 observations and measurements from other satellites contribute to GHG monitoring and models in the [Tracking Greenhouse Gas Cycles Data Insight](https://earth.gov/ghgcenter/stories/tracking-greenhouse-gas-cycles) 
+    - Learn more about the [OCO-2 mission](https://ocov2.jpl.nasa.gov/)
+
     ## Acknowledgment
     The development of this dataset has been supported by NASA’s [Carbon Monitoring System (CMS) Program](https://carbon.nasa.gov/cms/) and the [OCO Science Team](https://ocov2.jpl.nasa.gov/mission/teams/).    
     
