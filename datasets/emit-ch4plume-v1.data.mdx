@@ -86,36 +86,24 @@ layers:
         - '#f8df25'
 ---
 
-<Block type='wide'>
+<Block>
   <Prose>
-    Methane is a strong greenhouse gas that is invisible to the human eye. Large methane emissions, typically referred to as point source emissions, represent a significant proportion of total methane emissions from the production, transport, and processing of oil and natural gas, landfills, and other sources. By measuring the spectral fingerprint of methane, EMIT can map areas of high methane concentration over background levels in the atmosphere, identifying plume complexes, and estimating the methane enhancements. This dataset includes methane plume complexes measured within the extent and timeframe of EMIT observations. EMIT is on the International Space Station and therefore does not sample everywhere on Earth nor can methane plumes be derived for all locations observed. 
+    **Temporal Extent:** August 1, 2022 - Ongoing<br />
+    **Temporal Resolution:** Variable (based on ISS orbit, solar illumination, and target mask)<br />
+    **Spatial Extent:** 52°N to 52°S latitude within target mask<br />
+    **Spatial Resolution:** 60 m<br />
+    **Data Units:** Parts per million meter (ppm-m)<br />
+    **Data Type:** Research<br />
+    **Data Latency:** EMIT plume complex identification primarily occurs about a week after the observation and can vary with ISS data downlink rates and the need for manual review. Some plume complexes may be identified rapidly, but with improving algorithms, additional older plume complexes may continue to appear in the dataset over time.
 
-    - **Temporal Extent:** August 1, 2022 - Ongoing
-    - **Temporal Resolution:** Variable (based on ISS orbit, solar illumination, and target mask)
-    - **Spatial Extent:** 52°N to 52°S latitude within target mask
-    - **Spatial Resolution:** 60 m
-    - **Data Units:** Parts per million meter (ppm-m)
-    - **Data Type:** Research
-    - **Data Latency:** EMIT plume complex identification primarily occurs about a week after the observation and can vary with ISS data downlink rates and the need for manual review. Some plume complexes may be identified rapidly, but with improving algorithms, additional older plume complexes may continue to appear in the dataset over time.
-
-    **Scientific Details:** EMIT has demonstrated the capacity to characterize methane point source emissions by measuring gas absorption features in the shortwave infrared. The EMIT GHG point source plumes provided here build on a substantial history of remote greenhouse gas detections from airborne imaging spectrometers (Thorpe et al., 2013, 2014, 2017; Thompson et al., 2015; Frankenberg et al., 2016; Duren et al., 2019; Cusworth et al., 2022). We leverage a per-column adaptive matched filter for the primary detection, due to the speed and efficacy of identifying subtle signatures. Plumes are identified and assessed by scientists following a protocol in order to provide only instances with maximum confidence. For each EMIT point source plume complex, methane enhancements in units of ppm-m are provided. See the [ATBD](https://lpdaac.usgs.gov/documents/1696/EMIT_GHG_ATBD_V1.pdf) for more details.
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
+    Methane is a strong greenhouse gas that is invisible to the human eye. Large methane emissions, typically referred to as point source emissions, represent a significant proportion of total methane emissions from the production, transport, and processing of oil and natural gas, landfills, and other sources. By measuring the spectral fingerprint of methane, EMIT can map areas of high methane concentration over background levels in the atmosphere, identifying plume complexes, and estimating the methane enhancements. This dataset includes methane plume complexes measured within the extent and timeframe of EMIT observations. EMIT is on the International Space Station and therefore does not sample everywhere on Earth nor can methane plumes be derived for all locations observed.
   </Prose>
-</Block>    
-<Block type="wide">
+</Block>
+<Block>
   <Prose>
-    **Attention!** 
+    **Attention!**
     The location of the markers in the visualization environment below represent the location of maximum enhancement within a plume and does not indicate a source location.
-    </Prose>
+  </Prose>
 </Block>
 <Block type="wide">
   <Figure>
@@ -135,7 +123,10 @@ layers:
 
     ## Disclaimer
     Uncertainty in the methane (ppm-m) depends on instrument, observation, and surface factors as described in the ATBD by Broderick, et al. 2023 (see link in references below). An uncertainty value (ppm-m) is calculated and reported for each plume complex. As described in the ATBD, EMIT plume complexes are manually identified and reviewed. While we publish high confidence examples, false positives can occur and when identified these cases are removed from subsequent data releases.
-    
+
+    ## Scientific Details
+    EMIT has demonstrated the capacity to characterize methane point source emissions by measuring gas absorption features in the shortwave infrared. The EMIT GHG point source plumes provided here build on a substantial history of remote greenhouse gas detections from airborne imaging spectrometers (Thorpe et al., 2013, 2014, 2017; Thompson et al., 2015; Frankenberg et al., 2016; Duren et al., 2019; Cusworth et al., 2022). We leverage a per-column adaptive matched filter for the primary detection, due to the speed and efficacy of identifying subtle signatures. Plumes are identified and assessed by scientists following a protocol in order to provide only instances with maximum confidence. For each EMIT point source plume complex, methane enhancements in units of ppm-m are provided. See the [ATBD](https://lpdaac.usgs.gov/documents/1696/EMIT_GHG_ATBD_V1.pdf) for more details.
+
     ## Key Publications
     Thorpe, A.K., et al., Attribution of individual methane and carbon dioxide emission sources using EMIT observations from space, *Science Advances* (in review).
 
@@ -155,6 +146,11 @@ layers:
     C. Frankenberg, A. K. Thorpe, D. R. Thompson, G. Hulley, E. A. Kort, N. Vance, J. Borchardt, T. Krings, K. Gerilowski, C. Sweeney, S. Conley, B. D. Bue, A. D. Aubrey, S. Hook, R. O. Green, Airborne methane remote measurements reveal heavytail flux distribution in Four Corners region. *Proceedings of the National Academy of Sciences of the United States of America. 113*, 9734–9739 (2016).
 
     D. H. Cusworth, A. K. Thorpe, A. K. Ayasse, D. Stepp, J. Heckler, G. P. Asner, C. E. Miller, V. Yadav, J. W. Chapman, M. L. Eastwood, R. O. Green, B. Hmiel, D. R. Lyon, R. M. Duren, Strong methane point sources contribute a disproportionate fraction of total emissions across multiple basins in the United States. *Proceedings of the National Academy of Sciences. 119*, e2202338119 (2022).
+
+    ## Learn More
+    - EMIT data are available through the NASA LP DAAC and [additional information is available](https://lpdaac.usgs.gov/data/get-started-data/collection-overview/missions/emit-overview/#emit-metadata)
+    - The Jet Propulsion Lab (JPL) contains [VISIONS - The EMIT open data portal](https://earth.jpl.nasa.gov/emit/data/data-portal/coverage-and-forecasts/)
+    - See how EMIT contributes to new technologies to detect and quantify large methane release events in the [Discovering Large Methane Emission Events with Remote Measurement Data Insight](https://earth.gov/ghgcenter/stories/discovering-large-methane-emissions)
 
     ## Acknowledgment
     We would like to acknowledge the contributions of the entire EMIT engineering and science teams and the ISS team for enabling the EMIT mission. We thank NASA’s Earth Science Division with special thanks to Dr. Jack Kaye for continued support of the greenhouse gas application.

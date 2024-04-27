@@ -6,9 +6,9 @@ usage:
   - url: 'https://us-ghg-center.github.io/ghgc-docs/cog_transformation/tm54dvar-ch4flux-monthgrid-v1.html'
     label: Notebook showing data transformation to COG for ingest to the US GHG Center
     title: 'Data Transformation Notebook'
-  - url: 'https://us-ghg-center.github.io/ghgc-docs/user_data_notebooks/tm54dvar-ch4flux-monthgrid-v1_User_Notebook.html'
-    label: Notebook to read, visualize, and explore data statistics
-    title: 'Sample Data Notebook'
+  - url: 'https://us-ghg-center.github.io/ghgc-docs/datausage.html'
+    label: Notebooks to read, visualize, and explore data statistics
+    title: 'Data Usage Notebooks'
   - url: 'https://hub.ghg.center/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FUS-GHG-Center%2Fghgc-docs&urlpath=tree%2Fghgc-docs%2Fuser_data_notebooks%2Ftm54dvar-ch4flux-monthgrid-v1_User_Notebook.ipynb&branch=main'
     label: Run example notebook
     title: Interactive Session in the US GHG Center JupyterHub (requires account)
@@ -275,21 +275,17 @@ layers:
 
 ---
 
-<Block type='wide'>
-  <Prose>
+<Block>
+  <Prose>   
+    **Temporal Extent:** January 1999 - December 2016<br />
+    **Temporal Resolution:** Monthly<br />
+    **Spatial Extent:** Global    
+    **Spatial Resolution:** 1° x 1°   
+    **Data Units:** Grams of methane per square meter per year (g CH₄/m²/year)       
+    **Data Type:** Research<br />
+    **Data Latency:** Approximately 2 years
+
     Surface methane (CH₄) emissions are derived from atmospheric measurements of methane and its ¹³C carbon isotope content. Different sources of methane contain different ratios of the two stable isotopologues, ¹²CH₄ and ¹³CH₄. This makes normally indistinguishable collocated sources of methane, say from agriculture and oil and gas exploration, distinguishable. The National Oceanic and Atmospheric Administration (NOAA) collects whole air samples from its global cooperative network of flasks (https://gml.noaa.gov/ccgg/about.html), which are then analyzed for methane and other trace gases. A subset of those flasks are also analyzed for ¹³C of methane in collaboration with the Institute of Arctic and Alpine Research at the University of Colorado Boulder. Scientists at the National Aeronautics and Space Administration (NASA) and NOAA used those measurements of methane and ¹³C of methane in conjunction with a model of atmospheric circulation to estimate emissions of methane separated by three source types, microbial, fossil and pyrogenic. Microbial emissions are produced by microbial decomposition of present-day organic matter, such as in wetlands, agricultural fields, livestock and landfills. Fossil emissions come from the breakdown of ancient carbonaceous matter deep underground, such as natural gas, coal bed methane, and small amounts of naturally occurring geologic seeps. Finally, pyrogenic emissions come from the burning of present-day organic matter, such as from wildfires and biofuels. These three sources of methane come with slightly different ¹³C content, and therefore can be separated given enough atmospheric measurements. This dataset presents monthly methane emissions from microbial, fossil and pyrogenic sources, along with a layer of total methane emissions from all three sources combined, at 1° resolution from 1999 to 2016.      
-    
-    - **Temporal Extent:** January 1999 - December 2016
-    - **Temporal Resolution:** Monthly
-    - **Spatial Extent:** Global    
-    - **Spatial Resolution:** 1° x 1°   
-    - **Data Units:** Grams of methane per square meter per year (g CH₄/m²/year)       
-    - **Data Type:** Research
-    - **Data Latency:** Approximately 2 years
-
-    **Scientific Details:**  Surface emissions were derived using an atmospheric inverse model described in [Basu et al. 2022](https://doi.org/10.5194/acp-22-15351-2022). The modeling framework – including the transport model (Tracer Model 5 – Four-Dimensional Variational model (TM5-4DVar)), the atmospheric chemistry setup, and the specification of spatiotemporally explicit source signatures – are described in [Lan et al. 2021](https://doi.org/10.1029/2021GB007000). Several different inversions were performed by [Basu et al. 2022](https://doi.org/10.5194/acp-22-15351-2022), both as sensitivity tests (for example to test the impact of assumed sources signatures and atmospheric chemistry on the results) and to test specific hypotheses (for example to attribute the post-2007 growth in methane). The emissions shown here correspond to the “best case” simulation from [Basu et al. 2022](https://doi.org/10.5194/acp-22-15351-2022), labeled as “CH₄+δ¹³CH₄” in that publication.
-
-    The atmospheric inverse model was run at 3° (longitude) x 2° (latitude) globally to estimate monthly surface emissions. The atmospheric inversion problem is under-constrained, and therefore inversely estimated emissions cannot be interpreted at the grid scale. Therefore, to present 1°x1° emission maps for the U.S. GHG Center, prior 1°x1° emissions were scaled to match the posterior continental and global totals for each source type and year.
 
   </Prose>
 </Block>
@@ -302,9 +298,14 @@ layers:
     Evaluating the accuracy and uncertainty of gridded emissions data is challenging because of the lack of direct physical measurements on grid scales. The emissions presented here were transported by an atmospheric model, and the resulting methane and ¹³C of methane fields were compared to atmospheric measurements of methane and ¹³C of methane globally over multiple decades. Under that transformation and within the bounds of model and observational uncertainty, these emissions satisfy the spatial patterns and time trends seen in the atmospheric measurements.
 
     ## Disclaimer
-    All data provided in the U.S. GHG Center has been transformed from the original format (NetCDF) into Cloud Optimized GeoTIFF ([COG](https://www.cogeo.org/)). Careful quality checks are used to ensure data transformation has been performed correctly.
+    This dataset has been transformed from its original format (NetCDF) into Cloud Optimized GeoTIFF ([COG](https://www.cogeo.org/)) for display in the US GHG Center. Careful quality checks are used to ensure data transformation has been performed correctly.
 
     The emissions presented here are consistent with but not identical to the inversion result “CH₄+δ¹³CH₄” in [Basu et al. 2022](https://doi.org/10.5194/acp-22-15351-2022). Annual continental and global totals of these emissions are identical to those reported in [Basu et al. 2022](https://doi.org/10.5194/acp-22-15351-2022), while sub-continental and monthly patterns in these emissions are determined by the prior emissions used in [Basu et al. 2022](https://doi.org/10.5194/acp-22-15351-2022).
+
+   ## Scientific Details
+   Surface emissions were derived using an atmospheric inverse model described in [Basu et al. 2022](https://doi.org/10.5194/acp-22-15351-2022). The modeling framework – including the transport model (Tracer Model 5 – Four-Dimensional Variational model (TM5-4DVar)), the atmospheric chemistry setup, and the specification of spatiotemporally explicit source signatures – are described in [Lan et al. 2021](https://doi.org/10.1029/2021GB007000). Several different inversions were performed by [Basu et al. 2022](https://doi.org/10.5194/acp-22-15351-2022), both as sensitivity tests (for example to test the impact of assumed sources signatures and atmospheric chemistry on the results) and to test specific hypotheses (for example to attribute the post-2007 growth in methane). The emissions shown here correspond to the “best case” simulation from [Basu et al. 2022](https://doi.org/10.5194/acp-22-15351-2022), labeled as “CH₄+δ¹³CH₄” in that publication.
+
+   The atmospheric inverse model was run at 3° (longitude) x 2° (latitude) globally to estimate monthly surface emissions. The atmospheric inversion problem is under-constrained, and therefore inversely estimated emissions cannot be interpreted at the grid scale. Therefore, to present 1°x1° emission maps for the U.S. GHG Center, prior 1°x1° emissions were scaled to match the posterior continental and global totals for each source type and year.
 
     ## Key Publications
     Basu, S., Lan, X., Dlugokencky, E., Michel, S., Schwietzke, S., Miller, J. B., Bruhwiler, L., Oh, Y., Tans, P. P., Apadula, F., Gatti, L. V., Jordan, A., Necki, J., Sasakawa, M., Morimoto, S., Di Iorio, T., Lee, H., Arduini, J., & Manca, G. (2022). Estimating emissions of methane consistent with atmospheric measurements of methane and δ¹³C of methane. *Atmospheric Chemistry and Physics Discussions*, 1–38. [https://doi.org/10.5194/acp-22-15351-2022](https://doi.org/10.5194/acp-22-15351-2022)
@@ -323,6 +324,10 @@ layers:
     Schwietzke, S., Sherwood, O. A., Bruhwiler, L. M. P., Miller, J. B., Etiope, G., Dlugokencky, E. J., Michel, S. E., Arling, V. A., Vaughn, B. H., White, J. W. C., & Tans, P. P. (2016). Upward revision of global fossil fuel methane emissions based on isotope database. *Nature, 538*, 88–91. [https://doi.org/10.1038/nature19797](https://doi.org/10.1038/nature19797)
 
     Sherwood, O. A., Schwietzke, S., & Lan, X. (2021). Global Inventory of Fossil and Non-fossil δ13C-CH₄ Source Signature Measurements for Improved Atmospheric Modeling, Database DOI: [https://doi.org/10.15138/qn55-e011](https://doi.org/10.15138/qn55-e011)
+
+    ## Learn More
+    - Learn more about methane isotopes on [NOAA’s website](https://research.noaa.gov/2021/06/17/new-analysis-shows-microbial-sources-fueling-rise-of-atmospheric-methane/)
+    - Learn about how different methane isotopes can help identify methane sources in the [Tracking Greenhouse Gas Cycles Data Insight](https://earth.gov/ghgcenter/stories/tracking-greenhouse-gas-cycles)
 
     ## Acknowledgment
     This work was supported by funding from the National Aeronautics and Space Administration (NASA) and the National Oceanic and Atmospheric Administration (NOAA). Measurements of atmospheric methane and ¹³C of methane were supported by several partner agencies and laboratories globally as described in [Basu et al. 2022](https://doi.org/10.5194/acp-22-15351-2022).
