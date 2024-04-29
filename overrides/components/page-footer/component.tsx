@@ -138,12 +138,12 @@ const MODALS_CONTENT = {
         This Exploration and Analysis environment is an interactive space 
         for users to visually examine data within a mapping environment 
         and to create time series of basic statistics for dataset layers. 
-        The visualization uses area weighting to derive values of pixels 
-        at higher latitudes.
-        This environment is intended to provide users a means to explore 
-        spatial and temporal patterns and is not intended for use in 
-        rigorous scientific data analysis. Please visit the dataset overview 
-        pages by clicking the (i) for complete documentation of the data shown.
+        The statistics calculation ensures correct representation of data
+        across latitudes (area weighting / equal area reprojection).
+        This environment is intended for quickly exploring spatial and temporal 
+        patterns and not for use in rigorous scientific data analysis. 
+        For complete documentation of the data shown, please visit the dataset 
+        overview pages by clicking the (i) on each data layer.
       </p>
     ),
   },
