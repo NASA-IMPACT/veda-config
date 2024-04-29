@@ -135,13 +135,15 @@ const MODALS_CONTENT = {
     headline: "Disclaimer",
     body: (
       <p>
-        This US GHG Center Exploration and Analysis environment is an interactive
-        space for users to explore center data within a mapping environment 
-        and review time series of basic statistics for each dataset.
-        Users are advised to review the material on the Overview page to better
-        understand the documentation pertaining to the data they are viewing.
-        This environment is intended to provide a means to explore temporal patterns
-        and is not intended for use in rigorous scientific data analysis.
+        This Exploration and Analysis environment is an interactive space 
+        for users to visually examine data within a mapping environment 
+        and to create time series of basic statistics for dataset layers. 
+        The visualization uses area weighting to derive values of pixels 
+        at higher latitudes.
+        This environment is intended to provide users a means to explore 
+        spatial and temporal patterns and is not intended for use in 
+        rigorous scientific data analysis. Please visit the dataset overview 
+        pages by clicking the (i) for complete documentation of the data shown.
       </p>
     ),
   },
