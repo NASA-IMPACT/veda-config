@@ -45,7 +45,7 @@ module.exports = {
     tempBanner:
         "Register for the webinar - An Overview of The Global Greenhouse Gas Watch (G3W) - by Gianpaolo Balsamo, May 8th  at 12 noon ET.",
     tempBannerUrl:
-        "https://nasaenterprise.webex.com/webappng/sites/nasaenterprise/meeting/register/dd51c5f23ae94c948b30191151ad6768?ticket=4832534b00000005d9ebe088afb404cf50c741a479faab69f74ebfcbefd909f9d2f44a8072544937&timestamp=1714513723949&RGID=rd916bf09633aa7d4f9fe87eb6ff67fe3",
+        "https://nasaenterprise.webex.com/webappng/sites/nasaenterprise/meeting/register/dd51c5f23ae94c948b30191151ad6768?ticket=4832534b000000059f0c457771b39c8f878fe988ef141be4763ae8a235642625004bdb21d54b0e11&timestamp=1714591524812&RGID=rd916bf09633aa7d4f9fe87eb6ff67fe3",
     tempBannerExpires:
         "2024-05-08T12:00:00-04:00"
   },
