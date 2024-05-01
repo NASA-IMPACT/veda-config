@@ -47,7 +47,7 @@ module.exports = {
     tempBannerUrl:
         "https://nasaenterprise.webex.com/webappng/sites/nasaenterprise/meeting/register/dd51c5f23ae94c948b30191151ad6768?ticket=4832534b00000005d9ebe088afb404cf50c741a479faab69f74ebfcbefd909f9d2f44a8072544937&timestamp=1714513723949&RGID=rd916bf09633aa7d4f9fe87eb6ff67fe3",
     tempBannerExpires:
-        "2024-04-29T13:00:00-05:00" // Feb 20th, 1 PM EST
+        "2024-05-08T12:00:00-04:00"
   },
 
   theme: {
