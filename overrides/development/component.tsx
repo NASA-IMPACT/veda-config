@@ -20,7 +20,7 @@ export default function Component() {
   return (
     <FoldProse>
       <p>
-      The current US GHG Center portal reflects a second beta release (v{process.env.APP_VERSION}) available April 29, 2024. 
+      The current US GHG Center portal reflects a second beta release (v{process.env.APP_VERSION}) available May 6, 2024. 
       More releases are planned throughout 2024 as new datasets and features are added. 
       While in beta mode, the portal will undergo design changes and content additions. 
       The currently available greenhouse gas information is accurate and ready to be used for research and decision making.
