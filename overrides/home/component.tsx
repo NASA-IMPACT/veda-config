@@ -3,7 +3,7 @@ import { NavLink } from "$veda-ui/react-router-dom";
 import styled from "$veda-ui/styled-components";
 import { glsp, themeVal, media } from "$veda-ui/@devseed-ui/theme-provider";
 import { Button } from "$veda-ui/@devseed-ui/button";
-import { CollecticonArrowRight } from "$veda-ui/@devseed-ui/collecticons";
+import { CollecticonArrowRight, CollecticonCirclePlay } from "$veda-ui/@devseed-ui/collecticons";
 import Hug from "$veda-ui-scripts/styles/hug";
 import { VarHeading } from "$veda-ui-scripts/styles/variable-components";
 import { variableGlsp } from "$veda-ui-scripts/styles/variable-utils";
@@ -121,6 +121,7 @@ export default function HomeComponent() {
               size="xlarge"
               variation="primary-fill"
             >
+              <CollecticonCirclePlay />
               Tour the US GHG Center
             </Button>
             <Button
