@@ -10,8 +10,8 @@ import { variableGlsp } from "$veda-ui-scripts/styles/variable-utils";
 
 import Partners from "./partners";
 import Keypoints from "./keypoints";
-import { ArrowLink } from "./arrow-link";
 import Banner from './banner';
+import VideoModal from "../components/video-modal";
 
 const HomeContent = styled(Hug)`
   padding: ${variableGlsp(2.5, 0)};
@@ -86,7 +86,16 @@ const InfoCalloutHeadline = styled.div`
   }
 `;
 
+const Buttons = styled.div`
+  display: flex;
+  gap: ${glsp()};
+  justify-content: center;
+`;
+
 export default function HomeComponent() {
+  const [showModal, setShowModal] = React.useState<boolean>(false);
+  const handleOpenModal = () => setShowModal(true);
+  
   return (
     <>
     <Banner />
@@ -106,9 +115,23 @@ export default function HomeComponent() {
           greenhouse gas areas of study, as shown below. The US GHG Center 
           also encourages stakeholder feedback and ideas for future expansion.
           </p>
-          <ArrowLink to="/stories/intro-us-ghg-center">
-            Introduction to the US GHG Center
-          </ArrowLink>
+          <Buttons>
+            <Button
+              onClick={handleOpenModal}
+              size="xlarge"
+              variation="primary-fill"
+            >
+              Tour the US GHG Center
+            </Button>
+            <Button
+              forwardedAs={NavLink}
+              to="/stories/intro-us-ghg-center"
+              size="xlarge"
+              variation="primary-fill"
+            >
+              Learn More
+            </Button>
+          </Buttons>
         </IntroHeadline>
         <Keypoints />
         <ActionsBlock>
@@ -144,6 +167,17 @@ export default function HomeComponent() {
           </Button>
         </InfoCalloutInner>
       </InfoCallout>
+      {
+        showModal && (
+          <VideoModal 
+            iframe={<iframe width="560" height="315" src="https://www.youtube.com/embed/4JVd7pYel0w?si=2at04mgt69Wzt5Mm" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen={true}></iframe>}
+            display={showModal}
+            onClose={() => setShowModal(false)}
+            width={`${560*1.5}px`} // Iframe's original embed width value 1.5x bigger
+            height={`${315*1.5}px`} // Iframe's original embed height value 1.5x bigger
+          />
+        )
+      }
     </>
   );
 }
