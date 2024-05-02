@@ -54,11 +54,7 @@ export default function VideoModal(props: VideoModalProps) {
           <CollecticonXmarkSmall size='large' color={theme.color!['surface']}/>
         </Button>
       )}
-      content={
-        <>
-          {iframe}
-        </>
-      }
+      content={iframe}
     />
 
   );
