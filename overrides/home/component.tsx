@@ -171,7 +171,7 @@ export default function HomeComponent() {
       {
         showModal && (
           <VideoModal 
-            iframe={<iframe width="560" height="315" src="https://www.youtube.com/embed/4JVd7pYel0w?si=2at04mgt69Wzt5Mm" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen={true}></iframe>}
+            iframe={<iframe width="560" height="315" src="https://www.youtube.com/embed/6xWdIlWqhBE?si=NpOVMavs4IgKE297" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen={true}></iframe>}
             display={showModal}
             onClose={() => setShowModal(false)}
             width={`${560*1.5}px`} // Iframe's original embed width value 1.5x bigger
