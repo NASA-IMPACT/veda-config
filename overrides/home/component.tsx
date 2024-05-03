@@ -128,7 +128,7 @@ export default function HomeComponent() {
               forwardedAs={NavLink}
               to="/stories/intro-us-ghg-center"
               size="xlarge"
-              variation="primary-fill"
+              variation="base-outline"
             >
               Learn More
             </Button>
