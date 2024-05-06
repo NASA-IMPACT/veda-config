@@ -24,9 +24,9 @@ taxonomy:
 layers:
   - id: no2-monthly
     stacCol: no2-monthly
-    name: No2
+    name: Nitrogen Dioxide (monthly)
     type: raster
-    description: 'Global nitrogen dioxide data organized into monthly metrics'
+    description: 'Global nitrogen dioxide (NO₂) data organized into monthly metrics'
     zoomExtent:
       - 0
       - 20
@@ -57,9 +57,9 @@ layers:
         - "#DD7059"
   - id: no2-monthly-diff
     stacCol: no2-monthly-diff
-    name: No2 (Diff)
+    name: Nitrogen Dioxide (monthly difference)
     type: raster
-    description: 'Global nitrogen dioxide data which displays the difference from the same time 1 year ago'
+    description: 'Global nitrogen dioxide (NO₂) data which displays the difference from the same time 1 year ago'
     zoomExtent:
       - 0
       - 20
@@ -68,8 +68,8 @@ layers:
       bidx: 1
       colormap_name: rdbu_r
       rescale:
-        - -8e15
-        - 8e15
+        - -3e15
+        - 3e15
     compare:
       datasetId: no2
       layerId: no2-monthly-diff
@@ -89,9 +89,9 @@ layers:
         - "#DD7059"
   - id: OMI_trno2-COG
     stacCol: OMI_trno2-COG
-    name: OMI_trno2 Annual
+    name: Nitrogen Dioxide Total and Tropospheric Column (NASA OMI/Aura)
     type: raster
-    description: "NASA OMI/Aura Nitrogen Dioxide (NO2) Total and Tropospheric Column"
+    description: "NASA OMI/Aura Nitrogen Dioxide (NO₂) Total and Tropospheric Column"
     zoomExtent:
       - 0
       - 16
