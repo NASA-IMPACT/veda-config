@@ -51,7 +51,7 @@ export const EVENT_ITEMS = [
   {
     name: 'Policy Speaker Series: An Overview of the Global Greenhouse Gas Watch (G3W)',
     asLink : {
-      url: 'https://drive.google.com/file/d/1rsamxBvOmVNKbFgmIdFJa1s8F84Pigio/view?usp=drive_link'
+      url: 'https://carbon.nasa.gov/docs/May%202024%20PSS%20Talk%20Announcement.pdf'
     },
     media: {
       src: new URL('./media/events/GHGC_CMS_Joint_Policy_Speaker_Series_G3W_Webinar.png', import.meta.url).href,
