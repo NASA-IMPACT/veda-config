@@ -4,11 +4,15 @@ import styled from "$veda-ui/styled-components";
 import Image from "$veda-ui-scripts/components/common/blocks/images";
 import { media } from "$veda-ui/@devseed-ui/theme-provider";
 
+import { getLinkProps } from "$veda-ui-scripts/utils/url";
+
 import epaImg from "../media/epa.svg";
 import nasaImg from "../media/nasa.png";
 import nistImg from "../media/nist.png";
 import nistImgNeg from "../media/nist-neg.png";
 import noaaImg from "../media/noaa.png";
+
+
 
 const LogoWrapper = styled.div`
   grid-column: 1 / -1;
@@ -36,13 +40,13 @@ export default function Partners(props: {
 
   return (
     <LogoWrapper>
-      <a href="https://www.nasa.gov/">
+      <a {...getLinkProps("https://www.nasa.gov/")}>
         <Image src={nasaImg} alt="NASA logo" height={squareLogoHeight} />
       </a>
-      <a href="https://www.epa.gov/">
+      <a {...getLinkProps("https://www.epa.gov/")}>
         <Image src={epaImg} alt="EPA logo" height={squareLogoHeight} />
       </a>
-      <a href="https://www.nist.gov/">
+      <a {...getLinkProps("https://www.nist.gov/")}>
         {variation === "positive" ? (
           <Image src={nistImg} alt="NIST logo" height={wideLogoHeight} />
         ) : (
@@ -50,7 +54,7 @@ export default function Partners(props: {
         )}
       </a>
 
-      <a href="https://www.noaa.gov/">
+      <a {...getLinkProps("https://www.noaa.gov/")}>
         <Image src={noaaImg} alt="NOAA logo" height={squareLogoHeight} />
       </a>
     </LogoWrapper>

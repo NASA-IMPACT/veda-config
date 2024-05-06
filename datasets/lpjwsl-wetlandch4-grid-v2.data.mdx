@@ -1,0 +1,395 @@
+---
+id: lpjeosim-wetlandch4-grid-v2
+name: Wetland Methane Emissions, LPJ-EOSIM Model
+description: Global monthly and daily 0.5 degree resolution estimates of wetland methane emissions from the LPJ-EOSIM model, version 2
+usage:
+  - url: 'https://us-ghg-center.github.io/ghgc-docs/datausage.html'
+    label: Notebooks to read, visualize, and explore data statistics
+    title: 'Data Usage Notebooks'
+  - url: 'https://hub.ghg.center/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FUS-GHG-Center%2Fghgc-docs&urlpath=tree%2Fghgc-docs%2Fuser_data_notebooks%2Flpjeosim-wetlandch4-grid-v2_User_Notebook.ipynb&branch=main'
+    label: Run example notebook
+    title: Interactive Session in the US GHG Center JupyterHub (requires account)
+  - url: https://dljsq618eotzp.cloudfront.net/browseui/index.html#lpjeosim-wetlandch4-daygrid-v2/
+    label: Browse and download the data
+    title: Data Browser
+media:
+  src: ::file ./ch4-wetland--cover.jpeg
+  alt: svs visualiztion
+  author:
+    name: Mark SubbaRao (NASA/GSFC)
+    url: https://svs.gsfc.nasa.gov/5054
+taxonomy:
+  - name: Topics
+    values:
+      - Natural Emissions and Sinks
+  - name: Source
+    values:
+      - NASA
+  - name: Gas
+    values:
+      - CH₄
+  - name: Product Type
+    values:
+      - Model Output
+infoDescription: |
+  ::markdown
+    - Temporal Extent: January 1, 1990 - ongoing
+    - Temporal Resolution: Daily and Monthly
+    - Spatial Extent: Global
+    - Spatial Resolution: 0.5° x 0.5°
+    - Data Units: Grams of methane per meter squared per day(g CH₄/m²/day) and grams of methane per meter squared per month (g CH₄/m²/month)  
+    - Data Type: Research
+    - Data Latency: Updated bimonthly with a ~6 week latency
+
+layers:
+  - id: ch4-wetlands-emissions-m-ens
+    stacCol: lpjeosim-wetlandch4-monthgrid-v2
+    name: (Monthly) Ensemble Mean Wetland CH₄ Emissions LPJ-EOSIM Model 
+    type: raster
+    description: Monthly CH₄ emissions from wetlands constructed using an ensemble of climate forcing data sources input to the LPJ-EOSIM model (mean of ERA5 and MERRA-2 layers)
+    initialDatetime: newest
+    projection:
+      id: 'equirectangular'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: ensemble-mean-ch4-wetlands-emissions
+      colormap_name: magma
+      rescale:
+        - 0
+        - 3
+      nodata: -9999
+    compare:
+      datasetId: lpjeosim-wetlandch4-grid-v2
+      layerId: ch4-wetlands-emissions-m-ens
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit:
+        label: g CH₄/m²/month
+      type: gradient
+      min: 0
+      max: 3
+      stops:
+        - '#2c115f'
+        - '#721f81'
+        - '#b73779'
+        - '#f1605d'
+        - '#feb078'    
+    analysis:
+      metrics:
+        - mean
+      sourceParams:
+        dst_crs: "+proj=cea"
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Monthly
+      unit: g CH₄/m²/month
+
+  - id: ch4-wetlands-emissions-d-ens
+    stacCol: lpjeosim-wetlandch4-daygrid-v2
+    name: (Daily) Ensemble Mean Wetland CH₄ Emissions LPJ-EOSIM Model 
+    type: raster
+    description: Daily CH₄ emissions from wetlands constructed using an ensemble of climate forcing data sources input to the LPJ-EOSIM model (mean of ERA5 and MERRA-2 layers)
+    initialDatetime: newest
+    projection:
+      id: 'equirectangular'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: ensemble-mean-ch4-wetlands-emissions
+      colormap_name: magma
+      rescale:
+        - 0
+        - 0.1
+      nodata: -9999
+    compare:
+      datasetId: lpjeosim-wetlandch4-grid-v2
+      layerId: ch4-wetlands-emissions-d-ens
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit:
+        label: g CH₄/m²/day
+      type: gradient
+      min: 0
+      max: 0.1
+      stops:
+        - '#2c115f'
+        - '#721f81'
+        - '#b73779'
+        - '#f1605d'
+        - '#feb078'    
+    analysis:
+      metrics:
+        - mean
+      sourceParams:
+        dst_crs: "+proj=cea"
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Daily
+      unit: g CH₄/m²/day           
+  - id: ch4-wetlands-emissions-m-era
+    stacCol: lpjeosim-wetlandch4-monthgrid-v2
+    name: (Monthly) (ERA5) Wetland CH₄ Emissions LPJ-EOSIM Model 
+    type: raster
+    description: Monthly CH₄ from wetlands constructed using ERA5 climate forcing data input to the LPJ-EOSIM model
+    initialDatetime: newest
+    projection:
+      id: 'equirectangular'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: era5-ch4-wetlands-emissions
+      colormap_name: magma
+      rescale:
+        - 0
+        - 3
+      nodata: -9999
+    compare:
+      datasetId: lpjeosim-wetlandch4-grid-v2
+      layerId: ch4-wetlands-emissions-m-era
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit:
+        label: g CH₄/m²/month
+      type: gradient
+      min: 0
+      max: 3
+      stops:
+        - '#2c115f'
+        - '#721f81'
+        - '#b73779'
+        - '#f1605d'
+        - '#feb078'    
+    analysis:
+      metrics:
+        - mean
+      sourceParams:
+        dst_crs: "+proj=cea"
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Monthly
+      unit: g CH₄/m²/month          
+  - id: ch4-wetlands-emissions-d-era
+    stacCol: lpjeosim-wetlandch4-daygrid-v2
+    name: (Daily) (ERA5) Wetland CH₄ Emissions LPJ-EOSIM Model 
+    type: raster
+    description: Daily CH₄ from wetlands constructed using ERA5 climate forcing data input to the LPJ-EOSIM model
+    initialDatetime: newest
+    projection:
+      id: 'equirectangular'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: era5-ch4-wetlands-emissions
+      colormap_name: magma
+      rescale:
+        - 0
+        - 0.1
+      nodata: -9999
+    compare:
+      datasetId: lpjeosim-wetlandch4-grid-v2
+      layerId: ch4-wetlands-emissions-d-era
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit:
+        label: g CH₄/m²/day
+      type: gradient
+      min: 0
+      max: 0.1
+      stops:
+        - '#2c115f'
+        - '#721f81'
+        - '#b73779'
+        - '#f1605d'
+        - '#feb078'    
+    analysis:
+      metrics:
+        - mean
+      sourceParams:
+        dst_crs: "+proj=cea"
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Daily
+      unit: g CH₄/m²/day   
+  - id: ch4-wetlands-emissions-m-merra
+    stacCol: lpjeosim-wetlandch4-monthgrid-v2
+    name: (Monthly) (MERRA-2) Wetland CH₄ Emissions LPJ-EOSIM Model 
+    type: raster
+    description: Monthly CH₄ emissions from wetlands constructed using MERRA-2 climate forcing data input to the LPJ-EOSIM model
+    initialDatetime: newest
+    projection:
+      id: 'equirectangular'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: merra2-ch4-wetlands-emissions
+      colormap_name: magma
+      rescale:
+        - 0
+        - 3
+      nodata: -9999
+    compare:
+      datasetId: lpjeosim-wetlandch4-grid-v2
+      layerId: ch4-wetlands-emissions-m-merra
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit:
+        label: g CH₄/m²/month
+      type: gradient
+      min: 0
+      max: 3
+      stops:
+        - '#2c115f'
+        - '#721f81'
+        - '#b73779'
+        - '#f1605d'
+        - '#feb078'    
+    analysis:
+      metrics:
+        - mean
+      sourceParams:
+        dst_crs: "+proj=cea"
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Monthly
+      unit: g CH₄/m²/month              
+  - id: ch4-wetlands-emissions-d-merra
+    stacCol: lpjeosim-wetlandch4-daygrid-v2
+    name: (Daily) (MERRA-2) Wetland CH₄ Emissions LPJ-EOSIM Model 
+    type: raster
+    description: Daily CH₄ emissions from wetlands constructed using MERRA-2 climate forcing data input to the LPJ-EOSIM model
+    initialDatetime: newest
+    projection:
+      id: 'equirectangular'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: merra2-ch4-wetlands-emissions
+      colormap_name: magma
+      rescale:
+        - 0
+        - 0.1
+      nodata: -9999
+    compare:
+      datasetId: lpjeosim-wetlandch4-grid-v2
+      layerId: ch4-wetlands-emissions-d-merra
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit:
+        label: g CH₄/m²/day
+      type: gradient
+      min: 0
+      max: 0.1
+      stops:
+        - '#2c115f'
+        - '#721f81'
+        - '#b73779'
+        - '#f1605d'
+        - '#feb078'    
+    analysis:
+      metrics:
+        - mean
+      sourceParams:
+        dst_crs: "+proj=cea"
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Daily
+      unit: g CH₄/m²/day                        
+---
+
+<Block>
+  <Prose>
+    **Temporal extent:** January 1, 1990 - ongoing<br /> 
+    **Temporal resolution:** Daily and Monthly     
+    **Spatial extent:** Global    
+    **Spatial resolution:** 0.5° x 0.5°<br />
+    **Data units:** Grams of methane per meter squared per day (g CH₄/m²/day) and grams of methane per meter squared per month (g CH₄/m²/month)     
+    **Data type:** Research <br />
+    **Data Latency:** Updated bimonthly with a ~6 week latency <br />
+    
+    Methane (CH₄) emissions from vegetated wetlands are estimated to be the largest natural source of methane in the global CH₄ budget, contributing to roughly one third of the total of natural and anthropogenic emissions. Wetland CH₄ is produced by microbes breaking down organic matter in the oxygen deprived environment of inundated soils. Due to limited data availability, the details of the role of wetland CH₄ emissions have thus far been underrepresented. Using the Earth Observation SIMulator  version (LPJ-EOSIM) of the Lund-Potsdam-Jena Dynamic Global Vegetation Model (LPJ-DGVM) global CH₄ emissions from wetlands are estimated at 0.5 x 0.5 degree spatial resolution. By simulating wetland extent and using characteristics of inundated areas, such as wetland soil moisture, temperature, and carbon content, the model provides estimates of CH₄ quantities emitted into the atmosphere. This dataset shows concentrated methane sources from tropical and high latitude ecosystems. The LPJ-EOSIM Wetland Methane Emissions dataset consists of global daily and monthly model estimates of terrestrial wetland methane emissions from 1990 to the present, with data added bimonthly. The monthly dataset is computed by summing the daily data for each month. The estimates are regularly used in conjunction with NASA’s Goddard Earth Observing System (GEOS) model to simulate the impact of wetlands and other methane sources on atmospheric methane concentrations, to compare against satellite and airborne data, and to improve understanding and prediction of wetland emissions. This is a new version and replaces the LPJ-wsl dataset previously available in the GHG Center.  
+
+  </Prose>
+</Block>
+<Block>
+  <Prose>
+    ## Source Data Product Citation
+    This data product will soon be available at the NASA Land Processes Distributed Active Archive Data Center (LP DAAC). Once available, the data product citation will be provided here. In the meantime, please refer to the [Zhang et al. 2017 publication](https://doi.org/10.1073/pnas.1618765114) for more information.
+
+    ## Version History
+    The current dataset version is v2, which replaced v1 (named LPJ-wsl) in the US GHG Center in April 2024. Summary of version 2 update changes:
+    - Model updates and improvements, including improved data latency with more regular updates and driver-specific model recalibration
+    - Addition of two new data layers: LPJ-EOSIM model estimated wetland methane emissions using ERA5 climate input forcing data, and using the mean of both MERRA-2 and ERA5 climate input forcing data (mean ensemble). For the daily data layer, the v1 dataset only provided LPJ-EOSIM estimates using MERRA-2 climate input forcing data until the end of 2021. 
+    - v2 data is delivered to the US GHG Center in Cloud Optimized GeoTIFF (COG) format (v1 data was in NetCDF format and transformed to COG)
+    - v2 data is provided in units of g CH₄/m²/day and g CH₄/m²/mon
+    - v1 data remains accessible from the [GMAO website](https://gmao.gsfc.nasa.gov/gmaoftp/lott/CH4/wetlands/) 
+
+    ## Dataset Accuracy
+    Shifting spatial patterns of vascular plants affect the transport of CH₄ from soil into the atmosphere. The absence of this effect from the LPJ-EOSIM model could lead to the underestimation of CH₄ emissions. Additionally, the biogeographical distribution of methane-producing microbes and the mechanisms by which they grow and generate byproducts may have a significant impact on CH₄ emissions but are not well understood, adding additional uncertainty to current models. Uncertainties in radiative forcing estimates also contribute to model output uncertainty. Care should be taken when running analyses, as these data are model simulations and not Earth observations. 
+    
+    The wetland CH₄ data presented here have been subjected to rigorous quality checks, including comprehensive benchmarking against ground-truth model simulations and observations. Each file has been visually and programmatically checked for outliers or missing data, but errors can still occur. In the event of a reprocessing, a note will be posted on this website and the dataset will be updated. 
+    
+    ## Scientific Details
+    For this dataset, wetlands are defined as land areas that are either permanently or seasonally saturated, excluding small ponds, lakes, and coastal wetlands. Permanent wetlands comprise three general types: mineral wetlands (swamps and marshes), peatlands (permafrost, bog, fens), and seasonally flooded shallow water (floodplains). The methane-producing area is thus linked to inundation and freeze−thaw dynamics, which change geographically and temporally in response to soil water dynamics. Wetland emissions of CH₄ are estimated as a function of substrate, soil temperature, and soil moisture. The net flux of CH₄ is defined as the heterotrophic respiration for the area of a grid cell covered by wetland, scaled by a fixed ratio of soil carbon to CH₄ emissions and by a modifier that varies the CH₄ emission intensity for different biomes. The LPJ-EOSIM land surface model uses a two-layer bucket model to simulate soil hydrology and uses a modified version of the topography-based hydrological model (TOPMODEL) to determine the likely distribution and dynamics of permafrost and inundated areas. Input climate forcing data comes from two different data products: the Modern-Era Retrospective analysis for Research and Applications Version 2 (MERRA-2) data and the European Centre for Medium-Range Weather Forecasts (ECMWF) Re-Analysis (ERA5). This LPJ-EOSIM dataset contains 3 data layers: two wetland methane emission estimates forced by MERRA-2 and ERA5 respectively, and a mean ensemble data layer which is computed as the mean of the two wetland datasets forced by MERRA-2 and ERA5. The ERA5 and MERRA-2 reanalysis datasets differ in how they represent variables such as precipitation and temperature, which affects wetland methane estimates in LPJ-EOSIM. The ensemble mean product is recommended for use as it has performed better against known data, as measured by the [ILAMB](https://www.ilamb.org/) benchmarking tool, than the two constituent MERRA-2 and ERA5 data products.  
+
+    ## Key Publications
+    Zhang, Z., Zimmermann, N.E., Stenke, A., Li, X., Hodson, E.L., Zhu, G., Huang, C., & Poulter, B. (2017). Emerging role of wetland methane emissions in driving 21st century climate change. *Proceedings of the National Academy of Sciences, 114(36), 9647–9652*. [https://doi.org/10.1073/pnas.1618765114](https://doi.org/10.1073/pnas.1618765114)
+
+    ## Other Relevant Publications
+    Poulter, B., Bousquet, P., Canadell, J. G., Ciais, P., Peregon, A., Saunois, M., Arora, V. K., Beerling, D. J., Brovkin, V., Jones, C.D., Joos, F., Gedney, N., Ito, A., Kleinen, T., Koven, C. D., McDonald, K., Melton, J. R., Peng, C., Peng, S., … Qiuan, Z. (2017). Global wetland contribution to 2000-2012 atmospheric methane growth rate dynamics. *Environmental Research Letters, 12*(9), 094013. [https://doi.org/10.1088/1748-9326/aa8391](https://doi.org/10.1088/1748-9326/aa8391)
+
+    Saunois, M., Stavert, A.R., Poulter, B., Bousquet, P., Canadell, J. G., Jackson, R.B., Raymond, P. A., Dlugokencky, E. J., Houweling, S., Patra, P. K., Ciais, P., Arora, V. K., Bastviken, D., Bergamaschi, P., Blake, D. R., Brailsford, G., Bruhwiler, L., Carlson, K. M., Carrol, M., … Q Zhuang. 2020. The Global Methane Budget 2000–2017. *Earth System Science Data, 12*(3), 561–1623. [https://doi.org/10.5194/essd-12-1561-2020](https://doi.org/10.5194/essd-12-1561-2020)
+
+    Sitch, S., Smith, B., Prentice, I.C., Arneth, A., Bondeau, A., Cramer, W., Kaplan, J.O., Levis, S., Lucht, W., Sykes, M.T., Thonicke, K. & Venevsky, S. (2003). Evaluation of ecosystem dynamics, plant geography and terrestrial carbon cycling in the LPJ dynamic global vegetation model. *Global Change Biology, 9*(2), 161-185. [https://doi.org/10.1046/j.1365-2486.2003.00569.x](https://doi.org/10.1046/j.1365-2486.2003.00569.x)
+
+    Zhang, Z., Zimmermann, N.E., Calle, L., Hurtt, G., Chatterjee, A., & Poulter, B. (2018). Enhanced response of global wetland methane emissions to the 2015–2016 El Niño-Southern Oscillation event. *Environmental Research Letters, 13*(7), 074009. [https://doi.org/10.1088/1748-9326/aac939](https://doi.org/10.1088/1748-9326/aac939)
+
+    Zhang, Z., Zimmermann, N. E., Kaplan, J. O., & Poulter, B. (2016). Modeling spatiotemporal dynamics of global wetlands: comprehensive evaluation of a new sub-grid TOPMODEL parameterization and uncertainties. *Biogeosciences, 13*(5), 1387–1408. [https://doi.org/10.5194/bg-13-1387-2016](https://doi.org/10.5194/bg-13-1387-2016)
+    
+    ## Learn More
+    - See a video of methane emissions from wetlands around the globe in the [Intro to the US GHG Center Data Insight](https://earth.gov/ghgcenter/stories/intro-us-ghg-center)
+    - See how wetlands in the tropics and in higher latitude areas differ in their contribution to global wetland methane emissions in the [Tracking Greenhouse Gas Cycles Data Insight](https://earth.gov/ghgcenter/stories/tracking-greenhouse-gas-cycles)
+
+    ## Acknowledgment
+    The LPJ-EOSIM model is based on the development of the Lund-Potsdam-Jena Dynamic Global Vegetation Model (LPJ-DGVM) [by researchers at institutions in Germany and Sweden](https://doi.org/10.1046/j.1365-2486.2003.00569.x) (Potsdam and Jena, Germany & Lund, Sweden).    
+    
+    ## License
+    [Creative Commons Zero v1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC0 1.0)   
+
+    ## Data Stewardship
+    - [Data Workflow](https://us-ghg-center.github.io/ghgc-docs/data_workflow/lpjeosim-wetlandch4-grid-v2_Data_Flow.html)
+    - Data Transformation Code: n/a - The dataset was utilized in its original, unaltered format
+    - [US GHG Center Data Intake Processing and Verification Report](https://us-ghg-center.github.io/ghgc-docs/processing_and_verification_reports/lpjeosim-wetlandch4-grid-v2_Processing%20and%20Verification%20Report.html)
+
+  </Prose>
+</Block>

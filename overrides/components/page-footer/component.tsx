@@ -24,9 +24,13 @@ import {
 } from "$veda-ui-scripts/utils/routes";
 import { useFeedbackModal } from "$veda-ui-scripts/components/common/layout-root";
 import { useMediaQuery } from "$veda-ui-scripts/utils/use-media-query";
+import { getLinkProps } from "$veda-ui-scripts/utils/url";
 import Partners from "../../home/partners";
 import { AccessibilityMenuItem } from "../../common/styles";
 import { CollecticonExpandTopRight } from '$veda-ui/@devseed-ui/collecticons';
+
+import { SUBSCRIPTION_URL } from "../../../constants";
+
 
 const PRESS_PATH = '/learn#press';
 
@@ -124,31 +128,22 @@ const AccessibilityStatementLink = styled.a`
 `;
 
 const DISCLAIMER_MODALS_DISMISSED_KEY = "disclaimerModalsDismissedKey";
-const EXPLORE_PATH = "/explore";
+const EXPLORATION_PATH = "/exploration";
 
 const MODALS_CONTENT = {
-  [EXPLORE_PATH]: {
+  [EXPLORATION_PATH]: {
     headline: "Disclaimer",
     body: (
       <p>
-        This US GHG Center Explore visualization environment is an interactive
-        space for users to explore center data within a mapping environment.
-        Currently only one dataset at a time can be used within the environment.
-        Users are advised to review the material on the Overview page to better
-        understand the documentation pertaining to the data they are viewing.
-      </p>
-    ),
-  },
-  [ANALYSIS_PATH]: {
-    headline: "Disclaimer",
-    body: (
-      <p>
-        This US GHG Center analysis environment is an interactive space for
-        users to review time series of basic statistics for each dataset. All
-        users are advised to review the information provided on the dataset
-        landing page to better understand the data they are viewing. This
-        environment is intended to provide a means to explore temporal patterns
-        and is not intended for use in rigorous scientific data analysis.
+        This Exploration and Analysis environment is an interactive space 
+        for users to visually examine data within a mapping environment 
+        and to create time series of basic statistics for dataset layers. 
+        The statistics calculation ensures correct representation of data
+        across latitudes (area weighting / equal area reprojection).
+        This environment is intended for quickly exploring spatial and temporal 
+        patterns and not for use in rigorous scientific data analysis. 
+        For complete documentation of the data shown, please visit the dataset 
+        overview pages by clicking the (i) on each data layer.
       </p>
     ),
   },
@@ -170,8 +165,7 @@ export default function PageFooter(props) {
   }, [currentPage]);
   const [dontShowAgain, setDontShowAgain] = useState(true);
   const [modalsDismissed, setModalsDismissed] = useState({
-    [EXPLORE_PATH]: false,
-    [ANALYSIS_PATH]: false,
+    [EXPLORATION_PATH]: false,
   });
 
   useEffect(() => {
@@ -254,8 +248,8 @@ export default function PageFooter(props) {
                 <FooterMenuLink to={DATASETS_PATH}>Data Catalog</FooterMenuLink>
               </li>
               <li>
-                <FooterMenuLink to={ANALYSIS_PATH}>
-                  Data Analysis
+                <FooterMenuLink to={EXPLORATION_PATH}>
+                  Data Exploration
                 </FooterMenuLink>
               </li>
               <li>
@@ -265,7 +259,7 @@ export default function PageFooter(props) {
               </li>
               {!!process.env.HUB_URL && !!process.env.HUB_NAME && (
                 <li>
-                  <FooterMenuLink as="a" href={process.env.HUB_URL}>
+                  <FooterMenuLink as="a" {...getLinkProps(process.env.HUB_URL)}>
                     {process.env.HUB_NAME}
                   </FooterMenuLink>
                 </li>
@@ -277,7 +271,7 @@ export default function PageFooter(props) {
                 <FooterMenuLink to={PRESS_PATH}>Press Info</FooterMenuLink>
               </li>
               <li>
-                <FooterMenuLink as="a" href="https://docs.google.com/forms/d/e/1FAIpQLSfDxq_jR3z_006WkUnNKriGFlAdXhiZxC0ppkxV9fDXSM_FxQ/viewform">
+                <FooterMenuLink as="a" href={SUBSCRIPTION_URL}>
                   Subscribe
                 </FooterMenuLink>
               </li>
@@ -339,9 +333,7 @@ export default function PageFooter(props) {
             <p>
               U.S. Greenhouse Gas Center Responsible Official:{" "}
               <a
-                href="https://appliedsciences.nasa.gov/about/our-team/argyro-kavvada"
-                target="_blank"
-                rel="noopener noreferrer"
+                {...getLinkProps("https://appliedsciences.nasa.gov/about/our-team/argyro-kavvada")} 
               >
                 <strong>Argyro Kavvada</strong>
               </a>

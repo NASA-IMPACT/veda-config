@@ -1,13 +1,10 @@
 import React from "$veda-ui/react";
 import styled from "$veda-ui/styled-components";
-import { glsp, media } from "$veda-ui/@devseed-ui/theme-provider";
+import { listReset, media, glsp, media } from "$veda-ui/@devseed-ui/theme-provider";
 import Hug from "$veda-ui-scripts/styles/hug";
-import {
-  Card,
-  CardList,
-  CardFooter,
-} from "$veda-ui-scripts/components/common/card";
-
+import { Card } from "$veda-ui-scripts/components/common/card";
+import { CardFooter } from "$veda-ui-scripts/components/common/card/styles";
+import { variableGlsp } from '$veda-ui-scripts/styles/variable-utils';
 import { ArrowLink } from "./arrow-link";
 
 import { DATASETS_PATH } from "$veda-ui-scripts/utils/routes";
@@ -16,6 +13,26 @@ import { Actions } from "$veda-ui-scripts/components/common/browse-controls/use-
 import featureEmissions from "./media/refinery.png";
 import featureSources from "./media/swamp.png";
 import featureMethane from "./media/plume.png";
+
+export const CardList = styled.ol`
+  ${listReset()}
+  grid-column: 1 / -1;
+  display: grid;
+  gap: ${variableGlsp()};
+  grid-template-columns: repeat(1, 1fr);
+
+  ${media.mediumUp`
+    grid-template-columns: repeat(2, 1fr);
+  `}
+
+  ${media.largeUp`
+    grid-template-columns: repeat(3, 1fr);
+  `}
+
+  > li {
+    min-width: 0;
+  }
+`;
 
 const KeypointsWrapper = styled(Hug)`
   padding: ${glsp(1, 0)};

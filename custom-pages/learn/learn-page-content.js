@@ -1,3 +1,16 @@
+export const NEWSLETTER_ITEMS = [
+  {
+    name: 'The inaugural US GHG Center Newsletter',
+    asLink : {
+      url: 'https://myemail-api.constantcontact.com/US-GHG-Center-Newsletter.html?soid=1141171816352&aid=TCM2bjPR30g'
+    },
+    media: {
+      src: new URL('./media/news/newsletter.jpg', import.meta.url).href,
+      alt: 'March 2024'
+    },
+    description: 'Volume 1.1, March 2024'
+  }
+]
 export const NEWS_ITEMS = [
   {
     name: 'US GHG Center announced at COP28',
@@ -36,17 +49,17 @@ export const NEWS_ITEMS = [
 
 export const EVENT_ITEMS = [
   {
-    name: 'Policy Speaker Series: Implementing the U.S. Greenhouse Gas Center',
+    name: 'Policy Speaker Series: An Overview of the Global Greenhouse Gas Watch (G3W)',
     asLink : {
-      url: 'https://carbon.nasa.gov/pdfs/Feb%202024%20PSS%20Talk%20Announcement%20.pdf'
+      url: 'https://carbon.nasa.gov/docs/May%202024%20PSS%20Talk%20Announcement.pdf'
     },
     media: {
-      src: new URL('./media/events/GHGC_CMS_Joint_Policy_Speaker_Series_v1.png', import.meta.url).href,
+      src: new URL('./media/events/GHGC_CMS_Joint_Policy_Speaker_Series_G3W_Webinar.png', import.meta.url).href,
       alt: 'CMS speaker series screenshot'
     },
-    description: 'The US GHG Center is joining with NASA’s Carbon Monitoring System (CMS) Initiative to present a webinar on Tuesday, February 20, 2024 from 12-1PM ET. Dr. Argyro Kavvada, Dr. Lesley Ott, and Dr. Erin McDuffie will discuss development and implementation for the multi-agency US GHG Center and links to the national GHG strategy. Participants can attend on-site at GSFC in Building 33, conference room H114 or virtually through WebEx. Attendees must register.',
-    startDate: '2024-06-11',
-    endDate: '2024-06-21'
+    description: "The US GHG Center is joining with NASA's Carbon Monitoring System (CMS) Initiative to present a webinar on Wednesday, May 8, 2024 from 12-1PM ET. Gianpaolo Balsamo, director of the World Meteorological Organization (WMO) and G3W leader, will discuss how G3W fills critical information gaps on greenhouse gases via an integrated operational framework. Participants can register for the event virtually through WebEx. Attendees must register.",
+    startDate: '2024-05-08',
+    endDate: '2024-05-08'
   },
   {
     name: 'US GHG Center Summer School',
@@ -60,6 +73,19 @@ export const EVENT_ITEMS = [
     description: 'The US GHG Center is hosting a Summer School for Inverse Modeling of Greenhouse Gases (SSIM-GHG), June 11-21, 2024 at Fort Collins, CO, USA. The goal of the summer school is to present and provide guidance and instruction in state-of-the-art atmospheric data assimilation techniques needed to support current and future GHG observing systems.',
     startDate: '2024-06-11',
     endDate: '2024-06-21'
+  },
+  {
+    name: 'Policy Speaker Series: Implementing the U.S. Greenhouse Gas Center',
+    asLink : {
+      url: 'https://carbon.nasa.gov/pdfs/Feb%202024%20PSS%20Talk%20Announcement%20.pdf'
+    },
+    media: {
+      src: new URL('./media/events/GHGC_CMS_Joint_Policy_Speaker_Series_v1.png', import.meta.url).href,
+      alt: 'CMS speaker series screenshot'
+    },
+    description: 'The US GHG Center is joining with NASA’s Carbon Monitoring System (CMS) Initiative to present a webinar on Tuesday, February 20, 2024 from 12-1PM ET. Dr. Argyro Kavvada, Dr. Lesley Ott, and Dr. Erin McDuffie will discuss development and implementation for the multi-agency US GHG Center and links to the national GHG strategy. Participants can attend on-site at GSFC in Building 33, conference room H114 or virtually through WebEx. Attendees must register.',
+    startDate: '2024-02-21',
+    endDate: '2024-02-21'
   },
   {
     name: 'American Meteorological Society (AMS) Annual Meeting',

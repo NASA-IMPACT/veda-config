@@ -1,7 +1,17 @@
 ---
-id: noaa-cpfp-co2-point
+id: noaa-gggrn-co2-concentrations
 name: Atmospheric Carbon Dioxide Concentrations from NOAA Global Monitoring Laboratory
-description: Atmospheric concentrations of carbon dioxide (CO₂) from discrete air samples collected since 1968 at globally distributed surface sites
+description: Atmospheric concentrations of carbon dioxide (CO₂) collected since 1968 at globally distributed surface sites
+usage:
+  - url: 'https://us-ghg-center.github.io/ghgc-docs/cog_transformation/noaa-gggrn-concentrations.html'
+    label: Notebook showing data transformation for ingest to the US GHG Center
+    title: 'Data Transformation Notebook'
+  - url: 'https://us-ghg-center.github.io/ghgc-docs/datausage.html'
+    label: Notebooks to read, visualize, and explore data statistics
+    title: 'Data Usage Notebooks'
+  - url: 'https://gml.noaa.gov/dv/data/index.php?parameter_name=Carbon%2BDioxide'
+    label: Download data from NOAA
+    title: 'Data Browser'
 media:
   src: ::file ./noaa-air-samples--cover.png
   alt: aa
@@ -20,10 +30,19 @@ taxonomy:
   - name: Gas
     values:
       - CO₂
+infoDescription: |
+  ::markdown
+    - Temporal Extent: 1968 - 2022, varies by station   
+    - Temporal Resolution:  Varies by station, can be daily up to weekly   
+    - Spatial Extent: United States   
+    - Spatial Resolution: Point location samples    
+    - Data Units: parts CO₂ per million (ppm)
+    - Data Type: Operational
+    - Data Latency: Updated annually          
 disableExplore: true
 layers:
-  - id: noaa-cpfp-co2-point
-    stacCol: noaa-cpfp-co2-point
+  - id: noaa-gggrn-co2-concentrations
+    stacCol: noaa-gggrn-co2-concentrations
     name: Carbon Dioxide (Air Sample)
     type: vector
     description: Atmospheric concentrations of carbon dioxide (CO₂) from discrete air samples collected since 1968 at globally distributed surface sites
@@ -34,15 +53,15 @@ layers:
       - 0
       - 20
     sourceParams:
-      assets: noaa-cpfp-co2-point
+      assets: noaa-gggrn-co2-concentrations
       colormap_name: plasma
       rescale:
         - 0
         - 1000
       nodata: 0
     compare:
-      datasetId: noaa-cpfp-co2-point
-      layerId: noaa-cpfp-co2-point
+      datasetId: noaa-gggrn-co2-concentrations
+      layerId: noaa-gggrn-co2-concentrations
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
@@ -71,21 +90,21 @@ layers:
         - '#f8df25'
 ---
 
-<Block type='wide'>
+<Block>
   <Prose>
-    The Global Greenhouse Gas Reference Network (GGGRN) for the Carbon Cycle and Greenhouse Gases (CCGG) Group is part of NOAA'S Global Monitoring Laboratory (GML) in Boulder, CO. The Reference Network measures the atmospheric distribution and trends of the three main long-term drivers of climate change, carbon dioxide (CO₂), methane (CH₄), and nitrous oxide (N<sub>2</sub>O), as well as carbon monoxide (CO) and many other trace gases which help interpretation of the main GHGs. The Reference Network measurement program includes continuous in-situ measurements at 4 baseline observatories (global background sites) and 8 tall towers, as well as flask-air samples collected by volunteers at over 50 additional regional background sites and from small aircraft conducting regular vertical profiles. The air samples are returned to GML for analysis where measurements of about 55 trace gases are done. NOAA's GGGRN maintains the World Meteorological Organization international calibration scales for CO₂, CH₄, CO, N<sub>2</sub>O, and SF<sub>6</sub> in air. The measurements from the GGGRN serve as a comparison with measurements made by many other international laboratories, and with regional studies. They are widely used in modeling studies that infer space-time patterns of emissions and removals of greenhouse gases that are optimally consistent with the atmospheric observations, given wind patterns. These data serve as an early warning for climate "surprises". The measurements are also helpful for the ongoing evaluation of remote sensing technologies.
+    **Temporal Extent:** 1968 - 2022, varies by station   
+    **Temporal Resolution:** The GHG Center provides only daily and monthly means for continuous measurements; temporal resolution varies by station for non-continuous measurements (can be daily up to weekly)<br />
+    **Spatial Extent:** Global   
+    **Spatial Resolution:** Point location samples    
+    **Data Units:**  Parts CO₂ per million (ppm)<br /> 
+    **Data Type:** Operational<br /> 
+    **Data Latency:** Updated annually
+    
+    The Global Greenhouse Gas Reference Network (GGGRN) for the Carbon Cycle and Greenhouse Gases (CCGG) Group is part of NOAA'S Global Monitoring Laboratory (GML) in Boulder, CO. The Reference Network measures the atmospheric distribution and trends of the three main long-term drivers of climate change, carbon dioxide (CO₂), methane (CH₄), and nitrous oxide (N<sub>2</sub>O), as well as carbon monoxide (CO) and many other trace gases which help interpretation of the main GHGs. The Reference Network measurement program includes continuous in-situ measurements at 4 baseline observatories (global background sites) and 8 tall towers, as well as flask-air samples collected by volunteers at over 50 additional regional background sites and from small aircraft conducting regular vertical profiles. The flask air samples are returned to GML for analysis where measurements of about 55 trace gases are completed.
 
-    For more information refer to the [dataset documentation](https://gml.noaa.gov/aftp/data/greenhouse_gases/co2/flask/surface/README_co2_surface-flask_ccgg.html) and [sampling location information](https://gml.noaa.gov/dv/site/?program=ccgg).
+    This dataset contains CO₂ concentration measurements in units of parts per million (ppm) made from surface in-situ and tower sites and from surface flask air samples. The surface in-situ and tower instrumentation measures CO2 continuously (hourly) while the flask air samples are non-continuous measurements (frequency varies by station). Due to the high data volume of hourly tower measurements, daily and monthly averages are generated for display in the US GHG Center.
 
-    - **Temporal Extent:** 1968 - 2022, varies by station   
-    - **Temporal Resolution:** Varies by station, can be daily up to weekly
-    - **Spatial Extent:** United States   
-    - **Spatial Resolution:** Point location samples    
-    - **Data Units:**  parts CO₂ per million (ppm)
-    - **Data Type:** Operational
-    - **Data Latency:** Updated annually
-
-    **Scientific Details:** CO₂ measurements are formally reported in mole fraction units of micromol (10<sup>-6</sup> mole) of CO₂ per mol of dry air.  However, for communicating with broader audiences we refer to mole fraction as “concentration” in units of parts per million (ppm). This CO₂ data set provides CO₂ dry air mole fractions from more than 80 NOAA GML GGGRN sites across the globe. Measurements have been made using a highly-calibrated nondispersive infrared absorption analyzer (NDIR, before August 2019) or a cavity ring-down spectrometer (CRDS, since August 2019).
+    NOAA's GGGRN maintains the World Meteorological Organization international calibration scales for CO₂, CH₄, CO, N<sub>2</sub>O, and SF<sub>6</sub> in air. The measurements from the GGGRN serve as a comparison with measurements made by many other international laboratories, and with regional studies. They are widely used in modeling studies that infer space-time patterns of emissions and removals of greenhouse gases that are optimally consistent with the atmospheric observations, given wind patterns. These data serve as an early warning for climate "surprises". The measurements are also helpful for the ongoing evaluation of remote sensing technologies.
 
   </Prose>
 </Block>
@@ -93,23 +112,47 @@ layers:
   <Figure>
     <Embed
       height="800"
-      src="https://earth.gov/ghgcenter/custom-interfaces/noaa-cpfp-point?ghg=co2&type=flask"
+      src="https://earth.gov/ghgcenter/custom-interfaces/noaa-gggrn-ghg-concentrations/index.html?ghg=co2&frequency=all"
     />
   </Figure>
 </Block>
 <Block>
     <Prose>
     ## Source Data Product Citation
-    Lan, X., Mund, J.W., Crotwell, A.M., Crotwell, M.J., Moglia,  E.,  Madronich, M., Neff, D, Thoning, K.W. (2023). Atmospheric Carbon Dioxide Dry Air Mole Fractions from the NOAA GML Carbon Cycle Cooperative Global Air Sampling Network, 1968-2022, Version: 2023-08-28. [https://doi.org/10.15138/wkgj-f215](https://doi.org/10.15138/wkgj-f215)    
-    
+    K.W. Thoning, A.M. Crotwell, and J.W. Mund (2024). Atmospheric Carbon Dioxide Dry Air Mole Fractions from continuous measurements at Mauna Loa, Hawaii, Barrow, Alaska, American Samoa and South Pole, 1973-2023. National Oceanic and Atmospheric Administration (NOAA), Global Monitoring Laboratory (GML), Boulder, Colorado, USA. Version 2024-02-12. [https://doi.org/10.15138/yaf1-bk21](https://doi.org/10.15138/yaf1-bk21)
+
+    A. Andrews, N. Miles, J. Kofler, M.E. Trudeau, P.S. Bakwin, M.L. Fischer, C. Sweeney, A.R. Desai, B. J. Viner, M. J. Parker, D. A. Jaffe, C. E. Miller, S. F. J. de Wekker, and J. B. Miller. Continuous measurements of CO₂, CO, CH₄ on tall towers starting in 1992. NOAA Global Monitoring Laboratory. Version: 2023-08-23. [https://doi.org/10.7289/V57W69F2](https://doi.org/10.7289/V57W69F2)
+
+    Lan, X., Mund, J.W., Crotwell, A.M., Crotwell, M.J., Moglia,  E., Madronich, M., Neff, D, and Thoning, K.W. (2023). Atmospheric Carbon Dioxide Dry Air Mole Fractions from the NOAA GML Carbon Cycle Cooperative Global Air Sampling Network, 1968-2022. Version: 2023-08-28.  [https://doi.org/10.15138/wkgj-f215](https://doi.org/10.15138/wkgj-f215)
+
+    Andrews, A., Crotwell, A., Crotwell, M., Handley, P., Higgs, J., Kofler, J., Lan, X., Legard, T., Madronich, M., McKain, K., Miller, J., Moglia, E., Mund, J., Neff, D., Newberger, T., Petron, G., Turnbull, J., Vimont, I., Wolter, S., & NOAA Global Monitoring Laboratory (2023). NOAA Global Greenhouse Gas Reference Network Flask-Air PFP Sample Measurements of CO2 at Tall Tower and other Continental Sites, 2005-Present. NOAA GML. Version: 2023-08-23. [https://doi.org/10.15138/gr3w-qm07](https://doi.org/10.15138/gr3w-qm07) 
+  
+    The CO₂ data displayed in the web map viewer can be directly accessed from NOAA here:
+    - [Continuous Surface and Tower In-situ CO₂ Samples](https://gml.noaa.gov/dv/data/index.php?category=Greenhouse%252BGases&type=Insitu&parameter_name=Carbon%2BDioxide). Hourly tower data have been aggregated into daily and monthly averages for display in the US GHG Center. 
+    - [Non-Continuous Surface CO₂ Flask Samples](https://gml.noaa.gov/dv/data/index.php?type=Flask&frequency=Discrete&parameter_name=Carbon%2BDioxide)
+    - [Non-Continuous Surface Programmable Flask Package (PFP) CO₂ Samples](https://gml.noaa.gov/dv/data/index.php?parameter_name=Carbon%2BDioxide&frequency=Discrete&type=Surface%2BPFP). 
+
     ## Dataset Accuracy
     Measurements are reported on the WMO X2019 CO₂ mole fraction scale. More information on this scale is available at https://gml.noaa.gov/ccl/co2_scale.html.  Accuracy is approximately 0.1 ppm.  For details, see
 
     Hall, B. D., Crotwell, A. M., Kitzis, D. R., Mefford, T., Miller, B. R., Schibig, M. F., and Tans, P. P (2021). Revision of the World Meteorological Organization Global Atmosphere Watch (WMO/GAW) CO₂ calibration scale. *Atmos. Meas. Tech., 14*, 3015–3032. [https://doi.org/10.5194/amt-14-3015-2021](https://doi.org/10.5194/amt-14-3015-2021)
 
     ## Disclaimer
-    Every effort is made to produce the most accurate and precise measurements possible.  However, NOAA reserves the right to make corrections to the data based on recalibration of standard gases or for other reasons deemed scientifically justified.  NOAA is not responsible for results and conclusions based on use of these data without regard to this warning.
- 
+    Every effort is made to produce the most accurate and precise measurements possible. However, NOAA reserves the right to make corrections to the data based on recalibration of standard gases or for other reasons deemed scientifically justified. NOAA is not responsible for results and conclusions based on use of these data without regard to this warning.
+    
+    Due to the high data volume of tower measurements which occur hourly, tower measurements have been aggregated into daily and monthly averages for display in the US GHG Center. Hourly data are [available from NOAA](https://gml.noaa.gov/aftp/data/greenhouse_gases/co2/in-situ/tower/).
+
+    Due to shortness of record or complexity of interpretation, the following surface PFP flask sites have been excluded:
+    LAC, INX, BWD, NEB, NWB, TMD, SPF, KLM, MKO, MLO, HFM
+
+    ## Scientific Details
+    CO₂ measurements are formally reported in mole fraction units of micromol (10<sup>-6</sup> mole) of CO₂ per mol of dry air.  However, for communicating with broader audiences we refer to mole fraction as “concentration” in units of parts per million (ppm). This CO₂ data set provides CO₂ dry air mole fractions from more than 80 NOAA GML GGGRN sites across the globe. Measurements have been made using a highly-calibrated nondispersive infrared absorption analyzer (NDIR, before August 2019) or a cavity ring-down spectrometer (CRDS, since August 2019).
+    
+    For more information refer to the following dataset documentation and [sampling location information](https://gml.noaa.gov/dv/site/?program=ccgg):
+    - [Continuous Surface In-situ CO₂ Measurements](https://gml.noaa.gov/aftp/data/greenhouse_gases/co2/in-situ/surface/README_co2_surface-insitu_ccgg.html)
+    - [Continuous Tower CO₂ Measurements](https://gml.noaa.gov/aftp/data/greenhouse_gases/co2/in-situ/tower/README_co2_tower-insitu_ccgg.html)
+    - Non-continuous Surface [Flask](https://gml.noaa.gov/aftp/data/greenhouse_gases/co2/flask/surface/README_co2_surface-flask_ccgg.html) and [Programmable Flask Package (PFP)](https://gml.noaa.gov/aftp/data/greenhouse_gases/co2/pfp/surface/README_co2_surface-pfp_ccgg.html) CO2 Measurements
+    
     ## Key Publications
     Ballantyne, A. P., Alden, C. B.,  Miller,J. B., Tans, P., & White, J. W. C. (2012).  Increase in observed net carbon dioxide uptake by land and oceans during the past 50 years. *Nature, 488*,7409. [https://doi.org/10.1038/nature11299](https://doi.org/10.1038/nature11299)
 
@@ -128,7 +171,7 @@ layers:
 
     Tans, P.P.,Fung,  I.Y., & Takahashi, T. (1990). Observational Constraints on the global atmospheric CO₂ budget. *Science, 247*, 1431-1438. [https://www.jstor.org/stable/2874222](https://www.jstor.org/stable/2874222)
 
-    Tans, P.P., Crotwell, A.M., & Thoning, K.W. (2017). Abundances of isotopologues and calibration of CO₂ greenhouse gas measurements. *Atmospheric Measurement Techniques, 10*, 7, 2669-2685. [https://doi.org/10.5194/amt-10-2669-2017](https://doi.org/10.5194/amt-10-2669-2017) 
+    Tans, P.P., Crotwell, A.M., & Thoning, K.W. (2017). Abundances of isotopologues and calibration of CO₂ greenhouse gas measurements. *Atmospheric Measurement Techniques, 10*, 7, 2669-2685.[https://doi.org/10.5194/amt-10-2669-2017](https://doi.org/10.5194/amt-10-2669-2017) 
 
     Thoning, K.W., Tans, P.P., Conway, T.J., & Waterman, L.S. (1987). NOAA/GMCC calibrations of CO₂-in-air reference gases:  1979-1985.  NOAA Tech. Memo. (ERL ARL-150).  Environmental Research Laboratories, Boulder, CO, 63 pp.
 
@@ -138,6 +181,11 @@ layers:
 
     Zhao, C., & Tans,P.P. (2006). Estimating uncertainty of the WMO Mole Fraction Scale for carbon dioxide in air. *J. Geophys. Res. 111*, D08S09, doi: 10.1029/2005JD006003. [https://doi.org/10.1029/2005JD006003](https://doi.org/10.1029/2005JD006003)
 
+    ## Learn More
+    - [View current trends in CO₂](https://gml.noaa.gov/ccgg/trends/) powered by NOAA data 
+    - See NOAA’s observations of CO₂ at the Mauna Loa Observatory featured in the [Tracking Greenhouse Gas Cycles Data Insight](https://earth.gov/ghgcenter/stories/tracking-greenhouse-gas-cycles). The Mauna Loa CO₂ data provides the longest record of direct measurements of CO₂ in Earth’s atmosphere. 
+    - [Learn more about the Global Greenhouse Gas Reference Network (GGGRN)](https://gml.noaa.gov/ccgg/about.html)
+
     ## Acknowledgment
     This dataset would not be possible without the cooperating agencies and individuals throughout the world who collect air samples and enable the operation of the Global Greenhouse Gas Reference Network.
     
@@ -145,7 +193,9 @@ layers:
     This dataset was produced by NOAA and is not subject to copyright protection in the United States. NOAA waives any potential copyright and related rights in these data worldwide through the [Creative Commons Zero v1.0 Universal Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC0 1.0)
 
     ## Data Stewardship
-    - [Data Workflow](https://us-ghg-center.github.io/ghgc-docs/data_workflow/noaa-insitu_Data_Flow.html)
+    - [Data Workflow](https://us-ghg-center.github.io/ghgc-docs/data_workflow/noaa-gggrn-co2-concentrations_Data_Flow.html)
+    - [Data Transformation Code](https://us-ghg-center.github.io/ghgc-docs/cog_transformation/noaa-gggrn-concentrations.html)
+    - [US GHG Center Data Intake Processing and Verification Report](https://us-ghg-center.github.io/ghgc-docs/processing_and_verification_reports/noaa-gggrn-co2-concentrations_Processing%20and%20Verification%20Report.html)
 
     </Prose>
 </Block>

@@ -43,11 +43,11 @@ module.exports = {
         "This dashboard is for exploring key datasets that provide insight into greenhouse gas sources, sinks, emissions, fluxes, and events.",
     // Temporary Banner Text/URL/expiry
     tempBanner:
-        "Register for the upcoming Carbon Monitoring System webinar on the US Greenhouse Gas Center, Feb 20, 2024 at noon ET.",
+        "Register for the webinar - An Overview of The Global Greenhouse Gas Watch (G3W) - by Gianpaolo Balsamo, May 8th  at 12 noon ET.",
     tempBannerUrl:
-        "https://carbon.nasa.gov/pdfs/Feb%202024%20PSS%20Talk%20Announcement%20.pdf",
+        "https://nasaenterprise.webex.com/weblink/register/rd916bf09633aa7d4f9fe87eb6ff67fe3",
     tempBannerExpires:
-        "2024-02-20T13:00:00-05:00" // Feb 20th, 1 PM EST
+        "2024-05-08T12:00:00-04:00"
   },
 
   theme: {
@@ -67,5 +67,9 @@ module.exports = {
         weight: 500,
       },
     },
+  },
+  
+  booleans: {
+    'externalLinksInNewTab': true,
   },
 };

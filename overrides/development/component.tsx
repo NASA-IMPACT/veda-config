@@ -20,10 +20,18 @@ export default function Component() {
   return (
     <FoldProse>
       <p>
-      The current US GHG Center platform reflects an initial (v{process.env.APP_VERSION}) release available October 2nd, 2023. Newly added data, feature changes and content updates will continue to be made via an iterative process throughout the coming year.
+      The current US GHG Center portal reflects a second beta release (v{process.env.APP_VERSION}) available May 6, 2024. 
+      More releases are planned throughout 2024 as new datasets and features are added. 
+      While in beta mode, the portal will undergo design changes and content additions. 
+      The currently available greenhouse gas information is accurate and ready to be used for research and decision making.
       </p>
       <p>
-      We welcome your feedback to help improve the US GHG Center! To share your thoughts, please click on the Contact Us button below or use the button available at the top of any of the Center website pages.
+      We welcome your feedback to improve the US GHG Center. To share your thoughts, please click the Contact Us 
+      button below or use the Contact Us button in the top right or bottom right area of all Center web pages.
+      </p>
+      <p>
+      If you would like to hear about more GHG Center updates, please sign up for our subscription email list 
+      using the subscribe link at the bottom of any page.
       </p>
       <ContributeCta>
         <Button
