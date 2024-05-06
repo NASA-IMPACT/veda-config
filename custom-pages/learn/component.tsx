@@ -23,14 +23,16 @@ export const continuumFoldSpanCols = {
   largeUp: 4
 };
 
-const FoldSection = styled.div`
-  grid-column: 1 / -1;
-  display: flex;
-  flex-flow: column nowrap;
-  margin-bottom: ${glsp(2)};
-`;
+
+const StyledContinuumCardsDragScrollWrapper = styled(ContinuumCardsDragScrollWrapper)`
+  // @NOTE: There is a bug that wrapper's height doesn't respect the child's padding 
+  // when there is only one item in the list
+  ${(props) => props.itemsN === 1 ? `padding-bottom: 1rem` : ``};
+`
 
 const StyledCard = styled(Card)`
+  box-shadow: 0 0 2px 0 rgba(44,62,80,0.08),0 6px 6px 0 rgba(44,62,80,0.08);
+  
   h3:first-child {
     margin-bottom: 0;
     &:before {
@@ -71,8 +73,8 @@ function getEventTemporalState(startDate, endDate) {
 
 export function EventsComponent ({items}) {
   const { isScrolling, scrollProps } = useReactIndianaScrollControl();
-  
-  return (<ContinuumCardsDragScrollWrapper>
+
+  return (<StyledContinuumCardsDragScrollWrapper itemsN={items.length}>
     <ContinuumScrollIndicator />
     <ContinuumDragScroll hideScrollbars={false} {...scrollProps}>
       <StyledContinuum
@@ -113,6 +115,6 @@ export function EventsComponent ({items}) {
         }}
       />
     </ContinuumDragScroll>
-  </ContinuumCardsDragScrollWrapper>
+  </StyledContinuumCardsDragScrollWrapper>
   )
 };
