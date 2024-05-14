@@ -1,7 +1,7 @@
 ---
 id: 'emit-and-aviris-3'
 name: Tracking Methane Plumes from Space and Sky
-description: 'Example methane plumes as observed with EMIT and AVIRIS-3. EMIT perched on the International Space Station provides an 80 km wide image swath at 60 m spatial resolution, and AVIRIS-3 provides a narrower 3 km swath at 2 m spatial resolution when flying at 13,000 ft '
+description: 'Example methane plumes as observed with EMIT and AVIRIS-3. EMIT perched on the International Space Station provides an 80 km wide image swath at 60 m spatial resolution, and AVIRIS-3 provides a narrower 3 km swath at 2 m spatial resolution when flying at 13,000 ft. '
 media:
   src: ::file ./emit-plane-iss-plume.png
   alt: Image of plume from EMIT and AVIRIS-3 showing image swath width for each.
@@ -38,13 +38,16 @@ taxonomy:
 
 <Block>
     <Figure>
-        EMIT example from Jan. 31, 2024 showing a prominent methane plume from the Permian Basin, Texas.
-        <Image
-            src={new URL('./emit-large-plume-slider.png', import.meta.url).href}
+        <CompareImage
+            leftImageSrc={new URL('./permian-basin-plume.png', import.meta.url).href}
+            rightImageSrc={new URL('./permian-basin-plume-hidden.png', import.meta.url).href}
+            width="20"
             attrAuthor="NASA/JPL-Caltech"
             alt="EMIT example from Jan. 31, 2024 showing a prominent methane plume from the Permian Basin, Texas"
-            caption="Slider showing methane plume observed from the Permian Basin, Texas."
         />
+        <Caption>
+            Slider showing methane plume observed from the Permian Basin, Texas.
+        </Caption>
     </Figure>
 </Block>
 
@@ -110,7 +113,7 @@ taxonomy:
             attrAuthor="NASA/JPL-Caltech"
         />
         <Caption>
-            The airborne AVIRIS-3 instrument (left) makes analogous measurements to the EMIT (right) observations from space. The EMIT spectrometer (gold appearance) is dwarfed by the telescope (silver)
+            The airborne AVIRIS-3 instrument (left) makes analogous measurements to the EMIT (right) observations from space. The EMIT spectrometer (gold appearance) is dwarfed by the telescope (silver).
         </Caption>
     </Figure>
 </Block>
@@ -135,14 +138,13 @@ taxonomy:
             attrAuthor="NASA/JPL-Caltech"
         />
         <Caption>
-            AVIRIS-3 team instrument operator monitors real time display of methane during science flight
+            AVIRIS-3 team instrument operator monitors real time display of methane during science flight.
         </Caption>
     </Figure>
 </Block>
 
 <Block>
     <Figure>
-        Video
         <iframe
             src="https://drive.google.com/file/d/10JghQEINpGxnUBsMR0D9nj3EcZCYMUtr/preview"
             width="900"
@@ -158,7 +160,6 @@ taxonomy:
 
 <Block>
     <Figure>
-        GIF of EMIT and AVIRIS-3 methane plume observations for the same emission source
         <iframe
             src="https://drive.google.com/file/d/1DBHCphQ3NZAczYT5vgyXpkKcmyoARvY_/preview"
             width="900"
