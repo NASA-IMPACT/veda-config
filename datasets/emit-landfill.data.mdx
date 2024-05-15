@@ -50,6 +50,38 @@ layers:
         - '#52076c'
         - '#f57c16'
         - '#f7cf39'
+  - id: emit-stockton
+    stacCol: emit-stockton
+    name: Methane (ppm m)
+    type: raster
+    description: "EMIT Methane (CH4) plumes in ppm m"
+    initialDatetime: newest
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      colormap_name: plasma_r
+      rescale:
+        - 0
+        - 2418
+      nodata: -9999
+    compare:
+      datasetId: svi-overall
+      layerId: social-vulnerability-index-overall
+      mapLabel: |
+        ::js ({dateFns, datetime, compareDatetime}) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      type: gradient
+      min: "0"
+      max: "2418"
+      stops:
+        - '#08041d'
+        - '#1f0a46'
+        - '#52076c'
+        - '#f57c16'
+        - '#f7cf39'
 ---
 
 <Block type='wide'>
