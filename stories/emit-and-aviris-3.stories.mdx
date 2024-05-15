@@ -150,13 +150,15 @@ taxonomy:
 
 <Block>
     <Figure>
-        <iframe
-            src="https://drive.google.com/file/d/10JghQEINpGxnUBsMR0D9nj3EcZCYMUtr/preview"
+        <video
+            src={new URL('./AV320231008t161012_realtime_screen_recording_plume2.mov', import.meta.url).href}
             width="900"
             height="500"
-            allow="autoplay"
-        >
-        </iframe>
+            controls
+            autoplay
+            loop
+            >
+        </video>
         <Caption attrAuthor="NASA/JPL-Caltech" alt="Video showing methane plumes observed in real time">
             Video of AVIRIS-3 real time methane plume view during flight
         </Caption>
