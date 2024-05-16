@@ -49,7 +49,7 @@ taxonomy:
             alt="EMIT example from Jan. 31, 2024 showing a prominent methane plume from the Permian Basin, Texas"
         />
         <Caption>
-            Slider showing methane plume observed in the Permian Basin, Texas on Jan 31, 2024
+            Slider showing EMIT methane plume observed in the Permian Basin, Texas on Jan 31, 2024
         </Caption>
     </Figure>
 </Block>
@@ -69,7 +69,7 @@ taxonomy:
     <Figure>
       <table style={{ width: '100%', borderCollapse: 'collapse' }}>
           <tr>
-            <th style={{ borderBottom: '2px solid #ccc', padding: '8px', textAlign: 'left' }}>Feature</th>
+            <th style={{ borderBottom: '2px solid #ccc', padding: '8px', textAlign: 'left' }}></th>
             <th style={{ borderBottom: '2px solid #ccc', padding: '8px', textAlign: 'left' }}>AVIRIS-3</th>
             <th style={{ borderBottom: '2px solid #ccc', padding: '8px', textAlign: 'left' }}>EMIT</th>
           </tr>
@@ -79,19 +79,19 @@ taxonomy:
             <td style={{ borderBottom: '1px solid #eee', padding: '8px' }}>ISS</td>
           </tr>
           <tr>
-            <td style={{ borderBottom: '1px solid #eee', padding: '8px' }}>Spectral Measurement Range (nm)</td>
-            <td style={{ borderBottom: '1px solid #eee', padding: '8px' }}>381-2493</td>
-            <td style={{ borderBottom: '1px solid #eee', padding: '8px' }}>381-2493</td>
+            <td style={{ borderBottom: '1px solid #eee', padding: '8px' }}>Spectral Measurement Range</td>
+            <td style={{ borderBottom: '1px solid #eee', padding: '8px' }}>381-2493 nm</td>
+            <td style={{ borderBottom: '1px solid #eee', padding: '8px' }}>381-2493 nm</td>
           </tr>
           <tr>
-            <td style={{ borderBottom: '1px solid #eee', padding: '8px' }}>Spectral Sampling (nm)</td>
-            <td style={{ borderBottom: '1px solid #eee', padding: '8px' }}>7.4</td>
-            <td style={{ borderBottom: '1px solid #eee', padding: '8px' }}>7.4</td>
+            <td style={{ borderBottom: '1px solid #eee', padding: '8px' }}>Spectral Sampling</td>
+            <td style={{ borderBottom: '1px solid #eee', padding: '8px' }}>7.4 nm</td>
+            <td style={{ borderBottom: '1px solid #eee', padding: '8px' }}>7.4 nm</td>
           </tr>
           <tr>
-            <td style={{ borderBottom: '1px solid #eee', padding: '8px' }}>Width of Measurement Swath Image (km)</td>
-            <td style={{ borderBottom: '1px solid #eee', padding: '8px' }}>&lt;7 (varies with altitude)</td>
-            <td style={{ borderBottom: '1px solid #eee', padding: '8px' }}>80</td>
+            <td style={{ borderBottom: '1px solid #eee', padding: '8px' }}>Width of Measurement Swath Image</td>
+            <td style={{ borderBottom: '1px solid #eee', padding: '8px' }}>0.4-10 km (varies with altitude)</td>
+            <td style={{ borderBottom: '1px solid #eee', padding: '8px' }}>80 km</td>
           </tr>
           <tr>
             <td style={{ borderBottom: '1px solid #eee', padding: '8px' }}>Number of Samples per Measurement Width</td>
@@ -99,9 +99,9 @@ taxonomy:
             <td style={{ borderBottom: '1px solid #eee', padding: '8px' }}>1242</td>
           </tr>
           <tr>
-            <td style={{ borderBottom: '1px solid #eee', padding: '8px' }}>Ground Sample Distance (GSD) (m)</td>
-            <td style={{ borderBottom: '1px solid #eee', padding: '8px' }}>&lt;5 (varies with altitude)</td>
-            <td style={{ borderBottom: '1px solid #eee', padding: '8px' }}>60</td>
+            <td style={{ borderBottom: '1px solid #eee', padding: '8px' }}>Ground Sample Distance (GSD)</td>
+            <td style={{ borderBottom: '1px solid #eee', padding: '8px' }}>0.25-7.0 m (varies with altitude)</td>
+            <td style={{ borderBottom: '1px solid #eee', padding: '8px' }}>60 m</td>
           </tr>
       </table>
          <Caption alt="Table showing comparison of various characteristics of AVIRIS-3 and EMIT">
@@ -114,7 +114,7 @@ taxonomy:
     <Figure>
         <Image
             src={new URL('./emit_aviris3.png', import.meta.url).href}
-            alt="Two pictures of instruments. The left photo shows the AVIRIS-3 instrument that can be installed on different aircraft, and the right photo shows EMIT prior to placement on the International Space Station (ISS)."
+            alt="Two pictures of instruments. The left photo shows the AVIRIS-3 instrument (26  inches tall) that can be installed on different aircraft, and the right photo shows EMIT prior to placement on the International Space Station (ISS) with a much larger telescope."
             attrAuthor="NASA/JPL-Caltech"
         />
         <Caption>
@@ -157,6 +157,7 @@ taxonomy:
             controls
             autoplay
             loop
+            poster={new URL('./plume-view-image-for-video.png', import.meta.url).href}
             >
         </video>
         <Caption attrAuthor="NASA/JPL-Caltech" alt="Video showing methane plumes observed in real time">
@@ -168,7 +169,7 @@ taxonomy:
 <Block>
     <Figure>
         <img
-            src={new URL('./EMIT_AV-3_GIF.gif', import.meta.url).href}
+            src={new URL('./EMIT_AV-3_v2a_GIF_med.gif', import.meta.url).href}
             height="600"
         >
         </img>
