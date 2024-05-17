@@ -24,14 +24,15 @@ layers:
     description: "EMIT Methane (CH4) plumes in ppm m"
     initialDatetime: newest
     zoomExtent:
-      - 11
+      - 4
       - 20
     sourceParams:
-      colormap_name: plasma_r
+      resampling: bilinear
+      colormap_name: plasma
       rescale:
         - 1
         - 1500
-      nodata: 0
+      nodata: -9999
     bounds: [-125.0,25.0,-67.0,53.0]
     compare:
       datasetId: svi-overall
@@ -69,9 +70,10 @@ layers:
     description: "EMIT Methane (CH4) plumes in ppm m"
     initialDatetime: newest
     zoomExtent:
-      - 11
+      - 8
       - 20
     sourceParams:
+      resampling: bilinear
       colormap_name: plasma
       rescale:
         - 1
@@ -113,9 +115,10 @@ layers:
     description: "EMIT Methane (CH4) plumes in ppm m"
     initialDatetime: newest
     zoomExtent:
-      - 11
+      - 8
       - 20
     sourceParams:
+      resampling: bilinear
       colormap_name: plasma
       rescale:
         - 1
