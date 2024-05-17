@@ -24,15 +24,15 @@ layers:
     description: "EMIT Methane (CH4) plumes in ppm m"
     initialDatetime: newest
     zoomExtent:
-      - 0
+      - 11
       - 20
     sourceParams:
       colormap_name: plasma_r
       rescale:
-        - 0
-        - 255
+        - 1
+        - 1500
       nodata: 0
-    bounds: [-97.5, 32.4, -96.0, 32.9]
+    bounds: [-125.0,25.0,-67.0,53.0]
     compare:
       datasetId: svi-overall
       layerId: social-vulnerability-index-overall
@@ -42,14 +42,26 @@ layers:
         }
     legend:
       type: gradient
-      min: "0"
-      max: "2418"
+      unit:
+        label: ppm-m
+      min: 1
+      max: +1500
       stops:
-        - '#08041d'
-        - '#1f0a46'
-        - '#52076c'
-        - '#f57c16'
-        - '#f7cf39'
+        - '#310597'
+        - '#4c02a1'
+        - '#6600a7'
+        - '#7e03a8'
+        - '#9511a1'
+        - '#aa2395'
+        - '#bc3587'
+        - '#cc4778'
+        - '#da5a6a'
+        - '#e66c5c'
+        - '#f0804e'
+        - '#f89540'
+        - '#fdac33'
+        - '#fdc527'
+        - '#f8df25'
   - id: emit-stockton
     stacCol: emit-stockton
     name: Stockton Methane (ppm m)
@@ -57,13 +69,13 @@ layers:
     description: "EMIT Methane (CH4) plumes in ppm m"
     initialDatetime: newest
     zoomExtent:
-      - 0
+      - 11
       - 20
     sourceParams:
       colormap_name: plasma
       rescale:
-        - 0
-        - 2418
+        - 1
+        - 1500
       nodata: -9999
     compare:
       datasetId: svi-overall
@@ -74,14 +86,26 @@ layers:
         }
     legend:
       type: gradient
-      min: "0"
-      max: "2418"
+      unit:
+        label: ppm-m
+      min: 1
+      max: +1500
       stops:
-        - '#08041d'
-        - '#1f0a46'
-        - '#52076c'
-        - '#f57c16'
-        - '#f7cf39'
+        - '#310597'
+        - '#4c02a1'
+        - '#6600a7'
+        - '#7e03a8'
+        - '#9511a1'
+        - '#aa2395'
+        - '#bc3587'
+        - '#cc4778'
+        - '#da5a6a'
+        - '#e66c5c'
+        - '#f0804e'
+        - '#f89540'
+        - '#fdac33'
+        - '#fdc527'
+        - '#f8df25'
   - id: emit-dallas
     stacCol: emit-dallas
     name: Dallas Methane (ppm m)
@@ -89,13 +113,13 @@ layers:
     description: "EMIT Methane (CH4) plumes in ppm m"
     initialDatetime: newest
     zoomExtent:
-      - 0
+      - 11
       - 20
     sourceParams:
       colormap_name: plasma
       rescale:
-        - 0
-        - 3097
+        - 1
+        - 1500
       nodata: -9999
     compare:
       datasetId: svi-overall
@@ -106,14 +130,26 @@ layers:
         }
     legend:
       type: gradient
-      min: "0"
-      max: "3097"
+      unit:
+        label: ppm-m
+      min: 1
+      max: +1500
       stops:
-        - '#08041d'
-        - '#1f0a46'
-        - '#52076c'
-        - '#f57c16'
-        - '#f7cf39'
+        - '#310597'
+        - '#4c02a1'
+        - '#6600a7'
+        - '#7e03a8'
+        - '#9511a1'
+        - '#aa2395'
+        - '#bc3587'
+        - '#cc4778'
+        - '#da5a6a'
+        - '#e66c5c'
+        - '#f0804e'
+        - '#f89540'
+        - '#fdac33'
+        - '#fdc527'
+        - '#f8df25'
 ---
 
 <Block type='wide'>
