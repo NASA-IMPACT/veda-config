@@ -44,7 +44,7 @@ infoDescription: |
     - Spatial Resolution:  1° x 1°
     - Data Units: Grams of carbon dioxide per square meter per year (g CO₂/m²/yr)
     - Data Type: Research
-    - Data Latency: N/A        
+    - Data Latency: N/A
 layers:
   - id: co2-emissions-lnlgis-nbe
     stacCol: oco2-mip-co2budget-yeargrid-v1
@@ -94,12 +94,12 @@ layers:
         - mean
       sourceParams:
         nodata: 0
-        dst_crs: "+proj=cea"
+        dst_crs: '+proj=cea'
     info:
       source: NASA / NOAA
       spatialExtent: Global
-      temporalResolution: Annual 
-      unit: g CO₂/m²/yr              
+      temporalResolution: Annual
+      unit: g CO₂/m²/yr
     media:
       src: ::file ./oco2-mip-co2budget-yeargrid-v1.thumbnails.biosphere.exchange.png
       alt: OCO-2 MIP Top-down CO₂ Budgets - LNLGIS Net Biosphere Exchange (LNLGIS_NBE)
@@ -151,12 +151,12 @@ layers:
         - mean
       sourceParams:
         nodata: 0
-        dst_crs: "+proj=cea"
+        dst_crs: '+proj=cea'
     info:
       source: NASA / NOAA
       spatialExtent: Global
-      temporalResolution: Annual 
-      unit: g CO₂/m²/yr        
+      temporalResolution: Annual
+      unit: g CO₂/m²/yr
     media:
       src: ::file ./oco2-mip-co2budget-yeargrid-v1.thumbnails.biosphere.exchange.uncertainty.png
       alt: OCO-2 MIP Top-down CO₂ Budgets - Uncertainty - LNLGIS Net Biosphere Exchange (LNLGIS_NBE_std)
@@ -208,12 +208,12 @@ layers:
         - mean
       sourceParams:
         nodata: 0
-        dst_crs: "+proj=cea"
+        dst_crs: '+proj=cea'
     info:
       source: NASA / NOAA
       spatialExtent: Global
-      temporalResolution: Annual 
-      unit: g CO₂/m²/yr        
+      temporalResolution: Annual
+      unit: g CO₂/m²/yr
     media:
       src: ::file ./oco2-mip-co2budget-yeargrid-v1.thumbnails.net.carbon.exchange.png
       alt: OCO-2 MIP Top-down CO₂ Budgets - LNLGIS Net Carbon Exchange (LNLGIS_NCE)
@@ -265,12 +265,12 @@ layers:
         - mean
       sourceParams:
         nodata: 0
-        dst_crs: "+proj=cea"
+        dst_crs: '+proj=cea'
     info:
       source: NASA / NOAA
       spatialExtent: Global
-      temporalResolution: Annual 
-      unit: g CO₂/m²/yr        
+      temporalResolution: Annual
+      unit: g CO₂/m²/yr
     media:
       src: ::file ./oco2-mip-co2budget-yeargrid-v1.thumbnails.net.carbon.exchange.uncertainty.png
       alt: OCO-2 MIP Top-down CO₂ Budgets - Uncertainty - LNLGIS Net Carbon Exchange (LNLGIS_NCE_std)
@@ -322,18 +322,18 @@ layers:
         - mean
       sourceParams:
         nodata: 0
-        dst_crs: "+proj=cea"
+        dst_crs: '+proj=cea'
     info:
       source: NASA / NOAA
       spatialExtent: Global
-      temporalResolution: Annual 
-      unit: g CO₂/m²/yr        
+      temporalResolution: Annual
+      unit: g CO₂/m²/yr
     media:
       src: ::file ./oco2-mip-co2budget-yeargrid-v1.thumbnails.net.land.carbon.stock.loss.png
       alt: OCO-2 MIP Top-down CO₂ Budgets - LNLGIS Net Land Carbon Stock Loss (LNLGIS_dC_loss)
   - id: co2-emissions-lnlgis-dc-loss-std
     stacCol: oco2-mip-co2budget-yeargrid-v1
-    name: LNLGIS Net Land Carbon Stock Loss (LNLGIS_dC_loss_std)
+    name: Uncertainty - LNLGIS Net Land Carbon Stock Loss (LNLGIS_dC_loss_std)
     type: raster
     description: Uncertainty in CO₂ emissions from net land carbon stock loss (decrease in land carbon) estimated from the OCO-2 v10 MIP LNLGIS  ensemble
     initialDatetime: newest
@@ -379,15 +379,15 @@ layers:
         - mean
       sourceParams:
         nodata: 0
-        dst_crs: "+proj=cea"
+        dst_crs: '+proj=cea'
     info:
       source: NASA / NOAA
       spatialExtent: Global
-      temporalResolution: Annual 
-      unit: g CO₂/m²/yr        
+      temporalResolution: Annual
+      unit: g CO₂/m²/yr
     media:
       src: ::file ./oco2-mip-co2budget-yeargrid-v1.thumbnails.net.land.carbon.stock.loss.uncertainty.png
-      alt: OCO-2 MIP Top-down CO₂ Budgets - LNLGIS Net Land Carbon Stock Loss (LNLGIS_dC_loss_std)
+      alt: OCO-2 MIP Top-down CO₂ Budgets - Uncertainty LNLGIS Net Land Carbon Stock Loss (LNLGIS_dC_loss_std)
   - id: co2-emissions-crop
     stacCol: oco2-mip-co2budget-yeargrid-v1
     name: Lateral Crop CO₂ Flux (Crop)
@@ -436,12 +436,12 @@ layers:
         - mean
       sourceParams:
         nodata: 0
-        dst_crs: "+proj=cea"
+        dst_crs: '+proj=cea'
     info:
       source: NASA / NOAA
       spatialExtent: Global
-      temporalResolution: Annual 
-      unit: g CO₂/m²/yr        
+      temporalResolution: Annual
+      unit: g CO₂/m²/yr
     media:
       src: ::file ./oco2-mip-co2budget-yeargrid-v1.thumbnails.lateral.crop.co2.flux.png
       alt: OCO-2 MIP Top-down CO₂ Budgets - Lateral Crop CO₂ Flux (Crop)
@@ -493,12 +493,12 @@ layers:
         - mean
       sourceParams:
         nodata: 0
-        dst_crs: "+proj=cea"
+        dst_crs: '+proj=cea'
     info:
       source: NASA / NOAA
       spatialExtent: Global
-      temporalResolution: Annual 
-      unit: g CO₂/m²/yr        
+      temporalResolution: Annual
+      unit: g CO₂/m²/yr
     media:
       src: ::file ./oco2-mip-co2budget-yeargrid-v1.thumbnails.lateral.crop.co2.flux.uncertainty.png
       alt: OCO-2 MIP Top-down CO₂ Budgets - Uncertainty - Lateral Crop CO₂ Flux (Crop_std)
@@ -550,12 +550,12 @@ layers:
         - mean
       sourceParams:
         nodata: 0
-        dst_crs: "+proj=cea"
+        dst_crs: '+proj=cea'
     info:
       source: NASA / NOAA
       spatialExtent: Global
-      temporalResolution: Annual 
-      unit: g CO₂/m²/yr        
+      temporalResolution: Annual
+      unit: g CO₂/m²/yr
     media:
       src: ::file ./oco2-mip-co2budget-yeargrid-v1.thumbnails.fossil.fuel.cement.co2.emissions.png
       alt: OCO-2 MIP Top-down CO₂ Budgets - Fossil Fuel and Cement CO₂ Emissions (FF)
@@ -607,12 +607,12 @@ layers:
         - mean
       sourceParams:
         nodata: 0
-        dst_crs: "+proj=cea"
+        dst_crs: '+proj=cea'
     info:
       source: NASA / NOAA
       spatialExtent: Global
-      temporalResolution: Annual 
-      unit: g CO₂/m²/yr        
+      temporalResolution: Annual
+      unit: g CO₂/m²/yr
     media:
       src: ::file ./oco2-mip-co2budget-yeargrid-v1.thumbnails.fossil.fuel.cement.co2.emissions.uncertainty.png
       alt: OCO-2 MIP Top-down CO₂ Budgets - Uncertainty - Fossil Fuel and Cement CO₂ Emissions (FF_std)
@@ -664,12 +664,12 @@ layers:
         - mean
       sourceParams:
         nodata: 0
-        dst_crs: "+proj=cea"
+        dst_crs: '+proj=cea'
     info:
       source: NASA / NOAA
       spatialExtent: Global
-      temporalResolution: Annual 
-      unit: g CO₂/m²/yr        
+      temporalResolution: Annual
+      unit: g CO₂/m²/yr
     media:
       src: ::file ./oco2-mip-co2budget-yeargrid-v1.thumbnails.lateral.river.co2.flux.png
       alt: OCO-2 MIP Top-down CO₂ Budgets - Lateral River CO₂ Flux (River)
@@ -721,12 +721,12 @@ layers:
         - mean
       sourceParams:
         nodata: 0
-        dst_crs: "+proj=cea"
+        dst_crs: '+proj=cea'
     info:
       source: NASA / NOAA
       spatialExtent: Global
-      temporalResolution: Annual 
-      unit: g CO₂/m²/yr        
+      temporalResolution: Annual
+      unit: g CO₂/m²/yr
     media:
       src: ::file ./oco2-mip-co2budget-yeargrid-v1.thumbnails.lateral.river.co2.flux.uncertainty.png
       alt: OCO-2 MIP Top-down CO₂ Budgets - Uncertainty - Lateral River CO₂ Flux (River_std)
@@ -778,12 +778,12 @@ layers:
         - mean
       sourceParams:
         nodata: 0
-        dst_crs: "+proj=cea"
+        dst_crs: '+proj=cea'
     info:
       source: NASA / NOAA
       spatialExtent: Global
-      temporalResolution: Annual 
-      unit: g CO₂/m²/yr        
+      temporalResolution: Annual
+      unit: g CO₂/m²/yr
     media:
       src: ::file ./oco2-mip-co2budget-yeargrid-v1.thumbnails.lateral.wood.co2.flux.png
       alt: OCO-2 MIP Top-down CO₂ Budgets - Lateral Wood CO₂ Flux (Wood)
@@ -835,12 +835,12 @@ layers:
         - mean
       sourceParams:
         nodata: 0
-        dst_crs: "+proj=cea"
+        dst_crs: '+proj=cea'
     info:
       source: NASA / NOAA
       spatialExtent: Global
-      temporalResolution: Annual 
-      unit: g CO₂/m²/yr        
+      temporalResolution: Annual
+      unit: g CO₂/m²/yr
     media:
       src: ::file ./oco2-mip-co2budget-yeargrid-v1.thumbnails.lateral.wood.co2.flux.uncertainty.png
       alt: OCO-2 MIP Top-down CO₂ Budgets - Uncertainty - Lateral Wood CO₂ Flux (Wood_std)
@@ -883,9 +883,9 @@ layers:
     Leveraging the OCO-2 MIP, the surface-atmosphere CO₂ fluxes are estimated from four standardized experiments of which one is included in the Center:
     - LNLGIS: both in situ CO₂ measurements from the National Oceanic and Atmospheric Administration (NOAA) Observation Package [ObsPack](https://gml.noaa.gov/ccgg/obspack/) and column-averaged CO₂ dry air mole fraction (XCO₂) retrievals from NASA’s Orbiting Carbon Observatory-2 (OCO-2) Land Nadir and Land Glint data
 
-    For the LNLGIS experiment, net carbon exchange (NCE) and ocean CO₂ fluxes are optimized to match the atmospheric CO₂ observations within their uncertainties. The net biosphere exchange (NBE) is calculated by subtracting bottom-up fossil fuel emission estimates from NCE. The net loss of land carbon is then estimated by accounting for “lateral” carbon fluxes from the terrestrial biosphere such as land-to-ocean transport of carbon by rivers and the import and export of harvested agricultural and wood products. Changes in terrestrial carbon stocks (ΔCloss) reflect the combined impact of direct anthropogenic activities and changes to managed ecosystems in response to rising atmospheric CO2 concentrations, climate change, and disturbances (i.e., droughts, floods, wildfires, severe weather). 
+    For the LNLGIS experiment, net carbon exchange (NCE) and ocean CO₂ fluxes are optimized to match the atmospheric CO₂ observations within their uncertainties. The net biosphere exchange (NBE) is calculated by subtracting bottom-up fossil fuel emission estimates from NCE. The net loss of land carbon is then estimated by accounting for “lateral” carbon fluxes from the terrestrial biosphere such as land-to-ocean transport of carbon by rivers and the import and export of harvested agricultural and wood products. Changes in terrestrial carbon stocks (ΔCloss) reflect the combined impact of direct anthropogenic activities and changes to managed ecosystems in response to rising atmospheric CO2 concentrations, climate change, and disturbances (i.e., droughts, floods, wildfires, severe weather).
 
-    The US GHG Center explore view only highlights flux estimates from the LNLGIS experiment, but the full dataset with all layers and national totals can be accessed on the [CEOS website](https://ceos.org/gst/carbon-dioxide.html). In addition, the following Jupyter Notebook demonstrates how to read, visualize and explore statistics for the national (i.e. country level) CO₂ budget data: [OCO-2 MIP National CO₂ Budget Notebook](https://us-ghg-center.github.io/ghgc-docs/user_data_notebooks/oco2-mip-National-co2budget.html). 
+    The US GHG Center explore view only highlights flux estimates from the LNLGIS experiment, but the full dataset with all layers and national totals can be accessed on the [CEOS website](https://ceos.org/gst/carbon-dioxide.html). In addition, the following Jupyter Notebook demonstrates how to read, visualize and explore statistics for the national (i.e. country level) CO₂ budget data: [OCO-2 MIP National CO₂ Budget Notebook](https://us-ghg-center.github.io/ghgc-docs/user_data_notebooks/oco2-mip-National-co2budget.html).
 
     ## Key Publications
     Byrne, B., Baker, D. F., Basu, S., Bertolacci, M., Bowman, K. W., Carroll, D., Chatterjee, A., Chevallier, F., Ciais, P., Cressie, N., Crisp, D., Crowell, S., Deng, F., Deng, Z., Deutscher, N. M., Dubey, M. K., Feng, S., García, O. E., Griffith, D. W. T., … Zeng, N. (2023). National CO₂ budgets (2015–2020) inferred from atmospheric CO₂ observations in support of the global stocktake. *Earth System Science Data, 15*, 963–1004. [https://doi.org/10.5194/essd-15-963-2023](https://doi.org/10.5194/essd-15-963-2023)
