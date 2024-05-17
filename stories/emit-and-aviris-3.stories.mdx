@@ -3,7 +3,7 @@ id: 'emit-and-aviris-3'
 name: Tracking Methane Plumes from Space and Sky
 description: 'Methane plumes can now be detected using the airborne AVIRIS-3 spectrometer in addition to EMIT on the International Space Station. Learn more about the similarities and differences and how scientists validate and understand the data from each.'
 media:
-  src: ::file ./EMIT_AVIRIS3_data_insight_banner_v1.png
+  src: ::file ./EMIT_AVIRIS3_Data_Insight_Banner_v2 .jpg
   alt: Image of plume from EMIT and AVIRIS-3 showing image swath width for each.
   author:
     name: NASA/JPL-Caltech
@@ -12,7 +12,6 @@ taxonomy:
   - name: Topics
     values:
       - Large Emission Events
-
   - name: Authors
     values:
       - GHG Center Large Emission Events Focus Group
@@ -64,9 +63,8 @@ taxonomy:
 </Block>
 
 <Block>
-    <Prose>
-        Comparison of the airborne AVIRIS-3 instrument and EMIT characteristics showing AVIRIS-3 has similar spectral measurements to EMIT.
     <Figure>
+        <b>Comparison of the airborne AVIRIS-3 instrument and EMIT characteristics showing AVIRIS-3 has similar spectral measurements to EMIT.</b>
       <table style={{ width: '100%', borderCollapse: 'collapse' }}>
           <tr>
             <th style={{ borderBottom: '2px solid #ccc', padding: '8px', textAlign: 'left' }}></th>
@@ -107,7 +105,6 @@ taxonomy:
          <Caption alt="Table showing comparison of various characteristics of AVIRIS-3 and EMIT">
         </Caption>
     </Figure>
-    </Prose>
 </Block>
 
 <Block>
@@ -138,7 +135,7 @@ taxonomy:
 <Block>
     <Figure>
         <Image
-            src={new URL('./aviris3-operator.jpg', import.meta.url).href}
+            src={new URL('./aviris3-operator_.jpg', import.meta.url).href}
             alt="Photo of operator looking at laptop display on aircraft during flight"
             attrAuthor="NASA/JPL-Caltech"
         />
@@ -157,7 +154,7 @@ taxonomy:
             controls
             autoplay
             loop
-            poster={new URL('./plume-view-image-for-video.png', import.meta.url).href}
+            poster={new URL('./EMIT_AVIRIS3_Video_Image_Play_Arrow.jpg', import.meta.url).href}
             >
         </video>
         <Caption attrAuthor="NASA/JPL-Caltech" alt="Video showing methane plumes observed in real time">
@@ -170,7 +167,8 @@ taxonomy:
     <Figure>
         <img
             src={new URL('./EMIT_AV-3_v2a_GIF_med.gif', import.meta.url).href}
-            height="600"
+            width="600"
+            height="800"
         >
         </img>
         <Caption attrAuthor="NASA/JPL-Caltech" alt="Alternating image showing EMIT and AVIRIS-3 coincidently measured methane plume" >
