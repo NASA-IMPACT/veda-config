@@ -19,24 +19,28 @@ taxonomy:
 <Block>
   <Prose>
     ## Introduction
-    Trent Cowan<sup>1</sup>, Andrew Blackford<sup>1</sup>, and Udaysankar Nair<sup>1</sup>
+    Trent Cowan<sup>1</sup>, Andrew Blackford<sup>1</sup>, Udaysankar Nair<sup>1</sup>, and Ashley Riddle<sup>1</sup>
 
     <sup>1</sup>: University of Alabama in Huntsville
 
     <mark>Disclaimer: This research is ongoing and is not yet peer-reviewed.</mark>
 
-    Hurricane season in the United States stretches from June 1 through November 30 on any particular year. Peak hurricane season in the eastern United States occurs in August and September. In 2022, Hurricane Ian impacted southwest Florida on September 28 as it made landfall as a Category 4 hurricane (based on the Saffir-Simpson Wind Scale). The storm produced $110 billion dollars in damage in Florida alone and left 158 dead. Hurricane Ian was also responsible for not only its impact on life and property, but also an impact on the landscape in portions of southwestern Florida near Fort Myers. Storm surge reached unprecedented levels around the regions of Cape Coral and Fort Myers upwards of 12 to 18 feet. Storm surge, in simple terms, is the sudden rise in ocean water levels during a storm such as a tropical cyclone  or other strong low pressure system. An analysis in Figure 1 from the National Hurricane Center’s review on Hurricane Ian shows the dangerous storm surge’s heavy impact on our area of interest. The storm surge is attributed as the primary cause of death along the coast of southwestern Florida.
+    Atlantic hurricane season stretches from June 1 to November 30, and generally reaches a peak in August and September. On September 28, 2022, Hurricane Ian made landfall in southwest Florida as a Category 4 hurricane (based on the Saffir-Simpson Wind Scale), with estimated wind speeds of 150 MPH. The toll was high, leaving 158 people dead and producing $110 billion in damage in Florida alone. The hurricane also left a devastating impact on the landscape in portions of southwest Florida near Fort Myers. A storm surge reached unprecedented levels of 12 to 18 feet around the regions of Cape Coral and Fort Myers. A storm surge is the sudden rise in ocean water above normal tide levels during a storm such as a tropical cyclone or other strong low pressure system as wind from the storm pushes water ashore. An analysis in Figure 1 from the U.S. National Hurricane Center’s review of Hurricane Ian shows the storm surge’s heavy impact on the southwest Florida coast. The storm surge is attributed as the primary cause of fatalities along the coast of southwestern Florida.
 
+    This work aims to provide a comprehensive analysis of Hurricane Ian’s devastating environmental impact on southwestern Florida and explore the critical role of remote sensing in monitoring and mitigating the effects of natural disasters using advanced remote sensing techniques. Parameters such as Normalized Difference Vegetation Index (NDVI) and entropy changes offer insights into Ian’s effects on vegetation and surface textures. The HLS (Harmonized Landsat and Sentinel-2) project serves as a great tool in this analysis by providing essential data for response and recovery; moreover, this article introduces the UCONN Geographic Environmental Remote Sensing (GERS) lab’s CONUS Disturbance Water to highlight the importance of near real-time land disturbance detection. 
 
     ## Inland Effects of Ian
-    Hurricane Ian  became an official named storm southeast of Jamaica on September 24th. Ian then intensified into a hurricane quickly and made landfall in western Cuba near Havana as a Category 3 storm where it caused catastrophic damage and widespread power outages. After exiting  Cuba, it quickly intensified into a Category 5 Hurricane near the southwestern coast of Florida.  As it continued moving north and west, hurricane Ian made landfall on Cayo Costa Island as a strong Category 4 Hurricane with maximum sustained winds of 149 MPH. Ian weakened to tropical storm status further inland of the Florida Peninsula before exiting into the Atlantic. The damage from Hurricane Ian was especially catastrophic on Pine and Sanibel islands just off the coast of Cape Coral. Figure 2 represents two images from the Associated Press encompassing our primary areas of focus for this data story: Fort Myers Beach and Sanibel Island and the destruction that Hurricane Ian left in its wake. Most homes along this portion of Fort Myers beach were moved due to the storm surge and were either destroyed or severely damaged. The second image shows a section of the Sanibel Causeway (the causeway that connects Sanibel Island to the mainland of Florida) that was taken out by Hurricane Ian. Both of these images do not begin to scratch the surface on just how catastrophic Ian was not only on vegetation, but to infrastructure in the area.  
+    On September 24, Hurricane Ian became a named storm southeast of Jamaica. Ian quickly intensified into a hurricane and made landfall in western Cuba near Havana as a Category 3 storm, where it caused catastrophic damage and widespread power outages. After exiting Cuba, the storm quickly intensified into a massive Category 5 storm near the southwestern coast of Florida with sustained wind speeds in excess of 158 mph. As Ian continued moving north and west, the storm made landfall on Florida’s Cayo Costa Island as a strong Category 4 hurricane, with maximum sustained winds of 149 mph. Ian weakened to a tropical storm as it moved further inland of the Florida Peninsula before exiting into the Atlantic. 
+
+    The damage from Hurricane Ian was particularly catastrophic on Pine Island and Sanibel Island just off the coast of Cape Coral. The scrollytelling cards shows images from the Associated Press encompassing Fort Myers Beach and Sanibel Island and illustrating the destruction Hurricane Ian left in its wake. Most homes along this portion of Fort Myers beach were moved due to the storm surge and were either destroyed or severely damaged. A section of the Sanibel Causeway (the causeway that connects Sanibel Island to the mainland of Florida) was taken out by Hurricane Ian leaving residents stranded on Sanibel Island. The damage to houses, roads, and other structures was catastrophic, and the hurricane also inflicted severe harm on the area’s vegetation.
+
   </Prose>
   <Figure>
       <Image
       src={new URL('./surge_track_figure.jpg', import.meta.url).href}
     />
     <Caption attrAuthor='National Hurricane Center' attrUrl='https://www.nhc.noaa.gov/data/tcr/AL092022_Ian.pdf'>
-      Figure 1: Combined storm surge and Hurricane Ian track. 
+      Figure 1: National Hurricane Center analysis of the storm surge from Hurricane Ian. Black line indicates Ian’s path. Red/magenta colors indicate areas of highest storm surge. Credit: National Hurricane Center. 
     </Caption>
   </Figure>
 </Block>
@@ -55,13 +59,15 @@ taxonomy:
       attrAuthor='Harmonized Landsat and Sentinel-2'
       attrUrl='https://hls.gsfc.nasa.gov/'
     >
-   Figure 2: NDVI over Cape Coral & Fort Myers a month prior and just after Hurricane Ian.
+   Figure 2 and 3: HLS NDVI pre/post-Ian over Sanible Island, Cape Coral, and portions of Fort Myers.
     </Caption>
   </Figure>
   <Prose>
     ## NDVI & Entropy Analysis
 
-    The figure to the left depicts the Normalized Difference Vegetation Index (NDVI) around Cape Coral a month prior to Hurricane Ian comparing the landscape to the week after. NDVI serves as a fundamental metric for comprehending the vitality and abundance of vegetation within a specific geographical region. In this data story, we compare NDVI data from Harmonized Landsat Sentinel-2 (HLS) for two different days encompassing the area prior to the hurricane and post-hurricane. The primary vegetation in this portion of Florida can include grasslands and forested regions. In Figure 5, the darker green locations show a relatively high abundance of healthy vegetation at a particular location. The light green,yellow, and red locations depict areas with no or unhealthy vegetation. Notice Pine and Sanibel Islands just east of Cape Coral. These areas were particularly hard hit by Ian. Storm surge inundated much of the access points to the islands and washed  away much of the vegetation in these locations. The post-Ian image shows a significant change in the vegetation landscape. Much of the vegetation seems to have been damaged or removed by the storm surge. In addition to statistical analyses, the notable transformation of vegetation in these dispersed areas holds significant scientific importance, as it provides compelling evidence of the formidable impacts of this catastrophic hurricane. Here, a substantial portion of the pre-Ian vegetation underwent severe devastation due to the sudden surge in water. Hurricanes can have a big and varied impact on nature, showing why it's important to know about their wider environmental effects.
+    Normalized Difference Vegetation Index (NDVI) serves as a fundamental metric for understanding the vitality and abundance of vegetation within a specific geographical region. In this data story, we compare NDVI data of the area derived from HLS data for two different days pre- and post-hurricane. The primary vegetation in this portion of Florida includes grasslands and forested regions. NDVI is a key metric used to assess the health and density of vegetation in a specific area based on satellite imagery. Figure 2 (left portion of the NDVI slider) depicts the NDVI around Cape Coral a month prior to Hurricane Ian, while Figure 3 (right portion of the NDVI slider) shows the same landscape the week following the storm. In Figure 2, darker green colors indicate a relatively high abundance of healthy vegetation at a particular location. The light green, yellow, and red colors indicate areas with little to no healthy vegetation. 
+
+    Pine and Sanibel Islands, east of Cape Coral, are particularly notable because the hurricane inflicted so much damage. The post-Ian image (Figure 3) shows a significant change in the vegetation landscape. Storm surge inundated much of the access points to the islands and washed away or damaged much of the vegetation in these locations. In addition to statistical analyses, the notable transformation of vegetation in these dispersed areas holds significant scientific importance, as it provides compelling evidence of the formidable impacts of this catastrophic storm. Hurricanes can have a massive and varied impact on nature, demonstrating why it is crucial to understand their wider environmental effects.
 
   </Prose>
 </Block>
@@ -79,18 +85,20 @@ taxonomy:
       attrAuthor='Harmonized Landsat and Sentinel-2'
       attrUrl='https://hls.gsfc.nasa.gov/'
     >
-    Figure 3: The difference taken of the before and after NDVI images.
+    Figure 4: HLS NDVI Difference for Sanibel Island, Cape Coral, and portions of Fort Myers. Red colors indicate an increase in vegetation and blue indicates a decrease in vegetation.
     </Caption>
   </Figure>
   <Prose>
-    Figure 3 shows a significant change in the vegetation landscape post-hurricane by taking the difference between pre and post-Ian NDVI. Ian caused widespread devastation in coastal areas, with many places experiencing severe damage or complete flooding. The storm surge washed away much of the natural vegetation, severely impacting local ecosystems and communities. This highlights the broader issue of the destructive power of hurricanes on natural environments near and along the coast, underscoring the need for preparedness and resilience strategies.
+    Figure 4 shows a significant change in the post-hurricane vegetation landscape by tracking the difference between pre- and post-Ian NDVI. The blue colors show a negative change in NDVI in the difference image, suggesting there was a substantial loss in vegetation after Ian. Ian caused widespread devastation in coastal areas, with many places experiencing severe damage or complete flooding. The storm surge washed away much of the natural vegetation, severely impacting local ecosystems and communities. This highlights the broader issue of the destructive power of hurricanes on natural environments near and along the coast, underscoring the need for preparedness and resilience strategies.
   </Prose>
 </Block>
 
 <Block>
   <Prose>
 
-    Entropy, in the context of remote sensing and image analysis, is a measure of the randomness or disorder in an image. More specifically, we can see how surface textures such as vegetation and buildings were changed after the hurricane. A high entropy value suggests a higher level of complexity and texture, while a lower value indicates uniformity and smoothness. By analyzing the entropy change associated with Hurricane Ian using the same HLS data, we analyze alterations in surface patterns and characteristics. The observed increase in entropy in certain coastal regions post-hurricane suggests that the once smooth and uniform beach areas become more complex in texture. This complexity could be attributed to the catastrophic storm surge that occurred in the hurricane that pushed coastal sand further inland. This not only altered the coastal terrain but also created a lot of land surface changes further inland where homes and businesses that were once present are now either destroyed or heavily damaged. The amount of sand and debris that is scattered throughout the area of interest can be seen within our entropy change from Hurricane Ian. These differences can be analyzed in the figure to the right where the areas in light to dark red represent the areas where the highest change occurred.
+    Entropy, in the context of remote sensing and image analysis, is a measure of the randomness or disorder in an image. More specifically, we can see how surface textures such as vegetation and buildings changed after the hurricane. A high entropy value suggests a higher level of complexity and texture, while a lower value indicates uniformity and smoothness. By analyzing the entropy change associated with Hurricane Ian using the same HLS data as was used in the NDVI examination above, we analyze alterations in surface patterns and characteristics.
+
+    Depicted in Figure 5, the observed increase in entropy in certain coastal regions post-hurricane suggests that the once smooth and uniform beach areas became more complex in texture. This complexity could be attributed to the catastrophic storm surge that pushed coastal sand further inland. This not only altered the coastal terrain but also created a lot of land surface changes further inland, where homes and businesses that were once present are now either destroyed or heavily damaged. The amount of sand and debris scattered throughout the area of interest can be seen within our entropy change image from Hurricane Ian. These differences are highlighted in Figure 8, where areas in light to dark red represent locations where the highest change occurred.
 
   </Prose>
   <Figure>
@@ -105,7 +113,7 @@ taxonomy:
       attrAuthor='Harmonized Landsat and Sentinel-2'
       attrUrl='https://hls.gsfc.nasa.gov/'
     >
-    Figure 4: The entropy difference of the same images used for our NDVI analysis along with Lee and Charlotte Counties. 
+    Figure 5. HLS entropy difference for Sanibel Island, Cape Coral, and portions of Fort Myers. The red indicates areas with a significant increase in complexity and texture following the hurricane. 
     </Caption>
   </Figure>
 </Block>
@@ -114,7 +122,9 @@ taxonomy:
   <Prose>
     ## Damage Probability Predictions
 
-    The UCONN GERS lab’s ‘CONUS Disturbance Watcher’ offers a pioneering approach to near real-time land disturbance detection, utilizing the HLS dataset. By harnessing the capabilities of the Stochastic Continuous Change Detection (S-CCD), the dataset establishes a reference image from sustained observation of the land surface and is triggered after a natural disaster to identify  land surface disturbance features in post-event satellite imagery. Once these features are defined, the system predicts the damage probability by comparing against the reference image for a given location. In the context of Hurricane Ian, this damage probability dataset serves as a valuable complement to evaluating vegetation and coastline changes associated with wind and storm surge. While our primary assessments, including entropy changes, provide direct insights into Ian’s impact, the ‘CONUS Disturbance Watcher’ augments our understanding by delivering probabilistic insights into areas most likely affected by disturbances. While the damage probability index highlights changes to more forested regions, we have combined vegetation and entropy indices to this study to encompass both the vegetation impact and perhaps more human influenced land cover impacts. By integrating these data, we gain a more comprehensive view of Ian’s aftermath, combining direct observation with predictive analytics to determine areas of potential vulnerability and change. 
+    The UCONN GERS lab’s CONUS Disturbance Watcher offers a pioneering approach to near real-time land disturbance detection utilizing the HLS dataset. By harnessing the capabilities of the Stochastic Continuous Change Detection (S-CCD), the dataset establishes a reference image from sustained observation of the land surface and is triggered after a natural disaster to identify land surface disturbance features in post-event satellite imagery. S-CCD is a remote sensing technique used to monitor and detect ongoing changes in land surface characteristics. It highlights areas of disturbances or alteration by comparing new images against a reference baseline. Once these features are defined, the system predicts damage probability by comparing a post-disaster image against a reference image for a given location. In the context of Hurricane Ian, this damage probability dataset serves as a valuable complement to evaluating vegetation and coastline changes associated with wind and storm surge.  
+
+    While our primary assessments, including entropy changes, provide direct insights into Ian’s impact, the CONUS Disturbance Watcher augments our understanding by delivering probabilistic insights into areas most likely affected by disturbances. The damage probability index primarily highlights changes in forested regions. To provide a more comprehensive analysis, we have combined vegetation and entropy indices in this study to encompass both the impact on vegetation and changes to human-influenced land cover. By integrating these data and combining direct observation with predictive analytics to determine areas of potential vulnerability and change, we gain a more comprehensive view of Ian’s aftermath. 
 
   </Prose>
 </Block>
@@ -130,9 +140,9 @@ taxonomy:
     />
     <Caption
       attrAuthor='NASA'
-      attrUrl='https://nasa.gov/'
+      attrUrl='https://gerslab.uconn.edu/'
     >
-    Figure 5: Damage Probability from UCONN GERS lab for Lee and Charlotte counties in Florida.  
+    Figure 6: Damage Probability from UCONN GERS lab for Lee and Charlotte counties in Florida. This product is on a scale of 0 to 99 with 0 indicating 0 probability of damage and 99 indicating the highest probability of damage.  
     </Caption>
   </Figure>
 </Block>
@@ -147,7 +157,7 @@ taxonomy:
   >
     ## Damage on the Sanibel Causeway
 
-    The devastating impact of Hurricane Ian resulted in the collapse of the Sanibel Causeway, a critical link connecting Sanibel Island to Florida's mainland. This destruction stranded numerous residents, necessitating boat-based evacuations and delivery of vital supplies, underscoring the hurricane's profound effects on offshore communities. The area around Punta Rassa, where the causeway commences, suffered extensive damage, further illustrating the severe consequences of Hurricane Ian on these coastal regions.
+    The devastating impact of Hurricane Ian resulted in the collapse of the Sanibel Causeway, a critical link connecting Sanibel Island to Florida's mainland. This destruction stranded numerous residents, necessitating boat-based evacuations and delivery of vital supplies and underscoring the hurricane's profound effects on offshore communities. The area around Punta Rassa, where the causeway commences, suffered extensive damage, further illustrating the severe consequences of Hurricane Ian on these coastal regions.
 
     <Figure>
       <Image
@@ -167,7 +177,7 @@ taxonomy:
   >
     ## Fort Myers Beach
 
-    Heading to the main coast of Florida, high storm surge creates major inundation for Fort Myers Beach. Most of this area is developed, however, several miles inland are wetlands that experienced the major hit to vegetation from the water. Homes and businesses were mostly damaged or destroyed in this region. 
+    On the mainland Florida coast, high storm surge led to major inundation of Fort Myers Beach. Most of this area is developed; however, wetlands several miles inland experienced major vegetation damage from the water. Homes and businesses were mostly damaged or destroyed in this region. 
 
     <Figure>
       <Image
@@ -187,7 +197,7 @@ taxonomy:
   >
     ## Sanibel Island
 
-    Overall, the most significant change in vegetation as a result of Ian occurred on Sanibel Island. The highest winds and energy occurred in this area resulting in some of the highest storm surge and inundation from the other locations mentioned. 
+    Overall, the most significant change in vegetation as a result of Hurricane Ian occurred on Sanibel Island. The highest winds and energy occurred in this area, resulting in some of the highest storm surge and inundation from the other locations mentioned.  
 
     <Figure>
       <Image
@@ -199,6 +209,15 @@ taxonomy:
     </Figure>
   </Chapter>
 </ScrollytellingBlock>
+
+<Block>
+  <Prose>
+    ## Conclusion 
+
+    Hurricane Ian left a trail of devastation across southwestern Florida, highlighting the urgent need for enhanced disaster preparedness and resilience strategies. The catastrophic impact on life, property, and the environment, evidenced through detailed NDVI and entropy analyses using HLS data, underscores the challenges communities face in recovery. The use of advanced remote sensing tools like the CONUS Disturbance Watcher emphasizes the importance of real-time data in disaster response.
+
+  </Prose>
+</Block>
 
 <Block>
   <Prose>
