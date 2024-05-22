@@ -29,7 +29,7 @@ export const NEWSLETTER_ITEMS = sortByDateDesc([
   }
 ])
 
-export const NEWS_ITEMS = sortByDateDesc([
+export const NEWS_ITEMS = [
   {
     name: 'US GHG Center announced at COP28',
     asLink : {
@@ -39,9 +39,8 @@ export const NEWS_ITEMS = sortByDateDesc([
       src: new URL('./media/news/cop28-uae.jpg', import.meta.url).href,
       alt: 'Cop 28 Logo'
     },
-    description: 'Agency partners released the US GHG Center at the 28th annual United Nations Climate Conference (COP28) on December 4, 2023.',
-    date: '2023-12-04'
-  },  
+    description: 'Agency partners released the US GHG Center at the 28th annual United Nations Climate Conference (COP28) on December 4, 2023.'
+  },
   {
     name: 'A U.S. national strategy for measuring and monitoring GHG emissions',
     asLink : {
@@ -51,8 +50,7 @@ export const NEWS_ITEMS = sortByDateDesc([
       src: new URL('./media/news/US_GHG_MMIS_report_cover_screenshot.png', import.meta.url).href,
       alt: 'NASA logo'
     },
-    description: 'On November 29, 2023, the White House released the National Strategy to Advance an Integrated U.S. Greenhouse Gas Measurement, Monitoring, and Information System to Advance an Integrated U.S. Greenhouse Gas Measurement, Monitoring, and Information System. This report outlines how federal agencies will collaborate to lead the federal government’s efforts to assess and reduce GHG emissions.',
-    date: '2023-11-29'
+    description: 'On November 29, 2023, the White House released the National Strategy to Advance an Integrated U.S. Greenhouse Gas Measurement, Monitoring, and Information System to Advance an Integrated U.S. Greenhouse Gas Measurement, Monitoring, and Information System. This report outlines how federal agencies will collaborate to lead the federal government’s efforts to assess and reduce GHG emissions.'
   },
   {
     name: 'The US GHG Center at the 2023 AGU Fall Meeting',
@@ -63,10 +61,9 @@ export const NEWS_ITEMS = sortByDateDesc([
       src: new URL('./media/news/Kavvada_2023_AGU_Hyperwall_Edited.png', import.meta.url).href,
       alt: 'NASA logo'
     },
-    description: 'The US GHG Center and beta portal was a new and prominent effort highlighted at the 2023 AGU Fall Meeting in San Francisco, December 11th - 15th. Several presentations and posters featured the Center’s content, design, and functionality.',
-    date: '2023-12-11'
+    description: 'The US GHG Center and beta portal was a new and prominent effort highlighted at the 2023 AGU Fall Meeting in San Francisco, December 11th - 15th. Several presentations and posters featured the Center’s content, design, and functionality.'
   }
-])
+]
 
 export const EVENT_ITEMS = sortByDateDesc([
   {
