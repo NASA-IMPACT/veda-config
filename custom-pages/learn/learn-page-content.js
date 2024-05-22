@@ -1,6 +1,17 @@
 export const NEWSLETTER_ITEMS = [
   {
-    name: 'The inaugural US GHG Center Newsletter',
+    name: 'March 2024 - US GHG Center Newsletter',
+    asLink : {
+      url: 'https://conta.cc/4blhTSu'
+    },
+    media: {
+      src: new URL('./media/news/Newsletter_2_Learn_Page_Screenshot.png', import.meta.url).href,
+      alt: 'March 2024'
+    },
+    description: 'Volume 1.2, May 2024'
+  },
+  {
+    name: 'March 2024 - US GHG Center Newsletter',
     asLink : {
       url: 'https://myemail-api.constantcontact.com/US-GHG-Center-Newsletter.html?soid=1141171816352&aid=TCM2bjPR30g'
     },
