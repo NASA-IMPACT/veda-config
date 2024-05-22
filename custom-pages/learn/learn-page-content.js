@@ -158,6 +158,6 @@ export const EVENT_ITEMS = sortByDateDesc([
     },
     description: 'On September 26, 2023, several US GHG Center team members met with a community of potential users and considered how the site could best serve stakeholders. Meeting participants shared ideas on focus areas and needs for the US GHG Center and also suggested stakeholders who might be interested in a targeted Stakeholder Forum for the US GHG Center (November 2023). In addition, team members explored a potential partnership with NASA CMS stakeholder engagement.',
     startDate: '2023-09-26',
-    endDate: '2023-09-26'
+    endDate: '2023-11-26'
   }
 ])
