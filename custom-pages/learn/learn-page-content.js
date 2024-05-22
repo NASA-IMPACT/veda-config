@@ -1,14 +1,19 @@
-export const NEWSLETTER_ITEMS = [
+function sortByDateDesc(items) {
+  return items.sort((a, b) => new Date(b.date || b.startDate) - new Date(a.date || a.startDate));
+}
+
+export const NEWSLETTER_ITEMS = sortByDateDesc([
   {
-    name: 'March 2024 - US GHG Center Newsletter',
+    name: 'May 2024 - US GHG Center Newsletter',
     asLink : {
       url: 'https://conta.cc/4blhTSu'
     },
     media: {
       src: new URL('./media/news/Newsletter_2_Learn_Page_Screenshot.png', import.meta.url).href,
-      alt: 'March 2024'
+      alt: 'May 2024'
     },
-    description: 'Volume 1.2, May 2024'
+    description: 'Volume 1.2, May 2024',
+    date: '2024-05'
   },
   {
     name: 'March 2024 - US GHG Center Newsletter',
@@ -19,10 +24,12 @@ export const NEWSLETTER_ITEMS = [
       src: new URL('./media/news/newsletter.jpg', import.meta.url).href,
       alt: 'March 2024'
     },
-    description: 'Volume 1.1, March 2024'
+    description: 'Volume 1.1, March 2024',
+    date: '2024-03'
   }
-]
-export const NEWS_ITEMS = [
+])
+
+export const NEWS_ITEMS = sortByDateDesc([
   {
     name: 'US GHG Center announced at COP28',
     asLink : {
@@ -32,7 +39,8 @@ export const NEWS_ITEMS = [
       src: new URL('./media/news/cop28-uae.jpg', import.meta.url).href,
       alt: 'Cop 28 Logo'
     },
-    description: 'Agency partners released the US GHG Center at the 28th annual United Nations Climate Conference (COP28) on December 4, 2023.'
+    description: 'Agency partners released the US GHG Center at the 28th annual United Nations Climate Conference (COP28) on December 4, 2023.',
+    date: '2023-12-04'
   },  
   {
     name: 'A U.S. national strategy for measuring and monitoring GHG emissions',
@@ -43,7 +51,8 @@ export const NEWS_ITEMS = [
       src: new URL('./media/news/US_GHG_MMIS_report_cover_screenshot.png', import.meta.url).href,
       alt: 'NASA logo'
     },
-    description: 'On November 29, 2023, the White House released the National Strategy to Advance an Integrated U.S. Greenhouse Gas Measurement, Monitoring, and Information System to Advance an Integrated U.S. Greenhouse Gas Measurement, Monitoring, and Information System. This report outlines how federal agencies will collaborate to lead the federal government’s efforts to assess and reduce GHG emissions.'
+    description: 'On November 29, 2023, the White House released the National Strategy to Advance an Integrated U.S. Greenhouse Gas Measurement, Monitoring, and Information System to Advance an Integrated U.S. Greenhouse Gas Measurement, Monitoring, and Information System. This report outlines how federal agencies will collaborate to lead the federal government’s efforts to assess and reduce GHG emissions.',
+    date: '2023-11-29'
   },
   {
     name: 'The US GHG Center at the 2023 AGU Fall Meeting',
@@ -54,11 +63,12 @@ export const NEWS_ITEMS = [
       src: new URL('./media/news/Kavvada_2023_AGU_Hyperwall_Edited.png', import.meta.url).href,
       alt: 'NASA logo'
     },
-    description: 'The US GHG Center and beta portal was a new and prominent effort highlighted at the 2023 AGU Fall Meeting in San Francisco, December 11th - 15th. Several presentations and posters featured the Center’s content, design, and functionality.'
+    description: 'The US GHG Center and beta portal was a new and prominent effort highlighted at the 2023 AGU Fall Meeting in San Francisco, December 11th - 15th. Several presentations and posters featured the Center’s content, design, and functionality.',
+    date: '2023-12-11'
   }
-]
+])
 
-export const EVENT_ITEMS = [
+export const EVENT_ITEMS = sortByDateDesc([
   {
     name: 'Policy Speaker Series: An Overview of the Global Greenhouse Gas Watch (G3W)',
     asLink : {
@@ -148,6 +158,6 @@ export const EVENT_ITEMS = [
     },
     description: 'On September 26, 2023, several US GHG Center team members met with a community of potential users and considered how the site could best serve stakeholders. Meeting participants shared ideas on focus areas and needs for the US GHG Center and also suggested stakeholders who might be interested in a targeted Stakeholder Forum for the US GHG Center (November 2023). In addition, team members explored a potential partnership with NASA CMS stakeholder engagement.',
     startDate: '2023-09-26',
-    endDate: '2023-11-26'
+    endDate: '2023-09-26'
   }
-]
+])
