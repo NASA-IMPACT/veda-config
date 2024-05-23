@@ -1,5 +1,14 @@
 function sortByDateDesc(items) {
-  return items.sort((a, b) => new Date(b.date || b.startDate) - new Date(a.date || a.startDate));
+  return items.sort((a, b) => {
+    const dateA = new Date(a.endDate || a.date || a.startDate);
+    const dateB = new Date(b.endDate || b.date || b.startDate);
+    if (dateA.getTime() === dateB.getTime()) {
+      const startA = new Date(a.startDate || a.date);
+      const startB = new Date(b.startDate || b.date);
+      return startB - startA;
+    }
+    return dateB - dateA;
+  });
 }
 
 export const NEWSLETTER_ITEMS = sortByDateDesc([
