@@ -1,6 +1,31 @@
-export const NEWSLETTER_ITEMS = [
+function sortByDateDesc(items) {
+  return items.sort((a, b) => {
+    const dateA = new Date(a.endDate || a.date || a.startDate);
+    const dateB = new Date(b.endDate || b.date || b.startDate);
+    if (dateA.getTime() === dateB.getTime()) {
+      const startA = new Date(a.startDate || a.date);
+      const startB = new Date(b.startDate || b.date);
+      return startB - startA;
+    }
+    return dateB - dateA;
+  });
+}
+
+export const NEWSLETTER_ITEMS = sortByDateDesc([
   {
-    name: 'The inaugural US GHG Center Newsletter',
+    name: 'May 2024 - US GHG Center Newsletter',
+    asLink : {
+      url: 'https://conta.cc/4blhTSu'
+    },
+    media: {
+      src: new URL('./media/news/Newsletter_2_Learn_Page_Screenshot.png', import.meta.url).href,
+      alt: 'May 2024'
+    },
+    description: 'Volume 1.2, May 2024',
+    date: '2024-05'
+  },
+  {
+    name: 'March 2024 - US GHG Center Newsletter',
     asLink : {
       url: 'https://myemail-api.constantcontact.com/US-GHG-Center-Newsletter.html?soid=1141171816352&aid=TCM2bjPR30g'
     },
@@ -8,9 +33,11 @@ export const NEWSLETTER_ITEMS = [
       src: new URL('./media/news/newsletter.jpg', import.meta.url).href,
       alt: 'March 2024'
     },
-    description: 'Volume 1.1, March 2024'
+    description: 'Volume 1.1, March 2024',
+    date: '2024-03'
   }
-]
+])
+
 export const NEWS_ITEMS = [
   {
     name: 'US GHG Center announced at COP28',
@@ -22,7 +49,7 @@ export const NEWS_ITEMS = [
       alt: 'Cop 28 Logo'
     },
     description: 'Agency partners released the US GHG Center at the 28th annual United Nations Climate Conference (COP28) on December 4, 2023.'
-  },  
+  },
   {
     name: 'A U.S. national strategy for measuring and monitoring GHG emissions',
     asLink : {
@@ -47,7 +74,7 @@ export const NEWS_ITEMS = [
   }
 ]
 
-export const EVENT_ITEMS = [
+export const EVENT_ITEMS = sortByDateDesc([
   {
     name: 'Policy Speaker Series: An Overview of the Global Greenhouse Gas Watch (G3W)',
     asLink : {
@@ -139,4 +166,4 @@ export const EVENT_ITEMS = [
     startDate: '2023-09-26',
     endDate: '2023-11-26'
   }
-]
+])
