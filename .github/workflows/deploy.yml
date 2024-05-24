@@ -50,7 +50,7 @@ jobs:
           access_token: ${{ github.token }}
 
       - name: Use Node.js ${{ env.NODE }}
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE }}
 
@@ -109,7 +109,7 @@ jobs:
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ github.workflow }}-${{ github.sha }}
 
       - name: Use Node.js ${{ env.NODE }}
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE }}
 
