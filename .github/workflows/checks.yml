@@ -14,7 +14,7 @@ on:
     - 'main'
 
 env:
-  NODE: 16
+  NODE: 20
 
 jobs:
   prep:
@@ -36,7 +36,7 @@ jobs:
           submodules: recursive
 
       - name: Use Node.js ${{ env.NODE }}
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE }}
 
@@ -63,7 +63,7 @@ jobs:
           submodules: recursive
 
       - name: Use Node.js ${{ env.NODE }}
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE }}
 
