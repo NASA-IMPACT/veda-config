@@ -26,6 +26,9 @@ git pull
 cd -
 ```
 
+> [!IMPORTANT]  
+> For a production release, it is recommended to pin `veda-ui` to a release tag (viewable via `git tags`) instead of a branch. This is to make sure that only changes that have been thoroughly tested are pulled in to the release.
+
 At this point you will have changed the commit the submodule is pointed to.  
 If you run a diff on the submodule `git diff .veda/ui` you'll see that the commit changed.
 ```diff
