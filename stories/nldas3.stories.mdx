@@ -1,7 +1,7 @@
 ---
 id: 'eis-nldas'
 name: Enhancing NLDAS for Characterizing Freshwater over North and Central America
-description: 'NASA measurements and models shed light on present and future coastal risks'
+description: 'small description to be added'
 featured: true
 media:
   src: ::file ./coastal-flooding-and-slr-cover.jpg
@@ -9,7 +9,7 @@ media:
   author:
     name: Don Lodge
     url: https://unsplash.com/photos/P8PuYidUYMw
-pubDate: 2022-11-15
+pubDate: 2024-05-30
 taxonomy:
   - name: Topics
     values:
@@ -28,7 +28,7 @@ taxonomy:
 
   NLDAS-3 uses the following precipitation datasets: 1) daily precipitation gauge observations; 2) the NASA Integrated Multi-SatellitE Retrievals for GPM (IMERG) half-hourly retrospective and real-time precipitation retrievals; 3) data from the NASA Modern Era Retrospective analysis for Research and Applications, version 2 (MERRA-2) and the NASA Goddard Earth Observing System for Instrument Teams (GEOS-IT); and 4) ECCC Canadian Precipitation Analysis (CaPA) retrospective and real-time precipitation analyses. We assimilated daily precipitation amounts at 4 km of IMERG and CaPA into the MERRA-2 (GEOS-IT for real-time analyses) precipitation using an optimal interpolation technique based on residual kriging and the Bratseth algorithm. Then the precipitation analysis at 4 km was (1) downscaled to 1-km grid spacing using a cloud cover frequency-based algorithm and (2) disaggregated into hourly using IMERG and MERRA-2 datasets.
 
-  <u>Authors:</u> [Kim Locke](mailto:kim.locke@nasa.gov)
+  <u>Authors:</u> David Mocko, Fadji Maina, Sujay Kumar, Chris Hain, [Kim Locke](mailto:kim.locke@nasa.gov)
   </Prose>
 </Block>
 
@@ -79,6 +79,7 @@ taxonomy:
 <Block>
   <Prose>
     ### Section for scrollytelling
+    ### Can add locations with graphs(png) which are already created
     Furthermore, there are cross-border (U.S.-Canada) precipitation issues related to the blending scheme between different precipitation inputs; some years are abnormally dry, and some years are abnormally wet, particularly in southern Ontario and Quebec (see figure below).
   </Prose>
 </Block>
@@ -142,7 +143,7 @@ taxonomy:
 
 <Block>
    <Prose>
-   ## NLDAS-3: What Improvements will this new system have?
+   ### NLDAS-3: What Improvements will this new system have?
    - Uses the NASA Land Information System
    - Assimilates remotely-sensed products (soil moisture, snow, TWS, vegetation)
    - Uses a modern state-of-the-art land-surface model (LSM) – Noah-MP
@@ -153,7 +154,7 @@ taxonomy:
    A NASA data driven meteorological forcing in retrospective and real time
 
    Improvements to meteorological forcings include:
-   - Table 
+   - Table (csv file or png can be provided)
 
    </Prose>
 </Block>
@@ -166,8 +167,10 @@ taxonomy:
     - Temperature and moisture adjustments using a dynamic lapse rate methodology currently being implemented/evaluated.
     - Winds adjusted using MicroMet methodology, which uses values of computed topographic slope, topographic slope azimuth, and topographic curvature.
     - Shortwave down using data from CERES/POWER data, and then downscaled using slope-aspect correction using 1-km topography.
+
    </Prose>
 </Block>
+
 <ScrollytellingBlock>
   <Chapter
     center={[-94.167, 41.591]}
@@ -204,63 +207,23 @@ taxonomy:
       </Caption>
     </Figure>
   </Chapter>
-
-  <Chapter
-    center={[-87.608, 40.107]}
-    zoom={14}
-    datasetId='conus-reach'
-    layerId='conus-reach'
-    datetime='2020-01-01'
-  >
-    <Figure>
-      <Image
-        src={new URL("./WQ_TS3.png", import.meta.url).href}
-        alt="Model performance at USGS Gage 03339000"
-      />
-      <Caption>
-        Model performance at USGS Gage 03339000
-      </Caption>
-    </Figure>
-  </Chapter>
-
-  <Chapter
-    center={[-91.4385, 38.7098]}
-    zoom={14}
-    datasetId='conus-reach'
-    layerId='conus-reach'
-    datetime='2020-01-01'
-  >
-    <Figure>
-      <Image
-        src={new URL("./WQ_TS4.png", import.meta.url).href}
-        alt="Model performance at USGS Gage 06934500"
-      />
-      <Caption>
-        Model performance at USGS Gage 06934500
-      </Caption>
-    </Figure>
-  </Chapter>
-
 </ScrollytellingBlock>
-
 
 <Block>
   <Prose>
     ### Data Access
-    ### Data Usage Notebook
-    ### 
-
-    * [NASA Description for EMIT](https://lpdaac.usgs.gov/products/emitl2bch4plmv001/)
-    * [CDC/ATSDR SVI Data and Documentation Download | Place and Health | ATSDR](https://www.atsdr.cdc.gov/placeandhealth/svi/data_documentation_download.html)
+    - How user can access the data
     
-    **Authors**: 
+    ### Data Usage Notebook
+    - Link to data usage notebook
+       
+    - **Authors**: 
+    - **Editor**: 
+    - **Developers**: 
+    - **Science and Content Contributors**: 
+    - **Acknowledgements**: 
+    - **Questions / Feedback (email address)**:
 
-    **Editor**: 
-    **Developers**: 
-    **Science and Content Contributors**: 
-    **Acknowledgements**: 
-    **Questions / Feedback (email address)**:
-
-    #### Additional Resources
+    ### Additional Resources
   </Prose>
 </Block>
