@@ -45,10 +45,10 @@ export const NEWS_ITEMS = [
       url: 'https://nspires.nasaprs.com/external/solicitations/summary.do?solId=%7B0FD29EB7-2725-1A98-66A4-0A2C07F9A1A6%7D'
     },
     media: {
-      src: new URL('./media/news/roses-a58.jpg', import.meta.url).href,
+      src: new URL('./media/news/rosesa58.jpg', import.meta.url).href,
       alt: 'NASA ROSES A.58'
     },
-    description: 'Minority serving institutions are invited to propose for funding to establish and expand ground-based, remote sensing instruments, such as the EM27/Sun instruments, to quantify atmospheric gases such as carbon dioxide and methane.  To be eligible, the proposing organization must be an R2 Minority Serving Institution. NASA will provide one instrument and up to five years of funding for installation and operation. Read more at NASA NSPIRES.'
+    description: 'Minority Serving Institutions (MSIs) are invited to propose for a ground-based GHG remote sensing instrument (EM27/Sun) to measure CO2 and CH4. NASA will provide one instrument and up to five years of funding for installation and operation. Read more at NASA NSPIRES A.58 ROSES call.'
   },
   {
     name: 'US GHG Center announced at COP28',
