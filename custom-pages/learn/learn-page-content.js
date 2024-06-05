@@ -40,6 +40,17 @@ export const NEWSLETTER_ITEMS = sortByDateDesc([
 
 export const NEWS_ITEMS = [
   {
+    name: 'Submit your proposal to NASA ROSES A.58 due June 10th!',
+    asLink : {
+      url: 'https://nspires.nasaprs.com/external/solicitations/summary.do?solId=%7B0FD29EB7-2725-1A98-66A4-0A2C07F9A1A6%7D'
+    },
+    media: {
+      src: new URL('./media/news/roses-a58.jpg', import.meta.url).href,
+      alt: 'NASA ROSES A.58'
+    },
+    description: 'Minority serving institutions are invited to propose for funding to establish and expand ground-based, remote sensing instruments, such as the EM27/Sun instruments, to quantify atmospheric gases such as carbon dioxide and methane.  To be eligible, the proposing organization must be an R2 Minority Serving Institution. NASA will provide one instrument and up to five years of funding for installation and operation. Read more at NASA NSPIRES.'
+  },
+  {
     name: 'US GHG Center announced at COP28',
     asLink : {
       url: 'https://www.nasa.gov/news-release/nasa-partners-launch-us-greenhouse-gas-center-to-share-climate-data/'
