@@ -40,6 +40,17 @@ export const NEWSLETTER_ITEMS = sortByDateDesc([
 
 export const NEWS_ITEMS = [
   {
+    name: 'Submit your proposal to NASA ROSES A.58 due June 10th!',
+    asLink : {
+      url: 'https://nspires.nasaprs.com/external/solicitations/summary.do?solId=%7B0FD29EB7-2725-1A98-66A4-0A2C07F9A1A6%7D'
+    },
+    media: {
+      src: new URL('./media/news/nspires.jpg', import.meta.url).href,
+      alt: 'NASA ROSES A.58'
+    },
+    description: 'Minority Serving Institutions (MSIs) are invited to propose for a ground-based GHG remote sensing instrument (EM27/Sun) to measure CO2 and CH4. NASA will provide one instrument and up to five years of funding for installation and operation. Read more at NASA NSPIRES A.58 ROSES call.'
+  },
+  {
     name: 'US GHG Center announced at COP28',
     asLink : {
       url: 'https://www.nasa.gov/news-release/nasa-partners-launch-us-greenhouse-gas-center-to-share-climate-data/'
