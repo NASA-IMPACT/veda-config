@@ -1,0 +1,122 @@
+---
+id: nceo_africa_biomass
+name: NCEO Africa Biomass 2017
+description: The NCEO Africa Aboveground Woody Biomass (AGB) map for the year 2017 at 100m spatial resolution was developed using a combination of LiDAR, Synthetic Aperture Radar (SAR) and optical based data.
+  src: ::file ./NCEO_Africa_AGB_2017.png
+  alt: Aboveground woody biomass for the African Continent in 2017
+  author:
+    name: National Center for Earth Observation
+taxonomy:
+  - name: Theme
+    values:
+      - Biomass
+  - name: Source
+    values:
+      - NCEO
+  - name: Product Type
+    values:
+      - Harmonized
+      - SAR
+      - Optical
+layers:
+  - id: biomass
+    stacApiEndpoint: stac.maap-project.org
+    tileApiEndpoint: titiler.maap-project.org
+    stacCol: map_2017v0m_COG
+    name: NCEO Africa Biomass 2017
+    type: raster
+    description: The NCEO Africa Aboveground Woody Biomass (AGB) map for the year 2017 at 100m spatial resolution was developed using a combination of LiDAR, Synthetic Aperture Radar (SAR) and optical based data.
+    initialDatetime: newest
+    projection:
+      id: "equirectangular"
+    basemapId: "satellite"
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: biomass
+      colormap_name: terrain_r
+      rescale:
+        - 0
+        - 400
+      # nodata: -9999
+    analysis:
+      exclude: true
+    legend:
+      unit:
+        label: Mg/ha
+      type: gradient
+      min: 0
+      max: 400
+      stops:
+      - "#ffffff"
+      - "#c6b6b3"
+      - "#8e6e67"
+      - "#aa926b"
+      - "#e3db8a"
+      - "#c6f48e"
+      - "#55dd77"
+      - "#00be90"
+      - "#0d7fe5"
+      - "#333399"
+
+  - id: biomass_std
+    stacApiEndpoint: stac.maap-project.org
+    tileApiEndpoint: titiler.maap-project.org
+    stacCol: map_2017v0m_COG
+    name: NCEO Africa Standard Deviation 2017
+    type: raster
+    description: The total uncertainty (SD) at pixel level is composed of different sources of error, which are assumed to be random and independent.
+    initialDatetime: newest
+    projection:
+      id: "equirectangular"
+    basemapId: "satellite"
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: standard_deviation
+      colormap_name: Reds
+      rescale:
+        - 0
+        - 310
+      # nodata: -9999
+    analysis:
+      exclude: true
+    legend:
+      unit:
+        label: Mg/ha
+      type: gradient
+      min: 0
+      max: 310
+      stops:
+      - "#fff5f0"
+      - "#fee2d5"
+      - "#fcc3ac"
+      - "#fca082"
+      - "#fb7c5c"
+      - "#f6553d"
+      - "#e32f27"
+      - "#c3161b"
+      - "#9e0d14"
+      - "#67000d"
+
+<Block type='wide'>
+  <Prose>
+The National Centre for Earth Observation (NCEO) Africa Aboveground Woody Biomass (AGB) map for the year 2017 at 100m spatial resolution was developed using the NASA’s Global Ecosystem Dynamics Investigation (GEDI), JAXA’s L-band SAR ALOS-2 PALSAR-2 mosaics and Landsat Percent Tree Cover (PTC) (Hansen et al., 2012). This product is part of a time series of AGB maps (2007-2017) developed by the UK’s NERC National Centre for Earth Observation (NCEO) through the Carbon Cycle and Official Development Assistance (ODA) programmes. This preliminary version of the 2017 map is available here. The final version of the AGB time series (2007-2017) will be available at the Centre for Environmental Data Analysis (CEDA).
+    ## Data Summary
+    
+      - **Temporal Extent:** 2017    
+      - **Temporal Resolution:** Annual    
+      - **Spatial Extent:** Continental Africa 
+      - **Spatial Resolution:** 100m
+      - **Data Units:** Megagrams per hectare (Mg/ha)    
+      - **Data Type:** Research 
+  </Prose>
+</Block>
+<Block>
+  <Prose>
+    ## Source Data Access
+    https://ceos.org/gst/africa-biomass.html
+  </Prose>
+</Block>
