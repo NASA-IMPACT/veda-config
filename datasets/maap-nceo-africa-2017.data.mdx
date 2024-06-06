@@ -35,12 +35,12 @@ layers:
       - 0
       - 20
     sourceParams:
-      assets: biomass
+      assets: ["biomass"]
       colormap_name: terrain_r
       rescale:
         - 0
         - 400
-      # nodata: -9999
+      nodata: 65535
     analysis:
       exclude: true
     legend:
@@ -76,12 +76,12 @@ layers:
       - 0
       - 20
     sourceParams:
-      assets: standard_deviation
+      assets: ["standard_deviation"]
       colormap_name: Reds
       rescale:
         - 0
         - 310
-      # nodata: -9999
+      nodata: 65535
     analysis:
       exclude: true
     legend:
