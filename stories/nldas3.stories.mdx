@@ -79,11 +79,10 @@ taxonomy:
 </Block>
 
 <Block type="full">
-  <Prose>
-      <Figure>
+  <Figure>
     <Map
       datasetId='soil-moisture'
-      layerId='soil-moisture'
+      layerId='sport-lis-vsm0_100cm-percentile'
       dateTime='2016-09-06'
       compareDateTime='2016-11-29'
       compareLabel='2016 Sep-2016 Nov Soil Moisture Percentile'
@@ -92,13 +91,14 @@ taxonomy:
       Figure 3: 
     </Caption>
   </Figure>
+  <Prose>
     ### NLDAS-3 sample precipitation:
     The other surface meteorological variables will also be downscaled to 1-km:
     - Surface pressure and longwave down adjusted using 1-km surface topography, using a similar methodology to NLDAS-2.
     - Temperature and moisture adjustments using a dynamic lapse rate methodology currently being implemented/evaluated.
     - Winds adjusted using MicroMet methodology, which uses values of computed topographic slope, topographic slope azimuth, and topographic curvature.
     - Shortwave down using data from CERES/POWER data, and then downscaled using slope-aspect correction using 1-km topography.
-   </Prose>
+  </Prose>
 </Block>
 
 <Block type='full'>
