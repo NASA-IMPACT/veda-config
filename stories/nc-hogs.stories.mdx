@@ -15,6 +15,31 @@ taxonomy:
       - Environmental Justice
 ---
 
+<style>{`
+  .data-table {
+    display: flex;
+    gap: 2rem;
+  }
+  .data-table thead th,
+  .data-table tbody td {
+    text-align: center;
+  }
+  .high-val {
+    background: #F0DADE;
+  }
+  .mid-val {
+    background: #FAF4E1;
+  }
+  .low-val {
+    background: #E2EFE6;
+  }
+  @media only screen and (max-width: 544px) {
+    .data-table {
+      flex-flow: column;
+    }
+  }
+`}</style>
+
 <Block>
   <Prose>
 
@@ -81,11 +106,11 @@ taxonomy:
           <td>2195</td>
           <td>0.62</td>
           <td>0.38</td>
-          <td>884</td>
-          <td>0.40</td>
+          <td class='mid-val'>884</td>
+          <td class='mid-val'>0.40</td>
           <td>10264876</td>
-          <td>3799180</td>
-          <td>0.37</td>
+          <td class='mid-val'>3799180</td>
+          <td class='mid-val'>0.37</td>
         </tr>
         <tr>
           <td>Bladen County</td>
@@ -93,11 +118,11 @@ taxonomy:
           <td>6</td>
           <td>0.55</td>
           <td>0.46</td>
-          <td>6</td>
-          <td>1.00</td>
+          <td class='high-val'>6</td>
+          <td class='high-val'>1.00</td>
           <td>33407</td>
-          <td>33407</td>
-          <td>1.00</td>
+          <td class='high-val'>33407</td>
+          <td class='high-val'>1.00</td>
         </tr>
         <tr>
           <td>Duplin County</td>
@@ -105,11 +130,11 @@ taxonomy:
           <td>11</td>
           <td>0.51</td>
           <td>0.49</td>
-          <td>8</td>
-          <td>0.73</td>
+          <td class='mid-val'>8</td>
+          <td class='mid-val'>0.73</td>
           <td>58967</td>
-          <td>44871</td>
-          <td>0.76</td>
+          <td class='mid-val'>44871</td>
+          <td class='mid-val'>0.76</td>
         </tr>
         <tr>
           <td>Sampson County</td>
@@ -117,11 +142,11 @@ taxonomy:
           <td>11</td>
           <td>0.51</td>
           <td>0.49</td>
-          <td>8</td>
-          <td>0.73</td>
+          <td class='mid-val'>8</td>
+          <td class='mid-val'>0.73</td>
           <td>63385</td>
-          <td>47394</td>
-          <td>0.75</td>
+          <td class='mid-val'>47394</td>
+          <td class='mid-val'>0.75</td>
         </tr>
         <tr>
           <td>Wayne County</td>
@@ -129,11 +154,11 @@ taxonomy:
           <td>26</td>
           <td>0.50</td>
           <td>0.50</td>
-          <td>16</td>
-          <td>0.62</td>
+          <td class='low-val'>16</td>
+          <td class='low-val'>0.62</td>
           <td>123603</td>
-          <td>72910</td>
-          <td>0.59</td>
+          <td class='low-val'>72910</td>
+          <td class='low-val'>0.59</td>
         </tr>
       </tbody>
     </table>
