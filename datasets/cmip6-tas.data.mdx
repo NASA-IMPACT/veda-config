@@ -13,6 +13,18 @@ taxonomy:
   - name: Topics
     values:
       - Climate
+infoDescription: |
+  ::markdown
+    * Format: [kerchunk (metadata)](https://fsspec.github.io/kerchunk/) for netCDF4
+    * Spatial Coverage: 180° W to 180° E, 60° S to 90° N
+    * Temporal: 1950-01-01 to 1951-12-31
+      * _As noted below, this dataset is a subset all available data. The full dataset includes data from 1950 to 2100._
+    * Data Resolution:
+      * Latitude Resolution: 0.25 degrees (25 km)
+      * Longitude Resolution: 0.25 degrees (25 km)
+      * Temporal Resolution: daily
+    
+    Source: [https://www.nccs.nasa.gov/services/data-collections/land-based-products/nex-gddp-cmip6](https://www.nccs.nasa.gov/services/data-collections/land-based-products/nex-gddp-cmip6)
 layers:
   - id: combined_CMIP6_daily_GISS-E2-1-G_tas_kerchunk_DEMO
     stacCol: combined_CMIP6_daily_GISS-E2-1-G_tas_kerchunk_DEMO
@@ -43,6 +55,11 @@ layers:
       - '#f2cbb7'
       - '#ee8468'
       - '#b40426'
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Daily
+      unit: Kelvin
 ---
 
 <Block>
