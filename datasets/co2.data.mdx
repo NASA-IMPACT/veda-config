@@ -13,6 +13,9 @@ taxonomy:
     values:
       - Air Quality
       - EIS
+infoDescription: |
+  ::markdown
+    The Impact of the COVID-19 Pandemic on Atmospheric CO2
 layers:
   - id: co2-mean
     stacCol: co2-mean
@@ -47,6 +50,11 @@ layers:
         - "#fee090"
         - "#fc8d59"
         - "#d73027"
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Daily
+      unit: ppm
   - id: co2-diff
     stacCol: co2-diff
     name: Difference CO2
@@ -77,6 +85,11 @@ layers:
         - "#f39779"
         - "#db5c48"
         - "#b50021"
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Daily
+      unit: ppm
 ---
 
 <Block type='wide'>
