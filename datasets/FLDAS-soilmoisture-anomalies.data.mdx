@@ -14,6 +14,15 @@ taxonomy:
   - name: Source
     values:
       - NASA GES DISC
+infoDescription: |
+  ::markdown
+    - **Temporal Extent:** January 1982 - June 2023
+    - **Temporal Resolution:** Monthly
+    - **Spatial Extent:** Quasi-Global ( -180.0,-60.0,180.0,90.0)
+    - **Spatial Resolution:** 10 km x 10 km
+    - **Data Units:** Fraction Soil moisture anomaly (mm3/mm3) difference from 1982-2016 monthly mean
+    - **Data Type:** Research
+    - **Data Latency:** Monthly
 layers:
   - id: SoilMoi00_10cm_tavg
     stacCol: fldas-soil-moisture-anomalies
@@ -49,6 +58,11 @@ layers:
         - "#d1e5f0"
         - "#4393c3"
         - "#053061"
+    info:
+      source: NASA
+      spatialExtent: Quasi-Global
+      temporalResolution: Monthly
+      unit: mm3/mm3
 ---
 
 <Block type='wide'>
