@@ -1,0 +1,204 @@
+---
+id: 'emit-and-aviris-3'
+name: Tracking Methane Plumes from Space and Sky
+description: 'Methane plumes can now be detected using the airborne AVIRIS-3 spectrometer in addition to EMIT on the International Space Station. Learn more about the similarities and differences and how scientists validate and understand the data from each.'
+media:
+  src: ::file ./EMIT_AVIRIS3_Data_Insight_Banner_v2 .jpg
+  alt: Image of plume from EMIT and AVIRIS-3 showing image swath width for each.
+  author:
+    name: NASA/JPL-Caltech. Example methane plumes as observed with EMIT and AVIRIS-3.
+          EMIT perched on the International Space Station provides an 80 km wide image swath at 60 m spatial resolution,
+          and AVIRIS-3 provides a narrower 3 km swath at 2 m spatial resolution when flying at 13,000 ft (figure is not to scale).
+
+pubDate: 2024-04-01
+taxonomy:
+  - name: Topics
+    values:
+      - Large Emission Events
+  - name: Authors
+    values:
+      - GHG Center Large Emission Events Focus Group
+---
+
+<Block>
+    <Prose>
+        <div style={{'background-color': '#ecf0f1', padding: '16px', 'font-size': '24px', 'font-weight': 500}}>
+            It is now possible for scientists to observe methane – a potent greenhouse gas – in more detail than ever before. These new detailed observations combine two different methane datasets. One set is from an instrument onboard an airplane, called AVIRIS-3. The other is from the EMIT instrument aboard the International Space Station. By using both data sets, scientists have an unprecedented ability to analyze methane emissions.
+        </div>
+    </Prose>
+</Block>
+
+<Block>
+    <Prose>
+        ## Detecting Large Methane Emission Events from Space
+        Both natural and human activities across the globe generate methane greenhouse gas emissions. Pinpointing and quantifying large methane events help scientists understand how releases of methane impact our atmosphere and planet.
+
+        It takes ambitious levels of coordination and sensitive instruments to gather the thorough, detailed observations necessary to compile reliable datasets for scientists and decision makers to use.
+
+        Orbiting 150 miles above Earth’s surface on the [International Space Station](https://www.nasa.gov/international-space-station/), an instrument called EMIT - the Earth Surface Mineral Dust Source Investigation - [monitors methane and carbon dioxide emissions.](https://earth.gov/ghgcenter/stories/discovering-large-methane-emissions) EMIT data allows scientists to identify areas of the atmosphere that have high methane and carbon dioxide enhancements relative to background values.
+
+        [EMIT’s primary mission](https://earth.jpl.nasa.gov/emit/) is to observe desert and arid regions that contribute to Earth’s mineral dust cycle. But the instrument is also able to detect methane as it passes over the Earth, allowing scientists to observe methane emissions events worldwide. The resulting data product is the [EMIT Methane Point Source Plume Complex](https://earth.gov/ghgcenter/data-catalog/emit-ch4plume-v1) (example shown below).
+
+        Despite EMIT’s ability to detect methane plumes from space, there are limitations. As an instrument aboard the International Space Station, EMIT is constrained to the station’s orbital patterns and positions. Also, the 60-meter spatial resolution of EMIT limits observations to larger emissions.  Airborne instruments with finer spatial resolution enable the mapping of smaller emissions. This is because with smaller image pixels, methane enhancements near the emission source will be larger, making them more readily observed.  Uniting airborne and spaceborne data addresses these issues and allows scientists to study large methane emission events from multiple perspectives.
+    </Prose>
+</Block>
+
+<Block>
+    <Figure>
+        <CompareImage
+            leftImageSrc={new URL('./permian-basin-plume.png', import.meta.url).href}
+            rightImageSrc={new URL('./permian-basin-plume-hidden.png', import.meta.url).href}
+            width="20"
+            alt="EMIT example from Jan. 31, 2024 showing a prominent methane plume from the Permian Basin, Texas"
+            attrAuthor="NASA/JPL-Caltech"
+        />
+        <Caption>
+            Slider showing EMIT methane plume observed in the Permian Basin, Texas on Jan 31, 2024
+        </Caption>
+    </Figure>
+</Block>
+
+<Block>
+    <Prose>
+        ## Instrument Twins: Spaceborne and Airborne
+        In 2023, NASA began flying a new airborne instrument to measure methane and carbon dioxide point source emissions data in much the same way that EMIT does from space. AVIRIS-3 stands for the third generation of Airborne Visible/Infrared Imaging Spectrometers. It is an [advanced imaging system](https://earth.jpl.nasa.gov/emit/instrument/overview/) developed and operated by NASA's Jet Propulsion Laboratory (JPL). Designed to capture high-resolution data of Earth's surface in visible and infrared wavelengths analogous to EMIT measurements (see table below), AVIRIS-3 is an ideal companion instrument to EMIT, offering enhanced greenhouse gas sensitivity from locations much closer to the ground. AVIRIS-3 can be flown on a variety of aircraft.
+
+    </Prose>
+</Block>
+
+<Block>
+    <Figure>
+        <b>Comparison of the airborne AVIRIS-3 instrument and spaceborne EMIT characteristics. The two instruments have similar spectral measurements.</b>
+      <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+          <tr>
+            <th style={{ borderBottom: '2px solid #ccc', padding: '8px', textAlign: 'left' }}></th>
+            <th style={{ borderBottom: '2px solid #ccc', padding: '8px', textAlign: 'left' }}>AVIRIS-3</th>
+            <th style={{ borderBottom: '2px solid #ccc', padding: '8px', textAlign: 'left' }}>EMIT</th>
+          </tr>
+          <tr>
+            <td style={{ borderBottom: '1px solid #eee', padding: '8px' }}>Platform</td>
+            <td style={{ borderBottom: '1px solid #eee', padding: '8px' }}>Aircraft</td>
+            <td style={{ borderBottom: '1px solid #eee', padding: '8px' }}>ISS</td>
+          </tr>
+          <tr>
+            <td style={{ borderBottom: '1px solid #eee', padding: '8px' }}>Spectral Measurement Range</td>
+            <td style={{ borderBottom: '1px solid #eee', padding: '8px' }}>381-2493 nm</td>
+            <td style={{ borderBottom: '1px solid #eee', padding: '8px' }}>381-2493 nm</td>
+          </tr>
+          <tr>
+            <td style={{ borderBottom: '1px solid #eee', padding: '8px' }}>Spectral Sampling</td>
+            <td style={{ borderBottom: '1px solid #eee', padding: '8px' }}>7.4 nm</td>
+            <td style={{ borderBottom: '1px solid #eee', padding: '8px' }}>7.4 nm</td>
+          </tr>
+          <tr>
+            <td style={{ borderBottom: '1px solid #eee', padding: '8px' }}>Width of Measurement Swath Image</td>
+            <td style={{ borderBottom: '1px solid #eee', padding: '8px' }}>0.4-10 km (varies with altitude)</td>
+            <td style={{ borderBottom: '1px solid #eee', padding: '8px' }}>80 km</td>
+          </tr>
+          <tr>
+            <td style={{ borderBottom: '1px solid #eee', padding: '8px' }}>Number of Samples per Measurement Width</td>
+            <td style={{ borderBottom: '1px solid #eee', padding: '8px' }}>1242</td>
+            <td style={{ borderBottom: '1px solid #eee', padding: '8px' }}>1242</td>
+          </tr>
+          <tr>
+            <td style={{ borderBottom: '1px solid #eee', padding: '8px' }}>Ground Sample Distance (GSD)</td>
+            <td style={{ borderBottom: '1px solid #eee', padding: '8px' }}>0.25-7.0 m (varies with altitude)</td>
+            <td style={{ borderBottom: '1px solid #eee', padding: '8px' }}>60 m</td>
+          </tr>
+      </table>
+         <Caption alt="Table showing comparison of the characteristics of AVIRIS-3 and EMIT">
+        </Caption>
+    </Figure>
+</Block>
+
+<Block>
+    <Figure>
+        <Image
+            src={new URL('./emit_aviris3.png', import.meta.url).href}
+            alt="Two pictures of instruments. The left photo shows the AVIRIS-3 instrument (26  inches tall) that can be installed on different aircraft, and the right photo shows EMIT prior to placement on the International Space Station (ISS) with a much larger telescope."
+            attrAuthor="NASA/JPL-Caltech"
+        />
+        <Caption>
+            The airborne AVIRIS-3 instrument (left) makes similar measurements to the EMIT instrument (right). The EMIT spectrometer is the gold colored portion in the right image.
+        </Caption>
+    </Figure>
+</Block>
+
+
+<Block>
+    <Prose>
+        ## Observation Coordination
+        It’s difficult enough to work with data from one instrument, let alone two instruments positioned hundreds of miles apart and moving at vastly different velocities. While the International Space Station orbits Earth at around 28,000 km/hr (~17,398 miles/hr), aircraft move much slower at ~322 km/hr (200 miles/hr). Simultaneously observing a large methane emission event with AVIRIS-3 and EMIT allows for direct comparison of greenhouse gas retrievals and emission estimates derived from concurrent airborne and satellite measurements. This type of coordinated measurement and evaluation is referred to by scientists as “cal/val”, which stands for calibration and validation. Cal/val is a critical process for space and airborne scientific instruments. In cal/val processes, data are calibrated, validated, and verified to ensure accuracy, reliability, and consistency.
+
+        Obtaining coincident AVIRIS-3 and EMIT observations requires significant planning. This starts with tracking the anticipated EMIT location, assessing the weather forecast, and identifying a good location. In the case shown below, researchers chose the Permian Basin to observe methane emissions for a week.
+
+        Permian Basin example: A flight crew from NASA JPL brought the AVIRIS-3 instrument to Midland, TX. They used a real time methane display on the plane to select one methane emission source to target the day they would conduct the AVIRIS-3 observation flight (see image below). On the day of the scheduled EMIT overpass, the AVIRIS-3 flight crew performed repeat observations of the target location and timed one aircraft observation within a few seconds of the EMIT overpass time (see video below). This tightly coordinated measurement resulted in AVIRIS-3 and EMIT making separate observations within a few seconds. The result clearly shows the same methane plume observed from both aircraft and space (see GIF below). By having coincident methane plumes, emissions can be estimated from both AVIRIS-3 and EMIT, and results compared with an eye towards improving emission quantification algorithms.
+    </Prose>
+</Block>
+
+<Block>
+    <Figure>
+        <Image
+            src={new URL('./aviris3-operator_.jpg', import.meta.url).href}
+            alt="Photo of operator looking at laptop display on aircraft during flight"
+            attrAuthor="NASA/JPL-Caltech"
+        />
+        <Caption>
+            AVIRIS-3 team instrument operator monitors real time display of methane during science flight
+        </Caption>
+    </Figure>
+</Block>
+
+<Block>
+    <Figure>
+        <video
+            src={new URL('./AV320231008t161012_realtime_screen_recording_plume2.mov', import.meta.url).href}
+            width="900"
+            height="600"
+            controls
+            autoplay
+            loop
+            poster={new URL('./EMIT_AVIRIS3_Video_Image_Play_Arrow_Middle.jpg', import.meta.url).href}
+            >
+        </video>
+        <Caption attrAuthor="NASA/JPL-Caltech" alt="Video showing methane plumes observed in real time">
+            Video of AVIRIS-3 real time methane plume view during flight.
+        </Caption>
+    </Figure>
+</Block>
+
+<Block>
+    <Figure>
+        <img
+            src={new URL('./EMIT_AVIRIS3_GIF_New.gif', import.meta.url).href}
+            width="600"
+            height="800"
+        >
+        </img>
+        <Caption attrAuthor="NASA/JPL-Caltech" alt="Alternating image showing EMIT and AVIRIS-3 coincidently measured methane plume" >
+            GIF of EMIT and AVIRIS-3 methane plume observations for the emission source. Coincident observations permit comparison of emission estimates derived from AVIRIS-3 and EMIT.
+        </Caption>
+    </Figure>
+</Block>
+
+<Block>
+    <Prose>
+        ## Enhanced Methane Observations on the Horizon
+        The US GHG Center continues to fund AVIRIS-3 airborne campaigns to gather the best airborne methane and carbon dioxide emission data to date, including planned campaigns in conjunction with NOAA. With improved greenhouse gas sensitivity due to enhanced spatial resolution, AVIRIS-3 complements EMIT’s space-based observations. Combining greenhouse gas emission observations from AVIRIS-3 and EMIT gives scientists the ability to analyze plumes from methane emission sources at an exceptionally detailed level. By offering access to AVIRIS-3 plume and concentration data alongside EMIT datasets, the US GHG Center will enable better utility and coordination of airborne and satellite data to study large emissions of methane.
+    </Prose>
+</Block>
+
+<Block>
+    <Prose>
+        ## Disclaimers
+        Algorithms are being continuously improved and updated which can mean these images may change over time.
+    </Prose>
+</Block>
+
+<Block>
+    <Prose>
+        ## Related Datasets
+        - [EMIT Methane Point Source Plume Complexes](https://deploy-preview-384--ghg-demo.netlify.app/data-catalog/emit-ch4plume-v1)
+        - AVIRIS-3 Methane Point Source Plumes: Coming Soon
+    </Prose>
+</Block>
