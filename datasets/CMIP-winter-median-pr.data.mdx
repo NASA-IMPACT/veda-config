@@ -1,13 +1,14 @@
 ---
+featured: false
 id: CMIP-winter-median-pr
-name: 'Projections of changes to winter precipitation '
-description: "CMIP6 projections of changes to winter cumulative precipitation"
+name: "Projections of changes to winter precipitation "
+description: CMIP6 projections of changes to winter cumulative precipitation hello
 media:
   src: ::file ./CMIP-winter-median.jpeg
   alt: Photo of Nisqually glacier
   author:
     name: Justin Pflug
-    url: 
+    url: null
 taxonomy:
   - name: Topics
     values:
@@ -15,9 +16,12 @@ taxonomy:
 layers:
   - id: CMIP245-winter-median-pr
     stacCol: CMIP245-winter-median-pr
-    name: 'Percent-change to winter cumulative precipitation, SSP2-4.5'
+    name: Percent-change to winter cumulative precipitation, SSP2-4.5
     type: raster
-    description: 'Percent difference in projected winter (January, February, March) cumulative precipitation, relative to a historical timeframe between 1995 and 2014. Outputs represent the median of 23 member ensembles from CMIP6 (SSP 2-4.5) with downscaling performed by NASA Earth Exchange'
+    description: Percent difference in projected winter (January, February, March)
+      cumulative precipitation, relative to a historical timeframe between 1995
+      and 2014. Outputs represent the median of 23 member ensembles from CMIP6
+      (SSP 2-4.5) with downscaling performed by NASA Earth Exchange
     sourceParams:
       resampling: bilinear
       bidx: 1
@@ -29,30 +33,33 @@ layers:
     compare:
       datasetId: CMIP-winter-median-pr
       layerId: CMIP245-winter-median-pr
-      mapLabel: |
+      mapLabel: >
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'DD LLL yyyy')}`;        
         }
     legend:
       type: gradient
       label: Precipitation percent-difference
-      min: "-60%"
-      max: "+60%"
+      min: -60%
+      max: +60%
       stops:
-      - "#CA171C"
-      - "#DE6158"
-      - "#F2B089"
-      - "#F5D5C3"
-      - "#F8F8F8"
-      - "#CDE2EF"
-      - "#A0CBE4"
-      - "#5EA4D1"
-      - "#207BBD"
+        - "#CA171C"
+        - "#DE6158"
+        - "#F2B089"
+        - "#F5D5C3"
+        - "#F8F8F8"
+        - "#CDE2EF"
+        - "#A0CBE4"
+        - "#5EA4D1"
+        - "#207BBD"
   - id: CMIP585-winter-median-pr
     stacCol: CMIP585-winter-median-pr
-    name: 'Percent-change to winter cumulative precipitation, SSP5-8.5'
+    name: Percent-change to winter cumulative precipitation, SSP5-8.5
     type: raster
-    description: 'Percent difference in projected winter (January, February, March) cumulative precipitation, relative to a historical timeframe between 1995 and 2014. Outputs represent the median of 23 member ensembles from CMIP6 (SSP 5-8.5) with downscaling performed by NASA Earth Exchange'
+    description: Percent difference in projected winter (January, February, March)
+      cumulative precipitation, relative to a historical timeframe between 1995
+      and 2014. Outputs represent the median of 23 member ensembles from CMIP6
+      (SSP 5-8.5) with downscaling performed by NASA Earth Exchange
     sourceParams:
       resampling: bilinear
       bidx: 1
@@ -64,25 +71,25 @@ layers:
     compare:
       datasetId: CMIP-winter-median-pr
       layerId: CMIP585-winter-median-pr
-      mapLabel: |
+      mapLabel: >
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'DD LLL yyyy')}`;
         }
     legend:
       type: gradient
       label: Precipitation percent-difference
-      min: "-60%"
-      max: "+60%"
+      min: -60%
+      max: +60%
       stops:
-      - "#CA171C"
-      - "#DE6158"
-      - "#F2B089"
-      - "#F5D5C3"
-      - "#F8F8F8"
-      - "#CDE2EF"
-      - "#A0CBE4"
-      - "#5EA4D1"
-      - "#207BBD"
+        - "#CA171C"
+        - "#DE6158"
+        - "#F2B089"
+        - "#F5D5C3"
+        - "#F8F8F8"
+        - "#CDE2EF"
+        - "#A0CBE4"
+        - "#5EA4D1"
+        - "#207BBD"
 ---
 <Block>
 <Prose>
