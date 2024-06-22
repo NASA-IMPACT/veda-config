@@ -13,6 +13,11 @@ taxonomy:
   - name: Topics
     values:
       - EIS
+infoDescription: |
+  ::markdown
+    The reanalysis product is created using the [NASA Land Information System](https://lis.gsfc.nasa.gov/) modeling framework to merge land surface model simulations with observations from satellites through data assimilation. The team uses the Noah-MP land surface model and assimilates soil moisture from the European Space Agency’s Climate Change Initiative Program (ESA CCI), leaf area index from the Moderate Resolution Imaging Spectroradiometer (MODIS), and terrestrial water storage anomalies from the Gravity Recovery and Climate Experiment and the follow-on missions (GRACE/GRACE-FO). 
+
+The output variables available on VEDA include evapotranspiration (ET), gross primary productivity (GPP), groundwater storage (GWS), snow water equivalent (SWE), streamflow, surface runoff, subsurface runoff, terrestrial water storage (TWS), and total precipitation. See the [VEDA Analysis tool](https://www.earthdata.nasa.gov/dashboard/eis/analysis) to make interactive plots of the variables over a user-specified domain and time period.
 layers:
   - id: lis-global-da-evap
     stacCol: lis-global-da-evap
@@ -49,7 +54,11 @@ layers:
         - '#21918c'
         - '#5ec962'
         - '#fde725'
-
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Daily 
+      unit: kg m-2 s-1
   - id: lis-global-da-gpp
     stacCol: lis-global-da-gpp
     name: 'Gross Primary Productivity'
@@ -85,6 +94,11 @@ layers:
         - '#21918c'
         - '#5ec962'
         - '#fde725'
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Daily 
+      unit: g m-2 s-1
 
   - id: lis-global-da-gws
     stacCol: lis-global-da-gws
@@ -121,6 +135,11 @@ layers:
         - '#21918c'
         - '#5ec962'
         - '#fde725'
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Daily 
+      unit: mm
 
   - id: lis-global-da-swe
     stacCol: lis-global-da-swe
@@ -158,6 +177,11 @@ layers:
         - "#4A98C9"
         - "#2164AB"
         - "#0E316B"
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Daily 
+      unit: mm
 
   - id: lis-global-da-streamflow
     stacCol: lis-global-da-streamflow
@@ -194,6 +218,11 @@ layers:
         - '#21918c'
         - '#5ec962'
         - '#fde725'
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Daily 
+      unit: m3 s-1
 
   - id: lis-global-da-qs
     stacCol: lis-global-da-qs
@@ -230,6 +259,11 @@ layers:
         - '#21918c'
         - '#5ec962'
         - '#fde725'
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Daily 
+      unit: kg m-2 s-1
 
   - id: lis-global-da-qsb
     stacCol: lis-global-da-qsb
@@ -266,6 +300,11 @@ layers:
         - '#21918c'
         - '#5ec962'
         - '#fde725'
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Daily 
+      unit: kg m-2 s-1
 
   - id: lis-global-da-tws
     stacCol: lis-global-da-tws
@@ -302,6 +341,11 @@ layers:
         - '#21918c'
         - '#5ec962'
         - '#fde725'
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Daily 
+      unit: mm
 
   - id: lis-global-da-totalprecip
     stacCol: lis-global-da-totalprecip
@@ -339,6 +383,11 @@ layers:
         - "#4A98C9"
         - "#2164AB"
         - "#0E316B"
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Daily 
+      unit: kg m-2 s-1
 
 ---
 <Block>
