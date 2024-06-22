@@ -15,6 +15,9 @@ taxonomy:
   - name: Source
     values:
       - ATSDR
+infoDescription: |
+  ::markdown
+    The Minority Status & Language Score (MSLS), as with the other SVI thematic areas, is used to calculate a community’s social vulnerability. This data set can be used to prepare emergency plans for communities with lower English-proficiency levels¹, and has helped contribute to efforts such as the Minority Health SVI and its related Dashboard. The Minority Health SVI is an extension of the CDC/ATSDR Social Vulnerability Index (CDC/ATSDR SVI), which is a database that helps emergency response planners and public health officials identify, map, and plan support for communities that will most likely need support before, during, and after a public health emergency². The MSLS SVI Grid is part of the U.S. Census Grids collection, and displays the Center for Disease Control & Prevention (CDC) SVI score. Funding for the final development, processing and dissemination of this data set by the Socioeconomic Data and Applications Center (SEDAC) was provided under the U.S. National Aeronautics and Space Administration (NASA)³.
 layers:
   - id: social-vulnerability-index-minority
     stacCol: social-vulnerability-index-minority
@@ -49,6 +52,12 @@ layers:
       - "#8683bd"
       - "#61409b"
       - "#3f007d"
+    info:
+      source: NASA
+      spatialExtent: United States
+      temporalResolution: Annual 
+      unit: Percentile Ranking 
+
   - id: social-vulnerability-index-minority-nopop
     stacCol: social-vulnerability-index-minority-nopop
     name: Minority Status and Language Score - Masked for No Population
@@ -82,6 +91,12 @@ layers:
       - "#8683bd"
       - "#61409b"
       - "#3f007d"
+    info:
+      source: NASA
+      spatialExtent: United States
+      temporalResolution: Annual 
+      unit: Percentile Ranking 
+
 ---
 
 <Block>
