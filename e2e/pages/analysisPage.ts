@@ -16,7 +16,7 @@ export default class AnalysisPage {
     this.page = page;
     this.selectDatasetsMessage = this.page.getByText(/To select datasets, please define an area and a date first/i);
     this.mainContent = this.page.getByRole('main');
-    this.header = this.mainContent.getByRole('heading', {level: 1, name: /analysis/i });
+    this.header = this.mainContent.getByRole('heading', {level: 1, name: /exploration/i });
     this.mapboxCanvas = this.page.getByLabel('Map', { exact: true });
     this.generateAnalysisButton = this.page.getByRole('link', { name: /Generate analysis/i });
     this.datasetCheckbox = this.page.locator('label').filter({ hasText: /From:/i })

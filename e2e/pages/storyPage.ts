@@ -9,6 +9,6 @@ export default class StoryPage {
   constructor(page: Page) {
     this.page = page;
     this.mainContent = this.page.getByRole('main');
-    this.header = this.mainContent.getByRole('heading', {level: 1})
+    this.header = this.mainContent.getByRole('heading', {level: 1, name: /data insights/i })
   }
 }

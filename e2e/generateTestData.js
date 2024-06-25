@@ -7,12 +7,16 @@ const catalogPaths = fg.globSync('**/datasets/*.mdx');
 const storyPaths = fg.globSync('**/stories/*.mdx');
 const catalogNames = [];
 const datasetIds = [];
+const datasetIdDisableExplore = [];
 const storyNames = [];
 
 for (const catalog of catalogPaths) {
   const catalogData = matter.read(catalog).data;
   catalogNames.push(catalogData['name']);
   datasetIds.push(catalogData['id']);
+  if(catalogData['disableExplore'] == true) {
+    datasetIdDisableExplore.push(catalogData['id'])
+  }
 }
 
 for (const story of storyPaths) {
@@ -23,7 +27,8 @@ for (const story of storyPaths) {
 const testDataJson = {
   catalogs: catalogNames,
   datasetIds: datasetIds,
-  stories: storyNames
+  stories: storyNames,
+  disabledDatasets: datasetIdDisableExplore,
 };
 
 fs.writeFile(

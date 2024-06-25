@@ -4,6 +4,8 @@ import AnalysisPage from './analysisPage';
 import AnalysisResultsPage from './analysisResultsPage';
 import CatalogPage from './catalogPage';
 import DatasetPage from './datasetPage';
+import DatasetSelectorComponent from './datasetSelectorComponent';
+import DisclaimerComponent from './disclaimerComponent';
 import ExplorePage from './explorePage';
 import FooterComponent from './footerComponent';
 import HeaderComponent from './headerComponent';
@@ -16,6 +18,8 @@ export const test = base.extend<{
   analysisResultsPage: AnalysisResultsPage;
   catalogPage: CatalogPage;
   datasetPage: DatasetPage;
+  datasetSelectorComponent: DatasetSelectorComponent;
+  disclaimerComponent: DisclaimerComponent;
   explorePage: ExplorePage;
   footerComponent: FooterComponent;
   headerComponent: HeaderComponent;
@@ -36,6 +40,12 @@ export const test = base.extend<{
   },
   datasetPage: async ({page}, use) => {
     await use(new DatasetPage(page));
+  },
+  datasetSelectorComponent: async ({page}, use) => {
+    await use(new DatasetSelectorComponent(page));
+  },
+  disclaimerComponent: async ({page}, use) => {
+    await use(new DisclaimerComponent(page));
   },
   explorePage: async ({page}, use) => {
     await use(new ExplorePage(page));

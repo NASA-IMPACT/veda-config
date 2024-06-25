@@ -17,7 +17,7 @@ test('load stories on /stories route', async ({
   });
 
   await page.goto('/stories');
-  await expect(storyPage.header, `data stories page should load`).toHaveText(/data stories/i);
+  await expect(storyPage.header, `data stories page should load`).toBeVisible();
 
   for (const item of stories) {
     const storiesCard = storyPage.mainContent.getByRole('article').getByRole('heading', { level: 3, name: item, exact: true}).first();

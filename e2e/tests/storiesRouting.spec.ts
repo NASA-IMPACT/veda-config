@@ -17,7 +17,7 @@ test.describe('stories card routing', () => {
     });
 
     await page.goto('/stories');
-    await expect(storyPage.header, `stories page should load`).toHaveText(/data stories/i);
+    await expect(storyPage.header, `stories page should load`).toBeVisible();
 
     const storyCard = storyPage.mainContent.getByRole('article').getByRole('heading', { level: 3, name: item, exact: true}).last();
     await storyCard.scrollIntoViewIfNeeded();
