@@ -9,6 +9,7 @@ import {
 } from '$veda-ui/@devseed-ui/theme-provider';
 import Hug from "$veda-ui-scripts/styles/hug";
 import { getString } from 'veda';
+import { Link } from "$veda-ui/react-router-dom"; 
 
 const BANNER_KEY = 'dismissedBannerUrl'
 
@@ -77,9 +78,9 @@ export default function Banner() {
       <BannerBox className="banner">
         <BannerContainer>
           <BannerContent>
-          <a href={getString('tempBannerUrl')?.other || "" } target="_blank"> 
+          <Link to={getString('tempBannerUrl')?.other || "" } target="_blank"> 
             { getString('tempBanner').other }
-          </a>
+          </Link>
           </BannerContent>
         </BannerContainer>
         <Button onClick={onClick} variation="base-text" fitting="skinny">
