@@ -43,11 +43,11 @@ module.exports = {
         "This dashboard is for exploring key datasets that provide insight into greenhouse gas sources, sinks, emissions, fluxes, and events.",
     // Temporary Banner Text/URL/expiry
     tempBanner:
-        "Register for the webinar - An Overview of The Global Greenhouse Gas Watch (G3W) - by Gianpaolo Balsamo, May 8th  at 12 noon ET.",
+        "Read the new data insight on using EMIT and AVIRIS-3 for monitoring large methane emission events",
     tempBannerUrl:
-        "https://nasaenterprise.webex.com/weblink/register/rd916bf09633aa7d4f9fe87eb6ff67fe3",
+      "stories/emit-and-aviris-3",
     tempBannerExpires:
-        "2024-05-08T12:00:00-04:00"
+        "2024-07-03T12:00:00-04:00"
   },
 
   theme: {
