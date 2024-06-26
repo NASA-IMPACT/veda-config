@@ -15,6 +15,9 @@ taxonomy:
   - name: Source
     values:
       - ATSDR
+infoDescription: |
+  ::markdown
+    The Economic Status Score, like the three other themes, is used in observing a community’s social vulnerability. As with other SVI scores, the economic status score can help local officials and teams identify communities that will need continued support to recover following an emergency or natural disaster¹. The Economic Status SVI Grid is part of the U.S. Census Grids collection, and displays the Center for Disease Control & Prevention (CDC) SVI score. Funding for the final development, processing and dissemination of this data set by the Socioeconomic Data and Applications Center (SEDAC) was provided under the U.S. National Aeronautics and Space Administration (NASA)².
 layers:
   - id: social-vulnerability-index-socioeconomic
     stacCol: social-vulnerability-index-socioeconomic
@@ -49,6 +52,12 @@ layers:
       - "#4bb062"
       - "#157f3b"
       - "#00441b"
+    info:
+      source: NASA
+      spatialExtent: United States
+      temporalResolution: Annual 
+      unit: Percentile Ranking 
+
   - id: social-vulnerability-index-socioeconomic-nopop
     stacCol: social-vulnerability-index-socioeconomic-nopop
     name: Socioeconomic (No Pop) Vulnerability Score
@@ -82,6 +91,12 @@ layers:
       - "#4bb062"
       - "#157f3b"
       - "#00441b"
+    info:
+      source: NASA
+      spatialExtent: United States
+      temporalResolution: Annual 
+      unit: Percentile Ranking 
+
 ---
 
 <Block>

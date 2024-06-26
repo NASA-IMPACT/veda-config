@@ -15,6 +15,9 @@ taxonomy:
   - name: Source
     values:
       - NASA CIESIN
+infoDescription: |
+  ::markdown
+    The Global Gridded Relative Deprivation Index (GRDI), Version 1 (GRDIv1) dataset characterizes the relative levels of multidimensional deprivation and poverty in each 30 arc-second (~1 km) pixel, where a value of 100 represents the highest level of deprivation and a value of 0 the lowest. GRDIv1 is built from sociodemographic and satellite data inputs that were spatially harmonized, indexed, and weighted into six main components to produce the final index raster. Inputs were selected from the best-available data that either continuously vary across space or have at least administrative level 1 (provincial/state) resolution, and which have global spatial coverage.
 layers:
   - id: grdi-cdr-raster
     stacCol: grdi-cdr-raster
@@ -39,6 +42,12 @@ layers:
         - '#21918c'
         - '#5ec962'
         - '#fde725'
+    info:
+      source: NASA CIESIN
+      spatialExtent: Global
+      temporalResolution: Annual 
+      unit: Ratio
+
   - id: grdi-filled-missing-values-count
     stacCol: grdi-filled-missing-values-count
     name: GRDI Constituent Inputs
@@ -62,6 +71,12 @@ layers:
         - '#21918c'
         - '#5ec962'
         - '#fde725'
+    info:
+      source: NASA CIESIN
+      spatialExtent: Global
+      temporalResolution: Annual 
+      unit: Ratio
+
   - id: grdi-imr-raster
     stacCol: grdi-imr-raster
     name: GRDI Infant Mortality Rate
@@ -85,6 +100,12 @@ layers:
         - '#21918c'
         - '#5ec962'
         - '#fde725'
+    info:
+      source: NASA CIESIN
+      spatialExtent: Global
+      temporalResolution: Annual 
+      unit: Ratio
+
   - id: grdi-shdi-raster
     stacCol: grdi-shdi-raster
     name: GRDI Subnational Human Development Index
@@ -108,6 +129,12 @@ layers:
         - '#21918c'
         - '#5ec962'
         - '#fde725'
+    info:
+      source: NASA CIESIN
+      spatialExtent: Global
+      temporalResolution: Annual 
+      unit: Ratio
+
   - id: grdi-v1-built
     stacCol: grdi-v1-built
     name: GRDI v1 built-up area
@@ -131,6 +158,12 @@ layers:
         - '#21918c'
         - '#5ec962'
         - '#fde725'
+    info:
+      source: NASA CIESIN
+      spatialExtent: Global
+      temporalResolution: Annual 
+      unit: Ratio
+
   - id: grdi-v1-raster
     stacCol: grdi-v1-raster
     name: GRDI v1 raster
@@ -154,6 +187,12 @@ layers:
         - '#21918c'
         - '#5ec962'
         - '#fde725'
+    info:
+      source: NASA CIESIN
+      spatialExtent: Global
+      temporalResolution: Annual 
+      unit: Ratio
+
   - id: grdi-vnl-raster
     stacCol: grdi-vnl-raster
     name: GRDI VNL Constituent raster
@@ -177,6 +216,12 @@ layers:
         - '#21918c'
         - '#5ec962'
         - '#fde725'
+    info:
+      source: NASA CIESIN
+      spatialExtent: Global
+      temporalResolution: Annual 
+      unit: Ratio
+
   - id: grdi-vnl-slope-raster
     stacCol: grdi-vnl-slope-raster
     name: GRDI VNL Slope Constituent raster
@@ -200,6 +245,12 @@ layers:
         - '#21918c'
         - '#5ec962'
         - '#fde725'
+    info:
+      source: NASA CIESIN
+      spatialExtent: Global
+      temporalResolution: Annual 
+      unit: Ratio
+
 ---
 
 <Block>

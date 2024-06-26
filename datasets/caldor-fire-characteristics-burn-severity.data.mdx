@@ -12,6 +12,9 @@ taxonomy:
   - name: Topics
     values:
       - EIS
+infoDescription: |
+  ::markdown
+    This dataset describes the progression and active fire behavior of the 2021 Caldor Fire in California, as recorded by the algorithm detailed in https://www.nature.com/articles/s41597-022-01343-0. It includes an extra layer detailing the soil burn severity (SBS) conditions provided by the [Burned Area Emergency Response](https://burnseverity.cr.usgs.gov/baer/) team.
 layers:
   - id: caldor-fire-behavior
     stacCol: caldor-fire-behavior
@@ -36,6 +39,11 @@ layers:
         - "#BB3754"
         - "#781D6D"
         - "#34095F"
+    info:
+      source: NASA
+      spatialExtent: Regional
+      temporalResolution: Annual
+      unit: Categorical
   - id: caldor-fire-burn-severity
     stacCol: caldor-fire-burn-severity
     name: Burn Severity
@@ -59,7 +67,11 @@ layers:
         - "#BB3754"
         - "#781D6D"
         - "#34095F"
-  
+    info:
+      source: NASA
+      spatialExtent: Regional
+      temporalResolution: Annual
+      unit: Categorical
 ---
 
 <Block>

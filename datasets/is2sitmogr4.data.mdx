@@ -12,6 +12,9 @@ taxonomy:
   - name: Topics
     values:
       - EIS
+infoDescription: |
+  ::markdown
+     This data set reports monthly, gridded winter sea ice thickness across the Arctic Ocean. Sea ice thickness is estimated using ATLAS/ICESat-2 L3A Sea Ice Freeboard (ATL10), Version 5 data and NASA Eulerian Snow On Sea Ice Model (NESOSIM) snow loading.
 layers:
   - id: IS2SITMOGR4-cog
     stacCol: IS2SITMOGR4-cog
@@ -38,6 +41,11 @@ layers:
         - '#cc4778'
         - '#f89540'
         - '#f89540'
+    info:
+      source: NASA
+      spatialExtent: Polar
+      temporalResolution: Monthly 
+      unit: Meters  
 ---
 
 <Block>

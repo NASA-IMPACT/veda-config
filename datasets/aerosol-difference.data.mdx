@@ -12,6 +12,9 @@ taxonomy:
   - name: Topics
     values:
       - Air Quality
+infoDescription: |
+  ::markdown
+    This dataset comes from the two decadal COGs that displayed mean Aerosol Optical Depth for 2000-2009 and for 2010-2019. Those tiffs were subtracted to display the differences between the two decades.
 layers:
   - id: houston-aod-diff
     stacCol: houston-aod-diff
@@ -47,9 +50,11 @@ layers:
         - "#fee090"
         - "#fc8d59"
         - "#d73027"
-
-
-  
+    info:
+      source: NASA
+      spatialExtent: Regional
+      temporalResolution: Annual
+      unit: Percent Difference
 ---
 
 <Block>

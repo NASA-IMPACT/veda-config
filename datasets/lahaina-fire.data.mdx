@@ -15,6 +15,9 @@ taxonomy:
   - name: Source
     values:
       - UAH
+infoDescription: |
+  ::markdown
+    On August 8th, 2023, a devastating wildfire rapidly spread through the city of Lahaina, Hawai’i, which is located on the island of Maui and home to over 13,000 residents. This destructive wildfire was initially ignited by a downed powerline on Lahainaluna Road and was later fueled by intense wind gusts that persisted throughout the day. The National Weather Service recorded wind gusts as high as 67 mph in the area, contributing to the rapid spread of the wildfire across much of Lahaina during the afternoon hours of August 8th.
 layers:
   - id: hls-bais2-v2
     stacCol: hls-bais2-v2
@@ -48,6 +51,11 @@ layers:
           - "#fee090"
           - "#f46d43"
           - "#a50026"
+    info:
+      source: NASA
+      spatialExtent: Hawaii
+      temporalResolution: Annual 
+      unit: N/A 
 
   - id: hls-swir-falsecolor-composite
     stacCol: hls-swir-falsecolor-composite
@@ -69,6 +77,11 @@ layers:
         ::js ({ dateFns, datetime, compareDatetime }) => {
           return `${dateFns.format(datetime, 'DD LLL yyyy')}`;        
         }
+    info:
+      source: NASA
+      spatialExtent: Hawaii
+      temporalResolution: Annual 
+      unit: N/A 
 
   - id: landsat-nighttime-thermal
     stacCol: landsat-nighttime-thermal
@@ -106,7 +119,11 @@ layers:
         - '#52076c'
         - '#f57c16'
         - '#f7cf39'
-
+    info:
+      source: NASA
+      spatialExtent: Hawaii
+      temporalResolution: Annual 
+      unit: N/A 
 ---
 
 <Block type='full'>

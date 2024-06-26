@@ -12,6 +12,9 @@ taxonomy:
   - name: Topics
     values:
       - Air Quality
+infoDescription: |
+  ::markdown
+    The OMI Sulfur Dioxide (SO2) Total Column layer indicates the column density of sulfur dioxide and is measured in Dobson Units (DU). Sulfur Dioxide and Aerosol Index products are used to monitor volcanic clouds and detect pre-eruptive volcanic degassing globally. This information is used by the Volcanic Ash Advisory Centers in advisories to airlines for operational decision
 layers:
   - id: OMSO2PCA-COG
     stacCol: OMSO2PCA-COG
@@ -47,6 +50,11 @@ layers:
       - "#fee090"
       - "#f46d43"
       - "#a50026"
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Annual 
+      unit: N/A
 ---
 <Block type='full'>
   <Figure>

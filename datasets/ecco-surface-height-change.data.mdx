@@ -12,6 +12,9 @@ taxonomy:
   - name: Topics
     values:
       - EIS
+infoDescription: |
+  ::markdown
+    Gridded global sea-surface height change from 1992 to 2017 from the Estimating the Circulation and Climate of the Ocean (ECCO) ocean state estimate. The dataset was calculated as the difference between the annual means over 2017 and 1992, from the 0.5 degree, gridded monthly mean data product available on [PO.DAAC](https://podaac.jpl.nasa.gov/dataset/ECCO_L4_SSH_05DEG_MONTHLY_V4R4).
 layers:
   - id: ecco-surface-height-change
     stacCol: ecco-surface-height-change
@@ -34,7 +37,11 @@ layers:
         - "#EF8A62"
         - "#F7F7F7"
         - "#67A9CF"
-
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Annual
+      unit: meters
 ---
 
 <Block>

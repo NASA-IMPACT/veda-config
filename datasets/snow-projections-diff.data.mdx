@@ -12,6 +12,9 @@ taxonomy:
   - name: Topics
     values:
       - EIS
+infoDescription: |
+  ::markdown
+    Snow water equivalent (SWE) is defined as the amount of water in the snow. Here, we present the projected percent-change to projected snow in future periods, relative to the historical period (1995 - 2014). 
 layers:
   - id: snow-projections-diff-scenario-245
     stacCol: snow-projections-diff-245
@@ -45,6 +48,12 @@ layers:
       - "#D1E5F0"
       - "#4393C3"
       - "#0D2F60"
+    info:
+      source: NASA
+      spatialExtent: Western United States
+      temporalResolution: Annual 
+      unit: Percent Diff
+
   - id: snow-projections-diff-scenario-585
     stacCol: snow-projections-diff-585
     name: 'SWE Losses, SSP5-8.5'
@@ -77,6 +86,12 @@ layers:
       - "#D1E5F0"
       - "#4393C3"
       - "#0D2F60"
+    info:
+      source: NASA
+      spatialExtent: Western United States
+      temporalResolution: Annual 
+      unit: Percent Diff
+
 ---
 <Block>
 <Prose>

@@ -19,6 +19,9 @@ taxonomy:
   - name: Topics
     values:
      - Environmental Justice
+infoDescription: |
+  ::markdown
+    Input data from Landsat 8/9 and Sentinel-2A/B is reprojected and Sentinel-2 data adjusted so that the output data products, HLSL30 (Landsat-derived) and HLSS30 (Sentinel-2-derived) can be used interchangeably. The harmonization of the Optical Land Imager (OLI) on Landsat 8/9 and Multispectral Imager (MSI) on Sentinel-2A/B increases the time series density of plot-scale observations such that data is available every 2-4 days over a given location.
 layers:
   - id: hls-l30-002-ej
     stacCol: hls-l30-002-ej-reprocessed
@@ -41,6 +44,12 @@ layers:
         ::js ({ dateFns, datetime, compareDatetime }) => {
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }
+    info:
+      source: NASA
+      spatialExtent: Puerto Rico
+      temporalResolution: Daily 
+      unit: N/A  
+
   - id: hls-s30-002-ej
     stacCol: hls-s30-002-ej-reprocessed
     name: HLS Sentinel-2 SWIR
@@ -55,6 +64,12 @@ layers:
         - B12
         - B8A
         - B04
+    info:
+      source: NASA
+      spatialExtent: Puerto Rico
+      temporalResolution: Daily 
+      unit: N/A  
+
 ---
 
 <Block>
