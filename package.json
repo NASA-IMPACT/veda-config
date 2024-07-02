@@ -13,6 +13,12 @@
     "local-cms": "npx netlify-cms-proxy-server",
     "test": "NODE_ENV=test .veda/veda test"
   },
+  "targets": {
+    "veda-app": {
+      "source": "./.veda/ui/app/index.html",
+      "context": "browser"
+    }
+  },
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "engines": {
     "node": "20.x"
