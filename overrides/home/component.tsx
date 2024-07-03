@@ -94,7 +94,14 @@ const Buttons = styled.div`
 
 export default function HomeComponent() {
   const [showModal, setShowModal] = React.useState<boolean>(false);
-  const handleOpenModal = () => setShowModal(true);
+  const [videoLink, setVideoLink] = React.useState<string>("");
+  
+
+  const handleOpenModal = (link: string) => {
+    setVideoLink(link);
+    setShowModal(true);
+  };
+
   
   return (
     <>
@@ -117,7 +124,7 @@ export default function HomeComponent() {
           </p>
           <Buttons>
             <Button
-              onClick={handleOpenModal}
+              onClick={() => handleOpenModal("https://www.youtube.com/embed/6xWdIlWqhBE?si=NpOVMavs4IgKE297")}
               size="xlarge"
               variation="primary-fill"
             >
@@ -136,6 +143,7 @@ export default function HomeComponent() {
         </IntroHeadline>
         <Keypoints />
         <ActionsBlock>
+        <Buttons>
           <Button
             forwardedAs={NavLink}
             to="/data-catalog"
@@ -144,6 +152,15 @@ export default function HomeComponent() {
           >
             Browse the Data Catalog <CollecticonArrowRight />
           </Button>
+          <Button
+            onClick={() => handleOpenModal("https://drive.google.com/file/d/1Y3fSerrh6ElydBN7zwR6MpvmPsPK25V-/preview")}
+            size="xlarge"
+            variation="primary-fill"
+          >
+            <CollecticonCirclePlay />
+            Introduction to the Exploration Environment 
+          </Button>
+          </Buttons>
         </ActionsBlock>
       </HomeContent>
       <InfoCallout>
@@ -171,7 +188,7 @@ export default function HomeComponent() {
       {
         showModal && (
           <VideoModal 
-            iframe={<iframe width="560" height="315" src="https://www.youtube.com/embed/6xWdIlWqhBE?si=NpOVMavs4IgKE297" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen={true}></iframe>}
+            iframe={<iframe width="560" height="315" src={videoLink} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen={true}></iframe>}
             display={showModal}
             onClose={() => setShowModal(false)}
             width={`${560*1.5}px`} // Iframe's original embed width value 1.5x bigger
