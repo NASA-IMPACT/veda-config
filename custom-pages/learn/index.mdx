@@ -29,7 +29,7 @@ import { SUBSCRIPTION_URL } from "../../constants";
 <Block>
   <Prose>
     <h2 id="news">News and Announcements</h2>
-    <EventsComponent items={NEWS_ITEMS} />
+    <EventsComponent items={NEWS_ITEMS} itemType="news" />
 
     {/* <h3 id="newsletter">U.S. GHG Center newsletters</h3>
     <div style={{background: '#E8F0FD', border: '1px solid #B7CFFA', padding: '0.5rem', fontSize: '1rem'}}>
@@ -45,7 +45,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel nunc mauris
 <Block>
   <Prose>
     ## Events 
-    <EventsComponent items={EVENT_ITEMS} />
+    <EventsComponent items={EVENT_ITEMS} itemType="event_items"/>
   </Prose>
 </Block>
 
@@ -53,14 +53,14 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel nunc mauris
 <Block>
   <Prose>
     ## Newsletters 
-    <EventsComponent items={NEWSLETTER_ITEMS} />
+    <EventsComponent items={NEWSLETTER_ITEMS} itemType="newsletter" />
   </Prose>
 </Block>
 
 <Block>
   <Prose>
     ## Tutorial Videos 
-    <EventsComponent items={TUTORIAL_ITEMS} />
+    <EventsComponent items={TUTORIAL_ITEMS}  itemType="tutorials"/>
   </Prose>
 </Block>
 
