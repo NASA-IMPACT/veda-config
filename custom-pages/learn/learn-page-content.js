@@ -196,7 +196,7 @@ export const TUTORIAL_ITEMS = [
   {
     name: 'Introduction to the Exploration Environment',
     asLink : {
-      url: 'https://drive.google.com/file/d/1Y3fSerrh6ElydBN7zwR6MpvmPsPK25V-/preview'
+      url: 'https://www.youtube.com/watch?v=S2XL5WT9W4g'
     },
     media: {
       src: new URL("./media/tutorials/tutorial_exploration_video.png", import.meta.url).href,
