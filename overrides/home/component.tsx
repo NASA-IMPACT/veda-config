@@ -153,7 +153,7 @@ export default function HomeComponent() {
             Browse the Data Catalog <CollecticonArrowRight />
           </Button>
           <Button
-            onClick={() => handleOpenModal("https://drive.google.com/file/d/1Y3fSerrh6ElydBN7zwR6MpvmPsPK25V-/preview")}
+            onClick={() => handleOpenModal("https://www.youtube.com/embed/S2XL5WT9W4g")}
             size="xlarge"
             variation="primary-fill"
           >
