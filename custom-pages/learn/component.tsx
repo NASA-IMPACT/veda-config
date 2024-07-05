@@ -5,6 +5,8 @@ import {
   Card
 } from "$veda-ui-scripts/components/common/card";
 
+import { CollecticonCirclePlay } from "$veda-ui/@devseed-ui/collecticons";
+
 import {
   Continuum,
   ContinuumGridItem,
@@ -30,7 +32,7 @@ const StyledContinuumCardsDragScrollWrapper = styled(ContinuumCardsDragScrollWra
   ${(props) => props.itemsN === 1 ? `padding-bottom: 1rem` : ``};
 `
 
-const StyledCard = styled(Card)`
+const StyledCard = styled(Card)<{ itemType: string }>`
   box-shadow: 0 0 2px 0 rgba(44,62,80,0.08),0 6px 6px 0 rgba(44,62,80,0.08);
   
   h3:first-child {
@@ -39,15 +41,49 @@ const StyledCard = styled(Card)`
       content: none;
     }
   }
+
   img {
     max-height: 250px;
   }
+
+  ${({ itemType }) =>
+    itemType === 'tutorials' &&
+    `
+    img {
+      border: 3px solid red;
+    }
+
+    img::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      z-index: 1;
+      opacity: 1;
+    }
+  `}
+
+  .play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: ${({ itemType }) => (itemType === 'tutorials' ? '2' : '-1')}; 
+    opacity: ${({ itemType }) => (itemType === 'tutorials' ? '1' : '0')};
+    transition: opacity 0.3s ease;
+  }
+  
+
   h3 {
     font-size: 1.125rem;
   }
   p {
     font-size: 1rem;
   }
+
 `
 
 const StyledContinuum = styled(Continuum)`
@@ -71,7 +107,7 @@ function getEventTemporalState(startDate, endDate) {
   else return 'Upcoming'
 }
 
-export function EventsComponent ({items}) {
+export function EventsComponent ({items, itemType}) {
   const { isScrolling, scrollProps } = useReactIndianaScrollControl();
 
   return (<StyledContinuumCardsDragScrollWrapper itemsN={items.length}>
@@ -84,12 +120,17 @@ export function EventsComponent ({items}) {
         spanCols={continuumFoldSpanCols}
         render={(bag) => {
           return items.map((d) => {
+            
             // const date = new Date(d[dateProperty ?? '']);
             // const topics = getTaxonomy(d, TAXONOMY_TOPICS)?.values;
+            const isTutorial = itemType === 'tutorials';
+            console.log("here",itemType)
             const timeStatus = (d.startDate && d.endDate)? getEventTemporalState(d.startDate, d.endDate): null
+            
             return (
               <ContinuumGridItem {...bag} key={d.name}>
                 <StyledCard
+                  itemType={itemType}
                   onCardClickCapture={(e) => {
                     // If the user was scrolling and let go of the mouse on top of a
                     // card a click event is triggered. We capture the click on the
@@ -108,7 +149,10 @@ export function EventsComponent ({items}) {
                     {timeStatus && 
                       <Pill variation='primary'>{timeStatus}</Pill>
                     }
-                />
+                >
+                  <img src={d.media?.src} alt={d.media?.alt} />
+                  {itemType === 'tutorials' && <CollecticonCirclePlay className="play-button" />}
+                  </StyledCard>
               </ContinuumGridItem>
             );
           });
