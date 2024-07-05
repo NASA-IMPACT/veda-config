@@ -5,6 +5,7 @@ import {
   Card
 } from "$veda-ui-scripts/components/common/card";
 
+
 import {
   Continuum,
   ContinuumGridItem,
@@ -39,15 +40,18 @@ const StyledCard = styled(Card)`
       content: none;
     }
   }
+
   img {
     max-height: 250px;
   }
+
   h3 {
     font-size: 1.125rem;
   }
   p {
     font-size: 1rem;
   }
+
 `
 
 const StyledContinuum = styled(Continuum)`
@@ -84,9 +88,11 @@ export function EventsComponent ({items}) {
         spanCols={continuumFoldSpanCols}
         render={(bag) => {
           return items.map((d) => {
+            
             // const date = new Date(d[dateProperty ?? '']);
             // const topics = getTaxonomy(d, TAXONOMY_TOPICS)?.values;
             const timeStatus = (d.startDate && d.endDate)? getEventTemporalState(d.startDate, d.endDate): null
+            
             return (
               <ContinuumGridItem {...bag} key={d.name}>
                 <StyledCard
