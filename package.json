@@ -1,7 +1,7 @@
 {
   "name": "veda-config",
   "description": "Configuration for Veda",
-  "version": "2.0.7",
+  "version": "2.0.8",
   "source": "./.veda/ui/app/index.html",
   "license": "Apache-2.0",
   "scripts": {
@@ -12,6 +12,12 @@
     "clean": ".veda/veda clean",
     "local-cms": "npx netlify-cms-proxy-server",
     "test": "NODE_ENV=test .veda/veda test"
+  },
+  "targets": {
+    "veda-app": {
+      "source": "./.veda/ui/app/index.html",
+      "context": "browser"
+    }
   },
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "engines": {

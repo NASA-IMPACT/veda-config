@@ -178,3 +178,33 @@ export const EVENT_ITEMS = sortByDateDesc([
     endDate: '2023-11-26'
   }
 ])
+
+export const TUTORIAL_ITEMS = [
+  {
+    name: 'Tour the US GHG Center',
+    asLink : {
+      url: 'https://youtu.be/6xWdIlWqhBE?si=KEaUug75HvH94aBo'
+    },
+    media: {
+      src: new URL("./media/tutorials/tutorial_intro_video.png", import.meta.url).href,
+      alt: ''
+    },
+    description: 'Learn how to use the US GHG Center portal.',
+    startDate: '',
+    endDate: ''
+  },
+  {
+    name: 'Introduction to the Exploration Environment',
+    asLink : {
+      url: 'https://www.youtube.com/watch?v=S2XL5WT9W4g'
+    },
+    media: {
+      src: new URL("./media/tutorials/tutorial_exploration_video.png", import.meta.url).href,
+      alt: ''
+    },
+    description: "Learn how to navigate the Exploration Environment.",
+    startDate: '',
+    endDate: ''
+    
+  }
+]
