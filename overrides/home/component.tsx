@@ -158,7 +158,7 @@ export default function HomeComponent() {
             variation="primary-fill"
           >
             <CollecticonCirclePlay />
-            Introduction to the Exploration Environment 
+            How to Explore Data
           </Button>
           </Buttons>
         </ActionsBlock>
