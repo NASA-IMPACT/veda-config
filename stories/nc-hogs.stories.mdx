@@ -19,10 +19,14 @@ taxonomy:
   .data-table {
     display: flex;
     gap: 2rem;
+    justify-content: center; /* Center the table */
+    margin: 0 auto; /* Center the table */
   }
   .data-table thead th,
   .data-table tbody td {
     text-align: center;
+    white-space: nowrap;
+    padding: 0 1rem; /* Add horizontal padding */
   }
   .high-val {
     background: #F0DADE;
@@ -88,13 +92,13 @@ taxonomy:
     <table>
       <thead>
         <tr>
-          <th>Region</th>
-          <th>Census Tracts</th>
-          <th>% White</th>
-          <th>% Non-white</th>
-          <th>% Disadvantaged Tracts</th>
-          <th>Total Population</th>
-          <th>% Disadvantaged Population</th>
+          <th>   Region   </th>
+          <th>   Census Tracts   </th>
+          <th>   % White   </th>
+          <th>   % Non-White   </th>
+          <th>   % Disadvantaged Tracts   </th>
+          <th>   Total Population   </th>
+          <th>   % Disadvantaged Population   </th>
         </tr>
       </thead>
       <tbody>
@@ -150,16 +154,12 @@ taxonomy:
   Disadvantaged population data pulled from the [White House Climate and Economic Justice Screening Tool](https://screeningtool.geoplatform.gov/en/#3/33.47/-97.5) for all of North Carolina and each of the four counties of interest.
 </Caption>  
 </Figure>
-
-  <Prose>
-
-    Hog farm production waste poses a dual threat to both the local water supply and air quality. Chemicals like methane and ammonia are released into the atmosphere while waste is sprayed on fields as a fertilizer. Wind catches this waste and spreads it over the neighboring area, blanketing it in a layer of feces, urine, pus, and blood. The pervasive odor from these lagoons makes basic outdoor activities and chores challenging for communities in these regions. Not only do these chemicals cause foul odors, they can also be responsible for short-term and long-term health risks. A 2021 report from Duplin County, NC found that about 89 premature deaths per year can be attributed to hog farm emissions.  
-  
-  </Prose>
 </Block>
+  
 
 <Block>
   <Prose>
+    Hog farm production waste poses a dual threat to both the local water supply and air quality. Chemicals like methane and ammonia are released into the atmosphere while waste is sprayed on fields as a fertilizer. Wind catches this waste and spreads it over the neighboring area, blanketing it in a layer of feces, urine, pus, and blood. The pervasive odor from these lagoons makes basic outdoor activities and chores challenging for communities in these regions. Not only do these chemicals cause foul odors, they can also be responsible for short-term and long-term health risks. A 2021 report from Duplin County, NC found that about 89 premature deaths per year can be attributed to hog farm emissions.  
 
     Short-Term Health Risks:
     - Nausea and Vomiting
