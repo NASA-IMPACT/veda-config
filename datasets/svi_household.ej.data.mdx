@@ -15,6 +15,9 @@ taxonomy:
   - name: Source
     values:
       - ATSDR
+infoDescription: |
+  ::markdown
+    The Household Composition & Disability Score (HCDS) is one of the four themes used in determining a community’s social vulnerability. This dataset can be used to create a community evacuation plan accounting for individuals who have special needs, the elderly, and/or families with young children. In the event of a disaster, this data can also help responders determine the number of emergency personnel required for special household cases (accessibility assistance), the type of supplies needed based on age, and the amount of supplies, food, and other restorative resources needed¹. The HCDS SVI Grid is part of the U.S. Census Grids collection, and displays the Center for Disease Control & Prevention (CDC) SVI score. Funding for the final development, processing and dissemination of this data set by the Socioeconomic Data and Applications Center (SEDAC)was provided under the U.S. National Aeronautics and Space Administration (NASA)². 
 layers:
   - id: social-vulnerability-index-household
     stacCol: social-vulnerability-index-household
@@ -49,6 +52,12 @@ layers:
       - "#f3701b"
       - "#c54102"
       - "#7f2704"
+    info:
+      source: NASA
+      spatialExtent: United States
+      temporalResolution: Annual 
+      unit: Percentile Ranking 
+
   - id: social-vulnerability-index-household-nopop
     stacCol: social-vulnerability-index-household-nopop
     name: Household and Disability Score (No Pop)
@@ -82,6 +91,12 @@ layers:
       - "#f3701b"
       - "#c54102"
       - "#7f2704"
+    info:
+      source: NASA
+      spatialExtent: United States
+      temporalResolution: Annual 
+      unit: Percentile Ranking 
+
 ---
 
 <Block>

@@ -15,6 +15,9 @@ taxonomy:
   - name: Source
     values:
       - GEOGLAM
+infoDescription: |
+  ::markdown
+    The Group on Earth Observation's Global Agricultural Monitoring Initiative (GEOGLAM) Global Crop Monitor uses remote sensing data like global precipitation and soil moisture measurements to help reduce uncertainty, promote market transparency, and provide early warning for crop failures through multi-agency collaboration.
 layers:
   - id: geoglam
     stacCol: geoglam
@@ -49,6 +52,11 @@ layers:
           label: "Out of season"
         - color: "#804115"
           label: "No data"
+    info:
+      source: GEOGLAM
+      spatialExtent: Global
+      temporalResolution: Monthly 
+      unit: Categorical
 ---
 
 <Block>
