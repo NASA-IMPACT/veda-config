@@ -1,8 +1,7 @@
 ---
-featured: false
 id: geoglam
-name: GEOGLAM Crop Conditions
-description: Open, timely, science-driven information on crop conditions, change
+name: "GEOGLAM Crop Conditions"
+description: Open, timely, science-driven information on crop conditions
 media:
   src: ::file ./geoglam--dataset-cover.jpg
   alt: Bird's eye view of fields
@@ -20,31 +19,37 @@ infoDescription: |
   ::markdown
     The Group on Earth Observation's Global Agricultural Monitoring Initiative (GEOGLAM) Global Crop Monitor uses remote sensing data like global precipitation and soil moisture measurements to help reduce uncertainty, promote market transparency, and provide early warning for crop failures through multi-agency collaboration.
 layers:
-  - sourceParams:
-      colormap: '{"1": [120, 120, 120], "2": [130, 65, 0], "3": [66, 207, 56], "4":
-        [245, 239, 0], "5": [241, 89, 32], "6": [168, 0, 0], "7": [0, 143,
-        201]}'
+  - id: geoglam
+    stacCol: geoglam
+    name: GEOGLAM Crop Conditions
+    type: raster
+    description: Combined crop conditions across both the Crop Monitor for AMIS and Crop Monitor for Early Warning
+    zoomExtent:
+      - 0
+      - 16
+    sourceParams:
+      colormap: '{"1": [120, 120, 120], "2": [130, 65, 0], "3": [66, 207, 56], "4": [245, 239, 0], "5": [241, 89, 32], "6": [168, 0, 0], "7": [0, 143, 201]}'
       bidx: 1
       unscale: false
       resampling: nearest
       max_size: 1024
       return_mask: true
-    name: GEOGLAM Crop Conditions
+    initialDatetime: newest
     legend:
       type: categorical
       stops:
         - color: "#3A8DC6"
-          label: Exceptional
+          label: "Exceptional"
         - color: "#62D246"
-          label: Favourable
+          label: "Favourable"
         - color: "#FFFF00"
-          label: Watch
+          label: "Watch"
         - color: "#EC5830"
-          label: Poor
+          label: "Poor"
         - color: "#891911"
-          label: Failure
+          label: "Failure"
         - color: "#787878"
-          label: Out of season
+          label: "Out of season"
         - color: "#804115"
           label: "No data"
     info:
