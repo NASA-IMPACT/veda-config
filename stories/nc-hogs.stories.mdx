@@ -63,6 +63,22 @@ taxonomy:
   </Prose>
 </Block>
 
+<Block>
+  <Figure>
+    <Chart
+      dataPath={new URL('./nc-hogs-county-inventory.csv', import.meta.url).href}
+      dateFormat="%Y"
+      idKey='source'
+      xKey='Year'
+      yKey='Inventory'
+      yAxisLabel='Hog Farm Count'
+    />
+    <Caption>
+      USDA hog farm inventory for the counties of Bladen, Duplin, Sampson, and Wayne in North Carolina time series from 1974 through 2022.
+    </Caption>
+  </Figure>
+</Block>
+
 <Block type="full">
   <Figure>
     <Map
