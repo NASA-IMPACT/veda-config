@@ -65,6 +65,21 @@ taxonomy:
 
 <Block>
   <Figure>
+     <video style={{ width: '100%', aspectRatio: "16/9" }} controls>
+      <source
+        src={new URL('./inventory-hogs.mp4', import.meta.url).href} type="video/mp4"
+      />
+      Your browser does not support the video tag.
+    </video>
+
+    <Caption>
+    Time lapse of the spatial distribution of hog farm inventory in North Carolina with the counties of interest outlined in red.
+    </Caption>
+  </Figure>
+</Block>
+
+<Block>
+  <Figure>
     <Chart
       dataPath={new URL('./nc-hogs-county-inventory.csv', import.meta.url).href}
       dateFormat="%Y"
@@ -178,7 +193,7 @@ taxonomy:
   </Prose>
   <Figure>
     <Image
-      src={new URL('./bar_chat_nc.jpg', import.meta.url).href}
+      src={new URL('./bar-chat-nc.jpg', import.meta.url).href}
       alt='Normalized Methane Vs SVI'
     <Caption> 
       Normalized methane emissions in mol m^-2 s^-1 vs binned social vuilnerability index from low to very high.
@@ -188,8 +203,6 @@ taxonomy:
 
 <Block>
   <Prose>
-    Hog farm production waste poses a dual threat to both the local water supply and air quality. Chemicals like methane and ammonia are released into the atmosphere while waste is sprayed on fields as a fertilizer. Wind catches this waste and spreads it over the neighboring area, blanketing it in a layer of feces, urine, pus, and blood. The pervasive odor from these lagoons makes basic outdoor activities and chores challenging for communities in these regions. Not only do these chemicals cause foul odors, they can also be responsible for short-term and long-term health risks. A 2021 report from Duplin County, NC found that about 89 premature deaths per year can be attributed to hog farm emissions.  
-
     Short-Term Health Risks:
     - Nausea and Vomiting
     - Asthma
