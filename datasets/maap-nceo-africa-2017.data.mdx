@@ -62,7 +62,7 @@ layers:
 
   - id: biomass_std
     stacApiEndpoint: https://stac.maap-project.org
-    tileApiEndpoint: https://titiler-pgstac.maap-project.org
+    tileApiEndpoint: https://titiler-pgstac.maap-project.org/
     stacCol: NCEO_Africa_AGB_100m_2017
     name: NCEO Africa Standard Deviation 2017
     type: raster
@@ -75,7 +75,7 @@ layers:
       - 20
     sourceParams:
       assets: standard_deviation
-      colormap_name: Reds
+      colormap_name: reds
       rescale:
         - 0
         - 310
