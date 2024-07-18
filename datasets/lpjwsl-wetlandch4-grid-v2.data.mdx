@@ -9,8 +9,8 @@ usage:
   - url: 'https://hub.ghg.center/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FUS-GHG-Center%2Fghgc-docs&urlpath=lab%2Ftree%2Fghgc-docs%2Fuser_data_notebooks%2Flpjeosim-wetlandch4-grid-v2_User_Notebook.ipynb&branch=main'
     label: Run example notebook
     title: Interactive Session in the US GHG Center JupyterHub (requires account)
-  - url: https://dljsq618eotzp.cloudfront.net/browseui/index.html#lpjeosim-wetlandch4-daygrid-v2/
-    label: Browse and download the data
+  - url: https://search.earthdata.nasa.gov/search?q=LPJ-EOSIM
+    label: Download data from NASA Distributed Active Archive Center
     title: Data Browser
 media:
   src: ::file ./ch4-wetland--cover.jpeg
@@ -69,7 +69,7 @@ layers:
         }
     legend:
       unit:
-        label: g CH₄/m²/month
+        label: g CH₄/m²/s
       type: gradient
       min: 0
       max: 3
@@ -117,7 +117,7 @@ layers:
         }
     legend:
       unit:
-        label: g CH₄/m²/day
+        label: g CH₄/m²/s
       type: gradient
       min: 0
       max: 0.1
@@ -164,7 +164,7 @@ layers:
         }
     legend:
       unit:
-        label: g CH₄/m²/month
+        label: g CH₄/m²/s
       type: gradient
       min: 0
       max: 3
@@ -211,7 +211,7 @@ layers:
         }
     legend:
       unit:
-        label: g CH₄/m²/day
+        label: g CH₄/m²/s
       type: gradient
       min: 0
       max: 0.1
@@ -258,7 +258,7 @@ layers:
         }
     legend:
       unit:
-        label: g CH₄/m²/month
+        label: g CH₄/m²/s
       type: gradient
       min: 0
       max: 3
@@ -305,7 +305,7 @@ layers:
         }
     legend:
       unit:
-        label: g CH₄/m²/day
+        label: g CH₄/m²/s
       type: gradient
       min: 0
       max: 0.1
@@ -333,7 +333,7 @@ layers:
     **Temporal resolution:** Daily and Monthly     
     **Spatial extent:** Global    
     **Spatial resolution:** 0.5° x 0.5°<br />
-    **Data units:** Grams of methane per meter squared per day (g CH₄/m²/day) and grams of methane per meter squared per month (g CH₄/m²/month)     
+    **Data units:** Grams of methane per meter squared per second (g CH₄/m²/s)   
     **Data type:** Research <br />
     **Data Latency:** Updated bimonthly with a ~6 week latency <br />
     
@@ -344,14 +344,19 @@ layers:
 <Block>
   <Prose>
     ## Source Data Product Citation
-    This data product will soon be available at the NASA Land Processes Distributed Active Archive Data Center (LP DAAC). Once available, the data product citation will be provided here. In the meantime, please refer to the [Zhang et al. 2017 publication](https://doi.org/10.1073/pnas.1618765114) for more information.
+    Colligan, T., Poulter, B., Quinn, C. (2024). LPJ-EOSIM L2 Global Simulated Daily Wetland Methane Flux V001 [Data set]. NASA EOSDIS Land Processes Distributed Active Archive Center. Accessed [Date Accessed] from [https://doi.org/10.5067/Community/LPJ-EOSIM/LPJ_EOSIM_L2_DCH4E.001](https://doi.org/10.5067/Community/LPJ-EOSIM/LPJ_EOSIM_L2_DCH4E.001)
+    
+    Colligan, T., Poulter, B., Quinn, C. (2024). LPJ-EOSIM L2 Global Simulated Daily Wetland Methane Flux Low Latency V001 [Data set]. NASA EOSDIS Land Processes Distributed Active Archive Center. Accessed [Date Accessed] from [https://doi.org/10.5067/Community/LPJ-EOSIM/LPJ_EOSIM_L2_DCH4E_LL.001](https://doi.org/10.5067/Community/LPJ-EOSIM/LPJ_EOSIM_L2_DCH4E_LL.001)
+    
+    Colligan, T., Poulter, B., Quinn, C. (2024). LPJ-EOSIM L2 Global Simulated Monthly Wetland Methane Flux V001 [Data set]. NASA EOSDIS Land Processes Distributed Active Archive Center. Accessed [Date Accessed] from [https://doi.org/10.5067/Community/LPJ-EOSIM/LPJ_EOSIM_L2_MCH4E.001](https://doi.org/10.5067/Community/LPJ-EOSIM/LPJ_EOSIM_L2_MCH4E.001)
+    
+    Colligan, T., Poulter, B., Quinn, C. (2024). LPJ-EOSIM L2 Global Simulated Monthly Wetland Methane Flux Low Latency V001 [Data set]. NASA EOSDIS Land Processes Distributed Active Archive Center. Accessed [Date Accessed] from [https://doi.org/10.5067/Community/LPJ-EOSIM/LPJ_EOSIM_L2_MCH4E_LL.001](https://doi.org/10.5067/Community/LPJ-EOSIM/LPJ_EOSIM_L2_MCH4E_LL.001)
 
     ## Version History
     The current dataset version is v2, which replaced v1 (named LPJ-wsl) in the US GHG Center in April 2024. Summary of version 2 update changes:
     - Model updates and improvements, including improved data latency with more regular updates and driver-specific model recalibration
     - Addition of two new data layers: LPJ-EOSIM model estimated wetland methane emissions using ERA5 climate input forcing data, and using the mean of both MERRA-2 and ERA5 climate input forcing data (mean ensemble). For the daily data layer, the v1 dataset only provided LPJ-EOSIM estimates using MERRA-2 climate input forcing data until the end of 2021. 
-    - v2 data is delivered to the US GHG Center in Cloud Optimized GeoTIFF (COG) format (v1 data was in NetCDF format and transformed to COG)
-    - v2 data is provided in units of g CH₄/m²/day and g CH₄/m²/mon
+    - v2 data is obtained directly from the LP DAAC in Cloud Optimized GeoTIFF (COG) format (v1 data was in NetCDF format and transformed to COG)
     - v1 data remains accessible from the [GMAO website](https://gmao.gsfc.nasa.gov/gmaoftp/lott/CH4/wetlands/) 
 
     ## Dataset Accuracy
