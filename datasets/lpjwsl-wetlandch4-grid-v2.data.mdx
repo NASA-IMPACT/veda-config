@@ -39,7 +39,7 @@ infoDescription: |
     - Spatial Resolution: 0.5° x 0.5°
     - Data Units: Grams of methane per meter squared per second(g CH₄/m²/s)
     - Data Type: Research
-    - Data Latency: Updated 3 times per year in January, May and November (subject to change)
+    - Data Latency: Updated several times per year
 
 layers:
   - id: ch4-wetlands-emissions-m-ens
@@ -335,15 +335,19 @@ layers:
     **Spatial resolution:** 0.5° x 0.5°<br />
     **Data units:** Grams of methane per meter squared per second (g CH₄/m²/s)   
     **Data type:** Research <br />
-    **Data Latency:** Updated 3 times per year in January, May and November (subject to change) <br />
+    **Data Latency:** Updated several times per year <br />
     
-    Methane (CH₄) emissions from vegetated wetlands are estimated to be the largest natural source of methane in the global CH₄ budget, contributing to roughly one third of the total of natural and anthropogenic emissions. Wetland CH₄ is produced by microbes breaking down organic matter in the oxygen deprived environment of inundated soils. Due to limited data availability, the details of the role of wetland CH₄ emissions have thus far been underrepresented. Using the Earth Observation SIMulator  version (LPJ-EOSIM) of the Lund-Potsdam-Jena Dynamic Global Vegetation Model (LPJ-DGVM) global CH₄ emissions from wetlands are estimated at 0.5 x 0.5 degree spatial resolution. By simulating wetland extent and using characteristics of inundated areas, such as wetland soil moisture, temperature, and carbon content, the model provides estimates of CH₄ quantities emitted into the atmosphere. This dataset shows concentrated methane sources from tropical and high latitude ecosystems. The LPJ-EOSIM Wetland Methane Emissions dataset consists of global daily and monthly model estimates of terrestrial wetland methane emissions from 1990 to the present, with data added bimonthly. The monthly dataset is computed by summing the daily data for each month. The estimates are regularly used in conjunction with NASA’s Goddard Earth Observing System (GEOS) model to simulate the impact of wetlands and other methane sources on atmospheric methane concentrations, to compare against satellite and airborne data, and to improve understanding and prediction of wetland emissions. This is a new version and replaces the LPJ-wsl dataset previously available in the GHG Center.  
+    Methane (CH₄) emissions from vegetated wetlands are estimated to be the largest natural source of methane in the global CH₄ budget, contributing to roughly one third of the total of natural and anthropogenic emissions. Wetland CH₄ is produced by microbes breaking down organic matter in the oxygen deprived environment of inundated soils. Due to limited data availability, the details of the role of wetland CH₄ emissions have thus far been underrepresented. Using the Earth Observation SIMulator  version (LPJ-EOSIM) of the Lund-Potsdam-Jena Dynamic Global Vegetation Model (LPJ-DGVM) global CH₄ emissions from wetlands are estimated at 0.5 x 0.5 degree spatial resolution. By simulating wetland extent and using characteristics of inundated areas, such as wetland soil moisture, temperature, and carbon content, the model provides estimates of CH₄ quantities emitted into the atmosphere. This dataset shows concentrated methane sources from tropical and high latitude ecosystems. The LPJ-EOSIM Wetland Methane Emissions dataset consists of global daily and monthly model estimates of terrestrial wetland methane emissions from 1990 to the present, with data added several times per year. The monthly dataset is computed by summing the daily data for each month. The estimates are regularly used in conjunction with NASA’s Goddard Earth Observing System (GEOS) model to simulate the impact of wetlands and other methane sources on atmospheric methane concentrations, to compare against satellite and airborne data, and to improve understanding and prediction of wetland emissions. This is a new version and replaces the LPJ-wsl dataset previously available in the GHG Center.  
 
   </Prose>
 </Block>
 <Block>
   <Prose>
     ## Source Data Product Citation
+    The following four citations encompass the data used in creating the visualizations of the LPJ-EOSIM data in the US GHG Center.
+
+    The daily and monthly low latency datasets listed indicate the data delivered more frequently throughout the year using estimated carbon dioxide input data. The daily and monthly higher quality “final” datasets are delivered annually and replace the low latency data. 
+
     Colligan, T., Poulter, B., Quinn, C. (2024). LPJ-EOSIM L2 Global Simulated Daily Wetland Methane Flux V001 [Data set]. NASA EOSDIS Land Processes Distributed Active Archive Center. Accessed [Date Accessed] from [https://doi.org/10.5067/Community/LPJ-EOSIM/LPJ_EOSIM_L2_DCH4E.001](https://doi.org/10.5067/Community/LPJ-EOSIM/LPJ_EOSIM_L2_DCH4E.001)
     
     Colligan, T., Poulter, B., Quinn, C. (2024). LPJ-EOSIM L2 Global Simulated Daily Wetland Methane Flux Low Latency V001 [Data set]. NASA EOSDIS Land Processes Distributed Active Archive Center. Accessed [Date Accessed] from [https://doi.org/10.5067/Community/LPJ-EOSIM/LPJ_EOSIM_L2_DCH4E_LL.001](https://doi.org/10.5067/Community/LPJ-EOSIM/LPJ_EOSIM_L2_DCH4E_LL.001)
@@ -370,6 +374,10 @@ layers:
     ## Key Publications
     Zhang, Z., Zimmermann, N.E., Stenke, A., Li, X., Hodson, E.L., Zhu, G., Huang, C., & Poulter, B. (2017). Emerging role of wetland methane emissions in driving 21st century climate change. *Proceedings of the National Academy of Sciences, 114(36), 9647–9652*. [https://doi.org/10.1073/pnas.1618765114](https://doi.org/10.1073/pnas.1618765114)
 
+    Colligan, T., Poulter, B., Quinn, C. (2024). User’s Guide for the LPJ-EOSIM Global Simulated Daily/Monthly Wetland Methane Flux data product, version 1. NASA Land Processes Distributed Active Archive Center (LP DAAC). https://lpdaac.usgs.gov/documents/2017/LPJ_EOSIM_User_Guide_v1.pdf 
+    
+    Colligan, T., Poulter, B., Quinn, C. (2018). Algorithm Theoretical Basis Document for the LPJ-EOSIM Global Simulated Daily/Monthly Wetland Methane Flux data product. https://lpdaac.usgs.gov/documents/2018/LPJ_EOSIM_ATBD_v1.pdf 
+    
     ## Other Relevant Publications
     Poulter, B., Bousquet, P., Canadell, J. G., Ciais, P., Peregon, A., Saunois, M., Arora, V. K., Beerling, D. J., Brovkin, V., Jones, C.D., Joos, F., Gedney, N., Ito, A., Kleinen, T., Koven, C. D., McDonald, K., Melton, J. R., Peng, C., Peng, S., … Qiuan, Z. (2017). Global wetland contribution to 2000-2012 atmospheric methane growth rate dynamics. *Environmental Research Letters, 12*(9), 094013. [https://doi.org/10.1088/1748-9326/aa8391](https://doi.org/10.1088/1748-9326/aa8391)
 
