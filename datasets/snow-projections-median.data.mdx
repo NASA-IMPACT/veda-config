@@ -12,6 +12,9 @@ taxonomy:
   - name: Topics
     values:
       - EIS
+infoDescription: |
+  ::markdown
+    Snow water equivalent (SWE) is defined as the amount of water in the snow. It is expressed as a height (in millimeters), representative of the height of water that would exist if snow was only in a liquid state.
 layers:
   - id: snow-projections-median-scenario-245
     stacCol: snow-projections-median-245
@@ -46,6 +49,12 @@ layers:
       - "#4A98C9"
       - "#2164AB"
       - "#0E316B"
+    info:
+      source: NASA
+      spatialExtent: Western United States
+      temporalResolution: Annual 
+      unit: mm
+
   - id: snow-projections-median-scenario-585
     stacCol: snow-projections-median-585
     name: 'SWE, SSP5-8.5'
@@ -79,6 +88,12 @@ layers:
       - "#4A98C9"
       - "#2164AB"
       - "#0E316B"
+    info:
+      source: NASA
+      spatialExtent: Western United States
+      temporalResolution: Annual 
+      unit: mm
+
 ---
 <Block type='full'>
 <Prose>

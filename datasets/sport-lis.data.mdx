@@ -12,6 +12,9 @@ taxonomy:
   - name: Topics
     values:
       - EIS
+infoDescription: |
+  ::markdown
+    The NASA Land Information System (LIS) is a high-performance land surface modeling and data assimilation system used to characterize land surface states and fluxes by integrating satellite-derived datasets, ground-based observations, and model re-analyses. The NASA SPoRT Center at MSFC developed a real-time configuration of the LIS (“SPoRT-LIS”), which is designed for use in experimental operations by domestic and international users. SPoRT-LIS is an observations-driven, historical and real-time modeling setup that runs the Noah land surface model over a full CONUS domain. It provides soil moisture estimates at approximately 3-km horizontal grid spacing over a 2-meter-deep soil column and has been validated for regional applications.
 layers:
   - sourceParams:
       resampling: bilinear
@@ -47,6 +50,11 @@ layers:
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'MMM yyyy')} VS ${dateFns.format(compareDatetime, 'MMM yyyy')}`;
         }
+    info:
+      source: NASA
+      spatialExtent: Contiguous United States
+      temporalResolution: Sub-Annual 
+      unit: cm
 ---
 
 <Block>

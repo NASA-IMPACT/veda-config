@@ -12,6 +12,9 @@ taxonomy:
   - name: Topics
     values:
       - EIS
+infoDescription: |
+  ::markdown
+     Maximum Fire Radiative Power recorded by the Suomi NPP VIIRS sensor per 12hr fire line segment for the Thomas Fire of 2017
 layers:
   - id: frp-max-thomasfire
     stacCol: frp-max-thomasfire
@@ -45,6 +48,11 @@ layers:
         - "#BB3754"
         - "#781D6D"
         - "#34095F"
+    info:
+      source: NASA
+      spatialExtent: Thomas Fire Area
+      temporalResolution: Annual 
+      unit: Watts
   - id: barc-thomasfire
     stacCol: barc-thomasfire
     name: Burn Area Reflectance Classification for Thomas Fire
@@ -70,7 +78,11 @@ layers:
           label: "Moderate"
         - color: "#971d2b"
           label: "High"
-
+    info:
+      source: NASA
+      spatialExtent: Thomas Fire Area
+      temporalResolution: Annual 
+      unit: Categorical
 ---
 
 <Block>
