@@ -82,9 +82,16 @@ taxonomy:
   The other meteorological forcing are obtained by downscaling MERRA-2 datasets (except for Shortwave Down radiation, which will use CERES/POWER data) using the methods as follows:
 
     <Figure>
-      <Table
-      dataPath='./table2_meteorological_downscaling.csv'
-    />
+      <Table>
+      | Meteorological Variable | Downscaling Method                                                            |
+      |-------------------------|-------------------------------------------------------------------------------|
+      | Surface Pressure        | Elevation-based following Cosgrove et al., 2003                               |
+      | Longwave Down Radiation | Elevation-based following Cosgrove et al., 2003                               |
+      | Air Temperature         | Dynamic lapse rate bias correction, following Rouf et al., 2020               |
+      | Air Humidity            | Adjusted to be consistent after the Air Temperature adjustment                |
+      | Wind Speed              | MicroMet methodology following Liston & Elder, 2006                           |
+      | Shortwave Down Radiation| Slope-aspect based following Rutan et al., 2015                               |
+      </Table>
     </Figure>
 
   NLDAS-3 will employ the Noah-MP land surface model (He et al., 2023), implemented within LIS. Schematic diagrams of the energy and water budgets and processes represented in the model are shown below.
