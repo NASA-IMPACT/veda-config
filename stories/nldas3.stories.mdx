@@ -48,14 +48,11 @@ taxonomy:
   - Incorporate observational constraints by assimilating remote sensing datasets, which can help capture human management of water and vegetation, such as irrigation, groundwater withdrawal, droughts, floods, and hydrological impacts of wildland fire and other disturbances
 
   **Summary of NLDAS-3 improvements**
-  <Figure>
-      <Image
-      src={new URL('./nldas3-table1.png', import.meta.url).href}
+    <Figure>
+      <Table
+      dataPath='./table1_summary.csv'
     />
-    <Caption attrAuthor='EIS Team' attrUrl='https://www.nasa.gov/goddard/'>
-      NLDAS-3 sample precipitation data compared to NLDAS-2 outputs.
-    </Caption> 
-  </Figure>
+    </Figure>
   To make these improvements, science and modeling teams across NASA centers are using the open source NASA Land Information System (LIS) framework (Kumar et al., 2006; Peters-Lidard et al., 2007), a state-of-the-art software suite for high performance terrestrial hydrology modeling and data assimilation. LIS software is open-source and available at [GitHub](https://github.com/NASA-LIS/LISF). 
     <Figure>
       <Image
@@ -84,7 +81,11 @@ taxonomy:
     </Figure>
   The other meteorological forcing are obtained by downscaling MERRA-2 datasets (except for Shortwave Down radiation, which will use CERES/POWER data) using the methods as follows:
 
-  [Add Table here]
+    <Figure>
+      <Table
+      dataPath='./table2_meteorological_downscaling.csv'
+    />
+    </Figure>
 
   NLDAS-3 will employ the Noah-MP land surface model (He et al., 2023), implemented within LIS. Schematic diagrams of the energy and water budgets and processes represented in the model are shown below.
     <Figure>
@@ -102,12 +103,20 @@ taxonomy:
   <Prose>
   **Integrating remote sensing data is crucial for accurately depicting the influence of human activities on the land surface, such as agricultural irrigation, groundwater extraction, reservoir management, and wildfires.** To better detect these impacts, we are working to assimilate the following NASA satellite data products in NLDAS-3:
   
-  [Insert Table here]
+    <Figure>
+      <Table
+      dataPath='./table3_land_surface_variable.csv'
+    />
+    </Figure>
 
   The multivariate assimilation (also known as reanalysis) will produce land (e.g., vegetation states, evapotranspiration, snow dynamics) and hydrologic (soil moisture, groundwater and surface water storage) variables listed below at a spatial resolution of 1 km.
   
   **Potential variables delivered by NLDAS-3**
-  [Insert Table here]
+    <Figure>
+      <Table
+      dataPath='./table4_LSM_variables.csv'
+    />
+    </Figure>
 
   Data will be provided in netCDF-4 format through NASA’s open source cloud environments. Based on the needs of the stakeholder community, a collection of selected variables will also be made available in cloud-optimized GEOTIFF and GIS-based formats, among others.
 

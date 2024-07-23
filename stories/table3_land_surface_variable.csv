@@ -1,0 +1,6 @@
+﻿Land Surface Variable,Remote Sensing Platform
+Soil Moisture,"SMAP, AMSR-E, AMSR-2"
+Snow ,"AMSR-E, AMSR-2, MODIS"
+Leaf Area Index,MODIS/VIIRS
+Terrestrial Water Storage,GRACE/GRACE-FO
+Radar Altimetry Water Level,SWOT

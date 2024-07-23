@@ -1,0 +1,7 @@
+﻿Meteorological Variable,Downscaling Method
+Surface Pressure,"Elevation-based following Cosgrove et al., 2003"
+Longwave Down Radiation,"Elevation-based following Cosgrove et al., 2003"
+Air Temperature,"Dynamic lapse rate bias correction, following Rouf et al., 2020"
+Air Humidity,Adjusted to be consistent after the Air Temperature adjustment
+Wind Speed,"MicroMet methodology following Liston & Elder, 2006"
+Shortwave Down Radiation,"Slope-aspect based following Rutan et al., 2015"
