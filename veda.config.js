@@ -29,13 +29,13 @@ module.exports = {
     headerBrand: "./overrides/components/header-brand/index.mdx",
     // Component for the footer.
     pageFooter: "./overrides/components/page-footer/index.mdx",
-    "/learn": "./custom-pages/learn/index.mdx"
+    "/news": "./custom-pages/news-and-events/index.mdx"
   },
 
   strings: {
     stories: {
-      one: "Data Insights",
-      other: "Data Insights",
+      one: "Story",
+      other: "Stories",
     },
     storiesBanner:
         "Explore the guided narratives below to learn more about greenhouse gas measurement, changes over time, events and human-related causes and contributions.",
