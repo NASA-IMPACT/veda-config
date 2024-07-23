@@ -1,7 +1,7 @@
 ---
 id: 'eis-nldas'
 name:  Mapping Water Availability over North America
-description: ' NASA is co-developing high-resolution retrospective and real-time data for water resources and agriculture applications'
+description: 'NASA is co-developing high-resolution retrospective and real-time data for water resources and agricultural applications'
 featured: true
 media:
   src: ::file ./nldas-cover.png
@@ -23,7 +23,8 @@ taxonomy:
   **Authors**: David Mocko, Fadji Maina, Kim Locke, Sujay Kumar,  Kristen Whitney, Rishi Anand, Siddharth Chaudhary, Chris Hain
 
   ## The North American Land Data Assimilation System (NLDAS)
-  NLDAS is a widely-used land modeling environment that generates estimates of land surface fluxes and states such as soil moisture, snow, and streamflow. These estimates are critical for drought and flood monitoring, water availability and water resource management, climate assessments, and other uses. For instance, the University of Nebraska-Lincoln’s National Drought Mitigation Center (NDMC) relies on NLDAS data for their drought assessments. Applications like [OpenET](https://etdata.org/) and [QuickDRI](https://quickdri.unl.edu/) also rely on the quality of NLDAS meteorological forcing and model outputs. The phase 2 of NLDAS (NLDAS-2) is currently operational at NOAA.
+  NLDAS is a widely-used land modeling environment that generates estimates of land surface fluxes and states such as soil moisture, snow, and streamflow. These estimates are critical for drought and flood monitoring, water availability and water resource management, climate assessments, and other uses. For instance, the University of Nebraska-Lincoln’s National Drought Mitigation Center (NDMC) relies on NLDAS data for their drought assessments. Applications like [OpenET](https://etdata.org/) and [QuickDRI](https://quickdri.unl.edu/) also rely on the quality of NLDAS meteorological forcing and model outputs. The phase 2 of NLDAS (NLDAS-2) is currently operational at NOAA, with long-term archives of data back to Jan 1979 available from NASA.
+
   <Figure>
       <Image
       src={new URL('./nldas-fig1.png', import.meta.url).href}
@@ -34,16 +35,17 @@ taxonomy:
   </Figure> 
   </Prose>
 </Block>
+
 <Block>
   <Prose>
   ## Community-Centered Model Development
   Building on stakeholder feedback and advancements in Earth observations and data assimilation, teams across NASA are working on major enhancements to the NLDAS environment called “NLDAS Phase 3” (NLDAS-3). The vision for NLDAS-3 is to provide near field scale (~1 km), high quality, observation-informed estimates of land surface and hydrology conditions.  Specifically, NLDAS-3 aims to:   
-  - Improve the spatial resolution of NLDAS-2 by providing meteorological forcing and land-surface model output at 1-km resolution;
-  - Expand the geographical coverage to encompass all of North and Central America; 
+  - Improve the spatial resolution by providing meteorological forcing and land-surface model output at 1-km resolution;
+  - Expand the spatial coverage to encompass all of North and Central America (including Alaska, Hawaii, and Puerto Rico);  
   - Utilize high quality surface meteorological data;
   - Reduce the current NLDAS-2 latency of 3.5 days to near real-time; 
-  - Upgrade the land surface model to include the latest scientific advancements, such as improved representation of groundwater processes and energy balance budget (He et al., 2023); and
-  - Incorporate observational constraints by assimilating remote sensing datasets.
+  - Upgrade the land surface model to include the latest scientific advancements, such as improved representation of groundwater processes (He et al., 2023); and
+  - Incorporate observational constraints by assimilating remote sensing datasets, which can help capture human management of water and vegetation, such as irrigation, groundwater withdrawal, droughts, floods, and hydrological impacts of wildland fire and other disturbances
 
   **Summary of NLDAS-3 improvements**
   <Figure>
@@ -54,54 +56,88 @@ taxonomy:
       NLDAS-3 sample precipitation data compared to NLDAS-2 outputs.
     </Caption> 
   </Figure>
-  <Figure>
+  To make these improvements, science and modeling teams across NASA centers are using the open source NASA Land Information System (LIS) framework (Kumar et al., 2006; Peters-Lidard et al., 2007), a state-of-the-art software suite for high performance terrestrial hydrology modeling and data assimilation. LIS software is open-source and available at [GitHub](https://github.com/NASA-LIS/LISF). 
+    <Figure>
+      <Image
+      src={new URL('./lis-logo.png', import.meta.url).href}
+    />
+    <Caption attrAuthor='EIS Team' attrUrl='https://www.nasa.gov/goddard/'>
+    </Caption>
+    </Figure>
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  ## Precipitation and Meteorology Data Updates
+  NASA is updating NLDAS surface meteorology by leveraging NASA’s reanalysis and remote sensing data products. Specifically, we are working on a new data assimilation approach used successfully in operational environments as well as advanced optimal interpolation techniques (Kemp et al. 2022) to blend well-known and widely used meteorological datasets. Daily precipitation amounts at 4 km of the NASA Integrated Multi-SatellitE Retrievals for GPM (IMERG; Huffman et al. 2020) and the ECCC Canadian Precipitation Analysis (CaPA; Lespinas et al. 2015) are assimilated into NASA Modern Era Retrospective analysis for Research and Applications, Version 2 (MERRA-2; Gelaro et al. 2017) precipitation data. Then the precipitation analysis at 4 km is downscaled to a 1 km fine-scale resolution using a cloud cover frequency-based algorithm and disaggregated into hourly using IMERG and MERRA-2 datasets. Below is a sample of NLDAS-3 precipitation data compared to NLDAS-2 over the U.S. Midwest region to illustrate improved spatial resolution. 
+  
+  [insert slider here]
+
+    <Figure>
       <Image
       src={new URL('./nldas-fig4.png', import.meta.url).href}
     />
     <Caption attrAuthor='EIS Team' attrUrl='https://www.nasa.gov/goddard/'>
       NLDAS-3 sample precipitation data compared to NLDAS-2 outputs.
     </Caption> 
-  </Figure>
-  </Prose>
-</Block>
-<Block>
-  <Prose>
-  ## Modeling and Data Enhancement in NLDAS-3
-  The team is using the open source NASA Land Information System (LIS) framework (Kumar et al., 2006; Peters-Lidard et al., 2007), a state-of-the-art software suite for high performance terrestrial hydrology modeling and data assimilation. LIS development is led by the Hydrological Sciences Laboratory at NASA's Goddard Space Flight Center. The LIS software is open-source and available at [GitHub](https://github.com/NASA-LIS/LISF).
-  Table 2. Downscaling and bias correction methods for other surface meteorological variables.
-  <Figure>
-      <Image
-      src={new URL('./nldas3-table1.png', import.meta.url).href}
-    />
-  </Figure>
-  NLDAS-3 will employ the Noah-MP land surface model (He et al., 2023), implemented within LIS. Schematics of the energy and water budgets and processes represented in the model are shown below.
-  <Figure>
-      <Image
-      src={new URL('./lis-logo.png', import.meta.url).href}
-    />
-    <Caption attrAuthor='EIS Team' attrUrl='https://www.nasa.gov/goddard/'>
-    </Caption>
-  </Figure>
+    </Figure>
+  The other meteorological forcing are obtained by downscaling MERRA-2 datasets (except for Shortwave Down radiation, which will use CERES/POWER data) using the methods as follows:
+
+  [Add Table here]
+
+  NLDAS-3 will employ the Noah-MP land surface model (He et al., 2023), implemented within LIS. Schematic diagrams of the energy and water budgets and processes represented in the model are shown below.
     <Figure>
       <Image
       src={new URL('./nldas-fig7.png', import.meta.url).href}
     />
     <Caption attrAuthor='EIS Team' attrUrl='https://www.nasa.gov/goddard/'>
     </Caption>
-  </Figure>
+    </Figure>
   Schematic diagrams of energy and water budgets and processes represented in Noah-MP version 5.0 (He et al., 2023).
-  
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
   **Integrating remote sensing data is crucial for accurately depicting the influence of human activities on the land surface, such as agricultural irrigation, groundwater extraction, reservoir management, and wildfires.** To better detect these impacts, we are working to assimilate the following NASA satellite data products in NLDAS-3:
   
+  [Insert Table here]
+
   The multivariate assimilation (also known as reanalysis) will produce land (e.g., vegetation states, evapotranspiration, snow dynamics) and hydrologic (soil moisture, groundwater and surface water storage) variables listed below at a spatial resolution of 1 km.
-  Data will be provided in netCDF-4 format through NASA’s open source cloud environments.  Based on the needs of the stakeholder community, a collection of selected variables will also be made available in formats such as cloud-optimized GEOTIFF and GIS-based, among others.
+  
+  **Potential variables delivered by NLDAS-3**
+  [Insert Table here]
 
-  Please join the discussion on our NLDAS github discussion page [here](https://github.com/orgs/Earth-Information-System/repositories)
-
-  **Table 3**. Potential variables delivered by NLDAS-3
+  Data will be provided in netCDF-4 format through NASA’s open source cloud environments. Based on the needs of the stakeholder community, a collection of selected variables will also be made available in cloud-optimized GEOTIFF and GIS-based formats, among others.
 
   </Prose>
 </Block>
+
+<Block>
+  <Prose>
+  ## Explore the Data in the Cloud
+  Below are links to sample monthly precipitation forcing data in Jupyter Notebooks for you to explore.
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  ## Provide Your Feedback
+  What information on water availability and land surface meteorology do you need from NLDAS-3? Here are recent requests for downstream products and applications from the community: 
+  - Soil moisture percentiles and outlooks
+  - Drought percentiles, indices and forecasts
+  - ET and PET products
+  - Soil hydrologic conductivity
+  - Modeled ET and runoff 
+  - GIS-enabled data
+  - Weekly change maps
+  - Model uncertainty information
+
+  NASA model developers are collecting feedback via our NLDAS github discussion page [here](https://github.com/Earth-Information-System/NLDAS-3/discussions). Please get involved and help create the next state-of-the-art land surface and hydrology model! 
+  </Prose>
+</Block>  
+
 <Block>
   <Prose>
   ## References 
