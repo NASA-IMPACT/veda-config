@@ -32,7 +32,7 @@ import { CollecticonExpandTopRight } from '$veda-ui/@devseed-ui/collecticons';
 import { SUBSCRIPTION_URL } from "../../../constants";
 
 
-const PRESS_PATH = '/learn#press';
+const PRESS_PATH = '/news#press';
 
 
 const FooterInner = styled.div`
