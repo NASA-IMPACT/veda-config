@@ -48,11 +48,57 @@ taxonomy:
   - Incorporate observational constraints by assimilating remote sensing datasets, which can help capture human management of water and vegetation, such as irrigation, groundwater withdrawal, droughts, floods, and hydrological impacts of wildland fire and other disturbances
 
   **Summary of NLDAS-3 improvements**
-    <Figure>
-      <Table
-        dataPath='./table1_summary.csv'
-      />
-    </Figure>
+<Figure style={{ display: 'block' }}>
+  <div className='dataset-comparison'>
+    <table>
+      <thead>
+        <tr>
+          <th>Attribute</th>
+          <th>NLDAS-2</th>
+          <th>NLDAS-3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Spatial Coverage</td>
+          <td>CONUS (25-53 North / 125-67 West)</td>
+          <td>North America including Alaska, Hawaii, Puerto Rico and Central America (7-72 North / 169-52 West)</td>
+        </tr>
+        <tr>
+          <td>Spatial resolution</td>
+          <td>12.5-km</td>
+          <td>1.0-km</td>
+        </tr>
+        <tr>
+          <td>Latency</td>
+          <td>~4 days</td>
+          <td>~7 hours</td>
+        </tr>
+        <tr>
+          <td>Precipitation</td>
+          <td>CDC daily 12.5-km analysis over CONUS</td>
+          <td>Assimilation using gauges, CaPA, IMERG, with MERRA-2/GEOS-IT as background</td>
+        </tr>
+        <tr>
+          <td>Surface meteorology</td>
+          <td>NARR with constant lapse rate adjustments</td>
+          <td>MERRA-2/GEOS-IT with advanced downscaling</td>
+        </tr>
+        <tr>
+          <td>Land Surface Modeling</td>
+          <td>4 (Noah, VIC, Mosaic, SAC)</td>
+          <td>1 (Noah-MP)</td>
+        </tr>
+        <tr>
+          <td>Data assimilation</td>
+          <td>None</td>
+          <td>Assimilation of remotely sensed datasets of soil moisture (e.g., SMAP), leaf area index (e.g., MODIS), snow (e.g., AMSR), terrestrial water storage (GRACE-FO)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</Figure>
+
   To make these improvements, science and modeling teams across NASA centers are using the open source NASA Land Information System (LIS) framework (Kumar et al., 2006; Peters-Lidard et al., 2007), a state-of-the-art software suite for high performance terrestrial hydrology modeling and data assimilation. LIS software is open-source and available at [GitHub](https://github.com/NASA-LIS/LISF). 
     <Figure>
       <Image
@@ -64,16 +110,12 @@ taxonomy:
 </Block>
 
 <Block>
-  <Prose>
-  ## Precipitation and Meteorology Data Updates
-  NASA is updating NLDAS surface meteorology by leveraging NASA’s reanalysis and remote sensing data products. Specifically, we are working on a new data assimilation approach used successfully in operational environments as well as advanced optimal interpolation techniques (Kemp et al. 2022) to blend well-known and widely used meteorological datasets. Daily precipitation amounts at 4 km of the NASA Integrated Multi-SatellitE Retrievals for GPM (IMERG; Huffman et al. 2020) and the ECCC Canadian Precipitation Analysis (CaPA; Lespinas et al. 2015) are assimilated into NASA Modern Era Retrospective analysis for Research and Applications, Version 2 (MERRA-2; Gelaro et al. 2017) precipitation data. Then the precipitation analysis at 4 km is downscaled to a 1 km fine-scale resolution using a cloud cover frequency-based algorithm and disaggregated into hourly using IMERG and MERRA-2 datasets. Below is a sample of NLDAS-3 precipitation data compared to NLDAS-2 over the U.S. Midwest region to illustrate improved spatial resolution. 
-  
   <Figure>
     <Map
       datasetId='nighttime-lights-ej'
       layerId='nightlights-hd-1band'
-      zoom={9}
-      center={[-66.45,18.22]}
+      zoom={15}
+      center={[-65.97,18.41]}
       dateTime='2017-07-21'
       compareDateTime='2017-09-20'
     />
@@ -81,21 +123,52 @@ taxonomy:
       attrAuthor='NASA' 
       attrUrl='https://nasa.gov/'
     >
-      Comparison of NLDAS 2 and NLDAS 3 for August 2020.
+      NLDAS-3 sample precipitation data compared to NLDAS-2 outputs for August 2020.
     </Caption> 
-  </Figure>  
-
-    <Figure>
-      <Image
-      src={new URL('./nldas-fig4.png', import.meta.url).href}/>
-      <Caption attrAuthor='EIS Team' attrUrl='https://www.nasa.gov/goddard/'>NLDAS-3 sample precipitation data compared to NLDAS-2 outputs.</Caption> 
-    </Figure>
+  </Figure> 
+    <Prose>
+  ## Precipitation and Meteorology Data Updates
+  NASA is updating NLDAS surface meteorology by leveraging NASA’s reanalysis and remote sensing data products. Specifically, we are working on a new data assimilation approach used successfully in operational environments as well as advanced optimal interpolation techniques (Kemp et al. 2022) to blend well-known and widely used meteorological datasets. Daily precipitation amounts at 4 km of the NASA Integrated Multi-SatellitE Retrievals for GPM (IMERG; Huffman et al. 2020) and the ECCC Canadian Precipitation Analysis (CaPA; Lespinas et al. 2015) are assimilated into NASA Modern Era Retrospective analysis for Research and Applications, Version 2 (MERRA-2; Gelaro et al. 2017) precipitation data. Then the precipitation analysis at 4 km is downscaled to a 1 km fine-scale resolution using a cloud cover frequency-based algorithm and disaggregated into hourly using IMERG and MERRA-2 datasets. Below is a sample of NLDAS-3 precipitation data compared to NLDAS-2 over the U.S. Midwest region to illustrate improved spatial resolution. 
   The other meteorological forcing are obtained by downscaling MERRA-2 datasets (except for Shortwave Down radiation, which will use CERES/POWER data) using the methods as follows:
-    <Figure>
-      <Table
-        dataPath='./table2_meteorological_downscaling.csv'
-      />
-    </Figure>
+<Figure style={{ display: 'block' }}>
+  <div className='meteorological-tables'>
+    <table>
+      <thead>
+        <tr>
+          <th>Meteorological Variable</th>
+          <th>Downscaling Method</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Surface Pressure</td>
+          <td>Elevation-based following Cosgrove et al., 2003</td>
+        </tr>
+        <tr>
+          <td>Longwave Down Radiation</td>
+          <td>Elevation-based following Cosgrove et al., 2003</td>
+        </tr>
+        <tr>
+          <td>Air Temperature</td>
+          <td>Dynamic lapse rate bias correction, following Rouf et al., 2020</td>
+        </tr>
+        <tr>
+          <td>Air Humidity</td>
+          <td>Adjusted to be consistent after the Air Temperature adjustment</td>
+        </tr>
+        <tr>
+          <td>Wind Speed</td>
+          <td>MicroMet methodology following Liston & Elder, 2006</td>
+        </tr>
+        <tr>
+          <td>Shortwave Down Radiation</td>
+          <td>Slope-aspect based following Rutan et al., 2015</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</Figure>
+
   NLDAS-3 will employ the Noah-MP land surface model (He et al., 2023), implemented within LIS. Schematic diagrams of the energy and water budgets and processes represented in the model are shown below.
     <Figure>
       <Image
@@ -112,20 +185,76 @@ taxonomy:
   <Prose>
   **Integrating remote sensing data is crucial for accurately depicting the influence of human activities on the land surface, such as agricultural irrigation, groundwater extraction, reservoir management, and wildfires.** To better detect these impacts, we are working to assimilate the following NASA satellite data products in NLDAS-3:
   
-    <Figure>
-      <Table
-        dataPath='./table3_land_surface_variable.csv'
-      />
-    </Figure>
+<Figure style={{ display: 'block' }}>
+  <div className='remote-sensing-platforms'>
+    <table>
+      <thead>
+        <tr>
+          <th>Land Surface Variable</th>
+          <th>Remote Sensing Platform</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Soil Moisture</td>
+          <td>SMAP, AMSR-E, AMSR-2</td>
+        </tr>
+        <tr>
+          <td>Snow</td>
+          <td>AMSR-E, AMSR-2, MODIS</td>
+        </tr>
+        <tr>
+          <td>Leaf Area Index</td>
+          <td>MODIS/VIIRS</td>
+        </tr>
+        <tr>
+          <td>Terrestrial Water Storage</td>
+          <td>GRACE/GRACE-FO</td>
+        </tr>
+        <tr>
+          <td>Radar Altimetry Water Level</td>
+          <td>SWOT</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</Figure>
+
 
   The multivariate assimilation (also known as reanalysis) will produce land (e.g., vegetation states, evapotranspiration, snow dynamics) and hydrologic (soil moisture, groundwater and surface water storage) variables listed below at a spatial resolution of 1 km.
   
   **Potential variables delivered by NLDAS-3**
-    <Figure>
-      <Table
-        dataPath='./table4_LSM_variables.csv'
-      />
-    </Figure>
+<Figure style={{ display: 'block' }}>
+  <div className='energy-fluxes-states'>
+    <table>
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th>Variables</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Energy fluxes and states</td>
+          <td>Latent heat flux, sensible heat flux, ground heat flux</td>
+        </tr>
+        <tr>
+          <td>Surface state variables</td>
+          <td>Snow water equivalent, snow depth, snow cover, skin temperature, albedo, evapotranspiration, leaf area index</td>
+        </tr>
+        <tr>
+          <td>Carbon variables</td>
+          <td>Gross primary production, net primary production</td>
+        </tr>
+        <tr>
+          <td>Soil and subsurface state hydrologic variables</td>
+          <td>Soil moisture, terrestrial water storage, groundwater storage, water table depth, surface runoff, subsurface runoff, streamflow</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</Figure>
+
 
   Data will be provided in netCDF-4 format through NASA’s open source cloud environments. Based on the needs of the stakeholder community, a collection of selected variables will also be made available in cloud-optimized GEOTIFF and GIS-based formats, among others.
 
