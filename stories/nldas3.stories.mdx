@@ -30,7 +30,7 @@ taxonomy:
       src={new URL('./nldas-fig1.png', import.meta.url).href}
     />
     <Caption attrAuthor='EIS Team' attrUrl='https://www.nasa.gov/goddard/'>
-      Figure 1. NASA 2023 stakeholder workshop participant responses to the question, “How do you use NLDAS?” 
+      NASA 2023 stakeholder workshop participant responses to the question, “How do you use NLDAS?” 
     </Caption>
   </Figure> 
   </Prose>
@@ -46,6 +46,15 @@ taxonomy:
   - Reduce the current NLDAS-2 latency of 3.5 days to near real-time; 
   - Upgrade the land surface model to include the latest scientific advancements, such as improved representation of groundwater processes (He et al., 2023); and
   - Incorporate observational constraints by assimilating remote sensing datasets, which can help capture human management of water and vegetation, such as irrigation, groundwater withdrawal, droughts, floods, and hydrological impacts of wildland fire and other disturbances
+
+  <Figure>
+      <Image
+      src={new URL('./nldas3-fig1b.png', import.meta.url).href}
+    />
+    <Caption attrAuthor='EIS Team' attrUrl='https://www.nasa.gov/goddard/'>
+      Spatial domain of NLDAS-2 (CONUS) vs. NLDAS-3 (North and Central America).
+    </Caption>
+  </Figure> 
 
   **Summary of NLDAS-3 improvements**
 <Figure style={{ display: 'block' }}>
@@ -104,7 +113,7 @@ taxonomy:
       <Image
       src={new URL('./lis-logo.png', import.meta.url).href}
     />
-    <Caption attrAuthor='EIS Team' attrUrl='https://www.nasa.gov/goddard/'></Caption>
+    <Caption attrAuthor='EIS Team' attrUrl='https://lis.gsfc.nasa.gov//'></Caption>
     </Figure>
   </Prose>
 </Block>
@@ -126,10 +135,12 @@ taxonomy:
       NLDAS-3 sample precipitation data compared to NLDAS-2 outputs for August 2020.
     </Caption> 
   </Figure> 
-    <Prose>
+</Block> 
+<Block> 
+    <Prose>  
   ## Precipitation and Meteorology Data Updates
   NASA is updating NLDAS surface meteorology by leveraging NASA’s reanalysis and remote sensing data products. Specifically, we are working on a new data assimilation approach used successfully in operational environments as well as advanced optimal interpolation techniques (Kemp et al. 2022) to blend well-known and widely used meteorological datasets. Daily precipitation amounts at 4 km of the NASA Integrated Multi-SatellitE Retrievals for GPM (IMERG; Huffman et al. 2020) and the ECCC Canadian Precipitation Analysis (CaPA; Lespinas et al. 2015) are assimilated into NASA Modern Era Retrospective analysis for Research and Applications, Version 2 (MERRA-2; Gelaro et al. 2017) precipitation data. Then the precipitation analysis at 4 km is downscaled to a 1 km fine-scale resolution using a cloud cover frequency-based algorithm and disaggregated into hourly using IMERG and MERRA-2 datasets. Below is a sample of NLDAS-3 precipitation data compared to NLDAS-2 over the U.S. Midwest region to illustrate improved spatial resolution. 
-  The other meteorological forcing are obtained by downscaling MERRA-2 datasets (except for Shortwave Down radiation, which will use CERES/POWER data) using the methods as follows:
+  The other meteorological forcings are obtained by downscaling MERRA-2 datasets (except for Shortwave Down radiation, which will use CERES/POWER data) using the methods as follows:
 <Figure style={{ display: 'block' }}>
   <div className='meteorological-tables'>
     <table>
@@ -178,11 +189,11 @@ taxonomy:
       <Image
       src={new URL('./nldas-fig7.png', import.meta.url).href}
     />
-    <Caption attrAuthor='EIS Team' attrUrl='https://www.nasa.gov/goddard/'>
+    <Caption attrAuthor='See He et al., 2023' attrUrl='https://opensky.ucar.edu/islandora/object/technotes%3A599/datastream/PDF/view'>
     </Caption>
     </Figure>
   Schematic diagrams of energy and water budgets and processes represented in Noah-MP version 5.0 (He et al., 2023).
-  
+
   **Integrating remote sensing data is crucial for accurately depicting the influence of human activities on the land surface, such as agricultural irrigation, groundwater extraction, reservoir management, and wildfires.** To better detect these impacts, we are working to assimilate the following NASA satellite data products in NLDAS-3:
   
 <Figure style={{ display: 'block' }}>
@@ -291,6 +302,7 @@ taxonomy:
   <Prose>
   ## References 
   - ​https://lis.gsfc.nasa.gov/
+  - Cosgrove, B. A., et al. (2003), Land surface model spin-up behavior in the North American Land Data Assimilation System (NLDAS), J. Geophys. Res., 108, 8845, doi:10.1029/2002JD003316, D22.
   - He, C., Valayamkunnath, P., Barlage, M., Chen, F., Gochis, D., Cabell, R., … Ek, M. (2023). The Community Noah-MP Land Surface Modeling System Technical Description Version 5.0 (No. NCAR/TN-575+STR). doi:10.5065/ew8g-yr95
   - Kumar, S.V., C.D. Peters-Lidard, Y. Tian, P.R. Houser, J. Geiger, S. Olden, L. Lighty, J.L. Eastman, B. Doty, P. Dirmeyer, J. Adams, K. Mitchell, E. F. Wood, and J. Sheffield, 2006: Land Information System - An interoperable framework for high resolution land surface modeling. Environ. Modeling & Software, 21, 1402-1415, doi:10.1016/j.envsoft.2005.07.004
   - Liston, G.E., and K. Elder, 2006: A meteorological distribution system for high-resolution terrestrial modeling (MicroMet). J. Hydrometeor., 4, 217–234. https://doi.org/10.1175/JHM486.1
