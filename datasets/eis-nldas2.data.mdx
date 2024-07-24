@@ -1,0 +1,87 @@
+---
+id: eis-nldas2
+name:  NLDAS-2 Precipitation Forcing Dataset
+description: 
+description: "The impact of Aerosol over the Houston-metro and the Difference Over 20 Years"
+media:
+  src: ::file ./smog-city.png
+  alt: Smog Located In City.
+  author:
+    name: Nick van den Berg
+    url: https://unsplash.com/photos/2vb-_3t6YCM
+taxonomy:
+  - name: Topics
+    values:
+      - Hydrology
+      - Precipitation    
+      - Surface Meteorology    
+    
+layers:
+  - id: eis-nldas2
+    stacCol: eis-nldas2
+    name: NLDAS 2 Precipitation
+    type: raster
+    description: "Precipitation Dataset"
+    initialDatetime: newest
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      colormap_name: bwr
+      rescale:
+        - -0.1
+        - 0.1
+      nodata: 0
+    compare:
+      datasetId: eis-nldas2
+      layerId: eis-nldas2
+      mapLabel: |
+        ::js ({dateFns, datetime, compareDatetime}) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      type: gradient
+      min: "-0.1"
+      max: "0.1"
+      stops:
+        - "#4575b4"
+        - "#91bfdb"
+        - "#e0f3f8"
+        - "#ffffff"
+        - "#fee090"
+        - "#fc8d59"
+        - "#d73027"
+---
+<Block>
+  <Prose>
+    **Temporal Extent:** January 1979 - present   
+    **Temporal Resolution:** Hourly (Monthly Averages also available)    
+    **Spatial Extent:** CONUS (25 to 53 North and -125 to -67 West)  
+    **Spatial Resolution:** 0.125° x 0.125°    
+    **Data type:** Research
+    **Data Latency:** 4 days
+    
+    The precipitation from NLDAS-2 over CONUS is derived from a daily gridded precipitation analysis at 0.125-degrees from NOAA CPC.  The data is temporally disaggregated to hourly using a variety of data sources, primarily radar-estimated precipitation amounts from Doppler Stage II data.  Outside of CONUS, but still in the 25 to 53 North domain, different datasets are used to generate NLDAS-2 precipitation.  See https://ldas.gsfc.nasa.gov/nldas/v2/forcing for details.
+
+    ## Source Data Product Citation
+    https://doi.org/10.5067/THUF4J1RLSYG
+    NLDAS project (2021), NLDAS Primary Forcing Data L4 Hourly 0.125 x 0.125 degree V2.0, Edited by David M. Mocko, NASA/GSFC/HSL, Greenbelt, Maryland, USA, Goddard Earth Sciences Data and Information Services Center (GES DISC), Accessed: [Data Access Date], 10.5067/THUF4J1RLSYG
+
+    ## Version History
+    V2.0
+
+  </Prose>
+</Block>
+<Block>
+  <Prose>
+    ## Key Publications
+    Xia, Youlong, Mitchell, Kenneth, Ek, Michael, Sheffield, Justin, Cosgrove, Brian, Wood, Eric, Luo, Lifeng, Alonge, Charles, Wei, Helin, Meng, Jesse, Livneh, Ben, Lettenmaier, Dennis, Koren, Victor, Duan, Qingyun, Mo, Kingtse, Fan, Yun, Mocko, David. 2012.  Continental-scale water and energy flux analysis and validation for the North American Land Data Assimilation System project phase 2 (NLDAS-2): 1. Intercomparison and application of model products: WATER AND ENERGY FLUX ANALYSIS. Journal of Geophysical Research: Atmospheres. Vol. 117, No. D3, pp. n/a-n/a. DOI: 10.1029/2011JD016048  ISSN: 01480227 
+    
+    ## Learn More
+    - https://ldas.gsfc.nasa.gov/nldas/v2/forcing
+ 
+    ## License
+    [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/legalcode) (CC BY 4.0)
+
+  </Prose>
+</Block>
