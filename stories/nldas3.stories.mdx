@@ -126,6 +126,15 @@ taxonomy:
       NLDAS-3 sample precipitation data compared to NLDAS-2 outputs for August 2020.
     </Caption> 
   </Figure> 
+  NLDAS-3 will employ the Noah-MP land surface model (He et al., 2023), implemented within LIS. Schematic diagrams of the energy and water budgets and processes represented in the model are shown below.
+    <Figure>
+      <Image
+      src={new URL('./nldas-fig7.png', import.meta.url).href}
+    />
+    <Caption attrAuthor='EIS Team' attrUrl='https://www.nasa.gov/goddard/'>
+    </Caption>
+    </Figure>
+  Schematic diagrams of energy and water budgets and processes represented in Noah-MP version 5.0 (He et al., 2023).
     <Prose>
   ## Precipitation and Meteorology Data Updates
   NASA is updating NLDAS surface meteorology by leveraging NASA’s reanalysis and remote sensing data products. Specifically, we are working on a new data assimilation approach used successfully in operational environments as well as advanced optimal interpolation techniques (Kemp et al. 2022) to blend well-known and widely used meteorological datasets. Daily precipitation amounts at 4 km of the NASA Integrated Multi-SatellitE Retrievals for GPM (IMERG; Huffman et al. 2020) and the ECCC Canadian Precipitation Analysis (CaPA; Lespinas et al. 2015) are assimilated into NASA Modern Era Retrospective analysis for Research and Applications, Version 2 (MERRA-2; Gelaro et al. 2017) precipitation data. Then the precipitation analysis at 4 km is downscaled to a 1 km fine-scale resolution using a cloud cover frequency-based algorithm and disaggregated into hourly using IMERG and MERRA-2 datasets. Below is a sample of NLDAS-3 precipitation data compared to NLDAS-2 over the U.S. Midwest region to illustrate improved spatial resolution. 
@@ -168,16 +177,6 @@ taxonomy:
     </table>
   </div>
 </Figure>
-
-  NLDAS-3 will employ the Noah-MP land surface model (He et al., 2023), implemented within LIS. Schematic diagrams of the energy and water budgets and processes represented in the model are shown below.
-    <Figure>
-      <Image
-      src={new URL('./nldas-fig7.png', import.meta.url).href}
-    />
-    <Caption attrAuthor='EIS Team' attrUrl='https://www.nasa.gov/goddard/'>
-    </Caption>
-    </Figure>
-  Schematic diagrams of energy and water budgets and processes represented in Noah-MP version 5.0 (He et al., 2023).
   </Prose>
 </Block>
 
