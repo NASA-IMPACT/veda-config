@@ -32,7 +32,7 @@
     cursor: pointer;
   }
   
-  a:link, a:visited {
+  .link:link, .link:visited {
     text-decoration: none;
     color: white !important;
   }

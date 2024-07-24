@@ -26,7 +26,7 @@ const UrbanEmissionsSpotlight = () => {
         <p>
           Globally, cities are responsible for more than 70% of greenhouse gas emissions. Cities have the power to reduce emissions using policies that benefit the health of their citizens. The U.S. Greenhouse Gas Center welcomes a new set of tools aimed at supporting city decisionmakers.
         </p>
-        <button className="explore-button"><a href="/stories/urban">Explore the Collection</a></button>
+        <button className="explore-button"><a className="link" href="/stories/urban">Explore the Collection</a></button>
       </div>
     </div>
   );
