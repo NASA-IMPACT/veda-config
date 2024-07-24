@@ -194,7 +194,7 @@ export const TUTORIAL_ITEMS = [
     endDate: ''
   },
   {
-    name: 'Introduction to the Exploration Environment',
+    name: 'How to Explore Data',
     asLink : {
       url: 'https://www.youtube.com/watch?v=S2XL5WT9W4g'
     },
