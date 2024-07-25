@@ -1,5 +1,5 @@
 ---
-id: nldas2
+id: nldas3
 name:  "NLDAS-2 Precipitation Forcing Dataset"
 description: "NASA is co-developing high-resolution retrospective and real-time data for water resources and agricultural applications"
 media:
@@ -15,8 +15,8 @@ taxonomy:
       - Precipitation    
       - Surface Meteorology        
 layers:
-  - id: nldas2
-    stacCol: nldas2
+  - id: nldas3
+    stacCol: nldas3
     name: Precipitation
     type: raster
     description: "Precipitation Dataset"
@@ -31,8 +31,8 @@ layers:
         - 200
       nodata: 0
     compare:
-      datasetId: nldas2
-      layerId: nldas2
+      datasetId: nldas3
+      layerId: nldas3
       mapLabel: |
         ::js ({dateFns, datetime, compareDatetime}) => {
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
