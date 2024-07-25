@@ -12,7 +12,7 @@ on:
     - 'main'
 
 env:
-  NODE: 16
+  NODE: 20
   DOMAIN_PROD: https://www.earthdata.nasa.gov/dashboard
   DEPLOY_BUCKET_PROD: climatedashboard
   DEPLOY_BUCKET_PROD_REGION: us-east-1
@@ -110,7 +110,7 @@ jobs:
 
       - name: Deploy to S3 Production
         run: |
-          aws s3 sync ./deploy s3://${{ env.DEPLOY_BUCKET_PROD }} --cache-control max-age=604800 --delete
+          aws s3 sync ./deploy s3://${{ env.DEPLOY_BUCKET_PROD }} --cache-control max-age=30,must-revalidate,s-maxage=604800 --delete
 
       - name: Invalidate CloudFront cache
         uses: oneyedev/aws-cloudfront-invalidation@v1

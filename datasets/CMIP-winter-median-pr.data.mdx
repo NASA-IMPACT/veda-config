@@ -12,6 +12,9 @@ taxonomy:
   - name: Topics
     values:
       - EIS
+infoDescription: |
+  ::markdown
+    Future changes to precipitation are expected to alter the volume and timing of snow water resources. Here, we present the projected percent-change to Western US cumulative winter precipitation at quarter-degree spatial resoutions across 20-year time periods between 2016 and 2095. Projections are averaged from an ensemble of 23 downscaled climate models from the CMIP6 NASA Earth Exchange Global Daily Downscaled Projections.
 layers:
   - id: CMIP245-winter-median-pr
     stacCol: CMIP245-winter-median-pr
@@ -48,6 +51,11 @@ layers:
       - "#A0CBE4"
       - "#5EA4D1"
       - "#207BBD"
+    info:
+      source: NASA
+      spatialExtent: Regional
+      temporalResolution: Annual
+      unit: Percent Difference
   - id: CMIP585-winter-median-pr
     stacCol: CMIP585-winter-median-pr
     name: 'Percent-change to winter cumulative precipitation, SSP5-8.5'
@@ -83,6 +91,11 @@ layers:
       - "#A0CBE4"
       - "#5EA4D1"
       - "#207BBD"
+    info:
+      source: NASA
+      spatialExtent: Regional
+      temporalResolution: Annual
+      unit: Percent Difference
 ---
 <Block>
 <Prose>

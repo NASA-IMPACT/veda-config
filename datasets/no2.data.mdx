@@ -21,12 +21,15 @@ taxonomy:
     values:
       - Air Quality
       - Covid 19
+infoDescription: |
+  ::markdown
+    OMI, which launched in 2004, preceded TROPOMI, which launched in 2017. While TROPOMI provides higher resolution information, the longer OMI data record provides context for the TROPOMI observations.
 layers:
   - id: no2-monthly
     stacCol: no2-monthly
-    name: No2
+    name: Nitrogen Dioxide (monthly)
     type: raster
-    description: 'Global nitrogen dioxide data organized into monthly metrics'
+    description: 'Global nitrogen dioxide (NO₂) data organized into monthly metrics'
     zoomExtent:
       - 0
       - 20
@@ -55,11 +58,17 @@ layers:
         - "#E4EEF3"
         - "#FDDCC9"
         - "#DD7059"
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Monthly 
+      unit: N/A
+
   - id: no2-monthly-diff
     stacCol: no2-monthly-diff
-    name: No2 (Diff)
+    name: Nitrogen Dioxide (monthly difference)
     type: raster
-    description: 'Global nitrogen dioxide data which displays the difference from the same time 1 year ago'
+    description: 'Global nitrogen dioxide (NO₂) data which displays the difference from the same time 1 year ago'
     zoomExtent:
       - 0
       - 20
@@ -68,8 +77,8 @@ layers:
       bidx: 1
       colormap_name: rdbu_r
       rescale:
-        - -8e15
-        - 8e15
+        - -3e15
+        - 3e15
     compare:
       datasetId: no2
       layerId: no2-monthly-diff
@@ -87,11 +96,17 @@ layers:
         - "#E4EEF3"
         - "#FDDCC9"
         - "#DD7059"
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Monthly 
+      unit: N/A
+
   - id: OMI_trno2-COG
     stacCol: OMI_trno2-COG
-    name: OMI_trno2 Annual
+    name: Nitrogen Dioxide Total and Tropospheric Column (NASA OMI/Aura)
     type: raster
-    description: "NASA OMI/Aura Nitrogen Dioxide (NO2) Total and Tropospheric Column"
+    description: "NASA OMI/Aura Nitrogen Dioxide (NO₂) Total and Tropospheric Column"
     zoomExtent:
       - 0
       - 16
@@ -111,6 +126,12 @@ layers:
         - '#fdd1bf'
         - '#e02d26'
         - '#67000c'
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Monthly 
+      unit: N/A
+
 ---
 
 <Block type='full'>
