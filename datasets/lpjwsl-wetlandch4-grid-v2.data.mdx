@@ -37,9 +37,9 @@ infoDescription: |
     - Temporal Resolution: Daily and Monthly
     - Spatial Extent: Global
     - Spatial Resolution: 0.5° x 0.5°
-    - Data Units: Grams of methane per meter squared per second(g CH₄/m²/s)
+    - Data Units: Kilograms of methane per meter squared per second (kg CH₄/m²/s)
     - Data Type: Research
-    - Data Latency: Updated several times per year
+    - Data Latency: Updated once every two months
 
 layers:
   - id: ch4-wetlands-emissions-m-ens
@@ -69,7 +69,7 @@ layers:
         }
     legend:
       unit:
-        label: g CH₄/m²/s
+        label: kg CH₄/m²/s
       type: gradient
       min: 0
       max: 3
@@ -88,7 +88,7 @@ layers:
       source: NASA
       spatialExtent: Global
       temporalResolution: Monthly
-      unit: g CH₄/m²/month
+      unit: kg CH₄/m²/month
 
   - id: ch4-wetlands-emissions-d-ens
     stacCol: lpjeosim-wetlandch4-daygrid-v2
@@ -117,7 +117,7 @@ layers:
         }
     legend:
       unit:
-        label: g CH₄/m²/s
+        label: kg CH₄/m²/s
       type: gradient
       min: 0
       max: 0.1
@@ -136,7 +136,7 @@ layers:
       source: NASA
       spatialExtent: Global
       temporalResolution: Daily
-      unit: g CH₄/m²/day           
+      unit: kg CH₄/m²/day  
   - id: ch4-wetlands-emissions-m-era
     stacCol: lpjeosim-wetlandch4-monthgrid-v2
     name: (Monthly) (ERA5) Wetland CH₄ Emissions LPJ-EOSIM Model 
@@ -164,7 +164,7 @@ layers:
         }
     legend:
       unit:
-        label: g CH₄/m²/s
+        label: kg CH₄/m²/s
       type: gradient
       min: 0
       max: 3
@@ -183,7 +183,7 @@ layers:
       source: NASA
       spatialExtent: Global
       temporalResolution: Monthly
-      unit: g CH₄/m²/month          
+      unit: kg CH₄/m²/month       
   - id: ch4-wetlands-emissions-d-era
     stacCol: lpjeosim-wetlandch4-daygrid-v2
     name: (Daily) (ERA5) Wetland CH₄ Emissions LPJ-EOSIM Model 
@@ -211,7 +211,7 @@ layers:
         }
     legend:
       unit:
-        label: g CH₄/m²/s
+        label: kg CH₄/m²/s
       type: gradient
       min: 0
       max: 0.1
@@ -230,7 +230,7 @@ layers:
       source: NASA
       spatialExtent: Global
       temporalResolution: Daily
-      unit: g CH₄/m²/day   
+      unit: kg CH₄/m²/day   
   - id: ch4-wetlands-emissions-m-merra
     stacCol: lpjeosim-wetlandch4-monthgrid-v2
     name: (Monthly) (MERRA-2) Wetland CH₄ Emissions LPJ-EOSIM Model 
@@ -258,7 +258,7 @@ layers:
         }
     legend:
       unit:
-        label: g CH₄/m²/s
+        label: kg CH₄/m²/s
       type: gradient
       min: 0
       max: 3
@@ -277,7 +277,7 @@ layers:
       source: NASA
       spatialExtent: Global
       temporalResolution: Monthly
-      unit: g CH₄/m²/month              
+      unit: kg CH₄/m²/month              
   - id: ch4-wetlands-emissions-d-merra
     stacCol: lpjeosim-wetlandch4-daygrid-v2
     name: (Daily) (MERRA-2) Wetland CH₄ Emissions LPJ-EOSIM Model 
@@ -305,7 +305,7 @@ layers:
         }
     legend:
       unit:
-        label: g CH₄/m²/s
+        label: kg CH₄/m²/s
       type: gradient
       min: 0
       max: 0.1
@@ -324,7 +324,7 @@ layers:
       source: NASA
       spatialExtent: Global
       temporalResolution: Daily
-      unit: g CH₄/m²/day                        
+      unit: kg CH₄/m²/day                        
 ---
 
 <Block>
@@ -333,11 +333,11 @@ layers:
     **Temporal resolution:** Daily and Monthly     
     **Spatial extent:** Global    
     **Spatial resolution:** 0.5° x 0.5°<br />
-    **Data units:** Grams of methane per meter squared per second (g CH₄/m²/s)   
+    **Data units:** Kilograms of methane per meter squared per second (kg CH₄/m²/s)   
     **Data type:** Research <br />
-    **Data Latency:** Updated several times per year <br />
+    **Data Latency:** Updated once every two months <br />
     
-    Methane (CH₄) emissions from vegetated wetlands are estimated to be the largest natural source of methane in the global CH₄ budget, contributing to roughly one third of the total of natural and anthropogenic emissions. Wetland CH₄ is produced by microbes breaking down organic matter in the oxygen deprived environment of inundated soils. Due to limited data availability, the details of the role of wetland CH₄ emissions have thus far been underrepresented. Using the Earth Observation SIMulator  version (LPJ-EOSIM) of the Lund-Potsdam-Jena Dynamic Global Vegetation Model (LPJ-DGVM) global CH₄ emissions from wetlands are estimated at 0.5 x 0.5 degree spatial resolution. By simulating wetland extent and using characteristics of inundated areas, such as wetland soil moisture, temperature, and carbon content, the model provides estimates of CH₄ quantities emitted into the atmosphere. This dataset shows concentrated methane sources from tropical and high latitude ecosystems. The LPJ-EOSIM Wetland Methane Emissions dataset consists of global daily and monthly model estimates of terrestrial wetland methane emissions from 1990 to the present, with data added several times per year. The monthly dataset is computed by summing the daily data for each month. The estimates are regularly used in conjunction with NASA’s Goddard Earth Observing System (GEOS) model to simulate the impact of wetlands and other methane sources on atmospheric methane concentrations, to compare against satellite and airborne data, and to improve understanding and prediction of wetland emissions. This is a new version and replaces the LPJ-wsl dataset previously available in the GHG Center.  
+    Methane (CH₄) emissions from vegetated wetlands are estimated to be the largest natural source of methane in the global CH₄ budget, contributing to roughly one third of the total of natural and anthropogenic emissions. Wetland CH₄ is produced by microbes breaking down organic matter in the oxygen deprived environment of inundated soils. Due to limited data availability, the details of the role of wetland CH₄ emissions have thus far been underrepresented. Using the Earth Observation SIMulator  version (LPJ-EOSIM) of the Lund-Potsdam-Jena Dynamic Global Vegetation Model (LPJ-DGVM) global CH₄ emissions from wetlands are estimated at 0.5 x 0.5 degree spatial resolution. By simulating wetland extent and using characteristics of inundated areas, such as wetland soil moisture, temperature, and carbon content, the model provides estimates of CH₄ quantities emitted into the atmosphere. This dataset shows concentrated methane sources from tropical and high latitude ecosystems. The LPJ-EOSIM Wetland Methane Emissions dataset consists of global daily and monthly model estimates of terrestrial wetland methane emissions from 1990 to the present, with data added every two months. The monthly dataset is computed by summing the daily data for each month. The estimates are regularly used in conjunction with NASA’s Goddard Earth Observing System (GEOS) model to simulate the impact of wetlands and other methane sources on atmospheric methane concentrations, to compare against satellite and airborne data, and to improve understanding and prediction of wetland emissions. This is a new version and replaces the LPJ-wsl dataset previously available in the GHG Center.  
 
   </Prose>
 </Block>
@@ -346,7 +346,7 @@ layers:
     ## Source Data Product Citation
     The following four citations encompass the data used in creating the visualizations of the LPJ-EOSIM data in the US GHG Center.
 
-    The daily and monthly low latency datasets listed indicate the data delivered more frequently throughout the year using estimated carbon dioxide input data. The daily and monthly higher quality “final” datasets are delivered annually and replace the low latency data. 
+    The daily and monthly low latency datasets listed indicate the data delivered more frequently throughout the year using estimated carbon dioxide input data. Once the carbon dioxide input data has been finalized, the daily and monthly products are permanently published to the high latency collections. 
 
     Colligan, T., Poulter, B., Quinn, C. (2024). LPJ-EOSIM L2 Global Simulated Daily Wetland Methane Flux V001 [Data set]. NASA EOSDIS Land Processes Distributed Active Archive Center. Accessed [Date Accessed] from [https://doi.org/10.5067/Community/LPJ-EOSIM/LPJ_EOSIM_L2_DCH4E.001](https://doi.org/10.5067/Community/LPJ-EOSIM/LPJ_EOSIM_L2_DCH4E.001)
     
