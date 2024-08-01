@@ -1,3 +1,35 @@
+const defaultMenuLinks = [
+  {
+    title: 'Data Hub',
+    to: '/data-hub',
+    type: 'internalLink'
+  },
+  {
+    title: 'Stories',
+    to: '/stories',
+    type: 'internalLink'
+  },
+  {
+    title: 'Topics',
+    to: '/topics',
+    type: 'internalLink'
+  },
+  // {
+  //   title: 'Dropdown',
+  //   type: 'dropdown',
+  //   children: [{
+  //     title: 'child 1',
+  //     to: '/stories',
+  //     type: 'internalLink'
+  //   },{
+  //     title: 'child 2',
+  //     href: 'https://nasa.gov',
+  //     type: 'externalLink'
+  //   }]
+
+  // }
+];
+
 module.exports = {
   /**
    * Glob path for the datasets.
@@ -74,4 +106,7 @@ module.exports = {
   booleans: {
     'externalLinksInNewTab': true,
   },
+  navItems: {
+    mainNavItems: defaultMenuLinks
+  }
 };
