@@ -14,20 +14,11 @@ const defaultMenuLinks = [
     to: '/topics',
     type: 'internalLink'
   },
-  // {
-  //   title: 'Dropdown',
-  //   type: 'dropdown',
-  //   children: [{
-  //     title: 'child 1',
-  //     to: '/stories',
-  //     type: 'internalLink'
-  //   },{
-  //     title: 'child 2',
-  //     href: 'https://nasa.gov',
-  //     type: 'externalLink'
-  //   }]
-
-  // }
+  {
+    title: 'News & Events',
+    to: '/news',
+    type: 'internalLink',
+  }
 ];
 
 module.exports = {
