@@ -3,11 +3,6 @@ const { parsed: config } = dotEnvConfig;
 
 const defaultMenuLinks = [
   {
-    title: 'Data Hub',
-    to: '/data-hub',
-    type: 'internalLink'
-  },
-  {
     title: 'Stories',
     to: '/stories',
     type: 'internalLink'
@@ -16,7 +11,12 @@ const defaultMenuLinks = [
     title: 'Topics',
     to: '/topics',
     type: 'internalLink'
-  }
+  },
+  {
+    title: 'Data Center',
+    to: '/data-hub',
+    type: 'internalLink'
+  },
 ];
 
 let subNavItems = [
