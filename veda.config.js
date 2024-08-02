@@ -1,3 +1,6 @@
+const dotEnvConfig = require('dotenv').config();
+const { parsed: config } = dotEnvConfig;
+
 const defaultMenuLinks = [
   {
     title: 'Data Hub',
@@ -13,13 +16,32 @@ const defaultMenuLinks = [
     title: 'Topics',
     to: '/topics',
     type: 'internalLink'
-  },
+  }
+];
+
+let subNavItems = [
   {
     title: 'News & Events',
     to: '/news',
-    type: 'internalLink',
-  }
-];
+    type: 'internalLink'
+  },
+  {
+    title: 'About',
+    to: '/about',
+    type: 'internalLink'
+  },
+]
+
+if (config.GOOGLE_FORM) {
+  subNavItems = [
+    ...subNavItems,
+    {
+      title: 'Contact us',
+      src: config.GOOGLE_FORM,
+      type: 'modal'
+    }
+  ];
+}
 
 module.exports = {
   /**
@@ -98,6 +120,7 @@ module.exports = {
     'externalLinksInNewTab': true,
   },
   navItems: {
-    mainNavItems: defaultMenuLinks
+    mainNavItems: defaultMenuLinks,
+    subNavItems: subNavItems
   }
 };
