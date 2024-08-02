@@ -63,7 +63,6 @@ layers:
       rescale:
         - 412
         - 422
-      nodata: 0
     compare:
       datasetId: oco2geos-co2-daygrid-v10r
       layerId: oco2-dryair-column
@@ -86,8 +85,7 @@ layers:
     analysis:
       metrics:
         - mean
-      sourceParams:
-        nodata: 0        
+      sourceParams:        
         dst_crs: "+proj=cea"
     info:
       source: NASA
