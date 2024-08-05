@@ -121,6 +121,99 @@ export default function KeypointsDatasets() {
   );
 }
 
+export function KeypointsCities() {
+  return (
+    <KeypointsWrapper>
+      <CardList>
+        <li>
+          <KeypointCard
+            linkLabel="Baltimore"
+            linkTo="/stories/baltimore"
+            title="Baltimore"
+            description="Description"
+            imgSrc={"https://cdn.britannica.com/90/77990-050-E6087086/Inner-Harbor-skyline-Baltimore-Maryland.jpg"}
+            imgAlt="Baltimore"
+            // footerContent={
+            //   <div>
+            //     <ArrowLink
+            //       to={`${DATASETS_PATH}?${Actions.TAXONOMY}=${encodeURIComponent(
+            //         JSON.stringify({ Topics: "anthropogenic-emissions" })
+            //       )}`}
+            //     >
+            //       Check out relevant datasets
+            //     </ArrowLink>
+            //   </div>
+            // }
+          />
+        </li>
+        <li>
+          <KeypointCard
+            linkLabel="New York"
+            linkTo="/stories/newyork"
+            title="New York"
+            description="Description"
+            imgSrc={"https://i.natgeofe.com/n/874df281-d3e0-489a-98c0-6b840023b828/newyork_NationalGeographic_2328428.jpg"}
+            imgAlt="New York"
+            // footerContent={
+            //   <div>
+            //     <ArrowLink
+            //       to={`${DATASETS_PATH}?${Actions.TAXONOMY}=${encodeURIComponent(
+            //         JSON.stringify({ Topics: "natural-emissions-and-sinks" })
+            //       )}`}
+            //     >
+            //       Check out relevant datasets
+            //     </ArrowLink>
+            //   </div>
+            // }
+          />
+        </li>
+        <li>
+          <KeypointCard
+            linkLabel="San Francisco"
+            linkTo="/stories/sanfrancisco"
+            title="San Francisco"
+            description="Description"
+            imgSrc={"https://cdn.britannica.com/13/77413-050-95217C0B/Golden-Gate-Bridge-San-Francisco.jpg"}
+            imgAlt="San Francisco"
+            // footerContent={
+            //   <div>
+            //     <ArrowLink
+            //       to={`${DATASETS_PATH}?${Actions.TAXONOMY}=${encodeURIComponent(
+            //         JSON.stringify({ Topics: "large-emission-events" })
+            //         )}`}
+            //         >
+            //       Check out relevant datasets
+            //     </ArrowLink>
+            //   </div>
+            // }
+          />
+        </li>
+        <li>
+          <KeypointCard
+            linkLabel="Los Angeles"
+            linkTo=""
+            title="Los Angeles"
+            description="Description"
+            imgSrc={"https://biggardenfurniture.com.au/wp-content/uploads/2018/08/img-placeholder.png"}
+            imgAlt="Los Angeles"
+            // footerContent={
+            //   <div>
+            //     <ArrowLink
+            //       to={`${DATASETS_PATH}?${Actions.TAXONOMY}=${encodeURIComponent(
+            //         JSON.stringify({ Topics: "large-emission-events" })
+            //         )}`}
+            //         >
+            //       Check out relevant datasets
+            //     </ArrowLink>
+            //   </div>
+            // }
+          />
+        </li>
+      </CardList>
+    </KeypointsWrapper>
+  );
+}
+
 export const HomeContent = styled(Hug)`
   padding: ${variableGlsp(2.5, 0)};
   grid-row-gap: ${variableGlsp(2)};
