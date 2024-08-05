@@ -5,10 +5,6 @@ import Hug from "$veda-ui-scripts/styles/hug";
 import { Card } from "$veda-ui-scripts/components/common/card";
 import { CardFooter } from "$veda-ui-scripts/components/common/card/styles";
 import { variableGlsp } from '$veda-ui-scripts/styles/variable-utils';
-import { ArrowLink } from "./arrow-link";
-
-import { DATASETS_PATH } from "$veda-ui-scripts/utils/routes";
-import { Actions } from "$veda-ui-scripts/components/common/browse-controls/use-browse-controls";
 
 import featureEmissions from "/custom-pages/data-hub/media/refinery.png";
 import featureSources from "/custom-pages/data-hub/media/swamp.png";
@@ -49,7 +45,7 @@ const KeypointCard = styled(Card)`
   `}
 `
 
-export default function Keypoints() {
+export function Keypoints() {
   return (
     <KeypointsWrapper>
       <CardList>
