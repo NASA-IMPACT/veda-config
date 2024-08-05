@@ -10,9 +10,9 @@ import { ArrowLink } from "./arrow-link";
 import { DATASETS_PATH } from "$veda-ui-scripts/utils/routes";
 import { Actions } from "$veda-ui-scripts/components/common/browse-controls/use-browse-controls";
 
-import featureEmissions from "./media/refinery.png";
-import featureSources from "./media/swamp.png";
-import featureMethane from "./media/plume.png";
+import featureEmissions from "/custom-pages/data-hub/media/refinery.png";
+import featureSources from "/custom-pages/data-hub/media/swamp.png";
+import featureMethane from "/custom-pages/data-hub/media/plume.png";
 
 export const CardList = styled.ol`
   ${listReset()}
