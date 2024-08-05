@@ -49,7 +49,7 @@ const KeypointCard = styled(Card)`
   `}
 `
 
-export function KeypointsDatasets() {
+export default function KeypointsDatasets() {
   return (
     <KeypointsWrapper>
       <CardList>
