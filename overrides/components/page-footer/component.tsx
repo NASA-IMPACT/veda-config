@@ -259,7 +259,6 @@ export default function PageFooter(props) {
                   Data Center
                 </FooterMenuLink>
               </li>
-              )}
               <li>
                 <FooterMenuLink to='/news'>News & Events</FooterMenuLink>
               </li>
