@@ -259,20 +259,6 @@ export default function PageFooter(props) {
                   Data Center
                 </FooterMenuLink>
               </li>
-              <li>
-                <FooterMenuLink to={DATASETS_PATH}>Data Catalog</FooterMenuLink>
-              </li>
-              <li>
-                <FooterMenuLink to={EXPLORATION_PATH}>
-                  Data Exploration
-                </FooterMenuLink>
-              </li>
-              {!!process.env.HUB_URL && !!process.env.HUB_NAME && (
-                <li>
-                  <FooterMenuLink as="a" {...getLinkProps(process.env.HUB_URL)}>
-                    {process.env.HUB_NAME}
-                  </FooterMenuLink>
-                </li>
               )}
               <li>
                 <FooterMenuLink to='/news'>News & Events</FooterMenuLink>
