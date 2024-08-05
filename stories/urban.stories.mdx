@@ -26,7 +26,7 @@ import { variableGlsp } from "$veda-ui-scripts/styles/variable-utils";
 
 import KeypointsDatasets from "./keydatasets";
 
-<Block>
+<Block tyep="wide">
     <Prose>
         # Greenhouse Gases and Air Quality
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum
@@ -41,44 +41,18 @@ import KeypointsDatasets from "./keydatasets";
         For the latest, subscribe to our email newsletter.
   </Prose>
 </Block>
-    
+<HomeContent>  
   <KeypointsDatasets/>
+</HomeContent>
 
-<Block>
+<Block type="wide">
     <Prose>
         # Featured cities        
     </Prose>
 </Block>
 
-
-    <div style={{display: 'flex', justifyContent: 'space-around'}}>
-    <a href="/stories/baltimore">
-    <div style={{border: '1px solid #ccc', borderRadius: '8px', overflow: 'hidden', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', width: '300px', margin: '10px'}}>
-        <img src="https://cdn.britannica.com/90/77990-050-E6087086/Inner-Harbor-skyline-Baltimore-Maryland.jpg" alt="Baltimore" style={{width: '100%', height: 'auto'}} />
-        <div style={{padding: '10px'}}>
-            <div style={{fontSize: '1.2em', margin: 0}}>Baltimore</div>
-            <div style={{margin: '5px 0 0'}}>Description</div>
-        </div>
-    </div>
-    </a>
-    <a href="/stories/newyork">
-    <div style={{border: '1px solid #ccc', borderRadius: '8px', overflow: 'hidden', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', width: '300px', margin: '10px'}}>
-        <img src="https://i.natgeofe.com/n/874df281-d3e0-489a-98c0-6b840023b828/newyork_NationalGeographic_2328428.jpg?w=2048&h=1366" alt="New York City" style={{width: '100%', height: 'auto'}} />
-        <div style={{padding: '10px'}}>
-            <div style={{fontSize: '1.2em', margin: 0}}>New York City</div>
-            <div style={{margin: '5px 0 0'}}>Description</div>
-        </div>
-    </div>
-    </a>
-    <a href="/stories/sanfrancisco">
-    <div style={{border: '1px solid #ccc', borderRadius: '8px', overflow: 'hidden', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', width: '300px', margin: '10px'}}>
-        <img src="https://cdn.britannica.com/13/77413-050-95217C0B/Golden-Gate-Bridge-San-Francisco.jpg" alt="San Francisco" style={{width: '100%', height: 'auto'}} />
-        <div style={{padding: '10px'}}>
-            <div style={{fontSize: '1.2em', margin: 0}}>San Francisco</div>
-            <div style={{margin: '5px 0 0'}}>Description</div>
-        </div>
-    </div>
-    </a>
-</div>
+<HomeContent>
+    <KeypointsCities/>
+</HomeContent>
 
 
