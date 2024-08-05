@@ -192,7 +192,7 @@ export function KeypointsCities() {
         <li>
           <KeypointCard
             linkLabel="Los Angeles"
-            linkTo=""
+            linkTo="/stories"
             title="Los Angeles"
             description="Description"
             imgSrc={"https://biggardenfurniture.com.au/wp-content/uploads/2018/08/img-placeholder.png"}
