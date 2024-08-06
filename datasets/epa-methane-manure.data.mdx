@@ -3,7 +3,7 @@ id: epa-ch4emission-yeargrid-v2express-manure
 name: U.S. Gridded Anthropogenic Methane Emissions Inventory
 description: Spatially disaggregated 0.1°x 0.1° maps of annual U.S. anthropogenic methane emissions from over 25 emission sources, consistent with the U.S. Inventory of Greenhouse Gas Emissions and Sinks.
 media:
-  src: "https://github.com/US-GHG-Center/veda-config-ghg/blob/develop/datasets/epa-annual--cover.jpg"
+  src: https://github.com/US-GHG-Center/veda-config-ghg/blob/develop/datasets/epa-annual--cover.jpg
   alt: Total Gridded Methane Emissions from the U.S. Inventory of Greenhouse Gas Emissions and Sinks
   author:
     name: EPA
@@ -14,12 +14,6 @@ taxonomy:
   - name: Source
     values:
       - EPA
-  - name: Gas
-    values:
-      - CH₄
-  - name: Product Type
-    values:
-      - Gridded Inventory
 sourceExclusive: EPA
 infoDescription: |
   ::markdown
@@ -32,6 +26,8 @@ infoDescription: |
     - Data Latency: N/A        
 layers:
   - id: manure-management
+    stacApiEndpoint: https://earth.gov/ghgcenter/api/stac
+    tileApiEndpoint: https://earth.gov/ghgcenter/api/raster
     stacCol: epa-ch4emission-yeargrid-v2express
     name: Agriculture - Manure Management (annual)
     type: raster
@@ -104,7 +100,7 @@ layers:
         - "#721E17"
         - "#521A13"
     media:
-      src: "https://github.com/US-GHG-Center/veda-config-ghg/blob/develop/datasets/epa-ch4emission-yeargrid-v2express.thumbnails.agriculture.manure.management.anual.png"
+      src: https://github.com/US-GHG-Center/veda-config-ghg/blob/develop/datasets/epa-ch4emission-yeargrid-v2express.thumbnails.agriculture.manure.management.anual.png
       alt: U.S. Gridded Anthropogenic Methane Emissions Inventory - Agriculture - Manure Management (annual)
 ---
 
