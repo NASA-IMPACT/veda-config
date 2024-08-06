@@ -1,0 +1,186 @@
+---
+id: epa-ch4emission-yeargrid-v2express-manure
+name: U.S. Gridded Anthropogenic Methane Emissions Inventory
+description: Spatially disaggregated 0.1°x 0.1° maps of annual U.S. anthropogenic methane emissions from over 25 emission sources, consistent with the U.S. Inventory of Greenhouse Gas Emissions and Sinks.
+media:
+  src: "https://github.com/US-GHG-Center/veda-config-ghg/blob/develop/datasets/epa-annual--cover.jpg"
+  alt: Total Gridded Methane Emissions from the U.S. Inventory of Greenhouse Gas Emissions and Sinks
+  author:
+    name: EPA
+taxonomy:
+  - name: Topics
+    values:
+      - Anthropogenic Emissions
+  - name: Source
+    values:
+      - EPA
+  - name: Gas
+    values:
+      - CH₄
+  - name: Product Type
+    values:
+      - Gridded Inventory
+sourceExclusive: EPA
+infoDescription: |
+  ::markdown
+    - Temporal Extent: 2012 - 2020    
+    - Temporal Resolution: Annual    
+    - Spatial Extent: Contiguous United States  
+    - Spatial Resolution: 0.1° x 0.1°    
+    - Data Units: Megagrams of methane per square kilometer per year (Mg CH₄/km²/yr)    
+    - Data type: Research (v2 express extension)
+    - Data Latency: N/A        
+layers:
+  - id: manure-management
+    stacCol: epa-ch4emission-yeargrid-v2express
+    name: Agriculture - Manure Management (annual)
+    type: raster
+    description: Annual methane emission fluxes from Manure Management (inventory Agriculture category 3B)
+    initialDatetime: newest
+    projection:
+      id: "equirectangular"
+    basemapId: "light"
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: manure-management
+      colormap_name: epa-ghgi-ch4
+      rescale:
+        - 0
+        - 20
+      minzoom: 0
+      maxzoom: 5
+    compare:
+      datasetId: epa-ch4emission-yeargrid-v2express
+      layerId: manure-management
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
+        }
+    analysis:
+      exclude: true
+      metrics:
+        - mean
+      sourceParams:
+        dst_crs: "+proj=cea"
+    info:
+      source: EPA
+      spatialExtent: Contiguous United States
+      temporalResolution: Annual 
+      unit: Mg CH₄/km²/yr                 
+    legend:
+      unit:
+        label: Mg CH₄/km²/yr
+      type: gradient
+      min: 0
+      max: 20
+      stops:
+        - "#FFFFFF"
+        - "#6F4C9B"
+        - "#6059A9"
+        - "#5568B8"
+        - "#4E79C5"
+        - "#4D8AC6"
+        - "#4E96BC"
+        - "#549EB3"
+        - "#59A5A9"
+        - "#60AB9E"
+        - "#69B190"
+        - "#77B77D"
+        - "#8CBC68"
+        - "#A6BE54"
+        - "#BEBC48"
+        - "#D1B541"
+        - "#DDAA3C"
+        - "#E49C39"
+        - "#E78C35"
+        - "#E67932"
+        - "#E4632D"
+        - "#DF4828"
+        - "#DA2222"
+        - "#B8221E"
+        - "#95211B"
+        - "#721E17"
+        - "#521A13"
+    media:
+      src: "https://github.com/US-GHG-Center/veda-config-ghg/blob/develop/datasets/epa-ch4emission-yeargrid-v2express.thumbnails.agriculture.manure.management.anual.png"
+      alt: U.S. Gridded Anthropogenic Methane Emissions Inventory - Agriculture - Manure Management (annual)
+---
+
+<Block>
+  <Prose>
+    **Temporal Extent:** 2012 - 2020    
+    **Temporal Resolution:** Annual    
+    **Spatial Extent:** Contiguous United States  
+    **Spatial Resolution:** 0.1° x 0.1°    
+    **Data Units:** Megagrams of methane per square kilometer per year (Mg CH₄/km²/yr)    
+    **Data type:** Research (v2 express extension)<br />
+    **Data Latency:** N/A
+    
+    The gridded EPA U.S. anthropogenic methane greenhouse gas inventory (gridded GHGI) includes spatially disaggregated (0.1 deg x 0.1 deg or approximately 10 x 10 km resolution) maps of annual anthropogenic methane emissions for the contiguous United States (CONUS), consistent with national annual U.S. anthropogenic methane emissions reported in the U.S. EPA [Inventory of U.S. Greenhouse Gas Emissions and Sinks](https://www.epa.gov/ghgemissions/inventory-us-greenhouse-gas-emissions-and-sinks) (U.S. GHGI). This dataset contains methane emissions provided as fluxes, in units of molecules of methane per square cm per second, for manure management. The data have been converted from their original NetCDF format to Cloud-Optimized GeoTIFF (COG) and scaled to Megagrams of CH4 per km2 per year (Mg/km²/yr).
+    
+    ## Source Data Product Citation
+    Gridded GHGI Version 2 & Express Extension **(this dataset in US GHG Center)**: 
+    McDuffie, E. E., Maasakkers, J. D., Sulprizio, M. P., Chen, C., Schultz, M., Brunelle, L., Thrush, R., Steller, J., Sherry, C., Jacob, Daniel, J., Jeong, S., Irving, B., & Weitz, M. (2023). Gridded EPA U.S. Anthropogenic Methane Greenhouse Gas Inventory (gridded GHGI) (v1.0) [Data set]. Zenodo. [https://doi.org/10.5281/zenodo.8367082](https://doi.org/10.5281/zenodo.8367082) 
+    
+    Gridded GHGI Version 1:
+    Maasakkers, J. D., Jacob, D. J., Sulprizio, M. P., Turner, A. J., Weitz, M., Wirth, T., Hight, C., DeFigueiredo, M., Desai, M., Schmeltz, R., Hockstad, L., Bloom, A. A., Bowman, K. W., Jeong, S., Fischer, M. L. (2016) A Gridded National Inventory of U.S. Methane Emissions [Data set]. Available at: [https://www.epa.gov/ghgemissions/gridded-2012-methane-emissions#data](https://www.epa.gov/ghgemissions/gridded-2012-methane-emissions#data) 
+   
+    ## Version History
+    The gridded methane GHGI is continually updated to capture ongoing improvements and updates to the U.S. GHG Inventory. The gridded methane GHGI currently includes 2 versions, which reflect sectoral methane emissions that are consistent with different versions of the U.S. GHGI. Versions include:
+    
+    Current Version(s)
+      - Gridded methane GHGI Version 2 - Express Extension (0.1°×0.1° annual emission maps for 2012-2020, consistent with the 2022 U.S. GHGI) 
+    
+    Previous Versions
+      - A. Gridded methane GHGI Version 1 (0.1°×0.1° annual emission maps for 2016, consistent with the 2020 U.S. GHGI)
+  
+    **Data available on the Data Exploration page correspond to the V2 Express Extension dataset.** 
+    
+    For more information on the current data set versions, see the associated publication: [Massakkers et al., 2023.](https://pubs.acs.org/doi/full/10.1021/acs.est.3c05138) or visit the [EPA gridded inventory webpage](https://www.epa.gov/ghgemissions/us-gridded-methane-emissions). For more information on the previous version, see the associated publication: [Massakkers et al., 2016.](https://pubs.acs.org/doi/10.1021/acs.est.6b02878)   
+    
+  </Prose>
+</Block>
+<Block>
+  <Prose>
+    ## Dataset Accuracy
+    Uncertainties underlying the development of national methane emission estimates are discussed in each annual U.S. GHGI Report. Additional characterization of resolution-dependent uncertainties are discussed in [Maasakkers et al. (2023)](https://pubs.acs.org/doi/full/10.1021/acs.est.3c05138).
+
+    ## Disclaimer
+    This dataset has been transformed from its original format (NetCDF) into Cloud Optimized GeoTIFF ([COG](https://www.cogeo.org/)). Careful quality checks are used to ensure data transformation has been performed correctly. The manuscript describing the gridded methane GHGI has been peer-reviewed, but is not part of the same annual expert and public review processes as the U.S. EPA National and State-level Inventory.
+
+    Users of these datasets are asked to cite the original references [Maasakkers et al. (2023)](https://pubs.acs.org/doi/full/10.1021/acs.est.3c05138) or [Maasakkers, et al., (2016)](https://pubs.acs.org/doi/10.1021/acs.est.6b02878) in their publications and are encouraged to reach out to the development team with further questions. 
+    
+    ## Scientific Details
+    The gridded methane GHGI is developed by spatially allocating national annual methane emissions from individual source categories from the Inventory of U.S. Greenhouse Gas Emissions and Sinks (U.S. GHGI) to a 0.1 deg x 0.1 deg (~10 x 10 km) grid using a series of spatial and temporal proxy datasets at the state, county, and grid levels. Where possible, the proxy data are the same as those used to develop the GHGI so that the gridded emissions can be, as closely as possible, a spatial and temporal representation of those in the national-level U.S. GHGI Report.
+
+    The development of the gridded GHGI enables more direct comparisons between the methane emissions reported in the annual U.S. GHGI and those derived from atmospheric methane observations, such as through inverse analyses, with the aim of improving national inventory estimates and better understanding uncertain sources of methane emissions.
+
+    Details of the methodological development of this dataset are described in the paper Maasakkers et al., 2023: [https://pubs.acs.org/doi/full/10.1021/acs.est.3c05138](https://pubs.acs.org/doi/full/10.1021/acs.est.3c05138)
+
+    ## Key Publications
+    Maasakkers, J. D., McDuffie, E. E.,, Sulprizio, M. P., Chen, C., Schultz, M., Brunelle, L., Thrush, R., Steller, J., Sherry, C., Jacob, D. J., Jeong, S., Irving, B., & Weitz, M. (2023). A gridded inventory of annual 2012-2018 U.S. anthropogenic methane emissions. Environmental Science & Technology, 57(43), 16276-16288. https://pubs.acs.org/doi/full/10.1021/acs.est.3c05138
+
+    ## Other Relevant Publications
+    Maasakkers, J., Jacob, D., Sulprizio, M., Turner, A., Weitz, M., Wirth, T., Hight, C., DeFigueiredo, M., Desai, M., Schmeltz, R., Hockstad, L., Bloom, A., Bowman, K., Jeong, S., Fischer, M. (2016). Gridded National Inventory of U.S. Methane Emissions. *Environmental Science & Technology*, 50(23), 13123-13133. https://doi.org/10.1021/acs.est.6b02878
+
+    ## Learn More
+    - Learn more about how this data helps identify trends in U.S. methane emissions in the <Link to="/stories/us-methane-sources">U.S. Gridded Anthropogenic Greenhouse Gas Emissions Data Insight</Link> 
+    - Check out other GHG data [from the EPA](https://www.epa.gov/ghgemissions)
+    - Check out the [data interpretation notes](https://drive.google.com/file/d/1_c6SrKr4z2SNs4fCy3QQMlX92G09Yf6R/view?usp=drive_link) for more information when viewing this dataset in the US GHG Center <Link to="/exploration?search=epa-ch4emission-yeargrid-v2express&datasets=%5B%5D">Exploration environment</Link>
+
+    ## Acknowledgment
+    This dataset was developed in collaboration between researchers at the U.S. EPA, Netherlands Institute for Space Research (SRON), Harvard University, and Lawrence Berkeley National Laboratory.
+
+    ## License
+    [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/legalcode) (CC BY 4.0)
+
+    ## Data Stewardship
+    The EPA gridded emissions for manure management in the VEDA platform are served by the U.S. Greenhouse Gas Center data catalog. For information on data stewardship within the U.S. Greenhouse Gas Center please refer to the documentation below.
+    - [Data Workflow](https://github.com/US-GHG-Center/ghgc-docs/blob/main/data_workflow/media/epa-ch4emission-grid-v2express_Data_Flow.png)
+    - [Data Transformation Code](https://us-ghg-center.github.io/ghgc-docs/cog_transformation/epa-ch4emission-grid-v2express.html)
+    - [US GHG Center Data Intake Processing and Verification Report](https://us-ghg-center.github.io/ghgc-docs/processing_and_verification_reports/epa-ch4emission-grid-v2express_Processing%20and%20Verification%20Report.html)
+
+  </Prose>
+</Block>
