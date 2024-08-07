@@ -38,7 +38,10 @@ layers:
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }
     legend:
+      unit:
+        label: kg m-2    
       type: gradient
+      label: Precipitation [kg m-2]      
       min: "0"
       max: "200"
       stops:

@@ -157,7 +157,7 @@ taxonomy:
 <Block> 
     <Prose>  
   ## Precipitation and Meteorology Data Updates
-  NASA is updating NLDAS surface meteorology by leveraging NASA’s reanalysis and remote sensing data products. Specifically, we are working on a new data assimilation approach used successfully in operational environments as well as advanced optimal interpolation techniques (Kemp et al. 2022) to blend well-known and widely used meteorological datasets. Daily precipitation amounts at 4 km of the NASA Integrated Multi-SatellitE Retrievals for GPM (IMERG; Huffman et al. 2020) and the ECCC Canadian Precipitation Analysis (CaPA; Lespinas et al. 2015) are assimilated into NASA Modern Era Retrospective analysis for Research and Applications, Version 2 (MERRA-2; Gelaro et al. 2017) precipitation data. Then the precipitation analysis at 4 km is downscaled to a 1 km fine-scale resolution using a cloud cover frequency-based algorithm and disaggregated into hourly using IMERG and MERRA-2 datasets. Below is a sample of NLDAS-3 precipitation data compared to NLDAS-2 over the U.S. Midwest region to illustrate improved spatial resolution. 
+  NASA is updating NLDAS surface meteorology by leveraging NASA’s reanalysis and remote sensing data products. Specifically, we are working on a new data assimilation approach used successfully in operational environments as well as advanced optimal interpolation techniques (Kemp et al. 2022) to blend well-known and widely used meteorological datasets. Daily precipitation amounts at 4 km of the NASA Integrated Multi-SatellitE Retrievals for GPM (IMERG; Huffman et al. 2020) and the ECCC Canadian Precipitation Analysis (CaPA; Lespinas et al. 2015) are assimilated into NASA Modern Era Retrospective analysis for Research and Applications, Version 2 (MERRA-2; Gelaro et al. 2017) precipitation data. Then the precipitation analysis at 4 km is downscaled to a 1 km fine-scale resolution using a cloud cover frequency-based algorithm and disaggregated into hourly using IMERG and MERRA-2 datasets. Above is a sample of NLDAS-3 precipitation data compared to NLDAS-2 over the U.S. Midwest region to illustrate improved spatial resolution. 
   The other meteorological forcings are obtained by downscaling MERRA-2 datasets (except for Shortwave Down radiation, which will use CERES/POWER data) using the methods as follows:
 <Figure style={{ display: 'block' }}>
   <div className='meteorological-tables'>
@@ -191,7 +191,7 @@ taxonomy:
         </tr>
         <tr>
           <td>Shortwave Down Radiation</td>
-          <td>Slope-aspect based following Rutan et al., 2015</td>
+          <td>Slope-aspect corrections of CERES/POWER data from Rutan et al., 2015</td>
         </tr>
       </tbody>
     </table>
@@ -294,8 +294,8 @@ taxonomy:
   <Prose>
   ## Explore the Data in the Cloud
   Below are links to sample monthly precipitation forcing data in Jupyter Notebooks for you to explore.
-  - [Notebook 1](https://nasa-impact.github.io/veda-docs/pr-preview/pr-154/notebooks/datasets/nldas_visualize_rawdata.html) shows how to visualize NLDAS 3 data.
-  - [Notebook 2](https://nasa-impact.github.io/veda-docs/pr-preview/pr-154/notebooks/datasets/nldas_visualize_rawdata.html) shows you how to create time series for NLDAS 3 data.
+  - [Notebook 1](https://nasa-impact.github.io/veda-docs/pr-preview/pr-154/notebooks/datasets/nldas_visualize_rawdata.html) shows how to visualize NLDAS-3 data.
+  - [Notebook 2](https://nasa-impact.github.io/veda-docs/pr-preview/pr-154/notebooks/datasets/nldas_visualize_rawdata.html) shows you how to create time series for NLDAS-3 data.
   - [Notebook 3](https://nasa-impact.github.io/veda-docs/pr-preview/pr-154/notebooks/datasets/nldas_compare2_3.html) shows you how to compare NLDAS-2 and NLDAS-3 data.
   
   </Prose>
@@ -323,11 +323,14 @@ taxonomy:
   ## References 
   - ​https://lis.gsfc.nasa.gov/
   - Cosgrove, B. A., et al. (2003), Land surface model spin-up behavior in the North American Land Data Assimilation System (NLDAS), J. Geophys. Res., 108, 8845, doi:10.1029/2002JD003316, D22.
+  - Gelaro, R., and Coauthors, 2017: The Modern-Era Retrospective Analysis for Research and Applications, Version 2 (MERRA-2). J. Climate, 30, 5419–5454, https://doi.org/10.1175/JCLI-D-16-0758.1.
   - He, C., Valayamkunnath, P., Barlage, M., Chen, F., Gochis, D., Cabell, R., … Ek, M. (2023). The Community Noah-MP Land Surface Modeling System Technical Description Version 5.0 (No. NCAR/TN-575+STR). doi:10.5065/ew8g-yr95
+  - Kemp, E, J.W. Wegiel, S.V. Kumar, J. V. Geiger, D.M. Mocko, J. Jacob, C.D. Peters-Lidard, 2022: A NASA-Air Force Precipitation Analysis for Near-Real-Time Operations, Journal of Hydrometeorology, 23(6), 965-989, doi:10.1175/JHM-D-21-0228.1
   - Kumar, S.V., C.D. Peters-Lidard, Y. Tian, P.R. Houser, J. Geiger, S. Olden, L. Lighty, J.L. Eastman, B. Doty, P. Dirmeyer, J. Adams, K. Mitchell, E. F. Wood, and J. Sheffield, 2006: Land Information System - An interoperable framework for high resolution land surface modeling. Environ. Modeling & Software, 21, 1402-1415, doi:10.1016/j.envsoft.2005.07.004
   - Liston, G.E., and K. Elder, 2006: A meteorological distribution system for high-resolution terrestrial modeling (MicroMet). J. Hydrometeor., 4, 217–234. https://doi.org/10.1175/JHM486.1
   - Peters-Lidard, C.D., P.R. Houser, Y. Tian, S.V. Kumar, J. Geiger, S. Olden, L. Lighty, B. Doty, P. Dirmeyer, J. Adams, K. Mitchell, E.F. Wood, and J. Sheffield, 2007: High-performance Earth system modeling with NASA/GSFC's Land Information System. Innovations in Systems and Software Engineering, 3(3), 157-165, doi:10.1007/s11334-007-0028-x
   - Rouf, T., Y. Mei, V. Maggioni, P. Houser, and M. Noonan, 2020: A physically based atmospheric variables downscaling technique. Journal of Hydrometeorology, 21(1), 93–108. https://doi.org/10.1175/JHM-D-19-0109.1
+  - Rutan, D. A., S. Kato, D. R. Doelling, F. G. Rose, L. T. Nguyen, T. E. Caldwell, and N. G. Loeb, 2015: CERES Synoptic Product: Methodology and Validation of Surface Radiant Flux. J. Atmos. Oceanic Technol., 32, 1121–1143, https://doi.org/10.1175/JTECH-D-14-00165.1.
   - U.S. Drought Monitor Inputs, National Drought Mitigation Center, University of Nebraska-Lincoln, website accessed June 17, 2024. https://droughtmonitor.unl.edu/ConditionsOutlooks/Inputs.aspx  
   </Prose>
 </Block>
