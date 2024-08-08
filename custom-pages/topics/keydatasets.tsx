@@ -6,9 +6,9 @@ import { Card } from "$veda-ui-scripts/components/common/card";
 import { CardFooter } from "$veda-ui-scripts/components/common/card/styles";
 import { variableGlsp } from '$veda-ui-scripts/styles/variable-utils';
 
-import featureEmissions from "/custom-pages/data-hub/media/refinery.png";
-import featureSources from "/custom-pages/data-hub/media/swamp.png";
-import featureMethane from "/custom-pages/data-hub/media/plume.png";
+import featureEmissions from "/custom-pages/data-center/media/refinery.png";
+import featureSources from "/custom-pages/data-center/media/swamp.png";
+import featureMethane from "/custom-pages/data-center/media/plume.png";
 
 export const CardList = styled.ol`
   ${listReset()}

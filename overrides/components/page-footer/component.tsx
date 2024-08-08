@@ -255,7 +255,7 @@ export default function PageFooter(props) {
                 </FooterMenuLink>
               </li>
               <li>
-                <FooterMenuLink to='/data-hub'>
+                <FooterMenuLink to='/data-center'>
                   Data Center
                 </FooterMenuLink>
               </li>
