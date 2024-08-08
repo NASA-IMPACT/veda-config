@@ -14,7 +14,7 @@ const defaultMenuLinks = [
   },
   {
     title: 'Data Center',
-    to: '/data-hub',
+    to: '/data-center',
     type: 'internalLink'
   },
 ];
@@ -22,7 +22,7 @@ const defaultMenuLinks = [
 let subNavItems = [
   {
     title: 'News & Events',
-    to: '/news',
+    to: '/news-and-events',
     type: 'internalLink'
   },
   {
@@ -74,8 +74,8 @@ module.exports = {
     headerBrand: "./overrides/components/header-brand/index.mdx",
     // Component for the footer.
     pageFooter: "./overrides/components/page-footer/index.mdx",
-    "/news": "./custom-pages/news-and-events/index.mdx",
-    "/data-hub": "./custom-pages/data-hub/index.mdx",
+    "/news-and-events": "./custom-pages/news-and-events/index.mdx",
+    "/data-center": "./custom-pages/data-center/index.mdx",
     "/topics": "./custom-pages/topics/index.mdx",
   },
 
