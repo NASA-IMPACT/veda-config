@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "$veda-ui/react";
-import axios from 'axios';
+import React from "$veda-ui/react";
 import styled from "$veda-ui/styled-components";
 import { glsp, themeVal, media } from "$veda-ui/@devseed-ui/theme-provider";
 
@@ -68,66 +67,9 @@ const PageHeroCover = styled(Figure)`
   }
 `;
 
-const VitalSigns = styled.div`
-  display: flex;
-  align-items: center;
-  padding: ${glsp(2)};
-  background: ${themeVal("color.surface")};
-  color: ${themeVal("color.primary")};
-  border-bottom: 1px solid ${themeVal("color.primary")};
-
-  > div {
-    flex: 1;
-    text-align: center;
-
-    &:not(:last-child) {
-      border-right: 1px solid ${themeVal("color.baseAlphaC")};
-    }
-
-    > div:first-child {
-      font-size: 1rem;
-      font-weight: bold;
-    }
-
-    > div:last-child {
-      display: flex;
-      justify-content: center;
-      font-size: 2rem;
-      color: ${themeVal("color.danger")};
-
-      > div {
-        margin-left: 8px;
-        font-size: 1rem;
-        color: ${themeVal("color.danger")};
-      }
-    }
-  }
-`;
-
 
 export default function HomeHero(props) {
   const { isMediumUp } = useMediaQuery();
-
-  const [carbonDioxide, setCarbonDioxide] = useState(null);
-  const [methane, setMethane] = useState(null);
-
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        const response = await axios.get('https://corsproxy.io/?https://climate.nasa.gov/api/v1/vital_signs/');
-        const data = response.data;
-        const co2 = data.items.find(sign => sign.title === 'Carbon Dioxide');
-        const ch4 = data.items.find(sign => sign.title === 'Methane');
-
-        setCarbonDioxide(co2);
-        setMethane(ch4);
-      } catch (error) {
-        // console.error('Error fetching vital signs data:', error);
-      }
-    }
-
-    fetchData();
-  }, []);
 
   return (
     <Hero>
@@ -169,30 +111,6 @@ export default function HomeHero(props) {
           />
         </Figcaption>
       </PageHeroCover>
-      {
-        (carbonDioxide !== null && methane !== null ) &&
-        <VitalSigns>
-          <div>
-            <div>
-              Carbon Dioxide
-            </div>
-            <div>
-              {!carbonDioxide.rate_is_increasing ? `↓ ${carbonDioxide.value.substring(1)}` : `↑ ${carbonDioxide.value}`}
-              <div>{carbonDioxide.unit_abbr}</div>
-            </div>
-          </div>
-          <div>
-            <div>
-              Methane
-            </div>
-            <div>
-              {!methane.rate_is_increasing ? `↓ ${methane.value.substring(1)}` : `↑ ${methane.value}`}
-              <div>{methane.unit_abbr}</div>
-            </div>
-
-          </div>
-        </VitalSigns>
-      }
     </Hero>
   );
 }
