@@ -15,6 +15,35 @@ taxonomy:
       - Disasters
 ---
 
+<style>{`
+  .data-table {
+    display: flex;
+    gap: 2rem;
+    justify-content: center; /* Center the table */
+    margin: 0 auto; /* Center the table */
+  }
+  .data-table thead th,
+  .data-table tbody td {
+    text-align: center;
+    white-space: nowrap;
+    padding: 0 1rem; /* Add horizontal padding */
+  }
+  .high-val {
+    background: #FF00FF; /* EF-5 */
+  }
+  .mid-val {
+    background: #FF0000; /* EF-4 */
+  }
+  .low-val {
+    background: #FF4500; /* EF-3 */
+  }
+  @media only screen and (max-width: 544px) {
+    .data-table {
+      flex-flow: column;
+    }
+  }
+`}</style>
+
 <Block>
   <Prose>
 
@@ -332,6 +361,52 @@ taxonomy:
 
   </Prose>
 
+</Block>
+
+<Block>
+<Figure style={{ display: 'block' }}>
+  <div className='data-table'>
+    <table>
+      <thead>
+        <tr>
+          <th>   Date   </th>
+          <th>   EF Rating   </th>
+          <th>   Counties   </th>
+          <th>   States   </th>
+          <th>   Track Length (mi)  </th>
+          <th>   Max Width (yd)   </th>
+          <th>   Start Time (UTC)   </th>
+          <th>   FAT/INJ   </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>March 14</td>
+          <td class='low-val'>EF-3</td>
+          <td>Auglaize, Logan</td>
+          <td>Ohio</td>
+          <td>31.33</td>
+          <td>1000</td>
+          <td>23:29</td>
+          <td>3/27</td>
+        </tr>
+        <tr>
+          <td>March 14</td>
+          <td class='low-val'>EF-3</td>
+          <td>Randolph IN, Darke, Miami OH</td>
+          <td>Indiana, Ohio</td>
+          <td>41.34</td>
+          <td>700</td>
+          <td>23:50</td>
+          <td>1/39</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+<Caption>
+  Table 1: List of all intense (EF-3+) tornadoes that occurred from March to May of 2024 in the contiguous United States. 
+</Caption>  
+</Figure>
 </Block>
 
 <Block>
