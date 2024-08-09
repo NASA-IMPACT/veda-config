@@ -45,6 +45,9 @@ export default function CarouselItem({ item, onTitleClick, shouldProgress, progr
   
   return (
     <div className="tablet:grid-col tablet:margin-top-0 margin-top-2 tablet:padding-2">
+      <div className="tablet:display-none display-block">
+        <img src={item.image} height={200} />
+      </div>
       <ProgressBar shouldProgress={shouldProgress} progressDone={progressDone} progressPercentage={progressPercentage}selected={selected} />
       <ItemCard item={item} onTitleClick={onTitleClick} />
     </div>)
