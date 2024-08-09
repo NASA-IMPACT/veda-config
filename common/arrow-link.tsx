@@ -2,7 +2,7 @@ import React from "$veda-ui/react";
 import styled from "$veda-ui/styled-components";
 import { glsp, themeVal } from "$veda-ui/@devseed-ui/theme-provider";
 import { CollecticonArrowRight } from "$veda-ui/@devseed-ui/collecticons";
-import { AccessibilityLink } from "../common/styles";
+import { AccessibilityLink } from "../overrides/common/styles";
 
 const ArrowLinkCmp = styled(AccessibilityLink)`
   display: flex;

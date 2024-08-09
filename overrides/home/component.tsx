@@ -8,8 +8,16 @@ import Hug from "$veda-ui-scripts/styles/hug";
 import { VarHeading } from "$veda-ui-scripts/styles/variable-components";
 import { variableGlsp } from "$veda-ui-scripts/styles/variable-utils";
 
+
+import { DATASETS_PATH } from "$veda-ui-scripts/utils/routes";
+import { Actions } from "$veda-ui-scripts/components/common/browse-controls/use-browse-controls";
+
+import featureEmissions from "../../common/media/refinery.png";
+import featureSources from "../../common/media/swamp.png";
+import featureMethane from "../../common/media/plume.png";
+
 import Partners from "./partners";
-import Keypoints from "./keypoints";
+import Keypoints from "../../common/keypoints";
 import Banner from './banner';
 import VideoModal from "../components/video-modal";
 
@@ -92,6 +100,64 @@ const Buttons = styled.div`
   justify-content: center;
 `;
 
+let data = [
+  {
+    "title": "Gridded Anthropogenic Greenhouse Gas Emissions",
+    "desc": "Emission estimates from human activities including the energy, agriculture, waste, and industry sectors",
+    "img": {
+      "src": featureEmissions,
+      "alt": "image of oil refinery"
+    },
+    "link": {
+      "url": "/stories/us-methane-sources",
+      "text": "View more"
+    },
+    "footer": {
+      "link": {
+        "title": "Check out relevant datasets",
+        "url": `${DATASETS_PATH}?${Actions.TAXONOMY}=${encodeURIComponent(JSON.stringify({ Topics: "anthropogenic-emissions" }))}`
+      }
+    }
+  },
+  {
+    "title": "Natural Greenhouse Gas Sources and Sinks",
+    "desc": "Naturally-occurring greenhouse gas fluxes from land, ocean, and atmosphere",
+    "img": {
+      "src": featureSources,
+      "alt": "image of green wetlands"
+    },
+    "link": {
+      "url": "/stories/tracking-greenhouse-gas-cycles",
+      "text": "View more"
+    },
+    "footer": {
+      "link": {
+        "title": "Check out relevant datasets",
+        "url": `${DATASETS_PATH}?${Actions.TAXONOMY}=${encodeURIComponent(JSON.stringify({ Topics: "natural-emissions-and-sinks" }))}`
+      }
+    }
+  },
+  {
+    "title": "New Observations for Tracking Large Emission Events",
+    "desc": "Identify and quantify large methane leak events leveraging aircraft and space-based data",
+    "img": {
+      "src": featureMethane,
+      "alt": "image of colorful polygon against satellite landscape surface in brown"
+    },
+    "link": {
+      "url": "/stories/discovering-large-methane-emissions",
+      "text": "View more"
+    },
+    "footer": {
+      "link": {
+        "title": "Check out relevant datasets",
+        "url": `${DATASETS_PATH}?${Actions.TAXONOMY}=${encodeURIComponent(JSON.stringify({ Topics: "large-emission-events" }))}`
+      }
+    }
+  }
+];
+
+
 export default function HomeComponent() {
   const [showModal, setShowModal] = React.useState<boolean>(false);
   const [videoLink, setVideoLink] = React.useState<string>("");
@@ -141,7 +207,7 @@ export default function HomeComponent() {
             </Button>
           </Buttons>
         </IntroHeadline>
-        <Keypoints />
+        <Keypoints data={data}/>
         <ActionsBlock>
         <Buttons>
           <Button
