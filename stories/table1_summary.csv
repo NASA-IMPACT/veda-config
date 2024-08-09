@@ -1,0 +1,8 @@
+﻿Attribute,NLDAS-2,NLDAS-3
+Spatial Coverage,CONUS (25-53 North / 125-67 West),"North America including Alaska, Hawaii, Puerto Rico and Central America (7-72 North / 169-52 West)"
+Spatial resolution,12.5-km,1.0-km
+Latency,~4 days,~7 hours
+Precipitation,CDC daily 12.5-km analysis over CONUS,"Assimilation using gauges, CaPA, IMERG, with MERRA-2/ GEOS-IT as background"
+Surface meteorology,NARR with constant lapse rate adjustments,MERRA-2/GEOS-IT with advanced downscaling
+Land Surface Modeling,"4 (Noah, VIC, Mosaic, SAC)",1 (Noah-MP)
+Data assimilation,None,"Assimilation of remotely sensed datasets of soil moisture (e.g., SMAP), leaf area index (e.g., MODIS),  snow (e.g., AMSR), , terrestrial water storage (GRACE-FO)"
