@@ -12,6 +12,9 @@ taxonomy:
   - name: Topics
     values:
       - Environmental Justice
+infoDescription: |
+  ::markdown
+    Nightlights data are collected by the [Visible Infrared Radiometer Suite (VIIRS) Day/Night Band (DNB)](https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/) on the Suomi-National Polar-Orbiting Partnership (Suomi-NPP) platform, a joint National Oceanic and Atmospheric Administration (NOAA) and NASA satellite. The images are produced by [NASA’s Black Marble](https://blackmarble.gsfc.nasa.gov/) products suite. All data are calibrated daily, corrected, and validated with ground measurements for science-ready analysis.
 layers:
   - id: nightlights-hd-1band
     stacCol: nightlights-hd-1band
@@ -30,6 +33,11 @@ layers:
     compare:
       datasetId: nighttime-lights-ej
       layerId: nightlights-hd-1band
+    info:
+      source: NOAA & NASA
+      spatialExtent: Puerto Rico
+      temporalResolution: Monthly 
+      unit: N/A
 ---
 
 <Block>

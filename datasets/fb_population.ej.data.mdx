@@ -15,6 +15,9 @@ taxonomy:
   - name: Source
     values:
       - Meta 
+infoDescription: |
+  ::markdown
+    In partnership with the Center for International Earth Science Information Network (CIESIN) at Columbia University, Meta [formerly known as Facebook] used census data and computer vision techniques (Convolutional Neural Networks) to identify buildings from publicly accessible mapping services to create population density datasets. These high-resolution maps estimate the number of individuals living within 30-meter grid tiles on a global scale. The population estimates are based on data from the Gridded Population of the World (GPWv4) data collection.
 layers:
   - id: facebook_population_density
     stacCol: facebook_population_density
@@ -31,6 +34,11 @@ layers:
       rescale:
         - 0
         - 69
+    info:
+      source: Meta
+      spatialExtent: Global
+      temporalResolution: Annual 
+      unit: Units of People per Square Meter   
     legend:
       type: gradient
       min: "0"

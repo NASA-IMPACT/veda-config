@@ -21,6 +21,9 @@ taxonomy:
     values:
       - Air Quality
       - Covid 19
+infoDescription: |
+  ::markdown
+    OMI, which launched in 2004, preceded TROPOMI, which launched in 2017. While TROPOMI provides higher resolution information, the longer OMI data record provides context for the TROPOMI observations.
 layers:
   - id: no2-monthly
     stacCol: no2-monthly
@@ -55,6 +58,12 @@ layers:
         - "#E4EEF3"
         - "#FDDCC9"
         - "#DD7059"
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Monthly 
+      unit: N/A
+
   - id: no2-monthly-diff
     stacCol: no2-monthly-diff
     name: Nitrogen Dioxide (monthly difference)
@@ -87,6 +96,12 @@ layers:
         - "#E4EEF3"
         - "#FDDCC9"
         - "#DD7059"
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Monthly 
+      unit: N/A
+
   - id: OMI_trno2-COG
     stacCol: OMI_trno2-COG
     name: Nitrogen Dioxide Total and Tropospheric Column (NASA OMI/Aura)
@@ -111,6 +126,12 @@ layers:
         - '#fdd1bf'
         - '#e02d26'
         - '#67000c'
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Monthly 
+      unit: N/A
+
 ---
 
 <Block type='full'>
