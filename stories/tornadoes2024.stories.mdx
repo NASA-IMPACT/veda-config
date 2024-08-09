@@ -28,6 +28,9 @@ taxonomy:
     white-space: nowrap;
     padding: 0 1rem; /* Add horizontal padding */
   }
+  .data-table thead th {
+    font-size: 1.2rem; /* Increase the font size of the title row */
+  }
   .high-val {
     background: #F61FDC; /* EF-5 */
   }
@@ -36,6 +39,9 @@ taxonomy:
   }
   .low-val {
     background: #F7753B; /* EF-3 */
+  }
+  .bold-row {
+    font-weight: bold; /* Bold the row */
   }
   @media only screen and (max-width: 544px) {
     .data-table {
@@ -380,17 +386,17 @@ taxonomy:
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td class='low-val'>March 14</td>
+        <tr class='bold-row'>
+          <td>March 14</td>
           <td class='low-val'>3</td>
-          <td class='low-val'>Auglaize, Logan</td>
-          <td class='low-val'>Ohio</td>
-          <td class='low-val'>31.33</td>
-          <td class='low-val'>1000</td>
-          <td class='low-val'>23:29</td>
-          <td class='low-val'>3/27</td>
+          <td>Auglaize, Logan</td>
+          <td>Ohio</td>
+          <td>31.33</td>
+          <td>1000</td>
+          <td>23:29</td>
+          <td>3/27</td>
         </tr>
-        <tr>
+        <tr class='bold-row'>
           <td>March 14</td>
           <td class='low-val'>3</td>
           <td>Randolph IN, Darke, Miami OH</td>
@@ -430,6 +436,37 @@ taxonomy:
           <td>20:30</td>
           <td>0/4</td>
         </tr>
+        <tr>
+          <td>April 26</td>
+          <td class='low-val'>3</td>
+          <td>Pottawattamie IA, Douglas NE, Harrison IA</td>
+          <td>Iowa, Nebraska</td>
+          <td>19.06</td>
+          <td>550</td>
+          <td>21:54</td>
+          <td>0/0</td>
+        </tr>
+        <tr>
+          <td>April 26</td>
+          <td class='low-val'>3</td>
+          <td>Pottawattamie</td>
+          <td>Iowa</td>
+          <td>13.31</td>
+          <td>900</td>
+          <td>22:08</td>
+          <td>0/0</td>
+        </tr>
+        <tr>
+          <td>April 26</td>
+          <td class='low-val'>3</td>
+          <td>Pottawattamie, Harrison, Shelby</td>
+          <td>Iowa</td>
+          <td>40.91</td>
+          <td>1900</td>
+          <td>22:25</td>
+          <td>1/3</td>
+        </tr>
+
       </tbody>
     </table>
   </div>
