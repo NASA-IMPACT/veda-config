@@ -25,8 +25,8 @@ import { media } from "$veda-ui/@devseed-ui/theme-provider";
 import Hug from "$veda-ui-scripts/styles/hug";
 import { variableGlsp } from "$veda-ui-scripts/styles/variable-utils";
 
-import KeypointsDatasets from "./keydatasets"
-import { KeypointsCities } from "./keydatasets";
+import Keypoints from "../common/keypoints";
+import { cities, keyUrbanDatasets } from "../common/constants";
 
 <Block tyep="wide">
     <Prose>
@@ -41,7 +41,7 @@ import { KeypointsCities } from "./keydatasets";
         Lorem ipsum odor amet, consectetuer adipiscing elit.
   </Prose>
 </Block>
-<KeypointsDatasets/>
+<Keypoints data={keyUrbanDatasets} />
 
 <Block type="wide">
     <Prose>
@@ -49,6 +49,6 @@ import { KeypointsCities } from "./keydatasets";
     </Prose>
 </Block>
 
-<KeypointsCities/>
+<Keypoints data={cities}/>
 
 {/* <Cmp {...props} /> */}

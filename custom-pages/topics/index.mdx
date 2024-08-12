@@ -12,6 +12,9 @@ import { media } from "$veda-ui/@devseed-ui/theme-provider";
 import Hug from "$veda-ui-scripts/styles/hug";
 import { variableGlsp } from "$veda-ui-scripts/styles/variable-utils";
 
+import Keypoints from "../../common/keypoints";
+import { focusAreasSansDatasets } from "../../common/constants";
+
 import UrbanEmissionsSpotlight from './component';
 
 <Block type="wide">
@@ -29,3 +32,7 @@ import UrbanEmissionsSpotlight from './component';
         For the latest, subscribe to our email newsletter.
   </Prose>
 </Block>
+
+<Keypoints
+  data={focusAreasSansDatasets}
+/>

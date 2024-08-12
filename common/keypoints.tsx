@@ -59,7 +59,7 @@ export default function Keypoints({
                 description={datum.desc}
                 imgSrc={datum.img.src}
                 imgAlt={datum.img.alt}
-                footerContent={
+                footerContent={ datum.footer ? (
                   <div>
                     <ArrowLink
                       to={datum.footer.link.url}
@@ -67,6 +67,8 @@ export default function Keypoints({
                       {datum.footer.link.title}
                     </ArrowLink>
                   </div>
+                  )
+                  : null
                 }
               />
             </li>
