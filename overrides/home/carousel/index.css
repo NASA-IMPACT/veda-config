@@ -6,7 +6,7 @@
 /* ending ENTER animation */
 .messageout-enter-active {
   opacity: 1;
-  transition: opacity 2000ms ease-in;
+  transition: opacity 400ms ease-in;
 }
 
 /* starting EXIT animation */
@@ -17,5 +17,5 @@
 /* ending EXIT animation */
 .messageout-exit-active {
   opacity: 0;
-  transition: opacity 2000ms ease-out;
+  transition: opacity 400ms ease-out;
 }
