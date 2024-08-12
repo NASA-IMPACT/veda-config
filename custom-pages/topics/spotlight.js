@@ -1,6 +1,5 @@
-// src/UrbanEmissionsSpotlight.js
 import React from 'react';
-import './UrbanEmissionsSpotlight.css'; // Import the CSS file for styling
+import './UrbanEmissionsSpotlight.css';
 
 import React from "$veda-ui/react";
 import styled from "$veda-ui/styled-components";
@@ -31,14 +30,5 @@ const UrbanEmissionsSpotlight = () => {
     </div>
   );
 }
-
-export const HomeContent = styled(Hug)`
-  padding: ${variableGlsp(2.5, 0)};
-  grid-row-gap: ${variableGlsp(2)};
-
-  ${media.mediumUp`
-    grid-row-gap: ${variableGlsp(3)};
-  `}
-`;
 
 export default UrbanEmissionsSpotlight;

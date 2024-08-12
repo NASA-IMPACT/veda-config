@@ -6,42 +6,6 @@ description: "
   Welcome to the integrative center for technical exploration of Greenhouse Gas datasets, interactive mapping tools, and open source data materials.
 "
 ---
-import React from "$veda-ui/react";
-import styled from "$veda-ui/styled-components";
-import { media } from "$veda-ui/@devseed-ui/theme-provider";
-import Hug from "$veda-ui-scripts/styles/hug";
-import { variableGlsp } from "$veda-ui-scripts/styles/variable-utils";
+import Cmp from './component.tsx';
 
-import Keypoints from "../../common/keypoints";
-import { focusAreas } from "../../common/constants";
-import { dataEngagements } from "../../common/constants";
-
-
-<Block type="wide">
-  <Prose>
-        # Engage with the Data
-  </Prose>
-</Block>
-<Keypoints
-  data={dataEngagements}
-/>
-<Block type="wide">
-  <Prose>
-        # Core Science Focus Areas
-        The GHG Center includes three core science focus areas. How to get involved?
-        For the latest, subscribe to our email newsletter.
-  </Prose>
-</Block>
-<Keypoints
-  data={focusAreas}
-></Keypoints>
-
-<Block type="wide">
-<Prose>
-# What Else Do You Need? Let Us Help You!
-
-Do you have a need, idea, or suggestion? Contact us.
-</Prose>
-</Block>
-
-{/* <Cmp {...props} /> */}
+<Cmp {...props} />
