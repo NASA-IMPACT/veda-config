@@ -1,6 +1,6 @@
 import React from "$veda-ui/react";
 import styled from "$veda-ui/styled-components";
-import { listReset, media, glsp, media } from "$veda-ui/@devseed-ui/theme-provider";
+import { listReset, media, glsp } from "$veda-ui/@devseed-ui/theme-provider";
 import Hug from "$veda-ui-scripts/styles/hug";
 import { Card } from "$veda-ui-scripts/components/common/card";
 import { CardFooter } from "$veda-ui-scripts/components/common/card/styles";
@@ -47,31 +47,34 @@ export default function Keypoints({
   data
 }) {
   return (
+    
     <KeypointsWrapper>
       <CardList>
         {
           data.map(datum => {
-            <li>
-              <KeypointCard
-                linkLabel={datum.link.text}
-                linkTo={datum.link.url}
-                title={datum.title}
-                description={datum.desc}
-                imgSrc={datum.img.src}
-                imgAlt={datum.img.alt}
-                footerContent={ datum.footer ? (
-                  <div>
-                    <ArrowLink
-                      to={datum.footer.link.url}
-                    >
-                      {datum.footer.link.title}
-                    </ArrowLink>
-                  </div>
-                  )
-                  : null
-                }
-              />
-            </li>
+            return (
+              <li>
+                <KeypointCard
+                  linkLabel={datum.link.text}
+                  linkTo={datum.link.url}
+                  title={datum.title}
+                  description={datum.desc}
+                  imgSrc={datum.img.src}
+                  imgAlt={datum.img.alt}
+                  footerContent={ datum.footer ? (
+                    <div>
+                      <ArrowLink
+                        to={datum.footer.link.url}
+                      >
+                        {datum.footer.link.title}
+                      </ArrowLink>
+                    </div>
+                    )
+                    : null
+                  }
+                />
+              </li>
+            )
           })
         }
       </CardList>
