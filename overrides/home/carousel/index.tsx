@@ -57,7 +57,7 @@ export function DesktopCarousel () {
       <TransitionGroup>
           <CSSTransition
             key={itemInProgress.title}
-            timeout={animation_length*2}
+            timeout={2000}
             classNames="messageout"
           >
             <div style={{width: '100%', height: '500px', backgroundColor: 'grey', position: 'absolute', left: '0', top:'0'}}>
@@ -66,7 +66,7 @@ export function DesktopCarousel () {
           </CSSTransition>
         </TransitionGroup>
       </div>
-      <div className="grid-row margin-top-2" role="tablist" aria-label="Slides">
+      <div className="grid-row tablet:margin-top-4 margin-top-2" role="tablist" aria-label="Slides">
         {CarouselItems.map((item, itemIdx) => {
           return <CarouselItem 
             key={item.title} 
