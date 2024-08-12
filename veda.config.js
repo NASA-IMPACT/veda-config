@@ -13,8 +13,8 @@ const defaultMenuLinks = [
     type: 'internalLink'
   },
   {
-    title: 'Data Center',
-    to: '/data-center',
+    title: 'Data Toolkit',
+    to: '/data-toolkit',
     type: 'internalLink'
   },
 ];
@@ -75,7 +75,7 @@ module.exports = {
     // Component for the footer.
     pageFooter: "./overrides/components/page-footer/index.mdx",
     "/news-and-events": "./custom-pages/news-and-events/index.mdx",
-    "/data-center": "./custom-pages/data-center/index.mdx",
+    "/data-toolkit": "./custom-pages/data-toolkit/index.mdx",
     "/topics": "./custom-pages/topics/index.mdx",
   },
 
