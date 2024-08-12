@@ -12,6 +12,9 @@ taxonomy:
   - name: Topics
     values:
       - EIS
+infoDescription: |
+  ::markdown
+    Change in vegetation transpiration for 2020 fires using model outputs from Land Information System (LIS) framework that synthesizes multiple remote sensing observations within the Noah-MP land surface model. Change is calculated as the difference of transpiration in the immediate post-fire water year from that in the immediate pre-fire water year. The difference is normalized by pre-fire transpiration and negative values denote vegetation disturbance induced by fire or by a climatological anomaly resulting in the decline in transpiration.
 layers:
   - id: lis-tvegsuppression
     stacCol: lis-tvegsuppression
@@ -46,6 +49,12 @@ layers:
       - "#e0f3f8"
       - "#74add1"
       - "#313695"
+    info:
+      source: NASA
+      spatialExtent: Western United States
+      temporalResolution: Annual 
+      unit: Percent Diff  
+
   - id: mtbs-burn-severity
     stacCol: mtbs-burn-severity
     name: MTBS Burn Severity
@@ -70,6 +79,11 @@ layers:
           label: "Moderate"
         - color: "#971d2b"
           label: "High"
+    info:
+      source: NASA
+      spatialExtent: Western United States
+      temporalResolution: Annual 
+      unit: Categorical
 ---
 
 <Block>

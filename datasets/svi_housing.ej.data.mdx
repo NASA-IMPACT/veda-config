@@ -15,6 +15,9 @@ taxonomy:
   - name: Source
     values:
       - ATSDR
+infoDescription: |
+  ::markdown
+    The Housing Type & Transportation Score (HTTS) is one of the four themes used in determining a community’s social vulnerability, examining it against housing structure/type and vehicle access. As with the other SVI thematic areas, in the event of a disaster, or to better prepare for one, this dataset can help emergency personnel create an evacuation plan for individuals without vehicles, allocate emergency preparedness funding by community need, and identify areas in need of emergency shelters¹. It can also be used for local governments to identify areas needing more robust public transportation, areas of overcrowding, and local housing vulnerability. The HTTS SVI Grid is part of the U.S. Census Grids collection, and displays the Center for Disease Control & Prevention (CDC) SVI score. Funding for the final development, processing and dissemination of this data set by the Socioeconomic Data and Applications Center (SEDAC)was provided under the U.S. National Aeronautics and Space Administration (NASA)².
 layers:
   - id: social-vulnerability-index-housing
     stacCol: social-vulnerability-index-housing
@@ -53,6 +56,12 @@ layers:
       - "#4a98c9"
       - "#1764ab"
       - "#08306b"
+    info:
+      source: NASA
+      spatialExtent: United States
+      temporalResolution: Annual 
+      unit: Percentile Ranking 
+
   - id: social-vulnerability-index-housing-nopop
     stacCol: social-vulnerability-index-housing-nopop
     name: Housing Type and Transportation Score - Masked for No Population
@@ -86,6 +95,12 @@ layers:
       - "#4a98c9"
       - "#1764ab"
       - "#08306b"
+    info:
+      source: NASA
+      spatialExtent: United States
+      temporalResolution: Annual 
+      unit: Percentile Ranking 
+
 ---
 
 <Block>
