@@ -19,3 +19,12 @@
   opacity: 0;
   transition: opacity 400ms ease-out;
 }
+
+.veda-color--link {
+  color: var(--veda-color-link);
+}
+
+.veda-color--base {
+  color: var(--veda-color-base);
+}
+

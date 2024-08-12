@@ -29,7 +29,7 @@ export function ItemPanel({ item }) {
   return (<>
   <p className="margin-top-2">{item.description}</p>
   <div className="tablet:margin-top-4 margin-top-2">
-    <a className="display-flex flex-align-center" href={item.link}>
+    <a className="display-flex flex-align-center veda-color--link" href={item.link}>
       <Icon.ArrowForward stroke="#1565EF" fill="#1565EF" /> 
     <span className="padding-left-1">Read more</span>
     </a>
@@ -41,7 +41,7 @@ function ItemCard({ item, itemIdx, onTitleClick, selected}) {
   return <div className="tablet:padding-left-1 tabelt:padding-right-1 margin-top-1">
   <div className="tablet:display-block display-none">
     <button 
-      className="usa-button usa-button--unstyled text-bold"
+      className="usa-button usa-button--unstyled text-bold veda-color--base"
       type="button"
       role="tab" 
       aria-label={`Slide ${itemIdx}`}
