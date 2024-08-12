@@ -38,8 +38,8 @@ export function ItemPanel({ item }) {
 }
 
 function ItemCard({ item, itemIdx, onTitleClick, selected}) {
-  return <div className="tablet:padding-left-1 tabelt:padding-right-1 margin-top-1">
-  <div className="tablet:display-block display-none">
+  return <div className="padding-left-1 padding-right-1 margin-top-1">
+  <div className="display-block">
     <button 
       className="usa-button usa-button--unstyled text-bold"
       type="button"
@@ -61,8 +61,8 @@ function ItemCard({ item, itemIdx, onTitleClick, selected}) {
 export default function CarouselItem({ item, itemIdx, onTitleClick, shouldProgress, progressDone, progressPercentage, selected }) {
   const selectedStyle = (selected || shouldProgress)? {opacity: 1, transition: 'opacity 200ms ease-out'}: {opacity: 0.5, transition: 'opacity 200ms ease-out'};
   return (
-    <div className="tablet:grid-col tablet:margin-top-0 margin-top-2 tablet:padding-2 padding-0" style={selectedStyle}>
-      <div className="tablet:display-block display-none">
+    <div className="grid-col margin-top-0 margin-top-2 padding-2 padding-0" style={selectedStyle}>
+      <div className="display-block">
         <ProgressBar shouldProgress={shouldProgress} progressDone={progressDone} progressPercentage={progressPercentage}selected={selected} />
         <ItemCard item={item} itemIdx={itemIdx} onTitleClick={onTitleClick} selected={selected} />
       </div>

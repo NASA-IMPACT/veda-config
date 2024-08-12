@@ -66,7 +66,7 @@ export function DesktopCarousel () {
           </CSSTransition>
         </TransitionGroup>
       </div>
-      <div className="grid-row tablet:margin-top-4 margin-top-2" role="tablist" aria-label="Slides">
+      <div className="grid-row margin-top-2" role="tablist" aria-label="Slides">
         {CarouselItems.map((item, itemIdx) => {
           return <CarouselItem 
             key={item.title} 
