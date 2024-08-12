@@ -1,0 +1,183 @@
+---
+id: nlcd
+name: 'National Land Cover Database'
+description: "National Land Cover Database Land Use - Land Cover classifications for CONUS, 2001-2021 at 30 m resolution."
+
+media:
+  src: ::file ./nhous_lst.png
+  alt: 2021 NLCD classifications.
+  author:
+    name: NASA
+    url:
+taxonomy:
+  - name: Topics
+    values:
+      - Agriculture
+      - Biomass
+      - EIS
+      - Environmental Justice
+  - name: Source
+    values:
+      - UAH
+layers:
+  - id: nlcd
+    stacCol: nlcd
+    name: NLCD Land Use - Land Cover Classification
+    type: raster
+    description: "30 meter LULC classification provided by the NLCD."
+    initialDatetime: newest
+    zoomExtent:
+        - 0
+        - 20
+    sourceParams:
+        colormap: '{"11":"#486DA2", "12":"#E7EFFC", "21": "#E1CDCE", "22": "#DC9881", "23": "#F10100", "24": "#AB0101",
+              "31":"#B3AFA4", "41":"#6BA966", "42": "#1D6533", "43": "#BDCC93", "51": "#B29C46", "52": "#D1BB82",
+              "71":"#EDECCD", "72":"#D0D181", "73": "#A4CC51", "74": "#82BA9D", "81": "#DDD83E", "82": "#AE7229",
+              "90":"#BBD7ED", "95":"#71A4C1","0":"#00BFFF"}'
+        nodata: 0
+        rescale:
+            - 0
+            - 255   
+    legend:
+        type: categorical
+        min: "0"
+        max: "255"
+        stops:
+            # - color: "#486DA2"
+            #   label: "Open Water"
+            # - color: "#E7EFFC"
+            #   label: "Perennial Ice/Snow"
+            - color: "#E1CDCE"
+              label: "Urban"
+            - color: "#DC9881"
+            #   label: "Developed, Low Intensity"
+            - color: "#F10100"
+            #   label: "Developed, Medium Intensity"
+            - color: "#AB0101"
+            #   label: "Developed High Intensity"
+            # - color: "#B3AFA4"
+            #   label: "Barren Land (Rock/Sand/Clay)"
+            - color: "#6BA966"
+              label: "Vegetation"
+            #   label: "Deciduous Forest"
+            - color: "#1D6533"
+            #   label: "Evergreen Forest"
+            - color: "#BDCC93"
+            #   label: "Mixed Forest"
+            # - color: "#B29C46"
+            #   label: "Dwarf Scrub"
+            - color: "#D1BB82"
+            #   label: "Shrub/Scrub"
+            - color: "#EDECCD"
+            #   label : "Grassland/Herbaceous"
+            - color: "#D0D181"
+            #   label: "Sedge/Herbaceous"
+            - color: "#A4CC51"
+            #   label: "Lichens"
+            # - color: "#82BA9D"
+            #   label: "Moss"
+            # - color: "#DDD83E"
+            #   label: "Pasture/Hay"
+            - color: "#AE7229"
+            #   label: "Cultivated Crops"
+              label: "Agriculture"
+            # - color: "#BBD7ED"
+            #   label: "Woody Wetlands"
+            # - color: "#71A4C1"
+            #   label: "Emergent Herbaceous Wetlands"
+    compare:
+      datasetId: nlcd
+      layerId: nlcd
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
+        }
+
+    legend:
+        type: categorical
+        min: "0"
+        max: "255"
+        stops:
+            # - color: "#486DA2"
+            #   label: "Open Water"
+            # - color: "#E7EFFC"
+            #   label: "Perennial Ice/Snow"
+            - color: "#E1CDCE"
+              label: "Urban"
+            - color: "#DC9881"
+            #   label: "Developed, Low Intensity"
+            - color: "#F10100"
+            #   label: "Developed, Medium Intensity"
+            - color: "#AB0101"
+            #   label: "Developed High Intensity"
+            # - color: "#B3AFA4"
+            #   label: "Barren Land (Rock/Sand/Clay)"
+            - color: "#6BA966"
+              label: "Vegetation"
+            #   label: "Deciduous Forest"
+            - color: "#1D6533"
+            #   label: "Evergreen Forest"
+            - color: "#BDCC93"
+            #   label: "Mixed Forest"
+            # - color: "#B29C46"
+            #   label: "Dwarf Scrub"
+            - color: "#D1BB82"
+            #   label: "Shrub/Scrub"
+            - color: "#EDECCD"
+            #   label : "Grassland/Herbaceous"
+            - color: "#D0D181"
+            #   label: "Sedge/Herbaceous"
+            - color: "#A4CC51"
+            #   label: "Lichens"
+            # - color: "#82BA9D"
+            #   label: "Moss"
+            # - color: "#DDD83E"
+            #   label: "Pasture/Hay"
+            - color: "#AE7229"
+            #   label: "Cultivated Crops"
+              label: "Agriculture"
+            # - color: "#BBD7ED"
+            #   label: "Woody Wetlands"
+            # - color: "#71A4C1"
+            #   label: "Emergent Herbaceous Wetlands"
+    info:
+      source: MRLC
+      spatialExtent: United States
+      temporalResolution: Bi to Tri-Annual 
+      unit: N/A 
+
+---
+
+<Block>
+<Prose>
+The MRLC's National Land Cover Database (NLCD) land use-land cover classification is derived from Landsat satellite observations over the contiguous United States (CONUS) at 30 meter spatial resolution. Available in two to three-year intervals from 2001-2021, the NLCD classifies the CONUS grid into one of thrity-four land cover classes.
+</Prose>
+</Block>
+
+<Block type='full'>
+<Figure>
+  <Map
+    datasetId='nlcd'
+    layerId='nlcd'
+    dateTime='2001-01-01'
+    zoom={8}
+    center={[-95.37,29.76]}
+    compareDateTime='2021-01-01'
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+    Comparison of the NLCD for Houston, TX between 2001 and 2021
+  </Caption>
+</Figure>
+</Block>
+
+<Block>
+<Prose>
+## Credits
+1. Center for International Earth Science Information Network, (CIESIN), Columbia University. 2021. Documentation for the U.S. Social Vulnerability Index Grids. Palisades, NY: NASA Socioeconomic Data and Applications Center (SEDAC). https://doi.org/10.7927/fjr9-a973. Accessed 13 May 2022.
+
+2. Centers for Disease Control and Prevention/ Agency for Toxic Substances and Disease Registry/ Geospatial Research, Analysis, and Services Program. CDC/ATSDR Social Vulnerability Index Database. https://www.atsdr.cdc.gov/placeandhealth/svi/documentation/pdf/SVI2018Documentation_01192022_1.pdf
+</Prose>
+</Block>
