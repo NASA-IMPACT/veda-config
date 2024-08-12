@@ -255,12 +255,12 @@ export default function PageFooter(props) {
                 </FooterMenuLink>
               </li>
               <li>
-                <FooterMenuLink to='/data-center'>
-                  Data Center
+                <FooterMenuLink to='/data-toolkit'>
+                  Data Toolkit
                 </FooterMenuLink>
               </li>
               <li>
-                <FooterMenuLink to='/news'>News & Events</FooterMenuLink>
+                <FooterMenuLink to='/news-and-events'>News & Events</FooterMenuLink>
               </li>
               <li>
                 <FooterMenuLink to='/about'>About</FooterMenuLink>
