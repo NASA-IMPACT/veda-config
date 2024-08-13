@@ -9,13 +9,13 @@ import { VarHeading } from "$veda-ui-scripts/styles/variable-components";
 import { variableGlsp } from "$veda-ui-scripts/styles/variable-utils";
 
 import Partners from "./partners";
+import Keypoints from "./keypoints";
 import Banner from './banner';
 import VideoModal from "../components/video-modal";
-
+import Carousel from './carousel/
 const HomeContent = styled(Hug)`
   padding: ${variableGlsp(2.5, 0)};
   grid-row-gap: ${variableGlsp(2)};
-
   ${media.mediumUp`
     grid-row-gap: ${variableGlsp(3)};
   `}
@@ -91,7 +91,6 @@ const Buttons = styled.div`
   justify-content: center;
 `;
 
-
 export default function HomeComponent() {
   const [showModal, setShowModal] = React.useState<boolean>(false);
   const [videoLink, setVideoLink] = React.useState<string>("");
@@ -107,6 +106,7 @@ export default function HomeComponent() {
     <>
     <Banner />
       <HomeContent>
+        <Carousel />
         <IntroHeadline>
           <VarHeading size="xxlarge">Welcome</VarHeading>
           <p>
@@ -141,6 +141,7 @@ export default function HomeComponent() {
             </Button>
           </Buttons>
         </IntroHeadline>
+        <Keypoints />
         <ActionsBlock>
         <Buttons>
           <Button
