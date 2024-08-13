@@ -155,6 +155,24 @@ taxonomy:
 </Figure>
 </Block>
 
+<Block type='wide'>
+<Figure>
+  <Map
+    center={[-88, 38]}
+    zoom={1}
+    datasetId='tornadoes-2024-tracks'
+    layerId='tornadoes-2024'
+    dateTime='2024-05-31'
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+    This interactive map displays all official NWS-surveyed tornado tracks in the United States from March - May 2024. Zoom in on the map to see individual tracks.
+  </Caption>
+</Figure>
+</Block>
+
 <Block>
   <Prose>
   The National Weather Service (NWS) issued numerous tornado warnings during the Spring 2024 tornado season. A total of 1,728 tornado warnings were issued across the United States from March to May, with several of these being upgraded to Particularly Dangerous Situation (PDS) Tornado Warnings if the tornado was confirmed to be large and actively damaging structures. An even smaller subset were further upgraded to Tornado Emergencies if the tornado was confirmed to be large and was directly threatening a larger population center. As a result, millions of Americans were impacted by tornado warnings during the Spring of 2024, with the vast majority of counties in the country's midsection seeing a warning at least once during the three-month period. Compared to average spring severe weather seasons, the Southeast United States saw a less active season, while the Great Plains and Midwest saw a more active season. 
@@ -171,6 +189,7 @@ taxonomy:
     All tornado warning polygons issued by the National Weather Service from March to May 2024. Central California also had six tornado warnings during this time period.
     </Caption>
   </Figure>
+  <Prose>
   <Figure>
       <Image
       src={new URL('./tornado-2024-warns-counties-MAM.jpg', import.meta.url).href}
@@ -180,20 +199,7 @@ taxonomy:
     All counties in the United States that were impacted by tornado warnings from March to May 2024. Central California also had nine counties impacted during this time period.
     </Caption>
   </Figure>
-
-</Block> 
-
-
-<Block>
-  <Figure>
-      <Image
-      src={new URL('./tornado-2024-MAM-map.jpg', import.meta.url).href}
-      alt='NWS-confirmed tornado tracks from March-May 2024.'
-    />
-    <Caption>
-    All confirmed tornado tracks as reported by the National Weather Service across the eastern portion of the United States from March to May of 2024.
-    </Caption>
-  </Figure>
+  </Prose>
 </Block> 
 
 <Block>
