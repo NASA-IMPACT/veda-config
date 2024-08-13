@@ -1,7 +1,7 @@
 export default [{
-  link: 'https://nasa.gov',
+  link: '/stories',
   title: 'Item 1',
-  description: 'Description for the item 1',
+  description: 'Description for the item 1 - internal link - make it a littttttle bit lonnnnggggger',
   image: 'https://placehold.co/600x400?text=1'
 }, {
   link: 'https://nasa.gov',

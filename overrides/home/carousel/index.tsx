@@ -6,6 +6,7 @@ import { useMediaQuery } from "$veda-ui-scripts/utils/use-media-query";
 import CarouselItems from './items'
 import CarouselItem, { ItemPanel } from './carousel-item';
 
+import SmartLink from '$veda-ui-scripts/components/common/smart-link';
 
 import './index.css';
 
@@ -77,6 +78,7 @@ export function DesktopCarousel () {
             shouldProgress = {selectedItem? false: currentProgressItemIdx == itemIdx}
             selected={!timerAnimationId && selectedItem?.title === item.title}
             progressPercentage = {progressPercentage}
+            linkComponent={SmartLink}
           />
         })}
       </div>
@@ -92,7 +94,7 @@ function TabletCarousel() {
               <img style={{width: '100%', height: '100%', objectFit: 'cover'}} src={item.image} />
               </div>
               <h3 className="margin-top-1">{item.title}</h3>
-              <ItemPanel item={item} />
+              <ItemPanel item={item} linkComponent={SmartLink} />
             </div>
         })}
         </div>

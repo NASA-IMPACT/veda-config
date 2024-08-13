@@ -25,20 +25,20 @@ function ProgressBar({ selected, shouldProgress, progressDone, progressPercentag
   </>
 }
 
-export function ItemPanel({ item }) {
+export function ItemPanel({ item, linkComponent: LinkComponent }) {
   return (<>
   <p className="margin-top-2">{item.description}</p>
-  <div className="tablet:margin-top-4 margin-top-2">
-    <a className="display-flex flex-align-center veda-color--link" href={item.link}>
+  <div className="tablet:margin-top-0 margin-top-2">
+    <LinkComponent className="display-flex flex-align-center veda-color--link" to={item.link}>
       <Icon.ArrowForward stroke="#1565EF" fill="#1565EF" /> 
     <span className="padding-left-1">Read more</span>
-    </a>
+    </LinkComponent>
   </div>
   </>)
 }
 
-function ItemCard({ item, itemIdx, onTitleClick, selected}) {
-  return <div className="tablet:padding-left-1 tabelt:padding-right-1 margin-top-1">
+function ItemCard({ item, itemIdx, onTitleClick, selected, linkComponent }) {
+  return <div className="tablet:padding-left-1 tabelt:padding-right-1 margin-top-1 height-full">
   <div className="tablet:display-block display-none">
     <button 
       className="usa-button usa-button--unstyled text-bold veda-color--base"
@@ -51,20 +51,18 @@ function ItemCard({ item, itemIdx, onTitleClick, selected}) {
       {item.title}
     </button>
   </div>
-  <div role="tabpanel" aria-roledescription='' aria-label={`${itemIdx} of 3`}>
-    <ItemPanel item={item} />
+  <div role="tabpanel" className="height-full display-flex flex-wrap" style={{alignContent: 'space-between'}} aria-roledescription='' aria-label={`${itemIdx} of 3`}>
+    <ItemPanel item={item} linkComponent={linkComponent} />
   </div>
 </div>
 }
 
 
-export default function CarouselItem({ item, itemIdx, onTitleClick, shouldProgress, progressDone, progressPercentage, selected }) {
+export default function CarouselItem({ item, itemIdx, onTitleClick, shouldProgress, progressDone, progressPercentage, selected, linkComponent }) {
   const selectedStyle = (selected || shouldProgress)? {opacity: 1, transition: 'opacity 200ms ease-out'}: {opacity: 0.5, transition: 'opacity 200ms ease-out'};
   return (
     <div className="tablet:grid-col tablet:margin-top-0 margin-top-2 tablet:padding-2 padding-0" style={selectedStyle}>
-      <div className="tablet:display-block display-none">
         <ProgressBar shouldProgress={shouldProgress} progressDone={progressDone} progressPercentage={progressPercentage}selected={selected} />
-        <ItemCard item={item} itemIdx={itemIdx} onTitleClick={onTitleClick} selected={selected} />
-      </div>
+        <ItemCard item={item} itemIdx={itemIdx} onTitleClick={onTitleClick} selected={selected} linkComponent={linkComponent} />
     </div>)
 }
