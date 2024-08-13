@@ -175,7 +175,7 @@ export const keyUrbanDatasets = [
       "alt": "image of green wetlands"
     },
     "link": {
-      "url": "",
+      "url": "/stories/graapes",
       "text": "View more"
     },
     "footer": null
