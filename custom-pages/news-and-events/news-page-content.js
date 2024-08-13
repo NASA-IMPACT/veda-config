@@ -35,7 +35,20 @@ export const NEWSLETTER_ITEMS = sortByDateDesc([
     },
     description: 'Volume 1.1, March 2024',
     date: '2024-03'
+  },
+  {
+    name: 'July 2024 - US GHG Center Newsletter',
+    asLink : {
+      url: 'https://conta.cc/4fxbpCD'
+    },
+    media: {
+      src: new URL('./media/news/newsletter-v1.3.jpg', import.meta.url).href,
+      alt: 'July 2024'
+    },
+    description: 'Volume 1.3, July 2024',
+    date: '2024-07'
   }
+  
 ])
 
 export const NEWS_ITEMS = [
