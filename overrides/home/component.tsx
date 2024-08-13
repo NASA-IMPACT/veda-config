@@ -142,7 +142,7 @@ export default function HomeComponent() {
           </Buttons>
         </IntroHeadline>
         <ActionsBlock>
-        <Buttons>
+        {/* <Buttons>
           <Button
             forwardedAs={NavLink}
             to="/data-catalog"
@@ -159,7 +159,7 @@ export default function HomeComponent() {
             <CollecticonCirclePlay />
             How to Explore Data
           </Button>
-          </Buttons>
+          </Buttons> */}
         </ActionsBlock>
       </HomeContent>
       <InfoCallout>
