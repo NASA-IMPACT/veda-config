@@ -31,14 +31,29 @@ taxonomy:
   .data-table thead th {
     font-size: 1.2rem; /* Increase the font size of the title row */
   }
-  .high-val {
+  .ef5 {
     background: #F61FDC; /* EF-5 */
   }
-  .mid-val {
+  .ef4 {
     background: #F6251F; /* EF-4 */
   }
-  .low-val {
+  .ef3 {
     background: #F7753B; /* EF-3 */
+  }
+  .ef2 {
+    background: #F6DC1F; /* EF-2 */  
+  }
+  .ef1 {
+    background: #44E112; /* EF-1 */  
+  }
+  .ef0 {
+    background: #28DFF3; /* EF-0 */  
+  }
+  .efunk {
+    background: #A1AEB0; /* EF-UNK */  
+  }
+  .total {
+    background: #EEEEEE; /* Total Count */  
   }
   .bold-row {
     font-weight: bold; /* Bold the row */
@@ -49,6 +64,7 @@ taxonomy:
     }
   }
 `}</style>
+
 
 <Block>
   <Prose>
@@ -62,9 +78,69 @@ taxonomy:
 
     ### Overview
 
-    The Spring 2024 tornado season was one of the most active on record in the United States. As of May 31st, there have been 938 tornadoes confirmed in the United States. The vast majority of these occurred in the meteorological spring months of March-May (49 in March, 327 in April, and 473 in May), placing this period within the 90th percentile of activity compared to climatological averages. This three-month period was responsible for 36 fatalities, hundreds of injuries, and was the second most prolific tornado season since at least 1950–second only to the deadly 2011 tornado season. Three tornadoes were rated violent EF-4s with wind speeds from 166-200 mph, and 28 were rated as intense EF-3s with wind speeds from 136-165 mph. 
+    The Spring 2024 tornado season was one of the most active on record in the United States. As of May 31st, there have been 1,176 tornadoes confirmed in the United States. The vast majority of these occurred in the meteorological spring months of March-May (Table 1), placing this period within the 90th percentile of activity compared to climatological averages. This three-month period was responsible for 36 fatalities, hundreds of injuries, and was the second most prolific tornado season since at least 1950–second only to the deadly 2011 tornado season. Four tornadoes were rated violent EF-4s with wind speeds from 166-200 mph, and 27 were rated as intense EF-3s with wind speeds from 136-165 mph. 
 
   </Prose>
+</Block>
+
+<Block>
+<Figure style={{ display: 'block' }}>
+  <div className='data-table'>
+    <table>
+      <thead>
+        <tr>
+          <th>   Month   </th>
+          <th>   EF-UNK   </th>
+          <th>   EF-0   </th>
+          <th>   EF-1   </th>
+          <th>   EF-2  </th>
+          <th>   EF-3   </th>
+          <th>   EF-4   </th>
+          <th>   EF-5   </th>
+          <th>   Total   </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>March</td>
+          <td class='efunk'>8</td>
+          <td class='ef0'>18</td>
+          <td class='ef1'>18</td>
+          <td class='ef2'>8</td>
+          <td class='ef3'>2</td>
+          <td class='ef4'>0</td>
+          <td class='ef5'>0</td>
+          <td class='total'>55</td>
+        </tr>
+        <tr>
+          <td>April</td>
+          <td class='efunk'>48</td>
+          <td class='ef0'>92</td>
+          <td class='ef1'>171</td>
+          <td class='ef2'>35</td>
+          <td class='ef3'>8</td>
+          <td class='ef4'>2</td>
+          <td class='ef5'>0</td>
+          <td class='total'>356</td>
+        </tr>
+        <tr>
+          <td>May</td>
+          <td class='efunk'>51</td>
+          <td class='ef0'>160</td>
+          <td class='ef1'>222</td>
+          <td class='ef2'>44</td>
+          <td class='ef3'>17</td>
+          <td class='ef4'>2</td>
+          <td class='ef5'>0</td>
+          <td class='total'>496</td>
+        </tr>        
+      </tbody>
+    </table>
+  </div>
+<Caption>
+  Table 1: Official total tornado count by month and EF rating in the United States.
+</Caption>  
+</Figure>
 </Block>
 
 <Block>
@@ -301,7 +377,7 @@ taxonomy:
       <tbody>
         <tr class='bold-row'>
           <td>March 14</td>
-          <td class='low-val'>3</td>
+          <td class='ef3'>3</td>
           <td>Auglaize, Logan</td>
           <td>Ohio</td>
           <td>31.33</td>
@@ -311,7 +387,7 @@ taxonomy:
         </tr>
         <tr class='bold-row'>
           <td>March 14</td>
-          <td class='low-val'>3</td>
+          <td class='ef3'>3</td>
           <td>Randolph IN, Darke, Miami OH</td>
           <td>Indiana, Ohio</td>
           <td>41.34</td>
@@ -321,7 +397,7 @@ taxonomy:
         </tr>
         <tr>
           <td>April 26</td>
-          <td class='low-val'>3</td>
+          <td class='ef3'>3</td>
           <td>Howard</td>
           <td>Nebraska</td>
           <td>8.65</td>
@@ -331,7 +407,7 @@ taxonomy:
         </tr>
         <tr>
           <td>April 26</td>
-          <td class='low-val'>3</td>
+          <td class='ef3'>3</td>
           <td>Lancaster</td>
           <td>Nebraska</td>
           <td>8.55</td>
@@ -341,7 +417,7 @@ taxonomy:
         </tr>
         <tr>
           <td>April 26</td>
-          <td class='mid-val'>4</td>
+          <td class='ef4'>4</td>
           <td>Douglas, Washington NE, Harrison IA</td>
           <td>Nebraska, Iowa</td>
           <td>32.50</td>
@@ -351,7 +427,7 @@ taxonomy:
         </tr>
         <tr>
           <td>April 26</td>
-          <td class='low-val'>3</td>
+          <td class='ef3'>3</td>
           <td>Pottawattamie IA, Douglas NE, Harrison IA</td>
           <td>Iowa, Nebraska</td>
           <td>19.06</td>
@@ -361,7 +437,7 @@ taxonomy:
         </tr>
         <tr>
           <td>April 26</td>
-          <td class='low-val'>3</td>
+          <td class='ef3'>3</td>
           <td>Pottawattamie</td>
           <td>Iowa</td>
           <td>13.31</td>
@@ -371,7 +447,7 @@ taxonomy:
         </tr>
         <tr class='bold-row'>
           <td>April 26</td>
-          <td class='low-val'>3</td>
+          <td class='ef3'>3</td>
           <td>Pottawattamie, Harrison, Shelby</td>
           <td>Iowa</td>
           <td>40.91</td>
@@ -381,7 +457,7 @@ taxonomy:
         </tr>
         <tr class='bold-row'>
           <td>April 27</td>
-          <td class='low-val'>3</td>
+          <td class='ef3'>3</td>
           <td>Murray, Pontotoc</td>
           <td>Oklahoma</td>
           <td>9.96</td>
@@ -391,7 +467,7 @@ taxonomy:
         </tr>
         <tr class='bold-row'>
           <td>April 27</td>
-          <td class='low-val'>3</td>
+          <td class='ef3'>3</td>
           <td>Hughes, Okfuskee</td>
           <td>Oklahoma</td>
           <td>27.98</td>
@@ -401,7 +477,7 @@ taxonomy:
         </tr>
         <tr class='bold-row'>
           <td>April 27</td>
-          <td class='mid-val'>4</td>
+          <td class='ef4'>4</td>
           <td>Love, Carter</td>
           <td>Oklahoma</td>
           <td>26.85</td>
@@ -411,7 +487,7 @@ taxonomy:
         </tr>
         <tr class='bold-row'>
           <td>April 30</td>
-          <td class='low-val'>3</td>
+          <td class='ef3'>3</td>
           <td>Pottawatomie</td>
           <td>Kansas</td>
           <td>2.24</td>
@@ -421,7 +497,7 @@ taxonomy:
         </tr>
         <tr>
           <td>May 2</td>
-          <td class='low-val'>3</td>
+          <td class='ef3'>3</td>
           <td>Jones</td>
           <td>Texas</td>
           <td>3.29</td>
@@ -431,7 +507,7 @@ taxonomy:
         </tr>
         <tr class='bold-row'>
           <td>May 6</td>
-          <td class='mid-val'>4</td>
+          <td class='ef4'>4</td>
           <td>Osage, Washington</td>
           <td>Oklahoma</td>
           <td>40.81</td>
@@ -441,7 +517,7 @@ taxonomy:
         </tr>
         <tr class='bold-row'>
           <td>May 8</td>
-          <td class='low-val'>3</td>
+          <td class='ef3'>3</td>
           <td>Maury, Marshall</td>
           <td>Tennessee</td>
           <td>12.16</td>
@@ -451,7 +527,7 @@ taxonomy:
         </tr>
         <tr>
           <td>May 8</td>
-          <td class='low-val'>3</td>
+          <td class='ef3'>3</td>
           <td>Lawrence, Limestone</td>
           <td>Alabama</td>
           <td>3.76</td>
@@ -461,7 +537,7 @@ taxonomy:
         </tr>
         <tr>
           <td>May 8</td>
-          <td class='low-val'>3</td>
+          <td class='ef3'>3</td>
           <td>Jackson, DeKalb</td>
           <td>Alabama</td>
           <td>12.34</td>
@@ -471,7 +547,7 @@ taxonomy:
         </tr>
         <tr>
           <td>May 21</td>
-          <td class='low-val'>3</td>
+          <td class='ef3'>3</td>
           <td>Page, Montgomery, Adams</td>
           <td>Iowa</td>
           <td>34.62</td>
@@ -481,7 +557,7 @@ taxonomy:
         </tr>
         <tr class='bold-row'>
           <td>May 21</td>
-          <td class='mid-val'>4</td>
+          <td class='ef4'>4</td>
           <td>Page, Taylor, Adams, Adair</td>
           <td>Iowa</td>
           <td>43.04</td>
@@ -491,7 +567,7 @@ taxonomy:
         </tr>
         <tr>
           <td>May 22</td>
-          <td class='low-val'>3</td>
+          <td class='ef3'>3</td>
           <td>Sterling, Tom Green</td>
           <td>Texas</td>
           <td>4.79</td>
@@ -501,7 +577,7 @@ taxonomy:
         </tr>
         <tr class='bold-row'>
           <td>May 25</td>
-          <td class='low-val'>3</td>
+          <td class='ef3'>3</td>
           <td>Montague, Cooke, Denton</td>
           <td>Texas</td>
           <td>47.31</td>
@@ -511,7 +587,7 @@ taxonomy:
         </tr>
         <tr class='bold-row'>
           <td>May 25</td>
-          <td class='low-val'>3</td>
+          <td class='ef3'>3</td>
           <td>Rogers, Mayes</td>
           <td>Oklahoma</td>
           <td>23.88</td>
@@ -521,7 +597,7 @@ taxonomy:
         </tr>
         <tr>
           <td>May 25</td>
-          <td class='low-val'>3</td>
+          <td class='ef3'>3</td>
           <td>Denton, Collin</td>
           <td>Texas</td>
           <td>0.71</td>
@@ -531,7 +607,7 @@ taxonomy:
         </tr>
         <tr>
           <td>May 26</td>
-          <td class='low-val'>3</td>
+          <td class='ef3'>3</td>
           <td>Delaware OK, Benton AR</td>
           <td>Oklahoma, Arkansas</td>
           <td>7.90</td>
@@ -541,7 +617,7 @@ taxonomy:
         </tr>
         <tr class='bold-row'>
           <td>May 26</td>
-          <td class='low-val'>3</td>
+          <td class='ef3'>3</td>
           <td>Boone, Marion</td>
           <td>Arkansas</td>
           <td>22.00</td>
@@ -551,7 +627,7 @@ taxonomy:
         </tr>
         <tr class='bold-row'>
           <td>May 26</td>
-          <td class='low-val'>3</td>
+          <td class='ef3'>3</td>
           <td>Marion, Baxter, Fulton</td>
           <td>Arkansas</td>
           <td>36.30</td>
@@ -561,7 +637,7 @@ taxonomy:
         </tr>
         <tr class='bold-row'>
           <td>May 26</td>
-          <td class='low-val'>3</td>
+          <td class='ef3'>3</td>
           <td>Stoddard, New Madrid, Scott</td>
           <td>Missouri</td>
           <td>19.58</td>
@@ -571,7 +647,7 @@ taxonomy:
         </tr>
         <tr>
           <td>May 26</td>
-          <td class='low-val'>3</td>
+          <td class='ef3'>3</td>
           <td>Howell, Shannon</td>
           <td>Missouri</td>
           <td>12.71</td>
@@ -581,7 +657,7 @@ taxonomy:
         </tr>
         <tr>
           <td>May 26</td>
-          <td class='low-val'>3</td>
+          <td class='ef3'>3</td>
           <td>Johnson</td>
           <td>Illinois</td>
           <td>5.07</td>
@@ -591,7 +667,7 @@ taxonomy:
         </tr>
         <tr class='bold-row'>
           <td>May 26</td>
-          <td class='low-val'>3</td>
+          <td class='ef3'>3</td>
           <td>Lyon, Caldwell, Hopkins</td>
           <td>Kentucky</td>
           <td>35.49</td>
@@ -601,7 +677,7 @@ taxonomy:
         </tr>
         <tr>
           <td>May 30</td>
-          <td class='low-val'>3</td>
+          <td class='ef3'>3</td>
           <td>Midland, Upton</td>
           <td>Texas</td>
           <td>5.44</td>
@@ -614,7 +690,7 @@ taxonomy:
     </table>
   </div>
 <Caption>
-  Table 1: List of all intense (EF-3+) tornadoes that occurred from March to May of 2024 in the contiguous United States. FAT/INJ indicates the number of fatalities and injuries that occurred from the tornado. If the tornado caused fatalities, its entry has been bolded in the table. UNK indicates that the statistic has an unknown value at the time of data story publication.
+  Table 2: List of all intense (EF-3+) tornadoes that occurred from March to May of 2024 in the contiguous United States. FAT/INJ indicates the number of fatalities and injuries that occurred from the tornado. If the tornado caused fatalities, its entry has been bolded in the table. UNK indicates that the statistic has an unknown value at the time of data story publication.
 </Caption>  
 </Figure>
 </Block>
