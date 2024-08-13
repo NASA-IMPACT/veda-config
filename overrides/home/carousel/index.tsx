@@ -61,7 +61,7 @@ export function DesktopCarousel () {
             timeout={2000}
             classNames="messageout"
           >
-            <div style={{width: '100%', height: '500px', backgroundColor: 'grey', position: 'absolute', left: '0', top:'0'}}>
+            <div style={{width: '600px', height: '400px', backgroundColor: 'grey', position: 'absolute', left: '0', top:'0'}}>
               <img style={{width: '100%', height: '100%', objectFit: 'cover'}} src={itemInProgress.image} /> 
             </div>
           </CSSTransition>
