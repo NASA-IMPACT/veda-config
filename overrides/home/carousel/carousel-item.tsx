@@ -27,8 +27,8 @@ function ProgressBar({ selected, shouldProgress, progressDone, progressPercentag
 
 export function ItemPanel({ item, linkComponent: LinkComponent }) {
   return (<>
-  <p className="margin-top-2">{item.description}</p>
-  <div className="tablet:margin-top-0 margin-top-2">
+  <p className="margin-top-2 flex-align-self-stretch">{item.description}</p>
+  <div className="tablet:margin-top-0 margin-top-2 flex-align-self-stretch">
     <LinkComponent className="display-flex flex-align-center veda-color--link" to={item.link}>
       <Icon.ArrowForward stroke="#1565EF" fill="#1565EF" /> 
     <span className="padding-left-1">Read more</span>
@@ -51,7 +51,7 @@ function ItemCard({ item, itemIdx, onTitleClick, selected, linkComponent }) {
       {item.title}
     </button>
   </div>
-  <div role="tabpanel" className="height-full display-flex flex-wrap" style={{alignContent: 'space-between'}} aria-roledescription='' aria-label={`${itemIdx} of 3`}>
+  <div role="tabpanel" className="height-full display-flex flex-column flex-justify" aria-roledescription='' aria-label={`${itemIdx} of 3`}>
     <ItemPanel item={item} linkComponent={linkComponent} />
   </div>
 </div>
