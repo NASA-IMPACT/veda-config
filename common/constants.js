@@ -72,9 +72,9 @@ export const focusAreasSansDatasets = focusAreas.map(area => {
 export const dataEngagements = [
   {
     "title": "Data Catalog",
-    "desc": "This dashboard is for exploring key datasets that provide insight into greenhouse gas sources, sinks, emissions, fluxes, and events.",
+    "desc": "Detailed information for datasets that provides insight into greenhouse gas sources, sinks, emissions, fluxes, and events.",
     "img": {
-      "src": "https://biggardenfurniture.com.au/wp-content/uploads/2018/08/img-placeholder.png",
+      "src": new URL('./media/catalog.png', import.meta.url).href,
       "alt": "image of oil refinery"
     },
     "link": {
@@ -85,9 +85,9 @@ export const dataEngagements = [
   },
   {
     "title": "Interactive Map",
-    "desc": "This exploration and analysis environment is an interactive space for users to visually examine data within a mapping environment and create time series of basic statistics for dataset layers.",
+    "desc": "The exploration and analysis environment is a space where users can visually examine data on a customizable map and create a time series of basic statistics for dataset layers.",
     "img": {
-      "src": "https://biggardenfurniture.com.au/wp-content/uploads/2018/08/img-placeholder.png",
+      "src": new URL('./media/explore.png', import.meta.url).href,
       "alt": "image of green wetlands"
     },
     "link": {
@@ -97,10 +97,10 @@ export const dataEngagements = [
     "footer": null
   },
   {
-    "title": "Jupyter Notebook",
-    "desc": "Jupyter Notebook enables analysis of massive archives of Earth science data in the cloud in an interactive environment that alleviates the complexities of managing compute resources. Log in or request access here.",
+    "title": "JupyterHub",
+    "desc": "With JupyterHub, users can analyze cloud archives of Earth science data using an interactive environment. Log in or request access here.",
     "img": {
-      "src": "https://biggardenfurniture.com.au/wp-content/uploads/2018/08/img-placeholder.png",
+      "src": new URL('./media/jupyterhub.png', import.meta.url).href,
       "alt": "image of colorful polygon against satellite landscape surface in brown"
     },
     "link": {
@@ -110,6 +110,48 @@ export const dataEngagements = [
     "footer": null
   }
 ];
+
+export const customInterfaces = [
+  {
+    "title": "EMIT Methane Plume Viewer",
+    "desc": "Detailed information for methane plumes identified using EMIT.",
+    "img": {
+      "src": new URL('./media/emit.png', import.meta.url).href,
+      "alt": "Baltimore"
+    },
+    "link": {
+      "url": "/data-catalog/emit-ch4plume-v1",
+      "text": "Baltimore"
+    },
+    "footer": null
+  },
+  {
+    "title": "Carbon Dioxide Concentration Viewer",
+    "desc": "Measurements of carbon dioxide from ground locations throughout the US and worldwide are collected by NOAA GML and available for exploring concentration time series.",
+    "img": {
+      "src": new URL('./media/co2.png', import.meta.url).href,
+      "alt": "Baltimore"
+    },
+    "link": {
+      "url": "/data-catalog/noaa-gggrn-co2-concentrations",
+      "text": "Baltimore"
+    },
+    "footer": null
+  },
+  {
+    "title": "Methane Concentration Viewer",
+    "desc": "Measurements of methane from ground locations throughout the US and worldwide are collected by NOAA GML and available for exploring concentration time series.",
+    "img": {
+      "src": new URL('./media/ch4.png', import.meta.url).href,
+      "alt": "Baltimore"
+    },
+    "link": {
+      "url": "/data-catalog/noaa-gggrn-ch4-concentrations",
+      "text": "Baltimore"
+    },
+    "footer": null
+  },
+]
 
 export const cities = [
   {

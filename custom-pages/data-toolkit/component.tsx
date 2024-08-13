@@ -8,7 +8,7 @@ import '$veda-ui/@trussworks/react-uswds/lib/uswds.css'
 import '$veda-ui/@trussworks/react-uswds/lib/index.css'
 
 import Keypoints from "../../common/keypoints";
-import { dataEngagements, focusAreasSansDatasets } from "../../common/constants";
+import { dataEngagements, focusAreasSansDatasets, customInterfaces } from "../../common/constants";
 
 import { SUBSCRIPTION_URL } from "../../constants";
 import { Title, P } from "../../common/styled-components";
@@ -22,6 +22,8 @@ export default function Component() {
             </div>
             <Keypoints data={dataEngagements} />
 
+            <Keypoints data={customInterfaces} />
+
             <div>
             <Title> Core Science Focus Areas </Title>
             <p>
@@ -32,7 +34,7 @@ export default function Component() {
 
             <div>
                 <Title> Learn More and Share Your Ideas </Title>
-                <Card className="usa-card--flag">
+                {/* <Card className="usa-card--flag">
                     <CardMedia>
                         <img
                         src="https://via.placeholder.com/150"
@@ -64,10 +66,10 @@ export default function Component() {
                     <CardBody>
                     <P>Do you have a U.S. Greenhouse Gas Center portal suggestion or question? Reach the team using the "Contact Us" button at the top or bottom of every page. </P>
                     </CardBody>
-                </Card>
-                {/* <p> For the latest updates and information about the U.S. Greenhouse Gas Center or to join a focus area group, <a href={SUBSCRIPTION_URL}>subscribe to our email updates list.</a></p>
-                <p> Read more about the US GHG Center news, trainings, and workshop opportunities on the <Link to="/news-and-events">News and Events page.</Link></p>
-                <p>Do you have a U.S. Greenhouse Gas Center portal suggestion or question? Reach the team using the "Contact Us" button at the top or bottom of every page. </p> */}
+                </Card> */}
+                <P> - For the latest updates and information about the U.S. Greenhouse Gas Center or to join a focus area group, <a href={SUBSCRIPTION_URL}>subscribe to our email updates list.</a></P>
+                <P> - Read more about the US GHG Center news, trainings, and workshop opportunities on the <Link to="/news-and-events">News and Events page.</Link></P>
+                <P> - Do you have a U.S. Greenhouse Gas Center portal suggestion or question? Reach the team using the "Contact Us" button at the top or bottom of every page. </P>
             </div>
         </div>
     )
