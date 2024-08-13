@@ -10,20 +10,21 @@ import { variableGlsp } from "$veda-ui-scripts/styles/variable-utils";
 
 import Keypoints from "../../common/keypoints";
 import { focusAreasSansDatasets } from "../../common/constants";
+import { Title } from "../../common/styled-components";
 
 import UrbanEmissionsSpotlight from "./spotlight";
 
 
 export default function HomeComponent() {  
   return (
-    <>
-      <h1>Content Collections by Topic</h1>
+    <div style={{display: "flex", flexDirection: "column",  padding: "12px 13vw", margin: "12px"}}>
+      <Title>Content Collections by Topic</Title>
       <UrbanEmissionsSpotlight />
 
-      <h1>Core Science Focus Areas</h1>
+      <Title>Core Science Focus Areas</Title>
       <p>The GHG Center includes three core science focus areas. How to get involved? For the latest, subscribe to our email newsletter.</p>
 
       <Keypoints data={focusAreasSansDatasets} />
-    </>
+    </div>
   );
 }
