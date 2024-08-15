@@ -16,8 +16,8 @@ infoDescription: |
   ::markdown
     This dataset comes from the two decadal COGs that displayed mean Aerosol Optical Depth for 2000-2009 and for 2010-2019. Those tiffs were subtracted to display the differences between the two decades.
 layers:
-  - id: nlcd-urbanization
-    stacCol: nlcd-urbanization
+  - id: houston-aod-diff
+    stacCol: houston-aod-diff
     name: AOD Difference (2010-2019) - (2000-2009)
     type: raster
     description: "This figure shows the difference in AOD in the form of a raster when subtracting the two decades from the original AOD Dataset"
@@ -32,8 +32,8 @@ layers:
         - 0.1
       nodata: 0
     compare:
-      datasetId: houston-urbanization
-      layerId: houston-urbanization
+      datasetId: nlcd-new-urbanization
+      layerId: nlcd-new-urbanization
       mapLabel: |
         ::js ({dateFns, datetime, compareDatetime}) => {
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
