@@ -58,13 +58,6 @@ layers:
             - color: "#A4CC51"
             - color: "#AE7229"
               label: "Agriculture"
-    compare:
-      datasetId: nlcd
-      layerId: nlcd
-      mapLabel: |
-        ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
-        }
     info:
       source: MRLC
       spatialExtent: United States
