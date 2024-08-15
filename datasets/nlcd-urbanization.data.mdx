@@ -1,7 +1,7 @@
 ---
 id: nlcd-urbanization
 name: "National Land Cover Database Urbanization"
-description: "Using the National Land Cover Database (NLCD) to illustrate new urbanzation ifrom 2001-2021."
+description: "Using the National Land Cover Database (NLCD) to illustrate new urbanization from 2001-2021."
 
 media:
   src: ::file ./nlcd-cover.png
@@ -12,13 +12,11 @@ media:
 taxonomy:
   - name: Topics
     values:
-      - Agriculture
-      - Biomass
-      - EIS
       - Environmental Justice
+      - Land Cover
   - name: Source
     values:
-      - UAH
+      - Community Contributed
 infoDescription: |
   ::markdown
     The National Land Cover Database (NLCD) stands as a paramount dataset offering an in-depth overview of the land cover characteristics in the United States. Spearheaded by the Earth Resources Observation and Science (EROS) Center, this database is renewed every two to three years to provide updated and accurate data for the nation.
@@ -27,7 +25,7 @@ layers:
     stacCol: nlcd_urbanization_2001_2021_cog
     name: Urbanization
     type: raster
-    description: "This dataset illustrates the growth in the metropolitan area of Houston, TX from 2000-2019. Note that these values are from 0 to 1."
+    description: "This is a binary dataset derived from the National Land Cover Database (NLCD) to illustrate new urbanization from 2001-2021, where 0 is no new urbanization and 1 is new urbanization."
     initialDatetime: newest
     zoomExtent:
       - 0
