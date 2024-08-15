@@ -63,6 +63,8 @@ taxonomy:
       layerId='houston-landcover'
       dateTime='2001-01-01'
       compareDateTime='2019-01-01'
+      center={[-95.35, 29.8]}
+      zoom={8.75}      
     />
     <Caption>
       Figure 1. Land cover classification between 2001 and 2019 showing urban growth in the Houston metro area. For a full list of land cover classes, see the class legend and descriptions [here](https://www.mrlc.gov/data/legends/national-land-cover-database-class-legend-and-description).
@@ -96,6 +98,8 @@ taxonomy:
       dateTime='2000-01-01'
       compareDateTime='2010-01-01'
       compareLabel='2000-2009 avg / 2010-2019 avg'
+      center={[-95.35, 29.8]}
+      zoom={8.75}      
     />
     <Caption>
       Comparison of decadally-averaged daytime land surface temperature (LST) between 2000-2009 and 2010-2019 showing urban heating in the Houston metropolitan area.
@@ -111,6 +115,8 @@ taxonomy:
       dateTime='2000-01-01'
       compareDateTime='2010-01-01'
       compareLabel='2000-2009 avg / 2010-2019 avg'
+      center={[-95.35, 29.8]}
+      zoom={8.75}      
     />
     <Caption>
       Comparison of decadaly-averaged normalized differential vegetation index (NDVI) between 2000-2009 and 2010-2019 showing a reduction in healthy vegetation in the Houston metropolitan area.
@@ -123,13 +129,13 @@ taxonomy:
     <Chart
       dataPath={new URL('./harris-lst-svi-2020.csv', import.meta.url).href}
       dateFormat="%Y-%m-%d"
-      idKey='SVI %'
+      idKey='SVI POV150%'
       xKey='Date'
       yKey='LST'
       yAxisLabel='Kelvin'
     />
     <Caption>
-        Land surface Temperature (LST) trend in various socio-economic (Social Vulnerability Index) ranges in Harris county, Houston (2020)
+        Land surface Temperature (LST) trend in various socio-economic (Social Vulnerability Index 150% Poverty Threshhold) ranges in Harris county, Texas (2020)
     </Caption>
   </Figure>
   <Prose>
@@ -146,12 +152,12 @@ taxonomy:
     <Chart
       dataPath={new URL('./harris-ndvi-svi-2020.csv', import.meta.url).href}
       dateFormat="%Y-%m-%d"
-      idKey='SVI %'
+      idKey='SVI POV150%'
       xKey='Date'
       yKey='NDVI'
     />
     <Caption>
-        Normalized Difference Vegetation Index (NDVI) trend in various socio-economic (Social Vulnerability Index) ranges in Harris county, Houston (2020)
+        Normalized Difference Vegetation Index (NDVI) trend in various socio-economic (Social Vulnerability Index 150% Poverty Threshhold) ranges in Harris County, Texas (2020)
     </Caption>
   </Figure>
 </Block>
