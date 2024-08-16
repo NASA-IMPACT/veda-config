@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from '$veda-ui/react'
 import styled from '$veda-ui/styled-components';
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { useMediaQuery } from "$veda-ui-scripts/utils/use-media-query";
-
+import { GridContainer, Grid} from '$veda-ui/@trussworks/react-uswds'
 import CarouselItems from './items'
 import CarouselItem, { ItemPanel } from './carousel-item';
 
@@ -53,8 +53,8 @@ export function DesktopCarousel () {
   // @TODO : aria, lazy loading
   // Carousel aria reference: https://www.w3.org/WAI/ARIA/apg/patterns/carousel/examples/carousel-2-tablist/#ex_label
   return (
-    <section className='grid-container' aria-roledescription="carousel" aria-label="Highlighted VEDA Dashboard projects">
-      <div className="grid-row position-relative" style={{height: '500px'}} aria-live="off"> 
+    <GridContainer aria-roledescription="carousel" aria-label="Highlighted VEDA Dashboard projects">
+      <Grid row className="position-relative" style={{height: '500px'}} aria-live="off"> 
       <TransitionGroup>
           <CSSTransition
             key={itemInProgress.title}
@@ -66,8 +66,8 @@ export function DesktopCarousel () {
             </div>
           </CSSTransition>
         </TransitionGroup>
-      </div>
-      <div className="grid-row tablet:margin-top-4 margin-top-2" role="tablist" aria-label="Slides">
+      </Grid>
+      <Grid row className="tablet:margin-top-4 margin-top-2" role="tablist" aria-label="Slides">
         {CarouselItems.map((item, itemIdx) => {
           return <CarouselItem 
             key={item.title} 
@@ -81,13 +81,13 @@ export function DesktopCarousel () {
             linkComponent={SmartLink}
           />
         })}
-      </div>
-    </section>)
+      </Grid>
+    </GridContainer>)
 }
 
 function TabletCarousel() {
-  return <section className='grid-container'>
-    <div className="grid-row margin-top-2">
+  return <GridContainer>
+    <Grid row className="margin-top-2">
         {CarouselItems.map((item) => {
           return <div className="grid-col-12 margin-bottom-4">
               <div>
@@ -97,8 +97,8 @@ function TabletCarousel() {
               <ItemPanel item={item} linkComponent={SmartLink} />
             </div>
         })}
-        </div>
-  </section>
+        </Grid>
+  </GridContainer>
 }
 
 
