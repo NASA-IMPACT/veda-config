@@ -1,5 +1,5 @@
 ---
-id: nlcd-annual
+id: nlcd-annual-conus
 name: 'National Land Cover Database LULC Classifications'
 description: "National Land Cover Database Land Use - Land Cover classifications for CONUS, 2001-2021 at 30 m resolution."
 
@@ -20,8 +20,8 @@ taxonomy:
     values:
       - Community Contributed
 layers:
-  - id: nlcd
-    stacCol: nlcd
+  - id: nlcd-annual-conus
+    stacCol: nlcd-annual-conus
     name: NLCD Land Use - Land Cover Classification
     type: raster
     description: "30 meter LULC classification provided by the NLCD."
@@ -86,8 +86,8 @@ layers:
         # - color: "#71A4C1"
         #   label: "Emergent Herbaceous Wetlands"
     compare:
-      datasetId: nlcd-annual
-      layerId: nlcd-annual
+      datasetId: nlcd-annual-conus
+      layerId: nlcd-annual-conus
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
@@ -103,8 +103,8 @@ layers:
 <Block type='full'>
 <Figure>
   <Map
-    datasetId='nlcd-annual'
-    layerId='nlcd-annual'
+    datasetId='nlcd-annual-conus'
+    layerId='nlcd-annual-conus'
     dateTime='2001-01-01'
     zoom={8}
     center={[-95.37,29.76]}
