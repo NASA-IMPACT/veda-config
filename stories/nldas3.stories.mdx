@@ -118,6 +118,12 @@ taxonomy:
   </Prose>
 </Block>
 
+<Block> 
+    <Prose>  
+  ## Precipitation Data Updates
+  NASA is updating NLDAS preciptation by leveraging NASA’s reanalysis and remote sensing data products. Specifically, we are working on a new data assimilation approach used successfully in operational environments as well as advanced optimal interpolation techniques (Kemp et al. 2022) to blend well-known and widely used precipitation datasets. Daily precipitation amounts at 4 km of the NASA Integrated Multi-SatellitE Retrievals for GPM (IMERG; Huffman et al. 2020) and the ECCC Canadian Precipitation Analysis (CaPA; Lespinas et al. 2015) are assimilated into NASA Modern Era Retrospective analysis for Research and Applications, Version 2 (MERRA-2; Gelaro et al. 2017) precipitation data. Then the precipitation analysis at 4 km is downscaled to a 1 km fine-scale resolution using a cloud cover frequency-based algorithm and disaggregated into hourly using IMERG and MERRA-2 datasets. Below is a sample of NLDAS-3 precipitation data compared to NLDAS-2 over the U.S. Midwest region to illustrate improved spatial resolution.
+    </Prose>  
+</Block>   
 <Block>
   <Figure>
     <Map
@@ -153,13 +159,34 @@ taxonomy:
     NLDAS-3 sample precipitation outputs for August 2017 and 2020.
     </Caption> 
   </Figure>
-</Block>  
-<Block> 
-    <Prose>  
-  ## Precipitation and Meteorology Data Updates
-  NASA is updating NLDAS surface meteorology by leveraging NASA’s reanalysis and remote sensing data products. Specifically, we are working on a new data assimilation approach used successfully in operational environments as well as advanced optimal interpolation techniques (Kemp et al. 2022) to blend well-known and widely used meteorological datasets. Daily precipitation amounts at 4 km of the NASA Integrated Multi-SatellitE Retrievals for GPM (IMERG; Huffman et al. 2020) and the ECCC Canadian Precipitation Analysis (CaPA; Lespinas et al. 2015) are assimilated into NASA Modern Era Retrospective analysis for Research and Applications, Version 2 (MERRA-2; Gelaro et al. 2017) precipitation data. Then the precipitation analysis at 4 km is downscaled to a 1 km fine-scale resolution using a cloud cover frequency-based algorithm and disaggregated into hourly using IMERG and MERRA-2 datasets. Above is a sample of NLDAS-3 precipitation data compared to NLDAS-2 over the U.S. Midwest region to illustrate improved spatial resolution. 
-  The other meteorological forcings are obtained by downscaling MERRA-2 datasets (except for Shortwave Down radiation, which will use CERES/POWER data) using the methods as follows:
-<Figure style={{ display: 'block' }}>
+</Block>
+
+<Block>
+  <Prose>
+  ## Data Browser
+  Users are encouraged to further examine the NLDAS-2 and sample NLDAS-3 precipitation using the following two data catalogs links.  They contain monthly-averaged precipitation from both products for a ~20-year period.  Click on “Explore Data” in the upper right of these two data catalogs.
+  - [NLDAS-2](https://deploy-preview-403--visex.netlify.app/data-catalog/nldas2)
+  - [NLDAS-3](https://deploy-preview-403--visex.netlify.app/data-catalog/nldas3)
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  ## Explore the Data in the Cloud
+  Below are links to sample monthly precipitation forcing data in Jupyter Notebooks for you to further explore and examine NLDAS-2 and the sample NLDAS-3 data.
+  - [Notebook 1](https://nasa-impact.github.io/veda-docs/pr-preview/pr-154/notebooks/datasets/nldas_visualize_rawdata.html) shows how to visualize NLDAS-3 data.
+  - [Notebook 2](https://nasa-impact.github.io/veda-docs/pr-preview/pr-154/notebooks/datasets/nldas_visualize_rawdata.html) shows you how to create time series for NLDAS-3 data.
+  - [Notebook 3](https://nasa-impact.github.io/veda-docs/pr-preview/pr-154/notebooks/datasets/nldas_compare2_3.html) shows you how to compare NLDAS-2 and NLDAS-3 data.
+  
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  ## Surface Meteorology Data Updates
+  The other NLDAS-3 meteorological forcings are obtained by downscaling MERRA-2 datasets (except for Shortwave Down radiation, which will use CERES/POWER data) using the methods as follows:
+  
+  <Figure style={{ display: 'block' }}>
   <div className='meteorological-tables'>
     <table>
       <thead>
@@ -202,6 +229,7 @@ taxonomy:
 
 <Block>
   <Prose>
+  ## Land surface model and Data Assimilation Updates
   NLDAS-3 will employ the Noah-MP land surface model (He et al., 2023), implemented within LIS. Schematic diagrams of the energy and water budgets and processes represented in the model are shown below.
     <Figure>
       <Image
@@ -292,17 +320,6 @@ taxonomy:
 
 <Block>
   <Prose>
-  ## Explore the Data in the Cloud
-  Below are links to sample monthly precipitation forcing data in Jupyter Notebooks for you to explore.
-  - [Notebook 1](https://nasa-impact.github.io/veda-docs/pr-preview/pr-154/notebooks/datasets/nldas_visualize_rawdata.html) shows how to visualize NLDAS-3 data.
-  - [Notebook 2](https://nasa-impact.github.io/veda-docs/pr-preview/pr-154/notebooks/datasets/nldas_visualize_rawdata.html) shows you how to create time series for NLDAS-3 data.
-  - [Notebook 3](https://nasa-impact.github.io/veda-docs/pr-preview/pr-154/notebooks/datasets/nldas_compare2_3.html) shows you how to compare NLDAS-2 and NLDAS-3 data.
-  
-  </Prose>
-</Block>
-
-<Block>
-  <Prose>
   ## Provide Your Feedback
   What information on water availability and land surface meteorology do you need from NLDAS-3? Here are recent requests for downstream products and applications from the community: 
   - Soil moisture percentiles and outlooks
@@ -320,6 +337,15 @@ taxonomy:
 
 <Block>
   <Prose>
+  ## Learn More
+  - [NASA NLDAS-3 Website](https://ldas.gsfc.nasa.gov/nldas/v3)
+  ## Acknowledgements 
+  Thanks to the NLDAS-3 developers and science teams at the NASA Goddard Hydrological Sciences Laboratory and Marshall Space Flight Center SPoRT and all the NLDAS stakeholders who have participated in workshops, provided valuable feedback, and developed downstream applications for assessing water availability.
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
   ## References 
   - ​https://lis.gsfc.nasa.gov/
   - Cosgrove, B. A., et al. (2003), Land surface model spin-up behavior in the North American Land Data Assimilation System (NLDAS), J. Geophys. Res., 108, 8845, doi:10.1029/2002JD003316, D22.
@@ -334,17 +360,7 @@ taxonomy:
   - U.S. Drought Monitor Inputs, National Drought Mitigation Center, University of Nebraska-Lincoln, website accessed June 17, 2024. https://droughtmonitor.unl.edu/ConditionsOutlooks/Inputs.aspx  
   </Prose>
 </Block>
-<Block>
-  <Prose>
-  ## Data Browser
-  - [NLDAS-2](https://deploy-preview-403--visex.netlify.app/data-catalog/nldas2)
-  - [NLDAS-3](https://deploy-preview-403--visex.netlify.app/data-catalog/nldas3)
-  ## Learn More
-  - [NASA NLDAS-3 Website](https://ldas.gsfc.nasa.gov/nldas/v3)
-  ## Acknowledgements 
-  Thanks to the NLDAS-3 developers and science teams at the NASA Goddard Hydrological Sciences Laboratory and Marshall Space Flight Center SPoRT and all the NLDAS stakeholders who have participated in workshops, provided valuable feedback, and developed downstream applications for assessing water availability.   
-  </Prose>
-</Block>
+
 <Block>
   <Prose>
   ## Additional Resources 
