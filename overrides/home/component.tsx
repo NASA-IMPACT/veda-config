@@ -41,6 +41,12 @@ const IntroHeadline = styled.div`
   }
 `;
 
+const ButtonWithLongText = styled(Button)`
+  min-height: 3rem;
+  height: auto;
+  
+`
+
 const ActionsBlock = styled.div`
   grid-column: 1 / -1;
   display: flex;
@@ -144,22 +150,22 @@ export default function HomeComponent() {
         <Keypoints />
         <ActionsBlock>
         <Buttons>
-          <Button
+          <ButtonWithLongText
             forwardedAs={NavLink}
             to="/data-catalog"
             size="xlarge"
             variation="primary-fill"
           >
             Browse the Data Catalog <CollecticonArrowRight />
-          </Button>
-          <Button
+          </ButtonWithLongText>
+          <ButtonWithLongText
             onClick={() => handleOpenModal("https://www.youtube.com/embed/S2XL5WT9W4g")}
             size="xlarge"
             variation="primary-fill"
           >
             <CollecticonCirclePlay />
             How to Explore Data
-          </Button>
+          </ButtonWithLongText>
           </Buttons>
         </ActionsBlock>
       </HomeContent>
