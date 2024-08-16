@@ -1,6 +1,5 @@
 import React from '$veda-ui/react'
-
-import { Icon } from "$veda-ui/@trussworks/react-uswds";
+import { Grid, Icon } from '$veda-ui/@trussworks/react-uswds'
 
 const progressColor = '#1565EF';
 const greyColor = '#CCC';
@@ -30,7 +29,7 @@ export function ItemPanel({ item, linkComponent: LinkComponent }) {
   <p className="margin-top-2 flex-align-self-stretch">{item.description}</p>
   <div className="tablet:margin-top-0 margin-top-2 flex-align-self-stretch">
     <LinkComponent className="display-flex flex-align-center veda-color--link" to={item.link}>
-      <Icon.ArrowForward stroke="#1565EF" fill="#1565EF" /> 
+      <Icon.ArrowForward stroke={progressColor} fill={progressColor} /> 
     <span className="padding-left-1">Read more</span>
     </LinkComponent>
   </div>
@@ -61,8 +60,10 @@ function ItemCard({ item, itemIdx, onTitleClick, selected, linkComponent }) {
 export default function CarouselItem({ item, itemIdx, onTitleClick, shouldProgress, progressDone, progressPercentage, selected, linkComponent }) {
   const selectedStyle = (selected || shouldProgress)? {opacity: 1, transition: 'opacity 200ms ease-out'}: {opacity: 0.5, transition: 'opacity 200ms ease-out'};
   return (
-    <div className="tablet:grid-col tablet:margin-top-0 margin-top-2 tablet:padding-2 padding-0" style={selectedStyle}>
+    <Grid 
+      tablet={{col: true}}
+      className="tablet:margin-top-0 margin-top-2 tablet:padding-2 padding-0" style={selectedStyle}>
         <ProgressBar shouldProgress={shouldProgress} progressDone={progressDone} progressPercentage={progressPercentage}selected={selected} />
         <ItemCard item={item} itemIdx={itemIdx} onTitleClick={onTitleClick} selected={selected} linkComponent={linkComponent} />
-    </div>)
+    </Grid>)
 }

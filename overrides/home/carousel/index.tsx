@@ -15,7 +15,6 @@ const HugResetContainer = styled.div`
 `;
 const interval = 100;
 const slide_length = 100;
-const animation_length = 200;
 const item_n = CarouselItems.length;
 
 
@@ -48,21 +47,18 @@ export function DesktopCarousel () {
     setSelectedItem(clickedItem);
   },[timerAnimationId]);
 
-  // Maybe have to use https://reactcommunity.org/react-transition-group/transition
-  // Example: https://codesandbox.io/s/6lmv669kz
-  // @TODO : aria, lazy loading
-  // Carousel aria reference: https://www.w3.org/WAI/ARIA/apg/patterns/carousel/examples/carousel-2-tablist/#ex_label
+
   return (
     <GridContainer aria-roledescription="carousel" aria-label="Highlighted VEDA Dashboard projects">
-      <Grid row className="position-relative" style={{height: '500px'}} aria-live="off"> 
+      <Grid row className="position-relative carousel--height" aria-live="off"> 
       <TransitionGroup>
           <CSSTransition
             key={itemInProgress.title}
             timeout={2000}
             classNames="messageout"
           >
-            <div style={{width: '100%', height: '500px', backgroundColor: 'grey', position: 'absolute', left: '0', top:'0'}}>
-              <img style={{width: '100%', height: '100%', objectFit: 'cover'}} src={itemInProgress.image} /> 
+            <div className="carousel--height width-full position-absolute left-0 top-0">
+              <img className="carousel--content-image" src={itemInProgress.image} /> 
             </div>
           </CSSTransition>
         </TransitionGroup>
@@ -89,13 +85,13 @@ function TabletCarousel() {
   return <GridContainer>
     <Grid row className="margin-top-2">
         {CarouselItems.map((item) => {
-          return <div className="grid-col-12 margin-bottom-4">
+          return <Grid col={12} key={item.title} className="margin-bottom-4">
               <div>
-              <img style={{width: '100%', height: '100%', objectFit: 'cover'}} src={item.image} />
+              <img className="carousel--content-image" src={item.image} />
               </div>
               <h3 className="margin-top-1">{item.title}</h3>
               <ItemPanel item={item} linkComponent={SmartLink} />
-            </div>
+            </Grid>
         })}
         </Grid>
   </GridContainer>
