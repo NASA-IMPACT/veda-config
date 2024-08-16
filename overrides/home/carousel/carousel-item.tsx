@@ -1,8 +1,25 @@
 import React from '$veda-ui/react'
+import styled  from '$veda-ui/styled-components';
 import { Grid, Icon } from '$veda-ui/@trussworks/react-uswds'
 
 const progressColor = '#1565EF';
 const greyColor = '#CCC';
+
+const ProgresBarBackground = styled.div`
+  height: 4px;
+  background-color: ${greyColor};
+`
+
+const ProgressIndicator = styled.div`
+  background-color: ${progressColor};
+  width: ${props => props.progressWidth}%;
+  transition: ${props => props.noTransition? null: 'width 200ms ease-out'};
+`;
+
+const GridWithStyle = styled(Grid)`
+  opacity: ${props => props.bright? 1 : 0.5};
+  transition: opacity 200ms ease-out;
+`;
 
 function ProgressBar({ selected, shouldProgress, progressDone, progressPercentage }) {
   
@@ -12,15 +29,12 @@ function ProgressBar({ selected, shouldProgress, progressDone, progressPercentag
   // If it is in progress, progress Percentage - false if something is manually selected
   // If it is manually selected, 100% 
   const progressWidth = progressDone? 100: shouldProgress? progressPercentage: selected? 100: 0;
+  const noTransition = (!shouldProgress && !progressDone && progressPercentage === 0)? true : false;
 
-  const widthStyle = { width: progressWidth + '%'};
-  const transitionStyle = (!shouldProgress && !progressDone && progressPercentage === 0)? {} : {transition: 'width 200ms ease-out'}
-
-  const barStyle = {height: '100%', backgroundColor: progressColor, ...widthStyle, ...transitionStyle}
   return <>
-    <div style={progressBarStyleSetup}>
-      <div style={barStyle} />
-    </div>
+    <ProgresBarBackground>
+      <ProgressIndicator className="height-full" progressWidth={progressWidth} noTransition={noTransition} />
+    </ProgresBarBackground>
   </>
 }
 
@@ -58,12 +72,13 @@ function ItemCard({ item, itemIdx, onTitleClick, selected, linkComponent }) {
 
 
 export default function CarouselItem({ item, itemIdx, onTitleClick, shouldProgress, progressDone, progressPercentage, selected, linkComponent }) {
-  const selectedStyle = (selected || shouldProgress)? {opacity: 1, transition: 'opacity 200ms ease-out'}: {opacity: 0.5, transition: 'opacity 200ms ease-out'};
+
   return (
-    <Grid 
+    <GridWithStyle
       tablet={{col: true}}
-      className="tablet:margin-top-0 margin-top-2 tablet:padding-2 padding-0" style={selectedStyle}>
+      bright={selected || shouldProgress}
+      className="tablet:margin-top-0 margin-top-2 tablet:padding-2 padding-0">
         <ProgressBar shouldProgress={shouldProgress} progressDone={progressDone} progressPercentage={progressPercentage}selected={selected} />
         <ItemCard item={item} itemIdx={itemIdx} onTitleClick={onTitleClick} selected={selected} linkComponent={linkComponent} />
-    </Grid>)
+    </GridWithStyle>)
 }

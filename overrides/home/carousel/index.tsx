@@ -8,7 +8,7 @@ import CarouselItem, { ItemPanel } from './carousel-item';
 
 import SmartLink from '$veda-ui-scripts/components/common/smart-link';
 
-import './index.css';
+import './index.scss';
 
 const HugResetContainer = styled.div`
   grid-column: 1 / -1;
@@ -16,7 +16,6 @@ const HugResetContainer = styled.div`
 const interval = 100;
 const slide_length = 100;
 const item_n = CarouselItems.length;
-
 
 export function DesktopCarousel () {
   const [timer, setTimer] = useState(0);
@@ -34,7 +33,7 @@ export function DesktopCarousel () {
     return () => {
       clearInterval(intervalId);
     };
-  }, [interval]);
+  }, []);
 
   const animationTimer = timer % slide_length;
   const progressPercentage = Math.floor((animationTimer/slide_length) * 100)
@@ -55,7 +54,7 @@ export function DesktopCarousel () {
           <CSSTransition
             key={itemInProgress.title}
             timeout={2000}
-            classNames="messageout"
+            classNames="imagetransition"
           >
             <div className="carousel--height width-full position-absolute left-0 top-0">
               <img className="carousel--content-image" src={itemInProgress.image} /> 
