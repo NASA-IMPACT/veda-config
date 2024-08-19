@@ -4,6 +4,7 @@
     "strictNullChecks": true,
     "baseUrl": "./.veda/ui",
     "jsx": "react",
+    "lib": [ "es2015" ],
     "paths": {
       "$veda-ui-scripts/*": ["./app/scripts/*"],
       "$veda-ui/*": ["./node_modules/*"],

@@ -32,7 +32,7 @@ import { CollecticonExpandTopRight } from '$veda-ui/@devseed-ui/collecticons';
 import { SUBSCRIPTION_URL } from "../../../constants";
 
 
-const PRESS_PATH = '/learn#press';
+const PRESS_PATH = '/news#press';
 
 
 const FooterInner = styled.div`
@@ -245,30 +245,25 @@ export default function PageFooter(props) {
           <nav>
             <FooterMenu>
               <li>
-                <FooterMenuLink to={DATASETS_PATH}>Data Catalog</FooterMenuLink>
-              </li>
-              <li>
-                <FooterMenuLink to={EXPLORATION_PATH}>
-                  Data Exploration
+                <FooterMenuLink to='/stories'>
+                  Stories
                 </FooterMenuLink>
               </li>
               <li>
-                <FooterMenuLink to={STORIES_PATH}>
-                  {getString("stories").other}
+                <FooterMenuLink to='/topics'>
+                  Topics
                 </FooterMenuLink>
               </li>
-              {!!process.env.HUB_URL && !!process.env.HUB_NAME && (
-                <li>
-                  <FooterMenuLink as="a" {...getLinkProps(process.env.HUB_URL)}>
-                    {process.env.HUB_NAME}
-                  </FooterMenuLink>
-                </li>
-              )}
               <li>
-                <FooterMenuLink to={ABOUT_PATH}>About</FooterMenuLink>
+                <FooterMenuLink to='/data-toolkit'>
+                  Data Toolkit
+                </FooterMenuLink>
               </li>
               <li>
-                <FooterMenuLink to={PRESS_PATH}>Press Info</FooterMenuLink>
+                <FooterMenuLink to='/news-and-events'>News & Events</FooterMenuLink>
+              </li>
+              <li>
+                <FooterMenuLink to='/about'>About</FooterMenuLink>
               </li>
               <li>
                 <FooterMenuLink as="a" href={SUBSCRIPTION_URL}>

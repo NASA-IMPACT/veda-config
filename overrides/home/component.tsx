@@ -9,10 +9,10 @@ import { VarHeading } from "$veda-ui-scripts/styles/variable-components";
 import { variableGlsp } from "$veda-ui-scripts/styles/variable-utils";
 
 import Partners from "./partners";
-import Keypoints from "./keypoints";
 import Banner from './banner';
 import VideoModal from "../components/video-modal";
-import Carousel from './carousel/
+import Carousel from './carousel/';
+
 const HomeContent = styled(Hug)`
   padding: ${variableGlsp(2.5, 0)};
   grid-row-gap: ${variableGlsp(2)};
@@ -141,9 +141,8 @@ export default function HomeComponent() {
             </Button>
           </Buttons>
         </IntroHeadline>
-        <Keypoints />
         <ActionsBlock>
-        <Buttons>
+        {/* <Buttons>
           <Button
             forwardedAs={NavLink}
             to="/data-catalog"
@@ -160,7 +159,7 @@ export default function HomeComponent() {
             <CollecticonCirclePlay />
             How to Explore Data
           </Button>
-          </Buttons>
+          </Buttons> */}
         </ActionsBlock>
       </HomeContent>
       <InfoCallout>
