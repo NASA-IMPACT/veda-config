@@ -99,18 +99,16 @@ function TabletCarousel() {
 }
 
 
-function Carousel() {
+export default function Carousel() {
   const { isMediumUp } = useMediaQuery();
   return isMediumUp? 
-  <DesktopCarousel /> : <TabletCarousel />
-}
-
-export default function LazyLoadedCarousel () {
-  return <HugResetContainer
+  <LazyLoad
+    className="hug-reset-container"
     offset={100}
     once
   >
-  <Carousel />
-</HugResetContainer>
+    <DesktopCarousel /> 
+  </LazyLoad>: 
+  <div className="hug-reset-container"><TabletCarousel /></div>
 }
 

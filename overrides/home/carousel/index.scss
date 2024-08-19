@@ -24,6 +24,10 @@
   color: var(--veda-color-base);
 }
 
+.hug-reset-container {
+  grid-column: 1 / -1;
+}
+
 .carousel {
   &--height {
     height: 500px;
