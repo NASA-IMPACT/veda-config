@@ -3,6 +3,8 @@ import styled from '$veda-ui/styled-components';
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { useMediaQuery } from "$veda-ui-scripts/utils/use-media-query";
 import { GridContainer, Grid} from '$veda-ui/@trussworks/react-uswds'
+import LazyLoad from '$veda-ui/react-lazyload';
+
 import CarouselItems from './items'
 import CarouselItem, { ItemPanel } from './carousel-item';
 
@@ -10,7 +12,7 @@ import SmartLink from '$veda-ui-scripts/components/common/smart-link';
 
 import './index.scss';
 
-const HugResetContainer = styled.div`
+const HugResetContainer = styled(LazyLoad)`
   grid-column: 1 / -1;
 `;
 const interval = 100;
@@ -56,7 +58,7 @@ export function DesktopCarousel () {
             timeout={2000}
             classNames="imagetransition"
           >
-            <div className="carousel--height width-full position-absolute left-0 top-0">
+            <div className="carousel--height width-full position-absolute left-0 top-0 shadow-1">
               <img className="carousel--content-image" src={itemInProgress.image} /> 
             </div>
           </CSSTransition>
@@ -97,9 +99,18 @@ function TabletCarousel() {
 }
 
 
-export default function Carousel() {
+function Carousel() {
   const { isMediumUp } = useMediaQuery();
   return isMediumUp? 
-  <HugResetContainer><DesktopCarousel /></HugResetContainer> : <HugResetContainer><TabletCarousel /></HugResetContainer>
+  <DesktopCarousel /> : <TabletCarousel />
+}
+
+export default function LazyLoadedCarousel () {
+  return <HugResetContainer
+    offset={100}
+    once
+  >
+  <Carousel />
+</HugResetContainer>
 }
 
