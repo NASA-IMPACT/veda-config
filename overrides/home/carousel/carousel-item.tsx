@@ -3,12 +3,6 @@ import styled  from '$veda-ui/styled-components';
 import { Grid, Icon } from '$veda-ui/@trussworks/react-uswds'
 
 const progressColor = '#1565EF';
-const greyColor = '#CCC';
-
-const ProgresBarBackground = styled.div`
-  height: 4px;
-  background-color: ${greyColor};
-`
 
 const ProgressIndicator = styled.div`
   background-color: ${progressColor};
@@ -23,8 +17,6 @@ const GridWithStyle = styled(Grid)`
 
 function ProgressBar({ selected, shouldProgress, progressDone, progressPercentage }) {
   
-  const progressBarStyleSetup = { height: '4px', backgroundColor: greyColor};
-
   // If progress is done, 100% - false if something is manually selected
   // If it is in progress, progress Percentage - false if something is manually selected
   // If it is manually selected, 100% 
@@ -32,9 +24,9 @@ function ProgressBar({ selected, shouldProgress, progressDone, progressPercentag
   const noTransition = (!shouldProgress && !progressDone && progressPercentage === 0)? true : false;
 
   return <>
-    <ProgresBarBackground>
+    <div className="height-05 bg-base-lighter">
       <ProgressIndicator className="height-full" progressWidth={progressWidth} noTransition={noTransition} />
-    </ProgresBarBackground>
+    </div>
   </>
 }
 
