@@ -51,18 +51,20 @@ export function ItemPanel({ item, linkComponent: LinkComponent }) {
 }
 
 function ItemCard({ item, itemIdx, onTitleClick, selected, linkComponent }) {
-  return <div className="tablet:padding-left-1 tabelt:padding-right-1 margin-top-1 height-full">
+  return <div className="tablet:padding-left-1 tabelt:padding-right-1 margin-top-1 height-full position-relative">
+  <button
+    className="position-absolute top-0 left-0 width-full height-full cursor-pointer usa-button--unstyled "
+    onClick={() => {onTitleClick(item);}}
+    type="button"
+    role="tab" 
+    aria-label={`Slide ${itemIdx}`}
+    aria-selected={selected.toString()}
+    aria-controls={`carousel-item-${itemIdx}`}
+  />
   <div className="tablet:display-block display-none">
-    <button 
-      className="usa-button usa-button--unstyled text-bold veda-color--base"
-      type="button"
-      role="tab" 
-      aria-label={`Slide ${itemIdx}`}
-      aria-selected={selected.toString()}
-      aria-controls={`carousel-item-${itemIdx}`}
-      onClick={() => {onTitleClick(item);}}>
+    <h3 className="usa-button usa-button--unstyled text-bold veda-color--base">
       {item.title}
-    </button>
+    </h3>
   </div>
   <div role="tabpanel" className="height-full display-flex flex-column flex-justify" aria-roledescription='' aria-label={`${itemIdx} of 3`}>
     <ItemPanel item={item} linkComponent={linkComponent} />
