@@ -1,3 +1,30 @@
+const dotEnvConfig = require('dotenv').config();
+const { parsed: config } = dotEnvConfig;
+
+let subNavItems = [
+  {
+    title: 'Learn',
+    to: '/learn',
+    type: 'internalLink'
+  },
+  {
+    title: 'About',
+    to: '/about',
+    type: 'internalLink'
+  },
+]
+
+if (config.GOOGLE_FORM) {
+  subNavItems = [
+    ...subNavItems,
+    {
+      title: 'Contact us',
+      src: config.GOOGLE_FORM,
+      type: 'modal'
+    }
+  ];
+}
+
 module.exports = {
   /**
    * Glob path for the datasets.
@@ -72,4 +99,7 @@ module.exports = {
   booleans: {
     'externalLinksInNewTab': true,
   },
+  navItems: {
+    subNavItems: subNavItems
+  }
 };
