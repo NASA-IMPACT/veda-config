@@ -49,10 +49,12 @@ taxonomy:
 </Block>
 
 <Block>
-  <Prose>
+  <Prose style={{ flex: '1', paddingRight: '20px', textAlign: 'justify' }}>
+    <p>
     The Black Belt's crescent shape is captured in a natural-color image by the Moderate Resolution Imaging Spectroradiometer (MODIS) on NASA’s Terra satellite. This image is a composition of segments from several images taken between 2015 and 2018, allowing for the removal of clouds and haze.  
+    </p>
   </Prose>
-  <Figure>
+  <Figure style={{ flex: '0 0 auto', marginLeft: '20px' }}>
       <Image
       src={new URL('./blackbelt_tmo_2015-2018_lrg.jpg', import.meta.url).href}
     />
@@ -80,9 +82,34 @@ taxonomy:
 </Block>
 
 <Block>
-  <Prose style={{ flex: '1', paddingRight: '20px', textAlign: 'justify' }}>
+  <Prose style={{ flex: '1', paddingRight: '5px', textAlign: 'justify' }}>
     <p>
      Anthropogenic climate change is causing extreme events, such as heatwaves, to become more frequent and severe. This trend is particularly alarming for the Black Belt, where many residents, especially the older population, depend on outdoor agricultural work.
     </p>
   </Prose>
 </Block>
+
+<Block style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
+  <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginRight: '20px', flex: '0 0 auto' }}>
+      <Image
+        src={new URL('./BB_WarmNights.png', import.meta.url).href}
+        style={{ width: '100%', height: 'auto' }}
+        alt="Increasing Warm Nights"
+      />
+      <span style={{ textAlign: 'center', marginTop: '5px' }}>Increasing Warm Nights (day/month)</span>
+    </div>
+    <p style={{ flex: '1', margin: '0 20px' }}>
+      The MERRA-2 climate extreme indices dataset offers valuable insights into the rising extreme day and night temperatures affecting the Alabama Black Belt region. This dataset includes indices such as Cool Nights (TN10P), which represent the percentage of days when the daily minimum temperature falls below the 10th percentile, and Warm Nights (TN90P), indicating when the daily minimum temperature exceeds the 90th percentile. Similarly, Cool Days (TX10P) and Warm Days (TX90P) track the percentage of days when daily maximum temperatures are below the 10th percentile or above the 90th percentile, respectively. These indices are analyzed for linear trends (p<0.1) in the data from 1980 to 2023, providing a comprehensive view of temperature extremes over time.
+    </p>
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginLeft: '20px', flex: '0 0 auto' }}>
+      <Image
+        src={new URL('./BB_WarmDays.png', import.meta.url).href}
+        style={{ width: '100%', height: 'auto' }}
+        alt="Increasing Warm Days"
+      />
+      <span style={{ textAlign: 'center', marginTop: '5px' }}>Increasing Warm Days (day/month)</span>
+    </div>
+  </Prose>
+</Block>
+
