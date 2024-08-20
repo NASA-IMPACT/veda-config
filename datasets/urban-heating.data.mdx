@@ -248,9 +248,45 @@ layers:
 ---
 <Block>
   <Prose>
-  ## Introduction
-  
-  Urban heat islands (UHIs) are no longer mere academic concepts; they’re palpable urban challenges. In cities such as Houston in this case, understanding the dynamics of land surface temperature (LST) is not just about decoding satellite data, but comprehending its implications for urban planning, health, and socioeconomic dynamics. Leveraging data from NASA’s Terra MODIS (moderate Resolution Imaging Spectroradiometer) platform, we delve into Houston’s changing LST landscape over two decades, offering a technical perspective on this urban phenomenon. LST is the temperature of the earth’s surface derived from NASA’s Terra MODIS, encompassing both natural terrains and man-made infrastructures. Unlike ambient air temperature, which gauges the immediate atmospheric conditions we feel, LST provides a granular temperature profile of surfaces from park greens to asphalt roads.
+  ## Dataset Details
+  ##### Land Surface Temperature 
+  - **Temporal Extent:** 2000-2019
+  - **Temporal Resolution:** Decadal
+  - **Spatial Extent:** Houston, Texas
+  - **Spatial Resolution:** 1 km
+  - **Data Units:** Kelvin (K) 
+  - **Data Type:** Research
+  - **Data Latency:** N/A
+  ##### Normalized Difference Vegetation Index 
+  - **Temporal Extent:** 2000-2019
+  - **Temporal Resolution:** Decadal
+  - **Spatial Extent:** Houston, Texas
+  - **Spatial Resolution:** 250 m
+  - **Data Units:** Unitless
+  - **Data Type:** Research
+  - **Data Latency:** N/A
+  </Prose>
+<Figure>
+<Map
+      datasetId='urban-heating'
+      layerId='houston-lst-day'
+      dateTime='2000-01-01'
+      compareDateTime='2010-01-01'
+      compareLabel='2000-2009 Avg / 2010-2019 Avg'
+      center={[-95.35, 29.8]}
+      zoom={8.75}      
+    />
+    <Caption>
+      Comparison of decadally-averaged daytime land surface temperature (LST) between 2000-2009 and 2010-2019 showing urban heating in the Houston metropolitan area.
+    </Caption>
+</Figure>
+</Block>
+
+<Block>
+  <Prose> 
+  ## Overview
+    
+  Urban heat islands (UHIs) are no longer merely academic concepts; they’re palpable urban challenges. In rapdily urbanizing cities such as Houston, understanding the dynamics of land surface temperature (LST) is not just about decoding satellite data, but comprehending its implications for urban planning, health, and socioeconomic dynamics. Leveraging data from NASA’s Moderate Resolution Imaging Spectroradiometer (MODIS)) platform, we delve into Houston’s changing landscape over two decades by examining multi-decadal changes both LST and the Normalized Difference Vegetation Index (NDVI), offering a technical perspective on this urban phenomenon. LST is the temperature of the earth’s surface derived from the Terra satellite that houses the MODIS instrumentation, encompassing both natural terrains and man-made infrastructures. Unlike ambient air temperature, which gauges the immediate atmospheric conditions we feel, LST provides a granular temperature profile of surfaces from park greens to asphalt roads. Exmaining this in conjunction with NDVI gives an idea of the changing access to green space in sprawling urban spaces such as Houston.
   </Prose>
 </Block>
 
@@ -258,24 +294,54 @@ layers:
   <Prose>
   ## Data Acquisition
 
-  Terra MODIS has been instrumental in capturing LST data. This platform, orbiting Earth, scans our planet in multiple spectral bands, allowing for a detailed analysis of LST values. The data periods 2000-20009 and 2010-2019 form this satellite have been particularly enlightening, revealing distinct shifts in Houston’s urban heat profile.
+  Terra has been instrumental in capturing this data. This platform, orbiting Earth, scans our planet in multiple spectral bands, allowing for a detailed analysis of LST and NDVI. The decadal periods of 2000-20009 and 2010-2019 were examined specifically to study the growth of Houston's UHI.
 
   Comparative analysis of LST data from the two decades indicate a tangible uptick in surface temperatures, especially in Houston’s southwestern regions. Urban expansion is likely culprit, with infrastructural growth leading to increased heat absorption and radiation. This phenomenon, known as the urban heat island effect, can intensify local temperatures, leading to a cascade of socio-environmental effects.
+
+  Users can access MODIS data for anywhere across the globe [here](https://modis.gsfc.nasa.gov/data/), or click 'Explore Data' at the top of this page for a quick examination of the specific data used in this study.
   </Prose>
 </Block>
 
 <Block>
   <Prose>
-  ## Conclusion
+  ## Importance of Heat Stress Datasets
   
-  Houston’s LST data, meticulously captured by Terra MODIS, serves as a crucial pointer for urban planners, environmentalists, and policymakers. By understanding the nexus of urban heat, infrastructure, and socio-economics, we can shape urban features that are not only sustainable but also equitable. As Houston continues its urban journey, armed with this data, it has the potential to redefine urban resilience in the face of escalating heat challenges.
+  MODIS LST and NDVI data serves as a crucial pointer for urban planners, environmentalists, and policymakers. By understanding the nexus of urban heat, infrastructure, and socioeconomics, we can shape urban features that are not only sustainable but also equitable. As Houston continues to rapidly urbanize, it has the potential to redefine urban resilience in the face of escalating heat challenges.
   </Prose>
 </Block>
 
 <Block>
-<Prose>
-## Conclusion
+  <Prose>
+  ## Disclaimer
+  All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
+  </Prose>
+</Block>
 
-Houston’s LST data, meticulously captured by Terra MODIS, serves as a crucial pointer for urban planners, environmentalists, and policymakers. By understanding the nexus of urban heat, infrastructure, and socio-economics, we can shape urban features that are not only sustainable but also equitable. As Houston continues its urban journey, armed with this data, it has the potential to redefine urban resilience in the face of escalating heat challenges.
-</Prose>
+<Block>
+  <Prose>
+  ## Key Publications
+
+  Didan, K., Munoz, A.B., Solano, R., and Huete, A. (2015). MODIS vegetatin index user's guide (MOD13 series). University of Arizona Veg. Index Phenol. Lab
+
+  Wan, Z. (2014). New refinements and validation of the collection-6 MODIS land-surface temperature/emissivity product. *Remote Sensing of the Environment, 140*, 36-45. https://doi.org/10.1016/j.rse.2013.08.027
+
+  **The citation below is a peer-reviewed study that stemmed from this research, written by the authors of the associated data story:**
+
+  Blackford, A., Cowan, T., Nair, U., Phillips, C., Kaulfus, A., and Freitag, B. (2024). Synergy of urban heat, pollution, and social vulnerability in one of America's most rapidly growing cities: Houston, we have a problem. *GeoHealth, 8*, e2024GH001079. https://doi.org/10.1029/2024GH001079
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  ## Data Stories That Use This Dataset
+  **[Implications for Heat Stress](https://www.earthdata.nasa.gov/dashboard/stories/urban-heating)**
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  ## License
+  [Creative Commons Attribution 1.0 International](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC BY 1.0)
+
+  </Prose>
 </Block>
