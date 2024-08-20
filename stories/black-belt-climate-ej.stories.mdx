@@ -1,7 +1,7 @@
 ---
 id: black-belt-climate
 name: Climate Extremes Aggrevate Social Vulnerabilities in Alabama's Black Belt
-description: "Rising temperatures worsen social vulnerabilities for elder population adults by increasing their heat-related health risks."
+description: "Rising temperatures worsen social vulnerabilities for elder population by increasing their heat-related health risks."
 media:
   src: ::file ./black_belt_cover.jpg
   alt: Farmer in the fields.
@@ -40,7 +40,7 @@ taxonomy:
   <Figure style={{ flex: '0 0 auto', marginLeft: '20px' }}>
     <Image
       src={new URL('./soilmap_Alabama.png', import.meta.url).href}
-      style={{ maxWidth: '100%', height: 'auto' }}
+      style={{ maxWidth: '70%', height: 'auto' }}
     />
     <Caption attrAuthor='Data.gov' attrUrl='https://hdl.loc.gov/loc.gmd/g3971j.ct010657'>
       General Soil Map of Alabama, highlights the distinct soils found in the prairie regions, particularly focusing on the Black Belt area. 
@@ -60,4 +60,21 @@ taxonomy:
       Black Belt Prairie from MODIS.
     </Caption>
   </Figure>
+</Block>
+
+<Block style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
+  <Prose style={{ flex: '1', paddingRight: '20px', textAlign: 'justify' }}>
+    <p>
+     Historically, the Alabama Black Belt was a cornerstone of the cotton economy, heavily reliant on enslaved African American labor. After the Civil War, many African Americans remained in the area, working as sharecroppers and tenant farmers. The region became a significant cultural and political area, particularly noted for its role in the civil rights movement. Despite its agricultural legacy, the Black Belt has faced economic and social challenges, including poverty and limited access to education and healthcare, which continue to impact its predominantly African American population.
+    </p>
+  </Prose>
+  <Figure style={{ flex: '0 0 auto', marginLeft: '20px' }}>
+    <Image
+      src={new URL('./Black_cotton_farming_family.jpg', import.meta.url).href}
+      style={{ maxWidth: '100%', height: 'auto' }}
+    />
+    <Caption attrAuthor='Data.gov' attrUrl='https://en.wikipedia.org/wiki/History_of_African-American_agriculture'>
+      Black cotton farming family.
+    </Caption>
+  </Figure> 
 </Block>
