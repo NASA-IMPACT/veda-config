@@ -102,6 +102,83 @@ layers:
     media:
       src: https://github.com/US-GHG-Center/veda-config-ghg/blob/develop/datasets/epa-ch4emission-yeargrid-v2express.thumbnails.agriculture.manure.management.anual.png
       alt: U.S. Gridded Anthropogenic Methane Emissions Inventory - Agriculture - Manure Management (annual)
+  - id: rice-cultivation-l
+    stacApiEndpoint: https://earth.gov/ghgcenter/api/stac
+    tileApiEndpoint: https://earth.gov/ghgcenter/api/raster
+    stacCol: epa-ch4emission-yeargrid-v2express
+    name: Agriculture - Rice Cultivation (annual)
+    type: raster
+    description: Annual methane emission fluxes from Rice Cultivation (inventory Agriculture category 3C)
+    initialDatetime: newest
+    projection:
+      id: "equirectangular"
+    basemapId: "light"
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: rice-cultivation
+      colormap_name: epa-ghgi-ch4
+      rescale:
+        - 0
+        - 20
+      minzoom: 0
+      maxzoom: 5
+    compare:
+      datasetId: epa-ch4emission-yeargrid-v2express
+      layerId: rice-cultivation-l
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
+        }
+    analysis:
+      exclude: true
+      metrics:
+        - mean
+      sourceParams:
+        dst_crs: "+proj=cea"
+    info:
+      source: EPA
+      spatialExtent: Contiguous United States
+      temporalResolution: Annual 
+      unit: Mg CH₄/km²/yr                 
+    legend:
+      unit:
+        label: Mg CH₄/km²/yr
+      type: gradient
+      min: 0
+      max: 20
+      stops:
+        - "#FFFFFF"
+        - "#6F4C9B"
+        - "#6059A9"
+        - "#5568B8"
+        - "#4E79C5"
+        - "#4D8AC6"
+        - "#4E96BC"
+        - "#549EB3"
+        - "#59A5A9"
+        - "#60AB9E"
+        - "#69B190"
+        - "#77B77D"
+        - "#8CBC68"
+        - "#A6BE54"
+        - "#BEBC48"
+        - "#D1B541"
+        - "#DDAA3C"
+        - "#E49C39"
+        - "#E78C35"
+        - "#E67932"
+        - "#E4632D"
+        - "#DF4828"
+        - "#DA2222"
+        - "#B8221E"
+        - "#95211B"
+        - "#721E17"
+        - "#521A13"
+    media:
+      src: ::file ./epa-ch4emission-yeargrid-v2express.thumbnails.agriculture.rice.cultivation.annual.png
+      alt: U.S. Gridded Anthropogenic Methane Emissions Inventory - Agriculture - Rice Cultivation (annual)
 ---
 
 <Block>
