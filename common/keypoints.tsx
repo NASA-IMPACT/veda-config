@@ -43,11 +43,36 @@ const KeypointCard = styled(Card)`
   `}
 `
 
+type Data = {
+  title: string;
+  desc: string;
+  img: {
+    src: string;
+    alt: string;
+  };
+  link: {
+    url: string;
+    text: string;
+  };
+  footer: {
+    link: {
+      title: string;
+      url: string;
+    };
+  } | null;
+};
+
+
+interface KeypointsProps {
+  data: Data[],
+  cardType?: string
+}
+
 export default function Keypoints({
-  data
-}) {
+  data,
+  cardType = "classic"
+}: KeypointsProps) {
   return (
-    
     <KeypointsWrapper>
       <CardList>
         {
@@ -61,6 +86,7 @@ export default function Keypoints({
                   description={datum.desc}
                   imgSrc={datum.img.src}
                   imgAlt={datum.img.alt}
+                  cardType={cardType}
                   footerContent={ datum.footer ? (
                     <div>
                       <ArrowLink

@@ -18,7 +18,21 @@ const P = styled.p`
   font-family: var(--base-font-family)
 `
 
+const FitContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 12px 13vw;
+  margin: 12px;
+  font: inherit
+`
+
+const SectionContainer = styled.section`
+  margin: 12px;
+`
+
 export {
-    Title,
-    P
+  FitContainer,
+  P,
+  SectionContainer,
+  Title,
 }
