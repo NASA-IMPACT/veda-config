@@ -1,7 +1,7 @@
 ---
 id: black-belt-climate
 name: Climate Extremes Aggrevate Social Vulnerabilities in Alabama's Black Belt
-description: "Rising temperatures worsen social vulnerabilities for older adults by increasing their heat-related health risks."
+description: "Rising temperatures worsen social vulnerabilities for elder population adults by increasing their heat-related health risks."
 media:
   src: ::file ./black_belt_cover.jpg
   alt: Farmer in the fields.
@@ -107,24 +107,24 @@ taxonomy:
 
 <Block style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
   <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginRight: '20px' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginRight: '20px', flex: '0 0 auto' }}>
       <Image
         src={new URL('./BB_WarmNights.png', import.meta.url).href}
-        style={{ maxWidth: '50%', height: 'auto' }}
-        alt="Left Image"
+        style={{ width: '100%', height: 'auto' }}
+        alt="Increasing Warm Nights"
       />
       <span style={{ textAlign: 'center', marginTop: '5px' }}>Increasing Warm Nights (day/month)</span>
     </div>
-    <p style={{ flex: '1'}}>
-     The MERRA-2 climate extreme indices dataset offers valuable insights into the rising extreme day and night temperatures affecting the Alabama Black Belt region. This dataset includes indices such as Cool Nights (TN10P), which represent the percentage of days when the daily minimum temperature falls below the 10th percentile, and Warm Nights (TN90P), indicating when the daily minimum temperature exceeds the 90th percentile. Similarly, Cool Days (TX10P) and Warm Days (TX90P) track the percentage of days when daily maximum temperatures are below the 10th percentile or above the 90th percentile, respectively. These indices are analyzed for linear trends (p<0.1) in the data from 1980 to 2023, providing a comprehensive view of temperature extremes over time.
+    <p style={{ flex: '1', margin: '0 20px' }}>
+      The MERRA-2 climate extreme indices dataset offers valuable insights into the rising extreme day and night temperatures affecting the Alabama Black Belt region. This dataset includes indices such as Cool Nights (TN10P), which represent the percentage of days when the daily minimum temperature falls below the 10th percentile, and Warm Nights (TN90P), indicating when the daily minimum temperature exceeds the 90th percentile. Similarly, Cool Days (TX10P) and Warm Days (TX90P) track the percentage of days when daily maximum temperatures are below the 10th percentile or above the 90th percentile, respectively. These indices are analyzed for linear trends (p<0.1) in the data from 1980 to 2023, providing a comprehensive view of temperature extremes over time.
     </p>
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginLeft: '20px' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginLeft: '20px', flex: '0 0 auto' }}>
       <Image
         src={new URL('./BB_WarmDays.png', import.meta.url).href}
-        style={{ maxWidth: '50%', height: 'auto' }}
-        alt="Right Image"
+        style={{ width: '100%', height: 'auto' }}
+        alt="Increasing Warm Days"
       />
-      <span style={{ textAlign: 'center', marginTop: '5px' }}> Increasing Warm Days (day/month) </span>
+      <span style={{ textAlign: 'center', marginTop: '5px' }}>Increasing Warm Days (day/month)</span>
     </div>
   </Prose>
 </Block>
@@ -151,16 +151,24 @@ taxonomy:
 
 <Block>
   <Prose>
-    ### Data Access : UPDATE 
+    ### Data Access
 
-    * [National Weather Service Damage Assessment Toolkit](https://apps.dat.noaa.gov/stormdamage/damageviewer/)
-    * [National Weather Service Text Product Archive](https://mesonet.agron.iastate.edu/wx/afos/#)
-    * [Storm Prediction Center Event Archive](https://www.spc.noaa.gov/exper/archive/)
-    * [PlanetScope](https://www.planet.com/explorer/)
+    * [NASA Description for EMIT](https://lpdaac.usgs.gov/products/emitl2bch4plmv001/)
+    * [CDC/ATSDR SVI Data and Documentation Download | Place and Health | ATSDR](https://www.atsdr.cdc.gov/placeandhealth/svi/data_documentation_download.html)
+    
+    **Authors**: Maheshwari Neelam and Udaysankar Nair 
 
-    ### Additional Resources : UPDATE
+    **Editor**: Maheshwari Neelam; 
+    **Developers**: Andrew Blackford, Trent Cowan, and Jerika Christman ;
+    **Acknowledgements**: All individuals dedicated to Environmental Justice ;
+    **Questions / Feedback (email address)**: maheshwari.neelam@nasa.gov
 
-    * [FILL OUT](https://www.earthdata.nasa.gov/learn/pathfinders/air-quality-data-pathfinder)
+    #### Additional Resources
+
+    1. https://dtsc.ca.gov/2020/09/23/water-treatment-chemical-company-in-stockton-pays-32k-penalty-for-hazardous-waste-accumulation/
+    2. https://www.keranews.org/news/2022-08-23/dallas-lets-polluters-build-in-black-and-latino-neighborhoods-complaint-alleges
+    3. https://www.americanbar.org/groups/crsj/publications/human_rights_magazine_home/vol--44--no-2--housing/environmental-injustice-in-uniontown--alabama--decades-after-the/
+    4. https://sites.uab.edu/humanrights/2018/09/05/the-plastic-problem/
 
   </Prose>
 </Block>
