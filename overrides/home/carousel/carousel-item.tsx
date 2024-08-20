@@ -54,7 +54,7 @@ function ItemCard({ item, itemIdx, onTitleClick, selected, linkComponent }) {
     aria-controls={`carousel-item-${itemIdx}`}
   />
   <div className="tablet:display-block display-none">
-    <h3 className="usa-button usa-button--unstyled text-bold veda-color--base">
+    <h3 className="tablet:margin-top-1 carousel--title usa-button usa-button--unstyled text-bold veda-color--base">
       {item.title}
     </h3>
   </div>
