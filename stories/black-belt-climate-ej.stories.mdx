@@ -80,6 +80,14 @@ taxonomy:
 </Block>
 
 <Block style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
+  <Prose style={{ flex: '1', paddingRight: '20px', textAlign: 'justify' }}>
+    <p>
+      Anthropogenic climate change is causing extreme events, such as heatwaves, to become more frequent and severe. This trend is particularly alarming for the Black Belt, where many residents, especially the older population, depend on outdoor agricultural work. The MERRA-2 climate extreme indices dataset offers valuable insights into the rising extreme day and night temperatures affecting this region. As an advanced climate modeling system, MERRA-2 integrates extensive observational data to analyze climate patterns since 1980. It reveals a concerning increase in temperatures, which heightens the vulnerabilities of those working outdoors in the Black Belt.
+    </p>
+  </Prose>
+</Block>
+
+<Block style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
   <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
     <Image
       src={new URL('./BB_WarmNights.png', import.meta.url).href}
@@ -87,7 +95,7 @@ taxonomy:
       alt="Left Image Caption"
     />
     <p style={{ flex: '1' }}>
-      Anthropogenic climate change is causing extreme events, such as heatwaves, to become more frequent and severe. This trend is particularly alarming for the Black Belt, where many residents, especially the older population, depend on outdoor agricultural work. The MERRA-2 climate extreme indices dataset offers valuable insights into the rising extreme day and night temperatures affecting this region. As an advanced climate modeling system, MERRA-2 integrates extensive observational data to analyze climate patterns since 1980. It reveals a concerning increase in temperatures, which heightens the vulnerabilities of those working outdoors in the Black Belt.
+      Anthropogenic climate change is causing extreme events, such as heatwaves, to become more frequent and severe. This trend is particularly alarming for the Black Belt, where many residents, especially the older population, depend on outdoor agricultural work. 
     </p>
     <Image
       src={new URL('./BB_WarmDays.png', import.meta.url).href}
@@ -105,18 +113,18 @@ taxonomy:
         style={{ maxWidth: '50%', height: 'auto' }}
         alt="Left Image"
       />
-      <span style={{ textAlign: 'center', marginTop: '5px' }}>Left Image Caption</span>
+      <span style={{ textAlign: 'center', marginTop: '5px' }}>Increasing Warm Nights (day/month)</span>
     </div>
-    <p style={{ flex: '1', margin: '0 20px' }}>
-      Anthropogenic climate change is causing extreme events, such as heatwaves, to become more frequent and severe. This trend is particularly alarming for the Black Belt, where many residents, especially the older population, depend on outdoor agricultural work. The MERRA-2 climate extreme indices dataset offers valuable insights into the rising extreme day and night temperatures affecting this region. As an advanced climate modeling system, MERRA-2 integrates extensive observational data to analyze climate patterns since 1980. It reveals a concerning increase in temperatures, which heightens the vulnerabilities of those working outdoors in the Black Belt.
+    <p style={{ flex: '1'}}>
+     The MERRA-2 climate extreme indices dataset offers valuable insights into the rising extreme day and night temperatures affecting the Alabama Black Belt region. This dataset includes indices such as Cool Nights (TN10P), which represent the percentage of days when the daily minimum temperature falls below the 10th percentile, and Warm Nights (TN90P), indicating when the daily minimum temperature exceeds the 90th percentile. Similarly, Cool Days (TX10P) and Warm Days (TX90P) track the percentage of days when daily maximum temperatures are below the 10th percentile or above the 90th percentile, respectively. These indices are analyzed for linear trends (p<0.1) in the data from 1980 to 2023, providing a comprehensive view of temperature extremes over time.
     </p>
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginLeft: '20px' }}>
       <Image
-        src={new URL('./BB_WarmNights.png', import.meta.url).href}
+        src={new URL('./BB_WarmDays.png', import.meta.url).href}
         style={{ maxWidth: '50%', height: 'auto' }}
         alt="Right Image"
       />
-      <span style={{ textAlign: 'center', marginTop: '5px' }}>Here is the cold nights</span>
+      <span style={{ textAlign: 'center', marginTop: '5px' }}> Increasing Warm Days (day/month) </span>
     </div>
   </Prose>
 </Block>
