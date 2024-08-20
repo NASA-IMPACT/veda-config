@@ -80,21 +80,29 @@ taxonomy:
 </Block>
 
 <Block style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
-  <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
+  <Figure style={{ flex: '0 0 auto', marginRight: '20px' }}>
     <Image
-      src={new URL('./BB_WarmDays.png', import.meta.url).href}
-      style={{ maxWidth: '20%', height: 'auto', marginRight: '20px' }}
-      alt="Left Image Caption"
+      src={new URL('./left_image.jpg', import.meta.url).href}
+      style={{ maxWidth: '100%', height: 'auto' }}
+      alt="Left Image"
     />
-    <p style={{ flex: '1' }}>
+    <figcaption style={{ textAlign: 'center' }}>Left Image Caption</figcaption>
+  </Figure>
+  
+  <Prose style={{ flex: '1', textAlign: 'justify' }}>
+    <p>
       Anthropogenic climate change is causing extreme events, such as heatwaves, to become more frequent and severe. This trend is particularly alarming for the Black Belt, where many residents, especially the older population, depend on outdoor agricultural work. The MERRA-2 climate extreme indices dataset offers valuable insights into the rising extreme day and night temperatures affecting this region. As an advanced climate modeling system, MERRA-2 integrates extensive observational data to analyze climate patterns since 1980. It reveals a concerning increase in temperatures, which heightens the vulnerabilities of those working outdoors in the Black Belt.
     </p>
-    <Image
-      src={new URL('./BB_WarmNights.png', import.meta.url).href}
-      style={{ maxWidth: '20%', height: 'auto', marginLeft: '20px' }}
-      alt="Right Image Caption"
-    />
   </Prose>
+
+  <Figure style={{ flex: '0 0 auto', marginLeft: '20px' }}>
+    <Image
+      src={new URL('./right_image.jpg', import.meta.url).href}
+      style={{ maxWidth: '100%', height: 'auto' }}
+      alt="Right Image"
+    />
+    <figcaption style={{ textAlign: 'center' }}>Right Image Caption</figcaption>
+  </Figure>
 </Block>
 
 
