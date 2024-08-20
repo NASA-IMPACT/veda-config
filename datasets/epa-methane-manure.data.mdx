@@ -1104,7 +1104,1544 @@ layers:
     media:
       src: ::file ./epa-ch4emission-yeargrid-v2express.thumbnails.total.petroleum.systems.annual.png
       alt: U.S. Gridded Anthropogenic Methane Emissions Inventory - Total Petroleum Systems (annual)
-    
+   - id: 1B2a-exploration-ps
+    stacApiEndpoint: https://earth.gov/ghgcenter/api/stac
+    tileApiEndpoint: https://earth.gov/ghgcenter/api/raster
+    stacCol: epa-ch4emission-yeargrid-v2express
+    name: Petroleum - Exploration (annual)
+    type: raster
+    description: Annual methane emission fluxes from Petroleum Exploration (inventory Energy 1B2a sub-category).
+    initialDatetime: newest
+    projection:
+      id: "equirectangular"
+    basemapId: "light"
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: exploration-ps
+      colormap_name: epa-ghgi-ch4
+      rescale:
+        - 0
+        - 20
+      minzoom: 0
+      maxzoom: 5
+    compare:
+      datasetId: epa-ch4emission-yeargrid-v2express
+      layerId: 1B2a-exploration-ps
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
+        }
+    analysis:
+      exclude: true
+      metrics:
+        - mean
+      sourceParams:
+        dst_crs: "+proj=cea"
+    info:
+      source: EPA
+      spatialExtent: Contiguous United States
+      temporalResolution: Annual 
+      unit: Mg CH₄/km²/yr                 
+    legend:
+      unit:
+        label: Mg CH₄/km²/yr
+      type: gradient
+      min: 0
+      max: 20
+      stops:
+        - "#FFFFFF"
+        - "#6F4C9B"
+        - "#6059A9"
+        - "#5568B8"
+        - "#4E79C5"
+        - "#4D8AC6"
+        - "#4E96BC"
+        - "#549EB3"
+        - "#59A5A9"
+        - "#60AB9E"
+        - "#69B190"
+        - "#77B77D"
+        - "#8CBC68"
+        - "#A6BE54"
+        - "#BEBC48"
+        - "#D1B541"
+        - "#DDAA3C"
+        - "#E49C39"
+        - "#E78C35"
+        - "#E67932"
+        - "#E4632D"
+        - "#DF4828"
+        - "#DA2222"
+        - "#B8221E"
+        - "#95211B"
+        - "#721E17"
+        - "#521A13"
+    media:
+      src: ::file ./epa-ch4emission-yeargrid-v2express.thumbnails.petroleum.exploration.annual.png
+      alt: U.S. Gridded Anthropogenic Methane Emissions Inventory - Petroleum - Exploration (annual)
+  - id: 1B2a-production-ps
+    stacApiEndpoint: https://earth.gov/ghgcenter/api/stac
+    tileApiEndpoint: https://earth.gov/ghgcenter/api/raster
+    stacCol: epa-ch4emission-yeargrid-v2express
+    name: Petroleum - Production (annual)
+    type: raster
+    description: Annual methane emission fluxes from Petroleum Production (inventory Energy 1B2a sub-category).
+    initialDatetime: newest
+    projection:
+      id: "equirectangular"
+    basemapId: "light"
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: production-ps
+      colormap_name: epa-ghgi-ch4
+      rescale:
+        - 0
+        - 20
+      minzoom: 0
+      maxzoom: 5
+    compare:
+      datasetId: epa-ch4emission-yeargrid-v2express
+      layerId: 1B2a-production-ps
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
+        }
+    analysis:
+      exclude: true
+      metrics:
+        - mean
+      sourceParams:
+        dst_crs: "+proj=cea"
+    info:
+      source: EPA
+      spatialExtent: Contiguous United States
+      temporalResolution: Annual 
+      unit: Mg CH₄/km²/yr                 
+    legend:
+      unit:
+        label: Mg CH₄/km²/yr
+      type: gradient
+      min: 0
+      max: 20
+      stops:
+        - "#FFFFFF"
+        - "#6F4C9B"
+        - "#6059A9"
+        - "#5568B8"
+        - "#4E79C5"
+        - "#4D8AC6"
+        - "#4E96BC"
+        - "#549EB3"
+        - "#59A5A9"
+        - "#60AB9E"
+        - "#69B190"
+        - "#77B77D"
+        - "#8CBC68"
+        - "#A6BE54"
+        - "#BEBC48"
+        - "#D1B541"
+        - "#DDAA3C"
+        - "#E49C39"
+        - "#E78C35"
+        - "#E67932"
+        - "#E4632D"
+        - "#DF4828"
+        - "#DA2222"
+        - "#B8221E"
+        - "#95211B"
+        - "#721E17"
+        - "#521A13"
+    media:
+      src: ::file ./epa-ch4emission-yeargrid-v2express.thumbnails.petroleum.production.annual.png
+      alt: U.S. Gridded Anthropogenic Methane Emissions Inventory - Petroleum - Production (annual)
+  - id: 1B2a-transport-ps
+    stacApiEndpoint: https://earth.gov/ghgcenter/api/stac
+    tileApiEndpoint: https://earth.gov/ghgcenter/api/raster
+    stacCol: epa-ch4emission-yeargrid-v2express
+    name: Petroleum - Transportation (annual)
+    type: raster
+    description: Annual methane emission fluxes from Petroleum Transportation (inventory Energy 1B2a sub-category).
+    initialDatetime: newest
+    projection:
+      id: "equirectangular"
+    basemapId: "light"
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: transport-ps
+      colormap_name: epa-ghgi-ch4
+      rescale:
+        - 0
+        - 20
+      minzoom: 0
+      maxzoom: 5
+    compare:
+      datasetId: epa-ch4emission-yeargrid-v2express
+      layerId: 1B2a-transport-ps
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
+        }
+    analysis:
+      exclude: true
+      metrics:
+        - mean
+      sourceParams:
+        dst_crs: "+proj=cea"
+    info:
+      source: EPA
+      spatialExtent: Contiguous United States
+      temporalResolution: Annual 
+      unit: Mg CH₄/km²/yr                 
+    legend:
+      unit:
+        label: Mg CH₄/km²/yr
+      type: gradient
+      min: 0
+      max: 20
+      stops:
+        - "#FFFFFF"
+        - "#6F4C9B"
+        - "#6059A9"
+        - "#5568B8"
+        - "#4E79C5"
+        - "#4D8AC6"
+        - "#4E96BC"
+        - "#549EB3"
+        - "#59A5A9"
+        - "#60AB9E"
+        - "#69B190"
+        - "#77B77D"
+        - "#8CBC68"
+        - "#A6BE54"
+        - "#BEBC48"
+        - "#D1B541"
+        - "#DDAA3C"
+        - "#E49C39"
+        - "#E78C35"
+        - "#E67932"
+        - "#E4632D"
+        - "#DF4828"
+        - "#DA2222"
+        - "#B8221E"
+        - "#95211B"
+        - "#721E17"
+        - "#521A13"
+    media:
+      src: ::file ./epa-ch4emission-yeargrid-v2express.thumbnails.petroleum.transportation.annual.png
+      alt: U.S. Gridded Anthropogenic Methane Emissions Inventory - Petroleum - Transportation (annual)
+  - id: 1B2a-refining-ps
+    stacApiEndpoint: https://earth.gov/ghgcenter/api/stac
+    tileApiEndpoint: https://earth.gov/ghgcenter/api/raster
+    stacCol: epa-ch4emission-yeargrid-v2express
+    name: Petroleum - Refining (annual)
+    type: raster
+    description: Annual methane emission fluxes from Petroleum Refining (inventory Energy 1B2a sub-category).
+    initialDatetime: newest
+    projection:
+      id: "equirectangular"
+    basemapId: "light"
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: refining-ps
+      colormap_name: epa-ghgi-ch4
+      rescale:
+        - 0
+        - 20
+      minzoom: 0
+      maxzoom: 5
+    compare:
+      datasetId: epa-ch4emission-yeargrid-v2express
+      layerId: 1B2a-refining-ps
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
+        }
+    analysis:
+      exclude: true
+      metrics:
+        - mean
+      sourceParams:
+        dst_crs: "+proj=cea"
+    info:
+      source: EPA
+      spatialExtent: Contiguous United States
+      temporalResolution: Annual 
+      unit: Mg CH₄/km²/yr                 
+    legend:
+      unit:
+        label: Mg CH₄/km²/yr
+      type: gradient
+      min: 0
+      max: 20
+      stops:
+        - "#FFFFFF"
+        - "#6F4C9B"
+        - "#6059A9"
+        - "#5568B8"
+        - "#4E79C5"
+        - "#4D8AC6"
+        - "#4E96BC"
+        - "#549EB3"
+        - "#59A5A9"
+        - "#60AB9E"
+        - "#69B190"
+        - "#77B77D"
+        - "#8CBC68"
+        - "#A6BE54"
+        - "#BEBC48"
+        - "#D1B541"
+        - "#DDAA3C"
+        - "#E49C39"
+        - "#E78C35"
+        - "#E67932"
+        - "#E4632D"
+        - "#DF4828"
+        - "#DA2222"
+        - "#B8221E"
+        - "#95211B"
+        - "#721E17"
+        - "#521A13"
+    media:
+      src: ::file ./epa-ch4emission-yeargrid-v2express.thumbnails.petroleum.refining.annual.png
+      alt: U.S. Gridded Anthropogenic Methane Emissions Inventory - Petroleum - Refining (annual)
+  - id: total-waste
+    stacApiEndpoint: https://earth.gov/ghgcenter/api/stac
+    tileApiEndpoint: https://earth.gov/ghgcenter/api/raster
+    stacCol: epa-ch4emission-yeargrid-v2express
+    name: Total Waste (annual)
+    type: raster
+    description: Total annual methane emission fluxes from Waste (sum of inventory Waste categories 5A1, 5B1, 5D)
+    initialDatetime: newest
+    projection:
+      id: "equirectangular"
+    basemapId: "light"
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: total-waste
+      colormap_name: epa-ghgi-ch4
+      rescale:
+        - 0
+        - 20
+      minzoom: 0
+      maxzoom: 5
+    compare:
+      datasetId: epa-ch4emission-yeargrid-v2express
+      layerId: total-waste
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
+        }
+    analysis:
+      exclude: true
+      metrics:
+        - mean
+      sourceParams:
+        dst_crs: "+proj=cea"
+    info:
+      source: EPA
+      spatialExtent: Contiguous United States
+      temporalResolution: Annual 
+      unit: Mg CH₄/km²/yr                 
+    legend:
+      unit:
+        label: Mg CH₄/km²/yr
+      type: gradient
+      min: 0
+      max: 20
+      stops:
+        - "#FFFFFF"
+        - "#6F4C9B"
+        - "#6059A9"
+        - "#5568B8"
+        - "#4E79C5"
+        - "#4D8AC6"
+        - "#4E96BC"
+        - "#549EB3"
+        - "#59A5A9"
+        - "#60AB9E"
+        - "#69B190"
+        - "#77B77D"
+        - "#8CBC68"
+        - "#A6BE54"
+        - "#BEBC48"
+        - "#D1B541"
+        - "#DDAA3C"
+        - "#E49C39"
+        - "#E78C35"
+        - "#E67932"
+        - "#E4632D"
+        - "#DF4828"
+        - "#DA2222"
+        - "#B8221E"
+        - "#95211B"
+        - "#721E17"
+        - "#521A13"
+    media:
+      src: ::file ./epa-ch4emission-yeargrid-v2express.thumbnails.total.waste.annual.png
+      alt: U.S. Gridded Anthropogenic Methane Emissions Inventory - Total Waste (annual)
+  - id: 5A1-msw-landfill-waste
+    stacApiEndpoint: https://earth.gov/ghgcenter/api/stac
+    tileApiEndpoint: https://earth.gov/ghgcenter/api/raster
+    stacCol: epa-ch4emission-yeargrid-v2express
+    name: Waste - Municipal Solid Waste (MSW) Landfills (annual)
+    type: raster
+    description: Annual methane emissions fluxes from Municipal Solid Waste Landfills (inventory Waste 5A1 sub-category).
+    initialDatetime: newest
+    projection:
+      id: "equirectangular"
+    basemapId: "light"
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: msw-landfill-waste
+      colormap_name: epa-ghgi-ch4
+      rescale:
+        - 0
+        - 20
+      minzoom: 0
+      maxzoom: 5
+    compare:
+      datasetId: epa-ch4emission-yeargrid-v2express
+      layerId: 5A1-msw-landfill-waste
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
+        }
+    analysis:
+      exclude: true
+      metrics:
+        - mean
+      sourceParams:
+        dst_crs: "+proj=cea"
+    info:
+      source: EPA
+      spatialExtent: Contiguous United States
+      temporalResolution: Annual 
+      unit: Mg CH₄/km²/yr                 
+    legend:
+      unit:
+        label: Mg CH₄/km²/yr
+      type: gradient
+      min: 0
+      max: 20
+      stops:
+        - "#FFFFFF"
+        - "#6F4C9B"
+        - "#6059A9"
+        - "#5568B8"
+        - "#4E79C5"
+        - "#4D8AC6"
+        - "#4E96BC"
+        - "#549EB3"
+        - "#59A5A9"
+        - "#60AB9E"
+        - "#69B190"
+        - "#77B77D"
+        - "#8CBC68"
+        - "#A6BE54"
+        - "#BEBC48"
+        - "#D1B541"
+        - "#DDAA3C"
+        - "#E49C39"
+        - "#E78C35"
+        - "#E67932"
+        - "#E4632D"
+        - "#DF4828"
+        - "#DA2222"
+        - "#B8221E"
+        - "#95211B"
+        - "#721E17"
+        - "#521A13"
+    media:
+      src: ::file ./epa-ch4emission-yeargrid-v2express.thumbnails.waste.municipal.landfills.annual.png
+      alt: U.S. Gridded Anthropogenic Methane Emissions Inventory - Waste - Municipal Solid Waste (MSW) Landfills (annual)
+  - id: 5A1-industrial-landfill-waste
+    stacApiEndpoint: https://earth.gov/ghgcenter/api/stac
+    tileApiEndpoint: https://earth.gov/ghgcenter/api/raster
+    stacCol: epa-ch4emission-yeargrid-v2express
+    name: Waste - Industrial Landfills (annual)
+    type: raster
+    description: Annual methane emissions fluxes from Industrial Landfills (inventory Waste 5A1 sub-category).
+    initialDatetime: newest
+    projection:
+      id: "equirectangular"
+    basemapId: "light"
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: industrial-landfill-waste
+      colormap_name: epa-ghgi-ch4
+      rescale:
+        - 0
+        - 20
+      minzoom: 0
+      maxzoom: 5
+    compare:
+      datasetId: epa-ch4emission-yeargrid-v2express
+      layerId: 5A1-industrial-landfill-waste
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
+        }
+    analysis:
+      exclude: true
+      metrics:
+        - mean
+      sourceParams:
+        dst_crs: "+proj=cea"
+    info:
+      source: EPA
+      spatialExtent: Contiguous United States
+      temporalResolution: Annual 
+      unit: Mg CH₄/km²/yr                 
+    legend:
+      unit:
+        label: Mg CH₄/km²/yr
+      type: gradient
+      min: 0
+      max: 20
+      stops:
+        - "#FFFFFF"
+        - "#6F4C9B"
+        - "#6059A9"
+        - "#5568B8"
+        - "#4E79C5"
+        - "#4D8AC6"
+        - "#4E96BC"
+        - "#549EB3"
+        - "#59A5A9"
+        - "#60AB9E"
+        - "#69B190"
+        - "#77B77D"
+        - "#8CBC68"
+        - "#A6BE54"
+        - "#BEBC48"
+        - "#D1B541"
+        - "#DDAA3C"
+        - "#E49C39"
+        - "#E78C35"
+        - "#E67932"
+        - "#E4632D"
+        - "#DF4828"
+        - "#DA2222"
+        - "#B8221E"
+        - "#95211B"
+        - "#721E17"
+        - "#521A13"
+    media:
+      src: ::file ./epa-ch4emission-yeargrid-v2express.thumbnails.waste.industrial.landfills.annual.png
+      alt: U.S. Gridded Anthropogenic Methane Emissions Inventory - Waste - Industrial Landfills (annual)
+  - id: 5A1-dwtd-waste
+    stacApiEndpoint: https://earth.gov/ghgcenter/api/stac
+    tileApiEndpoint: https://earth.gov/ghgcenter/api/raster
+    stacCol: epa-ch4emission-yeargrid-v2express
+    name: Waste - Domestic Wastewater Treatment & Discharge (annual)
+    type: raster
+    description: Annual methane emissions fluxes from Domestic Wastewater Treatment and Discharge (inventory Waste 5D sub-category).
+    initialDatetime: newest
+    projection:
+      id: "equirectangular"
+    basemapId: "light"
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: dwtd-waste
+      colormap_name: epa-ghgi-ch4
+      rescale:
+        - 0
+        - 20
+      minzoom: 0
+      maxzoom: 5
+    compare:
+      datasetId: epa-ch4emission-yeargrid-v2express
+      layerId: 5A1-dwtd-waste
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
+        }
+    analysis:
+      exclude: true
+      metrics:
+        - mean
+      sourceParams:
+        dst_crs: "+proj=cea"
+    info:
+      source: EPA
+      spatialExtent: Contiguous United States
+      temporalResolution: Annual 
+      unit: Mg CH₄/km²/yr                 
+    legend:
+      unit:
+        label: Mg CH₄/km²/yr
+      type: gradient
+      min: 0
+      max: 20
+      stops:
+        - "#FFFFFF"
+        - "#6F4C9B"
+        - "#6059A9"
+        - "#5568B8"
+        - "#4E79C5"
+        - "#4D8AC6"
+        - "#4E96BC"
+        - "#549EB3"
+        - "#59A5A9"
+        - "#60AB9E"
+        - "#69B190"
+        - "#77B77D"
+        - "#8CBC68"
+        - "#A6BE54"
+        - "#BEBC48"
+        - "#D1B541"
+        - "#DDAA3C"
+        - "#E49C39"
+        - "#E78C35"
+        - "#E67932"
+        - "#E4632D"
+        - "#DF4828"
+        - "#DA2222"
+        - "#B8221E"
+        - "#95211B"
+        - "#721E17"
+        - "#521A13"
+    media:
+      src: ::file ./epa-ch4emission-yeargrid-v2express.thumbnails.waste.domestic.wastewater.annual.png
+      alt: U.S. Gridded Anthropogenic Methane Emissions Inventory - Waste - Domestic Wastewater Treatment & Discharge (annual)
+  - id: 5A1-iwtd-waste
+    stacApiEndpoint: https://earth.gov/ghgcenter/api/stac
+    tileApiEndpoint: https://earth.gov/ghgcenter/api/raster
+    stacCol: epa-ch4emission-yeargrid-v2express
+    name: Waste - Industrial Wastewater Treatment & Discharge (annual)
+    type: raster
+    description: Annual methane emissions fluxes from Industrial Wastewater Treatment and Discharge (inventory Waste 5D sub-category).
+    initialDatetime: newest
+    projection:
+      id: "equirectangular"
+    basemapId: "light"
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: iwtd-waste
+      colormap_name: epa-ghgi-ch4
+      rescale:
+        - 0
+        - 20
+      minzoom: 0
+      maxzoom: 5
+    compare:
+      datasetId: epa-ch4emission-yeargrid-v2express
+      layerId: 5A1-iwtd-waste
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
+        }
+    analysis:
+      exclude: true
+      metrics:
+        - mean
+      sourceParams:
+        dst_crs: "+proj=cea"
+    info:
+      source: EPA
+      spatialExtent: Contiguous United States
+      temporalResolution: Annual 
+      unit: Mg CH₄/km²/yr                 
+    legend:
+      unit:
+        label: Mg CH₄/km²/yr
+      type: gradient
+      min: 0
+      max: 20
+      stops:
+        - "#FFFFFF"
+        - "#6F4C9B"
+        - "#6059A9"
+        - "#5568B8"
+        - "#4E79C5"
+        - "#4D8AC6"
+        - "#4E96BC"
+        - "#549EB3"
+        - "#59A5A9"
+        - "#60AB9E"
+        - "#69B190"
+        - "#77B77D"
+        - "#8CBC68"
+        - "#A6BE54"
+        - "#BEBC48"
+        - "#D1B541"
+        - "#DDAA3C"
+        - "#E49C39"
+        - "#E78C35"
+        - "#E67932"
+        - "#E4632D"
+        - "#DF4828"
+        - "#DA2222"
+        - "#B8221E"
+        - "#95211B"
+        - "#721E17"
+        - "#521A13"
+    media:
+      src: ::file ./epa-ch4emission-yeargrid-v2express.thumbnails.waste.industrial.wastewater.annual.png
+      alt: U.S. Gridded Anthropogenic Methane Emissions Inventory - Waste - Industrial Wastewater Treatment & Discharge (annual)
+  - id: 5A1-composting-waste
+    stacApiEndpoint: https://earth.gov/ghgcenter/api/stac
+    tileApiEndpoint: https://earth.gov/ghgcenter/api/raster
+    stacCol: epa-ch4emission-yeargrid-v2express
+    name: Waste - Composting (annual)
+    type: raster
+    description: Annual methane emissions fluxes from Composting (inventory Waste category 5B1).
+    initialDatetime: newest
+    projection:
+      id: "equirectangular"
+    basemapId: "light"
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: composting-waste
+      colormap_name: epa-ghgi-ch4
+      rescale:
+        - 0
+        - 20
+      minzoom: 0
+      maxzoom: 5
+    compare:
+      datasetId: epa-ch4emission-yeargrid-v2express
+      layerId: 5A1-composting-waste
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
+        }
+    analysis:
+      exclude: true
+      metrics:
+        - mean
+      sourceParams:
+        dst_crs: "+proj=cea"
+    info:
+      source: EPA
+      spatialExtent: Contiguous United States
+      temporalResolution: Annual 
+      unit: Mg CH₄/km²/yr                 
+    legend:
+      unit:
+        label: Mg CH₄/km²/yr
+      type: gradient
+      min: 0
+      max: 20
+      stops:
+        - "#FFFFFF"
+        - "#6F4C9B"
+        - "#6059A9"
+        - "#5568B8"
+        - "#4E79C5"
+        - "#4D8AC6"
+        - "#4E96BC"
+        - "#549EB3"
+        - "#59A5A9"
+        - "#60AB9E"
+        - "#69B190"
+        - "#77B77D"
+        - "#8CBC68"
+        - "#A6BE54"
+        - "#BEBC48"
+        - "#D1B541"
+        - "#DDAA3C"
+        - "#E49C39"
+        - "#E78C35"
+        - "#E67932"
+        - "#E4632D"
+        - "#DF4828"
+        - "#DA2222"
+        - "#B8221E"
+        - "#95211B"
+        - "#721E17"
+        - "#521A13"
+    media:
+      src: ::file ./epa-ch4emission-yeargrid-v2express.thumbnails.composting.annual.png
+      alt: U.S. Gridded Anthropogenic Methane Emissions Inventory - Waste - Composting (annual)
+  - id: total-coal-mines
+    stacApiEndpoint: https://earth.gov/ghgcenter/api/stac
+    tileApiEndpoint: https://earth.gov/ghgcenter/api/raster
+    stacCol: epa-ch4emission-yeargrid-v2express
+    name: Total Coal Mines (annual)
+    type: raster
+    description: Total annual methane emission fluxes from Coal Mines (sum of inventory 1B1a sub-categories)
+    initialDatetime: newest
+    projection:
+      id: "equirectangular"
+    basemapId: "light"
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: total-coal-mines
+      colormap_name: epa-ghgi-ch4
+      rescale:
+        - 0
+        - 20
+      minzoom: 0
+      maxzoom: 5
+    compare:
+      datasetId: epa-ch4emission-yeargrid-v2express
+      layerId: total-coal-mines
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
+        }
+    analysis:
+      exclude: true
+      metrics:
+        - mean
+      sourceParams:
+        dst_crs: "+proj=cea"
+    info:
+      source: EPA
+      spatialExtent: Contiguous United States
+      temporalResolution: Annual 
+      unit: Mg CH₄/km²/yr                 
+    legend:
+      unit:
+        label: Mg CH₄/km²/yr
+      type: gradient
+      min: 0
+      max: 20
+      stops:
+        - "#FFFFFF"
+        - "#6F4C9B"
+        - "#6059A9"
+        - "#5568B8"
+        - "#4E79C5"
+        - "#4D8AC6"
+        - "#4E96BC"
+        - "#549EB3"
+        - "#59A5A9"
+        - "#60AB9E"
+        - "#69B190"
+        - "#77B77D"
+        - "#8CBC68"
+        - "#A6BE54"
+        - "#BEBC48"
+        - "#D1B541"
+        - "#DDAA3C"
+        - "#E49C39"
+        - "#E78C35"
+        - "#E67932"
+        - "#E4632D"
+        - "#DF4828"
+        - "#DA2222"
+        - "#B8221E"
+        - "#95211B"
+        - "#721E17"
+        - "#521A13"
+    media:
+      src: ::file ./epa-ch4emission-yeargrid-v2express.thumbnails.total.coal.mines.annual.png
+      alt: U.S. Gridded Anthropogenic Methane Emissions Inventory - Total Coal Mines (annual)
+  - id: 1B1a-underground-coal
+    stacApiEndpoint: https://earth.gov/ghgcenter/api/stac
+    tileApiEndpoint: https://earth.gov/ghgcenter/api/raster
+    stacCol: epa-ch4emission-yeargrid-v2express
+    name: Coal Mining - Underground Mining (annual)
+    type: raster
+    description: Annual methane emission fluxes from active Underground Coal Mining (inventory Energy 1B1a sub-category)
+    initialDatetime: newest
+    projection:
+      id: "equirectangular"
+    basemapId: "light"
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: underground-coal
+      colormap_name: epa-ghgi-ch4
+      rescale:
+        - 0
+        - 20
+      minzoom: 0
+      maxzoom: 5
+    compare:
+      datasetId: epa-ch4emission-yeargrid-v2express
+      layerId: 1B1a-underground-coal
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
+        }
+    analysis:
+      exclude: true
+      metrics:
+        - mean
+      sourceParams:
+        dst_crs: "+proj=cea"
+    info:
+      source: EPA
+      spatialExtent: Contiguous United States
+      temporalResolution: Annual 
+      unit: Mg CH₄/km²/yr                 
+    legend:
+      unit:
+        label: Mg CH₄/km²/yr
+      type: gradient
+      min: 0
+      max: 20
+      stops:
+        - "#FFFFFF"
+        - "#6F4C9B"
+        - "#6059A9"
+        - "#5568B8"
+        - "#4E79C5"
+        - "#4D8AC6"
+        - "#4E96BC"
+        - "#549EB3"
+        - "#59A5A9"
+        - "#60AB9E"
+        - "#69B190"
+        - "#77B77D"
+        - "#8CBC68"
+        - "#A6BE54"
+        - "#BEBC48"
+        - "#D1B541"
+        - "#DDAA3C"
+        - "#E49C39"
+        - "#E78C35"
+        - "#E67932"
+        - "#E4632D"
+        - "#DF4828"
+        - "#DA2222"
+        - "#B8221E"
+        - "#95211B"
+        - "#721E17"
+        - "#521A13"
+    media:
+      src: ::file ./epa-ch4emission-yeargrid-v2express.thumbnails.coal.mining.underground.annual.png
+      alt: U.S. Gridded Anthropogenic Methane Emissions Inventory - Coal Mining - Underground Mining (annual)
+ - id: 1B1a-abn-underground-coal
+    stacApiEndpoint: https://earth.gov/ghgcenter/api/stac
+    tileApiEndpoint: https://earth.gov/ghgcenter/api/raster
+    stacCol: epa-ch4emission-yeargrid-v2express
+    name: Coal Mining - Abandoned Underground Mines (annual)
+    type: raster
+    description: Annual methane emission fluxes from Abandoned Underground Coal Mines (inventory Energy 1B1a sub-category)
+    initialDatetime: newest
+    projection:
+      id: "equirectangular"
+    basemapId: "light"
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: abn-underground-coal
+      colormap_name: epa-ghgi-ch4
+      rescale:
+        - 0
+        - 20
+      minzoom: 0
+      maxzoom: 5
+    compare:
+      datasetId: epa-ch4emission-yeargrid-v2express
+      layerId: 1B1a-abn-underground-coal
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
+        }
+    analysis:
+      exclude: true
+      metrics:
+        - mean
+      sourceParams:
+        dst_crs: "+proj=cea"
+    info:
+      source: EPA
+      spatialExtent: Contiguous United States
+      temporalResolution: Annual 
+      unit: Mg CH₄/km²/yr                 
+    legend:
+      unit:
+        label: Mg CH₄/km²/yr
+      type: gradient
+      min: 0
+      max: 20
+      stops:
+        - "#FFFFFF"
+        - "#6F4C9B"
+        - "#6059A9"
+        - "#5568B8"
+        - "#4E79C5"
+        - "#4D8AC6"
+        - "#4E96BC"
+        - "#549EB3"
+        - "#59A5A9"
+        - "#60AB9E"
+        - "#69B190"
+        - "#77B77D"
+        - "#8CBC68"
+        - "#A6BE54"
+        - "#BEBC48"
+        - "#D1B541"
+        - "#DDAA3C"
+        - "#E49C39"
+        - "#E78C35"
+        - "#E67932"
+        - "#E4632D"
+        - "#DF4828"
+        - "#DA2222"
+        - "#B8221E"
+        - "#95211B"
+        - "#721E17"
+        - "#521A13"
+    media:
+      src: ::file ./epa-ch4emission-yeargrid-v2express.thumbnails.coal.mining.abandoned.annual.png
+      alt: U.S. Gridded Anthropogenic Methane Emissions Inventory - Coal Mining - Abandoned Underground Mines (annual)
+  - id: 1B1a-surface-coal
+    stacApiEndpoint: https://earth.gov/ghgcenter/api/stac
+    tileApiEndpoint: https://earth.gov/ghgcenter/api/raster
+    stacCol: epa-ch4emission-yeargrid-v2express
+    name: Coal Mining - Surface Mining (annual)
+    type: raster
+    description: Annual methane emission fluxes from active Surface Coal Mining (inventory Energy 1B1a sub-category)
+    initialDatetime: newest
+    projection:
+      id: "equirectangular"
+    basemapId: "light"
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: surface-coal
+      colormap_name: epa-ghgi-ch4
+      rescale:
+        - 0
+        - 20
+      minzoom: 0
+      maxzoom: 5
+    compare:
+      datasetId: epa-ch4emission-yeargrid-v2express
+      layerId: 1B1a-surface-coal
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
+        }
+    analysis:
+      exclude: true
+      metrics:
+        - mean
+      sourceParams:
+        dst_crs: "+proj=cea"
+    info:
+      source: EPA
+      spatialExtent: Contiguous United States
+      temporalResolution: Annual 
+      unit: Mg CH₄/km²/yr                 
+    legend:
+      unit:
+        label: Mg CH₄/km²/yr
+      type: gradient
+      min: 0
+      max: 20
+      stops:
+        - "#FFFFFF"
+        - "#6F4C9B"
+        - "#6059A9"
+        - "#5568B8"
+        - "#4E79C5"
+        - "#4D8AC6"
+        - "#4E96BC"
+        - "#549EB3"
+        - "#59A5A9"
+        - "#60AB9E"
+        - "#69B190"
+        - "#77B77D"
+        - "#8CBC68"
+        - "#A6BE54"
+        - "#BEBC48"
+        - "#D1B541"
+        - "#DDAA3C"
+        - "#E49C39"
+        - "#E78C35"
+        - "#E67932"
+        - "#E4632D"
+        - "#DF4828"
+        - "#DA2222"
+        - "#B8221E"
+        - "#95211B"
+        - "#721E17"
+        - "#521A13"
+    media:
+      src: ::file ./epa-ch4emission-yeargrid-v2express.thumbnails.coal.mining.surface.annual.png
+      alt: U.S. Gridded Anthropogenic Methane Emissions Inventory - Coal Mining - Surface Mining (annual)
+  - id: total-other
+    stacApiEndpoint: https://earth.gov/ghgcenter/api/stac
+    tileApiEndpoint: https://earth.gov/ghgcenter/api/raster
+    stacCol: epa-ch4emission-yeargrid-v2express
+    name: Total Other (annual)
+    type: raster
+    description: Total annual methane emission fluxes from ‘other’ remaining sources (sum of inventory categories 1A (energy combustion), 2B8 & 2C2 (petrochemical & ferroalloy production) and 1B2a & 1B2b (abandoned O&G well emissions))
+    initialDatetime: newest
+    projection:
+      id: "equirectangular"
+    basemapId: "light"
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: total-other
+      colormap_name: epa-ghgi-ch4
+      rescale:
+        - 0
+        - 20
+      minzoom: 0
+      maxzoom: 5
+    compare:
+      datasetId: epa-ch4emission-yeargrid-v2express
+      layerId: total-other
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
+        }
+    analysis:
+      exclude: true
+      metrics:
+        - mean
+      sourceParams:
+        dst_crs: "+proj=cea"
+    info:
+      source: EPA
+      spatialExtent: Contiguous United States
+      temporalResolution: Annual 
+      unit: Mg CH₄/km²/yr                 
+    legend:
+      unit:
+        label: Mg CH₄/km²/yr
+      type: gradient
+      min: 0
+      max: 20
+      stops:
+        - "#FFFFFF"
+        - "#6F4C9B"
+        - "#6059A9"
+        - "#5568B8"
+        - "#4E79C5"
+        - "#4D8AC6"
+        - "#4E96BC"
+        - "#549EB3"
+        - "#59A5A9"
+        - "#60AB9E"
+        - "#69B190"
+        - "#77B77D"
+        - "#8CBC68"
+        - "#A6BE54"
+        - "#BEBC48"
+        - "#D1B541"
+        - "#DDAA3C"
+        - "#E49C39"
+        - "#E78C35"
+        - "#E67932"
+        - "#E4632D"
+        - "#DF4828"
+        - "#DA2222"
+        - "#B8221E"
+        - "#95211B"
+        - "#721E17"
+        - "#521A13"
+    media:
+      src: ::file ./epa-ch4emission-yeargrid-v2express.thumbnails.total.other.annual.png
+      alt: U.S. Gridded Anthropogenic Methane Emissions Inventory - Total Other (annual)
+  - id: 1A-stationary-combustion-other
+    stacApiEndpoint: https://earth.gov/ghgcenter/api/stac
+    tileApiEndpoint: https://earth.gov/ghgcenter/api/raster
+    stacCol: epa-ch4emission-yeargrid-v2express
+    name: Other - Stationary Combustion (annual)
+    type: raster
+    description: Annual methane emission fluxes from Stationary Combustion (inventory Energy 1A sub-category)
+    initialDatetime: newest
+    projection:
+      id: "equirectangular"
+    basemapId: "light"
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: stationary-combustion-other
+      colormap_name: epa-ghgi-ch4
+      rescale:
+        - 0
+        - 20
+      minzoom: 0
+      maxzoom: 5
+    compare:
+      datasetId: epa-ch4emission-yeargrid-v2express
+      layerId: 1A-stationary-combustion-other
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
+        }
+    analysis:
+      exclude: true
+      metrics:
+        - mean
+      sourceParams:
+        dst_crs: "+proj=cea"
+    info:
+      source: EPA
+      spatialExtent: Contiguous United States
+      temporalResolution: Annual 
+      unit: Mg CH₄/km²/yr                 
+    legend:
+      unit:
+        label: Mg CH₄/km²/yr
+      type: gradient
+      min: 0
+      max: 20
+      stops:
+        - "#FFFFFF"
+        - "#6F4C9B"
+        - "#6059A9"
+        - "#5568B8"
+        - "#4E79C5"
+        - "#4D8AC6"
+        - "#4E96BC"
+        - "#549EB3"
+        - "#59A5A9"
+        - "#60AB9E"
+        - "#69B190"
+        - "#77B77D"
+        - "#8CBC68"
+        - "#A6BE54"
+        - "#BEBC48"
+        - "#D1B541"
+        - "#DDAA3C"
+        - "#E49C39"
+        - "#E78C35"
+        - "#E67932"
+        - "#E4632D"
+        - "#DF4828"
+        - "#DA2222"
+        - "#B8221E"
+        - "#95211B"
+        - "#721E17"
+        - "#521A13"
+    media:
+      src: ::file ./epa-ch4emission-yeargrid-v2express.thumbnails.other.stationary.combustion.annual.png
+      alt: U.S. Gridded Anthropogenic Methane Emissions Inventory - Other - Stationary combustion (annual)
+  - id: 1A-mobile-combustion-othe
+    stacApiEndpoint: https://earth.gov/ghgcenter/api/stac
+    tileApiEndpoint: https://earth.gov/ghgcenter/api/raster
+    stacCol: epa-ch4emission-yeargrid-v2express
+    name: Other - Mobile Combustion (annual)
+    type: raster
+    description: Annual methane emission fluxes from Mobile Combustion (inventory Energy 1A sub-category)
+    initialDatetime: newest
+    projection:
+      id: "equirectangular"
+    basemapId: "light"
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: mobile-combustion-other
+      colormap_name: epa-ghgi-ch4
+      rescale:
+        - 0
+        - 20
+      minzoom: 0
+      maxzoom: 5
+    compare:
+      datasetId: epa-ch4emission-yeargrid-v2express
+      layerId: 1A-mobile-combustion-othe
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
+        }
+    analysis:
+      exclude: true
+      metrics:
+        - mean
+      sourceParams:
+        dst_crs: "+proj=cea"
+    info:
+      source: EPA
+      spatialExtent: Contiguous United States
+      temporalResolution: Annual 
+      unit: Mg CH₄/km²/yr                 
+    legend:
+      unit:
+        label: Mg CH₄/km²/yr
+      type: gradient
+      min: 0
+      max: 20
+      stops:
+        - "#FFFFFF"
+        - "#6F4C9B"
+        - "#6059A9"
+        - "#5568B8"
+        - "#4E79C5"
+        - "#4D8AC6"
+        - "#4E96BC"
+        - "#549EB3"
+        - "#59A5A9"
+        - "#60AB9E"
+        - "#69B190"
+        - "#77B77D"
+        - "#8CBC68"
+        - "#A6BE54"
+        - "#BEBC48"
+        - "#D1B541"
+        - "#DDAA3C"
+        - "#E49C39"
+        - "#E78C35"
+        - "#E67932"
+        - "#E4632D"
+        - "#DF4828"
+        - "#DA2222"
+        - "#B8221E"
+        - "#95211B"
+        - "#721E17"
+        - "#521A13"
+    media:
+      src: ::file ./epa-ch4emission-yeargrid-v2express.thumbnails.other.mobile.combustion.annual.png
+      alt: U.S. Gridded Anthropogenic Methane Emissions Inventory - Other - Mobile combustion (annual)
+  - id: 1A-abn-ong-other
+    stacApiEndpoint: https://earth.gov/ghgcenter/api/stac
+    tileApiEndpoint: https://earth.gov/ghgcenter/api/raster
+    stacCol: epa-ch4emission-yeargrid-v2express
+    name: Other - Abandoned Oil and Gas Wells (annual)
+    type: raster
+    description: Annual methane emission fluxes from Abandoned Oil and Gas Wells (inventory Energy 1B2a and 1B2b sub-categories)
+    initialDatetime: newest
+    projection:
+      id: "equirectangular"
+    basemapId: "light"
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: abn-ong-other
+      colormap_name: epa-ghgi-ch4
+      rescale:
+        - 0
+        - 20
+      minzoom: 0
+      maxzoom: 5
+    compare:
+      datasetId: epa-ch4emission-yeargrid-v2express
+      layerId: 1A-abn-ong-other
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
+        }
+    analysis:
+      exclude: true
+      metrics:
+        - mean
+      sourceParams:
+        dst_crs: "+proj=cea"
+    info:
+      source: EPA
+      spatialExtent: Contiguous United States
+      temporalResolution: Annual 
+      unit: Mg CH₄/km²/yr                 
+    legend:
+      unit:
+        label: Mg CH₄/km²/yr
+      type: gradient
+      min: 0
+      max: 20
+      stops:
+        - "#FFFFFF"
+        - "#6F4C9B"
+        - "#6059A9"
+        - "#5568B8"
+        - "#4E79C5"
+        - "#4D8AC6"
+        - "#4E96BC"
+        - "#549EB3"
+        - "#59A5A9"
+        - "#60AB9E"
+        - "#69B190"
+        - "#77B77D"
+        - "#8CBC68"
+        - "#A6BE54"
+        - "#BEBC48"
+        - "#D1B541"
+        - "#DDAA3C"
+        - "#E49C39"
+        - "#E78C35"
+        - "#E67932"
+        - "#E4632D"
+        - "#DF4828"
+        - "#DA2222"
+        - "#B8221E"
+        - "#95211B"
+        - "#721E17"
+        - "#521A13"
+    media:
+      src: ::file ./epa-ch4emission-yeargrid-v2express.thumbnails.other.abandoned.oil.gas.annual.png
+      alt: U.S. Gridded Anthropogenic Methane Emissions Inventory - Other - Abandoned Oil and Gas Wells (annual)
+  - id: 1A-petro-production-other
+    stacApiEndpoint: https://earth.gov/ghgcenter/api/stac
+    tileApiEndpoint: https://earth.gov/ghgcenter/api/raster
+    stacCol: epa-ch4emission-yeargrid-v2express
+    name: Other - Petrochemical Production (annual)
+    type: raster
+    description: Annual methane emission fluxes from Petrochemical Production (inventory Industrial Processes and Product Use category 2B8)
+    initialDatetime: newest
+    projection:
+      id: "equirectangular"
+    basemapId: "light"
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: petro-production-other
+      colormap_name: epa-ghgi-ch4
+      rescale:
+        - 0
+        - 20
+      minzoom: 0
+      maxzoom: 5
+    compare:
+      datasetId: epa-ch4emission-yeargrid-v2express
+      layerId: 1A-petro-production-other
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
+        }
+    analysis:
+      exclude: true
+      metrics:
+        - mean
+      sourceParams:
+        dst_crs: "+proj=cea"
+    info:
+      source: EPA
+      spatialExtent: Contiguous United States
+      temporalResolution: Annual 
+      unit: Mg CH₄/km²/yr                 
+    legend:
+      unit:
+        label: Mg CH₄/km²/yr
+      type: gradient
+      min: 0
+      max: 20
+      stops:
+        - "#FFFFFF"
+        - "#6F4C9B"
+        - "#6059A9"
+        - "#5568B8"
+        - "#4E79C5"
+        - "#4D8AC6"
+        - "#4E96BC"
+        - "#549EB3"
+        - "#59A5A9"
+        - "#60AB9E"
+        - "#69B190"
+        - "#77B77D"
+        - "#8CBC68"
+        - "#A6BE54"
+        - "#BEBC48"
+        - "#D1B541"
+        - "#DDAA3C"
+        - "#E49C39"
+        - "#E78C35"
+        - "#E67932"
+        - "#E4632D"
+        - "#DF4828"
+        - "#DA2222"
+        - "#B8221E"
+        - "#95211B"
+        - "#721E17"
+        - "#521A13"
+    media:
+      src: ::file ./epa-ch4emission-yeargrid-v2express.thumbnails.other.petrochemical.production.annual.png
+      alt: U.S. Gridded Anthropogenic Methane Emissions Inventory - Other - Petrochemical Production (annual)
+  - id: 1A-ferroalloy-production-other
+    stacApiEndpoint: https://earth.gov/ghgcenter/api/stac
+    tileApiEndpoint: https://earth.gov/ghgcenter/api/raster
+    stacCol: epa-ch4emission-yeargrid-v2express
+    name: Other - Ferroalloy Production (annual)
+    type: raster
+    description: Annual methane emission fluxes from Ferroalloy Production (inventory Industrial Processes and Product Use category 2C2)
+    initialDatetime: newest
+    projection:
+      id: "equirectangular"
+    basemapId: "light"
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: ferroalloy-production-other
+      colormap_name: epa-ghgi-ch4
+      rescale:
+        - 0
+        - 20
+    compare:
+      datasetId: epa-ch4emission-yeargrid-v2express
+      layerId: 1A-ferroalloy-production-other
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
+        }
+    analysis:
+      exclude: true
+      metrics:
+        - mean
+      sourceParams:
+        dst_crs: "+proj=cea"
+    info:
+      source: EPA
+      spatialExtent: Contiguous United States
+      temporalResolution: Annual 
+      unit: Mg CH₄/km²/yr                 
+    legend:
+      unit:
+        label: Mg CH₄/km²/yr
+      type: gradient
+      min: 0
+      max: 20
+      stops:
+        - "#FFFFFF"
+        - "#6F4C9B"
+        - "#6059A9"
+        - "#5568B8"
+        - "#4E79C5"
+        - "#4D8AC6"
+        - "#4E96BC"
+        - "#549EB3"
+        - "#59A5A9"
+        - "#60AB9E"
+        - "#69B190"
+        - "#77B77D"
+        - "#8CBC68"
+        - "#A6BE54"
+        - "#BEBC48"
+        - "#D1B541"
+        - "#DDAA3C"
+        - "#E49C39"
+        - "#E78C35"
+        - "#E67932"
+        - "#E4632D"
+        - "#DF4828"
+        - "#DA2222"
+        - "#B8221E"
+        - "#95211B"
+        - "#721E17"
+        - "#521A13"
+    media:
+      src: ::file ./epa-ch4emission-yeargrid-v2express.thumbnails.other.ferroalloy.production.annual.png
+      alt: U.S. Gridded Anthropogenic Methane Emissions Inventory - Other - Ferroalloy Production (annual)    
 ---
 
 <Block>
