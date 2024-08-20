@@ -257,6 +257,25 @@ layers:
   - **Data Units:** Kelvin (K) 
   - **Data Type:** Research
   - **Data Latency:** N/A
+  </Prose>
+  <Figure>
+<Map
+      datasetId='urban-heating'
+      layerId='houston-lst-day'
+      dateTime='2000-01-01'
+      compareDateTime='2010-01-01'
+      compareLabel='2000-2009 Avg / 2010-2019 Avg'
+      center={[-95.35, 29.8]}
+      zoom={8.75}      
+    />
+    <Caption>
+      Comparison of decadally-averaged daytime land surface temperature (LST) between 2000-2009 and 2010-2019 showing urban heating in the Houston Metropolitan Area.
+    </Caption>
+</Figure>
+</Block>
+
+<Block>
+  <Prose>
   ##### Normalized Difference Vegetation Index 
   - **Temporal Extent:** 2000-2019
   - **Temporal Resolution:** Decadal
@@ -269,7 +288,7 @@ layers:
 <Figure>
 <Map
       datasetId='urban-heating'
-      layerId='houston-lst-day'
+      layerId='houston-ndvi'
       dateTime='2000-01-01'
       compareDateTime='2010-01-01'
       compareLabel='2000-2009 Avg / 2010-2019 Avg'
@@ -277,7 +296,7 @@ layers:
       zoom={8.75}      
     />
     <Caption>
-      Comparison of decadally-averaged daytime land surface temperature (LST) between 2000-2009 and 2010-2019 showing urban heating in the Houston metropolitan area.
+      Comparison of decadally-averaged Normalized Difference Vegetation Index (NDVI) between 2000-2009 and 2010-2019 showing green space reduction in the Houston Metropolitan Area.
     </Caption>
 </Figure>
 </Block>
@@ -333,7 +352,7 @@ layers:
 
 <Block>
   <Prose>
-  ## Data Stories That Use This Dataset
+  ## Data Stories Using This Dataset
   **[Implications for Heat Stress](https://www.earthdata.nasa.gov/dashboard/stories/urban-heating)**
   </Prose>
 </Block>
