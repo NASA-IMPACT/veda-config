@@ -34,7 +34,7 @@ taxonomy:
 <Block style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
   <Prose style={{ flex: '1', paddingRight: '20px', textAlign: 'justify' }}>
     <p>
-    The Black Belt is a region in the Southern United States OF America. The term "Black Belt" originally referred to the region's fertile black soil, ideal for agriculture, particularly cotton plantations. The fertile soil of the Black Belt is intricately connected to the weathering of limestone bases in the Selma Chalk region, which dates back to the Cretaceous Period when the Gulf of Mexico's shoreline was much further inland. Over millions of years, plankton deposited exoskeletons rich in calcium carbonate, leading to the formation of soft limestone known as Selma Chalk. This geological process resulted in a chalky subsoil that, due to its high calcium content, provides exceptional fertility, making the Black Belt particularly suitable for agriculture.
+     The Black Belt is a region in the Southern United States OF America. The term "Black Belt" originally referred to the region's fertile black soil, ideal for agriculture, particularly cotton plantations. The fertile soil of the Black Belt is intricately connected to the weathering of limestone bases in the Selma Chalk region, which dates back to the Cretaceous Period when the Gulf of Mexico's shoreline was much further inland. Over millions of years, plankton deposited exoskeletons rich in calcium carbonate, leading to the formation of soft limestone known as Selma Chalk. This geological process resulted in a chalky subsoil that, due to its high calcium content, provides exceptional fertility, making the Black Belt particularly suitable for agriculture.
     </p>
   </Prose>
   <Figure style={{ flex: '0 0 auto', marginLeft: '20px' }}>
@@ -48,16 +48,13 @@ taxonomy:
   </Figure>
 </Block>
 
-<Block style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
-  <Prose style={{ flex: '1', paddingRight: '20px', textAlign: 'justify' }}>
-    <p>
+<Block>
+  <Prose>
     The Black Belt's crescent shape is captured in a natural-color image by the Moderate Resolution Imaging Spectroradiometer (MODIS) on NASA’s Terra satellite. This image is a composition of segments from several images taken between 2015 and 2018, allowing for the removal of clouds and haze.  
-    </p>
   </Prose>
-  <Figure style={{ flex: '0 0 auto', marginLeft: '20px' }}>
-    <Image
+  <Figure>
+      <Image
       src={new URL('./blackbelt_tmo_2015-2018_lrg.jpg', import.meta.url).href}
-      style={{ maxWidth: '50%', height: 'auto' }}
     />
     <Caption attrAuthor='Data.gov' attrUrl='https://earthobservatory.nasa.gov/images/92321/black-belt-prairie'>
       Black Belt Prairie from MODIS.
@@ -68,7 +65,7 @@ taxonomy:
 <Block style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
   <Prose style={{ flex: '1', paddingRight: '20px', textAlign: 'justify' }}>
     <p>
-      During the 19th century, the Black Belt became synonymous with large-scale cotton production, heavily reliant on enslaved African American labor. After the Civil War, many freed African Americans continued to work in agriculture as sharecroppers or tenant farmers.
+     Historically, the Alabama Black Belt was a cornerstone of the cotton economy, heavily reliant on enslaved African American labor. After the Civil War, many African Americans remained in the area, working as sharecroppers and tenant farmers. The region became a significant cultural and political area, particularly noted for its role in the civil rights movement. Despite its agricultural legacy, the Black Belt has faced economic and social challenges, including poverty and limited access to education and healthcare, which continue to impact its predominantly African American population.
     </p>
   </Prose>
   <Figure style={{ flex: '0 0 auto', marginLeft: '20px' }}>
@@ -79,16 +76,35 @@ taxonomy:
     <Caption attrAuthor='Data.gov' attrUrl='https://en.wikipedia.org/wiki/History_of_African-American_agriculture'>
       Black cotton farming family.
     </Caption>
+  </Figure> 
+</Block>
+
+<Block style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
+  <Figure style={{ flex: '0 0 auto', marginRight: '20px' }}>
+    <Image
+      src={new URL('./BB_WarmNights.png', import.meta.url).href}
+      style={{ maxWidth: '100%', height: 'auto' }}
+    />
+    <Caption attrAuthor='Left Image Source' attrUrl='https://example.com/left-image'>
+      Left Image Caption.
+    </Caption>
+  </Figure>
+  <Prose style={{ flex: '1', textAlign: 'justify' }}>
+    <p>
+      Anthropogenic climate change is causing extreme events, such as heatwaves, to become more frequent and severe. This trend is particularly alarming for the Black Belt, where many residents, especially the older population, depend on outdoor agricultural work. The MERRA-2 climate extreme indices dataset offers valuable insights into the rising extreme day and night temperatures affecting this region. As an advanced climate modeling system, MERRA-2 integrates extensive observational data to analyze climate patterns since 1980. It reveals a concerning increase in temperatures, which heightens the vulnerabilities of those working outdoors in the Black Belt.
+    </p>
+  </Prose>
+  <Figure style={{ flex: '0 0 auto', marginLeft: '20px' }}>
+    <Image
+      src={new URL('./BB_WarmDays.png', import.meta.url).href}
+      style={{ maxWidth: '100%', height: 'auto' }}
+    />
+    <Caption attrAuthor='Right Image Source' attrUrl='https://example.com/right-image'>
+      Right Image Caption.
+    </Caption>
   </Figure>
 </Block>
 
-<Block>
-  <Prose>
-    ## Employment Patterns in the Black Belt
-    
-    x
-  </Prose>
-</Block>
 
 <Block>
   <Prose>
