@@ -3,8 +3,8 @@ id: black-belt-climate
 name: Climate Extremes Aggrevate Social Vulnerabilities in Alabama's Black Belt
 description: "Fill In"
 media:
-  src: ::file ./black-belt-cover.png
-  alt: Black Belt Prairie via NLCD data.
+  src: ::file ./black_belt_cover.jpg
+  alt: Farmer in the fields.
   author:
     name: NASA
     url: https://earthobservatory.nasa.gov/images/92321/black-belt-prairie
@@ -61,13 +61,13 @@ taxonomy:
   </Figure>
 </Block>
 
-<Block style={{ display: 'flex', alignItems: 'flex-start' }}>
-  <Prose style={{ flex: 0.5, paddingRight: '5px', textAlign: 'justify' }}>
+<Block style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
+  <Prose style={{ flex: '1', paddingRight: '20px', textAlign: 'justify' }}>
     <p>
       During the 19th century, the Black Belt became synonymous with large-scale cotton production, heavily reliant on enslaved African American labor. After the Civil War, many freed African Americans continued to work in agriculture as sharecroppers or tenant farmers.
     </p>
   </Prose>
-  <Figure style={{ flex: '0 0 auto' }}>
+  <Figure style={{ flex: '0 0 auto', marginLeft: '20px' }}>
     <Image
       src={new URL('./Black_cotton_farming_family.jpg', import.meta.url).href}
       style={{ maxWidth: '100%', height: 'auto' }}
