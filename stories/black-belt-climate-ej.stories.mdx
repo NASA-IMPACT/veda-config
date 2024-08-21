@@ -88,9 +88,27 @@ taxonomy:
 </Block>
 
 <Block style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
+  <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
+    <Image
+        src={new URL('./BB_OlderPopulation.png', import.meta.url).href}
+        style={{ width: '30%', height: 'auto' }}
+        alt="Increasing Warm Nights"
+    />
+    <p style={{ flex: '1' }}>
+      Analyzing Social Vulnerability Index (SVI) data from the CDC between 2000 and 2022 shows a concerning demographic shift: the younger generation, including those as young as 17, is increasingly moving out of the region, leaving behind an aging population, particularly those aged 65 and above. A linear trend is observed, with color coding representing the slope of this shift. This trend exacerbates the region's vulnerabilities, as the older population becomes more isolated and dependent. 
+    </p>
+    <Image
+        src={new URL('./BB_YoungerPopulation.png', import.meta.url).href}
+        style={{ width: '30%', height: 'auto' }}
+        alt="Increasing Warm Days"
+    />
+  </Prose>
+</Block>
+
+<Block style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
   <Prose style={{ flex: '1', paddingRight: '1px', textAlign: 'justify' }}>
     <p>
-     Data from the MERRA-2 climate extreme indices dataset reveal alarming trends. The indices track various temperature extremes, such as Cool Nights (TN10P), which represent the percentage of days when nighttime temperatures fall below the 10th percentile, and Warm Nights (TN90P), indicating when nighttime temperatures exceed the 90th percentile. Similarly, Cool Days (TX10P) and Warm Days (TX90P) monitor daytime temperature extremes. Analyzing these indices from 1980 to 2023 reveals a clear pattern of rising temperatures in the Black Belt, with an increasing number of warm days and nights.
+      The region is now facing a significant new challenge: climate change. As global temperatures rise, extreme weather events like heatwaves are becoming increasingly frequent and severe. This is particularly concerning for areas where many residents, especially older adults, rely on outdoor agricultural work. Data from the MERRA-2 climate extreme indices dataset reveal troubling trends, showing changes in temperature extremes. Indices such as Cool Nights (TN10P) and Warm Nights (TN90P) track the frequency of days with nighttime temperatures falling below the 10th percentile or exceeding the 90th percentile. Similarly, Cool Days (TX10P) and Warm Days (TX90P) monitor daytime temperature extremes. Analyzing these indices from 1980 to 2023 uncovers a clear pattern of rising temperatures, with an increasing number of warm days and nights, highlighting the escalating climate challenges facing the region.
     </p>
   </Prose>
 </Block>
@@ -191,7 +209,8 @@ taxonomy:
      ### Data Access
      * [NASA Description for MERRA-2 Climate Indices ](https://search.earthdata.nasa.gov/search/granules?p=C1949649168-GES_DISC&pg[0][v]=f&pg[0][gsk]=-start_date&q=MERRA-2%20extremes&tl=1724265744.288!3!!/)
      * [CDC/ATSDR SVI Data and Documentation Download | Place and Health | ATSDR](https://www.atsdr.cdc.gov/placeandhealth/svi/data_documentation_download.html)
-     * [United States Department of Agriculture (USDA) National Agricultural Statistics Service (NASS)](https://www.nass.usda.gov/)
+     * [United States Department of Agriculture (USDA) | National Agricultural Statistics Service (NASS) | Census](https://www.nass.usda.gov/)
+     * [Census Bureau Data | Occupation](https://www.census.gov/topics/employment/industry-occupation.html)]
     </p>
     <p>
      **Authors**: Maheshwari Neelam 
