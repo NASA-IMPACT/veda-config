@@ -82,9 +82,11 @@ taxonomy:
   </Figure> 
 </Block>
 
-<Block>
-  <Prose>
+<Block style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
+  <Prose style={{ flex: '1', paddingRight: '20px', textAlign: 'justify' }}>
+    <p>
      Anthropogenic climate change is leading to more frequent and severe extreme events, such as heatwaves. This trend is particularly concerning for the Alabama Black Belt region, where many residents, especially the older population, depend on outdoor agricultural work. The MERRA-2 climate extreme indices dataset provides valuable insights into the increasing extreme temperatures affecting this area. It includes indices like Cool Nights (TN10P), which represent the percentage of days when the daily minimum temperature falls below the 10th percentile, and Warm Nights (TN90P), indicating when the daily minimum temperature exceeds the 90th percentile. Similarly, Cool Days (TX10P) and Warm Days (TX90P) track the percentage of days when daily maximum temperatures are below the 10th percentile or above the 90th percentile, respectively. By analyzing these indices for linear trends from 1980 to 2023, we can better understand the rising temperatures over time in this region.
+    </p>
   </Prose>
 </Block>
 
@@ -92,15 +94,15 @@ taxonomy:
   <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
     <Image
         src={new URL('./BB_IncreasingWarmNights.png', import.meta.url).href}
-        style={{ width: '60%', height: 'auto' }}
+        style={{ width: '40%', height: 'auto' }}
         alt="Increasing Warm Nights"
     />
     <p style={{ flex: '1' }}>
-      The increasing occurrences of warm days and warm nights are significantly affecting the counties within Alabama's Black Belt region. The colorbar illustrates the slope of the linear trend. 
+      The increasing occurrences of warm days and warm nights are significantly impacting the counties within Alabama's Black Belt. The colorbar illustrates the slope of the linear trend. 
     </p>
     <Image
         src={new URL('./BB_IncreasingWarmDays.png', import.meta.url).href}
-        style={{ width: '60%', height: 'auto' }}
+        style={{ width: '40%', height: 'auto' }}
         alt="Increasing Warm Days"
     />
   </Prose>
@@ -110,15 +112,15 @@ taxonomy:
   <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
     <Image
         src={new URL('./BB_DecreasingCoolDays.png', import.meta.url).href}
-        style={{ width: '60%', height: 'auto' }}
+        style={{ width: '40%', height: 'auto' }}
         alt="Increasing Warm Nights"
     />
     <p style={{ flex: '1' }}>
-      The decreasing occurrences of cool days and cool nights are also significantly affecting the counties within Alabama's Black Belt region. The colorbar illustrates the slope of the linear trend. 
+      Concurrently, the decreasing occurrences of cool days and cool nights are also affecting the region. 
     </p>
     <Image
         src={new URL('./BB_DecreasingCoolNights.png', import.meta.url).href}
-        style={{ width: '60%', height: 'auto' }}
+        style={{ width: '40%', height: 'auto' }}
         alt="Increasing Warm Days"
     />
   </Prose>
@@ -127,8 +129,7 @@ taxonomy:
 <Block style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
   <Prose style={{ flex: '1', paddingRight: '20px', textAlign: 'justify' }}>
     <p>
-      Agriculture continues to be the backbone of the Black Belt's economy, with many older adults working in the fields. This reliance on an aging workforce is concerning, particularly as the physical demands of farming are intensified by rising temperatures. In Sumter County, the number of farm operators aged 55 and above is increasing, mirroring a broader national trend where the average age of U.S. farm producers has risen to 58.1 years by 2022. This demographic shift poses challenges for the sustainability of the agricultural sector, as younger generations increasingly seek opportunities outside traditional farming roles.
-    </p>
+      Agriculture remains the backbone of the Black Belt's economy, with many older adults working in the fields. This reliance on an aging workforce is concerning, particularly as the physical demands of farming intensify with rising temperatures. In Sumter County, the number of farm operators aged 55 and above is increasing, reflecting a broader national trend where the average age of U.S. farm producers has risen to 58.1 years by 2022.     </p>
   </Prose>
   <Figure style={{ flex: '0 0 auto', marginLeft: '5px' }}>
     <Image
@@ -144,27 +145,23 @@ taxonomy:
 <Block style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
   <Prose style={{ flex: '1', paddingRight: '20px', textAlign: 'justify' }}>
     <p>
-      Additionally, outdoor occupations like transportation and construction have remained crucial sources of income and have been increasing over the past few years, as analyzed by data from the U.S. Census Bureau. This data, specifically examining the number of establishments by employment category in counties such as Choctaw and Butler, highlights the economic importance of these sectors. 
-    </p>
+     Additionally, outdoor occupations such as transportation and construction have become crucial sources of income and have shown growth over the past few years. Data from the U.S. Census Bureau, which examines the number of establishments by employment category in counties like Choctaw and Butler, underscores the economic importance of these sectors.    </p>
   </Prose>
   <Figure style={{ flex: '0 0 auto', marginLeft: '5px' }}>
     <Image
       src={new URL('./BB_Employ_Choctaw.png', import.meta.url).href}
-      style={{ maxWidth: '60%', height: 'auto' }}
+      style={{ maxWidth: '30%', height: 'auto' }}
     />
-    <Caption attrAuthor='Data.gov' attrUrl='https://en.wikipedia.org/wiki/History_of_African-American_agriculture'>
-      Black cotton farming family.
-    </Caption>
   </Figure> 
 </Block>
 
 <Block>
   <Prose>
     The combination of rising temperatures and an older workforce underscores the urgent need for adaptive strategies to protect both the health of the population and the viability of these economic sectors.Addressing these intertwined challenges requires targeted policies and investments in climate resilience measures. By enhancing education, healthcare, and job opportunities, along with adopting sustainable agricultural practices, the Black Belt can work towards a more resilient and prosperous future in the face of climate change. 
-    To mitigate heat-related risks, several safeguards can be implemented:
-    ### Improved Access to Cooling Centers: Establishing more cooling centers in rural areas can provide relief during extreme heat events.
-    ### Health Monitoring Programs: Implementing regular health check-ups for older adults working in agriculture can help prevent heat-related illnesses.
-    ### Education and Training: Providing training on heat safety and recognizing symptoms of heat stress can empower workers to take preventive actions.
-    ### Flexible Work Schedules: Adjusting work hours to cooler parts of the day can reduce exposure to extreme heat.
+    ### To mitigate heat-related risks, several safeguards can be implemented:
+    - Improved Access to Cooling Centers: Establishing more cooling centers in rural areas can provide relief during extreme heat events.
+    - Health Monitoring Programs: Implementing regular health check-ups for older adults working in agriculture can help prevent heat-related illnesses.
+    - Education and Training: Providing training on heat safety and recognizing symptoms of heat stress can empower workers to take preventive actions.
+    - Flexible Work Schedules: Adjusting work hours to cooler parts of the day can reduce exposure to extreme heat.
   </Prose>
 </Block>
