@@ -1,6 +1,6 @@
 ---
 id: nlcd-new-urbanization
-name: "National Land Cover Database Urbanization"
+name: "National Land Cover Database New Urbanization"
 description: "Using the National Land Cover Database (NLCD) to illustrate new urbanization from 2001-2021."
 
 media:
@@ -51,6 +51,37 @@ layers:
 
 <Block>
   <Prose>
+  ## Dataset Details
+  - **Temporal Extent:** 2001-2021 
+  - **Temporal Resolution:** 20 Years
+  - **Spatial Extent:** CONUS
+  - **Spatial Resolution:** 30 m
+  - **Data Units:** N/A
+  - **Data Type:** Research
+  - **Data Latency:** N/A
+  </Prose>
+<Figure>
+  <Map
+    datasetId='nlcd-new-urbanization'
+    layerId='nlcd-new-urbanization''
+    dateTime='2001-01-01'
+    zoom={8}
+    center={[-95.37,29.76]}
+    compareDateTime='2021-01-01'
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+    Comparison of the NLCD land cover classifications over Houston, TX between 2001 and 2021
+  </Caption>
+</Figure>
+</Block>
+
+</Block>
+
+<Block>
+  <Prose>
 
   ### About
 
@@ -59,6 +90,14 @@ layers:
   This is a collective effort between the U.S. Geological Survey (USGS) and the Multi-Resolution Land Characteristics (MRLC) Consortium. The MRLC, composed of various federal agencies, has a rich legacy spanning over 30 years of generating consistent and pertinent land cover information on a national scale. The NLCD is a testament to their dedication and has emerged as one of the most frequently utilized geospatial datasets within the U.S., catering to an extensive audience ranging from scientists, land managers, city planners, to students.
 
   As of its latest release, the NLCD showcases land cover data and related changes across nine specific epochs, starting from 2001 and culminating in 2021. These datasets are meticulously crafted, ensuring continuity and consistency with the past releases (from 2001-2019). This methodological consistency ensures that the datasets from the different epochs are directly comparable and well-suited for mult-temporal analyses.
+  
+  This dataset landing page is specific to a binary raster dataset of new urbanization seen from the NLCD classifications between the years 2001 and 2021.
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
 
   ### What NLCD Offers
 
@@ -69,16 +108,58 @@ layers:
   * Urban Imperviousness: A crucial dataset for urbanization studies, it highlights impervious surfaces in urban regions, showcasing them as a percentage of the developed surface at every 30-meter pixel.
 
   * Urban Impervious Descriptor: A more nuanced product that classifies specific urban developments, such as roads, wind tower sites, building locations, and energy production sites. This aids in a more granular analysis of urban features.
+  
+  </Prose>
+</Block>
 
+<Block>
+  <Prose>
+  
   ### Access the Data
 
   Visit the [Acess Data](https://www.mrlc.gov/data) page to explore all of the options that NLCD offers.
 
+  </Prose>
+</Block
+
+<Block>
+  <Prose>
+
   ### Citing this Dataset
 
   U.S. Geological Survey (USGS) & Multi-Resolution Land Characteristics (MRLC) Consortium. (2021). National Land Cover Database (NLCD) 2021: Conterminous U.S. Land Cover. Earth Resources Observation and Science (EROS) Center. Retrieved from https://www.mrlc.gov/data
+  
+  </Prose>
+</Block>
 
-  ### Publications
+<Block>
+  <Prose>
+  
+  ## Disclaimer
+
+  All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
+  
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+
+  ### Key Publications
+  
+  Homer, C., Dewitz, J., Fry, J., Coan, M., Hossain, N., Larson, C., et al. (2007). Completion of the 2001 National Land Cover Database for the conterminous United States. Photogrammetric Engineering and Remote Sensing, 73(4), 337–341.
+
+  Homer, C., Fry, J. A., & Barnes, C. A. (2012). The national land cover database. US geological survey fact sheet, 3020(4), 1–4.
+
+  Homer, C., Dewitz, J., Yang, L., Jin, S., Danielson, P., Xian, G., et al. (2015). Completion of the 2011 national land cover database for the conterminous United States – Representing a decade of land cover change information. Photogrammetric Engineering and Remote Sensing, 81(5), 345–354. https://doi.org/10.14358/PERS.81.5.345
+ 
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+
+  ### Other Publications
 
   * Danielson, Patrick, Postma, Kory, Riegle, J., Dewitz, Jon A., Deep learning artificial intelligence (AI) for improving classification accuracy for the National Land Cover Database (NLCD) [abs.]
 
@@ -97,4 +178,22 @@ layers:
   </Prose>
 </Block>
 
+<Block>
+  <Prose>
+  
+  ## Data Stories Using This Dataset
+  
+  **[Aerosols and Their Impacts on Houston, TX](https://www.earthdata.nasa.gov/dashboard/stories/houston-aod)**
 
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## License
+  
+  [Creative Commons Attribution 1.0 International](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC BY 1.0)
+
+  </Prose>
+</Block>
