@@ -16,31 +16,25 @@ taxonomy:
       - Disasters
 ---
 
-<Block style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
-  <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
-
-    Authors: Maheshwari Neelam <sup>[1]</sup>, Udaysankar Nair <sup>[2]</sup> and Natalie P.Thomas <sup>[3]</sup>
-
-    <sup>[1]</sup> USRA and National Aeronautics and Space Administration (NASA)
-    
-    <sup>[2]</sup> The University of Alabama in Huntsville
-
-    <sup>[3]</sup> University of Maryland and Global Modeling and Assimilation Office, NASA
-
-    **Mission**: [NASA Earth Action](https://science.nasa.gov/earth/in-action/): A thriving world, driven by trusted, actionable Earth science
-
-    **Disclaimer**: This study demonstrates innovative and practical applications of NASA Earth science data to highlight existing environmental inequities. Please note that the results have not undergone peer review.
-  </Prose>
-</Block>
-
-<Block style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
-  <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
-    <p>
-     Authors: Maheshwari Neelam <sup>[1]</sup>, Udaysankar Nair <sup>[2]</sup>
-     <sup>[1]</sup> USRA and National Aeronautics and Space Administration (NASA)
-     <sup>[2]</sup> The University of Alabama in Huntsville
-     **Mission**: [NASA Earth Action](https://science.nasa.gov/earth/in-action/): A thriving world, driven by trusted, actionable Earth science
-     **Disclaimer**: This study demonstrates innovative and practical applications of NASA Earth science data to highlight existing environmental inequities. Please note that the results have not undergone peer review.
+<Block style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
+  <Prose style={{ textAlign: 'center', width: '100%' }}>
+    <p style={{ marginBottom: '0.5em' }}>
+      Authors: Maheshwari Neelam <sup>[1]</sup>, Udaysankar Nair <sup>[2]</sup> and Natalie P.Thomas <sup>[3]</sup>
+    </p>
+    <p style={{ marginBottom: '0.5em' }}>
+      <sup>[1]</sup> USRA and National Aeronautics and Space Administration (NASA)
+    </p>
+    <p style={{ marginBottom: '0.5em' }}>
+      <sup>[2]</sup> The University of Alabama in Huntsville
+    </p>
+    <p style={{ marginBottom: '0.5em' }}>
+      <sup>[3]</sup> University of Maryland and Global Modeling and Assimilation Office, NASA
+    </p>
+    <p style={{ marginBottom: '0.5em', fontWeight: 'bold' }}>
+      Mission: NASA Earth Action: A thriving world, driven by trusted, actionable Earth science
+    </p>
+    <p style={{ fontSize: '0.9em', fontStyle: 'italic' }}>
+      Disclaimer: This study demonstrates innovative and practical applications of NASA Earth science data to highlight existing environmental inequities. Please note that the results have not undergone peer review.
     </p>
   </Prose>
 </Block>
@@ -90,9 +84,6 @@ taxonomy:
       src={new URL('./Black_cotton_farming_family.jpg', import.meta.url).href}
       style={{ maxWidth: '100%', height: 'auto' }}
     />
-    <Caption attrAuthor='Data.gov' attrUrl='https://en.wikipedia.org/wiki/History_of_African-American_agriculture'>
-      Black cotton farming family.
-    </Caption>
   </Figure> 
 </Block>
 
