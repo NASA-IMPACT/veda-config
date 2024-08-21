@@ -12,9 +12,6 @@ import SmartLink from '$veda-ui-scripts/components/common/smart-link';
 
 import './index.scss';
 
-const HugResetContainer = styled(LazyLoad)`
-  grid-column: 1 / -1;
-`;
 const interval = 100;
 const slide_length = 100;
 const item_n = CarouselItems.length;

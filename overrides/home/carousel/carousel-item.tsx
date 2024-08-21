@@ -43,23 +43,23 @@ export function ItemPanel({ item, linkComponent: LinkComponent }) {
 }
 
 function ItemCard({ item, itemIdx, onTitleClick, selected, linkComponent }) {
-  return <div className="tablet:padding-left-1 tabelt:padding-right-1 margin-top-1 height-full position-relative">
+  return <div className="tablet:padding-left-1 tablet:padding-right-1 margin-top-1 height-full position-relative">
   <Button
       unstyled={true}
       className="position-absolute top-0 left-0 width-full height-full "
       onClick={() => { onTitleClick(item); } }
       type="button"
       role="tab"
-      aria-label={`Slide ${itemIdx}`}
+      aria-label={`Slide ${itemIdx+1}`}
       aria-selected={selected.toString()}
-      aria-controls={`carousel-item-${itemIdx}`} 
+      aria-controls={`carousel-item-${itemIdx+1}`} 
       children={undefined} />
-  <div className="tablet:display-block display-none">
+  <div className="tablet:display-block display-none"  aria-roledescription='slide' aria-label={`${itemIdx+1} of 3`}>
     <h3 className="tablet:margin-top-1 carousel--title usa-button usa-button--unstyled text-bold veda-color--base">
       {item.title}
     </h3>
   </div>
-  <div role="tabpanel" className="height-full display-flex flex-column flex-justify" aria-roledescription='' aria-label={`${itemIdx} of 3`}>
+  <div role="tabpanel" className="height-full display-flex flex-column flex-justify">
     <ItemPanel item={item} linkComponent={linkComponent} />
   </div>
 </div>
