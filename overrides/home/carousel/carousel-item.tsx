@@ -1,6 +1,6 @@
 import React from '$veda-ui/react'
 import styled  from '$veda-ui/styled-components';
-import { Grid, Icon } from '$veda-ui/@trussworks/react-uswds'
+import { Button, Grid, Icon } from '$veda-ui/@trussworks/react-uswds'
 
 const progressColor = '#1565EF';
 
@@ -44,15 +44,16 @@ export function ItemPanel({ item, linkComponent: LinkComponent }) {
 
 function ItemCard({ item, itemIdx, onTitleClick, selected, linkComponent }) {
   return <div className="tablet:padding-left-1 tabelt:padding-right-1 margin-top-1 height-full position-relative">
-  <button
-    className="position-absolute top-0 left-0 width-full height-full cursor-pointer usa-button--unstyled "
-    onClick={() => {onTitleClick(item);}}
-    type="button"
-    role="tab" 
-    aria-label={`Slide ${itemIdx}`}
-    aria-selected={selected.toString()}
-    aria-controls={`carousel-item-${itemIdx}`}
-  />
+  <Button
+      unstyled={true}
+      className="position-absolute top-0 left-0 width-full height-full "
+      onClick={() => { onTitleClick(item); } }
+      type="button"
+      role="tab"
+      aria-label={`Slide ${itemIdx}`}
+      aria-selected={selected.toString()}
+      aria-controls={`carousel-item-${itemIdx}`} 
+      children={undefined} />
   <div className="tablet:display-block display-none">
     <h3 className="tablet:margin-top-1 carousel--title usa-button usa-button--unstyled text-bold veda-color--base">
       {item.title}
