@@ -37,7 +37,7 @@ taxonomy:
      The Black Belt is a region in the Southern United States OF America. The term "Black Belt" originally referred to the region's fertile black soil, ideal for agriculture, particularly cotton plantations. The fertile soil of the Black Belt is intricately connected to the weathering of limestone bases in the Selma Chalk region, which dates back to the Cretaceous Period when the Gulf of Mexico's shoreline was much further inland. Over millions of years, plankton deposited exoskeletons rich in calcium carbonate, leading to the formation of soft limestone known as Selma Chalk. This geological process resulted in a chalky subsoil that, due to its high calcium content, provides exceptional fertility, making the Black Belt particularly suitable for agriculture.
     </p>
   </Prose>
-  <Figure style={{ flex: '0 0 auto', marginLeft: '20px' }}>
+  <Figure style={{ flex: '0 0 auto', marginLeft: '5px' }}>
     <Image
       src={new URL('./soilmap_Alabama.png', import.meta.url).href}
       style={{ maxWidth: '70%', height: 'auto' }}
@@ -54,10 +54,10 @@ taxonomy:
     The Black Belt's crescent shape is captured in a natural-color image by the Moderate Resolution Imaging Spectroradiometer (MODIS) on NASA’s Terra satellite. This image is a composition of segments from several images taken between 2015 and 2018, allowing for the removal of clouds and haze.  
     </p>
   </Prose>
-  <Figure style={{ flex: '0 0 auto', marginLeft: '20px' }}>
+  <Figure style={{ flex: '0 0 auto', marginLeft: '5px' }}>
       <Image
       src={new URL('./blackbelt_tmo_2015-2018_lrg.jpg', import.meta.url).href}
-      style={{ maxWidth: '60%', height: 'auto' }}
+      style={{ maxWidth: '90%', height: 'auto' }}
     />
     <Caption attrAuthor='Data.gov' attrUrl='https://earthobservatory.nasa.gov/images/92321/black-belt-prairie'>
       Black Belt Prairie from MODIS.
@@ -71,7 +71,7 @@ taxonomy:
      Historically, the Alabama Black Belt was a cornerstone of the cotton economy, heavily reliant on enslaved African American labor. After the Civil War, many African Americans remained in the area, working as sharecroppers and tenant farmers. The region became a significant cultural and political area, particularly noted for its role in the civil rights movement. Despite its agricultural legacy, the Black Belt has faced economic and social challenges, including poverty and limited access to education and healthcare, which continue to impact its predominantly African American population.
     </p>
   </Prose>
-  <Figure style={{ flex: '0 0 auto', marginLeft: '20px' }}>
+  <Figure style={{ flex: '0 0 auto', marginLeft: '5px' }}>
     <Image
       src={new URL('./Black_cotton_farming_family.jpg', import.meta.url).href}
       style={{ maxWidth: '100%', height: 'auto' }}
@@ -83,9 +83,9 @@ taxonomy:
 </Block>
 
 <Block>
-  <Prose style={{textAlign: 'center' }}>
+  </Prose>
     <p>
-     Anthropogenic climate change is causing extreme events, such as heatwaves, to become more frequent and severe. This trend is particularly alarming for the Black Belt, where many residents, especially the older population, depend on outdoor agricultural work.
+     Anthropogenic climate change is leading to more frequent and severe extreme events, such as heatwaves. This trend is particularly concerning for the Alabama Black Belt region, where many residents, especially the older population, depend on outdoor agricultural work. The MERRA-2 climate extreme indices dataset provides valuable insights into the increasing extreme temperatures affecting this area. It includes indices like Cool Nights (TN10P), which represent the percentage of days when the daily minimum temperature falls below the 10th percentile, and Warm Nights (TN90P), indicating when the daily minimum temperature exceeds the 90th percentile. Similarly, Cool Days (TX10P) and Warm Days (TX90P) track the percentage of days when daily maximum temperatures are below the 10th percentile or above the 90th percentile, respectively. By analyzing these indices for linear trends from 1980 to 2023, we can better understand the rising temperatures over time in this region. 
     </p>
   </Prose>
 </Block>
@@ -93,33 +93,81 @@ taxonomy:
 <Block style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
   <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
     <Image
-      src={new URL('./BB_WarmNights.png', import.meta.url).href}
-      style={{ maxWidth: '50%', height: 'auto', marginRight: '20px' }}
-      alt="Increasing Warm Nights"
+        src={new URL('./BB_IncreasingWarmNights.png', import.meta.url).href}
+        style={{ width: '100%', height: 'auto' }}
+        alt="Increasing Warm Nights"
     />
     <p style={{ flex: '1' }}>
-     The MERRA-2 climate extreme indices dataset offers valuable insights into the rising extreme day and night temperatures affecting the Alabama Black Belt region. This dataset includes indices such as Cool Nights (TN10P), which represent the percentage of days when the daily minimum temperature falls below the 10th percentile, and Warm Nights (TN90P), indicating when the daily minimum temperature exceeds the 90th percentile. Similarly, Cool Days (TX10P) and Warm Days (TX90P) track the percentage of days when daily maximum temperatures are below the 10th percentile or above the 90th percentile, respectively. These indices are analyzed for linear trends in the data from 1980 to 2023, providing a comprehensive view of temperature extremes over time.
+      The increasing occurrences of warm days and warm nights are significantly affecting the counties within Alabama's Black Belt region. The colorbar illustrates the slope of the linear trend. 
     </p>
     <Image
-      src={new URL('./BB_WarmDays.png', import.meta.url).href}
-      style={{ maxWidth: '50%', height: 'auto', marginLeft: '20px' }}
-      alt="Increasing Warm Days"
+        src={new URL('./BB_IncreasingWarmDays.png', import.meta.url).href}
+        style={{ width: '100%', height: 'auto' }}
+        alt="Increasing Warm Days"
     />
   </Prose>
 </Block>
 
+<Block style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
+  <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
+    <Image
+        src={new URL('./BB_DecreasingCoolDays.png', import.meta.url).href}
+        style={{ width: '100%', height: 'auto' }}
+        alt="Increasing Warm Nights"
+    />
+    <p style={{ flex: '1' }}>
+      The decreasing occurrences of cool days and cool nights are also significantly affecting the counties within Alabama's Black Belt region. The colorbar illustrates the slope of the linear trend. 
+    </p>
+    <Image
+        src={new URL('./BB_DecreasingCoolNights.png', import.meta.url).href}
+        style={{ width: '100%', height: 'auto' }}
+        alt="Increasing Warm Days"
+    />
+  </Prose>
+</Block>
+
+<Block style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
+  <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
+    <Image
+        src={new URL('./BB_Youngerpopulation.png', import.meta.url).href}
+        style={{ width: '100%', height: 'auto' }}
+        alt="Increasing Warm Nights"
+    />
+    <p style={{ flex: '1' }}>
+        Compounding these environmental challenges are significant demographic and socio-economic shifts within the Black Belt. The region is socio-economically disadvantaged, with limited access to education, healthcare, and employment opportunities. As a result, many young residents are leaving in search of better prospects, leading to a noticeable increase in the proportion of older adults. This demographic shift presents additional challenges, as older adults are generally more susceptible to the adverse effects of extreme heat, including heat-related illnesses. With fewer younger individuals to support them, the community's resilience to climate change is further weakened.    
+    </p>
+    <Image
+        src={new URL('./BB_OlderPopulation.png', import.meta.url).href}
+        style={{ width: '100%', height: 'auto' }}
+        alt="Increasing Warm Days"
+    />
+  </Prose>
+</Block>
+
+
+
+
+
+
+
+
+
+
+
+
+*/
 <Block style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
   <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginRight: '20px', flex: '0 0 auto' }}>
       <Image
         src={new URL('./BB_WarmNights.png', import.meta.url).href}
-        style={{ width: '50%', height: 'auto' }}
+        style={{ width: '100%', height: 'auto' }}
         alt="Increasing Warm Nights"
       />
       <span style={{ textAlign: 'center', marginTop: '5px' }}>Increasing Warm Nights</span>
     </div>
     <p style={{ flex: '1', margin: '0 20px' }}>
-      The MERRA-2 climate extreme indices dataset offers valuable insights into the rising extreme day and night temperatures affecting the Alabama Black Belt region. This dataset includes indices such as Cool Nights (TN10P), which represent the percentage of days when the daily minimum temperature falls below the 10th percentile, and Warm Nights (TN90P), indicating when the daily minimum temperature exceeds the 90th percentile. Similarly, Cool Days (TX10P) and Warm Days (TX90P) track the percentage of days when daily maximum temperatures are below the 10th percentile or above the 90th percentile, respectively. These indices are analyzed for linear trends in the data from 1980 to 2023, providing a comprehensive view of temperature extremes over time.
+      The increasing occurrences of warm days (depicted on the right) and warm nights (depicted on the left) are significantly affecting the counties within Alabama's Black Belt region. The colorbar illustrates the slope of the linear trend. 
     </p>
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginLeft: '20px', flex: '0 0 auto' }}>
       <Image
@@ -127,7 +175,8 @@ taxonomy:
         style={{ width: '100%', height: 'auto' }}
         alt="Increasing Warm Days"
       />
-      <span style={{ textAlign: 'center', marginTop: '5px' }}>Increasing Warm Days</span>
+      <span style={{ textAlign: 'center', marginTop: '5px' }}>Increasing Warm Days </span>
     </div>
   </Prose>
 </Block>
+*/
