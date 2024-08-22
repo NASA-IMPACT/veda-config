@@ -1,5 +1,6 @@
 import styled from "$veda-ui/styled-components";
 
+
 const Title = styled.h2`
   margin: 48px 0 24px 0;
   font-size: calc(2rem + var(--base-text-increment,0rem));
@@ -15,7 +16,7 @@ const Title = styled.h2`
 
 const P = styled.p`
   font-size: 1.25rem;
-  font-family: var(--base-font-family)
+  width: 80%;
 `
 
 const FitContainer = styled.div`
@@ -23,7 +24,6 @@ const FitContainer = styled.div`
   flex-direction: column;
   padding: 12px 13vw;
   margin: 12px;
-  font: inherit
 `
 
 const SectionContainer = styled.section`
