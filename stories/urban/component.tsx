@@ -31,6 +31,5 @@ export default function Urban() {
                 <Keypoints data={cities} cardType="cover"></Keypoints>
             </SectionContainer>
         </FitContainer>
-
     )
 }
