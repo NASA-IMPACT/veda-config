@@ -1,64 +1,70 @@
 import React from "$veda-ui/react";
+import styled from "$veda-ui/styled-components";
 
 import {
-  Card,
   CardHeader,
-  CardMedia,
-  CardFooter,
   CardBody,
-  Link
+  Grid,
 } from '$veda-ui/@trussworks/react-uswds';
 
 import Keypoints from "../../common/keypoints";
 import { focusAreasSansDatasets } from "../../common/constants";
 import { FitContainer, P, SectionContainer, Title } from "../../common/styled-components";
 
-import './UrbanEmissionsSpotlight.css';
+const GridContainer = styled(Grid)`
+  height: 300px;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 4px 0 rgba(44,62,80,0.08), 0 12px 24px 0 rgba(44,62,80,0.08);
+
+  &:hover {
+    transform: translate(0, 0.125rem);
+    transition: all 0.24s ease-in-out 0s;
+  }
+`;
+
+const CenteredGrid = styled(Grid)`
+  align-content: center;
+`
+
+const StyledImg = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+`
+
+const Link = styled.a`
+  text-decoration: none;
+  color: inherit;
+  opacity: 1;
+`
+
 
 export default function HomeComponent() {  
   return (
     <FitContainer>
       <SectionContainer>
         <Title>Content Collections by Topic</Title>
-        <div className="spotlight-container">
-        <img 
-          src="https://nicholas.duke.edu/sites/default/files/styles/banner/public/images/Urban%20Environment.jpg" 
-          alt="Urban Emissions" 
-          className="spotlight-image" 
-        />
-        <div className="spotlight-text">
-          <h2>Spotlight: Urban Emissions</h2>
-          <p>
-            Globally, cities are responsible for more than 70% of greenhouse gas emissions. Cities have the power to reduce emissions using policies that benefit the health of their citizens. The U.S. Greenhouse Gas Center welcomes a new set of tools aimed at supporting city decisionmakers.
-          </p>
-          <button className="explore-button"><a className="link" href="/stories/urban">Explore the Collection</a></button>
-        </div>
-        </div>
-
-        <Card className="usa-card--flag" layout="flagDefault" headerFirst gridLayout={{
-          tablet: {
-            col: 12
-          }
-        }}>
-          <CardHeader>
-            <h3 className="usa-card__heading">I hereunto append the result</h3>
-          </CardHeader>
-          <CardMedia exdent>
-            <img src={"https://nicholas.duke.edu/sites/default/files/styles/banner/public/images/Urban%20Environment.jpg"} alt="" />
-          </CardMedia>
-          <CardBody>
-            <p>
-              He roused up and gave me good-day. I told him a friend of mine had
-              commissioned me to make some inquiries about a cherished companion of
-              his boyhood named Leonidas W. Smiley.
-            </p>
+        <Link href="/stories/urban" >
+        <GridContainer row col={10} gap={3}>
+          <CenteredGrid tablet={{col: 5}}>
+              <StyledImg src={"https://nicholas.duke.edu/sites/default/files/styles/banner/public/images/Urban%20Environment.jpg"}
+                alt="urban image"
+              />
+          </CenteredGrid>
+          <CenteredGrid tablet={{col: true}}>
+            <CardHeader>
+            <h1 className="usa-card__heading" style={{fontSize: "1.5rem"}}>Spotlight: Urban Emissions</h1>
+            </CardHeader>
+            <CardBody>
+              <p style={{fontSize: "1.125rem"}}>
+              Globally, cities are resp consible for more than 70% of greenhouse gas emissions. Cities have the power to reduce emissions using policies that benefit the health of their citizens. The U.S. Greenhouse Gas Center welcomes a new set of tools aimed at supporting city decisionmakers.
+              </p>
           </CardBody>
-          <CardFooter>
-            <Link href={'#'} variant="unstyled" className="usa-button" allowSpacebarActivation>
-              Make some inquiries
-            </Link>
-          </CardFooter>
-        </Card>
+          </CenteredGrid>
+        </GridContainer>
+        </Link>
       </SectionContainer>
 
       <SectionContainer>
