@@ -1,5 +1,4 @@
 import React from "$veda-ui/react";
-import styled from "$veda-ui/styled-components";
 import { Link } from '$veda-ui/react-router-dom';
 import {
   Card, 
@@ -7,38 +6,31 @@ import {
   CardBody,
   CardMedia,
   CardGroup,
-  CardFooter,
-  Grid,
   GridContainer
 } from '$veda-ui/@trussworks/react-uswds';
 
-import { FoldTitle } from '$veda-ui/instance';
-import Keypoints from "../../common/keypoints";
 import { focusAreasSansDatasets } from "../../common/constants";
-import { P, SectionContainer, Title } from "../../common/styled-components";
+import { Title } from "../../common/styled-components";
 
-console.log(focusAreasSansDatasets)
-const FitContainer = styled.div`
-  grid-column: 1 / -1;
-`
-import '/common/styles.scss'
+import '/common/styles.scss';
+import './topics.scss';
 
 export default function HomeComponent() {  
   return (
-    <div className="hug-reset-container">
+    <div className="hug-reset-container margin-bottom-8">
       <GridContainer>
           <Title>Content Collections by Topic</Title>
         <CardGroup>
-          <Card layout="flagDefault" gridLayout={{tablet: {col: 12}}} containerProps={{className:'border-0 position-relative devseed-card__mimick'}}>
+          <Card layout="flagDefault" gridLayout={{tablet: {col: 10}, col: 12}} containerProps={{className:'border-0 position-relative devseed-card__mimick'}}>
             <CardMedia exdent>
               <img src={"https://nicholas.duke.edu/sites/default/files/styles/banner/public/images/Urban%20Environment.jpg"} alt="urban image" />
               </CardMedia>
 
             <CardHeader>
-              <h3 className="usa-card__heading">Spotlight: Urban Emissions</h3>
+              <h3 className="usa-card__heading margin-top-4">Spotlight: Urban Emissions</h3>
             </CardHeader>
             <CardBody>
-              <p className="padding-bottom-2">
+              <p className="padding-bottom-2 margin-bottom-4">
                 Globally, cities are resp consible for more than 70% of greenhouse gas emissions. Cities have the power to reduce emissions using policies that benefit the health of their citizens. The U.S. Greenhouse Gas Center welcomes a new set of tools aimed at supporting city decisionmakers.
               </p>
             </CardBody>
@@ -47,9 +39,9 @@ export default function HomeComponent() {
           </CardGroup>
         
       
-      <SectionContainer>
+      <section>
         <Title>Core Science Focus Areas</Title>
-        <p className="margin-top-4 margin-bottom-2">The GHG Center includes three core science focus areas. How to get involved? For the latest, subscribe to our email newsletter.</p>
+        <p className="margin-top-2 margin-bottom-4 font-sans-md">The GHG Center includes three core science focus areas. How to get involved? For the latest, subscribe to our email newsletter.</p>
         <CardGroup>
         {/* <Keypoints data={focusAreasSansDatasets} /> */}
         {focusAreasSansDatasets.map(focusArea => {
@@ -69,7 +61,7 @@ export default function HomeComponent() {
           </Card>
         })}
         </CardGroup>
-      </SectionContainer>
+      </section>
     </GridContainer>
     </div>
   );
