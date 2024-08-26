@@ -18,10 +18,10 @@ import './topics.scss';
 export default function HomeComponent() {  
   return (
     <div className="hug-reset-container margin-bottom-8">
-      <GridContainer>
+      <GridContainer containerSize="widescreen">
           <Title>Content Collections by Topic</Title>
         <CardGroup>
-          <Card layout="flagDefault" gridLayout={{tablet: {col: 10}, col: 12}} containerProps={{className:'border-0 position-relative devseed-card__mimick'}}>
+          <Card layout="flagDefault" gridLayout={{tablet: {col: 10}, col: 12}} containerProps={{className:'border-0 position-relative card-shadow__hover'}}>
             <CardMedia exdent>
               <img src={"https://nicholas.duke.edu/sites/default/files/styles/banner/public/images/Urban%20Environment.jpg"} alt="urban image" />
               </CardMedia>
@@ -45,7 +45,7 @@ export default function HomeComponent() {
         <CardGroup>
         {/* <Keypoints data={focusAreasSansDatasets} /> */}
         {focusAreasSansDatasets.map(focusArea => {
-            return <Card gridLayout={{ tablet: {col: 4}}} containerProps={{className:'border-0 position-relative devseed-card__mimick'}}>
+            return <Card gridLayout={{ tablet: {col: 4}}} containerProps={{className:'border-0 position-relative card-shadow__hover'}}>
             <CardMedia exdent>
               <img src={focusArea.img.src} alt={focusArea.img.alt} />
               </CardMedia>
