@@ -47,19 +47,22 @@ export default function Keypoints({
         <Card
           key={datum.title}
           gridLayout={{ tablet: { col: 4 } }}
+          className="padding-bottom-0"
           containerProps={{
-            className: `border-0 position-relative card-shadow__hover margin-top-4 margin-right-2`,
+            className: `border-0 position-relative card-shadow__hover margin-top-4 margin-right-2 ${cardType === 'cover' ? 'card__cover' : ''}`,
           }}
         >
           <CardMedia exdent>
             <img src={datum.img.src} alt={datum.img.alt} />
           </CardMedia>
-          <CardHeader>
-            <h3 className="usa-card__heading">{datum.title}</h3>
-          </CardHeader>
-          <CardBody>
-            <p className="padding-bottom-2">{datum.desc}</p>
-          </CardBody>
+          <div className="card__body">
+            <CardHeader>
+              <h3 className="usa-card__heading">{datum.title}</h3>
+            </CardHeader>
+            <CardBody>
+              <p className="padding-bottom-2">{datum.desc}</p>
+            </CardBody>
+          </div>
           <Link className="position-absolute top-0 left-0 width-full height-full blocklink" to={datum.link.url} />
         </Card>
       ))}

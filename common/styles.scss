@@ -23,3 +23,33 @@
 .usa-card__media--exdent {
   margin-inline: auto;
 }
+
+.card__cover {
+  height: 200px;
+  overflow: hidden;
+  
+  .usa-card__media {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .card__body {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Translucent overlay */
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    border-radius: 8px;
+
+    color: white;
+    text-align: left;
+
+    .usa-card__body {
+      flex: none;
+      padding: .125rem 1.5rem;
+    }
+  }
+}
