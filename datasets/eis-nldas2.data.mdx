@@ -1,7 +1,6 @@
 ---
 id: nldas2
 name:  "NLDAS-2 Precipitation Forcing Dataset"
-description: "NASA is co-developing high-resolution retrospective and real-time data for water resources and agricultural applications"
 media:
   src: ::file ./nldas-cover.png
   alt: Landsat 8 — OLI image of the Mississippi River below Memphis, Tennessee on September 16, 2023 at near record low water levels, limiting barge shipments, threatening drinking water supplies, agriculture, and ecosystems.y.
@@ -11,9 +10,13 @@ media:
 taxonomy:
   - name: Topics
     values:
+      - Water Resources
       - Hydrology
-      - Precipitation    
-      - Surface Meteorology        
+      - Precipitation
+      - Surface Meteorology
+      - Drought    
+      - Agriculture
+      - Disasters       
 layers:
   - id: nldas2
     stacCol: nldas2
@@ -72,10 +75,12 @@ layers:
 <Block>
   <Prose>
     ## Key Publications
-    Xia, Youlong, Mitchell, Kenneth, Ek, Michael, Sheffield, Justin, Cosgrove, Brian, Wood, Eric, Luo, Lifeng, Alonge, Charles, Wei, Helin, Meng, Jesse, Livneh, Ben, Lettenmaier, Dennis, Koren, Victor, Duan, Qingyun, Mo, Kingtse, Fan, Yun, Mocko, David. 2012.  Continental-scale water and energy flux analysis and validation for the North American Land Data Assimilation System project phase 2 (NLDAS-2): 1. Intercomparison and application of model products: WATER AND ENERGY FLUX ANALYSIS. Journal of Geophysical Research: Atmospheres. Vol. 117, No. D3, pp. n/a-n/a. DOI: 10.1029/2011JD016048  ISSN: 01480227 
+    Xia, Y., Mitchell, K., Ek, M., Sheffield, J., Cosgrove, B., Wood, E., Luo, L., Alonge, C., Wei, H., Meng, J., Livneh, B., Lettenmaier, D., Koren, V., Duan, Q., Mo, K., Fan, Y., Mocko, D., 2012. Continental-scale water and energy flux analysis and validation for the North American Land Data Assimilation System project phase 2 (NLDAS-2): 1. Intercomparison and application of model products: WATER AND ENERGY FLUX ANALYSIS. Journal of Geophysical Research: Atmospheres. Vol. 117, No. D3.  https://doi.org/10.1029/2011JD016048    
     
     ## Learn More
     - https://ldas.gsfc.nasa.gov/nldas/v2/forcing
+    - [Data Story](https://deploy-preview-403--visex.netlify.app/stories/eis-nldas)
+
  
     ## License
     [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/legalcode) (CC BY 4.0)
