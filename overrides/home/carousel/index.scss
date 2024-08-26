@@ -24,20 +24,6 @@
   color: var(--veda-color-base);
 }
 
-.blocklink {
-  &:focus { outline: none; }
-  &:focus-visible { outline: 1px solid var(--veda-color-link);}
-  @supports not selector(:focus-visible) {
-    &:focus {
-      outline: 1px solid  var(--veda-color-link);
-    }
-  }
-}
-
-.hug-reset-container {
-  grid-column: 1 / -1;
-}
-
 .carousel {
   &--height {
     height: 500px;

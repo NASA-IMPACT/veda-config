@@ -1,0 +1,21 @@
+.blocklink {
+  &:focus { outline: none; }
+  &:focus-visible { outline: 1px solid var(--veda-color-link);}
+  @supports not selector(:focus-visible) {
+    &:focus {
+      outline: 1px solid  var(--veda-color-link);
+    }
+  }
+}
+
+.hug-reset-container {
+  grid-column: 1 / -1;
+}
+
+.devseed-card__mimick {
+  box-shadow: 0 0 2px 0 rgba(44,62,80,0.08),0 6px 6px 0 rgba(44,62,80,0.08);
+  transition: all 0.24s ease-in-out 0s;
+  &:hover {
+    transform: translate(0, 0.125rem);
+  }
+}

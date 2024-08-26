@@ -46,7 +46,7 @@ function ItemCard({ item, itemIdx, onTitleClick, selected, linkComponent }) {
   return <div className="tablet:padding-left-1 tablet:padding-right-1 margin-top-1 height-full position-relative">
   <Button
       unstyled={true}
-      className="position-absolute top-0 left-0 width-full height-full "
+      className="position-absolute top-0 left-0 width-full height-full blocklink"
       onClick={() => { onTitleClick(item); } }
       type="button"
       role="tab"
