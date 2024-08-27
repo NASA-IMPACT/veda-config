@@ -42,6 +42,7 @@ export default function Keypoints({
   cardType = "classic"
 }: KeypointsProps) {
   return (
+    
     <CardGroup>
       {data.map(datum => (
         <Card
@@ -52,7 +53,7 @@ export default function Keypoints({
             className: `border-0 position-relative card-shadow__hover margin-top-4 margin-right-2 ${cardType === 'cover' ? 'card__cover' : ''}`,
           }}
         >
-          <CardMedia exdent>
+          <CardMedia imageClass="height-card-lg">
             <img src={datum.img.src} alt={datum.img.alt} />
           </CardMedia>
           <div className="card__body">
@@ -67,5 +68,6 @@ export default function Keypoints({
         </Card>
       ))}
     </CardGroup>
+    
   );
 }
