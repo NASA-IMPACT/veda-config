@@ -59,6 +59,13 @@ layers:
       - "#00be90"
       - "#0d7fe5"
       - "#333399"
+    compare:
+      datasetId: nceo_africa_biomass
+      layerId: biomass_std
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
+        }
 
   - id: biomass_std
     stacApiEndpoint: https://stac.maap-project.org
@@ -99,6 +106,13 @@ layers:
       - "#c3161b"
       - "#9e0d14"
       - "#67000d"
+    compare:
+      datasetId: nceo_africa_biomass
+      layerId: biomass
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
+        }
 
 ---
 
