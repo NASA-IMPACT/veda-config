@@ -12,7 +12,9 @@ import {
 import { focusAreasSansDatasets } from "../../common/constants";
 import { Title } from "../../common/styled-components";
 
-import '/common/styles.scss';
+import Keypoints from "../../common/keypoints";
+
+import '../../common/styles.scss';
 import './topics.scss';
 
 export default function HomeComponent() {  
@@ -24,7 +26,7 @@ export default function HomeComponent() {
           <Card layout="flagDefault" gridLayout={{tablet: {col: 10}, col: 12}} containerProps={{className:'border-0 position-relative card-shadow__hover'}}>
             <CardMedia exdent>
               <img src={"https://nicholas.duke.edu/sites/default/files/styles/banner/public/images/Urban%20Environment.jpg"} alt="urban image" />
-              </CardMedia>
+            </CardMedia>
 
             <CardHeader>
               <h3 className="usa-card__heading margin-top-4">Spotlight: Urban Emissions</h3>
@@ -37,32 +39,13 @@ export default function HomeComponent() {
             <Link className="position-absolute top-0 left-0 width-full height-full blocklink" to="/stories/urban" />
           </Card>
           </CardGroup>
-        
       
-      <section>
-        <Title>Core Science Focus Areas</Title>
-        <p className="margin-top-2 margin-bottom-4 font-sans-md">The GHG Center includes three core science focus areas. How to get involved? For the latest, subscribe to our email newsletter.</p>
-        <CardGroup>
-        {/* <Keypoints data={focusAreasSansDatasets} /> */}
-        {focusAreasSansDatasets.map(focusArea => {
-            return <Card gridLayout={{ tablet: {col: 4}}} containerProps={{className:'border-0 position-relative card-shadow__hover'}}>
-            <CardMedia exdent>
-              <img src={focusArea.img.src} alt={focusArea.img.alt} />
-              </CardMedia>
-            <CardHeader>
-              <h3 className="usa-card__heading">{focusArea.title} </h3>
-            </CardHeader>
-            <CardBody>
-              <p className="padding-bottom-2">
-               {focusArea.desc}
-              </p>
-            </CardBody>
-            <Link className="position-absolute top-0 left-0 width-full height-full blocklink" to={focusArea.link.url} />
-          </Card>
-        })}
-        </CardGroup>
-      </section>
-    </GridContainer>
+        <section>
+          <Title>Core Science Focus Areas</Title>
+          <p className="margin-top-2 font-sans-md margin-bottom-2">The GHG Center includes three core science focus areas. How to get involved? For the latest, subscribe to our email newsletter.</p>
+          <Keypoints data={focusAreasSansDatasets} />
+        </section>
+      </GridContainer>
     </div>
   );
 }
