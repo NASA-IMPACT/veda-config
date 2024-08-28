@@ -1,30 +1,51 @@
 import React from "$veda-ui/react";
-import { NavLink } from "$veda-ui/react-router-dom";
-import styled from "$veda-ui/styled-components";
-import { glsp, themeVal, media } from "$veda-ui/@devseed-ui/theme-provider";
-import { Button } from "$veda-ui/@devseed-ui/button";
-import { CollecticonArrowRight, CollecticonCirclePlay } from "$veda-ui/@devseed-ui/collecticons";
-import Hug from "$veda-ui-scripts/styles/hug";
-import { VarHeading } from "$veda-ui-scripts/styles/variable-components";
-import { variableGlsp } from "$veda-ui-scripts/styles/variable-utils";
+import { Link } from '$veda-ui/react-router-dom';
+import {
+  Card, 
+  CardHeader,
+  CardBody,
+  CardMedia,
+  CardGroup,
+  GridContainer
+} from '$veda-ui/@trussworks/react-uswds';
 
-import Keypoints from "../../common/keypoints";
 import { focusAreasSansDatasets } from "../../common/constants";
 import { Title } from "../../common/styled-components";
 
-import UrbanEmissionsSpotlight from "./spotlight";
+import Keypoints from "../../common/keypoints";
 
+import '../../common/styles.scss';
+import './topics.scss';
 
 export default function HomeComponent() {  
   return (
-    <div style={{display: "flex", flexDirection: "column",  padding: "12px 13vw", margin: "12px"}}>
-      <Title>Content Collections by Topic</Title>
-      <UrbanEmissionsSpotlight />
+    <div className="hug-reset-container margin-bottom-8">
+      <GridContainer containerSize="widescreen">
+          <Title>Content Collections by Topic</Title>
+        <CardGroup>
+          <Card layout="flagDefault" gridLayout={{tablet: {col: 10}, col: 12}} containerProps={{className:'border-0 position-relative card-shadow__hover'}}>
+            <CardMedia exdent>
+              <img src={"https://nicholas.duke.edu/sites/default/files/styles/banner/public/images/Urban%20Environment.jpg"} alt="urban image" />
+            </CardMedia>
 
-      <Title>Core Science Focus Areas</Title>
-      <p>The GHG Center includes three core science focus areas. How to get involved? For the latest, subscribe to our email newsletter.</p>
-
-      <Keypoints data={focusAreasSansDatasets} />
+            <CardHeader>
+              <h3 className="usa-card__heading margin-top-4">Spotlight: Urban Emissions</h3>
+            </CardHeader>
+            <CardBody>
+              <p className="padding-bottom-2 margin-bottom-4">
+                Globally, cities are resp consible for more than 70% of greenhouse gas emissions. Cities have the power to reduce emissions using policies that benefit the health of their citizens. The U.S. Greenhouse Gas Center welcomes a new set of tools aimed at supporting city decisionmakers.
+              </p>
+            </CardBody>
+            <Link className="position-absolute top-0 left-0 width-full height-full blocklink" to="/stories/urban" />
+          </Card>
+          </CardGroup>
+      
+        <section>
+          <Title>Core Science Focus Areas</Title>
+          <p className="margin-top-2 font-sans-md margin-bottom-2">The GHG Center includes three core science focus areas. How to get involved? For the latest, subscribe to our email newsletter.</p>
+          <Keypoints data={focusAreasSansDatasets} />
+        </section>
+      </GridContainer>
     </div>
   );
 }

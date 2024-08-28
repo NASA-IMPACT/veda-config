@@ -10,6 +10,7 @@ import CarouselItem, { ItemPanel } from './carousel-item';
 
 import SmartLink from '$veda-ui-scripts/components/common/smart-link';
 
+import '/common/styles.scss';
 import './index.scss';
 
 const interval = 100;

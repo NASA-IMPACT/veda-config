@@ -1,83 +1,74 @@
 import React from "$veda-ui/react";
-import styled from "$veda-ui/styled-components";
-import { listReset, media, glsp } from "$veda-ui/@devseed-ui/theme-provider";
-import Hug from "$veda-ui-scripts/styles/hug";
-import { Card } from "$veda-ui-scripts/components/common/card";
-import { CardFooter } from "$veda-ui-scripts/components/common/card/styles";
-import { variableGlsp } from '$veda-ui-scripts/styles/variable-utils';
-import { ArrowLink } from "./arrow-link";
+import { Link } from '$veda-ui/react-router-dom';
+
+import {
+  Card, 
+  CardHeader,
+  CardBody,
+  CardMedia,
+  CardGroup,
+} from '$veda-ui/@trussworks/react-uswds';
+
+import "./styles.scss"
 
 
-export const CardList = styled.ol`
-  ${listReset()}
-  grid-column: 1 / -1;
-  display: grid;
-  gap: ${variableGlsp()};
-  grid-template-columns: repeat(1, 1fr);
+type Data = {
+  title: string;
+  desc: string;
+  img: {
+    src: string;
+    alt: string;
+  };
+  link: {
+    url: string;
+    text: string;
+  };
+  footer: {
+    link: {
+      title: string;
+      url: string;
+    };
+  } | null;
+};
 
-  ${media.mediumUp`
-    grid-template-columns: repeat(2, 1fr);
-  `}
-
-  ${media.largeUp`
-    grid-template-columns: repeat(3, 1fr);
-  `}
-
-  > li {
-    min-width: 0;
-  }
-`;
-
-const KeypointsWrapper = styled(Hug)`
-  padding: ${glsp(1, 0)};
-  grid-column: content-start / content-end;
-
-  ${CardFooter} {
-    margin-top: auto;
-  }
-`;
-
-const KeypointCard = styled(Card)`
-  ${media.mediumUp`
-    font-size: 1.125rem;
-  `}
-`
+interface KeypointsProps {
+  data: Data[],
+  cardType?: string
+}
 
 export default function Keypoints({
-  data
-}) {
+  data,
+  cardType = "classic"
+}: KeypointsProps) {
   return (
     
-    <KeypointsWrapper>
-      <CardList>
-        {
-          data.map(datum => {
-            return (
-              <li>
-                <KeypointCard
-                  linkLabel={datum.link.text}
-                  linkTo={datum.link.url}
-                  title={datum.title}
-                  description={datum.desc}
-                  imgSrc={datum.img.src}
-                  imgAlt={datum.img.alt}
-                  footerContent={ datum.footer ? (
-                    <div>
-                      <ArrowLink
-                        to={datum.footer.link.url}
-                      >
-                        {datum.footer.link.title}
-                      </ArrowLink>
-                    </div>
-                    )
-                    : null
-                  }
-                />
-              </li>
-            )
-          })
-        }
-      </CardList>
-    </KeypointsWrapper>
+    <CardGroup className="margin-bottom-4">
+      {data.map(datum => (
+        <Card
+          key={datum.title}
+          gridLayout={{ tablet: { col: 4 } }}
+          className="padding-bottom-0"
+          containerProps={{
+            className: `border-0 position-relative card-shadow__hover margin-top-1 margin-right-2  ${cardType === 'cover' ? 'card__cover height-card-lg' : ''}`,
+          }}
+        >
+          <CardMedia imageClass={`height-card-lg ${cardType === 'cover'? 'radius-lg bg-gray-30' : ''}`}>
+            <img src={datum.img.src} alt={datum.img.alt} className={`${cardType === 'cover' ? 'card-image__blend' : ''}`} />
+          </CardMedia>
+          <div className={`${cardType === 'cover' ? 'position-absolute bottom-0 left-0 text-gray-5' : ''}`}>
+            <div>
+            <CardHeader>
+              <h3 className="usa-card__heading">{datum.title}</h3>
+            </CardHeader>
+            <CardBody>
+              <p className="padding-bottom-2">{datum.desc}</p>
+            </CardBody>
+            </div>
+          </div>
+          <Link className="position-absolute top-0 left-0 width-full height-full blocklink" to={datum.link.url} />
+        </Card>
+
+      ))}
+    </CardGroup>
   );
 }
