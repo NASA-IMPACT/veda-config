@@ -42,7 +42,7 @@ export default function Keypoints({
 }: KeypointsProps) {
   return (
     
-    <CardGroup>
+    <CardGroup className="margin-top-1 margin-bottom-1">
       {data.map(datum => (
         <Card
           key={datum.title}
