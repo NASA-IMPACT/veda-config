@@ -1,78 +1,51 @@
 import React from "$veda-ui/react";
-import styled from "$veda-ui/styled-components";
-
+import { Link } from '$veda-ui/react-router-dom';
 import {
+  Card, 
   CardHeader,
   CardBody,
-  Grid,
+  CardMedia,
+  CardGroup,
+  GridContainer
 } from '$veda-ui/@trussworks/react-uswds';
 
-import Keypoints from "../../common/keypoints";
 import { focusAreasSansDatasets } from "../../common/constants";
-import { FitContainer, P, SectionContainer, Title } from "../../common/styled-components";
+import { Title } from "../../common/styled-components";
 
-const GridContainer = styled(Grid)`
-  height: 300px;
-  border-radius: 0.5rem;
-  box-shadow: 0 0 4px 0 rgba(44,62,80,0.08), 0 12px 24px 0 rgba(44,62,80,0.08);
+import Keypoints from "../../common/keypoints";
 
-  &:hover {
-    transform: translate(0, 0.125rem);
-    transition: all 0.24s ease-in-out 0s;
-  }
-`;
-
-const CenteredGrid = styled(Grid)`
-  align-content: center;
-`
-
-const StyledImg = styled.img`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-top-left-radius: 0.5rem;
-  border-bottom-left-radius: 0.5rem;
-`
-
-const Link = styled.a`
-  text-decoration: none;
-  color: inherit;
-  opacity: 1;
-`
-
+import '../../common/styles.scss';
+import './topics.scss';
 
 export default function HomeComponent() {  
   return (
-    <FitContainer>
-      <SectionContainer>
-        <Title>Content Collections by Topic</Title>
-        <Link href="/stories/urban" >
-        <GridContainer row col={10} gap={3}>
-          <CenteredGrid tablet={{col: 5}}>
-              <StyledImg src={"https://nicholas.duke.edu/sites/default/files/styles/banner/public/images/Urban%20Environment.jpg"}
-                alt="urban image"
-              />
-          </CenteredGrid>
-          <CenteredGrid tablet={{col: true}}>
+    <div className="hug-reset-container margin-bottom-8">
+      <GridContainer containerSize="widescreen">
+          <Title>Content Collections by Topic</Title>
+        <CardGroup>
+          <Card layout="flagDefault" gridLayout={{tablet: {col: 10}, col: 12}} containerProps={{className:'border-0 position-relative card-shadow__hover'}}>
+            <CardMedia exdent>
+              <img src={"https://nicholas.duke.edu/sites/default/files/styles/banner/public/images/Urban%20Environment.jpg"} alt="urban image" />
+            </CardMedia>
+
             <CardHeader>
-            <h1 className="usa-card__heading" style={{fontSize: "1.5rem"}}>Spotlight: Urban Emissions</h1>
+              <h3 className="usa-card__heading margin-top-4">Spotlight: Urban Emissions</h3>
             </CardHeader>
             <CardBody>
-              <p style={{fontSize: "1.125rem"}}>
-              Globally, cities are resp consible for more than 70% of greenhouse gas emissions. Cities have the power to reduce emissions using policies that benefit the health of their citizens. The U.S. Greenhouse Gas Center welcomes a new set of tools aimed at supporting city decisionmakers.
+              <p className="padding-bottom-2 margin-bottom-4">
+                Globally, cities are resp consible for more than 70% of greenhouse gas emissions. Cities have the power to reduce emissions using policies that benefit the health of their citizens. The U.S. Greenhouse Gas Center welcomes a new set of tools aimed at supporting city decisionmakers.
               </p>
-          </CardBody>
-          </CenteredGrid>
-        </GridContainer>
-        </Link>
-      </SectionContainer>
-
-      <SectionContainer>
-        <Title>Core Science Focus Areas</Title>
-        <P>The GHG Center includes three core science focus areas. How to get involved? For the latest, subscribe to our email newsletter.</P>
-        <Keypoints data={focusAreasSansDatasets} />
-      </SectionContainer>
-
-    </FitContainer>
+            </CardBody>
+            <Link className="position-absolute top-0 left-0 width-full height-full blocklink" to="/stories/urban" />
+          </Card>
+          </CardGroup>
+      
+        <section>
+          <Title>Core Science Focus Areas</Title>
+          <p className="margin-top-2 font-sans-md margin-bottom-2">The GHG Center includes three core science focus areas. How to get involved? For the latest, subscribe to our email newsletter.</p>
+          <Keypoints data={focusAreasSansDatasets} />
+        </section>
+      </GridContainer>
+    </div>
   );
 }

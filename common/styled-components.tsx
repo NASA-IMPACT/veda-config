@@ -11,6 +11,7 @@ const Title = styled.h2`
       height: 0.25rem;
       border-radius: 0.25rem;
       background: #082a64;
+      margin-bottom: 0.75rem;
   }
 `
 
