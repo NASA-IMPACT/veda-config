@@ -8,7 +8,7 @@ import {
 } from '$veda-ui/@trussworks/react-uswds';
 
 import {
-    CollecticonBell,
+    CollecticonTextBlock,
     CollecticonEnvelope,
     CollecticonSpeechBalloon,
 } from '$veda-ui/@devseed-ui/collecticons';
@@ -52,8 +52,8 @@ export default function Component() {
                         <span className="margin-left-4 font-sans-md"> For the latest updates and information about the US GHG Center or to join a focus area group, <a href={SUBSCRIPTION_URL}>subscribe to our email updates list.</a></span>
                     </div>
                     <div className="display-flex flex-align-center margin-bottom-2">
-                        <CollecticonBell size='xlarge' color='#082a64' className="grid-col-1" />
-                        <span className="margin-left-3 font-sans-md"> Read more about the US GHG Center news, trainings, and workshop opportunities on the <Link to="/news-and-events">News and Events page.</Link></span>
+                        <CollecticonTextBlock size='xlarge' color='#082a64' className="grid-col-1" />
+                        <span className="margin-left-4 font-sans-md"> Read more about the U.S. Greenhouse Gas Center news, trainings, and workshop opportunities on the <Link to="/news-and-events">News and Events page.</Link></span>
                     </div>
                     <div className="display-flex flex-align-center margin-bottom-2">
                         <CollecticonSpeechBalloon size='xlarge' color='#082a64' className="grid-col-1" />
