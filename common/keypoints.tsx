@@ -52,8 +52,8 @@ export default function Keypoints({
             className: `border-0 position-relative card-shadow__hover margin-top-2 margin-right-2  ${cardType === 'cover' ? 'card__cover height-card-lg' : ''}`,
           }}
         >
-          <CardMedia imageClass={`height-card-lg ${cardType === 'cover'? 'radius-lg' : ''}`}>
-            <img src={datum.img.src} alt={datum.img.alt} />
+          <CardMedia imageClass={`height-card-lg ${cardType === 'cover'? 'radius-lg bg-gray-30' : ''}`}>
+            <img src={datum.img.src} alt={datum.img.alt} className={`${cardType === 'cover' ? 'card-image__blend' : ''}`} />
           </CardMedia>
           <div className={`${cardType === 'cover' ? 'position-absolute bottom-0 left-0 text-gray-5' : ''}`}>
             <div>
