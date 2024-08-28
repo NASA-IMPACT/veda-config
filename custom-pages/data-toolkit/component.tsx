@@ -31,7 +31,7 @@ export default function Component() {
                 </section>
                 <section>
                 <Title> Core Science Focus Areas </Title>
-                <p>
+                <p className="margin-bottom-2">
                     The U.S. Greenhouse Gas Center is organized around three core focus areas. <a href={SUBSCRIPTION_URL}>Sign up</a> to join a focus area group.
                 </p>
                 <Keypoints data={focusAreasSansDatasets} />

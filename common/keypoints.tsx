@@ -49,7 +49,7 @@ export default function Keypoints({
           gridLayout={{ tablet: { col: 4 } }}
           className="padding-bottom-0"
           containerProps={{
-            className: `border-0 position-relative card-shadow__hover margin-top-2 margin-right-2  ${cardType === 'cover' ? 'card__cover height-card-lg' : ''}`,
+            className: `border-0 position-relative card-shadow__hover margin-top-1 margin-right-2  ${cardType === 'cover' ? 'card__cover height-card-lg' : ''}`,
           }}
         >
           <CardMedia imageClass={`height-card-lg ${cardType === 'cover'? 'radius-lg bg-gray-30' : ''}`}>

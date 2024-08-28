@@ -42,7 +42,7 @@ export default function HomeComponent() {
       
         <section>
           <Title>Core Science Focus Areas</Title>
-          <p className="margin-top-2 font-sans-md">The GHG Center includes three core science focus areas. How to get involved? For the latest, subscribe to our email newsletter.</p>
+          <p className="margin-top-2 font-sans-md margin-bottom-2">The GHG Center includes three core science focus areas. How to get involved? For the latest, subscribe to our email newsletter.</p>
           <Keypoints data={focusAreasSansDatasets} />
         </section>
       </GridContainer>

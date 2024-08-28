@@ -21,7 +21,7 @@ export default function Urban() {
 
                 <section>
                     <Title>Featured datasets</Title>
-                    <p>
+                    <p className="margin-bottom-2">
                         Lorem ipsum odor amet, consectetuer adipiscing elit.
                     </p>
                     <Keypoints data={keyUrbanDatasets} cardType="classic"></Keypoints>
@@ -29,7 +29,7 @@ export default function Urban() {
 
                 <section>
                     <Title>Featured cities</Title>
-                    <p>
+                    <p className="margin-bottom-2">
                         Lorem ipsum odor amet, consectetuer adipiscing elit.
                     </p>
                     <Keypoints data={cities} cardType="cover"></Keypoints>
