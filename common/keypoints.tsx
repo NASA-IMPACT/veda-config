@@ -31,7 +31,6 @@ type Data = {
   } | null;
 };
 
-
 interface KeypointsProps {
   data: Data[],
   cardType?: string
@@ -50,24 +49,26 @@ export default function Keypoints({
           gridLayout={{ tablet: { col: 4 } }}
           className="padding-bottom-0"
           containerProps={{
-            className: `border-0 position-relative card-shadow__hover margin-top-4 margin-right-2 ${cardType === 'cover' ? 'card__cover' : ''}`,
+            className: `border-0 position-relative card-shadow__hover margin-top-2 margin-right-2  ${cardType === 'cover' ? 'card__cover height-card-lg' : ''}`,
           }}
         >
-          <CardMedia imageClass="height-card-lg">
+          <CardMedia imageClass={`height-card-lg ${cardType === 'cover'? 'radius-lg' : ''}`}>
             <img src={datum.img.src} alt={datum.img.alt} />
           </CardMedia>
-          <div className="card__body">
+          <div className={`${cardType === 'cover' ? 'position-absolute bottom-0 left-0 text-gray-5' : ''}`}>
+            <div>
             <CardHeader>
               <h3 className="usa-card__heading">{datum.title}</h3>
             </CardHeader>
             <CardBody>
               <p className="padding-bottom-2">{datum.desc}</p>
             </CardBody>
+            </div>
           </div>
           <Link className="position-absolute top-0 left-0 width-full height-full blocklink" to={datum.link.url} />
         </Card>
+
       ))}
     </CardGroup>
-    
   );
 }
