@@ -7,7 +7,7 @@ import { DATASETS_PATH } from "$veda-ui-scripts/utils/routes";
 import { Actions } from "$veda-ui-scripts/components/common/browse-controls/use-browse-controls";
 
 
-export const focusAreas = [
+export const focusAreaDatasets = [
   {
     "title": "Gridded Anthropogenic Greenhouse Gas Emissions",
     "desc": "Emission estimates from human activities including the energy, agriculture, waste, and industry sectors",
@@ -16,7 +16,7 @@ export const focusAreas = [
       "alt": "image of oil refinery"
     },
     "link": {
-      "url": "/stories/us-methane-sources",
+      "url": `${DATASETS_PATH}?${Actions.TAXONOMY}=${encodeURIComponent(JSON.stringify({ Topics: "anthropogenic-emissions" }))}`,
       "text": "View more"
     },
     "footer": {
@@ -34,7 +34,7 @@ export const focusAreas = [
       "alt": "image of green wetlands"
     },
     "link": {
-      "url": "/stories/tracking-greenhouse-gas-cycles",
+      "url": `${DATASETS_PATH}?${Actions.TAXONOMY}=${encodeURIComponent(JSON.stringify({ Topics: "natural-emissions-and-sinks" }))}`,
       "text": "View more"
     },
     "footer": {
@@ -52,7 +52,7 @@ export const focusAreas = [
       "alt": "image of colorful polygon against satellite landscape surface in brown"
     },
     "link": {
-      "url": "/stories/discovering-large-methane-emissions",
+      "url": `${DATASETS_PATH}?${Actions.TAXONOMY}=${encodeURIComponent(JSON.stringify({ Topics: "large-emission-events" }))}`,
       "text": "View more"
     },
     "footer": {
@@ -64,10 +64,22 @@ export const focusAreas = [
   }
 ];
 
-export const focusAreasSansDatasets = focusAreas.map(area => {
+// Make sure these are in the same order
+const focusAreaStoriesLinks = [
+  "/stories/us-methane-sources", "/stories/tracking-greenhouse-gas-cycles", "/stories/discovering-large-methane-emissions"
+]
+
+export const focusAreasStories = focusAreaDatasets.map((area, index) => {
   const { footer, ...areaSansFooter } = area;
-  return areaSansFooter;
-})
+  return {
+    ...areaSansFooter,
+    link: {
+      ...areaSansFooter.link,
+      url: focusAreaStoriesLinks[index],
+    }
+  }
+});
+
 
 export const dataEngagements = [
   {

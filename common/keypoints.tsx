@@ -5,9 +5,14 @@ import {
   Card, 
   CardHeader,
   CardBody,
+  CardFooter,
   CardMedia,
   CardGroup,
 } from '$veda-ui/@trussworks/react-uswds';
+
+import {
+  CollecticonArrowRight
+} from '$veda-ui/@devseed-ui/collecticons';
 
 import "./styles.scss"
 
@@ -33,12 +38,14 @@ type Data = {
 
 interface KeypointsProps {
   data: Data[],
-  cardType?: string
+  cardType?: string,
+  overlay?: boolean,
 }
 
 export default function Keypoints({
   data,
-  cardType = "classic"
+  cardType = "classic",
+  overlay = false,
 }: KeypointsProps) {
   return (
     
@@ -53,7 +60,7 @@ export default function Keypoints({
           }}
         >
           <CardMedia imageClass={`height-card-lg ${cardType === 'cover'? 'radius-lg bg-gray-30' : ''}`}>
-            <img src={datum.img.src} alt={datum.img.alt} className={`${cardType === 'cover' ? 'card-image__blend' : ''}`} />
+            <img src={datum.img.src} alt={datum.img.alt} className={`${((cardType === 'cover') || overlay) ? 'card-image__blend' : ''}`} />
           </CardMedia>
           <div className={`${cardType === 'cover' ? 'position-absolute bottom-0 left-0 text-gray-5' : ''}`}>
             <div>
@@ -63,6 +70,14 @@ export default function Keypoints({
             <CardBody>
               <p className="padding-bottom-2">{datum.desc}</p>
             </CardBody>
+            {
+              datum.footer?.link &&
+              <CardFooter>
+                <Link to={datum.footer.link.url} className={`display-flex flex-align-center ${cardType === 'cover' ? 'text-gray-5' : 'veda-color--link'}`}>
+                <CollecticonArrowRight className="margin-right-1"/> <span className="text-underline"> {datum.footer.link.title} </span>
+                </Link>
+              </CardFooter>
+            }
             </div>
           </div>
           <Link className="position-absolute top-0 left-0 width-full height-full blocklink" to={datum.link.url} />

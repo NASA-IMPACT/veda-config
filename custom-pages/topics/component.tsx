@@ -9,7 +9,7 @@ import {
   GridContainer
 } from '$veda-ui/@trussworks/react-uswds';
 
-import { focusAreasSansDatasets } from "../../common/constants";
+import { focusAreasStories } from "../../common/constants";
 import { Title } from "../../common/styled-components";
 
 import Keypoints from "../../common/keypoints";
@@ -43,7 +43,7 @@ export default function HomeComponent() {
         <section>
           <Title>Core Science Focus Areas</Title>
           <p className="margin-top-2 font-sans-md margin-bottom-2">The GHG Center includes three core science focus areas. How to get involved? For the latest, subscribe to our email newsletter.</p>
-          <Keypoints data={focusAreasSansDatasets} />
+          <Keypoints data={focusAreasStories} />
         </section>
       </GridContainer>
     </div>

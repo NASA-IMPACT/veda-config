@@ -14,7 +14,7 @@ import {
 } from '$veda-ui/@devseed-ui/collecticons';
 
 import Keypoints from "../../common/keypoints";
-import { dataEngagements, focusAreasSansDatasets, customInterfaces } from "../../common/constants";
+import { dataEngagements, focusAreaDatasets, customInterfaces } from "../../common/constants";
 
 import { SUBSCRIPTION_URL } from "../../constants";
 import { Title } from "../../common/styled-components";
@@ -42,7 +42,7 @@ export default function Component() {
                 <p className="margin-bottom-2 font-sans-md">
                     The U.S. Greenhouse Gas Center is organized around three core focus areas. <a href={SUBSCRIPTION_URL}>Sign up</a> to join a focus area group.
                 </p>
-                <Keypoints data={focusAreasSansDatasets} />
+                <Keypoints data={focusAreaDatasets} />
                 </section>
 
                 <Grid tablet={{col:8, offset: 2}}>

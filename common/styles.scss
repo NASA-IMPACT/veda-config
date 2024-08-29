@@ -23,3 +23,10 @@
 .card-image__blend {
   mix-blend-mode: multiply;
 }
+
+.veda-color--link {
+  color: var(--veda-color-link);
+}
+.veda-color--base {
+  color: var(--veda-color-base);
+}
