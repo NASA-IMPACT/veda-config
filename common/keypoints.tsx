@@ -1,5 +1,5 @@
 import React from "$veda-ui/react";
-import { Link } from '$veda-ui/react-router-dom';
+import SmartLink from '$veda-ui-scripts/components/common/smart-link';
 
 import {
   Card, 
@@ -60,7 +60,7 @@ export default function Keypoints({
           }}
         >
           <CardMedia imageClass={`height-card-lg ${cardType === 'cover'? 'radius-lg bg-gray-30' : ''}`}>
-            <img src={datum.img.src} alt={datum.img.alt} className={`${((cardType === 'cover') || overlay) ? 'card-image__blend' : ''}`} />
+            <img src={datum.img.src} alt={datum.img.alt} className={`${cardType === 'cover' ? 'card-image__blend' : 'border-bottom border-gray-5'}`} />
           </CardMedia>
           <div className={`${cardType === 'cover' ? 'position-absolute bottom-0 left-0 text-gray-5' : ''}`}>
             <div>
@@ -73,14 +73,14 @@ export default function Keypoints({
             {
               datum.footer?.link &&
               <CardFooter>
-                <Link to={datum.footer.link.url} className={`display-flex flex-align-center ${cardType === 'cover' ? 'text-gray-5' : 'veda-color--link'}`}>
+                <SmartLink to={datum.footer.link.url} className={`display-flex flex-align-center ${cardType === 'cover' ? 'text-gray-5' : 'veda-color--link'}`}>
                 <CollecticonArrowRight className="margin-right-1"/> <span className="text-underline"> {datum.footer.link.title} </span>
-                </Link>
+                </SmartLink>
               </CardFooter>
             }
             </div>
           </div>
-          <Link className="position-absolute top-0 left-0 width-full height-full blocklink" to={datum.link.url} />
+          {!datum.footer?.link && <SmartLink className="position-absolute top-0 left-0 width-full height-full blocklink" to={datum.link.url} />}
         </Card>
 
       ))}
