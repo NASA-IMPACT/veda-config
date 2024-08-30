@@ -102,7 +102,7 @@ export const EVENT_ITEMS = sortByDateDesc([
   {
     name: 'Join the 2nd Annual Stakeholder Forum;  Dec 4-5, 2024',
     asLink : {
-      url: 'https://drive.google.com/drive/u/0/folders/1zTHEk9hQU-dIAXLuMUACXvVEIxw7-UHq'
+      url: 'https://drive.google.com/file/d/1Mkz43d3iP4CfTuBeZXsoO1-fxBRGmmVq/view?usp=sharing'
     },
     media: {
       src: new URL('./media/events/GHGC_Stakeholder_Forum_Announcement_Image.png', import.meta.url).href,
