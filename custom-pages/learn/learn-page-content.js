@@ -100,15 +100,15 @@ export const NEWS_ITEMS = [
 
 export const EVENT_ITEMS = sortByDateDesc([
   {
-    name: 'U.S. Greenhouse Gas Center Stakeholder Forum',
+    name: 'Join the 2nd Annual Stakeholder Forum;  Dec 4-5, 2024',
     asLink : {
       url: 'https://drive.google.com/drive/u/0/folders/1zTHEk9hQU-dIAXLuMUACXvVEIxw7-UHq'
     },
     media: {
-      src: new URL('./media/events/GHGC_CMS_Joint_Policy_Speaker_Series_G3W_Webinar.png', import.meta.url).href,
-      alt: 'CMS speaker series screenshot'
+      src: new URL('./media/events/GHGC_Stakeholder_Forum_Announcement_Image.png', import.meta.url).href,
+      alt: 'GHGC Stakeholder Forum Announcement Image'
     },
-    description: "The U.S. Greenhouse Gas Center will host its 2nd Annual Stakeholder Forum on December 4–5, 2024. The forum will take place at the NOAA Center for Weather and Climate Prediction in College Park, Maryland, near Washington, DC. The forum precedes the annual AGU conference in Washington, DC (December 9-13).",
+    description: "This 2-day forum will focus on gathering input from the stakeholder community to inform the Center's priorities and future directions. Join us on Dec 4-5, 2024 in College Park, Maryland!",
     startDate: '2024-12-04',
     endDate: '2024-12-06'
   },
