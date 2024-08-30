@@ -14,7 +14,7 @@ import '/common/styles.scss';
 import './index.scss';
 
 const interval = 100;
-const slide_length = 100;
+const slide_length = 50;
 const item_n = CarouselItems.length;
 
 export function DesktopCarousel () {

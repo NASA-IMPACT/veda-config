@@ -8,10 +8,19 @@ import Hug from "$veda-ui-scripts/styles/hug";
 import { VarHeading } from "$veda-ui-scripts/styles/variable-components";
 import { variableGlsp } from "$veda-ui-scripts/styles/variable-utils";
 
+import {
+  GridContainer,
+  Grid,
+} from '$veda-ui/@trussworks/react-uswds';
+
+
 import Partners from "./partners";
 import Banner from './banner';
 import VideoModal from "../components/video-modal";
 import Carousel from './carousel/';
+
+import '../../common/styles.scss';
+
 
 const HomeContent = styled(Hug)`
   padding: ${variableGlsp(2.5, 0)};
@@ -111,20 +120,25 @@ export default function HomeComponent() {
   return (
     <>
     <Banner />
-      <HomeContent>
+      <GridContainer containerSize="widescreen">
+        <Grid col={8} offset={4}>
+          <h1 className="font-heading-2xl margin-y-5">Featured Content</h1>
+          {/* <p className="margin-bottom-4"> Check out the featured content </p> */}
+        </Grid>
+        
         <Carousel />
-        <IntroHeadline>
-          <VarHeading size="xxlarge">Welcome</VarHeading>
-          <p>
+        <Grid col={8} offset={2} className="font-heading-md margin-y-10">
+          <h1 className="font-heading-2xl margin-y-5">Welcome</h1>
+          <p className="margin-bottom-4">
             The U.S. Greenhouse Gas Center opens up access to trusted data on
             greenhouse gases. This&nbsp;multi-agency effort consolidates
             greenhouse gas information from observations and models.
             The&nbsp;goal of the US GHG Center is to provide decision-makers with
             one location for data and analysis.
           </p>
-          <p>
+          <p className="margin-bottom-4">
           This initial two-year demonstration phase creates a way to explore 
-          and analyze U.S. government and other datasets, targeting three 
+          and analyze U.S.&nbsp;government and other datasets, targeting three 
           greenhouse gas areas of study, as shown below. The US GHG Center 
           also encourages stakeholder feedback and ideas for future expansion.
           </p>
@@ -146,28 +160,28 @@ export default function HomeComponent() {
               Learn More
             </Button>
           </Buttons>
-        </IntroHeadline>
-        <ActionsBlock>
-        {/* <Buttons>
-          <ButtonWithLongText
-            forwardedAs={NavLink}
-            to="/data-catalog"
-            size="xlarge"
-            variation="primary-fill"
-          >
-            Browse the Data Catalog <CollecticonArrowRight />
-          </ButtonWithLongText>
-          <ButtonWithLongText
-            onClick={() => handleOpenModal("https://www.youtube.com/embed/S2XL5WT9W4g")}
-            size="xlarge"
-            variation="primary-fill"
-          >
-            <CollecticonCirclePlay />
-            How to Explore Data
-          </ButtonWithLongText>
-          </Buttons>*/ }
-        </ActionsBlock>
-      </HomeContent>
+        </Grid>
+      </GridContainer>
+      <ActionsBlock>
+      {/* <Buttons>
+        <ButtonWithLongText
+          forwardedAs={NavLink}
+          to="/data-catalog"
+          size="xlarge"
+          variation="primary-fill"
+        >
+          Browse the Data Catalog <CollecticonArrowRight />
+        </ButtonWithLongText>
+        <ButtonWithLongText
+          onClick={() => handleOpenModal("https://www.youtube.com/embed/S2XL5WT9W4g")}
+          size="xlarge"
+          variation="primary-fill"
+        >
+          <CollecticonCirclePlay />
+          How to Explore Data
+        </ButtonWithLongText>
+        </Buttons>*/ }
+      </ActionsBlock>
       <InfoCallout>
         <InfoCalloutInner>
           <InfoCalloutHeadline>
