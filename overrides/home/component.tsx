@@ -121,8 +121,8 @@ export default function HomeComponent() {
     <>
     <Banner />
       <GridContainer containerSize="widescreen">
-        <Grid col={8} offset={4}>
-          <h1 className="font-heading-2xl margin-y-5">Featured Content</h1>
+        <Grid col={9} offset={2}>
+          <h1 className="font-heading-2xl margin-y-5">Updates from the U.S. Greenhouse Gas Center</h1>
           {/* <p className="margin-bottom-4"> Check out the featured content </p> */}
         </Grid>
         
