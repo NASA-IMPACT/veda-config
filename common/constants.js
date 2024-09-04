@@ -3,6 +3,7 @@ import featureSources from "./media/swamp.png";
 import featureMethane from "./media/plume.png";
 
 
+
 import { DATASETS_PATH } from "$veda-ui-scripts/utils/routes";
 import { Actions } from "$veda-ui-scripts/components/common/browse-controls/use-browse-controls";
 
@@ -225,7 +226,7 @@ export const keyUrbanDatasets = [
     "title": "New Dataset Offers Neighborhood-Scale View of Carbon Emissions",
     "desc": "Carbon dioxide emissions data are now available at a granular level, from city blocks to entire counties across the contiguous U.S. The latest dataset from the Vulcan Project, called Vulcan 4.0, helps researchers to analyze annual CO2 emissions at fine scales and urban decision-makers to develop localized carbon management strategies.",
     "img": {
-      "src": "https://www.nist.gov/sites/default/files/styles/480_x_480_limit/public/images/2023/03/22/GRAAPES_2017_CO2.png?itok=T_IOom0Z",
+      "src": new URL('./media/vulcan.png', import.meta.url).href,
       "alt": "image of green wetlands"
     },
     "link": {
