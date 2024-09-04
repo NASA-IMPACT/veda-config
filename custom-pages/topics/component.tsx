@@ -45,6 +45,10 @@ export default function HomeComponent() {
           <p className="margin-top-2 font-sans-md margin-bottom-2">The GHG Center includes three core science focus areas. How to get involved? For the latest, subscribe to our email newsletter.</p>
           <Keypoints data={focusAreasStories} />
         </section>
+        <section>
+          <Title>What Else Do You Need? Let Us Help You!</Title>
+          <p className="margin-top-2 font-sans-md margin-bottom-2">Do you have a need, idea, or suggestion? Contact the GHG Center team using the “Contact Us” button at the top or bottom of every page.</p>
+        </section>
       </GridContainer>
     </div>
   );
