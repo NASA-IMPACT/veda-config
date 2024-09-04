@@ -222,21 +222,21 @@ export const cities = [
 
 export const keyUrbanDatasets = [
   {
-    "title": "GRAAPES",
-    "desc": "Lorem Ipsum",
+    "title": "New Dataset Offers Neighborhood-Scale View of Carbon Emissions",
+    "desc": "Carbon dioxide emissions data are now available at a granular level, from city blocks to entire counties across the contiguous U.S. The latest dataset from the Vulcan Project, called Vulcan 4.0, helps researchers to analyze annual CO2 emissions at fine scales and urban decision-makers to develop localized carbon management strategies.",
     "img": {
       "src": "https://www.nist.gov/sites/default/files/styles/480_x_480_limit/public/images/2023/03/22/GRAAPES_2017_CO2.png?itok=T_IOom0Z",
       "alt": "image of green wetlands"
     },
     "link": {
-      "url": "/stories/graapes",
+      "url": "/stories/vulcan",
       "text": "View more"
     },
     "footer": null
   },
   {
-    "title": "Vulcan 4.0",
-    "desc": "Dataset 1",
+    "title": "Dataset 2",
+    "desc": "Dataset 2",
     "img": {
       "src": "https://vulcan.rc.nau.edu/assets/images/vulcan.v3.0.poster-1014x633.png",
       "alt": "Vulcan data visualization"
@@ -248,8 +248,8 @@ export const keyUrbanDatasets = [
     "footer": null
   },
   {
-    "title": "NIST Urban Testbed",
-    "desc": "Lorem Ipsum",
+    "title": "Urban Dome Testbeds Help Diagnose Accuracy of Emissions Data",
+    "desc": "In three testbeds across the U.S., selected for varying meteorology, terrain, and emissions characteristics, advanced tower-based observing networks offer the opportunity to evaluate the performance and accuracy of local emissions estimates. ",
     "img": {
       "src": "https://www.nist.gov/sites/default/files/styles/480_x_480_limit/public/images/2023/01/06/GHG%20urban%20measurements.png?itok=RiRUANaw",
       "alt": "image of colorful polygon against satellite landscape surface in brown"
