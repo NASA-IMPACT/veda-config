@@ -32,7 +32,7 @@ import { CollecticonExpandTopRight } from '$veda-ui/@devseed-ui/collecticons';
 import { SUBSCRIPTION_URL } from "../../../constants";
 
 
-const PRESS_PATH = '/news#press';
+const PRESS_PATH = '/news-and-events#press';
 
 
 const FooterInner = styled.div`
@@ -260,10 +260,10 @@ export default function PageFooter(props) {
                 </FooterMenuLink>
               </li>
               <li>
-                <FooterMenuLink to='/news-and-events'>News & Events</FooterMenuLink>
+                <FooterMenuLink to='/about'>About</FooterMenuLink>
               </li>
               <li>
-                <FooterMenuLink to='/about'>About</FooterMenuLink>
+                <FooterMenuLink to={PRESS_PATH}>Press Info</FooterMenuLink>
               </li>
               <li>
                 <FooterMenuLink as="a" href={SUBSCRIPTION_URL}>

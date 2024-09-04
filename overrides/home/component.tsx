@@ -136,29 +136,29 @@ export default function HomeComponent() {
             The&nbsp;goal of the US GHG Center is to provide decision-makers with
             one location for data and analysis.
           </p>
-          <p className="margin-bottom-4">
+          {/* <p className="margin-bottom-4">
           This initial two-year demonstration phase creates a way to explore 
           and analyze U.S.&nbsp;government and other datasets, targeting three 
           greenhouse gas areas of study, as shown below. The US GHG Center 
           also encourages stakeholder feedback and ideas for future expansion.
-          </p>
+          </p> */}
           <Buttons>
-            <Button
+            <ButtonWithLongText
               onClick={() => handleOpenModal("https://www.youtube.com/embed/6xWdIlWqhBE?si=NpOVMavs4IgKE297")}
               size="xlarge"
               variation="primary-fill"
             >
               <CollecticonCirclePlay />
-              Tour the US GHG Center
-            </Button>
-            <Button
+              TOUR THE US GHG CENTER
+            </ButtonWithLongText>
+            <ButtonWithLongText
               forwardedAs={NavLink}
               to="/stories/intro-us-ghg-center"
               size="xlarge"
               variation="base-outline"
             >
-              Learn More
-            </Button>
+              LEARN MORE ABOUT THE US GHG CENTER
+            </ButtonWithLongText>
           </Buttons>
         </Grid>
       </GridContainer>
