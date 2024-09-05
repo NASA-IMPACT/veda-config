@@ -42,7 +42,7 @@ export default function Urban() {
                 <section>
                     <Title>Resources for Data Users</Title>
                     <p className="margin-bottom-2">
-                    Would you like to explore and engage directly with the data? Discover detailed dataset information, interactive maps, data visualizations, and open source tools by clicking Data Toolkit at the top of any page.
+                    Would you like to explore and engage directly with the data? Discover detailed dataset information, interactive maps, data visualizations, and open source tools by clicking Data Toolkit at the top or bottom of any page.
                     </p>
                 </section>
             </GridContainer>
