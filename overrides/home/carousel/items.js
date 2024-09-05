@@ -7,7 +7,7 @@ export default [{
   link: '/stories/gra2pes',
   title: 'Title',
   description: "Lorem Ipsum",
-  image: 'https://www.nist.gov/sites/default/files/styles/480_x_480_limit/public/images/2023/03/22/GRAAPES_2017_CO2.png?itok=T_IOom0Z'
+  image: new URL('../../media/graapes.png', import.meta.url).href,
 },
 {
   link: '/stories/newyork',
