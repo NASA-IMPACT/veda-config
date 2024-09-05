@@ -3,6 +3,7 @@ import featureSources from "./media/swamp.png";
 import featureMethane from "./media/plume.png";
 
 
+
 import { DATASETS_PATH } from "$veda-ui-scripts/utils/routes";
 import { Actions } from "$veda-ui-scripts/components/common/browse-controls/use-browse-controls";
 
@@ -167,7 +168,7 @@ export const customInterfaces = [
 
 export const cities = [
   {
-    "title": "Baltimore",
+    "title": "Baltimore Presents Unique Opportunity for Government & Academic Research Partners",
     "desc": "Description",
     "img": {
       "src": "https://cdn.britannica.com/90/77990-050-E6087086/Inner-Harbor-skyline-Baltimore-Maryland.jpg",
@@ -180,8 +181,8 @@ export const cities = [
     "footer": null
   },
   {
-    "title": "New York",
-    "desc": "Description",
+    "title": "New York City Researchers Take to the Street to Investigate Emissions",
+    "desc": "Researchers at Columbia University are working with the New York State Energy Research & Development Authority to improve emissions estimates by combining measurements from a network of sensors across NYC with data collected by NASA satellites and aircraft, identifying unidentified or incorrectly cataloged sources of GHGs.",
     "img": {
       "src": "https://i.natgeofe.com/n/874df281-d3e0-489a-98c0-6b840023b828/newyork_NationalGeographic_2328428.jpg",
       "alt": "New York"
@@ -193,8 +194,8 @@ export const cities = [
     "footer": null
   },
   {
-    "title": "San Francisco",
-    "desc": "Description",
+    "title": "San Francisco Scientists Use Low-Cost Sensor Network to Track Local Emissions Progress",
+    "desc": "A research team from the University of California, Berkeley, has developed a cost-effective, shoebox-sized sensor and dispersed 57 throughout the San Francisco Bay Area to track pollutants in real time and monitor progress for the city’s carbon reduction targets. The project is expanding to new cities.",
     "img": {
       "src": "https://cdn.britannica.com/13/77413-050-95217C0B/Golden-Gate-Bridge-San-Francisco.jpg",
       "alt": "San Francisco"
@@ -206,7 +207,7 @@ export const cities = [
     "footer": null
   },
   {
-    "title": "Los Angeles",
+    "title": "Satellite Data Helps to Pinpoint CO₂ Emissions Changes in Los Angeles",
     "desc": "Description",
     "img": {
       "src": "https://i.natgeofe.com/n/110d522c-7c56-4185-ba59-3162a78e3abc/1_3x2.jpg",
@@ -222,24 +223,11 @@ export const cities = [
 
 export const keyUrbanDatasets = [
   {
-    "title": "GRAAPES",
-    "desc": "Lorem Ipsum",
+    "title": "New Dataset Offers Neighborhood-Scale View of Carbon Emissions",
+    "desc": "Carbon dioxide emissions data are now available at a granular level, from city blocks to entire counties across the contiguous U.S. The latest dataset from the Vulcan Project, called Vulcan 4.0, helps researchers to analyze annual CO2 emissions at fine scales and urban decision-makers to develop localized carbon management strategies.",
     "img": {
-      "src": "https://www.nist.gov/sites/default/files/styles/480_x_480_limit/public/images/2023/03/22/GRAAPES_2017_CO2.png?itok=T_IOom0Z",
-      "alt": "image of green wetlands"
-    },
-    "link": {
-      "url": "/stories/graapes",
-      "text": "View more"
-    },
-    "footer": null
-  },
-  {
-    "title": "Vulcan 4.0",
-    "desc": "Dataset 1",
-    "img": {
-      "src": "https://vulcan.rc.nau.edu/assets/images/vulcan.v3.0.poster-1014x633.png",
-      "alt": "Vulcan data visualization"
+      "src": "https://images.unsplash.com/photo-1580064461598-505b080a8242?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "alt": "smoke coming out of a factory"
     },
     "link": {
       "url": "/stories/vulcan",
@@ -248,11 +236,24 @@ export const keyUrbanDatasets = [
     "footer": null
   },
   {
-    "title": "NIST Urban Testbed",
-    "desc": "Lorem Ipsum",
+    "title": "Dataset 2",
+    "desc": "Dataset 2",
     "img": {
-      "src": "https://www.nist.gov/sites/default/files/styles/480_x_480_limit/public/images/2023/01/06/GHG%20urban%20measurements.png?itok=RiRUANaw",
-      "alt": "image of colorful polygon against satellite landscape surface in brown"
+      "src": "https://placehold.co/600x400?text=Placeholder",
+      "alt": "Placeholder"
+    },
+    "link": {
+      "url": "/stories/vulcan",
+      "text": "View more"
+    },
+    "footer": null
+  },
+  {
+    "title": "Innovative Urban Testbeds to Advance Emissions Estimates",
+    "desc": "NIST’s Urban GHG Measurements Testbed System uses ground-based observing networks in Los Angeles, Indianapolis, and the Baltimore/Washington, D.C. region, together with aircraft and satellite data, to diagnose accuracy of local emissions estimates and advance transformative monitoring and measurement methods for the future.",
+    "img": {
+      "src": "https://bpb-us-e1.wpmucdn.com/sites.psu.edu/dist/9/4276/files/2023/09/US_INC.png",
+      "alt": "image from INFLUX project"
     },
     "link": {
       "url": "",

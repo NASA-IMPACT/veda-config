@@ -12,16 +12,10 @@ import {
 } from "$veda-ui/@devseed-ui/theme-provider";
 import { Button } from "$veda-ui/@devseed-ui/button";
 import { format } from "$veda-ui/date-fns";
-import { getString } from "veda";
 
 import { Tip } from "$veda-ui-scripts/components/common/tip";
 import { variableGlsp } from "$veda-ui-scripts/styles/variable-utils";
-import {
-  STORIES_PATH,
-  DATASETS_PATH,
-  ANALYSIS_PATH,
-  ABOUT_PATH,
-} from "$veda-ui-scripts/utils/routes";
+
 import { useFeedbackModal } from "$veda-ui-scripts/components/common/layout-root";
 import { useMediaQuery } from "$veda-ui-scripts/utils/use-media-query";
 import { getLinkProps } from "$veda-ui-scripts/utils/url";
@@ -31,8 +25,6 @@ import { CollecticonExpandTopRight } from '$veda-ui/@devseed-ui/collecticons';
 
 import { SUBSCRIPTION_URL } from "../../../constants";
 
-
-const PRESS_PATH = '/news#press';
 
 
 const FooterInner = styled.div`
@@ -260,10 +252,10 @@ export default function PageFooter(props) {
                 </FooterMenuLink>
               </li>
               <li>
-                <FooterMenuLink to='/news-and-events'>News & Events</FooterMenuLink>
+                <FooterMenuLink to='/about'>About</FooterMenuLink>
               </li>
               <li>
-                <FooterMenuLink to='/about'>About</FooterMenuLink>
+                <FooterMenuLink to='/news-and-events'>News & Events</FooterMenuLink>
               </li>
               <li>
                 <FooterMenuLink as="a" href={SUBSCRIPTION_URL}>
