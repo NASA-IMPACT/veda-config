@@ -2,6 +2,16 @@ import React from '$veda-ui/react'
 import styled  from '$veda-ui/styled-components';
 import { Button, Grid, Icon } from '$veda-ui/@trussworks/react-uswds'
 
+import {
+  Card, 
+  CardHeader,
+  CardBody,
+  CardFooter,
+  CardMedia,
+  CardGroup,
+} from '$veda-ui/@trussworks/react-uswds';
+
+
 const progressColor = '#1565EF';
 
 const ProgressIndicator = styled.div`
@@ -10,13 +20,7 @@ const ProgressIndicator = styled.div`
   transition: ${props => props.noTransition? null: 'width 200ms ease-out'};
 `;
 
-const GridWithStyle = styled(Grid)`
-  opacity: ${props => props.bright? 1 : 0.5};
-  transition: opacity 200ms ease-out;
-`;
-
 function ProgressBar({ selected, shouldProgress, progressDone, progressPercentage }) {
-  
   // If progress is done, 100% - false if something is manually selected
   // If it is in progress, progress Percentage - false if something is manually selected
   // If it is manually selected, 100% 
@@ -32,8 +36,9 @@ function ProgressBar({ selected, shouldProgress, progressDone, progressPercentag
 
 export function ItemPanel({ item, linkComponent: LinkComponent }) {
   return (<>
-  <p className="margin-top-2 flex-align-self-stretch">{item.description}</p>
+
   <div className="tablet:margin-top-0 margin-top-2 flex-align-self-stretch">
+    <p className="margin-top-2 margin-bottom-2 flex-align-self-stretch">{item.description}</p>
     <LinkComponent className="display-flex flex-align-center veda-color--link" to={item.link}>
       <Icon.ArrowForward stroke={progressColor} fill={progressColor} /> 
     <span className="padding-left-1">Read more</span>
@@ -42,9 +47,18 @@ export function ItemPanel({ item, linkComponent: LinkComponent }) {
   </>)
 }
 
-function ItemCard({ item, itemIdx, onTitleClick, selected, linkComponent }) {
-  return <div className="tablet:padding-left-1 tablet:padding-right-1 margin-top-1 height-full position-relative">
-  <Button
+function ItemCard({ item, itemIdx, onTitleClick, selected, linkComponent: LinkComponent, shouldProgress, progressDone, progressPercentage, bright }) {
+  return <Card 
+    gridLayout={{ tablet: { col: 4 } }} 
+    containerProps={{className:`border-0 ${bright? 'opacity-100':'opacity-50'}`}}>
+    <ProgressBar shouldProgress={shouldProgress} progressDone={progressDone} progressPercentage={progressPercentage}selected={selected} />
+
+    <CardBody className="padding-left-0 position-relative">
+      <h3 className="tablet:margin-top-1 carousel--title usa-button usa-button--unstyled text-bold veda-color--base">
+        {item.title}
+      </h3>
+      <p className="margin-top-2 flex-align-self-stretch">{item.description}</p>
+      <Button
       unstyled={true}
       className="position-absolute top-0 left-0 width-full height-full blocklink"
       onClick={() => { onTitleClick(item); } }
@@ -54,26 +68,20 @@ function ItemCard({ item, itemIdx, onTitleClick, selected, linkComponent }) {
       aria-selected={selected.toString()}
       aria-controls={`carousel-item-${itemIdx+1}`} 
       children={undefined} />
-  <div className="tablet:display-block display-none"  aria-roledescription='slide' aria-label={`${itemIdx+1} of 3`}>
-    <h3 className="tablet:margin-top-1 carousel--title usa-button usa-button--unstyled text-bold veda-color--base">
-      {item.title}
-    </h3>
-  </div>
-  <div role="tabpanel" className="height-full display-flex flex-column flex-justify">
-    <ItemPanel item={item} linkComponent={linkComponent} />
-  </div>
-</div>
+    </CardBody>
+    <CardFooter className="padding-left-0 padding-top-1">
+      <LinkComponent className="display-flex flex-align-center veda-color--link" to={item.link}>
+        <Icon.ArrowForward stroke={progressColor} fill={progressColor} /> 
+      <span className="padding-left-1">Read more</span>
+      </LinkComponent>
+    </CardFooter>
+</Card>
 }
 
 
 export default function CarouselItem({ item, itemIdx, onTitleClick, shouldProgress, progressDone, progressPercentage, selected, linkComponent }) {
-
   return (
-    <GridWithStyle
-      tablet={{col: true}}
-      bright={selected || shouldProgress}
-      className="tablet:margin-top-0 margin-top-2 tablet:padding-2 padding-0">
-        <ProgressBar shouldProgress={shouldProgress} progressDone={progressDone} progressPercentage={progressPercentage}selected={selected} />
-        <ItemCard item={item} itemIdx={itemIdx} onTitleClick={onTitleClick} selected={selected} linkComponent={linkComponent} />
-    </GridWithStyle>)
+      <ItemCard  bright={selected || shouldProgress} item={item} itemIdx={itemIdx} onTitleClick={onTitleClick} selected={selected} linkComponent={linkComponent} shouldProgress={shouldProgress} progressDone={progressDone} progressPercentage={progressPercentage} />
+  )
 }
+

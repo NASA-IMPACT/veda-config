@@ -7,6 +7,14 @@ import LazyLoad from '$veda-ui/react-lazyload';
 
 import CarouselItems from './items'
 import CarouselItem, { ItemPanel } from './carousel-item';
+import {
+  Card, 
+  CardHeader,
+  CardBody,
+  CardFooter,
+  CardMedia,
+  CardGroup,
+} from '$veda-ui/@trussworks/react-uswds';
 
 import SmartLink from '$veda-ui-scripts/components/common/smart-link';
 
@@ -62,7 +70,7 @@ export function DesktopCarousel () {
           </CSSTransition>
         </TransitionGroup>
       </Grid>
-      <Grid row className="tablet:margin-top-4 margin-top-2" role="tablist" aria-label="Slides">
+      <CardGroup className="tablet:margin-top-4 margin-top-2" role="tablist" aria-label="Slides">
         {CarouselItems.map((item, itemIdx) => {
           return <CarouselItem 
             key={item.title} 
@@ -76,7 +84,7 @@ export function DesktopCarousel () {
             linkComponent={SmartLink}
           />
         })}
-      </Grid>
+      </CardGroup>
     </GridContainer>)
 }
 
