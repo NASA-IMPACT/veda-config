@@ -3,7 +3,11 @@ import { NavLink } from "$veda-ui/react-router-dom";
 import styled from "$veda-ui/styled-components";
 import { glsp, themeVal, media } from "$veda-ui/@devseed-ui/theme-provider";
 import { Button } from "$veda-ui/@devseed-ui/button";
-import { CollecticonArrowRight, CollecticonCirclePlay } from "$veda-ui/@devseed-ui/collecticons";
+import {
+  CollecticonArrowRight,
+  CollecticonEnvelope,
+  CollecticonSpeechBalloon,
+} from "$veda-ui/@devseed-ui/collecticons";
 import Hug from "$veda-ui-scripts/styles/hug";
 import { VarHeading } from "$veda-ui-scripts/styles/variable-components";
 import { variableGlsp } from "$veda-ui-scripts/styles/variable-utils";
@@ -97,21 +101,31 @@ export default function HomeComponent() {
         
         <Carousel />
         <Grid col={8} offset={2} className="font-heading-md margin-y-10">
-          <h1 className="font-heading-2xl margin-y-5">Welcome</h1>
+          <h1 className="font-heading-2xl margin-y-6">Welcome</h1>
           <p className="margin-bottom-4">
             The U.S. Greenhouse Gas Center opens up access to trusted data on
             greenhouse gases. This&nbsp;multi-agency effort consolidates
-            greenhouse gas information from observations and models.
+            greenhouse gas information from observations and models to create a unified source for U.S. government and other datasets.
             The&nbsp;goal of the US GHG Center is to provide decision-makers with
             one location for data and analysis.
           </p>
-          <p className="margin-bottom-4">
-            If you are interested in exploring partnership opportunities with the US GHG Center, please <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSeVWCrnca08Gt_qoWYjTo6gnj1BEGL4NCUC9VEiQnXA02gzVQ/viewform">reach out to our team</a>.
-          </p>
-          <p className="margin-bottom-4">
-            To get GHG Center updates delivered to your mailbox, <a href={SUBSCRIPTION_URL}>subscribe to the news and announcements list</a>.
-          </p>
-          <Buttons>
+          <Grid row>
+            <Grid col='auto' className="display-flex flex-align-center margin-bottom-2">
+              <CollecticonSpeechBalloon size='xlarge' color='#082a64' className="grid-col-auto" />
+            </Grid>
+            <Grid col='fill' className="display-flex flex-align-center margin-bottom-2">
+              <span className="margin-left-4 font-sans-md"> If you are interested in exploring partnership opportunities with the US GHG Center, please <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSeVWCrnca08Gt_qoWYjTo6gnj1BEGL4NCUC9VEiQnXA02gzVQ/viewform">reach out to our team</a>.</span>
+            </Grid>
+          </Grid>
+          <Grid row>
+            <Grid col='auto' className="display-flex flex-align-center margin-bottom-2">
+              <CollecticonEnvelope size='xlarge' color='#082a64' className="grid-col-auto" />
+            </Grid>
+            <Grid col='fill' className="display-flex flex-align-center margin-bottom-2">
+              <span className="margin-left-4 font-sans-md"> To get GHG Center updates delivered to your mailbox, <a href={SUBSCRIPTION_URL}>subscribe to the news and announcements list</a>.</span>
+            </Grid>
+          </Grid>
+          <Buttons className="margin-top-4">
             <Button
               forwardedAs={NavLink}
               to="/about"
