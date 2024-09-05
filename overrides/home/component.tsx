@@ -21,39 +21,8 @@ import Carousel from './carousel/';
 
 import '../../common/styles.scss';
 
+import { SUBSCRIPTION_URL } from "../../constants";
 
-const HomeContent = styled(Hug)`
-  padding: ${variableGlsp(2.5, 0)};
-  grid-row-gap: ${variableGlsp(2)};
-  ${media.mediumUp`
-    grid-row-gap: ${variableGlsp(3)};
-  `}
-`;
-
-const IntroHeadline = styled.div`
-  display: flex;
-  flex-flow: column;
-  gap: ${glsp(2)};
-  grid-column: content-start / content-end;
-
-  ${media.mediumUp`
-    grid-column: content-2 / content-8;
-  `}
-
-  ${media.largeUp`
-    grid-column: content-3 / content-11;
-  `}
-
-  p {
-    font-size: 1.25rem;
-  }
-`;
-
-const ButtonWithLongText = styled(Button)`
-  min-height: 3rem;
-  height: auto;
-  
-`
 
 const ActionsBlock = styled.div`
   grid-column: 1 / -1;
@@ -136,51 +105,25 @@ export default function HomeComponent() {
             The&nbsp;goal of the US GHG Center is to provide decision-makers with
             one location for data and analysis.
           </p>
-          {/* <p className="margin-bottom-4">
-          This initial two-year demonstration phase creates a way to explore 
-          and analyze U.S.&nbsp;government and other datasets, targeting three 
-          greenhouse gas areas of study, as shown below. The US GHG Center 
-          also encourages stakeholder feedback and ideas for future expansion.
-          </p> */}
+          <p className="margin-bottom-4">
+            If you are interested in exploring partnership opportunities with the US GHG Center, please <a href="https://docs.google.com/forms/d/e/1FAIpQLSeVWCrnca08Gt_qoWYjTo6gnj1BEGL4NCUC9VEiQnXA02gzVQ/viewform">reach out to our team</a>.
+          </p>
+          <p className="margin-bottom-4">
+            To get GHG Center updates delivered to your mailbox, <a href={SUBSCRIPTION_URL}>subscribe to the news and announcements list</a>.
+          </p>
           <Buttons>
-            <ButtonWithLongText
-              onClick={() => handleOpenModal("https://www.youtube.com/embed/6xWdIlWqhBE?si=NpOVMavs4IgKE297")}
-              size="xlarge"
-              variation="primary-fill"
-            >
-              <CollecticonCirclePlay />
-              TOUR THE US GHG CENTER
-            </ButtonWithLongText>
-            <ButtonWithLongText
+            <Button
               forwardedAs={NavLink}
-              to="/stories/intro-us-ghg-center"
+              to="/about"
               size="xlarge"
-              variation="base-outline"
+              variation="primary-outline"
             >
-              LEARN MORE ABOUT THE US GHG CENTER
-            </ButtonWithLongText>
+                Learn More <CollecticonArrowRight />
+            </Button>
           </Buttons>
         </Grid>
       </GridContainer>
       <ActionsBlock>
-      {/* <Buttons>
-        <ButtonWithLongText
-          forwardedAs={NavLink}
-          to="/data-catalog"
-          size="xlarge"
-          variation="primary-fill"
-        >
-          Browse the Data Catalog <CollecticonArrowRight />
-        </ButtonWithLongText>
-        <ButtonWithLongText
-          onClick={() => handleOpenModal("https://www.youtube.com/embed/S2XL5WT9W4g")}
-          size="xlarge"
-          variation="primary-fill"
-        >
-          <CollecticonCirclePlay />
-          How to Explore Data
-        </ButtonWithLongText>
-        </Buttons>*/ }
       </ActionsBlock>
       <InfoCallout>
         <InfoCalloutInner>
@@ -194,14 +137,6 @@ export default function HomeComponent() {
             </p>
           </InfoCalloutHeadline>
           <Partners variation="positive" size="big" />
-          <Button
-            forwardedAs={NavLink}
-            to="/about"
-            size="xlarge"
-            variation="primary-outline"
-          >
-            Learn More <CollecticonArrowRight />
-          </Button>
         </InfoCalloutInner>
       </InfoCallout>
       {
