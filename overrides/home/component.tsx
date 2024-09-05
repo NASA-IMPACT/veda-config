@@ -106,7 +106,7 @@ export default function HomeComponent() {
             one location for data and analysis.
           </p>
           <p className="margin-bottom-4">
-            If you are interested in exploring partnership opportunities with the US GHG Center, please <a href="https://docs.google.com/forms/d/e/1FAIpQLSeVWCrnca08Gt_qoWYjTo6gnj1BEGL4NCUC9VEiQnXA02gzVQ/viewform">reach out to our team</a>.
+            If you are interested in exploring partnership opportunities with the US GHG Center, please <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSeVWCrnca08Gt_qoWYjTo6gnj1BEGL4NCUC9VEiQnXA02gzVQ/viewform">reach out to our team</a>.
           </p>
           <p className="margin-bottom-4">
             To get GHG Center updates delivered to your mailbox, <a href={SUBSCRIPTION_URL}>subscribe to the news and announcements list</a>.
