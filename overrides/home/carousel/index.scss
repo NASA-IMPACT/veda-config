@@ -24,6 +24,10 @@
   color: var(--veda-color-base);
 }
 
+.animation--transition {
+  transition: opacity 200ms ease-out;
+}
+
 .carousel {
   &--height {
     height: 500px;
