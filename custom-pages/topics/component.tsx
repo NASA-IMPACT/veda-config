@@ -33,7 +33,7 @@ export default function HomeComponent() {
             </CardHeader>
             <CardBody>
               <p className="padding-bottom-2 margin-bottom-4">
-                Globally, cities are resp consible for more than 70% of greenhouse gas emissions. Cities have the power to reduce emissions using policies that benefit the health of their citizens. The U.S. Greenhouse Gas Center welcomes a new set of tools aimed at supporting city decisionmakers.
+                Globally, cities are responsible for more than 70% of greenhouse gas emissions. Cities have the power to reduce emissions using policies that benefit the health of their citizens. The U.S. Greenhouse Gas Center welcomes a new set of tools aimed at supporting city decisionmakers.
               </p>
             </CardBody>
             <Link className="position-absolute top-0 left-0 width-full height-full blocklink" to="/stories/urban" />
