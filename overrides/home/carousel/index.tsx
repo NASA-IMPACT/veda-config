@@ -1,20 +1,14 @@
 import React, { useState, useEffect, useCallback } from '$veda-ui/react'
-import styled from '$veda-ui/styled-components';
+
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { useMediaQuery } from "$veda-ui-scripts/utils/use-media-query";
 import { GridContainer, Grid} from '$veda-ui/@trussworks/react-uswds'
 import LazyLoad from '$veda-ui/react-lazyload';
+import { CardGroup } from '$veda-ui/@trussworks/react-uswds';
 
 import CarouselItems from './items'
 import CarouselItem, { ItemPanel } from './carousel-item';
-import {
-  Card, 
-  CardHeader,
-  CardBody,
-  CardFooter,
-  CardMedia,
-  CardGroup,
-} from '$veda-ui/@trussworks/react-uswds';
+
 
 import SmartLink from '$veda-ui-scripts/components/common/smart-link';
 

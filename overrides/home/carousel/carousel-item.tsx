@@ -1,14 +1,11 @@
 import React from '$veda-ui/react'
 import styled  from '$veda-ui/styled-components';
-import { Button, Grid, Icon } from '$veda-ui/@trussworks/react-uswds'
+import { Button, Icon } from '$veda-ui/@trussworks/react-uswds'
 
 import {
   Card, 
-  CardHeader,
   CardBody,
   CardFooter,
-  CardMedia,
-  CardGroup,
 } from '$veda-ui/@trussworks/react-uswds';
 
 
@@ -47,10 +44,10 @@ export function ItemPanel({ item, linkComponent: LinkComponent }) {
   </>)
 }
 
-function ItemCard({ item, itemIdx, onTitleClick, selected, linkComponent: LinkComponent, shouldProgress, progressDone, progressPercentage, bright }) {
+export default function CarouselItem({ item, itemIdx, onTitleClick, shouldProgress, progressDone, progressPercentage, selected, linkComponent: LinkComponent }) {
   return <Card 
     gridLayout={{ tablet: { col: 4 } }} 
-    containerProps={{className:`border-0 ${bright? 'opacity-100':'opacity-50'}`}}>
+    containerProps={{className:`border-0 animation--transition ${(selected || shouldProgress)? 'opacity-100':'opacity-50'}`}}>
     <ProgressBar shouldProgress={shouldProgress} progressDone={progressDone} progressPercentage={progressPercentage}selected={selected} />
 
     <CardBody className="padding-left-0 position-relative">
@@ -70,18 +67,11 @@ function ItemCard({ item, itemIdx, onTitleClick, selected, linkComponent: LinkCo
       children={undefined} />
     </CardBody>
     <CardFooter className="padding-left-0 padding-top-1">
-      <LinkComponent className="display-flex flex-align-center veda-color--link" to={item.link}>
-        <Icon.ArrowForward stroke={progressColor} fill={progressColor} /> 
-      <span className="padding-left-1">Read more</span>
-      </LinkComponent>
-    </CardFooter>
-</Card>
-}
-
-
-export default function CarouselItem({ item, itemIdx, onTitleClick, shouldProgress, progressDone, progressPercentage, selected, linkComponent }) {
-  return (
-      <ItemCard  bright={selected || shouldProgress} item={item} itemIdx={itemIdx} onTitleClick={onTitleClick} selected={selected} linkComponent={linkComponent} shouldProgress={shouldProgress} progressDone={progressDone} progressPercentage={progressPercentage} />
-  )
+        <LinkComponent className="display-flex flex-align-center veda-color--link" to={item.link}>
+          <Icon.ArrowForward stroke={progressColor} fill={progressColor} /> 
+        <span className="padding-left-1">Read more</span>
+        </LinkComponent>
+      </CardFooter>
+  </Card>
 }
 
