@@ -100,6 +100,19 @@ export const NEWS_ITEMS = [
 
 export const EVENT_ITEMS = sortByDateDesc([
   {
+    name: 'Join the 2nd Annual Stakeholder Forum;  Dec 4-5, 2024',
+    asLink : {
+      url: 'https://drive.google.com/file/d/1Mkz43d3iP4CfTuBeZXsoO1-fxBRGmmVq/view?usp=sharing'
+    },
+    media: {
+      src: new URL('./media/events/GHGC_Stakeholder_Forum_Announcement_Image.png', import.meta.url).href,
+      alt: 'GHGC Stakeholder Forum Announcement Image'
+    },
+    description: "This 2-day forum will focus on gathering input from the stakeholder community to inform the Center's priorities and future directions. Join us on Dec 4-5, 2024 in College Park, Maryland!",
+    startDate: '2024-12-04',
+    endDate: '2024-12-06'
+  },
+  {
     name: 'Policy Speaker Series: An Overview of the Global Greenhouse Gas Watch (G3W)',
     asLink : {
       url: 'https://carbon.nasa.gov/docs/May%202024%20PSS%20Talk%20Announcement.pdf'

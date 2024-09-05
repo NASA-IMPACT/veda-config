@@ -20,7 +20,6 @@ import {
 
 import Partners from "./partners";
 import Banner from './banner';
-import VideoModal from "../components/video-modal";
 import Carousel from './carousel/';
 
 import '../../common/styles.scss';
@@ -79,17 +78,7 @@ const Buttons = styled.div`
   justify-content: center;
 `;
 
-export default function HomeComponent() {
-  const [showModal, setShowModal] = React.useState<boolean>(false);
-  const [videoLink, setVideoLink] = React.useState<string>("");
-  
-
-  const handleOpenModal = (link: string) => {
-    setVideoLink(link);
-    setShowModal(true);
-  };
-
-  
+export default function HomeComponent() {  
   return (
     <>
     <Banner />
@@ -153,17 +142,6 @@ export default function HomeComponent() {
           <Partners variation="positive" size="big" />
         </InfoCalloutInner>
       </InfoCallout>
-      {
-        showModal && (
-          <VideoModal 
-            iframe={<iframe width="560" height="315" src={videoLink} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen={true}></iframe>}
-            display={showModal}
-            onClose={() => setShowModal(false)}
-            width={`${560*1.5}px`} // Iframe's original embed width value 1.5x bigger
-            height={`${315*1.5}px`} // Iframe's original embed height value 1.5x bigger
-          />
-        )
-      }
     </>
   );
 }
