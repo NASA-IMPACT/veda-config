@@ -3,7 +3,7 @@ id: 'tracking-greenhouse-gas-cycles'
 name: Tracking Greenhouse Gas Cycles
 description: 'Understanding carbon transfers between land, ocean, and atmosphere'
 media:
-  src: ::file ./tracking-ghg-cycles--cover.jpeg
+  src: ::file ./media/tracking-ghg-cycles--cover.jpeg
   alt: Satellite view of wetland area
   author:
     name: NASA Earth Observatory/Michael Taylor and Adam Voiland
@@ -32,7 +32,7 @@ taxonomy:
     </Prose>
     <Figure>
         <Chart
-            dataPath={new URL('./co2_mm_mlo.csv', import.meta.url).href}
+            dataPath={new URL('./media/co2_mm_mlo.csv', import.meta.url).href}
             dateFormat="%Y-%m"
             idKey='gas'
             xKey='year month'
@@ -49,7 +49,7 @@ taxonomy:
 
 <Block>
     <Figure>
-        <video style={{ width: '100%', aspectRatio: "16/9" }} poster={new URL('./screenshot-co2-explainer.png', import.meta.url).href} controls autoplay muted>
+        <video style={{ width: '100%', aspectRatio: "16/9" }} poster={new URL('./media/screenshot-co2-explainer.png', import.meta.url).href} controls autoplay muted>
             <source src="https://svs.gsfc.nasa.gov/vis/a000000/a005100/a005110/CO2explainer_1080p30.mp4" type="video/mp4"/>
             Your browser does not support the video tag.
         </video> 
@@ -71,8 +71,8 @@ taxonomy:
     <Figure>
         <div style={{"background-color": "black"}}>
         <CompareImage
-            leftImageSrc={new URL('./nee-1.png', import.meta.url).href}
-            rightImageSrc={new URL('./nee-2.png', import.meta.url).href}
+            leftImageSrc={new URL('./media/nee-1.png', import.meta.url).href}
+            rightImageSrc={new URL('./media/nee-2.png', import.meta.url).href}
             width="100"
             attrAuthor="NASA Science Visualization Studio, Mark SubbaRao"
             alt="Differences between January and July Net Ecosystem Exchange (NEE)"
@@ -142,7 +142,7 @@ taxonomy:
 <Block>
     <Figure>
         <Image 
-            src={new URL('./net-carbon-emissions.gif', import.meta.url).href}
+            src={new URL('./media/net-carbon-emissions.gif', import.meta.url).href}
             alt="NASA animation of country-level CO₂ emissions inferred from atmospheric observations " 
             align="left"
             attrAuthor=" NASA Science Visualization Studio/Greg Shirah and Helen-Nicole Kostis"
