@@ -21,10 +21,10 @@ export const focusAreaDatasets = [
       "text": "View more"
     },
     "footer": {
-      "link": {
+      "links": [{
         "title": "Check out relevant datasets",
         "url": `${DATASETS_PATH}?${Actions.TAXONOMY}=${encodeURIComponent(JSON.stringify({ Topics: "anthropogenic-emissions" }))}`
-      }
+      }]
     }
   },
   {
@@ -39,10 +39,10 @@ export const focusAreaDatasets = [
       "text": "View more"
     },
     "footer": {
-      "link": {
+      "links": [{
         "title": "Check out relevant datasets",
         "url": `${DATASETS_PATH}?${Actions.TAXONOMY}=${encodeURIComponent(JSON.stringify({ Topics: "natural-emissions-and-sinks" }))}`
-      }
+      }]
     }
   },
   {
@@ -57,10 +57,10 @@ export const focusAreaDatasets = [
       "text": "View more"
     },
     "footer": {
-      "link": {
+      "links": [{
         "title": "Check out relevant datasets",
         "url": `${DATASETS_PATH}?${Actions.TAXONOMY}=${encodeURIComponent(JSON.stringify({ Topics: "large-emission-events" }))}`
-      }
+      }]
     }
   }
 ];
@@ -130,37 +130,48 @@ export const customInterfaces = [
     "desc": "Detailed information for methane plumes identified using EMIT",
     "img": {
       "src": new URL('./media/emit.png', import.meta.url).href,
-      "alt": "Baltimore"
+      "alt": "view of colored shape overlaid on satellite landscape image with boxes of information containing plume details"
     },
     "link": {
       "url": "/data-catalog/emit-ch4plume-v1",
-      "text": "Baltimore"
+      "text": "See more"
     },
     "footer": null
   },
   {
     "title": "NOAA Concentration Viewer",
-    "desc": "Measurements of carbon dioxide and methane from ground stations throughout the US and worldwide",
+    "desc": "Measurements of carbon dioxide and methane concentrations from ground stations throughout the US and worldwide",
     "img": {
       "src": new URL('./media/co2.png', import.meta.url).href,
-      "alt": "Baltimore"
+      "alt": "map showing Mauna Loa location of station with a time series of data below the map"
     },
     "link": {
       "url": "/data-catalog/noaa-gggrn-co2-concentrations",
-      "text": "Baltimore"
+      "text": "See more"
     },
-    "footer": null
+    "footer": {
+      "links": [
+        {
+          "title": "Carbon Dioxide",
+          "url": "/data-catalog/noaa-gggrn-co2-concentrations"
+        },
+        {
+          "title": "Methane",
+          "url": "/data-catalog/noaa-gggrn-ch4-concentrations"
+        }
+      ]
+    }
   },
   {
     "title": "NIST Tower Data Viewer",
     "desc": "Measurements of carbon dioxide and methane concentrations from urban tower instruments",
     "img": {
-      "src": new URL('./media/ch4.png', import.meta.url).href,
-      "alt": "Baltimore"
+      "src": new URL('./media/nist-co2-nwb.png', import.meta.url).href,
+      "alt": "map showing Northwest Baltimore, MD location of station with a time series of data below the map"
     },
     "link": {
       "url": "/data-catalog/noaa-gggrn-ch4-concentrations",
-      "text": "Baltimore"
+      "text": "See more"
     },
     "footer": null
   },

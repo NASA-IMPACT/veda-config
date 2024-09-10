@@ -32,7 +32,6 @@ export default function Component() {
                 </section>
                 <section>
                     <Title> Featured Data Tools </Title>
-
                     <Keypoints data={customInterfaces} />
                 </section>
                 <section>
