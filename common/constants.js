@@ -85,7 +85,7 @@ export const focusAreasStories = focusAreaDatasets.map((area, index) => {
 export const dataEngagements = [
   {
     "title": "Data Catalog",
-    "desc": "Detailed information for datasets that provides insight into greenhouse gas sources, sinks, emissions, fluxes, and events.",
+    "desc": "Detailed dataset information for insight into greenhouse gas sources, sinks, emissions, and large events.",
     "img": {
       "src": new URL('./media/catalog.png', import.meta.url).href,
       "alt": "image of oil refinery"
@@ -98,7 +98,7 @@ export const dataEngagements = [
   },
   {
     "title": "Interactive Map",
-    "desc": "The exploration and analysis environment is a space where users can visually examine data on a customizable map and create a time series of basic statistics for dataset layers.",
+    "desc": "The exploration and analysis environment can be used to visually examine data on a customizable map and create a time series of basic statistics.",
     "img": {
       "src": new URL('./media/explore.png', import.meta.url).href,
       "alt": "image of green wetlands"
@@ -127,7 +127,7 @@ export const dataEngagements = [
 export const customInterfaces = [
   {
     "title": "EMIT Methane Plume Viewer",
-    "desc": "Detailed information for methane plumes identified using EMIT.",
+    "desc": "Detailed information for methane plumes identified using EMIT",
     "img": {
       "src": new URL('./media/emit.png', import.meta.url).href,
       "alt": "Baltimore"
@@ -139,8 +139,8 @@ export const customInterfaces = [
     "footer": null
   },
   {
-    "title": "Carbon Dioxide Concentration Viewer",
-    "desc": "Measurements of carbon dioxide from ground locations throughout the US and worldwide are collected by NOAA GML and available for exploring concentration time series.",
+    "title": "NOAA Concentration Viewer",
+    "desc": "Measurements of carbon dioxide and methane from ground stations throughout the US and worldwide",
     "img": {
       "src": new URL('./media/co2.png', import.meta.url).href,
       "alt": "Baltimore"
@@ -152,8 +152,8 @@ export const customInterfaces = [
     "footer": null
   },
   {
-    "title": "Methane Concentration Viewer",
-    "desc": "Measurements of methane from ground locations throughout the US and worldwide are collected by NOAA GML and available for exploring concentration time series.",
+    "title": "NIST Tower Data Viewer",
+    "desc": "Measurements of carbon dioxide and methane concentrations from urban tower instruments",
     "img": {
       "src": new URL('./media/ch4.png', import.meta.url).href,
       "alt": "Baltimore"

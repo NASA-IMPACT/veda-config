@@ -27,10 +27,8 @@ export default function Component() {
         <div className="hug-reset-container margin-bottom-8">
             <GridContainer containerSize="widescreen">
                 <section>
-                    <Title> Engage with the Data </Title>
+                    <Title> Engage with Data </Title>
                     <Keypoints data={dataEngagements} />
-
-                    <Keypoints data={customInterfaces} />
                 </section>
                 <section>
                     <Title> Featured Data Tools </Title>
@@ -40,7 +38,7 @@ export default function Component() {
                 <section>
                 <Title> Core Science Focus Areas </Title>
                 <p className="margin-bottom-2 font-sans-md">
-                    The U.S. Greenhouse Gas Center is organized around three core focus areas. <a href={SUBSCRIPTION_URL}>Sign up</a> to join a focus area group.
+                    The U.S. Greenhouse Gas Center is organized around three core focus areas. <Link to={SUBSCRIPTION_URL}>Sign up</Link> to join a focus area group.
                 </p>
                 <Keypoints data={focusAreaDatasets} />
                 </section>
