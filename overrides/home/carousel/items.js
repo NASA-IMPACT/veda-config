@@ -5,8 +5,8 @@ export default [{
   image: 'https://www.nasa.gov/wp-content/uploads/2023/03/1-maia-los-angeles-1041.jpg'
 }, {
   link: '/stories/gra2pes',
-  title: 'Title',
-  description: "Lorem Ipsum",
+  title: 'First-of-its-Kind Dataset Connects Greenhouse Gases and Air Quality',
+  description: "The GReenhouse gas And Air Pollutants Emissions System (GRA2PES) is the first U.S.-based measurement system to combine greenhouse gas and air quality pollutant sources.",
   image: new URL('../../media/graapes.png', import.meta.url).href,
 },
 {
