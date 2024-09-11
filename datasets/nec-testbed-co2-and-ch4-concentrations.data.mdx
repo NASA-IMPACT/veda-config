@@ -1,9 +1,9 @@
 ---
-id: nec-testbed-co2-and-ch4-concentrations
+id: nec-testbed-ghg-concentrations
 name: Carbon Dioxide and Methane Concentrations from the Northeast Corridor (NEC) Urban Test Bed
 description: Atmospheric concentrations of carbon dioxide (CO₂) and methane (CH₄) collected at NIST Urban Test Bed tower sites in the Northeastern U.S.
 usage:
-  - url: 'https://us-ghg-center.github.io/ghgc-docs/cog_transformation/noaa-gggrn-concentrations.html'
+  - url: 'https://us-ghg-center.github.io/ghgc-docs/cog_transformation/nec-testbed-ghg-concentrations.html'
     label: Notebook showing data transformation for ingest to the US GHG Center
     title: 'Data Transformation Notebook'
   - url: 'https://us-ghg-center.github.io/ghgc-docs/datausage.html'
@@ -13,14 +13,16 @@ usage:
     label: Browse and download data from NIST
     title: 'Data Browser'    
 media:
-  src: ::file ./media/noaa-air-samples--cover.png
-  alt: aa
+  src: ::file ./media/nist-nec--dataset-cover.jpg
+  alt: Smoke
   author:
-    name: Columbia University
+    name: Chris Leboutillier
+    url: https://unsplash.com/photos/a-large-plume-of-smoke-coming-out-of-a-pipe-NmT8Nk8OJMg
 taxonomy:
   - name: Topics
     values:
       - GHG Concentrations
+      - Urban
   - name: Source
     values:
       - NIST
@@ -40,11 +42,11 @@ infoDescription: |
     - Spatial Resolution: Point location samples    
     - Data Units: Micromoles per mole of dry air (Parts CO₂ per million (ppm)); Nanomoles per mole of dry air (Parts CH₄ per billion (ppb))
     - Data Type: Research
-    - Data Latency: Updated annually        
+    - Data Latency: Updated ~annually        
 disableExplore: true
 layers:
-  - id: nec-testbed-co2-and-ch4-concentrations
-    stacCol: nec-testbed-co2-and-ch4-concentrations
+  - id: nec-testbed-ghg-concentrations
+    stacCol: nec-testbed-ghg-concentrations
     name: Methane Concentration (Air Sample) 
     type: vector
     description: Discrete air sample measurements of methane (CH₄)
@@ -55,15 +57,15 @@ layers:
       - 0
       - 20
     sourceParams:
-      assets: nec-testbed-co2-and-ch4-concentrations
+      assets: nec-testbed-ghg-concentrations
       colormap_name: plasma
       rescale:
         - 0
         - 1000
       nodata: 0
     compare:
-      datasetId: nec-testbed-co2-and-ch4-concentrations
-      layerId: nec-testbed-co2-and-ch4-concentrations
+      datasetId: nec-testbed-ghg-concentrations
+      layerId: nec-testbed-ghg-concentrations
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
@@ -100,18 +102,18 @@ layers:
     **Spatial Resolution:** Point location samples    
     **Data Units:** Micromoles per mole of dry air (Parts CO₂ per million (ppm)); Nanomoles per mole of dry air (Parts CH₄ per billion (ppb))<br />
     **Data Type:** Research<br />
-    **Data Latency:** Updated annually
+    **Data Latency:** Updated ~annually
     
     NIST is engaged in research to improve measurement of greenhouse gas emissions in areas containing multiple emission sources and sinks, such as cities. NIST's objective is to develop measurement tools supporting independent means to increase the accuracy of greenhouse gas emissions data at urban and regional geospatial scales. NIST has established [three test beds in U.S. cities](https://www.nist.gov/greenhouse-gas-measurements/urban-test-beds) to develop and evaluate the performance of advanced measurement capabilities for emissions independent of their origin. Located in Indianapolis, Indiana, the Los Angeles air basin of California, and the U.S. Northeast corridor (beginning with the Baltimore/Washington D.C. region), the test beds have been selected for their varying meteorology, terrain and emissions characteristics. These test beds will serve as a means to independently diagnose the accuracy of emissions data obtained directly from emission or uptake sources.
     
-    A variety of data are collected at the test bed locations including station measurements of various GHG and trace gas species, airborne observations, weather data and modeling, lidar measurements, and observations from rawinsondes. Here, the GHG Center displays CO₂ and CH₄ concentration measurements from tower sites within the Northeast Corridor (NEC) test bed location. This tower data provides important continuous measurements of GHGs which can be used to track trends over time, diurnal variations, and reveal how GHG concentrations change in relation to surrounding events and observations. While only tower concentration data is shown in the GHG Center, the complete urban testbed data collection can be accessed via NIST’s website: [https://www.nist.gov/greenhouse-gas-measurements/urban-test-beds](https://www.nist.gov/greenhouse-gas-measurements/urban-test-beds)       
+    A variety of data are collected at the test bed locations including station measurements of various GHG and trace gas species, airborne observations, weather and surface fluxes, atmospheric profiling measurements including lidar measurements, and observations from rawinsondes. The interactive display below includes CO₂ and CH₄ concentration measurements from tower sites within the Northeast Corridor (NEC) test bed location. This concentration data provides important continuous measurements of GHGs in the atmospheric boundary layer which can be used, along with associated weather models, to reveal how GHG concentrations and, more importantly, urban emissions of GHGs change over space and time. While only tower concentration data is shown in the GHG Center, the complete NEC urban testbed data collection can be accessed via NIST’s website: [https://www.nist.gov/greenhouse-gas-measurements/urban-test-beds](https://www.nist.gov/greenhouse-gas-measurements/urban-test-beds) 
   </Prose>
 </Block>
 <Block type="wide">
   <Figure>
     <Embed
       height="800"
-      src="http://ghgc-nist-custom-interfaces-develop.s3-website-us-west-2.amazonaws.com/?agency=nist&region=nec&zoom-level=5"
+      src="https://staging.earth.gov/ghgcenter/custom-interfaces/nist-interface/?agency=nist&region=nec&zoom-level=5"
     />
   </Figure>
 </Block>
@@ -134,31 +136,29 @@ layers:
     Measurements are reported on the NOAA/WMO X2007 (CO₂) and X2004A (CH₄) calibration scales. The CO₂ data will be updated to the NOAA/WMO X2019 calibration scale at a future date.
 
     ## Key Publications
-    Karion, A., Callahan, W., Stock, M., Prinzivalli, S., Verhulst, K. R., Kim, J., Salameh, P. K., Lopez-Coto, I., and Whetstone, J. (2020). Greenhouse gas observations from the Northeast Corridor tower network. Earth Syst. Sci. Data, 12, 699–717, [https://doi.org/10.5194/essd-12-699-2020](https://doi.org/10.5194/essd-12-699-2020) 
+    Karion, A., Callahan, W., Stock, M., Prinzivalli, S., Verhulst, K. R., Kim, J., Salameh, P. K., Lopez-Coto, I., & Whetstone, J. (2020). Greenhouse gas observations from the Northeast Corridor tower network. *Earth Syst. Sci. Data*, 12, 699–717. [https://doi.org/10.5194/essd-12-699-2020](https://doi.org/10.5194/essd-12-699-2020) 
     
     ## Other Relevant Publications    
-    Karion, A., Ghosh, S., Lopez-Coto, I., Mueller, K., Gourdji, S., Pitt, J., and Whetstone, J. (2023). Methane Emissions Show Recent Decline but Strong Seasonality in Two US Northeastern Cities. Environmental Science & Technology, 57(48), 19565-19574, [https://doi.org/10.1021/acs.est.3c05050](https://doi.org/10.1021/acs.est.3c05050)      
+    Karion, A., Ghosh, S., Lopez-Coto, I., Mueller, K., Gourdji, S., Pitt, J., & Whetstone, J. (2023). Methane Emissions Show Recent Decline but Strong Seasonality in Two US Northeastern Cities. *Environmental Science & Technology*, 57(48), 19565-19574. [https://doi.org/10.1021/acs.est.3c05050](https://doi.org/10.1021/acs.est.3c05050)      
     
-    Yadav, V., Ghosh, S., Mueller, K., Karion, A., Roest, G., Gourdji, S. M., Lopez-Coto, I., Gurney, K. R., Parazoo, N., Verhulst, K. R., Kim, J., Prinzivalli, S., Fain, C., Nehrkorn, T., Mountain, M., Keeling, R. F., Weiss, R. F., Duren, R., Miller, C. E., and Whetstone, J. (2021). The Impact of COVID-19 on CO₂ Emissions in the Los Angeles and Washington DC/Baltimore Metropolitan Areas. Geophysical Research Letters, 48(11), e2021GL092744, [https://doi.org/10.1029/2021GL092744](https://doi.org/10.1029/2021GL092744)                  
+    Yadav, V., Ghosh, S., Mueller, K., Karion, A., Roest, G., Gourdji, S. M., Lopez-Coto, I., Gurney, K. R., Parazoo, N., Verhulst, K. R., Kim, J., Prinzivalli, S., Fain, C., Nehrkorn, T., Mountain, M., Keeling, R. F., Weiss, R. F., Duren, R., Miller, C. E., & Whetstone, J. (2021). The Impact of COVID-19 on CO₂ Emissions in the Los Angeles and Washington DC/Baltimore Metropolitan Areas. *Geophysical Research Letters*, 48(11), e2021GL092744. [https://doi.org/10.1029/2021GL092744](https://doi.org/10.1029/2021GL092744)                  
 
-    Gourdji, S. M., Karion, A., Lopez-Coto, I., Ghosh, S., Mueller, K. L., Zhou, Y., Williams, C. A., Baker, I. T., Haynes, K. D., and Whetstone, J. R. (2021). A Modified Vegetation Photosynthesis and Respiration Model (VPRM) for the Eastern USA and Canada, Evaluated With Comparison to Atmospheric Observations and Other Biospheric Models. JGR Biogeosciences, 127(1), e2021JG006290, [https://doi.org/10.1029/2021JG006290](https://doi.org/10.1029/2021JG006290)  
+    Gourdji, S. M., Karion, A., Lopez-Coto, I., Ghosh, S., Mueller, K. L., Zhou, Y., Williams, C. A., Baker, I. T., Haynes, K. D., & Whetstone, J. R. (2021). A Modified Vegetation Photosynthesis and Respiration Model (VPRM) for the Eastern USA and Canada, Evaluated With Comparison to Atmospheric Observations and Other Biospheric Models. *JGR Biogeosciences*, 127(1), e2021JG006290. [https://doi.org/10.1029/2021JG006290](https://doi.org/10.1029/2021JG006290)  
 
     ## Learn More
-    - Link to NIST/Urban Testbed story (once available)
-    - Learn more about the [Urban Dome Test Bed System at NIST’s website] (https://www.nist.gov/greenhouse-gas-measurements/urban-test-beds)
+    - Check out the <Link to="stories/baltimore.stories.mdx">US GHG Center feature story </Link>on the NIST Urban GHG Measurements Testbed System
+    - Learn more about the [Urban Test Bed System at NIST’s website](https://www.nist.gov/greenhouse-gas-measurements/urban-test-beds)
 
     ## Acknowledgment
     NIST, AEM/Earth Networks, Inc., Scripps Institution of Oceanography, GCWerks, Inc.
     
     ## License
-    [Creative Commons Attribution Non Commercial 4.0 International](https://creativecommons.org/licenses/by-nc/4.0/legalcode) (CC-BY-NC-4.0)
-
     This data is published for research academic and related non-commercial purposes consistent with NIST’s mandate to further the science and the promulgation of appropriate standards. 
 
     ## Data Stewardship
-    - [Data Workflow](https://us-ghg-center.github.io/ghgc-docs/data_workflow/nec-testbed-co2-and-ch4-concentrations_Data_Flow.html)
-    - [Data Transformation Code](https://us-ghg-center.github.io/ghgc-docs/cog_transformation/noaa-gggrn-concentrations.html)
-    - [US GHG Center Data Intake Processing and Verification Report](https://us-ghg-center.github.io/ghgc-docs/processing_and_verification_reports/nec-testbed-co2-and-ch4-concentrations_Processing%20and%20Verification%20Report.html)
+    - [Data Workflow](https://us-ghg-center.github.io/ghgc-docs/data_workflow/nec-testbed-ghg-concentrations_Data_Flow.html)
+    - [Data Transformation Code](https://us-ghg-center.github.io/ghgc-docs/cog_transformation/nec-testbed-ghg-concentrations.html)
+    - [US GHG Center Data Intake Processing and Verification Report](https://us-ghg-center.github.io/ghgc-docs/processing_and_verification_reports/nec-testbed-ghg-concentrations_Processing%20and%20Verification%20Report.html)
 
     </Prose>
 </Block>
