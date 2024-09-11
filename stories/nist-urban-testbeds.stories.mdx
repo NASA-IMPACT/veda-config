@@ -16,6 +16,9 @@ taxonomy:
        - Urban
 ---
 
+import Quote from "./components/quote";
+
+
 <Block>
     <Prose>
         <p>
@@ -60,6 +63,7 @@ taxonomy:
     </Prose>
 
 </Block>
+
 <Block>
     <Prose>
       # An Inter-Agency Prototype for Greenhouse Gas Monitoring
@@ -67,11 +71,11 @@ taxonomy:
 
         <Block>
             <Prose>
-                <div style={{'background-color': '#ecf0f1', 'padding': '16px', 'font-size': '24px', 'font-weight': 500}}>
-                    <p>To cost-effectively manage urban greenhouse gas emissions, local and regional decision-makers need emissions data that is accurate, timely, and actionable. The goal of Urban-GEMMS is to supply that data and to provide a model that can be replicated across the country.”</p>
-                    <br/>
-                    <p style={{'font-size': 'calc(1rem + var(--base-text-increment,0rem))', 'font-weight': 300}}>- James Whetstone, Special Assistant to the Director for Greenhouse Gas Measurement, NIST</p>
-                </div>
+                <Quote
+                    text={"To cost-effectively manage urban greenhouse gas emissions, local and regional decision-makers need emissions data that is accurate, timely, and actionable. The goal of Urban-GEMMS is to supply that data and to provide a model that can be replicated across the country."}
+                    author="James Whetstone"
+                    subtitle={"Special Assistant to the Director for Greenhouse Gas Measurement, NIST"}
+                />
             </Prose>
         </Block>
 
