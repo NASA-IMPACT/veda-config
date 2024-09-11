@@ -87,7 +87,7 @@ export const dataEngagements = [
     "title": "Data Catalog",
     "desc": "Detailed dataset information for insight into greenhouse gas sources, sinks, emissions, and large events.",
     "img": {
-      "src": new URL('./media/catalog.png', import.meta.url).href,
+      "src": new URL('./media/data_catalog.png', import.meta.url).href,
       "alt": "image of oil refinery"
     },
     "link": {
@@ -100,7 +100,7 @@ export const dataEngagements = [
     "title": "Interactive Map",
     "desc": "The exploration and analysis environment can be used to visually examine data on a customizable map and create a time series of basic statistics.",
     "img": {
-      "src": new URL('./media/explore.png', import.meta.url).href,
+      "src": new URL('./media/interactive_map.png', import.meta.url).href,
       "alt": "image of green wetlands"
     },
     "link": {
@@ -113,7 +113,7 @@ export const dataEngagements = [
     "title": "JupyterHub",
     "desc": "With JupyterHub, users can analyze cloud archives of Earth science data using an interactive environment. Log in or request access here.",
     "img": {
-      "src": new URL('./media/jupyterhub.png', import.meta.url).href,
+      "src": new URL('./media/jupyter_hub.png', import.meta.url).href,
       "alt": "image of colorful polygon against satellite landscape surface in brown"
     },
     "link": {
