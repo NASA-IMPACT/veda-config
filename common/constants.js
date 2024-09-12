@@ -21,10 +21,10 @@ export const focusAreaDatasets = [
       "text": "View more"
     },
     "footer": {
-      "link": {
+      "links": [{
         "title": "Check out relevant datasets",
         "url": `${DATASETS_PATH}?${Actions.TAXONOMY}=${encodeURIComponent(JSON.stringify({ Topics: "anthropogenic-emissions" }))}`
-      }
+      }]
     }
   },
   {
@@ -39,10 +39,10 @@ export const focusAreaDatasets = [
       "text": "View more"
     },
     "footer": {
-      "link": {
+      "links": [{
         "title": "Check out relevant datasets",
         "url": `${DATASETS_PATH}?${Actions.TAXONOMY}=${encodeURIComponent(JSON.stringify({ Topics: "natural-emissions-and-sinks" }))}`
-      }
+      }]
     }
   },
   {
@@ -57,10 +57,10 @@ export const focusAreaDatasets = [
       "text": "View more"
     },
     "footer": {
-      "link": {
+      "links": [{
         "title": "Check out relevant datasets",
         "url": `${DATASETS_PATH}?${Actions.TAXONOMY}=${encodeURIComponent(JSON.stringify({ Topics: "large-emission-events" }))}`
-      }
+      }]
     }
   }
 ];
@@ -85,9 +85,9 @@ export const focusAreasStories = focusAreaDatasets.map((area, index) => {
 export const dataEngagements = [
   {
     "title": "Data Catalog",
-    "desc": "Detailed information for datasets that provides insight into greenhouse gas sources, sinks, emissions, fluxes, and events.",
+    "desc": "Detailed dataset information for insight into greenhouse gas sources, sinks, emissions, and large events.",
     "img": {
-      "src": new URL('./media/catalog.png', import.meta.url).href,
+      "src": new URL('./media/data_catalog.png', import.meta.url).href,
       "alt": "image of oil refinery"
     },
     "link": {
@@ -98,9 +98,9 @@ export const dataEngagements = [
   },
   {
     "title": "Interactive Map",
-    "desc": "The exploration and analysis environment is a space where users can visually examine data on a customizable map and create a time series of basic statistics for dataset layers.",
+    "desc": "The exploration and analysis environment can be used to visually examine data on a customizable map and create a time series of basic statistics.",
     "img": {
-      "src": new URL('./media/explore.png', import.meta.url).href,
+      "src": new URL('./media/interactive_map.png', import.meta.url).href,
       "alt": "image of green wetlands"
     },
     "link": {
@@ -113,7 +113,7 @@ export const dataEngagements = [
     "title": "JupyterHub",
     "desc": "With JupyterHub, users can analyze cloud archives of Earth science data using an interactive environment. Log in or request access here.",
     "img": {
-      "src": new URL('./media/jupyterhub.png', import.meta.url).href,
+      "src": new URL('./media/jupyter_hub.png', import.meta.url).href,
       "alt": "image of colorful polygon against satellite landscape surface in brown"
     },
     "link": {
@@ -127,42 +127,68 @@ export const dataEngagements = [
 export const customInterfaces = [
   {
     "title": "EMIT Methane Plume Viewer",
-    "desc": "Detailed information for methane plumes identified using EMIT.",
+    "desc": "Detailed information for methane plumes identified using EMIT",
     "img": {
       "src": new URL('./media/emit.png', import.meta.url).href,
-      "alt": "Baltimore"
+      "alt": "view of colored shape overlaid on satellite landscape image with boxes of information containing plume details"
     },
     "link": {
       "url": "/data-catalog/emit-ch4plume-v1",
-      "text": "Baltimore"
+      "text": "See more"
     },
     "footer": null
   },
   {
-    "title": "Carbon Dioxide Concentration Viewer",
-    "desc": "Measurements of carbon dioxide from ground locations throughout the US and worldwide are collected by NOAA GML and available for exploring concentration time series.",
+    "title": "NOAA Concentration Viewer",
+    "desc": "Measurements of carbon dioxide and methane concentrations from ground stations throughout the US and worldwide",
     "img": {
       "src": new URL('./media/co2.png', import.meta.url).href,
-      "alt": "Baltimore"
+      "alt": "map showing Mauna Loa location of station with a time series of data below the map"
     },
     "link": {
       "url": "/data-catalog/noaa-gggrn-co2-concentrations",
-      "text": "Baltimore"
+      "text": "See more"
     },
-    "footer": null
+    "footer": {
+      "links": [
+        {
+          "title": "Carbon Dioxide",
+          "url": "/data-catalog/noaa-gggrn-co2-concentrations"
+        },
+        {
+          "title": "Methane",
+          "url": "/data-catalog/noaa-gggrn-ch4-concentrations"
+        }
+      ]
+    }
   },
   {
-    "title": "Methane Concentration Viewer",
-    "desc": "Measurements of methane from ground locations throughout the US and worldwide are collected by NOAA GML and available for exploring concentration time series.",
+    "title": "NIST Tower Data Viewer",
+    "desc": "Measurements of carbon dioxide and methane concentrations from urban tower instruments",
     "img": {
-      "src": new URL('./media/ch4.png', import.meta.url).href,
-      "alt": "Baltimore"
+      "src": new URL('./media/nist-co2-nwb.png', import.meta.url).href,
+      "alt": "map showing Northwest Baltimore, MD location of station with a time series of data below the map"
     },
     "link": {
       "url": "/data-catalog/noaa-gggrn-ch4-concentrations",
-      "text": "Baltimore"
+      "text": "See more"
     },
-    "footer": null
+    "footer": {
+      "links": [
+        {
+          "title": "Indianapolis Flux Experiment (INFLUX)",
+          "url": "/data-catalog/influx-testbed-ghg-concentrations"
+        },
+        {
+          "title": "Los Angeles Megacity Carbon Project",
+          "url": "/data-catalog/lam-testbed-ghg-concentrations"
+        },
+        {
+          "title": "Northeast Corridor (NEC) Urban Test Bed",
+          "url": "/data-catalog/nec-testbed-ghg-concentrations"
+        }
+      ]
+    }
   },
 ]
 

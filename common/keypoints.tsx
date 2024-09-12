@@ -29,10 +29,10 @@ type Data = {
     text: string;
   };
   footer: {
-    link: {
+    links: [{
       title: string;
       url: string;
-    };
+    }];
   } | null;
 };
 
@@ -70,17 +70,18 @@ export default function Keypoints({
             <CardBody>
               <p className="padding-bottom-2">{datum.desc}</p>
             </CardBody>
+            <CardFooter>
             {
-              datum.footer?.link &&
-              <CardFooter>
-                <SmartLink to={datum.footer.link.url} className={`display-flex flex-align-center ${cardType === 'cover' ? 'text-gray-5' : 'veda-color--link'}`}>
-                <CollecticonArrowRight className="margin-right-1"/> <span className="text-underline"> {datum.footer.link.title} </span>
-                </SmartLink>
-              </CardFooter>
+              datum.footer?.links?.[0] && datum.footer?.links?.map(link => (
+                  <SmartLink to={link.url} className={`display-flex flex-align-center ${cardType === 'cover' ? 'text-gray-5' : 'veda-color--link'}`}>
+                  <CollecticonArrowRight className="margin-right-1"/> <span className="text-underline"> {link.title} </span>
+                  </SmartLink>
+              ))
             }
+            </CardFooter>
             </div>
           </div>
-          {!datum.footer?.link && <SmartLink className="position-absolute top-0 left-0 width-full height-full blocklink" to={datum.link.url} />}
+          {!datum.footer?.links && <SmartLink className="position-absolute top-0 left-0 width-full height-full blocklink" to={datum.link.url} />}
         </Card>
 
       ))}
