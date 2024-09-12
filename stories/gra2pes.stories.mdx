@@ -1,7 +1,7 @@
 ---
 id: 'gra2pes'
 name: First-of-its-Kind Dataset Connects Greenhouse Gases and Air Quality 
-description: 'The GReenhouse gas And Air Pollutants Emissions System (GRA²PES), from NOAA and NIST, is the first U.S.-based system to combine greenhouse gas and air quality pollutant sources into a single research database, offering benefits for both climate and public health solutions.'
+description: ''
 # media:
 #   src: ::file ./media/EMIT_AVIRIS3_Data_Insight_Banner_v2 .jpg
 #   alt: Image of plume from EMIT and AVIRIS-3 showing image swath width for each.
@@ -29,14 +29,14 @@ taxonomy:
   <Figure>
     <Embed
       height="800"
-      src="http://ghgc-custom-interfaces-develop-urban-dashboard.s3-website-us-west-2.amazonaws.com/?dataset=gra2pes"
+      src="https://earth.gov/ghgcenter/custom-interfaces/urban-dashboard/?dataset=gra2pes"
     />
   </Figure>
 </Block>
 
 <Block>
     <Prose>
-        Having the GHG and air quality constituents in the same dataset is exceedingly helpful, said Columbia University atmospheric scientist Roisin Commane, the lead on <Link to="/stories/newyork">a New York City project to improve emissions estimates</Link>.
+        Having the GHG and air quality constituents in the same dataset will be exceedingly helpful, said Columbia University atmospheric scientist Roisin Commane, the lead on <Link to="/stories/newyork">a New York City project to improve emissions estimates</Link>.
         
 
         “My work focuses on emissions from the burning of fossil fuels to fingerprint the sources of greenhouse gases,” Commane said. “But, at the moment, we have to use a mish-mash of datasets and we spend way too much time trying to figure out their different ways of representing things.”
@@ -54,7 +54,7 @@ taxonomy:
 
         GRA²PES includes data collected in two pathways. GHG datasets are generally built by estimating the rate of emissions from a range of activities, like energy production, manufacturing, transportation, and agriculture and land use, among others, and then scaling up estimates of total activity levels for a given area. 
 
-        To improve the accuracy of these “bottom-up” methods and arrive at more accurate estimates, new and expanded GHG monitoring programs are working to measure criteria air pollutants directly in the atmosphere using sensitive instruments across a network of stationary and/or mobile platforms by ground and by sky. Airborne programs include [NOAA’s partnership with United Airlines](https://www.noaa.gov/news-release/noaa-and-united-airlines-partner-to-measure-greenhouse-gases-pollutants) to measure GHGs using instruments installed on a commercial airliner and [campaigns flown by NASA and NOAA](https://csl.noaa.gov/projects/ages/) to measure air pollutants over several cities in North America. The data is then fed into models which allow researchers to infer the source of the pollutants, offering a broader picture of atmospheric conditions.
+        To improve the accuracy of these “bottom-up” methods and arrive at more accurate estimates, new and expanded GHG monitoring programs are working to measure criteria air pollutants directly in the atmosphere using sensitive instruments across a network of stationary and/or mobile platforms by ground and by sky. Airborne programs include [NOAA’s partnership with United Airlines](https://www.noaa.gov/news-release/noaa-and-united-airlines-partner-to-measure-greenhouse-gases-pollutants) to measure GHGs using instruments installed on a commercial airliner and [campaigns flown by NASA and NOAA](https://csl.noaa.gov/projects/ages/) to measure air pollutants over several cities in North America. The data is then fed into models that allow researchers to infer the source of the pollutants, offering a broader picture of atmospheric conditions.
 
     </Prose>
 </Block>
@@ -63,7 +63,7 @@ taxonomy:
     <Figure>
         <Image
             src={new URL('./media/otter-aircraft.png', import.meta.url).href}
-            alt="picture of noaa's twin otter aircraft and two men in front of it"
+            alt="two men working on a propeller aircraft on the tarmac"
             attrAuthor="NOAA"
         />
         <Caption>
@@ -76,7 +76,7 @@ taxonomy:
 <Block>
     <Prose>
         ## Doubling the Benefit of Climate Solutions
-        There are potential co-benefits from reducing GHGs that improve air quality while mitigating climate impacts. Take nitrogen oxides and carbon dioxide, important air quality and GHG indicators, respectively, and both byproducts of fossil fuel burning produced mainly from transportation and industrial sources.
+        There are potential co-benefits from reducing GHGs that can improve air quality while also mitigating climate impacts. Take nitrogen oxides and carbon dioxide, important air quality and GHG indicators, respectively, and both byproducts of fossil fuel burning produced mainly from transportation and industrial sources.
 
         “Using GRA²PES, we can see that with the electrification of transportation in New York City, carbon dioxide could be reduced by 43%, while nitrogen oxide emissions could be simultaneously reduced by 62%,” said Brian McDonald, a physical scientist with NOAA’s Chemical Sciences Laboratory whose research focuses on modeling atmospheric composition.
     </Prose>
@@ -84,12 +84,12 @@ taxonomy:
     <Block>
     <Figure>
         <Map
-            datasetId='epa-ch4emission-yeargrid-v2express'
-            layerId='total-methane'
-            dateTime='2020-01-01'
-            compareDateTime='2020-01-01'
-            center={[-97.5, 39.8283]}
-            zoom={2.8}
+            datasetId='gra2pes-ghg-monthgrid-v1'
+            layerId='co2'
+            dateTime='2021-12-01'
+            compareDateTime='2021-12-01'
+            center={[-74.144488, 40.6976312]}
+            zoom={4}
         />
         <Caption>
             [TODO] Just a placeholder - will be updated later 
