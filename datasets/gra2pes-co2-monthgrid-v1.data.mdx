@@ -1,7 +1,7 @@
 ---
 id: gra2pes-ghg-monthgrid-v1
 name: GRA²PES Greenhouse Gas and Air Quality Species 
-description: Monthly, 0.036 degree resolution emissions of fossil fuel carbon dioxide (ffCO₂), carbon monoxide (CO), nitrogen oxide (NOₓ), sulfur dioxide (SO₂), and particulate matter (PM₂.₅) emissions for the year 2021 over the Contiguous United States from the Greenhouse gas And Air Pollutants Emissions System (GRA²PES)
+description: Monthly, 0.036 degree resolution emissions of carbon dioxide (CO₂), carbon monoxide (CO), nitrogen oxide (NOₓ), sulfur dioxide (SO₂), and particulate matter (PM₂.₅) emissions for the year 2021 over the Contiguous United States from the Greenhouse gas And Air Pollutants Emissions System (GRA²PES)
 usage:
   - url: "https://us-ghg-center.github.io/ghgc-docs/cog_transformation/gra2pes-ghg-monthgrid-v1.html"
     label: Notebook showing data transformation to COG for ingest to the US GHG Center
@@ -46,15 +46,15 @@ infoDescription: |
     - Temporal Resolution: Monthly
     - Spatial Extent: Contiguous United States
     - Spatial Resolution: 0.036 x 0.036 degrees
-    - Data Units: Metric tons per kilometer squared per month (tonne/km²/month) for fossil fuel carbon dioxide (ffCO₂), carbon monoxide (CO), nitrogen oxides (NOₓ), sulfur dioxide (SO₂), and particulate matter (PM₂.₅)
+    - Data Units: Metric tons per kilometer squared per month (tonne/km²/month) for carbon dioxide (ffCO₂), carbon monoxide (CO), nitrogen oxides (NOₓ), sulfur dioxide (SO₂), and particulate matter (PM₂.₅)
     - Data Type: Research
     - Data Latency: Updated ~annually
 layers:
   - id: co2
     stacCol: gra2pes-ghg-monthgrid-v1
-    name: Fossil Fuel CO₂ Emissions 
+    name: CO₂ Emissions 
     type: raster
-    description: Estimated monthly total CO₂ emissions from fossil fuel combustion (ffCO₂) across all sectors.
+    description: Estimated monthly total CO₂ emissions across all sectors.
     initialDatetime: newest
     projection:
       id: "equirectangular"
@@ -101,10 +101,9 @@ layers:
       spatialExtent: Global
       temporalResolution: Annual
       unit: tonne CO₂/km²/month
-
     media:
       src: ::file ./media/gra2pes-ghg-monthgrid-v1.thumbnails.total.png
-      alt: Rendered Fossil Fuel CO₂ Emissions
+      alt: Rendered CO₂ Emissions
   - id: co
     stacCol: gra2pes-ghg-monthgrid-v1
     name: CO Emissions 
@@ -158,7 +157,7 @@ layers:
       unit: tonne CO/km²/month
     media:
       src: ::file ./media/gra2pes-ghg-co-monthgrid-v1.thumbnails.total.png
-      alt: Rendered Fossil Fuel CO₂ Emissions
+      alt: Rendered CO₂ Emissions
 
   - id: nox
     stacCol: gra2pes-ghg-monthgrid-v1
@@ -208,9 +207,9 @@ layers:
       unit: tonne NOₓ/km²/month
     media:
       src: ::file ./media/gra2pes-ghg-nox-monthgrid-v1.thumbnails.total.png
-      alt: Rendered Fossil Fuel CO₂ Emissions
+      alt: Rendered CO₂ Emissions
 
-  - id: sox
+  - id: so2
     stacCol: gra2pes-ghg-monthgrid-v1
     name: SO₂ Emissions 
     type: raster
@@ -222,14 +221,14 @@ layers:
       - 0
       - 20
     sourceParams:
-      assets: sox
+      assets: so2
       colormap_name: blues
       rescale:
         - 0
         - 0.5
     compare:
       datasetId: gra2pes-ghg-monthgrid-v1
-      layerId: sox
+      layerId: so2
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
@@ -258,7 +257,7 @@ layers:
       unit: tonne SO₂/km²/month
     media:
       src: ::file ./media/gra2pes-ghg-sox-monthgrid-v1.thumbnails.total.png
-      alt: Rendered Fossil Fuel CO₂ Emissions 
+      alt: Rendered CO₂ Emissions 
 
   - id: pm25
     stacCol: gra2pes-ghg-monthgrid-v1
@@ -308,7 +307,7 @@ layers:
       unit: PM₂.₅/km²/month
     media:
       src: ::file ./media/gra2pes-ghg-pm25-monthgrid-v1.thumbnails.total.png
-      alt: Rendered Fossil Fuel CO₂ Emissions                   
+      alt: Rendered CO₂ Emissions                   
 ---
 
 <Block>
@@ -317,11 +316,11 @@ layers:
     **Temporal Resolution:** Monthly<br />
     **Spatial Extent:** Contiguous United States<br />
     **Spatial Resolution:** 0.036 x 0.036 degrees<br />
-    **Data Units:** Metric tons per kilometer squared per month (tonne/km²/month) for fossil fuel carbon dioxide (ffCO₂), carbon monoxide (CO), nitrogen oxides (NOₓ), sulfur dioxide (SO₂), and particulate matter (PM₂.₅)<br />
+    **Data Units:** Metric tons per kilometer squared per month (tonne/km²/month) for carbon dioxide (CO₂), carbon monoxide (CO), nitrogen oxides (NOₓ), sulfur dioxide (SO₂), and particulate matter (PM₂.₅)<br />
     **Data Type:** Research<br />
     **Data Latency:** Updated ~annually<br />
 
-    The Greenhouse gas And Air Pollutants Emissions System (GRA²PES) dataset at the GHG Center is an aggregated, regridded, monthly high-resolution (0.036 x 0.036°) data product with emissions of both greenhouse gases and air pollutants developed in a consistent framework. The dataset contains emissions over the contiguous United States covering major anthropogenic sectors, including energy, industrial fuel combustion and processes, commercial and residential combustion, oil and gas production, on-road and off-road transportation, etc. (see Table 2 in the Scientific Details section below for a full sector list). Fossil fuel CO₂ (ffCO₂) emissions are developed along with those of air pollutants including CO, NOₓ, SO₂, and PM₂.₅ with consistency in spatial and temporal distributions. Emissions by sectors are reported as column totals in units of metric tons per km² per month. Spatial-temporal surrogates are developed to distribute CO₂ emissions to grid cells to keep consistency between greenhouse gases and air quality species. The current version of GRA²PES is for 2021. Long-term emissions and more greenhouse gas species (e.g., methane) are under development and will be added in the future. 
+    The Greenhouse gas And Air Pollutants Emissions System (GRA²PES) dataset at the GHG Center is an aggregated, regridded, monthly high-resolution (0.036 x 0.036°) data product with emissions of both greenhouse gases and air pollutants developed in a consistent framework. The dataset contains emissions over the contiguous United States covering major anthropogenic sectors, including energy, industrial fuel combustion and processes, commercial and residential combustion, oil and gas production, on-road and off-road transportation, etc. Carbon dioxide (CO₂) emissions are developed along with those of air pollutants including CO, NOₓ, SO₂, and PM₂.₅ with consistency in spatial and temporal distributions. Emissions by sectors are reported as column totals in units of metric tons per km² per month. Spatial-temporal surrogates are developed to distribute CO₂ emissions to grid cells to keep consistency between greenhouse gases and air quality species. The current version of GRA²PES is for 2021. Long-term emissions and more greenhouse gas species (e.g., methane) are under development and will be added in the future. 
 
     GRA²PES is a collaborative research project, aiming to strengthen the community’s ability to consistently model and map greenhouse gas and air pollutant emissions and associated uncertainties across the contiguous United States. GRA²PES builds off of previously developed inventories such as the Fuel-based Oil and Gas (FOG) inventory (Gorchov Negron et al., 2018), and the Fuel-based Inventory of Vehicle Emissions (FIVE) (McDonald et al., 2014, McDonald et al., 2018a), the Volatile Chemical Products (VCPs) inventory (McDonald et al., 2018b). These inventories have been updated over time; VCPs in Coggon et al., 2021, FIVE in Harkins et al., 2021, FOG in Francoeur et al., 2021. A full anthropogenic air quality inventory, with near-real-time adjustments was also developed in He et al., 2024. These inventories that GRA²PES builds off of have been extensively evaluated in air quality modeling studies and compared to satellite, aircraft and ground observations in multiple years (McDonald et al., 2018a, Li et al., 2021, He et al., 2024, Zhu et al., 2024).  
 
@@ -334,18 +333,18 @@ layers:
     
     ## Version History
     The current version is V1.
-    - August 2024, the first version of GRA²PES data with ffCO₂ and air pollutants is developed and deployed to the NIST data center.
+    - August 2024, the first version of GRA²PES data with CO₂ and air pollutants is developed and deployed to the NIST data center.
 
     ## Dataset Accuracy
-    Quantifying emission uncertainties is difficult because of the complexity in data sources and emissions processing. Comprehensive evaluations are conducted to provide insights into the fossil fuel CO₂ emissions accuracy of GRA²PES. Through comparing GRA²PES with other commonly used climate inventories, ffCO₂ emissions agree within 1% of the ensembled average emission estimates at a national level. Higher discrepancies are found over state and urban levels. Model evaluation of the GRA²PES inventory suggests ~20% underestimation in ffCO₂ emissions against ¹⁴C-based ffCO₂ observations over Los Angeles, which is comparable to the uncertainties of other inventories. Details of emission evaluations of GRA²PES and associated uncertainties are discussed in Lyu et al. (to be submitted). 
+    Quantifying emission uncertainties is difficult because of the complexity in data sources and emissions processing. Comprehensive evaluations are conducted to provide insights into the CO₂ emissions accuracy of GRA²PES. Through comparing GRA²PES with other commonly used climate inventories, ffCO₂ emissions agree within 1% of the ensembled average emission estimates at a national level. Higher discrepancies are found over state and urban levels. Model evaluation of the GRA²PES inventory suggests ~20% underestimation in ffCO₂ emissions against ¹⁴C-based ffCO₂ observations over Los Angeles, which is comparable to the uncertainties of other inventories. Details of emission evaluations of GRA²PES and associated uncertainties are discussed in Lyu et al. (to be submitted). 
 
     ## Disclaimer
     This dataset has been transformed from the original format (NetCDF) into Cloud Optimized GeoTIFF ([COG](https://www.cogeo.org/)) for display in the US GHG Center. Careful quality checks are used to ensure data transformation has been performed correctly.
 
     ## Scientific Details
-    The GHG Center provides a subset of the native GRA²PES data, which has been aggregated to monthly column totals and regridded. The native GRA²PES dataset has weekday-weekend and diurnal profiles applied by sources to allocate emissions from month to hour, at 4 km x 4 km spatial resolution. These data are reported in NetCDF format, with 20 vertical layers based on stack information where applicable, for 95 (excluding methane) species, and 18 sectors (see Table 2 below), as well as international emissions in the domain. Total emissions for all sectors combined are also provided. Please visit [NIST’s data center](https://doi.org/10.18434/mds2-3520) to access the native dataset and detailed documentation, including a listing of all 95 species and vertical layer descriptions. 
+    The GHG Center provides a subset of the native GRA²PES data, which has been aggregated to monthly column totals and regridded. The native GRA²PES dataset has weekday-weekend and diurnal profiles applied by sources to allocate emissions from month to hour, at 4 km x 4 km spatial resolution. These data are reported in NetCDF format, with 20 vertical layers based on stack information where applicable, for 95 (excluding methane) species, and 18 sectors, as well as international emissions in the domain. Total emissions for all sectors combined are also provided. Please visit [NIST’s data center](https://doi.org/10.18434/mds2-3520) to access the native dataset and detailed documentation, including a listing of all 95 species, sectors and vertical layer descriptions. 
 
-    GRA²PES emissions are developed for both greenhouse gases and air pollutants under a consistent framework. For fuel combustion sources, fuel combustion and CO₂ emission factors at a state level are estimated, with facility-level information integrated. Emissions of electricity generation units are developed by matching point sources from different inventories. Air pollutant emissions derived from the national emissions inventory are used to develop spatial-temporal surrogates to distribute CO₂ emissions to 4km x 4km grid cells. A series of emission inventories that have been comprehensively evaluated based on field campaigns from oil and gas production, on-road vehicles, cooking and volatile chemical products are integrated into GRA²PES (see Table 2 below).
+    GRA²PES emissions are developed for both greenhouse gases and air pollutants under a consistent framework. For fuel combustion sources, fuel combustion and CO₂ emission factors at a state level are estimated, with facility-level information integrated. Emissions of electricity generation units are developed by matching point sources from different inventories. Air pollutant emissions derived from the national emissions inventory are used to develop spatial-temporal surrogates to distribute CO₂ emissions to 4 km x 4 km grid cells. A series of emission inventories that have been comprehensively evaluated based on field campaigns from oil and gas production, on-road vehicles, cooking and volatile chemical products are integrated into GRA²PES.
 
     **Table 1:** Species List (GHG Center data). For a full list of species included in the native dataset, please visit the [NIST data center](https://doi.org/10.18434/mds2-3520). 
     
@@ -361,8 +360,8 @@ layers:
       </thead>
       <tbody>
         <tr>
-          <td style={{ border: '1px solid black', padding: '8px' }}>ffCO₂</td>
-          <td style={{ border: '1px solid black', padding: '8px' }}>Fossil Fuel Carbon Dioxide</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}>CO₂</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}>Carbon Dioxide</td>
           <td style={{ border: '1px solid black', padding: '8px' }}>tonne CO₂/km²/month</td>
         </tr>
         <tr>
@@ -389,126 +388,6 @@ layers:
     </table>
   </div>
 </Figure>
-
-    **Table 2:** Full list of sectors (with references).
-<figure style={{ display: 'block' }}>
-  <div className='dataset-comparison'>
-    <table style={{ width: '100%', borderCollapse: 'collapse' }}>
-      <thead>
-        <tr>
-          <th style={{ border: '1px solid black', padding: '8px' }}>Sector</th>
-          <th style={{ border: '1px solid black', padding: '8px' }}>ffCO₂ Data Source</th>
-          <th style={{ border: '1px solid black', padding: '8px' }}>Air Quality Data Source</th>
-          <th style={{ border: '1px solid black', padding: '8px' }}>Publications</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td style={{ border: '1px solid black', padding: '8px' }}>Industrial fuel</td>
-          <td style={{ border: '1px solid black', padding: '8px' }}>GHGI17 + GHGRP</td>
-          <td style={{ border: '1px solid black', padding: '8px' }}>NEI17 + GHGRP</td>
-          <td style={{ border: '1px solid black', padding: '8px' }}>He et al., 2024</td>
-        </tr>
-        <tr>
-          <td style={{ border: '1px solid black', padding: '8px' }}>Industrial processes</td>
-          <td style={{ border: '1px solid black', padding: '8px' }}>GHGRP</td>
-          <td style={{ border: '1px solid black', padding: '8px' }}>NEI17 + GHGRP</td>
-          <td style={{ border: '1px solid black', padding: '8px' }}>He et al., 2024</td>
-        </tr>
-        <tr>
-          <td style={{ border: '1px solid black', padding: '8px' }}>Commercial</td>
-          <td style={{ border: '1px solid black', padding: '8px' }}>GHGI17</td>
-          <td style={{ border: '1px solid black', padding: '8px' }}>NEI17</td>
-          <td style={{ border: '1px solid black', padding: '8px' }}>He et al., 2024</td>
-        </tr>
-        <tr>
-          <td style={{ border: '1px solid black', padding: '8px' }}>Residential</td>
-          <td style={{ border: '1px solid black', padding: '8px' }}>GHGI17</td>
-          <td style={{ border: '1px solid black', padding: '8px' }}>NEI17</td>
-          <td style={{ border: '1px solid black', padding: '8px' }}>He et al., 2024</td>
-        </tr>
-        <tr>
-          <td style={{ border: '1px solid black', padding: '8px' }}>Railroad</td>
-          <td style={{ border: '1px solid black', padding: '8px' }}>EIA</td>
-          <td style={{ border: '1px solid black', padding: '8px' }}>NEI17</td>
-          <td style={{ border: '1px solid black', padding: '8px' }}>He et al., 2024</td>
-        </tr>
-        <tr>
-          <td style={{ border: '1px solid black', padding: '8px' }}>Electricity Generating Unit (EGU)</td>
-          <td style={{ border: '1px solid black', padding: '8px' }}>CEMS (CO₂)</td>
-          <td style={{ border: '1px solid black', padding: '8px' }}>NEI17 + CEMS (NOₓ, SO₂ only)</td>
-          <td style={{ border: '1px solid black', padding: '8px' }}>He et al., 2024</td>
-        </tr>
-        <tr>
-          <td style={{ border: '1px solid black', padding: '8px' }}>Airport</td>
-          <td style={{ border: '1px solid black', padding: '8px' }}>N/A</td>
-          <td style={{ border: '1px solid black', padding: '8px' }}>NEI17</td>
-          <td style={{ border: '1px solid black', padding: '8px' }}>He et al., 2024</td>
-        </tr>
-        <tr>
-          <td style={{ border: '1px solid black', padding: '8px' }}>Waste</td>
-          <td style={{ border: '1px solid black', padding: '8px' }}>N/A</td>
-          <td style={{ border: '1px solid black', padding: '8px' }}>NEI17</td>
-          <td style={{ border: '1px solid black', padding: '8px' }}></td>
-        </tr>
-        <tr>
-          <td style={{ border: '1px solid black', padding: '8px' }}>Agricultural</td>
-          <td style={{ border: '1px solid black', padding: '8px' }}>N/A</td>
-          <td style={{ border: '1px solid black', padding: '8px' }}>NEI17</td>
-          <td style={{ border: '1px solid black', padding: '8px' }}></td>
-        </tr>
-        <tr>
-          <td style={{ border: '1px solid black', padding: '8px' }}>Fugitives</td>
-          <td style={{ border: '1px solid black', padding: '8px' }}>N/A</td>
-          <td style={{ border: '1px solid black', padding: '8px' }}>NEI17</td>
-          <td style={{ border: '1px solid black', padding: '8px' }}>He et al., 2024</td>
-        </tr>
-        <tr>
-          <td style={{ border: '1px solid black', padding: '8px' }}>Oil and Gas</td>
-          <td style={{ border: '1px solid black', padding: '8px' }}>GHGRP + FOG</td>
-          <td style={{ border: '1px solid black', padding: '8px' }}>GHGRP + NEI17 + FOG</td>
-          <td style={{ border: '1px solid black', padding: '8px' }}>Gorchov Negron et al., 2018, Francoeur et al., 2021</td>
-        </tr>
-        <tr>
-          <td style={{ border: '1px solid black', padding: '8px' }}>On-road Gasoline</td>
-          <td style={{ border: '1px solid black', padding: '8px' }} rowSpan="3" >FIVE</td>
-          <td style={{ border: '1px solid black', padding: '8px' }} rowSpan="3" >FIVE</td>
-          <td style={{ border: '1px solid black', padding: '8px' }} rowSpan="3" >McDonald et al., 2014, McDonald et al., 2018a, Harkins et al., 2021</td>
-        </tr>
-        <tr>
-          <td style={{ border: '1px solid black', padding: '8px' }}>On-road Diesel</td>
-        </tr>
-        <tr>
-          <td style={{ border: '1px solid black', padding: '8px' }}>Nonroad</td>
-        </tr>
-        <tr>
-          <td style={{ border: '1px solid black', padding: '8px' }}>Volatile chemical products (VCP)</td>
-          <td style={{ border: '1px solid black', padding: '8px' }}>N/A</td>
-          <td style={{ border: '1px solid black', padding: '8px' }}>VCP</td>
-          <td style={{ border: '1px solid black', padding: '8px' }}>McDonald et al., 2018b, Coggon et al., 2021, He et al., 2024</td>
-        </tr>
-        <tr>
-          <td style={{ border: '1px solid black', padding: '8px' }}>Cooking</td>
-          <td style={{ border: '1px solid black', padding: '8px' }}>N/A</td>
-          <td style={{ border: '1px solid black', padding: '8px' }}>Observations + gridded population</td>
-          <td style={{ border: '1px solid black', padding: '8px' }}>Coggon et al., 2024, Zhu et al., 2024 (under review)</td>
-        </tr>
-        <tr>
-          <td style={{ border: '1px solid black', padding: '8px' }}>Shipping</td>
-          <td style={{ border: '1px solid black', padding: '8px' }}>CAMSv4.2</td>
-          <td style={{ border: '1px solid black', padding: '8px' }}>CAMSv4.2</td>
-          <td style={{ border: '1px solid black', padding: '8px' }}>Granier et al., 2019</td>
-        </tr>
-        <tr>
-          <td style={{ border: '1px solid black', padding: '8px' }}>International</td>
-          <td style={{ border: '1px solid black', padding: '8px' }}>CAMSv4.2</td>
-          <td style={{ border: '1px solid black', padding: '8px' }}>CAMSv4.2</td>
-          <td style={{ border: '1px solid black', padding: '8px' }}>Granier et al., 2019</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</figure>
 
     ## Key Publications
     Lyu, C., Harkins, C., Li, M., Mueller, K., McDonald, B. et al.: Developing the United States GReenhouse gas And Air Pollutants Emissions System (GRA²PES), *to be submitted*.
