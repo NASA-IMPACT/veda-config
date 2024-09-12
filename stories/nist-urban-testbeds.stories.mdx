@@ -55,10 +55,15 @@ import Quote from "./components/quote";
 
         <p>The high accuracy observations collected at the testbed sites can help researchers identify specific emissions sources such as neighborhoods, transportation networks, or landfills, and to track how those emissions change over time. This information is critically important for decision-makers seeking to track progress in their efforts to reduce greenhouse gas emissions.</p>
         <Figure>
-            <Embed
-                src={new URL('./media/NIST_Greenhouse_Gas_Measurement_Program_Video_Download.mp4', import.meta.url).href}
+            <video
                 height="400"
-            />
+                controls
+                autoPlay
+                muted
+                style={{ textAlign: "center" }}
+            >
+                <source src={new URL('./media/NIST_Greenhouse_Gas_Measurement_Program_Video_Download.mp4', import.meta.url).href} type="video/mp4"/>
+            </video>
             <Caption>
                 NIST’s Greenhouse Gas Measurements Program develops advanced tools for accurately measuring emissions so industries and governments will have the information they need to manage emissions effectively. Video by [NIST](https://www.nist.gov/).
             </Caption>
