@@ -173,7 +173,22 @@ export const customInterfaces = [
       "url": "/data-catalog/noaa-gggrn-ch4-concentrations",
       "text": "See more"
     },
-    "footer": null
+    "footer": {
+      "links": [
+        {
+          "title": "Indianapolis Flux Experiment (INFLUX)",
+          "url": "/data-catalog/influx-testbed-ghg-concentrations"
+        },
+        {
+          "title": "Los Angeles Megacity Carbon Project",
+          "url": "/data-catalog/lam-testbed-ghg-concentrations"
+        },
+        {
+          "title": "Northeast Corridor (NEC) Urban Test Bed",
+          "url": "/data-catalog/nec-testbed-ghg-concentrations"
+        }
+      ]
+    }
   },
 ]
 
