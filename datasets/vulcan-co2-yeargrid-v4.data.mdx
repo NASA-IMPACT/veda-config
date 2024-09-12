@@ -561,8 +561,8 @@ layers:
         - 0
         - 500
     compare:
-      datasetId: vulcan-ffco2-yeargrid-v4
-      layerId: vulcan-res-co2
+      datasetId: vulcan-ffco2-elc-res-yeargrid-v4
+      layerId: vulcan-elc-res-co2
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
@@ -675,7 +675,7 @@ layers:
   <Figure>
     <Embed
       height="800"
-      src="http://ghgc-custom-interfaces-develop-urban-dashboard.s3-website-us-west-2.amazonaws.com/?dataset=vulcan"
+      src="https://earth.gov/ghgcenter/custom-interfaces/urban-dashboard/?dataset=vulcan"
     />
   </Figure>
 </Block>
