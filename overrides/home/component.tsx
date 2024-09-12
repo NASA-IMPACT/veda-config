@@ -84,7 +84,7 @@ export default function HomeComponent() {
     <Banner />
       <GridContainer containerSize="widescreen">
         <Grid col={9} offset={2}>
-          <h1 className="font-heading-2xl margin-y-5">Updates from the U.S. Greenhouse Gas Center</h1>
+          <h1 className="font-heading-2xl margin-y-5">Explore the Latest Updates</h1>
           {/* <p className="margin-bottom-4"> Check out the featured content </p> */}
         </Grid>
         
@@ -95,7 +95,7 @@ export default function HomeComponent() {
             The U.S. Greenhouse Gas Center opens up access to trusted data on
             greenhouse gases. This&nbsp;multi-agency effort consolidates
             greenhouse gas information from observations and models to create a unified source for U.S. government and other datasets.
-            The&nbsp;goal of the US GHG Center is to provide decision-makers with
+            The&nbsp;goal of the US GHG Center is to provide decision makers with
             one location for data and analysis.
           </p>
           <Grid row>
