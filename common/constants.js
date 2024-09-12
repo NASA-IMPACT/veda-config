@@ -168,15 +168,15 @@ export const customInterfaces = [
 
 export const cities = [
   {
-    "title": "Baltimore Presents Unique Opportunity for Government & Academic Research Partners",
-    "desc": "Description",
+    "title": "Baltimore, A Nexus for Government and  Academic Emissions Research",
+    "desc": "Scientists from U.S. government agencies and regional universities have come together for cooperative research projects, helping to expand environmental monitoring capabilities and improve resident wellbeing across the Baltimore metropolitan region in line with the city’s ambitious climate action plans.",
     "img": {
       "src": "https://cdn.britannica.com/90/77990-050-E6087086/Inner-Harbor-skyline-Baltimore-Maryland.jpg",
       "alt": "Baltimore"
     },
     "link": {
       "url": "/stories/baltimore",
-      "text": "Baltimore"
+      "text": "See More"
     },
     "footer": null
   },
@@ -189,33 +189,33 @@ export const cities = [
     },
     "link": {
       "url": "/stories/newyork",
-      "text": "New York"
+      "text": "See More"
     },
     "footer": null
   },
   {
-    "title": "San Francisco Scientists Use Low-Cost Sensor Network to Track Local Emissions Progress",
-    "desc": "A research team from the University of California, Berkeley, has developed a cost-effective, shoebox-sized sensor and dispersed 57 throughout the San Francisco Bay Area to track pollutants in real time and monitor progress for the city’s carbon reduction targets. The project is expanding to new cities.",
+    "title": "Scientists Use Low-Cost Sensor Network to Track San Francisco Area Emissions",
+    "desc": "Cities have implemented a variety of measures to meet greenhouse-gas-emissions goals, including expanding renewable energy use and incentivizing residents to drive electric cars. But a challenge for city leaders is measuring if policies are working. One solution is a network of low-cost sensors, scientists say.",
     "img": {
       "src": "https://cdn.britannica.com/13/77413-050-95217C0B/Golden-Gate-Bridge-San-Francisco.jpg",
       "alt": "San Francisco"
     },
     "link": {
       "url": "/stories/sanfrancisco",
-      "text": "San Francisco"
+      "text": "See More"
     },
     "footer": null
   },
   {
-    "title": "Satellite Data Helps to Pinpoint CO₂ Emissions Changes in Los Angeles",
-    "desc": "Description",
+    "title": "Scientists Use Satellite Data to Measure Impact of Los Angeles Climate Solutions",
+    "desc": "From its vantage point on the International Space Station, NASA’s Orbiting Carbon Observatory-3 provides near-real time measurements of carbon dioxide concentrations for wide regions across the globe. Scientists are using the data to examine the impact of efforts to reduce emissions in Los Angeles.",
     "img": {
       "src": "https://i.natgeofe.com/n/110d522c-7c56-4185-ba59-3162a78e3abc/1_3x2.jpg",
       "alt": "Los Angeles"
     },
     "link": {
       "url": "/stories/losangeles",
-      "text": "Los Angeles"
+      "text": "See More"
     },
     "footer": null
   }
@@ -236,14 +236,14 @@ export const keyUrbanDatasets = [
     "footer": null
   },
   {
-    "title": "Dataset 2",
-    "desc": "Dataset 2",
+    "title": "First-of-its-Kind Dataset Connects Greenhouse Gases and Air Quality",
+    "desc": "The GReenhouse gas And Air Pollutants Emissions System (GRA2PES), from NOAA and NIST, is the first U.S.-based system to combine greenhouse gas and air quality pollutant sources into a single database, offering benefits for both climate and public health solutions.",
     "img": {
       "src": "https://placehold.co/600x400?text=Placeholder",
       "alt": "Placeholder"
     },
     "link": {
-      "url": "/stories/vulcan",
+      "url": "/stories/gra2pes",
       "text": "View more"
     },
     "footer": null
@@ -256,7 +256,7 @@ export const keyUrbanDatasets = [
       "alt": "image from INFLUX project"
     },
     "link": {
-      "url": "",
+      "url": "/stories/urban-testbed",
       "text": "View more"
     },
     "footer": null
