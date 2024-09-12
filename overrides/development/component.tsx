@@ -53,7 +53,7 @@ export default function Component() {
       </ContributeCta>
       <p><strong>Disclaimer:</strong></p>
       <p>
-      This U.S. Greenhouse Gas Center contains data from various US government agencies and other organizations. Some of the datasets available are from research efforts and others consist of regulatory data. Data users are advised to examine each dataset landing page for important information, documentation, disclaimers, acknowledgements and citations. 
+      This U.S. Greenhouse Gas Center contains data from various US government agencies and other organizations. Some of the datasets available are from research efforts and others consist of regulatory data. Data users are advised to examine each dataset landing page for important information, documentation, disclaimers, acknowledgments and citations. 
       </p> 
       <p>
       The US GHG Center is fully open and data can be used freely as specified by individual dataset disclaimers. Please acknowledge the dataset and data producers if sharing data, images, or information. 
