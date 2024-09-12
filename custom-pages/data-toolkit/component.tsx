@@ -60,7 +60,7 @@ export default function Component() {
                             <CollecticonTextBlock size='xlarge' color='#082a64' className="grid-col-auto" />
                         </Grid>
                         <Grid col='fill' className="display-flex flex-align-center margin-bottom-2">
-                            <span className="margin-left-4 font-sans-md"> Read more about the US GHG Center news, trainings, and workshop opportunities on the <Link to="/news-and-events">News and Events page.</Link></span>
+                            <span className="margin-left-4 font-sans-md"> Read more about the U.S. Greenhouse Gas Center news, trainings, and workshop opportunities on the <Link to="/news-and-events">News and Events page.</Link></span>
                         </Grid>
                     </Grid>
                     <Grid row>

@@ -42,13 +42,13 @@ export default function HomeComponent() {
       
         <section>
           <Title>Core Science Focus Areas</Title>
-          <p className="margin-top-2 font-sans-md margin-bottom-2">The US GHG Center targets three greenhouse gas areas of study, as shown below. For the latest, <a href="/public/subscription/index.html">subscribe to our email newsletter</a>.</p>
+          <p className="margin-top-2 font-sans-md margin-bottom-2">The U.S. Greenhouse Gas Center targets three greenhouse gas areas of study, as shown below. For the latest, <a href="/public/subscription/index.html">subscribe to our email newsletter</a>.</p>
           <Keypoints data={focusAreasStories} />
         </section>
 
         <section>
           <Title>What Else Do You Need? Let Us Help You!</Title>
-          <p className="margin-top-2 font-sans-md margin-bottom-2">Do you have a need, idea, or suggestion? Contact the GHG Center team using the “Contact Us” button at the top or bottom of every page.</p>
+          <p className="margin-top-2 font-sans-md margin-bottom-2">Do you have a need, idea, or suggestion? Contact the U.S. Greenhouse Gas Center team using the “Contact Us” button at the top or bottom of every page.</p>
         </section>
       </GridContainer>
     </div>
