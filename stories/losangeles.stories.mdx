@@ -16,6 +16,8 @@ taxonomy:
       - Urban
 ---
 
+import Quote from "./components/quote";
+
 <Block>
     <Prose>
         
@@ -43,7 +45,11 @@ taxonomy:
           caption="The Baltimore Social and Environmental Collaborative (BSEC) currently has 45 air quality monitors located around Baltimore" 
           width="600"
         />
-        <p>“We are able to disentangle the emission hotspots so that they can be targeted for future reductions,” Wu said.</p>
+        <Quote
+          text={"We are able to disentangle the emission hotspots so that they can be targeted for future reductions."}
+          author="Wu"
+          subtitle={"Special Assistant to the Director for Greenhouse Gas Measurement, NIST"}
+          />
         <p>More recently, Dustin Roten of NASA’s Jet Propulsion Laboratory in Southern California combined the OCO-3 maps with a dataset of fossil fuel carbon dioxide emissions from North Arizona University’s Vulcan Project dataset. This allowed his team to identify emissions coming specifically from factories, ships and roadways, another step in digging greater detail out of the data.</p>
         <p>Because OCO-3 is continually sending down new scans, scientists can search for patterns over time. For example, Roten examined over 30 OCO-3 scans of Los Angeles from 2020 to 2022 to analyze how the Covid-19 pandemic might have impacted emissions from different sectors. As expected, he found that with fewer cars on the road, emissions fell. Additionally, the data showed an increase in shipping emissions at the port of Los Angeles during this time. This increase coincided with a backlog of freight ships idling off the city’s coast, belching out smoke and greenhouse gases. </p>
         <Embed
@@ -51,8 +57,11 @@ taxonomy:
           height="400"
         />
         <p>Roten hopes to further develop these techniques to offer a way to test how well reduction strategies are working. For example, he said, analysis by scientists could quantify the effects of safer bike lanes, faster bus routes, different commuting patterns, or even new metro systems on carbon dioxide emissions.</p>
-        <p>“There is a broad interest in putting the satellite and inventory data together,” Roten said. “It will create a nice, robust system that will let us observe the results of CO2 reduction policies in near-real time.”</p>
-
+        <Quote
+          text={"There is a broad interest in putting the satellite and inventory data together. It will create a nice, robust system that will let us observe the results of CO2 reduction policies in near-real time."}
+          author="Roten"
+          subtitle={"Special Assistant to the Director for Greenhouse Gas Measurement, NIST"}
+          />
     </Prose>
 
 </Block>
@@ -62,7 +71,7 @@ taxonomy:
         ## Resources for data users
         Detailed dataset information: [OCO-3 Data Center](https://ocov3.jpl.nasa.gov/science/oco-3-data-center/)
 
-        Detailed information on NIST’s Los Angeles Megacities (LAM) dataset: [Link to dataset overview page]
+        Detailed information on NIST’s <Link to="/data-catalog/lam-testbed-ghg-concentrations">Los Angeles Megacities (LAM)</Link> dataset
     </Prose>
 
 </Block>
