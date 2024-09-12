@@ -36,16 +36,19 @@ import Quote from "./components/quote";
         <p>Traditionally, researchers generate estimates of GHG emissions using complex “bottom-up” methods, aggregating emissions from sources like highway traffic, manufacturing, and agriculture, among others. Scientists then take that data and apply computational power and physics-based principles to create sophisticated models capable of representing emissions across regional or national scales.</p>
 
         <p>But an even more complete picture comes into play when scientists combine “bottom-up” information with emissions estimates based on “top-down” methods. “Top-down” estimates involve taking direct measurements of GHG concentrations in Earth’s atmosphere, studying subtle changes that may be associated with weather and seasonal variations, and making inferences about the reasons for observed fluctuations.</p>
-
-        <Image 
-            src={new URL('./media/US_INC.png', import.meta.url).href}
-            alt="street view of a city with tower in distance showing image of instruments on tower" 
-            align="left"
-            attrAuthor="INFLUX project / NIST"
-            attrUrl="https://bpb-us-e1.wpmucdn.com/sites.psu.edu/dist/9/4276/files/2023/09/US_INC.png "
-            caption="Indianapolis is the site of NIST’s longest-running urban testbed, which began in 2010 as the Indianapolis Flux Experiment, also known as INFLUX. These long-standing atmospheric measurements offer a unique and valuable opportunity to assess changes and trends in greenhouse gases around Indianapolis."
-            width="600"
-        />
+        <Figure>
+            <Image
+                src={new URL('./media/US_INC.png', import.meta.url).href}
+                alt="street view of a city with tower in distance showing image of instruments on tower"
+                align="left"
+                attrAuthor="INFLUX project / NIST"
+                attrUrl="https://bpb-us-e1.wpmucdn.com/sites.psu.edu/dist/9/4276/files/2023/09/US_INC.png "
+                width="100%"
+            />
+            <Caption>
+                Indianapolis is the site of NIST’s longest-running urban testbed, which began in 2010 as the Indianapolis Flux Experiment, also known as INFLUX. These long-standing atmospheric measurements offer a unique and valuable opportunity to assess changes and trends in greenhouse gases around Indianapolis.
+            </Caption>
+        </Figure>
 
         <p>Comparing the two helps reduce uncertainties and improve the overall accuracy of greenhouse gas emissions estimates. This is where the NIST testbed system comes in. It is designed to aid researchers in combining top-down and bottom-up approaches in key regions.</p>
 
@@ -65,7 +68,9 @@ import Quote from "./components/quote";
                 <source src={new URL('./media/NIST_Greenhouse_Gas_Measurement_Program_Video_Download.mp4', import.meta.url).href} type="video/mp4"/>
             </video>
             <Caption>
-                NIST’s Greenhouse Gas Measurements Program develops advanced tools for accurately measuring emissions so industries and governments will have the information they need to manage emissions effectively. Video by [NIST](https://www.nist.gov/).
+                <p>
+                    NIST’s Greenhouse Gas Measurements Program develops advanced tools for accurately measuring emissions so industries and governments will have the information they need to manage emissions effectively. Video by [NIST](https://www.nist.gov/).
+                </p>
             </Caption>
         </Figure>
     </Prose>
