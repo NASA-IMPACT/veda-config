@@ -69,7 +69,7 @@ layers:
         - 100
     compare:
       datasetId: gra2pes-ghg-monthgrid-v1
-      layerId: co2
+      layerId: nox
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
