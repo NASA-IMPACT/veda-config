@@ -20,10 +20,7 @@ export default function Component() {
   return (
     <FoldProse>
       <p>
-      The current US GHG Center portal reflects a second beta release (v{process.env.APP_VERSION}) available May 6, 2024. 
-      More releases are planned throughout 2024 as new datasets and features are added. 
-      While in beta mode, the portal will undergo design changes and content additions. 
-      The currently available greenhouse gas information is accurate and ready to be used for research and decision making.
+      The current US GHG Center portal reflects a second beta release (v{process.env.APP_VERSION}) available September 19, 2024. More releases are planned throughout 2024 as new datasets and features are added. While in beta mode, the portal will undergo design changes and content additions. The currently available greenhouse gas information is accurate and ready to be used for research and decision making.
       </p>
       <p>
       We welcome your feedback to improve the US GHG Center. To share your thoughts, please click the Contact Us 
@@ -54,6 +51,16 @@ export default function Component() {
           <CollecticonBrandGithub /> Releases
         </Button>
       </ContributeCta>
-    </FoldProse>
+      <p><strong>Disclaimer:</strong></p>
+      <p>
+      This U.S. Greenhouse Gas Center contains data from various US government agencies and other organizations. Some of the datasets available are from research efforts and others consist of regulatory data. Data users are advised to examine each dataset landing page for important information, documentation, disclaimers, acknowledgements and citations. 
+      </p> 
+      <p>
+      The US GHG Center is fully open and data can be used freely as specified by individual dataset disclaimers. Please acknowledge the dataset and data producers if sharing data, images, or information. 
+      </p>  
+      <p>
+      Every effort has been made to carefully incorporate accurate and curated data in the Center. Dataset providers reserve the right to make corrections to data based on recalibration of standard gases or for other reasons deemed scientifically justified. Providers of the datasets included in the US GHG Center are not responsible for user results and conclusions based on the use of products without regard to this disclaimer. Content may change over time as the Center is still in development.
+      </p>                   
+    </FoldProse>    
   );
 }

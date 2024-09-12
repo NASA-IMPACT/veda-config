@@ -1,0 +1,104 @@
+---
+id: "urban-testbed"
+name: "Innovative Urban Testbeds to Advance Emissions Estimates"
+description: "NIST’s Urban GHG Measurements Testbed System uses ground-based observing networks together with aircraft and satellite data, to diagnose accuracy of local emissions estimates and to advance transformative monitoring and measurement methods for the future."
+isHidden: false
+media:
+   src: "https://bpb-us-e1.wpmucdn.com/sites.psu.edu/dist/9/4276/files/2023/09/US_INC.png"
+   alt: street view of a city with tower in distance showing image of instruments on tower
+   author:
+     name: INFLUX project / NIST
+     url: "https://bpb-us-e1.wpmucdn.com/sites.psu.edu/dist/9/4276/files/2023/09/US_INC.png"
+pubDate: 2024-09-20
+taxonomy:
+  - name: Topics
+    values:
+      - Urban
+  - name: Gas
+    values:
+      - CO₂
+      - CH₄
+---
+
+import Quote from "./components/quote";
+
+
+<Block>
+    <Prose>
+        <p>
+            Los Angeles, Indianapolis, and the Baltimore/Washington, D.C. region may not have a great deal in common when it comes to weather, terrain, and economic activity. Their diversity as urban environments, however, is precisely why they were chosen by researchers for an innovative program  to test and improve the accuracy of greenhouse gas (GHG) emissions estimates in U.S. cities.
+        </p>
+        <p>
+            [NIST’s Urban GHG Measurements Testbed System](https://www.nist.gov/greenhouse-gas-measurements/urban-test-beds) brings together scientists from U.S. government agencies, including NIST, NOAA and NASA, in partnership with universities, the private sector and local governments, to solve measurement challenges and develop new methods with the power to transform the way we monitor and measure GHGs in the future.
+        </p>
+    </Prose>
+</Block>
+
+<Block>
+    <Prose>
+        # Bottom-Up and Top-Down Methods 
+        <p>Traditionally, researchers generate estimates of GHG emissions using complex “bottom-up” methods, aggregating emissions from sources like highway traffic, manufacturing, and agriculture, among others. Scientists then take that data and apply computational power and physics-based principles to create sophisticated models capable of representing emissions across regional or national scales.</p>
+
+        <p>But an even more complete picture comes into play when scientists combine “bottom-up” information with emissions estimates based on “top-down” methods. “Top-down” estimates involve taking direct measurements of GHG concentrations in Earth’s atmosphere, studying subtle changes that may be associated with weather and seasonal variations, and making inferences about the reasons for observed fluctuations.</p>
+
+        <p>Comparing the two helps reduce uncertainties and improve the overall accuracy of greenhouse gas emissions estimates. This is where the NIST testbed system comes in. It is designed to aid researchers in combining top-down and bottom-up approaches in key regions.</p>
+
+        <p>Across the three urban areas, researchers have set sensors on building rooftops and communications towers to measure concentrations of carbon dioxide, methane, and carbon monoxide in the atmosphere. The observations from these ground-based networks include 14 sites in and around the Los Angeles basin, 8 across Indianapolis, and 28 across the Northeast, including 15 in the Baltimore/D.C. region.</p>
+
+        <Image 
+            src={new URL('./media/US_INC.png', import.meta.url).href}
+            alt="street view of a city with tower in distance showing image of instruments on tower" 
+            align="center"
+            attrAuthor="INFLUX project / NIST"
+            attrUrl="https://bpb-us-e1.wpmucdn.com/sites.psu.edu/dist/9/4276/files/2023/09/US_INC.png "
+            caption="Indianapolis is the site of NIST’s longest-running urban testbed, which began in 2010 as the Indianapolis Flux Experiment, also known as INFLUX. These long-standing atmospheric measurements offer a unique and valuable opportunity to assess changes and trends in greenhouse gases around Indianapolis."
+            width="600"
+        />
+
+        <p>This data can be combined with airborne measurements obtained by NOAA and NASA aircraft and satellite missions, yielding even more complete coverage across urban areas. </p>
+
+        <p>The high accuracy observations collected at the testbed sites can help researchers identify specific emissions sources such as neighborhoods, transportation networks, or landfills, and to track how those emissions change over time. This information is critically important for decision-makers seeking to track progress in their efforts to reduce greenhouse gas emissions.</p>
+
+        <Embed
+        src={new URL('./media/NIST_Greenhouse_Gas_Measurement_Program_Video_Download.mp4', import.meta.url).href}
+        height="400"
+        />
+
+    </Prose>
+
+</Block>
+
+<Block>
+    <Prose>
+      # An Inter-Agency Prototype for Greenhouse Gas Monitoring
+        <p>NIST and NOAA have teamed up on the [Urban GHG Measurement and Monitoring System](https://www.arl.noaa.gov/research/atmospheric-transport-and-dispersion/urban-gemms/) (Urban-GEMMS), aiming to integrate mature bottom-up and top-down methods into a first-of-its-kind urban-scale, operational GHG monitoring system prototype. They chose the Baltimore/D.C. region for their initial demonstration site because it already has an extensive network of surface and airborne observational systems, though they also plan to implement the system across other urban areas and regional and national scales in the future.</p>
+
+        <Block>
+            <Prose>
+                <Quote
+                    text={"To cost-effectively manage urban greenhouse gas emissions, local and regional decision-makers need emissions data that is accurate, timely, and actionable. The goal of Urban-GEMMS is to supply that data and to provide a model that can be replicated across the country."}
+                    author="James Whetstone"
+                    subtitle={"Special Assistant to the Director for Greenhouse Gas Measurement, NIST"}
+                />
+            </Prose>
+        </Block>
+
+        <p>The primary benefit of an integrated system is in reducing the lag between collecting data and making the resulting GHG emissions estimates available to the decision-makers who need them. By providing emissions estimates multiple times throughout the year, this project can facilitate effective collaboration between regional and local city planners and federal agencies as they monitor GHG emissions and evaluate the effectiveness of mitigation policies.</p>
+
+        <p>This effort to produce high-quality, detailed data is poised to transform the way GHGs are understood and managed in urban environments.</p>
+
+    </Prose>
+</Block>
+
+<Block>
+    <Prose>
+    # Resources for data users
+        Detailed information on the  <Link to="/data-catalog/nec-testbed-ghg-concentrations">Northeast Corridor (NEC) dataset</Link>
+
+        Detailed information on the  <Link to="/data-catalog/influx-testbed-ghg-concentrations">Indianapolis Flux Experiment (INFLUX) dataset</Link>
+
+        Detailed information on the  <Link to="/data-catalog/lam-testbed-ghg-concentrations">Los Angeles Megacities (LAM) dataset</Link>
+
+        Explore the data in our [customizable interactive map](https://staging.earth.gov/ghgcenter/custom-interfaces/nist-interface/?agency=nist)
+    </Prose>
+</Block>

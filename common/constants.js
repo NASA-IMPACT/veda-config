@@ -21,10 +21,10 @@ export const focusAreaDatasets = [
       "text": "View more"
     },
     "footer": {
-      "link": {
+      "links": [{
         "title": "Check out relevant datasets",
         "url": `${DATASETS_PATH}?${Actions.TAXONOMY}=${encodeURIComponent(JSON.stringify({ Topics: "anthropogenic-emissions" }))}`
-      }
+      }]
     }
   },
   {
@@ -39,10 +39,10 @@ export const focusAreaDatasets = [
       "text": "View more"
     },
     "footer": {
-      "link": {
+      "links": [{
         "title": "Check out relevant datasets",
         "url": `${DATASETS_PATH}?${Actions.TAXONOMY}=${encodeURIComponent(JSON.stringify({ Topics: "natural-emissions-and-sinks" }))}`
-      }
+      }]
     }
   },
   {
@@ -57,10 +57,10 @@ export const focusAreaDatasets = [
       "text": "View more"
     },
     "footer": {
-      "link": {
+      "links": [{
         "title": "Check out relevant datasets",
         "url": `${DATASETS_PATH}?${Actions.TAXONOMY}=${encodeURIComponent(JSON.stringify({ Topics: "large-emission-events" }))}`
-      }
+      }]
     }
   }
 ];
@@ -85,9 +85,9 @@ export const focusAreasStories = focusAreaDatasets.map((area, index) => {
 export const dataEngagements = [
   {
     "title": "Data Catalog",
-    "desc": "Detailed information for datasets that provides insight into greenhouse gas sources, sinks, emissions, fluxes, and events.",
+    "desc": "Detailed dataset information for insight into greenhouse gas sources, sinks, emissions, and large events.",
     "img": {
-      "src": new URL('./media/catalog.png', import.meta.url).href,
+      "src": new URL('./media/data_catalog.png', import.meta.url).href,
       "alt": "image of oil refinery"
     },
     "link": {
@@ -98,9 +98,9 @@ export const dataEngagements = [
   },
   {
     "title": "Interactive Map",
-    "desc": "The exploration and analysis environment is a space where users can visually examine data on a customizable map and create a time series of basic statistics for dataset layers.",
+    "desc": "The exploration and analysis environment can be used to visually examine data on a customizable map and create a time series of basic statistics.",
     "img": {
-      "src": new URL('./media/explore.png', import.meta.url).href,
+      "src": new URL('./media/interactive_map.png', import.meta.url).href,
       "alt": "image of green wetlands"
     },
     "link": {
@@ -113,7 +113,7 @@ export const dataEngagements = [
     "title": "JupyterHub",
     "desc": "With JupyterHub, users can analyze cloud archives of Earth science data using an interactive environment. Log in or request access here.",
     "img": {
-      "src": new URL('./media/jupyterhub.png', import.meta.url).href,
+      "src": new URL('./media/jupyter_hub.png', import.meta.url).href,
       "alt": "image of colorful polygon against satellite landscape surface in brown"
     },
     "link": {
@@ -127,56 +127,82 @@ export const dataEngagements = [
 export const customInterfaces = [
   {
     "title": "EMIT Methane Plume Viewer",
-    "desc": "Detailed information for methane plumes identified using EMIT.",
+    "desc": "Detailed information for methane plumes identified using EMIT",
     "img": {
       "src": new URL('./media/emit.png', import.meta.url).href,
-      "alt": "Baltimore"
+      "alt": "view of colored shape overlaid on satellite landscape image with boxes of information containing plume details"
     },
     "link": {
       "url": "/data-catalog/emit-ch4plume-v1",
-      "text": "Baltimore"
+      "text": "See more"
     },
     "footer": null
   },
   {
-    "title": "Carbon Dioxide Concentration Viewer",
-    "desc": "Measurements of carbon dioxide from ground locations throughout the US and worldwide are collected by NOAA GML and available for exploring concentration time series.",
+    "title": "NOAA Concentration Viewer",
+    "desc": "Measurements of carbon dioxide and methane concentrations from ground stations throughout the US and worldwide",
     "img": {
       "src": new URL('./media/co2.png', import.meta.url).href,
-      "alt": "Baltimore"
+      "alt": "map showing Mauna Loa location of station with a time series of data below the map"
     },
     "link": {
       "url": "/data-catalog/noaa-gggrn-co2-concentrations",
-      "text": "Baltimore"
+      "text": "See more"
     },
-    "footer": null
+    "footer": {
+      "links": [
+        {
+          "title": "Carbon Dioxide",
+          "url": "/data-catalog/noaa-gggrn-co2-concentrations"
+        },
+        {
+          "title": "Methane",
+          "url": "/data-catalog/noaa-gggrn-ch4-concentrations"
+        }
+      ]
+    }
   },
   {
-    "title": "Methane Concentration Viewer",
-    "desc": "Measurements of methane from ground locations throughout the US and worldwide are collected by NOAA GML and available for exploring concentration time series.",
+    "title": "NIST Tower Data Viewer",
+    "desc": "Measurements of carbon dioxide and methane concentrations from urban tower instruments",
     "img": {
-      "src": new URL('./media/ch4.png', import.meta.url).href,
-      "alt": "Baltimore"
+      "src": new URL('./media/nist-co2-nwb.png', import.meta.url).href,
+      "alt": "map showing Northwest Baltimore, MD location of station with a time series of data below the map"
     },
     "link": {
       "url": "/data-catalog/noaa-gggrn-ch4-concentrations",
-      "text": "Baltimore"
+      "text": "See more"
     },
-    "footer": null
+    "footer": {
+      "links": [
+        {
+          "title": "Indianapolis Flux Experiment (INFLUX)",
+          "url": "/data-catalog/influx-testbed-ghg-concentrations"
+        },
+        {
+          "title": "Los Angeles Megacity Carbon Project",
+          "url": "/data-catalog/lam-testbed-ghg-concentrations"
+        },
+        {
+          "title": "Northeast Corridor (NEC) Urban Test Bed",
+          "url": "/data-catalog/nec-testbed-ghg-concentrations"
+        }
+      ]
+    }
   },
 ]
 
 export const cities = [
   {
-    "title": "Baltimore Presents Unique Opportunity for Government & Academic Research Partners",
-    "desc": "Description",
+    "title": "Baltimore, A Nexus for Government and  Academic Emissions Research",
+    "desc": "Scientists from U.S. government agencies and regional universities have come together for cooperative research projects, helping to expand environmental monitoring capabilities and improve resident wellbeing across the Baltimore metropolitan region in line with the city’s ambitious climate action plans.",
     "img": {
       "src": "https://cdn.britannica.com/90/77990-050-E6087086/Inner-Harbor-skyline-Baltimore-Maryland.jpg",
       "alt": "Baltimore"
     },
     "link": {
       "url": "/stories/baltimore",
-      "text": "Baltimore"
+      "text": "See More"
     },
     "footer": null
   },
@@ -189,33 +215,33 @@ export const cities = [
     },
     "link": {
       "url": "/stories/newyork",
-      "text": "New York"
+      "text": "See More"
     },
     "footer": null
   },
   {
-    "title": "San Francisco Scientists Use Low-Cost Sensor Network to Track Local Emissions Progress",
-    "desc": "A research team from the University of California, Berkeley, has developed a cost-effective, shoebox-sized sensor and dispersed 57 throughout the San Francisco Bay Area to track pollutants in real time and monitor progress for the city’s carbon reduction targets. The project is expanding to new cities.",
+    "title": "Scientists Use Low-Cost Sensor Network to Track San Francisco Area Emissions",
+    "desc": "Cities have implemented a variety of measures to meet greenhouse-gas-emissions goals, including expanding renewable energy use and incentivizing residents to drive electric cars. But a challenge for city leaders is measuring if policies are working. One solution is a network of low-cost sensors, scientists say.",
     "img": {
       "src": "https://cdn.britannica.com/13/77413-050-95217C0B/Golden-Gate-Bridge-San-Francisco.jpg",
       "alt": "San Francisco"
     },
     "link": {
       "url": "/stories/sanfrancisco",
-      "text": "San Francisco"
+      "text": "See More"
     },
     "footer": null
   },
   {
-    "title": "Satellite Data Helps to Pinpoint CO₂ Emissions Changes in Los Angeles",
-    "desc": "Description",
+    "title": "Scientists Use Satellite Data to Measure Impact of Los Angeles Climate Solutions",
+    "desc": "From its vantage point on the International Space Station, NASA’s Orbiting Carbon Observatory-3 provides near-real time measurements of carbon dioxide concentrations for wide regions across the globe. Scientists are using the data to examine the impact of efforts to reduce emissions in Los Angeles.",
     "img": {
       "src": "https://i.natgeofe.com/n/110d522c-7c56-4185-ba59-3162a78e3abc/1_3x2.jpg",
       "alt": "Los Angeles"
     },
     "link": {
       "url": "/stories/losangeles",
-      "text": "Los Angeles"
+      "text": "See More"
     },
     "footer": null
   }
@@ -236,14 +262,14 @@ export const keyUrbanDatasets = [
     "footer": null
   },
   {
-    "title": "Dataset 2",
-    "desc": "Dataset 2",
+    "title": "First-of-its-Kind Dataset Connects Greenhouse Gases and Air Quality",
+    "desc": "The GReenhouse gas And Air Pollutants Emissions System (GRA2PES), from NOAA and NIST, is the first U.S.-based system to combine greenhouse gas and air quality pollutant sources into a single database, offering benefits for both climate and public health solutions.",
     "img": {
       "src": "https://placehold.co/600x400?text=Placeholder",
       "alt": "Placeholder"
     },
     "link": {
-      "url": "/stories/vulcan",
+      "url": "/stories/gra2pes",
       "text": "View more"
     },
     "footer": null
@@ -256,7 +282,7 @@ export const keyUrbanDatasets = [
       "alt": "image from INFLUX project"
     },
     "link": {
-      "url": "",
+      "url": "/stories/urban-testbed",
       "text": "View more"
     },
     "footer": null

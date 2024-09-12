@@ -38,7 +38,8 @@ export function DesktopCarousel () {
   }, []);
 
   const animationTimer = timer % slide_length;
-  const progressPercentage = Math.floor((animationTimer/slide_length) * 100)
+  // animationTimer/slide_length will never be 1, compensating the value here
+  const progressPercentage = Math.floor((animationTimer/slide_length) * (100*(slide_length/(slide_length-1))));
   const currentProgressItemIdx = Math.floor((timer / slide_length)%item_n);
   const itemInProgress = selectedItem?? CarouselItems[currentProgressItemIdx];
 
@@ -59,7 +60,7 @@ export function DesktopCarousel () {
             classNames="imagetransition"
           >
             <div className="carousel--height width-full position-absolute left-0 top-0 shadow-1">
-              <img className="carousel--content-image" src={itemInProgress.image} /> 
+              <img className="carousel--content-image" src={itemInProgress.image} alt={itemInProgress.imageAlt} /> 
             </div>
           </CSSTransition>
         </TransitionGroup>

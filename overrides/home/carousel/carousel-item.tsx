@@ -47,24 +47,23 @@ export function ItemPanel({ item, linkComponent: LinkComponent }) {
 export default function CarouselItem({ item, itemIdx, onTitleClick, shouldProgress, progressDone, progressPercentage, selected, linkComponent: LinkComponent }) {
   return <Card 
     gridLayout={{ tablet: { col: 4 } }} 
-    containerProps={{className:`border-0 animation--transition ${(selected || shouldProgress)? 'opacity-100':'opacity-50'}`}}>
+    containerProps={{className:`hover:bg-base-lightest padding-x-1 radius-0 border-0 animation--transition ${(selected || shouldProgress)? 'opacity-100':'opacity-50'}`}}>
     <ProgressBar shouldProgress={shouldProgress} progressDone={progressDone} progressPercentage={progressPercentage}selected={selected} />
-
     <CardBody className="padding-left-0 position-relative">
-      <h3 className="tablet:margin-top-1 carousel--title usa-button usa-button--unstyled text-bold veda-color--base">
+      <h3 className="tablet:margin-top-1 carousel--title text-bold veda-color--base">
         {item.title}
       </h3>
       <p className="margin-top-2 flex-align-self-stretch">{item.description}</p>
       <Button
-      unstyled={true}
-      className="position-absolute top-0 left-0 width-full height-full blocklink"
-      onClick={() => { onTitleClick(item); } }
-      type="button"
-      role="tab"
-      aria-label={`Slide ${itemIdx+1}`}
-      aria-selected={selected.toString()}
-      aria-controls={`carousel-item-${itemIdx+1}`} 
-      children={undefined} />
+        unstyled={true}
+        className="position-absolute top-0 left-0 width-full height-full blocklink"
+        onClick={() => { onTitleClick(item); } }
+        type="button"
+        role="tab"
+        aria-label={`Slide ${itemIdx+1}`}
+        aria-selected={selected.toString()}
+        aria-controls={`carousel-item-${itemIdx+1}`} 
+        children={undefined} />
     </CardBody>
     <CardFooter className="padding-left-0 padding-top-1">
         <LinkComponent className="display-flex flex-align-center veda-color--link" to={item.link}>
