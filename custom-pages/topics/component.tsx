@@ -25,15 +25,15 @@ export default function HomeComponent() {
         <CardGroup>
           <Card layout="flagDefault" gridLayout={{tablet: {col: 10}, col: 12}} containerProps={{className:'border-0 position-relative card-shadow__hover'}}>
             <CardMedia exdent>
-              <img src={"https://nicholas.duke.edu/sites/default/files/styles/banner/public/images/Urban%20Environment.jpg"} alt="urban image" />
+              <img src={new URL('./media/1-maia-los-angeles-1041.png', import.meta.url).href} alt="los angeles skyline" />
             </CardMedia>
 
             <CardHeader>
-              <h3 className="usa-card__heading margin-top-4">Spotlight: Urban Emissions</h3>
+              <h3 className="usa-card__heading margin-top-4">Urban Emissions</h3>
             </CardHeader>
             <CardBody>
               <p className="padding-bottom-2 margin-bottom-4">
-                Globally, cities are responsible for more than 70% of greenhouse gas emissions. Cities have the power to reduce emissions using policies that benefit the health of their citizens. The U.S. Greenhouse Gas Center welcomes a new set of tools aimed at supporting city decisionmakers.
+              Cities and metropolitan regions, where most of the world's population live, are responsible for approximately 70% of greenhouse gas emissions. Researchers are making rapid advances in urban emissions measurement and modeling to provide robust, accurate, and reliable emissions estimates at fine scales. The U.S. Greenhouse Gas Center offers an introduction to new urban-relevant datasets and highlights innovative emissions research in cities across the country.
               </p>
             </CardBody>
             <Link className="position-absolute top-0 left-0 width-full height-full blocklink" to="/stories/urban" />
@@ -42,7 +42,7 @@ export default function HomeComponent() {
       
         <section>
           <Title>Core Science Focus Areas</Title>
-          <p className="margin-top-2 font-sans-md margin-bottom-2">The GHG Center includes three core science focus areas. How to get involved? For the latest, subscribe to our email newsletter.</p>
+          <p className="margin-top-2 font-sans-md margin-bottom-2">The US GHG Center targets three greenhouse gas areas of study, as shown below. For the latest, <a href="/public/subscription/index.html">subscribe to our email newsletter</a>.</p>
           <Keypoints data={focusAreasStories} />
         </section>
 
