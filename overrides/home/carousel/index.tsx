@@ -60,7 +60,7 @@ export function DesktopCarousel () {
             classNames="imagetransition"
           >
             <div className="carousel--height width-full position-absolute left-0 top-0 shadow-1">
-              <img className="carousel--content-image" src={itemInProgress.image} /> 
+              <img className="carousel--content-image" src={itemInProgress.image} alt={itemInProgress.imageAlt} /> 
             </div>
           </CSSTransition>
         </TransitionGroup>
