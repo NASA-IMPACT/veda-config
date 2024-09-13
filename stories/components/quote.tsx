@@ -15,16 +15,7 @@ const QuoteContainer = styled.div`
 const QuoteText = styled.p`
     font-size: 1.5rem;
     line-height: 1.6;
-    margin-left: 16px;
-
-    &:before {
-        content: '“';
-        font-size: 5rem;
-        color: #ccc;
-        position: absolute;
-        left: 0;
-        top: -40px;
-    }
+    margin-left: 20px;
 
     &:after {
         content: '”';
@@ -34,6 +25,14 @@ const QuoteText = styled.p`
         right: -8px;
         bottom: 8px;
     }
+`;
+
+const QuoteStart = styled.div`
+    font-size: 5rem;
+    color: #ccc;
+    position: absolute;
+    left: 0;
+    top: -40px;
 `;
 
 const QuoteAuthor = styled.p`
@@ -56,6 +55,7 @@ const QuoteSubtitle = styled.p`
 const QuoteComponent = ({ text, author, subtitle }) => (
     <>
     <QuoteContainer>
+        <QuoteStart>“</QuoteStart>
         <QuoteText>{`${text}`}</QuoteText>
         <QuoteAuthor>{author}</QuoteAuthor>
         {subtitle && <QuoteSubtitle>{subtitle}</QuoteSubtitle>}
