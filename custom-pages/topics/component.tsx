@@ -6,13 +6,22 @@ import {
   CardBody,
   CardMedia,
   CardGroup,
-  GridContainer
+  Grid,
+  GridContainer,
 } from '$veda-ui/@trussworks/react-uswds';
+
+import {
+  CollecticonTextBlock,
+  CollecticonEnvelope,
+  CollecticonSpeechBalloon,
+} from '$veda-ui/@devseed-ui/collecticons';
 
 import { focusAreasStories } from "../../common/constants";
 import { Title } from "../../common/styled-components";
 
 import Keypoints from "../../common/keypoints";
+
+import { SUBSCRIPTION_URL } from "../../constants";
 
 import '../../common/styles.scss';
 import './topics.scss';
@@ -46,10 +55,39 @@ export default function HomeComponent() {
           <Keypoints data={focusAreasStories} />
         </section>
 
-        <section>
-          <Title>What Else Do You Need? Let Us Help You!</Title>
-          <p className="margin-top-2 font-sans-md margin-bottom-2">Do you have a need, idea, or suggestion? Contact the U.S. Greenhouse Gas Center team using the “Contact Us” button at the top or bottom of every page.</p>
-        </section>
+        <Grid tablet={{col:8, offset: 2}}>
+          <section>
+            <Title>What Else Do You Need? Let Us Help You!</Title>
+            <p className="margin-top-2 font-sans-md margin-bottom-2">Do you have a need, idea, or suggestion? Contact the U.S. Greenhouse Gas Center team using the “Contact Us” button at the top or bottom of every page.</p>
+          </section>
+
+          <Title> Learn More and Share Your Ideas </Title>
+          <Grid row>
+              <Grid col='auto' className="display-flex flex-align-center margin-bottom-2">
+                  <CollecticonEnvelope size='xlarge' color='#082a64' className="grid-col-auto" />
+              </Grid>
+              <Grid col='fill' className="display-flex flex-align-center margin-bottom-2">
+                  <span className="margin-left-4 font-sans-md"> For the latest updates and information about the U.S. Greenhouse Gas Center or to join a focus area group, <a href={SUBSCRIPTION_URL}>subscribe to our email updates list.</a></span>
+              </Grid>
+          </Grid>
+          <Grid row>
+              <Grid col='auto' className="display-flex flex-align-center margin-bottom-2">
+                  <CollecticonTextBlock size='xlarge' color='#082a64' className="grid-col-auto" />
+              </Grid>
+              <Grid col='fill' className="display-flex flex-align-center margin-bottom-2">
+                  <span className="margin-left-4 font-sans-md"> Read more about the U.S. Greenhouse Gas Center news, trainings, and workshop opportunities on the <Link to="/news-and-events">News and Events page.</Link></span>
+              </Grid>
+          </Grid>
+          <Grid row>
+              <Grid col='auto' className="display-flex flex-align-center margin-bottom-2">
+                  <CollecticonSpeechBalloon size='xlarge' color='#082a64' className="grid-col-auto" />
+              </Grid>
+              <Grid col='fill' className="display-flex flex-align-center margin-bottom-2">
+                  <span className="margin-left-4 font-sans-md">  Do you have a U.S. Greenhouse Gas Center portal suggestion or question? Reach the team using the "Contact Us" button at the top or bottom of every page.</span>
+              </Grid>
+          </Grid>
+        </Grid>
+
       </GridContainer>
     </div>
   );
