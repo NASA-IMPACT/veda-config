@@ -11,7 +11,7 @@ import { Title } from "../../common/styled-components";
 
 export default function Urban() {
     return (
-        <GridContainer containerSize="widescreen">
+        <GridContainer containerSize="widescreen" className="margin-bottom-8">
             <Grid col={10} className="margin-bottom-4">
                 <Title>About Urban Emissions</Title>
                 <p className="margin-bottom-2 font-sans-md">
