@@ -88,7 +88,7 @@ export default function HomeComponent() {
         <Carousel />
         <Grid col={8} offset={2} className="font-heading-md margin-y-10">
           <h1 className="font-heading-2xl margin-y-6">Welcome</h1>
-          <p className="margin-bottom-4">
+          <p className="margin-bottom-4 font-size-md-deprecated">
             The U.S. Greenhouse Gas Center opens up access to trusted data on
             greenhouse gases. This&nbsp;multi-agency effort consolidates
             greenhouse gas information from observations and models to create a unified source for U.S. government and other datasets.
