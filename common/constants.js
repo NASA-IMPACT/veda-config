@@ -252,7 +252,7 @@ export const keyUrbanDatasets = [
     "title": "New Dataset Offers Neighborhood-Scale View of Carbon Emissions",
     "desc": "Carbon dioxide emissions data are now available at a granular level, from city blocks to entire counties across the contiguous U.S. The latest dataset from the Vulcan Project, called Vulcan 4.0, helps researchers to analyze annual CO₂ emissions at fine scales and urban decision-makers to develop localized carbon management strategies.",
     "img": {
-      "src": new URL('./media/urban-1.jpeg', import.meta.url).href,
+      "src": new URL('../stories/media/urban-1.jpeg', import.meta.url).href,
       "alt": "magnifying glass with co2 written in text with background of smoke coming out of factories."
     },
     "link": {
