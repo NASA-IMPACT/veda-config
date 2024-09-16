@@ -262,8 +262,8 @@ export const keyUrbanDatasets = [
     "footer": null
   },
   {
-    "title": "First-of-its-Kind Dataset Connects Greenhouse Gases and Air Quality",
-    "desc": "The GReenhouse gas And Air Pollutants Emissions System (GRA²PES), from NOAA and NIST, is the first U.S.-based system to combine greenhouse gas and air quality pollutant sources into a single database, offering benefits for both climate and public health solutions.",
+    "title": "Nationwide Dataset Connects Greenhouse Gases and Air Quality",
+    "desc": "The GReenhouse gas And Air Pollutants Emissions System (GRA²PES), from NOAA and NIST, is the first U.S.-based system to combine greenhouse gas and air quality pollutant sources into a single national database, offering benefits for both climate and public health solutions.",
     "img": {
       "src": new URL('../stories/media/gra2pes.png', import.meta.url).href,
       "alt": "Comparison of CO2 and NOx emission from GRA2PES dataset"

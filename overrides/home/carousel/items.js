@@ -6,7 +6,7 @@ export default [{
   imageAlt: 'Los Angeles skyline shown with visible haze of air pollution.'
 }, {
   link: '/stories/gra2pes',
-  title: 'First-of-its-Kind Dataset Connects Greenhouse Gases and Air Quality',
+  title: 'Nationwide Dataset Connects Greenhouse Gases and Air Quality',
   description: "The GReenhouse gas And Air Pollutants Emissions System (GRA²PES) is the first U.S.-based measurement system to combine greenhouse gas and air quality pollutant sources.",
   image: new URL('../../media/gra2pes.png', import.meta.url).href,
   imageAlt: ''
