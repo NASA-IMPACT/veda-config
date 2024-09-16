@@ -19,7 +19,7 @@ import { dataEngagements, focusAreaDatasets, customInterfaces } from "../../comm
 import { SUBSCRIPTION_URL } from "../../constants";
 import { Title } from "../../common/styled-components";
 
-import '/common/styles.scss';
+import '../../common/styles.scss';
 
 
 export default function Component() {  
@@ -28,12 +28,15 @@ export default function Component() {
             <GridContainer containerSize="widescreen">
                 <section>
                     <Title> Engage with Data </Title>
+                    <p className="margin-bottom-2 font-size-md-deprecated">
+                        Access the catalog of datasets, visualize the data on a map, and conduct analysis with JupyterHub
+                    </p>
                     <Keypoints data={dataEngagements} />
                 </section>
                 <section>
                     <Title> Featured Data Tools </Title>
                     <p className="margin-bottom-2 font-size-md-deprecated">
-                        View and explore greenhouse gas emissions data with customized data visualization tools.
+                        View and explore greenhouse gas emissions data with customized data visualization tools
                     </p>
                     <Keypoints data={customInterfaces} />
                 </section>
