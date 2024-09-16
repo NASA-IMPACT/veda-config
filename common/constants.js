@@ -221,7 +221,7 @@ export const cities = [
   },
   {
     "title": "Scientists Use Low-Cost Sensor Network to Track San Francisco Area Emissions",
-    "desc": "Cities have implemented a variety of measures to meet greenhouse-gas-emissions goals, including expanding renewable energy use and incentivizing residents to drive electric cars. But a challenge for city leaders is measuring if policies are working. One solution is a network of low-cost sensors, scientists say.",
+    "desc": "Cities have implemented a variety of measures to meet greenhouse gas emissions goals, including expanding renewable energy use and incentivizing residents to drive electric cars. But a challenge for city leaders is measuring if policies are working. One solution is a network of low-cost sensors, scientists say.",
     "img": {
       "src": "https://cdn.britannica.com/13/77413-050-95217C0B/Golden-Gate-Bridge-San-Francisco.jpg",
       "alt": "San Francisco"
@@ -250,10 +250,10 @@ export const cities = [
 export const keyUrbanDatasets = [
   {
     "title": "New Dataset Offers Neighborhood-Scale View of Carbon Emissions",
-    "desc": "Carbon dioxide emissions data are now available at a granular level, from city blocks to entire counties across the contiguous U.S. The latest dataset from the Vulcan Project, called Vulcan 4.0, helps researchers to analyze annual CO2 emissions at fine scales and urban decision-makers to develop localized carbon management strategies.",
+    "desc": "Carbon dioxide emissions data are now available at a granular level, from city blocks to entire counties across the contiguous U.S. The latest dataset from the Vulcan Project, called Vulcan 4.0, helps researchers to analyze annual CO₂ emissions at fine scales and urban decision-makers to develop localized carbon management strategies.",
     "img": {
-      "src": "https://images.unsplash.com/photo-1580064461598-505b080a8242?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "alt": "smoke coming out of a factory"
+      "src": new URL('./media/urban-1.jpeg', import.meta.url).href,
+      "alt": "magnifying glass with co2 written in text with background of smoke coming out of factories."
     },
     "link": {
       "url": "/stories/vulcan",
@@ -263,7 +263,7 @@ export const keyUrbanDatasets = [
   },
   {
     "title": "First-of-its-Kind Dataset Connects Greenhouse Gases and Air Quality",
-    "desc": "The GReenhouse gas And Air Pollutants Emissions System (GRA2PES), from NOAA and NIST, is the first U.S.-based system to combine greenhouse gas and air quality pollutant sources into a single database, offering benefits for both climate and public health solutions.",
+    "desc": "The GReenhouse gas And Air Pollutants Emissions System (GRA²PES), from NOAA and NIST, is the first U.S.-based system to combine greenhouse gas and air quality pollutant sources into a single database, offering benefits for both climate and public health solutions.",
     "img": {
       "src": new URL('../stories/media/gra2pes.png', import.meta.url).href,
       "alt": "Comparison of CO2 and NOx emission from GRA2PES dataset"
