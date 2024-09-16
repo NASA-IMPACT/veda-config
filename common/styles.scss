@@ -30,3 +30,10 @@
 .veda-color--base {
   color: var(--veda-color-base);
 }
+
+// font-size: 20px (1.25rem) will be deprecated with USWDS design system
+// but we need a temporary style class for the consistency across the pages
+
+.font-size-md-deprecated {
+  font-size: calc(1rem + var(--base-text-increment, 0rem));
+}
