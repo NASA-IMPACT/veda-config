@@ -2,6 +2,7 @@
 title: The U.S. Greenhouse Gas Center
 description: Uniting Data and Technology to Empower Tomorrow's Climate Solutions
 ---
+import { PartnerHeader } from "./common/styles";
 
 import { SUBSCRIPTION_URL } from "../constants";
 
@@ -35,53 +36,61 @@ The U.S. Greenhouse Gas Center would not be possible without the collaboration o
 
 {" "}
 
-<a href="https://www.nasa.gov/" target="_blank">
-  <Image
-    src={new URL("./media/nasa.png", import.meta.url).href}
-    alt="NASA logo"
-    width="105"
-  />
-</a>
+<PartnerHeader>
+  <a href="https://www.nasa.gov/" target="_blank">
+    <Image
+      src={new URL("./media/nasa.png", import.meta.url).href}
+      alt="NASA logo"
+      width="105"
+    />
+    <p><strong>NASA (National Aeronautics and Space Administration)</strong></p>
+  </a>
+</PartnerHeader>
 
-**[NASA (National Aeronautics and Space Administration)](https://www.nasa.gov/)**  
  NASA plays a crucial role in expanding our understanding of the universe and advancing technology for the benefit of humanity.  As the lead agency for implementing the U.S. Greenhouse Gas Center, the effort is shared among various NASA centers and coordinated by the project office at NASA Goddard Space Flight Center (GSFC). Technical development and implementation of the U.S. Greenhouse Gas Center portal is carried out by a team at NASA’s Marshall Space Flight Center (MSFC), and scientists at the Jet Propulsion Laboratory produce many of the NASA datasets available from the portal (for example EMIT and various model datasets). NASA’s leadership of the U.S. Greenhouse Gas Center accelerates collaborative use of Earth science data and information for GHG monitoring, measurement, reporting, and decision support. 
 {" "}
 
+<PartnerHeader>
 <a href="https://www.epa.gov/" target="_blank">
   <Image
     src={new URL("./media/epa.svg", import.meta.url).href}
     alt="epa logo"
     width="80"
   />
-</a>
+  <p><strong>EPA (Environmental Protection Agency)</strong></p>
+  </a>
+</PartnerHeader>
 
-**[EPA (Environmental Protection Agency)](https://www.epa.gov/)**  
  The EPA is a vital agency committed to protecting human health and the environment. The inclusion of EPA in the U.S. Greenhouse Gas Center effort ensures portal users have access to valuable and relevant EPA resources, research, and regulatory information related to environmental issues, sustainability, and public health. By incorporating EPA's insights and guidelines into Center content, we aim to raise awareness and encourage responsible practices that contribute to a healthier planet.
 
 {" "}
 
-<a href="https://www.nist.gov/" target="_blank">
-  <Image
-    src={new URL("./media/nist.png", import.meta.url).href}
-    alt="NIST logo"
-    width="250"
-  />
-</a>
+<PartnerHeader>
+  <a href="https://www.nist.gov/" target="_blank">
+    <Image
+      src={new URL("./media/nist.png", import.meta.url).href}
+      alt="NIST logo"
+      width="250"
+    />
+    <p><strong>NIST (National Institute of Standards and Technology)</strong></p>
+  </a>
+</PartnerHeader>
 
-**[NIST (National Institute of Standards and Technology)](https://www.nist.gov/)**  
  NIST is an agency of the U.S. Department of Commerce that is dedicated to promoting innovation and industrial competitiveness by advancing measurement science, standards, and technology. NIST contributes access to cutting-edge research, data, and standards on greenhouse gases that help ensure the accuracy and reliability of the U.S. Greenhouse Gas Center content and services. 
 
 {" "}
 
+<PartnerHeader>
 <a href="https://www.noaa.gov/" target="_blank">
   <Image
     src={new URL("./media/noaa.png", import.meta.url).href}
     alt="NOAA logo"
-    width="95"
+    width="85"
   />
-</a>
+  <p><strong>NOAA (National Oceanic and Atmospheric Administration)</strong></p>
+  </a>
+</PartnerHeader>
 
-**[NOAA (National Oceanic and Atmospheric Administration)](https://www.noaa.gov/)**  
  As an agency within the U.S. Department of Commerce, NOAA data helps to empower users with the knowledge needed to make informed decisions about their lives and the environment. NOAA focuses on public understanding and predicting changes in the Earth's environment and safeguarding its resources. As a member of the U.S. Greenhouse Gas Center, NOAA provides accurate and up-to-date information on greenhouse gas monitoring and the research to increase understanding of greenhouse gas impacts on Earth’s environment.
 
 ## Joining Forces for a Better Future
