@@ -113,13 +113,23 @@ taxonomy:
 
 <ScrollytellingBlock>
   <Chapter
-    datasetId='svi-overall'
-    layerId='social-vulnerability-index-overall'
-    zoom={8}
-    center={[-95.37,29.76]}
+   center={[-95.37,29.76]}
+   zoom={8}
+   datasetId='svi-overall'
+   layerId='social-vulnerability-index-overall'
+   datetime='2016-01-01' 
   >
     ## Monitoring air pollution with satellites
     Collecting measurements of sulfur dioxide plumes from space is a valuable way to monitor changes in emissions.
+    <Figure>
+      <Image
+      src={new URL('./BB_trends_Choctaw.png', import.meta.url).href}
+    />
+    <Caption attrAuthor='https://www.pbs.org/newshour/nation/watch-live-desantis-holds-press-conference-amid-rescue-efforts-after-ian'>
+    Damage to a portion of Fort Myers Beach. Credit to Kevin Fogarty - REUTERS. 
+    </Caption>
+    </Figure>
+
   </Chapter>
 </ScrollytellingBlock>
 
