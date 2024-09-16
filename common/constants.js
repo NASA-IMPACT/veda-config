@@ -253,7 +253,7 @@ export const keyUrbanDatasets = [
     "desc": "Carbon dioxide emissions data are now available at a granular level, from city blocks to entire counties across the contiguous U.S. The latest dataset from the Vulcan Project, called Vulcan 4.0, helps researchers to analyze annual CO₂ emissions at fine scales and urban decision-makers to develop localized carbon management strategies.",
     "img": {
       "src": new URL('../stories/media/urban-1.jpeg', import.meta.url).href,
-      "alt": "magnifying glass with co2 written in text with background of smoke coming out of factories."
+      "alt": "magnifying glass with CO₂ written in text with background of smoke coming out of factories."
     },
     "link": {
       "url": "/stories/vulcan",
@@ -266,7 +266,7 @@ export const keyUrbanDatasets = [
     "desc": "The GReenhouse gas And Air Pollutants Emissions System (GRA²PES), from NOAA and NIST, is the first U.S.-based system to combine greenhouse gas and air quality pollutant sources into a single national database, offering benefits for both climate and public health solutions.",
     "img": {
       "src": new URL('../stories/media/gra2pes.png', import.meta.url).href,
-      "alt": "Comparison of CO2 and NOx emission from GRA2PES dataset"
+      "alt": "Comparison of CO₂ and NOₓ emission from GRA2PES dataset"
     },
     "link": {
       "url": "/stories/gra2pes",
