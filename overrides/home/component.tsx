@@ -83,11 +83,8 @@ export default function HomeComponent() {
     <>
     <Banner />
       <GridContainer containerSize="widescreen">
-        <Grid col={9} offset={2}>
-          <h1 className="font-heading-2xl margin-y-5">Explore the Latest Updates</h1>
-          {/* <p className="margin-bottom-4"> Check out the featured content </p> */}
-        </Grid>
-        
+        <h1 className="font-heading-2xl margin-y-5 text-center">Explore the Latest Updates</h1>
+        {/* <p className="margin-bottom-4"> Check out the featured content </p> */}        
         <Carousel />
         <Grid col={8} offset={2} className="font-heading-md margin-y-10">
           <h1 className="font-heading-2xl margin-y-6">Welcome</h1>
