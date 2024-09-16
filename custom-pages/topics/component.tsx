@@ -51,7 +51,7 @@ export default function HomeComponent() {
       
         <section>
           <Title>Core Science Focus Areas</Title>
-          <p className="margin-top-2 font-sans-md margin-bottom-2">The U.S. Greenhouse Gas Center targets three greenhouse gas areas of study, as shown below. For the latest, <a href="/public/subscription/index.html">subscribe to our email newsletter</a>.</p>
+          <p className="margin-top-2 font-size-md-deprecated margin-bottom-2">The U.S. Greenhouse Gas Center targets three greenhouse gas areas of study, as shown below. For the latest, <a href="/public/subscription/index.html">subscribe to our email newsletter</a>.</p>
           <Keypoints data={focusAreasStories} />
         </section>
 
@@ -62,7 +62,7 @@ export default function HomeComponent() {
                   <CollecticonEnvelope size='xlarge' color='#082a64' className="grid-col-auto" />
               </Grid>
               <Grid col='fill' className="display-flex flex-align-center margin-bottom-2">
-                  <span className="margin-left-4 font-sans-md"> For the latest updates and information about the US GHG Center or to join a focus area group, <a href={SUBSCRIPTION_URL}>subscribe to our email updates list.</a></span>
+                  <span className="margin-left-4 font-size-md-deprecated"> For the latest updates and information about the US GHG Center or to join a focus area group, <a href={SUBSCRIPTION_URL}>subscribe to our email updates list.</a></span>
               </Grid>
           </Grid>
           <Grid row>
@@ -70,7 +70,7 @@ export default function HomeComponent() {
                   <CollecticonTextBlock size='xlarge' color='#082a64' className="grid-col-auto" />
               </Grid>
               <Grid col='fill' className="display-flex flex-align-center margin-bottom-2">
-                  <span className="margin-left-4 font-sans-md"> Read more about the US GHG Center news, trainings, and workshop opportunities on the <Link to="/news-and-events">News and Events page.</Link></span>
+                  <span className="margin-left-4 font-size-md-deprecated"> Read more about the US GHG Center news, trainings, and workshop opportunities on the <Link to="/news-and-events">News and Events page.</Link></span>
               </Grid>
           </Grid>
           <Grid row>
@@ -78,7 +78,7 @@ export default function HomeComponent() {
                   <CollecticonSpeechBalloon size='xlarge' color='#082a64' className="grid-col-auto" />
               </Grid>
               <Grid col='fill' className="display-flex flex-align-center margin-bottom-2">
-                  <span className="margin-left-4 font-sans-md">  Do you have a US GHG Center portal suggestion or question? Reach the team using the "Contact Us" button at the top or bottom of every page.</span>
+                  <span className="margin-left-4 font-size-md-deprecated">  Do you have a US GHG Center portal suggestion or question? Reach the team using the "Contact Us" button at the top or bottom of every page.</span>
               </Grid>
           </Grid>
         </Grid>

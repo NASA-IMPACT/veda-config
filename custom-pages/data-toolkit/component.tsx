@@ -32,14 +32,14 @@ export default function Component() {
                 </section>
                 <section>
                     <Title> Featured Data Tools </Title>
-                    <p className="margin-bottom-2 font-sans-md">
+                    <p className="margin-bottom-2 font-size-md-deprecated">
                         View and explore greenhouse gas emissions data with customized data visualization tools.
                     </p>
                     <Keypoints data={customInterfaces} />
                 </section>
                 <section>
                 <Title> Core Science Focus Areas </Title>
-                <p className="margin-bottom-2 font-sans-md">
+                <p className="margin-bottom-2 font-size-md-deprecated">
                     The U.S. Greenhouse Gas Center is organized around three core focus areas. <Link to={SUBSCRIPTION_URL}>Sign up</Link> to join a focus area group.
                 </p>
                 <Keypoints data={focusAreaDatasets} />
@@ -52,7 +52,7 @@ export default function Component() {
                             <CollecticonEnvelope size='xlarge' color='#082a64' className="grid-col-auto" />
                         </Grid>
                         <Grid col='fill' className="display-flex flex-align-center margin-bottom-2">
-                            <span className="margin-left-4 font-sans-md"> For the latest updates and information about the U.S. Greenhouse Gas Center or to join a focus area group, <a href={SUBSCRIPTION_URL}>subscribe to our email updates list.</a></span>
+                            <span className="margin-left-4 font-size-md-deprecated"> For the latest updates and information about the U.S. Greenhouse Gas Center or to join a focus area group, <a href={SUBSCRIPTION_URL}>subscribe to our email updates list.</a></span>
                         </Grid>
                     </Grid>
                     <Grid row>
@@ -60,7 +60,7 @@ export default function Component() {
                             <CollecticonTextBlock size='xlarge' color='#082a64' className="grid-col-auto" />
                         </Grid>
                         <Grid col='fill' className="display-flex flex-align-center margin-bottom-2">
-                            <span className="margin-left-4 font-sans-md"> Read more about the U.S. Greenhouse Gas Center news, trainings, and workshop opportunities on the <Link to="/news-and-events">News and Events page.</Link></span>
+                            <span className="margin-left-4 font-size-md-deprecated"> Read more about the U.S. Greenhouse Gas Center news, trainings, and workshop opportunities on the <Link to="/news-and-events">News and Events page.</Link></span>
                         </Grid>
                     </Grid>
                     <Grid row>
@@ -68,7 +68,7 @@ export default function Component() {
                             <CollecticonSpeechBalloon size='xlarge' color='#082a64' className="grid-col-auto" />
                         </Grid>
                         <Grid col='fill' className="display-flex flex-align-center margin-bottom-2">
-                            <span className="margin-left-4 font-sans-md">  Do you have a U.S. Greenhouse Gas Center portal suggestion or question? Reach the team using the "Contact Us" button at the top or bottom of every page.</span>
+                            <span className="margin-left-4 font-size-md-deprecated">  Do you have a U.S. Greenhouse Gas Center portal suggestion or question? Reach the team using the "Contact Us" button at the top or bottom of every page.</span>
                         </Grid>
                     </Grid>
                 </Grid>

@@ -100,7 +100,7 @@ export default function HomeComponent() {
               <CollecticonSpeechBalloon size='xlarge' color='#082a64' className="grid-col-auto" />
             </Grid>
             <Grid col='fill' className="display-flex flex-align-center margin-bottom-2">
-              <span className="margin-left-4 font-sans-md"> If you are interested in exploring partnership opportunities with the US GHG Center, please <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSeVWCrnca08Gt_qoWYjTo6gnj1BEGL4NCUC9VEiQnXA02gzVQ/viewform">reach out to our team</a>.</span>
+              <span className="margin-left-4 font-size-md-deprecated"> If you are interested in exploring partnership opportunities with the US GHG Center, please <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSeVWCrnca08Gt_qoWYjTo6gnj1BEGL4NCUC9VEiQnXA02gzVQ/viewform">reach out to our team</a>.</span>
             </Grid>
           </Grid>
           <Grid row>
@@ -108,7 +108,7 @@ export default function HomeComponent() {
               <CollecticonEnvelope size='xlarge' color='#082a64' className="grid-col-auto" />
             </Grid>
             <Grid col='fill' className="display-flex flex-align-center margin-bottom-2">
-              <span className="margin-left-4 font-sans-md"> To get GHG Center updates delivered to your mailbox, <a href={SUBSCRIPTION_URL}>subscribe to the news and announcements list</a>.</span>
+              <span className="margin-left-4 font-size-md-deprecated"> To get GHG Center updates delivered to your mailbox, <a href={SUBSCRIPTION_URL}>subscribe to the news and announcements list</a>.</span>
             </Grid>
           </Grid>
           <Buttons className="margin-top-4">
