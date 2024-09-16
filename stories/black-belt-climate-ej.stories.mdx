@@ -103,6 +103,7 @@ taxonomy:
   </Prose>
 </Block>
 
+{/*
 <Block style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
   <Prose style={{ flex: '1', paddingRight: '1px', textAlign: 'justify' }}>
     <p>
@@ -110,29 +111,37 @@ taxonomy:
     </p>
   </Prose>
 </Block>
+*/}
 
 <ScrollytellingBlock>
   <Chapter
-   center={[-95.37,29.76]}
+   center={[-86.71,33.10]}
    zoom={8}
    datasetId='svi-overall'
    layerId='social-vulnerability-index-overall'
    datetime='2016-01-01' 
   >
-    ## Monitoring air pollution with satellites
-    Collecting measurements of sulfur dioxide plumes from space is a valuable way to monitor changes in emissions.
+  ## Climate Extremes in the Black Belt Region
+    Alabama's Black Belt counties face escalating climate challenges. MERRA-2 data from 1980 to 2023 reveals significant shifts in temperature extremes. The region is experiencing an increase in warm days and nights (TX90P, TN90P) and a decrease in cool days and nights (TX10P, TN10P). These changes pose particular risks for the area's agricultural workforce and older residents, highlighting the growing impact of climate change on the region. 
+  </Chapter>
+
+  <Chapter
+   center={[-88.247405, 32.022218]}
+   zoom={4}
+   datasetId='svi-overall'
+   layerId='social-vulnerability-index-overall'
+   datetime='2016-01-01' 
+  >
+    ## Choctaw County
     <Figure>
       <Image
       src={new URL('./BB_trends_Choctaw.png', import.meta.url).href}
     />
-    <Caption attrAuthor='https://www.pbs.org/newshour/nation/watch-live-desantis-holds-press-conference-amid-rescue-efforts-after-ian'>
-    Damage to a portion of Fort Myers Beach. Credit to Kevin Fogarty - REUTERS. 
     </Caption>
     </Figure>
-
   </Chapter>
-</ScrollytellingBlock>
 
+</ScrollytellingBlock>
 
 <Block style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
   <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
