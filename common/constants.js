@@ -14,7 +14,7 @@ export const focusAreaDatasets = [
     "desc": "Emission estimates from human activities including the energy, agriculture, waste, and industry sectors",
     "img": {
       "src": featureEmissions,
-      "alt": "image of oil refinery"
+      "alt": "image of oil refinery."
     },
     "link": {
       "url": `${DATASETS_PATH}?${Actions.TAXONOMY}=${encodeURIComponent(JSON.stringify({ Topics: "anthropogenic-emissions" }))}`,
@@ -32,7 +32,7 @@ export const focusAreaDatasets = [
     "desc": "Naturally-occurring greenhouse gas fluxes from land, ocean, and atmosphere",
     "img": {
       "src": featureSources,
-      "alt": "image of green wetlands"
+      "alt": "image of green wetlands."
     },
     "link": {
       "url": `${DATASETS_PATH}?${Actions.TAXONOMY}=${encodeURIComponent(JSON.stringify({ Topics: "natural-emissions-and-sinks" }))}`,
@@ -50,7 +50,7 @@ export const focusAreaDatasets = [
     "desc": "Identify and quantify large methane leak events leveraging aircraft and space-based data",
     "img": {
       "src": featureMethane,
-      "alt": "image of colorful polygon against satellite landscape surface in brown"
+      "alt": "image of colorful polygon against satellite landscape surface in brown."
     },
     "link": {
       "url": `${DATASETS_PATH}?${Actions.TAXONOMY}=${encodeURIComponent(JSON.stringify({ Topics: "large-emission-events" }))}`,
