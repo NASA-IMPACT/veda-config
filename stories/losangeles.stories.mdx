@@ -19,17 +19,16 @@ taxonomy:
       - CO₂
 ---
 
-<Block type="wide">
+<Block>
     <Prose>
         
-        Los Angeles is home to about 8 million cars and trucks, the largest oil refinery on the West Coast, and the nation’s busiest port. As such, it is one of the top five carbon dioxide-emitting cities in the world, making it a prime location for studying urban greenhouse gas emissions — and efforts to reduce them.
+      Los Angeles is home to about 8 million cars and trucks, the largest oil refinery on the West Coast, and the nation’s busiest port. As such, it is one of the top five carbon dioxide-emitting cities in the world, making it a prime location for studying urban greenhouse gas emissions — and efforts to reduce them.
 
-        Enter [NASA’s Orbiting Carbon Observatory-3](https://ocov3.jpl.nasa.gov/mission/) , also known as OCO-3. Mounted to the outside of the International Space Station, this instrument takes measurements of the amount of carbon dioxide molecules between Earth’s surface and the top of the atmosphere, which can then be used by scientists to study the impact of local policy and climate solutions around the world.
+      Enter [NASA’s Orbiting Carbon Observatory-3](https://ocov3.jpl.nasa.gov/mission/) , also known as OCO-3. Mounted to the outside of the International Space Station, this instrument takes measurements of the amount of carbon dioxide molecules between Earth’s surface and the top of the atmosphere, which can then be used by scientists to study the impact of local policy and climate solutions around the world.
 
-        As carbon dioxide (CO₂) builds up in the atmosphere, it traps heat and warms the planet. The presence of CO₂ in the air alters the intensity of sunlight, and special “cameras” onboard OCO-3, known as spectrometers, are able to translate this intensity into a measurement of concentration. From this data and other information about weather patterns, scientists can identify sources and sinks of carbon dioxide.
-
-        As carbon dioxide (CO₂) builds up in the atmosphere, it traps heat and warms the planet. The presence of CO₂ in the air alters the intensity of sunlight, and special “cameras” onboard OCO-3, known as spectrometers, are able to translate this intensity into a measurement of concentration. From this data and other information about weather patterns, scientists can identify sources and sinks of carbon dioxide.
-
+    </Prose>
+    
+    <Figure>
         <Image 
           src={new URL('./media/la-img1.jpg', import.meta.url).href}
           alt="diagram of the international space station as it measures the Earth surface. Surface colors indicate carbon dioxide measurement values." 
@@ -37,26 +36,13 @@ taxonomy:
           attrAuthor="NASA/JPL"
           attrUrl="https://unsplash.com/photos/QdECiEXGCBU"
           caption="From its vantage point on the International Space Station, the OCO-3 cameras can scan locations across the globe, providing near-real time measurements of carbon dioxide concentrations for wide regions." 
-          width="100%"
+          width="600"
         />
-        One challenge, though, is that these neighborhood scans don’t distinguish between point sources of emissions. Due to wind and the proximity of emission sources, it can be unclear how much of the mapped carbon originates from local influences, like a city’s port, heavy industry, or traffic, instead of upwind sources outside a city’s limits. So scientists are in the process of developing techniques to go this extra step.
+    </Figure>
+</Block>
 
-        Dien Wu of the California Institute of Technology developed a sophisticated wind model that reverse-traced carbon dioxide concentrations back to their original locations. By overlaying these scans with urban maps, she was able to quantify how much was coming from heavy industry, such as factories and oil refineries. Researchers have since used her method to isolate industrial emissions in cities in Europe and China.
-
-        <Image 
-          src={new URL('./media/LA-story-img2.png', import.meta.url).href}
-          alt="shipping cranes, bridges and industry area in the Los Angeles port area." 
-          align="left"
-          attrAuthor="Llstock/Adobe Stock"
-          caption="Satellite-based observations allow scientists to pinpoint sources of carbon dioxide emissions associated with the burning of fossil fuels, including industrial areas and shipping ports. " 
-          width="100%"
-        />
-        We are able to disentangle the emission hotspots so that they can be targeted for future reductions, Wu said.
-
-        More recently, Dustin Roten of NASA’s Jet Propulsion Laboratory in Southern California combined the OCO-3 maps with a dataset of fossil fuel carbon dioxide emissions from North Arizona University’s Vulcan Project dataset. This allowed his team to identify emissions coming specifically from factories, ships and roadways, another step in digging greater detail out of the data.
-
-        Because OCO-3 is continually sending down new scans, scientists can search for patterns over time. For example, Roten examined over 30 OCO-3 scans of Los Angeles from 2020 to 2022 to analyze how the Covid-19 pandemic might have impacted emissions from different sectors. As expected, he found that with fewer cars on the road, emissions fell. Additionally, the data showed an increase in shipping emissions at the port of Los Angeles during this time. This increase coincided with a backlog of freight ships idling off the city’s coast, belching out smoke and greenhouse gases. 
-
+<Block>
+    <Figure>
         <Image 
           src={new URL('./media/oco3 snapshot Los A fr2.gif', import.meta.url).href}
           alt="movie showing monthly OCO-3 carbon dioxide concentration values over the Los Angeles area for several random months from May 2020 to October 2022." 
@@ -66,11 +52,46 @@ taxonomy:
           caption="Measurements from OCO-3 SAM showed a decrease in carbon dioxide concentration over the city of Los Angeles in 2020 associated with fewer cars on the road during the height of the Covid-19 pandemic, followed by an increase in 2021 and 2022 as road traffic returned to pre-pandemic levels." 
           width="100%"
         />
+    </Figure>
+    <Prose>
+        As carbon dioxide (CO₂) builds up in the atmosphere, it traps heat and warms the planet. The presence of CO₂ in the air alters the intensity of sunlight, and special “cameras” onboard OCO-3, known as spectrometers, are able to translate this intensity into a measurement of concentration. From this data and other information about weather patterns, scientists can identify sources and sinks of carbon dioxide.
+        
+        One challenge, though, is that these neighborhood scans don’t distinguish between point sources of emissions. Due to wind and the proximity of emission sources, it can be unclear how much of the mapped carbon originates from local influences, like a city’s port, heavy industry, or traffic, instead of upwind sources outside a city’s limits. So scientists are in the process of developing techniques to go this extra step.
+
+        Dien Wu of the California Institute of Technology developed a sophisticated wind model that reverse-traced carbon dioxide concentrations back to their original locations. By overlaying these scans with urban maps, she was able to quantify how much was coming from heavy industry, such as factories and oil refineries. Researchers have since used her method to isolate industrial emissions in cities in Europe and China.
+
+    </Prose>
+
+</Block>
+
+<Block>
+  <Prose>
+
+        We are able to disentangle the emission hotspots so that they can be targeted for future reductions, Wu said.
+
+        More recently, Dustin Roten of NASA’s Jet Propulsion Laboratory in Southern California combined the OCO-3 maps with a dataset of fossil fuel carbon dioxide emissions from North Arizona University’s Vulcan Project dataset. This allowed his team to identify emissions coming specifically from factories, ships and roadways, another step in digging greater detail out of the data.
+
+        Because OCO-3 is continually sending down new scans, scientists can search for patterns over time. For example, Roten examined over 30 OCO-3 scans of Los Angeles from 2020 to 2022 to analyze how the Covid-19 pandemic might have impacted emissions from different sectors. As expected, he found that with fewer cars on the road, emissions fell. Additionally, the data showed an increase in shipping emissions at the port of Los Angeles during this time. This increase coincided with a backlog of freight ships idling off the city’s coast, belching out smoke and greenhouse gases. 
+  </Prose>
+  <Figure>
+        <Image 
+          src={new URL('./media/LA-story-img2.png', import.meta.url).href}
+          alt="shipping cranes, bridges and industry area in the Los Angeles port area." 
+          align="left"
+          attrAuthor="Llstock/Adobe Stock"
+          caption="Satellite-based observations allow scientists to pinpoint sources of carbon dioxide emissions associated with the burning of fossil fuels, including industrial areas and shipping ports. " 
+          width="600"
+        />
+  </Figure>
+</Block>
+
+<Block>
+  <Prose>
+
         Roten hopes to further develop these techniques to offer a way to test how well reduction strategies are working. For example, he said, analysis by scientists could quantify the effects of safer bike lanes, faster bus routes, different commuting patterns, or even new metro systems on carbon dioxide emissions.
         
         “There is a broad interest in putting the satellite and inventory data together,” Roten said. “It will create a nice, robust system that will let us observe the results of CO₂ reduction policies in near-real time.”
-    </Prose>
-
+  </Prose>
 </Block>
 
 <Block>
