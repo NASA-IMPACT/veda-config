@@ -127,15 +127,7 @@ const MODALS_CONTENT = {
     headline: "Disclaimer",
     body: (
       <p>
-        This Exploration and Analysis environment is an interactive space 
-        for users to visually examine data within a mapping environment 
-        and to create time series of basic statistics for dataset layers. 
-        The statistics calculation ensures correct representation of data
-        across latitudes (area weighting / equal area reprojection).
-        This environment is intended for quickly exploring spatial and temporal 
-        patterns and not for use in rigorous scientific data analysis. 
-        For complete documentation of the data shown, please visit the dataset 
-        overview pages by clicking the (i) on each data layer.
+        This Exploration environment is an interactive space for users to visually examine data within a mapping environment and to create time series of basic statistics for selected dataset layers. The statistics calculation ensures correct representation of data across latitudes using area weighting and equal area reprojection. This environment is intended for quickly exploring spatial and temporal patterns and not for use in rigorous scientific data analysis. For complete documentation of the data shown, please visit the dataset overview pages by clicking the (i) on each data layer.
       </p>
     ),
   },
