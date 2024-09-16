@@ -21,7 +21,6 @@ taxonomy:
 ---
 
 import Quote from "./components/quote";
-import InlineImage from "./components/inlineImage";
 
 
 <Block>
@@ -42,15 +41,21 @@ import InlineImage from "./components/inlineImage";
 
         <p>But an even more complete picture comes into play when scientists combine “bottom-up” information with emissions estimates based on “top-down” methods. “Top-down” estimates involve taking direct measurements of GHG concentrations in Earth’s atmosphere, studying subtle changes that may be associated with weather and seasonal variations, and making inferences about the reasons for observed fluctuations.</p>
 
-        <InlineImage
-            src={new URL('./media/US_INC.png', import.meta.url).href}
-            alt="street view of a city with tower in distance showing image of instruments on tower"
-            align="left"
-            caption="Indianapolis is the site of NIST’s longest-running urban testbed, which began in 2010 as the Indianapolis Flux Experiment, also known as INFLUX. These long-standing atmospheric measurements offer a unique and valuable opportunity to assess changes and trends in greenhouse gases around Indianapolis."
-            attrAuthor="INFLUX project / NIST"
-            attrUrl="https://bpb-us-e1.wpmucdn.com/sites.psu.edu/dist/9/4276/files/2023/09/US_INC.png "
-            width="600"
-        />
+        <div style={{float: "left"}}>
+            <Image
+                src={new URL('./media/US_INC.png', import.meta.url).href}
+                alt="street view of a city with tower in distance showing image of instruments on tower"
+                align="left"
+                attrAuthor="INFLUX project / NIST"
+                attrUrl="https://bpb-us-e1.wpmucdn.com/sites.psu.edu/dist/9/4276/files/2023/09/US_INC.png "
+                width="600"
+            />
+            <div style={{width:"600px"}}>
+            <Caption>
+                    NIST's Greenhouse Gas Measurements Program develops advanced tools for accurately measuring emissions so industries and governments will have the information they need to manage emissions effectively. Video by [NIST](https://www.nist.gov/).
+            </Caption>
+            </div>
+        </div>
 
         <p>Comparing the two helps reduce uncertainties and improve the overall accuracy of greenhouse gas emissions estimates. This is where the NIST testbed system comes in. It is designed to aid researchers in combining top-down and bottom-up approaches in key regions.</p>
 
