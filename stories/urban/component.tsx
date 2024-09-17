@@ -27,7 +27,7 @@ export default function Urban() {
             <Grid col={10} className="margin-bottom-4">
                 <Title>Features: Latest Datasets Now on the Portal</Title>
                 <p className="margin-bottom-2 font-size-md-deprecated">
-                Read about the latest national and city scale datasets now available on the US GHG Center portal and how the data enables greater understanding of local emissions in cities across the U.S.
+                Read about the latest national and city scale datasets now available on the US GHG Center portal and how the data enables greater understanding of local emissions.
                 </p>
             </Grid>
             <Keypoints data={keyUrbanDatasets} cardType="classic"></Keypoints>
@@ -42,7 +42,7 @@ export default function Urban() {
             <Grid col={10} className="margin-bottom-4">
                 <Title>Resources for Data Users</Title>
                 <p className="margin-bottom-2 font-size-md-deprecated">
-                Would you like to explore and engage directly with the data? Discover detailed dataset information, interactive maps, data visualizations, and open source tools by clicking Data Toolkit at the top or bottom of any page.
+                Would you like to explore and engage directly with the data? Discover detailed dataset information, interactive maps, data visualizations, and open source tools by clicking “Data Toolkit” at the top or bottom of any page.
                 </p>
             </Grid>
         </GridContainer>

@@ -11,7 +11,7 @@ import { Actions } from "$veda-ui-scripts/components/common/browse-controls/use-
 export const focusAreaDatasets = [
   {
     "title": "Gridded Anthropogenic Greenhouse Gas Emissions",
-    "desc": "Emission estimates from human activities including the energy, agriculture, waste, and industry sectors",
+    "desc": "Emission estimates from human activities including the energy, agriculture, waste, and industry sectors.",
     "img": {
       "src": featureEmissions,
       "alt": "image of oil refinery."
@@ -29,7 +29,7 @@ export const focusAreaDatasets = [
   },
   {
     "title": "Natural Greenhouse Gas Sources and Sinks",
-    "desc": "Naturally-occurring greenhouse gas fluxes from land, ocean, and atmosphere",
+    "desc": "Naturally-occurring greenhouse gas fluxes from land, ocean, and atmosphere.",
     "img": {
       "src": featureSources,
       "alt": "image of green wetlands."
@@ -47,10 +47,10 @@ export const focusAreaDatasets = [
   },
   {
     "title": "New Observations for Tracking Large Emission Events",
-    "desc": "Identify and quantify large methane leak events leveraging aircraft and space-based data",
+    "desc": "Identify and quantify large methane leak events leveraging aircraft and space-based data.",
     "img": {
       "src": featureMethane,
-      "alt": "image of colorful polygon against satellite landscape surface in brown."
+      "alt": "image of colorful polygon against satellite view of landscape surface."
     },
     "link": {
       "url": `${DATASETS_PATH}?${Actions.TAXONOMY}=${encodeURIComponent(JSON.stringify({ Topics: "large-emission-events" }))}`,
@@ -127,7 +127,7 @@ export const dataEngagements = [
 export const customInterfaces = [
   {
     "title": "EMIT Methane Plume Viewer",
-    "desc": "Detailed information for methane plumes identified using EMIT",
+    "desc": "Detailed information for methane plumes identified using EMIT.",
     "img": {
       "src": new URL('./media/emit.jpg', import.meta.url).href,
       "alt": "view of colored shape overlaid on satellite landscape image with boxes of information containing plume details"
@@ -140,7 +140,7 @@ export const customInterfaces = [
   },
   {
     "title": "NOAA Concentration Viewer",
-    "desc": "Measurements of carbon dioxide and methane concentrations from ground stations throughout the US and worldwide",
+    "desc": "Measurements of carbon dioxide and methane concentrations from ground stations throughout the US and worldwide.",
     "img": {
       "src": new URL('./media/co2.jpg', import.meta.url).href,
       "alt": "map showing Mauna Loa location of station with a time series of data below the map"
@@ -164,7 +164,7 @@ export const customInterfaces = [
   },
   {
     "title": "NIST Tower Data Viewer",
-    "desc": "Measurements of carbon dioxide and methane concentrations from urban tower instruments",
+    "desc": "Measurements of carbon dioxide and methane concentrations from urban tower instruments.",
     "img": {
       "src": new URL('./media/nist-co2-nwb.jpg', import.meta.url).href,
       "alt": "map showing Northwest Baltimore, MD location of station with a time series of data below the map"
@@ -208,7 +208,7 @@ export const cities = [
   },
   {
     "title": "New York City Researchers Take to the Street to Investigate Emissions",
-    "desc": "Researchers are working with the New York State Energy Research & Development Authority to improve emissions estimates by combining measurements from a network of sensors across NYC with data collected by satellites and aircraft, in order to identify unidentified or incorrectly cataloged sources of GHGs and study interactions with other air pollutants.",
+    "desc": "Researchers are working with the New York State Energy Research & Development Authority to improve emissions estimates by combining measurements from a network of sensors across NYC with data collected by satellites and aircraft, to pinpoint unidentified or incorrectly cataloged sources of GHGs and study interactions with other air pollutants.",
     "img": {
       "src": "https://i.natgeofe.com/n/874df281-d3e0-489a-98c0-6b840023b828/newyork_NationalGeographic_2328428.jpg",
       "alt": "New York"
@@ -233,8 +233,8 @@ export const cities = [
     "footer": null
   },
   {
-    "title": "Scientists Use Satellite Data to Measure Impact of Los Angeles Climate Solutions",
-    "desc": "From its vantage point on the International Space Station, NASA’s Orbiting Carbon Observatory-3 provides near-real time measurements of carbon dioxide concentrations for wide regions across the globe. Scientists are using the data to examine the impact of efforts to reduce emissions in Los Angeles.",
+    "title": "Satellite Data to Help Measure Impact of Los Angeles Climate Solutions",
+    "desc": "From its vantage point on the International Space Station, NASA’s Orbiting Carbon Observatory-3 provides measurements of carbon dioxide concentrations over many of the world’s cities. Scientists are using the data to examine the impact of efforts to reduce emissions in Los Angeles.",
     "img": {
       "src": "https://i.natgeofe.com/n/110d522c-7c56-4185-ba59-3162a78e3abc/1_3x2.jpg",
       "alt": "Los Angeles"
@@ -249,8 +249,8 @@ export const cities = [
 
 export const keyUrbanDatasets = [
   {
-    "title": "New Dataset Offers Neighborhood-Scale View of Carbon Emissions",
-    "desc": "Carbon dioxide emissions data are now available at a granular level, from city blocks to entire counties across the contiguous U.S. The latest dataset from the Vulcan Project, called Vulcan 4.0, helps researchers to analyze annual CO₂ emissions at fine scales and urban decision-makers to develop localized carbon management strategies.",
+    "title": "Carbon Dioxide Emissions Estimates Available at Neighborhood Scale",
+    "desc": "Carbon dioxide emissions data are now available at a granular level, from city blocks to entire counties across the contiguous U.S. The latest dataset from the Vulcan Project, called Vulcan 4.0, helps researchers to analyze annual CO₂ emissions at fine scales and helps urban decision-makers to develop localized carbon management strategies.",
     "img": {
       "src": new URL('../stories/media/urban-1.jpeg', import.meta.url).href,
       "alt": "magnifying glass with CO₂ written in text with background of smoke coming out of factories."
@@ -263,7 +263,7 @@ export const keyUrbanDatasets = [
   },
   {
     "title": "Nationwide Dataset Connects Greenhouse Gases and Air Quality",
-    "desc": "The GReenhouse gas And Air Pollutants Emissions System (GRA²PES), from NOAA and NIST, is the first U.S.-based system to combine greenhouse gas and air quality pollutant sources into a single national database, offering benefits for both climate and public health solutions.",
+    "desc": "The GReenhouse gas And Air Pollutants Emissions System (GRA²PES), from NOAA and NIST, combines information on greenhouse gas and air quality pollutant sources into a single national database, offering innovative geospatial detail and new benefits for both climate and public health solutions.",
     "img": {
       "src": new URL('../stories/media/gra2pes.png', import.meta.url).href,
       "alt": "Comparison of CO₂ and NOₓ emission from GRA2PES dataset"
