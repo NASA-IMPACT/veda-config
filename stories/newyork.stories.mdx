@@ -1,7 +1,7 @@
 ---
 id: "newyork"
 name: "New York City Researchers Take to the Street to Investigate Emissions"
-description: "Researchers at Columbia University are working with the New York State Energy Research & Development Authority to improve emissions estimates by combining measurements from a network of sensors across NYC with data collected by NASA satellites and aircraft, identifying unidentified or incorrectly cataloged sources of GHGs."
+description: "Researchers are working with the New York State Energy Research & Development Authority to improve emissions estimates by combining measurements from a network of sensors across NYC with data collected by satellites and aircraft, pinpoint unidentified or incorrectly cataloged sources of GHGs and study interactions with other air pollutants."
 isHidden: false
 featured: true
 media:
@@ -12,9 +12,16 @@ media:
      url: "https://stock.adobe.com/images/aerial-view-of-lower-manhattan-new-york-city/168804068"
 pubDate: 2024-09-20
 taxonomy:
-   - name: Topics
-     values:
-       - Urban
+  - name: Topics
+    values:
+      - Urban
+  - name: Gas
+    values:
+      - CO₂ 
+      - CH₄
+      - NOₓ
+      - SO₂
+      - PM2.5
 ---
 
 <Block>
@@ -31,30 +38,35 @@ taxonomy:
         <Image
             src={new URL('./media/nyc_story_image_asset_1.jpg', import.meta.url).href}
             alt="two people operating a drone in a forested area"
-            align="center"
+            align="left"
             attrAuthor="Courtesy of Roisin Commane, Columbia University"
-            attrUrl="https://bpb-us-e1.wpmucdn.com/sites.psu.edu/dist/9/4276/files/2023/09/US_INC.png "
             caption="Researchers with the New York Atmospheric carbon and Air Quality Project use drones, among other methods, to measure ground-based sources of greenhouse gases and other air pollutants."
             width="600"
         />
       </Figure>
     </Block>
-    <Block>
-      <Prose>
+  <Block>
+    <Prose>
 
-        Commane is interested in the interactions between city greenhouse gas emissions and air pollution. The burning of fossil fuels, primarily for power generation and via vehicles, releases both greenhouse gas emissions and other air pollutants.
-        <Figure>
-          <Image
+      Commane is interested in the interactions between city greenhouse gas emissions and air pollution. The burning of fossil fuels, primarily for power generation and via vehicles, releases both greenhouse gas emissions and other air pollutants.
+    </Prose>
+  </Block>
+
+<Block>
+    <Figure>
+        <Image
             src={new URL('./media/nyc_story_image_asset_2.jpg', import.meta.url).href}
             alt="nyc city scape"
-            align="left"
-            attrAuthor="TBD"
-            attrUrl="https://bpb-us-e1.wpmucdn.com/sites.psu.edu/dist/9/4276/files/2023/09/US_INC.png "
-            caption="Scientists in NYC are exploring the relationship between greenhouses and air quality, including combinations that cause smog, as seen here over Manhattan."
+            attrAuthor="Adobe Stock (licensed)"
           />
-        </Figure>
+        <Caption>
+            Scientists in NYC are exploring the relationship between greenhouses and air quality, including combinations that cause smog, as seen here over Manhattan.
+        </Caption>
+    </Figure>
+</Block>
 
-
+  <Block>
+    <Prose>
         She’s been working to measure both in New York City since 2019. Her team has set up a network of carbon dioxide, carbon monoxide, and methane sensors around the New York City area. She’s also hit the road, measuring sources on the ground using portable sensors and drones.
 
         Over the years, Commane and her collaborators have reported some interesting findings.
@@ -81,9 +93,8 @@ taxonomy:
       <Image
         src={new URL('./media/nyc_story_image_asset_3.jpg', import.meta.url).href}
         alt="tail of a NASA aircraft in the hangar"
-        align="center"
+        align="left"
         attrAuthor="Monica Vazquez Gonzales"
-        attrUrl="https://bpb-us-e1.wpmucdn.com/sites.psu.edu/dist/9/4276/files/2023/09/US_INC.png"
         caption="NASA’s DC-8 aircraft is prepared for a July 2023 flight to take airborne measurements of air quality, offering valuable data for atmospheric concentrations."
         height="600"
       />
@@ -92,15 +103,22 @@ taxonomy:
 </Block>
 <Block>
     <Prose>
-    Commane noted the unprecedented amount of open data currently available. Case in point: last summer’s NASA-led mission that included a fleet of aircraft, laboratories on wheels, weather balloons, and hundreds of scientists mobilizing to track gases and other air pollutants in unprecedented detail.
+    Commane noted the unprecedented amount of open data currently available. Case in point: last summer’s NASA- and NOAA-led missions which included a fleet of aircraft, laboratories on wheels, weather balloons, and hundreds of scientists mobilizing to track gases and other air pollutants in unprecedented detail.
 
-    That mission, called Synergistic TEMPO Air Quality Science ([STAQS](https://espo.nasa.gov/staqs/content/STAQS)), honed in on several North American population centers: New York City, Chicago, Los Angeles, and Toronto. The goal was to map gases and other air pollutants from the ground up through the [troposphere](https://science.nasa.gov/earth/earth-atmosphere/earths-atmosphere-a-multi-layered-cake/), the lowest and largest layer of Earth’s atmosphere, in order to track where they come from and how they change hour by hour, and identify neighborhoods disproportionately exposed to unhealthy air.
+    Those missions – NASA’s [STAQS](https://espo.nasa.gov/staqs/content/STAQS) and NOAA’s [AEROMMA](https://csl.noaa.gov/projects/aeromma/) and [CUPiDS](https://csl.noaa.gov/groups/csl3/measurements/2023cupids/) – honed in on several North American population centers: New York City, Chicago, Los Angeles, and Toronto. The goal was to map gases and other air pollutants from the ground up through the [troposphere](https://science.nasa.gov/earth/earth-atmosphere/earths-atmosphere-a-multi-layered-cake/), the lowest and largest layer of Earth’s atmosphere, in order to track where they come from and how they change hour by hour, and identify neighborhoods disproportionately exposed to unhealthy air.
 
     And while their team is currently working through the findings from New York, what they learn can be applied in other communities to more accurately estimate emissions and improve efforts to reduce them.
   
     “The lessons we learn from New York will have an immediate impact on tens of millions of people living locally but can be applied everywhere,” Commane said. “If we can do it in New York, we can do it anywhere.”
 
     “It’s all hands on deck,” said Burkhard.
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  ## Resources for Data Users
+  - Detailed dataset information: [New York Atmospheric carbon and Air Quality Project](https://atmoscomp.ldeo.columbia.edu/content/data-sharing)
   </Prose>
 </Block>
 
@@ -119,9 +137,3 @@ taxonomy:
   </Prose>
 </Block>
 
-<Block>
-  <Prose>
-  ## Resources for Data Users
-  - Detailed dataset information: [New York Atmospheric carbon and Air Quality Project](https://atmoscomp.ldeo.columbia.edu/content/data-sharing)
-  </Prose>
-</Block>

@@ -3,10 +3,10 @@ id: vulcan-ffco2-yeargrid-v4
 name: Vulcan Fossil Fuel CO₂ Emissions
 description: Annual (2010 - 2021), 1 km resolution estimates of carbon dioxide emissions from fossil fuel combustion over the contiguous United States, version 4.0
 usage:
-  - url: "https://us-ghg-center.github.io/ghgc-docs/pr-preview/pr-123/cog_transformation/vulcan-ffco2-yeargrid-v4.html"
+  - url: "https://us-ghg-center.github.io/ghgc-docs/cog_transformation/vulcan-ffco2-yeargrid-v4.html"
     label: Notebook showing data transformation to COG for ingest to the US GHG Center
     title: 'Data Transformation Notebook'
-  - url: "https://us-ghg-center.github.io/ghgc-docs/pr-preview/pr-123/datausage.html"
+  - url: "https://us-ghg-center.github.io/ghgc-docs/datausage.html"
     label: Notebooks to read, visualize, and explore data statistics
     title: 'Data Usage Notebooks'
   - url: "https://hub.ghg.center/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FUS-GHG-Center%2Fghgc-docs&urlpath=lab%2Ftree%2Fghgc-docs%2Fuser_data_notebooks%2Fvulcan-ffco2-yeargrid-v4_User_Notebook.ipynb&branch=main"
@@ -38,6 +38,7 @@ taxonomy:
   - name: Product Type
     values:
       - Hybrid Product
+sourceExclusive: NSF
 infoDescription: |
   ::markdown
     - Temporal Extent: 2010 - 2021
@@ -90,6 +91,7 @@ layers:
         - '#d8434e' 
         - '#9e0142'
     analysis:
+      exclude: true
       metrics:
         - mean
       sourceParams:
@@ -146,6 +148,7 @@ layers:
         - '#d8434e' 
         - '#9e0142'
     analysis:
+      exclude: true
       metrics:
         - mean
       sourceParams:
@@ -201,6 +204,7 @@ layers:
         - '#d8434e' 
         - '#9e0142'
     analysis:
+      exclude: true
       metrics:
         - mean
       sourceParams:
@@ -256,6 +260,7 @@ layers:
         - '#d8434e' 
         - '#9e0142'
     analysis:
+      exclude: true
       metrics:
         - mean
       sourceParams:
@@ -311,6 +316,7 @@ layers:
         - '#d8434e' 
         - '#9e0142'
     analysis:
+      exclude: true
       metrics:
         - mean
       sourceParams:
@@ -366,6 +372,7 @@ layers:
         - '#d8434e' 
         - '#9e0142'
     analysis:
+      exclude: true
       metrics:
         - mean
       sourceParams:
@@ -421,6 +428,7 @@ layers:
         - '#d8434e' 
         - '#9e0142'
     analysis:
+      exclude: true
       metrics:
         - mean
       sourceParams:
@@ -476,6 +484,7 @@ layers:
         - '#d8434e' 
         - '#9e0142'
     analysis:
+      exclude: true
       metrics:
         - mean
       sourceParams:
@@ -531,6 +540,7 @@ layers:
         - '#d8434e' 
         - '#9e0142'
     analysis:
+      exclude: true
       metrics:
         - mean
       sourceParams:
@@ -586,6 +596,7 @@ layers:
         - '#d8434e' 
         - '#9e0142'
     analysis:
+      exclude: true
       metrics:
         - mean
       sourceParams:
@@ -641,6 +652,7 @@ layers:
         - '#d8434e' 
         - '#9e0142'
     analysis:
+      exclude: true
       metrics:
         - mean
       sourceParams:
@@ -691,13 +703,13 @@ layers:
     The Vulcan data product is an attempt to estimate fossil fuel CO₂ (ffCO₂) emissions at fine time and space scales. It should be considered a “climatology” of emissions rather than the “weather” of emissions. This means that the estimates represent “typical” emissions at a specific time and place (average conditions). Hence, it is not considered appropriate to use in comparison to short-term “campaign” style atmospheric measurements (e.g. 5 days of continuous monitoring at a specific location) without consideration of the mismatch between the measurement and the Vulcan estimation approach.   
     
     ## Scientific Details
-    Vulcan covers 10 emission source sectors and is constructed from numerous public datasets that generate the emissions’ magnitude in addition to space and time distributions. The ffCO₂ emissions are estimated at a mixture of spatial and temporal resolutions (e.g., polygons, points, lines, annual, hourly) depending upon the characteristics of the incoming data sources and spatialization/temporalization techniques. Hence, some sources receive spatial and temporal “conditioning” (e.g., downscaling, interpolation, proxy surrogates) to arrive at the mix of spatial resolutions (point, polylines, polygons) and hourly resolution for each of the years spanning the 2010-2021 period. The emissions are typically gridded to spatial resolutions coarser than 0.5 km x 0.5 km. Please refer to the [Vulcan data derivation notes](https://docs.google.com/document/d/1DCwFoMdDy8xGJ-zcdX8IkNwo6cEwFc7E7Xu47IgE2Ik/edit?usp=sharing) for further detail on the methods for estimating emissions in the largest sectors: electricity production, industrial, on-road, and residential/commercial emissions. Methods for the remaining sectors: airport, railroad, commercial marine vessels, non-road, and cement can be found in [Gurney et al., 2020](https://doi.org/10.1029/2020JD032974) which describes the previous version of Vulcan, [Vulcan v3.0](https://doi.org/10.3334/ORNLDAAC/1741).
+    Vulcan covers 10 emission source sectors and is constructed from numerous public datasets that generate the emissions’ magnitude in addition to space and time distributions. The ffCO₂ emissions are estimated at a mixture of spatial and temporal resolutions (e.g., polygons, points, lines, annual, hourly) depending upon the characteristics of the incoming data sources and spatialization/temporalization techniques. Hence, some sources receive spatial and temporal “conditioning” (e.g., downscaling, interpolation, proxy surrogates) to arrive at the mix of spatial resolutions (point, polylines, polygons) and hourly resolution for each of the years spanning the 2010-2021 period. The emissions are typically gridded to spatial resolutions coarser than 0.5 km x 0.5 km. Please refer to the [Vulcan data derivation notes](https://drive.google.com/file/d/1NyIvUW-ABCkf5AUZezKSVma0F4TwAG2d/view?usp=drive_link) for further detail on the methods for estimating emissions in the largest sectors: electricity production, industrial, on-road, and residential/commercial emissions. Methods for the remaining sectors: airport, railroad, commercial marine vessels, non-road, and cement can be found in [Gurney et al., 2020](https://doi.org/10.1029/2020JD032974) which describes the previous version of Vulcan, [Vulcan v3.0](https://doi.org/10.3334/ORNLDAAC/1741).
     
     ## Key Publications
-    Gurney, K. R., Liang, J., Patarasuk, R., Song, Y., Huang, J., & Roest, G. (2020). The Vulcan Version 3.0 High-Resolution Fossil Fuel CO₂ Emissions for the United States. *Journal of Geophysical Research: Atmospheres*, 125(19), e2020JD032974. [https://doi.org/10.1029/2020JD032974](https://doi.org/10.1029/2020JD032974)
+    Gurney, K. R., Liang, J., Patarasuk, R., Song, Y., Huang, J., & Roest, G. (2020). The Vulcan Version 3.0 High-Resolution Fossil Fuel CO₂ Emissions for the United States. *Journal of Geophysical Research: Atmospheres, 125*(19), e2020JD032974. [https://doi.org/10.1029/2020JD032974](https://doi.org/10.1029/2020JD032974)
     
     ## Other Relevant Publications
-    Gurney, K. R., Mendoza, D. L., Zhou, Y., Fischer, M. L., Miller, C. C., Geethakumar, S., de la Rue du Can, S. (2009). High Resolution Fossil Fuel Combustion CO₂ Emission Fluxes for the United States. *Environmental Science & Technology*, 43(14), 5535-5541. [https://doi.org/10.1021/es900806c](https://doi.org/10.1021/es900806c)
+    Gurney, K. R., Mendoza, D. L., Zhou, Y., Fischer, M. L., Miller, C. C., Geethakumar, S., de la Rue du Can, S. (2009). High Resolution Fossil Fuel Combustion CO₂ Emission Fluxes for the United States. *Environmental Science & Technology, 43*(14), 5535-5541. [https://doi.org/10.1021/es900806c](https://doi.org/10.1021/es900806c)
 
     ## Learn More
     - Learn more about how decision-makers and researchers <Link to="/stories/vulcan">can leverage Vulcan data</Link>
@@ -712,9 +724,9 @@ layers:
     This data product is made freely available to the public and the scientific community in the belief that its wide dissemination will lead to greater scientific understanding and policy insights. The availability of this data product does not constitute publication of the data product or permission to use the information contained in the data product for publication or any commercial use. Please refer to the [Vulcan data Terms of Use for further information](https://vulcan.rc.nau.edu/assets/files/Terms.of.Use.12.20.2018.pdf). 
     
     ## Data Stewardship
-    - [Data Workflow](https://us-ghg-center.github.io/ghgc-docs/pr-preview/pr-123/data_workflow/vulcan-ffco2-yeargrid-v4_Data_Flow.html)
-    - [Data Transformation Code](https://us-ghg-center.github.io/ghgc-docs/pr-preview/pr-123/cog_transformation/vulcan-ffco2-yeargrid-v4.html)
-    - [US GHG Center Data Intake Processing and Verification Report](https://us-ghg-center.github.io/ghgc-docs/pr-preview/pr-123/processing_and_verification_reports/vulcan-ffco2-yeargrid-v4_Processing%20and%20Verification%20Report.html)
+    - [Data Workflow](https://us-ghg-center.github.io/ghgc-docs/data_workflow/vulcan-ffco2-yeargrid-v4_Data_Flow.html)
+    - [Data Transformation Code](https://us-ghg-center.github.io/ghgc-docs/cog_transformation/vulcan-ffco2-yeargrid-v4.html)
+    - [US GHG Center Data Intake Processing and Verification Report](https://us-ghg-center.github.io/ghgc-docs/processing_and_verification_reports/vulcan-ffco2-yeargrid-v4_Processing%20and%20Verification%20Report.html)
 
   </Prose>
 </Block>
