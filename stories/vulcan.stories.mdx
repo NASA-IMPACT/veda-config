@@ -22,26 +22,17 @@ taxonomy:
 
 <Block>
   <Prose>
-    Decision makers can now view annual carbon dioxide emissions estimates block-by-block in cities across the contiguous United States. This data is available on the U.S. Greenhouse Gas Center (US GHG Center) portal, a U.S. federal multi-agency website designed to make greenhouse gas information easily accessible.
+    Decision makers can now view annual  estimates of carbon dioxide emissions related to fossil fuel burning at a neighborhood scale across the contiguous United States. This data is available on the U.S. Greenhouse Gas Center (US GHG Center) portal, a U.S. federal multi-agency website designed to make greenhouse gas information easily accessible.
 
-    Mapping greenhouse gas emissions from human activities across the United States can reveal how the country uses energy. Cities are the epicenters of emissions, and population centers along the East Coast light up the map with fossil fuel use. Users of a carbon dioxide (CO₂) emissions dataset called the Vulcan Project can zoom in to look at emissions by county, city, or even the neighborhood level. Offering data per one-square-kilometer area, this level of detail can help to identify emissions sources and, potentially,ways to reduce fossil fuel use.
-  </Prose>
-</Block>
+    Mapping greenhouse gas emissions from human activities across the United States can reveal how the country uses energy. **The U.S. government has a long history of tracking source-specific emissions and trends of greenhouse gases at the national and state scales, such as through the EPA’s [U.S. Inventory of Greenhouse Gas Emissions and Sinks]( https://www.epa.gov/ghgemissions/inventory-us-greenhouse-gas-emissions-and-sinks).**
+    
+    At finer spatial scales, cities are the epicenters of carbon dioxide (CO₂) emissions, and population centers along the East Coast light up the map with fossil fuel use. Users of a CO₂ emissions dataset called the Vulcan Project can zoom in to look at emissions by county, city, or even the neighborhood level. Offering data per one-square-kilometer area, this level of detail can help to identify emissions sources and, potentially,ways to reduce fossil fuel use.
 
-<Block type="wide">
-  <Figure>
-    <Embed
-      height="800"
-      src="https://earth.gov/ghgcenter/custom-interfaces/urban-dashboard/?dataset=vulcan"
-    />
-  </Figure>
-</Block>
-
-<Block>
-  <Prose>
     “Our ability to quantify CO₂ at these local scales allow us to explore fascinating questions,” said Kevin Gurney, director of the Vulcan Project at Northern Arizona University in Flagstaff. “It was always the idea to get the entire landscape so that we were tracking all of the fuel combustion in the contiguous United States, no matter where it occurred.”
 
     Researchers using Vulcan datasets can see that industrial activities have moved to more rural regions as cities are now more residential and commercial, Gurney noted. Data from the project also demonstrate efficiencies of scale: When considered on a per person basis, some cities produce fewer CO₂ emissions as they grow. Others, particularly sprawling cities in the American West, see those efficiencies overwhelmed as more people end up driving farther distances.
+
+    With the fourth version of the Vulcan Project, Vulcan 4.0, now part of the U.S. GHG Center, Gurney said decision makers at local levels can now easily dig into the data to find ways to reduce emissions specific to their municipalities.
     </Prose>
   </Block>
 
@@ -57,7 +48,7 @@ taxonomy:
       zoom={8}
     />
     <Caption>
-      Scope 1 (left) VS Scope 2 (right) residential fossil fuel CO₂ emissions (2021) for Phoenix, Arizona
+      Scope 1 emissions refer to greenhouse gases released directly on site, from sources like vehicles, boilers, and furnaces, whereas Scope 2 emissions relate to indirect emissions generated from purchased electricity, heat, steam or cooling. In a warmer climate like Phoenix, Arizona, there is less need for heating homes, leading to lower scope 1 residential emissions, yet air conditioning may be needed throughout the year, leading to significantly higher scope 2 emissions, as shown using data from the Vulcan dataset. 
     </Caption>
   </Figure>
 </Block>
@@ -74,17 +65,28 @@ taxonomy:
       zoom={8}
     />
     <Caption>
-      Scope 1 (left) VS Scope 2 (right) residential fossil fuel CO₂ emissions (2021) for Minneapolis, Minnesota
+      In a more variable climate, residents may use a furnace to heat their homes throughout colder winters and may have less need for air conditioning throughout the moderate summer. Vulcan data shows more comparable scope 1 and scope 2 residential emissions in Minneapolis, Minnesota. Understanding the unique emissions characteristics of cities allows decision-makers to create more informed, localized climate action plans.
     </Caption>
   </Figure>
 </Block>
 
 <Block>
   <Prose>
-    With the fourth version of the Vulcan Project, Vulcan 4.0, now part of the U.S. GHG Center, Gurney said decision makers at local levels can now easily dig into the data to find ways to reduce emissions specific to their municipalities.
-
     “My real hope is that this enables cities, counties, and other entities to have a useful tool in accounting for and understanding their greenhouse gas emissions, saving staff time and resources,” he said.
+  </Prose>
+</Block>
 
+<Block type="wide">
+  <Figure>
+    <Embed
+      height="800"
+      src="https://earth.gov/ghgcenter/custom-interfaces/urban-dashboard/?dataset=vulcan"
+    />
+  </Figure>
+</Block>
+
+<Block>
+  <Prose>
     The Vulcan Project began in 2004 with grants from NASA, and later from the National Science Foundation and NOAA. The goal was to explore a basic question in carbon cycle science: Where do atmospheric greenhouse gases come from? Gurney wanted to quantify how the biosphere, Earth’s zone of life, exchanges CO₂. To do that, he needed to estimate where, and how much, people were burning fossil fuels.
 
     He was also researching climate solutions. As federal agencies and leaders sought to address CO₂ emissions at the national scale, it became clear to Gurney that cities and other smaller municipalities also had opportunities to take action – but they needed targeted data to inform their strategies. A database devoted to fine-resolution, consistent information on the sources of emissions from human activities fit the bill.
@@ -92,8 +94,27 @@ taxonomy:
     “Because we were getting these emission analyses down to scales that are meaningful, that are relevant to humans, the project took on a life of its own,” Gurney said.
 
     To locate CO₂ emissions from fossil fuel burning, the Vulcan project determines the use of a given site, whether it’s housing or commercial, industrial or agricultural, roads or railroads, and everything in between. Vulcan’s computer models use information from government agencies like the EPA, the U.S. Department of Energy, and the Federal Highway Administration.
+    
+  </Prose>
+</Block>  
+    
+<Block>
+    <Figure>
+        <Image
+            src={new URL('./media/vulcan-img3.jpg', import.meta.url).href}
+            alt="urban industrial smoke stacks spewing emissions at sunset"
+            attrAuthor="Adobe Stock"
+        />
+        <Caption>
+            The burning of fossil fuels is a significant source of CO2 emissions.
+        </Caption>
+    </Figure>
+</Block>
 
-    The models use standard estimates for how much fossil fuel CO₂ emissions each land use activity or infrastructure produces, crunch a massive amount of numbers, and generate a block-by-block accounting of CO₂ production.
+<Block>
+  <Prose>
+
+    The models use standard estimates for how much fossil fuel CO₂ emissions each land use activity or infrastructure produces, crunch a massive amount of numbers, and generate a block-by-block accounting of CO₂ emissions.
 
     The team then checks these modeled estimates against research measurements of CO₂ in the atmosphere, to ensure they match up – and this last step is one thing that makes the Vulcan dataset so trustworthy, Gurney said. When they’ve compared the estimates with the measurements in trial cities, the accuracy is down to a few percentage points.
 
@@ -101,10 +122,9 @@ taxonomy:
 
     “Eventually, we’ll go down to the building scale of the whole United States,” he said.
 
-    “There’s technically no reason we can’t do it, it’s just a computational challenge.”
+    “There’s scientifically no reason we can’t do it, it’s just a computational challenge.”
 
   </Prose>
-
 </Block>
 
 <Block>
@@ -116,16 +136,16 @@ taxonomy:
 
 <Block>
     <Prose>
-    ## Resources for data users
-    - Detailed information on the dataset: <Link to="/data-catalog/vulcan-ffco2-yeargrid-v4">Vulcan 4.0 Dataset Overview</Link>
-    - Explore the data in our customizable interactive map: <Link to="/exploration?search=vulcan-ffco2-yeargrid-v4">Vulcan 4.0 Map Exploration</Link>
+    ## Resources for Data Users
+    - Detailed information on the dataset: <Link to="/data-catalog/vulcan-ffco2-yeargrid-v4">Vulcan Fossil Fuel CO2 Emissions</Link>
+    - Explore the data in the <Link to="/exploration?search=vulcan-ffco2-yeargrid-v4">Vulcan 4.0 customizable interactive map</Link>
     </Prose>
 
 </Block>
 
 <Block>
     <Prose>
-    ## Disclaimers
+    ## Disclaimer
     The new emission datasets and tools described above are not fully consistent with U.S.-wide inventories submitted to fulfill international reporting commitments (i.e., United Nations Framework Convention on Climate Change and the UNECE’s Convention on the Long-Range Transboundary Air Pollution), but are included to provide complementary information for understanding sources and trends of emissions at the urban scale.
     </Prose>
 
