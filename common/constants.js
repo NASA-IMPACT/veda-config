@@ -208,7 +208,7 @@ export const cities = [
   },
   {
     "title": "New York City Researchers Take to the Street to Investigate Emissions",
-    "desc": "Researchers at Columbia University are working with the New York State Energy Research & Development Authority to improve emissions estimates by combining measurements from a network of sensors across NYC with data collected by NASA satellites and aircraft, identifying unidentified or incorrectly cataloged sources of GHGs.",
+    "desc": "Researchers are working with the New York State Energy Research & Development Authority to improve emissions estimates by combining measurements from a network of sensors across NYC with data collected by satellites and aircraft, in order to identify unidentified or incorrectly cataloged sources of GHGs and study interactions with other air pollutants.",
     "img": {
       "src": "https://i.natgeofe.com/n/874df281-d3e0-489a-98c0-6b840023b828/newyork_NationalGeographic_2328428.jpg",
       "alt": "New York"
