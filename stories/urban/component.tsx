@@ -35,7 +35,7 @@ export default function Urban() {
             <Grid col={10} className="margin-bottom-4">
                 <Title>Features: Innovative City-Based Emissions Research</Title>
                 <p className="margin-bottom-2 font-size-md-deprecated">
-                A look into how researchers in some U.S. cities are developing new approaches to improve local greenhouse gas emissions estimates
+                A look into how researchers in some U.S. cities are developing new approaches to improve local greenhouse gas emissions estimates.
                 </p>
             </Grid>
             <Keypoints data={cities}></Keypoints>
