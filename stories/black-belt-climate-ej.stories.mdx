@@ -116,7 +116,7 @@ taxonomy:
 <ScrollytellingBlock>
   <Chapter
    center={[-86.71,33.10]}
-   zoom={5}
+   zoom={6}
    datasetId='svi-overall'
    layerId='social-vulnerability-index-overall'
    datetime='2016-01-01' 
@@ -259,12 +259,15 @@ taxonomy:
      Additionally, outdoor occupations such as transportation and construction have become crucial sources of income and have shown growth over the past few years. Data from the U.S. Census Bureau, which examines the number of establishments by employment category in counties like Choctaw and Butler, underscores the economic importance of these sectors.
     </p>
   </Prose>
-  <Figure style={{ flex: '0 0 auto', marginLeft: '5px' }}>
-    <Image
-      src={new URL('./BB_Estab_Choctaw.png', import.meta.url).href}
-      style={{ maxWidth: '105%', height: 'auto' }}
-    />
-  </Figure> 
+  <Chart
+    style={{ flex: '1' }}
+    dataPath={new URL('./census_bureua_Butler.csv', import.meta.url).href}
+    xKey="YEAR"
+    yKey="EMP_numeric"
+    seriesKey="NAICS2012_LABEL"
+    yAxisLabel="Number of Employees"
+    xAxisLabel="Year"
+  />
 </Block>
 
 <Block style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
