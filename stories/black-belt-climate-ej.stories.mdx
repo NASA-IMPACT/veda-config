@@ -253,12 +253,33 @@ taxonomy:
   </Figure> 
 </Block>
 
+<Block>
+  <Figure>
+    <Chart
+      dataPath={new URL('./census_bureua_Butler.csv', import.meta.url).href}
+      dateFormat="%m/%d/%Y"
+      xKey='YEAR'
+      yKey='EMP_numeric'
+      yAxisLabel='EMP_numeric'
+    />
+    <Caption>
+      Monthly-averaged MODIS-derived NDVI values over the Camp Fire domain from 2002 to 2022. The highlighted portion of the time series indicates when the Camp Fire was active.
+    </Caption>
+  </Figure>
+</Block>
+
 <Block style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
   <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
     <p>
      Additionally, outdoor occupations such as transportation and construction have become crucial sources of income and have shown growth over the past few years. Data from the U.S. Census Bureau, which examines the number of establishments by employment category in counties like Choctaw and Butler, underscores the economic importance of these sectors.
     </p>
   </Prose>
+  <Figure style={{ flex: '0 0 auto', marginLeft: '5px' }}>
+    <Image
+      src={new URL('./BB_AgeOperators_Sumter.png', import.meta.url).href}
+      style={{ maxWidth: '700px', height: 'auto' }}
+    />
+  </Figure> 
 </Block>
 
 <Block style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
