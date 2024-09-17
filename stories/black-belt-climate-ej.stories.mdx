@@ -253,20 +253,6 @@ taxonomy:
   </Figure> 
 </Block>
 
-<Block>
-  <Figure>
-    <Chart
-      dataPath={new URL('./census_bureua_Butler.csv', import.meta.url).href}
-      dateFormat="%Y-%m-%d"
-      xKey='YEAR'
-      yKey='EMP_numeric'
-      yAxisLabel='EMP_numeric'
-    />
-    <Caption>
-      Monthly-averaged MODIS-derived NDVI values over the Camp Fire domain from 2002 to 2022. The highlighted portion of the time series indicates when the Camp Fire was active.
-    </Caption>
-  </Figure>
-</Block>
 
 <Block style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
   <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
@@ -276,7 +262,7 @@ taxonomy:
   </Prose>
   <Figure style={{ flex: '0 0 auto', marginLeft: '5px' }}>
     <Image
-      src={new URL('./BB_AgeOperators_Sumter.png', import.meta.url).href}
+      src={new URL('./BB_Estab_AL.png', import.meta.url).href}
       style={{ maxWidth: '700px', height: 'auto' }}
     />
   </Figure> 
