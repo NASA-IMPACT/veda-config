@@ -197,7 +197,7 @@ export const cities = [
     "title": "Baltimore, A Nexus for Government and  Academic Emissions Research",
     "desc": "Scientists from U.S. government agencies and regional universities have come together for cooperative research projects, helping to expand environmental monitoring capabilities and improve resident wellbeing across the Baltimore metropolitan region in line with the city’s ambitious climate action plans.",
     "img": {
-      "src": "https://cdn.britannica.com/90/77990-050-E6087086/Inner-Harbor-skyline-Baltimore-Maryland.jpg",
+      "src": new URL('../stories/media/baltimore_banner.png', import.meta.url).href,
       "alt": "Baltimore"
     },
     "link": {
@@ -210,7 +210,7 @@ export const cities = [
     "title": "New York City Researchers Take to the Street to Investigate Emissions",
     "desc": "Researchers are working with the New York State Energy Research & Development Authority to improve emissions estimates by combining measurements from a network of sensors across NYC with data collected by satellites and aircraft, to pinpoint unidentified or incorrectly cataloged sources of GHGs and study interactions with other air pollutants.",
     "img": {
-      "src": "https://i.natgeofe.com/n/874df281-d3e0-489a-98c0-6b840023b828/newyork_NationalGeographic_2328428.jpg",
+      "src": new URL('../stories/media/newyork_banner.png', import.meta.url).href,
       "alt": "New York"
     },
     "link": {
@@ -223,7 +223,7 @@ export const cities = [
     "title": "Scientists Use Low-Cost Sensor Network to Track San Francisco Area Emissions",
     "desc": "Cities have implemented a variety of measures to meet greenhouse gas emissions goals, including expanding renewable energy use and incentivizing residents to drive electric cars. But a challenge for city leaders is measuring if policies are working. One solution is a network of low-cost sensors, scientists say.",
     "img": {
-      "src": "https://cdn.britannica.com/13/77413-050-95217C0B/Golden-Gate-Bridge-San-Francisco.jpg",
+      "src": new URL('../stories/media/sanfran_banner.png', import.meta.url).href,
       "alt": "San Francisco"
     },
     "link": {
@@ -236,7 +236,7 @@ export const cities = [
     "title": "Satellite Data to Help Measure Impact of Los Angeles Climate Solutions",
     "desc": "From its vantage point on the International Space Station, NASA’s Orbiting Carbon Observatory-3 provides measurements of carbon dioxide concentrations over many of the world’s cities. Scientists are using the data to examine the impact of efforts to reduce emissions in Los Angeles.",
     "img": {
-      "src": "https://i.natgeofe.com/n/110d522c-7c56-4185-ba59-3162a78e3abc/1_3x2.jpg",
+      "src": new URL('../stories/media/losangeles_banner.png', import.meta.url).href,
       "alt": "Los Angeles"
     },
     "link": {
