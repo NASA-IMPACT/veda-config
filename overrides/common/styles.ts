@@ -28,3 +28,16 @@ export const AccessibilityMenuItem = styled(NavLink)`
     text-decoration: underline;
   }
 `;
+
+export const PartnerHeader = styled.div`
+  margin-bottom: 24px;
+
+  a {
+    img {
+      margin-bottom: 32px;
+    }
+    p {
+      margin-top: 16px;
+    }
+  }
+`

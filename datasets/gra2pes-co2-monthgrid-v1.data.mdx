@@ -1,7 +1,7 @@
 ---
 id: gra2pes-ghg-monthgrid-v1
 name: GRA²PES Greenhouse Gas and Air Quality Species 
-description: Monthly, 0.036 degree resolution emissions of carbon dioxide (CO₂), carbon monoxide (CO), nitrogen oxide (NOₓ), sulfur dioxide (SO₂), and particulate matter (PM₂.₅) emissions for the year 2021 over the Contiguous United States from the Greenhouse gas And Air Pollutants Emissions System (GRA²PES)
+description: Monthly, 0.036 degree resolution emissions of carbon dioxide (CO₂), carbon monoxide (CO), nitrogen oxide (NOₓ), sulfur dioxide (SO₂), and particulate matter (PM2.5) emissions for the year 2021 over the Contiguous United States from the Greenhouse gas And Air Pollutants Emissions System (GRA²PES)
 usage:
   - url: "https://us-ghg-center.github.io/ghgc-docs/pr-preview/pr-123/cog_transformation/gra2pes-ghg-monthgrid-v1.html"
     label: Notebook showing data transformation to COG for ingest to the US GHG Center
@@ -36,7 +36,7 @@ taxonomy:
       - CO
       - NOₓ
       - SO₂
-      - Particulates
+      - PM2.5
   - name: Product Type
     values:
       - Gridded Inventory 
@@ -46,7 +46,7 @@ infoDescription: |
     - Temporal Resolution: Monthly
     - Spatial Extent: Contiguous United States
     - Spatial Resolution: 0.036 x 0.036 degrees
-    - Data Units: Metric tons per kilometer squared per month (tonne/km²/month) for carbon dioxide (ffCO₂), carbon monoxide (CO), nitrogen oxides (NOₓ), sulfur dioxide (SO₂), and particulate matter (PM₂.₅)
+    - Data Units: Metric tons per kilometer squared per month (tonne/km²/month) for carbon dioxide (ffCO₂), carbon monoxide (CO), nitrogen oxides (NOₓ), sulfur dioxide (SO₂), and particulate matter (PM2.5)
     - Data Type: Research
     - Data Latency: Updated ~annually
 layers:
@@ -261,9 +261,9 @@ layers:
 
   - id: pm25
     stacCol: gra2pes-ghg-monthgrid-v1
-    name: Particulate Matter (PM₂.₅) 
+    name: Particulate Matter (PM2.5) 
     type: raster
-    description: Estimated monthly total emissions of fine particulate matter (PM₂.₅) across all sectors.
+    description: Estimated monthly total emissions of fine particulate matter (PM2.5) across all sectors.
     initialDatetime: newest
     projection:
       id: "equirectangular"
@@ -285,7 +285,7 @@ layers:
         }
     legend:
       unit:
-        label: PM₂.₅/km²/month
+        label: PM2.5/km²/month
       type: gradient
       min: 0
       max: 0.2
@@ -304,7 +304,7 @@ layers:
       source: NASA
       spatialExtent: Global
       temporalResolution: Annual
-      unit: PM₂.₅/km²/month
+      unit: PM2.5/km²/month
     media:
       src: ::file ./media/gra2pes-ghg-pm25-monthgrid-v1.thumbnails.total.png
       alt: Rendered CO₂ Emissions                   
@@ -316,11 +316,11 @@ layers:
     **Temporal Resolution:** Monthly<br />
     **Spatial Extent:** Contiguous United States<br />
     **Spatial Resolution:** 0.036 x 0.036 degrees<br />
-    **Data Units:** Metric tons per kilometer squared per month (tonne/km²/month) for carbon dioxide (CO₂), carbon monoxide (CO), nitrogen oxides (NOₓ), sulfur dioxide (SO₂), and particulate matter (PM₂.₅)<br />
+    **Data Units:** Metric tons per kilometer squared per month (tonne/km²/month) for carbon dioxide (CO₂), carbon monoxide (CO), nitrogen oxides (NOₓ), sulfur dioxide (SO₂), and particulate matter (PM2.5)<br />
     **Data Type:** Research<br />
     **Data Latency:** Updated ~annually<br />
 
-    The Greenhouse gas And Air Pollutants Emissions System (GRA²PES) dataset at the GHG Center is an aggregated, regridded, monthly high-resolution (0.036 x 0.036°) data product with emissions of both greenhouse gases and air pollutants developed in a consistent framework. The dataset contains emissions over the contiguous United States covering major anthropogenic sectors, including energy, industrial fuel combustion and processes, commercial and residential combustion, oil and gas production, on-road and off-road transportation, etc. Carbon dioxide (CO₂) emissions are developed along with those of air pollutants including CO, NOₓ, SO₂, and PM₂.₅ with consistency in spatial and temporal distributions. Emissions by sectors are reported as column totals in units of metric tons per km² per month. Spatial-temporal surrogates are developed to distribute CO₂ emissions to grid cells to keep consistency between greenhouse gases and air quality species. The current version of GRA²PES is for 2021. Long-term emissions and more greenhouse gas species (e.g., methane) are under development and will be added in the future. 
+    The Greenhouse gas And Air Pollutants Emissions System (GRA²PES) dataset at the GHG Center is an aggregated, regridded, monthly high-resolution (0.036 x 0.036°) data product with emissions of both greenhouse gases and air pollutants developed in a consistent framework. The dataset contains emissions over the contiguous United States covering major anthropogenic sectors, including energy, industrial fuel combustion and processes, commercial and residential combustion, oil and gas production, on-road and off-road transportation, etc. Carbon dioxide (CO₂) emissions are developed along with those of air pollutants including CO, NOₓ, SO₂, and PM2.5 with consistency in spatial and temporal distributions. Emissions by sectors are reported as column totals in units of metric tons per km² per month. Spatial-temporal surrogates are developed to distribute CO₂ emissions to grid cells to keep consistency between greenhouse gases and air quality species. The current version of GRA²PES is for 2021. Long-term emissions and more greenhouse gas species (e.g., methane) are under development and will be added in the future. 
 
     GRA²PES is a collaborative research project, aiming to strengthen the community’s ability to consistently model and map greenhouse gas and air pollutant emissions and associated uncertainties across the contiguous United States. GRA²PES builds off of previously developed inventories such as the Fuel-based Oil and Gas (FOG) inventory (Gorchov Negron et al., 2018), and the Fuel-based Inventory of Vehicle Emissions (FIVE) (McDonald et al., 2014, McDonald et al., 2018a), the Volatile Chemical Products (VCPs) inventory (McDonald et al., 2018b). These inventories have been updated over time; VCPs in Coggon et al., 2021, FIVE in Harkins et al., 2021, FOG in Francoeur et al., 2021. A full anthropogenic air quality inventory, with near-real-time adjustments was also developed in He et al., 2024. These inventories that GRA²PES builds off of have been extensively evaluated in air quality modeling studies and compared to satellite, aircraft and ground observations in multiple years (McDonald et al., 2018a, Li et al., 2021, He et al., 2024, Zhu et al., 2024).  
 
@@ -380,9 +380,9 @@ layers:
           <td style={{ border: '1px solid black', padding: '8px' }}>tonne SO₂/km²/month</td>
         </tr>
         <tr>
-          <td style={{ border: '1px solid black', padding: '8px' }}>PM₂.₅</td>
-          <td style={{ border: '1px solid black', padding: '8px' }}>Total PM₂.₅ Emissions</td>
-          <td style={{ border: '1px solid black', padding: '8px' }}>tonne PM₂.₅/km²/month</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}>PM2.5</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}>Total PM2.5 Emissions</td>
+          <td style={{ border: '1px solid black', padding: '8px' }}>tonne PM2.5/km²/month</td>
         </tr>
       </tbody>
     </table>

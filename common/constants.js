@@ -208,7 +208,7 @@ export const cities = [
   },
   {
     "title": "New York City Researchers Take to the Street to Investigate Emissions",
-    "desc": "Researchers at Columbia University are working with the New York State Energy Research & Development Authority to improve emissions estimates by combining measurements from a network of sensors across NYC with data collected by NASA satellites and aircraft, identifying unidentified or incorrectly cataloged sources of GHGs.",
+    "desc": "Researchers are working with the New York State Energy Research & Development Authority to improve emissions estimates by combining measurements from a network of sensors across NYC with data collected by satellites and aircraft, in order to identify unidentified or incorrectly cataloged sources of GHGs and study interactions with other air pollutants.",
     "img": {
       "src": "https://i.natgeofe.com/n/874df281-d3e0-489a-98c0-6b840023b828/newyork_NationalGeographic_2328428.jpg",
       "alt": "New York"
@@ -253,7 +253,7 @@ export const keyUrbanDatasets = [
     "desc": "Carbon dioxide emissions data are now available at a granular level, from city blocks to entire counties across the contiguous U.S. The latest dataset from the Vulcan Project, called Vulcan 4.0, helps researchers to analyze annual CO₂ emissions at fine scales and urban decision-makers to develop localized carbon management strategies.",
     "img": {
       "src": new URL('../stories/media/urban-1.jpeg', import.meta.url).href,
-      "alt": "magnifying glass with co2 written in text with background of smoke coming out of factories."
+      "alt": "magnifying glass with CO₂ written in text with background of smoke coming out of factories."
     },
     "link": {
       "url": "/stories/vulcan",
@@ -262,11 +262,11 @@ export const keyUrbanDatasets = [
     "footer": null
   },
   {
-    "title": "First-of-its-Kind Dataset Connects Greenhouse Gases and Air Quality",
-    "desc": "The GReenhouse gas And Air Pollutants Emissions System (GRA²PES), from NOAA and NIST, is the first U.S.-based system to combine greenhouse gas and air quality pollutant sources into a single database, offering benefits for both climate and public health solutions.",
+    "title": "Nationwide Dataset Connects Greenhouse Gases and Air Quality",
+    "desc": "The GReenhouse gas And Air Pollutants Emissions System (GRA²PES), from NOAA and NIST, is the first U.S.-based system to combine greenhouse gas and air quality pollutant sources into a single national database, offering benefits for both climate and public health solutions.",
     "img": {
       "src": new URL('../stories/media/gra2pes.png', import.meta.url).href,
-      "alt": "Comparison of CO2 and NOx emission from GRA2PES dataset"
+      "alt": "Comparison of CO₂ and NOₓ emission from GRA2PES dataset"
     },
     "link": {
       "url": "/stories/gra2pes",
