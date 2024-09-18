@@ -55,7 +55,7 @@ export default function Component() {
                             <CollecticonEnvelope size='xlarge' color='#082a64' className="grid-col-auto" />
                         </Grid>
                         <Grid col='fill' className="display-flex flex-align-center margin-bottom-2">
-                            <span className="margin-left-4 font-size-md-deprecated"> For the latest updates and information about the U.S. Greenhouse Gas Center or to join a focus area group, <a href={SUBSCRIPTION_URL}>subscribe to our email updates list.</a></span>
+                            <span className="margin-left-4 font-size-md-deprecated"> For the latest updates and information about the US GHG Center or to join a focus area group, <a href={SUBSCRIPTION_URL}>subscribe to our email updates list.</a></span>
                         </Grid>
                     </Grid>
                     <Grid row>
@@ -63,7 +63,7 @@ export default function Component() {
                             <CollecticonTextBlock size='xlarge' color='#082a64' className="grid-col-auto" />
                         </Grid>
                         <Grid col='fill' className="display-flex flex-align-center margin-bottom-2">
-                            <span className="margin-left-4 font-size-md-deprecated"> Read more about the U.S. Greenhouse Gas Center news, trainings, and workshop opportunities on the <Link to="/news-and-events">News and Events page.</Link></span>
+                            <span className="margin-left-4 font-size-md-deprecated"> Read more about the US GHG Center news, trainings, and workshop opportunities on the <Link to="/news-and-events">News and Events page.</Link></span>
                         </Grid>
                     </Grid>
                     <Grid row>
@@ -71,7 +71,7 @@ export default function Component() {
                             <CollecticonSpeechBalloon size='xlarge' color='#082a64' className="grid-col-auto" />
                         </Grid>
                         <Grid col='fill' className="display-flex flex-align-center margin-bottom-2">
-                            <span className="margin-left-4 font-size-md-deprecated">  Do you have a U.S. Greenhouse Gas Center portal suggestion or question? Reach the team using the "Contact Us" button at the top or bottom of every page.</span>
+                            <span className="margin-left-4 font-size-md-deprecated">  Do you have a US GHG Center portal suggestion or question? Reach the team using the "Contact Us" button at the top or bottom of every page.</span>
                         </Grid>
                     </Grid>
                 </Grid>
