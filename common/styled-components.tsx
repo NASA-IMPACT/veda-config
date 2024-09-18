@@ -15,25 +15,6 @@ const Title = styled.h2`
   }
 `
 
-const P = styled.p`
-  font-size: 1.25rem;
-  width: 80%;
-`
-
-const FitContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  padding: 12px 13vw;
-  margin: 12px;
-`
-
-const SectionContainer = styled.section`
-  margin: 12px;
-`
-
 export {
-  FitContainer,
-  P,
-  SectionContainer,
   Title,
 }
