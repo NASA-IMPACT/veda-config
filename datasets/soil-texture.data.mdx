@@ -19,7 +19,7 @@ taxonomy:
 layers:
   - id: soil-texture-0cm
     stacCol: soil-texture-0cm
-    name: Soil Texture at the Surface (0 cm)
+    name: Soil Texture at the Surface (0 cm Depth)
     type: raster
     description: 'ISRIC Soil Texture Classification at 0 cm'
     zoomExtent:
@@ -116,7 +116,6 @@ layers:
       spatialExtent: Global
       temporalResolution: Annual 
       unit: N/A 
-
 
   - id: soil-texture-15cm
     stacCol: soil-texture-15cm
@@ -218,8 +217,6 @@ layers:
       temporalResolution: Annual 
       unit: N/A 
 
-
-
   - id: soil-texture-60cm
     stacCol: soil-texture-60cm
     name: Soil Texture at 60 cm Depth
@@ -270,8 +267,6 @@ layers:
       temporalResolution: Annual 
       unit: N/A 
 
-
-
   - id: soil-texture-100cm
     stacCol: soil-texture-100cm
     name: Soil Texture at 100 cm Depth
@@ -281,12 +276,14 @@ layers:
       - 0
       - 20
     sourceParams:
-        colormap: '{"1":"#F89E61", "2":"#BA8560", "3": "#D8D2B4", "4": "#AE734C", "5": "#9E8478", "6": "#C6A365",
+      resampling: bilinear
+      bidx: 1
+      colormap: '{"1":"#F89E61", "2":"#BA8560", "3": "#D8D2B4", "4": "#AE734C", "5": "#9E8478", "6": "#C6A365",
                     "7":"#B4A67D", "8":"#E1D4C4", "9": "#BEB56D", "10": "#777C7A", "11": "#A89B6F", "12": "#E9E2AF"}'
-        nodata: 255
-        rescale:
-            - 1
-            - 12   
+      nodata: 255
+      rescale:
+        - 1
+        - 12   
     legend:
         type: categorical
         min: "1"
@@ -321,8 +318,6 @@ layers:
       spatialExtent: Global
       temporalResolution: Annual 
       unit: N/A 
-
-
 
   - id: soil-texture-200cm
     stacCol: soil-texture-200cm
@@ -373,7 +368,6 @@ layers:
       spatialExtent: Global
       temporalResolution: Annual 
       unit: N/A 
-
 
 ---
 <Block>
