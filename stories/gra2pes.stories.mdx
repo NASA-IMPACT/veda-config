@@ -25,6 +25,9 @@ taxonomy:
       - PM2.5
 ---
 
+import Quote from "./components/quote";
+
+
 <Block>
     <Prose>
     A new U.S.-based system to combine air quality and greenhouse gas pollution sources into a single national research database is now available in the U.S. Greenhouse Gas Center portal. This geospatial data allows leaders at city, state, and regional scales to more easily identify and take steps to address air quality issues while reducing climate-related hazards for populations.
@@ -105,22 +108,31 @@ taxonomy:
             GRA²PES geospatial data allows researchers to examine and better understand air quality and greenhouse gas pollution sources at a local level. Shown here over New York City in December 2021, carbon dioxide (CO₂) and nitrogen oxides (NOₓ) are both byproducts of fossil fuel burning.
         </Caption>
     </Figure>
-    </Block>
-    <Block>
-    
-    <Prose>
-
-        “With GRA²PES we can explore this connection between air quality and greenhouse gas emissions in a more localized way and expand our understanding of how mitigation efforts can equitably benefit citizens in different parts of cities,” McDonald said.
-
-        Similar changes in carbon dioxide and air quality emissions are expected in other cities across the US, although the magnitude will vary based on the mix of local sources as accounted for in GRA²PES.
-
-        As climate solutions continue to impact the mix of air pollution sources and their concentrations in the atmosphere, GRA²PES will help environmental officials select the most effective measures to improve air quality. 
-
-        “In the future, air quality managers will be greenhouse gas emissions managers too,” McDonald said.
-
-    </Prose>
 </Block>
 
+<Block>
+    <Prose>
+      ## An Inter-Agency Prototype for Greenhouse Gas Monitoring
+
+      “With GRA²PES we can explore this connection between air quality and greenhouse gas emissions in a more localized way and expand our understanding of how mitigation efforts can equitably benefit citizens in different parts of cities,” McDonald said.
+        <Block>
+            <Figure>
+                <Prose>
+                Similar changes in carbon dioxide and air quality emissions are expected in other cities across the US, although the magnitude will vary based on the mix of local sources as accounted for in GRA²PES.
+
+                As climate solutions continue to impact the mix of air pollution sources and their concentrations in the atmosphere, GRA²PES will help environmental officials select the most effective measures to improve air quality.
+                </Prose>
+            </Figure>
+                <Prose>
+                    <Quote
+                    text={"In the future, air quality managers will be greenhouse gas emissions managers too."}
+                    author="Brian McDonald"
+                    subtitle={"Environmental Engineer with NOAA’s Chemical Sciences Laboratory"}
+                />
+                </Prose>
+        </Block>
+    </Prose>
+</Block>
 
 <Block>
     <Prose>
