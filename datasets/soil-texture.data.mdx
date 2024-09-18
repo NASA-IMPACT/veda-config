@@ -68,54 +68,54 @@ layers:
       unit: N/A 
 
   - id: soil-texture-5cm
-      stacCol: soil-texture-5cm
-      name: Soil Texture at 5 cm Depth
-      type: raster
-      description: 'ISRIC Soil Texture Classification at 5 cm'
-      zoomExtent:
-        - 0
-        - 20
-      sourceParams:
-          colormap: '{"1":"#F89E61", "2":"#BA8560", "3": "#D8D2B4", "4": "#AE734C", "5": "#9E8478", "6": "#C6A365",
-                      "7":"#B4A67D", "8":"#E1D4C4", "9": "#BEB56D", "10": "#777C7A", "11": "#A89B6F", "12": "#E9E2AF}'
-          nodata: 0
-          rescale:
-              - 1
-              - 12   
-      legend:
-          type: categorical
-          min: "1"
-          max: "12"
-          stops:
-              - color: "#F89E61"
-                label: "Clay"
-              - color: "#BA8560"
-                label: "Silty Clay"
-              - color: "#D8D2B4"
-                label: "Sandy Clay"
-              - color: "#AE734C"
-                label: "Clay Loam"
-              - color: "#9E8478"
-                label: "Silty Clay Loam"
-              - color: "#C6A365"
-                label: "Sandy Clay Loam"
-              - color: "#B4A67D"
-                label: "Loam"
-              - color: "#E1D4C4"
-                label: "Silty Loam"
-              - color: "#BEB56D"
-                label: "Sandy Loam"
-              - color: "#777C7A"
-                label: "Silt"
-              - color: "#A89B6F"
-                label: "Loamy Sand"
-              - color: "#E9E2AF"
-                label: "Sand"
-      info:
-        source: ISRIC
-        spatialExtent: Global
-        temporalResolution: Annual 
-        unit: N/A 
+    stacCol: soil-texture-5cm
+    name: Soil Texture at 5 cm Depth
+    type: raster
+    description: 'ISRIC Soil Texture Classification at 5 cm'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+        colormap: '{"1":"#F89E61", "2":"#BA8560", "3": "#D8D2B4", "4": "#AE734C", "5": "#9E8478", "6": "#C6A365",
+                    "7":"#B4A67D", "8":"#E1D4C4", "9": "#BEB56D", "10": "#777C7A", "11": "#A89B6F", "12": "#E9E2AF}'
+        nodata: 0
+        rescale:
+            - 1
+            - 12   
+    legend:
+        type: categorical
+        min: "1"
+        max: "12"
+        stops:
+            - color: "#F89E61"
+              label: "Clay"
+            - color: "#BA8560"
+              label: "Silty Clay"
+            - color: "#D8D2B4"
+              label: "Sandy Clay"
+            - color: "#AE734C"
+              label: "Clay Loam"
+            - color: "#9E8478"
+              label: "Silty Clay Loam"
+            - color: "#C6A365"
+              label: "Sandy Clay Loam"
+            - color: "#B4A67D"
+              label: "Loam"
+            - color: "#E1D4C4"
+              label: "Silty Loam"
+            - color: "#BEB56D"
+              label: "Sandy Loam"
+            - color: "#777C7A"
+              label: "Silt"
+            - color: "#A89B6F"
+              label: "Loamy Sand"
+            - color: "#E9E2AF"
+              label: "Sand"
+    info:
+      source: ISRIC
+      spatialExtent: Global
+      temporalResolution: Annual 
+      unit: N/A 
 
 ---
 <Block>
