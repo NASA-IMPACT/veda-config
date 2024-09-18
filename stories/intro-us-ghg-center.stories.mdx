@@ -3,17 +3,16 @@ id: "intro-us-ghg-center"
 name: Introduction to the US GHG Center
 description: The U.S. Greenhouse Gas Center (US GHG Center) is a multi-agency effort to compile greenhouse gas data from observations and models into a collection of trusted greenhouse gas emissions and flux products.
 media:
-  src: ::file ./intro-to-ghg-center--cover.png
+  src: ::file ./media/intro-to-ghg-center--cover.jpg
   alt: Global carbon dioxide visualization
   author:
     name: US GHG Center
     url: "https://earth.gov/ghgcenter"
 pubDate: 2023-08-23
-featured: true
 ---
-<Block>
+{/* <Block>
   <Prose>
-    ## Tour the US GHG Center
+    ## Tour the US GHG Center Portal
     <div
       style={{
         display: "flex",
@@ -26,7 +25,7 @@ featured: true
       </Figure>
     </div>
   </Prose>
-</Block>
+</Block> */}
 
 <Block>
     <Prose>
@@ -36,13 +35,13 @@ featured: true
 
     Elevated concentrations of GHGs, including methane and carbon dioxide, are warming the planet. This is leading to changes in Earth's climate that occur at a pace and in a way that threatens human health, society, and the natural environment. These changes include warmer air and ocean temperatures, changes in precipitation patterns, retreating snow and ice, increasingly severe weather events, such as hurricanes of greater intensity, and sea level rise, among other impacts.
 
-    The Intergovernmental Panel on Climate Change (IPCC) states: "it is unequivocal that human influence has warmed the atmosphere, ocean and land" and that "widespread and rapid changes in the atmosphere, cryosphere, and biosphere have occurred." Link to IPCC AR6: [https://www.ipcc.ch/assessment-report/ar6/](https://www.ipcc.ch/assessment-report/ar6/). The data shows trends and patterns in carbon dioxide (CO₂) and methane (CH₄) from anthropogenic (human-related) and natural sources that can be used to inform decisions.
+    The Intergovernmental Panel on Climate Change (IPCC) states: "it is unequivocal that human influence has warmed the atmosphere, ocean and land" and that ["widespread and rapid changes in the atmosphere, cryosphere, and biosphere have occurred."](https://www.ipcc.ch/assessment-report/ar6/) The data shows trends and patterns in carbon dioxide (CO₂) and methane (CH₄) from anthropogenic (human-related) and natural sources that can be used to inform decisions.
 
-    Federal agencies are working together to develop a Greenhouse Gas Monitoring and Information System (GHGMIS) for the U.S. that combines atmospheric- and activity-based approaches to increase confidence in setting, assessing, and meeting climate mitigation goals. This system uses these advanced capabilities, as well as the growth of GHG observational data and models, to provide enhanced emissions and uptake data products.
+    Federal agencies are working together to develop a Greenhouse Gas Measurement, Monitoring, and Information System (GHGMMIS) for the U.S. that combines atmospheric- and activity-based approaches to increase confidence in setting, assessing, and meeting climate mitigation goals. This system uses these advanced capabilities, as well as the growth of GHG observational data and models, to provide enhanced emissions and uptake data products.
 
     The US GHG Center will disseminate this GHG data as well as provide decision support tools, engage with users, develop data quality criteria, and communicate data, capability, and expertise needs.
     
-    The US GHG Center works to inform mitigation efforts for a range of stakeholders and forms an interface between Federal and non-Federal activities to improve quantification of greenhouse gas exchange within the Earth system.
+    The US GHG Center team works to inform mitigation efforts for a range of stakeholders and forms an interface between Federal and non-Federal activities to improve quantification of greenhouse gas exchange within the Earth system.
     </Prose>
 
 </Block>
@@ -69,15 +68,15 @@ featured: true
 
 <Block>
   <Prose>
-    **U.S. Government Resources on Climate Change and Impacts:**
+    ##### U.S. Government Resources on Climate Change and Impacts:
 
-    **NASA**: *Global Climate Change*: https://climate.nasa.gov/
+    **NASA**: [Global Climate Change](https://climate.nasa.gov/)
     
-    **EPA**: *Climate Change*: https://www.epa.gov/climate-change
+    **EPA**: [Climate Change](https://www.epa.gov/climate-change)
     
-    **NIST**: *Climate*: https://www.nist.gov/climate
+    **NIST**: [Climate](https://www.nist.gov/climate)
     
-    **NOAA**: *Climate Change Impacts*: https://www.noaa.gov/education/resource-collections/climate/climate-change-impacts
+    **NOAA**: [Climate Change Impacts](https://www.noaa.gov/education/resource-collections/climate/climate-change-impacts)
     
   </Prose>
 </Block>
@@ -106,16 +105,16 @@ featured: true
       Your browser does not support the video tag.
     </video>
     <Caption>
-      {" "}
-      A simplified animation of the greenhouse effect. Video from https://climate.nasa.gov/climate_resources/240/the-greenhouse-effect-simplified/
-      *Credit: NASA/JPL-Caltech*{" "}
+      A simplified animation of the greenhouse effect.
+      <p>Video from https://climate.nasa.gov/climate_resources/240/the-greenhouse-effect-simplified/</p>
+      <p>*Credit: NASA/JPL-Caltech*</p>
     </Caption>
   </Figure>
 </Block>
 
 <Block>
     <Prose>
-    ## US GHG Center Purpose
+    ## US GHG Center Portal Purpose
 
     The U.S. Greenhouse Gas Center (US GHG Center) is a multi-agency effort to compile greenhouse gas data from observations and models into one environment containing trusted greenhouse gas emissions and flux products for use in research, decision-making, and other applications.
 
@@ -140,20 +139,20 @@ featured: true
         style={{ display: "inline-block", width: "130px", margin: "2px" }}
       >
         <img
-          src={new URL("./nasa.png", import.meta.url).href}
+          src={new URL("./media/nasa.png", import.meta.url).href}
           alt="nasa logo"
         />
       </figure>
       <figure
         style={{ display: "inline-block", width: "100px", margin: "2px" }}
       >
-        <img src={new URL("./epa.svg", import.meta.url).href} alt="epa logo" />
+        <img src={new URL("./media/epa.svg", import.meta.url).href} alt="epa logo" />
       </figure>
       <figure
         style={{ display: "inline-block", width: "200px", margin: "2px" }}
       >
         <img
-          src={new URL("./nist.png", import.meta.url).href}
+          src={new URL("./media/nist.png", import.meta.url).href}
           alt="nist logo"
         />
       </figure>
@@ -161,16 +160,17 @@ featured: true
         style={{ display: "inline-block", width: "100px", margin: "2px" }}
       >
         <img
-          src={new URL("./noaa.png", import.meta.url).href}
+          src={new URL("./media/noaa.png", import.meta.url).href}
           alt="noaa logo"
         />
       </figure>
     </div>
-    The US GHG Center is coordinated by NASA in partnership with EPA, NIST and NOAA. These agencies are collaborating to prototype development of the Center with the goal of accelerating the production and delivery of quality greenhouse gas (GHG) information, including a curated collection of GHG datasets, workflows and visualizations from the federal government and non-public sector. 
+    The US GHG Center is coordinated by NASA in partnership with EPA, NIST and NOAA. These agencies are collaborating to develop the Center with the goal of accelerating the production and delivery of GHG information, including a curated collection of GHG datasets, workflows and visualizations from the federal government and non-public sector.
     
-    The Center acts as a facilitator of collaboration with networks of interagency, intergovernmental and private sector partners to support setting, assessing, and meeting climate mitigation goals.
+    The Center acts as an enabler of collaboration with networks of interagency, international, intergovernmental and private sector partners to increase confidence in setting, assessing, and meeting climate mitigation goals. US GHG Center partner efforts accelerate the production and delivery of actionable, quality vetted GHG information, including a curated collection of datasets, workflows and visualizations from the federal government and non-public sector.   
 
-    The US GHG Center is more than just a funnel for greenhouse gas datasets packaged into a user interface. The US GHG Center also includes and reports on various efforts to engage stakeholders, increase understanding through webinars and training events, inform communities, and empower users with decision insights.
+    The US GHG Center is more than just a funnel for greenhouse gas datasets packaged into a user interface. The Center also reports on various efforts to engage stakeholders, increase understanding through webinars and training events, inform communities, and empower users with decision insights.
+
   </Prose>
 </Block>
 
@@ -178,14 +178,25 @@ featured: true
   <Prose>
     ## Relationship to Other GHG Activities
 
-    The Greenhouse Gas Monitoring & Measurement Interagency Working Group (IWG) was created in January 2022 to coordinate an approach that brings together Federal, subnational, commercial, philanthropic, and academic capabilities to accelerate the Nation’s progress towards an integrated GHG monitoring and information system that supports the Administration’s GHG reduction goals and mitigation efforts.  The IWG has  developed a National Strategy to Advance an Integrated [U.S. Greenhouse Monitoring & Information System (US GHGMIS)](https://www.google.com/url?q=https://www.whitehouse.gov/wp-content/uploads/2023/11/NationalGHGMMISStrategy-2023.pdf&sa=D&source=docs&ust=1713896151059183&usg=AOvVaw1ztcj-BFYRj5SqXliWRJul)
     
-    The U.S. Government will use a phased approach in implementing the National Strategy, with Phase 1 taking advantage of, and integrating, mature research capabilities and existing data, and Phase 2 reflecting a more robust monitoring and information system based on well-defined requirements as well as planning and research and development efforts from Phase 1. The US GHG Center supports both phases of the implementation of the National Strategy, following an iterative approach, which begins with input from EPA, NASA, NIST, and NOAA, and is expected to expand and include other agency and non-federal capabilities in the future.
+    The Greenhouse Gas Monitoring & Measurement Interagency Working Group (IWG) was created in January 2022 to coordinate an approach that brings together Federal, subnational, commercial, philanthropic, and academic capabilities to accelerate the Nation’s progress towards an integrated GHG monitoring and information system that supports the Administration’s GHG reduction goals and mitigation efforts.  The IWG has  developed a National Strategy to Advance an Integrated [U.S. Greenhouse Measurement, Monitoring and Information System (U.S. GHGMMIS)](https://www.whitehouse.gov/wp-content/uploads/2023/11/NationalGHGMMISStrategy-2023.pdf).
+    
+    The U.S. Government is using a phased approach to implement the National Strategy, with Phase 1 taking advantage of, and integrating, mature research capabilities and existing data, and Phase 2 reflecting a more robust monitoring and information system based on well-defined requirements as well as planning and research and development efforts from Phase 1. The US GHG Center supports both phases of the implementation of the National Strategy, following an iterative approach, which begins with input from EPA, NASA, NIST, and NOAA, and is expected to expand and include other agency and non-federal capabilities in the future.
 
-    The U.S. Greenhouse Gas Center plans to coordinate with networks of international organizations - including the World Meteorological Organization, the Committee on Earth Observation Satellites, and the UN Environment’s International Methane Emissions Observatory - to accelerate development and dissemination of the measurement, monitoring, reporting, and verification of GHGs.  It also will establish criteria for thorough evaluation of the quality, accessibility, and transparency of new data and modeling products.  
-
-
+    The US GHG Center plans to coordinate with networks of international organizations - including the World Meteorological Organization, the Committee on Earth Observation Satellites, and the UN Environment’s International Methane Emissions Observatory - to accelerate development and dissemination of the measurement, monitoring, reporting, and verification of GHGs. It also will establish criteria for thorough evaluation of the quality, accessibility, and transparency of new data and modeling products.
   </Prose>
+
+  <Figure>
+    <Image 
+        src={new URL('./media/US_GHG_MMIS_report_cover_screenshot.png', import.meta.url).href}
+        alt="Cover of National Strategy" 
+        align="right" 
+        attrAuthor="The White House"
+        attrUrl="https://www.whitehouse.gov/omb/briefing-room/2023/11/29/interagency-working-group-releases-national-strategy-enhance-nation-greenhouse-gas-measurement-monitoring-capabilities/"
+        width="256"
+    />
+    <Caption> National Strategy To Advance An Integrated  U.S. Greenhouse Gas Measurement,  Monitoring, And Information System, Released November 2023. </Caption>
+    </Figure>
 </Block>
 
 <Block>
@@ -195,65 +206,71 @@ featured: true
     The US GHG Center contains trusted information on greenhouse gas emissions, concentrations and flux products.
     <div style={{display: "flex", "align-items": "center", "justify-content": "center"}}>
         <figure style={{display: "inline-block", width:"250px", margin:"4px 2px 2px 2px"}}>
-            <img src={new URL('./refinery.png', import.meta.url).href} alt='anthropogenic emissions' />
+            <img src={new URL('./media/refinery.png', import.meta.url).href} alt='anthropogenic emissions' />
             <figcaption>Anthropogenic GHG Emissions</figcaption>
         </figure>
         <figure style={{display: "inline-block", width:"250px", margin:"2px"}}>
-            <img src={new URL('./swamp.png', import.meta.url).href} alt='natural sources and sinks' />
+            <img src={new URL('./media/swamp.png', import.meta.url).href} alt='natural sources and sinks' />
             <figcaption>Natural GHG Sources and Sinks</figcaption>
         </figure>
         <figure style={{display: "inline-block", width:"250px", margin:"2px"}}>
-            <img src={new URL('./plume.png', import.meta.url).href} alt='large emission events' />
+            <img src={new URL('./media/plume.png', import.meta.url).href} alt='large emission events' />
             <figcaption>Large Methane Emission Events</figcaption>
         </figure>
     </div>
 
-    The initial 2-year demonstration phase of the project targets three GHG areas of study in order to
+    The initial 2-year demonstration phase of the project has targeted three GHG areas of study in order to:
         - Provide access to selected anthropogenic gas emission data products;
         - Complement anthropogenic GHG inventories with estimates of natural GHG emissions, updates and other fluxes of GHGs, as well as improved usability and visualizations;
-        - Identify and quantify emissions from large methane (CH₄) leak events leveraging aircraft and space-borne instruments.
+        - Identify and quantify emissions from large methane leak events leveraging aircraft and space-borne instruments.
 
     The US GHG Center is not a comprehensive accounting of all GHG-relevant products and datasets produced by the U.S. Federal Government. Additional features and data sets will be added as more become available, with links throughout the site to additional resources beyond the Center.
     </Prose>
-
 </Block>
 <Block>
-    <Figure>
-        <video style={{ width: '100%', aspectRatio: "16/9" }} controls poster="https://svs.gsfc.nasa.gov/vis/a010000/a014200/a014257/Screen_Shot_2022-12-09_at_1.10.12_PM_print.jpg" autoplay muted>
-            <source
-                src="https://svs.gsfc.nasa.gov/vis/a010000/a014200/a014257/Methane.mp_Wetalnds_Final.mp4" type="video/mp4"
-            />
-        Your browser does not support the video tag.
-        </video> 
-        <Caption> This animation shows estimates of wetland methane emissions produced by the Lund–Potsdam–Jena Dynamic Global Vegetation Model (LPJ-DGVM) Wald Schnee und Landscaft version (LPJ-wsl). Video from https://svs.gsfc.nasa.gov/14257/ *Credit: NASA's Goddard Space Flight Center*  </Caption>
-    </Figure>
+    <Prose>
+        <Figure>
+          <video style={{ width: '100%', aspectRatio: "16/9" }} controls poster="https://svs.gsfc.nasa.gov/vis/a010000/a014200/a014257/Screen_Shot_2022-12-09_at_1.10.12_PM_print.jpg" autoplay muted>
+              <source
+                  src="https://svs.gsfc.nasa.gov/vis/a010000/a014200/a014257/Methane.mp_Wetalnds_Final.mp4" type="video/mp4"
+              />
+          Your browser does not support the video tag.
+          </video>
+          <Caption>
+            This animation shows estimates of wetland methane emissions produced by the Lund–Potsdam–Jena Dynamic Global Vegetation Model (LPJ-DGVM) Wald Schnee und Landscaft version (LPJ-wsl).
+            <p>Video from https://svs.gsfc.nasa.gov/14257/</p>
+            <p>*Credit: NASA's Goddard Space Flight Center*</p>
+          </Caption>
+      </Figure>
+      The US GHG Center is now focused on Urban areas and is working to provide local decision makers with information needed to work towards climate goals.
+    </Prose>
 </Block>
 
 <Block>
     <Prose>
     ## What Can You Do in the US GHG Center with the Existing Data?
 
-    - **[Discover](https://earth.gov/ghgcenter/data-catalog)** - Users can search the data catalog or learn more about the three demonstration areas
-    - **Explore and Analyze** - Visualize data from various data products, instruments and models and create time series for desired regions and time periods
-    - **Use** - Users can access data in a cloud environment and share the results after establishing a user account
-    - **Learn** - Read our newsletters  or find out about webinar and training opportunities
-    - **Helpdesk** - Submit feedback or request help understanding the US GHG Center contents
+    - **<Link to="/data-catalog">Discover</Link>** - Users can search the data catalog or learn more about the three demonstration areas
+    - **<Link to="/exploration">Explore and Analyze</Link>** - Visualize data from various data products, instruments and models and create time series for desired regions and time periods
+    - **<Link to="https://hub.ghg.center">Use</Link>** - Users can access data in a cloud environment and share the results after establishing a user account
+    - **<Link to="/news-and-events">Stay Updated</Link>** - Read our newsletters and the latest stories or find out about webinar and training opportunities
+    - **Helpdesk** - Submit feedback or request help to understand the US GHG Center contents
 
     <div style={{display: "flex", "align-items": "center", "justify-content": "space-around"}}>
         <figure style={{display: "inline-block", width:"50px", margin:"4px 2px 2px 2px"}}>
-            <img src={new URL('./magnifying-glass-solid.svg', import.meta.url).href} alt='discover logo' />
+            <img src={new URL('./media/magnifying-glass-solid.svg', import.meta.url).href} alt='discover logo' />
             {/* <figcaption>Discover</figcaption> */}
         </figure>
         <figure style={{display: "inline-block", width:"50px", margin:"2px"}}>
-            <img src={new URL('./map-solid.svg', import.meta.url).href} alt='explore logo' />
+            <img src={new URL('./media/map-solid.svg', import.meta.url).href} alt='explore logo' />
             {/* <figcaption>Explore</figcaption> */}
         </figure>
         <figure style={{display: "inline-block", width:"50px", margin:"2px"}}>
-            <img src={new URL('./chart-simple-solid.svg', import.meta.url).href} alt='use and analyze logo' />
+            <img src={new URL('./media/chart-simple-solid.svg', import.meta.url).href} alt='use and analyze logo' />
             {/* <figcaption>Use and Analyze</figcaption> */}
         </figure>
         <figure style={{display: "inline-block", width:"50px", margin:"2px"}}>
-            <img src={new URL('./circle-question-solid.svg', import.meta.url).href} alt='helpdesk logo' />
+            <img src={new URL('./media/circle-question-solid.svg', import.meta.url).href} alt='helpdesk logo' />
             {/* <figcaption>Helpdesk</figcaption> */}
         </figure>
     </div>
@@ -266,7 +283,7 @@ featured: true
     <Prose>
     ## **What’s Coming Next?**
 
-    Additions to the US GHG Center will occur in the coming year, including some new features and capabilities that will improve data discovery, exploration and analysis.
+    Additions to the US GHG Center will continue to occur in the coming year, including new features and capabilities that will improve data discovery, exploration and analysis.
 
     - Improvements to the Center design and function of the interface and tools
     - More and different kinds of data, such as data from airborne campaigns, new instruments, and other selected data products
@@ -282,19 +299,7 @@ featured: true
 <Block>
     <Prose>
     ## We Want Your Help!  
-    Please Share Your Ideas and Feedback!
-    Please contact us by filling out <a href="https://docs.google.com/forms/d/e/1FAIpQLSeVWCrnca08Gt_qoWYjTo6gnj1BEGL4NCUC9VEiQnXA02gzVQ/viewform" target="_blank">this form.</a>
-
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeVWCrnca08Gt_qoWYjTo6gnj1BEGL4NCUC9VEiQnXA02gzVQ/viewform" target="_blank">
-    <Image
-        src={new URL('./feedback-form.png', import.meta.url).href}
-        alt="feedback form for US GHG Center"
-        align="center"
-        attrAuthor="US GHG Center"
-        attrUrl="https://earth.gov/ghgcenter"
-        caption="US GHG Center Contact Form"
-    />
-    </a>
+    Please Share Your Ideas and Feedback! Please use the Contact Us button on any page.  
     </Prose>
 
 </Block>

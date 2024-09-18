@@ -1,0 +1,13 @@
+// Overriding card flag style to have wider image
+.usa-card--flag .usa-card__media {
+  @media (width >= 70em) {
+    width: 35rem;
+    margin: auto;
+  }
+}
+
+.usa-card--flag .usa-card__header, .usa-card--flag .usa-card__body, .usa-card--flag .usa-card__footer {
+  @media (width >= 70em) {
+    margin-left: 35rem;
+  }
+}

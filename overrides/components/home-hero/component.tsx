@@ -67,6 +67,7 @@ const PageHeroCover = styled(Figure)`
   }
 `;
 
+
 export default function HomeHero(props) {
   const { isMediumUp } = useMediaQuery();
 

@@ -12,16 +12,10 @@ import {
 } from "$veda-ui/@devseed-ui/theme-provider";
 import { Button } from "$veda-ui/@devseed-ui/button";
 import { format } from "$veda-ui/date-fns";
-import { getString } from "veda";
 
 import { Tip } from "$veda-ui-scripts/components/common/tip";
 import { variableGlsp } from "$veda-ui-scripts/styles/variable-utils";
-import {
-  STORIES_PATH,
-  DATASETS_PATH,
-  ANALYSIS_PATH,
-  ABOUT_PATH,
-} from "$veda-ui-scripts/utils/routes";
+
 import { useFeedbackModal } from "$veda-ui-scripts/components/common/layout-root";
 import { useMediaQuery } from "$veda-ui-scripts/utils/use-media-query";
 import { getLinkProps } from "$veda-ui-scripts/utils/url";
@@ -31,8 +25,6 @@ import { CollecticonExpandTopRight } from '$veda-ui/@devseed-ui/collecticons';
 
 import { SUBSCRIPTION_URL } from "../../../constants";
 
-
-const PRESS_PATH = '/learn#press';
 
 
 const FooterInner = styled.div`
@@ -135,15 +127,7 @@ const MODALS_CONTENT = {
     headline: "Disclaimer",
     body: (
       <p>
-        This Exploration and Analysis environment is an interactive space 
-        for users to visually examine data within a mapping environment 
-        and to create time series of basic statistics for dataset layers. 
-        The statistics calculation ensures correct representation of data
-        across latitudes (area weighting / equal area reprojection).
-        This environment is intended for quickly exploring spatial and temporal 
-        patterns and not for use in rigorous scientific data analysis. 
-        For complete documentation of the data shown, please visit the dataset 
-        overview pages by clicking the (i) on each data layer.
+        This Exploration environment is an interactive space for users to visually examine data within a mapping environment and to create time series of basic statistics for selected dataset layers. The statistics calculation ensures correct representation of data across latitudes using area weighting and equal area reprojection. This environment is intended for quickly exploring spatial and temporal patterns and not for use in rigorous scientific data analysis. For complete documentation of the data shown, please visit the dataset overview pages by clicking the (i) on each data layer.
       </p>
     ),
   },
@@ -245,30 +229,25 @@ export default function PageFooter(props) {
           <nav>
             <FooterMenu>
               <li>
-                <FooterMenuLink to={DATASETS_PATH}>Data Catalog</FooterMenuLink>
-              </li>
-              <li>
-                <FooterMenuLink to={EXPLORATION_PATH}>
-                  Data Exploration
+                <FooterMenuLink to='/stories'>
+                  Stories
                 </FooterMenuLink>
               </li>
               <li>
-                <FooterMenuLink to={STORIES_PATH}>
-                  {getString("stories").other}
+                <FooterMenuLink to='/topics'>
+                  Topics
                 </FooterMenuLink>
               </li>
-              {!!process.env.HUB_URL && !!process.env.HUB_NAME && (
-                <li>
-                  <FooterMenuLink as="a" {...getLinkProps(process.env.HUB_URL)}>
-                    {process.env.HUB_NAME}
-                  </FooterMenuLink>
-                </li>
-              )}
               <li>
-                <FooterMenuLink to={ABOUT_PATH}>About</FooterMenuLink>
+                <FooterMenuLink to='/data-toolkit'>
+                  Data Toolkit
+                </FooterMenuLink>
               </li>
               <li>
-                <FooterMenuLink to={PRESS_PATH}>Press Info</FooterMenuLink>
+                <FooterMenuLink to='/about'>About</FooterMenuLink>
+              </li>
+              <li>
+                <FooterMenuLink to='/news-and-events'>News & Events</FooterMenuLink>
               </li>
               <li>
                 <FooterMenuLink as="a" href={SUBSCRIPTION_URL}>

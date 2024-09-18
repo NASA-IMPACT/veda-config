@@ -1,0 +1,145 @@
+---
+id: 'gra2pes'
+name: Nationwide Dataset Connects Greenhouse Gases and Air Quality
+description: 'The GReenhouse gas And Air Pollutants Emissions System (GRA²PES), from NOAA and NIST, combines information on greenhouse gas and air quality pollutant sources into a single national database, offering innovative geospatial detail and new benefits for both climate and public health solutions.'
+media:
+  src: ::file ./media/gra2pes.png
+  alt: Comparison of CO₂ and NOₓ emissions values from GRA²PES dataset 
+  author:
+    name: US GHG Center
+    url: "https://earth.gov/ghgcenter"
+featured: true
+pubDate: 2024-09-20
+taxonomy:
+  - name: Topics
+    values:
+      - Urban
+      - Anthropogenic Emissions
+  - name: Gas
+    values:
+      - CO₂ 
+      - CO
+      - CH₄
+      - NOₓ
+      - SO₂
+      - PM2.5
+---
+
+import Quote from "./components/quote";
+
+
+<Block>
+    <Prose>
+    A new U.S.-based system to combine air quality and greenhouse gas pollution sources into a single national research database is now available in the U.S. Greenhouse Gas Center portal. This geospatial data allows leaders at city, state, and regional scales to more easily identify and take steps to address air quality issues while reducing climate-related hazards for populations.
+
+    The dataset is the GReenhouse gas And Air Pollutants Emissions System (GRA²PES). A research project from NOAA and NIST, GRA²PES captures monthly GHG emissions activity for multiple economic sectors to improve measurement and modeling for both GHG and air pollutants across the contiguous U.S.
+    </Prose>
+</Block>
+
+<Block type="wide">
+  <Figure>
+    <Embed
+      height="800"
+      src="https://earth.gov/ghgcenter/custom-interfaces/urban-dashboard/?dataset=gra2pes"
+    />
+  </Figure>
+</Block>
+
+<Block>
+    <Prose>
+        Having the GHG and air quality constituents in the same dataset will be exceedingly helpful, said Columbia University atmospheric scientist Roisin Commane, the lead on <Link to="/stories/newyork">a New York City project to improve emissions estimates.</Link>
+
+        “My work focuses on emissions from the burning of fossil fuels to fingerprint the sources of greenhouse gases,” Commane said. “But, at the moment, we have to use a mish-mash of datasets and we spend way too much time trying to figure out their different ways of representing things.”
+    </Prose>
+</Block>
+
+<Block>
+    <Prose>
+        ## A More Complete Picture of Atmospheric Conditions 
+        Since the establishment of the U.S. Clean Air Act in 1970, environmental managers have made great strides in addressing primary causes of air pollution by focusing on single point sources like smokestacks, and wider diffused sources, known as non-point sources, like transportation sector emissions. Since the early 1990s, the U.S. has also set national targets for reducing greenhouse gas emissions to address the root cause of climate change, along with various federal, state and local policies targeting smokestack and tailpipe pollution, in addition to other sources and sinks. 
+
+        Earth’s atmosphere, however, doesn’t distinguish between sources and sinks. Greenhouse gases (GHGs), such as carbon dioxide and methane, and [criteria air pollutants](https://www.epa.gov/criteria-air-pollutants), such as carbon monoxide and nitrogen dioxide, are often emitted by the same activity and mix freely in the atmosphere. Other less-appreciated sources, like volatile chemicals, fragrant consumer products, and even trees, can also contribute to poor air quality.
+
+        Plans to limit climate change by reducing GHGs generally lead to better air quality, but scientists need a detailed understanding of the exact mixture of pollutants and where they come from to develop the most effective strategies for protecting clean air and, in turn, public health and wellbeing.
+
+        GHG datasets are generally built by estimating the rate of emissions from a range of activities, like energy production, manufacturing, transportation, and agriculture and land use, among others, and then scaling up estimates of total activity levels for a given area. 
+
+        The U.S. government has a long history of tracking source-specific emissions and trends of GHGs and criteria air pollutants at the U.S. national, state, and county scales, such as through the [U.S. Inventory of Greenhouse Gas Emissions and Sinks](https://www.epa.gov/ghgemissions/inventory-us-greenhouse-gas-emissions-and-sinks) and EPA's [National Emissions Inventory](https://www.epa.gov/air-emissions-inventories).
+
+        To complement these “bottom-up” methods, new and expanded GHG monitoring programs are working to measure criteria air pollutants directly in the atmosphere using sensitive instruments across a network of stationary and/or mobile platforms by ground and by sky. Airborne programs include [NOAA’s partnership with United Airlines](https://www.noaa.gov/news-release/noaa-and-united-airlines-partner-to-measure-greenhouse-gases-pollutants) to measure GHGs using instruments installed on a commercial airliner and campaigns flown by NASA and [NOAA](https://csl.noaa.gov/projects/ages/) to measure air pollutants over several cities in North America. The data is then fed into models that allow researchers to infer the source of the pollutants, offering a broader picture of atmospheric conditions.
+
+    </Prose>
+</Block>
+
+<Block>
+    <Figure>
+        <Image
+            src={new URL('./media/otter-aircraft.png', import.meta.url).href}
+            alt="two men working on a propeller aircraft on the tarmac"
+            attrAuthor="NOAA"
+            caption="NOAA’s Twin Otter aircraft allow scientists to collect atmospheric measurements at low altitudes and long ranges in order to validate and improve traditionally developed emissions estimates."
+            align="left"
+            width="100%"
+        />
+    </Figure>
+</Block>
+
+
+<Block>
+    <Prose>
+        ## Doubling the Benefit of Climate Solutions
+        There are potential co-benefits from reducing GHGs that can improve air quality while also mitigating climate impacts. Take nitrogen oxides and carbon dioxide, important air quality and GHG indicators, respectively, and both byproducts of fossil fuel burning produced mainly from transportation, electricity generation, and industrial sources.
+
+        “Using GRA²PES, we can see that with the electrification of transportation in New York City, carbon dioxide could be reduced by 43%, while nitrogen oxide emissions could be simultaneously reduced by 62%,” said Brian McDonald, a physical scientist with NOAA’s Chemical Sciences Laboratory whose research focuses on modeling atmospheric composition.
+    </Prose>
+</Block>
+
+<Block>
+    <Figure>
+        <Map
+            datasetId='gra2pes-ghg-monthgrid-v1'
+            layerId='co2'
+            dateTime='2021-12-01'
+            compareDateTime='2021-12-01'
+            compareLabel="CO₂ Emissions (left) VS NOₓ Emissions (right) (Dec 2021)"
+            center={[-74.144488, 40.6976312]}
+            zoom={6}
+        />
+        <Caption>
+            GRA²PES geospatial data allows researchers to examine and better understand air quality and greenhouse gas pollution sources at a local level. Shown here over New York City in December 2021, carbon dioxide (CO₂) and nitrogen oxides (NOₓ) are both byproducts of fossil fuel burning.
+        </Caption>
+    </Figure>
+</Block>
+
+<Block>
+    <Prose>
+      ## An Inter-Agency Prototype for Greenhouse Gas Monitoring
+
+      “With GRA²PES we can explore this connection between air quality and greenhouse gas emissions in a more localized way and expand our understanding of how mitigation efforts can equitably benefit citizens in different parts of cities,” McDonald said.
+        <Block>
+            <Figure>
+                <Prose>
+                Similar changes in carbon dioxide and air quality emissions are expected in other cities across the US, although the magnitude will vary based on the mix of local sources as accounted for in GRA²PES.
+
+                As climate solutions continue to impact the mix of air pollution sources and their concentrations in the atmosphere, GRA²PES will help environmental officials select the most effective measures to improve air quality.
+                </Prose>
+            </Figure>
+                <Prose>
+                    <Quote
+                    text={"In the future, air quality managers will be greenhouse gas emissions managers too."}
+                    author="Brian McDonald"
+                    subtitle={"Environmental Engineer with NOAA’s Chemical Sciences Laboratory"}
+                />
+                </Prose>
+        </Block>
+    </Prose>
+</Block>
+
+<Block>
+    <Prose>
+        ## Resources for Data Users
+        - Detailed information on the dataset: <Link to="/data-catalog/gra2pes-ghg-monthgrid-v1">GRA²PES Greenhouse Gas and Air Quality Species</Link>
+        - Explore the data in the <Link to="/exploration?search=gra2pes-ghg-monthgrid-v1">GRA²PES customizable interactive map</Link>
+    </Prose>
+</Block>
+
