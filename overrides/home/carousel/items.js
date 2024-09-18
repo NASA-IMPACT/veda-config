@@ -8,7 +8,7 @@ export default [{
   link: '/stories/gra2pes',
   title: 'Nationwide Dataset Connects Greenhouse Gases and Air Quality',
   description: "The GReenhouse gas And Air Pollutants Emissions System (GRA²PES) is a new measurement system to combine greenhouse gas and air quality pollutant sources.",
-  image: new URL('../../media/gra2pes.png', import.meta.url).href,
+  image: new URL('../../../stories/media/gra2pes.png', import.meta.url).href,
   imageAlt: 'two GRA2PES data plots: left is gridded CO₂ emissions and right is NOₓ emissions over the Northeast US.'
 },
 {
