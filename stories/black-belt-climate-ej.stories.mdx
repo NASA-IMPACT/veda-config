@@ -45,15 +45,29 @@ taxonomy:
      The Alabama Black Belt, a region integral to the Southern United States, derives its name from its dark, fertile soil. This rich land, ideal for agriculture, especially cotton, owes its fertility to a unique geological history. Millions of years ago, when the Gulf of Mexico extended further inland, plankton deposits formed soft limestone called Selma Chalk. Over time, this limestone weathered, creating the calcium-rich, chalky subsoil that characterizes the Black Belt, transforming it into an agricultural powerhouse.
     </p>
   </Prose>
-  <Figure style={{ flex: '0 0 auto'}}>
-    <Image
-      src={new URL('./BB_alabamasoil.png', import.meta.url).href}
-      style={{maxWidth: '1500px', height: 'auto'}}
+  <Block>
+  <Prose>
+    ### Your markdown header
+
+    Your markdown contents comes here.
+  </Prose>
+</Block>
+<Block type='full'>
+  <Figure>
+    <Map
+      datasetId='soil-texture-0cm'
+      layerId='soil-texture-0cm'
+      center={[-87, 32.6]}
+      zoom={6.5}
+      dateTime='2017-01-01'
     />
-    <Caption attrAuthor='Data.gov' attrUrl='https://www.loc.gov/item/90684182/'>
-      General Soil Map of Alabama.
-    </Caption>
+    <Caption>
+    Surface soil textures classified from the International Soil Reference and Information Centre (ISRIC) show the fertile 'black belt' region of Alabama quite well.
+    </Caption> 
   </Figure>
+</Block>
+
+
 </Block>
 
 <Block style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
