@@ -32,7 +32,7 @@ const QuoteStart = styled.div`
     color: #ccc;
     position: absolute;
     left: 0;
-    top: -40px;
+    top: -25px;
 `;
 
 const QuoteAuthor = styled.p`
