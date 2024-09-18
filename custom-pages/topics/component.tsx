@@ -51,7 +51,7 @@ export default function HomeComponent() {
       
         <section>
           <Title>Core Science Focus Areas</Title>
-          <p className="margin-top-2 font-size-md-deprecated margin-bottom-2">The US GHG Center targets three greenhouse gas areas of study, as shown below. For the latest, <a href="/public/subscription/index.html">subscribe to our email newsletter</a>.</p>
+          <p className="margin-top-2 font-size-md-deprecated margin-bottom-2">The US GHG Center targets three greenhouse gas areas of study, as shown below. For the latest, <a href={SUBSCRIPTION_URL}>subscribe to our email newsletter</a>.</p>
           <Keypoints data={focusAreasStories} />
         </section>
 
