@@ -1,0 +1,10 @@
+index,GEO_ID,NAME,NAICS2012,SECTOR,INDLEVEL,INDGROUP,SUBSECTOR,NAICS2012_LABEL,LFO,LFO_LABEL,EMPSZES,EMPSZES_LABEL,YEAR,ESTAB,EMP,EMP_N,PAYQTR1,PAYQTR1_N,PAYANN,PAYANN_N,Unnamed: 20,NAICS2017,NAICS2017_LABEL,Unnamed: 16,EMP_numeric
+2700,0500000US01013,"Butler County, Alabama",11,11.0,2.0,,,"Agriculture, forestry, fishing and hunting",1,All establishments,1,All establishments,2012-01-01,19,144,G,1262,G,5575,G,,,,,144.0
+2720,0500000US01013,"Butler County, Alabama",23,23.0,2.0,,,Construction,1,All establishments,1,All establishments,2012-01-01,29,195,G,1881,H,9213,H,,,,,195.0
+2760,0500000US01013,"Butler County, Alabama",48-49,48.0,2.0,,,Transportation and warehousing,1,All establishments,1,All establishments,2012-01-01,9,270,H,2171,H,10235,H,,,,,270.0
+2710,0500000US01013,"Butler County, Alabama",11,11.0,2.0,,,"Agriculture, forestry, fishing and hunting",1,All establishments,1,All establishments,2014-01-01,20,100 to 249 employees,S,1932,H,8364,H,,,,,174.5
+2730,0500000US01013,"Butler County, Alabama",23,23.0,2.0,,,Construction,1,All establishments,1,All establishments,2014-01-01,29,254,G,2556,H,14636,H,,,,,254.0
+2770,0500000US01013,"Butler County, Alabama",48-49,48.0,2.0,,,Transportation and warehousing,1,All establishments,1,All establishments,2014-01-01,9,339,H,2899,H,12262,H,,,,,339.0
+2670,0500000US01013,"Butler County, Alabama",11,11.0,2.0,,,"Agriculture, forestry, fishing and hunting",1,All establishments,1,All establishments,2016-01-01,20,230,H,1978,H,7972,G,,,,,230.0
+2690,0500000US01013,"Butler County, Alabama",23,23.0,2.0,,,Construction,1,All establishments,1,All establishments,2016-01-01,26,276,H,3402,H,15743,H,,,,,276.0
+2730,0500000US01013,"Butler County, Alabama",48-49,48.0,2.0,,,Transportation and warehousing,1,All establishments,1,All establishments,2016-01-01,6,387,H,3564,H,15164,H,,,,,387.0
