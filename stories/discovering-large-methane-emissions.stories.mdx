@@ -3,7 +3,7 @@ id: 'discovering-large-methane-emissions'
 name: Discovering Large Methane Emission Events with Remote Measurement
 description: 'A new generation of satellite and airborne instruments can now detect methane emissions from the energy, waste, and agriculture sectors.'
 media:
-  src: ::file ./emit_above_planet_v4-1.png
+  src: ::file ./media/emit_above_planet_v4-1.png
   alt: An image of the Earth from space with a rendering of the international space station in the foreground. There is a lighter area imposed on the Earth’s surface to suggest the observation swath of EMIT with a rendered plume observation (these components are not to scale).
   author:
     name: NASA/JPL-Caltech
@@ -37,7 +37,7 @@ taxonomy:
     Methane is a flammable gas that is invisible to the human eye. Natural gas has a methane content of around 95% in the United States. Because it is used widely for heating and cooking there are distribution systems for natural gas throughout our cities and towns. While most methane emissions come from the waste sector (landfills, wastewater treatment), and agriculture (livestock and rice farming) methane is also released during coal mining and the production, transport, and processing of oil and natural gas.
 
     <Image 
-        src={new URL('./blue-flame.avif', import.meta.url).href}
+        src={new URL('./media/blue-flame.avif', import.meta.url).href}
         alt="the blue flame of a natural gas stove" 
         align="left"
         attrAuthor="Ilse Driessen"
@@ -53,7 +53,7 @@ taxonomy:
     <Block>
         <Figure>
             <Image 
-                src={new URL('./annual-methane-emissions-us.png', import.meta.url).href}
+                src={new URL('./media/annual-methane-emissions-us.png', import.meta.url).href}
                 alt="A stacked line graph showing the amount of methane released into the atmosphere from different sectors annually from 1990 through 2020 from the United States" 
                 align="left"
                 attrAuthor="NIST"
@@ -79,15 +79,15 @@ taxonomy:
 
             Satellite and aircraft remote measurements can now locate and characterize methane point source emissions. At the scale of an individual oil field or landfill, these methods can observe methane plumes at specific locations. These are often associated with visible infrastructure (well pads, tanks, compressor stations) or even buried gathering lines. These plumes reflect a mixture of expected and unintended emissions (leaks).
 
-            Below is an example of an intermittent methane plume observed from space with NASA’s Earth Surface Mineral Dust Source Investigation <a href="https://earth.jpl.nasa.gov/emit" style={{ color: '#1565EF' }}>EMIT</a> imaging spectrometer aboard the International Space Station. This example shows the Permian Basin, which is the largest petroleum-producing basin in the United States. The plume was observed on Feb. 5, 2023 but in subsequent observations methane plumes were not visible at this location.
+            Below is an example of an intermittent methane plume observed from space with NASA's Earth Surface Mineral Dust Source Investigation <a href="https://earth.jpl.nasa.gov/emit" style={{ color: '#1565EF' }} target="_blank">EMIT</a> imaging spectrometer aboard the International Space Station. This example shows the Permian Basin, which is the largest petroleum-producing basin in the United States. The plume was observed on Feb. 5, 2023 but in subsequent observations methane plumes were not visible at this location.
         </Prose>
     </Block>
 
     <Block>
     <Figure>
         <CompareImage
-            leftImageSrc={new URL('./plume01.png', import.meta.url).href}
-            rightImageSrc={new URL('./plume02.png', import.meta.url).href}
+            leftImageSrc={new URL('./media/plume01.png', import.meta.url).href}
+            rightImageSrc={new URL('./media/plume02.png', import.meta.url).href}
             width="20"
             alt="A figure that has a slider to show a large methane plume detected from EMIT, which can be slid to remove the content and reveal the satellite basemap behind it."
         />
@@ -106,8 +106,8 @@ taxonomy:
     <Block>
         <Figure>
             <CompareImage
-                leftImageSrc={new URL('./plume3.png', import.meta.url).href}
-                rightImageSrc={new URL('./plume4.png', import.meta.url).href}
+                leftImageSrc={new URL('./media/plume3.png', import.meta.url).href}
+                rightImageSrc={new URL('./media/plume4.png', import.meta.url).href}
                 height="100px"
             />
             <Caption> Methane plume observed from a space from a landfill outside of Phoenix, Arizona. </Caption>
@@ -116,14 +116,14 @@ taxonomy:
 
      <Block>
         <Prose>
-            Methane leaks in populated areas can be a danger to public safety. Detecting plumes at the detail of high spatial resolution can help locate specific emission sources. This serves as actionable information to utilities so that they can fix leaks. The example provided below shows methane plumes observed using the <a href="https://avirisng.jpl.nasa.gov/" style={{ color: '#1565EF' }}>Airborne Visible InfraRed Imaging Spectrometer - Next Generation (AVIRIS-NG)</a> as part of the California Methane Survey (Duren et al., 2019). Multiple flights on the same day observed methane in this residential location. The gas utility used these methane plume images to verify and repair the leak from a natural gas distribution line in a residential neighborhood.
+            Methane leaks in populated areas can be a danger to public safety. Detecting plumes at the detail of high spatial resolution can help locate specific emission sources. This serves as actionable information to utilities so that they can fix leaks. The example provided below shows methane plumes observed using the <a target="_blank" href="https://avirisng.jpl.nasa.gov/" style={{ color: '#1565EF' }}>Airborne Visible InfraRed Imaging Spectrometer - Next Generation (AVIRIS-NG)</a> as part of the California Methane Survey (Duren et al., 2019). Multiple flights on the same day observed methane in this residential location. The gas utility used these methane plume images to verify and repair the leak from a natural gas distribution line in a residential neighborhood.
         </Prose>
     </Block>
 
     <Block>
         <Figure>
             <Image 
-                src={new URL('./PIA22467_modest.jpg', import.meta.url).href}
+                src={new URL('./media/PIA22467_modest.jpg', import.meta.url).href}
                 alt="A three panel figure showing an overhead view of a suburban neighborhood. The left and center figure show the same area, overlaid with methane plume observations made from an airborne sensor. There are squares identifying the central point of the plumes, which is the same in both images, but the plume is extending in different directions due to changes in wind direction. The panel on the right shows the same area after the leak was fixed with no methane detected over the original area."
                 align="center"
                 attrAuthor="NASA/JPL-Caltech"
@@ -157,7 +157,7 @@ taxonomy:
         </Prose>
         <Figure>
             <Image 
-                src={new URL('./spectrometer.png', import.meta.url).href}
+                src={new URL('./media/spectrometer.png', import.meta.url).href}
                 alt="2-part figure showing measurement characteristics of the imaging spectrometer and on the right a methane spectral fingerprint plot" 
                 align="left" 
                 attrAuthor="NASA/JPL-Caltech"
@@ -174,20 +174,20 @@ taxonomy:
         </Figure> */}
         <Prose>
             <Image 
-                src={new URL('./emit-satellite.png', import.meta.url).href}
+                src={new URL('./media/emit-satellite.png', import.meta.url).href}
                 alt="A photograph from the window of the international space station. Solar panels, the EMIT instrument, and the arm are visible in the foreground, with a label indicating the location of EMIT. The edge of the Earth is in the background." 
                 align="center" 
                 attrAuthor="NASA/JPL-Caltech"
                 width="100%"
                 caption="EMIT was launched on 14 July 2022 and is currently operating on the International Space Station (ISS)."
             />
-            <a href="https://earth.jpl.nasa.gov/emit" style={{ color: '#1565EF' }}>(EMIT)</a> was launched on 14 July 2022 and is currently operating on the International Space Station (ISS). It provides wide coverage ~80 km swath at ~60 m spatial resolution with typical daily coverage equivalent to the area of Texas. EMIT is a NASA mission with all data and algorithms publicly available as part of NASA’s commitment to open data science.  This allows anyone to test the data, algorithms, and results and work for improvements.
+            <a target="_blank" href="https://earth.jpl.nasa.gov/emit" style={{ color: '#1565EF' }}>(EMIT)</a> was launched on 14 July 2022 and is currently operating on the International Space Station (ISS). It provides wide coverage ~80 km swath at ~60 m spatial resolution with typical daily coverage equivalent to the area of Texas. EMIT is a NASA mission with all data and algorithms publicly available as part of NASA’s commitment to open data science.  This allows anyone to test the data, algorithms, and results and work for improvements.
         </Prose>
     </Block>
 
      <Block>
         <Prose>
-            Methane plumes are currently visible in the <Link to='/data-catalog/emit-ch4plume-v1'>US GHG Center</Link>.
+            Methane plumes are currently visible in the <Link to='/data-catalog/emit-ch4plume-v1'>US GHG Center.</Link>
         </Prose>
     </Block>
 
@@ -195,7 +195,7 @@ taxonomy:
      <Figure>
             <Link to="/data-catalog/emit-ch4plume-v1">
             <Image 
-                src={new URL('./emit-plume-map.png', import.meta.url).href}
+                src={new URL('./media/emit-plume-map.png', import.meta.url).href}
                 alt="A map of the world with points representing methane plume locations distributed across all continents except antarctica." 
                 align="left" 
                 attrAuthor="GHG Center"
@@ -209,7 +209,7 @@ taxonomy:
     <Block>
         <Figure>
             <Image 
-                src={new URL('./Combined_AVIRIS-3.png', import.meta.url).href}
+                src={new URL('./media/Combined_AVIRIS-3.png', import.meta.url).href}
                 alt="Three panel photograph, one shows four people in a clean room standing behind an instrument. The bottom left shows an instrument mounted to the floor of a plane. The bottom right shows an image of a plane flying, ‘NASA’ is clearly visible on the tail. " 
                 align="left" 
                 attrAuthor="NASA/JPL-Caltech"
@@ -232,7 +232,7 @@ taxonomy:
     <Block>
         <Prose>
         ## Resources / References
-        Crippa, M., Guizzardi, D., Banja, M., Solazzo, E., Muntean, M., Schaaf, E., Pagani, F., Monforti-Ferrario, F., Olivier, J., Quadrelli, R., Risquez Martin, A., Taghavi-Moharamli, P., Grassi, G., Rossi, S., Jacome Felix Oom, D., Branco, A., San-Miguel-Ayanz, J. and Vignati, E., CO2 emissions of all world countries - 2022 Report, EUR 31182 EN, Publications Office of the European Union, Luxembourg, 2022, doi:10.2760/730164, JRC130363
+        Crippa, M., Guizzardi, D., Banja, M., Solazzo, E., Muntean, M., Schaaf, E., Pagani, F., Monforti-Ferrario, F., Olivier, J., Quadrelli, R., Risquez Martin, A., Taghavi-Moharamli, P., Grassi, G., Rossi, S., Jacome Felix Oom, D., Branco, A., San-Miguel-Ayanz, J. and Vignati, E., CO₂ emissions of all world countries - 2022 Report, EUR 31182 EN, Publications Office of the European Union, Luxembourg, 2022, doi:10.2760/730164, JRC130363
 
         Cusworth, D.H., Thorpe, A.K., Ayasse, A.K., Stepp, D., Heckler, J., Asner, G.P., Miller, C.E., Yadav, V., Chapman, J.W., Eastwood, M.L. and Green, R.O., 2022. Strong methane point sources contribute a disproportionate fraction of total emissions across multiple basins in the United States. Proceedings of the National Academy of Sciences, 119(38), p.e2202338119.
 

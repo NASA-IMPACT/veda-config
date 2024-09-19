@@ -1,0 +1,44 @@
+/* The classes for css transition group */
+.imagetransition {
+  &-enter {
+    opacity: 0.5;
+  }
+  &-enter-active {
+    opacity: 1;
+    transition: opacity 400ms ease-in;
+  }
+  &-exit {
+    opacity: 1;
+  }
+  /* ending EXIT animation */
+  &-exit-active {
+    opacity: 0;
+    transition: opacity 400ms ease-out;
+  }
+}
+
+.veda-color--link {
+  color: var(--veda-color-link);
+}
+.veda-color--base {
+  color: var(--veda-color-base);
+}
+
+.animation--transition {
+  transition: opacity 200ms ease-out;
+}
+
+.carousel {
+  &--height {
+    height: 500px;
+  }
+
+  &--content-image {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover;
+  }
+  &--title {
+    font-size: 1.25rem;
+  }
+}

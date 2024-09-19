@@ -3,49 +3,29 @@ import { NavLink } from "$veda-ui/react-router-dom";
 import styled from "$veda-ui/styled-components";
 import { glsp, themeVal, media } from "$veda-ui/@devseed-ui/theme-provider";
 import { Button } from "$veda-ui/@devseed-ui/button";
-import { CollecticonArrowRight, CollecticonCirclePlay } from "$veda-ui/@devseed-ui/collecticons";
+import {
+  CollecticonArrowRight,
+  CollecticonEnvelope,
+  CollecticonSpeechBalloon,
+} from "$veda-ui/@devseed-ui/collecticons";
 import Hug from "$veda-ui-scripts/styles/hug";
 import { VarHeading } from "$veda-ui-scripts/styles/variable-components";
 import { variableGlsp } from "$veda-ui-scripts/styles/variable-utils";
 
+import {
+  GridContainer,
+  Grid,
+} from '$veda-ui/@trussworks/react-uswds';
+
+
 import Partners from "./partners";
-import Keypoints from "./keypoints";
 import Banner from './banner';
-import VideoModal from "../components/video-modal";
+import Carousel from './carousel/';
 
-const HomeContent = styled(Hug)`
-  padding: ${variableGlsp(2.5, 0)};
-  grid-row-gap: ${variableGlsp(2)};
+import '../../common/styles.scss';
 
-  ${media.mediumUp`
-    grid-row-gap: ${variableGlsp(3)};
-  `}
-`;
+import { SUBSCRIPTION_URL } from "../../constants";
 
-const IntroHeadline = styled.div`
-  display: flex;
-  flex-flow: column;
-  gap: ${glsp(2)};
-  grid-column: content-start / content-end;
-
-  ${media.mediumUp`
-    grid-column: content-2 / content-8;
-  `}
-
-  ${media.largeUp`
-    grid-column: content-3 / content-11;
-  `}
-
-  p {
-    font-size: 1.25rem;
-  }
-`;
-
-const ButtonWithLongText = styled(Button)`
-  min-height: 3rem;
-  height: auto;
-  
-`
 
 const ActionsBlock = styled.div`
   grid-column: 1 / -1;
@@ -98,77 +78,53 @@ const Buttons = styled.div`
   justify-content: center;
 `;
 
-export default function HomeComponent() {
-  const [showModal, setShowModal] = React.useState<boolean>(false);
-  const [videoLink, setVideoLink] = React.useState<string>("");
-  
-
-  const handleOpenModal = (link: string) => {
-    setVideoLink(link);
-    setShowModal(true);
-  };
-
-  
+export default function HomeComponent() {  
   return (
     <>
     <Banner />
-      <HomeContent>
-        <IntroHeadline>
-          <VarHeading size="xxlarge">Welcome</VarHeading>
-          <p>
+      <GridContainer containerSize="widescreen">
+        <h1 className="font-heading-2xl margin-y-5 text-center">Explore the Latest Updates</h1>
+        {/* <p className="margin-bottom-4"> Check out the featured content </p> */}        
+        <Carousel />
+        <Grid col={8} offset={2} className="font-heading-md margin-y-10">
+          <h1 className="font-heading-2xl margin-y-6">Welcome</h1>
+          <p className="margin-bottom-4 font-size-md-deprecated">
             The U.S. Greenhouse Gas Center opens up access to trusted data on
             greenhouse gases. This&nbsp;multi-agency effort consolidates
-            greenhouse gas information from observations and models.
-            The&nbsp;goal of the US GHG Center is to provide decision-makers with
+            greenhouse gas information from observations and models to create a unified source for U.S. government and other datasets.
+            The&nbsp;goal of the US GHG Center is to provide decision makers with
             one location for data and analysis.
           </p>
-          <p>
-          This initial two-year demonstration phase creates a way to explore 
-          and analyze U.S. government and other datasets, targeting three 
-          greenhouse gas areas of study, as shown below. The US GHG Center 
-          also encourages stakeholder feedback and ideas for future expansion.
-          </p>
-          <Buttons>
-            <Button
-              onClick={() => handleOpenModal("https://www.youtube.com/embed/6xWdIlWqhBE?si=NpOVMavs4IgKE297")}
-              size="xlarge"
-              variation="primary-fill"
-            >
-              <CollecticonCirclePlay />
-              Tour the US GHG Center
-            </Button>
+          <Grid row>
+            <Grid col='auto' className="display-flex flex-align-center margin-bottom-2">
+              <CollecticonSpeechBalloon size='xlarge' color='#082a64' className="grid-col-auto" />
+            </Grid>
+            <Grid col='fill' className="display-flex flex-align-center margin-bottom-2">
+              <span className="margin-left-4 font-size-md-deprecated"> If you are interested in exploring partnership opportunities with the US GHG Center, please <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSeVWCrnca08Gt_qoWYjTo6gnj1BEGL4NCUC9VEiQnXA02gzVQ/viewform">reach out to our team</a>.</span>
+            </Grid>
+          </Grid>
+          <Grid row>
+            <Grid col='auto' className="display-flex flex-align-center margin-bottom-2">
+              <CollecticonEnvelope size='xlarge' color='#082a64' className="grid-col-auto" />
+            </Grid>
+            <Grid col='fill' className="display-flex flex-align-center margin-bottom-2">
+              <span className="margin-left-4 font-size-md-deprecated"> To get GHG Center updates delivered to your mailbox, <a href={SUBSCRIPTION_URL}>subscribe to the news and announcements list</a>.</span>
+            </Grid>
+          </Grid>
+          <Buttons className="margin-top-4">
             <Button
               forwardedAs={NavLink}
-              to="/stories/intro-us-ghg-center"
+              to="/about"
               size="xlarge"
-              variation="base-outline"
+              variation="primary-outline"
             >
-              Learn More
+                Learn More <CollecticonArrowRight />
             </Button>
           </Buttons>
-        </IntroHeadline>
-        <Keypoints />
-        <ActionsBlock>
-        <Buttons>
-          <ButtonWithLongText
-            forwardedAs={NavLink}
-            to="/data-catalog"
-            size="xlarge"
-            variation="primary-fill"
-          >
-            Browse the Data Catalog <CollecticonArrowRight />
-          </ButtonWithLongText>
-          <ButtonWithLongText
-            onClick={() => handleOpenModal("https://www.youtube.com/embed/S2XL5WT9W4g")}
-            size="xlarge"
-            variation="primary-fill"
-          >
-            <CollecticonCirclePlay />
-            How to Explore Data
-          </ButtonWithLongText>
-          </Buttons>
-        </ActionsBlock>
-      </HomeContent>
+        </Grid>
+      </GridContainer>
+      <ActionsBlock>
+      </ActionsBlock>
       <InfoCallout>
         <InfoCalloutInner>
           <InfoCalloutHeadline>
@@ -181,27 +137,8 @@ export default function HomeComponent() {
             </p>
           </InfoCalloutHeadline>
           <Partners variation="positive" size="big" />
-          <Button
-            forwardedAs={NavLink}
-            to="/about"
-            size="xlarge"
-            variation="primary-outline"
-          >
-            Learn More <CollecticonArrowRight />
-          </Button>
         </InfoCalloutInner>
       </InfoCallout>
-      {
-        showModal && (
-          <VideoModal 
-            iframe={<iframe width="560" height="315" src={videoLink} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen={true}></iframe>}
-            display={showModal}
-            onClose={() => setShowModal(false)}
-            width={`${560*1.5}px`} // Iframe's original embed width value 1.5x bigger
-            height={`${315*1.5}px`} // Iframe's original embed height value 1.5x bigger
-          />
-        )
-      }
     </>
   );
 }

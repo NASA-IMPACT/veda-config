@@ -1,10 +1,28 @@
 const dotEnvConfig = require('dotenv').config();
 const { parsed: config } = dotEnvConfig;
 
+const defaultMenuLinks = [
+  {
+    title: 'Stories',
+    to: '/stories',
+    type: 'internalLink'
+  },
+  {
+    title: 'Topics',
+    to: '/topics',
+    type: 'internalLink'
+  },
+  {
+    title: 'Data Toolkit',
+    to: '/data-toolkit',
+    type: 'internalLink'
+  },
+];
+
 let subNavItems = [
   {
-    title: 'Learn',
-    to: '/learn',
+    title: 'News & Events',
+    to: '/news-and-events',
     type: 'internalLink'
   },
   {
@@ -56,13 +74,15 @@ module.exports = {
     headerBrand: "./overrides/components/header-brand/index.mdx",
     // Component for the footer.
     pageFooter: "./overrides/components/page-footer/index.mdx",
-    "/learn": "./custom-pages/learn/index.mdx"
+    "/news-and-events": "./custom-pages/news-and-events/index.mdx",
+    "/data-toolkit": "./custom-pages/data-toolkit/index.mdx",
+    "/topics": "./custom-pages/topics/index.mdx",
   },
 
   strings: {
     stories: {
-      one: "Data Insights",
-      other: "Data Insights",
+      one: "Story",
+      other: "Stories",
     },
     storiesBanner:
         "Explore the guided narratives below to learn more about greenhouse gas measurement, changes over time, events and human-related causes and contributions.",
@@ -100,6 +120,7 @@ module.exports = {
     'externalLinksInNewTab': true,
   },
   navItems: {
+    mainNavItems: defaultMenuLinks,
     subNavItems: subNavItems
   }
 };
