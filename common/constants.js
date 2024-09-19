@@ -278,7 +278,6 @@ export const keyUrbanDatasets = [
     "title": "Innovative Urban Testbeds to Advance Emissions Estimates",
     "desc": "NIST’s Urban GHG Measurements Testbed System uses ground-based observing networks in Los Angeles, Indianapolis, and the Baltimore/Washington, D.C. region, together with aircraft and satellite data, to diagnose accuracy of local emissions estimates and advance transformative monitoring and measurement methods for the future.",
     "img": {
-      "src": "https://bpb-us-e1.wpmucdn.com/sites.psu.edu/dist/9/4276/files/2023/09/US_INC.png",
       "src": new URL('../stories/media/US_INC_banner.jpg', import.meta.url).href,
       "alt": "image from INFLUX project"
     },
