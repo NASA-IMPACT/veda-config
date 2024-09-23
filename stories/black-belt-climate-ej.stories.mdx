@@ -94,32 +94,36 @@ taxonomy:
 </Block>
 
 <Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
-  <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
-    <Image
-        src={new URL('./BB_OlderPopulation.png', import.meta.url).href}
-        style={{ width: '30%', height: 'auto' }}
-    />
-    <p style={{ flex: '1' }}>
-      Analyzing Social Vulnerability Index (SVI) data from the CDC between 2000 and 2022 shows a concerning demographic shift: the younger generation, including those as young as 17, is increasingly moving out of the region, leaving behind an aging population, particularly those aged 65 and above. A linear trend is observed, with color coding representing the slope of this shift. This trend exacerbates the region's vulnerabilities, as the older population becomes more isolated and dependent. 
-    </p>
-    <Image
-        src={new URL('./BB_Youngerpopulation.png', import.meta.url).href}
-        style={{ width: '30%', height: 'auto' }}
-    />
-  </Prose>
-</Block>
-
-{/*
-<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
   <Prose style={{ flex: '1', paddingRight: '1px', textAlign: 'justify' }}>
     <p>
       The region is now facing a significant new challenge: climate change. As global temperatures rise, extreme weather events like heatwaves are becoming increasingly frequent and severe. This is particularly concerning for areas where many residents, especially older adults, rely on outdoor agricultural work. Data from the MERRA-2 climate extreme indices dataset reveal troubling trends, showing changes in temperature extremes. Indices such as Cool Nights (TN10P) and Warm Nights (TN90P) track the frequency of days with nighttime temperatures falling below the 10th percentile or exceeding the 90th percentile. Similarly, Cool Days (TX10P) and Warm Days (TX90P) monitor daytime temperature extremes. Analyzing these indices from 1980 to 2023 uncovers a clear pattern of rising temperatures, with an increasing number of warm days and nights, highlighting the escalating climate challenges facing the region.
     </p>
   </Prose>
 </Block>
-*/}
 
 <ScrollytellingBlock>
+  <Chapter
+   center={[-86.71,33.10]}
+   zoom={6}
+   datasetId='svi-overall'
+   layerId='social-vulnerability-index-overall'
+   datetime='2016-01-01' 
+  >
+  ## Socioeconomic Stressors
+      Analyzing Social Vulnerability Index (SVI) data from the CDC between 2000 and 2022 shows a concerning demographic shift: the younger generation, including those as young as 17, is increasingly moving out of the region, leaving behind an aging population, particularly those aged 65 and above. A linear trend is observed, with color coding representing the slope of this shift. This trend exacerbates the region's vulnerabilities, as the older population becomes more isolated and dependent. 
+      <Image
+        src={new URL('./BB_OlderPopulation.png', import.meta.url).href}
+        style={{ width: '30%', height: 'auto' }}
+    />
+    
+
+    <Image
+        src={new URL('./BB_Youngerpopulation.png', import.meta.url).href}
+        style={{ width: '30%', height: 'auto' }}
+    />
+  
+  </Chapter>
+  
   <Chapter
    center={[-86.71,33.10]}
    zoom={6}
