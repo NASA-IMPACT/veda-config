@@ -24,8 +24,8 @@ test('explore a dataset', async ({
   const mapboxResponse = await mapboxResponsePromise;
   expect(mapboxResponse.ok(), 'mapbox request should be successful').toBeTruthy();
 
-  await page.getByRole('button', { name: 'Close feature tour' }).click();
-  await expect(page.locator('#preset-selector')).toBeVisible();
+  await explorePage.closeFeatureTour();
+  await expect(explorePage.presetSelector, 'preset selector should be visible').toBeVisible();
 
   await expect(explorePage.mapboxCanvas, 'mapbox canvas should be visible').toBeVisible();
 
