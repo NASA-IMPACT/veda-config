@@ -1,7 +1,7 @@
 {
   "name": "veda-config",
   "description": "Configuration for Veda",
-  "version": "0.15.2",
+  "version": "0.16.0",
   "source": "./.veda/ui/app/index.html",
   "license": "Apache-2.0",
   "scripts": {
@@ -15,9 +15,15 @@
     "pretest:e2e": "node e2e/generateTestData.js",
     "test:e2e": "yarn playwright test"
   },
+  "targets": {
+    "veda-app": {
+      "source": "./.veda/ui/app/index.html",
+      "context": "browser"
+    }
+  },
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "engines": {
-    "node": "16.x"
+    "node": "20.x"
   },
   "devDependencies": {
     "@parcel/packager-raw-url": "2.7.0",

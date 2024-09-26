@@ -12,6 +12,9 @@ taxonomy:
   - name: Topics
     values:
       - EIS
+infoDescription: |
+  ::markdown
+    The National Land Cover Database (NLCD) stands as a paramount dataset offering an in-depth overview of the land cover characteristics in the United States. Spearheaded by the Earth Resources Observation and Science (EROS) Center, this database is renewed every two to three years to provide updated and accurate data for the nation.
 layers:
   - id: houston-urbanization
     stacCol: houston-urbanization
@@ -35,7 +38,11 @@ layers:
           label: No Data
         - color: "#d73027"
           label: Urbanization
-
+    info:
+      source: EROS
+      spatialExtent: Houston
+      temporalResolution: Annual 
+      unit: Binary
   
 ---
 

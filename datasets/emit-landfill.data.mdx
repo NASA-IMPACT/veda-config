@@ -16,6 +16,14 @@ taxonomy:
   - name: Source
     values:
       - NASA EMIT
+infoDescription: |
+  ::markdown
+    - **Temporal Extent:** June 22, and August 25, 2023
+    - **Temporal Resolution:** Variable (based on ISS orbit, solar illumination, and target mask)
+    - **Spatial Extent:** Stockton, CA and Dallas, TX
+    - **Spatial Resolution:** 60 m
+    - **Data Units:** Parts per million-meter (ppm m)
+    - **Data Type:** Research
 layers:
   - id: landfill-emit
     stacCol: landfill-emit
@@ -63,6 +71,11 @@ layers:
         - '#fdac33'
         - '#fdc527'
         - '#f8df25'
+    info:
+      source: NASA
+      spatialExtent: Stockton, CA and Dallas, TX
+      temporalResolution: Annual
+      unit: ppm m
 ---
 
 <Block type='wide'>

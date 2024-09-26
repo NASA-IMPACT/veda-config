@@ -22,6 +22,9 @@ taxonomy:
   - name: Source
     values:
       - ATSDR
+infoDescription: |
+  ::markdown
+    The SVI Overall Score provides the overall, summed social vulnerability score for a given tract. The Overall Score SVI Grid is part of the U.S. Census Grids collection, and displays the Center for Disease Control & Prevention (CDC) SVI score. Funding for the final development, processing and dissemination of this data set by the Socioeconomic Data and Applications Center (SEDAC) was provided under the U.S. National Aeronautics and Space Administration (NASA)¹.
 layers:
   - id: social-vulnerability-index-overall
     stacCol: social-vulnerability-index-overall
@@ -56,6 +59,12 @@ layers:
       - "#2498c1"
       - "#234da0"
       - "#081d58"
+    info:
+      source: NASA
+      spatialExtent: United States
+      temporalResolution: Annual 
+      unit: Percentile Ranking 
+
   - id: social-vulnerability-index-overall-nopop
     stacCol: social-vulnerability-index-overall-nopop
     name: Overall (NoPop) Social Vulnerability - Percentile Ranking
@@ -89,6 +98,12 @@ layers:
       - "#2498c1"
       - "#234da0"
       - "#081d58"
+    info:
+      source: NASA
+      spatialExtent: United States
+      temporalResolution: Annual 
+      unit: Percentile Ranking 
+
 ---
 
 <Block>
