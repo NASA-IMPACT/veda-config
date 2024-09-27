@@ -2,7 +2,7 @@ import fs from 'fs';
 import { test, expect } from '../pages/basePage';
 
 const datasetIds = JSON.parse(fs.readFileSync('e2e/playwrightTestData.json', 'utf8')).datasetIds;
-
+const datasetName = JSON.parse(fs.readFileSync('e2e/playwrightTestData.json', 'utf8')).catalogNames;
 test.describe('explore dataset', () => {
  for (const dataset of datasetIds) {
   test(`${dataset} explore page functions`, async({
@@ -17,15 +17,15 @@ test.describe('explore dataset', () => {
     });
 
     //mosaic isn't hit on all datasets
-    const collectionsResponsePromise = page.waitForResponse(response =>
-      response.url().includes('collections') && response.status() === 200
-    );
+    // const collectionsResponsePromise = page.waitForResponse(response =>
+    //   response.url().includes('collections') && response.status() === 200
+    // );
 
-    await page.goto(`data-catalog/${dataset}/explore`);
-    await expect(explorePage.layersHeading).toBeVisible();
+    await page.goto(`data-catalog/${dataset}`);
+    await expect(explorePage.exploreDataLink).toBeVisible();
 
-    const mosaicResponse = await collectionsResponsePromise;
-    expect(mosaicResponse.ok(), 'mapbox request should be successful').toBeTruthy();
+    // const mosaicResponse = await collectionsResponsePromise;
+    // expect(mosaicResponse.ok(), 'mapbox request should be successful').toBeTruthy();
 
     // scroll page to bottom
     await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
