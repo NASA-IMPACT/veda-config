@@ -96,7 +96,7 @@ taxonomy:
   </Figure> 
 </Block>
 
-<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
+##<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
   <Prose style={{ flex: '1', paddingRight: '1px', textAlign: 'justify' }}>
     <p>
       The region is now facing a significant new challenge - climate change. MERRA-2 [Climate Indices](https://disc.gsfc.nasa.gov/datasets?page=1&keywords=MERRA-2) from 1980 to 2023 monthly product reveals significant shifts in temperature extremes. The region is witnessing a marked increase in warm days (TX90P) and warm nights (TN90P), alongside a decrease in cool days (TX10P) and cool nights (TN10P). TX90P and TN90P represent the percentage of days when the maximum and minimum temperatures, respectively, exceed the 90th percentile of the baseline period. Conversely, TX10P and TN10P indicate the percentage of days when the maximum and minimum temperatures fall below the 10th percentile. These changes pose particular risks for the area's agricultural workforce and older residents, highlighting the growing impact of climate change on the region. 
@@ -117,12 +117,23 @@ taxonomy:
   <Figure>
     <Image
       src={new URL('./black-belt-age-trends.png', import.meta.url).href}
-      style={{ width: '220%', height: 'auto' }}
+      style={{ width: '270%', height: 'auto' }}
     />
     <Caption attrAuthor=''>
     Significant Trends in Elderly and Young Populations (SVI data): Slope Analysis (p < 0.1)
     </Caption>
     </Figure>
+  </Chapter>
+
+  <Chapter
+   center={[-88.71, 32.60]}
+   zoom={6.5}
+   datasetId='svi-overall'
+   layerId='social-vulnerability-index-overall'
+   datetime='2018-01-01' 
+  >
+  ## Climate Extremes
+      The region is now facing a significant new challenge - climate change. MERRA-2 [Climate Indices](https://disc.gsfc.nasa.gov/datasets?page=1&keywords=MERRA-2) from 1980 to 2023 monthly product reveals significant shifts in temperature extremes. The region is witnessing a marked increase in warm days (TX90P) and warm nights (TN90P), alongside a decrease in cool days (TX10P) and cool nights (TN10P). TX90P and TN90P represent the percentage of days when the maximum and minimum temperatures, respectively, exceed the 90th percentile of the baseline period. Conversely, TX10P and TN10P indicate the percentage of days when the maximum and minimum temperatures fall below the 10th percentile. These changes pose particular risks for the area's agricultural workforce and older residents, highlighting the growing impact of climate change on the region. 
   </Chapter>
   
   <Chapter
@@ -201,7 +212,7 @@ taxonomy:
 <Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
   <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
     <p>
-      Agriculture remains the backbone of the Black Belt's economy, with many older adults working in the fields. This reliance on an aging workforce is concerning, particularly as the physical demands of farming intensify with rising temperatures. Analyzing USDA's  National Agricultural Statistics Service (NASS) (https://www.nass.usda.gov/) data for Sumter County, the number of farm operators aged 55 and above is increasing, reflecting a broader national trend where the average age of U.S. farm producers has risen to 58.1 years by 2022.
+      Agriculture remains the backbone of the Black Belt's economy, with many older adults working in the fields. This reliance on an aging workforce is concerning, particularly as the physical demands of farming intensify with rising temperatures. Analyzing USDA's  (National Agricultural Statistics Service)(https://www.nass.usda.gov/) data for Sumter County, the number of farm operators aged 55 and above is increasing, reflecting a broader national trend where the average age of U.S. farm producers has risen to 58.1 years by 2022.
     </p>
   </Prose>
   <Figure style={{ flex: '0 0 auto'}}>
@@ -255,13 +266,13 @@ taxonomy:
 
      **Developers**: Maheshwari Neelam, Andrew Blackford, Jerika Christman, Brian Freitag, and Aaron Kaulfus
 
-     **Science and Content Contributors**: Maheshwari Neelam, Natalie P.Thomas and Udaysankar Nair
+     **Science and Content Contributors**: Maheshwari Neelam and Udaysankar Nair
 
      **Questions / Feedback (email address)**: maheshwari.neelam@nasa.gov
     </p>
     <p>
      #### Additional Resources
-     * Thomas N. P., A. B. Marquardt Collow, M. G. Bosilovich, et al. 2023.(Effect of Baseline Period on Quantification of Climate Extremes Over the United States." Geophysical Research Letters 50 (17))[10.1029/2023gl105204]
+     * Thomas N. P., A. B. Marquardt Collow, M. G. Bosilovich, et al. 2023.(Effect of Baseline Period on Quantification of Climate Extremes Over the United States. Geophysical Research Letters 50 17)[10.1029/2023gl105204]
      * https://blogs.edf.org/growingreturns/2023/08/02/heat-threat-for-farmworkers/ 
      * https://www.thenation.com/article/society/black-farmers-pigford-debt/
      * https://foodprint.org/issues/black-land-loss-in-the-united-states/
