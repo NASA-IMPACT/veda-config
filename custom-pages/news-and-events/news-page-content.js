@@ -120,8 +120,8 @@ export const EVENT_ITEMS = sortByDateDesc([
       alt: 'ARSET Logo'
     },
     description: "Registration for the “Methane Observations for Large Emission Event Detection and Monitoring” training is now available on ARSET, NASA’s remote sensing training platform. The training introduces participants to using data gathered by the Earth surface Mineral dust Source Investigation (EMIT) mission. Training will occur November 19-21, 2024.",
-    startDate: '2024-10-04',
-    endDate: '2024-11-22'
+    startDate: '2024-11-19',
+    endDate: '2024-11-21'
   },
   {
     name: ' AGU Pre-conference Workshop',
@@ -133,11 +133,11 @@ export const EVENT_ITEMS = sortByDateDesc([
       alt: 'AGU Logo'
     },
     description: "On Sunday, December 8 (1:00 - 4:30PM EST), US GHG Center team members will host a workshop at the 2024 American Geophysical Union annual conference. Join us at Advancing Open Science: Greenhouse Gas Emission Data Analysis using the U.S. Greenhouse Gas Center’s JupyterHub. Early bird registration ends on November 6.",
-    startDate: '2024-10-04',
-    endDate: '2024-11-22'
+    startDate: '2024-12-04',
+    endDate: '2024-12-05'
   },
   {
-    name: 'Join the 2nd Annual Stakeholder Forum;  Dec 4-5, 2024',
+    name: 'Join the 2nd Annual Stakeholder Forum; Dec 4-5, 2024',
     asLink : {
       url: 'https://drive.google.com/file/d/1Mkz43d3iP4CfTuBeZXsoO1-fxBRGmmVq/view?usp=sharing'
     },
