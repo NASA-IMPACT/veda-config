@@ -53,6 +53,17 @@ export const NEWSLETTER_ITEMS = sortByDateDesc([
 
 export const NEWS_ITEMS = [
   {
+    name: 'EPA RFI on Methane Emission Technology',
+    asLink : {
+      url: 'https://www.regulations.gov/document/EPA-HQ-OAR-2024-0350-0001'
+    },
+    media: {
+      src: new URL('./media/news/epa.png', import.meta.url).href,
+      alt: 'EPA RFI'
+    },
+    description: 'The U.S. Environmental Protection Agency (EPA) is inviting public comment on the potential for expanded use of advanced and emerging technologies for methane emissions quantification in the Agency’s Greenhouse Gas Reporting Program (GHGRP). Responses to the request for information (RFI) are due by November 27, 2024.'
+  },  
+  {
     name: 'Submit your proposal to NASA ROSES A.58 due June 10th!',
     asLink : {
       url: 'https://nspires.nasaprs.com/external/solicitations/summary.do?solId=%7B0FD29EB7-2725-1A98-66A4-0A2C07F9A1A6%7D'
@@ -99,6 +110,32 @@ export const NEWS_ITEMS = [
 ]
 
 export const EVENT_ITEMS = sortByDateDesc([
+  {
+    name: 'New ARSET Training on Methane Observations',
+    asLink : {
+      url: 'https://appliedsciences.nasa.gov/get-involved/training/english/arset-methane-observations-large-emission-event-detection-and'
+    },
+    media: {
+      src: new URL('./media/events/arset_logo.png', import.meta.url).href,
+      alt: 'ARSET Logo'
+    },
+    description: "Registration for the “Methane Observations for Large Emission Event Detection and Monitoring” training is now available on ARSET, NASA’s remote sensing training platform. The training introduces participants to using data gathered by the Earth surface Mineral dust Source Investigation (EMIT) mission. Training will occur November 19-21, 2024.",
+    startDate: '2024-10-04',
+    endDate: '2024-11-22'
+  },
+  {
+    name: ' AGU Pre-conference Workshop',
+    asLink : {
+      url: 'https://www.agu.org/annual-meeting/attend#register'
+    },
+    media: {
+      src: new URL('./media/events/agu_logo.png', import.meta.url).href,
+      alt: 'AGU Logo'
+    },
+    description: "On Sunday, December 8 (1:00 - 4:30PM EST), US GHG Center team members will host a workshop at the 2024 American Geophysical Union annual conference. Join us at Advancing Open Science: Greenhouse Gas Emission Data Analysis using the U.S. Greenhouse Gas Center’s JupyterHub. Early bird registration ends on November 6.",
+    startDate: '2024-10-04',
+    endDate: '2024-11-22'
+  },
   {
     name: 'Join the 2nd Annual Stakeholder Forum;  Dec 4-5, 2024',
     asLink : {
