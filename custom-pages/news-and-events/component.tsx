@@ -61,7 +61,7 @@ const StyledContinuum = styled(Continuum)`
 `;
 
 
-function getEventTemporalState(startDate, endDate) {
+export function getEventTemporalState(startDate, endDate) {
   // Convert start and end dates to Date objects
   const startDateTime = new Date(startDate + 'T00:00:00-05:00'); // Assuming EST (UTC-5)
   const endDateTime = new Date(endDate + 'T23:59:59-05:00'); // Assuming EST (UTC-5)
