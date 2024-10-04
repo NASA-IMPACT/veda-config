@@ -1,3 +1,4 @@
+import { getEventTemporalState } from './component'
 function sortByDateDesc(items) {
   return items.sort((a, b) => {
     const dateA = new Date(a.endDate || a.date || a.startDate);
@@ -10,6 +11,30 @@ function sortByDateDesc(items) {
     return dateB - dateA;
   });
 }
+
+function sortByDateCustom(items) {
+  // Categorize the events
+  const { pastEvents, notPastEvents } = items.reduce((acc, item) => {
+    const temporalState = getEventTemporalState(item.startDate, item.endDate);
+    acc[temporalState === 'Past' ? 'pastEvents' : 'notPastEvents'].push(item);
+    return acc;
+  }, { pastEvents: [], notPastEvents: [] });
+
+  // Sort upcoming events: first by start date, then by end date descending
+  notPastEvents.sort((a, b) => {
+    const startDiff = new Date(a.startDate) - new Date(b.startDate);
+    return startDiff === 0
+      ? new Date(b.endDate) - new Date(a.endDate) // If start dates are the same, sort by end date descending
+      : startDiff; // Otherwise, sort by start date ascending
+  });
+
+  // Sort past events in descending order by end date
+  pastEvents.sort((a, b) => new Date(b.endDate) - new Date(a.endDate));
+
+  // Combine the events: upcoming past events first, then past events
+  return [...notPastEvents, ...pastEvents];
+}
+
 
 export const NEWSLETTER_ITEMS = sortByDateDesc([
   {
@@ -109,7 +134,7 @@ export const NEWS_ITEMS = [
   }
 ]
 
-export const EVENT_ITEMS = sortByDateDesc([
+export const EVENT_ITEMS = sortByDateCustom([
   {
     name: 'New ARSET Training on Methane Observations',
     asLink : {
