@@ -6,9 +6,12 @@ const fg = require('fast-glob');
 const catalogPaths = fg.globSync('**/datasets/*.mdx');
 const storyPaths = fg.globSync('**/stories/*.mdx');
 const catalogNames = [];
+const catalogNamesHidden = [];
 const datasetIds = [];
+const datasetIdsHidden = [];
 const datasetIdDisableExplore = [];
 const storyNames = [];
+const storyNamesHidden = [];
 
 for (const catalog of catalogPaths) {
   const catalogData = matter.read(catalog).data;
@@ -17,18 +20,35 @@ for (const catalog of catalogPaths) {
   if(catalogData['disableExplore'] == true) {
     datasetIdDisableExplore.push(catalogData['id'])
   }
+  if(catalogData['isHidden'] == true) {
+    catalogNamesHidden.push(catalogData['name'])
+    datasetIdsHidden.push(catalogData['id'])
+  }
 }
+
+const catalogNamesVisible = catalogNames.filter(item => !catalogNamesHidden.includes(item));
+const datasetIdsVisible = datasetIds.filter(item => !datasetIdsHidden.includes(item));
 
 for (const story of storyPaths) {
   const storyData = matter.read(story).data;
-    storyNames.push(storyData['name']);
+  storyNames.push(storyData['name']);
+  if(storyData['isHidden'] == true) {
+    storyNamesHidden.push(storyData['name'])
+  }
 }
+const storyNamesVisible = storyNames.filter(item => !storyNamesHidden.includes(item));
 
 const testDataJson = {
   catalogs: catalogNames,
+  catalogsHidden: catalogNamesHidden,
+  catalogsVisible: catalogNamesVisible,
   datasetIds: datasetIds,
+  datasetsIdsDisabled: datasetIdDisableExplore,
+  datasetIdsHidden: datasetIdsHidden,
+  datasetIdsVisible: datasetIdsVisible,
   stories: storyNames,
-  disabledDatasets: datasetIdDisableExplore,
+  storiesHidden: storyNamesHidden,
+  storiesVisible: storyNamesVisible,
 };
 
 fs.writeFile(

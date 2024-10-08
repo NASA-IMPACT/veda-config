@@ -1,7 +1,7 @@
 {
   "name": "veda-config",
   "description": "Configuration for Veda",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "source": "./.veda/ui/app/index.html",
   "license": "Apache-2.0",
   "scripts": {
@@ -28,7 +28,7 @@
   "devDependencies": {
     "@parcel/packager-raw-url": "2.7.0",
     "@parcel/transformer-webmanifest": "2.7.0",
-    "@playwright/test": "^1.41.1",
+    "@playwright/test": "^1.46.0",
     "@types/node": "^20.11.6",
     "buffer": "^5.5.0||^6.0.0",
     "dotenv": "^10.0.0",

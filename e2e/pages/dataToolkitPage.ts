@@ -1,6 +1,6 @@
 import { Locator, Page } from '@playwright/test';
 
-export default class StoryPage {
+export default class DataToolkitPage {
   readonly page: Page;
   readonly mainContent: Locator;
   readonly header: Locator;
@@ -9,6 +9,6 @@ export default class StoryPage {
   constructor(page: Page) {
     this.page = page;
     this.mainContent = this.page.getByRole('main');
-    this.header = this.mainContent.getByRole('heading', {level: 1, name: /stories/i })
+    this.header = this.mainContent.getByRole('heading', {level: 1, name: /accessing and exploring data/i })
   }
 }
