@@ -21,6 +21,8 @@ taxonomy:
       - MRLC
 layers:
   - id: nlcd-annual-conus
+    stacApiEndpoint: https://staging.openveda.cloud/api/stac
+    tileApiEndpoint: https://staging.openveda.cloud/api/raster
     stacCol: nlcd-annual-conus
     name: NLCD Land Use - Land Cover Classification
     type: raster
@@ -32,6 +34,9 @@ layers:
     sourceParams:
         assets: landcover
         bidx: [1]
+        nodata: 0
+        resampling: nearest
+        colormap_name: nlcd
     legend:
       type: categorical
       min: "0"

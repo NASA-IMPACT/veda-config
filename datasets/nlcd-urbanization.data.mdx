@@ -22,6 +22,8 @@ infoDescription: |
     The National Land Cover Database (NLCD) stands as a paramount dataset offering an in-depth overview of the land cover characteristics in the United States. Spearheaded by the Earth Resources Observation and Science (EROS) Center, this database is renewed every two to three years to provide updated and accurate data for the nation.
 layers:
   - id: nlcd-new-urbanization
+    stacApiEndpoint: https://staging.openveda.cloud/api/stac
+    tileApiEndpoint: https://staging.openveda.cloud/api/raster
     stacCol: nlcd-new-urbanization
     name: Urbanization
     type: raster
@@ -33,6 +35,7 @@ layers:
     sourceParams:
       colormap_name: reds
       nodata: 0
+      assets: landcover
       rescale:
         - 0
         - 1
@@ -175,7 +178,7 @@ layers:
   
   ## Data Stories Using This Dataset
   
-  **<Link to={"/stories/houston-aod"}Aerosols and Their Impacts on Houston, TX]</Link>**
+  **<Link to={"/stories/houston-aod"}>Aerosols and Their Impacts on Houston, TX</Link>**
 
   </Prose>
 </Block>
