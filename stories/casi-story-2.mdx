@@ -1,15 +1,15 @@
 ---
-id: 'eis-casi-story-2'
-name: CASI Story 2
-description: 'NASA measurements and models shed light on present and future coastal risks'
+id: 'eis-casi-story'
+name: CASI Story
+description: 'NASA measurements and models shed light on present and future in soil moisture condition'
 featured: true
 media:
-  src: ::file ./coastal-flooding-and-slr-cover.jpg
-  alt: Flooding in York, UK - February 2020.
+  src: ::file ./CASI_header.avif
+  alt: Drought typical photo.
   author:
-    name: Don Lodge
-    url: https://unsplash.com/photos/P8PuYidUYMw
-pubDate: 2024-07-15
+    name: Bernd Dittrich
+    url: https://unsplash.com/photos/a-close-up-of-a-cracked-surface-of-dirt-HtTIiBMUY9M
+pubDate: 2024-10-15
 taxonomy:
   - name: Topics
     values:
@@ -18,14 +18,103 @@ taxonomy:
       - Drought
 ---
 <Block>
-  <Prose>  
-  **Authors**: Nishan Biswas, Sujay Kumar, Kim Locke
-  **Editor**: 
-  **Developers**:
-  **Science and Content Contributors**: 
-  **Acknowledgements**:
+  <Prose>
+  ## Introduction
+  <mark>🚧 This Discovery presents work in progress and not peer-reviewed results! 🚧</mark>
   
-  **Disclaimer**: This Discovery presents work in progress and not peer-reviewed results!
+  National Aeronautics and Space Administration (NASA) Centers are currently experiencing heavy downpours, heatwaves and coastal flooding, and these are expected to increase in the coming decades due to climate variability and change. The United States Global Change Research Program (USGCRP) 2009 Climate Impacts Report concluded that “human-induced climate change is happening now, the impacts are already apparent, and greater impacts are projected, particularly if [greenhouse] gas emissions continue unabated.”
+
+  The EIS team integrates the Noah-MP land surface model within [NASA’s LIS framework](https://lis.gsfc.nasa.gov/) and Earth observations by assimilating soil moisture from the Climate Change Initiative Program released by European Space Agency  ([ESA CCI](https://esa-soilmoisture-cci.org/)), leaf area index from Moderate Resolution Imaging Spectroradiometer ([MODIS](https://lpdaac.usgs.gov/products/mcd15a2hv006/)), and terrestrial water storage anomalies from Gravity Recovery and Climate Experiment and the follow-on satellites ([GRACE/GRACE-FO](https://earth.gsfc.nasa.gov/geo/data/grace-mascons)). Using this data assimilation approach, the team provides a daily global water cycle reanalysis product for 2003-2021 at a 10 km spatial resolution. This allows us to better quantify surface variables and groundwater, human management influence, and hydrological extremes. These resulting reanalysis datasets are publicly available and interactable via this NASA VEDA platform, including key water, energy, and carbon fluxes such as terrestrial water storage (TWS) and gross primary production (GPP). For more information, please visit the corresponding [VEDA dataset page](https://www.earthdata.nasa.gov/dashboard/data-catalog?taxonomy=%7B%22Topics%22%3A%22eis%22%7D).
+
+  Join the discussion and provide comments on this Discovery at https://github.com/orgs/Earth-Information-System/discussions.
+
+  Authors: Nishan Kumar Biswas, Sujay V. Kumar, Kim Locke
 
   </Prose>
 </Block>
+
+<ScrollytellingBlock>
+  <Chapter
+    center={[-100,80]}
+    zoom={2}
+    datasetId='eis_casi_monthly'
+    layerId='median-soil-moisture'
+    datetime='2099-12-01'
+  >
+    ## Significant increase in soil moisture 
+    Big jump in soil moisture percentile in the arctic zone during the year of 2099 compared to the historical period.
+  </Chapter>
+  <Chapter
+    center={[-55,-10]}
+    zoom={3.8}
+    datasetId='eis_casi_monthly'
+    layerId='median-soil-moisture'
+    datetime='2099-12-01'
+  >
+    ## Drop in soil moisture percentile in Amazon 
+    A hotspot in Amazon where soil moisture will drop significantly during the projected period of 2099 
+  </Chapter>
+  <Chapter
+    center={[77.63,24.27]}
+    zoom={2}
+    datasetId='eis_casi_monthly'
+    layerId='median-soil-moisture'
+    datetime='2099-12-01'
+  >
+    ## Showing increasing pattern in China
+    Meanwhile, data from our model simulations shown here indicate increasing soil moisture gradually over the Central China region 
+  </Chapter>
+  <Chapter
+    center={[105.5001,40.7899]}
+    zoom={3.8}
+    datasetId='eis_casi_monthly'
+    layerId='median-soil-moisture'
+    datetime='2099-12-01'
+  >
+    ## Northern Africa is showing decline
+    Northern Africa shows a significant drop in soil moisture due the the drop in soil drying and more drought phenomena in the upcoming years.
+  </Chapter>
+</ScrollytellingBlock>
+
+<Block type="full">
+  <Figure>
+    <Map
+      datasetId='eis_casi_monthly'
+      layerId='minimum-soil-moisture'
+      dateTime='2015-01-01'
+      compareDateTime='2015-01-01'
+	  layerId='maximum-soil-moisture'
+
+    />
+    <Caption>
+      Figure 1. The spreading of soil moisture percentile between the minimum and maximum among the different ensembles.
+    </Caption>
+  </Figure>
+  <Prose>
+    ### Using satellite data to study soil moisture dynamics
+	The soil moisture percentile was caluclated from 25 different ensembles and an example of spreading of soil moisture is shown in the snapshot to understand the difference betweent he different percentiles.
+	
+  </Prose>
+</Block>
+
+<Block type="wide">
+  <Figure>
+    <Image
+      src={new URL('./CASI_NASA_Centers.png', import.meta.url).href}
+      alt='Soil Moisture dynamics around NASA Centers'
+    />
+    <Caption>
+      Comparison of soil moisture percentile calculated around the NASA centers with a five-year window. Here the number of months when soil moisture percentile crossed 50% are plotted along the y axis for the locations aroudn all the NASA centers.
+    </Caption> 
+  </Figure>
+</Block>
+
+
+
+<Block>
+  <Prose>
+  ## References
+
+</Prose>
+</Block>
+
