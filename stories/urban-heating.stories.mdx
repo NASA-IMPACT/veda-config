@@ -13,7 +13,20 @@ taxonomy:
   - name: Topics
     values:
       - Environmental Justice
+      - Urban
+      - Heat
+  - name: Source
+    values:
+      - Community Contributed
 ---
+
+<Block> 
+  <Prose>
+
+    ###### This story is part of a study conducted on both heat and pollution stress in the Houston Metropolitan Area. <Link to={"/stories/houston-aod"}>The data story that higlights pollution stress can be found here</Link>
+    
+  </Prose>
+</Block>
 
 <Block type="wide">
   <Figure>
@@ -31,11 +44,9 @@ taxonomy:
   <Prose>
 
     Authors: Andrew Blackford<sup>[1]</sup>, Trent Cowan<sup>[1]</sup>, Udaysankar Nair<sup>[1]</sup>\
-    <sup>[1]</sup> University of Alabama in Huntsville(UAH)
+    <sup>[1]</sup> The University of Alabama in Huntsville
 
     ## Implications for Heat Stress
-
-    <mark>🚧 This Discovery presents work in progress and not peer-reviewed results! 🚧</mark>
 
     Heat stress includes a series of conditions where the body undergoes stress due to overheating– typically from exposure to hot weather. It is a natural hazard that causes a large number of fatalities globally. Those at a greatest risk of heat stress include children, the elderly, and people with medical conditions, however, even young and healthy individuals can experience heat stress when exposed to intense heat or when conducting strenuous activities in hotter conditions. In the coming decades, climate change may cause more frequent heat waves, which could exacerbate heat-induced health issues. Future urban growth could also strengthen the urban heat island effect–in which infrastructure absorbs and re-emit the sun's heat at rates higher than natural landscapes–causing more severe heat events in urban populations.
     
@@ -45,7 +56,7 @@ taxonomy:
 
 <Block>
 <Prose>
-  ## Environmental inequality in Houston, TX
+  ## Environmental Inequality in Houston, TX
   Houston is the site of some of the earliest studies of environmental inequality. Robert Bullard, known as the “father of environmental justice,” proved that waste facilities were disproportionately sited in poor and minority neighborhoods as far back as the late 1970s (Bullard 1983). Today, environmental justice  research is still important in Houston, which is among the most racially segregated cities in the United States (Logan et al. 2013). In 2012, Houston was ranked the most economically segregated metropolitan area in the entire country (Fry and Taylor 2012). According to this study, 24% of high-income households live in high-income neighborhoods and 37% of low-income households reside in low-income neighborhoods (Fry and Taylor 2012).
 </Prose>
 </Block>
@@ -58,13 +69,15 @@ taxonomy:
       layerId='houston-landcover'
       dateTime='2001-01-01'
       compareDateTime='2019-01-01'
+      center={[-95.35, 29.8]}
+      zoom={8.75}      
     />
     <Caption>
-      Figure 1. Land cover classification between 2001 and 2019 showing urban growth in the Houston metro area. For a full list of land cover classes, see the class legend and descriptions [here](https://www.mrlc.gov/data/legends/national-land-cover-database-class-legend-and-description).
+      Figure 1. NLCD land cover classifications for 2001 and 2019 show urban growth in the Houston metro area. For a full list of land cover classes, see the class legend and descriptions [here](https://www.mrlc.gov/data/legends/national-land-cover-database-class-legend-and-description).
     </Caption>
   </Figure>
   <Prose>
-    ### Using satellite data to study urban heat
+    ### Using Satellite Data to Study Urban Heat
 
     Using satellite data and socioeconomic information, a complete picture of Houston’s urban growth can be examined to further understand the impacts of heat stress. To study how the city is changing over time, land cover data from the National Land Cover Database (NLCD) was used. This data classifies land cover types in areas as small as 30m x 30m every 3 years. Greenspace–a dedicated space for vegetation in an urban space, such as a park–also plays a big role in urban heat. To measure vegetation, such as trees and grass, the Normalized Difference Vegetation Index (NDVI) metric is used. On this scale, bare ground = 0 and dense vegetation = 1. This information comes from the NASA Moderate Resolution Imaging Spectroradiometer (MODIS) sensor on the Terra platform.
     
@@ -78,7 +91,7 @@ taxonomy:
 
 <Block>
   <Prose>
-    ### Utilizing Land cover maps
+    ### Utilizing Land Cover Maps
     Using land cover maps, the increase of urban and built-up land-cover was measured. It was found that the area of urban and built-up land cover increased by more than 20% in the last two decades. By comparing land cover maps from 2001 and 2019, a substantial increase in urban areas along the southwestern part of the city can be seen (Figure 1 - slide to compare years).  A similar comparison can be done with average temperature. Figure 2 shows Houston’s average temperature from 2000-2009 compared to 2010-2019. The maps show higher average temperatures over similar regions in the southwestern part of the city. These higher temperatures carry into the night, too, although they are less intense.
   </Prose>
 </Block>
@@ -91,6 +104,8 @@ taxonomy:
       dateTime='2000-01-01'
       compareDateTime='2010-01-01'
       compareLabel='2000-2009 avg / 2010-2019 avg'
+      center={[-95.35, 29.8]}
+      zoom={8.75}      
     />
     <Caption>
       Comparison of decadally-averaged daytime land surface temperature (LST) between 2000-2009 and 2010-2019 showing urban heating in the Houston metropolitan area.
@@ -106,6 +121,8 @@ taxonomy:
       dateTime='2000-01-01'
       compareDateTime='2010-01-01'
       compareLabel='2000-2009 avg / 2010-2019 avg'
+      center={[-95.35, 29.8]}
+      zoom={8.75}      
     />
     <Caption>
       Comparison of decadaly-averaged normalized differential vegetation index (NDVI) between 2000-2009 and 2010-2019 showing a reduction in healthy vegetation in the Houston metropolitan area.
@@ -124,12 +141,12 @@ taxonomy:
       yAxisLabel='Kelvin'
     />
     <Caption>
-        Land surface Temperature (LST) trend in various socio-economic (Social Vulnerability Index) ranges in Harris county, Houston (2020)
+        Land surface Temperature (LST) trend in various socio-economic (Social Vulnerability Index 150% Poverty Threshhold) ranges in Harris County, Texas (2020)
     </Caption>
   </Figure>
   <Prose>
-    ### What it means for economically disadvantaged population
-    When these changes in heat and land cover were combined with Houston's socioeconomic data, it was found that economically disadvantaged populations are subject to greater heat stress. At the same time, these populations may also face decreased access to greenspaces. In 2020, areas in Harris county with the lowest poverty levels < 5% were an average of  2°F (1°C) cooler than areas with higher poverty levels [F(4, 1584) = 47.3, p < .001].
+    ### What It Means For the Socioeconomically Disadvantaged Population
+    When these changes in heat and land cover were combined with Houston's socioeconomic data, it was found that socioeconomically disadvantaged populations are subject to greater heat stress. At the same time, these populations may also face decreased access to greenspaces. In 2020, areas in Harris county with the lowest poverty levels < 5% were an average of  2°F (1°C) cooler than areas with higher poverty levels [F(4, 1584) = 47.3, p < .001].
   </Prose>
 </Block>
 
@@ -146,16 +163,24 @@ taxonomy:
       yKey='NDVI'
     />
     <Caption>
-        Normalized Difference Vegetation Index (NDVI) trend in various socio-economic (Social Vulnerability Index) ranges in Harris county, Houston (2020)
+        Normalized Difference Vegetation Index (NDVI) trend in various socio-economic (Social Vulnerability Index 150% Poverty Threshhold) ranges in Harris County, Texas (2020)
     </Caption>
   </Figure>
 </Block>
 
+<Block>
+<Prose>
+  ## How to Cite This Work
+  Blackford, A., Cowan, T., Nair, U., Phillips, C., Kaulfus, A., and Freitag, B. (2024). Synergy of urban heat, pollution, and social vulnerability in one of America's most rapidly growing cities: Houston, we have a problem. *GeoHealth, 8*, e2024GH001079. https://doi.org/10.1029/2024GH001079
+</Prose>
+</Block>
+
 <Block> 
   <Prose>
-  For more information about how to access and use NASA data to study Extreme Heat please visit our Data Pathfinders: https://www.earthdata.nasa.gov/learn/pathfinders/disasters/extreme-heat-data-pathfinder 
+  ### Data Access
+  * [NASA Extreme Heat Data - Pathfinders](https://www.earthdata.nasa.gov/learn/pathfinders/disasters/extreme-heat-data-pathfinder) 
 
-  For more information about additional datasets that can be used to study Extreme Heat and Environmental Justice please visit the new EJ Data Catalog: https://www.earthdata.nasa.gov/learn/environmental-justice-data-catalog 
+  * [Earthdata EJ Data Catalog](https://www.earthdata.nasa.gov/learn/environmental-justice-data-catalog)
   </Prose>
 </Block>
 

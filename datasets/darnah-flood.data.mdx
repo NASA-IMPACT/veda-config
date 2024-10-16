@@ -11,10 +11,12 @@ media:
 taxonomy:
   - name: Topics
     values:
-      - EIS
+      - Disasters
+      - Precipitation
   - name: Source
     values:
-      - UAH
+      - HLS
+      - GPM
 
 layers:
   - id: darnah-flood
@@ -37,6 +39,8 @@ layers:
         ::js ({ dateFns, datetime, compareDatetime }) => {
           return `${dateFns.format(datetime, 'DD LLL yyyy')}`;        
         }
+    metadata:
+      source: HLS
 
   - id: darnah-gpm-daily
     stacCol: darnah-gpm-daily
@@ -67,7 +71,9 @@ layers:
         - '#52076c'
         - '#f57c16'
         - '#f7cf39'
-
+        
+    metadata:
+      source: GPM
 ---
 
 <Block>
