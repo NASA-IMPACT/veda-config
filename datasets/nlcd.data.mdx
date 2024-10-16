@@ -1,7 +1,7 @@
 ---
-id: nlcd-new-urbanization
-name: "National Land Cover Database New Urbanization"
-description: "Using the National Land Cover Database (NLCD) to illustrate new urbanization from 2001-2021."
+id: nlcd-annual-conus
+name: 'National Land Cover Database LULC Classifications'
+description: "National Land Cover Database Land Use - Land Cover classifications for CONUS, 2001-2021 at 30 m resolution."
 
 media:
   src: ::file ./nlcd-cover.png
@@ -12,51 +12,97 @@ media:
 taxonomy:
   - name: Topics
     values:
+      - Agriculture
+      - Biomass
       - Environmental Justice
       - Land Cover
   - name: Source
     values:
       - MRLC
-infoDescription: |
-  ::markdown
-    The National Land Cover Database (NLCD) stands as a paramount dataset offering an in-depth overview of the land cover characteristics in the United States. Spearheaded by the Earth Resources Observation and Science (EROS) Center, this database is renewed every two to three years to provide updated and accurate data for the nation.
 layers:
-  - id: nlcd-new-urbanization
+  - id: nlcd-annual-conus
     stacApiEndpoint: https://staging.openveda.cloud/api/stac
     tileApiEndpoint: https://staging.openveda.cloud/api/raster
-    stacCol: nlcd-new-urbanization
-    name: Urbanization
+    stacCol: nlcd-annual-conus
+    name: NLCD Land Use - Land Cover Classification
     type: raster
-    description: "This is a binary dataset derived from the National Land Cover Database (NLCD) to illustrate new urbanization from 2001-2021, where 0 is no new urbanization and 1 is new urbanization."
+    description: "30 meter LULC classification provided by the NLCD."
     initialDatetime: newest
     zoomExtent:
-      - 0
-      - 20
-    sourceParams:
-      colormap_name: reds
-      nodata: 0
-      assets: landcover
-      rescale:
         - 0
-        - 1
+        - 20
+    sourceParams:
+        assets: landcover
+        bidx: [1]
+        nodata: 0
+        resampling: nearest
+        colormap_name: nlcd
     legend:
       type: categorical
+      min: "0"
+      max: "255"
       stops:
-        - color: "#d73027"
-          label: New Urbanization
+        - color: "#486DA2"
+          label: "Open Water"
+        - color: "#E7EFFC"
+          label: "Perennial Ice/Snow"
+        - color: "#E1CDCE"
+          label: "Developed, Open Space"
+        - color: "#DC9881"
+          label: "Developed, Low Intensity"
+        - color: "#F10100"
+          label: "Developed, Medium Intensity"
+        - color: "#AB0101"
+          label: "Developed High Intensity"
+        - color: "#B3AFA4"
+          label: "Barren Land (Rock/Sand/Clay)"
+        - color: "#6BA966"
+        # label: "Vegetation"
+          label: "Deciduous Forest"
+        - color: "#1D6533"
+          label: "Evergreen Forest"
+        - color: "#BDCC93"
+          label: "Mixed Forest"
+        - color: "#B29C46"
+          label: "Dwarf Scrub"
+        - color: "#D1BB82"
+          label: "Shrub/Scrub"
+        - color: "#EDECCD"
+          label : "Grassland/Herbaceous"
+        - color: "#D0D181"
+          label: "Sedge/Herbaceous"
+        - color: "#A4CC51"
+          label: "Lichens"
+        - color: "#82BA9D"
+          label: "Moss"
+        - color: "#DDD83E"
+          label: "Pasture/Hay"
+        - color: "#AE7229"
+          label: "Cultivated Crops"
+        # label: "Agriculture"
+        - color: "#BBD7ED"
+          label: "Woody Wetlands"
+        - color: "#71A4C1"
+          label: "Emergent Herbaceous Wetlands"
+    compare:
+      datasetId: nlcd-annual-conus
+      layerId: nlcd-annual-conus
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
+        }
     info:
-      source: EROS
-      spatialExtent: CONUS
-      temporalResolution: 20 Year Difference 
-      unit: Binary
-  
----
+      source: MRLC
+      spatialExtent: United States
+      temporalResolution: Bi- to Tri-Annual 
+      unit: N/A 
 
+---
 <Block>
   <Prose>
   ## Dataset Details
-  - **Temporal Extent:** 2001-2021 
-  - **Temporal Resolution:** 20 Years
+  - **Temporal Extent:** 2001-2021
+  - **Temporal Resolution:** Inconsistent (every 2-3 years)
   - **Spatial Extent:** CONUS
   - **Spatial Resolution:** 30 m
   - **Data Units:** N/A
@@ -65,21 +111,21 @@ layers:
   </Prose>
 <Figure>
   <Map
-    datasetId='nlcd-new-urbanization'
-    layerId='nlcd-new-urbanization'
+    datasetId='nlcd-annual-conus'
+    layerId='nlcd-annual-conus'
     dateTime='2001-01-01'
-    zoom={8.65}
-    center={[-86.2,39.8]}
+    zoom={8}
+    center={[-95.37,29.76]}
+    compareDateTime='2021-01-01'
   />
   <Caption
     attrAuthor='NASA'
     attrUrl='https://nasa.gov/'
   >
-    Newly urbanized areas per NLCD classifications in the Indianapolis, IN metropolitan area between 2001 and 2021.
+    Comparison of the NLCD land cover classifications over Houston, TX between 2001 and 2021
   </Caption>
 </Figure>
 </Block>
-
 
 <Block>
   <Prose>
@@ -92,8 +138,6 @@ layers:
 
   As of its latest release, the NLCD showcases land cover data and related changes across nine specific epochs, starting from 2001 and culminating in 2021. These datasets are meticulously crafted, ensuring continuity and consistency with the past releases (from 2001-2019). This methodological consistency ensures that the datasets from the different epochs are directly comparable and well-suited for mult-temporal analyses.
   
-  This dataset landing page is specific to a binary raster dataset of new urbanization seen from the NLCD classifications between the years 2001 and 2021.
-
   </Prose>
 </Block>
 
@@ -125,7 +169,7 @@ layers:
 
 <Block>
   <Prose>
-
+    
   ### Citing this Dataset
 
   U.S. Geological Survey (USGS) & Multi-Resolution Land Characteristics (MRLC) Consortium. (2021). National Land Cover Database (NLCD) 2021: Conterminous U.S. Land Cover. Earth Resources Observation and Science (EROS) Center. Retrieved from https://www.mrlc.gov/data
@@ -178,7 +222,10 @@ layers:
   
   ## Data Stories Using This Dataset
   
-  **<Link to={"/stories/houston-aod"}>Aerosols and Their Impacts on Houston, TX</Link>**
+  **<Link to={"/stories/urban-heating"}>Implications for Heat Stress</Link>**
+  
+  **<Link to={"/stories/burn-scar"}>Wildfires Affect Local Weather, Climate, and Hydrology</Link>**
+
 
   </Prose>
 </Block>
