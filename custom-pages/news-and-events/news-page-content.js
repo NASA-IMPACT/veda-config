@@ -38,6 +38,18 @@ function sortByDateCustom(items) {
 
 export const NEWSLETTER_ITEMS = sortByDateDesc([
   {
+    name: 'October 2024 - US GHG Center Newsletter',
+    asLink : {
+      url: 'https://conta.cc/48jqdkT'
+    },
+    media: {
+      src: new URL('./media/news/Newsletter_2_Learn_Page_Screenshot.png', import.meta.url).href,
+      alt: 'October 2024'
+    },
+    description: 'Volume 1.4, October 2024',
+    date: '2024-10'
+  },
+  {
     name: 'May 2024 - US GHG Center Newsletter',
     asLink : {
       url: 'https://conta.cc/4blhTSu'
@@ -164,7 +176,7 @@ export const EVENT_ITEMS = sortByDateCustom([
   {
     name: 'Join the 2nd Annual Stakeholder Forum; Dec 4-5, 2024',
     asLink : {
-      url: 'https://drive.google.com/file/d/1Mkz43d3iP4CfTuBeZXsoO1-fxBRGmmVq/view?usp=sharing'
+      url: 'https://emg-wd.wixsite.com/us-ghg-2024'
     },
     media: {
       src: new URL('./media/events/GHGC_Stakeholder_Forum_Announcement_Image.png', import.meta.url).href,
