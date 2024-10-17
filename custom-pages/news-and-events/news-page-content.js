@@ -43,7 +43,7 @@ export const NEWSLETTER_ITEMS = sortByDateDesc([
       url: 'https://conta.cc/48jqdkT'
     },
     media: {
-      src: new URL('./media/news/Newsletter_2_Learn_Page_Screenshot.png', import.meta.url).href,
+      src: new URL('./media/news/newsletter-v1.4.jpg', import.meta.url).href,
       alt: 'October 2024'
     },
     description: 'Volume 1.4, October 2024',
