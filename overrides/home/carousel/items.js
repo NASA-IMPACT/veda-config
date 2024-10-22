@@ -8,7 +8,7 @@ export default [
   },
   {
     link: 'https://us-ghg-center.github.io/agu-2024-workshop/ghg-center-at-agu-2024.html',
-    title: 'US GHG Center at AGU 2024',
+    title: 'Schedule: US GHG Center at AGU 2024',
     description: 'Join us at the annual American Geophysical Union (AGU) meeting, held December 9-13 in Washington, D.C.',
     image: new URL('../../media/AGU2024_carousel_2.png', import.meta.url).href,
     imageAlt: 'US GHG Center at AGU 2024.'
