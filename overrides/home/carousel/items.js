@@ -1,20 +1,22 @@
-export default [{
+export default [
+  {
+    link: 'https://emg-wd.wixsite.com/us-ghg-2024',
+    title: 'Register: Stakeholder Engagement Forum',
+    description: "The US GHG Center will host its second annual Stakeholder Engagement Forum on December 4-5, 2024.",
+    image: new URL('../../media/StakeholderForum2024_carousel_1.png', import.meta.url).href,
+    imageAlt: 'Register: Stakeholder Engagement Forum.'
+  },
+  {
+    link: 'https://us-ghg-center.github.io/agu-2024-workshop/ghg-center-at-agu-2024.html',
+    title: 'Schedule: US GHG Center at AGU 2024',
+    description: 'Join us at the annual American Geophysical Union (AGU) meeting, held December 9-13 in Washington, D.C.',
+    image: new URL('../../media/AGU2024_carousel_2.png', import.meta.url).href,
+    imageAlt: 'US GHG Center at AGU 2024.'
+  },
+  {
   link: '/stories/urban',
   title: 'Spotlight on Urban Emissions',
   description: 'The U.S. Greenhouse Gas Center offers an introduction to the latest national and city scale datasets and highlights innovative emissions research in cities across the country.',
   image: 'https://www.nasa.gov/wp-content/uploads/2023/03/1-maia-los-angeles-1041.jpg',
   imageAlt: 'Los Angeles skyline shown with visible haze of air pollution.'
-}, {
-  link: '/stories/gra2pes',
-  title: 'Nationwide Dataset Connects Greenhouse Gases and Air Quality',
-  description: "The GReenhouse gas And Air Pollutants Emissions System (GRA²PES) is a new measurement system to combine greenhouse gas and air quality pollutant sources.",
-  image: new URL('../../../stories/media/gra2pes.png', import.meta.url).href,
-  imageAlt: 'two GRA2PES data plots: left is gridded CO₂ emissions and right is NOₓ emissions over the Northeast US.'
-},
-{
-  link: '/stories/newyork',
-  title: 'New York City Researchers Take to the Street to Investigate Emissions',
-  description: 'Researchers in NYC are working to pinpoint unidentified or incorrectly cataloged sources of GHGs by combining measurements from a local network of sensors with data collected by satellites and aircraft.',
-  image: new URL('../../../stories/media/newyork_banner.png', import.meta.url).href,
-  imageAlt: 'view of the New York skyline from the tip of Manhattan.'
 }]
