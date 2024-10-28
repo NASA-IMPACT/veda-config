@@ -14,11 +14,41 @@ taxonomy:
       - Disasters
 
 layers:
-  - id: ps-tornadoes-2024
-    stacCol: ps-tornadoes-2024
-    name: Planet TrueColor Satellite Imagery
+  - id: ps-lakeview-winchester-tornadoes-2024
+    stacCol: ps-lakeview-winchester-tornadoes-2024
+    name: Planet TrueColor Satellite Imagery (Winchester IN, Lakeview OH Tornado Damage)
     type: raster
-    description: 'Commercial SmallSat Planet Satellite Imagery of select locations that experienced tornado damage during the spring of 2024 in the United States.'
+    description: 'Commercial SmallSat Planet Satellite Imagery of tornado damage at Winchester, Indiana and Lakeview, Ohio in the spring 2024 tornado season.'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      rescale:
+        - 0,5000
+      resampling: bilinear
+      asset_bidx: cog_default|3,2,1
+
+
+  - id: ps-greenfield-pre-tornadoes-2024
+    stacCol: ps-greenfield-pre-tornadoes-2024
+    name: Planet TrueColor Satellite Imagery (Greenfield IA Tornado Damage - Pre)
+    type: raster
+    description: 'Commercial SmallSat Planet Satellite Imagery of tornado damage at Greenfield, Iowa in the spring 2024 tornado season.'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      rescale:
+        - 0,5000
+      resampling: bilinear
+      asset_bidx: cog_default|3,2,1    
+
+
+  - id: ps-greenfield-post-tornadoes-2024
+    stacCol: ps-greenfield-post-tornadoes-2024
+    name: Planet TrueColor Satellite Imagery (Greenfield IA Tornado Damage - Post)
+    type: raster
+    description: 'Commercial SmallSat Planet Satellite Imagery of tornado damage at Greenfield, Iowa in the spring 2024 tornado season.'
     zoomExtent:
       - 0
       - 20
@@ -28,13 +58,12 @@ layers:
       resampling: bilinear
       asset_bidx: cog_default|1,2,3
     compare:
-      datasetId: darnah-flood
-      layerId: darnah-flood
+      datasetId: ps-greenfield-pre-tornadoes-2024
+      layerId: ps-greenfield-pre-tornadoes-2024
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           return `${dateFns.format(datetime, 'DD LLL yyyy')}`;        
         }
-
 ---
 
 <Block>
@@ -52,8 +81,8 @@ layers:
   <Map
     center={[-83.924, 40.487]}
     zoom={13.5}
-    datasetId='ps-tornadoes-2024'
-    layerId='ps-tornadoes-2024'
+    datasetId='ps-lakeview-winchester-tornadoes-2024'
+    layerId='ps-lakeview-winchester-tornadoes-2024'
     dateTime='2024-03-16'
   />
   <Caption
