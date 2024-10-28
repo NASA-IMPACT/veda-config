@@ -1,0 +1,69 @@
+---
+id: ps-tornadoes-2024
+name: 'PlanetScope Satellite Imagery - 2024 Tornado Damage'
+description: "Commercial SmallSat Planet Satellite Imagery of select locations that experienced tornado damage during the spring of 2024 in the United States."
+media:
+  src: ::file ./tornado-2024-cover.png
+  alt: Wedge tornado passing southeast of Wapakoneta, Ohio on March 14, 2024.
+  author:
+    name: Jonny Glessner
+    url: https://x.com/JonnyGlessner/status/1768424574855610777/photo/4
+taxonomy:
+  - name: Topics
+    values:
+      - Disasters
+
+layers:
+  - id: ps-tornadoes-2024
+    stacCol: ps-tornadoes-2024
+    name: Planet TrueColor Satellite Imagery
+    type: raster
+    description: 'Commercial SmallSat Planet Satellite Imagery of select locations that experienced tornado damage during the spring of 2024 in the United States.'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      rescale:
+        - 0,5000
+      resampling: bilinear
+      asset_bidx: cog_default|3,2,1
+    compare:
+      datasetId: darnah-flood
+      layerId: darnah-flood
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'DD LLL yyyy')}`;        
+        }
+
+---
+
+<Block>
+  <Prose>
+
+  ### About
+
+  x
+  </Prose>
+</Block>
+
+<Block type='full'>
+
+<Figure>
+  <Map
+    center={[-83.924, 40.487]}
+    zoom={13.5}
+    datasetId='ps-tornadoes-2024'
+    layerId='ps-tornadoes-2024'
+    dateTime='2024-03-16'
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+    Planet imagery of EF-3 tornado damage in Lakeview, Ohio, from a local outbreak on March 14, 2024.
+  </Caption>
+</Figure>
+
+</Block>
+
+
