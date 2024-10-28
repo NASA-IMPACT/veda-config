@@ -42,7 +42,13 @@ layers:
         - 0,5000
       resampling: bilinear
       asset_bidx: cog_default|3,2,1    
-
+    compare:
+      datasetId: ps-greenfield-post-tornadoes-2024
+      layerId: ps-greenfield-post-tornadoes-2024
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'DD LLL yyyy')}`;        
+        }
 
   - id: ps-greenfield-post-tornadoes-2024
     stacCol: ps-greenfield-post-tornadoes-2024
@@ -97,7 +103,7 @@ layers:
     stacCol: ps-tornadoes-2024-difference
     name: Planet TrueColor Satellite Imagery Difference (Greenfield IA Tornado Damage)
     type: raster
-    description: 'Commercial SmallSat Planet Satellite Imagery differnece of tornado damage at Greenfield, Iowa in the spring 2024 tornado season.'
+    description: 'Commercial SmallSat Planet Satellite Imagery difference of tornado damage at Greenfield, Iowa in the spring 2024 tornado season.'
     zoomExtent:
       - 0
       - 20
@@ -122,11 +128,12 @@ layers:
 
 <Figure>
   <Map
-    center={[-83.924, 40.487]}
-    zoom={13.5}
-    datasetId='ps-lakeview-winchester-tornadoes-2024'
-    layerId='ps-lakeview-winchester-tornadoes-2024'
-    dateTime='2024-03-16'
+    datasetId='nlcd-annual-conus'
+    layerId='nlcd-annual-conus'
+    dateTime='2001-01-01'
+    zoom={8}
+    center={[-95.37,29.76]}
+    compareDateTime='2021-01-01'
   />
   <Caption
     attrAuthor='NASA'
