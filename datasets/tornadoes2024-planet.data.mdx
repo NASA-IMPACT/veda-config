@@ -64,6 +64,49 @@ layers:
         ::js ({ dateFns, datetime, compareDatetime }) => {
           return `${dateFns.format(datetime, 'DD LLL yyyy')}`;        
         }
+
+  - id: ps-barnsdall-tornadoes-2024
+    stacCol: ps-barnsdall-tornadoes-2024
+    name: Planet TrueColor Satellite Imagery (Barnsdall OK Tornado Damage)
+    type: raster
+    description: 'Commercial SmallSat Planet Satellite Imagery of tornado damage at Barnsdall, Oklahoma in the spring 2024 tornado season.'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      rescale:
+        - 0,255
+      resampling: bilinear
+      asset_bidx: cog_default|1,2,3
+
+  - id: ps-portage-tornadoes-2024
+    stacCol: ps-portage-tornadoes-2024
+    name: Planet TrueColor Satellite Imagery (Portage MI Tornado Damage)
+    type: raster
+    description: 'Commercial SmallSat Planet Satellite Imagery of tornado damage at Portage, Michigan in the spring 2024 tornado season.'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      rescale:
+        - 0,255
+      resampling: bilinear
+      asset_bidx: cog_default|1,2,3
+
+  - id: ps-tornadoes-2024-difference
+    stacCol: ps-tornadoes-2024-difference
+    name: Planet TrueColor Satellite Imagery Difference (Greenfield IA Tornado Damage)
+    type: raster
+    description: 'Commercial SmallSat Planet Satellite Imagery differnece of tornado damage at Greenfield, Iowa in the spring 2024 tornado season.'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      rescale:
+        - -2000,2000
+      resampling: bilinear
+      asset_bidx: cog_default|3,2,1
+
 ---
 
 <Block>
