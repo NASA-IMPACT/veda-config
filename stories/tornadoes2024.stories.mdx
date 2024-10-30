@@ -108,14 +108,15 @@ taxonomy:
   <Figure>
     <Chart
       dataPath={new URL('./tornadoes-2024-spc-counts.csv', import.meta.url).href}
-      dateFormat="%m/%d/%Y"
+      dateFormat="%m/%d"
       idKey='Source'
       xKey='Date'
       yKey='Tornado_Count'
       yAxisLabel='Count'
+      yAxis={{ tickFormat: d => d.toLocaleString() }}
     />
     <Caption>
-    Cumulative unfiltered tornado reports in the United States from January through May 2024 as logged by the Storm Prediction Center.
+    Cumulative unfiltered tornado reports in the United States from January through May 2024 as logged by the Storm Prediction Center. The 2005-2015 average total tornado count in the United States by May 31st is only ~800 tornadoes.
     </Caption>
   </Figure>
 </Block>
