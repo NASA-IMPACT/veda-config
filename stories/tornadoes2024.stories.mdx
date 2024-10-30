@@ -93,13 +93,31 @@ taxonomy:
     **Disclaimer:** 
     
     <mark>🚧 This Data Story presents work in progress and not peer-reviewed results! The Greenfield portion of this data story  is being expanded into an article that will undergo peer review and publication in 2025. 🚧</mark>
+  </Prose>
+</Block>
 
+<Block>
+  <Prose>
 
     ### Overview
 
     The Spring 2024 tornado season was one of the most active on record in the United States. As of May 31st, there have been 1,176 tornadoes confirmed in the United States. The vast majority of these occurred in the meteorological spring months of March-May (Table 1), placing this period within the 90th percentile of activity compared to climatological averages. This three-month period was responsible for 36 fatalities, hundreds of injuries, and was the second most prolific tornado season since at least 1950–second only to the deadly 2011 tornado season. Through the end of May, severe thunderstorms alone accounted for nearly $42 billion in damage across the United States, with four tornado outbreaks during the spring attributing over $1 billion in damage each. Four tornadoes were rated violent EF-4s with wind speeds from 166-200 mph, and 27 were rated as intense EF-3s with wind speeds from 136-165 mph.
 
   </Prose>
+
+  <Figure>
+    <Chart
+      dataPath={new URL('./tornadoes-2024-spc-counts.csv', import.meta.url).href}
+      dateFormat="%m/%d/%Y"
+      idKey='Source'
+      xKey='Date'
+      yKey='Tornado_Count'
+      yAxisLabel='Count'
+    />
+    <Caption>
+    Cumulative unfiltered tornado reports in the United States from January through May 2024 as logged by the Storm Prediction Center.
+    </Caption>
+  </Figure>
 </Block>
 
 <Block>
