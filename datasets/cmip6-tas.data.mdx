@@ -1,6 +1,6 @@
 ---
 id: combined_CMIP6_daily_GISS-E2-1-G_tas_kerchunk_DEMO
-name: 'CMIP6 Daily GISS-E2-1-G Near-Surface Air Temperature (demo subset)'
+name: 'Historic CMIP6 Daily GISS-E2-1-G Near-Surface Air Temperature (1950-2014)'
 featured: false
 description: "Daily near-surface air temperature from the NASA Earth Exchange Global Daily Downscaled Projections (NEX-GDDP-CMIP6) Project."
 media:
@@ -13,11 +13,16 @@ taxonomy:
   - name: Topics
     values:
       - Climate
+      - Temperature
+  - name: Source
+    values:
+      - CMIP6
+      
 infoDescription: |
   ::markdown
     * Format: [kerchunk (metadata)](https://fsspec.github.io/kerchunk/) for netCDF4
     * Spatial Coverage: 180° W to 180° E, 60° S to 90° N
-    * Temporal: 1950-01-01 to 1951-12-31
+    * Temporal: 1950-01-01 to 2014-12-31
       * _As noted below, this dataset is a subset all available data. The full dataset includes data from 1950 to 2100._
     * Data Resolution:
       * Latitude Resolution: 0.25 degrees (25 km)
@@ -26,10 +31,10 @@ infoDescription: |
 layers:
   - id: combined_CMIP6_daily_GISS-E2-1-G_tas_kerchunk_DEMO
     stacCol: combined_CMIP6_daily_GISS-E2-1-G_tas_kerchunk_DEMO
-    name: CMIP6 Daily GISS-E2-1-G Near-Surface Air Temperature (demo subset)
+    name: Historic CMIP6 Daily GISS-E2-1-G Near-Surface Air Temperature (1950-2014)
     type: zarr
     tileApiEndpoint: 'https://prod-titiler-xarray.delta-backend.com/tilejson.json'
-    description: "Historical (1950-2014) daily-mean near-surface (usually, 2 meter) air temperature in Kelvin."
+    description: "Historical CMIP6 (1950-2014) daily-mean near-surface (2 meter) air temperature in Kelvin."
     zoomExtent:
       - 0
       - 20
@@ -72,7 +77,7 @@ NEX-GDDP-CMIP6 is comprised of global downscaled climate scenarios derived from 
 
 * Format: [kerchunk (metadata)](https://fsspec.github.io/kerchunk/) for netCDF4
 * Spatial Coverage: 180° W to 180° E, 60° S to 90° N
-* Temporal: 1950-01-01 to 1951-12-31
+* Temporal: 1950-01-01 to 2014-12-31
   * _As noted below, this dataset is a subset all available data. The full dataset includes data from 1950 to 2100._
 * Data Resolution:
   * Latitude Resolution: 0.25 degrees (25 km)
