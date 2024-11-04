@@ -35,6 +35,13 @@ layers:
         ::js ({ dateFns, datetime, compareDatetime }) => {
           return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
         }
+    info:
+      source: NASA Black Marble
+      spatialExtent: Regional
+      temporalResolution: N/A
+      unit: Artificial Light Emissions (W cm^-2 sr^-1)
+
+
 
   - id: lakeview-nightlights-tornadoes-2024
     stacCol: lakeview-nightlights-tornadoes-2024
@@ -52,8 +59,8 @@ layers:
       nodata: -999
     legend:
       type: gradient
-      min: "-0.1"
-      max: "0.1"
+      min: "-150"
+      max: "150"
       stops:
         - "#4575b4"
         - "#91bfdb"
