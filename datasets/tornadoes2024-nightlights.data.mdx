@@ -1,0 +1,98 @@
+---
+id: nightlights-tornadoes-2024
+name: 'Black Marble Night Lights - 2024 Tornado Damage'
+description: "NASA’s Black Marble night lights dataset provides satellite images of Earth at night, capturing the light pollution from cities, roads, and other human activity. These images are collected by the Visible Infrared Imaging Radiometer Suite (VIIRS) sensor on the Suomi National Polar-orbiting Partnership (NPP) satellite, and can be used to examine changes in illumination over time. In this story, night lights data is used to assess changes before and after a tornado impacts a town, highlighting areas affected by power outages that may cause recovery slowdowns."
+media:
+  src: ::file ./tornado-2024-cover.png
+  alt: Wedge tornado passing southeast of Wapakoneta, Ohio on March 14, 2024.
+  author:
+    name: Jonny Glessner
+    url: https://x.com/JonnyGlessner/status/1768424574855610777/photo/4
+taxonomy:
+  - name: Topics
+    values:
+      - Disasters
+
+layers:
+  - id: lakeview-nightlights-tornadoes-2024
+    stacCol: lakeview-nightlights-tornadoes-2024
+    name: Black Marble Night Lights (Lakeview OH Tornado Damage; Difference)
+    type: raster
+    description: 'Black Marble night lights imagery of tornado damage at Lakeview, Ohio in the spring 2024 tornado season.'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      colormap_name: bwr
+      rescale:
+        - -150
+        - 150
+      nodata: -999
+    legend:
+      type: gradient
+      min: "-150"
+      max: "150"
+      stops:
+        - "#4575b4"
+        - "#91bfdb"
+        - "#e0f3f8"
+        - "#ffffff"
+        - "#fee090"
+        - "#fc8d59"
+        - "#d73027"
+    info:
+      source: NASA Black Marble
+      spatialExtent: Regional
+      temporalResolution: -
+      unit: Artificial Light Emissions Difference (W cm^-2 sr^-1)
+
+
+
+
+  - id: greenville-nightlights-tornadoes-2024
+    stacCol: greenville-nightlights-tornadoes-2024
+    name: Black Marble Night Lights (Greenville OH Tornado Damage)
+    type: raster
+    description: 'Black Marble night lights imagery of tornado damage at Greenville, Ohio in the spring 2024 tornado season.'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      rescale:
+        - 0,255
+      resampling: bilinear
+      asset_bidx: cog_default|1,2,3   
+
+---
+
+<Block>
+  <Prose>
+
+  ### About
+
+  x
+  </Prose>
+</Block>
+
+<Block type='full'>
+
+<Figure>
+  <Map
+    datasetId='greenville-nightlights-tornadoes-2024'
+    layerId='greenville-nightlights-tornadoes-2024'
+    dateTime='2024-05-07'
+    zoom={10}
+    center={[-84.641, 40.107]}
+    compareDateTime='2024-05-08'
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+    Comparison of artificial light emissions in Greenville, Ohio before and after a tornado strike on May 7, 2024.
+  </Caption>
+</Figure>
+
+</Block>
+
+
