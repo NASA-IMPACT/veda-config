@@ -13,7 +13,7 @@ git submodule update --init --recursive
 
 To set up the development environment for this website, you'll need to install the following on your system:
 
-- [Node](http://nodejs.org/) (see version in [.nvmrc](./.nvmrc)) (To manage multiple node versions we recommend [nvm](https://github.com/creationix/nvm))
+- [Node](http://nodejs.org/) (see version in [.nvmrc](../.nvmrc)) (To manage multiple node versions we recommend [nvm](https://github.com/creationix/nvm))
 - [Yarn](https://yarnpkg.com/) Package manager
 
 If you use [`nvm`](https://github.com/creationix/nvm), activate the desired Node version:
