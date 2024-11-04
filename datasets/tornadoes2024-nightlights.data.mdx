@@ -45,10 +45,23 @@ layers:
       - "0"
       - "20"
     sourceParams:
-      rescale: "-180,185"
-      resampling: bilinear
-      asset_bidx: cog_default|1,2,3
+      colormap_name: bwr
+      rescale:
+        - -150
+        - 150
       nodata: -999
+    legend:
+      type: gradient
+      min: "-0.1"
+      max: "0.1"
+      stops:
+        - "#4575b4"
+        - "#91bfdb"
+        - "#e0f3f8"
+        - "#ffffff"
+        - "#fee090"
+        - "#fc8d59"
+        - "#d73027"
     info:
       source: NASA Black Marble
       spatialExtent: Regional
