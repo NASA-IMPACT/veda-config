@@ -18,7 +18,7 @@ taxonomy:
       - ISRIC
 layers:
   - id: soil-texture-0cm
-    stacCol: soil-texture-0cm
+    stacCol: soil-texture
     name: Soil Texture at the Surface (0 cm Depth)
     type: raster
     description: 'ISRIC Soil Texture Classification at 0 cm'
@@ -26,8 +26,8 @@ layers:
       - 0
       - 20
     sourceParams:
-        colormap: '{"1":"#F89E61", "2":"#BA8560", "3": "#D8D2B4", "4": "#AE734C", "5": "#9E8478", "6": "#C6A365",
-                    "7":"#B4A67D", "8":"#E1D4C4", "9": "#BEB56D", "10": "#777C7A", "11": "#A89B6F", "12": "#E9E2AF"}'
+        assets: soil_texture_0cm_250m
+        colormap_name: soil_texture
         nodata: 255
 
     legend:
@@ -64,7 +64,7 @@ layers:
       unit: N/A 
 
   - id: soil-texture-5cm
-    stacCol: soil-texture-5cm
+    stacCol: soil-texture
     name: Soil Texture at 5 cm Depth
     type: raster
     description: 'ISRIC Soil Texture Classification at 5 cm'
@@ -72,8 +72,8 @@ layers:
       - 0
       - 20
     sourceParams:
-        colormap: '{"1":"#F89E61", "2":"#BA8560", "3": "#D8D2B4", "4": "#AE734C", "5": "#9E8478", "6": "#C6A365",
-                    "7":"#B4A67D", "8":"#E1D4C4", "9": "#BEB56D", "10": "#777C7A", "11": "#A89B6F", "12": "#E9E2AF"}'
+        assets: soil_texture_5cm_250m
+        colormap_name: soil_texture
         nodata: 255
   
     legend:
@@ -110,7 +110,7 @@ layers:
       unit: N/A 
 
   - id: soil-texture-15cm
-    stacCol: soil-texture-15cm
+    stacCol: soil-texture
     name: Soil Texture at 15 cm Depth
     type: raster
     description: 'ISRIC Soil Texture Classification at 15 cm'
@@ -118,8 +118,8 @@ layers:
       - 0
       - 20
     sourceParams:
-        colormap: '{"1":"#F89E61", "2":"#BA8560", "3": "#D8D2B4", "4": "#AE734C", "5": "#9E8478", "6": "#C6A365",
-                    "7":"#B4A67D", "8":"#E1D4C4", "9": "#BEB56D", "10": "#777C7A", "11": "#A89B6F", "12": "#E9E2AF"}'
+        assets: soil_texture_15cm_250m
+        colormap_name: soil_texture
         nodata: 255
  
     legend:
@@ -156,7 +156,7 @@ layers:
       unit: N/A 
 
   - id: soil-texture-30cm
-    stacCol: soil-texture-30cm
+    stacCol: soil-texture
     name: Soil Texture at 30 cm Depth
     type: raster
     description: 'ISRIC Soil Texture Classification at 30 cm'
@@ -164,8 +164,8 @@ layers:
       - 0
       - 20
     sourceParams:
-        colormap: '{"1":"#F89E61", "2":"#BA8560", "3": "#D8D2B4", "4": "#AE734C", "5": "#9E8478", "6": "#C6A365",
-                    "7":"#B4A67D", "8":"#E1D4C4", "9": "#BEB56D", "10": "#777C7A", "11": "#A89B6F", "12": "#E9E2AF"}'
+        assets: soil_texture_30cm_250m
+        colormap_name: soil_texture
         nodata: 255
 
     legend:
@@ -202,7 +202,7 @@ layers:
       unit: N/A 
 
   - id: soil-texture-60cm
-    stacCol: soil-texture-60cm
+    stacCol: soil-texture
     name: Soil Texture at 60 cm Depth
     type: raster
     description: 'ISRIC Soil Texture Classification at 60 cm'
@@ -210,8 +210,8 @@ layers:
       - 0
       - 20
     sourceParams:
-        colormap: '{"1":"#F89E61", "2":"#BA8560", "3": "#D8D2B4", "4": "#AE734C", "5": "#9E8478", "6": "#C6A365",
-                    "7":"#B4A67D", "8":"#E1D4C4", "9": "#BEB56D", "10": "#777C7A", "11": "#A89B6F", "12": "#E9E2AF"}'
+        assets: soil_texture_60cm_250m
+        colormap_name: soil_texture
         nodata: 255
   
     legend:
@@ -248,7 +248,7 @@ layers:
       unit: N/A 
 
   - id: soil-texture-100cm
-    stacCol: soil-texture-100cm
+    stacCol: soil-texture
     name: Soil Texture at 100 cm Depth
     type: raster
     description: 'ISRIC Soil Texture Classification at 100 cm'
@@ -256,8 +256,8 @@ layers:
       - 0
       - 20
     sourceParams:
-        colormap: '{"1":"#F89E61", "2":"#BA8560", "3": "#D8D2B4", "4": "#AE734C", "5": "#9E8478", "6": "#C6A365",
-                    "7":"#B4A67D", "8":"#E1D4C4", "9": "#BEB56D", "10": "#777C7A", "11": "#A89B6F", "12": "#E9E2AF"}'
+        assets: soil_texture_100cm_250m
+        colormap_name: soil_texture
         nodata: 255
 
     legend:
@@ -294,7 +294,7 @@ layers:
       unit: N/A 
 
   - id: soil-texture-200cm
-    stacCol: soil-texture-200cm
+    stacCol: soil-texture
     name: Soil Texture at 200 cm Depth
     type: raster
     description: 'ISRIC Soil Texture Classification at 200 cm'
@@ -302,8 +302,8 @@ layers:
       - 0
       - 20
     sourceParams:
-        colormap: '{"1":"#F89E61", "2":"#BA8560", "3": "#D8D2B4", "4": "#AE734C", "5": "#9E8478", "6": "#C6A365",
-                    "7":"#B4A67D", "8":"#E1D4C4", "9": "#BEB56D", "10": "#777C7A", "11": "#A89B6F", "12": "#E9E2AF"}'
+        assets: soil_texture_200cm_250m
+        colormap_name: soil_texture
         nodata: 255
  
     legend:
