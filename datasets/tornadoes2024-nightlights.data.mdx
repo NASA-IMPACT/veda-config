@@ -47,22 +47,10 @@ layers:
       - 0
       - 20
     sourceParams:
-      colormap_name: bwr
       rescale:
-        - -150, 150
-      nodata: -999
-    legend:
-      type: gradient
-      min: "-150"
-      max: "150"
-      stops:
-        - "#4575b4"
-        - "#91bfdb"
-        - "#e0f3f8"
-        - "#ffffff"
-        - "#fee090"
-        - "#fc8d59"
-        - "#d73027"
+        - 0,255
+      resampling: bilinear
+      asset_bidx: cog_default|1,2,3   
 
 
 ---
