@@ -28,7 +28,13 @@ layers:
         - 0,255
       resampling: bilinear
       asset_bidx: cog_default|1,2,3   
-
+    compare:
+      datasetId: greenville-nightlights-tornadoes-2024
+      layerId: greenville-nightlights-tornadoes-2024
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
+        }
 ---
 
 <Block>
@@ -47,7 +53,7 @@ layers:
     datasetId='greenville-nightlights-tornadoes-2024'
     layerId='greenville-nightlights-tornadoes-2024'
     dateTime='2024-05-07'
-    zoom={10}
+    zoom={11}
     center={[-84.641, 40.107]}
     compareDateTime='2024-05-08'
   />
