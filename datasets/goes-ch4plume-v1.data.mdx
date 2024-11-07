@@ -1,0 +1,160 @@
+---
+id: goes-ch4plume-v1
+name: Geostationary Satellite Observations of Extreme and Transient Methane Emissions from Oil and Gas Infrastructure
+description: A sample of methane plumes from point sources observed since 2019 by the U.S. Geostationary Operational Environmental Satellites (GOES) over North and South America
+usage:
+  - url: 'https://us-ghg-center.github.io/ghgc-docs/cog_transformation/goes-ch4plume-v1.html'
+    label: Notebook showing data transformation to COG for ingest to the US GHG Center
+    title: 'Data Transformation Notebook'
+  - url: 'https://us-ghg-center.github.io/ghgc-docs/user_data_notebooks/goes-ch4plume-v1_User_Notebook.html'
+    label: Notebooks to read, visualize, and explore data statistics
+    title: 'Data Usage Notebooks'
+  - url: 'https://hub.ghg.center/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FUS-GHG-Center%2Fghgc-docs&urlpath=lab%2Ftree%2Fghgc-docs%2Fuser_data_notebooks%2Fgoes-ch4plume-v1_User_Notebook.ipynb&branch=main'
+    label: Run example notebook
+    title: Interactive Session in the US GHG Center JupyterHub (requires account)
+  - url: https://search.earthdata.nasa.gov/search/granules?p=C2748088093-LPCLOUD&pg[0][v]=f&pg[0][gsk]=-start_date&q=emit%20plume&tl=1694622854.77!3!!
+    label: Download data from NASA Distributed Active Archive Center
+    title: Data Browser
+media:
+  src: ::file ./media/emit-plume--cover.jpg
+  alt: emission from industry
+  author:
+    name: Chris Leboutillier
+taxonomy:
+  - name: Topics
+    values:
+      - Large Emission Events
+  - name: Source
+    values:
+      - NOAA
+      - Harvard University
+  - name: Gas
+    values:
+      - CH₄
+  - name: Product Type
+    values:
+      - Satellite Observations
+disableExplore: true
+layers:
+  - id: ch4-plume-emissions
+    stacCol: goes-ch4plume-v1
+    name: CH₄ Point Source Plume Complexes
+    type: raster
+    description: Methane point source plume complex extents with methane enhancements
+    initialDatetime: newest
+    analysis:
+      exclude: true
+    zoomExtent:
+      - 8
+      - 20
+    sourceParams:
+      resampling: bilinear
+      bidx: 1
+      assets: ch4-plume-emissions
+      colormap_name: plasma
+      rescale:
+        - 0
+        - 0.4
+      nodata: -9999
+    compare:
+      datasetId: goes-ch4plume-v1
+      layerId: ch4-plume-emissions
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit:
+        label: ppm-m
+      type: gradient
+      min: 0
+      max: 0.4
+      stops:
+        - '#310597'
+        - '#4c02a1'
+        - '#6600a7'
+        - '#7e03a8'
+        - '#9511a1'
+        - '#aa2395'
+        - '#bc3587'
+        - '#cc4778'
+        - '#da5a6a'
+        - '#e66c5c'
+        - '#f0804e'
+        - '#f89540'
+        - '#fdac33'
+        - '#fdc527'
+        - '#f8df25'
+---
+
+<Block>
+  <Prose>
+    **Temporal Extent:** April 7, 2019 - July 26, 2023<br />
+    **Temporal Resolution:** 5 minutes <br />
+    **Spatial Extent:** North and South America<br />
+    **Spatial Resolution:** 1 km x 1 km (nadir)<br />
+    **Data Units:** Total column methane enhancement above background, moles of methane per square meter (mol CH₄/m²) <br />
+    **Data Type:** Research<br />
+    **Data Latency:** Updated annually
+
+    Methane is a relatively short-lived greenhouse gas responsible for about one third of greenhouse gas radiative forcing since pre-industrial times ([IPCC AR6, 2021](https://doi.org/10.1017/9781009157896)), making the reduction of atmospheric methane emissions an urgent priority to slow near term climate change. Satellites with instruments sensitive to methane have unique capabilities to pinpoint methane sources in support of climate action. However, almost all of the instruments are in low Earth orbit and can only image an area of interest as frequently as once per day, at best. This dataset, in contrast, is from a geostationary satellite, which is able to capture imagery for the same location as often as every 5 minutes. Since geostationary satellites are positioned farther away from the Earth’s surface, they are only able to detect very large methane emission events, but provide the unique opportunity to track the full evolution of a methane release.         
+
+    Presented in the GHG Center is a collection of large methane release events detected by the U.S. Geostationary Operational Environmental Satellite 16 (GOES-16), starting in April 2019. Included are the methane plumes highlighted in [Watine-Guiu et al. 2023](https://doi.org/10.1073/pnas.2310797120), including releases originating from three different block valve stations during April-May 2019 along the El Encino La Laguna natural gas pipeline in Durango, Mexico, as well as several other detections across North America. Additional plumes will continue to be added as data becomes available. This data demonstrates the unique value of geostationary satellite instruments for detecting extreme and short-lived methane emission events, quantifying emissions from variable point sources, and precisely determining source locations.  
+
+  </Prose>
+</Block>
+<Block type="wide">
+  <Figure>
+    <Embed
+      height="800"
+      src="https://earth.gov/ghgcenter/custom-interfaces/goes-ch4plume-v1"
+    />
+  </Figure>
+</Block>
+<Block>
+  <Prose>
+    ## Source Data Product Citation
+    Watine-Guiu, M., Varon, D. J., Irakulis-Loitxate, I., Balausus, N. & Jacob, D. J. (2023). Replication Data for: Geostationary satellite observations of extreme and transient methane emissions from oil and gas infrastructure, V2, Harvard Dataverse.  [https://doi.org/10.7910/DVN/EQWHCG](https://doi.org/10.7910/DVN/EQWHCG)
+
+    ## Version History
+    This data product (v1) was added to the US GHG Center data catalog in December 2024.   
+
+    ## Dataset Accuracy
+    Precision of the retrieved methane column enhancements is approximately 10%; the GOES-ABI detection limit is estimated at 10-100 t/h (Watine-Guiu et al., 2023).
+
+    ## Disclaimer
+    This dataset has been transformed from the original format (NetCDF) into Cloud Optimized GeoTIFF ([COG](https://www.cogeo.org/)) for display in the US GHG Center. Careful quality checks are used to ensure data transformation has been performed correctly.
+
+    This dataset is experimental and subject to change. An operational GOES-ABI methane capability is under development.
+
+    ## Scientific Details
+    Methane plumes are derived from top of atmosphere [Level 1B GOES radiance data](https://noaa-goes16.s3.amazonaws.com/index.html#ABI-L1b-RadC/). GOES provides continuous 5–10-minute coverage of the Americas at 0.5–2 km nadir pixel resolution in 16 spectral bands. Shortwave infrared bands, SWIR band 5 (~1590-1630 nm) and 6 (~2220-2270 nm), which have respective nadir pixel resolutions of 1 km and 2 km, are used to track the full evolution of an extreme methane release. The multi band multi pass (MBMP) methane retrieval of [Varon et al. (2021)](https://doi.org/10.5194/amt-14-2771-2021) was adapted to infer methane column enhancements (mol/m²) from normalized reflectance differences between GOES bands 5 and 6 on different 5 minute scans. 
+
+    ## Key Publications
+    Watine-Guiu, M., Varon, D. J., Irakulis-Loitxate, I., Balasus, N., & Jacob, D. J. Geostationary satellite observations of extreme and transient methane emissions from oil and gas infrastructure (2023). *Proceedings of the National Academy of Sciences, 120*(52), e2310797120. [https://doi.org/10.1073/pnas.2310797120](https://doi.org/10.1073/pnas.2310797120) 
+
+    ## Other Relevant Publications
+    Varon, D. J., Jervis, D., McKeever, J., Spence, I., Gains, D., & Jacob, D. J. (2021). High-frequency monitoring of anomalous methane point sources with multispectral sentinel-2 satellite observations. *Atmospheric Measurement Techniques, 14*(4), 2771–2785. [https://doi.org/10.5194/amt-14-2771-2021](https://doi.org/10.5194/amt-14-2771-2021)
+
+    Varon, D. J., Jacob, D. J., McKeever, J., Jervis, D., Durak, B. O. A., Xia, Y., & Huang, Y. (2018). Quantifying methane point sources from fine-scale satellite observations of atmospheric methane plumes. *Atmospheric Measurement Techniques, 11*(10), 5673–5686. [https://doi.org/10.5194/amt-11-5673-2018](https://doi.org/10.5194/amt-11-5673-2018)
+
+    Schmit, T. J., Griffith, P., Gunshor, M. M., Daniels, J. M., Goodman, S. J., & Lebair, W. J. (2017). A Closer Look at the ABI on the GOES-R Series. *Bulletin of the American Meteorological Society, 98*(4), 681–698. [https://doi.org/10.1175/BAMS-D-15-00230.1](https://doi.org/10.1175/BAMS-D-15-00230.1)
+
+    Jacob, D. J., Varon, D. J., Cusworth, D. H., Dennison, P. E., Frankenberg, C., Gautam, R., Guanter, L., Kelley, J., McKeever, J., Ott, L. E., Poulter, B., Qu, Z., Thorpe, A. K., Worden, J. R., & Duren, R. M. (2022). Quantifying methane emissions from the global scale down to point sources using satellite observations of atmospheric methane. *Atmospheric Chemistry and Physics, 22*(14), 9617–9646. [https://doi.org/10.5194/acp-22-9617-2022](https://doi.org/10.5194/acp-22-9617-2022)
+
+    Jacob, D. J., Turner, A. J., Maasakkers, J. D., Sheng, J., Sun, K., Liu, X., Chance, K., Aben, I., McKeever, J., & Frankenberg, C. (2016). Satellite observations of atmospheric methane and their value for quantifying methane emissions. *Atmospheric Chemistry and Physics, 16*(22), 14371–14396. [https://doi.org/10.5194/acp-16-14371-2016](https://doi.org/10.5194/acp-16-14371-2016)
+
+    ## Learn More
+   
+    ## Acknowledgment
+
+    ## License
+    [Creative Commons Attribution 1.0 International](https://creativecommons.org/licenses/by/1.0/legalcode) (CC BY 1.0)
+
+    ## Data Stewardship
+    - [Data Workflow](https://us-ghg-center.github.io/ghgc-docs/data_workflow/goes-ch4plume-v1_Data_Flow.html)
+    - [Data Ingest](https://us-ghg-center.github.io/ghgc-docs/cog_transformation/goes-ch4plume-v1.html)
+    - [US GHG Center Data Intake Processing and Verification Report](https://us-ghg-center.github.io/ghgc-docs/processing_and_verification_reports/goes-ch4plume-v1_Processing%20and%20Verification%20Report.html)
+
+  </Prose>
+</Block>
