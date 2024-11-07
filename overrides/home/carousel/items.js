@@ -10,8 +10,8 @@ export default [
 
     link: 'https://appliedsciences.nasa.gov/get-involved/training/english/arset-methane-observations-large-emission-event-detection-and',
     title: 'New Training on Methane Observations',
-    description: "Registration is open now on ARSET, NASA’s remote sensing training platform.",
-    image: new URL('../../../custom-pages/news-and-events/media/events/arset_logo.png', import.meta.url).href,
+    description: "Registration is open now on ARSET, NASA's remote sensing training program, for large emission event detection and monitoring.",
+    image: new URL('../../media/events/arset_logo.png', import.meta.url).href,
     imageAlt: 'Register: Stakeholder Engagement Forum.'
   },
   {
