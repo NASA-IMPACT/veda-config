@@ -122,9 +122,36 @@ export const dataEngagements = [
     },
     "footer": null
   }
+  ,
+  {
+    "title": "Documentation",
+    "desc": "Access technical documentation for US GHG Center data services including a collection of code notebooks, and instructions for accessing data via API.",
+    "img": {
+      "src": new URL('./media/data_catalog.png', import.meta.url).href,
+      "alt": "image of colorful polygon against satellite landscape surface in brown"
+    },
+    "link": {
+      "url": "https://us-ghg-center.github.io/ghgc-docs/",
+      "text": "View more"
+    },
+    "footer": null
+  }
 ];
 
 export const customInterfaces = [
+  {
+    "title": "GOES Methane Plume Viewer",
+    "desc": "A sample of methane plumes from point sources observed since 2019 by the U.S. Geostationary Operational Environmental Satellites (GOES) over North and South America",
+    "img": {
+      "src": new URL('./media/emit.jpg', import.meta.url).href,
+      "alt": "view of colored shape overlaid on satellite landscape image with boxes of information containing plume details"
+    },
+    "link": {
+      "url": "/data-catalog/goes-ch4plume-v1",
+      "text": "See more"
+    },
+    "footer": null
+  },
   {
     "title": "EMIT Methane Plume Viewer",
     "desc": "Detailed information for methane plumes identified using EMIT.",
