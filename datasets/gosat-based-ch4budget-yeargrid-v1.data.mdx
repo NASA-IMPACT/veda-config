@@ -44,63 +44,8 @@ infoDescription: |
     - Data Type: Research
     - Data Latency: Updated yearly         
 layers:
-  - id: prior-total-id
-    stacCol: gosat-based-ch4budget-yeargrid-v1
-    name: Priori Total
-    type: raster
-    description: Total methane emissions per grid cell derived from the GEOS-Chem global chemistry transport model
-    initialDatetime: newest
-    projection:
-      id: 'equirectangular'
-    basemapId: 'light'
-    zoomExtent:
-      - 0
-      - 20
-    sourceParams:
-      assets: prior-total
-      colormap_name: spectral_r
-      rescale:
-        - 0
-        - 0.3
-    compare:
-      datasetId: gosat-based-ch4budget-yeargrid-v1
-      layerId: prior-total-id
-      mapLabel: |
-        ::js ({ dateFns, datetime, compareDatetime }) => {
-          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
-        }
-    legend:
-      unit: 
-        label: Tg CH₄/yr
-      type: gradient
-      min: 0
-      max: 0.3
-      stops:
-        - '#5e4fa2'
-        - '#388eba'
-        - '#75c8a5'
-        - '#bfe5a0'
-        - '#f1f9a9'
-        - '#feeea2'
-        - '#fdbf6f'
-        - '#f67b4a' 
-        - '#d8434e' 
-        - '#9e0142'
-    analysis:
-      metrics:
-        - mean
-      sourceParams:
-        dst_crs: "+proj=cea"
-    info:
-      source: NASA
-      spatialExtent: Global
-      temporalResolution: Annual
-      unit: Tg CH₄/yr                
-    media:
-      src: ::file ./media/gosat-based-ch4budget-yeargrid-v1.thumbnails.priori.total.png
-      alt: GOSAT-based Top-down Total and Natural Methane Emissions - Priori Total
-  - id: post-total-id
-    stacCol: gosat-based-ch4budget-yeargrid-v1
+  - id: post-total
+    stacCol: gosat-based-ch4budget-yeargrid-v1-test
     name: Posterior Total
     type: raster
     description: Total methane emissions per grid cell derived using GOSAT data in the GEOS-Chem global chemistry transport model
@@ -119,7 +64,7 @@ layers:
         - 0.3
     compare:
       datasetId: gosat-based-ch4budget-yeargrid-v1
-      layerId: post-total-id
+      layerId: post-total
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
@@ -154,8 +99,8 @@ layers:
     media:
       src: ::file ./media/gosat-based-ch4budget-yeargrid-v1.thumbnails.posterior.total.png
       alt: GOSAT-based Top-down Total and Natural Methane Emissions - Posterior Total
-  - id: prior-wetland-id
-    stacCol: gosat-based-ch4budget-yeargrid-v1
+  - id: prior-wetland
+    stacCol: gosat-based-ch4budget-yeargrid-v1-test
     name: Priori Wetlands
     type: raster
     description: Total wetland methane emissions per grid cell derived from the GEOS-Chem global chemistry transport model
@@ -174,7 +119,7 @@ layers:
         - 0.10
     compare:
       datasetId: gosat-based-ch4budget-yeargrid-v1
-      layerId: post-total-id
+      layerId: prior-wetland
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
@@ -209,8 +154,8 @@ layers:
     media:
       src: ::file ./media/gosat-based-ch4budget-yeargrid-v1.thumbnails.priori.wetlands.png
       alt: GOSAT-based Top-down Total and Natural Methane Emissions - Priori Wetlands      
-  - id: post-wetland-id
-    stacCol: gosat-based-ch4budget-yeargrid-v1
+  - id: post-wetland
+    stacCol: gosat-based-ch4budget-yeargrid-v1-test
     name: Posterior Wetlands
     type: raster
     description: Total wetland methane emissions per grid cell derived using GOSAT data in the GEOS-Chem global chemistry transport model
@@ -229,7 +174,7 @@ layers:
         - 0.10
     compare:
       datasetId: gosat-based-ch4budget-yeargrid-v1
-      layerId: post-total-id
+      layerId: post-wetland
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
@@ -264,9 +209,9 @@ layers:
     media:
       src: ::file ./media/gosat-based-ch4budget-yeargrid-v1.thumbnails.posterior.wetlands.png
       alt: GOSAT-based Top-down Total and Natural Methane Emissions - Posterior Wetlands
-  - id: prior-wetland-uncertainty-id
-    stacCol: gosat-based-ch4budget-yeargrid-v1
-    name: Priori Wetlands Uncertainty
+  - id: post-anth
+    stacCol: gosat-based-ch4budget-yeargrid-v1-test
+    name: Anthropogenic Posterior Methane Emissions
     type: raster
     description: Model uncertainty for wetland emissions
     initialDatetime: newest
@@ -277,14 +222,14 @@ layers:
       - 0
       - 20
     sourceParams:
-      assets: prior-wetland-uncertainty
-      colormap_name: purd
+      assets: post-anth
+      colormap_name: spectral_r
       rescale:
         - 0
-        - 0.05
+        - 0.1
     compare:
       datasetId: gosat-based-ch4budget-yeargrid-v1
-      layerId: prior-wetland-uncertainty-id
+      layerId: post-anth
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
@@ -294,18 +239,18 @@ layers:
         label: Tg CH₄/yr
       type: gradient
       min: 0
-      max: 0.05
+      max: 0.1
       stops:
-        - '#F7F4F9'
-        - '#E9E3F0'
-        - '#D9C3DF'
-        - '#CDA0CD'
-        - '#D57ABA'
-        - '#E34A9F'
-        - '#DF2179'
-        - '#C10E51'
-        - '#92003F'
-        - '#67001F' 
+        - '#5e4fa2'
+        - '#388eba'
+        - '#75c8a5'
+        - '#bfe5a0'
+        - '#f1f9a9'
+        - '#feeea2'
+        - '#fdbf6f'
+        - '#f67b4a' 
+        - '#d8434e' 
+        - '#9e0142'
     analysis:
       metrics:
         - mean
@@ -319,9 +264,9 @@ layers:
     media:
       src: ::file ./media/gosat-based-ch4budget-yeargrid-v1.thumbnails.priori.wetlands.uncertainty.png
       alt: GOSAT-based Top-down Total and Natural Methane Emissions - Priori Wetlands Uncertainty    
-  - id: post-wetland-uncertainty-id
-    stacCol: gosat-based-ch4budget-yeargrid-v1
-    name: Posterior Wetlands Uncertainty
+  - id: prior-anth
+    stacCol: gosat-based-ch4budget-yeargrid-v1-test
+    name: Anthropogenic Prior Methane emissions
     type: raster
     description: Model uncertainty for wetland emissions when GOSAT data included in model
     initialDatetime: newest
@@ -332,14 +277,14 @@ layers:
       - 0
       - 20
     sourceParams:
-      assets: post-wetland-uncertainty
-      colormap_name: purd
+      assets: prior-anth
+      colormap_name: spectral_r
       rescale:
         - 0
-        - 0.05
+        - 0.1
     compare:
       datasetId: gosat-based-ch4budget-yeargrid-v1
-      layerId: post-wetland-uncertainty-id
+      layerId: prior-anth
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
@@ -349,18 +294,18 @@ layers:
         label: Tg CH₄/yr
       type: gradient
       min: 0
-      max:  0.05
+      max:  0.1
       stops:
-        - '#F7F4F9'
-        - '#E9E3F0'
-        - '#D9C3DF'
-        - '#CDA0CD'
-        - '#D57ABA'
-        - '#E34A9F'
-        - '#DF2179'
-        - '#C10E51'
-        - '#92003F'
-        - '#67001F'       
+        - '#5e4fa2'
+        - '#388eba'
+        - '#75c8a5'
+        - '#bfe5a0'
+        - '#f1f9a9'
+        - '#feeea2'
+        - '#fdbf6f'
+        - '#f67b4a' 
+        - '#d8434e' 
+        - '#9e0142'     
     analysis:
       metrics:
         - mean
