@@ -27,16 +27,16 @@ layers:
       - 20
     sourceParams:
       colormap_name: reds
-      nodata: 0  # Assuming 0 represents non-salt marsh
+      nodata: 0
       rescale:
         - 0
-        - 1  # Binary data: 0 for non-salt marsh, 1 for salt marsh
+        - 1
     legend:
       type: categorical
       stops:
-        - color: "#0000FF"  # Blue for Non-Salt Marsh
+        - color: "#0000FF"
           label: "Non-Salt Marsh"
-        - color: "#FF0000"  # Red for Salt Marsh
+        - color: "#FF0000"
           label: "Salt Marsh"
     compare:
       datasetId: marsh-ida
@@ -56,11 +56,11 @@ layers:
     legend:
       type: discrete
       items:
-        - color: "#FF0000"  # Red for Loss of Salt Marsh
+        - color: "#FF0000"
           label: "Loss of Salt Marsh"
         - color: "#FFFFFF"  # White for No Change
           label: "No Change"
-        - color: "#0000FF"  # Blue for Gain of Salt Marsh
+        - color: "#0000FF"
           label: "Gain of Salt Marsh"
 ---
 
