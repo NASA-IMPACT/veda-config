@@ -54,7 +54,9 @@ layers:
       - 20
     sourceParams:
       colormap_name: binary-difference-salt-marsh
-      rescale: -1,1  # -1 for loss, 0 for no change, 1 for gain
+      rescale:
+        - -1
+        - 1
     legend:
       type: discrete
       items:
