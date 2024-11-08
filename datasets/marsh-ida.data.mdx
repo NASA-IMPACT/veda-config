@@ -53,19 +53,18 @@ layers:
       - 0
       - 20
     sourceParams:
-      colormap_name: binary-difference-salt-marsh
+      colormap_name: bwr
+      nodata: 0
       rescale:
         - -1
         - 1
     legend:
-      type: discrete
-      items:
-        - color: "#FF0000"
-          label: "Loss of Salt Marsh"
-        - color: "#FFFFFF"  # White for No Change
-          label: "No Change"
+      type: categorical
+      stops:
         - color: "#0000FF"
-          label: "Gain of Salt Marsh"
+          label: "Gain of Marsh"
+        - color: "#FF0000"
+          label: "Loss of Marsh"
 ---
 
 <Block type='wide'>
