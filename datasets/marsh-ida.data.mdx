@@ -26,15 +26,18 @@ layers:
       - 0
       - 20
     sourceParams:
-      colormap_name: bwr
-      rescale: 0,1  # Binary data: 0 for non-salt marsh, 1 for salt marsh
+      colormap_name: reds
+      nodata: 0  # Assuming 0 represents non-salt marsh
+      rescale:
+        - 0
+        - 1  # Binary data: 0 for non-salt marsh, 1 for salt marsh
     legend:
-      type: discrete
-      items:
-        - color: "#FF0000"  # Red for Salt Marsh
-          label: "Salt Marsh"
+      type: categorical
+      stops:
         - color: "#0000FF"  # Blue for Non-Salt Marsh
           label: "Non-Salt Marsh"
+        - color: "#FF0000"  # Red for Salt Marsh
+          label: "Salt Marsh"
     compare:
       datasetId: marsh-ida
       layerId: marsh-ida
