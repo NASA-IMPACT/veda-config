@@ -16,7 +16,7 @@ cd .veda/ui
 git fetch
 
 # Switch to the release you want.
-# You can see the list of releaset on https://github.com/NASA-IMPACT/veda-ui/releases
+# You can see the list of releases on https://github.com/NASA-IMPACT/veda-ui/releases
 
 git checkout vx.x.x 
 
