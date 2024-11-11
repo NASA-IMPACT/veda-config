@@ -21,6 +21,8 @@ taxonomy:
       - MRLC
 layers:
   - id: nlcd-annual-conus
+    stacApiEndpoint: https://openveda.cloud/api/stac
+    tileApiEndpoint: https://openveda.cloud/api/raster
     stacCol: nlcd-annual-conus
     name: NLCD Land Use - Land Cover Classification
     type: raster
@@ -96,6 +98,8 @@ layers:
       unit: N/A 
 
   - id: nlcd-new-urbanization
+    stacApiEndpoint: https://openveda.cloud/api/stac
+    tileApiEndpoint: https://openveda.cloud/api/raster
     stacCol: nlcd-new-urbanization
     name: Urbanization
     type: raster
@@ -264,7 +268,9 @@ layers:
   ## Data Stories Using This Dataset
   
   **<Link to={"/stories/urban-heating"}>Implications for Heat Stress</Link>**
-  
+
+  **<Link to={"/stories/houston-aod"}>Aerosols and Their Impacts on Houston, TX</Link>**
+
   **<Link to={"/stories/burn-scar"}>Wildfires Affect Local Weather, Climate, and Hydrology</Link>**
 
 
