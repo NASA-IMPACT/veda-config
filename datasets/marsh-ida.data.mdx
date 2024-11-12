@@ -39,12 +39,10 @@ layers:
           label: Non-Salt Marsh
         - color: "#d73027"
           label: Salt Marsh
-    info:
-      source: UNEP-WCMC
-      spatialExtent: Southern Louisiana
-      temporalResolution: Monthly 
-      unit: Binary
-  - id: marsh-difference
+    compare:
+        datasetId: marsh-ida
+        layerId: marsh-ida
+- id: marsh-difference
     stacCol: marsh-difference
     name: Salt Marsh Difference
     type: raster
