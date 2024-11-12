@@ -1,7 +1,8 @@
 ---
 id: gosat-based-ch4budget-yeargrid-v1
 name: GOSAT-based Top-down Total and Natural Methane Emissions
-description: Total and natural methane emissions derived using the GEOS-Chem global chemistry transport model with inclusion of GOSAT data.  Methane emission values for both before and after adding GOSAT to the model are mapped to a 5° (longitude) by 4° (latitude) resolution grid for the years 2010 - 2022
+description: Total and natural methane emissions derived using the GEOS-Chem global chemistry transport model with inclusion of GOSAT data. Methane emission values for both before and after adding GOSAT to the model are mapped to a 5° (longitude) by 4° (latitude) resolution grid for the years 2010 - 2022
+usage:
   - url: 'https://us-ghg-center.github.io/ghgc-docs/cog_transformation/gosat-based-ch4budget-yeargrid-v1.html'
     label: Notebook showing data transformation to COG for ingest to the US GHG Center
     title: 'Data Transformation Notebook'
@@ -14,6 +15,7 @@ description: Total and natural methane emissions derived using the GEOS-Chem glo
   - url: https://dljsq618eotzp.cloudfront.net/browseui/index.html#gosat-based-ch4budget-yeargrid-v1/
     label: Browse and download the data
     title: Data Browser
+  
 media:
   src: ::file ./media/oco2-mip-ch4budget-yeargrid-v1--cover.jpg
   alt: Dried/Burned trees
@@ -261,7 +263,7 @@ layers:
       temporalResolution: Annual
       unit: Tg CH₄/yr                
     media:
-      src: ::file ./media/gosat-based-ch4budget-yeargrid-v1.thumbnails.priori.wetlands.uncertainty.png
+      src: ::file ./media/gosat-based-ch4budget-yeargrid-v1.thumbnails.priori.wetlands.png
       alt: GOSAT-based Top-down Total and Natural Methane Emissions - Priori Wetlands Uncertainty    
   - id: prior-anth
     stacCol: gosat-based-ch4budget-yeargrid-v1-test
@@ -316,7 +318,7 @@ layers:
       temporalResolution: Annual
       unit: Tg CH₄/yr                
     media:
-      src: ::file ./media/gosat-based-ch4budget-yeargrid-v1.thumbnails.posterior.wetlands.uncertainty.png
+      src: ::file ./media/gosat-based-ch4budget-yeargrid-v1.thumbnails.priori.wetlands.png
       alt: GOSAT-based Top-down Total and Natural Methane Emissions - Posterior Wetlands Uncertainty
       
 ---
@@ -326,7 +328,7 @@ layers:
     **Temporal Extent:** 2010-2022<br />
     **Temporal Resolution:** Annual   
     **Spatial Extent:** Global    
-    **Spatial Resolution:** 5° x 4°<br />    
+    **Spatial Resolution:** 5° x 4°  
     **Data Units:** Teragrams of methane per year (Tg CH₄/yr)<br />
     **Data Type:** Research<br />
     **Data Latency:** Updated yearly 
