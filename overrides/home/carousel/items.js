@@ -1,17 +1,18 @@
 export default [
   {
-    link: 'https://emg-wd.wixsite.com/us-ghg-2024',
-    title: 'Register: Stakeholder Engagement Forum',
-    description: "The US GHG Center will host its second annual Stakeholder Engagement Forum on December 4-5, 2024.",
-    image: new URL('../../media/StakeholderForum2024_carousel_1.png', import.meta.url).href,
-    imageAlt: 'Register: Stakeholder Engagement Forum.'
-  },
-  {
     link: 'https://us-ghg-center.github.io/agu-2024-workshop/ghg-center-at-agu-2024.html',
     title: 'Schedule: US GHG Center at AGU 2024',
     description: 'Join us at the annual American Geophysical Union (AGU) meeting, held December 9-13 in Washington, D.C.',
     image: new URL('../../media/AGU2024_carousel_2.png', import.meta.url).href,
     imageAlt: 'US GHG Center at AGU 2024.'
+  },
+  {
+
+    link: 'https://appliedsciences.nasa.gov/get-involved/training/english/arset-methane-observations-large-emission-event-detection-and',
+    title: 'New Training on Methane Observations',
+    description: "Registration is open now on ARSET, NASA's remote sensing training program, for large emission event detection and monitoring.",
+    image: new URL('../../media/Methane_Website_Header.png', import.meta.url).href,
+    imageAlt: 'Register: Stakeholder Engagement Forum.'
   },
   {
   link: '/stories/urban',
