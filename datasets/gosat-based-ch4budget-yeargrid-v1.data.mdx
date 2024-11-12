@@ -1,8 +1,7 @@
 ---
 id: gosat-based-ch4budget-yeargrid-v1
 name: GOSAT-based Top-down Total and Natural Methane Emissions
-description: Total and natural methane emissions derived using the GEOS-Chem global chemistry transport model with inclusion of GOSAT data.  Methane emission values for both before and after adding GOSAT to the model are mapped to a 1° resolution grid.  Version 1.0 contains data only for 2019
-usage:
+description: Total and natural methane emissions derived using the GEOS-Chem global chemistry transport model with inclusion of GOSAT data.  Methane emission values for both before and after adding GOSAT to the model are mapped to a 5° (longitude) by 4° (latitude) resolution grid for the years 2010 - 2022
   - url: 'https://us-ghg-center.github.io/ghgc-docs/cog_transformation/gosat-based-ch4budget-yeargrid-v1.html'
     label: Notebook showing data transformation to COG for ingest to the US GHG Center
     title: 'Data Transformation Notebook'
@@ -46,9 +45,9 @@ infoDescription: |
 layers:
   - id: post-total
     stacCol: gosat-based-ch4budget-yeargrid-v1-test
-    name: Posterior Total
+    name: Satellite-Corrected Total Methane Emissions
     type: raster
-    description: Total methane emissions per grid cell derived using GOSAT data in the GEOS-Chem global chemistry transport model
+    description: Total methane emissions per grid cell derived using GOSAT data in the GEOS-Chem global chemistry transport model (posterior)
     initialDatetime: newest
     projection:
       id: 'equirectangular'
@@ -99,66 +98,11 @@ layers:
     media:
       src: ::file ./media/gosat-based-ch4budget-yeargrid-v1.thumbnails.posterior.total.png
       alt: GOSAT-based Top-down Total and Natural Methane Emissions - Posterior Total
-  - id: prior-wetland
-    stacCol: gosat-based-ch4budget-yeargrid-v1-test
-    name: Priori Wetlands
-    type: raster
-    description: Total wetland methane emissions per grid cell derived from the GEOS-Chem global chemistry transport model
-    initialDatetime: newest
-    projection:
-      id: 'equirectangular'
-    basemapId: 'light'
-    zoomExtent:
-      - 0
-      - 20
-    sourceParams:
-      assets: prior-wetland
-      colormap_name: spectral_r
-      rescale:
-        - 0
-        - 0.10
-    compare:
-      datasetId: gosat-based-ch4budget-yeargrid-v1
-      layerId: prior-wetland
-      mapLabel: |
-        ::js ({ dateFns, datetime, compareDatetime }) => {
-          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
-        }
-    legend:
-      unit: 
-        label: Tg CH₄/yr
-      type: gradient
-      min: 0
-      max: 0.10
-      stops:
-        - '#5e4fa2'
-        - '#388eba'
-        - '#75c8a5'
-        - '#bfe5a0'
-        - '#f1f9a9'
-        - '#feeea2'
-        - '#fdbf6f'
-        - '#f67b4a' 
-        - '#d8434e' 
-        - '#9e0142'
-    analysis:
-      metrics:
-        - mean
-      sourceParams:
-        dst_crs: "+proj=cea"
-    info:
-      source: NASA
-      spatialExtent: Global
-      temporalResolution: Annual
-      unit: Tg CH₄/yr                
-    media:
-      src: ::file ./media/gosat-based-ch4budget-yeargrid-v1.thumbnails.priori.wetlands.png
-      alt: GOSAT-based Top-down Total and Natural Methane Emissions - Priori Wetlands      
   - id: post-wetland
     stacCol: gosat-based-ch4budget-yeargrid-v1-test
-    name: Posterior Wetlands
+    name: Satellite-Corrected Wetland Methane Emissions
     type: raster
-    description: Total wetland methane emissions per grid cell derived using GOSAT data in the GEOS-Chem global chemistry transport model
+    description: Total wetland methane emissions per grid cell derived using GOSAT data in the GEOS-Chem global chemistry transport model (posterior)
     initialDatetime: newest
     projection:
       id: 'equirectangular'
@@ -209,11 +153,66 @@ layers:
     media:
       src: ::file ./media/gosat-based-ch4budget-yeargrid-v1.thumbnails.posterior.wetlands.png
       alt: GOSAT-based Top-down Total and Natural Methane Emissions - Posterior Wetlands
+  - id: prior-wetland
+    stacCol: gosat-based-ch4budget-yeargrid-v1-test
+    name: Model-Estimated Wetland Methane Emissions
+    type: raster
+    description: Total wetland methane emissions per grid cell derived from the GEOS-Chem global chemistry transport model (priori)
+    initialDatetime: newest
+    projection:
+      id: 'equirectangular'
+    basemapId: 'light'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: prior-wetland
+      colormap_name: spectral_r
+      rescale:
+        - 0
+        - 0.10
+    compare:
+      datasetId: gosat-based-ch4budget-yeargrid-v1
+      layerId: prior-wetland
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit: 
+        label: Tg CH₄/yr
+      type: gradient
+      min: 0
+      max: 0.10
+      stops:
+        - '#5e4fa2'
+        - '#388eba'
+        - '#75c8a5'
+        - '#bfe5a0'
+        - '#f1f9a9'
+        - '#feeea2'
+        - '#fdbf6f'
+        - '#f67b4a' 
+        - '#d8434e' 
+        - '#9e0142'
+    analysis:
+      metrics:
+        - mean
+      sourceParams:
+        dst_crs: "+proj=cea"
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Annual
+      unit: Tg CH₄/yr                
+    media:
+      src: ::file ./media/gosat-based-ch4budget-yeargrid-v1.thumbnails.priori.wetlands.png
+      alt: GOSAT-based Top-down Total and Natural Methane Emissions - Priori Wetlands      
   - id: post-anth
     stacCol: gosat-based-ch4budget-yeargrid-v1-test
-    name: Anthropogenic Posterior Methane Emissions
+    name: Satellite-Corrected Anthropogenic Methane Emissions
     type: raster
-    description: Model uncertainty for wetland emissions
+    description: Total anthropogenic methane emissions per grid cell derived using GOSAT data in the GEOS-Chem global chemistry transport model (posterior)
     initialDatetime: newest
     projection:
       id: 'equirectangular'
@@ -266,9 +265,9 @@ layers:
       alt: GOSAT-based Top-down Total and Natural Methane Emissions - Priori Wetlands Uncertainty    
   - id: prior-anth
     stacCol: gosat-based-ch4budget-yeargrid-v1-test
-    name: Anthropogenic Prior Methane emissions
+    name: Model-Estimated Anthropogenic Methane Emissions
     type: raster
-    description: Model uncertainty for wetland emissions when GOSAT data included in model
+    description: Total anthropogenic methane emissions per grid cell derived from the GEOS-Chem global chemistry transport model (priori)
     initialDatetime: newest
     projection:
       id: 'equirectangular'
@@ -324,10 +323,10 @@ layers:
 
 <Block>
   <Prose>
-    **Temporal Extent:** 2019   
+    **Temporal Extent:** 2010-2022<br />
     **Temporal Resolution:** Annual   
     **Spatial Extent:** Global    
-    **Spatial Resolution:** 1° x 1°    
+    **Spatial Resolution:** 5° x 4°<br />    
     **Data Units:** Teragrams of methane per year (Tg CH₄/yr)<br />
     **Data Type:** Research<br />
     **Data Latency:** Updated yearly 
