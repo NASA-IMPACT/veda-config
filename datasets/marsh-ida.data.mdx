@@ -21,7 +21,7 @@ layers:
     stacCol: marsh-ida
     name: Salt Marsh
     type: raster
-    description: "Salt Marsh Classification Pre-Ida (Southern Louisiana)"
+    description: 'Salt Marsh Classification Pre-Ida (Southern Louisiana)'
     initialDatetime: newest
     zoomExtent:
       - 0
@@ -39,10 +39,28 @@ layers:
           label: Non-Salt Marsh
         - color: "#d73027"
           label: Salt Marsh
+<<<<<<< HEAD
+    compare:
+      datasetId: marsh-ida
+      layerId: marsh-ida
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
+        }
+    info:
+      source: UNEP-WCMC
+      spatialExtent: Southern Louisiana
+      temporalResolution: Monthly 
+      unit: Binary
+
+
+  - id: marsh-difference
+=======
     compare:
         datasetId: marsh-ida
         layerId: marsh-ida
 - id: marsh-difference
+>>>>>>> b611d40609b01159efe8b4f75d276a7cf6257ced
     stacCol: marsh-difference
     name: Salt Marsh Difference
     type: raster
