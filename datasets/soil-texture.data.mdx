@@ -29,6 +29,13 @@ layers:
         assets: soil_texture_0cm_250m
         colormap_name: soil_texture
         nodata: 255
+    compare:
+      datasetId: nlcd-annual-conus
+      layerId: nlcd-annual-conus
+      mapLabel: |
+        ::js ({dateFns, datetime, compareDatetime}) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
 
     legend:
         type: categorical
