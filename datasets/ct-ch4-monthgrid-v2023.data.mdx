@@ -1,18 +1,18 @@
 ---
-id: tm54dvar-ch4flux-monthgrid-v1
-name: TM5-4DVar Isotopic Methane Inverse Fluxes
-description: Global, monthly 1 degree resolution methane emission estimates from microbial, fossil and pyrogenic sources derived using inverse modeling, version 1
+id: ct-ch4-monthgrid-v2023
+name: CarbonTracker-CH4 Isotopic Methane Inverse Fluxes
+description: Global, monthly 1 degree resolution methane emission estimates from microbial, fossil and pyrogenic sources derived using inverse modeling, version 2023
 usage:
-  - url: 'https://us-ghg-center.github.io/ghgc-docs/cog_transformation/tm54dvar-ch4flux-monthgrid-v1.html'
+  - url: 'https://us-ghg-center.github.io/ghgc-docs/cog_transformation/ct-ch4-monthgrid-v2023.html'
     label: Notebook showing data transformation to COG for ingest to the US GHG Center
     title: 'Data Transformation Notebook'
   - url: 'https://us-ghg-center.github.io/ghgc-docs/datausage.html'
     label: Notebooks to read, visualize, and explore data statistics
     title: 'Data Usage Notebooks'
-  - url: 'https://hub.ghg.center/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FUS-GHG-Center%2Fghgc-docs&urlpath=lab%2Ftree%2Fghgc-docs%2Fuser_data_notebooks%2Ftm54dvar-ch4flux-monthgrid-v1_User_Notebook.ipynb&branch=main'
+  - url: 'https://hub.ghg.center/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FUS-GHG-Center%2Fghgc-docs&urlpath=lab%2Ftree%2Fghgc-docs%2Fuser_data_notebooks%2Fct-ch4-monthgrid-v2023_User_Notebook.ipynb&branch=main'
     label: Run example notebook
     title: Interactive Session in the US GHG Center JupyterHub (requires account)
-  - url: https://dljsq618eotzp.cloudfront.net/browseui/index.html#tm54dvar-ch4flux-monthgrid-v1/
+  - url: https://dljsq618eotzp.cloudfront.net/browseui/index.html#ct-ch4-monthgrid-v2023/
     label: Browse and download the data
     title: Data Browser
 
@@ -49,7 +49,7 @@ infoDescription: |
     - Data Latency: Approximately 2 years       
 layers:
   - id: total-ch4
-    stacCol: tm54dvar-ch4flux-mask-monthgrid-v1-test
+    stacCol: ct-ch4-monthgrid-v2023
     name: Total CH₄ Emission
     type: raster
     description: Total methane emission from microbial, fossil and pyrogenic sources.
@@ -67,7 +67,7 @@ layers:
         - 50
       
     compare:
-      datasetId: tm54dvar-ch4flux-monthgrid-v1
+      datasetId: ct-ch4-monthgrid-v2023
       layerId: total-ch4
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -105,10 +105,10 @@ layers:
       src: ::file ./media/tm54dvar-ch4flux-monthgrid-v1.thumbnails.total.png
       alt: TM5-4DVar Isotopic CH₄ Inverse Fluxes - Total CH₄ Emission
   - id: microbial-ch4
-    stacCol: tm54dvar-ch4flux-mask-monthgrid-v1-test
+    stacCol: ct-ch4-monthgrid-v2023
     name: Microbial CH₄ Emission
     type: raster
-    description: Emission of methane from all microbial sources, such as wetlands, agriculture and termites.
+    description: Emission of methane from all microbial sources, such as wetlands, ruminants, agriculture and termites.
     initialDatetime: newest
     projection:
       id: 'equirectangular'
@@ -123,7 +123,7 @@ layers:
         - 30
       
     compare:
-      datasetId: tm54dvar-ch4flux-monthgrid-v1
+      datasetId: ct-ch4-monthgrid-v2023
       layerId: microbial-ch4
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -161,7 +161,7 @@ layers:
       src: ::file ./media/tm54dvar-ch4flux-monthgrid-v1.thumbnails.microbial.png
       alt: TM5-4DVar Isotopic CH₄ Inverse Fluxes - Microbial CH₄ Emission
   - id: fossil-ch4
-    stacCol: tm54dvar-ch4flux-mask-monthgrid-v1-test
+    stacCol: ct-ch4-monthgrid-v2023
     name: Fossil CH₄ Emission
     type: raster
     description: Emission of methane from all fossil sources, such as oil and gas activities and coal mining.
@@ -179,7 +179,7 @@ layers:
         - 50
       
     compare:
-      datasetId: tm54dvar-ch4flux-monthgrid-v1
+      datasetId: ct-ch4-monthgrid-v2023
       layerId: fossil-ch4
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -217,7 +217,7 @@ layers:
       src: ::file ./media/tm54dvar-ch4flux-monthgrid-v1.thumbnails.fossil.png
       alt: TM5-4DVar Isotopic CH₄ Inverse Fluxes - Fossil CH₄ Emission
   - id: pyrogenic-ch4
-    stacCol: tm54dvar-ch4flux-mask-monthgrid-v1-test
+    stacCol: ct-ch4-monthgrid-v2023
     name: Pyrogenic CH₄ Emission
     type: raster
     description: Emission of methane from all sources of biomass burning, such as wildfires and crop residue burning.
@@ -235,7 +235,7 @@ layers:
         - 8
       
     compare:
-      datasetId: tm54dvar-ch4flux-monthgrid-v1
+      datasetId: ct-ch4-monthgrid-v2023
       layerId: pyrogenic-ch4
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -337,9 +337,9 @@ layers:
     [Creative Commons Zero v1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC0 1.0)
 
     ## Data Stewardship
-    - [Data Workflow](https://us-ghg-center.github.io/ghgc-docs/data_workflow/tm54dvar-ch4flux-monthgrid-v1_Data_Flow.html)
-    - [Data Transformation Code](https://us-ghg-center.github.io/ghgc-docs/cog_transformation/tm54dvar-ch4flux-monthgrid-v1.html)
-    - [US GHG Center Data Intake Processing and Verification Report](https://us-ghg-center.github.io/ghgc-docs/processing_and_verification_reports/tm54dvar-ch4flux-monthgrid-v1_Processing%20and%20Verification%20Report.html)
+    - [Data Workflow](https://us-ghg-center.github.io/ghgc-docs/data_workflow/ct-ch4-monthgrid-v2023_Data_Flow.html)
+    - [Data Transformation Code](https://us-ghg-center.github.io/ghgc-docs/cog_transformation/ct-ch4-monthgrid-v2023.html)
+    - [US GHG Center Data Intake Processing and Verification Report](https://us-ghg-center.github.io/ghgc-docs/processing_and_verification_reports/ct-ch4-monthgrid-v2023_Processing%20and%20Verification%20Report.html)
 
   </Prose>
 </Block>
