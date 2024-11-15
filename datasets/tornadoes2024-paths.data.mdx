@@ -52,27 +52,36 @@ layers:
     zoomExtent:
       - 0
       - 20
-    sourceParams:
-      colormap: '{"-1":"#b3bcc9", "0":"#add8e6", "1":"#90ee90", "2": "#ffe71f", "3": "#ffa500", "4": "#ff0000", "5": "#ff00ff"}'            
-      nodata: 999
+- id: tornadoes-2024-paths
+  stacCol: tornadoes-2024-paths
+  name: Spring 2024 Tornadoes (Paths)
+  type: raster
+  description: "This dataset shows official NWS tornado center path lines categorized by maximum EF rating."
+  zoomExtent:
+    - 0
+    - 20
+  sourceParams:
+    colormap: '{"-1":"#b3bcc9", "0":"#add8e6", "1":"#90ee90", "2": "#ffe71f", "3": "#ffa500", "4": "#ff0000", "5": "#ff00ff"}'            
+    nodata: 999
 
-    legend:
-      type: categorical
-      stops:
-      	- color: "#b3bcc9"  # Grey for EFUNK
-          label: EFUNK
-        - color: "#add8e6"  # Light blue for EF0
-          label: EF0
-        - color: "#90ee90"  # Green for EF1
-          label: EF1
-        - color: "#ffe71f"  # Yellow for EF2
-          label: EF2
-        - color: "#ffa500"  # Orange for EF3
-          label: EF3
-        - color: "#ff0000"  # Red for EF4
-          label: EF4
-        - color: "#ff00ff"  # Pink for EF5
-          label: EF5
+  legend:
+    type: categorical
+    stops:
+      - color: "#b3bcc9"  # Grey for EFUNK
+        label: EFUNK
+      - color: "#add8e6"  # Light blue for EF0
+        label: EF0
+      - color: "#90ee90"  # Green for EF1
+        label: EF1
+      - color: "#ffe71f"  # Yellow for EF2
+        label: EF2
+      - color: "#ffa500"  # Orange for EF3
+        label: EF3
+      - color: "#ff0000"  # Red for EF4
+        label: EF4
+      - color: "#ff00ff"  # Pink for EF5
+        label: EF5
+
   
 ---
 
