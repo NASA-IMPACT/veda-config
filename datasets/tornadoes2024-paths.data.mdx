@@ -53,12 +53,14 @@ layers:
       - 0
       - 20
     sourceParams:
-      colormap_name: reds
-      nodata: 25
+      colormap: '{"-1":"#b3bcc9", "0":"#add8e6", "1":"#90ee90", "2": "#ffe71f", "3": "#ffa500", "4": "#ff0000", "5": "#ff00ff"}'            
+      nodata: 999
 
     legend:
       type: categorical
       stops:
+      	- color: "#b3bcc9"  # Grey for EF Unknown
+          label: EFU        
         - color: "#add8e6"  # Light blue for EF0
           label: EF0
         - color: "#90ee90"  # Green for EF1
