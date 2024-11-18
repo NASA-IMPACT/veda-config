@@ -27,6 +27,7 @@ layers:
       - 20
     sourceParams:
         colormap_name: magma
+        nodata: -999
         rescale:
             - 55
             - 250
@@ -50,27 +51,27 @@ layers:
 <Block>
   <Prose>
   ## Dataset Details
-  - **Temporal Extent:** March 1 - May 31, 2024
-  - **Temporal Resolution:** Daily
-  - **Spatial Extent:** CONUS
-  - **Spatial Resolution:** 50 meters
-  - **Data Units:** N/A
+  - **Temporal Extent:** May 21, 2024
+  - **Temporal Resolution:** 7 Seconds
+  - **Spatial Extent:** Greenfield, Iowa
+  - **Spatial Resolution:** 15 meters
+  - **Data Units:** mph
   - **Data Type:** Research
   - **Data Latency:** N/A
   </Prose>
 <Figure>
   <Map
-    center={[-83.924, 40.487]}
-    zoom={13.5}
-    datasetId='tornadoes-2024-tracks'
-    layerId='tornadoes-2024'
-    dateTime='2024-05-31'
+    center={[-94.4604, 41.303]}
+    zoom={14.3}
+    datasetId='tornadoes-2024-dow'
+    layerId='tornadoes-2024-dow-vmax-greenfield'
+    dateTime='2024-05-21'
   />
   <Caption
     attrAuthor='NASA'
     attrUrl='https://nasa.gov/'
   >
-    EF-3 tornado path through Lakeview, Ohio, from a local outbreak on March 14, 2024.
+  Maximum DOW-derived velocities from the EF-4 Greenfield, Iowa tornado on May 21, 2024.
   </Caption>
 </Figure>
 </Block>
