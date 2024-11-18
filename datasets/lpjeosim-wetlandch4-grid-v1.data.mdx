@@ -323,8 +323,8 @@ layers:
 
 <Block>
   <Prose>
-    <div style={{'background-color': '#ecf0f1', padding: '16px',}}>
-      <span style={{ fontWeight: 'bold' }}>Notice:</span>
+    <div style={{ border: '2px solid black', padding: '10px', display: 'inline-block', color: 'black', backgroundColor: '#d4f1f9' }}>
+      <span style={{ color: 'red', fontWeight: 'bold' }}>Notice:</span>
       Due to issues with the ERA5 driver, LPJ-EOSIM ERA5 and ensemble mean estimates of wetland methane have been revised as of November 14, 2024, effective from July 1, 2024. If data was obtained prior to November 14, 2024, we recommend re-downloading data from July 1, 2024 onward.
     </div>
     **Temporal extent:** January 1, 1990 - ongoing<br /> 
@@ -355,10 +355,9 @@ layers:
     Colligan, T., Poulter, B., Quinn, C. (2024). LPJ-EOSIM L2 Global Simulated Monthly Wetland Methane Flux Low Latency V001 [Data set]. NASA EOSDIS Land Processes Distributed Active Archive Center. Accessed from [https://doi.org/10.5067/Community/LPJ-EOSIM/LPJ_EOSIM_L2_MCH4E_LL.001](https://doi.org/10.5067/Community/LPJ-EOSIM/LPJ_EOSIM_L2_MCH4E_LL.001)
 
     ## Version History
-    <div style={{'background-color': '#ecf0f1', padding: '16px',}}>
-      <span style={{ fontWeight: 'bold' }}>Notice:</span>
-        Due to issues with the ERA5 driver, LPJ-EOSIM ERA5 and ensemble mean estimates of wetland methane have been revised as of November 14, 2024, effective from July 1, 2024. If data was obtained prior to November 14, 2024, we recommend re-downloading data from July 1, 2024 onward.
-    </div>
+    Notice: Due to issues with the ERA5 driver, LPJ-EOSIM ERA5 and ensemble mean estimates of wetland methane have been revised as of November 14, 2024, effective from July 1, 2024. If data was obtained prior to November 14, 2024, we recommend re-downloading data from July 1, 2024 onward.
+
+    
     The current dataset version is LPJ-EOSIM v1, which replaced LPJ-wsl v1 in the US GHG Center in April 2024. Summary of version update changes:
     - Model updates and improvements, including improved data latency with more regular updates and driver-specific model recalibrationDue
     - Addition of two new data layers: LPJ-EOSIM model estimated wetland methane emissions using ERA5 climate input forcing data, and using the mean of both MERRA-2 and ERA5 climate input forcing data (mean ensemble). The LPJ-wsl dataset only provided estimates using MERRA-2 climate input forcing data until the end of 2021. 
