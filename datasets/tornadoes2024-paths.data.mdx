@@ -56,7 +56,6 @@ layers:
     sourceParams:
       colormap: '{"-1":"#b3bcc9", "0":"#add8e6", "1":"#90ee90", "2": "#ffe71f", "3": "#ffa500", "4": "#ff0000", "5": "#ff00ff"}'            
       nodata: 999
-
     legend:
       type: categorical
       stops:
@@ -74,7 +73,13 @@ layers:
           label: EF4
         - color: "#ff00ff"  # Pink for EF5
           label: EF5
-
+    compare:
+      datasetId: ps-tornadoes-2024
+      layerId: ps-tornadoes-2024-difference
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'DD LLL yyyy')}`;        
+        }
   
 ---
 
