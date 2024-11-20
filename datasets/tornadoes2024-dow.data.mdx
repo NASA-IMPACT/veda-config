@@ -257,6 +257,152 @@ layers:
       spatialExtent: Local
       temporalResolution: N/A
       unit: dBZ
+    compare:
+      datasetId: tornadoes-2024-dow
+      layerId: tornadoes-2024-dow-v-harlan
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'DD LLL yyyy')}`;        
+        }
+
+- id: tornadoes-2024-dow-v-greenfield
+    stacCol: tornadoes-2024-dow-v-greenfield
+    name: DOW7 Velocity (Ground; Harlan, IA)
+    type: raster
+    description: "Velocities (m/s) of the EF-3 Harlan, IA tornado on April 26, 2024 collected by DOW7. Scan taken at 23:08:12."
+    initialDatetime: newest
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+        colormap_name: seismic
+        nodata: -32768
+        rescale:
+            - -75
+            - 75
+        legend:
+        type: gradient
+        min: "-75 m/s"
+        max: "75 m/s"
+        stops:
+            - [ "#0000FF", -75 ]  # Deep blue (negative extreme)
+            - [ "#3399FF", -50 ]  # Light blue
+            - [ "#66CCFF", -25 ]  # Very light blue
+            - [ "#FFFFFF",  0 ]   # White (zero velocity)
+            - [ "#FF9999",  25 ]  # Light pink
+            - [ "#FF6666",  50 ]  # Light red
+            - [ "#FF0000",  75 ]  # Deep red (positive extreme)
+    info:
+      source: Doppler on Wheels (DOW)
+      spatialExtent: Local
+      temporalResolution: N/A
+      unit: m/s
+    compare:
+      datasetId: tornadoes-2024-dow
+      layerId: tornadoes-2024-dow-refl-harlan
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'DD LLL yyyy')}`;        
+        }
+
+  - id: tornadoes-2024-dow-rhohv-harlan
+    stacCol: tornadoes-2024-dow-rhohv-harlan
+    name: DOW7 Correlation Coefficient (Harlan, IA)
+    type: raster
+    description: "Correlation Coefficient values from the EF-3 Harlan, IA tornado on April 26, 2024 collected by DOW7. Scan taken at 23:08:12."
+    initialDatetime: newest
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+        colormap_name: turbo
+        nodata: -32768
+        rescale:
+            - 0
+            - 1
+        legend:
+        type: gradient
+        min: "0"
+        max: "1"
+        stops:
+            - [ "#30123B", 0.0 ]   # Deep purple (low correlation)
+            - [ "#443983", 0.2 ]   # Dark blue
+            - [ "#31678E", 0.4 ]   # Cyan
+            - [ "#35B779", 0.6 ]   # Green
+            - [ "#FDE725", 0.8 ]   # Yellow
+            - [ "#FF0000", 1.0 ]   # Red (high correlation)
+    info:
+      source: Doppler on Wheels (DOW)
+      spatialExtent: Local
+      temporalResolution: N/A
+      unit: unitless
+
+  - id: tornadoes-2024-dow-sw-harlan
+    stacCol: tornadoes-2024-dow-sw-harlan
+    name: DOW7 Spectrum Width (Harlan, IA)
+    type: raster
+    description: "Spectrum Width values (m/s) from the EF-3 Harlan, IA tornado on April 26, 2024 collected by DOW7. Scan taken at 23:08:12."
+    initialDatetime: newest
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+        colormap_name: rdpu
+        nodata: -32768
+        rescale:
+            - 0
+            - 25
+        legend:
+        type: gradient
+        min: "0 m/s"
+        max: "25 m/s"
+        stops:
+            - [ "#f7f4f9", 0 ]    # Light pink (low spectrum width)
+            - [ "#fddbc7", 5 ]    # Very light pink
+            - [ "#f4a582", 10 ]   # Pinkish-orange
+            - [ "#d6604d", 15 ]   # Orange-red
+            - [ "#b2182b", 20 ]   # Deep red
+            - [ "#67001f", 25 ]   # Deepest purple (high spectrum width)
+    info:
+      source: Doppler on Wheels (DOW)
+      spatialExtent: Local
+      temporalResolution: N/A
+      unit: m/s
+
+  - id: tornadoes-2024-dow-zdr-harlan
+    stacCol: tornadoes-2024-dow-zdr-harlan
+    name: DOW7 Differential Reflectivity (Harlan, IA)
+    type: raster
+    description: "Differential Reflectivity values (dB) from the EF-3 Harlan, IA tornado on April 26, 2024 collected by DOW7. Scan taken at 23:08:12."
+    initialDatetime: newest
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+        colormap_name: nipy_spectral
+        nodata: -32768
+        rescale:
+            - -5
+            - 7
+        legend:
+        type: gradient
+        min: "-5 dB"
+        max: "7 dB"
+        stops:
+            - [ "#000080", -5 ]    # Dark blue (low ZDR)
+            - [ "#0000FF", -3 ]    # Blue
+            - [ "#00FFFF", -1 ]    # Cyan
+            - [ "#00FF00", 1 ]     # Green
+            - [ "#FFFF00", 3 ]     # Yellow
+            - [ "#FFA500", 5 ]     # Orange
+            - [ "#FF0000", 6 ]     # Red
+            - [ "#800080", 7 ]     # Purple (high ZDR)
+    info:
+      source: Doppler on Wheels (DOW)
+      spatialExtent: Local
+      temporalResolution: N/A
+      unit: dB
+
 
 ---
 
