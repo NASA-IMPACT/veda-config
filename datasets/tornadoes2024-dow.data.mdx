@@ -225,6 +225,38 @@ layers:
       temporalResolution: N/A
       unit: dB
 
+- id: tornadoes-2024-dow-refl-harlan
+    stacCol: tornadoes-2024-dow-refl-harlan
+    name: DOW7 Reflectivity (Harlan, IA)
+    type: raster
+    description: "Horizontal reflectivity values (dBZ) from the EF-3 Harlan, IA tornado on April 26, 2024 collected by DOW7. Scan taken at 23:08:12."
+    initialDatetime: newest
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+        colormap_name: turbo
+        nodata: -32768
+        rescale:
+            - -10
+            - 50
+        legend:
+        type: gradient
+        min: "-10 dBZ"
+        max: "50 dBZ"
+        stops:
+            - [ "#30123B", -10 ]  # Deep purple (lowest reflectivity)
+            - [ "#443983", 0 ]    # Dark blue
+            - [ "#31678E", 10 ]   # Cyan
+            - [ "#35B779", 20 ]   # Green
+            - [ "#FDE725", 35 ]   # Yellow
+            - [ "#FF9900", 45 ]   # Orange
+            - [ "#FF0000", 50 ]   # Red (highest reflectivity)
+    info:
+      source: Doppler on Wheels (DOW)
+      spatialExtent: Local
+      temporalResolution: N/A
+      unit: dBZ
 
 ---
 
