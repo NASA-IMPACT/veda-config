@@ -30,7 +30,25 @@ export default function HomeComponent() {
   return (
     <div className="hug-reset-container margin-bottom-8">
       <GridContainer containerSize="widescreen">
-          <Title>Content Collections by Topic</Title>
+        <Title>Content Collections by Topic</Title>
+        <CardGroup>
+          <Card layout="flagDefault" gridLayout={{tablet: {col: 10}, col: 12}} containerProps={{className:'border-0 position-relative card-shadow__hover'}}>
+            <CardMedia exdent>
+              <img width={"20em"} src={new URL('../../overrides/media/Methane_Carousel_card.png', import.meta.url).href} alt="earth shown with purple gas indicating atmospheric methane." />
+            </CardMedia>
+
+            <CardHeader>
+              <h3 className="usa-card__heading margin-top-4">Methane Emissions</h3>
+            </CardHeader>
+            <CardBody>
+              <p className="padding-bottom-2 margin-bottom-4">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages...
+              </p>
+            </CardBody>
+            <Link className="position-absolute top-0 left-0 width-full height-full blocklink" to="/stories/methane" />
+          </Card>
+        </CardGroup>
+
         <CardGroup>
           <Card layout="flagDefault" gridLayout={{tablet: {col: 10}, col: 12}} containerProps={{className:'border-0 position-relative card-shadow__hover'}}>
             <CardMedia exdent>
@@ -47,7 +65,7 @@ export default function HomeComponent() {
             </CardBody>
             <Link className="position-absolute top-0 left-0 width-full height-full blocklink" to="/stories/urban" />
           </Card>
-          </CardGroup>
+        </CardGroup>
       
         <section>
           <Title>Core Science Focus Areas</Title>
