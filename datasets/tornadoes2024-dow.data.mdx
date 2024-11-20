@@ -46,6 +46,39 @@ layers:
             - '#FF0000'
             - '#CC0033'
             - '#990066'
+
+  - id: tornadoes-2024-dow-vg-greenfield
+    stacCol: tornadoes-2024-dow-vg-greenfield
+    name: DOW7 Velocity (Ground; Greenfield, IA)
+    type: raster
+    description: "Ground-based velocities (m/s) of the EF-4 Greenfield, IA tornado on May 21, 2024 collected by DOW7. Scan taken at 20:41:08."
+    initialDatetime: newest
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+        colormap_name: seismic
+        nodata: -32768
+        rescale:
+            - 75
+            - 75
+        legend:
+        type: gradient
+        min: "-75 m/s"
+        max: "75 m/s"
+        stops:
+            - [ "#0000FF", -75 ]  # Deep blue (negative extreme)
+            - [ "#3399FF", -50 ]  # Light blue
+            - [ "#66CCFF", -25 ]  # Very light blue
+            - [ "#FFFFFF",  0 ]   # White (zero velocity)
+            - [ "#FF9999",  25 ]  # Light pink
+            - [ "#FF6666",  50 ]  # Light red
+            - [ "#FF0000",  75 ]  # Deep red (positive extreme)
+    info:
+      source: Doppler on Wheels (DOW)
+      spatialExtent: Local
+      temporalResolution: N/A
+      unit: m/s
 ---
 
 <Block>
