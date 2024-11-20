@@ -88,7 +88,7 @@ export const dataEngagements = [
     "desc": "Detailed dataset information for insight into greenhouse gas sources, sinks, emissions, and large events.",
     "img": {
       "src": new URL('./media/data_catalog.png', import.meta.url).href,
-      "alt": "image of oil refinery"
+      "alt": "icon showing file drawers with an earth representing data card catalog."
     },
     "link": {
       "url": "/data-catalog",
@@ -101,7 +101,7 @@ export const dataEngagements = [
     "desc": "The exploration and analysis environment can be used to visually examine data on a customizable map and create a time series of basic statistics.",
     "img": {
       "src": new URL('./media/interactive_map.png', import.meta.url).href,
-      "alt": "image of green wetlands"
+      "alt": "icon drawing showing map with a magnifying glass and indicating a clock for temporal data."
     },
     "link": {
       "url": "/exploration",
@@ -114,10 +114,23 @@ export const dataEngagements = [
     "desc": "With JupyterHub, users can analyze cloud archives of Earth science data using an interactive environment. Log in or request access here.",
     "img": {
       "src": new URL('./media/jupyter_hub.png', import.meta.url).href,
-      "alt": "image of colorful polygon against satellite landscape surface in brown"
+      "alt": "icon drawing code, plots and figures made with data in the cloud."
     },
     "link": {
       "url": "https://hub.ghg.center",
+      "text": "View more"
+    },
+    "footer": null
+  },
+  {
+    "title": "Documentation",
+    "desc": "Access technical documentation for US GHG Center data services, including a collection of code notebooks, and instructions for accessing data via API.",
+    "img": {
+      "src": new URL('./media/documentation.png', import.meta.url).href,
+      "alt": "icon of an open laptop surrounded by icons of documents, and a chart."
+    },
+    "link": {
+      "url": "https://us-ghg-center.github.io/ghgc-docs/",
       "text": "View more"
     },
     "footer": null
@@ -125,6 +138,19 @@ export const dataEngagements = [
 ];
 
 export const customInterfaces = [
+  {
+    "title": "GOES Methane Plume Viewer",
+    "desc": "Detailed information for methane plumes identified using GOES.",
+    "img": {
+      "src": new URL('./media/emit.jpg', import.meta.url).href,
+      "alt": "view of colored shape overlaid on satellite landscape image with boxes of information containing plume details"
+    },
+    "link": {
+      "url": "/data-catalog/goes-ch4plume-v1",
+      "text": "See more"
+    },
+    "footer": null
+  },
   {
     "title": "EMIT Methane Plume Viewer",
     "desc": "Detailed information for methane plumes identified using EMIT.",
