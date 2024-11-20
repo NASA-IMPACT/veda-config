@@ -79,6 +79,39 @@ layers:
       spatialExtent: Local
       temporalResolution: N/A
       unit: m/s
+
+  - id: tornadoes-2024-dow-rhohv-greenfield
+    stacCol: tornadoes-2024-dow-rhohv-greenfield
+    name: DOW7 Correlation Coefficient (Greenfield, IA)
+    type: raster
+    description: "Correlation Coefficient values from the EF-4 Greenfield, IA tornado on May 21, 2024 collected by DOW7. Scan taken at 20:41:08."
+    initialDatetime: newest
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+        colormap_name: turbo
+        nodata: -32768
+        rescale:
+            - 0
+            - 1
+        legend:
+        type: gradient
+        min: "0"
+        max: "1"
+        stops:
+            - [ "#30123B", 0.0 ]   # Deep purple (low correlation)
+            - [ "#443983", 0.2 ]   # Dark blue
+            - [ "#31678E", 0.4 ]   # Cyan
+            - [ "#35B779", 0.6 ]   # Green
+            - [ "#FDE725", 0.8 ]   # Yellow
+            - [ "#FF0000", 1.0 ]   # Red (high correlation)
+    info:
+      source: Doppler on Wheels (DOW)
+      spatialExtent: Local
+      temporalResolution: N/A
+      unit: unitless
+
 ---
 
 <Block>
