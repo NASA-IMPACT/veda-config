@@ -112,6 +112,13 @@ layers:
       spatialExtent: Local
       temporalResolution: N/A
       unit: m/s
+    compare:
+      datasetId: tornadoes-2024-dow
+      layerId: tornadoes-2024-dow-rhohv-greenfield
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'DD LLL yyyy')}`;        
+        }
 
   - id: tornadoes-2024-dow-rhohv-greenfield
     stacCol: tornadoes-2024-dow-rhohv-greenfield
@@ -144,6 +151,13 @@ layers:
       spatialExtent: Local
       temporalResolution: N/A
       unit: unitless
+    compare:
+      datasetId: tornadoes-2024-dow
+      layerId: tornadoes-2024-dow-vg-greenfield
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'DD LLL yyyy')}`;        
+        }
 
   - id: tornadoes-2024-dow-sw-greenfield
     stacCol: tornadoes-2024-dow-sw-greenfield
