@@ -36,7 +36,7 @@ export default function Urban() {
             <Grid col={10} className="margin-bottom-4">
                 <Title>Stories</Title>
                 <p className="margin-bottom-2 font-size-md-deprecated">
-                    For more on innovations in methane monitoring and reporting, explore the full listing of <Link to="/stories/">methane stories</Link>. 
+                    For more on innovations in methane monitoring and reporting, explore the full listing of <Link to='/stories?taxonomy=%7B"Gas"%3A"ch₄"%7D'>methane stories</Link>. 
                 </p>
             </Grid>
             <Keypoints data={cities}></Keypoints>
