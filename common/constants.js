@@ -192,7 +192,7 @@ export const customInterfaces = [
     "title": "NIST Tower Data Viewer",
     "desc": "Measurements of carbon dioxide and methane concentrations from urban tower instruments.",
     "img": {
-      "src": new URL('./media/NIST_NEC_Methane_Viewer_card.png', import.meta.url).href,
+      "src": new URL('./media/NIST_NEC_Methane_Viewer_card1.png', import.meta.url).href,
       "alt": "map showing Northwest Baltimore, MD location of station with a time series of data below the map"
     },
     "link": {

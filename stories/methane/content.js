@@ -66,7 +66,7 @@ export const tools = [
       "title": "NIST Tower Data Viewer",
       "desc": "An interactive methane and carbon dioxide data tool for NIST’s Urban GHG Measurements Testbed System, using measurements from ground-based observing networks in three urban testbeds across the U.S.",
       "img": {
-        "src": new URL('../../common/media/NIST_NEC_Methane_Viewer_card.png', import.meta.url).href,
+        "src": new URL('../../common/media/NIST_NEC_Methane_Viewer_card1.png', import.meta.url).href,
         "alt": "map showing Northwest Baltimore, MD location of station with a time series of data below the map"
       },
       "link": {
