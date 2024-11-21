@@ -142,7 +142,7 @@ export const customInterfaces = [
     "title": "GOES Methane Plume Viewer",
     "desc": "Detailed information for methane plumes identified using GOES.",
     "img": {
-      "src": new URL('./media/goes.png', import.meta.url).href,
+      "src": new URL('./media/GOES_Methane_Plume_viewer_card.png', import.meta.url).href,
       "alt": "view of colored shape overlaid on satellite landscape image with boxes of information containing plume details"
     },
     "link": {
@@ -155,7 +155,7 @@ export const customInterfaces = [
     "title": "EMIT Methane Plume Viewer",
     "desc": "Detailed information for methane plumes identified using EMIT.",
     "img": {
-      "src": new URL('./media/emit.jpg', import.meta.url).href,
+      "src": new URL('./media/EMIT_Plume_Viewer_card.png', import.meta.url).href,
       "alt": "view of colored shape overlaid on satellite landscape image with boxes of information containing plume details"
     },
     "link": {
@@ -168,7 +168,7 @@ export const customInterfaces = [
     "title": "NOAA Concentration Viewer",
     "desc": "Measurements of carbon dioxide and methane concentrations from ground stations throughout the US and worldwide.",
     "img": {
-      "src": new URL('./media/co2.jpg', import.meta.url).href,
+      "src": new URL('./media/NOAA_Methane_Concentration_Viewer_card.png', import.meta.url).href,
       "alt": "map showing Mauna Loa location of station with a time series of data below the map"
     },
     "link": {
@@ -192,7 +192,7 @@ export const customInterfaces = [
     "title": "NIST Tower Data Viewer",
     "desc": "Measurements of carbon dioxide and methane concentrations from urban tower instruments.",
     "img": {
-      "src": new URL('./media/nist-co2-nwb.jpg', import.meta.url).href,
+      "src": new URL('./media/NIST_NEC_Methane_Viewer_card.png', import.meta.url).href,
       "alt": "map showing Northwest Baltimore, MD location of station with a time series of data below the map"
     },
     "link": {
