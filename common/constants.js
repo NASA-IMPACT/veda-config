@@ -142,7 +142,7 @@ export const customInterfaces = [
     "title": "GOES Methane Plume Viewer",
     "desc": "Detailed information for methane plumes identified using GOES.",
     "img": {
-      "src": new URL('./media/emit.jpg', import.meta.url).href,
+      "src": new URL('./media/goes.png', import.meta.url).href,
       "alt": "view of colored shape overlaid on satellite landscape image with boxes of information containing plume details"
     },
     "link": {
