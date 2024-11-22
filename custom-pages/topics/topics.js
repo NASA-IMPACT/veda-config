@@ -1,10 +1,10 @@
 export default [
     {
         "title": "Methane Emissions",
-        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages...",
+        "description": "Methane is a greenhouse gas emitted by a complex mix of natural sources and human activities. The structure of methane molecules makes the chemical compound particularly powerful at trapping heat: compared with carbon dioxide, methane can trap 80 times more heat over 20 years. These attributes make methane an attractive target for both public and private efforts to research and reduce emissions, with near-term benefits for global temperatures, air quality, and industrial efficiency.",
         "img": {
             "src": new URL('../../overrides/media/Methane_Carousel_card.png', import.meta.url).href,
-            "alt": "earth shown with purple gas indicating atmospheric methane."
+            "alt": "globe with purple gas swirls and overlaid text showing the word methane and CH4."
         },
         "href": "/stories/methane",
     },
