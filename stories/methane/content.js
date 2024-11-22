@@ -98,7 +98,7 @@ export const stories = [
         "desc": "To meet needs for methane measurement, two key NASA technologies have made recent steps. The Earth Surface Mineral Dust Source Investigation (EMIT) project is expanding its methane detection from space, and Airborne Visible/Infrared Imaging Spectrometer (AVIRIS) test flights are helping to improve scientific understanding of sources of methane. ",
         "img": {
           "src": new URL('./media/EMIT_story_card.png', import.meta.url).href,
-          "alt": "todo"
+          "alt": "the international space station in orbit over the earth with a zoomed in view of the EMIt instrument on the station"
         },
         "link": {
           "url": "/stories/",
@@ -111,7 +111,7 @@ export const stories = [
         "desc": "Methane measurements have seen a boom in data volume within the last decade as remote sensing technologies have advanced and new space-based instruments have taken flight. To support greater transparency and interoperability, NIST is leading an effort to standardize protocols for methane plume data reporting, processing, and comparison.",
         "img": {
           "src": new URL('./media/NIST_Methane_Intercomparisons_card.png', import.meta.url).href,
-          "alt": "todo"
+          "alt": "industrial smokestack background overlaid with connected points of light and human in foreground looking at the scene"
         },
         "link": {
           "url": "/stories/",
