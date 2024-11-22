@@ -101,7 +101,7 @@ export const stories = [
           "alt": "the international space station in orbit over the earth with a zoomed in view of the EMIt instrument on the station"
         },
         "link": {
-          "url": "/stories/",
+          "url": "/stories/emit-extension-nasa-expands",
           "text": "See more"
         },
         "footer": null
@@ -114,7 +114,7 @@ export const stories = [
           "alt": "industrial smokestack background overlaid with connected points of light and human in foreground looking at the scene"
         },
         "link": {
-          "url": "/stories/",
+          "url": "/stories/nist-methane-intercomparisons",
           "text": "See more"
         },
         "footer": null
@@ -127,7 +127,7 @@ export const stories = [
           "alt": "view of wetland and brush/forest area from above"
         },
         "link": {
-          "url": "/stories/",
+          "url": "/stories/methane-inverse-models",
           "text": "See more"
         },
         "footer": null
@@ -140,7 +140,7 @@ export const stories = [
           "alt": "gray box"
         },
         "link": {
-          "url": "/stories/",
+          "url": "/stories/epa-super-emitter",
           "text": "See more"
         },
         "footer": null
@@ -153,7 +153,7 @@ export const stories = [
           "alt": "colorful regions representing methane plumes over brown surface as observed by GOES satellite"
         },
         "link": {
-          "url": "https://research.noaa.gov/",
+          "url": "https://www.pnas.org/doi/10.1073/pnas.2310797120",
           "text": "See more"
         },
         "footer": null
