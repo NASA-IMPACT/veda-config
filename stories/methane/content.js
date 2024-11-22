@@ -134,10 +134,10 @@ export const stories = [
     },
     {
         "title": "Advanced Technology to Detect Methane “Super Emitters” from Oil and Natural Gas Operations",
-        "desc": "Major natural sources of methane, like wetlands, create complications in identifying types and quantities of emissions. Researchers from NASA and NOAA are using advanced technology and models to deepen understanding of the role of natural sources and sinks in global atmospheric concentrations and support improved estimates in the global methane budget.",
+        "desc": "text TBA by EPA",
         "img": {
-          "src": new URL('./media/Wetlands_image_v2_rs.png', import.meta.url).href,
-          "alt": "tbd"
+          "src": new URL('./media/Gray_box.png', import.meta.url).href,
+          "alt": "gray box"
         },
         "link": {
           "url": "/stories/",

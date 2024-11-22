@@ -69,19 +69,12 @@ export default function Urban() {
             <Keypoints data={trainings}></Keypoints>
 
             <Grid col={10} className="margin-bottom-4">
-                <Title>Datasets</Title>
-                <p className="margin-bottom-2 font-size-md-deprecated">
-                    For more on innovations in methane monitoring and reporting, explore the full listing of <Link to="/stories/">methane stories</Link>. 
-                </p>
-            </Grid>
-            <Keypoints data={datasets}></Keypoints>
-
-            <Grid col={10} className="margin-bottom-4">
                 <Title>Resources for Data Users</Title>
                 <p className="margin-bottom-2 font-size-md-deprecated">
                     Would you like to engage directly with the data? To discover detailed dataset information and download the data, explore the full listing of <Link to='data-catalog?taxonomy=%7B"Gas"%3A%5B"ch₄"%5D%7D'>methane datasets</Link>. Users can also access the full data catalog, interactive maps, data visualizations, and open source tools by clicking “Data Toolkit” at the top or bottom of any page.
                 </p>
             </Grid>
+            <Keypoints data={datasets}></Keypoints>
         </GridContainer>
     )
 }
