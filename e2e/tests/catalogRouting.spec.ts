@@ -5,8 +5,7 @@ const visibleCatalogs = JSON.parse(fs.readFileSync('e2e/playwrightTestData.json'
 
 test.describe('catalog card routing', () => {
  for (const item of visibleCatalogs) {
-  // skip external link
-  if (item !== 'GOES validation') {
+
     test(`${item} routes from catalog to details page`, async({
       page,
       catalogPage,
@@ -39,7 +38,6 @@ test.describe('catalog card routing', () => {
       
       await expect(notebookConnectModal.heading, 'modal should be visisble').toBeVisible();
     })
-  }
  }
 
 });
