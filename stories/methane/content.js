@@ -195,7 +195,7 @@ export const datasets = [
         "title": "Geostationary Satellite Observations of Extreme and Transient Methane Emissions from Oil and Gas Infrastructure",
         "desc": "A sample of methane plumes from point sources observed since 2019 by the U.S. Geostationary Operational Environmental Satellites (GOES) over North and South America",
         "img": {
-          "src": new URL('../../datasets/media/goes-ch4plume--cover.jpg', import.meta.url).href,
+          "src": new URL('../../datasets/media/goes-ch4plume--cover.png', import.meta.url).href,
           "alt": "emission from industry"
         },
         "link": {
