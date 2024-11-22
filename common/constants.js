@@ -135,34 +135,6 @@ export const dataEngagements = [
     },
     "footer": null
   }
-  ,
-  {
-    "title": "Documentation",
-    "desc": "Access technical documentation for US GHG Center data services including a collection of code notebooks, and instructions for accessing data via API.",
-    "img": {
-      "src": new URL('./media/documentation.png', import.meta.url).href,
-      "alt": "image of colorful polygon against satellite landscape surface in brown"
-    },
-    "link": {
-      "url": "https://us-ghg-center.github.io/ghgc-docs/",
-      "text": "View more"
-    },
-    "footer": null
-  }
-  ,
-  {
-    "title": "Documentation",
-    "desc": "Access technical documentation for US GHG Center data services including a collection of code notebooks, and instructions for accessing data via API.",
-    "img": {
-      "src": new URL('./media/documentation.png', import.meta.url).href,
-      "alt": "image of colorful polygon against satellite landscape surface in brown"
-    },
-    "link": {
-      "url": "https://us-ghg-center.github.io/ghgc-docs/",
-      "text": "View more"
-    },
-    "footer": null
-  }
 ];
 
 export const customInterfaces = [
