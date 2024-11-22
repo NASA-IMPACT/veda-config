@@ -195,8 +195,7 @@ export const datasets = [
         "title": "Geostationary Satellite Observations of Extreme and Transient Methane Emissions from Oil and Gas Infrastructure",
         "desc": "A sample of methane plumes from point sources observed since 2019 by the U.S. Geostationary Operational Environmental Satellites (GOES) over North and South America",
         "img": {
-        //   "src": new URL('../../datasets/media/goes-ch4plume--cover.jpg', import.meta.url).href,
-          "src": new URL('../../datasets/media/ch4-wetland--cover.jpeg', import.meta.url).href,
+          "src": new URL('../../datasets/media/goes-ch4plume--cover.jpg', import.meta.url).href,
           "alt": "emission from industry"
         },
         "link": {
@@ -222,7 +221,7 @@ export const datasets = [
         "title": "CarbonTracker-CH₄ Isotopic Methane Inverse Fluxes",
         "desc": "Global, monthly 1 degree resolution methane emission estimates from microbial, fossil and pyrogenic sources derived using inverse modeling, version 2023",
         "img": {
-          "src": new URL('../../datasets/media/CarbonTracker_Image1_FINAL.png', import.meta.url).href,
+          "src": new URL('../../datasets/media/ct-ch4-monthgrid-v2023-cover.jpg', import.meta.url).href,
           "alt": "three dimensional plot of methane in the atmosphere"
         },
         "link": {
