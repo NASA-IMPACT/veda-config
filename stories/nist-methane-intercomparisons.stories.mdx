@@ -3,7 +3,7 @@ id: 'nist-methane-intercomparisons'
 name: NIST Developing Consensus Standards for Growing Volume of Methane Plume Satellite Data
 description: 'Methane measurements have seen a boom in data volume within the last decade as remote sensing technologies have advanced and new space-based instruments have taken flight. To support greater transparency and interoperability, NIST is leading an effort to standardize protocols for methane plume data reporting, processing, and comparison.'
 media:
-  src: ::file ./media/EMIT_AVIRIS3_Data_Insight_Banner_v2.jpg
+  src: ::file ./media/nist-methane-intercomparisons.png
   alt: Image of plume from EMIT and AVIRIS-3 showing image swath width for each.
   author:
     name: NASA/JPL-Caltech. Example methane plumes as observed with EMIT and AVIRIS-3.
@@ -50,10 +50,10 @@ import Quote from "./components/quote";
 
 <Block>
     <Figure>
-        <CompareImage
-            leftImageSrc={new URL('./media/permian-basin-plume.png', import.meta.url).href}
-            rightImageSrc={new URL('./media/permian-basin-plume-hidden.png', import.meta.url).href}
-            width="20"
+        <Image
+            src={new URL('./media/carbon_mapper_leaking_oil_and_gas_pipeline.jpg', import.meta.url).href}
+            width="100%"
+            align="left"
             alt="two side by side earth surface images with left one showing colorful area representing plume"
             attrAuthor="Carbon Mapper / Planet Labs"
         />
@@ -75,7 +75,7 @@ import Quote from "./components/quote";
     <Prose>
         <Figure>
             <Image
-                src={new URL('./media/US_INC.jpg', import.meta.url).href}
+                src={new URL('./media/MethaneSAT_EDF_ArtistRendering1.jpeg', import.meta.url).href}
                 alt="satellite in orbit over earth with colorful area indicating measured data"
                 align="left"
                 attrAuthor="MethaneSAT/Environmental Defense Fund"
