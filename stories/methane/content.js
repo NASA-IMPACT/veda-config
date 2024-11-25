@@ -153,7 +153,7 @@ export const stories = [
           "alt": "colorful regions representing methane plumes over brown surface as observed by GOES satellite"
         },
         "link": {
-          "url": "www.research.noaa.gov",
+          "url": "https://www.research.noaa.gov",
           "text": "See more"
         },
         "footer": null
