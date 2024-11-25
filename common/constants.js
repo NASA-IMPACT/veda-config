@@ -140,10 +140,10 @@ export const dataEngagements = [
 export const customInterfaces = [
   {
     "title": "GOES Methane Plume Viewer",
-    "desc": "Detailed information for methane plumes identified using GOES.",
+    "desc": "Primarily a weather satellite, NOAA’s GOES also measures greenhouse gases on a continental scale. It is capable of detecting large methane plumes from sources like oil and gas production and agriculture. This brand new interactive plume viewer is based on novel data from the newest satellite, GOES-19, with more plumes to be added soon.",
     "img": {
       "src": new URL('./media/GOES_Methane_Plume_viewer_card.png', import.meta.url).href,
-      "alt": "view of colored shape overlaid on satellite landscape image with boxes of information containing plume details"
+      "alt": "map showing colorful methane gas plume from GOES over a green surface satellite image on June 15, 2020 in Indiana"
     },
     "link": {
       "url": "/data-catalog/goes-ch4plume-v1",
@@ -153,7 +153,7 @@ export const customInterfaces = [
   },
   {
     "title": "EMIT Methane Plume Viewer",
-    "desc": "Detailed information for methane plumes identified using EMIT.",
+    "desc": "NASA’s EMIT instrument measures carbon dioxide and methane from its position aboard the International Space Station. This updated interactive plume viewer offers a global map of large, point source methane plumes. New functionalities include EMIT observation passes over time, geographic plume quantifications, and a point-and-click plume measurement tool.",
     "img": {
       "src": new URL('./media/EMIT_Plume_Viewer_card.png', import.meta.url).href,
       "alt": "view of colored shape overlaid on satellite landscape image with boxes of information containing plume details"
@@ -166,7 +166,7 @@ export const customInterfaces = [
   },
   {
     "title": "NOAA Concentration Viewer",
-    "desc": "Measurements of carbon dioxide and methane concentrations from ground stations throughout the US and worldwide.",
+    "desc": "Get a bird’s-eye view of NOAA’s atmospheric methane measurements  from ground stations around the globe, and explore how methane concentrations have changed over time. These data include several different types of measurements as part of NOAA’s Global Greenhouse Gas Reference Network.",
     "img": {
       "src": new URL('./media/NOAA_Methane_Concentration_Viewer_card.png', import.meta.url).href,
       "alt": "map showing Mauna Loa location of station with a time series of data below the map"
@@ -190,7 +190,7 @@ export const customInterfaces = [
   },
   {
     "title": "NIST Tower Data Viewer",
-    "desc": "Measurements of carbon dioxide and methane concentrations from urban tower instruments.",
+    "desc": "An interactive methane and carbon dioxide data tool for NIST’s Urban GHG Measurements Testbed System, using measurements from ground-based observing networks in three urban testbeds across the U.S.",
     "img": {
       "src": new URL('./media/NIST_NEC_Methane_Viewer_card1.png', import.meta.url).href,
       "alt": "map showing Northwest Baltimore, MD location of station with a time series of data below the map"
