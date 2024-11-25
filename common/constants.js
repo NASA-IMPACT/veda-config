@@ -139,8 +139,8 @@ export const dataEngagements = [
 
 export const customInterfaces = [
   {
-    "title": "GOES Methane Plume Viewer",
-    "desc": "Primarily a weather satellite, NOAA’s GOES also measures greenhouse gases on a continental scale. It is capable of detecting large methane plumes from sources like oil and gas production and agriculture. This brand new interactive plume viewer is based on novel data from the newest satellite, GOES-19, with more plumes to be added soon.",
+    "title": "GOES Large Plume Visualization",
+    "desc": "NOAA’s GOES is the Western Hemisphere’s most advanced weather-monitoring satellite system, capable of detecting very large methane plumes. A new tool using GOES-16 data allows users to visualize large methane emission events, select the region and plume of interest, and animate to see how the plume changes over five-minute intervals.",
     "img": {
       "src": new URL('./media/GOES_Methane_Plume_viewer_card.png', import.meta.url).href,
       "alt": "map showing colorful methane gas plume from GOES over a green surface satellite image on June 15, 2020 in Indiana"
@@ -153,7 +153,7 @@ export const customInterfaces = [
   },
   {
     "title": "EMIT Methane Plume Viewer",
-    "desc": "NASA’s EMIT instrument measures carbon dioxide and methane from its position aboard the International Space Station. This updated interactive plume viewer offers a global map of large, point source methane plumes. New functionalities include EMIT observation passes over time, geographic plume quantifications, and a point-and-click plume measurement tool.",
+    "desc": "NASA’s EMIT instrument measures mineral dust, carbon dioxide and methane from the International Space Station. This updated interactive plume viewer offers a global map of large, point source methane plumes. New functionalities include EMIT overpasses over time, geographic plume quantifications, and a point-and-click plume measurement tool.",
     "img": {
       "src": new URL('./media/EMIT_Plume_Viewer_card.png', import.meta.url).href,
       "alt": "view of colored shape overlaid on satellite landscape image with boxes of information containing plume details"
@@ -165,8 +165,8 @@ export const customInterfaces = [
     "footer": null
   },
   {
-    "title": "NOAA Concentration Viewer",
-    "desc": "Get a bird’s-eye view of NOAA’s atmospheric methane measurements  from ground stations around the globe, and explore how methane concentrations have changed over time. These data include several different types of measurements as part of NOAA’s Global Greenhouse Gas Reference Network.",
+    "title": "NOAA Methane Concentration Viewer",
+    "desc": "Get a bird’s-eye view of NOAA’s atmospheric methane measurements  from ground stations around the globe, and explore how methane concentrations have changed over time. These data include tower, ground site, aircraft and flask measurements as part of NOAA’s Global Greenhouse Gas Reference Network.",
     "img": {
       "src": new URL('./media/NOAA_Methane_Concentration_Viewer_card.png', import.meta.url).href,
       "alt": "map showing Mauna Loa location of station with a time series of data below the map"

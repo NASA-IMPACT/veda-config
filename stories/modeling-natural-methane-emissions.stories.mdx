@@ -1,5 +1,5 @@
 ---
-id: 'methane-inverse-models'
+id: 'modeling-natural-methane-emissions'
 name: Earth System Models to Uncover Drivers of Natural Methane Emissions
 description: 'Major natural sources of methane, like wetlands, create complications in identifying types and quantities of emissions. Researchers from NASA and NOAA are using advanced technology and models to deepen understanding of the role of natural sources and sinks in global atmospheric concentrations and support improved estimates in the global methane budget.'
 media:
@@ -48,13 +48,12 @@ taxonomy:
 
       <Figure>
         <video
-            src={new URL('./media/AV320231008t161012_realtime_screen_recording_plume2.mov', import.meta.url).href}
+            src="https://svs.gsfc.nasa.gov//vis/a000000/a005000/a005054/MethaneWetalndsFinal.mp4"
             width="900"
             height="600"
             controls
             autoplay
             loop
-            poster={new URL('./media/EMIT_AVIRIS3_Video_Image_Play_Arrow_Middle.jpg', import.meta.url).href}
             >
         </video>
         <Caption attrAuthor="NASA’s Goddard Space Flight Center" alt="series of world plots with oceans in black, surface in gray and colorful areas indicating methane in each continent">
@@ -62,7 +61,7 @@ taxonomy:
         </Caption>
     </Figure>
 
-  While the wetlands methane model starts, literally, from the ground up, other models – such as NOAA’s Carbon Tracker Methane Emissions – take the opposite approach. This methane tracker ingests atmospheric greenhouse gas concentration data along with other conditions like winds and weather and then estimates emissions, said Lori Bruhwiler, a physical scientist with NOAA’s Global Monitoring Laboratory in Boulder, Colorado.
+  While the wetlands methane model starts, literally, from the ground up, other models – such as NOAA’s <Link to="/data-catalog/ct-ch4-monthgrid-v2023" >Carbon Tracker Methane Emissions </Link> – take the opposite approach. This methane tracker ingests atmospheric greenhouse gas concentration data along with other conditions like winds and weather and then estimates emissions, said Lori Bruhwiler, a physical scientist with NOAA’s Global Monitoring Laboratory in Boulder, Colorado.
 
   “We’re not trying to forecast the future concentrations of methane, instead these numerical techniques go back in time to find the distribution and fluxes of methane sources over the past several decades,” Bruhwiler said.
 
@@ -79,11 +78,11 @@ taxonomy:
                 attrAuthor="NASA"
             />
             <Caption>
-                Wildfires just northwest of California's Eagle Lake and Honey Lake (far left) are pictured from the International Space Station as it orbited 260 miles above The Golden State (Aug. 7, 2024). Wildfires are a source of pyrogenic methane emissions which contribute to global atmospheric concentrations of the gas. 
+                Wildfires just northwest of California's Eagle Lake and Honey Lake (far left) are pictured from the International Space Station as it orbited 260 miles above The Golden State (Aug. 7, 2024). Wildfires are a natural source of pyrogenic methane emissions which contribute to global atmospheric concentrations of the gas. 
             </Caption>
         </Figure>
 
-  While NOAA’s model uses information from a global network of surface sampling sites, other models take a space-based vantage point and utilize satellite observations to fill in gaps in data. NASA's Carbon Monitoring System Flux team in partnership with Harvard University uses measurements from Japan’s Greenhouse Gases Observing Satellite, or <Link to="/data-catalog/gosat-based-ch4budget-yeargrid-v1">GOSAT</Link>, to derive spatially-resolved estimates of total global methane emissions, as well as source-specific estimates for wetlands and various human-related emissions.
+  While NOAA’s model uses information from a global network of surface sampling sites, other models take a space-based vantage point and utilize satellite observations to fill in gaps in data. NASA's Carbon Monitoring System Flux team in partnership with Harvard University uses measurements from Japan’s Greenhouse Gases Observing Satellite, or <Link to="/data-catalog/gosat-based-ch4budget-yeargrid-v1">GOSAT,</Link> to derive spatially-resolved estimates of total global methane emissions, as well as source-specific estimates for wetlands and various human-related emissions.
 
   Quantifying different forms of methane to help decipher their source is critically important to understand global trends in methane. As researchers develop innovative and complementary models and methods of observation, they gain new insights into the complex balance of natural and human-caused sources of methane.
 
@@ -106,7 +105,7 @@ taxonomy:
     <Prose>
         ## Resources for Data Users 
         - Detailed information for NASA’s Wetland Methane Emissions dataset: <Link to="/data-catalog/lpjeosim-wetlandch4-grid-v1">Wetland Methane Emissions, LPJ-EOSIM Model </Link>
-        - Detailed information for NOAA’s Carbon Tracker Methane Emissions dataset: <Link to="/data-catalog/tm54dvar-ch4flux-monthgrid-v1">TM5-4DVar Isotopic Methane Inverse Fluxes </Link>
+        - Detailed information for NOAA’s Carbon Tracker Methane Emissions dataset: <Link to="/data-catalog/ct-ch4-monthgrid-v2023">CarbonTracker-CH₄ Isotopic Methane Inverse Fluxes </Link>
         - Detailed information for the GOSAT dataset: <Link to="/data-catalog/gosat-based-ch4budget-yeargrid-v1">GOSAT-based Top-down Total and Natural Methane Emissions </Link>
 
     </Prose>
