@@ -5,7 +5,7 @@ const visibleStories = JSON.parse(require('fs').readFileSync('e2e/playwrightTest
 test.describe('stories card routing', () => {
  for (const item of visibleStories) {
     // skip external link
-    if (item !== 'GOES validation') {
+    if (item !== "NOAA's GOES Satellites Can Provide Quicker Detection of Methane Gas Leaks") {
       test(`${item} routes from stories to details page`, async({
         page,
         storyPage,
