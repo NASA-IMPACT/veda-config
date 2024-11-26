@@ -1,0 +1,124 @@
+---
+id: 'casi'
+name:  NASA Model sheds light on climate adaptation strategies
+description: 'NASA Model sheds light on climate adaptation strategies'
+featured: true
+media:
+  src: ::file ./nldas-cover.png
+  alt: Landsat 8 — OLI image of the Mississippi River below Memphis, Tennessee on September 16, 2023 at near record low water levels, limiting barge shipments, threatening drinking water supplies, agriculture, and ecosystems.
+  author:
+    name: LDAS-NASA
+    url: https://eoimages.gsfc.nasa.gov/images/imagerecords/151000/151897/mississippi_oli_2023259_lrg.jpg
+pubDate: 2024-12-10
+taxonomy:
+  - name: Topics
+    values:
+      - Water Resources
+      - Drought    
+      - Agriculture
+---
+<Block>
+  <Prose>
+  **Authors**: Nishan Biswas, Sujay Kumar, Kim Locke, Siddharth Chaudhary
+  
+  <mark>🚧 This Data Story presents work in progress and not peer-reviewed results! 🚧</mark>
+
+  ## Introduction
+  The United States Global Change Research Program (USGCRP) 2009 Climate Impacts Report concluded that human-induced climate change is happening now, the impacts are already apparent, and greater impacts are projected, particularly if greenhouse gas emissions continue unabated. By developing climate adaptation strategies tailored to the specific risks and impacts anticipated, NASA decision-makers are able to minimize negative effects of climate extremes and climate change while leveraging positive outcomes. Because effective risk management requires the best possible understanding of hazards, NASA organized the Climate Adaptation Science Investigator Work Group (CASI) to expand collaboration among its Earth scientists, applications researchers and institutional stewards. According to the CASI’s mission statement, to advance and apply NASA’s scientific expertise and products to develop climate adaptation strategies that support NASA’s overall mission by minimizing risks to each center’s operations, physical and biological assets and personnel. While CASI is principally a science effort, its foundation rests on partnering with representatives from many Center organizations, including infrastructure, environmental management, master planning, human resources, and emergency planning and response, all working together to disseminate and to use climate science knowledge tailored to enable development of center-specific adaptation solutions. The CASI dataset provides the monthly statistics of root zone soil moisture percentiles at the global scale with a spatial resolution of 0.1 degree (approximately 10km at the equator). The dataset temporal period spans for a historical period of 1950-2014 and projection period of 2015-2100. It contains the minimum, median, maximum of the root zone soil moisture percentile values which were calculated from a total of 25 ensemble members.
+
+  <Figure>
+      <Image
+      src={new URL('./nldas-fig1.png', import.meta.url).href}
+    />
+    <Caption attrAuthor='NASA NLDAS Team' attrUrl='https://www.nasa.gov/goddard/'>
+      NASA 2023 stakeholder workshop participant responses to the question, “How do you use NLDAS?” 
+    </Caption>
+  </Figure> 
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  ## Comparison of soil moisture percentile between two years  
+  Building on stakeholder feedback and advancements in Earth observations and data assimilation, teams across NASA are working on major enhancements to the NLDAS environment called “NLDAS Phase 3” (NLDAS-3). The vision for NLDAS-3 is to provide near field scale (~1 km), high quality, observation-informed estimates of land surface and hydrology conditions.  Specifically, NLDAS-3 aims to:   
+  -  Significant increase in soil moisture 
+     Big jump in soil moisture percentile in the arctic zone during the year of 2090-2099 compared to the historical period of 2000-2010. 
+  -  Drop in soil moisture percentile in Amazon
+     A hotspot in Amazon where soil moisture will drop significantly during the projected period of 2090-2099 
+  -  Showing increasing pattern in China 
+     Meanwhile, data from our model simulations shown here indicate increasing soil moisture gradually over the Central China region 
+  -  Northern Africa is showing mixed pattern
+     Northern Africa shows a significant drop and rise in soil moisture due the the drop in soil drying and more drought phenomena in the upcoming years.   
+  
+  <Figure>
+      <Image
+      src={new URL('./nldas3-fig1b.png', import.meta.url).href}
+    />
+    <Caption attrAuthor='Water View Team' attrUrl='https://lis.gsfc.nasa.gov'>
+      GLDAS Median Soil Moisture Percentile Data for the years 2090-2099.
+    </Caption>
+  </Figure> 
+
+     Using satellite data to study soil moisture dynamics The soil moisture percentile was calculated from 25 different ensembles and an example of spread of soil moisture percentile data is shown in the snapshot to understand the difference between the different percentiles. The figure is showing the difference between the minimum and maximum of 25 ensembles over the 20 year period (2090-2099)
+  
+  <Figure>
+      <Image
+      src={new URL('./nldas3-fig1b.png', import.meta.url).href}
+    />
+    <Caption attrAuthor='Water View Team' attrUrl='https://lis.gsfc.nasa.gov'>
+      Spatial domain of NLDAS-2 (CONUS) vs. NLDAS-3 (North and Central America).
+    </Caption>
+  </Figure>
+
+       Comparison of soil moisture percentile calculated around the NASA centers with a five-year window. Here the number of months when soil moisture percentile crossed 50% are plotted along the y axis for the locations around all the NASA centers.     
+  
+  <Figure>
+      <Image
+      src={new URL('./nldas3-fig1b.png', import.meta.url).href}
+    />
+    <Caption attrAuthor=Water View Team' attrUrl='https://lis.gsfc.nasa.gov'>
+      Dataset 3.
+    </Caption>
+  </Figure>
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  ## Data Browser
+  Users are encouraged to further examine the CASI simulation dataset using the following data catalog link.
+  - <Link to="/data-catalog/nldas3">NLDAS-3</Link>  
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  ## Learn More
+  Below are links to sample Jupyter Notebooks for you to further explore and examine CASI simulation data.
+  - [Notebook 1](https://nasa-impact.github.io/veda-docs/notebooks/datasets/nldas_time_series.html) shows you how to create time series for NLDAS-3 data.
+  - [Notebook 2](https://nasa-impact.github.io/veda-docs/notebooks/datasets/nldas_compare2_3.html) shows you how to compare NLDAS-2 and NLDAS-3 data.
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  ## Acknowledgements 
+  Thanks to the NASA EIS developers and science teams, NASA GSFC Hydrological Sciences Laboratory team for their contribution And MSFC SPoRT team for technical support.
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  ## References 
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  ## Additional Resources 
+  - <Link to="/data-catalog/soil-moisture">SPoRT Land Information System</Link>
+  - <Link to="/data-catalog/fldas-soil-moisture-anomalies">FLDAS Surface Soil Moisture Anomalies</Link>
+  - <Link to="/data-catalog/global-reanalysis-da">A Global Reanalysis for Water, Energy, and Carbon Cycle Variables</Link>
+  </Prose>
+</Block>
