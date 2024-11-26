@@ -22,6 +22,7 @@ import "./styles.scss"
 type Data = {
   title: string;
   desc: string;
+  hideExternalLinkFlag?: boolean;
   img: {
     src: string;
     alt: string;
@@ -62,7 +63,7 @@ export default function Keypoints({
           }}
         >
           {
-            !!datum.link.url.startsWith("http") &&
+            ( !!datum.link.url.startsWith("http") && !datum.hideExternalLinkFlag ) &&
             <div style={{cursor: "pointer"}}>
               <ExternalLinkFlag />
             </div>
