@@ -165,8 +165,8 @@ export const customInterfaces = [
     "footer": null
   },
   {
-    "title": "NOAA Methane Concentration Viewer",
-    "desc": "Get a bird’s-eye view of NOAA’s atmospheric methane measurements  from ground stations around the globe, and explore how methane concentrations have changed over time. These data include tower, ground site, aircraft and flask measurements as part of NOAA’s Global Greenhouse Gas Reference Network.",
+    "title": "NOAA Concentration Viewer",
+    "desc": "Get a bird’s-eye view of NOAA’s atmospheric measurements from ground stations around the globe, and explore how methane and carbon dioxide concentrations have changed over time. These data include tower, ground site, aircraft and flask measurements as part of NOAA’s Global Greenhouse Gas Reference Network.",
     "img": {
       "src": new URL('./media/NOAA_Methane_Concentration_Viewer_card.png', import.meta.url).href,
       "alt": "map showing Mauna Loa location of station with a time series of data below the map"
