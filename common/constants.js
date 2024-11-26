@@ -141,12 +141,13 @@ export const customInterfaces = [
   {
     "title": "GOES Large Plume Visualization",
     "desc": "NOAA’s GOES is the Western Hemisphere’s most advanced weather-monitoring satellite system, capable of detecting very large methane plumes. A new tool using GOES-16 data allows users to visualize large methane emission events, select the region and plume of interest, and animate to see how the plume changes over five-minute intervals.",
+    "hideExternalLinkFlag": true,
     "img": {
       "src": new URL('./media/GOES_Methane_Plume_viewer_card.png', import.meta.url).href,
       "alt": "map showing colorful methane gas plume from GOES over a green surface satellite image on June 15, 2020 in Indiana"
     },
     "link": {
-      "url": "/data-catalog/goes-ch4plume-v1",
+      "url": "https://staging.earth.gov/ghgcenter/custom-interfaces/goes-plume-viewer",
       "text": "See more"
     },
     "footer": null
@@ -154,12 +155,13 @@ export const customInterfaces = [
   {
     "title": "EMIT Methane Plume Viewer",
     "desc": "NASA’s EMIT instrument measures mineral dust, carbon dioxide and methane from the International Space Station. This updated interactive plume viewer offers a global map of large, point source methane plumes. New functionalities include EMIT overpasses over time, geographic plume quantifications, and a point-and-click plume measurement tool.",
+    "hideExternalLinkFlag": true,
     "img": {
       "src": new URL('./media/EMIT_Plume_Viewer_card.png', import.meta.url).href,
       "alt": "view of colored shape overlaid on satellite landscape image with boxes of information containing plume details"
     },
     "link": {
-      "url": "/data-catalog/emit-ch4plume-v1",
+      "url": "https://staging.earth.gov/ghgcenter/custom-interfaces/emit-ch4plume-v1",
       "text": "See more"
     },
     "footer": null
@@ -179,11 +181,11 @@ export const customInterfaces = [
       "links": [
         {
           "title": "Carbon Dioxide",
-          "url": "/data-catalog/noaa-gggrn-co2-concentrations"
+          "url": "https://earth.gov/ghgcenter/custom-interfaces/noaa-gggrn-ghg-concentrations/index.html?ghg=co2&frequency=all"
         },
         {
           "title": "Methane",
-          "url": "/data-catalog/noaa-gggrn-ch4-concentrations"
+          "url": "https://earth.gov/ghgcenter/custom-interfaces/noaa-gggrn-ghg-concentrations/index.html?ghg=ch4&frequency=all"
         }
       ]
     }
@@ -203,15 +205,15 @@ export const customInterfaces = [
       "links": [
         {
           "title": "Indianapolis Flux Experiment (INFLUX)",
-          "url": "/data-catalog/influx-testbed-ghg-concentrations"
+          "url": "https://earth.gov/ghgcenter/custom-interfaces/nist-interface/?agency=nist&region=in&zoom-level=8"
         },
         {
           "title": "Los Angeles Megacity Carbon Project",
-          "url": "/data-catalog/lam-testbed-ghg-concentrations"
+          "url": "https://earth.gov/ghgcenter/custom-interfaces/nist-interface/?agency=nist&region=lam&zoom-level=7"
         },
         {
           "title": "Northeast Corridor (NEC) Urban Test Bed",
-          "url": "/data-catalog/nec-testbed-ghg-concentrations"
+          "url": "https://earth.gov/ghgcenter/custom-interfaces/nist-interface/?agency=nist&region=nec&zoom-level=5"
         }
       ]
     }
