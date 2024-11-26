@@ -2,12 +2,13 @@ export const tools = [
     {
         "title": "EMIT Methane Plume Viewer",
         "desc": "NASA’s EMIT instrument measures mineral dust, carbon dioxide and methane from the International Space Station. This updated interactive plume viewer offers a global map of large, point source methane plumes. New functionalities include EMIT overpasses over time, geographic plume quantifications, and a point-and-click plume measurement tool.",
+        "hideExternalLinkFlag": true,
         "img": {
           "src": new URL('../../common/media/EMIT_Plume_Viewer_card.png', import.meta.url).href,
           "alt": "view of colored shape overlaid on satellite landscape image with boxes of information containing plume details"
         },
         "link": {
-          "url": "/data-catalog/emit-ch4plume-v1",
+          "url": "https://staging.earth.gov/ghgcenter/custom-interfaces/emit-ch4plume-v1",
           "text": "See more"
         },
         "footer": null
@@ -15,12 +16,13 @@ export const tools = [
     {
       "title": "GOES Large Plume Visualization",
       "desc": "NOAA’s GOES is the Western Hemisphere’s most advanced weather-monitoring satellite system, capable of detecting very large methane plumes. A new tool using GOES-16 data allows users to visualize large methane emission events, select the region and plume of interest, and animate to see how the plume changes over five-minute intervals.",
+      "hideExternalLinkFlag": true,
       "img": {
         "src": new URL('../../common/media/GOES_Methane_Plume_viewer_card.png', import.meta.url).href,
         "alt": "map showing colorful methane gas plume from GOES over a green surface satellite image on June 15, 2020 in Indiana"
       },
       "link": {
-        "url": "/data-catalog/goes-ch4plume-v1",
+        "url": "https://staging.earth.gov/ghgcenter/custom-interfaces/goes-plume-viewer",
         "text": "See more"
       },
       "footer": null
@@ -41,26 +43,16 @@ export const tools = [
     {
       "title": "NOAA Methane Concentration Viewer",
       "desc": "Get a bird’s-eye view of NOAA’s atmospheric methane measurements  from ground stations around the globe, and explore how methane concentrations have changed over time. These data include tower, ground site, aircraft and flask measurements as part of NOAA’s Global Greenhouse Gas Reference Network.",
+      "hideExternalLinkFlag": true,
       "img": {
         "src": new URL('../../common/media/NOAA_Methane_Concentration_Viewer_card.png', import.meta.url).href,
         "alt": "map showing Mauna Loa location of station with a time series of data below the map"
       },
       "link": {
-        "url": "/data-catalog/noaa-gggrn-co2-concentrations",
+        "url": "https://earth.gov/ghgcenter/custom-interfaces/noaa-gggrn-ghg-concentrations/index.html?ghg=ch4&frequency=all",
         "text": "See more"
       },
-      "footer": {
-        "links": [
-          {
-            "title": "Carbon Dioxide",
-            "url": "/data-catalog/noaa-gggrn-co2-concentrations"
-          },
-          {
-            "title": "Methane",
-            "url": "/data-catalog/noaa-gggrn-ch4-concentrations"
-          }
-        ]
-      }
+      "footer": null
     },
     {
       "title": "NIST Tower Data Viewer",
@@ -70,22 +62,22 @@ export const tools = [
         "alt": "map showing Northwest Baltimore, MD location of station with a time series of data below the map"
       },
       "link": {
-        "url": "/data-catalog/noaa-gggrn-ch4-concentrations",
+        "url": "/data-catalog/influx-testbed-ghg-concentrations",
         "text": "See more"
       },
       "footer": {
         "links": [
           {
             "title": "Indianapolis Flux Experiment (INFLUX)",
-            "url": "/data-catalog/influx-testbed-ghg-concentrations"
+            "url": "https://earth.gov/ghgcenter/custom-interfaces/nist-interface/?agency=nist&region=in&zoom-level=8&ghg=ch4"
           },
           {
             "title": "Los Angeles Megacity Carbon Project",
-            "url": "/data-catalog/lam-testbed-ghg-concentrations"
+            "url": "https://earth.gov/ghgcenter/custom-interfaces/nist-interface/?agency=nist&region=lam&zoom-level=7&ghg=ch4"
           },
           {
             "title": "Northeast Corridor (NEC) Urban Test Bed",
-            "url": "/data-catalog/nec-testbed-ghg-concentrations"
+            "url": "https://earth.gov/ghgcenter/custom-interfaces/nist-interface/?agency=nist&region=nec&zoom-level=5&ghg=ch4"
           }
         ]
       }
@@ -180,7 +172,7 @@ export const trainings = [
 export const datasets = [
     {
         "title": "U.S. Gridded Anthropogenic Methane Emissions Inventory",
-        "desc": "Spatially disaggregated 0.1°x 0.1° maps of annual U.S. anthropogenic methane emissions from over 25 emission sources, consistent with the U.S. Inventory of Greenhouse Gas Emissions and Sinks.",
+        "desc": "Spatially disaggregated 0.1°x 0.1° maps of annual U.S. anthropogenic methane emissions from over 25 emission sources, consistent with the U.S. Inventory of Greenhouse Gas Emissions and Sinks",
         "img": {
           "src": new URL('../../datasets/media/epa-annual--cover.jpg', import.meta.url).href,
           "alt": "Total Gridded Methane Emissions from the U.S. Inventory of Greenhouse Gas Emissions and Sinks"
@@ -232,7 +224,7 @@ export const datasets = [
     },
     {
         "title": "GOSAT-based Top-down Total and Natural Methane Emissions ",
-        "desc": "Total and natural methane emissions derived using the GEOS-Chem global chemistry transport model with inclusion of GOSAT data.  Methane emission values for both before and after adding GOSAT to the model are mapped to a 1° resolution grid.  Version 1.0 contains data only for 2019",
+        "desc": "Total and wetland yearly methane emissions derived using the GEOS-Chem global chemistry transport model with inclusion of GOSAT data for 2010 to 2022 on a 4 x 5 degree (lat/lon) grid",
         "img": {
           "src": new URL('../../datasets/media/oco2-mip-ch4budget-yeargrid-v1--cover.jpg', import.meta.url).href,
           "alt": "Dried/Burned trees"
