@@ -35,8 +35,8 @@ layers:
         - 0.1
       nodata: 0
     compare:
-      datasetId: houston-urbanization
-      layerId: houston-urbanization
+      datasetId: nlcd-annual-conus
+      layerId: nlcd-new-urbanization
       mapLabel: |
         ::js ({dateFns, datetime, compareDatetime}) => {
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;

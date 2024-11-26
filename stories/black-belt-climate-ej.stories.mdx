@@ -16,7 +16,9 @@ taxonomy:
       - Heat
       - Land Use
       - Natural Disasters
-
+  - name: Source
+    values:
+      - Community Contributed
 ---
 
 <Block style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
@@ -51,14 +53,16 @@ taxonomy:
 
   <Figure>
     <Map
-      datasetId='soil-texture-0cm'
+      datasetId='soil-texture'
       layerId='soil-texture-0cm'
       center={[-87, 32.6]}
       zoom={6.5}
       dateTime='2017-01-01'
+      compareDateTime='2021-01-01'
+      compareLabel='Surface Soil Texture vs. NLCD Classifications'
     />
     <Caption>
-    Surface soil textures classified from the International Soil Reference and Information Centre (ISRIC) show the fertile 'black belt' region of Alabama quite well.
+    Surface soil textures classified from the International Soil Reference and Information Centre (ISRIC) show the fertile 'black belt' region of Alabama quite well, and the National Land Cover Database (NLCD) reveeals that this area is heavily agricultural.
     </Caption> 
   </Figure>
 
