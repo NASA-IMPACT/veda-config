@@ -124,7 +124,7 @@ export const dataEngagements = [
   },
   {
     "title": "Documentation",
-    "desc": "Access technical documentation for US GHG Center data services, including a collection of code notebooks, and instructions for accessing data via API.",
+    "desc": "Access technical documentation for US GHG Center data services, including a collection of code notebooks and instructions for accessing data via API.",
     "img": {
       "src": new URL('./media/documentation.png', import.meta.url).href,
       "alt": "icon of an open laptop surrounded by icons of documents, and a chart."
