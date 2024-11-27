@@ -29,14 +29,12 @@ export default function Urban() {
                 <Prose>
                     <h2>About Methane</h2>
 
-                    Methane is a greenhouse gas emitted by a complex mix of natural sources and human activities. Although it is short-lived in the atmosphere, the structure of methane molecules makes the chemical compound particularly powerful at trapping heat: compared with carbon dioxide, <a target="_blank" href="https://www.unep.org/explore-topics/energy/facts-about-methane#:~:text=Methane%20(CH4)%2C%20the%20primary,%C2%B0C%20target%20within%20reach.">methane can trap 80 times more heat over 20 years</a>. These attributes make methane an attractive focus for efforts to research and reduce emissions, which can help to limit rising temperatures, improve air quality, and support operational efficiency within some industrial sectors.
-                        
-                    To meet the growing need for information, innovative new observations and coordination across public and private data providers are enhancing trust and transparency in methane data. Explore below to learn how researchers and data providers are working to understand emissions around the world and support local scale views of methane sources.
+                    Methane is a greenhouse gas emitted by a complex mix of natural sources and human activities. Although it is shorter-lived than carbon dioxide in the atmosphere, the structure of methane molecules makes the chemical compound particularly powerful at trapping heat: compared with carbon dioxide, <a target="_blank" href="https://www.unep.org/explore-topics/energy/facts-about-methane#:~:text=Methane%20(CH4)%2C%20the%20primary,%C2%B0C%20target%20within%20reach.">methane can trap 80 times more heat over 20 years</a>. These attributes make methane an attractive focus for efforts to research and reduce emissions, which can help to limit rising temperatures, improve air quality, and support operational efficiency within some industrial sectors.
 
                     <br/>
                     <br/>
-                    <br/>
-                    Explore below to see how new data are providing new views of methane on local scales and how researchers are working to scale up to understand emissions around the world.
+                        
+                    To meet the growing need for information, innovative new observations and coordination across public and private data providers are enhancing trust and transparency in methane data. Explore below to learn how researchers and data providers are working to understand emissions around the world and support local scale views of methane sources.
                 </Prose>
                 <Figure style={{ textAlign: "center" }}>
                     <video
