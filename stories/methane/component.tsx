@@ -29,7 +29,7 @@ export default function Urban() {
                 <Prose>
                     <h2>About Methane</h2>
 
-                    Methane is a greenhouse gas emitted by a complex mix of natural sources and human activities. Although it is shorter-lived than carbon dioxide in the atmosphere, the structure of methane molecules makes the chemical compound particularly powerful at trapping heat: compared with carbon dioxide, <a target="_blank" href="https://www.unep.org/explore-topics/energy/facts-about-methane#:~:text=Methane%20(CH4)%2C%20the%20primary,%C2%B0C%20target%20within%20reach.">methane can trap 80 times more heat over 20 years</a>. These attributes make methane an attractive focus for efforts to research and reduce emissions, which can help to limit rising temperatures, improve air quality, and support operational efficiency within some industrial sectors.
+                    Methane is a greenhouse gas emitted by a complex mix of natural sources and human activities. Although it is shorter-lived than carbon dioxide in the atmosphere, the structure of methane molecules makes the chemical compound particularly powerful at trapping heat: <a target="_blank" href="https://www.epa.gov/ghgemissions/overview-greenhouse-gases#methane">the comparative impact of methane is 28 times greater than carbon dioxide over a 100-year period.</a> These attributes make methane an attractive focus for efforts to research and reduce emissions, which can help to limit rising temperatures, improve air quality, and support operational efficiency within some industrial sectors.
 
                     <br/>
                     <br/>
