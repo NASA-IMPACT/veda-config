@@ -88,7 +88,7 @@ export const dataEngagements = [
     "desc": "Detailed dataset information for insight into greenhouse gas sources, sinks, emissions, and large events.",
     "img": {
       "src": new URL('./media/data_catalog.png', import.meta.url).href,
-      "alt": "image of oil refinery"
+      "alt": "icon showing file drawers with an earth representing data card catalog."
     },
     "link": {
       "url": "/data-catalog",
@@ -101,7 +101,7 @@ export const dataEngagements = [
     "desc": "The exploration and analysis environment can be used to visually examine data on a customizable map and create a time series of basic statistics.",
     "img": {
       "src": new URL('./media/interactive_map.png', import.meta.url).href,
-      "alt": "image of green wetlands"
+      "alt": "icon drawing showing map with a magnifying glass and indicating a clock for temporal data."
     },
     "link": {
       "url": "/exploration",
@@ -114,10 +114,23 @@ export const dataEngagements = [
     "desc": "With JupyterHub, users can analyze cloud archives of Earth science data using an interactive environment. Log in or request access here.",
     "img": {
       "src": new URL('./media/jupyter_hub.png', import.meta.url).href,
-      "alt": "image of colorful polygon against satellite landscape surface in brown"
+      "alt": "icon drawing code, plots and figures made with data in the cloud."
     },
     "link": {
       "url": "https://hub.ghg.center",
+      "text": "View more"
+    },
+    "footer": null
+  },
+  {
+    "title": "Documentation",
+    "desc": "Access technical documentation for US GHG Center data services, including a collection of code notebooks and instructions for accessing data via API.",
+    "img": {
+      "src": new URL('./media/documentation.png', import.meta.url).href,
+      "alt": "icon of an open laptop surrounded by icons of documents, and a chart."
+    },
+    "link": {
+      "url": "https://us-ghg-center.github.io/ghgc-docs/",
       "text": "View more"
     },
     "footer": null
@@ -126,23 +139,38 @@ export const dataEngagements = [
 
 export const customInterfaces = [
   {
-    "title": "EMIT Methane Plume Viewer",
-    "desc": "Detailed information for methane plumes identified using EMIT.",
+    "title": "GOES Large Plume Visualization",
+    "desc": "NOAA’s GOES is the Western Hemisphere’s most advanced weather-monitoring satellite system, capable of detecting very large methane plumes. A new tool using GOES-16 data allows users to visualize large methane emission events, select the region and plume of interest, and animate to see how the plume changes over five-minute intervals.",
+    "hideExternalLinkFlag": true,
     "img": {
-      "src": new URL('./media/emit.jpg', import.meta.url).href,
+      "src": new URL('./media/GOES_Methane_Plume_viewer_card.png', import.meta.url).href,
+      "alt": "map showing colorful methane gas plume from GOES over a green surface satellite image on June 15, 2020 in Indiana"
+    },
+    "link": {
+      "url": "https://staging.earth.gov/ghgcenter/custom-interfaces/goes-plume-viewer/",
+      "text": "See more"
+    },
+    "footer": null
+  },
+  {
+    "title": "EMIT Methane Plume Viewer",
+    "desc": "NASA’s EMIT instrument measures mineral dust, carbon dioxide and methane from the International Space Station. This updated interactive plume viewer offers a global map of large, point source methane plumes. New functionalities include EMIT overpasses over time, geographic plume quantifications, and a point-and-click plume measurement tool.",
+    "hideExternalLinkFlag": true,
+    "img": {
+      "src": new URL('./media/EMIT_Plume_Viewer_card.png', import.meta.url).href,
       "alt": "view of colored shape overlaid on satellite landscape image with boxes of information containing plume details"
     },
     "link": {
-      "url": "/data-catalog/emit-ch4plume-v1",
+      "url": "https://staging.earth.gov/ghgcenter/custom-interfaces/emit-ch4plume-v1",
       "text": "See more"
     },
     "footer": null
   },
   {
     "title": "NOAA Concentration Viewer",
-    "desc": "Measurements of carbon dioxide and methane concentrations from ground stations throughout the US and worldwide.",
+    "desc": "Get a bird’s-eye view of NOAA’s atmospheric measurements from ground stations around the globe, and explore how methane and carbon dioxide concentrations have changed over time. These data include tower, ground site, aircraft and flask measurements as part of NOAA’s Global Greenhouse Gas Reference Network.",
     "img": {
-      "src": new URL('./media/co2.jpg', import.meta.url).href,
+      "src": new URL('./media/NOAA_Methane_Concentration_Viewer_card.png', import.meta.url).href,
       "alt": "map showing Mauna Loa location of station with a time series of data below the map"
     },
     "link": {
@@ -153,20 +181,20 @@ export const customInterfaces = [
       "links": [
         {
           "title": "Carbon Dioxide",
-          "url": "/data-catalog/noaa-gggrn-co2-concentrations"
+          "url": "https://earth.gov/ghgcenter/custom-interfaces/noaa-gggrn-ghg-concentrations/index.html?ghg=co2&frequency=all"
         },
         {
           "title": "Methane",
-          "url": "/data-catalog/noaa-gggrn-ch4-concentrations"
+          "url": "https://earth.gov/ghgcenter/custom-interfaces/noaa-gggrn-ghg-concentrations/index.html?ghg=ch4&frequency=all"
         }
       ]
     }
   },
   {
     "title": "NIST Tower Data Viewer",
-    "desc": "Measurements of carbon dioxide and methane concentrations from urban tower instruments.",
+    "desc": "An interactive methane and carbon dioxide data tool for NIST’s Urban GHG Measurements Testbed System, using measurements from ground-based observing networks in three urban testbeds across the U.S.",
     "img": {
-      "src": new URL('./media/nist-co2-nwb.jpg', import.meta.url).href,
+      "src": new URL('./media/NIST_NEC_Methane_Viewer_card1.png', import.meta.url).href,
       "alt": "map showing Northwest Baltimore, MD location of station with a time series of data below the map"
     },
     "link": {
@@ -177,15 +205,15 @@ export const customInterfaces = [
       "links": [
         {
           "title": "Indianapolis Flux Experiment (INFLUX)",
-          "url": "/data-catalog/influx-testbed-ghg-concentrations"
+          "url": "https://earth.gov/ghgcenter/custom-interfaces/nist-interface/?agency=nist&region=in&zoom-level=8"
         },
         {
           "title": "Los Angeles Megacity Carbon Project",
-          "url": "/data-catalog/lam-testbed-ghg-concentrations"
+          "url": "https://earth.gov/ghgcenter/custom-interfaces/nist-interface/?agency=nist&region=lam&zoom-level=7"
         },
         {
           "title": "Northeast Corridor (NEC) Urban Test Bed",
-          "url": "/data-catalog/nec-testbed-ghg-concentrations"
+          "url": "https://earth.gov/ghgcenter/custom-interfaces/nist-interface/?agency=nist&region=nec&zoom-level=5"
         }
       ]
     }

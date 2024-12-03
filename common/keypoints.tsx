@@ -1,6 +1,8 @@
 import React from "$veda-ui/react";
 import SmartLink from '$veda-ui-scripts/components/common/smart-link';
 
+import { ExternalLinkFlag } from '$veda-ui-scripts/components/common/card/';
+
 import {
   Card, 
   CardHeader,
@@ -20,6 +22,7 @@ import "./styles.scss"
 type Data = {
   title: string;
   desc: string;
+  hideExternalLinkFlag?: boolean;
   img: {
     src: string;
     alt: string;
@@ -59,6 +62,12 @@ export default function Keypoints({
             className: `border-0 position-relative card-shadow__hover margin-top-1 margin-right-2  ${cardType === 'cover' ? 'card__cover height-card-lg' : ''}`,
           }}
         >
+          {
+            ( !!datum.link.url.startsWith("http") && !datum.hideExternalLinkFlag ) &&
+            <div style={{cursor: "pointer"}}>
+              <ExternalLinkFlag />
+            </div>
+          }
           <CardMedia imageClass={`${cardType === 'cover'? 'radius-lg bg-gray-30' : ''}`}>
             <img src={datum.img.src} alt={datum.img.alt} className={`${cardType === 'cover' ? 'card-image__blend' : 'border-bottom border-gray-5'}`} />
           </CardMedia>

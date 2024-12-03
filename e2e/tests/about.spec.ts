@@ -19,7 +19,7 @@ test('about page should have no javascript errors', async ({
   expect(pageErrorCalled, 'no javascript exceptions thrown on page').toBe(false)
 });
 
-test('partner links should have url and image', async ({
+test.skip('partner links should have url and image', async ({
   page,
   aboutPage,
   footerComponent

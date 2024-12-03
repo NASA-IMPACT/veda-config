@@ -1,0 +1,164 @@
+---
+id: 'nist-methane-intercomparisons'
+name: NIST Developing Consensus Standards for Growing Volume of Methane Plume Satellite Data
+description: 'Methane measurements have seen a boom in data volume within the last decade as remote sensing technologies have advanced and new space-based instruments have taken flight. To support greater transparency and interoperability, NIST is leading an effort to standardize protocols for methane plume data reporting, processing, and comparison.'
+media:
+  src: ::file ./methane/media/NIST_Methane_Intercomparisons_card.png
+  alt: Image of plume from EMIT and AVIRIS-3 showing image swath width for each.
+  author:
+    name: NASA/JPL-Caltech. Example methane plumes as observed with EMIT and AVIRIS-3.
+          EMIT perched on the International Space Station provides an 80 km wide image swath at 60 m spatial resolution,
+          and AVIRIS-3 provides a narrower 3 km swath at 2 m spatial resolution when flying at 13,000 ft (figure is not to scale).
+isHidden: false
+pubDate: 2024-12-05
+featured: true
+taxonomy:
+  - name: Topics
+    values:
+      - Large Emission Events
+      - Methane
+  - name: Gas
+    values:
+      - CH₄
+---
+
+import Quote from "./components/quote";
+
+<Block>
+    <Prose>
+        Innovations in remote sensing technology and growing interest from the private sector in more efficient management of emissions have spawned a new generation of space-based observation technologies and data providers.
+
+        With an ever-growing volume of methane data from remote sensing technologies comes new challenges in consistent and transparent use of these measurements. In response to this, a team at the National Institute for Standards and Technology (NIST) is working closely with data providers on a project to standardize protocols for methane point source data reporting, processing, and comparison.
+
+        These efforts could serve as the foundation for greater transparency and interoperability of data, sparking new insights into the complex emissions and rising atmospheric concentrations of methane.
+    </Prose>
+</Block>
+
+<Block>
+    <Prose>
+        ## The Rapid Growth of Methane Remote Sensing
+        Methane measurements have seen a boom in data volume within the last decade as remote sensing technologies have advanced and new space-based instruments – from civil space agencies, nonprofits, and commercial companies – have taken flight to provide global views of methane emissions.
+
+        NASA’s Earth Surface Mineral Dust Source Investigation (EMIT) instrument, for example, was installed on the International Space Station in 2022. EMIT began as a mineral dust source observation experiment, though it was announced in November 2024 that the mission had been extended for three years and expanded its scope to include global detection of highly-concentrated methane plumes from point sources.
+
+        Non-governmental satellites are also bringing innovative monitoring technologies to the table. Methane data from [GHGSat](https://www.ghgsat.com/en/), a commercial data provider specializing in high-resolution remote sensing of greenhouse gasses, was evaluated and verified by NASA’s Commercial Small Dataset Acquisition program, receiving approval in July 2024. Selected data is now available via the agency’s Earth Data portal.
+
+        The [Carbon Mapper](https://carbonmapper.org/) Coalition’s first satellite, Tanager-1, was launched in August 2024 as part of a philanthropically-backed, public-private partnership to develop and deploy methane and carbon dioxide detecting satellites. Built and operated by Planet Labs PBC with technology from NASA Jet Propulsion Laboratory (JPL), Tanager-1 offers granularity on sources of super-emitters around the world, driving direct actions to cut methane emissions. 
+
+        To scale these local mitigation successes globally, the nonprofit Carbon Mapper is making methane and CO2 emissions data from Tanager-1 publicly available on its <Link to="https://data.carbonmapper.org/#1.96/0/50.5">data portal</Link> for non-commercial use 30 days after collection. An initial set of detections using Tanager-1 were released on Carbon Mapper’s data portal in November 2024, adding to their public emissions data from airborne surveys as well as NASA’s EMIT instrument.
+    </Prose>
+</Block>
+
+<Block>
+    <Figure>
+        <Image
+            src={new URL('./media/carbon_mapper_leaking_oil_and_gas_pipeline.jpg', import.meta.url).href}
+            width="100%"
+            align="left"
+            alt="two side by side earth surface images with left one showing colorful area representing plume"
+            attrAuthor="Carbon Mapper / Planet Labs"
+        />
+        <Caption>
+            Left: A large methane plume from a leaking oil and gas pipeline was detected by Tanager-1 in the Texas Permian Basin on October 9, 2024. The plume was reported and the leak was voluntarily fixed by the operator. Right: A subsequent Tanager-1 observation on October 24, 2024 detected no methane.
+        </Caption>
+    </Figure>
+</Block>
+
+<Block>
+    <Prose>
+        The NIST-led effort to establish consensus standards for remote sensing of point sources contributes to the broader ecosystem of methane observations, including efforts to improve emissions quantification across multiple scales.
+
+        Earlier this year, a new satellite dedicated to tracking methane emissions took to orbit. Launched in March 2024, the [MethaneSAT](https://www.methanesat.org/) project is led by the nonprofit Environmental Defense Fund and supported by experts from private organizations including Harvard and Google.
+
+        Whereas a global mapper can see images of a broad area to learn about large scale emissions, and “point source” detectors focus on a much smaller field of view for high-resolution plume observations, MethaneSAT looks at regional level including an assessment of point sources to derive area emissions.
+
+
+        The combination of these new observations from space-based instruments offers a more complete view of methane emissions than ever before.
+
+        {/* Professor Steve Wofsy is a Harvard scientist working on the MethaneSAT project. Of the surge of new space-based instruments, he said, “With a global mapper, you can see images of a broad area that can be used to learn about large scale emissions. Other missions are what we call ‘point source’ detectors; they have a much smaller field of view and can see plumes. MethaneSAT bridges the gap by looking at the region, not the whole globe.” */}
+    </Prose>
+</Block>
+
+<Block>
+    <Prose>
+        <Figure>
+            <Image
+                src={new URL('./media/MethaneSAT_EDF_ArtistRendering1.jpeg', import.meta.url).href}
+                alt="satellite in orbit over earth with colorful area indicating measured data"
+                align="left"
+                attrAuthor="MethaneSAT/Environmental Defense Fund"
+                attrUrl="https://bpb-us-e1.wpmucdn.com/sites.psu.edu/dist/9/4276/files/2023/09/US_INC.png "
+                width="100%"
+            />
+            <Caption>
+                MethaneSAT is measuring emissions over a wide view path, assessing point sources of methane to demonstrate trends in methane concentration over time.
+            </Caption>
+        </Figure>
+    </Prose>
+</Block>
+
+{/* <Block>
+    <Prose>
+        The combination of these new observations offers a more complete view of methane emissions than ever before, explained Wofsy. “Any one of these independent approaches can work really well. All taken together, they have the capability of providing a comprehensive global dataset to understand methane emissions.”
+    </Prose>
+</Block> */}
+
+<Block>
+    <Prose>
+        ## Setting the Stage for Operational Data and Services
+        New measurements offer increased opportunities for monitoring and reporting methane emissions. In a general sense, more data is better; however, proper context is required to optimize use of all of these datasets.
+
+        Observations from different platforms are characterized by subtle differences in spatial resolution and sensitivity to atmospheric factors like clouds and particles that can influence measurement quality. Interpreting the data also involves assumptions about wind direction and speed which transport the methane from its point source. Annmarie Eldering, an environmental engineer at NIST, said this is where the challenge lies.
+
+        <Block>
+            <Prose>
+                <Quote
+                    text={"Researchers use a variety of innovative techniques to account for uncontrolled factors and extract an isolated methane data point, but not all techniques will yield the exact same result. We can help to make these measurements more transparent and comparable by ensuring that everyone is working with the same tape measure."}
+                    author="Annmarie Eldering, Environmental Engineer, Greenhouse Gas Measurements Program, NIST "
+                    subtitle={""}
+                />
+            </Prose>
+        </Block>
+
+    </Prose>
+</Block>
+
+<Block>
+    <Prose>
+        This is the focus of a methane intercomparison project led by Eldering. NIST is working with scientists across a range of government, nonprofit, and commercial data providers, including EMIT, GHGSat, Carbon Mapper, and MethaneSAT, to understand and foster alignment in how methane plume detection and quantification with remote sensing is performed.
+
+        This effort includes defining common language used to describe data, establishing consensus for data formatting and validation, and collaboratively developing and documenting intercomparison techniques.
+
+        “As the volume of available methane data grows at exponential rates, this standardization is critical to enable trustworthiness and usability,” said Eldering.
+
+        As the methane intercomparison project progresses, Eldering hopes it will lead to a transparency portal for data providers, where science teams can prepare and share material to show steps in their analysis process and a wider working group can then analyze a benchmark set of measurement data to try to replicate the analysis. This type of analysis and complete documentation is key to achieving consensus standards.
+
+        The transparency of established standards allows users to work with data with the knowledge that providers have followed consensus protocols, a particular challenge when using private space observations whose algorithms are often proprietary and not publicly disclosed.
+
+        Common language, formatting and validation of methane measurements will make data products more accessible and useful to the broader community, and may support interoperable use of multiple satellite datasets to provide more comprehensive observations. These efforts benefit both users of GHG information by helping them understand the benefits of different products and private data and service providers by enabling them to serve customers more efficiently.
+    </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    **Author:**
+    *Emily Bell, NASA Goddard Space Flight Center*
+  </Prose>
+</Block>
+
+<Block>
+    <Prose>
+    ## Resources for Data Users
+        - Detailed dataset information: <Link to="https://earth.gov/ghgcenter/data-catalog/emit-ch4plume-v1">EMIT Methane Point Source Plume Complexes</Link>
+        - Information on GHGSat data available through NASA: <Link to="https://www.earthdata.nasa.gov/about/csda/vendor-ghgsat">CSDA Vendor - GHGSat</Link>
+        - Visit the <Link to="https://data.carbonmapper.org/#1.96/0/50.5">Carbon Mapper data portal</Link>
+        - Visit the <Link to="https://data.methanesat.org/en/emissions-map/?view-latitude=40.00000&view-longitude=-41.93241&view-zoom=3.30&date=2023-10-31&platform=MethaneAIR">MethaneSAT data portal</Link>
+    </Prose>
+</Block>
+
+<Block>
+    <Prose>
+        ## References
+        Atmospheric Chemistry and Physics (2022), [Quantifying methane emissions from the global scale down to point sources using satellite observations of atmospheric methane](https://acp.copernicus.org/articles/22/9617/2022/acp-22-9617-2022.pdf)
+    </Prose>
+</Block>
