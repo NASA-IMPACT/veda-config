@@ -1,6 +1,6 @@
 ---
 id: marsh-ida
-name: "Southern Louisiana Salt Marsh Coverage"
+name: "PlanetScope Satellite Imagery - Southern Louisiana Salt Marsh Coverage"
 description: "Commercial SmallSat Planet Satellite Imagery of salt marshes in southern Louisiana before and after Major Hurricane Ida made landfall in 2021. Additionally, by using a Salt Marsh distribution dataset from UNEP-WCMC, a supervised classification using PlanetScope data was employed to create salt marsh coverage classification scenes."
 media:
   src: ::file ../datasets/louisiana-marsh.jpg
@@ -44,7 +44,7 @@ layers:
       layerId: marsh-ida
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `${dateFns.format(datetime, 'DD LLL yyyy')} VS ${dateFns.format(compareDatetime, 'dd LLL yyyy')}`;
+          return `${dateFns.format(datetime, 'dd LLL yyyy')} VS ${dateFns.format(compareDatetime, 'dd LLL yyyy')}`;
         }
     info:
       source: UNEP-WCMC
@@ -105,7 +105,7 @@ layers:
       layerId: ida-ndvi
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `${dateFns.format(datetime, 'DD LLL yyyy')} VS ${dateFns.format(compareDatetime, 'dd LLL yyyy')}`;
+          return `${dateFns.format(datetime, 'dd LLL yyyy')} VS ${dateFns.format(compareDatetime, 'dd LLL yyyy')}`;
         }
     info:
       source: PlanetScope
@@ -144,7 +144,7 @@ layers:
       layerId: ida-ndwi
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `${dateFns.format(datetime, 'DD LLL yyyy')} VS ${dateFns.format(compareDatetime, 'DD LLL yyyy')}`;
+          return `${dateFns.format(datetime, 'dd LLL yyyy')} VS ${dateFns.format(compareDatetime, 'dd LLL yyyy')}`;
         }
     info:
       source: PlanetScope
