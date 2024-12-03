@@ -1,27 +1,27 @@
 ---
 id: planet-indices
-name: "Salt Marsh Distribution from UNEP-WCMC (WILL ADD MORE INFO)"
-description: "ADD INFO"
+name: "PlanetScope Satellite Imagery - Southern Louisiana Salt Marshes"
+description: "Commercial SmallSat Planet Satellite Imagery of salt marshes in southern Louisiana before and after Major Hurricane Ida made landfall in 2021."
 media:
-  src: ::file ../stories/ian_goes_cover.jpg
-  alt: Hurricane Ian as seen from space as it makes landfall with the state of Florida. NASA Earth Observatory image.
+  src: ::file ../datasets/louisiana-marsh.jpg
+  alt: Wetland landscape across southern Louisiana.
   author:
-    name: Joshua Stevens, using GOES 16 imagery courtesy of NOAA and the National Environmental Satellite, Data, and Information Service (NESDIS)
-    url: https://visibleearth.nasa.gov/images/150408/hurricane-ian-reaches-florida
+    name: Bridget Besaw
+    url: https://www.nature.org/en-us/get-involved/how-to-help/places-we-protect/the-nature-conservancy-in-louisiana-gulf-coast-prairies-and-marshes/
 taxonomy:
   - name: Topics
     values:
-      - Natural Disasters
-      - Tropical
+      - Disasters
+      - Land Cover
   - name: Source
     values:
-      - Community Contributed     
+      - Planet    
 layers:
   - id: ida-ndvi
     stacCol: ida-ndvi
     name: NDVI
     type: raster
-    description: 'NDVI Pre-Ian (Southern Louisiana)'
+    description: 'Planet NDVI (Southern Louisiana)'
     initialDatetime: newest
     zoomExtent:
       - 0
@@ -48,7 +48,7 @@ layers:
       layerId: ida-ndvi
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
+          return `${dateFns.format(datetime, 'DD LLL yyyy')} VS ${dateFns.format(compareDatetime, 'DD LLL yyyy')}`;
         }
     info:
       source: PlanetScope
@@ -60,7 +60,7 @@ layers:
     stacCol: ida-ndwi
     name: NDWI
     type: raster
-    description: 'NDWI Pre-Ian (Southern Louisiana)'
+    description: 'Planet NDWI (Southern Louisiana)'
     initialDatetime: newest
     zoomExtent:
       - 0
@@ -87,7 +87,7 @@ layers:
       layerId: ida-ndwi
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
+          return `${dateFns.format(datetime, 'DD LLL yyyy')} VS ${dateFns.format(compareDatetime, 'DD LLL yyyy')}`;
         }
     info:
       source: PlanetScope
@@ -99,7 +99,7 @@ layers:
     stacCol: ida-ndwi-difference
     name: NDWI Difference
     type: raster
-    description: 'NDWI Difference Pre-Ian (Southern Louisiana)'
+    description: 'Planet NDWI Difference (Southern Louisiana)'
     initialDatetime: newest
     zoomExtent:
       - 0
@@ -130,7 +130,7 @@ layers:
     stacCol: ida-ndvi-difference
     name: NDVI Difference
     type: raster
-    description: 'NDVI Difference Pre-Ian (Southern Louisiana)'
+    description: 'Planet NDVI Difference (Southern Louisiana)'
     initialDatetime: newest
     zoomExtent:
       - 0
@@ -172,17 +172,18 @@ layers:
   </Prose>
 <Figure>
   <Map
-    datasetId='marsh-ida'
-    layerId='marsh-ida'
+    datasetId='ida-ndvi'
+    layerId='ida-ndvi'
     dateTime='2021-08-23'
-    zoom={13}
+    zoom={10}
+    center={[-90.45, 29.386]}
     compareDateTime='2021-09-09'
   />
   <Caption
     attrAuthor='NASA'
     attrUrl='https://nasa.gov/'
   >
-    Planet satellite imagery classification of salt marshes pre- and post-Ida for southern Louisiana.
+    Planet satellite imagery Normalized Difference Vegetation Index (NDVI) calculations over salt marshes pre- and post-Ida for southern Louisiana.
   </Caption>
 </Figure>
 </Block>

@@ -1,6 +1,6 @@
 ---
 id: marsh-ida
-name: "Salt Marsh Distribution from UNEP-WCMC"
+name: "Southern Louisiana Salt Marsh Coverage"
 description: "Using a Salt Marsh distribution dataset from UNEP-WCMC, a supervised classification using NDVI and NDWI derived from PlanetScope was employed to create a pre- and post-classification scene for Hurricane Ida"
 media:
   src: ::file ../datasets/louisiana-marsh.jpg
@@ -11,11 +11,11 @@ media:
 taxonomy:
   - name: Topics
     values:
-      - Natural Disasters
-      - Tropical
+      - Disasters
+      - Land Cover
   - name: Source
     values:
-      - Community Contributed     
+      - UNEP-WCMC    
 layers:
   - id: marsh-ida
     stacCol: marsh-ida
@@ -44,7 +44,7 @@ layers:
       layerId: marsh-ida
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
+          return `${dateFns.format(datetime, 'DD LLL yyyy')} VS ${dateFns.format(compareDatetime, 'DD LLL yyyy')}`;
         }
     info:
       source: UNEP-WCMC
@@ -92,7 +92,8 @@ layers:
     datasetId='marsh-ida'
     layerId='marsh-ida'
     dateTime='2021-08-23'
-    zoom={13}
+    zoom={10}
+    center={[-90.45, 29.386]}
     compareDateTime='2021-09-09'
   />
   <Caption
