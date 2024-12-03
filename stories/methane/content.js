@@ -8,7 +8,7 @@ export const tools = [
           "alt": "view of colored shape overlaid on satellite landscape image with boxes of information containing plume details"
         },
         "link": {
-          "url": "https://staging.earth.gov/ghgcenter/custom-interfaces/emit-ch4plume-v1",
+          "url": "https://earth.gov/ghgcenter/custom-interfaces/emit-ch4plume-v1",
           "text": "See more"
         },
         "footer": null
@@ -22,7 +22,7 @@ export const tools = [
         "alt": "map showing colorful methane gas plume from GOES over a green surface satellite image on June 15, 2020 in Indiana"
       },
       "link": {
-        "url": "https://staging.earth.gov/ghgcenter/custom-interfaces/goes-plume-viewer/",
+        "url": "https://earth.gov/ghgcenter/custom-interfaces/goes-plume-viewer/",
         "text": "See more"
       },
       "footer": null
