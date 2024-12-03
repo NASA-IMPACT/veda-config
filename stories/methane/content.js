@@ -112,7 +112,7 @@ export const stories = [
         "footer": null
     },
     {
-        "title": "Earth System Models to Uncover Drivers of Natural Methane Emissions",
+        "title": "Models and Observations Combine to Uncover Drivers of Natural Methane Emissions",
         "desc": "Major natural sources of methane, like wetlands, create complications in identifying types and quantities of emissions. Researchers from NASA and NOAA are using advanced technology and models to deepen understanding of the role of natural sources and sinks in global atmospheric concentrations and support improved estimates in the global methane budget.",
         "img": {
           "src": new URL('./media/Wetlands_image_v2_rs.png', import.meta.url).href,
@@ -126,10 +126,10 @@ export const stories = [
     },
     {
         "title": "Advanced Technology to Detect Methane “Super Emitters” from Oil and Natural Gas Operations",
-        "desc": "text TBA by EPA",
+        "desc": "Under the U.S. EPA’s recent rule for oil and natural gas operations, EPA-certified third parties may use EPA-approved remote-sensing technology to identify large methane releases known as “super emitters.” The third parties will share data with the EPA. If the data are credible, the EPA will notify owners/operators, who must investigate.",
         "img": {
-          "src": new URL('./media/Gray_box.png', import.meta.url).href,
-          "alt": "gray box"
+          "src": new URL('../media/EPA_Super_Emitters_card.png', import.meta.url).href,
+          "alt": "a cluster of white oil tanks"
         },
         "link": {
           "url": "/stories/epa-super-emitter",
@@ -145,7 +145,7 @@ export const stories = [
           "alt": "colorful regions representing methane plumes over brown surface as observed by GOES satellite"
         },
         "link": {
-          "url": "https://www.research.noaa.gov",
+          "url": "https://www.nesdis.noaa.gov/news/noaas-goes-satellites-can-provide-quicker-detection-of-large-methane-emissions",
           "text": "See more"
         },
         "footer": null
