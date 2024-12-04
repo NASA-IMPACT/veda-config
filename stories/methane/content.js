@@ -35,14 +35,14 @@ export const tools = [
         "alt": "satellite map of western US region with areas of color indicating annual methane emissions for 2018"
       },
       "link": {
-        "url": "/exploration?datasets=%5B%7B%22id%22%3A%22total-methane%22%2C%22settings%22%3A%7B%22isVisible%22%3Atrue%2C%22opacity%22%3A100%2C%22analysisMetrics%22%3A%5B%7B%22id%22%3A%22mean%22%2C%22label%22%3A%22Average%22%2C%22chartLabel%22%3A%22Average%22%2C%22themeColor%22%3A%22infographicB%22%7D%5D%2C%22colorMap%22%3A%22epa-ghgi-ch4%22%2C%22scale%22%3A%7B%22min%22%3A0%2C%22max%22%3A20%7D%7D%7D%5D&taxonomy=%7B%7D&search=&date=2020-01-01T06%3A00%3A00.000Z",
+        "url": '/exploration?datasets=[{"id":"total-methane","settings":{"isVisible":true,"opacity":100,"analysisMetrics":[{"id":"mean","label":"Average","chartLabel":"Average","themeColor":"infographicB"}],"colorMap":"epa-ghgi-ch4","scale":{"min":0,"max":20}}}]&taxonomy={}&search=epa&date=2020-01-01T06:00:00.000Z',
         "text": "See more"
       },
       "footer": null
     },
     {
       "title": "NOAA Methane Concentration Viewer",
-      "desc": "Get a bird’s-eye view of NOAA’s atmospheric methane measurements  from ground stations around the globe, and explore how methane concentrations have changed over time. These data include tower, ground site, aircraft and flask measurements as part of NOAA’s Global Greenhouse Gas Reference Network.",
+      "desc": "Get a bird’s-eye view of NOAA’s atmospheric methane measurements  from ground stations around the globe, and explore how methane concentrations have changed over time. These data include tower, ground site and flask measurements as part of NOAA’s Global Greenhouse Gas Reference Network.",
       "hideExternalLinkFlag": true,
       "img": {
         "src": new URL('../../common/media/NOAA_Methane_Concentration_Viewer_card.png', import.meta.url).href,
