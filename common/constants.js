@@ -147,7 +147,7 @@ export const customInterfaces = [
       "alt": "map showing colorful methane gas plume from GOES over a green surface satellite image on June 15, 2020 in Indiana"
     },
     "link": {
-      "url": "https://staging.earth.gov/ghgcenter/custom-interfaces/goes-plume-viewer/",
+      "url": "https://earth.gov/ghgcenter/custom-interfaces/goes-plume-viewer/",
       "text": "See more"
     },
     "footer": null
@@ -161,14 +161,14 @@ export const customInterfaces = [
       "alt": "view of colored shape overlaid on satellite landscape image with boxes of information containing plume details"
     },
     "link": {
-      "url": "https://staging.earth.gov/ghgcenter/custom-interfaces/emit-ch4plume-v1",
+      "url": "https://earth.gov/ghgcenter/custom-interfaces/emit-ch4plume-v1",
       "text": "See more"
     },
     "footer": null
   },
   {
     "title": "NOAA Concentration Viewer",
-    "desc": "Get a bird’s-eye view of NOAA’s atmospheric measurements from ground stations around the globe, and explore how methane and carbon dioxide concentrations have changed over time. These data include tower, ground site, aircraft and flask measurements as part of NOAA’s Global Greenhouse Gas Reference Network.",
+    "desc": "Get a bird’s-eye view of NOAA’s atmospheric measurements from ground stations around the globe, and explore how methane and carbon dioxide concentrations have changed over time. These data include tower, ground site and flask measurements as part of NOAA’s Global Greenhouse Gas Reference Network.",
     "img": {
       "src": new URL('./media/NOAA_Methane_Concentration_Viewer_card.png', import.meta.url).href,
       "alt": "map showing Mauna Loa location of station with a time series of data below the map"

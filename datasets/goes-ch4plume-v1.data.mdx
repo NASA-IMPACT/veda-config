@@ -12,14 +12,15 @@ usage:
   - url: 'https://hub.ghg.center/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FUS-GHG-Center%2Fghgc-docs&urlpath=lab%2Ftree%2Fghgc-docs%2Fuser_data_notebooks%2Fgoes-ch4plume-v1_User_Notebook.ipynb&branch=main'
     label: Run example notebook
     title: Interactive Session in the US GHG Center JupyterHub (requires account)
-  - url: https://search.earthdata.nasa.gov/search/granules?p=C2748088093-LPCLOUD&pg[0][v]=f&pg[0][gsk]=-start_date&q=emit%20plume&tl=1694622854.77!3!!
-    label: Download data from NASA Distributed Active Archive Center
+  - url: https://data.ghg.center/browseui/#goes-ch4plume-v1/
+    label: Browse and download the data
     title: Data Browser
 media:
   src: ::file ./media/goes-ch4plume--cover.png
-  alt: emission from industry
+  alt: colorful area expands over time showing increase in size of methane plume
   author:
-    name: Chris Leboutillier
+    name: Daniel J. Varon
+    url: https://www.star.nesdis.noaa.gov/star/news_20240207_methane.php
 taxonomy:
   - name: Topics
     values:
@@ -108,7 +109,7 @@ layers:
   <Figure>
     <Embed
       height="800"
-      src="https://staging.earth.gov/ghgcenter/custom-interfaces/goes-plume-viewer/"
+      src="https://earth.gov/ghgcenter/custom-interfaces/goes-plume-viewer/"
     />
   </Figure>
 </Block>
@@ -146,6 +147,7 @@ layers:
     Jacob, D. J., Turner, A. J., Maasakkers, J. D., Sheng, J., Sun, K., Liu, X., Chance, K., Aben, I., McKeever, J., & Frankenberg, C. (2016). Satellite observations of atmospheric methane and their value for quantifying methane emissions. *Atmospheric Chemistry and Physics, 16*(22), 14371–14396. [https://doi.org/10.5194/acp-16-14371-2016](https://doi.org/10.5194/acp-16-14371-2016)
 
     ## Learn More
+    - Learn more about how <Link to="https://www.nesdis.noaa.gov/news/noaas-goes-satellites-can-provide-quicker-detection-of-large-methane-emissions">NOAA’s GOES Satellites Can Provide Quicker Detection of Large Methane Emissions</Link>
     - See the news announcement for this dataset from the [NOAA NESDIS STAR](https://www.star.nesdis.noaa.gov/star/news_20240207_methane.php) 
 
     ## Acknowledgment
@@ -156,7 +158,7 @@ layers:
 
     ## Data Stewardship
     - [Data Workflow](https://us-ghg-center.github.io/ghgc-docs/data_workflow/goes-ch4plume-v1_Data_Flow.html)
-    - [Data Ingest](https://us-ghg-center.github.io/ghgc-docs/cog_transformation/goes-ch4plume-v1.html)
+    - [Data Transformation Code](https://us-ghg-center.github.io/ghgc-docs/cog_transformation/goes-ch4plume-v1.html)
     - [US GHG Center Data Intake Processing and Verification Report](https://us-ghg-center.github.io/ghgc-docs/processing_and_verification_reports/goes-ch4plume-v1_Processing%20and%20Verification%20Report.html)
 
   </Prose>
