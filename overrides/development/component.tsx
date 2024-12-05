@@ -20,7 +20,7 @@ export default function Component() {
   return (
     <FoldProse>
       <p>
-      The current U.S. Greenhouse Gas Center portal reflects a final beta release (v{process.env.APP_VERSION}) available September 19, 2024. While in beta mode, the portal will undergo additional design changes and content additions. The currently available greenhouse gas information is accurate and ready to be used for research and decision making.
+      The current U.S. Greenhouse Gas Center portal reflects a beta release (v{process.env.APP_VERSION}) available December 5, 2024. While in beta mode, the portal will undergo additional design changes and content additions. The currently available greenhouse gas information is accurate and ready to be used for research and decision making.
       </p>
       <p>
       We welcome your feedback to improve the US GHG Center. To share your thoughts, please click the Contact Us 
@@ -47,6 +47,7 @@ export default function Component() {
           forwardedAs="a"
           href="https://github.com/NASA-IMPACT/veda-config-ghg/releases"
           variation="primary-fill"
+          target="_blank"
         >
           <CollecticonBrandGithub /> Releases
         </Button>
