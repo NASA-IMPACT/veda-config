@@ -44,6 +44,12 @@ layers:
           label: EF4
         - color: "#ff00ff"  # Pink for EF5
           label: EF5
+    info:
+      source: National Weather Service (NWS)
+      spatialExtent: CONUS
+      temporalResolution: N/A
+      unit: N/A
+
 
   - id: tornadoes-2024-paths
     stacCol: tornadoes-2024-paths
@@ -80,7 +86,12 @@ layers:
         ::js ({ dateFns, datetime, compareDatetime }) => {
           return `${dateFns.format(datetime, 'DD LLL yyyy')}`;        
         }
-  
+     info:
+      source: National Weather Service (NWS)
+      spatialExtent: CONUS
+      temporalResolution: N/A
+      unit: N/A
+      
 ---
 
 <Block>

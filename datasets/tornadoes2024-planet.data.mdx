@@ -30,7 +30,11 @@ layers:
         - 0,2500
       resampling: bilinear
       asset_bidx: cog_default|3,2,1
-
+    info:
+        source: Planet
+        spatialExtent: Local
+        temporalResolution: N/A
+        unit: Radiance
 
   - id: ps-greenfield-pre-tornadoes-2024
     stacCol: ps-greenfield-pre-tornadoes-2024
@@ -52,6 +56,11 @@ layers:
         ::js ({ dateFns, datetime, compareDatetime }) => {
           return `${dateFns.format(datetime, 'DD LLL yyyy')}`;        
         }
+    info:
+        source: Planet
+        spatialExtent: Local
+        temporalResolution: N/A
+        unit: Radiance
 
   - id: ps-greenfield-post-tornadoes-2024
     stacCol: ps-greenfield-post-tornadoes-2024
@@ -73,6 +82,11 @@ layers:
         ::js ({ dateFns, datetime, compareDatetime }) => {
           return `${dateFns.format(datetime, 'DD LLL yyyy')}`;        
         }
+    info:
+        source: Planet
+        spatialExtent: Local
+        temporalResolution: N/A
+        unit: Radiance
 
   - id: ps-barnsdall-tornadoes-2024
     stacCol: ps-barnsdall-tornadoes-2024
@@ -87,6 +101,11 @@ layers:
         - 0,255
       resampling: bilinear
       asset_bidx: cog_default|1,2,3
+    info:
+        source: Planet
+        spatialExtent: Local
+        temporalResolution: N/A
+        unit: Radiance
 
   - id: ps-portage-tornadoes-2024
     stacCol: ps-portage-tornadoes-2024
@@ -101,6 +120,11 @@ layers:
         - 0,255
       resampling: bilinear
       asset_bidx: cog_default|1,2,3
+    info:
+        source: Planet
+        spatialExtent: Local
+        temporalResolution: N/A
+        unit: Radiance
 
   - id: ps-tornadoes-2024-difference
     stacCol: ps-tornadoes-2024-difference
@@ -122,7 +146,11 @@ layers:
         ::js ({ dateFns, datetime, compareDatetime }) => {
           return `${dateFns.format(datetime, 'DD LLL yyyy')}`;        
         }
-
+    info:
+        source: Planet
+        spatialExtent: Local
+        temporalResolution: N/A
+        unit: Change in Radiance
 
 ---
 
