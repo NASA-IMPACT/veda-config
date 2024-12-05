@@ -35,8 +35,8 @@ layers:
         - 200
       nodata: 0
     compare:
-      datasetId: nldas3
-      layerId: nldas3
+      datasetId: nldas2
+      layerId: nldas2
       mapLabel: |
         ::js ({dateFns, datetime, compareDatetime}) => {
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
@@ -54,6 +54,10 @@ layers:
         - "#F37C21"
         - "#FCFFA4"
         - "#fc8d59"
+    info:
+      spatialExtent: CONUS 
+      temporalResolution: Monthly 
+      unit: mm/month        
 ---
 <Block>
   <Prose>
