@@ -1,8 +1,4 @@
-name: Preview build
-description: 'Build the preview with UI version number'
-
-on:
-  workflow_dispatch:
+name: Preview build with VEDA UI
 
 inputs:
   ui-version: 
@@ -15,7 +11,11 @@ runs:
     - name: Checkout Repository
       uses: actions/checkout@v4
       with:
-        submodules: true
+        submodules: recursive
+    - name: Use Node.js ${{ env.NODE }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ env.NODE }}
 
     - name: git config
       run: |
