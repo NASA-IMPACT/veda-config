@@ -30,7 +30,7 @@ runs:
       shell: bash
       run: |
         git submodule update --init --recursive
-        cd .veda/ui
+        cd ./.veda/ui
         git fetch --all
         git checkout ${{ github.event.inputs.ui-version }}
         cd -
