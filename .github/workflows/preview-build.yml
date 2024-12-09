@@ -1,26 +1,27 @@
 name: Preview build with VEDA UI
 
-inputs:
-  ui-version: 
-    required: true
-    default: 'v5.11.0'
+on:
+  repository_dispatch:
+    types: [update-version]
 
 permissions:
   contents: write
   pull-requests: write
 
-runs:
-  using: "composite"
-  steps:
+jobs:
+  makepr:
+    runs-on: ubuntu-latest
+    steps:
     - name: Checkout Repository
       uses: actions/checkout@v4
       with:
         submodules: recursive
+        ref: ${{ github.event.client_payload.ref }}
     - name: Use Node.js ${{ env.NODE }}
       uses: actions/setup-node@v1
       with:
         node-version: ${{ env.NODE }}
-
+  
     - name: git config
       shell: bash
       run: |
@@ -30,23 +31,23 @@ runs:
       shell: bash
       run: |
         git submodule update --init --recursive
+        git submodule update --recursive --remote
+        ls
         cd ./.veda/ui
         git fetch --all
-        git checkout ${{ github.event.inputs.ui-version }}
+        git checkout ${{ github.event.client_payload.VERSION_NUMBER }}
         cd -
         git add .veda/ui
-        git commit -m "Update submodule to version ${{ github.event.inputs.ui-version }}"
-
+        git commit -m "Update submodule to version ${{ github.event.client_payload.VERSION_NUMBER }}"
     - name: Push Changes
-      shell: bash
-      run: |
+      run: |  
         git checkout -b ${{ github.event.inputs.ui-version }}
         git push origin ${{ github.event.inputs.ui-version }}
 
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v7
       with:
-        commit-message: "Update UI to ${{ github.event.inputs.ui-version }}"
-        title: "Update submodule to version ${{ github.event.inputs.ui-version }}"
-        body: "This PR updates the submodule to version `${{ github.event.inputs.ui-version }}`."
-        branch: update-${{ github.event.inputs.ui-version }}
+        commit-message: "Update UI to ${{ github.event.client_payload.VERSION_NUMBER }}"
+        title: "Update submodule to version ${{ github.event.client_payload.VERSION_NUMBER }}"
+        body: "This PR updates the submodule to version `${{ github.event.client_payload.VERSION_NUMBER }}`."
+        branch: update-to-${{ github.event.client_payload.VERSION_NUMBER }}
