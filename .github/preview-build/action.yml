@@ -18,10 +18,12 @@ runs:
         node-version: ${{ env.NODE }}
 
     - name: git config
+      shell: bash
       run: |
         git config user.name "${GITHUB_ACTOR}"
         git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
     - name: Update Submodule
+      shell: bash
       run: |
         git submodule update --init --recursive
         cd .veda/ui
@@ -32,11 +34,13 @@ runs:
         git commit -m "Update submodule to version ${{ github.event.inputs.ui-version }}"
 
     - name: Push Changes
+      shell: bash
       run: |
         git checkout -b ${{ github.event.inputs.ui-version }}
         git push origin ${{ github.event.inputs.ui-version }}
 
     - name: Create Pull Request
+      shell: bash
       uses: peter-evans/create-pull-request@v6
       with:
         title: "Update submodule to version ${{ github.event.inputs.ui-version }}"
