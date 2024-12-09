@@ -5,6 +5,10 @@ inputs:
     required: true
     default: 'v5.11.0'
 
+permissions:
+  contents: write
+  pull-requests: write
+
 runs:
   using: "composite"
   steps:
@@ -40,9 +44,9 @@ runs:
         git push origin ${{ github.event.inputs.ui-version }}
 
     - name: Create Pull Request
-      shell: bash
-      uses: peter-evans/create-pull-request@v6
+      uses: peter-evans/create-pull-request@v7
       with:
+        commit-message: "Update UI to ${{ github.event.inputs.ui-version }}"
         title: "Update submodule to version ${{ github.event.inputs.ui-version }}"
         body: "This PR updates the submodule to version `${{ github.event.inputs.ui-version }}`."
-        branch: ${{ github.event.inputs.ui-version }}
+        branch: update-${{ github.event.inputs.ui-version }}
