@@ -19,6 +19,7 @@ jobs:
       with:
         submodules: recursive
         ref: ${{ github.event.client_payload.ref }}
+        fetch-depth: 0
     - name: Use Node.js ${{ env.NODE }}
       uses: actions/setup-node@v1
       with:
@@ -42,11 +43,6 @@ jobs:
         git fetch --tags
         git checkout ${{ env.VERSION }}
         cd -
-        git checkout -b ci-${{ env.VERSION }}
-        git add .veda/ui
-        git commit -m "Update submodule to version ${{ env.VERSION }}"
-        git push origin ci-${{ env.VERSION }}
-
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v7
       with:
