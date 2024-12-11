@@ -2,9 +2,6 @@ name: Preview build with VEDA UI
 
 on:
   workflow_dispatch:
-    inputs:
-      VERSION_NUMBER: 
-        default: 'v5.11.0'
   repository_dispatch:
     types: [update-version]
 
