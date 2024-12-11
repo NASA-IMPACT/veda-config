@@ -26,7 +26,7 @@ jobs:
 
     - name: Set Version Variable
       id: set-version
-      run: echo "VERSION=${{ github.event.client_payload.VERSION_NUMBER || 'v5.11.3' }}" >> $GITHUB_ENV
+      run: echo "VERSION=${{ github.event.client_payload.VERSION_NUMBER || 'v5.11.0' }}" >> $GITHUB_ENV
   
     - name: git config
       shell: bash
@@ -38,9 +38,9 @@ jobs:
       run: |
         git submodule update --init --recursive
         git submodule update --recursive --remote
-        ls
         cd ./.veda/ui
-        git fetch --all
+        git fetch --tags
+        git tag
         git checkout ${{ env.VERSION }}
         cd -
         git add .veda/ui
