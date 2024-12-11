@@ -1,6 +1,10 @@
 name: Preview build with VEDA UI
 
 on:
+  workflow_dispatch:
+    inputs:
+      VERSION_NUMBER: 
+        default: 'v5.11.0'
   repository_dispatch:
     types: [update-version]
 
@@ -21,6 +25,10 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ env.NODE }}
+
+    - name: Set Version Variable
+      id: set-version
+      run: echo "VERSION=${{ github.event.client_payload.VERSION_NUMBER || inputs.VERSION_NUMBER }}" >> $GITHUB_ENV
   
     - name: git config
       shell: bash
@@ -35,19 +43,19 @@ jobs:
         ls
         cd ./.veda/ui
         git fetch --all
-        git checkout ${{ github.event.client_payload.VERSION_NUMBER }}
+        git checkout ${{ env.VERSION }}
         cd -
         git add .veda/ui
-        git commit -m "Update submodule to version ${{ github.event.client_payload.VERSION_NUMBER }}"
+        git commit -m "Update submodule to version ${{ env.VERSION }}"
     - name: Push Changes
       run: |  
-        git checkout -b ${{ github.event.inputs.ui-version }}
-        git push origin ${{ github.event.inputs.ui-version }}
+        git checkout -b ${{ env.VERSION }}
+        git push origin ${{ env.VERSION }}
 
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v7
       with:
-        commit-message: "Update UI to ${{ github.event.client_payload.VERSION_NUMBER }}"
-        title: "Update submodule to version ${{ github.event.client_payload.VERSION_NUMBER }}"
-        body: "This PR updates the submodule to version `${{ github.event.client_payload.VERSION_NUMBER }}`."
-        branch: update-to-${{ github.event.client_payload.VERSION_NUMBER }}
+        commit-message: "Update UI to ${{ env.VERSION }}"
+        title: "Update submodule to version${{ env.VERSION }}"
+        body: "This PR updates the submodule to version `${{ env.VERSION }}`."
+        branch: update-to-${{ env.VERSION }}
