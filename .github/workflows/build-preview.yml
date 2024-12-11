@@ -42,12 +42,10 @@ jobs:
         git fetch --tags
         git checkout ${{ env.VERSION }}
         cd -
+        git checkout -b ci-${{ env.VERSION }}
         git add .veda/ui
         git commit -m "Update submodule to version ${{ env.VERSION }}"
-    - name: Push Changes
-      run: |  
-        git checkout -b use-${{ env.VERSION }}
-        git push origin use-${{ env.VERSION }}
+        git push origin ci-${{ env.VERSION }}
 
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v7
