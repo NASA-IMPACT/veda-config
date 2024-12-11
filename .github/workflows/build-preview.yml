@@ -2,9 +2,6 @@ name: Preview build with VEDA UI
 
 on:
   workflow_dispatch:
-    inputs:
-      VERSION_NUMBER:
-        default: 'v5.11.0'
   repository_dispatch:
     types: [update-version]
   pull_request:
@@ -29,7 +26,7 @@ jobs:
 
     - name: Set Version Variable
       id: set-version
-      run: echo "VERSION=${{ github.event.client_payload.VERSION_NUMBER || inputs.VERSION_NUMBER }}" >> $GITHUB_ENV
+      run: echo "VERSION=${{ github.event.client_payload.VERSION_NUMBER || 'v5.11.0' }}" >> $GITHUB_ENV
   
     - name: git config
       shell: bash
