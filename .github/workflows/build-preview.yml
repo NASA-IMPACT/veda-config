@@ -55,4 +55,5 @@ jobs:
         commit-message: "Update UI to ${{ env.VERSION }}"
         title: "Update submodule to version${{ env.VERSION }}"
         body: "This PR updates the submodule to version `${{ env.VERSION }}`."
+        base: develop
         branch: use-${{ env.VERSION }}
