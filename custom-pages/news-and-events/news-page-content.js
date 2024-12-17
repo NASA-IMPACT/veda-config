@@ -163,15 +163,15 @@ export const EVENT_ITEMS = sortByDateCustom([
   {
     name: ' AGU Pre-conference Workshop',
     asLink : {
-      url: 'https://www.agu.org/annual-meeting/attend#register'
+      url: 'https://agu.confex.com/agu/agu24/meetingapp.cgi/Session/229081'
     },
     media: {
       src: new URL('./media/events/agu_logo.png', import.meta.url).href,
       alt: 'AGU Logo'
     },
     description: "On Sunday, December 8 (1:00 - 4:30PM EST), US GHG Center team members will host a workshop at the 2024 American Geophysical Union annual conference. Join us at Advancing Open Science: Greenhouse Gas Emission Data Analysis using the U.S. Greenhouse Gas Center’s JupyterHub. Early bird registration ends on November 6.",
-    startDate: '2024-12-04',
-    endDate: '2024-12-05'
+    startDate: '2024-12-08',
+    endDate: '2024-12-08'
   },
   {
     name: 'Join the 2nd Annual Stakeholder Forum; Dec 4-5, 2024',
@@ -184,7 +184,7 @@ export const EVENT_ITEMS = sortByDateCustom([
     },
     description: "This 2-day forum will focus on gathering input from the stakeholder community to inform the Center's priorities and future directions. Join us on Dec 4-5, 2024 in College Park, Maryland!",
     startDate: '2024-12-04',
-    endDate: '2024-12-06'
+    endDate: '2024-12-05'
   },
   {
     name: 'Policy Speaker Series: An Overview of the Global Greenhouse Gas Watch (G3W)',

@@ -9,6 +9,6 @@ export default class HomePage {
   constructor(page: Page) {
     this.page = page;
     this.mainContent = this.page.getByRole('main');
-    this.headingContainer = this.mainContent.locator('div').filter({ hasText: 'U.S. Greenhouse Gas CenterUniting Data and Technology to Empower Tomorrow\'s' }).nth(2)
+    this.headingContainer = this.mainContent.locator('div').filter({ hasText: 'U.S. Greenhouse Gas Center\'s' }).nth(2)
   }
 }

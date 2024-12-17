@@ -22,6 +22,7 @@ taxonomy:
   - name: Topics
     values:
       - Natural Emissions and Sinks
+      - Methane
   - name: Source
     values:
       - NASA
@@ -323,6 +324,10 @@ layers:
 
 <Block>
   <Prose>
+    <div style={{ border: '2px solid black', padding: '10px', display: 'inline-block', color: 'black', backgroundColor: '#d4f1f9' }}>
+      <span style={{ color: 'red', fontWeight: 'bold' }}>Notice:</span>
+      See Version History below for major update affecting data between July 1, 2024 and November 14, 2024. If data within this range was previously used, re-accessing the data is advised.
+    </div>
     **Temporal extent:** January 1, 1990 - ongoing<br /> 
     **Temporal resolution:** Daily and Monthly     
     **Spatial extent:** Global    
@@ -351,6 +356,9 @@ layers:
     Colligan, T., Poulter, B., Quinn, C. (2024). LPJ-EOSIM L2 Global Simulated Monthly Wetland Methane Flux Low Latency V001 [Data set]. NASA EOSDIS Land Processes Distributed Active Archive Center. Accessed from [https://doi.org/10.5067/Community/LPJ-EOSIM/LPJ_EOSIM_L2_MCH4E_LL.001](https://doi.org/10.5067/Community/LPJ-EOSIM/LPJ_EOSIM_L2_MCH4E_LL.001)
 
     ## Version History
+    Notice: Due to ERA5 driver issues, the LPJ-EOSIM ERA5 and ensemble mean estimates of wetland methane were updated on November 14, 2024. Affected data covered July 1, 2024 to November 14, 2024. If data in this range were previously used, we recommend re-downloading /re-accessing the data.
+
+
     The current dataset version is LPJ-EOSIM v1, which replaced LPJ-wsl v1 in the US GHG Center in April 2024. Summary of version update changes:
     - Model updates and improvements, including improved data latency with more regular updates and driver-specific model recalibration
     - Addition of two new data layers: LPJ-EOSIM model estimated wetland methane emissions using ERA5 climate input forcing data, and using the mean of both MERRA-2 and ERA5 climate input forcing data (mean ensemble). The LPJ-wsl dataset only provided estimates using MERRA-2 climate input forcing data until the end of 2021. 
@@ -387,6 +395,7 @@ layers:
     ## Learn More
     - See a video of methane emissions from wetlands around the globe in the <Link to={"/stories/intro-us-ghg-center"}>Intro to the US GHG Center story</Link>
     - See how wetlands in the tropics and in higher latitude areas differ in their contribution to global wetland methane emissions in the <Link to={"/stories/tracking-greenhouse-gas-cycles"}>Tracking Greenhouse Gas Cycles story</Link>
+    - Check out this dataset mentioned in the <Link to={"/stories/modeling-natural-methane-emissions"}>Models and Observations Combine to Uncover Drivers of Natural Methane Emissions story</Link>
 
     ## Acknowledgment
     The LPJ-EOSIM model is based on the development of the Lund-Potsdam-Jena Dynamic Global Vegetation Model (LPJ-DGVM) [by researchers at institutions in Germany and Sweden](https://doi.org/10.1046/j.1365-2486.2003.00569.x) (Potsdam and Jena, Germany & Lund, Sweden).    
