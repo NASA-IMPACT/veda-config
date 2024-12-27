@@ -52,6 +52,24 @@ taxonomy:
     ## Immediate Impacts on Agriculture
     The May 12 derecho was devastating for the Midwest’s agricultural sector. Fields of corn and soybeans, critical to the region’s economy, were flattened within minutes. High-resolution satellite imagery from the Harmonized Landsat Sentinel-2 (HLS) project revealed stark before-and-after images of impacted farmland, showing extensive crop loss across thousands of acres. For farmers, the derecho meant not only immediate financial loss but also long-term challenges, as topsoil erosion caused by high winds further reduced the land’s productivity for future crops. Reports from the USDA detailed significant disruptions to planting and harvest cycles, while market data from the Chicago Board of Trade (CBOT) showed a sharp spike in the prices of corn and soybeans in the weeks following the derecho. These fluctuations reflected concerns over reduced supply, directly tied to the damage inflicted on key agricultural states.
   </Prose>
+
+  <Figure>
+    <Chart
+      dataPath={new URL('./derecho_Crop_Prices.csv', import.meta.url).href}
+      dateFormat="%m/%Y"
+      idKey='Crop'
+      xKey='Date'
+      yKey='Price'
+      yAxisLabel='Price (U.S. Dollars Per Bushel)'
+      colors={{ Corn: 'yellow', Soybean: 'green'  }}
+      highlightStart = '05/2022'
+      highlightEnd = '06/2022'
+      highlightLabel = 'May 12th Derecho'
+    />
+    <Caption>
+    The monthly price of Corn and Soybeans reported by the United States Department of Agriculture before and after the May 12th, 2022 Midwest derecho impacted farmland and growing crops.
+    </Caption>
+  </Figure>
 </Block>
 
 <Block>
