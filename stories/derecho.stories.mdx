@@ -52,6 +52,22 @@ taxonomy:
 
 <Block>
   <Figure>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/0SNRwR23jqE?si=vrA-IyLgG9hnClpb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <figcaption>Region-scale MRMS radar reflectivity with the respective time frame that the derecho impacted each state. Courtesy of the National Weather Service in Aberdeen, SD.</figcaption>
+  </Figure>
+
+  <Prose>
+    ## What is a Derecho?
+    Derechos are a type of severe windstorm caused by thunderstorms that move quickly in a straight line over a wide area. Unlike tornadoes, which have rotating winds, derechos produce widespread, powerful winds that can extend for hundreds of miles. The May 12, 2022, event was a serial derecho, a particularly intense type of derecho. Serial derechos occur when multiple clusters of thunderstorms form along a cold front, creating a prolonged impact on the same region. This type of derecho is especially destructive because it produces waves of high winds over an extended area, weakening structures with each round of storms that move through.
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    For this derecho, the setup was perfect: a heat wave created unstable air, while a strong storm system provided the necessary energy for severe storms to form. Sioux Falls, South Dakota, recorded a high of 94°F, much hotter than usual for May. These conditions, combined with a powerful jet stream, drove the rapid development of the storm system. The National Weather Service’s radar showed a characteristic bow-shaped formation called a "bow echo," a signature of strong, concentrated winds that caused the most damage. Serial derechos like this one are particularly challenging for communities because they overwhelm emergency response systems. Roads can be blocked for hours, power outages last longer, and damaged structures often endure repeated impacts from the storm. 
+  </Prose>
+  
+  <Figure>
     <Image
       src={new URL('./derecho_climo.jpg', import.meta.url).href}
       alt='Derecho Climatology in the U.S.'
@@ -63,26 +79,7 @@ taxonomy:
 </Block>
 
 <Block>
-  <Figure>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/0SNRwR23jqE?si=vrA-IyLgG9hnClpb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <figcaption>Region-scale MRMS radar reflectivity with the respective time frame that the derecho impacted each state. Courtesy of the National Weather Service in Aberdeen, SD.</figcaption>
-  </Figure>
-
-  <Prose>
-    ## What is a Derecho?
-    Derechos are a type of severe windstorm caused by thunderstorms that move quickly in a straight line over a wide area. Unlike tornadoes, which have rotating winds, derechos produce widespread, powerful winds that can extend for hundreds of miles. The May 12, 2022, event was a serial derecho, a particularly intense type of derecho. Serial derechos occur when multiple clusters of thunderstorms form along a cold front, creating a prolonged impact on the same region. This type of derecho is especially destructive because it produces waves of high winds over an extended area, weakening structures with each round of storms that move through.
-  
-    For this derecho, the setup was perfect: a heat wave created unstable air, while a strong storm system provided the necessary energy for severe storms to form. Sioux Falls, South Dakota, recorded a high of 94°F, much hotter than usual for May. These conditions, combined with a powerful jet stream, drove the rapid development of the storm system. The National Weather Service’s radar showed a characteristic bow-shaped formation called a "bow echo," a signature of strong, concentrated winds that caused the most damage. Serial derechos like this one are particularly challenging for communities because they overwhelm emergency response systems. Roads can be blocked for hours, power outages last longer, and damaged structures often endure repeated impacts from the storm. 
-  </Prose>
-</Block>
-
-<Block>
-  <Prose>
-    ## Immediate Impacts on Agriculture
-    The May 12 derecho was devastating for the Midwest’s agricultural sector. Fields of corn and soybeans, critical to the region’s economy, were flattened within minutes. High-resolution satellite imagery from the Harmonized Landsat Sentinel-2 (HLS) project revealed stark before-and-after images of impacted farmland, showing extensive crop loss across thousands of acres. For farmers, the derecho meant not only immediate financial loss but also long-term challenges, as topsoil erosion caused by high winds further reduced the land’s productivity for future crops. Reports from the USDA detailed significant disruptions to planting and harvest cycles, while market data from the Chicago Board of Trade (CBOT) showed a sharp spike in the prices of corn and soybeans in the weeks following the derecho. These fluctuations reflected concerns over reduced supply, directly tied to the damage inflicted on key agricultural states.
-  </Prose>
-
-  <Figure>
+    <Figure>
     <Chart
       dataPath={new URL('./derecho_Crop_Prices.csv', import.meta.url).href}
       dateFormat="%m/%Y"
@@ -98,6 +95,11 @@ taxonomy:
     The monthly price of Corn and Soybeans reported by the United States Department of Agriculture before and after the May 12th, 2022 Midwest derecho impacted farmland and growing crops.
     </Caption>
   </Figure>
+
+  <Prose>
+    ## Immediate Impacts on Agriculture
+    The May 12 derecho was devastating for the Midwest’s agricultural sector. Fields of corn and soybeans, critical to the region’s economy, were flattened within minutes. High-resolution satellite imagery from the Harmonized Landsat Sentinel-2 (HLS) project revealed stark before-and-after images of impacted farmland, showing extensive crop loss across thousands of acres. For farmers, the derecho meant not only immediate financial loss but also long-term challenges, as topsoil erosion caused by high winds further reduced the land’s productivity for future crops. Reports from the USDA detailed significant disruptions to planting and harvest cycles, while market data from the Chicago Board of Trade (CBOT) showed a sharp spike in the prices of corn and soybeans in the weeks following the derecho. These fluctuations reflected concerns over reduced supply, directly tied to the damage inflicted on key agricultural states.
+  </Prose>
 </Block>
 
 <Block>
