@@ -52,9 +52,14 @@ taxonomy:
 
 <Block>
   <Figure>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/0SNRwR23jqE?si=vrA-IyLgG9hnClpb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <figcaption>Region-scale MRMS radar reflectivity with the respective time frame that the derecho impacted each state. Courtesy of the National Weather Service in Aberdeen, SD.</figcaption>
-  </Figure>
+    <Image
+      src={new URL('./derecho-serial-pro.jpg', import.meta.url).href}
+      alt='How serial vs progressive derechos form.'
+    />
+    <Caption>
+    Weather patterns favorable for progressive and serial derechos. Progressive derechos form in hot, moist areas with strong winds and are harder to predict due to subtle triggers. Serial derechos form along a longer line of storms in large-scale systems, making them easier to forecast. (Source: [NWS LMK](https://www.weather.gov/lmk/derecho#:~:text=Therefore%2C%20a%20progressive%20derecho%20can,system%20that%20typically%20creates%20them.))
+    </Caption>
+  </Figure> 
 
   <Prose>
     ## What is a Derecho?
@@ -68,14 +73,9 @@ taxonomy:
   </Prose>
   
   <Figure>
-    <Image
-      src={new URL('./derecho_climo.jpg', import.meta.url).href}
-      alt='Derecho Climatology in the U.S.'
-    />
-    <Caption>
-    Approximate number of times "moderate and high intensity" (MH) derechos affected points in the United States during the years 1980 through 2001. Areas affected by 3 or more derecho events are shaded in yellow, orange, and red (From Coniglio and Stensrud 2004).
-    </Caption>
-  </Figure> 
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/0SNRwR23jqE?si=vrA-IyLgG9hnClpb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <figcaption>Region-scale MRMS radar reflectivity with the respective time frame that the derecho impacted each state. Courtesy of the National Weather Service in Aberdeen, SD.</figcaption>
+  </Figure>
 </Block>
 
 <Block>
