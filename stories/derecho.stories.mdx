@@ -1,7 +1,7 @@
 ---
-id: derecho
-name: Midwest Derechos and Their Impact on Rural America
-description: An analysis of the May 12, 2022 Derecho’s Economic Impact on Agriculture and Rural Communities
+id: 'derecho-impacts'
+name: Derechos and Their Impact on Rural America
+description: An analysis of the May 12, 2022 Derecho’s Impact on Agriculture and Rural Communities
 media:
   src: ::file ./derecho-background.jpg
   alt: Intense derecho thunderstorm as it sweeps across farmland on September 23, 2018
@@ -22,7 +22,7 @@ taxonomy:
 
 <Block>
   <Prose>
-    Authors: Madison Wallner<sup>[1]</sup>\, Udaysankar Nair<sup>[1]</sup>\
+    Authors: Madison Wallner<sup>[1]</sup>\, Andrew Blackford<sup>[1]</sup>\, Udaysankar Nair<sup>[1]</sup>
    
     <sup>[1]</sup> The University of Alabama in Huntsville (UAH)
 
@@ -79,7 +79,35 @@ taxonomy:
 </Block>
 
 <Block>
-    <Figure>
+  <Figure>
+    <Map
+      datasetId='hls-ndvi-ian'
+      layerId='hls-ndvi'
+      dateTime='2022-09-05'
+      zoom={10}
+      center={[-82.1476,26.5101]}
+      compareDateTime='2022-09-30'
+    />
+    <Caption
+      attrAuthor='Harmonized Landsat and Sentinel-2'
+      attrUrl='https://hls.gsfc.nasa.gov/'
+    >
+    Placeholder, add in my own data here.
+    </Caption>
+  </Figure>
+
+  <Prose>
+    ## Immediate Impacts on Agriculture
+    The May 12 derecho was devastating for the Midwest’s agricultural sector. Fields of corn and soybeans, critical to the region’s economy, were flattened within minutes. High-resolution satellite imagery from the Harmonized Landsat Sentinel-2 (HLS) project revealed stark before-and-after images of impacted farmland, showing extensive crop loss across thousands of acres. 
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    For farmers, the derecho meant not only immediate financial loss but also long-term challenges, as topsoil erosion caused by high winds further reduced the land’s productivity for future crops. Reports from the USDA detailed significant disruptions to planting and harvest cycles, while market data from the Chicago Board of Trade (CBOT) showed a sharp spike in the prices of corn and soybeans in the weeks following the derecho. These fluctuations reflected concerns over reduced supply, directly tied to the damage inflicted on key agricultural states.
+  </Prose>
+
+  <Figure>
     <Chart
       dataPath={new URL('./derecho_Crop_Prices.csv', import.meta.url).href}
       dateFormat="%m/%Y"
@@ -95,17 +123,29 @@ taxonomy:
     The monthly price of Corn and Soybeans reported by the United States Department of Agriculture before and after the May 12th, 2022 Midwest derecho impacted farmland and growing crops.
     </Caption>
   </Figure>
-
-  <Prose>
-    ## Immediate Impacts on Agriculture
-    The May 12 derecho was devastating for the Midwest’s agricultural sector. Fields of corn and soybeans, critical to the region’s economy, were flattened within minutes. High-resolution satellite imagery from the Harmonized Landsat Sentinel-2 (HLS) project revealed stark before-and-after images of impacted farmland, showing extensive crop loss across thousands of acres. For farmers, the derecho meant not only immediate financial loss but also long-term challenges, as topsoil erosion caused by high winds further reduced the land’s productivity for future crops. Reports from the USDA detailed significant disruptions to planting and harvest cycles, while market data from the Chicago Board of Trade (CBOT) showed a sharp spike in the prices of corn and soybeans in the weeks following the derecho. These fluctuations reflected concerns over reduced supply, directly tied to the damage inflicted on key agricultural states.
-  </Prose>
 </Block>
 
 <Block>
+  <Figure>
+    <Map
+      datasetId='houston-aod'
+      layerId='houston-aod'
+      dateTime='2000-01-01'
+      compareDateTime='2010-01-01'
+      compareLabel='2000-2009 mean / 2010-2019 mean'
+      center={[-95.35, 29.8]}
+      zoom={8.75}
+    />
+    <Caption>
+      Placeholder, add in my own data here.
+    </Caption>
+  </Figure>
+
   <Prose>
     ## Aerosol and Dust Transport
     The derecho’s intense winds lifted substantial amounts of dust and debris into the atmosphere, creating hazardous air conditions across the region. Satellite imagery captured the expansive dust plumes, which traveled hundreds of miles, decreasing air quality far beyond the storm’s path. The health impacts of the derecho extended beyond physical injuries. Hospitals across South Dakota and Iowa reported an increase in respiratory issues, as dust and debris stirred up by the storm aggravated health conditions like asthma and bronchitis. Vulnerable populations, including children and the elderly, were particularly affected by the compromised air quality.
+
+    *<mark> Need to find the illness data still </mark>
   </Prose>
 </Block>
 
@@ -113,6 +153,8 @@ taxonomy:
   <Prose>
     ## Broader Severe Weather Impacts
    Not only was this derecho damaging in itself, but it was accompanied by a series of secondary severe weather events, including tornadoes and hail. South Dakota experienced 14 tornadoes, with an EF2 near Gary causing significant structural damage. Hailstones as large as golf balls battered vehicles and homes, while flash flooding overwhelmed drainage systems in urban areas. Information from the Storm Prediction Center (SPC) details the secondary events by state, underscoring the derecho’s role in compounding weather disasters. For residents and emergency responders, these additional challenges strained resources and delayed recovery efforts.
+
+   *<mark> Add in Scrollytelling here </mark>
   </Prose>
 </Block>
 
@@ -122,7 +164,26 @@ taxonomy:
    Beyond the fields, the derecho wreaked havoc on rural infrastructure and communities. Nightlight data from NASA revealed the extent of power outages, with entire counties plunged into darkness for days. For residents reliant on electricity for irrigation, food storage, and daily life, these outages amplified the disaster’s impacts. Data from PowerOutage.us showed over 1 million customers lost power across the affected states, with some outages lasting more than a week. The disruption to electricity worsened economic losses, as grain silos requiring power for ventilation and storage were rendered inoperable, even if it wasn’t directly damaged by the wind gusts.
   
    Economically, the storm caused ripple effects. Damage to grain storage facilities not only affected individual farmers but also had overflowing effects on local markets, leading to increased prices for consumers. Stories of resilience emerged as neighbors worked together to clear roads and restore power, but the recovery underscored the challenges rural communities face in rebuilding after such disasters.
+
+   *<mark> Large power outage file, still going through the data. Image will be added afterwards </mark>
   </Prose>
+
+  <Figure>
+    <Map
+      datasetId='greenville-nightlights-tornadoes-2024'
+      layerId='greenville-nightlights-tornadoes-2024'
+     dateTime='2024-05-07'
+      zoom={11}
+     center={[-84.621, 40.107]}
+      compareDateTime='2024-05-08'
+    />
+    <Caption
+      attrAuthor='NASA'
+      attrUrl='https://nasa.gov/'
+    >
+      Placeholder, add in my own data here.
+    </Caption>
+  </Figure>
 </Block>
 
 <Block>
@@ -131,6 +192,8 @@ taxonomy:
    This particular storm system highlighted both the strengths and weaknesses of current emergency response systems. While early warning systems provided some residents with time to prepare, the rapid speed and intensity of the derecho left many caught off guard. Emergency responders faced challenges accessing damaged areas due to blocked roads and power outages, delaying relief efforts.
   
    Improving community resilience against such events involves enhancing early-warning communication systems and reinforcing infrastructure. In rural areas, investing in more robust power grids and shelters can help mitigate the effects of future derechos. Education and preparedness campaigns are also crucial in ensuring that residents understand the risks associated with derechos and know how to respond accordingly. Aid programs from state and federal agencies offered some relief to farmers, but rebuilding remained a large and daunting task. Many residents called for increased investment in resilient infrastructure to alleviate the impacts of future extreme weather events.
+
+   *<mark> Add in Slider: one side is a GIS image of SOE counties, other side is a overlay of storm reports for the day </mark>
   </Prose>
 </Block>
 
@@ -146,40 +209,51 @@ taxonomy:
 <Block>
   <Prose>
     ## References
-    Farm Progress. Winds, tillage steal soil productivity in Dakotas. Accessed November 28, 2024.https://www.farmprogress.com/conservation-and-sustainability/winds-tillage-steal-soil-productivity-in-dakotas?
+    Farm Progress. *Winds, tillage steal soil productivity in Dakotas.* https://www.farmprogress.com/conservation-and-sustainability/winds-tillage-steal-soil-productivity-in-dakotas?
 
-    National Oceanic and Atmospheric Administration. Types of Derechos. NOAA. Accessed November 28, 2024. https://www.noaa.gov/jetstream/derechos/types-of-derechos
+    National Oceanic and Atmospheric Administration. *Types of Derechos.* NOAA. https://www.noaa.gov/jetstream/derechos/types-of-derechos
 
-    National Weather Service. Storm Summary for May 12, 2022. NOAA. Accessed November 28, 2024. https://www.weather.gov/abr/StormsummaryMay122022
+    National Weather Service. *Storm Summary for May 12, 2022.* NOAA. https://www.weather.gov/abr/StormsummaryMay122022
 
-    National Weather Service. May 12, 2022, Significant Severe Derecho Event. NOAA. Accessed November 28, 2024. https://www.weather.gov/fgf/May12th2022SignificantSevereDerechoEvent
+    National Weather Service. *May 12, 2022, Significant Severe Derecho Event.* NOAA. https://www.weather.gov/fgf/May12th2022SignificantSevereDerechoEvent
 
-    National Weather Service. May 12, 2022 Derecho Summary. NOAA. Accessed November 28, 2024. https://www.weather.gov/mpx/May12th2022DerechoSummary
+    National Weather Service. *May 12, 2022 Derecho Summary.* NOAA. https://www.weather.gov/mpx/May12th2022DerechoSummary
 
-    National Weather Service. May 12, 2022, Wind Event. NOAA. Accessed November 28, 2024. https://www.weather.gov/fsd/20220512-wind-mayderecho
+    National Weather Service. *May 12, 2022, Wind Event.* NOAA. https://www.weather.gov/fsd/20220512-wind-mayderecho
 
-    The Weather Channel. May 12, 2022 Wind and Derecho Storms Damage. Weather.com. Accessed November 28, 2024. https://weather.com/news/news/2022-05-12-wind-derecho-tornado-storms-damage
+    The Weather Channel. *May 12, 2022 Wind and Derecho Storms Damage.* Weather.com. https://weather.com/news/news/2022-05-12-wind-derecho-tornado-storms-damage
 
-    National Weather Service Storm Prediction Center. Facts About Derechos. NOAA. Accessed November 28, 2024. https://www.spc.noaa.gov/misc/AbtDerechos/derechofacts.htm
+    National Weather Service Storm Prediction Center. *Facts About Derechos.* NOAA. https://www.spc.noaa.gov/misc/AbtDerechos/derechofacts.htm
 
-    PowerOutage.US. Power Outage Data and Tracking. Accessed November 28, 2024. https://poweroutage.us/
+    PowerOutage.US. *Power Outage Data and Tracking.* https://poweroutage.us/
 
-    Environmental Protection Agency. Air Research: Dust and Air Quality Resources. EPA. Accessed November 28, 2024. https://www.epa.gov/air-research
+    Environmental Protection Agency. *Air Research: Dust and Air Quality Resources.* EPA. https://www.epa.gov/air-research
   </Prose>
 </Block>
 
 <Block>
   <Prose>
-    ## Data Access
-    Learn More (add links in here)
-   *Jupyter Notebooks
-   *Join the discussion on Github
-  
-    Editor:
-    Developers:
-    Science and Content Contributors:
-    Acknowledgements:
-    Questions / Feedback (email address): mrw0091@uah.edu
-    Additional Resources: Links to other similar stories
+    ### Data Access
+
+    * <mark> Adding in Later </mark>
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+
+    **Editors**: Madison Wallner, 
+
+    **Developers**: Madison Wallner,
+
+    **Science and Content Contributors**: Madison Wallner, Andrew Blackford, 
+
+    **Acknowledgements**: <mark> Adding in Later </mark>
+
+    **Questions / Feedback**: Email mrw0091@uah.edu
+
+    ### Additional Resources
+
+    * <mark> Adding in Later </mark>
   </Prose>
 </Block>
