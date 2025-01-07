@@ -20,14 +20,13 @@ taxonomy:
       - Community Contributed
 ---
 
-<Block>
-  <Prose>
+<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
+  <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
     Authors: Madison Wallner<sup>[1]</sup>\, Andrew Blackford<sup>[1]</sup>\, Udaysankar Nair<sup>[1]</sup>
    
     <sup>[1]</sup> The University of Alabama in Huntsville (UAH)
 
     <mark>🚧 This Data Story presents work in progress and not peer-reviewed results! 🚧</mark>
-  
   </Prose>
 </Block>
 
@@ -69,6 +68,13 @@ taxonomy:
 </Block>
 
 <Block>
+  <Prose>
+  ## Datatsets Utilized
+  In this story, impacts can be seen in analyzing several datasets that capture its physical, economic, and societal consequences. [GOES Satellite](https://www.noaasis.noaa.gov/GOES/goes_overview.html) and [NEXRAD](https://www.ncei.noaa.gov/products/radar/next-generation-weather-radar) radar imagery illustrate the derecho’s bow-shaped structure that produces damaging straight line winds and overshooting cloud tops that demonstrate the updrafts capable of intense convection occurring in the atmosphere. Similarly, [NWS storm reports](https://www.ncdc.noaa.gov/stormevents/faq.jsp) detail tornadoes, hail, and wind gusts that added to the damage. [Harmonized Landsat and Sentinel-2](https://hls.gsfc.nasa.gov/) data highlight the extensive damage to farmland and vegetation, coupled with [USDA crop price](https://www.nass.usda.gov/Charts_and_Maps/Agricultural_Prices/index.php) data to identify if prices increased due to crop destruction and [IMERG](https://gpm.nasa.gov/data/imerg) precipitation data quantifying the heavy rainfall that contributed to soil erosion and flooding. [Black Marble Night Lights](https://blackmarble.gsfc.nasa.gov/) data show widespread power outages, particularly in rural areas that may cause recovery slowdowns. Lastly, [MERRA-2](https://gmao.gsfc.nasa.gov/reanalysis/merra-2/) data track dust and aerosols transported by the storm, illustrating degraded air quality that exacerbates respiratory health issues that individuals have. Together, these datasets provide a comprehensive view of the storm's far-reaching impacts on the Northern Plains.
+  </Prose>
+</Block>
+
+<Block>
   <Figure>
     <Image
       src={new URL('./derecho-serial-pro.jpg', import.meta.url).href}
@@ -94,6 +100,15 @@ taxonomy:
         <iframe width="560" height="315" src="https://www.youtube.com/embed/0SNRwR23jqE?si=vrA-IyLgG9hnClpb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         <figcaption>Regional-scale MRMS radar reflectivity with the corresponding time frame that the derecho impacted each state. Courtesy of the National Weather Service in [Aberdeen, SD](https://www.youtube.com/watch?v=0SNRwR23jqE).</figcaption>
   </Figure>
+</Block>
+
+<Block>
+  <Prose>
+    ## Broader Severe Weather Impacts
+   Not only was this derecho damaging in itself, but it was accompanied by a series of secondary severe weather events, including tornadoes and hail. South Dakota experienced 14 tornadoes, with an EF2 near Gary causing significant structural damage. Hailstones as large as golf balls battered vehicles and homes, while flash flooding overwhelmed drainage systems in urban areas. Information from the Storm Prediction Center (SPC) details the secondary events by state, underscoring the derecho’s role in compounding weather disasters. For residents and emergency responders, these additional challenges strained resources and delayed recovery efforts.
+
+   *<mark> Add in Scrollytelling here </mark>
+  </Prose>
 </Block>
 
 <Block>
@@ -187,15 +202,6 @@ taxonomy:
 
 <Block>
   <Prose>
-    ## Broader Severe Weather Impacts
-   Not only was this derecho damaging in itself, but it was accompanied by a series of secondary severe weather events, including tornadoes and hail. South Dakota experienced 14 tornadoes, with an EF2 near Gary causing significant structural damage. Hailstones as large as golf balls battered vehicles and homes, while flash flooding overwhelmed drainage systems in urban areas. Information from the Storm Prediction Center (SPC) details the secondary events by state, underscoring the derecho’s role in compounding weather disasters. For residents and emergency responders, these additional challenges strained resources and delayed recovery efforts.
-
-   *<mark> Add in Scrollytelling here </mark>
-  </Prose>
-</Block>
-
-<Block>
-  <Prose>
     ## Community Consequences
    Beyond the fields, the derecho wreaked havoc on rural infrastructure and communities. Nightlight data from NASA revealed the extent of power outages, with entire counties plunged into darkness for days. For residents reliant on electricity for irrigation, food storage, and daily life, these outages amplified the disaster’s impacts. Data from PowerOutage.us showed over 1 million customers lost power across the affected states, with some outages lasting more than a week. The disruption to electricity worsened economic losses, as grain silos requiring power for ventilation and storage were rendered inoperable, even if it wasn’t directly damaged by the wind gusts.
   
@@ -235,7 +241,7 @@ taxonomy:
 
 <Block>
   <Prose>
-    ## Conclusion and Future Outlook
+    ## Impacts and Implications
    The May 12, 2022, derecho was a harsh reminder of the Midwest’s vulnerability to extreme weather, highlighting its devastating impacts on farmland, rural communities, and the regional economy. For farmers, the destruction of crops, grain silos, and irrigation systems is immediate, but the long-term challenges of soil erosion and reduced land productivity pose even greater risks. Rural communities reliant on agriculture face prolonged disruptions to livelihoods and local economies, with rebuilding efforts further strained by the rising cost of infrastructure repairs.
   
    In a warmer climate, the frequency and intensity of derechos could increase, as higher temperatures enhance atmospheric instability and moisture content, presenting an urgent need for adaptation. Investments in wind-resistant infrastructure and sustainable farming practices will be critical to reducing future impacts. As extreme weather events become more common, building resilience is not only necessary for protecting farmland and communities but also vital for ensuring the stability of the broader economy in an era of climate extremes.
