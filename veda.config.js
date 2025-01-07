@@ -90,11 +90,9 @@ module.exports = {
         "This dashboard is for exploring key datasets that provide insight into greenhouse gas sources, sinks, emissions, fluxes, and events.",
     // Temporary Banner Text/URL/expiry
     tempBanner:
-        "Read the new story on using EMIT and AVIRIS-3 for monitoring large methane emission events.",
-    tempBannerUrl:
-      "stories/emit-and-aviris-3",
+        "Temporary Banner",
     tempBannerExpires:
-        "2024-07-03T12:00:00-04:00"
+        "2025-07-03T12:00:00-04:00"
   },
 
   theme: {
