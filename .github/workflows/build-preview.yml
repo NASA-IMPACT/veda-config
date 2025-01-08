@@ -12,6 +12,9 @@ permissions:
   contents: write
   pull-requests: write
 
+env:
+  SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+
 jobs:
   makepr:
     runs-on: ubuntu-latest
@@ -46,6 +49,7 @@ jobs:
         git checkout ${{ env.VERSION }}
         cd -
     - name: Create Pull Request
+      id: making-pr
       uses: peter-evans/create-pull-request@v7
       with:
         commit-message: "Update UI to ${{ env.VERSION }}"
@@ -53,3 +57,15 @@ jobs:
         body: "This is an automatic PR that updates the submodule to version `${{ env.VERSION }}`."
         base: develop
         branch: ci-update-${{ env.VERSION }}
+    - name: Notify release through Slack
+      uses: slackapi/slack-github-action@v2.0.0
+      with:
+        webhook: ${{ secrets.SLACK_WEBHOOK_URL }}
+        webhook-type: incoming-webhook
+        payload: |
+          text: "*VEDA UI Release ${{ env.VERSION }}*: ${{ job.status }}\n Preview link: ${{ steps.making-pr.outputs.pull-request-url }}"
+          blocks:
+            - type: "section"
+              text:
+                type: "mrkdwn"
+                text:  "*VEDA UI Release ${{ env.VERSION }}*: ${{ job.status }}\n Preview link: ${{ steps.making-pr.outputs.pull-request-url }}"
