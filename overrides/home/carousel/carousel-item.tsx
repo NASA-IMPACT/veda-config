@@ -51,7 +51,7 @@ export default function CarouselItem({ item, itemIdx, onTitleClick, shouldProgre
     aria-selected={selected.toString()}
     aria-label={`Slide ${itemIdx+1}`}
     aria-controls={`carousel-item-${itemIdx + 1}`} 
-    containerProps={{className:`∫ padding-x-1 radius-0 border-0 animation--transition ${(selected || shouldProgress)? 'opacity-100':'opacity-83'} `}}>
+    containerProps={{className:`padding-x-1 radius-0 border-0 animation--transition ${(selected || shouldProgress)? 'opacity-100':'opacity-83'} `}}>
     <ProgressBar shouldProgress={shouldProgress} progressDone={progressDone} progressPercentage={progressPercentage}selected={selected} />
     <CardBody className="padding-left-0 position-relative">
       <h2 className="tablet:margin-top-1 carousel--title text-bold veda-color--base">
