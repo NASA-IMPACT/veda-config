@@ -7,11 +7,11 @@ export default [
     imageAlt: 'Earth shown with purple gas indicating atmospheric methane.'
   },
   {
-    link: 'https://us-ghg-center.github.io/agu-2024-workshop/ghg-center-at-agu-2024.html',
-    title: 'US GHG Center at AGU 2024',
-    description: 'Join us at the annual American Geophysical Union (AGU) meeting, held December 9-13 in Washington, D.C.',
-    image: new URL('../../media/AGU2024_carousel_2.png', import.meta.url).href,
-    imageAlt: 'US GHG Center at AGU 2024.'
+    link: 'https://earth.gov/ghgcenter/stories/nist-methane-intercomparisons',
+    title: 'NIST Developing Standards for Methane Plume Data',
+    description: 'Description: Read about NIST efforts to develop consensus standards for growing volume of public and private methane plume satellite data.',
+    image: new URL('../../media/NIST-homepage-carousel.png', import.meta.url).href,
+    imageAlt: 'NIST Developing Standards for Methane Plume Data'
   },
   {
 
