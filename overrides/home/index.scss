@@ -1,0 +1,36 @@
+/* Base style for the link */
+.link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(18, 41, 97);
+  border: 1px solid rgb(18, 41, 97);
+  padding: 0px 20px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+  height: 3rem;
+  background-color: transparent;
+  transition: background-color 0.24s ease-in-out;
+  opacity: 1;
+  text-decoration: none;
+  
+  /* Hover effect */
+  &:hover {
+    background-color: rgba(8, 42, 100, 0.08);
+  }
+
+  /* Active effect */
+  &:active, 
+  &.active {
+    background-color: rgba(8, 42, 100, 0.08);
+  }
+}
+
+/* Optional styles for the arrow */
+.arrow {
+  display: flex;
+  margin: 0px 4px;
+}
