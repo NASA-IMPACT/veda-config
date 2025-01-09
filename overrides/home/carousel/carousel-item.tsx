@@ -54,9 +54,9 @@ export default function CarouselItem({ item, itemIdx, onTitleClick, shouldProgre
     containerProps={{className:`hover:bg-base-lightest padding-x-1 radius-0 border-0 animation--transition ${(selected || shouldProgress)? 'opacity-100':'opacity-50'}`}}>
     <ProgressBar shouldProgress={shouldProgress} progressDone={progressDone} progressPercentage={progressPercentage}selected={selected} />
     <CardBody className="padding-left-0 position-relative">
-      <h3 className="tablet:margin-top-1 carousel--title text-bold veda-color--base">
+      <h2 className="tablet:margin-top-1 carousel--title text-bold veda-color--base">
         {item.title}
-      </h3>
+      </h2>
       <p className="margin-top-2 flex-align-self-stretch">{item.description}</p>
       <Button
         unstyled={true}
