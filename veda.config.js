@@ -92,7 +92,7 @@ module.exports = {
     tempBanner:
         "Temporary Banner",
     tempBannerExpires:
-        "2025-07-03T12:00:00-04:00"
+        "2024-07-03T12:00:00-04:00"
   },
 
   theme: {
