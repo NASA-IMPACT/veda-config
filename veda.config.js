@@ -129,10 +129,10 @@ module.exports = {
     theme: {
       card: {
         backgroundColor: '#2276ac',
-        sideBarColor: '#175074',
+        sideBarColor: '#ff0000',
         textColor: 'White',
         linkColor: '#175074',
-        borderLeft: '0.5rem solid #175074'
+        borderLeft: '0.5rem solid #ff0000'
       },
       acceptButton: {
         default: { backgroundColor: '#175074', textColor: 'white' },
