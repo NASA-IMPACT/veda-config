@@ -15,10 +15,10 @@ export default [
     imageAlt: 'Register: Stakeholder Engagement Forum.'
   },
   {
-    link: 'https://earth.gov/ghgcenter/stories/nist-methane-intercomparisons',
+    link: '/stories/nist-methane-intercomparisons',
     title: 'NIST Developing Standards for Methane Plume Data',
     description: 'Read about NIST efforts to develop consensus standards for growing volume of public and private methane plume satellite data.',
-    image: new URL('../../media/NIST_Methane_Intercomparisons_card.png', import.meta.url).href,
+    image: new URL('../../../stories/methane/media/NIST_Methane_Intercomparisons_card.png', import.meta.url).href,
     imageAlt: 'Construction worker overlooking an industrial refinery at dusk, with interconnected glowing lines and nodes overlaid in the sky.'
   },
 ]
