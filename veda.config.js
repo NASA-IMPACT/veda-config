@@ -131,8 +131,7 @@ module.exports = {
         backgroundColor: '#2276ac',
         sideBarColor: '#ff0000',
         textColor: 'White',
-        linkColor: '#175074',
-        borderLeft: '0.5rem solid #ff0000'
+        linkColor: '#175074'
       },
       acceptButton: {
         default: { backgroundColor: '#175074', textColor: 'white' },
