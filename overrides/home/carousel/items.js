@@ -7,18 +7,18 @@ export default [
     imageAlt: 'Earth shown with purple gas indicating atmospheric methane.'
   },
   {
-    link: 'https://us-ghg-center.github.io/agu-2024-workshop/ghg-center-at-agu-2024.html',
-    title: 'US GHG Center at AGU 2024',
-    description: 'Join us at the annual American Geophysical Union (AGU) meeting, held December 9-13 in Washington, D.C.',
-    image: new URL('../../media/AGU2024_carousel_2.png', import.meta.url).href,
-    imageAlt: 'US GHG Center at AGU 2024.'
-  },
-  {
 
     link: 'https://appliedsciences.nasa.gov/get-involved/training/english/arset-methane-observations-large-emission-event-detection-and',
     title: 'New Training on Methane Observations',
     description: "View training and materials from ARSET, NASA’s remote sensing training program, for large emission event detection and monitoring.",
     image: new URL('../../media/Methane_Website_Header.png', import.meta.url).href,
     imageAlt: 'Register: Stakeholder Engagement Forum.'
+  },
+  {
+    link: '/stories/nist-methane-intercomparisons',
+    title: 'NIST Developing Standards for Methane Plume Data',
+    description: 'Read about NIST efforts to develop consensus standards for growing volume of public and private methane plume satellite data.',
+    image: new URL('../../../stories/methane/media/NIST_Methane_Intercomparisons_card.png', import.meta.url).href,
+    imageAlt: 'Construction worker overlooking an industrial refinery at dusk, with interconnected glowing lines and nodes overlaid in the sky.'
   },
 ]
