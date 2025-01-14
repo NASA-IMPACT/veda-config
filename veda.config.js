@@ -38,7 +38,7 @@ if (config.GOOGLE_FORM) {
     {
       title: 'Contact us',
       src: config.GOOGLE_FORM,
-      type: 'modal'
+      type: 'action'
     }
   ];
 }
