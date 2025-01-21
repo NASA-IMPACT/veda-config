@@ -146,7 +146,7 @@ taxonomy:
 <Block>
   <Figure>
     <Chart
-      dataPath={new URL('./derecho_Crop_Prices.csv', import.meta.url).href}
+      dataPath={new URL('./derecho_Crop_Price.csv', import.meta.url).href}
       dateFormat="%m/%Y"
       idKey='Crop'
       xKey='Date'
@@ -234,9 +234,21 @@ taxonomy:
    This particular storm system highlighted both the strengths and weaknesses of current emergency response systems. While early warning systems provided some residents with time to prepare, the rapid speed and intensity of the derecho left many caught off guard. Emergency responders faced challenges accessing damaged areas due to blocked roads and power outages, delaying relief efforts.
   
    Improving community resilience against such events involves enhancing early-warning communication systems and reinforcing infrastructure. In rural areas, investing in more robust power grids and shelters can help mitigate the effects of future derechos. Education and preparedness campaigns are also crucial in ensuring that residents understand the risks associated with derechos and know how to respond accordingly. Aid programs from state and federal agencies offered some relief to farmers, but rebuilding remained a large and daunting task. Many residents called for increased investment in resilient infrastructure to alleviate the impacts of future extreme weather events.
-
-   *<mark> Add in Slider: one side is a GIS image of SOE counties, other side is a overlay of storm reports for the day </mark>
   </Prose>
+
+  <Figure>
+    <CompareImage 
+      leftImageSrc={new URL('./Derecho-SOE-counties.jpg', import.meta.url).href}
+      leftImageAlt='State of Emergency Declared Counties May 12, 2022'
+      leftImageLabel='State of Emergency Counties May 12, 2022'
+      rightImageSrc={new URL('./Derecho-storm-reports.jpg', import.meta.url).href}
+      rightImageAlt='Filtered SPC Storm Reports May 12, 2022'
+      rightImageLabel='SPC Storm Reports May 12, 2022'
+    />
+    <Caption>
+    Comparison of the State of Emergency declared counties in South Dakota on May 12, 2022 and all unfiltered storm reports collected by the Storm Prediction Center (SPC).
+    </Caption>
+  </Figure>
 </Block>
 
 <Block>
