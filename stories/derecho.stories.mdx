@@ -19,10 +19,57 @@ taxonomy:
     values:
       - Community Contributed
 ---
+<style>{`
+  .data-table {
+    display: flex;
+    gap: 2rem;
+    justify-content: center; /* Center the table */
+    margin: 0 auto; /* Center the table */
+  }
+  .data-table thead th,
+  .data-table tbody td {
+    text-align: center;
+    white-space: nowrap;
+    padding: 0 1rem; /* Add horizontal padding */
+  }
+  .data-table thead th {
+    font-size: 1.2rem; /* Increase the font size of the title row */
+  }
+  .injur {
+    background:rgba(246, 110, 31, 0.51); /* Injuries */
+  }
+  .death {
+    background:rgba(196, 31, 246, 0.49); /* Deaths */
+  }
+  .prop {
+    background:rgba(126, 59, 0, 0.53); /* Property Damage */ 
+  }
+  .crop {
+    background:rgba(247, 250, 63, 0.49); /* Crop Damage */  
+  }
+  .hail {
+    background:rgba(108, 142, 104, 0.49).; /* Hail Reports */  
+  }
+  .wind {
+    background:rgba(62, 117, 183, 0.5).; /* Wind Reports */  
+  }
+  .tornado {
+    background:rgba(255, 0, 0, 0.45); /* Tornado Reports */  
+  }
+  .bold-row {
+    font-weight: bold; /* Bold the row */
+  }
+  @media only screen and (max-width: 544px) {
+    .data-table {
+      flex-flow: column;
+    }
+  }
+`}</style>
+
 
 <Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
   <Prose>
-    Authors: Madison Wallner<sup>[1]</sup>\, Andrew Blackford<sup>[1]</sup>\, Udaysankar Nair<sup>[1]</sup>
+    **Authors:** Madison Wallner<sup>[1]</sup>\, Andrew Blackford<sup>[1]</sup>\, Udaysankar Nair<sup>[1]</sup>
    
     <sup>[1]</sup> The University of Alabama in Huntsville (UAH)
 
@@ -249,6 +296,94 @@ taxonomy:
     Comparison of the State of Emergency declared counties in South Dakota on May 12, 2022 and all unfiltered storm reports collected by the Storm Prediction Center (SPC).
     </Caption>
   </Figure>
+</Block>
+
+<Block>
+<Figure style={{ display: 'block' }}>
+  <div className='data-table'>
+    <table>
+      <thead>
+        <tr>
+          <th>   State   </th>
+          <th>   Tornado Reports   </th>
+          <th>   Wind Reports   </th>
+          <th>   Hail Reports   </th>
+          <th>   Crop Damage  </th>
+          <th>   Property Damage   </th>
+          <th>   Deaths   </th>
+          <th>   Injuries   </th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td>Nebraska</td>
+          <td class='tornado'>0</td>
+          <td class='wind'>77</td>
+          <td class='hail'>21</td>
+          <td class='crop'>7.008M</td>
+          <td class='prop'>3.375M</td>
+          <td class='death'>0</td>
+          <td class='injur'>1</td>
+        </tr>
+        <tr>
+          <td>Iowa</td>
+          <td class='tornado'>1</td>
+          <td class='wind'>20</td>
+          <td class='hail'>0</td>
+          <td class='crop'>63K</td>
+          <td class='prop'>0K</td>
+          <td class='death'>0</td>
+          <td class='injur'>0</td>
+        </tr>
+        <tr>
+          <td>South Dakota</td>
+          <td class='tornado'>12</td>
+          <td class='wind'>84</td>
+          <td class='hail'>5</td>
+          <td class='crop'>1.056M</td>
+          <td class='prop'>0K</td>
+          <td class='death'>2</td>
+          <td class='injur'>3</td>
+        </tr> 
+        <tr>
+          <td>North Dakota</td>
+          <td class='tornado'>1</td>
+          <td class='wind'>11</td>
+          <td class='hail'>3</td>
+          <td class='crop'>0K</td>
+          <td class='prop'>75K</td>
+          <td class='death'>0</td>
+          <td class='injur'>0</td>
+        </tr>  
+        <tr>
+          <td>Minnesota</td>
+          <td class='tornado'>18</td>
+          <td class='wind'>104</td>
+          <td class='hail'>48</td>
+          <td class='crop'>5K</td>
+          <td class='prop'>4.68M</td>
+          <td class='death'>1</td>
+          <td class='injur'>2</td>
+        </tr>
+        <tr class='bold-row'>
+          <td>Total</td>
+          <td class='tornado'>32</td>
+          <td class='wind'>296</td>
+          <td class='hail'>77</td>
+          <td class='crop'>8.132M</td>
+          <td class='prop'>8.13M</td>
+          <td class='death'>3</td>
+          <td class='injur'>6</td>
+        </tr>      
+
+      </tbody>
+    </table>
+  </div>
+<Caption>
+  Table 1: Official filtered storm reports, damage reports, deaths and injuries associated with the May 12, 2022 Derecho within Nebraska, Iowa, South Dakota, North Dakota, and Minnesota. Totals from each column for the entire event region is reflected in the bottom row.
+</Caption>  
+</Figure>
 </Block>
 
 <Block>
