@@ -17,7 +17,8 @@ taxonomy:
       - Hydrology
       - Precipitation
       - Surface Meteorology
-      - Drought    
+      - Drought
+      - Flood           
       - Agriculture
       - Disasters
 ---
@@ -46,7 +47,8 @@ taxonomy:
   - Expand the spatial coverage to encompass all of North and Central America, including Alaska, Hawaii, and Puerto Rico (see figures below);  
   - Utilize high quality surface meteorological data;
   - Reduce the current NLDAS-2 latency of 3.5 days to near real-time; 
-  - Upgrade the land surface model to include the latest scientific advancements, such as improved representation of groundwater processes (He et al., 2023); and
+  - Upgrade the land surface model to include the latest scientific advancements, such as improved representation of groundwater processes (He et al., 2023);
+  - Include surface water dynamics (e.g., river discharge and depth, flow velocity, surface water storage, flood extent); and  
   - Incorporate observational constraints by assimilating remote sensing datasets, which can help capture human management of water and vegetation, such as irrigation, groundwater withdrawal, droughts, floods, and hydrological impacts of wildland fire and other disturbances
 
   <Figure>
@@ -100,6 +102,11 @@ taxonomy:
           <td>4 (Noah, VIC, Mosaic, SAC)</td>
           <td>1 (Noah-MP)</td>
         </tr>
+        <tr>
+          <td>Surface Water Modeling</td>
+          <td>4 None</td>
+          <td>1 (HyMAP)</td>
+        </tr>        
         <tr>
           <td>Data assimilation</td>
           <td>None</td>
@@ -221,6 +228,8 @@ taxonomy:
     </Figure>
   Schematic diagrams of energy and water budgets and processes represented in Noah-MP version 5.0.
 
+  NLDAS-3 will also include NASA’s HyMAP model (Getirana et al., 2017) to simulate inland surface water availability and dynamics.
+
   **Integrating remote sensing data is crucial for accurately depicting the influence of human activities on the land surface, such as agricultural irrigation, groundwater extraction, reservoir management, and wildfires.** To better detect these impacts, we are working to assimilate the following NASA satellite data products in NLDAS-3:
   
 <Figure style={{ display: 'block' }}>
@@ -310,6 +319,7 @@ taxonomy:
   - GIS-enabled data
   - Weekly change maps
   - Model uncertainty information
+  - Streamflow and surface water availability
   
   NASA model developers are collecting feedback via our NLDAS GitHub discussion page [here](https://github.com/Earth-Information-System/NLDAS-3/discussions) and with periodic stakeholder workshops. Please join the NASA NLDAS community and help us create the next state-of-the-art land surface and hydrology model! 
   </Prose>
@@ -331,6 +341,7 @@ taxonomy:
   - ​https://lis.gsfc.nasa.gov/
   - Cosgrove, B.A., Lohmann, D., Mitchell, K.E., Houser, P.R., Wood, E.F., Schaake, J.C., Robock, A., Marshall, C., Sheffield, J., Duan, Q., Luo, L., Higgins, R.W., Pinker, R.T., Tarpley, J.D., Meng, J., 2003. Real-time and retrospective forcing in the North American Land Data Assimilation System (NLDAS) project. Journal of Geophysical Research: Atmospheres 108. https://doi.org/10.1029/2002JD003118 
   - Gelaro, R., McCarty, W., Suárez, M.J., Todling, R., Molod, A., Takacs, L., Randles, C.A., Darmenov, A., Bosilovich, M.G., Reichle, R., Wargan, K., Coy, L., Cullather, R., Draper, C., Akella, S., Buchard, V., Conaty, A., Silva, A.M. da, Gu, W., Kim, G.-K., Koster, R., Lucchesi, R., Merkova, D., Nielsen, J.E., Partyka, G., Pawson, S., Putman, W., Rienecker, M., Schubert, S.D., Sienkiewicz, M., Zhao, B., 2017. The Modern-Era Retrospective Analysis for Research and Applications, Version 2 (MERRA-2). Journal of Climate 30, 5419–5454. https://doi.org/10.1175/JCLI-D-16-0758.1 
+  - Getirana, A., Kumar, S., Girotto, M., Rodell, M., 2017. Rivers and floodplains as key components of global terrestrial water storage variability. Geophysical Research Letters, 44, 10,359–10,368. https://doi.org/10.1002/2017GL074684.
   - He, C., Valayamkunnath, P., Barlage, M., Chen, F., Gochis, D., Cabell, R., Schneider, T., Rasmussen, R., Niu, G.-Y., Yang, Z.-L., Niyogi, D., Ek, M., 2023. Modernizing the open-source community Noah with multi-parameterization options (Noah-MP) land surface model (version 5.0) with enhanced modularity, interoperability, and applicability. Geoscientific Model Development 16, 5131–5151. https://doi.org/10.5194/gmd-16-5131-2023 
   - Kemp, E.M., Wegiel, J.W., Kumar, S.V., Geiger, J.V., Mocko, D.M., Jacob, J.P., Peters-Lidard, C.D., 2022. A NASA–Air Force Precipitation Analysis for Near-Real-Time Operations. Journal of Hydrometeorology 23, 965–989. https://doi.org/10.1175/JHM-D-21-0228.1 
   - Kumar, S.V., Peters-Lidard, C.D., Tian, Y., Houser, P.R., Geiger, J., Olden, S., Lighty, L., Eastman, J.L., Doty, B., Dirmeyer, P., Adams, J., Mitchell, K., Wood, E.F., Sheffield, J., 2006. Land information system: An interoperable framework for high resolution land surface modeling. Environmental Modelling & Software 21, 1402–1415. https://doi.org/10.1016/j.envsoft.2005.07.004 
