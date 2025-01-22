@@ -17,7 +17,10 @@ taxonomy:
       - Surface Meteorology
       - Drought    
       - Agriculture
-      - Disasters       
+      - Disasters
+infoDescription: |
+  ::markdown
+    NLDAS-2 is a surface meteorological analysis and land-surface model dataset running in operations to produce outputs of soil moisture, snow, surface fluxes, streamflow, etc. for drought monitoring and other applications.             
 layers:
   - id: nldas2
     stacCol: nldas2
@@ -35,8 +38,8 @@ layers:
         - 200
       nodata: 0
     compare:
-      datasetId: nldas3
-      layerId: nldas3
+      datasetId: nldas2
+      layerId: nldas2
       mapLabel: |
         ::js ({dateFns, datetime, compareDatetime}) => {
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
@@ -54,6 +57,10 @@ layers:
         - "#F37C21"
         - "#FCFFA4"
         - "#fc8d59"
+    info:
+      spatialExtent: CONUS 
+      temporalResolution: Monthly 
+      unit: mm/month        
 ---
 <Block>
   <Prose>

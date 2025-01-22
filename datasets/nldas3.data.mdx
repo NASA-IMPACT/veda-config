@@ -17,7 +17,10 @@ taxonomy:
       - Surface Meteorology
       - Drought    
       - Agriculture
-      - Disasters       
+      - Disasters
+infoDescription: |
+  ::markdown
+    NASA is co-developing high-resolution retrospective and real-time data for water resources and agricultural applications.             
 layers:
   - id: nldas3
     stacCol: nldas3
@@ -35,8 +38,8 @@ layers:
         - 200
       nodata: 0
     compare:
-      datasetId: nldas3
-      layerId: nldas3
+      datasetId: nldas2
+      layerId: nldas2
       mapLabel: |
         ::js ({dateFns, datetime, compareDatetime}) => {
           return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
@@ -54,6 +57,10 @@ layers:
         - "#F37C21"
         - "#FCFFA4"
         - "#fc8d59"
+    info:
+      spatialExtent: North and Central America 
+      temporalResolution: Monthly 
+      unit: mm/month          
 ---
 <Block>
   <Prose>
