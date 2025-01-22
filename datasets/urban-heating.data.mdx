@@ -232,8 +232,8 @@ layers:
       - 4
       - 16
     compare:
-      datasetId: svi-socioeconomic
-      layerId: social-vulnerability-index-socioeconomic
+      datasetId: urban-heating
+      layerId: houston-lst-diff
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
             if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
