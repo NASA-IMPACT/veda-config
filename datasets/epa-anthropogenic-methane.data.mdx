@@ -281,8 +281,8 @@ layers:
       minzoom: 0
       maxzoom: 5
     compare:
-      datasetId: svi-overall
-      layerId: social-vulnerability-index-overall
+      datasetId: epa-ch4emission-yeargrid-v2express-manure
+      layerId: manure-management
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
