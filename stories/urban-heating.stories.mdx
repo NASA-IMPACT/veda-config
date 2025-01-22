@@ -12,7 +12,6 @@ pubDate: 2023-02-06
 taxonomy:
   - name: Topics
     values:
-      - Environmental Justice
       - Urban
       - Heat
   - name: Source
@@ -28,18 +27,6 @@ taxonomy:
   </Prose>
 </Block>
 
-<Block type="wide">
-  <Figure>
-    <Image
-      src={new URL('./lst-vs-svi.png', import.meta.url).href}
-      alt='LST vs SVI socioeconomic (Houston)'
-    />
-    <Caption>
-      Comparison of decadally-averaged temperature difference from 2000-2009 and 2010-2019 with socioeconomic vulnerability from 2018. For the temperature plot, reds indicate warming and blues indicate cooling. For socioeconomic vulnerability, greens indicate more vulnerable and whites less vulnerable.
-    </Caption> 
-  </Figure>
-</Block>
-
 <Block> 
   <Prose>
 
@@ -53,14 +40,6 @@ taxonomy:
     In urban areas a variety of individual, social, and geographic factors determine an individual's heat risk (Reckien et al. 2018). Social structures and segregation in urban areas can increase the risk of unequal heat exposure. This discovery will be using NASA Earth observations to explore heat stress inequalities throughout areas of urban growth in Houston, Texas over the past 20 years.
   </Prose>
 </Block>
-
-<Block>
-<Prose>
-  ## Environmental Inequality in Houston, TX
-  Houston is the site of some of the earliest studies of environmental inequality. Robert Bullard, known as the “father of environmental justice,” proved that waste facilities were disproportionately sited in poor and minority neighborhoods as far back as the late 1970s (Bullard 1983). Today, environmental justice  research is still important in Houston, which is among the most racially segregated cities in the United States (Logan et al. 2013). In 2012, Houston was ranked the most economically segregated metropolitan area in the entire country (Fry and Taylor 2012). According to this study, 24% of high-income households live in high-income neighborhoods and 37% of low-income households reside in low-income neighborhoods (Fry and Taylor 2012).
-</Prose>
-</Block>
-
 
 <Block type="full">
   <Figure>
@@ -130,43 +109,6 @@ taxonomy:
   </Figure>
 </Block>
 
-<Block>
-  <Figure>
-    <Chart
-      dataPath={new URL('./harris-lst-svi-2020.csv', import.meta.url).href}
-      dateFormat="%Y-%m-%d"
-      idKey='SVI %'
-      xKey='Date'
-      yKey='LST'
-      yAxisLabel='Kelvin'
-    />
-    <Caption>
-        Land surface Temperature (LST) trend in various socio-economic (Social Vulnerability Index 150% Poverty Threshhold) ranges in Harris County, Texas (2020)
-    </Caption>
-  </Figure>
-  <Prose>
-    ### What It Means For the Socioeconomically Disadvantaged Population
-    When these changes in heat and land cover were combined with Houston's socioeconomic data, it was found that socioeconomically disadvantaged populations are subject to greater heat stress. At the same time, these populations may also face decreased access to greenspaces. In 2020, areas in Harris county with the lowest poverty levels < 5% were an average of  2°F (1°C) cooler than areas with higher poverty levels [F(4, 1584) = 47.3, p < .001].
-  </Prose>
-</Block>
-
-<Block>
-  <Prose>
-    As with temperature, an analysis of 2020 vegetation data showed a significant difference based on levels of poverty [F(4, 27.5) = 4.57, p = .006]. Areas with the lowest poverty levels (< 5%) have approximately 6% more vegetation than areas with the highest poverty levels (>20%). Even small increases or decreases in vegetation can affect how residents experience heat.
-  </Prose>
-  <Figure>
-    <Chart
-      dataPath={new URL('./harris-ndvi-svi-2020.csv', import.meta.url).href}
-      dateFormat="%Y-%m-%d"
-      idKey='SVI %'
-      xKey='Date'
-      yKey='NDVI'
-    />
-    <Caption>
-        Normalized Difference Vegetation Index (NDVI) trend in various socio-economic (Social Vulnerability Index 150% Poverty Threshhold) ranges in Harris County, Texas (2020)
-    </Caption>
-  </Figure>
-</Block>
 
 <Block>
 <Prose>
@@ -180,7 +122,6 @@ taxonomy:
   ### Data Access
   * [NASA Extreme Heat Data - Pathfinders](https://www.earthdata.nasa.gov/learn/pathfinders/disasters/extreme-heat-data-pathfinder) 
 
-  * [Earthdata EJ Data Catalog](https://www.earthdata.nasa.gov/learn/environmental-justice-data-catalog)
   </Prose>
 </Block>
 
@@ -191,8 +132,6 @@ taxonomy:
 
   Fry, R., and P. Taylor, 2012: The Rise of Residential Segregation by Income. Pew Research Center, 25 pp.
   Logan, J. R., C. Fischer, and C. Buchmann, 2013: US2010: Discovery America in a New Century. 1–62. http://www.s4.brown.edu/us2010/Data/data.htm.
-
-  Reckien, D., and Coauthors, 2018: Equity, environmental justice, and urban climate change.
 
 </Prose>
 </Block>
