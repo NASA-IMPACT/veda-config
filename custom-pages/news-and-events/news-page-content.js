@@ -99,17 +99,6 @@ export const NEWS_ITEMS = [
       alt: 'EPA RFI'
     },
     description: 'The U.S. Environmental Protection Agency (EPA) is inviting public comment on the potential for expanded use of advanced and emerging technologies for methane emissions quantification in the Agency’s Greenhouse Gas Reporting Program (GHGRP). Responses to the request for information (RFI) are due by November 27, 2024.'
-  },  
-  {
-    name: 'Submit your proposal to NASA ROSES A.58 due June 10th!',
-    asLink : {
-      url: 'https://nspires.nasaprs.com/external/solicitations/summary.do?solId=%7B0FD29EB7-2725-1A98-66A4-0A2C07F9A1A6%7D'
-    },
-    media: {
-      src: new URL('./media/news/nspires.jpg', import.meta.url).href,
-      alt: 'NASA ROSES A.58'
-    },
-    description: 'Minority Serving Institutions (MSIs) are invited to propose for a ground-based GHG remote sensing instrument (EM27/Sun) to measure CO₂ and CH₄. NASA will provide one instrument and up to five years of funding for installation and operation. Read more at NASA NSPIRES A.58 ROSES call.'
   },
   {
     name: 'US GHG Center announced at COP28',
@@ -121,17 +110,6 @@ export const NEWS_ITEMS = [
       alt: 'Cop 28 Logo'
     },
     description: 'Agency partners released the US GHG Center at the 28th annual United Nations Climate Conference (COP28) on December 4, 2023.'
-  },
-  {
-    name: 'A U.S. national strategy for measuring and monitoring GHG emissions',
-    asLink : {
-      url: 'https://www.whitehouse.gov/omb/briefing-room/2023/11/29/interagency-working-group-releases-national-strategy-enhance-nation-greenhouse-gas-measurement-monitoring-capabilities/'
-    },
-    media: {
-      src: new URL('./media/news/US_GHG_MMIS_report_cover_screenshot.png', import.meta.url).href,
-      alt: 'NASA logo'
-    },
-    description: 'On November 29, 2023, the White House released the National Strategy to Advance an Integrated U.S. Greenhouse Gas Measurement, Monitoring, and Information System to Advance an Integrated U.S. Greenhouse Gas Measurement, Monitoring, and Information System. This report outlines how federal agencies will collaborate to lead the federal government’s efforts to assess and reduce GHG emissions.'
   },
   {
     name: 'The US GHG Center at the 2023 AGU Fall Meeting',
