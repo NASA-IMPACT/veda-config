@@ -7,18 +7,18 @@ export default [
     imageAlt: 'Earth shown with purple gas indicating atmospheric methane.'
   },
   {
-
-    link: 'https://appliedsciences.nasa.gov/get-involved/training/english/arset-methane-observations-large-emission-event-detection-and',
-    title: 'New Training on Methane Observations',
-    description: "View training and materials from ARSET, NASA’s remote sensing training program, for large emission event detection and monitoring.",
-    image: new URL('../../media/Methane_Website_Header.png', import.meta.url).href,
-    imageAlt: 'Register: Stakeholder Engagement Forum.'
-  },
-  {
     link: '/stories/nist-methane-intercomparisons',
     title: 'NIST Developing Standards for Methane Plume Data',
     description: 'Read about NIST efforts to develop consensus standards for growing volume of public and private methane plume satellite data.',
     image: new URL('../../../stories/methane/media/NIST_Methane_Intercomparisons_card.png', import.meta.url).href,
     imageAlt: 'Construction worker overlooking an industrial refinery at dusk, with interconnected glowing lines and nodes overlaid in the sky.'
+  },
+  {
+
+    link: '/stories/modeling-natural-methane-emissions',
+    title: 'Uncovering Drivers of Natural Methane Emissions',
+    description: "Read about how researchers are using advanced technology and models to deepen understanding of the role of natural sources and sinks in global atmospheric concentrations of methane.",
+    image: new URL('../../../stories/methane/media/Wetlands_image_v2_rs.png', import.meta.url).href,
+    imageAlt: 'View of wetland and brush/forest area from above.'
   },
 ]
