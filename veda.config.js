@@ -149,13 +149,13 @@ module.exports = {
       },
       acceptButton: {
         default: { backgroundColor: '#082a64', textColor: 'white' },
-        hover: { backgroundColor: '#2c3e50', textColor: '#white' }
+        hover: { backgroundColor: '#061A3A', textColor: '#white' }
       },
       declineButton: {
         default: { borderColor: '#082a64', textColor: '#082a64' },
-        hover: { borderColor: '#2c3e50', textColor: '#2c3e50' }
+        hover: { borderColor: '#061A3A', textColor: '#2c3e50' }
       },
-      iconColor: { default: 'White', hover: '#082a64' }
+      iconColor: { default: '#082a64', hover: '#061A3A' }
     }
   },
   banner: {
