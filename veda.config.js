@@ -32,20 +32,6 @@ let subNavItems = [
   },
 ]
 
-const defaultGuidance = {
-  left: {
-    title: 'Official websites use .gov',
-    text: 'A **.gov** website belongs to an official government organization in the United States.',
-    iconAlt: 'Dot gov icon',
-    icon: '/ghgcenter/img/icon-dot-gov.svg'
-  },
-  right: {
-    title: 'Secure .gov websites use HTTPS',
-    text: "A **lock icon** or **https://** means you've safely connected to the .gov website. Share sensitive information only on official, secure websites.",
-    iconAlt: 'HTTPS icon',
-    icon: '/ghgcenter/img/icon-https.svg'
-  }
-};
 
 if (config.GOOGLE_FORM) {
   subNavItems = [
