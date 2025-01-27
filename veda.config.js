@@ -158,16 +158,4 @@ module.exports = {
       iconColor: { default: '#082a64', hover: '#061A3A' }
     }
   },
-  banner: {
-    headerText: 'An official website of the United States government',
-    headerActionText: "Here's how you know",
-    ariaLabel: 'Banner for official government website',
-    flagImgSrc: '/ghgcenter/img/us_flag_small.png',
-    flagImgAlt: 'US flag',
-    leftGuidance: defaultGuidance.left,
-    rightGuidance: defaultGuidance.right,
-    className: '',
-    defaultIsOpen: false,
-    contentId: 'gov-banner-content'
-  },
 };
