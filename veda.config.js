@@ -32,13 +32,28 @@ let subNavItems = [
   },
 ]
 
+const defaultGuidance = {
+  left: {
+    title: 'Official websites use .gov',
+    text: 'A **.gov** website belongs to an official government organization in the United States.',
+    iconAlt: 'Dot gov icon',
+    icon: '/img/icon-dot-gov.svg'
+  },
+  right: {
+    title: 'Secure .gov websites use HTTPS',
+    text: "A **lock icon** or **https://** means you've safely connected to the .gov website. Share sensitive information only on official, secure websites.",
+    iconAlt: 'HTTPS icon',
+    icon: '/img/icon-https.svg'
+  }
+};
+
 if (config.GOOGLE_FORM) {
   subNavItems = [
     ...subNavItems,
     {
       title: 'Contact us',
       src: config.GOOGLE_FORM,
-      type: 'action'
+      type: 'modal'
     }
   ];
 }
@@ -142,5 +157,17 @@ module.exports = {
       },
       iconColor: { default: 'White', hover: '#082a64' }
     }
+  },
+  banner: {
+    headerText: 'An official website of the United States government',
+    headerActionText: "Here's how you know",
+    ariaLabel: 'Banner for official government website',
+    flagImgSrc: '/img/us_flag_small.png',
+    flagImgAlt: 'US flag',
+    leftGuidance: defaultGuidance.left,
+    rightGuidance: defaultGuidance.right,
+    className: '',
+    defaultIsOpen: false,
+    contentId: 'gov-banner-content'
   },
 };
