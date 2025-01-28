@@ -124,24 +124,4 @@ module.exports = {
     mainNavItems: defaultMenuLinks,
     subNavItems: subNavItems
   },
-  cookieConsentForm: {
-    title: 'Cookie Consent',
-    copy: 'We use cookies to enhance your browsing experience and to help us understand how our website is used. These cookies allow us to collect data on site usage and improve our services based on your interactions. To learn more about it, see our [Privacy Policy](https://www.nasa.gov/privacy/#cookies).',
-    theme: {
-      card: {
-        sideBarColor: '#082a64',
-        textColor: '#1B2631',
-        linkColor: '#1565ef'
-      },
-      acceptButton: {
-        default: { backgroundColor: '#082a64', textColor: 'white' },
-        hover: { backgroundColor: '#061A3A', textColor: '#white' }
-      },
-      declineButton: {
-        default: { borderColor: '#082a64', textColor: '#082a64' },
-        hover: { borderColor: '#061A3A', textColor: '#2c3e50' }
-      },
-      iconColor: { default: '#082a64', hover: '#061A3A' }
-    }
-  },
 };
