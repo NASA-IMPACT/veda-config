@@ -32,6 +32,7 @@ let subNavItems = [
   },
 ]
 
+
 if (config.GOOGLE_FORM) {
   subNavItems = [
     ...subNavItems,
@@ -122,5 +123,5 @@ module.exports = {
   navItems: {
     mainNavItems: defaultMenuLinks,
     subNavItems: subNavItems
-  }
+  },
 };
