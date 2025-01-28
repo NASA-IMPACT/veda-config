@@ -131,7 +131,7 @@ module.exports = {
       card: {
         sideBarColor: '#082a64',
         textColor: '#1B2631',
-        linkColor: '#175074'
+        linkColor: '#1565ef'
       },
       acceptButton: {
         default: { backgroundColor: '#082a64', textColor: 'white' },
