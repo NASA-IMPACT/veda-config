@@ -1,0 +1,710 @@
+---
+id: 'derecho-impacts'
+name: Derechos and Their Impact on Rural America
+description: An analysis of the May 12, 2022 Derecho’s Impact on Agriculture and Rural Communities
+media:
+  src: ::file ./derecho-background.jpg
+  alt: Intense derecho thunderstorm as it sweeps across farmland on September 23, 2018
+  author: 
+    name: Jim Reed
+    url: https://fineartamerica.com/featured/4-derecho-thunderstorm-jim-reed-photographyscience-photo-library.html
+pubDate: 2024-12-31
+taxonomy:
+  - name: Topics
+    values:
+      - Natural Disasters
+      - Air Quality
+      - Agriculture
+  - name: Source
+    values:
+      - Community Contributed
+---
+<style>{`
+  .data-table {
+    display: flex;
+    gap: 2rem;
+    justify-content: center; /* Center the table */
+    margin: 0 auto; /* Center the table */
+  }
+  .data-table thead th,
+  .data-table tbody td {
+    text-align: center;
+    white-space: nowrap;
+    padding: 0 1rem; /* Add horizontal padding */
+  }
+  .data-table thead th {
+    font-size: 1.2rem; /* Increase the font size of the title row */
+  }
+  .injur {
+    background:rgba(246, 110, 31, 0.51); /* Injuries */
+  }
+  .death {
+    background:rgba(196, 31, 246, 0.49); /* Deaths */
+  }
+  .prop {
+    background:rgba(126, 59, 0, 0.53); /* Property Damage */ 
+  }
+  .crop {
+    background:rgba(247, 250, 63, 0.49); /* Crop Damage */  
+  }
+  .hail {
+    background:rgba(108, 142, 104, 0.49); /* Hail Reports */  
+  }
+  .wind {
+    background:rgba(62, 117, 183, 0.5); /* Wind Reports */  
+  }
+  .tornado {
+    background:rgba(255, 0, 0, 0.45); /* Tornado Reports */  
+  }
+  .bold-row {
+    font-weight: bold; /* Bold the row */
+  }
+  @media only screen and (max-width: 544px) {
+    .data-table {
+      flex-flow: column;
+    }
+  }
+`}</style>
+
+
+<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
+  <Prose>
+    **Authors:** Madison Wallner<sup>[1]</sup>\, Andrew Blackford<sup>[1]</sup>\, Udaysankar Nair<sup>[1]</sup>
+   
+    <sup>[1]</sup> The University of Alabama in Huntsville (UAH)
+
+    <mark>🚧 This Data Story presents work in progress and not peer-reviewed results! 🚧</mark>
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    ## Overview
+    The morning of May 12, 2022, began quietly across the Midwest, but by midday, the skies darkened as a powerful serial derecho brought hurricane-force winds exceeding 100 mph across Nebraska, North Dakota, South Dakota, Iowa, and Minnesota. With 68 reports of wind gusts over 75 mph, this weather event proved to be destructive as it impacted the Northern Plains region. These states are deeply rooted in agriculture, where farming is a good portion of their economies, serving as a source of employment in farming, processing, and distribution, and producing key crops like corn and soybeans (figure 1). Therefore, severe weather events like derechos pose a significant threat to these livelihoods, causing crop destruction, soil erosion, and damage to critical infrastructure such as grain silos and irrigation systems. When farms are impacted, the ripple effects extend beyond these small communities, disrupting local economies, and food supply chains.
+  </Prose>
+
+  <Figure>
+    <Image
+      src={new URL('./derecho_food_percent.png', import.meta.url).href}
+      alt='Percentage of state population involved in the agricultural industry'
+    />
+    <Caption>
+    Figure 1. Direct food and agricultural jobs as a percent of each state's population reported by the [American Farm Bureau Federation](https://www.fb.org/market-intel/feeding-the-economy-agricultural-jobs-by-state#:~:text=In%20many%20states%2C%20primarily%20in,tied%20to%20agriculture%20is%20lower.). The total includes direct jobs in agriculture, manufacturing, wholesale and retail.
+    </Caption>
+  </Figure> 
+</Block>
+
+<Block>
+  <Prose>
+    This storm laid bare the vulnerabilities of rural America, as this was an unusually intense and damaging weather event due to its strong wind speeds, large-scale impact over 600 miles long, and associated severe weather phenomena such as tornadoes, hail and heavy rainfall. The storm’s rapid speed, traveling at 50 mph, left little time for preparation, overwhelming emergency response systems. This intensity, paired with its extensive land coverage, led to widespread destruction of infrastructure and agricultural losses.
+  </Prose>
+</Block>
+
+<Block>
+  <Figure>
+     <video style={{ width: '100%', aspectRatio: "16/9" }} controls>
+      <source
+        src={new URL('./derecho_GOES_satellite.mp4', import.meta.url).href} type="video/mp4"
+      />
+      Your browser does not support the video tag.
+    </video>
+    <Caption>
+     Visual of the abundant lightning within the derecho as it races across Nebraska into South Dakota, demonstrating the storm's intensity. (Source: [CSU/CIRA](https://satlib.cira.colostate.edu/event/northern-plains-derecho/))
+    </Caption>
+  </Figure>
+</Block>
+
+<Block>
+  <Prose>
+  ## Datatsets Utilized
+  In this story, impacts can be seen in analyzing several datasets that capture its physical, economic, and societal consequences. [GOES Satellite](https://www.noaasis.noaa.gov/GOES/goes_overview.html) and [NEXRAD](https://www.ncei.noaa.gov/products/radar/next-generation-weather-radar) radar imagery illustrate the derecho’s bow-shaped structure that produces damaging straight line winds and overshooting cloud tops that demonstrate the updrafts capable of intense convection occurring in the atmosphere. Similarly, [NWS storm reports](https://www.ncdc.noaa.gov/stormevents/faq.jsp) detail tornadoes, hail, and wind gusts that added to the damage. [Harmonized Landsat and Sentinel-2](https://hls.gsfc.nasa.gov/) data highlight the extensive damage to farmland and vegetation, coupled with [USDA crop price](https://www.nass.usda.gov/Charts_and_Maps/Agricultural_Prices/index.php) data to identify if prices increased due to crop destruction and [IMERG](https://gpm.nasa.gov/data/imerg) precipitation data quantifying the heavy rainfall that contributed to soil erosion and flooding. [Black Marble Night Lights](https://blackmarble.gsfc.nasa.gov/) data show widespread power outages, particularly in rural areas that may cause recovery slowdowns. Lastly, [MERRA-2](https://gmao.gsfc.nasa.gov/reanalysis/merra-2/) data track dust and aerosols transported by the storm, illustrating degraded air quality that exacerbates respiratory health issues that individuals have. Together, these datasets provide a comprehensive view of the storm's far-reaching impacts on the Northern Plains.
+  </Prose>
+</Block>
+
+<Block>
+  <Figure>
+    <Image
+      src={new URL('./derecho-serial-pro.jpg', import.meta.url).href}
+      alt='How serial vs progressive derechos form.'
+    />
+    <Caption>
+    Figure 2. Weather patterns favorable for progressive and serial derechos. Progressive derechos form in hot, moist areas with strong winds and are harder to predict due to subtle triggers. Serial derechos form along a longer line of storms in large-scale systems, making them easier to forecast. (Source: [NWS LMK](https://www.weather.gov/lmk/derecho#:~:text=Therefore%2C%20a%20progressive%20derecho%20can,system%20that%20typically%20creates%20them.))
+    </Caption>
+  </Figure> 
+
+  <Prose>
+    ## What is a Derecho?
+    Derechos are a type of severe windstorm caused by thunderstorms that move quickly in a straight line over a wide area. Unlike tornadoes, which have rotating winds, derechos produce widespread, powerful straight-line winds that can extend for hundreds of miles. The May 12, 2022, event was a serial derecho, a particularly intense storm that occurs when multiple clusters of thunderstorms form along a cold front, creating a prolonged impact on the same region (figure 2). This is especially destructive because it produces multiple rounds of high winds over an extended area, weakening structures with each storm that moves through.
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    The atmospheric setup created the perfect conditions for the destructive derecho. A significant heatwave gripped the region, with temperatures in Sioux Falls, South Dakota, reaching an unseasonable 94°F, fueling instability for storms to form. Coupled with high moisture levels, a robust low-pressure system over the Plains, and a powerful jet stream enhancing wind shear, thunderstorms intensified and organized into a massive “bow-shaped” complex. The combination described provided all the necessary ingredients for the storm's rapid development and widespread destruction on farmland and infrastructure.
+  </Prose>
+  
+  <Figure>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/0SNRwR23jqE?si=vrA-IyLgG9hnClpb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <figcaption>Regional-scale MRMS radar reflectivity with the corresponding time frame that the derecho impacted each state. Courtesy of the National Weather Service in [Aberdeen, SD](https://www.youtube.com/watch?v=0SNRwR23jqE).</figcaption>
+  </Figure>
+</Block>
+
+<Block>
+  <Prose>
+    ## Broader Severe Weather Impacts
+   Not only was this derecho damaging in itself, but it was accompanied by a series of secondary severe weather events, including tornadoes and hail. South Dakota experienced 14 tornadoes, with an EF2 near Gary causing significant structural damage. Hailstones as large as golf balls battered vehicles and homes, while flash flooding overwhelmed drainage systems in urban areas. Information from the Storm Prediction Center (SPC) details the secondary events by state, underscoring the derecho’s role in compounding weather disasters. For residents and emergency responders, these additional challenges strained resources and delayed recovery efforts.
+  </Prose>
+</Block>
+
+<ScrollytellingBlock>
+  <Chapter
+    center={[-97.2603, 42.6222]}
+    zoom={12}
+    datasetId='darnah-flood'
+    layerId='darnah-gpm-daily'
+    datetime='2023-09-12'
+  >
+   ## Nebraska
+    
+   By 2:50 pm on Thursday May 12th, 2022, The derecho initiated in southern Nebraska where severe thunderstorms rapidly developed and organized into a fast-moving line of storms. As the system moved northeast, it intensified dramatically, producing widespread straight-line winds between 60 and 80 mph, with localized gusts reaching up to 100 mph near Hartington.
+  <Figure>
+    <Image
+      src={new URL('./derecho-photo1.jpg', import.meta.url).href}
+      alt='NWS Hastings photo of cell tower damage.'
+    />
+    <Caption>
+    The 300 ft 911 cell tower that was blown over by 115 mph derecho winds in Hartington, Nebraska. Courtesy of [NWS Hastings](https://services.dat.noaa.gov/arcgis/rest/services/nws_damageassessmenttoolkit/DamageViewer/FeatureServer/0/3082171/attachments/1890882).
+    </Caption>
+  </Figure>
+  <Figure>
+    <Image
+      src={new URL('./derecho-photo2.jpg', import.meta.url).href}
+      alt='NWS Hastings photo of cell tower foundational damage.'
+    />
+    <Caption>
+    Exposed wires and bent metal from where the 911 tower was separated from its foundation, highlighting the extreme wind gusts experienced. Courtesy of [NWS Hastings](https://services.dat.noaa.gov/arcgis/rest/services/nws_damageassessmenttoolkit/DamageViewer/FeatureServer/0/3082171/attachments/1890879).
+    </Caption>
+  </Figure> 
+  </Chapter>
+  
+  <Chapter
+    center={[-97.2603, 42.6222]}
+    zoom={12}
+    datasetId='darnah-flood'
+    layerId='darnah-gpm-daily'
+    datetime='2023-09-12'
+  >
+   Not only did the extreme winds cause extensive damage to infrastructure, the storm carried immense amounts of dust, forming an intense dust storm called a haboob. This was specifically bad, due to the drought experienced in the region that caused top soils to easily blow off farm fields. This caused reduced visibility to near zero in many rural areas, creating both a travel hazard for many motorists caught on the roadways while destroying the farmland in the central and eastern parts of the state. 
+  <Figure>
+    <Image
+      src={new URL('./derecho-photo3.jpg', import.meta.url).href}
+      alt='Kyle Coners photo of the Haboob'
+    />
+    <Caption>
+    The leading edge of the dust storm, called a haboob, as it entered southeastern South Dakota and northwestern Iowa from northeastern Nebraska. courtesy of [Kyle Coners](https://www.weather.gov/abr/StormsummaryMay122022).
+    </Caption>
+  </Figure> 
+  </Chapter>
+
+  <Chapter
+    center={[-96.7123, 43.8250]}
+    zoom={12}
+    datasetId='darnah-flood'
+    layerId='darnah-gpm-daily'
+    datetime='2023-09-12'
+  >
+   ## South Dakota
+    
+   As the derecho advanced into South Dakota around 4:10 pm, it maintained its strength and continued to be destructive on the surrounding cities. Winds of 80–107 mph were recorded, causing extensive damage to neighboring cities such as Tripp and Dell Rapids, South Dakota. Farmers who rely on these silos to store harvested crops were left facing massive economic losses, as the storm compromised their ability to store grain for future distribution and sale. In some cases, entire storage facilities were rendered inoperable, forcing producers to seek emergency storage solutions or risk spoilage of their remaining harvest.
+  <Figure>
+    <Image
+      src={new URL('./derecho-photo4.jpg', import.meta.url).href}
+      alt='Jeff LeBrun photo of destroyed grain silos.'
+    />
+    <Caption>
+    Grain silos left dented and inoperable in Dell Rapids, South Dakota as a direct result of powerful straight-line winds. Courtesy of [Jeff LeBrun](https://www.weather.gov/fsd/20220512-wind-mayderecho)
+    </Caption>
+  </Figure> 
+  <Figure>
+    <Image
+      src={new URL('./derecho-photo5.jpg', import.meta.url).href}
+      alt='Brent Woods photo of destroyed grain silos.'
+    />
+    <Caption>
+    More grain silos left destroyed in the wake of the derecho’s path, with surrounding debris also causing direct damage impacts to the facilities. Courtesy of [Brent Woods](https://www.weather.gov/fsd/20220512-wind-mayderecho)
+    </Caption>
+  </Figure> 
+  </Chapter>
+
+  <Chapter
+    center={[-97.0287, 44.7236]}
+    zoom={12}
+    datasetId='darnah-flood'
+    layerId='darnah-gpm-daily'
+    datetime='2023-09-12'
+  >
+   Castlewood, South Dakota in particular experienced an EF2 tornado that destroyed homes, barns, and grain bins along with the intense straight line winds. The town experienced widespread power outages and structural collapse. The National Weather Service in Aberdeen documented extensive damage, with debris scattered across agricultural fields, posing significant challenges for farmers. 
+  <Figure>
+    <Image
+      src={new URL('./derecho-photo6.jpg', import.meta.url).href}
+      alt='Troy Johnson photo of Castlewood Tornado.'
+    />
+    <Caption>
+    An EF2 tornado, with wind speeds up to 120 mph passing through the town of Castlewood, SD. Courtesy of [Troy Johnson](https://www.weather.gov/abr/StormsummaryMay122022)
+    </Caption>
+  </Figure>    
+  <Figure>
+    <Image
+      src={new URL('./derecho-photo7.jpg', import.meta.url).href}
+      alt='Bailey and Jayce Zubke photo of Castlewood Tornado Damage.'
+    />
+    <Caption>
+    Massive snapped trees and damage to exterior of houses from the tornado in Castlewood, SD. Courtesy of [Bailey and Jayce Zubke](https://www.weather.gov/abr/StormsummaryMay122022)
+    </Caption>
+  </Figure> 
+  <Figure>
+    <Image
+      src={new URL('./derecho-photo8.png', import.meta.url).href}
+      alt='Kendall Nielsen photo of Castlewood Tornado Damage.'
+    />
+    <Caption>
+    Tornado damage at a local warehouse in Castlewood, South Dakota that left the building without a roof. Courtesy of [Kendall Nielsen](https://www.weather.gov/abr/StormsummaryMay122022)
+    </Caption>
+  </Figure>
+  </Chapter>
+
+  <Chapter
+    center={[-96.2967, 43.2022]}
+    zoom={12}
+    datasetId='darnah-flood'
+    layerId='darnah-gpm-daily'
+    datetime='2023-09-12'
+  >
+   ## Iowa
+
+   Due to the large-scale of this severe storm, the derecho spanned into northwestern Iowa by 5:30 pm while it still ravaged South Dakota at the same time. Although there was only one brief tornado reported in the area with minimal damage, a similar situation like Nebraska manifested as an intense dust storm also reduced visibility across major highways and agricultural zones. Wind gusts of 70-90 mph were reported, leading to toppled power lines and substantial damage to farm structures, impacting both crops and livestock facilities.
+  <Figure>
+    <Image
+      src={new URL('./derecho-photo9.jpg', import.meta.url).href}
+      alt='Kyle Post photo of damaged Iowa Hog Confinement.'
+    />
+    <Caption>
+    In Rock Valley, IA, winds that gusted to nearly 90 miles per hour blew the roof off of a hog confinement.  Courtesy of [Kyle Post](https://www.weather.gov/fsd/20220512-wind-mayderecho)
+    </Caption>
+  </Figure>   
+  <Figure>
+    <Image
+      src={new URL('./derecho-photo10.jpg', import.meta.url).href}
+      alt='Ryan Reiser photo of derecho dust storm in Iowa.'
+    />
+    <Caption>
+    View of storm as it intensified into a haboob, a type of intense dust storm carried by the wind of a weather front. Courtesy of [Ryan Reiser](https://www.weather.gov/fsd/20220512-wind-mayderecho)
+    </Caption>
+  </Figure>    
+  </Chapter>
+
+  <Chapter
+    center={[-95.9866, 44.8525]}
+    zoom={9}
+    datasetId='darnah-flood'
+    layerId='darnah-gpm-daily'
+    datetime='2023-09-12'
+  >
+   ## Minnesota
+
+   Upon entering Minnesota at 6:10 pm, the storm moved across the state with remarkable speed, leaving a swath of damage in its wake. This brought about more extreme winds, large hail, and multiple tornadoes. The strongest wind gusts, reaching 94 mph, were recorded in Madison, Minnesota. Farmers reported significant crop losses due to wind-driven hail and excessive rainfall in some areas. According to the National Weather Service in Twin Cities, several farm buildings were destroyed, and widespread debris littered the countryside, impacting livestock and agricultural operations.
+  <Figure>
+    <Image
+      src={new URL('./derecho-photo11.jpg', import.meta.url).href}
+      alt='NWS Twin Cities photo of damaged grain silos'
+    />
+    <Caption>
+    Grain silos left dented and toppled over from straight-line winds in Bellingham, Minnesota. Courtesy of the [Twin Cities NWS](https://www.weather.gov/mpx/May12th2022DerechoSummary)
+    </Caption>
+  </Figure>   
+  <Figure>
+    <Image
+      src={new URL('./derecho-photo12.jpg', import.meta.url).href}
+      alt='Chase Thompson photo of a damaged barn'
+    />
+    <Caption>
+    A farm is brought down to its foundations, destroying all supplies and equipment that it stored in Cottonwood, MN. Courtesy of [Chase Thompson](https://www.weather.gov/fsd/20220512-wind-mayderecho)
+    </Caption>
+  </Figure>   
+  </Chapter>
+
+  <Chapter
+    center={[-95.7822, 45.4491]}
+    zoom={9}
+    datasetId='darnah-flood'
+    layerId='darnah-gpm-daily'
+    datetime='2023-09-12'
+  >
+   Tornadoes associated with the system struck rural areas, damaging homes, uprooting trees, and devastating farmland. The National Weather Service confirmed at least 18 tornadoes in Minnesota during this event, marking one of the most significant single-day tornado outbreaks in the state's recent history. One notable tornado touched down near Alexandria, causing significant damage to homes and uprooting numerous trees. Another tornado near Madison led to the partial removal of roofs from buildings and extensive tree damage.
+  <Figure>
+    <Image
+      src={new URL('./derecho-photo13.jpg', import.meta.url).href}
+      alt='NWS Twin Cities photo of toppled stadium light pole'
+    />
+    <Caption>
+    An electrical tower that was bent at its base and toppled over due to tornadic winds in Alexandria, Minnesota. Courtesy of the [Twin Cities NWS](https://www.weather.gov/mpx/May12th2022DerechoSummary)
+    </Caption>
+  </Figure>   
+  <Figure>
+    <Image
+      src={new URL('./derecho-photo14.jpg', import.meta.url).href}
+      alt='NWS Twin Cities photo of tornado damaged house'
+    />
+    <Caption>
+    Tornado damage left this house in Alexandria, Minnesota without its side walls and roof. Courtesy of the [Twin Cities NWS](https://www.weather.gov/mpx/May12th2022DerechoSummary)
+    </Caption>
+  </Figure>   
+  <Figure>
+    <Image
+      src={new URL('./derecho-photo15.jpg', import.meta.url).href}
+      alt='NWS Twin Cities photo of second tornado damaged house'
+    />
+    <Caption>
+    Tornado damage can be seen to infrastructure in residential areas in Madison, Minnesota. Courtesy of the [Twin Cities NWS](https://www.weather.gov/mpx/May12th2022DerechoSummary)
+    </Caption>
+  </Figure>  
+  </Chapter>
+  
+  <Chapter
+    center={[-96.6053, 46.2641]}
+    zoom={11}
+    datasetId='darnah-flood'
+    layerId='darnah-gpm-daily'
+    datetime='2023-09-12'
+  >
+   ## North Dakota
+  
+   Although North Dakota was on the northern edge of the derecho's path, the state still experienced strong wind gusts exceeding 75 mph, along with isolated reports of tornadoes and hail by 7:10 pm. The derecho's high winds caused damage to power infrastructure and buildings, with some rural areas reporting crop losses due to wind-driven erosion and extensive flooding. The Grand Forks National Weather Service recorded numerous reports of tree damage and structural impacts in the Red River Valley area. 
+  <Figure>
+    <Image
+      src={new URL('./derecho-photo17.jpg', import.meta.url).href}
+      alt='Reba Kompaa photo of destroyed shed'
+    />
+    <Caption>
+    A destroyed shed near Wahpeton, North Dakota that toppled into the roadways from powerful winds. Courtesy of [Reba Kompaa](https://www.weather.gov/fgf/May12th2022SignificantSevereDerechoEvent)
+    </Caption>
+  </Figure> 
+  <Figure>
+    <Image
+      src={new URL('./derecho-photo18.jpg', import.meta.url).href}
+      alt='Reba Kompaa photo of destroyed turkey farm'
+    />
+    <Caption>
+    Roofing missing on Turkey Barns located by Whapeton, North Dakota from excessive wind speeds and hail. Courtesy of [Reba Kompaa](https://www.weather.gov/fgf/May12th2022SignificantSevereDerechoEvent)
+    </Caption>
+  </Figure> 
+  </Chapter>
+
+  <Chapter
+    center={[-97.5333, 48.3833]}
+    zoom={12}
+    datasetId='darnah-flood'
+    layerId='darnah-gpm-daily'
+    datetime='2023-09-12'
+  >
+   Farmers in affected regions faced soil erosion and flooding, creating planting delays as a result of the storm's aftermath.
+  <Figure>
+    <Image
+      src={new URL('./derecho-photo16.jpg', import.meta.url).href}
+      alt='Megan Wanek photo of flooding and snapped trees'
+    />
+    <Caption>
+    Trees uprooted and slight flooding in Farmington, North Dakota as a result of tornadic winds. Courtesy of [Megan Wanek](https://www.weather.gov/fgf/May12th2022SignificantSevereDerechoEvent)
+    </Caption>
+  </Figure> 
+  </Chapter>
+</ScrollytellingBlock>
+
+<Block>
+  <Prose>
+    ## Immediate Impacts on Agriculture
+    The agricultural sector was the most devastated by this storm. Fields of corn and soybeans, critical to the region’s economy, were flattened within minutes. High-resolution satellite imagery from the Harmonized Landsat Sentinel-2 (HLS) project revealed stark before-and-after images of impacted farmland, showing extensive crop loss across thousands of acres. 
+  </Prose>
+</Block>
+
+<Block>
+  <Figure>
+    <Map
+      datasetId='hls-ndvi-ian'
+      layerId='hls-ndvi'
+      dateTime='2022-09-05'
+      zoom={10}
+      center={[-82.1476,26.5101]}
+      compareDateTime='2022-09-30'
+    />
+    <Caption
+      attrAuthor='Harmonized Landsat and Sentinel-2'
+      attrUrl='https://hls.gsfc.nasa.gov/'
+    >
+    Placeholder, add in my own data here.
+    </Caption>
+  </Figure>
+</Block>
+
+<Block>
+  <Prose>
+    For farmers, the derecho meant not only immediate financial loss but also long-term challenges, as topsoil erosion caused by high winds further reduced the land’s productivity for future crops. Reports from the United States Department of Agriculture (USDA) detailed significant disruptions to planting and harvest cycles, while the market data provided show a sharp spike in the prices of corn and soybeans. The month of June 2022 demonstrated the immediate impacts just two weeks following the event with its highest prices for these crops, with corn at $7.38 U.S. dollars per bushel and soybeans at $16.40. These fluctuations reflected concerns over reduced supply, directly tied to the damage inflicted on key agricultural states.
+  </Prose>
+</Block>
+
+<Block>
+  <Figure>
+    <Chart
+      dataPath={new URL('./derecho_Crop_Price.csv', import.meta.url).href}
+      dateFormat="%m/%Y"
+      idKey='Crop'
+      xKey='Date'
+      yKey='Price'
+      yAxisLabel='Price (U.S. Dollars Per Bushel)'
+      highlightStart = '05/2022'
+      highlightEnd = '06/2022'
+      highlightLabel = 'Derecho'
+    />
+    <Caption>
+    The monthly price of Corn and Soybeans reported by the USDA before and after the May 12th, 2022 derecho impacted farmland and growing crops.
+    </Caption>
+  </Figure>
+</Block>
+
+<Block>
+  <Figure>
+    <Map
+      datasetId='houston-aod'
+      layerId='houston-aod'
+      dateTime='2000-01-01'
+      compareDateTime='2010-01-01'
+      compareLabel='2000-2009 mean / 2010-2019 mean'
+      center={[-95.35, 29.8]}
+      zoom={8.75}
+    />
+    <Caption>
+      Placeholder, add in my own data here.
+    </Caption>
+  </Figure>
+
+  <Prose>
+    ## Aerosol and Dust Transport
+    The derecho’s intense winds lifted substantial amounts of dust, particulate matter (PM), and debris into the atmosphere which led to hazardous air conditions across the region. MERRA imagery captured an increase in aerosols seen after the event, which traveled hundreds of miles, significantly degrading air quality far beyond the storm’s path. 
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    Research shows that fine particulate matter (PM2.5) generated during such events can exacerbate health conditions like asthma, bronchitis, and cardiovascular diseases. This is directly linked to the fact that hospitals across South Dakota and Iowa reported an increase in respiratory-related hospital visits, particularly among vulnerable populations such as children, the elderly, and those with preexisting health conditions. Studies have linked these airborne particulates to increased inflammation and oxidative stress in the respiratory system, further amplifying health risks for affected communities. The derecho’s environmental and health impacts highlight the far-reaching consequences of severe weather events on public health and air quality.
+  </Prose>
+
+  <Figure>
+    <Image
+      src={new URL('./derecho-health.png', import.meta.url).href}
+      alt='Health impacts of aerosols and debris from derechos'
+    />
+    <Caption>
+    Figure 3. The percent contribution of aerosols to various health impacts. Cardiovascular diseases account for the highest proportion (40%), followed by respiratory diseases (30%), lung cancer (15%), strokes (10%), and other associated health impacts (5%). Courtesy of [Contini et al.](https://www.mdpi.com/2073-4433/12/6/730)
+    </Caption>
+  </Figure> 
+</Block>
+
+<Block>
+  <Prose>
+    ## Community Consequences
+   Beyond the fields, the derecho wreaked havoc on rural infrastructure and communities. Nightlight data from NASA revealed the extent of power outages, with entire counties plunged into darkness for days. For residents reliant on electricity for irrigation, food storage, and daily life, these outages amplified the disaster’s impacts. Data from PowerOutage.us showed over 1 million customers lost power across the affected states, with some outages lasting more than a week. The disruption to electricity worsened economic losses, as grain silos requiring power for ventilation and storage were rendered inoperable, even if it wasn’t directly damaged by the wind gusts.
+  
+   Economically, the storm caused ripple effects. Damage to grain storage facilities not only affected individual farmers but also had overflowing effects on local markets, leading to increased prices for consumers. Stories of resilience emerged as neighbors worked together to clear roads and restore power, but the recovery underscored the challenges rural communities face in rebuilding after such disasters.
+
+   *<mark> Large power outage file, still going through the data. Image will be added afterwards </mark>
+  </Prose>
+
+  <Figure>
+    <Map
+      datasetId='greenville-nightlights-tornadoes-2024'
+      layerId='greenville-nightlights-tornadoes-2024'
+     dateTime='2024-05-07'
+      zoom={11}
+     center={[-84.621, 40.107]}
+      compareDateTime='2024-05-08'
+    />
+    <Caption
+      attrAuthor='NASA'
+      attrUrl='https://nasa.gov/'
+    >
+      Placeholder, add in my own data here.
+    </Caption>
+  </Figure>
+</Block>
+
+<Block>
+  <Prose>
+    ## Emergency Results and Recovery
+   This particular storm system highlighted both the strengths and weaknesses of current emergency response systems. While early warning systems provided some residents with time to prepare, the rapid speed and intensity of the derecho left many caught off guard. Emergency responders faced challenges accessing damaged areas due to blocked roads and power outages, delaying relief efforts.
+  
+   Improving community resilience against such events involves enhancing early-warning communication systems and reinforcing infrastructure. In rural areas, investing in more robust power grids and shelters can help mitigate the effects of future derechos. Education and preparedness campaigns are also crucial in ensuring that residents understand the risks associated with derechos and know how to respond accordingly. Aid programs from state and federal agencies offered some relief to farmers, but rebuilding remained a large and daunting task. Many residents called for increased investment in resilient infrastructure to alleviate the impacts of future extreme weather events.
+  </Prose>
+
+  <Figure>
+    <CompareImage 
+      leftImageSrc={new URL('./Derecho-SOE-counties.jpg', import.meta.url).href}
+      leftImageAlt='State of Emergency Declared Counties May 12, 2022'
+      leftImageLabel='State of Emergency Counties May 12, 2022'
+      rightImageSrc={new URL('./Derecho-storm-reports.jpg', import.meta.url).href}
+      rightImageAlt='Filtered SPC Storm Reports May 12, 2022'
+      rightImageLabel='SPC Storm Reports May 12, 2022'
+    />
+    <Caption>
+    Comparison of the State of Emergency declared counties in South Dakota on May 12, 2022 and all unfiltered storm reports collected by the Storm Prediction Center (SPC).
+    </Caption>
+  </Figure>
+</Block>
+
+<Block>
+<Figure style={{ display: 'block' }}>
+  <div className='data-table'>
+    <table>
+      <thead>
+        <tr>
+          <th>   State   </th>
+          <th>   Tornado Reports   </th>
+          <th>   Wind Reports   </th>
+          <th>   Hail Reports   </th>
+          <th>   Crop Damage  </th>
+          <th>   Property Damage   </th>
+          <th>   Deaths   </th>
+          <th>   Injuries   </th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td>Nebraska</td>
+          <td class='tornado'>0</td>
+          <td class='wind'>77</td>
+          <td class='hail'>21</td>
+          <td class='crop'>7.008M</td>
+          <td class='prop'>3.375M</td>
+          <td class='death'>0</td>
+          <td class='injur'>1</td>
+        </tr>
+        <tr>
+          <td>Iowa</td>
+          <td class='tornado'>1</td>
+          <td class='wind'>20</td>
+          <td class='hail'>0</td>
+          <td class='crop'>63K</td>
+          <td class='prop'>0K</td>
+          <td class='death'>0</td>
+          <td class='injur'>0</td>
+        </tr>
+        <tr>
+          <td>South Dakota</td>
+          <td class='tornado'>12</td>
+          <td class='wind'>84</td>
+          <td class='hail'>5</td>
+          <td class='crop'>1.056M</td>
+          <td class='prop'>0K</td>
+          <td class='death'>2</td>
+          <td class='injur'>3</td>
+        </tr> 
+        <tr>
+          <td>North Dakota</td>
+          <td class='tornado'>1</td>
+          <td class='wind'>11</td>
+          <td class='hail'>3</td>
+          <td class='crop'>0K</td>
+          <td class='prop'>75K</td>
+          <td class='death'>0</td>
+          <td class='injur'>0</td>
+        </tr>  
+        <tr>
+          <td>Minnesota</td>
+          <td class='tornado'>18</td>
+          <td class='wind'>104</td>
+          <td class='hail'>48</td>
+          <td class='crop'>5K</td>
+          <td class='prop'>4.68M</td>
+          <td class='death'>1</td>
+          <td class='injur'>2</td>
+        </tr>
+        <tr class='bold-row'>
+          <td>Total</td>
+          <td class='tornado'>32</td>
+          <td class='wind'>296</td>
+          <td class='hail'>77</td>
+          <td class='crop'>8.132M</td>
+          <td class='prop'>8.13M</td>
+          <td class='death'>3</td>
+          <td class='injur'>6</td>
+        </tr>      
+
+      </tbody>
+    </table>
+  </div>
+<Caption>
+  Table 1: Official filtered storm reports, damage reports, deaths and injuries associated with the May 12, 2022 Derecho within Nebraska, Iowa, South Dakota, North Dakota, and Minnesota. Totals from each column for the entire event region is reflected in the bottom row. Data was collected from both the [NCEI Storm Events Database](https://www.ncdc.noaa.gov/stormevents/) and [SPC Storm Reports Archive](https://www.spc.noaa.gov/exper/archive/events/).
+</Caption>  
+</Figure>
+</Block>
+
+<Block>
+  <Prose>
+    ## Impacts and Implications
+   The May 12, 2022, derecho was a harsh reminder of the Midwest’s vulnerability to extreme weather, highlighting its devastating impacts on farmland, rural communities, and the regional economy. For farmers, the destruction of crops, grain silos, and irrigation systems is immediate, but the long-term challenges of soil erosion and reduced land productivity pose even greater risks. Rural communities reliant on agriculture face prolonged disruptions to livelihoods and local economies, with rebuilding efforts further strained by the rising cost of infrastructure repairs.
+  
+   In a warmer climate, the frequency and intensity of derechos could increase, as higher temperatures enhance atmospheric instability and moisture content, presenting an urgent need for adaptation. Investments in wind-resistant infrastructure and sustainable farming practices will be critical to reducing future impacts. As extreme weather events become more common, building resilience is not only necessary for protecting farmland and communities but also vital for ensuring the stability of the broader economy in an era of climate extremes.
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    ## References
+    Farm Progress. *Winds, tillage steal soil productivity in Dakotas.* https://www.farmprogress.com/conservation-and-sustainability/winds-tillage-steal-soil-productivity-in-dakotas?
+
+    National Oceanic and Atmospheric Administration. *Types of Derechos.* NOAA. https://www.noaa.gov/jetstream/derechos/types-of-derechos
+
+    National Weather Service. *Storm Summary for May 12, 2022.* NOAA. https://www.weather.gov/abr/StormsummaryMay122022
+
+    National Weather Service. *May 12, 2022, Significant Severe Derecho Event.* NOAA. https://www.weather.gov/fgf/May12th2022SignificantSevereDerechoEvent
+
+    National Weather Service. *May 12, 2022 Derecho Summary.* NOAA. https://www.weather.gov/mpx/May12th2022DerechoSummary
+
+    National Weather Service. *May 12, 2022, Wind Event.* NOAA. https://www.weather.gov/fsd/20220512-wind-mayderecho
+
+    The Weather Channel. *May 12, 2022 Wind and Derecho Storms Damage.* Weather.com. https://weather.com/news/news/2022-05-12-wind-derecho-tornado-storms-damage
+
+    National Weather Service Storm Prediction Center. *Facts About Derechos.* NOAA. https://www.spc.noaa.gov/misc/AbtDerechos/derechofacts.htm
+
+    PowerOutage.US. *Power Outage Data and Tracking.* https://poweroutage.us/
+
+    Environmental Protection Agency. *Air Research: Dust and Air Quality Resources.* EPA. https://www.epa.gov/air-research
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    ### Data Access
+
+    * <mark> Adding in Later </mark>
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+
+    **Editors**: Madison Wallner, 
+
+    **Developers**: Madison Wallner,
+
+    **Science and Content Contributors**: Madison Wallner, Andrew Blackford, 
+
+    **Acknowledgements**: <mark> Adding in Later </mark>
+
+    **Questions / Feedback**: Email mrw0091@uah.edu
+
+    ### Additional Resources
+
+    * <mark> Adding in Later </mark>
+  </Prose>
+</Block>
