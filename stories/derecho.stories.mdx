@@ -448,25 +448,22 @@ taxonomy:
 
 <Block>
   <Prose>
-    For farmers, the derecho meant not only immediate financial loss but also long-term challenges, as topsoil erosion caused by high winds further reduced the land’s productivity for future crops. Reports from the United States Department of Agriculture (USDA) detailed significant disruptions to planting and harvest cycles, while the market data provided show a sharp spike in the prices of corn and soybeans. The month of June 2022 demonstrated the immediate impacts just two weeks following the event with its highest prices for these crops, with corn at $7.38 U.S. dollars per bushel and soybeans at $16.40. These fluctuations reflected concerns over reduced supply, directly tied to the damage inflicted on key agricultural states.
+    The side-by-side comparison of the crop distribution map from the USDA and the storm reports from the May 12, 2022, derecho event also illustrates the correlation between severe weather impacts and agricultural destruction. The first map highlights the extensive corn and soybean fields across Nebraska, Iowa, South Dakota, Minnesota, and North Dakota, with dense concentrations particularly in eastern Nebraska, western Iowa, southern Minnesota, and southeastern South Dakota. The second map, detailing storm reports, shows a high density of wind (blue dots), hail (green dots), and tornado (red dots) reports directly overlapping with these key agricultural regions. High winds exceeding 100 mph was likely the culprit that caused widespread lodging of corn plants, structural damage to grain silos, and significant crop flattening, especially where tornadoes were reported. Hail reports concentrated in soybean-growing areas would have further compounded the damage, shredding plant leaves and bruising crops, reducing both yield quality and quantity on these staple crops.
   </Prose>
 </Block>
 
 <Block>
   <Figure>
-    <Chart
-      dataPath={new URL('./derecho_Crop_Price.csv', import.meta.url).href}
-      dateFormat="%m/%Y"
-      idKey='Crop'
-      xKey='Date'
-      yKey='Price'
-      yAxisLabel='Price (U.S. Dollars Per Bushel)'
-      highlightStart = '05/2022'
-      highlightEnd = '06/2022'
-      highlightLabel = 'Derecho'
+    <CompareImage 
+      leftImageSrc={new URL('./Derecho-Crop.jpg', import.meta.url).href}
+      leftImageAlt='2022 Corn and Soybean Land Cover'
+      leftImageLabel='2022 Corn and Soybean Land Cover'
+      rightImageSrc={new URL('./Derecho-storm-reports.jpg', import.meta.url).href}
+      rightImageAlt='Filtered SPC Storm Reports May 12, 2022'
+      rightImageLabel='SPC Storm Reports May 12, 2022'
     />
     <Caption>
-    The monthly price of Corn and Soybeans reported by the USDA before and after the May 12th, 2022 derecho impacted farmland and growing crops.
+    Comparison of the corn and soybean land cover for the year 2022 and all unfiltered storm reports collected by the Storm Prediction Center (SPC) on May 12, 2022.
     </Caption>
   </Figure>
 </Block>
