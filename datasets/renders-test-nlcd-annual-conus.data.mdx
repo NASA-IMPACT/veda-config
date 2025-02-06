@@ -32,10 +32,12 @@ layers:
   - 0
   - 4
   sourceParams:
-    assets: landcover
+    assets:
+    - landcover
     colormap_name: nlcd
     nodata: 0
-    bidx: [1]
+    bidx:
+    - 1
     resampling: nearest
   compare:
     datasetId: renders-test-nlcd-annual-conus
@@ -50,7 +52,7 @@ layers:
   legend:
     unit:
       label: Days
-    type: gradient
+    type: categorical
     min: 0
     max: 365
     stops:
