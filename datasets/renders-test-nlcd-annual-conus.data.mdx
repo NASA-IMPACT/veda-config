@@ -39,6 +39,9 @@ layers:
     bidx:
     - 1
     resampling: nearest
+    rescale:
+    - - 0
+      - 255
   compare:
     datasetId: renders-test-nlcd-annual-conus
     layerId: landcover
@@ -52,7 +55,7 @@ layers:
   legend:
     unit:
       label: Days
-    type: categorical
+    type: gradient
     min: 0
     max: 365
     stops:
