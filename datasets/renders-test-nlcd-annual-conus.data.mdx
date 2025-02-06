@@ -31,6 +31,17 @@ layers:
   zoomExtent:
   - 0
   - 4
+  sourceParams:
+    bidx:
+    - 1
+    assets:
+    - landcover
+    nodata: 0
+    resampling: nearest
+    colormap_name: nlcd
+    rescale:
+    - - 0
+      - 255
   compare:
     datasetId: renders-test-nlcd-annual-conus
     layerId: landcover
