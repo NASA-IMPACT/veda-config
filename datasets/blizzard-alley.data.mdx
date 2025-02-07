@@ -28,7 +28,7 @@ layers:
         - 0
         - 20
     sourceParams:
-      colormap_name: blues
+      colormap: '{"0":"#03bafc"}'
       nodata: 1
       rescale:
         - 0
@@ -58,18 +58,17 @@ layers:
   </Prose>
 <Figure>
   <Map
-    datasetId='nlcd-annual-conus'
-    layerId='nlcd-annual-conus'
-    dateTime='2001-01-01'
-    zoom={8}
-    center={[-95.37,29.76]}
-    compareDateTime='2021-01-01'
+    center={[-106,44]}
+    zoom={4.8}
+    datasetId='blizzard-alley'
+    layerId='blizzard-alley'
+    dateTime='1950-01-01'
   />
   <Caption
     attrAuthor='NASA'
     attrUrl='https://nasa.gov/'
   >
-    Comparison of the NLCD land cover classifications over Houston, TX between 2001 and 2021
+    The 'Blizzard Alley' region of the United States.
   </Caption>
 </Figure>
 </Block>
@@ -79,7 +78,7 @@ layers:
 
   ### About
 
-  x
+  Blizzard Alley is a term used to describe a region in the north-central United States, particularly the eastern Dakotas, western Minnesota, and parts of Nebraska and Iowa, that experiences blizzards regularly. This region is among the most blizzard-prone areas in North America. This specific dataset shows the Blizzard Alley region as interpolated from the National Centers for Environmental Information's (NCEI's) Storm Events Database. The Storm Events Database contains reports of officially confirmed blizzard conditions across the United States, beginning in 1950.
   </Prose>
 </Block>
 
@@ -92,7 +91,6 @@ layers:
 
   </Prose>
 </Block>
-
 
 <Block>
   <Prose>
