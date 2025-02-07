@@ -1,5 +1,5 @@
 import React from "$veda-ui/react";
-import { NavLink } from "$veda-ui/react-router-dom";
+import { Link } from "$veda-ui/react-router-dom";
 import styled from "$veda-ui/styled-components";
 import { glsp, themeVal, media } from "$veda-ui/@devseed-ui/theme-provider";
 import { Button } from "$veda-ui/@devseed-ui/button";
@@ -17,6 +17,7 @@ import {
   Grid,
 } from '$veda-ui/@trussworks/react-uswds';
 
+import './index.scss';
 
 import Partners from "./partners";
 import Banner from './banner';
@@ -112,14 +113,13 @@ export default function HomeComponent() {
             </Grid>
           </Grid>
           <Buttons className="margin-top-4">
-            <Button
-              forwardedAs={NavLink}
+            <Link
+              
               to="/about"
-              size="xlarge"
-              variation="primary-outline"
+              className="link"
             >
-                Learn More <CollecticonArrowRight />
-            </Button>
+                Learn More <div className="arrow"> <CollecticonArrowRight /></div>
+            </Link>
           </Buttons>
         </Grid>
       </GridContainer>
