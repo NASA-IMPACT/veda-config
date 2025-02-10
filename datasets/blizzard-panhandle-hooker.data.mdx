@@ -1,7 +1,7 @@
 ---
-id: blizzard-alley
-name: 'Blizzard Alley'
-description: "Interpolated from blizzard climatology studies, the region known as Blizzard Alley in the Northern Plains covers a region that has experienced 10-20+ blizzards since 1950, with eastern North Dakota having seen 50-100+ over the same time period."
+id: blizzard-panhandle-hooker
+name: 'Panhandle Hooker Snowfall Footprint'
+description: "Single value raster displaying the general snowfall footprint of a Panhandle Hooker type of mid-latitude cyclone."
 
 media:
   src: ::file ./blizzards-cover.png
@@ -16,13 +16,13 @@ taxonomy:
       - Snow
   - name: Source
     values:
-      - NCEI
+      - UAH
 layers:
-  - id: blizzard-alley
-    stacCol: blizzard-alley
-    name: Blizzard Alley
+  - id: blizzard-panhandle-hooker
+    stacCol: blizzard-panhandle-hooker
+    name: Panhandle Hooker Snowfall Footprint
     type: raster
-    description: "Climatologically favored region of the USA that experiences regular blizzards, known as Blizzard Alley."
+    description: "Climatologically favored region of the USA that experiences snowfall from Panhandle Hooker cyclones."
     initialDatetime: newest
     zoomExtent:
         - 0
@@ -37,10 +37,10 @@ layers:
       type: categorical
       stops:
         - color: "#03bafc"
-          label: Blizzard Alley
+          label: Panhandle Hooker Snowfall
     info:
-      source: NCEI
-      spatialExtent: Northern Plains
+      source: UAH
+      spatialExtent: Central United States
       temporalResolution: 1950-2021 Climatology
       unit: Binary
 
@@ -50,7 +50,7 @@ layers:
   ## Dataset Details
   - **Temporal Extent:** 1950-2021
   - **Temporal Resolution:** Single Climatology
-  - **Spatial Extent:** Northern Plains
+  - **Spatial Extent:** Central United States
   - **Spatial Resolution:** N/A
   - **Data Units:** N/A
   - **Data Type:** Research
@@ -58,17 +58,17 @@ layers:
   </Prose>
 <Figure>
   <Map
-    center={[-98.8, 44.8]}
-    zoom={4}
-    datasetId='blizzard-alley'
-    layerId='blizzard-alley'
+    center={[-92,41]}
+    zoom={3}
+    datasetId='blizzard-panhandle-hooker'
+    layerId='blizzard-panhandle-hooker'
     dateTime='1950-01-01'
   />
   <Caption
     attrAuthor='NASA'
     attrUrl='https://nasa.gov/'
   >
-    The 'Blizzard Alley' region of the United States.
+    Climatologically favored region of the USA that experiences snowfall from Panhandle Hooker cyclones.
   </Caption>
 </Figure>
 </Block>
@@ -78,7 +78,7 @@ layers:
 
   ### About
 
-  Blizzard Alley is a term used to describe a region in the north-central United States, particularly the eastern Dakotas, western Minnesota, and parts of Nebraska and Iowa, that experiences blizzards regularly. This region is among the most blizzard-prone areas in North America. This specific dataset shows the Blizzard Alley region as interpolated from the National Centers for Environmental Information's (NCEI's) Storm Events Database. The Storm Events Database contains reports of officially confirmed blizzard conditions across the United States, beginning in 1950.
+  Panhandle Hookers are another type of low pressure system that can bring blizzard conditions to portions of CONUS. These cyclones originate in the Texas and Oklahoma Panhandles and are known for their distinctive ‘hooking’ storm track - hence their unique name. These systems typically form when a strong blast of cold Arctic air from the north (known as Blue Northers) collides with warm, moist air from the Gulf of America in the southern Plains. As the storm intensifies, it takes a northeastward "hook-shaped" trajectory, moving across the central Plains, the Midwest, and into the Great Lakes region. Panhandle Hookers most often bring heavy snow and blizzard conditions to parts of the central Great Plains, Upper Midwest, and Great Lakes, while the southern Plains and Ohio Valley may experience mixed precipitation or severe weather on the warmer side of the storm. These systems are a major source of snow for the central United States and, depending on their exact track, can also more uncommonly impact the northeastern U.S. with snow or ice. The strong winds and rapid intensification of these storms make them a hallmark of winter weather in the Plains and Midwest.
   </Prose>
 </Block>
 

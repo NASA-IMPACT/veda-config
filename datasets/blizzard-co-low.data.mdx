@@ -1,7 +1,7 @@
 ---
-id: blizzard-alley
-name: 'Blizzard Alley'
-description: "Interpolated from blizzard climatology studies, the region known as Blizzard Alley in the Northern Plains covers a region that has experienced 10-20+ blizzards since 1950, with eastern North Dakota having seen 50-100+ over the same time period."
+id: blizzard-co-low
+name: 'Colorado Low Snowfall Footprint'
+description: "Single value raster displaying the general snowfall footprint of a Colorado Low type of mid-latitude cyclone."
 
 media:
   src: ::file ./blizzards-cover.png
@@ -16,13 +16,13 @@ taxonomy:
       - Snow
   - name: Source
     values:
-      - NCEI
+      - UAH
 layers:
-  - id: blizzard-alley
-    stacCol: blizzard-alley
-    name: Blizzard Alley
+  - id: blizzard-co-low
+    stacCol: blizzard-co-low
+    name: Colorado Low Snowfall Footprint
     type: raster
-    description: "Climatologically favored region of the USA that experiences regular blizzards, known as Blizzard Alley."
+    description: "Climatologically favored region of the USA that experiences snowfall from Colorado Low cyclones."
     initialDatetime: newest
     zoomExtent:
         - 0
@@ -37,10 +37,10 @@ layers:
       type: categorical
       stops:
         - color: "#03bafc"
-          label: Blizzard Alley
+          label: CO Low Snowfall
     info:
-      source: NCEI
-      spatialExtent: Northern Plains
+      source: UAH
+      spatialExtent: Central United States
       temporalResolution: 1950-2021 Climatology
       unit: Binary
 
@@ -50,7 +50,7 @@ layers:
   ## Dataset Details
   - **Temporal Extent:** 1950-2021
   - **Temporal Resolution:** Single Climatology
-  - **Spatial Extent:** Northern Plains
+  - **Spatial Extent:** Central United States
   - **Spatial Resolution:** N/A
   - **Data Units:** N/A
   - **Data Type:** Research
@@ -58,17 +58,17 @@ layers:
   </Prose>
 <Figure>
   <Map
-    center={[-98.8, 44.8]}
-    zoom={4}
-    datasetId='blizzard-alley'
-    layerId='blizzard-alley'
+    center={[-95,43]}
+    zoom={3}
+    datasetId='blizzard-co-low'
+    layerId='blizzard-co-low'
     dateTime='1950-01-01'
   />
   <Caption
     attrAuthor='NASA'
     attrUrl='https://nasa.gov/'
   >
-    The 'Blizzard Alley' region of the United States.
+    Climatologically favored region of the USA that experiences snowfall from Colorado Low cyclones.
   </Caption>
 </Figure>
 </Block>
@@ -78,7 +78,7 @@ layers:
 
   ### About
 
-  Blizzard Alley is a term used to describe a region in the north-central United States, particularly the eastern Dakotas, western Minnesota, and parts of Nebraska and Iowa, that experiences blizzards regularly. This region is among the most blizzard-prone areas in North America. This specific dataset shows the Blizzard Alley region as interpolated from the National Centers for Environmental Information's (NCEI's) Storm Events Database. The Storm Events Database contains reports of officially confirmed blizzard conditions across the United States, beginning in 1950.
+  Denver Cyclones, or Colorado Cyclones, are low pressure systems that form on the lee side of the Rocky Mountains, often along the Colorado Front Range. These systems form when moist air from the Gulf of America converges with cold Arctic air descending from Canada, creating sharp temperature gradients. The interaction between these air masses and the region’s complex terrain promotes the development of cyclonic systems that can bring heavy snowfall or blizzard conditions to the Colorado Front Range, including Denver, as well as parts of the Central and Northern Great Plains and Midwest. As these cyclones intensify and move eastward, they can bring severe winter weather to Blizzard Alley, making them a key contributor to the high frequency of blizzards in this region. The open terrain of the Great Plains amplifies wind speeds, further reducing visibility and exacerbating blizzard conditions.
   </Prose>
 </Block>
 

@@ -1,7 +1,7 @@
 ---
-id: blizzard-alley
-name: 'Blizzard Alley'
-description: "Interpolated from blizzard climatology studies, the region known as Blizzard Alley in the Northern Plains covers a region that has experienced 10-20+ blizzards since 1950, with eastern North Dakota having seen 50-100+ over the same time period."
+id: blizzard-clipper
+name: 'AB/SK/MB Clipper Snowfall Footprint'
+description: "Single value raster displaying the general snowfall footprint of Alberta Clipper, Saskatchewan Screamer, and Manitoba Mauler types of mid-latitude cyclones."
 
 media:
   src: ::file ./blizzards-cover.png
@@ -16,13 +16,13 @@ taxonomy:
       - Snow
   - name: Source
     values:
-      - NCEI
+      - UAH
 layers:
-  - id: blizzard-alley
-    stacCol: blizzard-alley
-    name: Blizzard Alley
+  - id: blizzard-clipper
+    stacCol: blizzard-clipper
+    name: AB/SK/MB Clipper Snowfall Footprint
     type: raster
-    description: "Climatologically favored region of the USA that experiences regular blizzards, known as Blizzard Alley."
+    description: "Climatologically favored region of the USA that experiences snowfall from Alberta Clipper, Saskatchewan Screamer, and Manitoba Mauler cyclones."
     initialDatetime: newest
     zoomExtent:
         - 0
@@ -37,10 +37,10 @@ layers:
       type: categorical
       stops:
         - color: "#03bafc"
-          label: Blizzard Alley
+          label: Clipper Snowfall
     info:
-      source: NCEI
-      spatialExtent: Northern Plains
+      source: UAH
+      spatialExtent: Southern Canada/Northern United States
       temporalResolution: 1950-2021 Climatology
       unit: Binary
 
@@ -50,7 +50,7 @@ layers:
   ## Dataset Details
   - **Temporal Extent:** 1950-2021
   - **Temporal Resolution:** Single Climatology
-  - **Spatial Extent:** Northern Plains
+  - **Spatial Extent:** Southern Canada/Northern United States
   - **Spatial Resolution:** N/A
   - **Data Units:** N/A
   - **Data Type:** Research
@@ -58,17 +58,17 @@ layers:
   </Prose>
 <Figure>
   <Map
-    center={[-98.8, 44.8]}
-    zoom={4}
-    datasetId='blizzard-alley'
-    layerId='blizzard-alley'
+    center={[-98,50]}
+    zoom={2.5}
+    datasetId='blizzard-clipper'
+    layerId='blizzard-clipper'
     dateTime='1950-01-01'
   />
   <Caption
     attrAuthor='NASA'
     attrUrl='https://nasa.gov/'
   >
-    The 'Blizzard Alley' region of the United States.
+    Climatologically favored region of the USA that experiences snowfall from Alberta Clipper, Saskatchewan Screamer, and Manitoba Mauler cyclones.
   </Caption>
 </Figure>
 </Block>
@@ -78,7 +78,7 @@ layers:
 
   ### About
 
-  Blizzard Alley is a term used to describe a region in the north-central United States, particularly the eastern Dakotas, western Minnesota, and parts of Nebraska and Iowa, that experiences blizzards regularly. This region is among the most blizzard-prone areas in North America. This specific dataset shows the Blizzard Alley region as interpolated from the National Centers for Environmental Information's (NCEI's) Storm Events Database. The Storm Events Database contains reports of officially confirmed blizzard conditions across the United States, beginning in 1950.
+  Alberta Clippers, Saskatchewan Screamers, and Manitoba Maulers are fast-moving low pressure systems that originate in the Canadian Prairies and bring cold, dry air and light to moderate snowfall to parts of the United States. These systems are named for their origins in Alberta, Saskatchewan, and Manitoba, respectively, and are distinguished by their speed and limited moisture content. Alberta Clippers are the most common of the three and typically travel southeastward across the northern Plains, Midwest, and Great Lakes region, often bringing light amounts of snow, though localized areas can receive higher totals. Saskatchewan Screamers and Manitoba Maulers follow similar tracks but are less frequent. Due to their rapid movement, these storms rarely bring heavy snowfall, but their strong winds can create blowing snow and reduced visibility, occasionally leading to blizzard conditions. Additionally, they often usher in frigid Arctic air, leading to significant temperature drops that can be anomalous for impacted regions. These systems are a defining feature of winter weather across the northern United States and contribute heavily to the region's cold and snowy climatology, as in more active years handfuls of these systems can occur in quick succession.
   </Prose>
 </Block>
 
