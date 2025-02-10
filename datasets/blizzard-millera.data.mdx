@@ -1,7 +1,7 @@
 ---
-id: blizzard-alley
-name: 'Blizzard Alley'
-description: "Interpolated from blizzard climatology studies, the region known as Blizzard Alley in the Northern Plains covers a region that has experienced 10-20+ blizzards since 1950, with eastern North Dakota having seen 50-100+ over the same time period."
+id: blizzard-millera
+name: 'Miller A Snowfall Footprint'
+description: "Single value raster displaying the general snowfall footprint of a Miller A type of mid-latitude cyclone."
 
 media:
   src: ::file ./blizzards-cover.png
@@ -16,13 +16,13 @@ taxonomy:
       - Snow
   - name: Source
     values:
-      - NCEI
+      - UAH
 layers:
-  - id: blizzard-alley
-    stacCol: blizzard-alley
-    name: Blizzard Alley
+  - id: blizzard-millera
+    stacCol: blizzard-millera
+    name: Miller A Snowfall Footprint
     type: raster
-    description: "Climatologically favored region of the USA that experiences regular blizzards, known as Blizzard Alley."
+    description: "Climatologically favored region of the USA that experiences snowfall from Miller A cyclones."
     initialDatetime: newest
     zoomExtent:
         - 0
@@ -37,10 +37,10 @@ layers:
       type: categorical
       stops:
         - color: "#03bafc"
-          label: Blizzard Alley
+          label: Miller A Snowfall
     info:
-      source: NCEI
-      spatialExtent: Northern Plains
+      source: UAH
+      spatialExtent: Eastern United States
       temporalResolution: 1950-2021 Climatology
       unit: Binary
 
@@ -50,7 +50,7 @@ layers:
   ## Dataset Details
   - **Temporal Extent:** 1950-2021
   - **Temporal Resolution:** Single Climatology
-  - **Spatial Extent:** Northern Plains
+  - **Spatial Extent:** Eastern United States
   - **Spatial Resolution:** N/A
   - **Data Units:** N/A
   - **Data Type:** Research
@@ -58,17 +58,17 @@ layers:
   </Prose>
 <Figure>
   <Map
-    center={[-106,44]}
-    zoom={4.8}
-    datasetId='blizzard-alley'
-    layerId='blizzard-alley'
+    center={[-85,40]}
+    zoom={4}
+    datasetId='blizzard-millera'
+    layerId='blizzard-millera'
     dateTime='1950-01-01'
   />
   <Caption
     attrAuthor='NASA'
     attrUrl='https://nasa.gov/'
   >
-    The 'Blizzard Alley' region of the United States.
+    Climatologically favored region of the USA that experiences snowfall from Miller A cyclones.
   </Caption>
 </Figure>
 </Block>
@@ -78,7 +78,7 @@ layers:
 
   ### About
 
-  Blizzard Alley is a term used to describe a region in the north-central United States, particularly the eastern Dakotas, western Minnesota, and parts of Nebraska and Iowa, that experiences blizzards regularly. This region is among the most blizzard-prone areas in North America. This specific dataset shows the Blizzard Alley region as interpolated from the National Centers for Environmental Information's (NCEI's) Storm Events Database. The Storm Events Database contains reports of officially confirmed blizzard conditions across the United States, beginning in 1950.
+  Miller Type A cyclones form along the Gulf Coast or in the southern United States, where warm, moist air from the Gulf of America meets colder Arctic air descending from the north. These storms then travel along the East Coast, often intensifying as they near the Northeast U.S., as they tap into additional moisture from the Atlantic Ocean. Type A cyclones tend to bring widespread, heavy snowfall to the densely populated I-95 corridor or interior Northeast. Their direct development along the Gulf provides an abundant moisture source, resulting in potentially significant impacts for the Southeastern U.S., the Mid-Atlantic, and the Northeast.
   </Prose>
 </Block>
 

@@ -1,7 +1,7 @@
 ---
-id: blizzard-alley
-name: 'Blizzard Alley'
-description: "Interpolated from blizzard climatology studies, the region known as Blizzard Alley in the Northern Plains covers a region that has experienced 10-20+ blizzards since 1950, with eastern North Dakota having seen 50-100+ over the same time period."
+id: blizzard-noreaster
+name: 'Nor'easter Snowfall Footprint'
+description: "Single value raster displaying the general snowfall footprint of a Nor'easter type of mid-latitude cyclone."
 
 media:
   src: ::file ./blizzards-cover.png
@@ -16,13 +16,13 @@ taxonomy:
       - Snow
   - name: Source
     values:
-      - NCEI
+      - UAH
 layers:
-  - id: blizzard-alley
-    stacCol: blizzard-alley
-    name: Blizzard Alley
+  - id: blizzard-noreaster
+    stacCol: blizzard-noreaster
+    name: Noreaster Snowfall Footprint
     type: raster
-    description: "Climatologically favored region of the USA that experiences regular blizzards, known as Blizzard Alley."
+    description: "Climatologically favored region of the USA that experiences snowfall from Nor'easter cyclones."
     initialDatetime: newest
     zoomExtent:
         - 0
@@ -37,10 +37,10 @@ layers:
       type: categorical
       stops:
         - color: "#03bafc"
-          label: Blizzard Alley
+          label: Noreaster Snowfall
     info:
-      source: NCEI
-      spatialExtent: Northern Plains
+      source: UAH
+      spatialExtent: Eastern United States
       temporalResolution: 1950-2021 Climatology
       unit: Binary
 
@@ -50,7 +50,7 @@ layers:
   ## Dataset Details
   - **Temporal Extent:** 1950-2021
   - **Temporal Resolution:** Single Climatology
-  - **Spatial Extent:** Northern Plains
+  - **Spatial Extent:** Eastern United States
   - **Spatial Resolution:** N/A
   - **Data Units:** N/A
   - **Data Type:** Research
@@ -58,17 +58,17 @@ layers:
   </Prose>
 <Figure>
   <Map
-    center={[-106,44]}
-    zoom={4.8}
-    datasetId='blizzard-alley'
-    layerId='blizzard-alley'
+   center={[-80,43]}
+    zoom={5}
+    datasetId='blizzard-noreaster'
+    layerId='blizzard-noreaster'
     dateTime='1950-01-01'
   />
   <Caption
     attrAuthor='NASA'
     attrUrl='https://nasa.gov/'
   >
-    The 'Blizzard Alley' region of the United States.
+    Climatologically favored region of the USA that experiences snowfall from Noreaster cyclones.
   </Caption>
 </Figure>
 </Block>
@@ -78,7 +78,7 @@ layers:
 
   ### About
 
-  Blizzard Alley is a term used to describe a region in the north-central United States, particularly the eastern Dakotas, western Minnesota, and parts of Nebraska and Iowa, that experiences blizzards regularly. This region is among the most blizzard-prone areas in North America. This specific dataset shows the Blizzard Alley region as interpolated from the National Centers for Environmental Information's (NCEI's) Storm Events Database. The Storm Events Database contains reports of officially confirmed blizzard conditions across the United States, beginning in 1950.
+  Nor’easters are perhaps the most notorious system that can bring blizzard conditions. Nor’easters frequent blizzard conditions to the I-95 corridor, can be either Miller Type A or B cyclones (but are more commonly Type B), and are often tracked using a coordinate benchmark known as the "40°N, 70°W rule." This location, just southeast of Cape Cod, Massachusetts, serves as a critical reference point for meteorologists. If the center of a nor’easter passes near or over this benchmark as it moves to the northeast, it frequently results in significant snow and wind impacts for the densely populated I-95 corridor from Washington, D.C., to Boston. This position aligns the storm to draw in cold Arctic air from the northwest while tapping into moist Atlantic air, creating the perfect setup for heavy snowfall and blizzard conditions.
   </Prose>
 </Block>
 
