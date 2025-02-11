@@ -41,5 +41,8 @@
   "parcelIgnore": [
     ".*/meta/"
   ],
-  "dependencies": {}
+  "dependencies": {
+    "@trussworks/react-uswds": "^9.1.0",
+    "uswds": "^2.14.0"
+  }
 }
