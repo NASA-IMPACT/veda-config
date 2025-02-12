@@ -1,7 +1,7 @@
 ---
-id: blizzard-era5
-name: 'ERA5 Reanalysis (Select Events)'
-description: "ERA5 reanalysis data of surface temperature, wind, mean sea level pressure, and cloud fraction for two select blizzard events."
+id: blizzard-merra2
+name: 'MERRA2 Reanalysis (Select Events)'
+description: "MERRA2 reanalysis data of surface temperature, wind, mean sea level pressure, and cloud fraction for three select blizzard events."
 
 media:
   src: ::file ./blizzards-cover.png
@@ -16,13 +16,13 @@ taxonomy:
       - Snow
   - name: Source
     values:
-      - ECMWF
+      - NASA GMAO
 layers:
-  - id: blizzard-era5-2m-temp
-    stacCol: blizzard-era5-2m-temp
-    name: ERA5 2 Meter Temperature
+  - id: blizzard-merra2-2m-temp
+    stacCol: blizzard-merra2-2m-temp
+    name: MERRA2 2 Meter Temperature
     type: raster
-    description: "ERA5 2-meter temperature reanalysis data for two select blizzards."
+    description: "MERRA2 2-meter temperature reanalysis data for three select blizzards."
     initialDatetime: newest
     zoomExtent:
         - 0
@@ -38,16 +38,16 @@ layers:
          - color: "#900c00"
            label: 315 K   
     info:
-      source: ECMWF
+      source: NASA GMAO
       spatialExtent: Global
-      temporalResolution: 1950-1978; Inconsistent
+      temporalResolution: 1991-2016; Inconsistent
       unit: Kelvin
 
-  - id: blizzard-era5-10m-wind
-    stacCol: blizzard-era5-10m-wind
-    name: ERA5 10 Meter Wind
+  - id: blizzard-merra2-10m-wind
+    stacCol: blizzard-merra2-10m-wind
+    name: MERRA2 10 Meter Wind
     type: raster
-    description: "ERA5 10-meter wind reanalysis data for two select blizzards."
+    description: "MERRA2 10-meter wind reanalysis data for three select blizzards."
     initialDatetime: newest
     zoomExtent:
         - 0
@@ -63,16 +63,16 @@ layers:
       - color: "#800026"
         label: 25 m/s 
     info:
-      source: ECMWF
+      source: NASA GMAO
       spatialExtent: Global
-      temporalResolution: 1950-1978; Inconsistent
+      temporalResolution: 1991-2016; Inconsistent
       unit: m/s
 
-  - id: blizzard-era5-cfrac
-    stacCol: blizzard-era5-cfrac
-    name: ERA5 Cloud Fraction
+  - id: blizzard-merra2-cfrac
+    stacCol: blizzard-merra2-cfrac
+    name: MERRA2 Cloud Fraction
     type: raster
-    description: "ERA5 cloud fraction reanalysis data for two select blizzards."
+    description: "MERRA2 cloud fraction reanalysis data for three select blizzards."
     initialDatetime: newest
     zoomExtent:
         - 0
@@ -89,16 +89,16 @@ layers:
         label: 1
 
     info:
-      source: ECMWF
+      source: NASA GMAO
       spatialExtent: Global
-      temporalResolution: 1950-1978; Inconsistent
+      temporalResolution: 1991-2016; Inconsistent
       unit: fraction; 1 = 100% coverage
 
-  - id: blizzard-era5-mslp
-    stacCol: blizzard-era5-mslp
-    name: ERA5 Mean Sea Level Pressure
+  - id: blizzard-merra2-mslp
+    stacCol: blizzard-merra2-mslp
+    name: MERRA2 Mean Sea Level Pressure
     type: raster
-    description: "ERA5 mean sea level pressure (MSLP) reanalysis data for two select blizzards."
+    description: "MERRA2 mean sea level pressure (MSLP) reanalysis data for three select blizzards."
     initialDatetime: newest
     zoomExtent:
         - 0
@@ -117,30 +117,30 @@ layers:
         label: 1040
 
     info:
-      source: ECMWF
+      source: NASA GMAO
       spatialExtent: Global
-      temporalResolution: 1950-1978; Inconsistent
+      temporalResolution: 1991-2016; Inconsistent
       unit: hPa
 
 ---
 <Block>
   <Prose>
   ## Dataset Details
-  - **Temporal Extent:** 1950-1978
+  - **Temporal Extent:** 1991-2016
   - **Temporal Resolution:** Inconsistent
   - **Spatial Extent:** Global
-  - **Spatial Resolution:** 0.25 degree
+  - **Spatial Resolution:** 0.625x0.5 degree
   - **Data Units:** Temperature - Kelvin; Wind - m/s; MSLP - hPa
   - **Data Type:** Research
   - **Data Latency:** N/A
   </Prose>
 <Figure>
   <Map
-    center={[-84, 43]}
-    zoom={3.5}
-    datasetId='blizzard-era5-mslp'
-    layerId='blizzard-era5-mslp'
-    dateTime='1978-01-26'
+    center={[-75, 40]}
+    zoom={3.25}
+    datasetId='blizzard-merra2-10m-wind'
+    layerId='blizzard-merra2-10m-wind'
+    dateTime='1993-03-14'
   />
   <Caption
     attrAuthor='NASA'
