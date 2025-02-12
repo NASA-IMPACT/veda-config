@@ -43,6 +43,85 @@ layers:
       temporalResolution: 1950-1978; Inconsistent
       unit: Kelvin
 
+  - id: blizzard-era5-10m-wind
+    stacCol: blizzard-era5-10m-wind
+    name: ERA5 10 Meter Wind
+    type: raster
+    description: "ERA5 10-meter wind reanalysis data for two select blizzards."
+    initialDatetime: newest
+    zoomExtent:
+        - 0
+    legend:
+      type: gradient
+      stops:
+      - color: "#ffffcc"
+        label: 0 m/s
+      - color: "#fee187"
+      - color: "#feab49"
+      - color: "#fc5b2e"
+      - color: "#d41020"
+      - color: "#800026"
+        label: 25 m/s 
+    info:
+      source: ECMWF
+      spatialExtent: Global
+      temporalResolution: 1950-1978; Inconsistent
+      unit: m/s
+
+  - id: blizzard-era5-cfrac
+    stacCol: blizzard-era5-cfrac
+    name: ERA5 Cloud Fraction
+    type: raster
+    description: "ERA5 cloud fraction reanalysis data for two select blizzards."
+    initialDatetime: newest
+    zoomExtent:
+        - 0
+    legend:
+      type: gradient
+      stops:
+      - color: "#000000"
+        label: 0
+      - color: "#404040"
+      - color: "#7a7a7a"
+      - color: "#b5b5b5"
+      - color: "#e2e2e2"
+      - color: "#ffffff"
+        label: 1
+
+    info:
+      source: ECMWF
+      spatialExtent: Global
+      temporalResolution: 1950-1978; Inconsistent
+      unit: fraction; 1 = 100% coverage
+
+  - id: blizzard-era5-mslp
+    stacCol: blizzard-era5-mslp
+    name: ERA5 Mean Sea Level Pressure
+    type: raster
+    description: "ERA5 mean sea level pressure (MSLP) reanalysis data for two select blizzards."
+    initialDatetime: newest
+    zoomExtent:
+        - 0
+    legend:
+      type: gradient
+      stops:
+      - color: "#000000"
+        label: 972
+      - color: "#870098"
+      - color: "#0078dd"
+      - color: "#00aa88"
+      - color: "#00dc00"
+      - color: "#efed00"
+      - color: "#fe0000"
+      - color: "#cccccc"
+        label: 1040
+
+    info:
+      source: ECMWF
+      spatialExtent: Global
+      temporalResolution: 1950-1978; Inconsistent
+      unit: hPa
+
 ---
 <Block>
   <Prose>
