@@ -1,0 +1,132 @@
+---
+id: blizzard-era5
+name: 'ERA5 Reanalysis (Select Events)'
+description: "ERA5 reanalysis data of surface temperature, wind, mean sea level pressure, and cloud fraction for two select blizzard events."
+
+media:
+  src: ::file ./blizzards-cover.png
+  alt: Near-blizzard conditions in Maria Stein, Ohio on December 23, 2022.
+  author: 
+    name: Andrew Blackford
+taxonomy:
+  - name: Topics
+    values:
+      - Climate
+      - Disasters
+      - Snow
+  - name: Source
+    values:
+      - ECMWF
+layers:
+  - id: blizzard-era5-2m-temp
+    stacCol: blizzard-era5-2m-temp
+    name: ERA5 2 Meter Temperature
+    type: raster
+    description: "ERA5 2-meter temperature reanalysis data for two select blizzards."
+    initialDatetime: newest
+    zoomExtent:
+        - 0
+    legend:
+      type: gradient
+      stops:
+         - color: "#30123b"
+           label: 240 K
+         - color: "#4146d1"
+         - color: "#23d775"
+         - color: "#f9f510"
+         - color: "#fa6b02"
+         - color: "#900c00"
+           label: 315 K   
+    info:
+      source: ECMWF
+      spatialExtent: Global
+      temporalResolution: 1950-1978; Inconsistent
+      unit: Kelvin
+
+---
+<Block>
+  <Prose>
+  ## Dataset Details
+  - **Temporal Extent:** 1950-1978
+  - **Temporal Resolution:** Inconsistent
+  - **Spatial Extent:** Global
+  - **Spatial Resolution:** 0.25 degree
+  - **Data Units:** Temperature - Kelvin; Wind - m/s; MSLP - hPa
+  - **Data Type:** Research
+  - **Data Latency:** N/A
+  </Prose>
+<Figure>
+  <Map
+    center={[-84, 43]}
+    zoom={5}
+    datasetId='blizzard-snowfall'
+    layerId='blizzard-snowfall'
+    dateTime='1978-01-26'
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+  RSI reported accumulated snowfall that occurred from the Great Blizzard of 1978 in the Great Lakes region of the USA.
+  </Caption>
+</Figure>
+</Block>
+
+<Block>
+  <Prose>
+
+  ### About
+
+  FILL OUT
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ### Access the Data
+
+  FILL OUT
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## Disclaimer
+
+  All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
+  
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+
+  ### Key Publications
+  
+  FILL OUT
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## Data Stories Using This Dataset
+  
+  **<Link to={"/stories/blizzards"}>When Winter Rages</Link>**
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## License
+  
+  [Creative Commons Attribution 1.0 International](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC BY 1.0)
+
+  </Prose>
+</Block>
