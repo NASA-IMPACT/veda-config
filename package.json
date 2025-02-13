@@ -1,7 +1,7 @@
 {
   "name": "veda-config",
   "description": "Configuration for Veda",
-  "version": "0.20.0",
+  "version": "3.1.4",
   "source": "./.veda/ui/app/index.html",
   "license": "Apache-2.0",
   "scripts": {
@@ -11,7 +11,9 @@
     "stage": "NODE_ENV=staging .veda/veda",
     "clean": ".veda/veda clean",
     "local-cms": "npx netlify-cms-proxy-server",
-    "test": "NODE_ENV=test .veda/veda test"
+    "test": "NODE_ENV=test .veda/veda test",
+    "pretest:e2e": "node e2e/generateTestData.js",
+    "test:e2e": "yarn playwright test"
   },
   "targets": {
     "veda-app": {
@@ -26,20 +28,28 @@
   "devDependencies": {
     "@parcel/packager-raw-url": "2.7.0",
     "@parcel/transformer-webmanifest": "2.7.0",
+    "@playwright/test": "^1.46.0",
+    "@types/node": "^20.11.6",
     "buffer": "^5.5.0||^6.0.0",
     "dotenv": "^10.0.0",
+    "events": "^3.1.0",
+    "fast-glob": "^3.3.2",
+    "gray-matter": "^4.0.3",
     "netlify-cms-proxy-server": "^1.3.24",
     "process": "^0.11.10",
     "stream-browserify": "^3.0.0"
   },
+  "parcelIgnore": [
+    ".*/meta/"
+  ],
   "alias": {
     "react": "./.veda/ui/node_modules/react",
     "@mdx-js/react": "./.veda/ui/node_modules/@mdx-js/react",
     "$veda-ui": "./.veda/ui/node_modules",
     "$veda-ui-scripts": "./.veda/ui/app/scripts"
   },
-  "parcelIgnore": [
-    ".*/meta/"
-  ],
-  "dependencies": {}
+  "dependencies": {
+    "react-dom": "^18.3.1",
+    "react-transition-group": "^4.4.5"
+  }
 }

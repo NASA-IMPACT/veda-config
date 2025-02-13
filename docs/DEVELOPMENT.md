@@ -7,7 +7,7 @@ You can see the version running:
 ./.veda/veda --info
 ```
 
-The commit you may want to pin the `veda-ui` to will depend, but to update veda-ui you can do:
+The commit you may want to pin the `veda-ui` to will depend, but to get the latest changes from the `main` branch you could do:
 ```
 # Go into the submodule
 cd .veda/ui
@@ -15,14 +15,19 @@ cd .veda/ui
 # Update the submodule info
 git fetch
 
-# Switch to the release you want.
-# You can see the list of releases on https://github.com/NASA-IMPACT/veda-ui/releases
+# Switch to the branch you want.
+# You can also choose a specific tag.
+git switch main
 
-git checkout vx.x.x 
+# Get the latest changes
+git pull
 
 # Get back to the root directory
 cd -
 ```
+
+> [!IMPORTANT]  
+> For a production release, it is recommended to pin `veda-ui` to a release tag (viewable via `git tags`) instead of a branch. This is to make sure that only changes that have been thoroughly tested are pulled in to the release.
 
 At this point you will have changed the commit the submodule is pointed to.  
 If you run a diff on the submodule `git diff .veda/ui` you'll see that the commit changed.

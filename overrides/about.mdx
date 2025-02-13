@@ -1,35 +1,106 @@
 ---
-title: About the Dashboard
-description: "Visualization, Exploration, and Data Analysis (VEDA): Scalable and Interactive System for Science Data."
+title: Disasters Mapping Portal
+description: ""
 ---
+<Block>
+<Prose>
+  ## 🚧 PAGE UNDER CONSTRUCTION
+
+  Please come back later.
+</Prose>
+</Block>
+{/* <Block>
+  <Prose>
+  The U.S. Greenhouse Gas Center (US GHG Center) is a multi-agency effort consolidating greenhouse gas (GHG) information from observations and models. Scientific experts from NASA, EPA, NIST, and NOAA worked together to curate this catalog of GHG datasets and analysis tools. The goal is to better understand GHG fluxes and emissions from natural and human-caused sources. The US GHG Center helps researchers, climate change mitigation practitioners, policymakers, data service providers, and concerned citizens understand GHG datasets and put them to use.
+  
+  The initial two-year demonstration phase focused on three GHG areas of study: human-caused GHG emissions; natural GHG sources and sinks, fluxes, and patterns; and large methane emission leak events.
+
+  The US GHG Center portal is built using open source principles and techniques allowing users to access, explore, analyze, and download data and products and learn about the latest information. It provides access to a curated and evolving list of foundational GHG data, including sources such as: ground observations from NASA, NIST, and NOAA; data collected from space-borne (ex. EMIT and OCO-2/3), airborne (ex. AVIRIS-NG), and ground-based platforms (ex. NIST tower data); and model-derived data and analyses. The US GHG Center includes curated EPA regulatory and research datasets as well as research data from NASA, NIST, and NOAA.
+
+  The portal features stories that introduce themes, topics, data and discoveries. User support is within reach via data exploration, Jupyter notebooks, and an analysis hub for authorized users to perform advanced cloud data analysis with computational resources. All code supporting the US GHG Center system is fully open sourced and available for examination.
+  
+  Begin your journey by exploring the <Link to={"/stories/intro-us-ghg-center"}>“Introduction to the US GHG Center.”</Link> Additional demonstration videos show users how to explore and discover data.
+  
+  Numerous stakeholder engagement activities continue to help scope and prioritize the evolution of the US GHG Center during continued development and implementation.
+  
+  Use the “Contact Us” button at the top right of every page to provide the team with ideas and suggestions for future updates.
+
+  </Prose>
+</Block>
 
 <Block>
   <Prose>
 
-      The VEDA Dashboard is one of several user interfaces in the VEDA project. It also is aligned with VEDA's goal of advancing interactive visualization and exploratory visual data analysis. This dashboard constitutes:
+## Our Partners
 
-    - an evolution of COVID-19 dashboard to provide the interactive storytelling for various environmental changes using Earth observation data;
-    - a transformation of high-valued NASA datasets to dynamic visualization, enabling users to perform on-the-fly visual analysis;
-    - a tool by which users can visually explore and localize data, and perform independent analysis; data-driven stories that are exportable in multiple formats;
-    - and a situational awareness system that brings together Earth observation datasets such as greenhouse gasses, air quality, and sea level rise, among others.
+The US GHG Center would not be possible without the collaboration of the partnering U.S. governmental agencies and other non-governmental entities. The initial partners of this effort are NASA, EPA, NIST, and NOAA.
 
-    As an interactive visual interface for storytelling, the dashboard provides a number of capabilities including sharing and interacting with datasets and their respective stories. Through visualizations, trend analyses, and comparative analyses of datasets, users can explore the applications and implications of those data. The VEDA Dashboard aims to reduce the barrier to entry of NASA of the Earth science data and enable faster science – one of the goals of the NASA open-source science initiative. Please submit any feedback or questions using the Feedback button in the top right of the dashboard.
+{" "}
 
-    ## Commitment to Open Science
+<PartnerHeader>
+  <a href="https://www.nasa.gov/" target="_blank">
+    <Image
+      src={new URL("./media/nasa.png", import.meta.url).href}
+      alt="NASA logo"
+      width="105"
+    />
+    <p><strong>NASA (National Aeronautics and Space Administration)</strong></p>
+  </a>
+</PartnerHeader>
 
-    In alignment with NASA's [Transform to Open Science](https://science.nasa.gov/open-science/transform-to-open-science) (TOPS) initiative, VEDA believes that a commitment to open source is an important aspect of creating and maintaining high-quality software and science. Open source code provided by VEDA as part of this initiative allows for collaboration and transparency, to promote better solutions and more robust code.
+ NASA plays a crucial role in expanding our understanding of the universe and advancing technology for the benefit of humanity.  As the lead agency for implementing the US GHG Center, the effort is shared among various NASA centers and coordinated by the project office at NASA Goddard Space Flight Center (GSFC). Technical development and implementation of the US GHG Center portal is carried out by a team at NASA’s Marshall Space Flight Center (MSFC), and scientists at the Jet Propulsion Laboratory produce many of the NASA datasets available from the portal (for example EMIT and various model datasets). NASA’s leadership of the US GHG Center accelerates collaborative use of Earth science data and information for GHG monitoring, measurement, reporting, and decision support. 
+{" "}
 
-    The different repositories of the VEDA project are all open and can be freely browsed:
-    - [veda-ui](https://github.com/NASA-IMPACT/veda-ui) (the web application)
-    - [veda-config](https://github.com/NASA-IMPACT/veda-config) (content storage)
-    - [veda-data-pipelines](https://github.com/NASA-IMPACT/veda-data-pipelines) (data transformation and ingest)
-    - [veda-backend](https://github.com/NASA-IMPACT/veda-backend) (backend stac and tiler)
-    
-    The full list can be found [here](https://github.com/orgs/NASA-IMPACT/repositories?language=&q=veda-&sort=&type=all).
-    
-    Furthermore this project would not be possible without many other openly maintained projects like [React](https://github.com/facebook/react), [MapboxGl](https://github.com/mapbox/mapbox-gl-js), [Parcel](https://github.com/parcel-bundler/parcel), [STAC](https://github.com/radiantearth/stac-api-spec), and [TiTiler](https://github.com/developmentseed/titiler) to name a few.
+<PartnerHeader>
+<a href="https://www.epa.gov/" target="_blank">
+  <Image
+    src={new URL("./media/epa.svg", import.meta.url).href}
+    alt="epa logo"
+    width="80"
+  />
+  <p><strong>EPA (Environmental Protection Agency)</strong></p>
+  </a>
+</PartnerHeader>
 
-    For more information, join the conversation in our openly maintained repositories.
+ The EPA is a vital agency committed to protecting human health and the environment. The inclusion of EPA in the US GHG Center effort ensures portal users have access to valuable and relevant EPA resources, research, and regulatory information related to environmental issues, sustainability, and public health. By incorporating EPA's insights and guidelines into Center content, we aim to raise awareness and encourage responsible practices that contribute to a healthier planet.
 
+{" "}
+
+<PartnerHeader>
+  <a href="https://www.nist.gov/" target="_blank">
+    <Image
+      src={new URL("./media/nist.png", import.meta.url).href}
+      alt="NIST logo"
+      width="250"
+    />
+    <p><strong>NIST (National Institute of Standards and Technology)</strong></p>
+  </a>
+</PartnerHeader>
+
+ NIST is an agency of the U.S. Department of Commerce that is dedicated to promoting innovation and industrial competitiveness by advancing measurement science, standards, and technology. NIST contributes access to cutting-edge research, data, and standards on greenhouse gases that help ensure the accuracy and reliability of the US GHG Center content and services. 
+
+{" "}
+
+<PartnerHeader>
+<a href="https://www.noaa.gov/" target="_blank">
+  <Image
+    src={new URL("./media/noaa.png", import.meta.url).href}
+    alt="NOAA logo"
+    width="85"
+  />
+  <p><strong>NOAA (National Oceanic and Atmospheric Administration)</strong></p>
+  </a>
+</PartnerHeader>
+
+ As an agency within the U.S. Department of Commerce, NOAA data helps to empower users with the knowledge needed to make informed decisions about their lives and the environment. NOAA focuses on public understanding and predicting changes in the Earth's environment and safeguarding its resources. As a member of the US GHG Center, NOAA provides accurate and up-to-date information on greenhouse gas monitoring and the research to increase understanding of greenhouse gas impacts on Earth’s environment.
+
+## Joining Forces for a Better Future
+
+  Through partnerships with other organizations, the US GHG Center portal provides a comprehensive platform that fosters learning, discovery, and positive change. Together, it strives to inspire curiosity, promote scientific literacy, and drive progress in various fields. The Center looks forward to expanding into a network of partners and continuing to build a community that values knowledge and innovation.
+  
+  If you are interested in exploring partnership opportunities with the US GHG Center, please reach out using the “Contact Us” button at the top right of every portal page.
+
+  To get updates delivered to your mailbox, <a href={SUBSCRIPTION_URL}>subscribe to the news and announcements list</a>.
   </Prose>
-</Block>
+</Block> */}
+

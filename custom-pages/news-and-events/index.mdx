@@ -1,0 +1,135 @@
+---
+mainNavItem:
+  navTitle: News & Events
+title: News & Events
+description: "
+  US GHG Center News, Events, and Training Opportunities.
+"
+---
+
+import { EventsComponent } from './component'
+import { NEWS_ITEMS, EVENT_ITEMS, NEWSLETTER_ITEMS, TUTORIAL_ITEMS } from './news-page-content'
+import AnchorScroll from './AnchorScroll'
+
+import { SUBSCRIPTION_URL } from "../../constants";
+
+
+<AnchorScroll />
+<Block >
+  <Prose>
+
+    The U.S. Greenhouse Gas Center is for researchers, climate change mitigation practitioners, policymakers, data service providers, and concerned citizens. It provides trusted greenhouse gas emission and flux data, as well as methods and tools to analyze, visualize and interpret the data. This site helps users to better understand greenhouse gas datasets and put the data and information to use.
+
+    The US GHG Center website is always evolving with new data and information. This page highlights US GHG Center news, trainings, and workshop opportunities.  
+
+    If you would like to stay informed, please <a href={SUBSCRIPTION_URL}>subscribe to our email newsletter</a>.
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    <h2 id="news">News and Announcements</h2>
+    <EventsComponent items={NEWS_ITEMS}/>
+
+    {/* <h3 id="newsletter">U.S. GHG Center newsletters</h3>
+    <div style={{background: '#E8F0FD', border: '1px solid #B7CFFA', padding: '0.5rem', fontSize: '1rem'}}>
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel nunc mauris. Integer a lacus nec ligula egestas volutpat ut a purus. Nullam tincidunt ultrices urna, sit amet placerat elit vestibulum dignissim.
+    
+    </div> */}
+  </Prose>
+</Block>
+
+
+
+<Block>
+  <Prose>
+    ## Events 
+    <EventsComponent items={EVENT_ITEMS}/>
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+    ## Newsletters 
+    <EventsComponent items={NEWSLETTER_ITEMS}/>
+  </Prose>
+</Block>
+
+{/* <Block>
+  <Prose>
+    ## Tutorial Videos 
+    <EventsComponent items={TUTORIAL_ITEMS}/>
+  </Prose>
+</Block> */}
+
+{/* <Block>
+  <Prose>
+    ## Learn More
+    <Embed
+      src="https://www.youtube.com/embed/YQWespzOtzI?si=0T-HzC405nrLfsTp" 
+      height="400"
+    />
+
+
+  Investigate the tutorials, demonstrations, and presentations. Also, explore opportunities to get involved with the US GHG Center.
+
+  ### Tutorials and Demonstrations
+  Recorded demos of GHG Center functionality
+
+  ### Previous Presentations
+  Stakeholder Meeting Recording
+  COP28 recording
+
+  ### Internships
+  - Apply for a NASA US GHG Center Internship 
+  - Check out other internship opportunities (@ partner organizations TBD)
+  
+  ### Carbon Monitoring System NASA Webinar Series links
+  </Prose>
+</Block> */}
+
+<Block>
+  <Prose>
+    ## Learn More
+
+    Investigate US GHG Center demonstrations and presentations and explore opportunities to get involved.
+
+     **Presentations**
+      - [Stakeholder Meeting Nov. 28, 2023](https://www.youtube.com/playlist?list=PLiuUQ9asub3RDzYAZ3N7_6wIIgmvDpZq_)
+        - [Part 1](https://www.youtube.com/watch?v=MPWow413i-o&list=PLiuUQ9asub3RDzYAZ3N7_6wIIgmvDpZq_&index=1&pp=iAQB) (Introductions and Science)
+        - [Part 2](https://www.youtube.com/watch?v=CrnBY4iYVeA&list=PLiuUQ9asub3RDzYAZ3N7_6wIIgmvDpZq_&index=2&t=136s&pp=iAQB) (Website overview; Focus area details; National Strategy)
+      - [COP28 State Department Announcement](https://www.youtube.com/watch?v=cw8ku_qfAao)
+      - [US GHG Center Hyperwall Presentation at AGU](https://youtu.be/8_aFRPqiXGw)
+      - [Carbon Monitoring System NASA Webinar Series](https://cce-datasharing.gsfc.nasa.gov/programs/meetings/10/h/1/)
+
+     **Reports**
+      - [After-Action Report: U.S. Greenhouse Center Targeted Stakeholder Forum (Nov. 28, 2023)](https://drive.google.com/file/d/17TwQtBNb6N4ArZLxDLabJOEzrYd4bWbE/view?usp=drive_link)
+
+     **Videos**
+      - [US GHG Center Playlist on YouTube](https://www.youtube.com/playlist?list=PLiuUQ9asub3SzKYAbWdOg3mv6kqMSiDiL)
+      - [NASA Earth Information Center: Tracking the Greenhouse Gas Methane](https://www.youtube.com/watch?v=ZinKaqthYX0)
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+   <h2 id="press"> Press Information </h2>
+   The U.S. Greenhouse Gas Center is a multi-agency effort to provide researchers, climate change mitigation practitioners, policymakers, data service providers, and concerned citizens with trusted data on greenhouse gases. 
+
+    For Media Inquiries:
+    - Aries Keck, NASA (lead implementing agency) - Aries.Keck@nasa.gov, 202-604-2356
+    - John Millet, EPA - Millett.john@epa.gov
+    - Richard Press, NIST - richard.press@nist.gov 
+    - Theo Stein, NOAA - theo.stein@noaa.gov
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    ## What Else Do You Need?  Let Us Help You!
+
+    Do you have a need, idea, or suggestion? Contact the US GHG Center team using the "Contact&nbsp;Us" button on the top or the bottom of every page.
+  </Prose>
+</Block>

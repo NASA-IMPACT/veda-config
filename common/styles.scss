@@ -1,0 +1,39 @@
+.blocklink {
+  &:focus { outline: none; }
+  &:focus-visible { outline: 1px solid var(--veda-color-link);}
+  @supports not selector(:focus-visible) {
+    &:focus {
+      outline: 1px solid  var(--veda-color-link);
+    }
+  }
+}
+
+.hug-reset-container {
+  grid-column: 1 / -1;
+}
+
+.card-shadow__hover {
+  box-shadow: 0 0 2px 0 rgba(44,62,80,0.08),0 6px 6px 0 rgba(44,62,80,0.08);
+  transition: all 0.24s ease-in-out 0s;
+  &:hover {
+    transform: translate(0, 0.125rem);
+  }
+}
+
+.card-image__blend {
+  mix-blend-mode: multiply;
+}
+
+.veda-color--link {
+  color: var(--veda-color-link);
+}
+.veda-color--base {
+  color: var(--veda-color-base);
+}
+
+// font-size: 20px (1.25rem) will be deprecated with USWDS design system
+// but we need a temporary style class for the consistency across the pages
+
+.font-size-md-deprecated {
+  font-size: calc(1rem + var(--base-text-increment, 0rem));
+}
