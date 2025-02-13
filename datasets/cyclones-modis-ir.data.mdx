@@ -1,0 +1,137 @@
+---
+id: cyclones-modis-ir
+name: 'MODIS Infrared Imagery (Select Cyclone Events)'
+description: "Moderate Resolution Imaging Spectroradiometer (MODIS) infrared satellite imagery for select cyclone events."
+
+media:
+  src: ::file ./cyclones_beryl_background.png
+  alt: GOES TrueColor satellite imagery of Hurricane Beryl's eye in July of 2024.
+  author: 
+    name: NOAA 
+taxonomy:
+  - name: Topics
+    values:
+      - Climate
+      - Disasters
+  - name: Source
+    values:
+      - MODIS
+layers:
+  - id: modis_mosaic-cyclone-beryl
+    stacCol: modis_mosaic-cyclone-beryl
+    name: MODIS IR - Hurricane Beryl
+    type: raster
+    description: "Mosaiced MODIS infrared satellite imagery for Hurricane Beryl."
+    initialDatetime: newest
+    zoomExtent:
+        - 0
+        - 20
+    sourceParams:
+      colormap_name: bupu    
+      nodata: -9999
+      rescale:
+        - 500
+        - 30000
+      legend:
+        type: gradient
+        stops:
+            - color: "#f7fcfd"
+            label: 240 K
+            - color: "#ccddec"
+            - color: "#9ab4d6"
+            - color: "#8c74b5"
+            - color: "#852d90"
+            - color: "#4d004b"
+            label: 315 K
+    info:
+      source: MODIS
+      spatialExtent: Regional
+      temporalResolution: 2000-Present, Inconsistent
+      unit: N/A
+
+---
+<Block>
+  <Prose>
+  ## Dataset Details
+  - **Temporal Extent:** 2000-Present
+  - **Temporal Resolution:** Inconsistent
+  - **Spatial Extent:** Regional
+  - **Spatial Resolution:** 1 km
+  - **Data Units:** N/A
+  - **Data Type:** Research
+  - **Data Latency:** N/A
+  </Prose>
+<Figure>
+  <Map
+    center={[-60, 15]}
+    zoom={3.5}
+    datasetId='modis_mosaic-cyclone-beryl'
+    layerId='modis_mosaic-cyclone-beryl'
+    dateTime='2024-07-01'
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+  Mosaiced MODIS Infrared satellite imagery of Hurricane Beryl nearing the Caribbean Sea on July 1, 2024.
+  </Caption>
+</Figure>
+</Block>
+
+<Block>
+  <Prose>
+
+  ### About
+
+  x
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ### Access the Data
+
+  x
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## Disclaimer
+
+  All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
+  
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+
+  ### Key Publications
+  
+  x
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## Data Stories Using This Dataset
+  
+  **<Link to={"/stories/cyclones-beryl"}>When Winter Rages</Link>**
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## License
+  
+  [Creative Commons Attribution 1.0 International](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC BY 1.0)
+
+  </Prose>
+</Block>
