@@ -1,7 +1,7 @@
 ---
-id: cyclones-modis-ir
-name: 'MODIS Infrared Imagery (Select Cyclone Events)'
-description: "Moderate Resolution Imaging Spectroradiometer (MODIS) infrared satellite imagery for select cyclone events."
+id: cyclones-viirs-ir
+name: 'VIIRS Infrared Imagery (Select Cyclone Events)'
+description: "Visible Infrared Imaging Radiometer Suite (VIIRS) infrared satellite imagery for select cyclone events."
 
 media:
   src: ::file ./cyclones_beryl_background.png
@@ -15,15 +15,15 @@ taxonomy:
       - Tropical
   - name: Source
     values:
-      - MODIS
+      - VIIRS
 layers:
-  - id: modis_mosaic-cyclone-beryl
+  - id: viirs_mosaic-cyclone-beryl
     stacApiEndpoint: https://staging.openveda.cloud/smce/api/stac
     tileApiEndpoint: https://staging.openveda.cloud/api/raster
-    stacCol: modis_mosaic-cyclone-beryl
-    name: MODIS IR - Hurricane Beryl
+    stacCol: viirs_mosaic-cyclone-beryl
+    name: VIIRS IR - Hurricane Beryl
     type: raster
-    description: "Mosaiced MODIS infrared satellite imagery for Hurricane Beryl."
+    description: "Mosaiced VIIRS infrared satellite imagery for Hurricane Beryl."
     initialDatetime: newest
     zoomExtent:
         - 0
@@ -32,7 +32,7 @@ layers:
       colormap_name: bupu    
       nodata: -9999
       rescale:
-        - 500
+        - 5000
         - 30000
       legend:
         type: gradient
@@ -44,7 +44,7 @@ layers:
             - color: "#852d90"
             - color: "#4d004b"
     info:
-      source: MODIS
+      source: VIIRS
       spatialExtent: Regional
       temporalResolution: 2000-Present, Inconsistent
       unit: N/A
@@ -56,7 +56,7 @@ layers:
   - **Temporal Extent:** 2000-Present
   - **Temporal Resolution:** Inconsistent
   - **Spatial Extent:** Regional
-  - **Spatial Resolution:** 1 km
+  - **Spatial Resolution:**  750 m
   - **Data Units:** N/A
   - **Data Type:** Research
   - **Data Latency:** N/A
@@ -65,15 +65,15 @@ layers:
   <Map
     center={[-60, 15]}
     zoom={3.5}
-    datasetId='modis_mosaic-cyclone-beryl'
-    layerId='modis_mosaic-cyclone-beryl'
+    datasetId='viirs_mosaic-cyclone-beryl'
+    layerId='viirs_mosaic-cyclone-beryl'
     dateTime='2024-07-01'
   />
   <Caption
     attrAuthor='NASA'
     attrUrl='https://nasa.gov/'
   >
-  Mosaiced MODIS Infrared satellite imagery of Hurricane Beryl nearing the Caribbean Sea on July 1, 2024.
+  Mosaiced VIIRS Infrared satellite imagery of Hurricane Beryl nearing the Caribbean Sea on July 1, 2024.
   </Caption>
 </Figure>
 </Block>

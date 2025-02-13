@@ -1,7 +1,7 @@
 ---
-id: cyclones-modis-ir
-name: 'MODIS Infrared Imagery (Select Cyclone Events)'
-description: "Moderate Resolution Imaging Spectroradiometer (MODIS) infrared satellite imagery for select cyclone events."
+id: cyclones-sport-sst
+name: 'NASA SPoRT Sea Surface Temperatures (Select Cyclone Events)'
+description: "Satellite-derived sea surface temperatures (SSTs) for select cyclone events."
 
 media:
   src: ::file ./cyclones_beryl_background.png
@@ -15,49 +15,51 @@ taxonomy:
       - Tropical
   - name: Source
     values:
-      - MODIS
+      - NASA SPoRT
 layers:
-  - id: modis_mosaic-cyclone-beryl
+  - id: sst-cyclone-beryl
     stacApiEndpoint: https://staging.openveda.cloud/smce/api/stac
     tileApiEndpoint: https://staging.openveda.cloud/api/raster
-    stacCol: modis_mosaic-cyclone-beryl
-    name: MODIS IR - Hurricane Beryl
+    stacCol: sst-cyclone-beryl
+    name: SSTs - Hurricane Beryl
     type: raster
-    description: "Mosaiced MODIS infrared satellite imagery for Hurricane Beryl."
+    description: "Satellite-derived sea surface temperatures for Hurricane Beryl."
     initialDatetime: newest
     zoomExtent:
         - 0
         - 20
     sourceParams:
-      colormap_name: bupu    
+      colormap_name: turbo    
       nodata: -9999
       rescale:
-        - 500
-        - 30000
+        - 290
+        - 305
       legend:
         type: gradient
         stops:
-            - color: "#f7fcfd"
-            - color: "#ccddec"
-            - color: "#9ab4d6"
-            - color: "#8c74b5"
-            - color: "#852d90"
-            - color: "#4d004b"
+            - color: "#30123b"
+              label: 290 K
+            - color: "#4146d1"
+            - color: "#23d775"
+            - color: "#f9f510"
+            - color: "#fa6b02"
+            - color: "#900c00"
+              label: 305 K  
     info:
-      source: MODIS
+      source: NASA SPoRT
       spatialExtent: Regional
-      temporalResolution: 2000-Present, Inconsistent
+      temporalResolution: Inconsistent
       unit: N/A
 
 ---
 <Block>
   <Prose>
   ## Dataset Details
-  - **Temporal Extent:** 2000-Present
+  - **Temporal Extent:** Inconsistent
   - **Temporal Resolution:** Inconsistent
   - **Spatial Extent:** Regional
   - **Spatial Resolution:** 1 km
-  - **Data Units:** N/A
+  - **Data Units:** Kelvin
   - **Data Type:** Research
   - **Data Latency:** N/A
   </Prose>
@@ -65,15 +67,15 @@ layers:
   <Map
     center={[-60, 15]}
     zoom={3.5}
-    datasetId='modis_mosaic-cyclone-beryl'
-    layerId='modis_mosaic-cyclone-beryl'
+    datasetId='sst-cyclone-beryl'
+    layerId='sst-cyclone-beryl'
     dateTime='2024-07-01'
   />
   <Caption
     attrAuthor='NASA'
     attrUrl='https://nasa.gov/'
   >
-  Mosaiced MODIS Infrared satellite imagery of Hurricane Beryl nearing the Caribbean Sea on July 1, 2024.
+  Satellite-derived sea surface temperatures during Hurricane Beryl's peak intensity nearing the Caribbean Sea on July 1, 2024.
   </Caption>
 </Figure>
 </Block>
