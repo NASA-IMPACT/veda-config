@@ -28,6 +28,11 @@ layers:
         - 0
         - 20
     sourceParams:
+      colormap_name: turbo    
+      nodata: -999
+      rescale:
+        - 240
+        - 315
       legend:
         type: gradient
         stops:
@@ -55,6 +60,11 @@ layers:
         - 0
         - 20
     sourceParams:
+      colormap_name: ylorrd    
+      nodata: -999
+      rescale:
+        - 0
+        - 25
       legend:
         type: gradient
         stops:
@@ -82,6 +92,11 @@ layers:
         - 0
         - 20
     sourceParams:
+      colormap_name: greys_r    
+      nodata: -999
+      rescale:
+        - 0
+        - 1
       legend:
         type: gradient
         stops:
@@ -109,6 +124,11 @@ layers:
         - 0
         - 20
     sourceParams:
+      colormap_name: nipy_spectral    
+      nodata: -999
+      rescale:
+        - 972
+        - 1040
       legend:
         type: gradient
         stops:
@@ -162,7 +182,7 @@ layers:
 
   ### About
 
-  FILL OUT
+  ERA5 reanalysis, produced by the European Centre for Medium-Range Weather Forecasts (ECMWF), is a high-resolution global atmospheric dataset that provides historical climate and weather information from 1940 to the present. It combines observations from satellites, weather stations, and other sources with advanced numerical weather prediction models to generate a consistent, spatially complete representation of past atmospheric conditions. ERA5 offers hourly data at a 0.25 degree spatial resolution with multiple atmospheric variables, including temperature, wind speed, cloud coverage, and pressure, along with uncertainty estimates. It is widely used in climate research, meteorology, and environmental studies. 
   </Prose>
 </Block>
 
@@ -171,7 +191,7 @@ layers:
   
   ### Access the Data
 
-  FILL OUT
+  Visit ECMWF's [Climate Data Store](https://cds.climate.copernicus.eu/datasets?q=era5&kw=Variable+domain%3A+Atmosphere+%28surface%29&kw=Variable+domain%3A+Atmosphere+%28upper+air%29&kw=Variable+domain%3A+Atmosphere+%28upper+level%29&kw=Variable+domain%3A+Ocean+%28physics%29) to explore options for data access.
 
   </Prose>
 </Block>
@@ -191,8 +211,7 @@ layers:
 
   ### Key Publications
   
-  FILL OUT
-
+  Hersbach, H., Bell, B., Berrisford, P., et al. (2020). The ERA5 global reanalysis. Quarterly Journal of the Royal Meteorological Society, 146(730), 1999–2049. https://doi.org/10.1002/qj.3803
   </Prose>
 </Block>
 
