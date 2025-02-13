@@ -42,7 +42,10 @@
     ".*/meta/"
   ],
   "dependencies": {
+    "@parcel/transformer-sass": "^2.13.3",
     "@trussworks/react-uswds": "^9.1.0",
+    "postcss": "^8.5.2",
+    "sass": "^1.84.0",
     "uswds": "^2.14.0"
   }
 }
