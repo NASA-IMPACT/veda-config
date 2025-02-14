@@ -1,7 +1,7 @@
 ---
 id: global-reanalysis-da
 name: 'A Global Reanalysis for Water, Energy, and Carbon Cycle Variables'
-description: "A high-resolution (10 km) global data product that integrates NASA’s state-of-the-art model with satellite observations"
+description: "A high-resolution global data product that integrates NASA’s state-of-the-art model with satellite observations"
 media:
   src: ::file ./global_tws_blackbg_v2.png
   alt: One day of terrestrial water storage from LIS outputs.
@@ -25,11 +25,11 @@ infoDescription: |
     The reanalysis product is created using the [NASA Land Information System](https://lis.gsfc.nasa.gov/) modeling framework to merge land surface model simulations with observations from satellites through data assimilation. The team uses the Noah-MP land surface model and assimilates soil moisture from the European Space Agency’s Climate Change Initiative Program (ESA CCI), leaf area index from the Moderate Resolution Imaging Spectroradiometer (MODIS), and terrestrial water storage anomalies from the Gravity Recovery and Climate Experiment and the follow-on missions (GRACE/GRACE-FO). 
 
 layers:
-  - id: lis-global-da-evap
-    stacCol: lis-global-da-evap
+  - id: lis-global-da-evap-5
+    stacCol: lis-global-da-evap-5
     name: 'Evapotranspiration'
     type: raster
-    description: 'Gridded total evapotranspiration (in kg m-2 s-1) from 10km global LIS with assimilation'
+    description: 'Gridded total evapotranspiration (in kg m-2 s-1) from 5km global LIS with assimilation'
     zoomExtent:
       - 0
       - 11
@@ -41,8 +41,8 @@ layers:
         - 0
         - 0.0001
     compare:
-      datasetId: global-reanalysis-da
-      layerId: lis-global-da-evap
+      datasetId: global-reanalysis-da-5
+      layerId: lis-global-da-evap-5
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'dd LLL yyyy')}`;
@@ -65,11 +65,11 @@ layers:
       spatialExtent: Global
       temporalResolution: Daily 
       unit: kg m-2 s-1
-  - id: lis-global-da-gpp
-    stacCol: lis-global-da-gpp
-    name: 'Gross Primary Productivity'
+  - id: lis-global-da-evap-10
+    stacCol: lis-global-da-evap-10
+    name: 'Evapotranspiration'
     type: raster
-    description: 'Gridded gross primary productivity (in g m-2 s-1) from 10km global LIS with assimilation'
+    description: 'Gridded total evapotranspiration (in kg m-2 s-1) from 10km global LIS with assimilation'
     zoomExtent:
       - 0
       - 11
@@ -81,173 +81,8 @@ layers:
         - 0
         - 0.0001
     compare:
-      datasetId: global-reanalysis-da
-      layerId: lis-global-da-gpp
-      mapLabel: |
-        ::js ({ dateFns, datetime, compareDatetime }) => {
-          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'dd LLL yyyy')}`;
-        }
-    legend:
-      unit:
-        label: g m-2 s-1
-      type: gradient
-      label: Gross primary productivity [g m-2 s-1]
-      min: "0"
-      max: "0.0001"
-      stops:
-        - '#440154'
-        - '#3b528b'
-        - '#21918c'
-        - '#5ec962'
-        - '#fde725'
-    info:
-      source: NASA
-      spatialExtent: Global
-      temporalResolution: Daily 
-      unit: g m-2 s-1
-
-  - id: lis-global-da-gws
-    stacCol: lis-global-da-gws
-    name: 'Groundwater Storage'
-    type: raster
-    description: 'Gridded groundwater storage (in mm) from 10km global LIS with assimilation'
-    zoomExtent:
-      - 0
-      - 11
-    sourceParams:
-      resampling: bilinear
-      bidx: 1
-      colormap_name: viridis
-      rescale:
-        - 4500
-        - 5000
-    compare:
-      datasetId: global-reanalysis-da
-      layerId: lis-global-da-gws
-      mapLabel: |
-        ::js ({ dateFns, datetime, compareDatetime }) => {
-          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'dd LLL yyyy')}`;
-        }
-    legend:
-      unit:
-        label: mm
-      type: gradient
-      label: Groundwater storage [mm]
-      min: "4500"
-      max: "5000"
-      stops:
-        - '#440154'
-        - '#3b528b'
-        - '#21918c'
-        - '#5ec962'
-        - '#fde725'
-    info:
-      source: NASA
-      spatialExtent: Global
-      temporalResolution: Daily 
-      unit: mm
-
-  - id: lis-global-da-swe
-    stacCol: lis-global-da-swe
-    name: 'Snow Water Equivalent'
-    type: raster
-    description: 'Gridded snow water equivalent (in kg m-2) from 10km global LIS with assimilation'
-    zoomExtent:
-      - 0
-      - 11
-    sourceParams:
-      resampling: bilinear
-      bidx: 1
-      colormap_name: blues
-      rescale:
-        - 0
-        - 500
-    compare:
-      datasetId: global-reanalysis-da
-      layerId: lis-global-da-swe
-      mapLabel: |
-        ::js ({ dateFns, datetime, compareDatetime }) => {
-          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'dd LLL yyyy')}`;
-        }
-    legend:
-      unit:
-        label: mm
-      type: gradient
-      label: Snow Water Equivalent [mm]
-      min: "0"
-      max: "500"
-      stops:
-        - "#F7FBFF"
-        - "#D0E1F2"
-        - "#94C4DF"
-        - "#4A98C9"
-        - "#2164AB"
-        - "#0E316B"
-    info:
-      source: NASA
-      spatialExtent: Global
-      temporalResolution: Daily 
-      unit: mm
-
-  - id: lis-global-da-streamflow
-    stacCol: lis-global-da-streamflow
-    name: 'Streamflow'
-    type: raster
-    description: 'Routed streamflow (in m3 s-1) from 10km global LIS+HyMAP with assimilation'
-    zoomExtent:
-      - 0
-      - 11
-    sourceParams:
-      resampling: bilinear
-      bidx: 1
-      colormap_name: viridis
-      rescale:
-        - 0
-        - 2500
-    compare:
-      datasetId: global-reanalysis-da
-      layerId: lis-global-da-streamflow
-      mapLabel: |
-        ::js ({ dateFns, datetime, compareDatetime }) => {
-          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'dd LLL yyyy')}`;
-        }
-    legend:
-      unit:
-        label: m3 s-1
-      type: gradient
-      label: Streamflow [m3 s-1]
-      min: "0"
-      max: "2500"
-      stops:
-        - '#440154'
-        - '#3b528b'
-        - '#21918c'
-        - '#5ec962'
-        - '#fde725'
-    info:
-      source: NASA
-      spatialExtent: Global
-      temporalResolution: Daily 
-      unit: m3 s-1
-
-  - id: lis-global-da-qs
-    stacCol: lis-global-da-qs
-    name: 'Surface runoff'
-    type: raster
-    description: 'Gridded surface runoff (in kg m-2 s-1) from 10km global LIS with assimilation'
-    zoomExtent:
-      - 0
-      - 11
-    sourceParams:
-      resampling: bilinear
-      bidx: 1
-      colormap_name: viridis
-      rescale:
-        - 0
-        - 0.0001
-    compare:
-      datasetId: global-reanalysis-da
-      layerId: lis-global-da-qs
+      datasetId: global-reanalysis-da-10
+      layerId: lis-global-da-evap-10
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'dd LLL yyyy')}`;
@@ -256,48 +91,7 @@ layers:
       unit:
         label: kg m-2 s-1
       type: gradient
-      label: Surface runoff [kg m-2 s-1]
-      min: "0"
-      max: "0.00001"
-      stops:
-        - '#440154'
-        - '#3b528b'
-        - '#21918c'
-        - '#5ec962'
-        - '#fde725'
-    info:
-      source: NASA
-      spatialExtent: Global
-      temporalResolution: Daily 
-      unit: kg m-2 s-1
-
-  - id: lis-global-da-qsb
-    stacCol: lis-global-da-qsb
-    name: 'Subsurface runoff'
-    type: raster
-    description: 'Gridded subsurface runoff (in kg m-2 s-1) from 10km global LIS with assimilation'
-    zoomExtent:
-      - 0
-      - 11
-    sourceParams:
-      resampling: bilinear
-      bidx: 1
-      colormap_name: viridis
-      rescale:
-        - 0
-        - 0.0001
-    compare:
-      datasetId: global-reanalysis-da
-      layerId: lis-global-da-qsb
-      mapLabel: |
-        ::js ({ dateFns, datetime, compareDatetime }) => {
-          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'dd LLL yyyy')}`;
-        }
-    legend:
-      unit:
-        label: kg m-2 s-1
-      type: gradient
-      label: Subsurface runoff [kg m-2 s-1]
+      label: Evapotranspiration [kg m-2 s-1]
       min: "0"
       max: "0.0001"
       stops:
@@ -311,95 +105,19 @@ layers:
       spatialExtent: Global
       temporalResolution: Daily 
       unit: kg m-2 s-1
-
-  - id: lis-global-da-tws
-    stacCol: lis-global-da-tws
-    name: 'Terrestrial Water Storage'
-    type: raster
-    description: 'Gridded terrestrial water storage (in mm) from 10km global LIS with assimilation'
-    zoomExtent:
-      - 0
-      - 11
-    sourceParams:
-      resampling: bilinear
-      bidx: 1
-      colormap_name: viridis
-      rescale:
-        - 5000
-        - 5800
-    compare:
-      datasetId: global-reanalysis-da
-      layerId: lis-global-da-tws
-      mapLabel: |
-        ::js ({ dateFns, datetime, compareDatetime }) => {
-          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'dd LLL yyyy')}`;
-        }
-    legend:
-      unit:
-        label: mm
-      type: gradient
-      label: Terrestrial Water Storage [mm]
-      min: "5000"
-      max: "5800"
-      stops:
-        - '#440154'
-        - '#3b528b'
-        - '#21918c'
-        - '#5ec962'
-        - '#fde725'
-    info:
-      source: NASA
-      spatialExtent: Global
-      temporalResolution: Daily 
-      unit: mm
-
-  - id: lis-global-da-totalprecip
-    stacCol: lis-global-da-totalprecip
-    name: 'Total Precipitation'
-    type: raster
-    description: 'Gridded total precipitation (in kg m-2 s-1) from 10km global LIS with assimilation'
-    zoomExtent:
-      - 0
-      - 11
-    sourceParams:
-      resampling: bilinear
-      bidx: 1
-      colormap_name: blues
-      rescale:
-        - 0
-        - 0.0001
-    compare:
-      datasetId: global-reanalysis-da
-      layerId: lis-global-da-totalprecip
-      mapLabel: |
-        ::js ({ dateFns, datetime, compareDatetime }) => {
-          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'dd LLL yyyy')}`;
-        }
-    legend:
-      unit:
-        label: kg m-2 s-1
-      type: gradient
-      label: Total precipitation [kg m-2 s-1]
-      min: "0"
-      max: "0.00001"
-      stops:
-        - "#F7FBFF"
-        - "#D0E1F2"
-        - "#94C4DF"
-        - "#4A98C9"
-        - "#2164AB"
-        - "#0E316B"
-    info:
-      source: NASA
-      spatialExtent: Global
-      temporalResolution: Daily 
-      unit: kg m-2 s-1
-
 ---
 <Block>
 <Prose>
 ## Introduction
 🚧 This page presents work in progress and not a peer-reviewed data product! 🚧
+
+<Link to='/datasets/global-reanalysis-da-5'>Learn more about the Data - 5km</Link>
+<Link to='/datasets/global-reanalysis-da-10'>Learn more about the Data - 10km</Link>
+
+
+
+<Link to='/exploration?search=global-reanalysis-da-5'>Explore the Data - 5km</Link>
+<Link to='/exploration?search=global-reanalysis-da-10'>Explore the Data - 10km</Link>
 
 Realistic estimates of water, energy, and carbon cycle variables are necessary for accurate understanding of earth system processes. Land surface models simulate processes at the Earth’s surface and can provide spatiotemporal estimates of a whole suite of variables like precipitation, soil moisture, and evapotranspiration. However, models often have biases that cause high uncertainties in important water budget variables. Therefore, tools like data assimilation, where observations are used to constrain model simulations, are often used.
 
