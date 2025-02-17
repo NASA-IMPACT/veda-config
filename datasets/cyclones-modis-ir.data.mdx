@@ -27,7 +27,7 @@ layers:
         - 0
         - 20
     sourceParams:
-      colormap_name: bupu    
+      colormap_name: cfastie    
       nodata: -9999
       rescale:
         - 500
@@ -35,12 +35,25 @@ layers:
       legend:
         type: gradient
         stops:
-            - color: "#f7fcfd"
-            - color: "#ccddec"
-            - color: "#9ab4d6"
-            - color: "#8c74b5"
-            - color: "#852d90"
-            - color: "#4d004b"
+          - color: "#000000"  # Black
+          - color: "#222222"  # Dark Gray
+          - color: "#555555"  # Medium Gray
+          - color: "#7F7F7F"  # Light Gray
+          - color: "#AFAFAF"  # Very Light Gray
+          - color: "#FFFFFF"  # White
+          - color: "#BFBFBF"  # Light Gray (Post White)
+          - color: "#808080"  # Medium Gray (Post White)
+          - color: "#404040"  # Dark Gray (Post White)
+          - color: "#0000FF"  # Blue
+          - color: "#5050FF"  # Light Blue
+          - color: "#00FF00"  # Green
+          - color: "#80FF00"  # Yellow-Green
+          - color: "#FFFF00"  # Yellow
+          - color: "#FFC000"  # Orange-Yellow
+          - color: "#FF8000"  # Orange
+          - color: "#FF0000"  # Red
+          - color: "#FF00A0"  # Magenta-Red
+          - color: "#FF00FF"  # Magenta
     info:
       source: MODIS
       spatialExtent: Regional
