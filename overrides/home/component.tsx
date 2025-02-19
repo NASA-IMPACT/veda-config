@@ -22,10 +22,6 @@ import Partners from "./partners";
 import Banner from './banner';
 import Carousel from './carousel/';
 
-import '../../common/styles.scss';
-
-import { SUBSCRIPTION_URL } from "../../constants";
-
 
 const ActionsBlock = styled.div`
   grid-column: 1 / -1;
