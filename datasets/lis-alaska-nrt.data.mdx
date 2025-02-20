@@ -1,0 +1,296 @@
+---
+id: lis-alaska-nrt
+name: Land Information System - Alaska
+description: State of Alaska vegetation and hydrological information produced by NASA’s Short-term Prediction and Transition Center – Land Information System (SPoRT-LIS).
+
+media:
+  src: ::file ./media/lis-alaska-nrt-cover.jpg
+  alt: Landfill
+  author:
+    name:  Figure by Matt Ziminski and Youmi Oh
+    url:  https://gml.noaa.gov/ccgg/carbontracker-ch4/
+taxonomy:
+  - name: Topics
+    values:
+      - Agriculture
+      - Climate
+      - Drought
+      - Evapotranspiration
+      - Hydrology
+      - Water Resources          
+  - name: Source
+    values:
+      - NASA
+infoDescription: |
+  ::markdown 
+    - Temporal Extent: June 1, 2010 - Present
+    - Temporal Resolution: Daily
+    - Spatial Extent: Alaska    
+    - Spatial Resolution: 0.03° x 0.03°   
+    - Data Units: Grams of methane per square meter per year (%)       
+    - Data Type: Research
+    - Data Latency: Updated annually      
+layers:
+  - id: total-ch4
+    stacCol: nrt_lis_rsm_Alaska
+    name: Relative Soil Moisture (0-10cm)
+    type: arc
+    description: Total methane emission from microbial, fossil and pyrogenic sources.
+    initialDatetime: newest
+    projection:
+      id: 'equirectangular'
+    zoomExtent:
+      - 0
+      - 0
+    sourceParams:
+      assets: total
+      colormap_name: purd
+      rescale:
+        - 0
+        - 50
+      
+    compare:
+      datasetId: lis-alaska-nrt
+      layerId: total-ch4
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit:
+        label: %
+      type: gradient
+      min: 0
+      max: 50
+      stops:
+        - '#F7F4F9'
+        - '#E9E3F0'
+        - '#D9C3DF'
+        - '#CDA0CD'
+        - '#D57ABA'
+        - '#E34A9F'
+        - '#DF2179'
+        - '#C10E51'
+        - '#92003F'
+        - '#67001F'
+    analysis:
+      metrics:
+        - mean
+      sourceParams:
+        
+        dst_crs: "+proj=cea"
+    info:
+      source: NASA 
+      spatialExtent: Alaska
+      temporalResolution: Daily
+      unit: %                  
+    media:
+      src: ::file ./media/tm54dvar-ch4flux-monthgrid-v1.thumbnails.total.png
+      alt: TM5-4DVar Isotopic CH₄ Inverse Fluxes - Total CH₄ Emission
+  - id: microbial-ch4
+    stacCol: lis-alaska-nrt
+    name: Relative Soil Moisture (0-40cm)
+    type: raster
+    description: Emission of methane from all microbial sources, such as wetlands, ruminants, agriculture and termites.
+    initialDatetime: newest
+    projection:
+      id: 'equirectangular'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: microbial
+      colormap_name: purd
+      rescale:
+        - 0
+        - 30
+      
+    compare:
+      datasetId: lis-alaska-nrt
+      layerId: microbial-ch4
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit:
+        label: %
+      type: gradient
+      min: 0
+      max: 30
+      stops:
+        - '#F7F4F9'
+        - '#E9E3F0'
+        - '#D9C3DF'
+        - '#CDA0CD'
+        - '#D57ABA'
+        - '#E34A9F'
+        - '#DF2179'
+        - '#C10E51'
+        - '#92003F'
+        - '#67001F'
+    analysis:
+      metrics:
+        - mean
+      sourceParams:
+        
+        dst_crs: "+proj=cea"
+    info:
+      source: NASA 
+      spatialExtent: Alaska
+      temporalResolution: Daily
+      unit: %               
+    media:
+      src: ::file ./media/tm54dvar-ch4flux-monthgrid-v1.thumbnails.microbial.png
+      alt: TM5-4DVar Isotopic CH₄ Inverse Fluxes - Microbial CH₄ Emission
+  - id: fossil-ch4
+    stacCol: lis-alaska-nrt
+    name: Green Vegetation Fraction
+    type: raster
+    description: Emission of methane from all fossil sources, such as oil and gas activities and coal mining.
+    initialDatetime: newest
+    projection:
+      id: 'equirectangular'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: fossil
+      colormap_name: purd
+      rescale:
+        - 0
+        - 50
+      
+    compare:
+      datasetId: lis-alaska-nrt
+      layerId: fossil-ch4
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit:
+        label: %
+      type: gradient
+      min: 0
+      max: 50
+      stops:
+        - '#F7F4F9'
+        - '#E9E3F0'
+        - '#D9C3DF'
+        - '#CDA0CD'
+        - '#D57ABA'
+        - '#E34A9F'
+        - '#DF2179'
+        - '#C10E51'
+        - '#92003F'
+        - '#67001F'
+    analysis:
+      metrics:
+        - mean
+      sourceParams:
+        
+        dst_crs: "+proj=cea"
+    info:
+      source: NASA 
+      spatialExtent: Alaska
+      temporalResolution: Daily 
+      unit: %               
+    media:
+      src: ::file ./media/tm54dvar-ch4flux-monthgrid-v1.thumbnails.fossil.png
+      alt: TM5-4DVar Isotopic CH₄ Inverse Fluxes - Fossil CH₄ Emission
+  - id: pyrogenic-ch4
+    stacCol: lis-alaska-nrt
+    name: Snow Depth
+    type: raster
+    description: Emission of methane from all sources of biomass burning, such as wildfires and crop residue burning.
+    initialDatetime: newest
+    projection:
+      id: 'equirectangular'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      assets: pyrogenic
+      colormap_name: purd
+      rescale:
+        - 0
+        - 8
+      
+    compare:
+      datasetId: lis-alaska-nrt
+      layerId: pyrogenic-ch4
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit:
+        label: %
+      type: gradient
+      min: 0
+      max: 8
+      stops:
+        - '#F7F4F9'
+        - '#E9E3F0'
+        - '#D9C3DF'
+        - '#CDA0CD'
+        - '#D57ABA'
+        - '#E34A9F'
+        - '#DF2179'
+        - '#C10E51'
+        - '#92003F'
+        - '#67001F'
+    analysis:
+      metrics:
+        - mean
+      sourceParams:
+        
+        dst_crs: "+proj=cea"
+    info:
+      source: NASA 
+      spatialExtent: Alaska
+      temporalResolution: Daily
+      unit: %               
+    media:
+      src: ::file ./media/tm54dvar-ch4flux-monthgrid-v1.thumbnails.pyrogenic.png
+      alt: TM5-4DVar Isotopic CH₄ Inverse Fluxes - Pyrogenic CH₄ Emission
+
+---
+
+<Block>
+  <Prose>   
+    **Temporal Extent:** June 1, 2010 - Present<br />
+    **Temporal Resolution:** Daily<br />
+    **Spatial Extent:** Alaska    
+    **Spatial Resolution:** 0.03° x 0.03°   
+    **Data Units:** Percentage (%)       
+    **Data Type:** Research<br />
+    **Data Latency:** Updated Daily
+
+    
+  </Prose>
+</Block>
+<Block>
+  <Prose>
+    ## Source Data Product Citation
+
+    ## Version History
+
+    ## Dataset Accuracy
+
+    ## Disclaimer
+
+    ## Scientific Details
+
+    ## Key Publications
+
+    ## Learn More
+
+    ## Acknowledgment
+
+    ## License
+    [Creative Commons Zero v1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC0 1.0)
+
+  </Prose>
+</Block>
