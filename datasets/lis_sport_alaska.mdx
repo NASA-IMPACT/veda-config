@@ -1,0 +1,166 @@
+---
+id: lis-sport-alaska <!-- Name to be assigned follow current VEDA STAC conventions. Manual-->
+name: 'Land Information System - Alaska' <!-- pulled from .docx  -->
+description: "State of Alaska vegetation and hydrological information produced by NASA’s Short-term Prediction and Transition Center – Land Information System (SPoRT-LIS)" <!-- pulled from .docx  -->
+usage: <!-- TODO Follow the template for others. Add specific information to each block (where applicable)    Also this ends up being in the "Access Data" section (like in GHG) -->
+  - url: '' 
+    label: Notebook showing data transformation to COG for ingest to the US GHG Center
+    title: ''
+  - url: ''
+    label: Notebooks to read, visualize, and explore data statistics
+    title: ''
+  - url: ''
+    label: Run example notebook
+    title: ''
+  - url: 
+    label: Browse and download the data
+    title: ''
+media:
+  src: ::file ./twsanomaly-globe.png  <!-- TODO Need to save new image name. Manual -->
+  alt: Add some information here about image. <!-- TODO. Manual   -->
+  author:
+    name: NASA LIS <!-- TODO. Manual   -->
+    url:
+taxonomy:
+  - name: Source
+    values:
+      - NASA EIS <!-- TODO. Manual   -->
+infoDescription: |
+  ::markdown
+    Add a couple of sentences describing dataset more in depth. <!-- TODO, insert. Manual  -->
+layers:
+  - id: lis_ak_rsm_10cm <!-- pulled from .json stac collection   -->
+    stacCol: lis-sport-alaska <!-- pulled from .json stac collection   -->
+    name: 'Relative soil moisture 0-10cm' <!-- TODO. Manual   -->
+    type: raster <!-- TODO. Manual   -->
+    description: 'Relative soil moisture (RSM) is a ratio of the volumetric soil moisture between the wilting and saturation points for a given soil type' <!-- pulled from .json stac collection   -->
+    zoomExtent:
+      - 0 <!-- TODO, insert. Manual  -->
+      - 11 <!-- TODO, insert. Manual  -->
+    sourceParams:
+      bidx: 1 <!-- TODO, Figure out what this is -->
+      colormap_name: rdylbu <!-- pulled from .json stac collection   -->
+      rescale:
+        - 0 <!-- TODO. Manual   -->
+        - 1 <!-- TODO. Manual   -->
+      nodata: -9999 <!-- TODO. Manual   -->
+    legend:
+      type: gradient
+      label: Trend in TWS Anomaly 
+      min: 0 <!-- TODO. Should be the same as rescale. Manual   -->
+      max: 1 <!-- TODO. Should be the same as rescale. Manual   -->
+      stops: <!-- TODO. Must find the number of categories/breakpoints. Manual   -->
+      <!-- For this specific dataset, they have a weird set of colors, I've asked them to provide th e hex colors   -->
+      - "#a50026"
+      - "#f46d43"
+      - "#fee090"
+      - "#e0f3f8"
+      - "#74add1"
+      - "#313695"
+    info:
+      source: NASA <!-- pulled from .docx  -->
+      spatialExtent: Alaska <!-- pulled from .docx  -->
+      temporalResolution: Daily <!-- pulled from .docx  -->
+      unit: Percentage (%) <!-- pulled from .docx  -->
+  - id: lis_ak_rsm_10cm <!-- pulled from .json stac collection   -->
+    stacCol: lis-sport-alaska <!-- pulled from .json stac collection   -->
+    name: 'Relative soil moisture 0-10cm' <!-- TODO. Manual   -->
+    type: raster <!-- TODO. Manual   -->
+    description: 'Relative soil moisture (RSM) is a ratio of the volumetric soil moisture between the wilting and saturation points for a given soil type' <!-- pulled from .json stac collection   -->
+    zoomExtent:
+      - 0 <!-- TODO, insert. Manual  -->
+      - 11 <!-- TODO, insert. Manual  -->
+    sourceParams:
+      bidx: 1
+      colormap_name: rdylbu <!-- pulled from .json stac collection   -->
+      rescale:
+        - 0 <!-- TODO. Manual   -->
+        - 1 <!-- TODO. Manual   -->
+      nodata: -9999 <!-- TODO. Manual   -->
+    legend:
+      type: gradient
+      label: Trend in TWS Anomaly 
+      min: 0 <!-- TODO. Should be the same as rescale. Manual   -->
+      max: 1 <!-- TODO. Should be the same as rescale. Manual   -->
+      stops: <!-- TODO. Must find the number of categories/breakpoints. Manual   -->
+      <!-- For this specific dataset, they have a weird set of colors, I've asked them to provide th e hex colors   -->
+      - "#a50026"
+      - "#f46d43"
+      - "#fee090"
+      - "#e0f3f8"
+      - "#74add1"
+      - "#313695"
+    info:
+      source: NASA <!-- pulled from .docx  -->
+      spatialExtent: Alaska <!-- pulled from .docx  -->
+      temporalResolution: Daily <!-- pulled from .docx  -->
+      unit: Percentage (%) <!-- pulled from .docx  -->
+---
+<Block type='full'>
+<Prose>
+## Overview
+Terrestrial water storage (TWS) is defined as the summation of all water on the land surface and in the subsurface. It includes surface soil moisture, root zone soil moisture, groundwater, snow, ice, water stored in the vegetation, river and lake water. 
+</Prose>
+  <Figure>
+  <Map
+    datasetId='tws-trend'
+    layerId='lis-tws-trend'
+    dateTime='2001-01-01'
+    zoom={4}
+    center={[-116,36]}
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+  Depleting TWS over CA captured by negative TWS anomaly trends
+</Caption>
+  </Figure>
+</Block>
+
+<Block>
+<Prose>
+## Modeling TWS  
+TWS is modeled using Noah-MP land surface model (LSM) within LIS framework by assimilating NASA earth observations of soil moisture from Soil Moisture Active Passive (SMAP), leaf area index from MODIS sensor, and TWS from GRACE/GRACE-FO. The modeled TWS is produced over global domain at a resolution of 10 km. 
+</Prose>
+</Block>
+
+<Block type='full'>
+  <Figure>
+  <Map
+    datasetId='tws-trend'
+    layerId='lis-tws-trend'
+    dateTime='2001-01-01'
+    zoom={4}
+    center={[77.63,24.27]}
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+  Trend in TWS anomalies over India showing large groundwater extraction leading to depleting TWS
+</Caption>
+  </Figure>
+<Prose>
+## Interpreting the data
+The TWS anomalies are calculated as differences of raw TWS with the climatology obtained over 2001-2021. Negative anomalies denote lower than normal TWS and vice-versa. The trend over time is thus deseasonalized and reflective of changes due to human impacts.
+</Prose>
+</Block>
+
+
+<Block>
+<Prose>
+## Additional resources
+* [EIS Freshwater](https://freshwater.eis.smce.nasa.gov/)
+
+* [Land Information System](https://lis.gsfc.nasa.gov/)
+
+### Explore the Missions
+* [GRACE-FO](https://gracefo.jpl.nasa.gov/data/grace-fo-data/)
+
+* [SMAP](https://smap.jpl.nasa.gov/)
+
+* [MODIS](https://modis.gsfc.nasa.gov/)
+</Prose>
+</Block>
+
