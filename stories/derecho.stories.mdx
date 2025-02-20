@@ -249,7 +249,7 @@ taxonomy:
   </Chapter>
   
   <Chapter
-    center={[-97.25, 42.73972]}
+    center={[-97.21, 42.73972]}
     zoom={12}
     datasetId='darnah-flood'
     layerId='darnah-gpm-daily'
@@ -290,7 +290,7 @@ taxonomy:
   </Chapter>
 
   <Chapter
-    center={[-97.2, 43.8250]}
+    center={[-97.16, 43.8250]}
     zoom={10}
     datasetId='darnah-flood'
     layerId='darnah-gpm-daily'
@@ -323,8 +323,8 @@ taxonomy:
 
 
   <Chapter
-    center={[-96.76, 43.55]}
-    zoom={12}
+    center={[-96.77, 43.55]}
+    zoom={11}
     datasetId='darnah-flood'
     layerId='darnah-gpm-daily'
     datetime='2023-09-12'
@@ -345,7 +345,7 @@ taxonomy:
   </Chapter>
 
   <Chapter
-    center={[-112, 44]}
+    center={[-110, 44]}
     zoom={5}
     datasetId='darnah-flood'
     layerId='darnah-gpm-daily'
@@ -403,7 +403,7 @@ taxonomy:
   </Chapter>
 
   <Chapter
-    center={[-96.4, 43.2022]}
+    center={[-96.5, 43.2022]}
     zoom={10}
     datasetId='darnah-flood'
     layerId='darnah-gpm-daily'
@@ -469,7 +469,7 @@ taxonomy:
   </Chapter>
 
   <Chapter
-    center={[-95.8, 45.8]}
+    center={[-95.4, 45.8848]}
     zoom={12}
     datasetId='darnah-flood'
     layerId='darnah-gpm-daily'
@@ -502,7 +502,7 @@ taxonomy:
   
   <Chapter
     center={[-96.6, 45.01278]}
-    zoom={9}
+    zoom={10}
     datasetId='darnah-flood'
     layerId='darnah-gpm-daily'
     datetime='2023-09-12'
@@ -526,7 +526,7 @@ taxonomy:
 
 
   <Chapter
-    center={[-96.8, 46.2720583]}
+    center={[-96.78, 46.2720583]}
     zoom={11}
     datasetId='darnah-flood'
     layerId='darnah-gpm-daily'
@@ -558,7 +558,7 @@ taxonomy:
   </Chapter>
 
   <Chapter
-    center={[-93.17, 48.3833]}
+    center={[-97.15, 47.0712]}
     zoom={10}
     datasetId='darnah-flood'
     layerId='darnah-gpm-daily'
@@ -575,13 +575,13 @@ taxonomy:
       alt='Megan Wanek photo of flooding and snapped trees'
     />
     <Caption>
-    Trees uprooted and slight flooding in Farmington, Minnesota as a result of tornadic winds. Courtesy of [Megan Wanek](https://www.weather.gov/fgf/May12th2022SignificantSevereDerechoEvent)
+    Trees uprooted and slight flooding in Fargo, Minnesota as a result of tornadic winds. Courtesy of [Megan Wanek](https://www.weather.gov/fgf/May12th2022SignificantSevereDerechoEvent)
     </Caption>
   </Figure> 
   </Chapter>
 
   <Chapter
-    center={[-112, 44]}
+    center={[-110, 44]}
     zoom={5}
     datasetId='darnah-flood'
     layerId='darnah-gpm-daily'
@@ -603,8 +603,91 @@ taxonomy:
 
   Overall, the derecho caused 32 tornadoes, 296 wind reports, and 77 hail reports across the affected states. The total estimated crop damage reached $8.132 million, while property damage totaled $8.13 million. Tragically, the storm resulted in three deaths and six injuries, emphasizing the destructive power of this high impact weather event.
    
-  *Insert table of all states and their storm reports, injuries, deaths, and property/crop damage amounts*
-   
+  <Figure style={{ display: 'block' }}>
+    <div className='data-table'>
+      <table>
+        <thead>
+          <tr>
+            <th>   State   </th>
+            <th>   Tornado Reports   </th>
+            <th>   Wind Reports   </th>
+            <th>   Hail Reports   </th>
+            <th>   Crop Damage  </th>
+            <th>   Property Damage   </th>
+            <th>   Deaths   </th>
+            <th>   Injuries   </th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <td>Nebraska</td>
+            <td class='tornado'>0</td>
+            <td class='wind'>77</td>
+            <td class='hail'>21</td>
+            <td class='crop'>7.008M</td>
+            <td class='prop'>3.375M</td>
+            <td class='death'>0</td>
+            <td class='injur'>1</td>
+          </tr>
+          <tr>
+            <td>Iowa</td>
+            <td class='tornado'>1</td>
+            <td class='wind'>20</td>
+            <td class='hail'>0</td>
+            <td class='crop'>63K</td>
+            <td class='prop'>0K</td>
+            <td class='death'>0</td>
+            <td class='injur'>0</td>
+          </tr>
+          <tr>
+            <td>South Dakota</td>
+            <td class='tornado'>12</td>
+            <td class='wind'>84</td>
+            <td class='hail'>5</td>
+            <td class='crop'>1.056M</td>
+            <td class='prop'>0K</td>
+            <td class='death'>2</td>
+            <td class='injur'>3</td>
+          </tr> 
+          <tr>
+            <td>North Dakota</td>
+            <td class='tornado'>1</td>
+            <td class='wind'>11</td>
+            <td class='hail'>3</td>
+            <td class='crop'>0K</td>
+            <td class='prop'>75K</td>
+            <td class='death'>0</td>
+            <td class='injur'>0</td>
+          </tr>  
+          <tr>
+            <td>Minnesota</td>
+            <td class='tornado'>18</td>
+            <td class='wind'>104</td>
+            <td class='hail'>48</td>
+            <td class='crop'>5K</td>
+            <td class='prop'>4.68M</td>
+            <td class='death'>1</td>
+            <td class='injur'>2</td>
+          </tr>
+          <tr class='bold-row'>
+            <td>Total</td>
+            <td class='tornado'>32</td>
+            <td class='wind'>296</td>
+            <td class='hail'>77</td>
+            <td class='crop'>8.132M</td>
+            <td class='prop'>8.13M</td>
+            <td class='death'>3</td>
+            <td class='injur'>6</td>
+          </tr>      
+
+        </tbody>
+      </table>
+    </div>
+  <Caption>
+    Table 1: Official filtered storm reports, damage reports, deaths and injuries associated with the May 12, 2022 Derecho within Nebraska, Iowa, South Dakota, North Dakota, and Minnesota. Totals from each column for the entire event region is reflected in the bottom row. Data was collected from both the [NCEI Storm Events Database](https://www.ncdc.noaa.gov/stormevents/) and [SPC Storm Reports Archive](https://www.spc.noaa.gov/exper/archive/events/).
+  </Caption>  
+  </Figure>
   </Chapter>
 </ScrollytellingBlock>
 
