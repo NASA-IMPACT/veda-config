@@ -1,7 +1,7 @@
 ---
 id: global-reanalysis-da
-name: 'A Global Reanalysis for Water, Energy, and Carbon Cycle Variables'
-description: "A high-resolution global data product that integrates NASA’s state-of-the-art model with satellite observations"
+name: 'High-Resolution Global Land and Hydrology Information'
+description: "Global data on land surface meteorology and water availability"
 media:
   src: ::file ./global_tws_blackbg_v2.png
   alt: One day of terrestrial water storage from LIS outputs.
@@ -14,16 +14,25 @@ taxonomy:
   values:
     - Water Resources
     - Water Model
+    - Land Surface Model
     - Precipitation
     - Groundwater
     - Hydrology
+    - Drought
+    - Floods
+
 - name: Source
   values:
-    - NASA EIS
+    - NASA
 infoDescription: |
   ::markdown
-    The reanalysis product is created using the [NASA Land Information System](https://lis.gsfc.nasa.gov/) modeling framework to merge land surface model simulations with observations from satellites through data assimilation. The team uses the Noah-MP land surface model and assimilates soil moisture from the European Space Agency’s Climate Change Initiative Program (ESA CCI), leaf area index from the Moderate Resolution Imaging Spectroradiometer (MODIS), and terrestrial water storage anomalies from the Gravity Recovery and Climate Experiment and the follow-on missions (GRACE/GRACE-FO). 
-
+    - Temporal Extent: January 2003 - December 2020
+    - Temporal Resolution: Daily
+    - Spatial Extent: Global    
+    - Spatial Resolution: 10km  
+    - Data Units: Multiple fields       
+    - Data Type: Research
+    - Data Latency: 1-2 months    
 layers:
   - id: lis-global-da-evap-5
     stacCol: lis-global-da-evap-5
@@ -108,69 +117,70 @@ layers:
 ---
 <Block>
 <Prose>
+| **Feature**            | **HydroGlobe-10km**     | **HydroGlobe-5km**       |
+|------------------------|-------------------------|--------------------------|
+| **Temporal Extent**     | 2003-2020              | 2003-near real-time      |
+| **Temporal Resolution** | Daily                  | Daily                    |
+| **Spatial Extent**      | Global                 | Global                   |
+| **Spatial Resolution**  | 10 km                  | 5 km                     |
+| **Data Units**          | Multiple fields        | Multiple fields          |
+| **Data Type**           | Research               | Research                 |
+| **Data Latency**        | Fixed latency (Ends in 2020) | 1-2 months            |
+
+
 ## Introduction
 🚧 This page presents work in progress and not a peer-reviewed data product! 🚧
 
-<Link to='/data-catalog/global-reanalysis-da-5'>Learn more about the Data - 5km</Link>
-<br />
-<Link to='/data-catalog/global-reanalysis-da-10'>Learn more about the Data - 10km</Link>
-<br />
-<Link to='/exploration?search=global-reanalysis-da-5'>Explore the Data - 5km</Link>
-<br />
-<Link to='/exploration?search=global-reanalysis-da-10'>Explore the Data - 10km</Link>
-<br />
+HydroGlobe data is available in two resolutions:
+  - <Link to='/data-catalog/global-reanalysis-da-5'>HydroGlobe-5km</Link>: 5km resolution with improved data assimilation for enhanced accuracy. Temporal extent 2003-2024
+  - <Link to='/data-catalog/global-reanalysis-da-10'>HydroGlobe-10km</Link>: 10km resolution with a temporal extent 2003-2020
 
-Realistic estimates of water, energy, and carbon cycle variables are necessary for accurate understanding of earth system processes. Land surface models simulate processes at the Earth’s surface and can provide spatiotemporal estimates of a whole suite of variables like precipitation, soil moisture, and evapotranspiration. However, models often have biases that cause high uncertainties in important water budget variables. Therefore, tools like data assimilation, where observations are used to constrain model simulations, are often used.
+Link to VEDA Data story pages:
+  - A 10-km View of the Global Water Cycle
 
-This dataset is a new global reanalysis that includes variables – such as terrestrial water storage, snow water equivalent, and gross primary productivity – to help quantify the water and energy budget. At the present time, the model reanalysis output is available at 10 km spatial resolution and a daily temporal resolution from January 1, 2003 through December 31, 2021. Details on the model setup are provided below, as well as links to how the reanalysis output can be used to address key science questions.
+Realistic estimates of water, energy, and carbon cycle variables are crucial for accurately understanding Earth system processes. HydroGlobe provides these estimates by integrating satellite observations with model simulations using data assimilation within NASA’s Land Information System (LIS) modeling framework. 
 
-Authors: Melissa Wrzesien, Wanshu Nie, Sujay Kumar, Kim Locke
+## Source Data Product Citation
+- NASA Land Data Assimilation System website https://ldas.gsfc.nasa.gov/hydroglobe
+- NASA Land Information System Framework website: https://lis.gsfc.nasa.gov/
+- Nie, W., Kumar, S. V., Getirana, A., Zhao, L., Wrzesien, M. L., Konapala, G., ... & Rodell, M. (2024). Nonstationarity in the global terrestrial water cycle and its interlinkages in the Anthropocene. Proceedings of the National Academy of Sciences, 121(45), e2403707121. DOI:10.1073/pnas.240370712.	
 
-</Prose>
-</Block>
+## Dataset Accuracy
+The HydroGlobe-10km dataset has been evaluated against both remotely sensed and in situ observations to assess its accuracy. Detailed reference datasets and evaluation results can be found in the Supporting Information section in this paper. While HydroGlobe provides high-quality hydrological reanalysis data, users are strongly encouraged to verify that the dataset meets the accuracy requirements of their specific applications. The interpretation of results should be done with consideration of potential uncertainties inherent to the satellite observations utilized for data assimilation and the corresponding modeling processes.
 
-<Block>
-<Prose>
-## Modeling Setup
-The reanalysis product is created using the [NASA Land Information System](https://lis.gsfc.nasa.gov/) modeling framework to merge land surface model simulations with observations from satellites through data assimilation. The team uses the Noah-MP land surface model and assimilates soil moisture from the European Space Agency’s Climate Change Initiative Program (ESA CCI), leaf area index from the Moderate Resolution Imaging Spectroradiometer (MODIS), and terrestrial water storage anomalies from the Gravity Recovery and Climate Experiment and the follow-on missions (GRACE/GRACE-FO). 
+## Scientific Details
+HydroGlobe integrates various remote-sensing datasets to provide real-world hydrological information. 
 
-The output variables available on VEDA include evapotranspiration (ET), gross primary productivity (GPP), groundwater storage (GWS), snow water equivalent (SWE), streamflow, surface runoff, subsurface runoff, terrestrial water storage (TWS), and total precipitation. See the [VEDA Analysis tool](https://www.earthdata.nasa.gov/dashboard/eis/analysis) to make interactive plots of the variables over a user-specified domain and time period.
+Key Aspects of the Dataset:
 
-</Prose>
-</Block>
+- The model: Both HydroGlobe-10km and HydroGlobe-5km use the Noah-MP land surface model within NASA LIS.
+- The meteorological forcings: 
+  - HydroGlobe 5km is driven by meteorological fields from the Modern-Era Retrospective analysis for Research and Applications version 2 (MERRA-2), radiation products from NASA’s Clouds and the Earth’s Radiant Energy System (CERES) project, and precipitation from Integrated Multi-satellitE Retrievals for Global Precipitation Measurement (IMERG) that has been downscaled and bias-corrected based on WorldClim precipitation climatology.
+  - HydroGlobe 10km is driven by a combination of NASA’s Modern-Era Retrospective analysis for Research and Applications version 2 (MERRA-2) data and Integrated Multi-satellitE Retrievals for Global Precipitation Measurement (IMERG) rainfall data.
+- The assimilated remote-sensing datasets:
+  - HydroGlobe-10km assimilated combined soil moisture product from European Space Agency (ESA CCI), leaf area index (LAI) from Moderate Resolution Imaging Spectroradiometer (MODIS), and terrestrial water storage anomalies from Gravity Recovery and Climate Experiment and follow-on satellites (GRACE/GRACE-FO).
+  - In addition to the remote-sensing products that HydroGlobe-10km adopted, HydroGlobe-5km includes the assimilation of soil moisture from NASA SMAP for 2023-2024 when ESA CCI product is not available and the assimilation of snow water equivalent derived from MODIS using machine learning-based reconstruction approaches.
 
-<Block>
-<Prose>
-## Explore the Data
-The global reanalysis is a large dataset with nearly two decades of daily output. Here we show a comparison of two dates for a single variable. We encourage users to <Link to='/exploration?search=global-reanalysis-da'>Explore the Data</Link> to look at different dates and to compare variables.
+## Key Publications
+- Nie, W., Kumar, S. V., Getirana, A., Zhao, L., Wrzesien, M. L., Konapala, G., ... & Rodell, M. (2024). Nonstationarity in the global terrestrial water cycle and its interlinkages in the Anthropocene. Proceedings of the National Academy of Sciences, 121(45), e2403707121. DOI:10.1073/pnas.240370712.
 
-An example of how trends calculated from the global reanalysis model output can be used to understand changes in TWS, GPP, and ET, can be seen in the <Link to='/stories/tws-trends'>corresponding data story</Link>.
-</Prose>
-  <Figure>
-  <Map
-    datasetId='global-reanalysis-da'
-    layerId='lis-global-da-tws'
-    dateTime='2005-06-01'
-    zoom={2}
-    center={[-112,40]}
-    compareDateTime='2020-06-01'
-  />
-  <Caption
-    attrAuthor='NASA'
-    attrUrl='https://nasa.gov/'
-  >
-  Terrestrial water storage over North America compared on June 1, 2005 (left) and June 1, 2020 (right), captured by LIS assimilation.
-</Caption>
-  </Figure>
-</Block>
+- Nie, W., Kumar, S. V., & Zhao, L. (2025). Anthropogenic influences on the water cycle amplify uncertainty in drought assessments. One Earth. DOI: 10.1016/j.oneear.2025.101196.
 
-<Block>
-<Prose>
-### Explore the modeling framework:
-* [Land Information System](https://lis.gsfc.nasa.gov/)
-### Explore the remote sensing datasets:
-    * [GRACE-FO](https://gracefo.jpl.nasa.gov/data/grace-fo-data/)
-    * [ESA CCI](https://esa-soilmoisture-cci.org/)
-    * [MODIS](https://modis.gsfc.nasa.gov/)
+## Other Relevant Publications
+
+## Learn More
+- Visualize the HydroGlobe-10km Data: 
+  - [TWS Nonstationarity Visualization]( https://svs.gsfc.nasa.gov/5442/) 
+  - [TWS Dataset Regional View](https://svs.gsfc.nasa.gov/5444/) 
+- Link to HydroGlobe Data Stories
+- Link to NLDAS-3 Data Story
+
+## License
+[Creative Commons Zero v1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC0 1.0)
+
+## Access Data
+- Open Data Repository link
+- Jupyter notebook link
+
 </Prose>
 </Block>
