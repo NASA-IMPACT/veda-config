@@ -28,13 +28,35 @@ for (let key in env) {
 
 const { execSync } = require('child_process');
 const path = require('path');
-
+const fs = require('fs');
 const inputCmd = process.argv.slice(2).join(' ');
+
 if (inputCmd === '--info') {
   const uiPkg = require(path.join(__dirname, 'ui/package.json'))
   console.log(`Current veda-ui: ${uiPkg.version}`);
 
   process.exit();
+}
+
+// Compile SASS to CSS before running other commands
+if (inputCmd !== 'clean' && inputCmd !== 'test') {
+  console.log('Compiling SASS styles...');
+
+  const uiDistStyles = path.join(__dirname, 'ui/dist/styles');
+
+  if (!fs.existsSync(uiDistStyles)) {
+    fs.mkdirSync(uiDistStyles, { recursive: true });
+  }
+
+  try {
+    execSync(
+      'sass --load-path=node_modules/@uswds/uswds/packages styles/theme.scss .veda/ui/dist/styles/theme.css',
+      { stdio: 'inherit' }
+    );
+    console.log('SASS compilation successful');
+  } catch (error) {
+    console.error('SASS compilation failed:', error);
+  }
 }
 
 const configFile = path.join(__dirname, '../veda.config.js');
@@ -57,3 +79,23 @@ const gulpConfig = path.join(__dirname, 'ui/gulpfile.js');
 const cmd = `node ${gulpCli} --cwd ${rootDir} -f ${gulpConfig} ${inputCmd} --veda-config ${configFile}`;
 
 execSync(cmd, { stdio: 'inherit' });
+
+// Add a simple watcher for SASS files when serving
+if (inputCmd === 'serve') {
+  console.log('Starting SASS watcher...');
+  const { spawn } = require('child_process');
+  const sassWatch = spawn(
+    'sass',
+    [
+      '--watch',
+      '--load-path=node_modules/@uswds/uswds/packages',
+      'styles/theme.scss:.veda/ui/dist/styles/theme.css'
+    ],
+    { stdio: 'inherit' }
+  );
+
+  process.on('SIGINT', () => {
+    sassWatch.kill();
+    process.exit();
+  });
+}
