@@ -1,7 +1,7 @@
 ---
 id: lis-conus-nrt
 name: Land Information System - CONUS
-description: Relative soil moisture (RSM) percentiles integrated over various depths for the contiguous United States (CONUS) produced by NASA’s Short-term Prediction and Transition Center – Land Information System (SPoRT-LIS).
+description: Soil moisture percentiles integrated over various depths for the contiguous United States (CONUS) produced by NASA’s Short-term Prediction and Transition Center – Land Information System (SPoRT-LIS).
 
 media:
   src: ::file ./media/lis-conus-nrt-cover.jpg
@@ -23,19 +23,19 @@ taxonomy:
       - NASA
 infoDescription: |
   ::markdown 
-    - Temporal Extent: January 1998 - December 2021
+    - Temporal Extent: Two weeks prior - present
     - Temporal Resolution: Daily
     - Spatial Extent: CONUS    
-    - Spatial Resolution: 1° x 1°   
-    - Data Units: Grams of methane per square meter per year (%)       
+    - Spatial Resolution: 0.03° x 0.03°  
+    - Data Units: Percentage (%)     
     - Data Type: Research
-    - Data Latency: Updated annually      
+    - Data Latency: Updated daily      
 layers:
-  - id: total-ch4
-    stacCol: nrt_lis_rsm_conus
+  - id: lis_rsm_conus
+    stacCol: lis-conus-nrt
     name:  Relative Soil Moisture (0-10cm)
     type: arc
-    description: Total methane emission from microbial, fossil and pyrogenic sources.
+    description: Relative soil moisture (RSM) is a ratio of the volumetric soil moisture between the wilting and saturation points for a given soil type.
     initialDatetime: newest
     projection:
       id: 'equirectangular'
@@ -47,21 +47,21 @@ layers:
       colormap_name: purd
       rescale:
         - 0
-        - 50
+        - 1
       
     compare:
       datasetId: lis-conus-nrt
-      layerId: total-ch4
+      layerId: lis_rsm_conus
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }
     legend:
       unit:
-        label: %
+        label: Percentage %
       type: gradient
       min: 0
-      max: 50
+      max: 1
       stops:
         - '#F7F4F9'
         - '#E9E3F0'
@@ -83,15 +83,16 @@ layers:
       source: NASA 
       spatialExtent: CONUS
       temporalResolution: Daily
-      unit: %                  
+      unit: Percentage %                  
     media:
       src: ::file ./media/tm54dvar-ch4flux-monthgrid-v1.thumbnails.total.png
       alt: TM5-4DVar Isotopic CH₄ Inverse Fluxes - Total CH₄ Emission
-  - id: microbial-ch4
+
+  - id: lis_rsm_2m
     stacCol: lis-conus-nrt
     name: Relative Soil Moisture (0-200cm)
     type: raster
-    description: Emission of methane from all microbial sources, such as wetlands, ruminants, agriculture and termites.
+    description: Relative soil moisture (RSM) is a ratio of the volumetric soil moisture between the wilting and saturation points for a given soil type.
     initialDatetime: newest
     projection:
       id: 'equirectangular'
@@ -103,21 +104,21 @@ layers:
       colormap_name: purd
       rescale:
         - 0
-        - 30
+        - 1
       
     compare:
       datasetId: lis-conus-nrt
-      layerId: microbial-ch4
+      layerId: lis_rsm_2m
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }
     legend:
       unit:
-        label: %
+        label: Percentage %
       type: gradient
       min: 0
-      max: 30
+      max: 1
       stops:
         - '#F7F4F9'
         - '#E9E3F0'
@@ -139,15 +140,16 @@ layers:
       source: NASA 
       spatialExtent: CONUS
       temporalResolution: Daily
-      unit: %               
+      unit: Percentage %               
     media:
       src: ::file ./media/tm54dvar-ch4flux-monthgrid-v1.thumbnails.microbial.png
       alt: TM5-4DVar Isotopic CH₄ Inverse Fluxes - Microbial CH₄ Emission
-  - id: fossil-ch4
+
+  - id: lis_vsm_percentile_10cm
     stacCol: lis-conus-nrt
     name:  Volumetric Soil Moisture (0-10cm)
     type: raster
-    description: Emission of methane from all fossil sources, such as oil and gas activities and coal mining.
+    description: Volumetric soil moisture (VSM) is the total water volume content per total soil volume content.
     initialDatetime: newest
     projection:
       id: 'equirectangular'
@@ -159,21 +161,21 @@ layers:
       colormap_name: purd
       rescale:
         - 0
-        - 50
+        - 1
       
     compare:
       datasetId: lis-conus-nrt
-      layerId: fossil-ch4
+      layerId: lis_vsm_percentile_10cm
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }
     legend:
       unit:
-        label: %
+        label: Percentage %
       type: gradient
       min: 0
-      max: 50
+      max: 1
       stops:
         - '#F7F4F9'
         - '#E9E3F0'
@@ -195,15 +197,16 @@ layers:
       source: NASA 
       spatialExtent: CONUS
       temporalResolution: Daily 
-      unit: %               
+      unit: Percentage %               
     media:
       src: ::file ./media/tm54dvar-ch4flux-monthgrid-v1.thumbnails.fossil.png
       alt: TM5-4DVar Isotopic CH₄ Inverse Fluxes - Fossil CH₄ Emission
-  - id: pyrogenic-ch4
+
+  - id: lis_vsm_percentile_40cm
     stacCol: lis-conus-nrt
     name: Volumetric Soil Moisture (0-40cm)
     type: raster
-    description: Emission of methane from all sources of biomass burning, such as wildfires and crop residue burning.
+    description: Volumetric soil moisture (VSM) is the total water volume content per total soil volume content.
     initialDatetime: newest
     projection:
       id: 'equirectangular'
@@ -215,21 +218,21 @@ layers:
       colormap_name: purd
       rescale:
         - 0
-        - 8
+        - 1
       
     compare:
       datasetId: lis-conus-nrt
-      layerId: pyrogenic-ch4
+      layerId: lis_vsm_percentile_40cm
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }
     legend:
       unit:
-        label: %
+        label: Percentage %
       type: gradient
       min: 0
-      max: 8
+      max: 1
       stops:
         - '#F7F4F9'
         - '#E9E3F0'
@@ -251,16 +254,16 @@ layers:
       source: NASA 
       spatialExtent: CONUS
       temporalResolution: Daily
-      unit: %               
+      unit: Percentage %               
     media:
       src: ::file ./media/tm54dvar-ch4flux-monthgrid-v1.thumbnails.pyrogenic.png
       alt: TM5-4DVar Isotopic CH₄ Inverse Fluxes - Pyrogenic CH₄ Emission
 
-  - id: pyrogenic-ch4
+  - id: lis_vsm_percentile_100cm
     stacCol: lis-conus-nrt
     name: Volumetric Soil Moisture (0-100cm)
     type: raster
-    description: Emission of methane from all sources of biomass burning, such as wildfires and crop residue burning.
+    description: Volumetric soil moisture (VSM) is the total water volume content per total soil volume content.
     initialDatetime: newest
     projection:
       id: 'equirectangular'
@@ -272,21 +275,21 @@ layers:
       colormap_name: purd
       rescale:
         - 0
-        - 8
+        - 1
       
     compare:
       datasetId: lis-conus-nrt
-      layerId: pyrogenic-ch4
+      layerId: lis_vsm_percentile_100cm
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }
     legend:
       unit:
-        label: %
+        label: Percentage %
       type: gradient
       min: 0
-      max: 8
+      max: 1
       stops:
         - '#F7F4F9'
         - '#E9E3F0'
@@ -308,16 +311,16 @@ layers:
       source: NASA 
       spatialExtent: CONUS
       temporalResolution: Daily
-      unit: %               
+      unit: Percentage %               
     media:
       src: ::file ./media/tm54dvar-ch4flux-monthgrid-v1.thumbnails.pyrogenic.png
       alt: TM5-4DVar Isotopic CH₄ Inverse Fluxes - Pyrogenic CH₄ Emission
 
-  - id: pyrogenic-ch4
+  - id: lis_vsm_percentile_200cm
     stacCol: lis-conus-nrt
     name: Volumetric Soil Moisture (0-200cm)
     type: raster
-    description: Emission of methane from all sources of biomass burning, such as wildfires and crop residue burning.
+    description: Volumetric soil moisture (VSM) is the total water volume content per total soil volume content.
     initialDatetime: newest
     projection:
       id: 'equirectangular'
@@ -329,21 +332,21 @@ layers:
       colormap_name: purd
       rescale:
         - 0
-        - 8
+        - 1
       
     compare:
       datasetId: lis-conus-nrt
-      layerId: pyrogenic-ch4
+      layerId: lis_vsm_percentile_200cm
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }
     legend:
       unit:
-        label: %
+        label: Percentage %
       type: gradient
       min: 0
-      max: 8
+      max: 1
       stops:
         - '#F7F4F9'
         - '#E9E3F0'
@@ -365,7 +368,7 @@ layers:
       source: NASA 
       spatialExtent: CONUS
       temporalResolution: Daily
-      unit: %               
+      unit: Percentage %               
     media:
       src: ::file ./media/tm54dvar-ch4flux-monthgrid-v1.thumbnails.pyrogenic.png
       alt: TM5-4DVar Isotopic CH₄ Inverse Fluxes - Pyrogenic CH₄ Emission
@@ -374,7 +377,7 @@ layers:
 
 <Block>
   <Prose>   
-    **Temporal Extent:** January 18, 2025 - Present<br />
+    **Temporal Extent:** Two weeks prior - Present<br />
     **Temporal Resolution:** Daily<br />
     **Spatial Extent:** Contiguous United States (CONUS)    
     **Spatial Resolution:** 0.03° x 0.03°   
@@ -388,17 +391,23 @@ layers:
 <Block>
   <Prose>
     ## Source Data Product Citation
-
+    NASA Land Information System model configuration and information can be found in this [peer-reviewed article](doi:10.1016/j.envsoft.2005.07.00).
     ## Version History
 
     ## Dataset Accuracy
 
     ## Disclaimer
-
+    This dataset has been transformed from its original format (NetCDF) into Cloud Optimized GeoTIFF ([COG](https://www.cogeo.org/)) for display with NASA VEDA. Careful quality checks are used to ensure data transformation has been performed correctly.
     ## Scientific Details
 
     ## Key Publications
+    Aaron, J. and Peursem, K.V. Utilizing Remote Sensing & NASA SPoRT Land Information System-Alaska To Improve Flood & Landslide Situational Awareness From Heavy Precipitation. 104th AMS Annual Meeting. AMS, 2024. [https://ams.confex.com/ams/104ANNUAL/mediafile/Handout/Paper435177/AMS_2024_AK-LIS%202020%20event.pptx.pdf](https://ams.confex.com/ams/104ANNUAL/mediafile/Handout/Paper435177/AMS_2024_AK-LIS%202020%20event.pptx.pdf) 
 
+    Tavakol, A., Rahmani, V., Quiring, S.M., Kumar, S.V. (2019). Evaluation analysis of NASA SMAP L3 and L4 and SPoRT-LIS soil moisture data in the United States. Remote Sensing of Environment, (229), 234-246, [https://doi.org/10.1016/j.rse.2019.05.006](https://doi.org/10.1016/j.rse.2019.05.006).
+
+    McDonough, K.R., Hutchinson, S.L., Hutchinson, J.M.S., Case, J.L., Rahmani, V. (2018). Validation and assessment of SPoRT-LIS surface soil moisture estimates for water resources management applications. Journal of Hydrology, (566), 43-54, [https://doi.org/10.1016/j.jhydrol.2018.09.007](https://doi.org/10.1016/j.jhydrol.2018.09.007).
+
+    Hoylman, Z. H., Holden, Z., Bocinsky, R. K., Ketchum, D., Swanson, A., & Jencso, K. (2024). Optimizing drought assessment for soil moisture deficits. Water Resources Research, (60), [https://doi.org/10.1029/2023WR036087](https://doi.org/10.1029/2023WR036087).
     ## Learn More
 
     ## Acknowledgment
