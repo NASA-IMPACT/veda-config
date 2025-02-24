@@ -33,7 +33,9 @@ layers:
       - 20
     sourceParams:
       colormap_name: rdylbu_r
-      rescale: 0.5,1
+      rescale:
+        - 0.5
+        - 1
       resampling: bilinear
       bidx: 1
       nodata: -9999
@@ -71,7 +73,8 @@ layers:
       - 20
     sourceParams:
       rescale:
-        - 0,5000
+        - 0
+        - 5000
       resampling: bilinear
       bidx: [1,2,3]
     compare:
