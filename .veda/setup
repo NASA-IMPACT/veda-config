@@ -6,13 +6,3 @@ yarn
 echo "Installing veda-ui dependencies"
 cd .veda/ui
 yarn
-
-echo "Creating required directories"
-mkdir -p dist/styles dist/img dist/fonts
-
-echo "Copying USWDS assets"
-cp -r ../node_modules/@uswds/uswds/dist/img/* ./dist/img/
-cp -r ../node_modules/@uswds/uswds/dist/fonts/* ./dist/fonts/
-
-echo "Setup completed successfully"
-cd ../..
