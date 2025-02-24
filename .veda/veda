@@ -42,7 +42,7 @@ if (inputCmd === '--info') {
 if (inputCmd !== 'clean' && inputCmd !== 'test') {
   console.log('Compiling SASS styles...');
 
-  const uiDistStyles = path.join(__dirname, 'ui/dist/styles');
+  const uiDistStyles = path.join(__dirname, 'ui/static/styles');
 
   if (!fs.existsSync(uiDistStyles)) {
     fs.mkdirSync(uiDistStyles, { recursive: true });
@@ -50,7 +50,7 @@ if (inputCmd !== 'clean' && inputCmd !== 'test') {
 
   try {
     execSync(
-      'sass --load-path=node_modules/@uswds/uswds/packages styles/theme.scss .veda/ui/dist/styles/theme.css',
+      'sass --quiet-deps --load-path=node_modules/@uswds/uswds/packages styles/theme.scss .veda/ui/static/styles/theme.css',
       { stdio: 'inherit' }
     );
     console.log('SASS compilation successful');
@@ -87,9 +87,10 @@ if (inputCmd === 'serve') {
   const sassWatch = spawn(
     'sass',
     [
+      '--quiet-deps',
       '--watch',
       '--load-path=node_modules/@uswds/uswds/packages',
-      'styles/theme.scss:.veda/ui/dist/styles/theme.css'
+      'styles/theme.scss:.veda/ui/static/styles/theme.css'
     ],
     { stdio: 'inherit' }
   );
