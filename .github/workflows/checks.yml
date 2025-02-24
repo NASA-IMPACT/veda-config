@@ -1,0 +1,80 @@
+# This workflow performs basic checks:
+#
+#   1. run a preparation step to install and cache node modules
+#   2. once prep succeeds, run lint and test in parallel
+#
+# The checks are skipped on the 'main' branch. The project relies on branch
+# protection to avoid pushes straight to 'main'.
+
+name: Checks
+
+on:
+  push:
+    branches-ignore:
+    - 'main'
+
+env:
+  NODE: 20
+
+jobs:
+  prep:
+    if: github.event.pull_request.draft == false
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.8.0
+        with:
+          access_token: ${{ github.token }}
+
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Use Node.js ${{ env.NODE }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE }}
+
+      - name: Cache node_modules
+        uses: actions/cache@v4
+        id: cache-node-modules
+        with:
+          path: |
+            node_modules
+            .veda/ui/node_modules
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package.json') }}
+
+      - name: Install
+        run: ./.veda/setup
+
+  test:
+    needs: prep
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Use Node.js ${{ env.NODE }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE }}
+
+      - name: Cache node_modules
+        uses: actions/cache@v4
+        id: cache-node-modules
+        with:
+          path: |
+            node_modules
+            .veda/ui/node_modules
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package.json') }}
+
+      - name: Install
+        run: ./.veda/setup
+
+      - name: Test
+        run: yarn test

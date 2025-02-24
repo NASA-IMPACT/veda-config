@@ -1,0 +1,118 @@
+# Deploy the site to AWS S3 on a push to specific branches
+
+name: Deploy Production - MCP (S3)
+
+permissions:
+  id-token: write
+  contents: read
+
+on:
+  push:
+    branches:
+    - 'main'
+
+env:
+  NODE: 20
+  DOMAIN_PROD: /dashboard
+  DEPLOY_BUCKET_PROD: climatedashboard
+  DEPLOY_BUCKET_PROD_REGION: us-east-1
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.8.0
+        with:
+          access_token: ${{ github.token }}
+
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Use Node.js ${{ env.NODE }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE }}
+
+      - name: Cache node_modules
+        uses: actions/cache@v4
+        id: cache-node-modules
+        with:
+          path: |
+            node_modules
+            .veda/ui/node_modules
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package.json') }}
+
+      - name: Cache dist
+        uses: actions/cache@v4
+        id: cache-dist
+        with:
+          path: dist
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ github.workflow }}-${{ github.sha }}
+
+      - name: Install
+        run: ./.veda/setup
+
+      - name: Build production
+        env:
+          MAPBOX_TOKEN: ${{secrets.MAPBOX_TOKEN}}
+          GOOGLE_TAG_MANAGER_ID: ${{secrets.GOOGLE_TAG_MANAGER_ID}}
+          GOOGLE_TAG_AUTH: ${{secrets.GOOGLE_TAG_AUTH}}
+          GOOGLE_TAG_PREVIEW: ${{secrets.GOOGLE_TAG_PREVIEW}}
+        run: PUBLIC_URL="${{ env.DOMAIN_PROD }}" yarn build
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Restore node_modules
+        uses: actions/cache@v4
+        id: cache-node-modules
+        with:
+          path: |
+            node_modules
+            .veda/ui/node_modules
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package.json') }}
+
+      - name: Restore dist cache
+        uses: actions/cache@v4
+        id: cache-dist
+        with:
+          path: dist
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ github.workflow }}-${{ github.sha }}
+
+      - name: Use Node.js ${{ env.NODE }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE }}
+
+      - name: Serve site from subpath
+        run: |
+          mkdir deploy/
+          mv dist deploy/dashboard
+          cp deploy/dashboard/index.html deploy/index.html
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.DEPLOYMENT_ROLE_ARN }}
+          role-session-name: "veda-dashboard-prod-deployment"
+          aws-region: ${{ env.DEPLOY_BUCKET_PROD_REGION }}
+
+      - name: Deploy to S3 Production
+        run: |
+          aws s3 sync ./deploy s3://${{ env.DEPLOY_BUCKET_PROD }} --cache-control max-age=30,must-revalidate,s-maxage=604800 --delete
+
+      - name: Invalidate CloudFront cache
+        uses: oneyedev/aws-cloudfront-invalidation@v1
+        with:
+          distribution-id: ${{ secrets.CLOUDFRONT_DISTRIBUTION_PROD }}
