@@ -1,0 +1,140 @@
+---
+id: blizzard-snowfall
+name: 'Regional Snowfall Index (RSI) Accumulated Snowfall (Select Events)'
+description: "Regional Snowfall Index (RSI) accumulated snowfall reports interpolated for five select blizzard events."
+
+media:
+  src: ::file ./blizzards-cover.png
+  alt: Near-blizzard conditions in Maria Stein, Ohio on December 23, 2022.
+  author: 
+    name: Andrew Blackford
+taxonomy:
+  - name: Topics
+    values:
+      - Climate
+      - Disasters
+      - Snow
+  - name: Source
+    values:
+      - NCEI
+layers:
+  - id: blizzard-snowfall
+    stacCol: blizzard-snowfall
+    name: Regional Snowfall Index (RSI) Accumulated Snowfall
+    type: raster
+    description: "RSI accumulated snowfall reports interpolated for five select blizzards."
+    initialDatetime: newest
+    zoomExtent:
+        - 0
+        - 20
+    sourceParams:
+      resampling: bilinear
+      bidx: 1
+      colormap: '{"6":[30,144,201,255],"12":[171,148,214,255],"18":[90,22,128,255],"24":[217,67,212,255]}'
+      nodata: -128
+    legend:
+      type: categorical
+      min: "6"
+      max: "24"
+      stops:
+        - color: "#1e90c9"
+          label: "6"
+        - color: "#ab94d6"
+          label: "12"
+        - color: "#5a1680"
+          label: "18"
+        - color: "#d943d4"
+          label: "24"       
+    info:
+      source: UAH
+      spatialExtent: United States
+      temporalResolution: 1950-2016; Inconsistent
+      unit: Inches (in)
+
+---
+<Block>
+  <Prose>
+  ## Dataset Details
+  - **Temporal Extent:** 1950-2016
+  - **Temporal Resolution:** Inconsistent
+  - **Spatial Extent:** United States
+  - **Spatial Resolution:** N/A
+  - **Data Units:** Inches (in)
+  - **Data Type:** Research
+  - **Data Latency:** N/A
+  </Prose>
+<Figure>
+  <Map
+    center={[-84, 43]}
+    zoom={5}
+    datasetId='blizzard-snowfall'
+    layerId='blizzard-snowfall'
+    dateTime='1978-01-26'
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+  RSI reported accumulated snowfall that occurred from the Great Blizzard of 1978 in the Great Lakes region of the USA.
+  </Caption>
+</Figure>
+</Block>
+
+<Block>
+  <Prose>
+
+  ### About
+
+  The Regional Snowfall Index (RSI) is a scale used to assess the societal impacts of major snowfall events across different regions in the United States. It accounts for snowfall amounts, the area affected, and population exposure to classify storms from Category 1 (Notable) to Category 5 (Extreme). Snowfall data for RSI calculations often come from NOAA’s Storm Events Database, which compiles reports from the National Weather Service (NWS), cooperative observers, and storm spotters. Additionally, automated observations from Automated Surface Observing Systems (ASOS) provide real-time snowfall measurements at airports and other key locations, contributing to the overall dataset used to analyze storm severity and impact.
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ### Access the Data
+
+  This dataset was interpolated from confirmed blizzard reports from the [Storm Events Database](https://www.ncdc.noaa.gov/stormevents/), between 1950-2021. 
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## Disclaimer
+
+  All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
+  
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+
+  ### Key Publications
+  
+  Coleman, J. S. M., and R. M. Schwartz, 2017: An Updated Blizzard Climatology of the Contiguous United States (1959–2014): An Examination of Spatiotemporal Trends. J. Appl. Meteor. Climatol., 56, 173–187, https://doi.org/10.1175/JAMC-D-15-0350.1.
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## Data Stories Using This Dataset
+  
+  **<Link to={"/stories/blizzards"}>When Winter Rages</Link>**
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## License
+  
+  [Creative Commons Attribution 1.0 International](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC BY 1.0)
+
+  </Prose>
+</Block>
