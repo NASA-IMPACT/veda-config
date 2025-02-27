@@ -38,14 +38,27 @@ if (inputCmd === '--info') {
   process.exit();
 }
 
+const rootDir = path.join(__dirname, '../');
+
 // Compile SASS to CSS before running other commands
 if (inputCmd !== 'clean' && inputCmd !== 'test') {
   console.log('Compiling SASS styles...');
 
   const uiDistStyles = path.join(__dirname, 'ui/static/styles');
+  const vedaUiThemePath = path.join(__dirname, 'ui/app/scripts/styles/_uswds-theme.scss');
+  const vedaConfigThemePath = path.join(rootDir, 'styles/_uswds-theme.scss');
 
   if (!fs.existsSync(uiDistStyles)) {
     fs.mkdirSync(uiDistStyles, { recursive: true });
+  }
+
+  // Copy the veda-config theme file to veda-ui
+  try {
+    fs.copyFileSync(vedaConfigThemePath, vedaUiThemePath);
+    console.log('Substituted veda-config theme file into veda-ui');
+  } catch (error) {
+    console.error('Failed to substitute theme file:', error);
+    process.exit(1);
   }
 
   try {
@@ -61,8 +74,6 @@ if (inputCmd !== 'clean' && inputCmd !== 'test') {
 
 const configFile = path.join(__dirname, '../veda.config.js');
 process.env.VEDA_CONFIG_PATH = process.env.VEDA_CONFIG_PATH || configFile;
-
-const rootDir = path.join(__dirname, '../');
 
 if (inputCmd === 'test') {
   const jestCli = path.join(__dirname, 'ui/node_modules/jest/bin/jest.js');
