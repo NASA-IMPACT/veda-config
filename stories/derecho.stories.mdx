@@ -292,19 +292,19 @@ taxonomy:
   </Chapter>
 
   <Chapter
-    center={[-97.21, 42.73972]}
+    center={[-107, 44]}
     zoom={12}
     datasetId='darnah-flood'
     layerId='darnah-gpm-daily'
     datetime='2023-09-12'
   >
-  ### MERRA2 Dataset
+  ### MERRA-2 Dataset
 
   #### ***Visualization of Airborne Dust Particles***
 
   As seen in the MERRA-2 Total Aerosol Optical Thickness (AOT) gif below, the first derecho moved into South Dakota from Nebraska, carrying large amounts of dust into North Dakota and Minnesota. The second derecho, which followed later, moved into northwestern Iowa before continuing into Minnesota. Since this was a serial derecho, MERRA-2 satellite imagery helps track the movement of dust from both storm systems. It also provides a regional view, showing how aerosol particles traveled far beyond the central storm path. This imagery is especially useful when cloud cover makes it hard to see the dust with the naked eye.
 
-  *Insert MERRA2 timeseries gif of dust transportation here*
+  *Insert MERRA-2 timeseries gif of dust transportation here*
 
   The MERRA-2 basemap data shows that northeastern Nebraska had a higher concentration of aerosols compared to the rest of the state. This dust transport led to near-zero visibility in many rural areas, making travel dangerous for motorists caught on the roads. The strong winds also stripped topsoil from farmland, causing further damage to crops and soil health.
   </Chapter>
@@ -377,9 +377,9 @@ taxonomy:
     layerId='darnah-gpm-daily'
     datetime='2023-09-12'
   >
-  ### EAGLEI Data for Power Outages
+  ### EAGLE-I Data for Power Outages
     
-  Additionally, the EAGLEI dataset from Oak Ridge Laboratory monitors hourly power outages. The line graph below shows how outages spiked as the derecho moved through each state. After the storm passed, outage numbers gradually decreased as utility crews worked to repair power lines and restore electricity.
+  Additionally, the EAGLE-I dataset from Oak Ridge Laboratory monitors hourly power outages. The line graph below shows how outages spiked as the derecho moved through each state. After the storm passed, outage numbers gradually decreased as utility crews worked to repair power lines and restore electricity.
 
   <Figure>
     <Chart
@@ -389,7 +389,7 @@ taxonomy:
       xKey='Date'
       yKey='Total_Power_Outages'
       yAxisLabel='Maximum Power Outages Recorded Hourly'
-      highlightStart = '05/12/2022 14:00'
+      highlightStart = '05/12/2022 01:00'
       highlightEnd = '05/13/2022 05:00'
       highlightLabel = 'Derecho'
     />
@@ -462,7 +462,7 @@ taxonomy:
 
   By 5:30 PM, a second derecho formed and entered northwestern Iowa and southeastern South Dakota at the same time. Although one brief tornado caused some damage, most of the destruction came from straight-line winds. Wind gusts of 70-90 mph knocked down power lines and wiped out farm buildings, affecting both crops and livestock facilities.
 
-  The derecho’s powerful winds lifted large amounts of dust, particulate matter (PM), and debris into the air, creating hazardous air conditions across the region. MERRA2 imagery showed a spike in aerosol levels in northwestern Iowa, with dust and particles traveling hundreds of miles. This significantly worsened air quality far beyond the storm’s path.
+  The derecho’s powerful winds lifted large amounts of dust, particulate matter (PM), and debris into the air, creating hazardous air conditions across the region. MERRA-2 imagery showed a spike in aerosol levels in northwestern Iowa, with dust and particles traveling hundreds of miles. This significantly worsened air quality far beyond the storm’s path.
   <Figure>
     <Image
       src={new URL('./derecho-photo9.jpg', import.meta.url).href}
