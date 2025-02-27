@@ -65,10 +65,10 @@ if (inputCmd !== 'clean' && inputCmd !== 'test') {
     if (hasStylesImport) {
       console.log('Disabling full styles import for veda-config build...');
 
-      // Replace the import for full styles with a comment
+      // Remove the veda-ui specific import
       const modifiedContent = mainContent.replace(
-        /import\s+['"][$]styles\/styles\.scss['"];/,
-        '// import \'$styles/styles.scss\'; // Disabled by veda-config build'
+        /import\s+['"][$]styles\/styles\.scss['"];(\r?\n)?/,
+        ''
       );
 
       fs.writeFileSync(mainTsxPath, modifiedContent);
