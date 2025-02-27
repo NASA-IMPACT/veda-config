@@ -45,20 +45,37 @@ if (inputCmd !== 'clean' && inputCmd !== 'test') {
   console.log('Compiling SASS styles...');
 
   const uiDistStyles = path.join(__dirname, 'ui/static/styles');
-  const vedaUiThemePath = path.join(__dirname, 'ui/app/scripts/styles/_uswds-theme.scss');
-  const vedaConfigThemePath = path.join(rootDir, 'styles/_uswds-theme.scss');
+  const mainTsxPath = path.join(__dirname, 'ui/app/scripts/main.tsx');
 
   if (!fs.existsSync(uiDistStyles)) {
     fs.mkdirSync(uiDistStyles, { recursive: true });
   }
 
-  // Copy the veda-config theme file to veda-ui
+  // Read the main.tsx file content and comment out styles.scss import.
+  // The styles.scss import is only needed for the standalone veda-ui build, and contains
+  // the core USWDS styles. The veda-config already includes its own core USWDS styles and
+  // theme, thus we're avoiding duplications.
   try {
-    fs.copyFileSync(vedaConfigThemePath, vedaUiThemePath);
-    console.log('Substituted veda-config theme file into veda-ui');
+    const mainContent = fs.readFileSync(mainTsxPath, 'utf8');
+
+    // Check if styles.scss is imported and not already commented out
+    const hasStylesImport = mainContent.includes('import \'$styles/styles.scss\'') ||
+                           mainContent.includes('import "$styles/styles.scss"');
+
+    if (hasStylesImport) {
+      console.log('Disabling full styles import for veda-config build...');
+
+      // Replace the import for full styles with a comment
+      const modifiedContent = mainContent.replace(
+        /import\s+['"][$]styles\/styles\.scss['"];/,
+        '// import \'$styles/styles.scss\'; // Disabled by veda-config build'
+      );
+
+      fs.writeFileSync(mainTsxPath, modifiedContent);
+      console.log('Successfully disabled full styles import');
+    }
   } catch (error) {
-    console.error('Failed to substitute theme file:', error);
-    process.exit(1);
+    console.error('Error while processing main.tsx:', error);
   }
 
   try {
