@@ -35,25 +35,26 @@ layers:
         - 315
     legend:
       type: gradient
+      unit:
+        label: K
+      min: 240
+      max: 315
       stops: 
-          - color: "#3CCBCE"
-            label: 240 k (-30 F)
-          - color: "#C5F8FF"   
-          - color: "#FEC5FF"   
-          - color: "#E079FB"   
-          - color: "#094FC9"   
-          - color: "#009FFF"   
-          - color: "#44E2FF"  
-            label: 273 K (0 F)
-          - color: "#147F4F"   
-          - color: "#79B32C"   
-          - color: "#FDFE00"   
-          - color: "#FF8700"   
-          - color: "#FF0F00"   
-          - color: "#9D0F2B"   
-          - color: "#4D0000"   
-          - color: "#BA2E6D"   
-            label: 315 K (110 F)
+          - "#3CCBCE"
+          - "#C5F8FF"   
+          - "#FEC5FF"   
+          - "#E079FB"   
+          - "#094FC9"   
+          - "#009FFF"   
+          - "#44E2FF"  
+          - "#147F4F"   
+          - "#79B32C"   
+          - "#FDFE00"   
+          - "#FF8700"   
+          - "#FF0F00"   
+          - "#9D0F2B"   
+          - "#4D0000"   
+          - "#BA2E6D"  
 
     info:
       source: ECMWF
@@ -78,15 +79,17 @@ layers:
         - 25
       legend:
         type: gradient
+        unit:
+          label: m/s
+        min: 0
+        max: 25
         stops:
-            - color: "#ffffcc"
-              label: 0 m/s
-            - color: "#fee187"
-            - color: "#feab49"
-            - color: "#fc5b2e"
-            - color: "#d41020"
-            - color: "#800026"
-              label: 25 m/s 
+            - "#ffffcc"
+            - "#fee187"
+            - "#feab49"
+            - "#fc5b2e"
+            - "#d41020"
+            - "#800026"
     info:
       source: ECMWF
       spatialExtent: Global
@@ -110,15 +113,15 @@ layers:
         - 1
       legend:
         type: gradient
+        min: 0
+        max: 1
         stops:
-            - color: "#000000"
-              label: 0
-            - color: "#404040"
-            - color: "#7a7a7a"
-            - color: "#b5b5b5"
-            - color: "#e2e2e2"
-            - color: "#ffffff"
-              label: 1
+            - "#000000"
+            - "#404040"
+            - "#7a7a7a"
+            - "#b5b5b5"
+            - "#e2e2e2"
+            - "#ffffff"
     info:
       source: ECMWF
       spatialExtent: Global
@@ -141,18 +144,20 @@ layers:
         - 972
         - 1040
       legend:
+        unit:
+          label: hPa
         type: gradient
+        min: 972
+        max: 1040
         stops:
-            - color: "#000000"
-              label: 972
-            - color: "#870098"
-            - color: "#0078dd"
-            - color: "#00aa88"
-            - color: "#00dc00"
-            - color: "#efed00"
-            - color: "#fe0000"
-            - color: "#cccccc"
-              label: 1040
+            - "#000000"
+            - "#870098"
+            - "#0078dd"
+            - "#00aa88"
+            - "#00dc00"
+            - "#efed00"
+            - "#fe0000"
+            - "#cccccc"
     info:
       source: ECMWF
       spatialExtent: Global
