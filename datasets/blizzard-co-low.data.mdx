@@ -1,0 +1,129 @@
+---
+id: blizzard-co-low
+name: 'Colorado Low Snowfall Footprint'
+description: "Single value raster displaying the general snowfall footprint of a Colorado Low type of mid-latitude cyclone."
+
+media:
+  src: ::file ./blizzards-cover.png
+  alt: Near-blizzard conditions in Maria Stein, Ohio on December 23, 2022.
+  author: 
+    name: Andrew Blackford
+taxonomy:
+  - name: Topics
+    values:
+      - Climate
+      - Disasters
+      - Snow
+  - name: Source
+    values:
+      - UAH
+layers:
+  - id: blizzard-co-low
+    stacCol: blizzard-co-low
+    name: Colorado Low Snowfall Footprint
+    type: raster
+    description: "Climatologically favored region of the USA that experiences snowfall from Colorado Low cyclones."
+    initialDatetime: newest
+    zoomExtent:
+        - 0
+        - 20
+    sourceParams:
+      colormap: '{"0":[22,158,242,255]}'
+    legend:
+      type: categorical
+      stops:
+        - color: "#169ef2"
+          label: CO Low Snowfall
+    info:
+      source: UAH
+      spatialExtent: Central United States
+      temporalResolution: 1950-2021 Climatology
+      unit: Binary
+
+---
+<Block>
+  <Prose>
+  ## Dataset Details
+  - **Temporal Extent:** 1950-2021
+  - **Temporal Resolution:** Single Climatology
+  - **Spatial Extent:** Central United States
+  - **Spatial Resolution:** N/A
+  - **Data Units:** N/A
+  - **Data Type:** Research
+  - **Data Latency:** N/A
+  </Prose>
+<Figure>
+  <Map
+    center={[-95,43]}
+    zoom={3}
+    datasetId='blizzard-co-low'
+    layerId='blizzard-co-low'
+    dateTime='1950-01-01'
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+    Climatologically favored region of the USA that experiences snowfall from Colorado Low cyclones.
+  </Caption>
+</Figure>
+</Block>
+
+<Block>
+  <Prose>
+
+  ### About
+
+  Denver Cyclones, or Colorado Cyclones, are low pressure systems that form on the lee side of the Rocky Mountains, often along the Colorado Front Range. These systems form when moist air from the Gulf of America converges with cold Arctic air descending from Canada, creating sharp temperature gradients. The interaction between these air masses and the region’s complex terrain promotes the development of cyclonic systems that can bring heavy snowfall or blizzard conditions to the Colorado Front Range, including Denver, as well as parts of the Central and Northern Great Plains and Midwest. As these cyclones intensify and move eastward, they can bring severe winter weather to Blizzard Alley, making them a key contributor to the high frequency of blizzards in this region. The open terrain of the Great Plains amplifies wind speeds, further reducing visibility and exacerbating blizzard conditions.
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ### Access the Data
+
+  This dataset was interpolated from confirmed blizzard reports from the [Storm Events Database](https://www.ncdc.noaa.gov/stormevents/), between 1950-2021. 
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## Disclaimer
+
+  All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
+  
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+
+  ### Key Publications
+  
+  Coleman, J. S. M., and R. M. Schwartz, 2017: An Updated Blizzard Climatology of the Contiguous United States (1959–2014): An Examination of Spatiotemporal Trends. J. Appl. Meteor. Climatol., 56, 173–187, https://doi.org/10.1175/JAMC-D-15-0350.1.
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## Data Stories Using This Dataset
+  
+  **<Link to={"/stories/blizzards"}>When Winter Rages</Link>**
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## License
+  
+  [Creative Commons Attribution 1.0 International](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC BY 1.0)
+
+  </Prose>
+</Block>

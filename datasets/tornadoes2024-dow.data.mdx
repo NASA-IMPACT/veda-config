@@ -36,26 +36,26 @@ layers:
       - 0
       - 20
     sourceParams:
-        colormap_name: gist_ncar
-        nodata: -999
-        rescale:
-            - 55
-            - 250
-        legend:
-        type: gradient
-        min: "55 mph"
-        max: "310 mph"
-        stops:
-            - '#000066'
-            - '#330099'
-            - '#3366FF'
-            - '#33CC33'
-            - '#66FF33'
-            - '#FFFF00'
-            - '#FF9933'
-            - '#FF0000'
-            - '#CC0033'
-            - '#990066'
+      colormap_name: gist_ncar
+      nodata: -999
+      rescale:
+          - 55
+          - 250
+    legend:
+      type: gradient
+      min: "55 mph"
+      max: "310 mph"
+      stops:
+          - '#000066'
+          - '#330099'
+          - '#3366FF'
+          - '#33CC33'
+          - '#66FF33'
+          - '#FFFF00'
+          - '#FF9933'
+          - '#FF0000'
+          - '#CC0033'
+          - '#990066'
     info:
       source: Doppler on Wheels (DOW)
       spatialExtent: Local
@@ -72,23 +72,23 @@ layers:
       - 0
       - 20
     sourceParams:
-        colormap_name: turbo
-        nodata: -32768
-        rescale:
-            - -10
-            - 50
-        legend:
-        type: gradient
-        min: "-10 dBZ"
-        max: "50 dBZ"
-        stops:
-            - [ "#30123B", -10 ]  # Deep purple (lowest reflectivity)
-            - [ "#443983", 0 ]    # Dark blue
-            - [ "#31678E", 10 ]   # Cyan
-            - [ "#35B779", 20 ]   # Green
-            - [ "#FDE725", 35 ]   # Yellow
-            - [ "#FF9900", 45 ]   # Orange
-            - [ "#FF0000", 50 ]   # Red (highest reflectivity)
+      colormap_name: turbo
+      nodata: -32768
+      rescale:
+          - -10
+          - 50
+    legend:
+      type: gradient
+      min: "-10 dBZ"
+      max: "50 dBZ"
+      stops:
+          - "#30123B"  # Deep purple (lowest reflectivity)
+          - "#443983"    # Dark blue
+          - "#31678E"   # Cyan
+          - "#35B779"   # Green
+          - "#FDE725"   # Yellow
+          - "#FF9900"   # Orange
+          - "#FF0000"   # Red (highest reflectivity)
     info:
       source: Doppler on Wheels (DOW)
       spatialExtent: Local
@@ -105,23 +105,23 @@ layers:
       - 0
       - 20
     sourceParams:
-        colormap_name: seismic
-        nodata: -32768
-        rescale:
-            - -75
-            - 75
-        legend:
-        type: gradient
-        min: "-75 m/s"
-        max: "75 m/s"
-        stops:
-            - [ "#0000FF", -75 ]  # Deep blue (negative extreme)
-            - [ "#3399FF", -50 ]  # Light blue
-            - [ "#66CCFF", -25 ]  # Very light blue
-            - [ "#FFFFFF",  0 ]   # White (zero velocity)
-            - [ "#FF9999",  25 ]  # Light pink
-            - [ "#FF6666",  50 ]  # Light red
-            - [ "#FF0000",  75 ]  # Deep red (positive extreme)
+      colormap_name: seismic
+      nodata: -32768
+      rescale:
+          - -75
+          - 75
+    legend:
+      type: gradient
+      min: "-75 m/s"
+      max: "75 m/s"
+      stops:
+          - "#0000FF" # Deep blue (negative extreme)
+          - "#3399FF" # Light blue
+          - "#66CCFF" # Very light blue
+          - "#FFFFFF" # White (zero velocity)
+          - "#FF9999" # Light pink
+          - "#FF6666" # Light red
+          - "#FF0000" # Deep red (positive extreme)
     info:
       source: Doppler on Wheels (DOW)
       spatialExtent: Local
@@ -145,22 +145,22 @@ layers:
       - 0
       - 20
     sourceParams:
-        colormap_name: turbo
-        nodata: -32768
-        rescale:
-            - 0
-            - 1
-        legend:
-        type: gradient
-        min: "0"
-        max: "1"
-        stops:
-            - [ "#30123B", 0.0 ]   # Deep purple (low correlation)
-            - [ "#443983", 0.2 ]   # Dark blue
-            - [ "#31678E", 0.4 ]   # Cyan
-            - [ "#35B779", 0.6 ]   # Green
-            - [ "#FDE725", 0.8 ]   # Yellow
-            - [ "#FF0000", 1.0 ]   # Red (high correlation)
+      colormap_name: turbo
+      nodata: -32768
+      rescale:
+          - 0
+          - 1
+    legend:
+      type: gradient
+      min: "0"
+      max: "1"
+      stops:
+          - "#30123B" # Deep purple (low correlation)
+          - "#443983" # Dark blue
+          - "#31678E" # Cyan
+          - "#35B779" # Green
+          - "#FDE725" # Yellow
+          - "#FF0000" # Red (high correlation)
     info:
       source: Doppler on Wheels (DOW)
       spatialExtent: Local
@@ -184,22 +184,22 @@ layers:
       - 0
       - 20
     sourceParams:
-        colormap_name: rdpu
-        nodata: -32768
-        rescale:
-            - 0
-            - 25
-        legend:
-        type: gradient
-        min: "0 m/s"
-        max: "25 m/s"
-        stops:
-            - [ "#f7f4f9", 0 ]    # Light pink (low spectrum width)
-            - [ "#fddbc7", 5 ]    # Very light pink
-            - [ "#f4a582", 10 ]   # Pinkish-orange
-            - [ "#d6604d", 15 ]   # Orange-red
-            - [ "#b2182b", 20 ]   # Deep red
-            - [ "#67001f", 25 ]   # Deepest purple (high spectrum width)
+      colormap_name: rdpu
+      nodata: -32768
+      rescale:
+          - 0
+          - 25
+    legend:
+      type: gradient
+      min: "0 m/s"
+      max: "25 m/s"
+      stops:
+          - "#f7f4f9" # Light pink (low spectrum width)
+          - "#fddbc7" # Very light pink
+          - "#f4a582" # Pinkish-orange
+          - "#d6604d" # Orange-red
+          - "#b2182b" # Deep red
+          - "#67001f" # Deepest purple (high spectrum width)
     info:
       source: Doppler on Wheels (DOW)
       spatialExtent: Local
@@ -216,24 +216,24 @@ layers:
       - 0
       - 20
     sourceParams:
-        colormap_name: nipy_spectral
-        nodata: -32768
-        rescale:
-            - -5
-            - 7
-        legend:
-        type: gradient
-        min: "-5 dB"
-        max: "7 dB"
-        stops:
-            - [ "#000080", -5 ]    # Dark blue (low ZDR)
-            - [ "#0000FF", -3 ]    # Blue
-            - [ "#00FFFF", -1 ]    # Cyan
-            - [ "#00FF00", 1 ]     # Green
-            - [ "#FFFF00", 3 ]     # Yellow
-            - [ "#FFA500", 5 ]     # Orange
-            - [ "#FF0000", 6 ]     # Red
-            - [ "#800080", 7 ]     # Purple (high ZDR)
+      colormap_name: nipy_spectral
+      nodata: -32768
+      rescale:
+          - -5
+          - 7
+    legend:
+      type: gradient
+      min: "-5 dB"
+      max: "7 dB"
+      stops:
+          - "#000080" # Dark blue (low ZDR)
+          - "#0000FF" # Blue
+          - "#00FFFF" # Cyan
+          - "#00FF00" # Green
+          - "#FFFF00" # Yellow
+          - "#FFA500" # Orange
+          - "#FF0000" # Red
+          - "#800080" # Purple (high ZDR)
     info:
       source: Doppler on Wheels (DOW)
       spatialExtent: Local
@@ -250,23 +250,23 @@ layers:
       - 0
       - 20
     sourceParams:
-        colormap_name: turbo
-        nodata: -32768
-        rescale:
-            - -10
-            - 50
-        legend:
-        type: gradient
-        min: "-10 dBZ"
-        max: "50 dBZ"
-        stops:
-            - [ "#30123B", -10 ]  # Deep purple (lowest reflectivity)
-            - [ "#443983", 0 ]    # Dark blue
-            - [ "#31678E", 10 ]   # Cyan
-            - [ "#35B779", 20 ]   # Green
-            - [ "#FDE725", 35 ]   # Yellow
-            - [ "#FF9900", 45 ]   # Orange
-            - [ "#FF0000", 50 ]   # Red (highest reflectivity)
+      colormap_name: turbo
+      nodata: -32768
+      rescale:
+          - -10
+          - 50
+    legend:
+      type: gradient
+      min: "-10 dBZ"
+      max: "50 dBZ"
+      stops:
+          - "#30123B"  # Deep purple (lowest reflectivity)
+          - "#443983"    # Dark blue
+          - "#31678E"   # Cyan
+          - "#35B779"   # Green
+          - "#FDE725"   # Yellow
+          - "#FF9900"   # Orange
+          - "#FF0000"   # Red (highest reflectivity)
     info:
       source: Doppler on Wheels (DOW)
       spatialExtent: Local
@@ -290,23 +290,23 @@ layers:
       - 0
       - 20
     sourceParams:
-        colormap_name: seismic
-        nodata: -32768
-        rescale:
-            - -75
-            - 75
-        legend:
-        type: gradient
-        min: "-75 m/s"
-        max: "75 m/s"
-        stops:
-            - [ "#0000FF", -75 ]  # Deep blue (negative extreme)
-            - [ "#3399FF", -50 ]  # Light blue
-            - [ "#66CCFF", -25 ]  # Very light blue
-            - [ "#FFFFFF",  0 ]   # White (zero velocity)
-            - [ "#FF9999",  25 ]  # Light pink
-            - [ "#FF6666",  50 ]  # Light red
-            - [ "#FF0000",  75 ]  # Deep red (positive extreme)
+      colormap_name: seismic
+      nodata: -32768
+      rescale:
+          - -75
+          - 75
+    legend:
+      type: gradient
+      min: "-75 m/s"
+      max: "75 m/s"
+      stops:
+          - "#0000FF"
+          - "#3399FF"
+          - "#66CCFF"
+          - "#FFFFFF"
+          - "#FF9999"
+          - "#FF6666"
+          - "#FF0000"
     info:
       source: Doppler on Wheels (DOW)
       spatialExtent: Local
@@ -330,22 +330,22 @@ layers:
       - 0
       - 20
     sourceParams:
-        colormap_name: turbo
-        nodata: -32768
-        rescale:
-            - 0
-            - 1
-        legend:
-        type: gradient
-        min: "0"
-        max: "1"
-        stops:
-            - [ "#30123B", 0.0 ]   # Deep purple (low correlation)
-            - [ "#443983", 0.2 ]   # Dark blue
-            - [ "#31678E", 0.4 ]   # Cyan
-            - [ "#35B779", 0.6 ]   # Green
-            - [ "#FDE725", 0.8 ]   # Yellow
-            - [ "#FF0000", 1.0 ]   # Red (high correlation)
+      colormap_name: turbo
+      nodata: -32768
+      rescale:
+          - 0
+          - 1
+    legend:
+      type: gradient
+      min: "0"
+      max: "1"
+      stops:
+          - "#30123B"
+          - "#443983"
+          - "#31678E"
+          - "#35B779"
+          - "#FDE725"
+          - "#FF0000"
     info:
       source: Doppler on Wheels (DOW)
       spatialExtent: Local
@@ -362,22 +362,22 @@ layers:
       - 0
       - 20
     sourceParams:
-        colormap_name: rdpu
-        nodata: -32768
-        rescale:
-            - 0
-            - 25
-        legend:
-        type: gradient
-        min: "0 m/s"
-        max: "25 m/s"
-        stops:
-            - [ "#f7f4f9", 0 ]    # Light pink (low spectrum width)
-            - [ "#fddbc7", 5 ]    # Very light pink
-            - [ "#f4a582", 10 ]   # Pinkish-orange
-            - [ "#d6604d", 15 ]   # Orange-red
-            - [ "#b2182b", 20 ]   # Deep red
-            - [ "#67001f", 25 ]   # Deepest purple (high spectrum width)
+      colormap_name: rdpu
+      nodata: -32768
+      rescale:
+          - 0
+          - 25
+    legend:
+      type: gradient
+      min: "0 m/s"
+      max: "25 m/s"
+      stops:
+          - "#f7f4f9"
+          - "#fddbc7"
+          - "#f4a582"
+          - "#d6604d"
+          - "#b2182b"
+          - "#67001f"
     info:
       source: Doppler on Wheels (DOW)
       spatialExtent: Local
@@ -394,24 +394,24 @@ layers:
       - 0
       - 20
     sourceParams:
-        colormap_name: nipy_spectral
-        nodata: -32768
-        rescale:
-            - -5
-            - 7
-        legend:
-        type: gradient
-        min: "-5 dB"
-        max: "7 dB"
-        stops:
-            - [ "#000080", -5 ]    # Dark blue (low ZDR)
-            - [ "#0000FF", -3 ]    # Blue
-            - [ "#00FFFF", -1 ]    # Cyan
-            - [ "#00FF00", 1 ]     # Green
-            - [ "#FFFF00", 3 ]     # Yellow
-            - [ "#FFA500", 5 ]     # Orange
-            - [ "#FF0000", 6 ]     # Red
-            - [ "#800080", 7 ]     # Purple (high ZDR)
+      colormap_name: nipy_spectral
+      nodata: -32768
+      rescale:
+          - -5
+          - 7
+    legend:
+      type: gradient
+      min: "-5 dB"
+      max: "7 dB"
+      stops:
+          - "#000080"
+          - "#0000FF"
+          - "#00FFFF"
+          - "#00FF00"
+          - "#FFFF00"
+          - "#FFA500"
+          - "#FF0000"
+          - "#800080"
     info:
       source: Doppler on Wheels (DOW)
       spatialExtent: Local

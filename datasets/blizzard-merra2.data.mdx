@@ -1,0 +1,250 @@
+---
+id: blizzard-merra2
+name: 'MERRA2 Reanalysis (Select Events)'
+description: "MERRA2 reanalysis data of surface temperature, wind, mean sea level pressure, and cloud fraction for three select blizzard events."
+media:
+  src: ::file ./blizzards-cover.png
+  alt: Near-blizzard conditions in Maria Stein, Ohio on December 23, 2022.
+  author: 
+    name: Andrew Blackford
+taxonomy:
+  - name: Topics
+    values:
+      - Climate
+      - Disasters
+      - Snow
+  - name: Source
+    values:
+      - NASA GMAO
+layers:
+  - id: blizzard-merra2-2m-temp
+    stacCol: blizzard-merra2-2m-temp
+    name: MERRA2 2 Meter Temperature
+    type: raster
+    description: "MERRA2 2-meter temperature reanalysis data for three select blizzards."
+    initialDatetime: newest
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      colormap_name: surface_temperature    
+      nodata: -999
+      rescale:
+        - 240
+        - 315
+    legend:
+      type: gradient
+      unit:
+        label: K
+      min: 240
+      max: 315
+      stops: 
+        - "#3CCBCE"
+        - "#C5F8FF"   
+        - "#FEC5FF"   
+        - "#E079FB"   
+        - "#094FC9"   
+        - "#009FFF"   
+        - "#44E2FF"  
+        - "#147F4F"   
+        - "#79B32C"   
+        - "#FDFE00"   
+        - "#FF8700"   
+        - "#FF0F00"   
+        - "#9D0F2B"   
+        - "#4D0000"   
+        - "#BA2E6D"   
+    info:
+      source: NASA GMAO
+      spatialExtent: Global
+      temporalResolution: 1991-2016; Inconsistent
+      unit: Kelvin
+  - id: blizzard-merra2-10m-wind
+    stacCol: blizzard-merra2-10m-wind
+    name: MERRA2 10 Meter Wind
+    type: raster
+    description: "MERRA2 10-meter wind reanalysis data for three select blizzards."
+    initialDatetime: newest
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      colormap_name: ylorrd    
+      nodata: -999
+      rescale:
+        - 0
+        - 25
+    legend:
+      type: gradient
+      unit:
+        label: m/s
+      min: 0
+      max: 25
+      stops:
+        - "#ffffcc"
+        - "#fee187"
+        - "#feab49"
+        - "#fc5b2e"
+        - "#d41020"
+        - "#800026"
+    info:
+      source: NASA GMAO
+      spatialExtent: Global
+      temporalResolution: 1991-2016; Inconsistent
+      unit: m/s
+  - id: blizzard-merra2-cfrac
+    stacCol: blizzard-merra2-cfrac
+    name: MERRA2 Cloud Fraction
+    type: raster
+    description: "MERRA2 cloud fraction reanalysis data for three select blizzards."
+    initialDatetime: newest
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      colormap_name: greys_r    
+      nodata: -999
+      rescale:
+        - 0
+        - 1
+    legend:
+      type: gradient
+      min: 0
+      max: 1
+      stops:
+          - "#000000"
+          - "#404040"
+          - "#7a7a7a"
+          - "#b5b5b5"
+          - "#e2e2e2"
+          - "#ffffff"
+
+    info:
+      source: NASA GMAO
+      spatialExtent: Global
+      temporalResolution: 1991-2016; Inconsistent
+      unit: fraction; 1 = 100% coverage
+
+  - id: blizzard-merra2-mslp
+    stacCol: blizzard-merra2-mslp
+    name: MERRA2 Mean Sea Level Pressure
+    type: raster
+    description: "MERRA2 mean sea level pressure (MSLP) reanalysis data for three select blizzards."
+    initialDatetime: newest
+    zoomExtent:
+        - 0
+        - 20
+    sourceParams:
+      colormap_name: nipy_spectral    
+      nodata: -999
+      rescale:
+        - 972
+        - 1040
+    legend:
+      unit:
+        label: hPa
+      type: gradient
+      min: 972
+      max: 1040
+      stops:
+          - "#000000"
+          - "#870098"
+          - "#0078dd"
+          - "#00aa88"
+          - "#00dc00"
+          - "#efed00"
+          - "#fe0000"
+          - "#cccccc"
+    info:
+      source: NASA GMAO
+      spatialExtent: Global
+      temporalResolution: 1991-2016; Inconsistent
+      unit: hPa
+
+---
+<Block>
+  <Prose>
+  ## Dataset Details
+  - **Temporal Extent:** 1991-2016
+  - **Temporal Resolution:** Inconsistent
+  - **Spatial Extent:** Global
+  - **Spatial Resolution:** 0.625x0.5 degree
+  - **Data Units:** Temperature - Kelvin; Wind - m/s; MSLP - hPa; Cloud Fraction - fraction 
+  - **Data Type:** Research
+  - **Data Latency:** N/A
+  </Prose>
+<Figure>
+  <Map
+    center={[-75, 40]}
+    zoom={3.25}
+    datasetId='blizzard-merra2-10m-wind'
+    layerId='blizzard-merra2-10m-wind'
+    dateTime='1993-03-14'
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+  ERA5 reanalysis 10 meter wind speeds from the strongest timeframe of the 1993 Storm of the Century along the Eastern Seaboard of the USA.
+  </Caption>
+</Figure>
+</Block>
+
+<Block>
+  <Prose>
+
+  ### About
+
+  The Modern-Era Retrospective Analysis for Research and Applications, Version 2 (MERRA-2) is NASA’s atmospheric reanalysis dataset that spans from 1980 to the present. Produced by the *lobal Modeling and Assimilation Office (GMAO), MERRA-2 improves upon its predecessor by incorporating aerosol interactions, bias corrections for satellite radiances, and observed precipitation to improve the representation of the hydrological cycle within the dataset. It provides global atmospheric, land surface, and oceanic variables such as temperature, wind speed, cloud cover, and pressure at 0.5° x 0.625° spatial resolution with hourly to monthly temporal coverage. MERRA-2 is widely used for climate studies, weather analysis, and Earth system research, particularly for investigating long-term atmospheric trends and variability.
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ### Access the Data
+
+  Visit NASA's [Global Modeling and Assimilation Office page](https://gmao.gsfc.nasa.gov/reanalysis/MERRA-2/data_access/) to explore options for data access.
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## Disclaimer
+
+  All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
+  
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+
+  ### Key Publications
+  
+  Gelaro, R., McCarty, W., Suárez, M. J., et al. (2017). The Modern-Era Retrospective Analysis for Research and Applications, Version 2 (MERRA-2). Journal of Climate, 30(14), 5419–5454. https://doi.org/10.1175/JCLI-D-16-0758.1
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## Data Stories Using This Dataset
+  
+  **<Link to={"/stories/blizzards"}>When Winter Rages</Link>**
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## License
+  
+  [Creative Commons Attribution 1.0 International](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC BY 1.0)
+
+  </Prose>
+</Block>

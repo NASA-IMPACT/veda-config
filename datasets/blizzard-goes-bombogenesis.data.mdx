@@ -1,0 +1,133 @@
+---
+id: blizzard-goes-bombogenesis
+name: 'GOES Imagery - Bombogenesis (Select Event)'
+description: "Single GOES TrueColor three-band image of a mid-latitude cyclone undergoing bomb cyclogenesis and producing blizzard conditions on January 4, 2018."
+
+media:
+  src: ::file ./blizzards-cover.png
+  alt: Near-blizzard conditions in Maria Stein, Ohio on December 23, 2022.
+  author: 
+    name: Andrew Blackford
+taxonomy:
+  - name: Topics
+    values:
+      - Climate
+      - Disasters
+      - Snow
+  - name: Source
+    values:
+      - NOAA
+layers:
+  - id: blizzard-goes-bombogenesis
+    stacCol: blizzard-goes-bombogenesis
+    name: GOES Imagery - Bombogenesis (Jan 4 2018)
+    type: raster
+    description: "Single GOES TrueColor three-band image of a mid-latitude cyclone undergoing bomb cyclogenesis and producing blizzard conditions on January 4, 2018."
+    initialDatetime: newest
+    zoomExtent:
+        - 0
+        - 20
+    sourceParams:
+      rescale:
+        - 0,15
+      resampling: bilinear
+      asset_bidx: cog_default|1,2,3
+    legend:
+      type: categorical
+      stops:
+        - color: "rgba(0, 0, 0, 0)" # using transparent for now to fix the issues with scrollytelling
+          label: "Imagery"
+    info:
+      source: NOAA
+      spatialExtent: Eastern USA / Northwest Atlantic Ocean
+      temporalResolution: January 4, 2018
+      unit: N/A
+
+---
+<Block>
+  <Prose>
+  ## Dataset Details
+  - **Temporal Extent:** 2018-01-04 1345 UTC
+  - **Temporal Resolution:** Single Time Step
+  - **Spatial Extent:** Eastern USA / Northwest Atlantic Ocean
+  - **Spatial Resolution:** 0.5 km
+  - **Data Units:** N/A
+  - **Data Type:** Research
+  - **Data Latency:** N/A
+  </Prose>
+<Figure>
+  <Map
+    center={[-78.8,41]}
+    zoom={4.75}
+    datasetId='blizzard-goes-bombogenesis'
+    layerId='blizzard-goes-bombogenesis'
+    dateTime='2018-01-04'
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+  Single GOES TrueColor three-band image of a mid-latitude cyclone undergoing bomb cyclogenesis and producing blizzard conditions on January 4, 2018.
+  </Caption>
+</Figure>
+</Block>
+
+<Block>
+  <Prose>
+
+  ### About
+
+  A defining feature of many nor’easters is bomb cyclogenesis, or **"bombogenesis"**, which occurs when a storm's central low pressure drops by at least 24 millibars in 24 hours, signifying rapid intensification of the system. The process is driven by the clash of cold air from the north and warm, humid air over the Atlantic. As the storm deepens, powerful winds spiral inward towards the central low pressure, enhancing snowfall rates and creating whiteout conditions. Bomb cyclogenesis often results in some of the most impactful nor’easters, which have been historically responsible for bringing record-breaking snowfall and hurricane-force winds to parts of the Northeast. The dataset is GOES satellite imagery of an example of a Noreaster undergoing bomb cyclogenesis off the East Coast of the USA on January 4, 2018. This TrueColor three-band composite satellite imagery is a combination of the red, green, and blue bands of GOES16 ABI. The green band was derived from the raw red, veggie, and blue bands. 
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ### Access the Data
+
+  Visit the Archived GOES Satellite [AWS S3 Bucket](https://registry.opendata.aws/noaa-goes/) to explore options for data access.
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## Disclaimer
+
+  All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
+  
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+
+  ### Key Publications
+  
+  Manobianco, J., 1989: Explosive East Coast Cyclogenesis: Numerical Experimentation and Model-Based Diagnostics. Mon. Wea. Rev., 117, 2384–2405.
+
+  Manobianco, J., 1989: Explosive East Coast Cyclogenesis over the West-Central North Atlantic Ocean: A Composite Study Derived from ECMWF Operational Analyses. Mon. Wea. Rev., 117, 2365–2383.
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## Data Stories Using This Dataset
+  
+  **<Link to={"/stories/blizzards"}>When Winter Rages</Link>**
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## License
+  
+  [Creative Commons Attribution 1.0 International](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC BY 1.0)
+
+  </Prose>
+</Block>
