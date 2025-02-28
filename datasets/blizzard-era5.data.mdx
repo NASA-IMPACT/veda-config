@@ -25,8 +25,8 @@ layers:
     description: "ERA5 2-meter temperature reanalysis data for two select blizzards."
     initialDatetime: newest
     zoomExtent:
-        - 0
-        - 20
+      - 0
+      - 20
     sourceParams:
       colormap_name: surface_temperature    
       nodata: -999
@@ -40,28 +40,26 @@ layers:
       min: 240
       max: 315
       stops: 
-          - "#3CCBCE"
-          - "#C5F8FF"   
-          - "#FEC5FF"   
-          - "#E079FB"   
-          - "#094FC9"   
-          - "#009FFF"   
-          - "#44E2FF"  
-          - "#147F4F"   
-          - "#79B32C"   
-          - "#FDFE00"   
-          - "#FF8700"   
-          - "#FF0F00"   
-          - "#9D0F2B"   
-          - "#4D0000"   
-          - "#BA2E6D"  
-
+        - "#3CCBCE"
+        - "#C5F8FF"   
+        - "#FEC5FF"   
+        - "#E079FB"   
+        - "#094FC9"   
+        - "#009FFF"   
+        - "#44E2FF"  
+        - "#147F4F"   
+        - "#79B32C"   
+        - "#FDFE00"   
+        - "#FF8700"   
+        - "#FF0F00"   
+        - "#9D0F2B"   
+        - "#4D0000"   
+        - "#BA2E6D"  
     info:
       source: ECMWF
       spatialExtent: Global
       temporalResolution: 1950-1978; Inconsistent
       unit: Kelvin
-
   - id: blizzard-era5-10m-wind
     stacCol: blizzard-era5-10m-wind
     name: ERA5 10 Meter Wind
@@ -69,33 +67,32 @@ layers:
     description: "ERA5 10-meter wind reanalysis data for two select blizzards."
     initialDatetime: newest
     zoomExtent:
-        - 0
-        - 20
+      - 0
+      - 20
     sourceParams:
       colormap_name: ylorrd    
       nodata: -999
       rescale:
         - 0
         - 25
-      legend:
-        type: gradient
-        unit:
-          label: m/s
-        min: 0
-        max: 25
-        stops:
-            - "#ffffcc"
-            - "#fee187"
-            - "#feab49"
-            - "#fc5b2e"
-            - "#d41020"
-            - "#800026"
+    legend:
+      type: gradient
+      unit:
+        label: m/s
+      min: 0
+      max: 25
+      stops:
+        - "#ffffcc"
+        - "#fee187"
+        - "#feab49"
+        - "#fc5b2e"
+        - "#d41020"
+        - "#800026"
     info:
       source: ECMWF
       spatialExtent: Global
       temporalResolution: 1950-1978; Inconsistent
       unit: m/s
-
   - id: blizzard-era5-cfrac
     stacCol: blizzard-era5-cfrac
     name: ERA5 Cloud Fraction
@@ -103,31 +100,30 @@ layers:
     description: "ERA5 cloud fraction reanalysis data for two select blizzards."
     initialDatetime: newest
     zoomExtent:
-        - 0
-        - 20
+      - 0
+      - 20
     sourceParams:
       colormap_name: greys_r    
       nodata: -999
       rescale:
         - 0
         - 1
-      legend:
-        type: gradient
-        min: 0
-        max: 1
-        stops:
-            - "#000000"
-            - "#404040"
-            - "#7a7a7a"
-            - "#b5b5b5"
-            - "#e2e2e2"
-            - "#ffffff"
+    legend:
+      type: gradient
+      min: 0
+      max: 1
+      stops:
+        - "#000000"
+        - "#404040"
+        - "#7a7a7a"
+        - "#b5b5b5"
+        - "#e2e2e2"
+        - "#ffffff"
     info:
       source: ECMWF
       spatialExtent: Global
       temporalResolution: 1950-1978; Inconsistent
       unit: fraction; 1 = 100% coverage
-
   - id: blizzard-era5-mslp
     stacCol: blizzard-era5-mslp
     name: ERA5 Mean Sea Level Pressure
@@ -143,27 +139,26 @@ layers:
       rescale:
         - 972
         - 1040
-      legend:
-        unit:
-          label: hPa
-        type: gradient
-        min: 972
-        max: 1040
-        stops:
-            - "#000000"
-            - "#870098"
-            - "#0078dd"
-            - "#00aa88"
-            - "#00dc00"
-            - "#efed00"
-            - "#fe0000"
-            - "#cccccc"
+    legend:
+      unit:
+        label: hPa
+      type: gradient
+      min: 972
+      max: 1040
+      stops:
+          - "#000000"
+          - "#870098"
+          - "#0078dd"
+          - "#00aa88"
+          - "#00dc00"
+          - "#efed00"
+          - "#fe0000"
+          - "#cccccc"
     info:
       source: ECMWF
       spatialExtent: Global
       temporalResolution: 1950-1978; Inconsistent
       unit: hPa
-
 ---
 <Block>
   <Prose>
