@@ -31,7 +31,12 @@ layers:
       rescale:
         - 0,15
       resampling: bilinear
-      asset_bidx: cog_default|1,2,3   
+      asset_bidx: cog_default|1,2,3
+    legend:
+      type: categorical
+      stops:
+        - color: "rgba(0, 0, 0, 0)" # using transparent for now to fix the issues with scrollytelling
+          label: "Imagery"
     info:
       source: NOAA
       spatialExtent: Eastern USA / Northwest Atlantic Ocean

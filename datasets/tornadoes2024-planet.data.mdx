@@ -39,6 +39,11 @@ layers:
         - 0,2500
       resampling: bilinear
       asset_bidx: cog_default|3,2,1
+    legend:
+      type: categorical
+      stops:
+        - color: "rgba(0, 0, 0, 0)" # using transparent for now to fix the issues with scrollytelling
+          label: "Imagery"
     info:
         source: Planet
         spatialExtent: Local
@@ -65,6 +70,11 @@ layers:
         ::js ({ dateFns, datetime, compareDatetime }) => {
           return `${dateFns.format(datetime, 'dd LLL yyyy')}`;        
         }
+    legend:
+      type: categorical
+      stops:
+        - color: "rgba(0, 0, 0, 0)" # using transparent for now to fix the issues with scrollytelling
+          label: "Imagery"
     info:
         source: Planet
         spatialExtent: Local
@@ -91,6 +101,11 @@ layers:
         ::js ({ dateFns, datetime, compareDatetime }) => {
           return `${dateFns.format(datetime, 'dd LLL yyyy')}`;        
         }
+    legend:
+      type: categorical
+      stops:
+        - color: "rgba(0, 0, 0, 0)" # using transparent for now to fix the issues with scrollytelling
+          label: "Imagery"
     info:
         source: Planet
         spatialExtent: Local
@@ -110,6 +125,11 @@ layers:
         - 0,255
       resampling: bilinear
       asset_bidx: cog_default|1,2,3
+    legend:
+      type: categorical
+      stops:
+        - color: "rgba(0, 0, 0, 0)" # using transparent for now to fix the issues with scrollytelling
+          label: "Imagery"
     info:
         source: Planet
         spatialExtent: Local
@@ -129,6 +149,11 @@ layers:
         - 0,255
       resampling: bilinear
       asset_bidx: cog_default|1,2,3
+    legend:
+      type: categorical
+      stops:
+        - color: "rgba(0, 0, 0, 0)" # using transparent for now to fix the issues with scrollytelling
+          label: "Imagery"
     info:
         source: Planet
         spatialExtent: Local
@@ -155,6 +180,11 @@ layers:
         ::js ({ dateFns, datetime, compareDatetime }) => {
           return `${dateFns.format(datetime, 'dd LLL yyyy')}`;        
         }
+    legend:
+      type: categorical
+      stops:
+        - color: "rgba(0, 0, 0, 0)" # using transparent for now to fix the issues with scrollytelling
+          label: "Imagery"
     info:
         source: Planet
         spatialExtent: Local
