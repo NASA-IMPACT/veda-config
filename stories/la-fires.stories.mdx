@@ -49,6 +49,19 @@ taxonomy:
     x
 
   </Prose>
+  <Figure>
+    <Chart
+      dataPath={new URL('./la-fires-ndvi.csv', import.meta.url).href}
+      dateFormat="%Y-%m"
+      idKey='Label'
+      xKey='Date'
+      yKey='NDVI_Scaled'
+      yAxisLabel='MODIS NDVI'
+    />
+    <Caption>
+    Monthly mean MODIS NDVI values at the ignition point of the 2025 Eaton Fire in Los Angeles County, California. 
+    </Caption>
+  </Figure>
 </Block>
 
 <Block>
