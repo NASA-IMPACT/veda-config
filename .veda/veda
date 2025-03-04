@@ -51,33 +51,6 @@ if (inputCmd !== 'clean' && inputCmd !== 'test') {
     fs.mkdirSync(uiDistStyles, { recursive: true });
   }
 
-  // Read the main.tsx file content and comment out styles.scss import.
-  // The styles.scss import is only needed for the standalone veda-ui build, and contains
-  // the core USWDS styles. The veda-config already includes its own core USWDS styles and
-  // theme, thus we're avoiding duplications.
-  try {
-    const mainContent = fs.readFileSync(mainTsxPath, 'utf8');
-
-    // Check if styles.scss is imported and not already commented out
-    const hasStylesImport = mainContent.includes('import \'$styles/styles.scss\'') ||
-                           mainContent.includes('import "$styles/styles.scss"');
-
-    if (hasStylesImport) {
-      console.log('Disabling full styles import for veda-config build...');
-
-      // Remove the veda-ui specific import
-      const modifiedContent = mainContent.replace(
-        /import\s+['"][$]styles\/styles\.scss['"];(\r?\n)?/,
-        ''
-      );
-
-      fs.writeFileSync(mainTsxPath, modifiedContent);
-      console.log('Successfully disabled full styles import');
-    }
-  } catch (error) {
-    console.error('Error while processing main.tsx:', error);
-  }
-
   try {
     execSync(
       'sass --quiet-deps --load-path=node_modules/@uswds/uswds/packages styles/theme.scss .veda/ui/static/styles/theme.css',
