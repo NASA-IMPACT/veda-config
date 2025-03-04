@@ -40,25 +40,53 @@ if (inputCmd === '--info') {
 
 const rootDir = path.join(__dirname, '../');
 
+const parentThemeFile = path.join(__dirname, 'styles/_uswds-theme.scss');
+const submoduleThemeFile = path.join(__dirname, '.veda/ui/app/scripts/styles/_uswds-theme.scss');
+let originalSubmoduleTheme = '';
+
+// Temporarily swap the USWDS theme file from the veda-ui with the one from veda-config
+function swapUswdsThemeFiles(restore = false) {
+  try {
+    if (!restore) {
+      if (fs.existsSync(submoduleThemeFile)) {
+        originalSubmoduleTheme = fs.readFileSync(submoduleThemeFile, 'utf8');
+
+        if (fs.existsSync(parentThemeFile)) {
+          const parentThemeContent = fs.readFileSync(parentThemeFile, 'utf8');
+          fs.writeFileSync(submoduleThemeFile, parentThemeContent);
+        }
+      }
+    } else if (originalSubmoduleTheme) {
+      fs.writeFileSync(submoduleThemeFile, originalSubmoduleTheme);
+    }
+  } catch (error) {
+    console.error('Error swapping USWDS theme files:', error);
+  }
+}
+
 // Compile SASS to CSS before running other commands
 if (inputCmd !== 'clean' && inputCmd !== 'test') {
   console.log('Compiling SASS styles...');
 
   const uiDistStyles = path.join(__dirname, 'ui/static/styles');
-  const mainTsxPath = path.join(__dirname, 'ui/app/scripts/main.tsx');
 
   if (!fs.existsSync(uiDistStyles)) {
     fs.mkdirSync(uiDistStyles, { recursive: true });
   }
 
   try {
+    swapUswdsThemeFiles();
+
     execSync(
       'sass --quiet-deps --load-path=node_modules/@uswds/uswds/packages styles/theme.scss .veda/ui/static/styles/theme.css',
       { stdio: 'inherit' }
     );
     console.log('SASS compilation successful');
+
+    swapUswdsThemeFiles(true);
   } catch (error) {
     console.error('SASS compilation failed:', error);
+    swapUswdsThemeFiles(true);
   }
 }
 
@@ -97,6 +125,7 @@ if (inputCmd === 'serve') {
   );
 
   process.on('SIGINT', () => {
+    swapUswdsThemeFiles(true);
     sassWatch.kill();
     process.exit();
   });
