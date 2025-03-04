@@ -1,0 +1,148 @@
+---
+id: cyclones-modis-ir
+name: 'MODIS Infrared Imagery (Select Cyclone Events)'
+description: "Moderate Resolution Imaging Spectroradiometer (MODIS) infrared satellite imagery for select cyclone events."
+
+media:
+  src: ::file ./cyclones_beryl_background.png
+  alt: GOES TrueColor satellite imagery of Hurricane Beryl's eye in July of 2024.
+  author: 
+    name: NOAA 
+taxonomy:
+  - name: Topics
+    values:
+      - Disasters
+      - Tropical
+  - name: Source
+    values:
+      - MODIS
+layers:
+  - id: modis_mosaic-cyclone-beryl
+    stacCol: modis_mosaic-cyclone-beryl
+    name: MODIS IR - Hurricane Beryl
+    type: raster
+    description: "Mosaiced MODIS infrared satellite imagery for Hurricane Beryl."
+    initialDatetime: newest
+    zoomExtent:
+        - 0
+        - 20
+    sourceParams:
+      colormap_name: cfastie    
+      nodata: -9999
+      rescale:
+        - 350
+        - 30000
+    legend:
+      type: gradient
+      stops:
+        - "#000000"  # Black
+        - "#222222"  # Dark Gray
+        - "#555555"  # Medium Gray
+        - "#7F7F7F"  # Light Gray
+        - "#AFAFAF"  # Very Light Gray
+        - "#FFFFFF"  # White
+        - "#BFBFBF"  # Light Gray (Post White)
+        - "#808080"  # Medium Gray (Post White)
+        - "#404040"  # Dark Gray (Post White)
+        - "#0000FF"  # Blue
+        - "#5050FF"  # Light Blue
+        - "#00FF00"  # Green
+        - "#80FF00"  # Yellow-Green
+        - "#FFFF00"  # Yellow
+        - "#FFC000"  # Orange-Yellow
+        - "#FF8000"  # Orange
+        - "#FF0000"  # Red
+        - "#FF00A0"  # Magenta-Red
+        - "#FF00FF"  # Magenta
+    info:
+        source: MODIS
+        spatialExtent: Regional
+        temporalResolution: 2000-Present, Inconsistent
+        unit: N/A
+
+---
+<Block>
+  <Prose>
+  ## Dataset Details
+  - **Temporal Extent:** 2000-Present
+  - **Temporal Resolution:** Inconsistent
+  - **Spatial Extent:** Regional
+  - **Spatial Resolution:** 1 km
+  - **Data Units:** N/A
+  - **Data Type:** Research
+  - **Data Latency:** N/A
+  </Prose>
+<Figure>
+  <Map
+    center={[-62, 13.5]}
+    zoom={5.25}
+    datasetId='modis_mosaic-cyclone-beryl'
+    layerId='modis_mosaic-cyclone-beryl'
+    dateTime='2024-07-01'
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+  Mosaiced MODIS Infrared satellite imagery of Hurricane Beryl nearing the Caribbean Sea on July 1, 2024.
+  </Caption>
+</Figure>
+</Block>
+
+<Block>
+  <Prose>
+
+  ### About
+
+  The MODIS Level-1B dataset provides high-quality satellite measurements of Earth's surface and atmosphere by capturing data across 36 different wavelength bands, ranging from visible to infrared. These measurements are carefully processed to ensure accuracy and are tied to specific locations on Earth. For certain bands, scientists can also analyze how sunlight interacts with surfaces, which helps in studying land and water properties. The dataset includes additional details like data quality, error estimates, and calibration information. Only Band 31 is being shown on this dataset landing page, which focuses on thermal infrared radiation, which is helpful in monitoring cloud top temperatures in cyclones.
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ### Access the Data
+
+  Visit the NASA [LAADS DAAC](https://ladsweb.modaps.eosdis.nasa.gov/search/) to explore options for data access.
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## Disclaimer
+
+  All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
+  
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+
+  ### Key Publication
+  
+  Petitcolin, F. and E. Vermote, 2002. Land surface reflectance, emissivity, and temperature from MODIS middle and thermal infrared data. Remote Sensing of Environment, 83(1). https://doi.org/10.1016/S0034-4257(02)00094-9
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## Data Stories Using This Dataset
+  
+  **<Link to={"/stories/cyclones-beryl"}>Hurricane Beryl</Link>**
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## License
+  
+  [Creative Commons Attribution 1.0 International](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC BY 1.0)
+
+  </Prose>
+</Block>
