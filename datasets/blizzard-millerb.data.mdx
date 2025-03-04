@@ -1,0 +1,129 @@
+---
+id: blizzard-millerb
+name: 'Miller B Snowfall Footprint'
+description: "Single value raster displaying the general snowfall footprint of a Miller B type of mid-latitude cyclone."
+
+media:
+  src: ::file media/blizzards-cover.png
+  alt: Near-blizzard conditions in Maria Stein, Ohio on December 23, 2022.
+  author: 
+    name: Andrew Blackford
+taxonomy:
+  - name: Topics
+    values:
+      - Climate
+      - Disasters
+      - Snow
+  - name: Source
+    values:
+      - UAH
+layers:
+  - id: blizzard-millerb
+    stacCol: blizzard-millerb
+    name: Miller B Snowfall Footprint
+    type: raster
+    description: "Climatologically favored region of the USA that experiences snowfall from Miller B cyclones."
+    initialDatetime: newest
+    zoomExtent:
+        - 0
+        - 20
+    sourceParams:
+      colormap: '{"0":[22,158,242,255]}'
+    legend:
+      type: categorical
+      stops:
+        - color: "#169ef2"
+          label: Miller B Snowfall
+    info:
+      source: UAH
+      spatialExtent: Eastern United States
+      temporalResolution: 1950-2021 Climatology
+      unit: Binary
+
+---
+<Block>
+  <Prose>
+  ## Dataset Details
+  - **Temporal Extent:** 1950-2021
+  - **Temporal Resolution:** Single Climatology
+  - **Spatial Extent:** Eastern United States
+  - **Spatial Resolution:** N/A
+  - **Data Units:** N/A
+  - **Data Type:** Research
+  - **Data Latency:** N/A
+  </Prose>
+<Figure>
+  <Map
+    center={[-80,42]}
+    zoom={3.5}
+    datasetId='blizzard-millerb'
+    layerId='blizzard-millerb'
+    dateTime='1950-01-01'
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+    Climatologically favored region of the USA that experiences snowfall from Miller B cyclones.
+  </Caption>
+</Figure>
+</Block>
+
+<Block>
+  <Prose>
+
+  ### About
+
+  Miller Type B cyclones are more complex, involving the interaction of two distinct low pressure systems. A primary low forms over the Midwest or Great Lakes regions, often producing light to moderate snowfall. As the primary low weakens, energy transfers to a secondary low-pressure system that develops near the Mid-Atlantic coast. This secondary low rapidly intensifies as it moves up the East Coast, often producing heavy snow for the Northeast and Mid-Atlantic regions. Type B cyclones tend to bring mixed precipitation and ice to areas farther inland before transitioning to snow along the coast. 
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ### Access the Data
+
+  This dataset was interpolated from confirmed blizzard reports from the [Storm Events Database](https://www.ncdc.noaa.gov/stormevents/), between 1950-2021. 
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## Disclaimer
+
+  All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
+  
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+
+  ### Key Publications
+  
+  Coleman, J. S. M., and R. M. Schwartz, 2017: An Updated Blizzard Climatology of the Contiguous United States (1959–2014): An Examination of Spatiotemporal Trends. J. Appl. Meteor. Climatol., 56, 173–187, https://doi.org/10.1175/JAMC-D-15-0350.1.
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## Data Stories Using This Dataset
+  
+  **<Link to={"/stories/blizzards"}>When Winter Rages</Link>**
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## License
+  
+  [Creative Commons Attribution 1.0 International](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC BY 1.0)
+
+  </Prose>
+</Block>
