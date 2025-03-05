@@ -1,7 +1,7 @@
 ---
-id: la-fires-parcels
-name: 'LA County Parcel Damage - Eaton and Palisades Fires (2025)'
-description: "Percent damage of parcels impacted by the 2025 Eaton and Palisades Fires, as determined by the LA County Assessor's Office."
+id: la-fires-sea
+name: 'LA County Significant Ecological Areas (SEAs)'
+description: "Significant Ecological Areas and Coastal Resource Areas in Los Angeles County, California."
 media:
   src: ::file ./LA-Fires-background.png
   alt: Planet Labs Commercial Satellite Imagery of the Eaton Fire (January 9, 2025).
@@ -15,10 +15,10 @@ taxonomy:
       - Wildfire
   - name: Source
     values:
-      - Los Angeles County Assessor
+      - LA County Dept. of Regional Planning
 infoDescription: |
   ::markdown
-    - **Temporal Extent:** January 9, 2025
+    - **Temporal Extent:** January 1, 2025
     - **Temporal Resolution:** N/A
     - **Spatial Extent:** LA County, CA
     - **Spatial Resolution:** 30 m
@@ -27,47 +27,45 @@ infoDescription: |
     - **Data Latency:** N/A
 
 layers:
-  - id: la-fires-parcels
-    stacCol: la-fires-parcels
-    name: LA County Parcel Damage - Eaton and Palisades Fires (2025)
+  - id: la-fires-sea
+    stacCol: la-fires-sea
+    name: LA County Significant Ecological Areas (SEAs)
     type: raster
-    description: "Percent damage of parcels impacted by the 2025 Eaton and Palisades Fires, as determined by the LA County Assessor's Office."
+    description: "Significant Ecological Areas (SEAs) and Coastal Resource Areas (CRAs) in Los Angeles County, California."
     zoomExtent:
       - 0
       - 20
     sourceParams:
       resampling: bilinear
       bidx: 1
-      colormap: '{"1":[255,255,255,255],"2":[79,1,6,255],"3":[122,191,54,255],"4":[214,88,30,255],"5":[214,190,30,255],"6":[99,95,65,255]}'
+      colormap: '{"1":[18,94,135,255],"2":[12,110,20,255],"3":[73,230,86,255],"4":[73,141,230,255],"5":[73,230,227,255]}'
     legend:
       type: categorical
       min: "1"
-      max: "6"
+      max: "5"
       stops:
-        - color: "#ffffff"
-          label: "No Damage"
-        - color: "#7bbf36"
-          label: "Affected (1-9%)"
-        - color: "#d6bd1e"
-          label: "Minor (10-25%)" 
-        - color: "#d6581e"
-          label: "Major (26-50%)" 
-        - color: "#4f0106"
-          label: "Destroyed (>50%)"
-        - color: "#635f41"
-          label: "Inaccessible" 
+        - color: "#493656"
+          label: "SEA" 
+        - color: "#0c6e14"
+          label: "SEA (Urban)"
+        - color: "#498de6"
+          label: "CRA" 
+        - color: "#125e87"
+          label: "CRA (Urban)"
+        - color: "#49e6e3"
+          label: "CRA (Ocean)"
     info:
-        source: Los Angeles County Assessor
+        source: LA County Dept. of Regional Planning
         spatialExtent: LA County, CA
         temporalResolution: N/A
-        unit: percent
+        unit: N/A
 
 ---
 
 <Block>
   <Prose>
   ## Dataset Details
-    - **Temporal Extent:** January 9, 2025
+    - **Temporal Extent:** January 1, 2025
     - **Temporal Resolution:** N/A
     - **Spatial Extent:** LA County, CA
     - **Spatial Resolution:** 30 m
@@ -77,17 +75,17 @@ layers:
   </Prose>
 <Figure>
   <Map
-    datasetId='la-fires-parcels'
-    layerId='la-fires-parcels'
-    dateTime='2025-01-09'
-    zoom={12.75}
-    center={[-118.1341, 34.1925]}
+    datasetId='la-fires-sea'
+    layerId='la-fires-sea'
+    dateTime='2025-01-01'
+    zoom={8}
+    center={[-118.3041, 33.9966]}
   />
   <Caption
     attrAuthor='NASA'
     attrUrl='https://nasa.gov/'
   >
-    Percent damage by parcel from the 2025 Eaton Fire in Altadena, California as determined by the LA County Assessor's Office.
+  LA County's Significant Ecological Areas (SEAs) in the area impacted by the 2025 Palisades Fire. 
   </Caption>
 </Figure>
 </Block>
