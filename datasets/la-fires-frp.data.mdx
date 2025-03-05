@@ -1,0 +1,184 @@
+---
+id: la-fires-frp
+name: 'Fire Radiative Power (FRP) - 2025 LA Fires'
+description: "Maximum daily FRP during the week of the 2025 Palisades and Eaton Fires in Southern California."
+media:
+  src: ::file ./LA-Fires-background.png
+  alt: Planet Labs Commercial Satellite Imagery of the Eaton Fire (January 9, 2025).
+  author:
+    name: NASA CDSA - Planet Labs
+taxonomy:
+  - name: Topics
+    values:
+      - Disasters
+      - Wildfire
+  - name: Source
+    values:
+      - CAMS
+infoDescription: |
+  ::markdown
+    - **Temporal Extent:** January 6-12, 2025
+    - **Temporal Resolution:** Daily
+    - **Spatial Extent:** Global
+    - **Spatial Resolution:** 0.1 x 0.1 degree
+    - **Data Units:** Wm<sup>[-2]</sup>
+    - **Data Type:** Research
+    - **Data Latency:** N/A
+
+layers:
+  - id: la-fires-frp
+    stacCol: la-fires-frp
+    name: Fire Radiative Power (FRP) - 2025 LA Fires
+    type: raster
+    description: 'Maximum daily FRP during the week of the 2025 Palisades and Eaton Fires in Southern California.'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      colormap_name: afmhot_r    
+      rescale:
+        - 0
+        - 100
+    legend:
+      type: gradient
+      unit:
+        label: Wm<sup>[-2]</sup>
+      min: 0
+      max: 100
+      stops: 
+        - "#FFFFFF"
+        - "#FFFFC6"
+        - "#FFFF8E"
+        - "#FFD555"
+        - "#FF9C1C"
+        - "#E36300"
+        - "#AA2B00"
+        - "#710000"
+        - "#390000"
+        - "#000000"
+    info:
+        source: CAMS
+        spatialExtent: Global
+        temporalResolution: Daily
+        unit: Wm<sup>[-2]</sup>
+
+---
+
+<Block>
+  <Prose>
+  ## Dataset Details
+    - **Temporal Extent:** January 6-12, 2025
+    - **Temporal Resolution:** Daily
+    - **Spatial Extent:** Global
+    - **Spatial Resolution:** 0.1 x 0.1 degree
+    - **Data Units:** Wm<sup>[-2]</sup>
+    - **Data Type:** Research
+    - **Data Latency:** N/A
+  </Prose>
+<Figure>
+  <Map
+    datasetId='la-fires-frp'
+    layerId='la-fires-frp'
+    dateTime='2025-01-09'
+    zoom={9.5}
+    center={[-118.1041, 34.1966]}
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+    Maximum FRP in the Los Angeles area on January 9, 2025.
+  </Caption>
+</Figure>
+</Block>
+
+<Block>
+  <Prose>
+
+  ### About
+
+  x
+  
+  </Prose>
+</Block>
+
+<Block>
+  
+  <Prose>
+
+  ### What CAMS FRP Data Offers
+
+  * s
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ### Access the Data
+
+  x
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    
+  ### Citing this Dataset
+
+  x
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## Disclaimer
+
+  All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
+  
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+
+  ### Key Publications
+  
+  x
+  
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+
+  ### Other Publications
+  
+  x
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## Data Stories Using This Dataset
+  
+  **<Link to={"/stories/la-fires"}>Fanning the Flames</Link>**
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## License
+  
+  [Creative Commons Attribution 1.0 International](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC BY 1.0)
+
+  </Prose>
+</Block>
+
