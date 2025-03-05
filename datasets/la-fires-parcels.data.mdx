@@ -1,7 +1,7 @@
 ---
-id: la-fires-slope
-name: 'Eaton and Palisades Fires (2025) Slope'
-description: "Computed slope from a digital elevation model (DEM) of the 2025 Palisades and Eaton Fires' burn scar extent."
+id: la-fires-parcels
+name: 'LA County Parcel Damage - Eaton and Palisades Fires (2025)'
+description: "Percent damage of parcels impacted by the 2025 Eaton and Palisades Fires, as determined by the LA County Assessor's Office."
 media:
   src: ::file ./LA-Fires-background.png
   alt: Planet Labs Commercial Satellite Imagery of the Eaton Fire (January 9, 2025).
@@ -15,80 +15,79 @@ taxonomy:
       - Wildfire
   - name: Source
     values:
-      - USGS
+      - Los Angeles County Assessor
 infoDescription: |
   ::markdown
-    - **Temporal Extent:** 2024-02-07
-    - **Temporal Resolution:** Inconsistent
-    - **Spatial Extent:** Eaton and Palisades Fire burn scar extent
+    - **Temporal Extent:** January 9, 2025
+    - **Temporal Resolution:** N/A
+    - **Spatial Extent:** LA County, CA
     - **Spatial Resolution:** 30 m
-    - **Data Units:** degrees
+    - **Data Units:** N/A
     - **Data Type:** Research
     - **Data Latency:** N/A
 
 layers:
-  - id: la-fires-slope
-    stacCol: la-fires-slope
-    name: Eaton and Palisades Fires (2025) Slope
+  - id: la-fires-parcels
+    stacCol: la-fires-parcels
+    name: LA County Parcel Damage - Eaton and Palisades Fires (2025)
     type: raster
-    description: 'Computed slope from a digital elevation model (DEM) of the 2025 Palisades and Eaton Fires burn scar extent.'
+    description: 'Percent damage of parcels impacted by the 2025 Eaton and Palisades Fires, as determined by the LA County Assessor's Office.'
     zoomExtent:
       - 0
       - 20
     sourceParams:
-      colormap_name: ylorrd    
-      rescale:
-        - 0
-        - 90
+      resampling: bilinear
+      bidx: 1
+      colormap: '{"1":[255,255,255,255],"2":[79,1,6,255],"3":[122,191,54,255],"4":[214,88,30,255],"5":[214,190,30,255],"6":[99,95,65,255]}'
     legend:
-      type: gradient
-      unit:
-        label: degrees
-      min: 0
-      max: 90
-      stops: 
-        - "#FFFFCC"
-        - "#FFF7BC"
-        - "#FFEDA0"
-        - "#FED976"
-        - "#FEB24C"
-        - "#FD8D3C"
-        - "#FC4E2A"
-        - "#E31A1C"
-        - "#BD0026"
-        - "#800026"
+      type: categorical
+      min: "1"
+      max: "6"
+      stops:
+        - color: "#ffffff"
+          label: "No Damage"
+        - color: "#7bbf36"
+          label: "Affected (1-9%)"
+        - color: "#d6bd1e"
+          label: "Minor (10-25%)" 
+        - color: "#d6581e"
+          label: "Major (26-50%)" 
+        - color: "#4f0106"
+          label: "Destroyed (>50%)"
+        - color: "#635f41"
+          label: "Inaccessible" 
     info:
-        source: USGS
-        spatialExtent: Local
+        source: Los Angeles County Assessor
+        spatialExtent: LA County, CA
         temporalResolution: N/A
-        unit: degrees
+        unit: percent
 
 ---
 
 <Block>
   <Prose>
   ## Dataset Details
-    - **Temporal Extent:** 2024-02-07
-    - **Temporal Resolution:** Inconsistent
-    - **Spatial Extent:** Eaton and Palisades Fire burn scar extent
-    - **Spatial Resolution:** 30 m
-    - **Data Units:** degrees
+    - **Temporal Extent:** January 6-12, 2025
+    - **Temporal Resolution:** Daily
+    - **Spatial Extent:** Global
+    - **Spatial Resolution:** 0.1 x 0.1 degree
+    - **Data Units:** W m-2
     - **Data Type:** Research
     - **Data Latency:** N/A
   </Prose>
 <Figure>
   <Map
-    datasetId='la-fires-slope'
-    layerId='la-fires-slope'
+    datasetId='la-fires-frp'
+    layerId='la-fires-frp'
     dateTime='2025-01-09'
-    zoom={10.5}
-    center={[-118.1041, 34.1966]}
+    zoom={8}
+    center={[-118.3041, 33.9966]}
   />
   <Caption
     attrAuthor='NASA'
     attrUrl='https://nasa.gov/'
   >
-    Digital Elevation Model (DEM)-derived slope values for the Eaton Fire burn scar extent.
+    Maximum FRP in the Los Angeles area on January 9, 2025.
   </Caption>
 </Figure>
 </Block>
@@ -107,7 +106,7 @@ layers:
   
   <Prose>
 
-  ### What USGS DEM Data Offers
+  ### What CAMS FRP Data Offers
 
   * s
   </Prose>
