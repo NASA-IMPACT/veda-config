@@ -22,7 +22,7 @@ layers:
     stacCol: blizzard-clipper
     name: AB/SK/MB Clipper Snowfall Footprint
     type: raster
-    description: "Climatologically favored region of the USA that experiences snowfall from Alberta Clipper, Saskatchewan Screamer, and Manitoba Mauler cyclones."
+    description: "Land mask of the climatologically favored region of the USA and Canada that experiences snowfall from Alberta Clipper, Saskatchewan Screamer, and Manitoba Mauler cyclones."
     initialDatetime: newest
     zoomExtent:
         - 0
@@ -43,30 +43,28 @@ layers:
 ---
 <Block>
   <Prose>
-  ## Dataset Details
-  - **Temporal Extent:** 1950-2021
-  - **Temporal Resolution:** Single Climatology
-  - **Spatial Extent:** Southern Canada/Northern United States
-  - **Spatial Resolution:** N/A
-  - **Data Units:** N/A
-  - **Data Type:** Research
-  - **Data Latency:** N/A
+    ## Dataset Details
+
+    - **Temporal Extent:** 1950-2021
+    - **Temporal Resolution:** Single Climatology
+    - **Spatial Extent:** Southern Canada/Northern United States
+    - **Data Type:** Research
   </Prose>
-<Figure>
-  <Map
-    center={[-98,50]}
-    zoom={2.5}
-    datasetId='blizzard-clipper'
-    layerId='blizzard-clipper'
-    dateTime='1950-01-01'
-  />
-  <Caption
-    attrAuthor='NASA'
-    attrUrl='https://nasa.gov/'
-  >
-    Climatologically favored region of the USA that experiences snowfall from Alberta Clipper, Saskatchewan Screamer, and Manitoba Mauler cyclones.
-  </Caption>
-</Figure>
+  <Figure>
+    <Map
+      center={[-98,50]}
+      zoom={2.5}
+      datasetId='blizzard-clipper'
+      layerId='blizzard-clipper'
+      dateTime='1950-01-01'
+    />
+    <Caption
+      attrAuthor='NASA'
+      attrUrl='https://nasa.gov/'
+    >
+      Land mask of the climatologically favored region of the USA and Canada that experiences snowfall from Alberta Clipper, Saskatchewan Screamer, and Manitoba Mauler cyclones.
+    </Caption>
+  </Figure>
 </Block>
 
 <Block>
@@ -80,50 +78,52 @@ layers:
 
 <Block>
   <Prose>
+    ### Access the Data
+
+    This dataset was interpolated from confirmed blizzard reports from the [Storm Events Database](https://www.ncdc.noaa.gov/stormevents/), between 1950-2021. 
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+    ## Disclaimer
+
+    All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+    ### Key Publications
   
-  ### Access the Data
+    Coleman, J. S. M., and R. M. Schwartz, 2017: An Updated Blizzard Climatology of the Contiguous United States (1959–2014): An Examination of Spatiotemporal Trends. J. Appl. Meteor. Climatol., 56, 173–187, https://doi.org/10.1175/JAMC-D-15-0350.1.
+  </Prose>
+</Block>
 
-  This dataset was interpolated from confirmed blizzard reports from the [Storm Events Database](https://www.ncdc.noaa.gov/stormevents/), between 1950-2021. 
 
+<Block>
+  <Prose>
+    ## Data Stories Using This Dataset
+  
+    **<Link to={"/stories/blizzards"}>When Winter Rages</Link>**
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+    ## Limitations of use
+
+    NASA data and products are freely available to federal, state, public, non-profit and commercial users. This information can be experimental- or research-grade data products and may not be appropriate for operational use. These NASA data products, services, and the Disasters Mapping Portal are intended to aid decision makers and enhance situational awareness, but these data are not guaranteed to be consistently available or routinely updated. Please cite the information according to the direction provided in the metadata.
   </Prose>
 </Block>
 
 <Block>
   <Prose>
+    ## License
   
-  ## Disclaimer
-
-  All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
-  
-  </Prose>
-</Block>
-
-<Block>
-  <Prose>
-
-  ### Key Publications
-  
-  Coleman, J. S. M., and R. M. Schwartz, 2017: An Updated Blizzard Climatology of the Contiguous United States (1959–2014): An Examination of Spatiotemporal Trends. J. Appl. Meteor. Climatol., 56, 173–187, https://doi.org/10.1175/JAMC-D-15-0350.1.
-
-  </Prose>
-</Block>
-
-<Block>
-  <Prose>
-  
-  ## Data Stories Using This Dataset
-  
-  **<Link to={"/stories/blizzards"}>When Winter Rages</Link>**
-
-  </Prose>
-</Block>
-
-<Block>
-  <Prose>
-  
-  ## License
-  
-  [Creative Commons Attribution 1.0 International](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC BY 1.0)
-
+    [Creative Commons Attribution 1.0 International](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC BY 1.0)
   </Prose>
 </Block>

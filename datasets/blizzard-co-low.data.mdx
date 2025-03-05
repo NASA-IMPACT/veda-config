@@ -22,7 +22,7 @@ layers:
     stacCol: blizzard-co-low
     name: Colorado Low Snowfall Footprint
     type: raster
-    description: "Climatologically favored region of the USA that experiences snowfall from Colorado Low cyclones."
+    description: "Land mask of climatologically favored region of the USA that experiences snowfall from Colorado Low cyclones."
     initialDatetime: newest
     zoomExtent:
         - 0
@@ -43,87 +43,89 @@ layers:
 ---
 <Block>
   <Prose>
-  ## Dataset Details
-  - **Temporal Extent:** 1950-2021
-  - **Temporal Resolution:** Single Climatology
-  - **Spatial Extent:** Central United States
-  - **Spatial Resolution:** N/A
-  - **Data Units:** N/A
-  - **Data Type:** Research
-  - **Data Latency:** N/A
+    ## Dataset Details
+    
+    - **Temporal Extent:** 1950-2021
+    - **Temporal Resolution:** Single Climatology
+    - **Spatial Extent:** Central United States
+    - **Data Type:** Research
   </Prose>
-<Figure>
-  <Map
-    center={[-95,43]}
-    zoom={3}
-    datasetId='blizzard-co-low'
-    layerId='blizzard-co-low'
-    dateTime='1950-01-01'
-  />
-  <Caption
-    attrAuthor='NASA'
-    attrUrl='https://nasa.gov/'
-  >
-    Climatologically favored region of the USA that experiences snowfall from Colorado Low cyclones.
-  </Caption>
-</Figure>
+  <Figure>
+    <Map
+      center={[-95,43]}
+      zoom={3}
+      datasetId='blizzard-co-low'
+      layerId='blizzard-co-low'
+      dateTime='1950-01-01'
+    />
+    <Caption
+      attrAuthor='NASA'
+      attrUrl='https://nasa.gov/'
+    >
+      Land mask of climatologically favored region of the USA that experiences snowfall from Colorado Low cyclones.
+    </Caption>
+  </Figure>
 </Block>
+
 
 <Block>
   <Prose>
+    ### About
 
-  ### About
-
-  Denver Cyclones, or Colorado Cyclones, are low pressure systems that form on the lee side of the Rocky Mountains, often along the Colorado Front Range. These systems form when moist air from the Gulf of America converges with cold Arctic air descending from Canada, creating sharp temperature gradients. The interaction between these air masses and the region’s complex terrain promotes the development of cyclonic systems that can bring heavy snowfall or blizzard conditions to the Colorado Front Range, including Denver, as well as parts of the Central and Northern Great Plains and Midwest. As these cyclones intensify and move eastward, they can bring severe winter weather to Blizzard Alley, making them a key contributor to the high frequency of blizzards in this region. The open terrain of the Great Plains amplifies wind speeds, further reducing visibility and exacerbating blizzard conditions.
+    Denver Cyclones, or Colorado Cyclones, are low pressure systems that form on the lee side of the Rocky Mountains, often along the Colorado Front Range. These systems form when moist air from the Gulf of America converges with cold Arctic air descending from Canada, creating sharp temperature gradients. The interaction between these air masses and the region’s complex terrain promotes the development of cyclonic systems that can bring heavy snowfall or blizzard conditions to the Colorado Front Range, including Denver, as well as parts of the Central and Northern Great Plains and Midwest. As these cyclones intensify and move eastward, they can bring severe winter weather to Blizzard Alley, making them a key contributor to the high frequency of blizzards in this region. The open terrain of the Great Plains amplifies wind speeds, further reducing visibility and exacerbating blizzard conditions.
   </Prose>
 </Block>
 
+
 <Block>
   <Prose>
-  
-  ### Access the Data
+    ### Access the Data
 
-  This dataset was interpolated from confirmed blizzard reports from the [Storm Events Database](https://www.ncdc.noaa.gov/stormevents/), between 1950-2021. 
-
+    This dataset was interpolated from confirmed blizzard reports from the [Storm Events Database](https://www.ncdc.noaa.gov/stormevents/), between 1950-2021. 
   </Prose>
 </Block>
 
+
 <Block>
   <Prose>
-  
-  ## Disclaimer
+    ## Disclaimer
 
-  All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
-  
+    All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
   </Prose>
 </Block>
 
+
 <Block>
   <Prose>
-
-  ### Key Publications
-  
-  Coleman, J. S. M., and R. M. Schwartz, 2017: An Updated Blizzard Climatology of the Contiguous United States (1959–2014): An Examination of Spatiotemporal Trends. J. Appl. Meteor. Climatol., 56, 173–187, https://doi.org/10.1175/JAMC-D-15-0350.1.
-
+    ### Key Publications
+    
+    Coleman, J. S. M., and R. M. Schwartz, 2017: An Updated Blizzard Climatology of the Contiguous United States (1959–2014): An Examination of Spatiotemporal Trends. J. Appl. Meteor. Climatol., 56, 173–187, https://doi.org/10.1175/JAMC-D-15-0350.1.
   </Prose>
 </Block>
 
+
 <Block>
   <Prose>
-  
-  ## Data Stories Using This Dataset
-  
-  **<Link to={"/stories/blizzards"}>When Winter Rages</Link>**
-
+    ## Data Stories Using This Dataset
+    
+    **<Link to={"/stories/blizzards"}>When Winter Rages</Link>**
   </Prose>
 </Block>
 
+
 <Block>
   <Prose>
-  
-  ## License
-  
-  [Creative Commons Attribution 1.0 International](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC BY 1.0)
+    ## Limitations of use
 
+    NASA data and products are freely available to federal, state, public, non-profit and commercial users. This information can be experimental- or research-grade data products and may not be appropriate for operational use. These NASA data products, services, and the Disasters Mapping Portal are intended to aid decision makers and enhance situational awareness, but these data are not guaranteed to be consistently available or routinely updated. Please cite the information according to the direction provided in the metadata.
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+    ## License
+
+    [Creative Commons Attribution 1.0 International](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC BY 1.0)
   </Prose>
 </Block>

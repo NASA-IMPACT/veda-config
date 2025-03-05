@@ -22,7 +22,7 @@ layers:
     stacCol: blizzard-alley
     name: Blizzard Alley
     type: raster
-    description: "Climatologically favored region of the USA that experiences regular blizzards, known as Blizzard Alley."
+    description: "Land mask of Blizzard Alley, a climatologically favored region of the USA that experiences regular."
     initialDatetime: newest
     zoomExtent:
         - 0
@@ -43,87 +43,85 @@ layers:
 ---
 <Block>
   <Prose>
-  ## Dataset Details
-  - **Temporal Extent:** 1950-2021
-  - **Temporal Resolution:** Single Climatology
-  - **Spatial Extent:** Northern Plains
-  - **Spatial Resolution:** N/A
-  - **Data Units:** N/A
-  - **Data Type:** Research
-  - **Data Latency:** N/A
+    ## Dataset Details
+    - **Temporal Extent:** 1950-2021<br />
+    - **Temporal Resolution:** Single Climatology<br />
+    - **Spatial Extent:** Northern Plains<br />
+    - **Data Type:** Research<br />
   </Prose>
-<Figure>
-  <Map
-    center={[-98.8, 44.8]}
-    zoom={4}
-    datasetId='blizzard-alley'
-    layerId='blizzard-alley'
-    dateTime='1950-01-01'
-  />
-  <Caption
-    attrAuthor='NASA'
-    attrUrl='https://nasa.gov/'
-  >
-    The 'Blizzard Alley' region of the United States.
-  </Caption>
-</Figure>
+  <Figure>
+    <Map
+      center={[-98.8, 44.8]}
+      zoom={4}
+      datasetId='blizzard-alley'
+      layerId='blizzard-alley'
+      dateTime='1950-01-01'
+    />
+    <Caption
+      attrAuthor='NASA'
+      attrUrl='https://nasa.gov/'
+    >
+      The 'Blizzard Alley' region of the United States.
+    </Caption>
+  </Figure>
 </Block>
 
 <Block>
   <Prose>
+    ### About
 
-  ### About
-
-  Blizzard Alley is a term used to describe a region in the north-central United States, particularly the eastern Dakotas, western Minnesota, and parts of Nebraska and Iowa, that experiences blizzards regularly. This region is among the most blizzard-prone areas in North America. This specific dataset shows the Blizzard Alley region as interpolated from the National Centers for Environmental Information's (NCEI's) Storm Events Database. The Storm Events Database contains reports of officially confirmed blizzard conditions across the United States, beginning in 1950.
+    Blizzard Alley is a term used to describe a region in the north-central United States, particularly the eastern Dakotas, western Minnesota, and parts of Nebraska and Iowa, that experiences blizzards regularly. This region is among the most blizzard-prone areas in North America. This specific dataset shows the Blizzard Alley region as interpolated from the National Centers for Environmental Information's (NCEI's) Storm Events Database. The Storm Events Database contains reports of officially confirmed blizzard conditions across the United States, beginning in 1950.
   </Prose>
 </Block>
 
+
 <Block>
   <Prose>
-  
-  ### Access the Data
+    ### Access the Data
 
-  This dataset was interpolated from confirmed blizzard reports from the [Storm Events Database](https://www.ncdc.noaa.gov/stormevents/), between 1950-2021. 
-
+    This dataset was interpolated from confirmed blizzard reports from the [Storm Events Database](https://www.ncdc.noaa.gov/stormevents/), between 1950-2021. 
   </Prose>
 </Block>
 
+
 <Block>
   <Prose>
-  
-  ## Disclaimer
+    ## Disclaimer
 
-  All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
-  
+    All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
   </Prose>
 </Block>
 
 <Block>
   <Prose>
+    ### Key Publications
 
-  ### Key Publications
-  
-  Coleman, J. S. M., and R. M. Schwartz, 2017: An Updated Blizzard Climatology of the Contiguous United States (1959–2014): An Examination of Spatiotemporal Trends. J. Appl. Meteor. Climatol., 56, 173–187, https://doi.org/10.1175/JAMC-D-15-0350.1.
-
+    Coleman, J. S. M., and R. M. Schwartz, 2017: An Updated Blizzard Climatology of the Contiguous United States (1959–2014): An Examination of Spatiotemporal Trends. J. Appl. Meteor. Climatol., 56, 173–187, https://doi.org/10.1175/JAMC-D-15-0350.1.
   </Prose>
 </Block>
 
 <Block>
   <Prose>
-  
-  ## Data Stories Using This Dataset
-  
-  **<Link to={"/stories/blizzards"}>When Winter Rages</Link>**
+    ## Data Stories Using This Dataset
 
+    **<Link to={"/stories/blizzards"}>When Winter Rages</Link>**
   </Prose>
 </Block>
 
+
 <Block>
   <Prose>
-  
-  ## License
-  
-  [Creative Commons Attribution 1.0 International](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC BY 1.0)
+    ## Limitations of use
 
+    NASA data and products are freely available to federal, state, public, non-profit and commercial users. This information can be experimental- or research-grade data products and may not be appropriate for operational use. These NASA data products, services, and the Disasters Mapping Portal are intended to aid decision makers and enhance situational awareness, but these data are not guaranteed to be consistently available or routinely updated. Please cite the information according to the direction provided in the metadata.
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+    ## License
+    
+    [Creative Commons Attribution 1.0 International](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC BY 1.0)
   </Prose>
 </Block>
