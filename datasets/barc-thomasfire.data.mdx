@@ -56,6 +56,7 @@ layers:
 <Block>
   <Prose>   
     ## Dataset Details
+
     - **Temporal Extent:** December 2017<br />
     - **Spatial Extent:** California counties: Ventura and Santa Barbara <br />
     - **Spatial Resolution:** 20 meters<br />
@@ -67,6 +68,7 @@ layers:
 <Block>
   <Prose>
     ## About
+
     Burn Area Reflectance Classification (BARC) from the Burned Area Emergency Response (BAER) program for the Thomas Fire of 2017.
   </Prose>
 </Block>
@@ -75,17 +77,12 @@ layers:
 <Block>
   <Prose>
     ## Scientific Details
+
     BARC maps are made by comparing satellite near and mid infrared reflectance values. The logic behind the process is as follows:
 
-    Near infrared light is largely reflected by healthy green vegetation. That means that near infrared bands will be very high in areas of healthy green vegetation and low in areas where there is little vegetation.
-
-    Mid infrared light is largely reflected by rock and bare soil. That means that mid infrared band values will be very high in bare, rocky areas with little vegetation and low in areas of healthy green vegetation.
-
-    Imagery collected over a forest in a pre-fire condition will have very high near infrared band values and very low mid infrared band values. Imagery collected over a forest after a fire will have very low near infrared band values and very high mid infrared band values.
+    Near infrared light is largely reflected by healthy green vegetation. That means that near infrared bands will be very high in areas of healthy green vegetation and low in areas where there is little vegetation. Mid infrared light is largely reflected by rock and bare soil. That means that mid infrared band values will be very high in bare, rocky areas with little vegetation and low in areas of healthy green vegetation. Imagery collected over a forest in a pre-fire condition will have very high near infrared band values and very low mid infrared band values. Imagery collected over a forest after a fire will have very low near infrared band values and very high mid infrared band values.
 
     It is the relationship between these two bands that the BARC attempts to exploit. The best way to do this is to measure the relationship between these bands prior to the fire and then again post fire. The areas where the relationship between the two bands has changed the most are most likely to be severely burned. The areas where that relationship has changed little are likely to be unburned or very lightly burned. To determine this relationship, analysts perform a band ratio between the mid and near infrared bands. The result is a classification of burned areas.
-
-    For more information, please visit the [USGS BAER homepage](https://burnseverity.cr.usgs.gov/baer/).
   </Prose>
 </Block>
 
@@ -93,6 +90,7 @@ layers:
 <Block>
   <Prose>
     ## Key Publications
+
     Szpakowski, D.M., Jensen, J.L.R. A Review of the Applications of Remote Sensing in Fire Ecology. Remote Sensing 11, 2638 (2019). https://doi.org/10.3390/rs11222638
 
     Addison, P., Oommen, T. Post-fire debris flow modeling analyses: case study of the post-Thomas Fire event in California. Natural Hazards 100, 329–343 (2020). https://doi.org/10.1007/s11069-019-03814-x
@@ -103,6 +101,7 @@ layers:
 <Block>
   <Prose>
     ## Limitations of use
+
     NASA data and products are freely available to federal, state, public, non-profit and commercial users. This information can be experimental- or research-grade data products and may not be appropriate for operational use. These NASA data products, services, and the Disasters Mapping Portal are intended to aid decision makers and enhance situational awareness, but these data are not guaranteed to be consistently available or routinely updated. Please cite the information according to the direction provided in the metadata.
   </Prose>
 </Block>
@@ -111,6 +110,17 @@ layers:
 <Block>
   <Prose>
     ## License
+
     [Creative Commons Zero v1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC0 1.0)
   </Prose>
 </Block>
+
+
+<Block>
+  <Prose>
+    ## Additional Resources
+
+    [[USGS BAER](https://burnseverity.cr.usgs.gov/baer/)]
+  </Prose>
+</Block>
+
