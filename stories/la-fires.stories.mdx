@@ -87,6 +87,24 @@ taxonomy:
 </Block>
 
 
+<Block>
+  <Figure>
+    <Chart
+      dataPath={new URL('./la-fires-precip.csv', import.meta.url).href}
+      dateFormat="%m/%d/%y %H:%M"
+      idKey='Source'
+      xKey='valid'
+      yKey='p01m'
+      yAxisLabel='Precipitation (mm)'
+      highlightStart = '01/07/25 00:00'
+      highlightEnd = '01/11/25 23:59'
+      highlightLabel = 'Peak of LA Fires'
+    />
+    <Caption>
+    Ten years of monthly mean MODIS NDVI values leading up to the 2025 LA Fires, taken at the ignition point of the 2025 Eaton Fire in Los Angeles County, California. 
+    </Caption>
+  </Figure>
+</Block>
 
 <Block>
 <Figure>
