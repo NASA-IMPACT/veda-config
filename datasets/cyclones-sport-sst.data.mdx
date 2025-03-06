@@ -55,7 +55,7 @@ layers:
       layerId: sst-cyclone-beryl
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
+          return `${dateFns.format(datetime, 'yyyymmdd')} VS ${dateFns.format(compareDatetime, 'yyyymmdd')}`;
         }
 
 
