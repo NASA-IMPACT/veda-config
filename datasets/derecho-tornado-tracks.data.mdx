@@ -28,8 +28,8 @@ infoDescription: |
     - **Data Latency:** N/A
 
 layers:
-  - id: derecho-tornadoes-paths
-    stacCol: derecho-tornadoes-paths
+  - id: tornado-tracks-derecho
+    stacCol: tornado-tracks-derecho
     name: May 12th 2022 Tornadoes (Paths)
     type: raster
     description: "This dataset shows official NWS tornado center path lines categorized by maximum EF rating."
@@ -39,7 +39,6 @@ layers:
       - 20
     sourceParams:
       colormap_name: tornado_ef_scale
-      nodata: 255
     legend:
       type: categorical
       stops:
@@ -81,7 +80,7 @@ layers:
     center={[-97.055, 44.7236]}
     zoom={13}
     datasetId='tornado-tracks-derecho'
-    layerId='derecho-tornadoes-paths'
+    layerId='tornado-tracks-derecho'
     dateTime='2022-05-12'
   />
   <Caption
