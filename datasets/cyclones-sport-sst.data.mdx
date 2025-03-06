@@ -50,6 +50,14 @@ layers:
       spatialExtent: Regional
       temporalResolution: Inconsistent
       unit: N/A
+    compare:
+      datasetId: sst-cyclone-beryl
+      layerId: sst-cyclone-beryl
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
+        }
+
 
 ---
 <Block>
