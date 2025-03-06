@@ -1,0 +1,193 @@
+---
+id: tornado-tracks-derecho
+name: "May 12th, 2022 Tornado Tracks"
+description: "Utilizing NWS tornado track data to highlight the damage of the 05/12/2022 derecho."
+media:
+  src: ::file ./media/derecho-background.jpg
+  alt: Intense derecho thunderstorm as it sweeps across farmland on September 23, 2018
+  author:
+    name: Jim Reed
+    url: https://fineartamerica.com/featured/4-derecho-thunderstorm-jim-reed-photographyscience-photo-library.html
+taxonomy:
+  - name: Topics
+    values:
+      - Natural Disasters
+      - Air Quality
+      - Agriculture
+  - name: Source
+    values:
+      - NWS
+infoDescription: |
+  ::markdown
+    - **Temporal Extent:** May 12, 2022
+    - **Temporal Resolution:** Daily
+    - **Spatial Extent:** CONUS 
+    - **Spatial Resolution:** 50 meters
+    - **Data Units:** N/A
+    - **Data Type:** Research
+    - **Data Latency:** N/A
+
+layers:
+  - id: derecho-tornadoes-paths
+    stacCol: derecho-tornadoes-paths
+    name: May 12th 2022 Tornadoes (Paths)
+    type: raster
+    description: "This dataset shows official NWS tornado center path lines categorized by maximum EF rating."
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      colormap_name: tornado_ef_scale
+      nodata: 255
+    legend:
+      type: categorical
+      stops:
+        - color: "#b3bcc9"  # Grey for EFUNK
+          label: EFUNK
+        - color: "#add8e6"  # Light blue for EF0
+          label: EF0
+        - color: "#90ee90"  # Green for EF1
+          label: EF1
+        - color: "#ffe71f"  # Yellow for EF2
+          label: EF2
+        - color: "#ffa500"  # Orange for EF3
+          label: EF3
+        - color: "#ff0000"  # Red for EF4
+          label: EF4
+        - color: "#ff00ff"  # Pink for EF5
+          label: EF5
+    info:
+      source: National Weather Service (NWS)
+      spatialExtent: CONUS
+      temporalResolution: N/A
+      unit: N/A
+
+---
+
+<Block>
+  <Prose>
+  ## Dataset Details
+  - **Temporal Extent:** May 12th 2022
+  - **Temporal Resolution:** Daily
+  - **Spatial Extent:** CONUS
+  - **Spatial Resolution:** 50 meters
+  - **Data Units:** N/A
+  - **Data Type:** Research
+  - **Data Latency:** N/A
+  </Prose>
+<Figure>
+  <Map
+    center={[-97.055, 44.7236]}
+    zoom={13}
+    datasetId='tornado-tracks-derecho'
+    layerId='derecho-tornadoes-paths'
+    dateTime='2022-05-12'
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+    EF-2 tornado path through Castlewood, South Dakota, produced from the derecho of May 12th, 2022.
+  </Caption>
+</Figure>
+</Block>
+
+<Block>
+  <Prose>
+
+  ### About
+
+  The National Weather Service’s (NWS) Damage Assessment Toolkit (DAT) is a pivotal geographic information system (GIS)-hosted dataset designed to support post-storm damage surveys conducted by meteorologists. This toolkit plays a crucial role in documenting and analyzing tornado and significant straight-line wind damage across affected areas. Ground-based surveys are carried out to capture this information, which is then geospatially referenced and uploaded to the DAT database. 
+
+  This dataset encompasses comprehensive elements such as tornado track centerlines, polygons depicting Enhanced Fujita (EF) scale ratings along tornado paths, and detailed descriptions with meteorological statistics for each logged damage location. In some cases, it also includes imagery collected by survey teams, adding further context to damage assessments. The comprehensive information in this dataset makes it invaluable for researchers, planners, and emergency responders.
+
+  </Prose>
+</Block>
+
+<Block>
+  
+  <Prose>
+
+  ### What the DAT Offers
+
+  * Tornado Track Centerlines: Geospatial data capturing the precise paths of tornadoes, providing insights into their trajectory and extent.
+
+  * Enhanced Fujita (EF) Scale Polygons: Detailed polygons of the EF rating at each location along a tornado’s path, offering a better understanding of the severity of the storm across different points.
+  
+  * Location-Specific Damage Descriptions: Comprehensive descriptions of damage at each surveyed point, paired with relevant meteorological statistics to offer deeper insight into storm impacts.
+    
+  * Damage Imagery: When available, surveyor-captured images provide visual context to logged damage points, further enhancing data interpretation and analysis.
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ### Access the Data
+
+  Visit the [Storm Damage Viewer](https://apps.dat.noaa.gov/StormDamage/DamageViewer/) page to explore a GIS-hosted page that contains the DAT dataset.
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    
+  ### Citing this Dataset
+
+  J. Parks Camp, NWSFO, Tallahassee, FL; and P. Kirkwood, J. G. LaDue, L. A. Schultz, and N. Parikh., National Weather Service Damage Assessment Toolkit: Transitioning to Operations, Abstract 9.1 presented at 2017 Annual Meeting, AMS, Seattle, Washington, 26 Jan.  
+  
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## Disclaimer
+
+  All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
+  
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+
+  ### Key Publications
+  
+  Leonardo, D., 2011: Damage Assessment Toolkit business case analysis: NWS OSIP Project 08-024. NWS Rep., 16 pp., https://osip.nws.noaa.gov/osip/projectDetail.php?document=23295.
+
+  Stellman, K., T. Brice, D. Hansing, A. Foster, C. Pieper, and K. Lander, 2009: How geographic information system software is improving the effectiveness of the National Weather Service. 89th Annual Meeting, New Orleans, LA, Amer. Meteor. Soc., 5A.11, http://ams.confex.com/ams/89annual/webprogram/Paper148642.html.
+ 
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+
+  ### Other Publications
+  
+  National Wind Institute, 2006: A recommendation for an enhanced Fujita scale (EF-scale). Texas Tech University Wind Science and Engineering Center Rep., 111 pp., www.depts.ttu.edu/nwi/Pubs/EnhancedFujitaScale/EFScale.pdf.
+ 
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## Data Stories Using This Dataset
+  
+  **<Link to={"/stories/derecho-impacts"}>NASA Data Fusion Analysis of Derechos and Their Impact on Rural America</Link>**
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## License
+  
+  [Creative Commons Attribution 1.0 International](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC BY 1.0)
+
+  </Prose>
+</Block>
