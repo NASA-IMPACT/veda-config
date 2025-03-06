@@ -81,11 +81,23 @@ taxonomy:
       highlightLabel = 'Peak of LA Fires'
     />
     <Caption>
-    Ten years of monthly mean MODIS NDVI values leading up to the 2025 LA Fires, taken at the ignition point of the 2025 Eaton Fire in Los Angeles County, California. 
+    Daily PM2.5 and PM10 values taken from EPA sensors across Los Angeles County, California. 
     </Caption>
   </Figure>
 </Block>
 
+<Block>
+  <Figure>
+    <Image
+      src={new URL('./la-fires-hrrr-wind.gif', import.meta.url).href}
+      alt='Modeled 10 meter wind gusts from the HRRR.'
+      attrAuthor = 'Andrew Blackford'
+    />
+    <Caption>
+    Modeled 10 meter wind gusts durng the ignition time frame of the 2025 LA Fires as simulated by the High Resolution Rapid Refresh (HRRR) model. Credit Andrew Blackford.
+    </Caption>
+  </Figure> 
+</Block>
 
 <Block>
   <Figure>
@@ -101,7 +113,7 @@ taxonomy:
       highlightLabel = 'Peak of LA Fires'
     />
     <Caption>
-    Ten years of monthly mean MODIS NDVI values leading up to the 2025 LA Fires, taken at the ignition point of the 2025 Eaton Fire in Los Angeles County, California. 
+    15 minute precipitation data taken from Automated Surface Observing System (ASOS) stations across Los Angeles County, California. 
     </Caption>
   </Figure>
 </Block>
