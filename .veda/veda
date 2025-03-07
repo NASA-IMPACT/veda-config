@@ -28,8 +28,9 @@ for (let key in env) {
 
 const { execSync } = require('child_process');
 const path = require('path');
-
+const fs = require('fs');
 const inputCmd = process.argv.slice(2).join(' ');
+
 if (inputCmd === '--info') {
   const uiPkg = require(path.join(__dirname, 'ui/package.json'))
   console.log(`Current veda-ui: ${uiPkg.version}`);
@@ -37,10 +38,60 @@ if (inputCmd === '--info') {
   process.exit();
 }
 
+const rootDir = path.join(__dirname, '../');
+
+const parentThemeFile = path.join(__dirname, 'styles/_uswds-theme.scss');
+const submoduleThemeFile = path.join(__dirname, '.veda/ui/app/scripts/styles/_uswds-theme.scss');
+let originalSubmoduleTheme = '';
+
+// Temporarily swap the USWDS theme file from the veda-ui with the one from veda-config
+function swapUswdsThemeFiles(restore = false) {
+  try {
+    if (!restore) {
+      if (fs.existsSync(submoduleThemeFile)) {
+        originalSubmoduleTheme = fs.readFileSync(submoduleThemeFile, 'utf8');
+
+        if (fs.existsSync(parentThemeFile)) {
+          const parentThemeContent = fs.readFileSync(parentThemeFile, 'utf8');
+          fs.writeFileSync(submoduleThemeFile, parentThemeContent);
+        }
+      }
+    } else if (originalSubmoduleTheme) {
+      fs.writeFileSync(submoduleThemeFile, originalSubmoduleTheme);
+    }
+  } catch (error) {
+    console.error('Error swapping USWDS theme files:', error);
+  }
+}
+
+// Compile SASS to CSS before running other commands
+if (inputCmd !== 'clean' && inputCmd !== 'test') {
+  console.log('Compiling SASS styles...');
+
+  const uiDistStyles = path.join(__dirname, 'ui/static/styles');
+
+  if (!fs.existsSync(uiDistStyles)) {
+    fs.mkdirSync(uiDistStyles, { recursive: true });
+  }
+
+  try {
+    swapUswdsThemeFiles();
+
+    execSync(
+      'sass --quiet-deps --load-path=node_modules/@uswds/uswds/packages styles/theme.scss .veda/ui/static/styles/theme.css',
+      { stdio: 'inherit' }
+    );
+    console.log('SASS compilation successful');
+
+    swapUswdsThemeFiles(true);
+  } catch (error) {
+    console.error('SASS compilation failed:', error);
+    swapUswdsThemeFiles(true);
+  }
+}
+
 const configFile = path.join(__dirname, '../veda.config.js');
 process.env.VEDA_CONFIG_PATH = process.env.VEDA_CONFIG_PATH || configFile;
-
-const rootDir = path.join(__dirname, '../');
 
 if (inputCmd === 'test') {
   const jestCli = path.join(__dirname, 'ui/node_modules/jest/bin/jest.js');
@@ -57,3 +108,25 @@ const gulpConfig = path.join(__dirname, 'ui/gulpfile.js');
 const cmd = `node ${gulpCli} --cwd ${rootDir} -f ${gulpConfig} ${inputCmd} --veda-config ${configFile}`;
 
 execSync(cmd, { stdio: 'inherit' });
+
+// Add a simple watcher for SASS files when serving
+if (inputCmd === 'serve') {
+  console.log('Starting SASS watcher...');
+  const { spawn } = require('child_process');
+  const sassWatch = spawn(
+    'sass',
+    [
+      '--quiet-deps',
+      '--watch',
+      '--load-path=node_modules/@uswds/uswds/packages',
+      'styles/theme.scss:.veda/ui/static/styles/theme.css'
+    ],
+    { stdio: 'inherit' }
+  );
+
+  process.on('SIGINT', () => {
+    swapUswdsThemeFiles(true);
+    sassWatch.kill();
+    process.exit();
+  });
+}

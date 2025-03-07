@@ -1,0 +1,147 @@
+---
+id: cyclones-sport-sst
+name: 'NASA SPoRT Sea Surface Temperatures (Select Cyclone Events)'
+description: "Satellite-derived sea surface temperatures (SSTs) for select cyclone events."
+
+media:
+  src: ::file ./cyclones_beryl_background.png
+  alt: GOES TrueColor satellite imagery of Hurricane Beryl's eye in July of 2024.
+  author: 
+    name: NOAA 
+taxonomy:
+  - name: Topics
+    values:
+      - Disasters
+      - Tropical
+  - name: Source
+    values:
+      - NASA SPoRT
+layers:
+  - id: sst-cyclone-beryl
+    stacCol: sst-cyclone-beryl
+    name: SSTs - Hurricane Beryl
+    type: raster
+    description: "Satellite-derived sea surface temperatures for Hurricane Beryl."
+    initialDatetime: newest
+    zoomExtent:
+        - 0
+        - 20
+    sourceParams:
+      colormap_name: turbo    
+      nodata: -9999
+      rescale:
+        - 295
+        - 305
+    legend:
+      type: gradient
+      unit:
+        label: K
+      min: 295
+      max: 305
+      stops:
+        - "#30123b"
+        - "#4146d1"
+        - "#23d775"
+        - "#f9f510"
+        - "#fa6b02"
+        - "#900c00"
+    info:
+      source: NASA SPoRT
+      spatialExtent: Regional
+      temporalResolution: Inconsistent
+      unit: N/A
+    compare:
+      datasetId: sst-cyclone-beryl
+      layerId: sst-cyclone-beryl
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'yyyy-MM-dd')} VS ${dateFns.format(compareDatetime, 'yyyy-MM-dd')}`;
+        }
+
+
+---
+<Block>
+  <Prose>
+  ## Dataset Details
+  - **Temporal Extent:** Inconsistent
+  - **Temporal Resolution:** Inconsistent
+  - **Spatial Extent:** Regional
+  - **Spatial Resolution:** 1 km
+  - **Data Units:** Kelvin
+  - **Data Type:** Research
+  - **Data Latency:** N/A
+  </Prose>
+<Figure>
+  <Map
+    center={[-62, 13.5]}
+    zoom={5.25}
+    datasetId='sst-cyclone-beryl'
+    layerId='sst-cyclone-beryl'
+    dateTime='2024-07-01'
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+  Satellite-derived sea surface temperatures during Hurricane Beryl's peak intensity nearing the Caribbean Sea on July 1, 2024.
+  </Caption>
+</Figure>
+</Block>
+
+<Block>
+  <Prose>
+
+  ### About
+
+  NASA’s Short-term Prediction Research and Transition (SPoRT) team provides a twice daily state of the art global Sea Surface Temperature (SST) product. SSTs are essential to hurricane forecasters in determining where a hurricane may be able to form and sustain itself, or even where it may be susceptible to weakening or strengthening. SSTs of approximately 26 °C (~80 °F) are the typical expected threshold of the amount of energy a hurricane requires from the surface of the ocean to form and sustain itself.
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ### Access the Data
+
+  Visit the NASA [SPoRT SST Page](https://weather.ndc.nasa.gov/sport/sst/) to explore options for data access.
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## Disclaimer
+
+  All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
+  
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+
+  ### Key Publication
+  
+  S. L. Haines, G. J. Jedlovec and S. M. Lazarus, "A MODIS Sea Surface Temperature Composite for Regional Applications," in IEEE Transactions on Geoscience and Remote Sensing, vol. 45, no. 9, pp. 2919-2927, Sept. 2007, doi: 10.1109/TGRS.2007.898274.
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## Data Stories Using This Dataset
+  
+  **<Link to={"/stories/cyclones-beryl"}>Hurricane Beryl</Link>**
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## License
+  
+  [Creative Commons Attribution 1.0 International](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC BY 1.0)
+
+  </Prose>
+</Block>
