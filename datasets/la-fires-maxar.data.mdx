@@ -1,0 +1,72 @@
+---
+id: la-fires-maxar
+name: MAXAR Commercial Satellite Imagery (2025 Eaton Fire)
+featured: false
+description: Subsurface material false color composite commercial satellite imagery
+  from MAXAR of the Eaton Fire on January 8, 2025 north of Los Angeles, CA. This data
+  was made available through the NASA Commercial Satellite Data Acquisition (CSDA)
+  Program.
+media:
+  src: https://bootstrap-cheatsheet.themeselection.com/assets/images/bs-images/img-2x1.png
+  alt: Placeholder image
+  author:
+    name: Media author
+    url: ''
+taxonomy:
+- name: Source
+  values:
+  - NASA
+infoDescription: "::markdown\n            - **Temporal Extent:** 2015 - 2100\n   \
+  \         - **Temporal Resolution:** Annual\n            - **Spatial Extent:** Global\n\
+  \            - **Spatial Resolution:** 0.25 degrees x 0.25 degrees\n           \
+  \ - **Data Units:** Days (Days per year above 90\xB0F or 110\xB0F)\n           \
+  \ - **Data Type:** Research\n        "
+layers:
+- id: la-fires-maxar-cog_default
+  stacCol: la-fires-maxar
+  name: Default COG Layer
+  type: raster
+  description: Cloud optimized default layer to display on map
+  zoomExtent:
+  - 0
+  - 4
+  sourceParams:
+    assets: cog_default
+    resampling_method: bilinear
+    colormap_name: wistia
+    rescale: 0,365
+    maxzoom: 4
+  compare:
+    datasetId: la-fires-maxar
+    layerId: cog_default
+    mapLabel: ::js ({ dateFns, datetime, compareDatetime }) => {if (dateFns && datetime
+      && compareDatetime)return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime,
+      'yyyy')}`;}
+  analysis:
+    exclude: false
+    metrics:
+    - mean
+  legend:
+    unit:
+      label: Days
+    type: gradient
+    min: 0
+    max: 365
+    stops:
+    - '#E4FF7A'
+    - '#FAED2D'
+    - '#FFCE0A'
+    - '#FFB100'
+    - '#FE9900'
+    - '#FC7F00'
+  info:
+    source: NASA
+    spatialExtent: Global
+    temporalResolution: Annual
+    unit: Days
+---
+<Block>
+  <Prose>
+  [[REPLACE WITH RELEVANT DATASET INFORMATION]]
+  </Prose>
+</Block>
