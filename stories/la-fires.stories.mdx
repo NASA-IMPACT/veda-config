@@ -1,0 +1,272 @@
+---
+id: 'la-fires'
+name: Fanning the Flames
+description: "Unraveling the Causes of the 2025 Los Angeles Area Wildfires."
+media:
+  src: ::file ./LA-Fires-background.png
+  alt: Planet Labs Commercial Satellite Imagery of the Eaton Fire (January 9, 2025).
+  author:
+    name: NASA CDSA - Planet Labs
+pubDate: 2025-03-28T00:00
+taxonomy:
+  - name: Topics
+    values:
+      - Air Quality
+      - Fire Impacts
+      - Fire Risk
+      - Fire Severity
+      - Land Use
+      - Natural Disasters
+      - Wildfire
+  - name: Source
+    values:
+      - Community Contributed
+---
+
+<Block>
+  <Prose>
+
+    **Authors:** 
+    
+    Maheshwari Neelam<sup>[1]</sup>, Andrew Blackford<sup>[2]</sup>, and Rajat Shinde<sup>[2]</sup>
+
+    <sup>[1]</sup> x
+
+    <sup>[2]</sup> The University of Alabama in Huntsville (UAH)
+
+
+    **Disclaimer:** 
+    
+    <mark>🚧 This Data Story presents work in progress and not peer-reviewed results. 🚧</mark>
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+
+    ### Introduction
+
+    x
+
+  </Prose>
+  <Figure>
+    <Chart
+      dataPath={new URL('./la-fires-ndvi.csv', import.meta.url).href}
+      dateFormat="%Y-%m"
+      idKey='Label'
+      xKey='Date'
+      yKey='NDVI_Scaled'
+      yAxisLabel='MODIS NDVI'
+      highlightStart = '2024-12'
+      highlightEnd = '2025-01'
+      highlightLabel = 'LA Fires'
+    />
+    <Caption>
+    Ten years of monthly mean MODIS NDVI values leading up to the 2025 LA Fires, taken at the ignition point of the 2025 Eaton Fire in Los Angeles County, California. 
+    </Caption>
+  </Figure>
+</Block>
+
+<Block>
+  <Figure>
+    <Chart
+      dataPath={new URL('./la-fires-pm25_pm10.csv', import.meta.url).href}
+      dateFormat="%m/%d/%Y"
+      idKey='Source'
+      xKey='Date'
+      yKey='Value'
+      yAxisLabel='PM'
+      highlightStart = '01/07/25'
+      highlightEnd = '01/11/25'
+      highlightLabel = 'Peak of LA Fires'
+    />
+    <Caption>
+    Daily PM2.5 and PM10 values taken from EPA sensors across Los Angeles County, California. 
+    </Caption>
+  </Figure>
+</Block>
+
+<Block>
+  <Figure>
+    <Image
+      src={new URL('./la-fires-hrrr_wind.gif', import.meta.url).href}
+      alt='Modeled 10 meter wind gusts from the HRRR.'
+      attrAuthor = 'Andrew Blackford'
+    />
+    <Caption>
+    Modeled 10 meter wind gusts durng the ignition time frame of the 2025 LA Fires as simulated by the High Resolution Rapid Refresh (HRRR) model. Credit Andrew Blackford.
+    </Caption>
+  </Figure> 
+</Block>
+
+<Block>
+  <Figure>
+    <Chart
+      dataPath={new URL('./la-fires-precip.csv', import.meta.url).href}
+      dateFormat="%m/%d/%y %H:%M"
+      idKey='Source'
+      xKey='valid'
+      yKey='p01m'
+      yAxisLabel='Precipitation (mm)'
+      highlightStart = '01/07/25 00:00'
+      highlightEnd = '01/11/25 23:59'
+      highlightLabel = 'Peak of LA Fires'
+    />
+    <Caption>
+    15 minute precipitation data taken from Automated Surface Observing System (ASOS) stations across Los Angeles County, California. 
+    </Caption>
+  </Figure>
+</Block>
+
+<Block>
+<Figure>
+  <Map
+    datasetId='la-fires-planet'
+    layerId='la-fires-planet'
+    dateTime='2025-01-09'
+    zoom={11}
+    center={[-118.1041, 34.1966]}
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+    Planet satellite imagery of the Eaton Fire on January 9, 2025.
+  </Caption>
+</Figure>
+</Block>
+
+<Block>
+<Figure>
+  <Map
+    datasetId='la-fires-hrrr-wind'
+    layerId='la-fires-hrrr-wind'
+    dateTime='2025-01-08'
+    zoom={7.25}
+    center={[-118.1041, 34.1966]}
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+    10 meter modeled wind gusts from the HRRR on January 8, 2025 at 02 UTC.
+  </Caption>
+</Figure>
+</Block>
+
+<Block>
+<Figure>
+  <Map
+    datasetId='la-fires-slope'
+    layerId='la-fires-slope'
+    dateTime='2025-01-09'
+    zoom={10.5}
+    center={[-118.1041, 34.1966]}
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+    Digital Elevation Model (DEM)-derived slope values for the Eaton Fire burn scar extent.
+  </Caption>
+</Figure>
+</Block>
+
+<Block>
+<Figure>
+  <Map
+    datasetId='la-fires-frp'
+    layerId='la-fires-frp'
+    dateTime='2025-01-09'
+    zoom={8}
+    center={[-118.3041, 33.9966]}
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+    Maximum FRP in the Los Angeles area on January 9, 2025.
+  </Caption>
+</Figure>
+</Block>
+
+<Block type = 'wide'>
+<Figure>
+  <Map
+    datasetId='la-fires-parcels'
+    layerId='la-fires-parcels'
+    dateTime='2025-01-09'
+    zoom={14.5}
+    center={[-118.14041, 34.1926]}
+    compareDateTime='2025-01-08'
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+    Percent damage by parcel from the 2025 Eaton Fire in Altadena, California as determined by the LA County Assessor's Office, compared to high-resolution commercial satellite imagery of the ongoing fire from MAXAR.
+  </Caption>
+</Figure>
+</Block>
+
+<Block>
+<Figure>
+  <Map
+    datasetId='la-fires-sea'
+    layerId='la-fires-sea'
+    dateTime='2025-01-01'
+    zoom={10}
+    center={[-118.55, 34.05]}
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+  LA County's Significant Ecological Areas (SEAs) in the area impacted by the 2025 Palisades Fire. 
+  </Caption>
+</Figure>
+</Block>
+
+<Block>
+  <Prose>
+
+    ### Conclusion
+
+    x
+  </Prose>
+
+</Block>
+
+
+<Block>
+  <Prose>
+    ### References
+    FILL OUT 
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    ### Data Access
+
+    * [FILL OUT](https://apps.dat.noaa.gov/stormdamage/damageviewer/)
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+
+    **Editors**: Maheshwari Neelam, Andrew Blackford, Rajat Shinde, Lauren Perkins, and Taylor DuPre
+
+    **Developers**: Maheshwari Neelam, Andrew Blackford, and Rajat Shinde
+
+    **Science and Content Contributors**: Maheshwari Neelam, Andrew Blackford, Rajat Shinde, and Brian Freitag
+
+    **Questions / Feedback**: Email maheshwari.neelam@nasa.gov
+
+    ### Additional Resources
+
+    * [FILL OUT](https://www.fema.gov/assistance/individual)
+
+  </Prose>
+</Block>
