@@ -56,6 +56,13 @@ layers:
           label: "Destroyed (>50%)"
         - color: "#635f41"
           label: "Inaccessible" 
+    compare:
+      datasetId: la-fires-maxar
+      layerId: la-fires-maxar
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'dd LLL yyyy')}`;        
+        }
     info:
         source: Los Angeles County Assessor
         spatialExtent: LA County, CA
