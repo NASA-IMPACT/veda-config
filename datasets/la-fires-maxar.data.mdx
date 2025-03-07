@@ -1,0 +1,176 @@
+---
+id: la-fires-maxar
+name: 'MAXAR Commercial Satellite Imagery - 2025 Eaton Fire'
+description: "Commercial MAXAR Satellite Imagery of the 2025 Eaton Fire while it was active on January 8, 2025."
+media:
+  src: ::file ./LA-Fires-background.png
+  alt: Planet Labs Commercial Satellite Imagery of the Eaton Fire (January 9, 2025).
+  author:
+    name: NASA CDSA - Planet Labs
+taxonomy:
+  - name: Topics
+    values:
+      - Disasters
+      - Wildfire
+  - name: Source
+    values:
+      - MAXAR
+infoDescription: |
+  ::markdown
+    - **Temporal Extent:** January 8, 2025
+    - **Temporal Resolution:** Inconsistent
+    - **Spatial Extent:** Local
+    - **Spatial Resolution:** 1 meter
+    - **Data Units:** N/A
+    - **Data Type:** Research
+    - **Data Latency:** N/A
+
+layers:
+  - id: la-fires-maxar
+    stacCol: la-fires-maxar
+    name: MAXAR False Color Satellite Imagery (2025 Eaton Fire)
+    type: raster
+    description: 'Commercial MAXAR Satellite Imagery of the ongoing Eaton Fire in Los Angeles County, California on January 8, 2025.'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      rescale:
+        - 0
+        - 500
+      resampling: bilinear
+      asset_bidx: cog_default|8,6,4
+    legend:
+      type: categorical
+      stops:
+        - color: "rgba(0, 0, 0, 0)" # using transparent for now to fix the issues with scrollytelling
+          label: "Imagery"
+    info:
+        source: MAXAR
+        spatialExtent: Local
+        temporalResolution: N/A
+        unit: Radiance
+
+---
+
+<Block>
+  <Prose>
+  ## Dataset Details
+    - **Temporal Extent:** January 8, 2025
+    - **Temporal Resolution:** Inconsistent
+    - **Spatial Extent:** Local
+    - **Spatial Resolution:** 1 meter
+    - **Data Units:** N/A
+    - **Data Type:** Research
+    - **Data Latency:** N/A
+  </Prose>
+<Figure>
+  <Map
+    datasetId='la-fires-maxar'
+    layerId='la-fires-maxar'
+    dateTime='2025-01-09'
+    zoom={15}
+    center={[-118.15041, 34.1966]}
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+    MAXAR satellite imagery of the Eaton Fire on January 8, 2025.
+  </Caption>
+</Figure>
+</Block>
+
+<Block>
+  <Prose>
+
+  ### About
+
+  x
+
+  </Prose>
+</Block>
+
+<Block>
+  
+  <Prose>
+
+  ### What MAXAR Data Offers
+
+  * x
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ### Access the Data
+
+  x 
+  
+  This data was made available through the NASA [Commercial Satellite Data Acquisition (CSDA) Program](https://earthdata.nasa.gov/about/csda/vendor-planet). You can access the CDSA data explorer [**HERE**](https://csdap.earthdata.nasa.gov).
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    
+  ### Citing this Dataset
+
+  x
+  
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## Disclaimer
+
+  All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
+  
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+
+  ### Key Publications
+  
+  x
+ 
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+
+  ### Other Publications
+  
+  x
+  
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## Data Stories Using This Dataset
+  
+  **<Link to={"/stories/la-fires"}>Fanning the Flames</Link>**
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## License
+  
+  [Creative Commons Attribution 1.0 International](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC BY 1.0)
+
+  </Prose>
+</Block>
+
