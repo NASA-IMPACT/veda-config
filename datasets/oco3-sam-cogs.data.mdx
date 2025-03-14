@@ -1,29 +1,44 @@
 ---
+featured: true
 id: oco3-sam-cogs
-name: Orbiting Carbon Observatory 3 (OCO-3) Snapshot Area Mapping (SAM) Cloud-Optimized
-  GeoTIFFs (COGs)
-featured: false
-description: NASA-JPL's OCO-3 is an instrument onboard the International Space Station
-  that measures carbon dioxide in the Earth's atmosphere.
+name: 'Orbiting Carbon Observatory 3 (OCO-3) Snapshot Area Mapping (SAM) Cloud-Optimized GeoTIFFs (COGs)'
+description: "NASA-JPL's OCO-3 is an instrument onboard the International Space Station that measures carbon dioxide in the Earth's atmosphere."
 media:
-  src: https://bootstrap-cheatsheet.themeselection.com/assets/images/bs-images/img-2x1.png
-  alt: Placeholder image
+  src: ::file ./losangeles_banner.png
+  alt: Image of Los Angeles
   author:
-    name: Media author
-    url: ''
+    name: Justin/Adobe Stock
+    url: "https://stock.adobe.com/images/los-angeles-skyline-with-palm-trees-in-the-foreground/123146928?asset_id=123146928"
 taxonomy:
-- name: Source
-  values:
-  - NASA
-infoDescription: "::markdown\n            - **Temporal Extent:** 2015 - 2100\n   \
-  \         - **Temporal Resolution:** Annual\n            - **Spatial Extent:** Global\n\
-  \            - **Spatial Resolution:** 0.25 degrees x 0.25 degrees\n           \
-  \ - **Data Units:** Days (Days per year above 90\xB0F or 110\xB0F)\n           \
-  \ - **Data Type:** Research\n        "
-layers: []
+  - name: Topics
+    values:
+      - Urban
+  - name: Gas
+    values:
+      - CO₂
+layers:
+  - id: oco3-sam-cogs
+    stacCol: oco3-sam-cogs
+    name: Orbiting Carbon Observatory 3 (OCO-3) Snapshot Area Mapping (SAMs) Cloud-Optimized GeoTIFFs (COGs)'
+    type: raster
+    description: "NASA-JPL's OCO-3 is an instrument onboard the International Space Station that measures carbon dioxide in the Earth's atmosphere. OCO-3 is similar in design to OCO-2 with the addition of the Pointing Mirror Assembly (PMA) which essentially allows the instrument to focus its observations on the area surrounding a given location of interest on a single overflight. This is a fourth operation mode (along with the three operation modes of OCO-2) called Snapshot Area Mapping, or SAM, and is, along with target-mode observations, the focus of this product."
+    zoomExtent:
+      - 4
+      - 16
+    sourceParams:
+      bidx: 1
+      colormap_name: viridis
+      rescale:
+        - 405
+        - 421
+    legend:
+      type: gradient
+      min: Less
+      max: More
+      stops:
+        - '#08041d'
+        - '#1f0a46'
+        - '#52076c'
+        - '#f57c16'
+        - '#f7cf39'
 ---
-<Block>
-  <Prose>
-  [[REPLACE WITH RELEVANT DATASET INFORMATION]]
-  </Prose>
-</Block>
