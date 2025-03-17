@@ -3,7 +3,7 @@ id: 'la-fires'
 name: Fanning the Flames
 description: "Unraveling the Causes of the 2025 Los Angeles Area Wildfires."
 media:
-  src: ::file ./LA-Fires-background.png
+  src: ::file ./cover_LA.png
   alt: Planet Labs Commercial Satellite Imagery of the Eaton Fire (January 9, 2025).
   author:
     name: NASA CDSA - Planet Labs
@@ -28,9 +28,9 @@ taxonomy:
 
     **Authors:** 
     
-    Maheshwari Neelam<sup>[1]</sup>, Andrew Blackford<sup>[2]</sup>, and Rajat Shinde<sup>[2]</sup>
+    Maheshwari Neelam<sup>[1]</sup>, Andrew Blackford<sup>[2]</sup>, and Nidhi Jha<sup>[2]</sup>
 
-    <sup>[1]</sup> x
+    <sup>[1]</sup> Universities Space Research Association (USRA)
 
     <sup>[2]</sup> The University of Alabama in Huntsville (UAH)
 
@@ -43,10 +43,25 @@ taxonomy:
 
 <Block>
   <Prose>
+    ### Devastating Wildfires in Los Angeles
+    In early January 2025, Los Angeles faced devastating wildfires that claimed at least 29 lives, forced over 200,000 evacuations, and destroyed more than 18,000 structures. The Palisades and Eaton fires, the two largest blazes, scorched over 37,000 acres combined. While the exact causes remain under investigation, extreme environmental conditions—particularly Santa Ana winds, prolonged dry periods, and the accumulation of flammable vegetation—were critical in fueling the fires' intensity and swift progression. 
+  </Prose>
+</Block>
 
-    ### Introduction
-
-    x
+<Block>
+  <Prose>
+   ### The Role of Santa Ana Winds
+    The Santa Ana winds, a key factor in these wildfires, are characterized by their strength, dryness, and heat. These katabatic winds originate from high-pressure air masses in the Great Basin, an elevated region encompassing Nevada and parts of Utah. Typically occurring between September and May, they bring hot, dry weather to coastal Southern California. As these winds flow westward, they interact with the mountainous terrain, creating mountain waves and funneling through passes, which increases their speed and temperature while decreasing humidity. The winds were particularly intense in Ventura County and Orange County, but unusually, they also traveled over the San Gabriel Mountains to affect Pasadena and Altadena, where the Eaton Fire is located.
+  </Prose> 
+    <Figure>
+      <Image
+      src={new URL('./la-fires-santa_winds.png', import.meta.url).href}
+    />
+    <Caption attrAuthor='Data.gov' attrUrl='https://forecast.weather.gov/MapClick.php?zoneid=CAZ057'>
+      Developmenet of Santa Ana Winds. 
+    </Caption>
+  </Figure>
+</Block>
 
   </Prose>
   <Figure>
@@ -62,7 +77,7 @@ taxonomy:
       highlightLabel = 'LA Fires'
     />
     <Caption>
-    Ten years of monthly mean MODIS NDVI values leading up to the 2025 LA Fires, taken at the ignition point of the 2025 Eaton Fire in Los Angeles County, California. 
+    Monthly mean MODIS NDVI values leading up to the 2025 LA Fires, taken at the ignition point of the 2025 Eaton Fire in Los Angeles County, California. 
     </Caption>
   </Figure>
 </Block>
