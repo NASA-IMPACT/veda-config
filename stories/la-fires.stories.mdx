@@ -206,6 +206,67 @@ taxonomy:
   </Prose>
 </Block>
 
+<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
+  <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
+   <p>
+   ### Quantifying Carbon Loss from the Palisades and Eaton Fires Using NASA’s GEDI Above-Ground Biomass
+    Using NASA’s GEDI footprint Above-Ground Biomass Density (AGBD) Level-4 (L4A) product, we estimated the carbon loss and associated CO₂ emissions for the Palisades and Eaton Fires. The GEDI L4A dataset provides above-ground biomass density predictions in units of megagrams per hectare (Mg/ha), enabling quantification of biomass loss due to wildfires. Based on the availability of GEDI data (2019-2023), we calculated pre-fire above-ground forest biomass and derived emissions under two scenarios, Scenario 1: All above-ground forest biomass is assumed lost, Scenario 2: Burn rates from USGS fire data are applied.
+    1 Teragram (Tg) of CO₂ is equivalent to 1 million metric tons of CO₂. This massive amount of carbon dioxide can be compared to everyday activities and global emissions:
+    ## The Palisades Fire emissions:
+    Scenario 1 (0.8074 Tg CO₂): Equivalent to the annual CO₂ emissions of about 174,000 average passenger vehicles.
+    Scenario 2 (0.6973 Tg CO₂): Similar to the yearly CO₂ emissions from electricity use in approximately 120,000 homes.
+   </p>
+   <p>
+    ## The Eaton Fire emissions:
+    Scenario 1 (1.062951 Tg CO₂): Comparable to the CO₂ absorbed by about 17.5 million tree seedlings grown for 10 years.
+    Scenario 2 (0.8718654 Tg CO₂): Equivalent to the carbon sequestered by approximately 1.1 million acres of U.S. forests in one year.
+    These emissions from just two fires represent a significant portion of a small country's annual CO₂ emissions or the amount of carbon dioxide sequestered by millions of trees over several years. This highlights the substantial impact wildfires can have on carbon release and underscores the importance of forest management and fire prevention strategies. 
+   </p>
+  </Prose>
+  <Figure>
+  <Map
+    datasetId='la-fires-parcels'
+    layerId='la-fires-parcels'
+    dateTime='2025-01-09'
+    zoom={14.5}
+    center={[-118.14041, 34.1926]}
+    compareDateTime='2025-01-08'
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+    Percent damage by parcel from the 2025 Eaton Fire in Altadena, California as determined by the LA County Assessor's Office, compared to high-resolution commercial satellite imagery of the ongoing fire from MAXAR.
+  </Caption>
+</Figure>
+</Block>
+
+<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
+  <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
+   <p>
+   ### Wildfires Encroaching on Critical Habitats
+   Significant Ecological Areas (SEAs) are designated for their irreplaceable biological resources and play a vital role in preserving the county’s biodiversity by maintaining genetic and physical diversity that supports various plant and animal species. These areas are essential for ensuring ecosystems can sustain themselves in the future. However, the recent wildfires in LA have encroached upon SEA habitats, disrupting species migration and weakening ecosystem resilience. The destruction of these habitats, particularly in regions already vulnerable due to drought and urbanization, further reduces the SEAs' ability to provide crucial ecosystem services.
+   </p>
+  </Prose>
+<Figure>
+  <Map
+    datasetId='la-fires-sea'
+    layerId='la-fires-sea'
+    dateTime='2025-01-01'
+    zoom={10}
+    center={[-118.55, 34.05]}
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+  LA County's Significant Ecological Areas (SEAs) in the area impacted by the 2025 Palisades Fire. 
+  </Caption>
+</Figure>
+</Block>
+
+
+{/*
 <Block>
 <Figure>
   <Map
@@ -223,7 +284,9 @@ taxonomy:
   </Caption>
 </Figure>
 </Block>
+*/}
 
+{/*
 <Block>
 <Figure>
   <Map
@@ -259,84 +322,47 @@ taxonomy:
   </Caption>
 </Figure>
 </Block>
+*/}
 
-<Block type = 'wide'>
-<Figure>
-  <Map
-    datasetId='la-fires-parcels'
-    layerId='la-fires-parcels'
-    dateTime='2025-01-09'
-    zoom={14.5}
-    center={[-118.14041, 34.1926]}
-    compareDateTime='2025-01-08'
-  />
-  <Caption
-    attrAuthor='NASA'
-    attrUrl='https://nasa.gov/'
-  >
-    Percent damage by parcel from the 2025 Eaton Fire in Altadena, California as determined by the LA County Assessor's Office, compared to high-resolution commercial satellite imagery of the ongoing fire from MAXAR.
-  </Caption>
-</Figure>
-</Block>
-
-<Block>
-<Figure>
-  <Map
-    datasetId='la-fires-sea'
-    layerId='la-fires-sea'
-    dateTime='2025-01-01'
-    zoom={10}
-    center={[-118.55, 34.05]}
-  />
-  <Caption
-    attrAuthor='NASA'
-    attrUrl='https://nasa.gov/'
-  >
-  LA County's Significant Ecological Areas (SEAs) in the area impacted by the 2025 Palisades Fire. 
-  </Caption>
-</Figure>
-</Block>
-
-<Block>
-  <Prose>
-
-    ### Conclusion
-
-    x
-  </Prose>
-
-</Block>
-
-
-<Block>
-  <Prose>
-    ### References
-    FILL OUT 
+<Block style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
+  <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
+    <p>
+     ### To mitigate and prevent wildfires risks, several safeguards can be implemented:
+     - Avoid fire-related activities: Refrain from any activities involving fire or sparks during hot, dry, and windy conditions.
+     - Urban planning: Limit residential expansion into fire-prone regions and forest areas.
+     - Create Defensible Spaces: Clear vegetation and combustible materials around homes and structures to act as a buffer zone against wildfires.
+     - Controlled burns: Periodic low-intensity fires speed up the process of forest decomposition, create open patches for new plants to grow, and improve habitat.
+    </p>
   </Prose>
 </Block>
 
-<Block>
-  <Prose>
-    ### Data Access
+<Block style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
+  <Prose style={{ flex: '1', paddingRight: '20px', textAlign: 'justify' }}>
+    <p>
+     ### Data Access
+     * [The Commercial Satellite Data Acquisition (CSDA)| Maxar and Planet](https://www.earthdata.nasa.gov/about/csda)
+     * [Tropospheric Emissions: Monitoring of Pollution (TEMPO)](https://science.nasa.gov/mission/tempo/)
+     * [Global Ecosystem Dynamics Investigation Lidar (GEDI)](https://www.earthdata.nasa.gov/data/instruments/gedi-lidar)
+     * [EPA's AirNow](https://www.airnow.gov/)
+     * [The Multi-Resolution Land Characteristics (MRLC)|National Land Cover Database (NLCD)](https://www.mrlc.gov/)
+     * [Significant Ecological Areas (SEA)](https://planning.lacounty.gov/long-range-planning/significant-ecological-areas-program/#:~:text=Significant%20Ecological%20Areas%20(SEA)%20are,sustaining%20themselves%20into%20the%20future)
+    </p>
+    <p>
+     **Editors**: Maheshwari Neelam, Andrew Blackford, Lauren Perkins, Brian Freitag and Taylor DuPre
 
-    * [FILL OUT](https://apps.dat.noaa.gov/stormdamage/damageviewer/)
+     **Developers**: Maheshwari Neelam, Andrew Blackford, and Nidhi Jha
+
+     **Science and Content Contributors**: Maheshwari Neelam and Brian Freitag
+
+     **Questions / Feedback (email address)**: maheshwari.neelam@nasa.gov
+    </p>
+    <p>
+     #### Additional Resources
+     * Thomas N. P., A. B. Marquardt Collow, M. G. Bosilovich, et al. 2023. Effect of Baseline Period on Quantification of Climate Extremes Over the United States. Geophysical Research Letters Volume 50, Issue 17, https://doi.org/10.1029/2023GL105204 .
+     * [The growing threat of heat for farmworkers](https://blogs.edf.org/growingreturns/2023/08/02/heat-threat-for-farmworkers/)
+     * [How Thousands of Black Farmers Were Forced Off Their Land](https://www.thenation.com/article/society/black-farmers-pigford-debt/)
+     * [“It Tears You Apart Mentally and Physically”: The Health Crisis Afflicting Black Farmers](https://inthesetimes.com/article/black-farmers-stress-debt-land-loss-racism-mental-health-crisis)
+    </p>
   </Prose>
 </Block>
 
-<Block>
-  <Prose>
-
-    **Editors**: Maheshwari Neelam, Andrew Blackford, Lauren Perkins, and Taylor DuPre
-
-    **Developers**: Maheshwari Neelam, Andrew Blackford, and Nidhi Jha
-
-    **Science and Content Contributors**: Maheshwari Neelam, Andrew Blackford, Nidhi Jha and Brian Freitag
-
-    **Questions / Feedback**: Email maheshwari.neelam@nasa.gov
-
-    ### Additional Resources
-
-    * [FILL OUT](https://www.fema.gov/assistance/individual)
-
-  </Prose>
-</Block>
