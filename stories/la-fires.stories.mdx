@@ -38,7 +38,7 @@ taxonomy:
       Mission: NASA Earth Action: A thriving world, driven by trusted, actionable Earth science
     </p>
     <p style={{ fontSize: '0.9em', fontStyle: 'italic' }}>
-      <mark>🚧 This Data Story presents work in progress and not peer-reviewed results. 🚧</mark>
+      This data story presents work in progress and not peer-reviewed results.
     </p>
   </Prose>
 </Block>
@@ -117,17 +117,22 @@ taxonomy:
 
 <Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
   <Figure>
-      <Image
-      src={new URL('./la-fires-LC.png', import.meta.url).href}
+    <Map
+        center={[-118.735, 34.1364]}
+      zoom={8}
+      datasetId='nlcd-annual-conus'
+      layerId='nlcd-annual-conus'
+      dateTime='2001-01-01'
+      compareDateTime='2021-01-01
     />
-    <Caption attrAuthor='mlrc.gov' attrUrl='https://www.mrlc.gov/'>
-      The annual NLCD land cover changes within Los Angeles County from 2001-2021. 
+    <Caption>
+      Changes in the NLCD land use-land cover classifications over LA County from 2000 to 2021 reveal significant growth in grasslands, shurblands and a decline in forest cover.    
     </Caption>
   </Figure>
   <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
    <p>
    ### Land Cover Changes and Rising Fire Risks
-    A key factor contributing to the increasing wildfire intensity is the transformation of Southern California’s landscape over the years. Analysis from the National Land Cover Database (NLCD) between 2000 and 2021 (Fig: Slider for NLCD map + graph for change in NLCD) shows significant shifts in land use, largely influenced by prolonged drought and rapid urban expansion. Decades of arid conditions have severely dried out vegetation (Fig: NDVI time series), particularly chaparral shrublands, a fire-dependent ecosystem that naturally relies on periodic burning. However, as these plants become exceptionally parched, they turn into an abundant and highly flammable fuel source, exacerbating fire hazards. Simultaneously, the residential areas have extended into the fire-prone zones. This expansion has placed more homes and infrastructure at direct risk, increasing both the frequency and severity of wildfires in areas that were once predominantly undeveloped.
+    A key factor contributing to the increasing wildfire intensity is the transformation of Southern California’s landscape over the years. Analysis from the National Land Cover Database (NLCD) between 2000 and 2021 shows significant shifts in land use, largely influenced by prolonged drought and urban expansion. Decades of arid conditions have severely dried out vegetation, particularly chaparral shrublands, a fire-dependent ecosystem that naturally relies on periodic burning. However, as these plants become exceptionally parched, they turn into an abundant and highly flammable fuel source, exacerbating fire hazards. Simultaneously, the residential areas have extended into the fire-prone zones. This expansion has placed more homes and infrastructure at direct risk, increasing both the frequency and severity of wildfires in areas that were once predominantly undeveloped.
    </p>
   </Prose>
 </Block>
@@ -139,18 +144,12 @@ taxonomy:
     While chaparral shrublands have naturally adapted to fire cycles, decades of aggressive fire suppression—exacerbated by worsening drought conditions—have increased the landscape’s vulnerability to wildfires. Without periodic, low-intensity burns to reduce excess vegetation, modern wildfires become far more destructive than they would have been under natural fire cycles. Although controlled burns are widely recognized as an effective way to reduce fire risks, they are difficult to implement. The expansion of residential areas into fire-prone regions has made prescribed burns controversial, as homeowners fear potential property damage.
   </p>
   </Prose>
-  <Figure>
-    <Map
-        center={[-118.14041, 34.1926]}
-      zoom={15}
-      datasetId='nlcd-annual-conus'
-      layerId='nlcd-annual-conus'
-      dateTime='2001-01-01'
-      compareDateTime='2021-01-01'
-
+   <Figure>
+      <Image
+      src={new URL('./la-fires-Eaton_nlcd_percentages_by_year.png', import.meta.url).href}
     />
-    <Caption>
-      Changes in the NLCD land use-land cover classifications over the burn scar domain from 2000 to 2021 reveal significant growth in flammable grasslands and a decline in forest cover.    
+    <Caption attrAuthor='mlrc.gov' attrUrl='https://www.mrlc.gov/'>
+      The NLCD land cover changes within Eaton Region, LA from 2001-2021
     </Caption>
   </Figure>
 </Block>
@@ -174,9 +173,26 @@ taxonomy:
   <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
    <p>
    ### Air Quality in Los Angeles: TEMPO and EPA AirNow Insights Post-Wildfires
-    The wildfires have significantly deteriorated air quality, with high concentrations of pollutants affecting both urban and suburban areas. To assess the impact, we utilized data from NASA's TEMPO (Tropospheric Emissions: Monitoring of Pollution) instrument and the EPA’s AirNow system. These datasets provide a comprehensive view of air pollution levels, both spatially and locally, helping to identify the severity and spread of harmful pollutants.
+    The wildfires have significantly deteriorated air quality, with high concentrations of pollutants affecting both urban and suburban areas. To assess the impact, we utilized data from NASA's Tropospheric Emissions: Monitoring of Pollution (TEMPO) instrument and the EPA’s AirNow system. These datasets provide a comprehensive view of air pollution levels, both spatially and locally, helping to identify the severity and spread of harmful pollutants.
    </p>
   </Prose>
+</Block>
+<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
+  <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
+   <p>
+   ### TEMPO: High-Resolution Air Pollution Monitoring
+   TEMPO is a geostationary satellite instrument designed to monitor air pollutants across North America in unprecedented detail. Unlike traditional satellites that provide daily snapshots, TEMPO offers hourly measurements, enabling real-time tracking of pollution sources and transport patterns.
+   </p>
+  </Prose>
+  <Figure>
+    <Image
+      src={new URL('./la-fires-TEMPO_NO2_animation_v2.gif', import.meta.url).href}
+      attrAuthor = 'Maheshwari Neelam'
+    />
+    <Caption>
+       Tropospheric Column nitrogen dioxide (NO₂) plumes from Palisades and Eaton wildfires were monitored by NASA's TEMPO satellite from January 6, 2025, at 2:23:55 PM PST to January 9, 2025, at 3:05:20 PM PST, capturing the escalation of air pollution during the ignition and spread of these devastating fires.
+    </Caption>
+  </Figure> 
 </Block>
 
 <Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
@@ -186,22 +202,31 @@ taxonomy:
    To complement TEMPO’s satellite-based observations, we utilized ground-based air quality data from the EPA’s AirNow system. During peak wildfire activity, Air Quality Index (AQI) levels in Los Angeles soared well into the “Very Unhealthy” (201-300) and “Hazardous” (300+) ranges, indicating extreme pollution conditions.
    </p>
   </Prose>
-  <Figure>
-    <Chart
-      dataPath={new URL('./la-fires-pm25_pm10.csv', import.meta.url).href}
-      dateFormat="%m/%d/%Y"
-      idKey='Source'
-      xKey='Date'
-      yKey='Value'
-      yAxisLabel='PM'
-      highlightStart = '01/07/25'
-      highlightEnd = '01/11/25'
-      highlightLabel = 'Peak of LA Fires'
-    />
-    <Caption>
-    Daily PM2.5 and PM10 values taken from EPA sensors across Los Angeles County, California. 
-    </Caption>
-  </Figure>
+<Figure>
+  <Chart
+    dataPath={new URL('./la-fires-pm25_pm10.csv', import.meta.url).href}
+    dateFormat="%m/%d/%Y"
+    idKey='Source'
+    xKey='Date'
+    yKey='Value'
+    yAxisLabel='PM'
+    highlightStart='01/07/25'
+    highlightEnd='01/11/25'
+    highlightLabel='Peak of LA Fires'
+    fontFamily="'Arial', sans-serif"
+    fontSize={14}
+    fontWeight={700}
+    titleFontSize={18}
+    axisLabelFontSize={16}
+    legendFontSize={14}
+    highlightColor="#FF4136"
+    lineColors={['#0074D9', '#FF851B']}
+    gridColor="#E0E0E0"
+  />
+  <Caption style={{ fontWeight: 'bold', fontSize: '16px', marginTop: '10px' }}>
+    Daily PM2.5 and PM10 values taken from EPA sensors across Los Angeles County, California.
+  </Caption>
+</Figure>
 </Block>
 
 <Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
@@ -223,8 +248,8 @@ taxonomy:
 </Figure>
   <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
    <p>
-   ### Quantifying Carbon Loss from the Palisades and Eaton Fires Using NASA’s GEDI Above-Ground Biomass
-    Using NASA’s GEDI footprint Above-Ground Biomass Density (AGBD) Level-4 (L4A) product, we estimated the carbon loss and associated CO₂ emissions for the Palisades and Eaton Fires. The GEDI L4A dataset provides above-ground biomass density predictions in units of megagrams per hectare (Mg/ha), enabling quantification of biomass loss due to wildfires. Based on the availability of GEDI data (2019-2023), we calculated pre-fire above-ground forest biomass and derived emissions under two scenarios, Scenario 1: All above-ground forest biomass is assumed lost, Scenario 2: Burn rates from USGS fire data are applied.
+   ### Quantifying Carbon Loss from the LA Wildfires Using NASA’s Global Ecosystem Dynamics Investigation (GEDI)
+    NASA’s GEDI footprint Above-Ground Biomass Density (AGBD) Level-4 (L4A) product is innovatively used to estimate the carbon loss and associated CO₂ emissions for the Palisades and Eaton Fires. The GEDI L4A dataset provides above-ground biomass density predictions in units of megagrams per hectare (Mg/ha), enabling quantification of biomass loss due to wildfires. Based on the availability of GEDI data (2019-2023), we calculated pre-fire above-ground forest biomass and derived emissions under two scenarios, Scenario 1: All above-ground forest biomass is assumed lost, Scenario 2: Burn rates from USGS fire data are applied.
     1 Teragram (Tg) of CO₂ is equivalent to 1 million metric tons of CO₂. This massive amount of carbon dioxide can be compared to everyday activities and global emissions:
     <u>The Palisades Fire emissions:</u>
     - Scenario 1 (0.8074 Tg CO₂): Equivalent to the annual CO₂ emissions of about 174,000 average passenger vehicles.
@@ -249,7 +274,7 @@ taxonomy:
     datasetId='la-fires-sea'
     layerId='la-fires-sea'
     dateTime='2025-01-01'
-    zoom={15}
+    zoom={8}
     center={[-118.74, 34.06]}
   />
   <Caption
@@ -261,26 +286,6 @@ taxonomy:
 </Figure>
 </Block>
 
-
-{/*
-<Block>
-<Figure>
-  <Map
-    datasetId='la-fires-hrrr-wind'
-    layerId='la-fires-hrrr-wind'
-    dateTime='2025-01-08'
-    zoom={7.25}
-    center={[-118.1041, 34.1966]}
-  />
-  <Caption
-    attrAuthor='NASA'
-    attrUrl='https://nasa.gov/'
-  >
-    10 meter modeled wind gusts from the HRRR on January 8, 2025 at 02 UTC.
-  </Caption>
-</Figure>
-</Block>
-*/}
 
 {/*
 <Block>
