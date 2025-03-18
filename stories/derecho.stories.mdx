@@ -234,9 +234,17 @@ taxonomy:
   >
   ### Drought Conditions Prior to Derecho Formation
 
-  Before the May 12, 2022 derecho, the U.S. Drought Monitor showed that the Great Plains area was experiencing severe to extreme drought, with the worst conditions in central Nebraska. The GLDAS daily 0-10 cm topsoil moisture data (shown in the gif below) reveals that these drought conditions had been present since April 1, 2022, existing for over a month before the storm. With very low soil moisture, crops like corn and soybeans were likely more vulnerable to damage from the high winds and hail delivered by this powerful derecho.
+  Before the May 12, 2022 derecho, the U.S. Drought Monitor indicated that the Great Plains area was experiencing severe to extreme drought, with the worst conditions in central Nebraska. The GLDAS Daily Topsoil Moisture data (shown in the gif below) reveals that these drought conditions had been present since April 1, 2022, existing for over a month before the storm. The WLDAS Topsoil Moisture Content data to the right demonstrates the drought conditions the day of the derecho, showing the soil dryness was relevant prior to convective initiation. With very low soil moisture, crops like corn and soybeans were likely more vulnerable to damage from the high winds and hail, as well as the airborne dust particles that would soon affect the region.
   
-  *Need to insert gif of drought conditions timeseries here*
+  <Figure>
+    <Image
+      src={new URL('./derecho-GLDAS-SM.gif', import.meta.url).href}
+      alt='Drought Conditions Prior to Derecho.'
+    />
+    <Caption>
+    **GIF 1.** GLDAS Daily Surface Soil Moisture (0-10 cm) from April 1, 2022 until the day of the derecho on May 12, 2022 across the Northern Plains region.
+    </Caption>
+  </Figure> 
   </Chapter>
 
   <Chapter
@@ -305,15 +313,20 @@ taxonomy:
     layerId='darnah-gpm-daily'
     datetime='2023-09-12'
   >
-  ### MERRA-2 Dataset
+  ### MERRA-2 and MODIS Datasets
 
   #### ***Visualization of Airborne Dust Particles***
 
-  As seen in the MERRA-2 Total Aerosol Optical Thickness (AOT) gif below, the first derecho moved into South Dakota from Nebraska, carrying large amounts of dust into North Dakota and Minnesota. The second derecho, which followed later, moved into northwestern Iowa before continuing into Minnesota. Since this was a serial derecho, MERRA-2 satellite imagery helps track the movement of dust from both storm systems. It also provides a regional view, showing how aerosol particles traveled far beyond the central storm path. This imagery is especially useful when cloud cover makes it hard to see the dust with the naked eye.
-
-  *Insert MERRA-2 timeseries gif of dust transportation here*
-
-  The MERRA-2 basemap data shows that northeastern Nebraska had a higher concentration of aerosols compared to the rest of the state. This dust transport led to near-zero visibility in many rural areas, making travel dangerous for motorists caught on the roads. The strong winds also stripped topsoil from farmland, causing further damage to crops and soil health.
+  As seen in the MERRA-2 Total Aerosol Optical Thickness (AOT) gif below, the first derecho moved into South Dakota from Nebraska, carrying large amounts of dust into North Dakota and Minnesota. The second derecho, which followed later, moved into northwestern Iowa before continuing into Minnesota. MODIS Aerosol Optical Depth (AOD) data for May 12, 2022 on the right shows a higher resolution of this dust transportation for the first derecho, but doesn’t capture the second derecho event later into the evening. Since this was a serial derecho, MERRA-2 and MODIS satellite imagery helps track the movement of dust from both storm systems hourly and daily, respectively.  It also provides a regional view, showing how aerosol particles traveled far beyond the central storm path. Such imagery is especially useful when cloud cover makes it hard to see the dust with the naked eye. This dust transport led to near-zero visibility in many rural areas, making travel dangerous for motorists caught on the roads. The strong winds also stripped topsoil from farmland, causing further damage to crops and soil health.
+  <Figure>
+    <Image
+      src={new URL('./derecho-MERRA-AOD.gif', import.meta.url).href}
+      alt='Airborne Dust during the Derecho.'
+    />
+    <Caption>
+    **GIF 2.** MERRA-2 Reanalysis of Total Aerosol Scattering AOT associated with both derechos moving through the Northern Plains region on May 12, 2022.
+    </Caption>
+  </Figure> 
   </Chapter>
 
   <Chapter
