@@ -133,6 +133,12 @@ taxonomy:
 </Block>
 
 <Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
+  <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
+   <p>
+   ### Fire Suppression and the Accumulation of Fuel
+    While chaparral shrublands have naturally adapted to fire cycles, decades of aggressive fire suppression—exacerbated by worsening drought conditions—have increased the landscape’s vulnerability to wildfires. Without periodic, low-intensity burns to reduce excess vegetation, modern wildfires become far more destructive than they would have been under natural fire cycles. Although controlled burns are widely recognized as an effective way to reduce fire risks, they are difficult to implement. The expansion of residential areas into fire-prone regions has made prescribed burns controversial, as homeowners fear potential property damage.
+  </p>
+  </Prose>
   <Figure>
     <Chart
       dataPath={new URL('./la-fires-ndvi.csv', import.meta.url).href}
@@ -149,21 +155,9 @@ taxonomy:
     Monthly mean MODIS NDVI values leading up to the 2025 LA Fires, taken at the ignition point of the 2025 Eaton Fire in Los Angeles County, California. 
     </Caption>
   </Figure>
-  <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
-   <p>
-   ### Fire Suppression and the Accumulation of Fuel
-    While chaparral shrublands have naturally adapted to fire cycles, decades of aggressive fire suppression—exacerbated by worsening drought conditions—have increased the landscape’s vulnerability to wildfires. Without periodic, low-intensity burns to reduce excess vegetation, modern wildfires become far more destructive than they would have been under natural fire cycles. Although controlled burns are widely recognized as an effective way to reduce fire risks, they are difficult to implement. The expansion of residential areas into fire-prone regions has made prescribed burns controversial, as homeowners fear potential property damage.
-  </p>
-  </Prose>
 </Block>
 
 <Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
-  <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
-   <p>
-   ### Air Quality in Los Angeles: TEMPO and EPA AirNow Insights Post-Wildfires
-    The wildfires have significantly deteriorated air quality, with high concentrations of pollutants affecting both urban and suburban areas. To assess the impact, we utilized data from NASA's TEMPO (Tropospheric Emissions: Monitoring of Pollution) instrument and the EPA’s AirNow system. These datasets provide a comprehensive view of air pollution levels, both spatially and locally, helping to identify the severity and spread of harmful pollutants.
-   </p>
-  </Prose>
    <Figure>
   <Map
     datasetId='la-fires-planet'
@@ -179,9 +173,21 @@ taxonomy:
     Wildfire smoke as seen from the planet satellite for Eaton Fire on January 9, 2025.
   </Caption>
   </Figure>
+  <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
+   <p>
+   ### Air Quality in Los Angeles: TEMPO and EPA AirNow Insights Post-Wildfires
+    The wildfires have significantly deteriorated air quality, with high concentrations of pollutants affecting both urban and suburban areas. To assess the impact, we utilized data from NASA's TEMPO (Tropospheric Emissions: Monitoring of Pollution) instrument and the EPA’s AirNow system. These datasets provide a comprehensive view of air pollution levels, both spatially and locally, helping to identify the severity and spread of harmful pollutants.
+   </p>
+  </Prose>
 </Block>
 
 <Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
+  <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
+   <p>
+   ### EPA AirNow: Local Air Quality Conditions
+   To complement TEMPO’s satellite-based observations, we utilized ground-based air quality data from the EPA’s AirNow system. During peak wildfire activity, Air Quality Index (AQI) levels in Los Angeles soared well into the “Very Unhealthy” (201-300) and “Hazardous” (300+) ranges, indicating extreme pollution conditions.
+   </p>
+  </Prose>
   <Figure>
     <Chart
       dataPath={new URL('./la-fires-pm25_pm10.csv', import.meta.url).href}
@@ -198,31 +204,9 @@ taxonomy:
     Daily PM2.5 and PM10 values taken from EPA sensors across Los Angeles County, California. 
     </Caption>
   </Figure>
-  <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
-   <p>
-   ### EPA AirNow: Local Air Quality Conditions
-   To complement TEMPO’s satellite-based observations, we utilized ground-based air quality data from the EPA’s AirNow system. During peak wildfire activity, Air Quality Index (AQI) levels in Los Angeles soared well into the “Very Unhealthy” (201-300) and “Hazardous” (300+) ranges, indicating extreme pollution conditions.
-   </p>
-  </Prose>
 </Block>
 
 <Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
-  <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
-   <p>
-   ### Quantifying Carbon Loss from the Palisades and Eaton Fires Using NASA’s GEDI Above-Ground Biomass
-    Using NASA’s GEDI footprint Above-Ground Biomass Density (AGBD) Level-4 (L4A) product, we estimated the carbon loss and associated CO₂ emissions for the Palisades and Eaton Fires. The GEDI L4A dataset provides above-ground biomass density predictions in units of megagrams per hectare (Mg/ha), enabling quantification of biomass loss due to wildfires. Based on the availability of GEDI data (2019-2023), we calculated pre-fire above-ground forest biomass and derived emissions under two scenarios, Scenario 1: All above-ground forest biomass is assumed lost, Scenario 2: Burn rates from USGS fire data are applied.
-    1 Teragram (Tg) of CO₂ is equivalent to 1 million metric tons of CO₂. This massive amount of carbon dioxide can be compared to everyday activities and global emissions:
-    ## The Palisades Fire emissions:
-    Scenario 1 (0.8074 Tg CO₂): Equivalent to the annual CO₂ emissions of about 174,000 average passenger vehicles.
-    Scenario 2 (0.6973 Tg CO₂): Similar to the yearly CO₂ emissions from electricity use in approximately 120,000 homes.
-   </p>
-   <p>
-    ## The Eaton Fire emissions:
-    Scenario 1 (1.062951 Tg CO₂): Comparable to the CO₂ absorbed by about 17.5 million tree seedlings grown for 10 years.
-    Scenario 2 (0.8718654 Tg CO₂): Equivalent to the carbon sequestered by approximately 1.1 million acres of U.S. forests in one year.
-    These emissions from just two fires represent a significant portion of a small country's annual CO₂ emissions or the amount of carbon dioxide sequestered by millions of trees over several years. This highlights the substantial impact wildfires can have on carbon release and underscores the importance of forest management and fire prevention strategies. 
-   </p>
-  </Prose>
   <Figure>
   <Map
     datasetId='la-fires-parcels'
@@ -239,6 +223,21 @@ taxonomy:
     Percent damage by parcel from the 2025 Eaton Fire in Altadena, California as determined by the LA County Assessor's Office, compared to high-resolution commercial satellite imagery of the ongoing fire from MAXAR.
   </Caption>
 </Figure>
+  <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
+   <p>
+   ### Quantifying Carbon Loss from the Palisades and Eaton Fires Using NASA’s GEDI Above-Ground Biomass
+    Using NASA’s GEDI footprint Above-Ground Biomass Density (AGBD) Level-4 (L4A) product, we estimated the carbon loss and associated CO₂ emissions for the Palisades and Eaton Fires. The GEDI L4A dataset provides above-ground biomass density predictions in units of megagrams per hectare (Mg/ha), enabling quantification of biomass loss due to wildfires. Based on the availability of GEDI data (2019-2023), we calculated pre-fire above-ground forest biomass and derived emissions under two scenarios, Scenario 1: All above-ground forest biomass is assumed lost, Scenario 2: Burn rates from USGS fire data are applied.
+    1 Teragram (Tg) of CO₂ is equivalent to 1 million metric tons of CO₂. This massive amount of carbon dioxide can be compared to everyday activities and global emissions:
+    <u>The Palisades Fire emissions:</u>
+    - Scenario 1 (0.8074 Tg CO₂): Equivalent to the annual CO₂ emissions of about 174,000 average passenger vehicles.
+    - Scenario 2 (0.6973 Tg CO₂): Similar to the yearly CO₂ emissions from electricity use in approximately 120,000 homes.
+
+    <u>The Eaton Fire emissions:</u>
+    - Scenario 1 (1.062951 Tg CO₂): Comparable to the CO₂ absorbed by about 17.5 million tree seedlings grown for 10 years.
+    - Scenario 2 (0.8718654 Tg CO₂): Equivalent to the carbon sequestered by approximately 1.1 million acres of U.S. forests in one year.
+    These emissions from just two fires represent a significant portion of a small country's annual CO₂ emissions or the amount of carbon dioxide sequestered by millions of trees over several years. This highlights the substantial impact wildfires can have on carbon release and underscores the importance of forest management and fire prevention strategies. 
+   </p>
+  </Prose>
 </Block>
 
 <Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
@@ -358,10 +357,9 @@ taxonomy:
     </p>
     <p>
      #### Additional Resources
-     * Thomas N. P., A. B. Marquardt Collow, M. G. Bosilovich, et al. 2023. Effect of Baseline Period on Quantification of Climate Extremes Over the United States. Geophysical Research Letters Volume 50, Issue 17, https://doi.org/10.1029/2023GL105204 .
-     * [The growing threat of heat for farmworkers](https://blogs.edf.org/growingreturns/2023/08/02/heat-threat-for-farmworkers/)
-     * [How Thousands of Black Farmers Were Forced Off Their Land](https://www.thenation.com/article/society/black-farmers-pigford-debt/)
-     * [“It Tears You Apart Mentally and Physically”: The Health Crisis Afflicting Black Farmers](https://inthesetimes.com/article/black-farmers-stress-debt-land-loss-racism-mental-health-crisis)
+     * [Avoiding Wildfire Damage: A Checklist for Homeowners](https://www.fema.gov/pdf/hazard/wildfire/wdfrdam.pdf)
+     * [Wildfire Prevention](https://www.nifc.gov/fire-information/fire-prevention-education-mitigation/wildfire-prevention/)
+     * Thomas, S. C., & Martin, A. R. (2012). Carbon Content of Tree Tissues: A Synthesis. Forests, 3, 332–352. https://doi.org/10.3390/f3020332
     </p>
   </Prose>
 </Block>
