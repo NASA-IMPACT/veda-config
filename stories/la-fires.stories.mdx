@@ -85,7 +85,7 @@ taxonomy:
   <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
    <p>
    ### Unprecedented Winter Wildfires
-    The recent wildfires in Los Angeles differ significantly from past fire disasters in California, primarily due to their timing and intensity. Unlike the typical wildfire season in the West, which peaks in late summer when extreme heat and dry conditions elevate the risk of ignition, these fires occurred in the middle of winter, driven by the powerful Santa Ana winds. This makes them some of the most destructive winter wildfires in over four decades. The Santa Ana winds, known for their dry, fast-moving air, have played a critical role in the active winter fire season of 2024-2025. In some areas, wind speeds have surged up to 100 mph—equivalent to hurricane-force gusts—rapidly spreading the flames and making containment efforts exceptionally difficult.
+    These wildfires differ significantly from past fire disasters in California, primarily due to their timing and intensity. Unlike the typical wildfire season in the West, which peaks in late summer when extreme heat and dry conditions elevate the risk of ignition, these fires occurred in the middle of winter, driven by the powerful Santa Ana winds. This makes them some of the most destructive winter wildfires in over four decades. In some areas, wind speeds have surged up to 100 mph—equivalent to hurricane-force gusts—rapidly spreading the flames and making containment efforts exceptionally difficult.
    </p>
   </Prose>
 </Block>
@@ -140,19 +140,17 @@ taxonomy:
   </p>
   </Prose>
   <Figure>
-    <Chart
-      dataPath={new URL('./la-fires-ndvi.csv', import.meta.url).href}
-      dateFormat="%Y-%m"
-      idKey='Label'
-      xKey='Date'
-      yKey='NDVI_Scaled'
-      yAxisLabel='MODIS NDVI'
-      highlightStart = '2024-12'
-      highlightEnd = '2025-01'
-      highlightLabel = 'LA Fires'
+    <Map
+        center={[-118.14041, 34.1926]}
+      zoom={15}
+      datasetId='nlcd-annual-conus'
+      layerId='nlcd-annual-conus'
+      dateTime='2001-01-01'
+      compareDateTime='2021-01-01'
+
     />
     <Caption>
-    Monthly mean MODIS NDVI values leading up to the 2025 LA Fires, taken at the ignition point of the 2025 Eaton Fire in Los Angeles County, California. 
+      Changes in the NLCD land use-land cover classifications over the burn scar domain from 2000 to 2021 reveal significant growth in flammable grasslands and a decline in forest cover.    
     </Caption>
   </Figure>
 </Block>
@@ -227,8 +225,6 @@ taxonomy:
    <p>
    ### Quantifying Carbon Loss from the Palisades and Eaton Fires Using NASA’s GEDI Above-Ground Biomass
     Using NASA’s GEDI footprint Above-Ground Biomass Density (AGBD) Level-4 (L4A) product, we estimated the carbon loss and associated CO₂ emissions for the Palisades and Eaton Fires. The GEDI L4A dataset provides above-ground biomass density predictions in units of megagrams per hectare (Mg/ha), enabling quantification of biomass loss due to wildfires. Based on the availability of GEDI data (2019-2023), we calculated pre-fire above-ground forest biomass and derived emissions under two scenarios, Scenario 1: All above-ground forest biomass is assumed lost, Scenario 2: Burn rates from USGS fire data are applied.
-   </p>
-   <p>
     1 Teragram (Tg) of CO₂ is equivalent to 1 million metric tons of CO₂. This massive amount of carbon dioxide can be compared to everyday activities and global emissions:
     <u>The Palisades Fire emissions:</u>
     - Scenario 1 (0.8074 Tg CO₂): Equivalent to the annual CO₂ emissions of about 174,000 average passenger vehicles.
@@ -253,7 +249,7 @@ taxonomy:
     datasetId='la-fires-sea'
     layerId='la-fires-sea'
     dateTime='2025-01-01'
-    zoom={10}
+    zoom={15}
     center={[-118.74, 34.06]}
   />
   <Caption
