@@ -1,10 +1,10 @@
 ---
 id: 'la-fires'
-name: Fanning the Flames Unraveling the Causes of the 2025 Los Angeles Area Wildfires.
-description: deciding 
+name: Fanning the Flames: Unraveling the Causes of the 2025 LA Wildfires.
+description:   
 media:
   src: ::file ./la-fires-010825_NO_cali-fires_feat.png
-  alt: Embers fly, spreading fire in the Pacific Palisades neighborhood in Los Angeles on January 7.
+  alt: Flying sparks in the Pacific Palisades neighborhood of Los Angeles on January 7.
   author:
     name: Ethan Swope/AP photo
 pubDate: 2025-03-28T00:00
@@ -26,13 +26,16 @@ taxonomy:
 <Block style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
   <Prose style={{ textAlign: 'center', width: '100%' }}>
     <p style={{ marginBottom: '0.5em' }}>
-      Authors: Maheshwari Neelam <sup>[1]</sup>, Andrew Blackford <sup>[2]</sup> and Nidhi Jha <sup>[2]</sup>
+      Authors: Maheshwari Neelam <sup>[1]</sup>, Andrew Blackford <sup>[2]</sup>, Nidhi Jha <sup>[2]</sup> and Brian Freitag <sup>[3]</sup>
     </p>
     <p style={{ marginBottom: '0.5em' }}>
-      <sup>[1]</sup> USRA and National Aeronautics and Space Administration (NASA)
+      <sup>[1]</sup> Universities Space Research Association (USRA)
     </p>
     <p style={{ marginBottom: '0.5em' }}>
       <sup>[2]</sup> The University of Alabama in Huntsville (UAH)
+    </p>
+    <p style={{ marginBottom: '0.5em' }}>
+      <sup>[3]</sup> The National Aeronautics and Space Administration (NASA)
     </p>
     <p style={{ marginBottom: '0.5em', fontWeight: 'bold' }}>
       Mission: NASA Earth Action: A thriving world, driven by trusted, actionable Earth science
@@ -202,22 +205,31 @@ taxonomy:
    To complement TEMPO’s satellite-based observations, we utilized ground-based air quality data from the EPA’s AirNow system. During peak wildfire activity, Air Quality Index (AQI) levels in Los Angeles soared well into the 'Very Unhealthy' (201-300) and 'Hazardous' (300+) ranges, indicating extreme pollution conditions.
    </p>
    </Prose>
-   <Figure>
-   <Chart
+<Figure>
+  <Chart
     dataPath={new URL('./la-fires-pm25_pm10.csv', import.meta.url).href}
     dateFormat="%m/%d/%Y"
     idKey='Source'
     xKey='Date'
     yKey='Value'
     yAxisLabel='PM'
-    highlightStart = '01/07/25'
-    highlightEnd = '01/11/25'
-    highlightLabel = 'Peak of LA Fires'
-    />
-    <Caption>
+    highlightStart='01/07/25'
+    highlightEnd='01/11/25'
+    highlightLabel='Peak of LA Fires'
+    fontFamily="'Arial', sans-serif"
+    fontSize={14}
+    fontWeight={700}
+    titleFontSize={18}
+    axisLabelFontSize={16}
+    legendFontSize={14}
+    highlightColor="#FF4136"
+    lineColors={['#0074D9', '#FF851B']}
+    gridColor="#E0E0E0"
+  />
+  <Caption style={{ fontWeight: 'bold', fontSize: '16px', marginTop: '10px' }}>
     Daily PM2.5 and PM10 values taken from EPA sensors across Los Angeles County, California.
-    </Caption>
-    </Figure>
+  </Caption>
+</Figure>
 </Block>
 
 <Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
