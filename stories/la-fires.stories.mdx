@@ -1,7 +1,7 @@
 ---
 id: 'la-fires'
 name: Fanning the Flames Unraveling the Causes of the 2025 Los Angeles Area Wildfires.
-description: "Unraveling the Causes of the 2025 Los Angeles Area Wildfires."
+description: deciding 
 media:
   src: ::file ./la-fires-010825_NO_cali-fires_feat.png
   alt: Embers fly, spreading fire in the Pacific Palisades neighborhood in Los Angeles on January 7.
@@ -199,11 +199,11 @@ taxonomy:
   <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
    <p>
    ### EPA AirNow: Local Air Quality Conditions
-   To complement TEMPO’s satellite-based observations, we utilized ground-based air quality data from the EPA’s AirNow system. During peak wildfire activity, Air Quality Index (AQI) levels in Los Angeles soared well into the “Very Unhealthy” (201-300) and “Hazardous” (300+) ranges, indicating extreme pollution conditions.
+   To complement TEMPO’s satellite-based observations, we utilized ground-based air quality data from the EPA’s AirNow system. During peak wildfire activity, Air Quality Index (AQI) levels in Los Angeles soared well into the 'Very Unhealthy' (201-300) and 'Hazardous' (300+) ranges, indicating extreme pollution conditions.
    </p>
-  </Prose>
-<Figure>
-<Chart
+   </Prose>
+   <Figure>
+   <Chart
     dataPath={new URL('./la-fires-pm25_pm10.csv', import.meta.url).href}
     dateFormat="%m/%d/%Y"
     idKey='Source'
@@ -214,10 +214,10 @@ taxonomy:
     highlightEnd = '01/11/25'
     highlightLabel = 'Peak of LA Fires'
     />
-<Caption>
+    <Caption>
     Daily PM2.5 and PM10 values taken from EPA sensors across Los Angeles County, California.
-</Caption>
-</Figure>
+    </Caption>
+    </Figure>
 </Block>
 
 <Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
