@@ -1,0 +1,170 @@
+---
+id: la-fires-gedi
+name: 'Eaton and Palisades Fires (2025) Above Groud Biomass Density'
+description: "Satellite-derived above-ground biomass density (extracted from GEDI data) over the burn scar extents of the Eaton and Palisades Fires in Southern California (2025)."
+media:
+  src: ::file ./LA-Fires-background.png
+  alt: Planet Labs Commercial Satellite Imagery of the Eaton Fire (January 9, 2025).
+  author:
+    name: NASA CDSA - Planet Labs
+taxonomy:
+  - name: Topics
+    values:
+      - Disasters
+      - Wildfire
+  - name: Source
+    values:
+      - NASA LPDAAC
+infoDescription: |
+  ::markdown
+    - **Temporal Extent:** January 7, 2025
+    - **Temporal Resolution:** N/A
+    - **Spatial Extent:** Local
+    - **Spatial Resolution:** 3 m
+    - **Data Units:** Mg/Ha
+    - **Data Type:** Research
+    - **Data Latency:** N/A
+
+layers:
+  - id: la-fires-gedi
+    stacCol: la-fires-gedi
+    name: Eaton and Palisades Fires (2025) Above Groud Biomass Density
+    type: raster
+    description: 'Satellite-derived above-ground biomass density (extracted from GEDI data) over the burn scar extents of the Eaton and Palisades Fires in Southern California (2025).'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      colormap_name: ylgn    
+      rescale:
+        - 0
+        - 250
+    legend:
+      type: gradient
+      unit:
+        label: Mg ha-1
+      min: 0
+      max: 250
+      stops: 
+        - "#FFFFE5"
+        - "#F7FCB9"
+        - "#D9F0A3"
+        - "#ADDD8E"
+        - "#78C679"
+        - "#41AB5D"
+        - "#238443"
+        - "#006837"
+        - "#004529"
+    info:
+        source: NASA LPDAAC
+        spatialExtent: Local
+        temporalResolution: N/A
+        unit: MG Ha-1
+
+---
+
+<Block>
+  <Prose>
+  ## Dataset Details
+    - **Temporal Extent:** January 7, 2025
+    - **Temporal Resolution:** N/A
+    - **Spatial Extent:** Local
+    - **Spatial Resolution:** 3 m
+    - **Data Units:** Mg/Ha
+    - **Data Type:** Research
+    - **Data Latency:** N/A
+  </Prose>
+<Figure>
+  <Map
+    datasetId='la-fires-gedi'
+    layerId='la-fires-gedi'
+    dateTime='2025-01-07'
+    zoom={10.5}
+    center={[-118.1041, 34.1966]}
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+    GEDI-derived above-ground biomass density across the 2025 Eaton Fire.
+  </Caption>
+</Figure>
+</Block>
+
+<Block>
+  <Prose>
+
+  ### About
+
+  x
+  
+  </Prose>
+</Block>
+
+<Block>
+  
+  <Prose>
+
+  ### What This Data Offers
+
+  * x
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ### Access the Data
+
+  x
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    
+  ### Citing this Dataset
+
+   x
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## Disclaimer
+
+  All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
+  
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+
+  ### Key Publications
+  
+  x
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## Data Stories Using This Dataset
+  
+  **<Link to={"/stories/la-fires"}>Fanning the Flames</Link>**
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## License
+  
+  [Creative Commons Attribution 1.0 International](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC BY 1.0)
+
+  </Prose>
+</Block>
+
