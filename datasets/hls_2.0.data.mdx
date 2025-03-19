@@ -1,0 +1,129 @@
+---
+id: HLS_2.0
+name: "Harmonized Landsat Sentinel 2"
+description: "Harmonized Landsat Sentinel 2: Landsat"
+media:
+  src: ::file ./media/hls-project-hero-1.jpg
+  alt: HLS
+  author:
+    name: NASA
+    url:
+taxonomy:
+  - name: Topics
+    values:
+      - Imagery
+layers:
+  - id: HLSL30_2.0_true_color
+    type: cmr
+    stacCol: HLSL30_2.0
+    stacApiEndpoint: "https://cmr.earthdata.nasa.gov/stac/LPCLOUD"
+    tileApiEndpoint: "https://dev-titiler-cmr.delta-backend.com/WebMercatorQuad/tilejson.json"
+    name: "HLS Landsat 8/9 True Color Composite"
+    description: "True color composite image from Landsat 8/9 bands B04, B03, B02"
+    time_density: day
+    zoomExtent:
+      - 7
+      - 18
+    sourceParams:
+      concept_id:	C2021957657-LPCLOUD
+      backend: rasterio
+      bands_regex: B[0-9][0-9]
+      bands:
+        - B04
+        - B03
+        - B02
+      minzoom: 7
+      maxzoom: 18
+      color_formula: Gamma RGB 3.5 Saturation 1.7 Sigmoidal RGB 15 0.35
+  - id: HLSL30_2.0_false_color
+    type: cmr
+    stacCol: HLSL30_2.0
+    stacApiEndpoint: "https://cmr.earthdata.nasa.gov/stac/LPCLOUD"
+    tileApiEndpoint: "https://dev-titiler-cmr.delta-backend.com/WebMercatorQuad/tilejson.json"
+    name: "HLS Landsat 8/9 False Color Composite"
+    description: "False color composite image from Landsat 8/9 bands B05, B03, B02"
+    time_density: day
+    zoomExtent:
+      - 7
+      - 18
+    sourceParams:
+      concept_id:	C2021957657-LPCLOUD
+      backend: rasterio
+      bands_regex: B[0-9][0-9]
+      bands:
+        - B05
+        - B03
+        - B02
+      minzoom: 7
+      maxzoom: 18
+      color_formula: Gamma RGB 2.5 Saturation 1.2 Sigmoidal RGB 10 0.35
+  - id: HLSS30_2.0_true_color
+    type: cmr
+    stacCol: HLSS30_2.0
+    stacApiEndpoint: "https://cmr.earthdata.nasa.gov/stac/LPCLOUD"
+    tileApiEndpoint: "https://dev-titiler-cmr.delta-backend.com/WebMercatorQuad/tilejson.json"
+    name: "HLS Sentinel-2 True Color Composite"
+    description: "True color composite image from Sentinel-2 bands B04, B03, B02"
+    time_density: day
+    zoomExtent:
+      - 7
+      - 18
+    sourceParams:
+      concept_id:	C2021957295-LPCLOUD
+      backend: rasterio
+      bands_regex: B[0-9][0-9A-Za-z]
+      bands:
+        - B04
+        - B03
+        - B02
+      minzoom: 7
+      maxzoom: 18
+      color_formula: Gamma RGB 3.5 Saturation 1.7 Sigmoidal RGB 15 0.35
+  - id: HLSS30_2.0_false_color
+    type: cmr
+    stacCol: HLSS30_2.0
+    stacApiEndpoint: "https://cmr.earthdata.nasa.gov/stac/LPCLOUD"
+    tileApiEndpoint: "https://dev-titiler-cmr.delta-backend.com/WebMercatorQuad/tilejson.json"
+    name: "HLS Sentinel-2 False Color Composite"
+    description: "False color composite image from Sentinel-2 bands B8A, B03, B02"
+    time_density: day
+    zoomExtent:
+      - 7
+      - 18
+    sourceParams:
+      concept_id:	C2021957295-LPCLOUD
+      backend: rasterio
+      bands_regex: B[0-9][0-9A-Za-z]
+      bands:
+        - B8A
+        - B03
+        - B02
+      minzoom: 7
+      maxzoom: 18
+      color_formula: Gamma RGB 2.5 Saturation 1.2 Sigmoidal RGB 10 0.35
+---
+
+<Block>
+  <Prose>
+  ## Dataset Details
+  - **Temporal Extent:** 2013-present
+  - **Temporal Resolution:** Daily
+  - **Spatial Extent:** Global
+  - **Spatial Resolution:** 30 x 30 meters
+  </Prose>
+<Figure>
+  <Map
+    datasetId='HLS_2.0'
+    layerId='HLSL30_2.0_true_color'
+    dateTime='2024-10-01'
+    zoom={7}
+    center={[-92.1265,46.8367]}
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+  HLSL30 imagery from October 1, 2024 over western Lake Superior.
+  </Caption>
+</Figure>
+</Block>
