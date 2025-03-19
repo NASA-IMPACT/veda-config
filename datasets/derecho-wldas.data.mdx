@@ -1,0 +1,179 @@
+---
+id: wldas-derecho-sm
+name:  "WLDAS Soil Moisture Dataset for May 12th, 2022"
+description: "WLDAS is a surface meteorological analysis and land-surface model dataset running in operations to produce outputs of soil moisture, snow, surface fluxes, streamflow, etc. for drought monitoring and other applications."
+media:
+  src: ::file ./derecho-background.jpg
+  alt: Intense derecho thunderstorm as it sweeps across farmland on September 23, 2018
+  author:
+    name: Jim Reed
+    url: https://fineartamerica.com/featured/4-derecho-thunderstorm-jim-reed-photographyscience-photo-library.html
+taxonomy:
+  - name: Topics
+    values:
+      - Natural Disasters
+      - Air Quality
+      - Agriculture
+  - name: Source
+    values:
+      - WLDAS
+infoDescription: |
+  ::markdown
+  - **Temporal Extent:** March 11th, 2022
+  - **Temporal Resolution:** Daily
+  - **Spatial Extent:** Western CONUS
+  - **Spatial Resolution:** 1113 meters
+  - **Data Units:** N/A
+  - **Data Type:** Research
+  - **Data Latency:** N/A     
+
+layers:
+  - id: wldas-derecho-sm
+    stacCol: wldas-derecho-sm
+    name: 0-10 cm Soil Moisture
+    type: raster
+    description: "0-10 cm Soil Moisture Dataset"
+    initialDatetime: newest
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      colormap_name: RdYlGn
+      rescale:
+        - 0
+        - 200
+      nodata: 0
+    legend:
+      type: gradient
+      min: "-150"
+      max: "150"
+      stops:
+        - "#a50026" #Deep Crimson
+        - "#f46d43" #Burnt Orange
+        - "#fee08b" #Pastel Yellow
+        - "#d9ef8b" #Lime Yellow
+        - "#66bd63" #Medium Green
+        - "#006837" #Deep Forest Green
+    info:
+      source: WLDAS
+      spatialExtent: Western CONUS
+      temporalResolution: N/A
+      unit: N/A
+
+
+---
+<Block>
+  <Prose>
+  ## Dataset Details
+  - **Temporal Extent:** March 11th, 2022
+  - **Temporal Resolution:** Daily
+  - **Spatial Extent:** Western CONUS
+  - **Spatial Resolution:** 1113 meters
+  - **Data Units:** N/A
+  - **Data Type:** Research
+  - **Data Latency:** N/A
+  </Prose>
+<Figure>
+  <Map
+    center={[-107, 44]}
+    zoom={4.5}
+    datasetId='wldas-derecho-sm'
+    layerId='wldas-derecho-sm'
+    datetime='2022-05-11'
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+    Topsoil moisture demonstrating drought condtions prior to the serial derecho of May 12th, 2022.
+  </Caption>
+  </Figure>
+</Block>
+
+<Block>
+  <Prose>
+
+  ### About
+
+  NASA’s Water-Land Data Assimilation System (WLDAS) provides high-resolution soil moisture data, offering critical insights into land surface hydrology and water availability. This dataset integrates satellite observations and land surface modeling to generate detailed soil moisture estimates, enabling researchers to assess water storage variability and land-atmosphere interactions at multiple temporal and spatial scales.
+
+  By analyzing soil moisture dynamics, WLDAS helps improve understanding of drought development, flood potential, and agricultural water stress. It supports early warning systems by identifying regions experiencing soil moisture deficits or surpluses, which is essential for managing water resources, optimizing irrigation strategies, and mitigating climate-related hazards. The dataset is particularly valuable for monitoring agricultural productivity, ecosystem responses, and hydrological extremes, informing policy decisions and adaptation strategies in a changing climate.
+
+  </Prose>
+</Block>
+
+<Block>
+  
+  <Prose>
+
+  ### What WLDAS Soil Moisture Data Offers
+
+  * High-Resolution Soil Moisture Monitoring: Delivers detailed spatial and temporal assessments of soil moisture dynamics, essential for analyzing land-atmosphere interactions, hydrological cycles, and ecosystem responses.
+  
+  * Drought and Flood Risk Analysis: Supports quantitative evaluation of soil moisture anomalies, aiding in early detection of drought conditions and flood potential, which is critical for water resource management and hazard mitigation.
+  
+  * Agricultural and Environmental Applications: Enhances understanding of soil moisture variability’s impact on crop productivity, vegetation health, and biogeochemical processes, informing sustainable land-use planning and climate adaptation strategies.
+    
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ### Access the Data
+
+  Visit NASA's [WLDAS home page](https://ldas.gsfc.nasa.gov/wldas/wldas-project-goals) to explore options for data access.
+  
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    
+  ### Citing this Dataset
+
+  Erlingis, J., M. Rodell, C.D. Peters-Lidard, B. Li, S.V. Kumar, J.S. Famiglietti, S.L. Granger, J.V. Hurley, P.-W. Liu, and D.M. Mocko, 2021: A High-Resolution Land Data Assimilation System Optimized for the Western United States. Journal of the American Water Resources Association, 1-19, doi:10.1111/1752-1688.12910
+  
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## Disclaimer
+
+  All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
+  
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+
+  ### Other Publications
+  
+  * Erlingis, J., B. Li, M. Rodell, NASA/GSFC/HSL (2024): WLDAS Noah-MP-3.6 Land Surface Model L4 Daily 0.01 degree x 0.01 degree Version D1.0, Greenbelt, Maryland, USA, Goddard Earth Sciences Data and Information Services Center (GES DISC), Accessed: [Data Access Date], doi:10.5067/ABBHPUIGJH5M
+  
+  * Erlingis, J.M., M. Rodell, C.D. Peters-LIdard, B. Li, and S.V. Kumar, 2020: Applications of the Western Land Data Assimilation System. AGU Fall Meeting. Virtual, American Geophysical Union.
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## Data Stories Using This Dataset
+  
+  **<Link to={"/stories/derecho-impacts"}>NASA Data Fusion Analysis of Derechos and Their Impact on Rural America</Link>**
+  
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## License
+  
+  [Creative Commons Attribution 1.0 International](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC BY 1.0)
+
+  </Prose>
+</Block>
