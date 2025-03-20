@@ -44,8 +44,8 @@ taxonomy:
 </Block>
     
 
-<Block style={{justifyContent: 'space-between', alignItems: 'center', margin: '0 auto', width: '95%' }}>
-<Figure style={{ flex: '1'}}>
+<Block style={{justifyContent: 'space-between', alignItems: 'center', margin: '0 auto', width: '100%' }}>
+<Figure style={{ flex: '1', marginRight: '0.2rem' }}>
   <Map
     datasetId='la-fires-parcels'
     layerId='la-fires-parcels'
@@ -61,7 +61,7 @@ taxonomy:
     Percent damage by parcel from the 2025 Eaton Fire in Altadena, California as determined by the LA County Assessor's Office, compared to high-resolution commercial satellite imagery of the ongoing fire from MAXAR.
   </Caption>
 </Figure>
-  <Prose style={{ textAlign: 'justify', flex: '1', alignItems: 'center'}}>
+  <Prose style={{ textAlign: 'justify', flex: '1', alignItems: 'center', marginLeft: '0.2rem'}}>
     <p>
     ### Devastating Wildfires in Los Angeles
     In early January 2025, Los Angeles faced devastating wildfires that claimed at least 29 lives, forced over 200,000 evacuations, and destroyed more than 18,000 structures. The Palisades and Eaton fires, the two largest blazes, scorched over 37,000 acres combined. While the exact causes remain under investigation, extreme environmental conditions—particularly Santa Ana winds, prolonged dry periods, and the accumulation of flammable vegetation—were critical in fueling the fires' intensity and swift progression. 
@@ -69,7 +69,7 @@ taxonomy:
   </Prose>
 </Block>
 
-<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
+<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
   <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
    <p>
    ### The Role of Santa Ana Winds
@@ -87,7 +87,7 @@ taxonomy:
   </Figure>
 </Block>
 
-<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
+<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
   <Figure>
     <Image
       src={new URL('./la-fires-hrrr_wind.gif', import.meta.url).href}
@@ -106,7 +106,7 @@ taxonomy:
   </Prose>
 </Block>
 
-<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
+<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
   <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
    <p>
    ### Prolonged Dry Conditions
@@ -131,7 +131,7 @@ taxonomy:
   </Figure>
 </Block>
 
-<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
+<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
   <Figure>
     <Map
         center={[-118.735, 34.1364]}
@@ -153,7 +153,7 @@ taxonomy:
   </Prose>
 </Block>
 
-<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
+<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
   <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
    <p>
    ### Fire Suppression and the Accumulation of Fuel
@@ -163,6 +163,7 @@ taxonomy:
    <Figure>
       <Image
       src={new URL('./la-fires-Eaton_nlcd_percentages_by_year.png', import.meta.url).href}
+      style={{ maxWidth: '80%', height: 'auto' }}
     />
     <Caption attrAuthor='mlrc.gov' attrUrl='https://www.mrlc.gov/'>
       The NLCD land cover changes within Eaton Region, LA from 2001-2021
@@ -170,7 +171,7 @@ taxonomy:
   </Figure>
 </Block>
 
-<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
+<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
    <Figure>
   <Map
     datasetId='la-fires-planet'
@@ -194,7 +195,7 @@ taxonomy:
   </Prose>
 </Block>
 
-<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
+<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
   <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
    <p>
    ### TEMPO: High-Resolution Air Pollution Monitoring
@@ -213,7 +214,7 @@ taxonomy:
   </Figure> 
 </Block>
 
-<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
+<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%'}}>
   <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
    <p>
    ### EPA AirNow: Local Air Quality Conditions
@@ -247,7 +248,7 @@ taxonomy:
 </Figure>
 </Block>
 
-<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
+<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%'}}>
   <Figure>
   <Map
     datasetId='la-fires-gedi'
@@ -272,7 +273,7 @@ taxonomy:
   </Prose>
 </Block>   
 
-<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
+<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%'}}>
   <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
     <p>   
       This massive amount of carbon dioxide can be compared to everyday activities and global emissions:
@@ -298,7 +299,7 @@ taxonomy:
   </Figure>
 </Block>
 
-<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
+<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
   <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
    <p>
    ### Wildfires Encroaching on Critical Habitats
@@ -361,7 +362,7 @@ taxonomy:
 </Block>
 */}
 
-<Block style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
+<Block style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
   <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
     <p>
      ### To mitigate and prevent wildfires risks, several safeguards can be implemented:
@@ -373,7 +374,7 @@ taxonomy:
   </Prose>
 </Block>
 
-<Block style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
+<Block style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
   <Prose style={{ flex: '1', paddingRight: '20px', textAlign: 'justify' }}>
     <p>
      ### Data Access
