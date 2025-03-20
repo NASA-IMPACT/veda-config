@@ -159,16 +159,16 @@ taxonomy:
   <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
    <p>
    ### Fire Suppression and the Accumulation of Fuel
-    While chaparral shrublands have naturally adapted to fire cycles, decades of aggressive fire suppression—exacerbated by worsening drought conditions—have increased the landscape’s vulnerability to wildfires. Without periodic, low-intensity burns to reduce excess vegetation, modern wildfires become far more destructive than they would have been under natural fire cycles. Although controlled burns are widely recognized as an effective way to reduce fire risks, they are difficult to implement. The expansion of residential areas into fire-prone regions has made prescribed burns controversial, as homeowners fear potential property damage.
+    While chaparral shrublands have naturally adapted to fire cycles, decades of aggressive fire suppression—exacerbated by worsening drought conditions—have increased the landscape’s vulnerability to wildfires. Without periodic, low-intensity burns to reduce excess vegetation, modern wildfires become far more destructive than they would have been under natural fire cycles.
   </p>
   </Prose>
    <Figure>
       <Image
       src={new URL('./la-fires-Eaton_nlcd_percentages_by_year.png', import.meta.url).href}
-      style={{ maxWidth: '120%', height: 'auto' }}
+      style={{ maxWidth: '200%'}}
     />
     <Caption>
-      The NLCD land cover changes within Eaton Region, LA from 2001-2021
+      The NLCD land cover changes within the Eaton Region, Los Angeles from 2001-2021 show significant shrublands.
     </Caption>
   </Figure>
 </Block>
@@ -220,7 +220,7 @@ taxonomy:
   <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
    <p>
    ### EPA AirNow: Local Air Quality Conditions
-   To complement TEMPO’s satellite-based observations, we utilized ground-based air quality data from the EPA’s AirNow system. During peak wildfire activity, Air Quality Index (AQI) levels in Los Angeles soared well into the 'Very Unhealthy' (201-300) and 'Hazardous' (300+) ranges, indicating extreme pollution conditions.
+   To complement TEMPO’s satellite-based observations, we utilized ground-based air quality data from the EPA’s AirNow system. During peak wildfire activity, particulate matter (PM) levels in Los Angeles reached alarming heights, with daily PM10 concentrations as high as 140 μg/m³ and PM2.5 levels reaching 35 μg/m³.
    </p>
    </Prose>
 <Figure>
@@ -291,10 +291,10 @@ taxonomy:
       These emissions from just two fires represent a significant portion of a small country's annual CO₂ emissions or the amount of carbon dioxide sequestered by millions of trees over several years. This highlights the substantial impact wildfires can have on carbon release and underscores the importance of forest management and fire prevention strategies. 
     </p>
   </Prose>
-  <Figure>
+  <Figure style={{ width: '100%', maxWidth: '800px' }}> 
       <Image
       src={new URL('./la-fires-CO.png', import.meta.url).href}
-      style={{ maxWidth: '180%', height: 'auto' }}
+      style={{ width: '100%', height: 'auto' }} 
     />
     <Caption attrUrl='https://www.jpl.nasa.gov/missions/atmospheric-infrared-sounder-airs/'>
       Carbon monoxide (CO) levels detected by the Atmospheric Infrared Sounder (AIRS) on NASA's Aqua satellite over Los Angeles, comparing pre-wildfire conditions on January 6, 2025, to post-wildfire conditions on January 9, 2025.
@@ -303,12 +303,6 @@ taxonomy:
 </Block>
 
 <Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
-  <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
-   <p>
-   ### Wildfires Encroaching on Critical Habitats
-    Significant Ecological Areas (SEAs) and Coastal Resource Areas are critical designations in LA County aimed at preserving irreplaceable biological and coastal resources. Los Angeles County has identified 62 SEAs, which are officially designated zones that support biodiversity by maintaining genetic and physical diversity essential for sustaining ecosystems. These areas include habitats for rare and endangered species, wildlife corridors, and natural biotic communities, such as the Santa Clara River SEA—the last major unchanneled river in the county. Coastal Resource Areas encompass vital coastal ecosystems such as wetlands, dunes, beaches, and significant portions of the Santa Monica Mountains. These areas provide essential services like biodiversity support, water quality maintenance, and climate regulation. LA County's beaches stretch approximately 25 miles and attract more than 50 million annual visitors, playing a major role in the region's economy. However, the recent wildfires in LA have encroached upon SEA habitats, disrupting species migration and weakening ecosystem resilience. The destruction of these habitats, particularly in regions already vulnerable due to drought and urbanization, further reduces the SEAs' ability to provide crucial ecosystem services.  
-   </p>
-  </Prose>
 <Figure>
   <Map
     datasetId='la-fires-sea'
@@ -324,6 +318,12 @@ taxonomy:
   LA County's Significant Ecological Areas (SEAs) in the area impacted by the 2025 Palisades Fire. 
   </Caption>
 </Figure>
+<Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
+   <p>
+   ### Wildfires Encroaching on Critical Habitats
+    Significant Ecological Areas (SEAs) and Coastal Resource Areas are critical designations in LA County aimed at preserving irreplaceable biological and coastal resources. Los Angeles County has identified 62 SEAs, which are officially designated zones that support biodiversity by maintaining genetic and physical diversity essential for sustaining ecosystems. These areas include habitats for rare and endangered species, wildlife corridors, and natural biotic communities, such as the Santa Clara River SEA—the last major unchanneled river in the county. Coastal Resource Areas encompass vital coastal ecosystems such as wetlands, dunes, beaches, and significant portions of the Santa Monica Mountains. These areas provide essential services like biodiversity support, water quality maintenance, and climate regulation. LA County's beaches stretch approximately 25 miles and attract more than 50 million annual visitors, playing a major role in the region's economy. However, the recent wildfires in LA have encroached upon SEA habitats, disrupting species migration and weakening ecosystem resilience. The destruction of these habitats, particularly in regions already vulnerable due to drought and urbanization, further reduces the SEAs' ability to provide crucial ecosystem services.  
+   </p>
+</Prose>
 </Block>
 
 
