@@ -23,23 +23,17 @@ taxonomy:
       - Community Contributed
 ---
 
-<Block style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
-  <Prose style={{ textAlign: 'center', width: '100%' }}>
-    <p style={{ marginBottom: '0.5em' }}>
-      Authors: Maheshwari Neelam <sup>[1]</sup>, Andrew Blackford <sup>[2]</sup>, Nidhi Jha, <sup>[2]</sup> and Brian Freitag <sup>[3]</sup>
-    </p>
-    <p style={{ marginBottom: '0.5em' }}>
-      <sup>[1]</sup> Universities Space Research Association (USRA)
-    </p>
-    <p style={{ marginBottom: '0.5em' }}>
-      <sup>[2]</sup> The University of Alabama in Huntsville (UAH)
-    </p>
-    <p style={{ marginBottom: '0.5em' }}>
-      <sup>[3]</sup> The National Aeronautics and Space Administration (NASA)
-    </p>
-    <p style={{ fontSize: '0.9em', fontStyle: 'italic' }}>
-    This Data Story presents work in progress and not peer-reviewed results.
-    </p>
+<Block>
+  <Prose>
+      Authors: Maheshwari Neelam <sup>1</sup>, Andrew Blackford <sup>2</sup>, Nidhi Jha <sup>2</sup>, and Brian Freitag <sup>3</sup>
+
+      <sup>1</sup> Universities Space Research Association (USRA)
+
+      <sup>2</sup> The University of Alabama in Huntsville (UAH)
+
+      <sup>3</sup> The National Aeronautics and Space Administration (NASA)
+
+    <mark>🚧 This Data Story presents work in progress and not peer-reviewed results! 🚧</mark>
   </Prose>
 </Block>
     
@@ -62,21 +56,17 @@ taxonomy:
 </Figure>
 </Block>
 
-<Block style={{justifyContent: 'space-between', alignItems: 'center', margin: '0 auto', width: '100%' }}>
-  <Prose style={{ textAlign: 'justify', flex: '1', alignItems: 'center', marginLeft: '0.2rem'}}>
-    <p>
+<Block>
+  <Prose>
     ### Devastating Wildfires in Los Angeles
     In early January 2025, Los Angeles faced devastating wildfires that claimed at least 29 lives, forced over 200,000 evacuations, and destroyed more than 18,000 structures. The Palisades and Eaton fires, the two largest blazes, scorched over 37,000 acres combined. While the exact causes remain under investigation, extreme environmental conditions—particularly Santa Ana winds, prolonged dry periods, and the accumulation of flammable vegetation—were critical in fueling the fires' intensity and swift progression. 
-    </p>
   </Prose>
 </Block>
 
-<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
-  <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
-   <p>
+<Block>
+  <Prose>
    ### The Role of Santa Ana Winds
     The Santa Ana winds, a key factor in these wildfires, are characterized by their strength, dryness, and heat. These katabatic winds originate from high-pressure air masses in the Great Basin, an elevated region encompassing Nevada and parts of Utah. Typically occurring between September and May, they bring hot, dry weather to coastal Southern California. As these winds flow westward, they interact with the mountainous terrain, creating mountain waves and funneling through passes, which increases their speed and temperature while decreasing humidity. The winds were particularly intense in Ventura County and Orange County, but unusually, they also traveled over the San Gabriel Mountains to affect Pasadena and Altadena, where the Eaton Fire is located.
-   </p>
   </Prose> 
     <Figure>
       <Image
@@ -89,7 +79,7 @@ taxonomy:
   </Figure>
 </Block>
 
-<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
+<Block>
   <Figure>
     <Image
       src={new URL('./la-fires-hrrr_wind.gif', import.meta.url).href}
@@ -100,28 +90,24 @@ taxonomy:
       Modeled 10 meter wind gusts durng the ignition time frame of the 2025 LA Fires as simulated by the High Resolution Rapid Refresh (HRRR) model. Credit Andrew Blackford.
     </Caption>
   </Figure> 
-  <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
-   <p>
+  <Prose>
    ### Unprecedented Winter Wildfires
     These wildfires differ significantly from past fire disasters in California, primarily due to their timing and intensity. Unlike the typical wildfire season in the West, which peaks in late summer when extreme heat and dry conditions elevate the risk of ignition, these fires occurred in the middle of winter, driven by the powerful Santa Ana winds. This makes them some of the most destructive winter wildfires in over four decades. In some areas, wind speeds have surged up to 100 mph—equivalent to hurricane-force gusts—rapidly spreading the flames and making containment efforts exceptionally difficult.
-   </p>
   </Prose>
 </Block>
 
-<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
-  <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
-   <p>
+<Block>
+  <Prose>
    ### Prolonged Dry Conditions
    Los Angeles County has experienced an extended period of dry conditions over the past year, as illustrated in the figure, which presents rainfall data from in-situ observations at ASOS (Automated Surface Observing System) stations across the region. One year ago, Los Angeles faced severe flooding and landslides, which effectively ended a long-term drought that had persisted for several years. The sudden influx of moisture led to widespread vegetation growth, as plants rapidly absorbed the available water. However, over the past year, a significant lack of rainfall has caused this vegetation to dry out, transforming it into highly flammable fuel. This prolonged period of arid conditions, combined with the abundance of dried vegetation, has greatly increased the region’s wildfire risk. 
-   </p>
   </Prose>
   <Figure>
     <Chart
-      dataPath={new URL('./la-fires-daily_precipitation_accumulation.csv', import.meta.url).href}
-      dateFormat="%m/%d/%y
-      idKey='Source'
-      xKey='valid'
-      yKey='p01m'
+      dataPath={new URL('./la-fires-precip.csv', import.meta.url).href}
+      dateFormat="%m/%d/%y"
+      idKey='source'
+      xKey='date'
+      yKey='daily_precipitation'
       yAxisLabel='Precipitation (mm)'
       highlightStart = '01/07/25'
       highlightEnd = '01/11/25'
@@ -133,7 +119,7 @@ taxonomy:
   </Figure>
 </Block>
 
-<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
+<Block type="wide">
   <Figure>
     <Map
         center={[-118.735, 34.1364]}
@@ -147,20 +133,19 @@ taxonomy:
       Changes in the NLCD land use-land cover classifications over LA County from 2000 to 2021 reveal significant growth in grasslands, shurblands and a decline in forest cover.    
     </Caption>
   </Figure>
-  <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
-   <p>
+  </Block>
+
+<Block>
+  <Prose>
    ### Land Cover Changes and Rising Fire Risks
     A key factor contributing to the increasing wildfire intensity is the transformation of Southern California’s landscape over the years. Analysis from the National Land Cover Database (NLCD) between 2000 and 2021 shows significant shifts in land use, largely influenced by prolonged drought and urban expansion. Decades of arid conditions have severely dried out vegetation, particularly chaparral shrublands, a fire-dependent ecosystem that naturally relies on periodic burning. However, as these plants become exceptionally parched, they turn into an abundant and highly flammable fuel source, exacerbating fire hazards. Simultaneously, the residential areas have extended into the fire-prone zones. This expansion has placed more homes and infrastructure at direct risk, increasing both the frequency and severity of wildfires in areas that were once predominantly undeveloped.
-   </p>
   </Prose>
 </Block>
 
-<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
-  <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
-   <p>
+<Block>
+  <Prose>
    ### Fire Suppression and the Accumulation of Fuel
     While chaparral shrublands have naturally adapted to fire cycles, decades of aggressive fire suppression—exacerbated by worsening drought conditions—have increased the landscape’s vulnerability to wildfires. Without periodic, low-intensity burns to reduce excess vegetation, modern wildfires become far more destructive than they would have been under natural fire cycles.
-  </p>
   </Prose>
    <Figure>
       <Image
@@ -173,7 +158,7 @@ taxonomy:
   </Figure>
 </Block>
 
-<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
+<Block>
    <Figure>
   <Map
     datasetId='la-fires-planet'
@@ -189,20 +174,16 @@ taxonomy:
     Wildfire smoke as seen from the planet satellite for Eaton Fire on January 9, 2025.
   </Caption>
   </Figure>
-  <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
-   <p>
+  <Prose>
    ### Air Quality in Los Angeles: TEMPO and EPA AirNow Insights Post-Wildfires
     The wildfires have significantly deteriorated air quality, with high concentrations of pollutants affecting both urban and suburban areas. To assess the impact, we utilized data from NASA's Tropospheric Emissions: Monitoring of Pollution (TEMPO) instrument and the EPA’s AirNow system. These datasets provide a comprehensive view of air pollution levels, both spatially and locally, helping to identify the severity and spread of harmful pollutants.
-   </p>
   </Prose>
 </Block>
 
-<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
-  <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
-   <p>
+<Block>
+  <Prose>
    ### TEMPO: High-Resolution Air Pollution Monitoring
    TEMPO is a geostationary satellite instrument designed to monitor air pollutants across North America in unprecedented detail. Unlike traditional satellites that provide daily snapshots, TEMPO offers hourly measurements, enabling real-time tracking of pollution sources and transport patterns.
-   </p>
   </Prose>
   <Figure>
     <Image
@@ -216,12 +197,10 @@ taxonomy:
   </Figure> 
 </Block>
 
-<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%'}}>
-  <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
-   <p>
+<Block>
+  <Prose>
    ### EPA AirNow: Local Air Quality Conditions
    To complement TEMPO’s satellite-based observations, we utilized ground-based air quality data from the EPA’s AirNow system. During peak wildfire activity, particulate matter (PM) levels in Los Angeles reached alarming heights, with daily PM10 concentrations as high as 140 μg/m³ and PM2.5 levels reaching 35 μg/m³.
-   </p>
    </Prose>
 <Figure>
   <Chart
@@ -250,7 +229,7 @@ taxonomy:
 </Figure>
 </Block>
 
-<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%'}}>
+<Block>
   <Figure>
   <Map
     datasetId='la-fires-gedi'
@@ -266,30 +245,26 @@ taxonomy:
   Aboveground biomass density (AGBD; Mg ha-1) predictions from NASA's GEDI Level-4A footprint product over Eaton Fire perimeter.
   </Caption>
 </Figure>
-  <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
-   <p>
+  <Prose>
    ### Quantifying Carbon Loss from the LA Wildfires Using NASA’s Global Ecosystem Dynamics Investigation (GEDI)
     NASA’s GEDI footprint Above-Ground Biomass Density (AGBD) Level-4 (L4A) product is innovatively used to estimate the carbon loss and associated CO₂ emissions for the Palisades and Eaton Fires. The GEDI L4A dataset provides above-ground biomass density predictions in units of megagrams per hectare (Mg/ha), enabling quantification of biomass loss due to wildfires. Based on the availability of GEDI data (2019-2023), we calculated pre-fire above-ground forest biomass and derived emissions under two scenarios, Scenario 1: All above-ground forest biomass is assumed lost, Scenario 2: Burn rates from USGS fire data are applied.
     1 Teragram (Tg) of CO₂ is equivalent to 1 million metric tons of CO₂. 
-    </p>
   </Prose>
 </Block>   
 
-<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%'}}>
-  <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
-    <p>   
+<Block>
+  <Prose>
       This massive amount of carbon dioxide can be compared to everyday activities and global emissions:
-      <br /><br />
+
       <u>The Eaton Fire emissions:</u>
       - Scenario 1 (1.062951 Tg CO₂): Comparable to the CO₂ absorbed by about 17.5 million tree seedlings grown for 10 years.
       - Scenario 2 (0.8718654 Tg CO₂): Equivalent to the carbon sequestered by approximately 1.1 million acres of U.S. forests in one year.
-      <br /><br />
+
       <u>The Palisades Fire emissions:</u>
       - Scenario 1 (0.8074 Tg CO₂): Equivalent to the annual CO₂ emissions of about 174,000 average passenger vehicles.
       - Scenario 2 (0.6973 Tg CO₂): Similar to the yearly CO₂ emissions from electricity use in approximately 120,000 homes.
-      <br /><br />
+
       These emissions from just two fires represent a significant portion of a small country's annual CO₂ emissions or the amount of carbon dioxide sequestered by millions of trees over several years. This highlights the substantial impact wildfires can have on carbon release and underscores the importance of forest management and fire prevention strategies. 
-    </p>
   </Prose>
   <Figure style={{ width: '100%', maxWidth: '800px' }}> 
       <Image
@@ -302,7 +277,7 @@ taxonomy:
   </Figure>
 </Block>
 
-<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
+<Block>
 <Figure>
   <Map
     datasetId='la-fires-sea'
@@ -318,11 +293,9 @@ taxonomy:
   LA County's Significant Ecological Areas (SEAs) in the area impacted by the 2025 Palisades Fire. 
   </Caption>
 </Figure>
-<Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
-   <p>
+<Prose>
    ### Wildfires Encroaching on Critical Habitats
     Significant Ecological Areas (SEAs) and Coastal Resource Areas are critical designations in LA County aimed at preserving irreplaceable biological and coastal resources. Los Angeles County has identified 62 SEAs, which are officially designated zones that support biodiversity by maintaining genetic and physical diversity essential for sustaining ecosystems. These areas include habitats for rare and endangered species, wildlife corridors, and natural biotic communities, such as the Santa Clara River SEA—the last major unchanneled river in the county. Coastal Resource Areas encompass vital coastal ecosystems such as wetlands, dunes, beaches, and significant portions of the Santa Monica Mountains. These areas provide essential services like biodiversity support, water quality maintenance, and climate regulation. LA County's beaches stretch approximately 25 miles and attract more than 50 million annual visitors, playing a major role in the region's economy. However, the recent wildfires in LA have encroached upon SEA habitats, disrupting species migration and weakening ecosystem resilience. The destruction of these habitats, particularly in regions already vulnerable due to drought and urbanization, further reduces the SEAs' ability to provide crucial ecosystem services.  
-   </p>
 </Prose>
 </Block>
 
@@ -365,21 +338,18 @@ taxonomy:
 </Block>
 */}
 
-<Block style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
-  <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
-    <p>
+<Block>
+  <Prose>
      ### To mitigate and prevent wildfires risks, several safeguards can be implemented:
      - Avoid fire-related activities: Refrain from any activities involving fire or sparks during hot, dry, and windy conditions.
      - Urban planning: Limit residential expansion into fire-prone regions and forest areas.
      - Create Defensible Spaces: Clear vegetation and combustible materials around homes and structures to act as a buffer zone against wildfires.
      - Controlled burns: Periodic low-intensity fires speed up the process of forest decomposition, create open patches for new plants to grow, and improve habitat.
-    </p>
   </Prose>
 </Block>
 
-<Block style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '85%' }}>
-  <Prose style={{ flex: '1', paddingRight: '20px', textAlign: 'justify' }}>
-    <p>
+<Block>
+  <Prose>
      ### Data Access
      * [The Commercial Satellite Data Acquisition (CSDA)| Maxar and Planet](https://www.earthdata.nasa.gov/about/csda)
      * [Tropospheric Emissions: Monitoring of Pollution (TEMPO)](https://science.nasa.gov/mission/tempo/)
@@ -387,8 +357,7 @@ taxonomy:
      * [EPA's AirNow](https://www.airnow.gov/)
      * [The Multi-Resolution Land Characteristics (MRLC)|National Land Cover Database (NLCD)](https://www.mrlc.gov/)
      * [Significant Ecological Areas (SEA)](https://planning.lacounty.gov/long-range-planning/significant-ecological-areas-program/#:~:text=Significant%20Ecological%20Areas%20(SEA)%20are,sustaining%20themselves%20into%20the%20future)
-    </p>
-    <p>
+    
      **Editors**: Maheshwari Neelam, Andrew Blackford, Lauren Perkins, Brian Freitag, and Taylor DuPre
 
      **Developers**: Maheshwari Neelam, Andrew Blackford, and Nidhi Jha
@@ -396,13 +365,11 @@ taxonomy:
      **Science and Content Contributors**: Maheshwari Neelam, Andrew Blackford, and Brian Freitag
 
      **Questions / Feedback (email address)**: maheshwari.neelam@nasa.gov
-    </p>
-    <p>
+    
      #### Additional Resources
      * [Avoiding Wildfire Damage: A Checklist for Homeowners](https://www.fema.gov/pdf/hazard/wildfire/wdfrdam.pdf)
      * [Wildfire Prevention](https://www.nifc.gov/fire-information/fire-prevention-education-mitigation/wildfire-prevention/)
      * Thomas, S. C., & Martin, A. R. (2012). Carbon Content of Tree Tissues: A Synthesis. Forests, 3, 332–352. https://doi.org/10.3390/f3020332
-    </p>
   </Prose>
 </Block>
 
