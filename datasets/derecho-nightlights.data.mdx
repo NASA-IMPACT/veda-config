@@ -38,15 +38,17 @@ layers:
       - 0
       - 20
     sourceParams:
+      resampling: null
+      bidx: 1
       colormap_name: rwb
       rescale:
-        - -150
-        - 150
+        - -255
+        - 255
       nodata: -999
     legend:
       type: gradient
-      min: "-150"
-      max: "150"
+      min: "-255"
+      max: "255"
       stops:
         - "#ff0000" #Pure Red
         - "#ff5454" #Bright Coral Red
