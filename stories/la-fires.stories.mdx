@@ -1,7 +1,7 @@
 ---
 id: 'la-fires'
 name: Fanning the Flames - Unraveling the Causes of the 2025 LA Wildfires.
-description:  thinking
+description:   
 media:
   src: ::file ./la-fires-010825_NO_cali-fires_feat.png
   alt: Flying sparks in the Pacific Palisades neighborhood of Los Angeles on January 7.
@@ -38,13 +38,29 @@ taxonomy:
       <sup>[3]</sup> The National Aeronautics and Space Administration (NASA)
     </p>
     <p style={{ fontSize: '0.9em', fontStyle: 'italic' }}>
-    <mark>🚧 This Data Story presents work in progress and not peer-reviewed results! 🚧</mark>
+    <mark> This Data Story presents work in progress and not peer-reviewed results</mark>
     </p>
   </Prose>
 </Block>
     
 
 <Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
+  <Figure>
+  <Map
+    datasetId='la-fires-parcels'
+    layerId='la-fires-parcels'
+    dateTime='2025-01-09'
+    zoom={14.5}
+    center={[-118.14041, 34.1926]}
+    compareDateTime='2025-01-08'
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+    Percent damage by parcel from the 2025 Eaton Fire in Altadena, California as determined by the LA County Assessor's Office, compared to high-resolution commercial satellite imagery of the ongoing fire from MAXAR.
+  </Caption>
+</Figure>
   <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
     <p>
     ### Devastating Wildfires in Los Angeles
@@ -234,25 +250,32 @@ taxonomy:
 <Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
   <Figure>
   <Map
-    datasetId='la-fires-parcels'
-    layerId='la-fires-parcels'
-    dateTime='2025-01-09'
-    zoom={14.5}
-    center={[-118.14041, 34.1926]}
-    compareDateTime='2025-01-08'
+    datasetId='la-fires-gedi'
+    layerId='la-fires-gedi'
+    dateTime='2025-01-07'
+    zoom={9}
+    center={[-118.1041, 34.1966]}
   />
   <Caption
     attrAuthor='NASA'
     attrUrl='https://nasa.gov/'
   >
-    Percent damage by parcel from the 2025 Eaton Fire in Altadena, California as determined by the LA County Assessor's Office, compared to high-resolution commercial satellite imagery of the ongoing fire from MAXAR.
+  Aboveground biomass density (AGBD; Mg ha-1) predictions from NASA's GEDI Level-4A footprint product over Eaton Fire perimeter.
   </Caption>
 </Figure>
   <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
    <p>
    ### Quantifying Carbon Loss from the LA Wildfires Using NASA’s Global Ecosystem Dynamics Investigation (GEDI)
     NASA’s GEDI footprint Above-Ground Biomass Density (AGBD) Level-4 (L4A) product is innovatively used to estimate the carbon loss and associated CO₂ emissions for the Palisades and Eaton Fires. The GEDI L4A dataset provides above-ground biomass density predictions in units of megagrams per hectare (Mg/ha), enabling quantification of biomass loss due to wildfires. Based on the availability of GEDI data (2019-2023), we calculated pre-fire above-ground forest biomass and derived emissions under two scenarios, Scenario 1: All above-ground forest biomass is assumed lost, Scenario 2: Burn rates from USGS fire data are applied.
-    1 Teragram (Tg) of CO₂ is equivalent to 1 million metric tons of CO₂. This massive amount of carbon dioxide can be compared to everyday activities and global emissions:
+    1 Teragram (Tg) of CO₂ is equivalent to 1 million metric tons of CO₂. 
+    </p>
+  </Prose>
+</Block>   
+
+ <Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
+  <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
+   <p>   
+    This massive amount of carbon dioxide can be compared to everyday activities and global emissions:
     <u>The Palisades Fire emissions:</u>
     - Scenario 1 (0.8074 Tg CO₂): Equivalent to the annual CO₂ emissions of about 174,000 average passenger vehicles.
     - Scenario 2 (0.6973 Tg CO₂): Similar to the yearly CO₂ emissions from electricity use in approximately 120,000 homes.
@@ -262,6 +285,14 @@ taxonomy:
     These emissions from just two fires represent a significant portion of a small country's annual CO₂ emissions or the amount of carbon dioxide sequestered by millions of trees over several years. This highlights the substantial impact wildfires can have on carbon release and underscores the importance of forest management and fire prevention strategies. 
    </p>
   </Prose>
+     <Figure>
+      <Image
+      src={new URL('./la-fires-CO_Jan6.png', import.meta.url).href}
+    />
+    <Caption attrAuthor='mlrc.gov' attrUrl='https://airs.jpl.nasa.gov/map/?p=1&c=-115.98653301540332,34.69427382950362&r=0.0087890625&t=2025-01-08&l=56:0,55:0,1:0,30&cl=1'>
+      Carbon monoxide levels detected by the Atmospheric Infrared Sounder (AIRS) on NASA's Aqua satellite over Los Angeles, comparing pre-wildfire conditions on January 6, 2025, to post-wildfire conditions on January 9, 2025.
+    </Caption>
+  </Figure>
 </Block>
 
 <Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
