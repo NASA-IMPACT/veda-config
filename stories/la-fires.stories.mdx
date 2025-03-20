@@ -61,7 +61,7 @@ taxonomy:
     Percent damage by parcel from the 2025 Eaton Fire in Altadena, California as determined by the LA County Assessor's Office, compared to high-resolution commercial satellite imagery of the ongoing fire from MAXAR.
   </Caption>
 </Figure>
-  <Prose style={{ textAlign: 'justify', flex: '1', alignItems: 'center', marginLeft: '0.2rem'}}>
+  <Prose style={{ textAlign: 'justify', flex: '1', alignItems: 'center'}}>
     <p>
     ### Devastating Wildfires in Los Angeles
     In early January 2025, Los Angeles faced devastating wildfires that claimed at least 29 lives, forced over 200,000 evacuations, and destroyed more than 18,000 structures. The Palisades and Eaton fires, the two largest blazes, scorched over 37,000 acres combined. While the exact causes remain under investigation, extreme environmental conditions—particularly Santa Ana winds, prolonged dry periods, and the accumulation of flammable vegetation—were critical in fueling the fires' intensity and swift progression. 
@@ -163,9 +163,9 @@ taxonomy:
    <Figure>
       <Image
       src={new URL('./la-fires-Eaton_nlcd_percentages_by_year.png', import.meta.url).href}
-      style={{ maxWidth: '80%', height: 'auto' }}
+      style={{ maxWidth: '120%', height: 'auto' }}
     />
-    <Caption attrAuthor='mlrc.gov' attrUrl='https://www.mrlc.gov/'>
+    <Caption>
       The NLCD land cover changes within Eaton Region, LA from 2001-2021
     </Caption>
   </Figure>
@@ -254,8 +254,8 @@ taxonomy:
     datasetId='la-fires-gedi'
     layerId='la-fires-gedi'
     dateTime='2025-01-07'
-    zoom={5}
-    center={[-118.1041, 34.1966]}
+    zoom={2}
+    center={[-118.0897, 34.212]}
   />
   <Caption
     attrAuthor='NASA'
@@ -292,8 +292,9 @@ taxonomy:
   <Figure>
       <Image
       src={new URL('./la-fires-CO.png', import.meta.url).href}
+      style={{ maxWidth: '120%', height: 'auto' }}
     />
-    <Caption attrAuthor='NASA' attrUrl='https://www.jpl.nasa.gov/missions/atmospheric-infrared-sounder-airs/'>
+    <Caption attrUrl='https://www.jpl.nasa.gov/missions/atmospheric-infrared-sounder-airs/'>
       Carbon monoxide (CO) levels detected by the Atmospheric Infrared Sounder (AIRS) on NASA's Aqua satellite over Los Angeles, comparing pre-wildfire conditions on January 6, 2025, to post-wildfire conditions on January 9, 2025.
     </Caption>
   </Figure>
@@ -303,7 +304,7 @@ taxonomy:
   <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
    <p>
    ### Wildfires Encroaching on Critical Habitats
-   Significant Ecological Areas (SEAs) are designated for their irreplaceable biological resources and play a vital role in preserving the county’s biodiversity by maintaining genetic and physical diversity that supports various plant and animal species. These areas are essential for ensuring ecosystems can sustain themselves in the future. However, the recent wildfires in LA have encroached upon SEA habitats, disrupting species migration and weakening ecosystem resilience. The destruction of these habitats, particularly in regions already vulnerable due to drought and urbanization, further reduces the SEAs' ability to provide crucial ecosystem services.
+    Significant Ecological Areas (SEAs) and Coastal Resource Areas are critical designations in LA County aimed at preserving irreplaceable biological and coastal resources. Los Angeles County has identified 62 SEAs, which are officially designated zones that support biodiversity by maintaining genetic and physical diversity essential for sustaining ecosystems. These areas include habitats for rare and endangered species, wildlife corridors, and natural biotic communities, such as the Santa Clara River SEA—the last major unchanneled river in the county. Coastal Resource Areas encompass vital coastal ecosystems such as wetlands, dunes, beaches, and significant portions of the Santa Monica Mountains. These areas provide essential services like biodiversity support, water quality maintenance, and climate regulation. LA County's beaches stretch approximately 25 miles and attract more than 50 million annual visitors, playing a major role in the region's economy. However, the recent wildfires in LA have encroached upon SEA habitats, disrupting species migration and weakening ecosystem resilience. The destruction of these habitats, particularly in regions already vulnerable due to drought and urbanization, further reduces the SEAs' ability to provide crucial ecosystem services.  
    </p>
   </Prose>
 <Figure>
@@ -374,7 +375,7 @@ taxonomy:
   </Prose>
 </Block>
 
-<Block style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
+<Block style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '85%' }}>
   <Prose style={{ flex: '1', paddingRight: '20px', textAlign: 'justify' }}>
     <p>
      ### Data Access
