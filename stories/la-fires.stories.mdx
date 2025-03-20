@@ -44,8 +44,8 @@ taxonomy:
 </Block>
     
 
-<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
-  <Figure>
+<Block style={{justifyContent: 'space-between', alignItems: 'center', margin: '0 auto', width: '95%' }}>
+<Figure style={{ flex: '1'}}>
   <Map
     datasetId='la-fires-parcels'
     layerId='la-fires-parcels'
@@ -61,7 +61,7 @@ taxonomy:
     Percent damage by parcel from the 2025 Eaton Fire in Altadena, California as determined by the LA County Assessor's Office, compared to high-resolution commercial satellite imagery of the ongoing fire from MAXAR.
   </Caption>
 </Figure>
-  <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
+  <Prose style={{ textAlign: 'justify', flex: '1', alignItems: 'center'}}>
     <p>
     ### Devastating Wildfires in Los Angeles
     In early January 2025, Los Angeles faced devastating wildfires that claimed at least 29 lives, forced over 200,000 evacuations, and destroyed more than 18,000 structures. The Palisades and Eaton fires, the two largest blazes, scorched over 37,000 acres combined. While the exact causes remain under investigation, extreme environmental conditions—particularly Santa Ana winds, prolonged dry periods, and the accumulation of flammable vegetation—were critical in fueling the fires' intensity and swift progression. 
@@ -110,7 +110,7 @@ taxonomy:
   <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
    <p>
    ### Prolonged Dry Conditions
-   Los Angeles County has experienced an extended period of dry conditions over the past year, as illustrated in the figure, which presents rainfall data from in-situ observations at ASOS (Automated Surface Observing System) stations across the region (Fig: time series plot for precipitation). One year ago, Los Angeles faced severe flooding and landslides, which effectively ended a long-term drought that had persisted for several years. The sudden influx of moisture led to widespread vegetation growth, as plants rapidly absorbed the available water. However, over the past year, a significant lack of rainfall has caused this vegetation to dry out, transforming it into highly flammable fuel. This prolonged period of arid conditions, combined with the abundance of dried vegetation, has greatly increased the region’s wildfire risk. 
+   Los Angeles County has experienced an extended period of dry conditions over the past year, as illustrated in the figure, which presents rainfall data from in-situ observations at ASOS (Automated Surface Observing System) stations across the region. One year ago, Los Angeles faced severe flooding and landslides, which effectively ended a long-term drought that had persisted for several years. The sudden influx of moisture led to widespread vegetation growth, as plants rapidly absorbed the available water. However, over the past year, a significant lack of rainfall has caused this vegetation to dry out, transforming it into highly flammable fuel. This prolonged period of arid conditions, combined with the abundance of dried vegetation, has greatly increased the region’s wildfire risk. 
    </p>
   </Prose>
   <Figure>
@@ -253,7 +253,7 @@ taxonomy:
     datasetId='la-fires-gedi'
     layerId='la-fires-gedi'
     dateTime='2025-01-07'
-    zoom={9}
+    zoom={5}
     center={[-118.1041, 34.1966]}
   />
   <Caption
@@ -272,30 +272,30 @@ taxonomy:
   </Prose>
 </Block>   
 
-<Block>
-  <Prose>
+<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
+  <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
     <p>   
       This massive amount of carbon dioxide can be compared to everyday activities and global emissions:
       <br /><br />
       <u>The Eaton Fire emissions:</u>
-      <br />
       - Scenario 1 (1.062951 Tg CO₂): Comparable to the CO₂ absorbed by about 17.5 million tree seedlings grown for 10 years.
-      <br />
       - Scenario 2 (0.8718654 Tg CO₂): Equivalent to the carbon sequestered by approximately 1.1 million acres of U.S. forests in one year.
       <br /><br />
       <u>The Palisades Fire emissions:</u>
-      <br />
       - Scenario 1 (0.8074 Tg CO₂): Equivalent to the annual CO₂ emissions of about 174,000 average passenger vehicles.
-      <br />
       - Scenario 2 (0.6973 Tg CO₂): Similar to the yearly CO₂ emissions from electricity use in approximately 120,000 homes.
       <br /><br />
       These emissions from just two fires represent a significant portion of a small country's annual CO₂ emissions or the amount of carbon dioxide sequestered by millions of trees over several years. This highlights the substantial impact wildfires can have on carbon release and underscores the importance of forest management and fire prevention strategies. 
     </p>
-    <Image src={new URL('./la-fires-CO_Jan6.png', import.meta.url).href} />
-    <p>Carbon monoxide levels detected by AIRS on NASA's Aqua satellite over Los Angeles on January 6, 2025 (pre-wildfire conditions).</p>
-    <Image src={new URL('./la-fires-CO_Jan9.png', import.meta.url).href} />
-    <p>Carbon monoxide levels detected by AIRS on NASA's Aqua satellite over Los Angeles on January 9, 2025 (post-wildfire conditions).</p>
   </Prose>
+  <Figure>
+      <Image
+      src={new URL('./la-fires-CO.png', import.meta.url).href}
+    />
+    <Caption attrAuthor='NASA' attrUrl='https://www.jpl.nasa.gov/missions/atmospheric-infrared-sounder-airs/'>
+      Carbon monoxide (CO) levels detected by the Atmospheric Infrared Sounder (AIRS) on NASA's Aqua satellite over Los Angeles, comparing pre-wildfire conditions on January 6, 2025, to post-wildfire conditions on January 9, 2025.
+    </Caption>
+  </Figure>
 </Block>
 
 <Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
