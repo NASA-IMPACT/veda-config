@@ -1,0 +1,184 @@
+---
+id: la-fires-frp
+name: 'Fire Radiative Power (FRP) - 2025 LA Fires'
+description: "Maximum daily FRP during the week of the 2025 Palisades and Eaton Fires in Southern California."
+media:
+  src: ::file ./LA-Fires-background.png
+  alt: Planet Labs Commercial Satellite Imagery of the Eaton Fire (January 9, 2025).
+  author:
+    name: NASA CDSA - Planet Labs
+taxonomy:
+  - name: Topics
+    values:
+      - Disasters
+      - Wildfire
+  - name: Source
+    values:
+      - MODIS
+infoDescription: |
+  ::markdown
+    - **Temporal Extent:** January 6-12, 2025
+    - **Temporal Resolution:** Daily
+    - **Spatial Extent:** Global
+    - **Spatial Resolution:** 0.1 x 0.1 degree
+    - **Data Units:** W m-2
+    - **Data Type:** Research
+    - **Data Latency:** N/A
+
+layers:
+  - id: la-fires-frp
+    stacCol: la-fires-frp
+    name: Fire Radiative Power (FRP) - 2025 LA Fires
+    type: raster
+    description: 'Maximum daily FRP during the week of the 2025 Palisades and Eaton Fires in Southern California.'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      colormap_name: afmhot_r    
+      rescale:
+        - 0
+        - 100
+    legend:
+      type: gradient
+      unit:
+        label: W m-2
+      min: 0
+      max: 100
+      stops: 
+        - "#FFFFFF"
+        - "#FFFFC6"
+        - "#FFFF8E"
+        - "#FFD555"
+        - "#FF9C1C"
+        - "#E36300"
+        - "#AA2B00"
+        - "#710000"
+        - "#390000"
+        - "#000000"
+    info:
+        source: MODIS
+        spatialExtent: Global
+        temporalResolution: Daily
+        unit: W m-2
+
+---
+
+<Block>
+  <Prose>
+  ## Dataset Details
+    - **Temporal Extent:** January 6-12, 2025
+    - **Temporal Resolution:** Daily
+    - **Spatial Extent:** Global
+    - **Spatial Resolution:** 0.1 x 0.1 degree
+    - **Data Units:** W m-2
+    - **Data Type:** Research
+    - **Data Latency:** N/A
+  </Prose>
+<Figure>
+  <Map
+    datasetId='la-fires-frp'
+    layerId='la-fires-frp'
+    dateTime='2025-01-09'
+    zoom={8}
+    center={[-118.3041, 33.9966]}
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+    Maximum FRP in the Los Angeles area on January 9, 2025.
+  </Caption>
+</Figure>
+</Block>
+
+<Block>
+  <Prose>
+
+  ### About
+
+  The Fire Radiative Power (FRP) dataset is derived from the MODIS (Moderate Resolution Imaging Spectroradiometer) sensor aboard the Terra and Aqua satellites. FRP measures the energy released by active fires, providing a quantitative estimate of fire intensity and biomass burning. This dataset highlights the maximum FRP values detected daily during the peak of the 2025 Palisades and Eaton Fires in Southern California.  
+  
+  </Prose>
+</Block>
+
+<Block>
+  
+  <Prose>
+
+  ### What MODIS FRP Data Offers
+
+  * Global Fire Monitoring: MODIS provides near-real-time fire observations across the globe, detecting wildfires and controlled burns.
+  * Fire Intensity Estimation: FRP values indicate the energy output of fires, which helps in assessing fire behavior and severity.
+  * Climate and Atmospheric Research: FRP data contributes to studies on smoke emissions, air quality, and carbon cycle modeling.
+  * Disaster Response and Management: Fire radiative power helps first responders and policymakers track wildfire progression and allocate resources effectively.
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ### Access the Data
+
+  The MODIS FRP dataset is publicly available via:
+
+  * [NASA FIRMS (Fire Information for Resource Management System)](https://firms.modaps.eosdis.nasa.gov/)
+
+  * [NASA Earthdata](https://earthdata.nasa.gov/)
+
+  * [MODIS Active Fire Products](https://modis.gsfc.nasa.gov/data/dataprod/mod14.php)
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    
+  ### Citing this Dataset
+
+  NASA LP DAAC, 2025. MODIS/Terra and Aqua Fire Radiative Power Data.
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## Disclaimer
+
+  All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
+  
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+
+  ### Key Publications
+  
+  Giglio, L., J. T. Randerson, and G. R. van der Werf (2013). Analysis of daily, monthly, and annual burned area using the fourth-generation global fire emissions database (GFED4). Journal of Geophysical Research: Biogeosciences, 118(1), 317-328.https://doi.org/10.1002/jgrg.20042
+  
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## Data Stories Using This Dataset
+  
+  **<Link to={"/stories/la-fires"}>Fanning the Flames</Link>**
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## License
+  
+  [Creative Commons Attribution 1.0 International](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC BY 1.0)
+
+  </Prose>
+</Block>
+
