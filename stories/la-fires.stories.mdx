@@ -1,13 +1,13 @@
 ---
 id: 'la-fires'
-name: Fanning the Flames - Unraveling the Causes of the 2025 LA Wildfires
-description:   
+name: Fanning the Flames 
+description: Unraveling the Causes of the 2025 LA Wildfires 
 media:
   src: ::file ./la-fires-010825_NO_cali-fires_feat.png
   alt: Flying sparks in the Pacific Palisades neighborhood of Los Angeles on January 7.
   author:
-    name: Ethan Swope/AP photo
-pubDate: 2025-03-28T00:00
+    name: Ethan Swope/AP
+pubDate: 2025-03-20T00:00
 taxonomy:
   - name: Topics
     values:
@@ -38,7 +38,7 @@ taxonomy:
       <sup>[3]</sup> The National Aeronautics and Space Administration (NASA)
     </p>
     <p style={{ fontSize: '0.9em', fontStyle: 'italic' }}>
-    This Data Story presents work in progress and not peer-reviewed results.
+    <mark>🚧 This Data Story presents work in progress and not peer-reviewed results! 🚧</mark>
     </p>
   </Prose>
 </Block>
@@ -117,8 +117,8 @@ taxonomy:
   </Prose>
   <Figure>
     <Chart
-      dataPath={new URL('./la-fires-precip.csv', import.meta.url).href}
-      dateFormat="%m/%d/%y %H:%M"
+      dataPath={new URL('./la-fires-daily_precipitation_accumulation.csv', import.meta.url).href}
+      dateFormat="%m/%d/%y
       idKey='Source'
       xKey='valid'
       yKey='p01m'
@@ -128,7 +128,7 @@ taxonomy:
       highlightLabel = 'Peak of LA Fires'
     />
     <Caption>
-    15 minute precipitation data taken from Automated Surface Observing System (ASOS) stations across Los Angeles County, California. 
+    Daily precipitation data taken from Automated Surface Observing System (ASOS) stations across Los Angeles County, California. 
     </Caption>
   </Figure>
 </Block>
