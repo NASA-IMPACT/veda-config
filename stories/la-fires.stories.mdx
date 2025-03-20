@@ -83,7 +83,7 @@ taxonomy:
       src={new URL('./la-fires-santa_winds.png', import.meta.url).href}
       style={{ maxWidth: '80%', height: 'auto' }}
     />
-    <Caption attrAuthor='National Weather Service' attrUrl='https://www.weather.gov/safety/wind-mountain-valley'>
+    <Caption>
       Developmenet of Santa Ana Winds. Courtesy of the National Weather Service.
     </Caption>
   </Figure>
@@ -123,8 +123,8 @@ taxonomy:
       xKey='valid'
       yKey='p01m'
       yAxisLabel='Precipitation (mm)'
-      highlightStart = '01/07/25 00:00'
-      highlightEnd = '01/11/25 23:59'
+      highlightStart = '01/07/25'
+      highlightEnd = '01/11/25'
       highlightLabel = 'Peak of LA Fires'
     />
     <Caption>
@@ -256,7 +256,7 @@ taxonomy:
     datasetId='la-fires-gedi'
     layerId='la-fires-gedi'
     dateTime='2025-01-07'
-    zoom={2}
+    zoom={12}
     center={[-118.0897, 34.212]}
   />
   <Caption
@@ -294,7 +294,7 @@ taxonomy:
   <Figure>
       <Image
       src={new URL('./la-fires-CO.png', import.meta.url).href}
-      style={{ maxWidth: '120%', height: 'auto' }}
+      style={{ maxWidth: '180%', height: 'auto' }}
     />
     <Caption attrUrl='https://www.jpl.nasa.gov/missions/atmospheric-infrared-sounder-airs/'>
       Carbon monoxide (CO) levels detected by the Atmospheric Infrared Sounder (AIRS) on NASA's Aqua satellite over Los Angeles, comparing pre-wildfire conditions on January 6, 2025, to post-wildfire conditions on January 9, 2025.
@@ -314,7 +314,7 @@ taxonomy:
     datasetId='la-fires-sea'
     layerId='la-fires-sea'
     dateTime='2025-01-01'
-    zoom={8}
+    zoom={10}
     center={[-118.74, 34.06]}
   />
   <Caption
