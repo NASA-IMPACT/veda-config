@@ -1,6 +1,6 @@
 ---
 id: 'la-fires'
-name: Fanning the Flames - Unraveling the Causes of the 2025 LA Wildfires.
+name: Fanning the Flames - Unraveling the Causes of the 2025 LA Wildfires
 description:   
 media:
   src: ::file ./la-fires-010825_NO_cali-fires_feat.png
@@ -38,7 +38,7 @@ taxonomy:
       <sup>[3]</sup> The National Aeronautics and Space Administration (NASA)
     </p>
     <p style={{ fontSize: '0.9em', fontStyle: 'italic' }}>
-    <mark> This Data Story presents work in progress and not peer-reviewed results</mark>
+    This Data Story presents work in progress and not peer-reviewed results.
     </p>
   </Prose>
 </Block>
@@ -276,23 +276,35 @@ taxonomy:
   <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
    <p>   
     This massive amount of carbon dioxide can be compared to everyday activities and global emissions:
+    <br />
     <u>The Palisades Fire emissions:</u>
     - Scenario 1 (0.8074 Tg CO₂): Equivalent to the annual CO₂ emissions of about 174,000 average passenger vehicles.
     - Scenario 2 (0.6973 Tg CO₂): Similar to the yearly CO₂ emissions from electricity use in approximately 120,000 homes.
+    <br />
     <u>The Eaton Fire emissions:</u>
     - Scenario 1 (1.062951 Tg CO₂): Comparable to the CO₂ absorbed by about 17.5 million tree seedlings grown for 10 years.
     - Scenario 2 (0.8718654 Tg CO₂): Equivalent to the carbon sequestered by approximately 1.1 million acres of U.S. forests in one year.
     These emissions from just two fires represent a significant portion of a small country's annual CO₂ emissions or the amount of carbon dioxide sequestered by millions of trees over several years. This highlights the substantial impact wildfires can have on carbon release and underscores the importance of forest management and fire prevention strategies. 
    </p>
   </Prose>
-     <Figure>
+  <div style={{display: 'flex', justifyContent: 'space-between'}}>
+    <Figure style={{width: '48%'}}>
       <Image
-      src={new URL('./la-fires-CO_Jan6.png', import.meta.url).href}
-    />
-    <Caption attrAuthor='mlrc.gov' attrUrl='https://airs.jpl.nasa.gov/map/?p=1&c=-115.98653301540332,34.69427382950362&r=0.0087890625&t=2025-01-08&l=56:0,55:0,1:0,30&cl=1'>
-      Carbon monoxide levels detected by the Atmospheric Infrared Sounder (AIRS) on NASA's Aqua satellite over Los Angeles, comparing pre-wildfire conditions on January 6, 2025, to post-wildfire conditions on January 9, 2025.
-    </Caption>
-  </Figure>
+        src={new URL('./la-fires-CO_Jan6.png', import.meta.url).href}
+      />
+      <Caption attrAuthor='mlrc.gov' attrUrl='https://airs.jpl.nasa.gov/map/?p=1&c=-115.98653301540332,34.69427382950362&r=0.0087890625&t=2025-01-08&l=56:0,55:0,1:0,30&cl=1'>
+        Carbon monoxide levels detected by AIRS on NASA's Aqua satellite over Los Angeles on January 6, 2025 (pre-wildfire conditions).
+      </Caption>
+    </Figure>
+    <Figure style={{width: '48%'}}>
+      <Image
+        src={new URL('./la-fires-CO_Jan9.png', import.meta.url).href}
+      />
+      <Caption attrAuthor='mlrc.gov' attrUrl='https://airs.jpl.nasa.gov/map/?p=1&c=-115.98653301540332,34.69427382950362&r=0.0087890625&t=2025-01-08&l=56:0,55:0,1:0,30&cl=1'>
+        Carbon monoxide levels detected by AIRS on NASA's Aqua satellite over Los Angeles on January 9, 2025 (post-wildfire conditions).
+      </Caption>
+    </Figure>
+  </div>
 </Block>
 
 <Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
