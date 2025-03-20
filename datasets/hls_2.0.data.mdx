@@ -19,11 +19,19 @@ taxonomy:
       - ESA
 infoDescription: |
   ::markdown
-    - Temporal Extent: 2013 - present    
+    The Landsat (HLSL30) and Sentinel-2 (HLSS30) collections are processed separately and can be viewed in an orbit-wise fashion by selecting a date. There will not be imagery for all areas on every day so you may need to toggle between several days to find suitable imagery for your area of interest.
+
+    ## Dataset Details:
+
+    - Temporal Extent: 
+      - HLSL30: 2013 - present    
+      - HLSS30: 2015 - present
     - Temporal Resolution: revisit ~2-3 days    
     - Spatial Extent: global  
     - Spatial Resolution: 30 x 30 meters    
-    - Data Latency: <5 days        
+    - Data Latency: <5 days
+
+
 layers:
   - id: HLSL30_2.0_true_color
     type: cmr
@@ -127,7 +135,9 @@ layers:
 
   ## Dataset Details
   - **Temporal Extent:** 2013-present
-  - **Temporal Resolution:** Revisit every 2-3 days
+  - **Temporal Extent:** 
+      - HLSL30: April 2013 - present    
+      - HLSS30: December 2015 - present
   - **Spatial Extent:** Global
   - **Spatial Resolution:** 30 x 30 meters
   </Prose>
@@ -136,14 +146,14 @@ layers:
     datasetId='HLS_2.0'
     layerId='HLSL30_2.0_true_color'
     dateTime='2024-10-01'
-    zoom={7}
-    center={[-92.1265,46.8367]}
+    zoom={11}
+    center={[-90.977,47.5905]}
   />
   <Caption
     attrAuthor='NASA'
     attrUrl='https://nasa.gov/'
   >
-  HLSL30 imagery from October 1, 2024 over western Lake Superior.
+  HLSL30 imagery from October 1, 2024 showing fall foliage in the North Shore Highlands in Northern Minnesota, US
   </Caption>
 </Figure>
 </Block>
