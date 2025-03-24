@@ -2,7 +2,6 @@
 id: windgusts-derecho
 name: 'NCEI Interpolated Wind Gusts for the May 12th, 2022 Derecho'
 description: "NCEI Storm Events Database Wind Gusts that are Interpolated for the Derecho of May 12th, 2022"
-
 media:
   src: ::file ./derecho-background.jpg
   alt: Intense derecho thunderstorm as it sweeps across farmland on September 23, 2018
@@ -18,6 +17,16 @@ taxonomy:
   - name: Source
     values:
       - NCEI
+infoDescription: |
+  ::markdown
+  - **Temporal Extent:** May 12, 2022
+  - **Temporal Resolution:** Daily
+  - **Spatial Extent:** Northern Plains region
+  - **Spatial Resolution:** N/A
+  - **Data Units:** Miles Per Hour (mph)
+  - **Data Type:** Research
+  - **Data Latency:** N/A 
+
 layers:
   - id: windgusts-derecho
     stacCol: windgusts-derecho
@@ -34,7 +43,7 @@ layers:
         - 75
         - 100
     legend:
-      type: categorical
+      type: gradient
       stops:
         - "#f7fcfd" #Very Pale Cyan 
         - "#bfd3e6" #Pastel Blue
