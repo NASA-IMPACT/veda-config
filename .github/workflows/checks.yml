@@ -83,7 +83,7 @@ jobs:
         run: yarn test
 
   playwright_test:
-    timeout-minutes: 90
+    timeout-minutes: 60
     needs: prep
     runs-on: ubuntu-latest
     steps:
@@ -110,7 +110,7 @@ jobs:
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
     - name: Run Playwright tests
-      run: MAPBOX_TOKEN="${{secrets.MAPBOX_TOKEN}}" yarn test:e2e  --workers=2
+      run: MAPBOX_TOKEN="${{secrets.MAPBOX_TOKEN}}" yarn test:e2e
     - uses: actions/upload-artifact@v4
       if: always()
       with:
