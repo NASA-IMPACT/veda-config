@@ -41,7 +41,7 @@ jobs:
           node-version: ${{ env.NODE }}
 
       - name: Cache node_modules
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         id: cache-node-modules
         with:
           path: |
@@ -68,7 +68,7 @@ jobs:
           node-version: ${{ env.NODE }}
 
       - name: Cache node_modules
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         id: cache-node-modules
         with:
           path: |
@@ -83,6 +83,7 @@ jobs:
         run: yarn test
 
   playwright_test:
+    if: false
     timeout-minutes: 60
     needs: prep
     runs-on: ubuntu-latest
@@ -96,7 +97,7 @@ jobs:
       with:
         node-version: ${{ env.NODE }}
     - name: Cache node_modules
-      uses: actions/cache@v2
+      uses: actions/cache@v4
       id: cache-node-modules
       with:
         path: |

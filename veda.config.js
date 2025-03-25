@@ -130,12 +130,12 @@ module.exports = {
       },
     },
   },
-  
+
   booleans: {
     'externalLinksInNewTab': true,
   },
   navItems: {
-    mainNavItems: defaultMenuLinks,
+    headerNavItems: defaultMenuLinks,
     subNavItems: subNavItems
   },
   cookieConsentForm: {
