@@ -3,15 +3,15 @@ id: HLS_2.0
 name: "Harmonized Landsat Sentinel-2 (HLS)"
 description: "The Harmonized Landsat Sentinel-2 (HLS) project provides consistent surface reflectance data from the Operational Land Imager (OLI) aboard the joint NASA/USGS Landsat 8 satellite and the Multi-Spectral Instrument (MSI) aboard Europe’s Copernicus Sentinel-2A, Sentinel-2B, and Sentinel-2C satellites."
 media:
-  src: ::file ./media/hls_arrowhead.jpg
-  alt: HLS imagery from autumn 2022 over the North Shore of Lake Superior
+  src: ::file ./media/hls_20241004_true_color.jpg
+  alt: HLS L30 and S30 true color composite from October 4, 2024 over Lake Superior
   author:
     name: NASA
     url:
 taxonomy:
   - name: Topics
     values:
-      - Imagery
+      - Satellite Imagery
   - name: Source
     values:
       - NASA
@@ -34,6 +34,9 @@ infoDescription: |
 
 layers:
   - id: HLSL30_2.0_true_color
+    media:
+      src: ::file ./media/hls_20241004_true_color.jpg
+      alt: HLS L30 and S30 true color composite from October 4, 2024 over Lake Superior
     type: cmr
     stacCol: HLSL30_2.0
     stacApiEndpoint: "https://cmr.earthdata.nasa.gov/stac/LPCLOUD"
@@ -56,6 +59,9 @@ layers:
       maxzoom: 18
       color_formula: Gamma RGB 3.5 Saturation 1.2 Sigmoidal RGB 15 0.35
   - id: HLSL30_2.0_false_color
+    media:
+      src: ::file ./media/hls_20241004_false_color.jpg
+      alt: HLS L30 and S30 false color composite from October 4, 2024 over Lake Superior
     type: cmr
     stacCol: HLSL30_2.0
     stacApiEndpoint: "https://cmr.earthdata.nasa.gov/stac/LPCLOUD"
@@ -78,6 +84,9 @@ layers:
       maxzoom: 18
       color_formula: Gamma RGB 2.5 Saturation 1.2 Sigmoidal RGB 10 0.35
   - id: HLSS30_2.0_true_color
+    media:
+      src: ::file ./media/hls_20241004_true_color.jpg
+      alt: HLS L30 and S30 true color composite from October 4, 2024 over Lake Superior
     type: cmr
     stacCol: HLSS30_2.0
     stacApiEndpoint: "https://cmr.earthdata.nasa.gov/stac/LPCLOUD"
@@ -100,6 +109,9 @@ layers:
       maxzoom: 18
       color_formula: Gamma RGB 3.5 Saturation 1.2 Sigmoidal RGB 15 0.35
   - id: HLSS30_2.0_false_color
+    media:
+      src: ::file ./media/hls_20241004_false_color.jpg
+      alt: HLS L30 and S30 false color composite from October 4, 2024 over Lake Superior
     type: cmr
     stacCol: HLSS30_2.0
     stacApiEndpoint: "https://cmr.earthdata.nasa.gov/stac/LPCLOUD"
@@ -134,12 +146,13 @@ layers:
   Two data products are generated as part of the HLS project: the L30 data product generated with Landsat 8 and Landsat 9 data, and the S30 product generated using Sentinel-2 data. These data are available through [Earthdata Search](https://search.earthdata.nasa.gov/search?q=HLS) as well as through NASA's Land Processes Distributed Active Archive Center ([LP DAAC](https://www.earthdata.nasa.gov/centers/lp-daac)). Feedback or questions about HLS data products can be made in the [Earthdata Forum for HLS](https://forum.earthdata.nasa.gov/viewtopic.php?f=7&t=618&sid=6c381c5ceb5d223e9910f8f6e7dce06e).
 
   ## Dataset Details
-  - **Temporal Extent:** 2013-present
   - **Temporal Extent:** 
       - HLSL30: April 2013 - present    
       - HLSS30: December 2015 - present
+  - **Temporal Resolution:** revisit ~2-3 days
   - **Spatial Extent:** Global
   - **Spatial Resolution:** 30 x 30 meters
+  - **Data Latency:** <5 days
   </Prose>
 <Figure>
   <Map
