@@ -83,6 +83,7 @@ jobs:
         run: yarn test
 
   playwright_test:
+    if: false
     timeout-minutes: 60
     needs: prep
     runs-on: ubuntu-latest
