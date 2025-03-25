@@ -55,7 +55,7 @@ jobs:
           node-version: ${{ env.NODE }}
 
       - name: Cache node_modules
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         id: cache-node-modules
         with:
           path: |
@@ -64,7 +64,7 @@ jobs:
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package.json') }}
 
       - name: Cache dist
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         id: cache-dist
         with:
           path: dist
@@ -93,7 +93,7 @@ jobs:
           submodules: recursive
 
       - name: Restore node_modules
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         id: cache-node-modules
         with:
           path: |
@@ -102,7 +102,7 @@ jobs:
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package.json') }}
 
       - name: Restore dist cache
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         id: cache-dist
         with:
           path: dist

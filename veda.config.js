@@ -130,7 +130,7 @@ module.exports = {
       },
     },
   },
-  
+
   booleans: {
     'externalLinksInNewTab': true,
   },
