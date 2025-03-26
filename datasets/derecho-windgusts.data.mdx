@@ -44,6 +44,10 @@ layers:
         - 100
     legend:
       type: gradient
+      unit:
+        label: mph
+      min: 70
+      max: 95
       stops:
         - "#f7fcfd" #Very Pale Cyan 
         - "#bfd3e6" #Pastel Blue
@@ -70,7 +74,7 @@ layers:
   </Prose>
   <Figure>
   <Map
-    center={[-97, 43]}
+    center={[-97, 44]}
     zoom={5.5}
     datasetId='windgusts-derecho'
     layerId='windgusts-derecho'
