@@ -90,7 +90,7 @@ taxonomy:
   </Figure>
 </Block>
 
-<Block>
+<Block type='wide'>
   <Prose>
   This derecho set a record for the number of powerful wind gusts, with straight-line winds reaching 60 to over 100 mph—similar in strength to a Category 1 hurricane or an EF0 to EF1 tornado. The storm linearly covered over 600 miles at speeds of 50 to 70 mph.  While local communities have weathered many derechos over the years, this storm was unique in its severity because there weren’t enough protections in place. Therefore, the damage was widespread, and emergency responders struggled to keep up. In southeastern South Dakota, the strong winds whipped dust clouds into the air, making it hard to see and slowing down rescue efforts. This event highlights the urgent need for stronger buildings, better weather protection, and improved disaster response protocols to help rural communities and farms prepare for and recover from future storms.
   </Prose>
@@ -103,21 +103,21 @@ taxonomy:
 
   * **Geostationary Operational Environmental Satellite (GOES) and Multi-Radar Multi-Sensor (MRMS) data**: Show the storm’s bow-shaped structure, which caused strong, damaging winds. They also reveal overshooting cloud tops, indicating powerful updrafts and intense storms.
 
-  * **Storm Prediction Center (SPC) storm reports and National Centers for Environmental Information (NCEI) storm events database**: Document the tornadoes, hail, and strong winds that contributed to the widespread damage.
+  * **Storm Prediction Center (SPC) storm reports and [National Centers for Environmental Information (NCEI) storm events database](https://www.earthdata.nasa.gov/dashboard/data-catalog/windgusts-derecho)**: Document the tornadoes, hail, and strong winds that contributed to the widespread damage.
 
-  * **National Weather Service Damage Assessment Toolkit (NWS-DAT)**: Provides a detailed visualization of tornado tracks, showing where tornadoes caused the most damage.
+  * **[National Weather Service Damage Assessment Toolkit (NWS-DAT)](https://www.earthdata.nasa.gov/dashboard/data-catalog/tornado-tracks-derecho)**: Provides a detailed visualization of tornado tracks, showing where tornadoes caused the most damage.
 
-  * **Integrated Multi-satellitE Retrievals for Global Precipitation Measurement (IMERG) data**: Highlights how heavy rain led to soil erosion and flooding.
+  * **[Integrated Multi-satellitE Retrievals for Global Precipitation Measurement (IMERG)](https://www.earthdata.nasa.gov/dashboard/data-catalog/GPM_3IMERGDF.v07) data**: Highlights how heavy rain led to soil erosion and flooding.
 
-  * **Visible Infrared Imaging Radiometer Suite (VIIRS) Night Lights data**: Reveals major power outages, especially in rural areas where losing electricity makes recovery harder.
+  * **[Visible Infrared Imaging Radiometer Suite (VIIRS) Night Lights data](https://www.earthdata.nasa.gov/dashboard/data-catalog/nightlights-derecho)**: Reveals major power outages, especially in rural areas where losing electricity makes recovery harder.
 
   * **EAGLE-I power outage data from Oak Ridge National Laboratory (ORNL)**: Tracks real-time power outages, providing insight into the extent of electrical disruptions across affected areas.
 
-  * **MAXAR satellite imagery**: Captures high-resolution views of the damage, offering a clear picture of the storm’s impact on infrastructure, agriculture, and communities.
+  * **[PlanetScope satellite imagery](https://www.earthdata.nasa.gov/dashboard/data-catalog/planet-derecho)**: Captures high-resolution views of the damage, offering a clear picture of the storm’s impact on infrastructure, agriculture, and communities.
 
-  * **Modern-Era Retrospective analysis for Research and Applications, Version 2 (MERRA-2) data**: Tracks dust and tiny particles in the air, illustrating how the storm worsened air quality and led to breathing problems for many people.
+  * **Modern-Era Retrospective analysis for Research and Applications, Version 2 (MERRA-2) and [Moderate Resolution Imaging Spectroradiometer (MODIS)](https://www.earthdata.nasa.gov/dashboard/data-catalog/modis-derecho) data**: Tracks dust and tiny particles in the air, illustrating how the storm worsened air quality and led to breathing problems for many people.
 
-  * **Global Land Data Assimilation System (GLDAS) data**: Helps assess soil moisture levels before and after the storm, showing how pre-existing drought conditions contributed to dust transport and how heavy rainfall may have impacted runoff and flooding.
+  * **Global Land Data Assimilation System (GLDAS) and [Western Land Data Assimilation System (WLDAS)](https://www.earthdata.nasa.gov/dashboard/data-catalog/wldas-derecho-sm) data**: Helps assess soil moisture levels before and after the storm, showing how pre-existing drought conditions contributed to dust transport and how heavy rainfall may have impacted runoff and flooding.
 
   * **Cropland Data Layer (CDL) from the U.S. Department of Agriculture (USDA)**: Assesses the storm's impact on different types of crops by analyzing changes in land cover and potential damage to agricultural areas.
   </Prose>
@@ -229,9 +229,9 @@ taxonomy:
   <Chapter
     center={[-107, 44]}
     zoom={4.5}
-    datasetId='darnah-flood'
-    layerId='darnah-gpm-daily'
-    datetime='2023-09-12'
+    datasetId='wldas-derecho-sm'
+    layerId='wldas-derecho-sm'
+    datetime='2022-05-11'
   >
   ### Drought Conditions Prior to Derecho Formation
 
@@ -251,9 +251,9 @@ taxonomy:
   <Chapter
     center={[-97.32, 42.6222]}
     zoom={12}
-    datasetId='darnah-flood'
-    layerId='darnah-gpm-daily'
-    datetime='2023-09-12'
+    datasetId='planet-derecho'
+    layerId='derecho-planet-hartington'
+    datetime='2022-05-13'
   >
   ### Nebraska
 
@@ -263,7 +263,7 @@ taxonomy:
 
   The storm’s intensity was clear from the damage it caused. A 300-foot 911 cell tower was completely twisted and mangled, as seen in satellite images, showing the power of the derecho’s winds.
 
-  MAXAR imagery helps track storm impacts by providing high-resolution satellite images with detailed panchromatic and multispectral capabilities. This level of detail allows scientists to monitor changes in vegetation, soil, and infrastructure before and after the storm with greater precision. Unlike lower-resolution satellites like MODIS, MAXAR imagery can capture wind-damaged crop rows, fallen trees, and areas of soil erosion in much finer detail, offering a clearer picture of storm-related damage.
+  PlanetScope imagery helps track storm impacts by providing high-resolution satellite images with detailed panchromatic and multispectral capabilities. This level of detail allows scientists to monitor changes in vegetation, soil, and infrastructure before and after the storm with greater precision. Unlike lower-resolution satellites, PlanetScope imagery can capture wind-damaged crop rows, fallen trees, and areas of soil erosion in much finer detail, offering a clearer picture of storm-related damage.
   <Figure>
     <Image
       src={new URL('./derecho-photo1.jpg', import.meta.url).href}
@@ -287,9 +287,9 @@ taxonomy:
   <Chapter
     center={[-97.21, 42.73972]}
     zoom={12}
-    datasetId='darnah-flood'
-    layerId='darnah-gpm-daily'
-    datetime='2023-09-12'
+    datasetId='modis-derecho'
+    layerId='modis-derecho'
+    datetime='2022-05-12'
   >
   ### Nebraska
 
@@ -310,9 +310,9 @@ taxonomy:
   <Chapter
     center={[-107, 44]}
     zoom={4.5}
-    datasetId='darnah-flood'
-    layerId='darnah-gpm-daily'
-    datetime='2023-09-12'
+    datasetId='modis-derecho'
+    layerId='modis-derecho'
+    datetime='2022-05-12'
   >
   ### MERRA-2 and MODIS Datasets
 
@@ -333,9 +333,9 @@ taxonomy:
   <Chapter
     center={[-96.9, 43.8250]}
     zoom={10}
-    datasetId='darnah-flood'
-    layerId='darnah-gpm-daily'
-    datetime='2023-09-12'
+    datasetId='windgusts-derecho'
+    layerId='windgusts-derecho'
+    datetime='2022-05-12'
   >
   ### South Dakota
 
@@ -366,9 +366,9 @@ taxonomy:
   <Chapter
     center={[-97.2, 43.55]}
     zoom={9}
-    datasetId='darnah-flood'
-    layerId='darnah-gpm-daily'
-    datetime='2023-09-12'
+    datasetId='nightlights-derecho'
+    layerId='nightlights-derecho'
+    datetime='2022-05-10'
   >
   ### South Dakota
 
@@ -378,8 +378,8 @@ taxonomy:
 
   To track these outages, VIIRS Night Lights data demonstrates images before and after the storm to show where power was lost. Unlike traditional outage reports that rely on self-reporting or utility records, VIIRS provides a clear, wide-area view of electricity disruptions.
 
-  * Red pixels indicate areas where power outages occurred.
-  * Blue pixels show areas that still have power.
+  * Blue pixels indicate areas where power outages occurred.
+  * Red pixels show areas that still have power.
   <Figure>
     <Image
       src={new URL('./derecho-photo19.jpg', import.meta.url).href}
@@ -394,9 +394,9 @@ taxonomy:
   <Chapter
     center={[-107, 44]}
     zoom={4.5}
-    datasetId='darnah-flood'
-    layerId='darnah-gpm-daily'
-    datetime='2023-09-12'
+    datasetId='nightlights-derecho'
+    layerId='nightlights-derecho'
+    datetime='2022-05-10'
   >
   ### EAGLE-I Data for Power Outages
     
@@ -432,9 +432,9 @@ taxonomy:
   <Chapter
     center={[-97.055, 44.7236]}
     zoom={13}
-    datasetId='darnah-flood'
-    layerId='darnah-gpm-daily'
-    datetime='2023-09-12'
+    datasetId='tornado-tracks-derecho'
+    layerId='tornado-tracks-derecho'
+    datetime='2022-05-12'
   >
   ### South Dakota
 
@@ -473,17 +473,15 @@ taxonomy:
   <Chapter
     center={[-96.5, 43.2022]}
     zoom={10}
-    datasetId='darnah-flood'
-    layerId='darnah-gpm-daily'
-    datetime='2023-09-12'
+    datasetId='planet-derecho'
+    layerId='derecho-planet-rockvalley'
+    datetime='2022-05-13'
   >
   ### Iowa
 
   #### ***Another Derecho Forms and Enters State-lines***
 
-  By 5:30 PM, a second derecho formed and entered northwestern Iowa and southeastern South Dakota at the same time. Although one brief tornado caused some damage, most of the destruction came from straight-line winds. Wind gusts of 70-90 mph knocked down power lines and wiped out farm buildings, affecting both crops and livestock facilities.
-
-  The derecho’s powerful winds lifted large amounts of dust, particulate matter (PM), and debris into the air, creating hazardous air conditions across the region. MERRA-2 imagery showed a spike in aerosol levels in northwestern Iowa, with dust and particles traveling hundreds of miles. This significantly worsened air quality far beyond the storm’s path.
+  By 5:30 PM, a second derecho formed and entered northwestern Iowa and southeastern South Dakota at the same time. Although one brief tornado caused some damage, most of the destruction came from straight-line winds. Wind gusts of 70–90 mph knocked down power lines and wiped out farm buildings, affecting both crops and livestock facilities. In Rock Valley, Iowa, the winds were so powerful they tore off the roof and walls of a hog confinement, underscoring the extreme force of the derecho.
   <Figure>
     <Image
       src={new URL('./derecho-photo9.jpg', import.meta.url).href}
@@ -507,9 +505,9 @@ taxonomy:
   <Chapter
     center={[-95.9, 44.873475]}
     zoom={9}
-    datasetId='darnah-flood'
-    layerId='darnah-gpm-daily'
-    datetime='2023-09-12'
+    datasetId='windgusts-derecho'
+    layerId='windgusts-derecho'
+    datetime='2022-05-12'
   >
   ### Minnesota
 
@@ -539,9 +537,9 @@ taxonomy:
   <Chapter
     center={[-96.3, 45.01278]}
     zoom={11}
-    datasetId='darnah-flood'
-    layerId='darnah-gpm-daily'
-    datetime='2023-09-12'
+    datasetId='tornado-tracks-derecho'
+    layerId='tornado-tracks-derecho'
+    datetime='2022-05-12'
   >
   ### Minnesota
 
@@ -563,9 +561,9 @@ taxonomy:
   <Chapter
     center={[-95.43, 45.8]}
     zoom={11}
-    datasetId='darnah-flood'
-    layerId='darnah-gpm-daily'
-    datetime='2023-09-12'
+    datasetId='tornado-tracks-derecho'
+    layerId='tornado-tracks-derecho'
+    datetime='2022-05-12'
   >
   ### Minnesota
 
@@ -595,13 +593,13 @@ taxonomy:
   <Chapter
     center={[-96.75, 46.2720583]}
     zoom={10}
-    datasetId='darnah-flood'
-    layerId='darnah-gpm-daily'
-    datetime='2023-09-12'
+    datasetId='windgusts-derecho'
+    layerId='windgusts-derecho'
+    datetime='2022-05-12'
   >
   ### North Dakota
 
-  #### ***Heavy Rain and Wind Gusts Persist***
+  #### ***Intense Wind Gusts Persist***
   
   Although North Dakota was on the northern edge of the derecho's path, the state still experienced strong wind gusts over 75 mph, along with isolated tornadoes and hail by 7:10 PM CST. The high winds caused damage to power infrastructure and buildings, while some rural areas reported crop losses due to wind-driven erosion and flooding. The Grand Forks National Weather Service documented widespread tree damage and structural impacts on the eastern side of North Dakota in the Red River Valley. Farmers in the affected areas faced soil erosion and planting delays, making recovery even more challenging.
   <Figure>
@@ -627,9 +625,9 @@ taxonomy:
   <Chapter
     center={[-97.1, 46.9]}
     zoom={9}
-    datasetId='darnah-flood'
-    layerId='darnah-gpm-daily'
-    datetime='2023-09-12'
+    datasetId='GPM_3IMERGDF.v07'
+    layerId='GPM_3IMERGDF'
+    datetime='2022-05-12'
   >
   ### North Dakota/Minnesota Border
 
@@ -780,7 +778,7 @@ taxonomy:
   </Figure>
 </Block>
 
-<Block>
+<Block type='wide'>
   <Prose>
   The economic impact reached beyond the crop fields. Many grain silos, irrigation systems, and farm buildings were also damaged or destroyed, adding to the financial burden on farmers. Even when grain silos weren’t completely destroyed, many lost power, making it impossible to ventilate and store grain properly. Despite community efforts to clear roads and restore power, the recovery process was slow and difficult, exposing the challenges rural areas face after such a disaster.
 
