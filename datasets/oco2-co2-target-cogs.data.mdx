@@ -1,0 +1,45 @@
+---
+featured: true
+id: oco2-co2-target-cogs
+name: 'Orbiting Carbon Observatory 2 (OCO-2) Target Mode Cloud-Optimized GeoTIFFs (COGs)'
+description: "NASA-JPL's OCO-2 (Orbiting Carbon Observatory 2) is an Earth satellite mission to study the sources and sinks of carbon dioxide globally. Target mode makes observations focused on a single location on the surface as the satellite passes by, allowing for more highly detailed sampling of areas of particular interest."
+media:
+  src: ::file media/OCO2_XCO2_v8_Jan_2017_UHD.max-1000x500.jpg
+  alt: Atmospheric CO₂ Concentration (January 2017)
+  author:
+    name: 
+    url: "https://ocov2.jpl.nasa.gov/galleries/data-products/#images-7"
+taxonomy:
+  - name: Topics
+    values:
+      - Urban
+  - name: Gas
+    values:
+      - CO₂
+layers:
+  - id: oco2-co2-target-cogs
+    stacCol: oco2-co2-target-cogs
+    name: 'Orbiting Carbon Observatory 2 (OCO-2) Target Mode Cloud-Optimized GeoTIFFs (COGs)'
+    description: "NASA-JPL's OCO-2 (Orbiting Carbon Observatory 2) is an Earth satellite mission to study the sources and sinks of carbon dioxide globally. Target mode makes observations focused on a single location on the surface as the satellite passes by, allowing for more highly detailed sampling of areas of particular interest."
+    type: raster
+    zoomExtent:
+      - 4
+      - 16
+    sourceParams:
+      bidx: 1
+      colormap_name: viridis
+      nodata: nan
+      rescale:
+        - 405
+        - 421
+    legend:
+      type: gradient
+      min: Less
+      max: More
+      stops:
+        - '#08041d'
+        - '#1f0a46'
+        - '#52076c'
+        - '#f57c16'
+        - '#f7cf39'
+---
