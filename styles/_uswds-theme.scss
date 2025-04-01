@@ -8,5 +8,11 @@
   $theme-utility-breakpoints: (
     'mobile-lg': true,
     'desktop': true
+  ),
+  $theme-typeface-tokens: (
+    baseFontFamily: (
+      'display-name': var(--base-font-family),
+      'cap-height': 364px
+    )
   )
 );
