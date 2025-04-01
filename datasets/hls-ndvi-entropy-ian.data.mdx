@@ -1,6 +1,6 @@
 ---
 id: hls-ndvi-ian
-name: "Harmonized Landsat and Sentinel-2 Normalized Difference Vegetation Index"
+name: "Harmonized Landsat and Sentinel-2 (Hurricane Ian)"
 description: "Using Harmonized Landsat and Sentinel-2 to Analyze the Aftermath of Hurricane Ian in Lee and Charlotte Counties in Florida."
 media:
   src: ::file ../stories/ian_goes_cover.jpg
@@ -65,11 +65,34 @@ layers:
       - "#d1e5f0"
       - "#4393c3"
       - "#053061"
+  - id: hls-entropy-difference
+    stacCol: hls-entropy-difference
+    name: Entropy Difference
+    type: raster
+    description: "Bitemporal Different with higher values indicating higher likelihood of change from before to after Ian."
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      colormap_name: bwr
+      rescale: -1,1
+    legend:
+      type: gradient
+      min: "-1"
+      max: "1"
+      stops:
+        - '#0000ff'
+        - '#6666ff'
+        - '#ccccff'
+        - '#ffffff'
+        - '#ffcccc'
+        - '#ff6666'
+        - '#ff0000'
 ---
 
 <Block type='wide'>
 <Prose>
-Harmonized Landsat Sentinel-2 (HLS) project from NASA is designed to integrate and harmonize data from multiple satellite sources, specifically the Operation Land Imager (OLI) on Landsat-8/9 and the Mult-Spectral Instrument (MSI) on Sentinel-2A/B satellites. This project aims to create a seamless surface reflectance record that is essential for various Earth Observation and monitoring tasks.
+Harmonized Landsat Sentinel-2 (HLS) project from NASA is designed to integrate and harmonize data from multiple satellite sources, specifically the Operation Land Imager (OLI) on Landsat-8/9 and the Mult-Spectral Instrument (MSI) on Sentinel-2A/B satellites. This project aims to create a seamless surface reflectance record that is essential for various Earth Observation and monitoring tasks. HLS project incorporates several advanced scientific methodologies and technologies to harmonize data from the Landsat and Sentinel-2 satellites such as atmospheric correction, geographic co-registration and common gridding, bidirectional reflectance distribution normalization, and cloud-shadow masking.
 
 - **Temporal Extent:** Landsat-9 2021-10-31; Sentinel-2B 2017-07-06
 - **Temporal Resolution:** ~3 days
@@ -80,8 +103,12 @@ Harmonized Landsat Sentinel-2 (HLS) project from NASA is designed to integrate a
 - **Data Latency:** 2 to 3 days
 
 
-**Scientific Details:**  
-HLS project incorporates several advanced scientific methodologies and technologies to harmonize data from the Landsat and Sentinel-2 satellites such as atmospheric correction, geographic co-registration and common gridding, bidirectional reflectance distribution normalization, and cloud-shadow masking. To calculate the Normalized Difference Vegetation Index (NDVI) from the HLS-2 Dataset, we utilize the red and near-infrared bands to assess vegetation health by applyin the formula NDVI = NIR - Red / NIR + Red, where 'NIR' refers to the near-infrared surface reflectance, and 'Red' denotes the red light surface reflectance, both harmonized from the Landsat and Sentinel satellites.
+**Scientific Details (NDVI):**<br />
+To calculate the Normalized Difference Vegetation Index (NDVI) from the HLS-2 Dataset, we utilize the red and near-infrared bands to assess vegetation health by applyin the formula NDVI = NIR - Red / NIR + Red, where 'NIR' refers to the near-infrared surface reflectance, and 'Red' denotes the red light surface reflectance, both harmonized from the Landsat and Sentinel satellites.
+ 
+**Scientific Details (Entropy):**<br />
+The calculation of entropy can be accomplished using the 'entropy' function from the 'scipy.stats' module, which computes the entropy of a distribution for given probability values. This function calculates the Shannon entropy. This metric quantifies the randomness or unpredictability inherent in the dataset's distribution from one time point to another.
+
 </Prose>
 </Block>
 
