@@ -35,11 +35,8 @@ layers:
       - 0
       - 20
     sourceParams:
-      rescale:
-        - 0
-        - 4000
       resampling: bilinear
-      bidx: [1,2,3]
+      asset_bidx: cog_default|1,2,3
     legend:
       type: categorical
       stops:
@@ -49,8 +46,7 @@ layers:
       datasetId: la-fires-HLS
       layerId: la-fires-HLS
       mapLabel: |
-        ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `${dateFns.format(datetime, 'dd LLL yyyy')} VS ${dateFns.format(compareDatetime, 'dd LLL yyyy')}`;
+        ::js ({ dateFns, datetime, compareDatetime }) => {return `${dateFns.format(datetime, 'dd LLL yyyy')}`;        
         }
     info:
         source: HLS
