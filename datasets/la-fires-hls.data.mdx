@@ -1,0 +1,178 @@
+---
+id: la-fires-HLS
+name: 'HLS False Color Imagery - 2025 LA Fires'
+description: "HLS L30 Satellite Imagery before and after the 2025 LA Fires."
+media:
+  src: ::file ./LA-Fires-background.png
+  alt: Planet Labs Commercial Satellite Imagery of the Eaton Fire (January 9, 2025).
+  author:
+    name: NASA CDSA - Planet Labs
+taxonomy:
+  - name: Topics
+    values:
+      - Disasters
+      - Wildfire
+  - name: Source
+    values:
+      - HLS
+infoDescription: |
+  ::markdown
+    - **Temporal Extent:** January 6-14, 2025
+    - **Temporal Resolution:** ~3 days
+    - **Spatial Extent:** Global with the exception of Antarctica
+    - **Spatial Resolution:** 30 m x 30 m 
+    - **Data Units:** Surface Reflectance 
+    - **Data Type:** Research
+    - **Data Latency:** 2 to 3 days
+
+layers:
+  - id: la-fires-HLS
+    stacCol: la-fires-HLS
+    name: MAXAR False Color Satellite Imagery (2025 Eaton Fire)
+    type: raster
+    description: 'Commercial MAXAR Satellite Imagery of the ongoing Eaton Fire in Los Angeles County, California on January 8, 2025.'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      rescale:
+        - 0
+        - 4000
+      resampling: bilinear
+      asset_bidx: cog_default|1,2,3
+    legend:
+      type: categorical
+      stops:
+        - color: "rgba(0, 0, 0, 0)" # using transparent for now to fix the issues with scrollytelling
+          label: "Imagery"
+    compare:
+      datasetId: la-fires-HLS
+      layerId: la-fires-HLS
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'dd LLL yyyy')}`;        
+        }
+    info:
+        source: HLS
+        spatialExtent: nearly global
+        temporalResolution: ~3 days
+        unit: Radiance
+
+---
+
+<Block>
+  <Prose>
+  ## Dataset Details
+    - **Temporal Extent:** January 6-14, 2025
+    - **Temporal Resolution:** ~3 days
+    - **Spatial Extent:** Global with the exception of Antarctica
+    - **Spatial Resolution:** 30 m x 30 m 
+    - **Data Units:** Surface Reflectance 
+    - **Data Type:** Research
+    - **Data Latency:** 2 to 3 days
+  </Prose>
+<Figure>
+  <Map
+    datasetId='la-fires-HLS'
+    layerId='la-fires-HLS'
+    dateTime='2025-01-06'
+    zoom={12}
+    center={[-118.15241, 34.1986]}
+    compareDateTime='2025-01-14'
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+    HLS satellite imagery of the Eaton Fire burn scar.
+  </Caption>
+</Figure>
+</Block>
+
+<Block>
+  <Prose>
+
+  ### About
+
+  x
+
+  </Prose>
+</Block>
+
+<Block>
+  
+  <Prose>
+
+  ### What HLS Data Offers
+
+  * X
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ### Access the Data
+
+  You can explore options for HLS data access at the HLS home page [HERE](https://hls.gsfc.nasa.gov/).
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    
+  ### Citing this Dataset
+
+  x
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## Disclaimer
+
+  All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
+  
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+
+  ### Key Publications
+  
+  x
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+
+  ### Other Publications
+  
+  x
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## Data Stories Using This Dataset
+  
+  **<Link to={"/stories/la-fires"}>Fanning the Flames</Link>**
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## License
+  
+  [Creative Commons Attribution 1.0 International](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC BY 1.0)
+
+  </Prose>
+</Block>
+
