@@ -17,9 +17,7 @@ taxonomy:
     values:
       - Fire Risk
       - Land Use
-  - name: Source
-    values:
-      - Community Contributed
+
 ---
 
 <Block style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
@@ -166,7 +164,7 @@ taxonomy:
   <Figure>
     <Map
       center={[-118.3823, 34.1334]}
-      zoom={8}
+      zoom={11}
       datasetId='la-fires-HLS'
       layerId='la-fires-HLS'
       dateTime='2025-01-06'
@@ -184,18 +182,6 @@ taxonomy:
    ### Burn Scars Using NASA’s HLS Data
      Burn scars can be effectively mapped using satellite imagery, particularly NASA’s Harmonized Landsat and Sentinel-2 (HLS) dataset. HLS integrates data from Landsat-8/9 Operational Land Imager (OLI) and Sentinel-2 MultiSpectral Instrument (MSI) to provide high-resolution, frequent observations of land surface changes. The 7-5-4 band combination—which includes Shortwave Infrared 2 (SWIR2), Near Infrared (NIR), and Red bands—is particularly useful for burn scar detection. It highlights variations in vegetation and soil properties, making fire-affected areas highly distinguishable. When visualized in a false-color composite (7-5-4), burn scars appear as dark brown or reddish areas, enabling clear identification and assessment of post-fire landscape recovery.
      </p> 
-  </Prose>
-</Block>
-
-<Block>
-  <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
-     <p>   
-   ### Advantages of HLS for Burn Scar Monitoring
-    - Frequent Monitoring: Near-daily HLS imagery enables rapid fire damage assessments.
-    - High Resolution: 30m imagery allows detailed burn severity and recovery analysis.
-    - Multispectral Insights: SWIR, NIR, and Red bands enhance burn scar and regrowth detection.
-    - Open Data Policy: NASA’s open data supports scientists, disaster teams, and environmental managers.
-     </p>  
   </Prose>
 </Block>
 
@@ -224,12 +210,6 @@ taxonomy:
 </Block>
 
 <Block>
-    <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
-     <p>   
-   ### TEMPO: High-Resolution Air Pollution Monitoring
-   TEMPO is a geostationary satellite instrument designed to monitor air pollutants across North America in unprecedented detail. Unlike traditional satellites that provide daily snapshots, TEMPO offers hourly measurements, enabling real-time tracking of pollution sources and transport patterns.
-    </p>
-  </Prose>
   <Figure>
     <Image
       src={new URL('./la-fires-TEMPO_NO2_animation.gif', import.meta.url).href}
@@ -240,12 +220,20 @@ taxonomy:
     TEMPO NO2 during the Eaton and Palisades Fires (2025).
     </Caption>
   </Figure> 
+  <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
+     <p>   
+   ### TEMPO: High-Resolution Air Pollution Monitoring
+   TEMPO is a geostationary satellite instrument designed to monitor air pollutants across North America in unprecedented detail. Unlike traditional satellites that provide daily snapshots, TEMPO offers hourly measurements, enabling real-time tracking of pollution sources and transport patterns.
+    </p>
+  </Prose>
 </Block>
 
 <Block>
-  <Prose>
+  <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
+    <p>
    ### EPA AirNow: Local Air Quality Conditions
    To complement TEMPO’s satellite-based observations, we utilized ground-based air quality data from the EPA’s AirNow system. During peak wildfire activity, particulate matter (PM) levels in Los Angeles reached alarming heights, with daily PM10 concentrations as high as 140 μg/m³ and PM2.5 levels reaching 35 μg/m³.
+   </p>
    </Prose>
 <Figure>
   <Chart
@@ -269,7 +257,7 @@ taxonomy:
     gridColor="#E0E0E0"
   />
   <Caption style={{ fontWeight: 'bold', fontSize: '16px', marginTop: '10px' }}>
-    Daily PM2.5 and PM10 values taken from EPA sensors across Los Angeles County, California.
+    Daily PM2.5 and PM10 taken from EPA's Air Now sensors across Los Angeles County, California.
   </Caption>
 </Figure>
 </Block>
