@@ -37,7 +37,7 @@ layers:
       layerId: darnah-flood
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `${dateFns.format(datetime, 'dd LLL yyyy')}`;        
+          return `${dateFns.format(datetime, 'LLL dd, yyyy')} VS ${dateFns.format(compareDatetime, 'LLL dd, yyyy')}`;
         }
     metadata:
       source: HLS
