@@ -1,0 +1,59 @@
+---
+id: la-fires-HLS
+name: 'HLS False Color Imagery - 2025 LA Fires'
+isHidden: true
+description: "HLS L30 Satellite Imagery before and after the 2025 LA Fires."
+media:
+  src: ::file ./LA-Fires-background.png
+  alt: Planet Labs Commercial Satellite Imagery of the Eaton Fire (January 9, 2025).
+  author:
+    name: NASA CDSA - Planet Labs
+taxonomy:
+  - name: Topics
+    values:
+      - Disasters
+      - Wildfire
+  - name: Source
+    values:
+      - HLS
+infoDescription: |
+  ::markdown
+    - **Temporal Extent:** January 6-14, 2025
+    - **Temporal Resolution:** ~3 days
+    - **Spatial Extent:** Global with the exception of Antarctica
+    - **Spatial Resolution:** 30 m x 30 m 
+    - **Data Units:** Surface Reflectance 
+    - **Data Type:** Research
+    - **Data Latency:** 2 to 3 days
+
+layers:
+  - id: la-fires-HLS
+    stacCol: la-fires-HLS
+    name: HLS False Color Satellite Imagery (2025 LA Fires)
+    type: raster
+    description: 'HLS Satellite Imagery showing the burn scars caused by the 2025 LA Fires.'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      resampling: bilinear
+      asset_bidx: cog_default|1,2,3
+      rescale: 0,4000
+    legend:
+      type: categorical
+      stops:
+        - color: "rgba(0, 0, 0, 0)" # using transparent for now to fix the issues with scrollytelling
+          label: "Imagery"
+    compare:
+      datasetId: la-fires-HLS
+      layerId: la-fires-HLS
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {return `${dateFns.format(datetime, 'dd LLL yyyy')}`;        
+        }
+    info:
+        source: HLS
+        spatialExtent: nearly global
+        temporalResolution: ~3 days
+        unit: Radiance
+
+---
