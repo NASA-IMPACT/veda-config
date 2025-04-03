@@ -149,6 +149,28 @@ layers:
       spatialExtent: Eastern United States
       temporalResolution: 1950-2021 Climatology
       unit: Binary
+
+  - id: blizzard-panhandle-hooker
+    stacCol: blizzard-panhandle-hooker
+    name: Panhandle Hooker Snowfall Footprint
+    type: raster
+    description: "Climatologically favored region of the USA that experiences snowfall from Panhandle Hooker cyclones."
+    initialDatetime: newest
+    zoomExtent:
+        - 0
+        - 20
+    sourceParams:
+      colormap: '{"0":[22,158,242,255]}'
+    legend:
+      type: categorical
+      stops:
+        - color: "#169ef2"
+          label: Panhandle Hooker Snowfall
+    info:
+      source: UAH
+      spatialExtent: Central United States
+      temporalResolution: 1950-2021 Climatology
+      unit: Binary
 ---
 
 <Block>
@@ -307,21 +329,39 @@ layers:
   </Figure>
 </Block>
 
+
 <Block>
   <Prose>
+  ## Panhandle Hooker
+  - **Spatial Extent:** Central United States<br />
+  <br />Panhandle Hookers are another type of low pressure system that can bring blizzard conditions to portions of CONUS. These cyclones originate in the Texas and Oklahoma Panhandles and are known for their distinctive ‘hooking’ storm track - hence their unique name. These systems typically form when a strong blast of cold Arctic air from the north (known as Blue Northers) collides with warm, moist air from the Gulf of America in the southern Plains. As the storm intensifies, it takes a northeastward "hook-shaped" trajectory, moving across the central Plains, the Midwest, and into the Great Lakes region. Panhandle Hookers most often bring heavy snow and blizzard conditions to parts of the central Great Plains, Upper Midwest, and Great Lakes, while the southern Plains and Ohio Valley may experience mixed precipitation or severe weather on the warmer side of the storm. These systems are a major source of snow for the central United States and, depending on their exact track, can also more uncommonly impact the northeastern U.S. with snow or ice. The strong winds and rapid intensification of these storms make them a hallmark of winter weather in the Plains and Midwest.
 
-  ### About
-
-  
   </Prose>
+<Figure>
+  <Map
+    center={[-98,50]}
+    zoom={2.5}
+    datasetId='blizzard-panhandle-hooker'
+    layerId='blizzard-panhandle-hooker'
+    dateTime='1950-01-01'
+  />
+    <Caption
+      attrAuthor='NASA'
+      attrUrl='https://nasa.gov/'
+    >
+      Climatologically favored region of the USA that experiences snowfall from Panhandle Hooker cyclones.
+    </Caption>
+  </Figure>
 </Block>
 
+
+
 <Block>
   <Prose>
   
-  ### Access the Data
+  ## Access the Data
 
-  This dataset was interpolated from confirmed blizzard reports from the [Storm Events Database](https://www.ncdc.noaa.gov/stormevents/), between 1950-2021. 
+  These data products were interpolated from confirmed blizzard reports from the [Storm Events Database](https://www.ncdc.noaa.gov/stormevents/), between 1950-2021. 
 
   </Prose>
 </Block>
@@ -339,7 +379,7 @@ layers:
 <Block>
   <Prose>
 
-  ### Key Publications
+  ## Key Publications
   
   Coleman, J. S. M., and R. M. Schwartz, 2017: An Updated Blizzard Climatology of the Contiguous United States (1959–2014): An Examination of Spatiotemporal Trends. J. Appl. Meteor. Climatol., 56, 173–187, https://doi.org/10.1175/JAMC-D-15-0350.1.
 
