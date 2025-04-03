@@ -7,7 +7,7 @@ media:
   alt: Flying sparks in the Pacific Palisades neighborhood of Los Angeles on January 7.
   author:
     name: Ethan Swope/AP
-pubDate: 2025-03-20T00:00
+pubDate: 2025-04-04T00:00
 taxonomy:
   - name: Topics
     values:
@@ -23,7 +23,7 @@ taxonomy:
 <Block style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
    <Prose style={{ textAlign: 'center', width: '100%' }}>
      <p style={{ marginBottom: '0.5em' }}>
-       Authors: Maheshwari Neelam <sup>[1]</sup>, Andrew Blackford <sup>[2]</sup>, Nidhi Jha, <sup>[2]</sup> and Brian Freitag <sup>[3]</sup>
+       Authors: Maheshwari Neelam <sup>[1]</sup>, Andrew Blackford <sup>[2]</sup>, Nidhi Jha <sup>[2]</sup>, and Brian Freitag <sup>[3]</sup>
      </p>
      <p style={{ marginBottom: '0.5em' }}>
        <sup>[1]</sup> Universities Space Research Association (USRA)
@@ -129,7 +129,7 @@ taxonomy:
 
 <ScrollytellingBlock>
   <Chapter
-    center={[-119.4606, 34.0823]}
+    center={[-119, 34.0823]}
     zoom={8}
     datasetId='nlcd-annual-conus'
     layerId='nlcd-annual-conus'
@@ -150,8 +150,8 @@ taxonomy:
   </Chapter>
 
   <Chapter
-    center={[-119.460, 34.2046]}
-    zoom={10.5}
+    center={[-119, 34.0823]}
+    zoom={8}
     datasetId='nlcd-annual-conus'
     layerId='nlcd-annual-conus'
     datetime='2021-01-01'
@@ -174,7 +174,7 @@ taxonomy:
   <Figure>
     <Map
       center={[-118.3823, 34.1334]}
-      zoom={9}
+      zoom={10}
       datasetId='la-fires-HLS'
       layerId='la-fires-HLS'
       dateTime='2025-01-06'
@@ -196,6 +196,12 @@ taxonomy:
 </Block>
 
 <Block>
+  <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
+     <p>   
+   ### Air Quality in Los Angeles: TEMPO and EPA AirNow Insights Post-Wildfires
+    The wildfires have significantly deteriorated air quality, with high concentrations of pollutants affecting both urban and suburban areas. To assess the impact, we utilized data from NASA's Tropospheric Emissions: Monitoring of Pollution (TEMPO) instrument and the EPA’s AirNow system. These datasets provide a comprehensive view of air pollution levels, both spatially and locally, helping to identify the severity and spread of harmful pollutants.
+    </p>
+  </Prose>
    <Figure>
   <Map
     datasetId='la-fires-planet'
@@ -211,12 +217,6 @@ taxonomy:
     Wildfire smoke as seen from the planet satellite for Eaton Fire on January 9, 2025.
   </Caption>
   </Figure>
-    <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
-     <p>   
-   ### Air Quality in Los Angeles: TEMPO and EPA AirNow Insights Post-Wildfires
-    The wildfires have significantly deteriorated air quality, with high concentrations of pollutants affecting both urban and suburban areas. To assess the impact, we utilized data from NASA's Tropospheric Emissions: Monitoring of Pollution (TEMPO) instrument and the EPA’s AirNow system. These datasets provide a comprehensive view of air pollution levels, both spatially and locally, helping to identify the severity and spread of harmful pollutants.
-    </p>
-  </Prose>
 </Block>
 
 <Block>
