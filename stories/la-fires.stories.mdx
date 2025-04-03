@@ -133,10 +133,30 @@ taxonomy:
     zoom={10.5}
     datasetId='nlcd-annual-conus'
     layerId='nlcd-annual-conus'
+    datetime='2001-01-01'
+  >  
+  ### Land Cover Changes and Rising Fire Risks
+    A key factor contributing to the wildfire intensity is the transformation of Southern California’s landscape over the years. Analysis from the National Land Cover Database (NLCD) data from 2000–2021 reveal significant land use shifts, particularly in chaparral shrublands, driven by prolonged drought. In wet years, chaparral grows densely, creating fuel loads, while drought leaves behind dry, flammable vegetation. Meanwhile, expanding residential areas in fire-prone zones have further heightened wildfire risk.
+  </Chapter>
+
+    <Chapter
+    center={[-118.6006, 34.0823]}
+    zoom={10.5}
+    datasetId='nlcd-annual-conus'
+    layerId='nlcd-annual-conus'
     datetime='2021-01-01'
   >  
   ### Land Cover Changes and Rising Fire Risks
-    A key factor contributing to the wildfire intensity is the transformation of Southern California’s landscape over the years. Analysis from the National Land Cover Database (NLCD) data from 2000–2021 reveal significant land use shifts, particularly in chaparral shrublands, driven by prolonged drought and urban expansion. In wet years, chaparral grows densely, creating fuel loads, while drought leaves behind dry, flammable vegetation. Meanwhile, expanding residential areas in fire-prone zones have further heightened wildfire risk.
+    Although chaparral shrublands are adapted to fire cycles, decades of aggressive fire suppression, coupled with worsening drought, have heightened wildfire vulnerability. Without periodic low-intensity burns to clear excess vegetation, modern wildfires are far more destructive than those in natural fire cycles. The figure below presents NLCD analysis for Palisades, indicating that approximately 70% of the region consists of shrublands.
+   <Figure>
+      <Image
+      src={new URL('./la-fires-palisades_nlcd_percentages_by_year.png', import.meta.url).href}
+      style={{ maxWidth: '200%'}}
+    />
+    <Caption>
+      The NLCD land cover changes within the Palisade Region, Los Angeles from 2001-2021 show significant shrublands.
+    </Caption>
+  </Figure>
   </Chapter>
 
   <Chapter
@@ -164,7 +184,7 @@ taxonomy:
   <Figure>
     <Map
       center={[-118.3823, 34.1334]}
-      zoom={11}
+      zoom={9}
       datasetId='la-fires-HLS'
       layerId='la-fires-HLS'
       dateTime='2025-01-06'
