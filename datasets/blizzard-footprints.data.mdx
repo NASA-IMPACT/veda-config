@@ -1,0 +1,367 @@
+---
+id: blizzard-snowfall-footprint
+name: 'Blizzard and Snowfall Footprint based on Climatology'
+description: "Raster land masks displaying the general snowfall footprint for various mid-latitude cyclones."
+
+media:
+  src: ::file ./media/blizzards-cover.png
+  alt: Near-blizzard conditions in Maria Stein, Ohio on December 23, 2022.
+  author: 
+    name: Andrew Blackford
+taxonomy:
+  - name: Topics
+    values:
+      - Climate
+      - Disasters
+      - Snow
+  - name: Source
+    values:
+      - UAH
+layers:
+  - id: blizzard-clipper
+    stacCol: blizzard-clipper
+    name: AB/SK/MB Clipper Snowfall Footprint
+    type: raster
+    description: "Climatologically favored region of the USA that experiences snowfall from Alberta Clipper, Saskatchewan Screamer, and Manitoba Mauler cyclones."
+    initialDatetime: newest
+    zoomExtent:
+        - 0
+        - 20
+    sourceParams:
+      colormap: '{"0":[22,158,242,255]}'
+    legend:
+      type: categorical
+      stops:
+        - color: "#169ef2"
+          label: Clipper Snowfall
+    info:
+      source: UAH
+      spatialExtent: Southern Canada/Northern United States
+      temporalResolution: 1950-2021 Climatology
+      unit: Binary
+
+  - id: blizzard-alley
+    stacCol: blizzard-alley
+    name: Blizzard Alley
+    type: raster
+    description: "Climatologically favored region of the Central USA that experiences regular blizzards, known as Blizzard Alley."
+    initialDatetime: newest
+    zoomExtent:
+        - 0
+        - 20
+    sourceParams:
+      colormap: '{"0":[22,158,242,255]}'
+    legend:
+      type: categorical
+      stops:
+        - color: "#169ef2"
+          label: Blizzard Alley
+    info:
+      source: NCEI
+      spatialExtent: Northern Plains
+      temporalResolution: 1950-2021 Climatology
+      unit: Binary
+
+  - id: blizzard-co-low
+    stacCol: blizzard-co-low
+    name: Colorado Low Snowfall Footprint
+    type: raster
+    description: "Climatologically favored region of the USA that experiences snowfall from Colorado Low cyclones."
+    initialDatetime: newest
+    zoomExtent:
+        - 0
+        - 20
+    sourceParams:
+      colormap: '{"0":[22,158,242,255]}'
+    legend:
+      type: categorical
+      stops:
+        - color: "#169ef2"
+          label: CO Low Snowfall
+    info:
+      source: UAH
+      spatialExtent: Central United States
+      temporalResolution: 1950-2021 Climatology
+      unit: Binary
+
+  - id: blizzard-millera
+    stacCol: blizzard-millera
+    name: Miller A Snowfall Footprint
+    type: raster
+    description: "Climatologically favored region of the USA that experiences snowfall from Miller A cyclones."
+    initialDatetime: newest
+    zoomExtent:
+        - 0
+        - 20
+    sourceParams:
+      colormap: '{"0":[22,158,242,255]}'
+    legend:
+      type: categorical
+      stops:
+        - color: "#169ef2"
+          label: Miller A Snowfall
+    info:
+      source: UAH
+      spatialExtent: Eastern United States
+      temporalResolution: 1950-2021 Climatology
+      unit: Binary
+
+  - id: blizzard-millerb
+    stacCol: blizzard-millerb
+    name: Miller B Snowfall Footprint
+    type: raster
+    description: "Climatologically favored region of the USA that experiences snowfall from Miller B cyclones."
+    initialDatetime: newest
+    zoomExtent:
+        - 0
+        - 20
+    sourceParams:
+      colormap: '{"0":[22,158,242,255]}'
+    legend:
+      type: categorical
+      stops:
+        - color: "#169ef2"
+          label: Miller B Snowfall
+    info:
+      source: UAH
+      spatialExtent: Eastern United States
+      temporalResolution: 1950-2021 Climatology
+      unit: Binary
+
+  - id: blizzard-noreaster
+    stacCol: blizzard-noreaster
+    name: Noreaster Snowfall Footprint
+    type: raster
+    description: "Climatologically favored region of the USA that experiences snowfall from Nor'easter cyclones."
+    initialDatetime: newest
+    zoomExtent:
+        - 0
+        - 20
+    sourceParams:
+      colormap: '{"0":[22,158,242,255]}'
+    legend:
+      type: categorical
+      stops:
+        - color: "#169ef2"
+          label: Noreaster Snowfall
+    info:
+      source: UAH
+      spatialExtent: Eastern United States
+      temporalResolution: 1950-2021 Climatology
+      unit: Binary
+---
+
+<Block>
+  <Prose>
+  ## Dataset Details
+  - **Temporal Extent:** 1950-2021
+  - **Temporal Resolution:** Single Climatology
+  - **Data Units:** Binary
+  - **Data Type:** Research
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  ## Alberta Clipper, Saskatchewan Screamer, and Manitoba Mauler
+  - **Spatial Extent:** Southern Canada/Northern United States<br />
+  <br />Alberta Clippers, Saskatchewan Screamers, and Manitoba Maulers (AC/SK/MB) are fast-moving low pressure systems that originate in the Canadian Prairies and bring cold, dry air and light to moderate snowfall to parts of the United States. These systems are named for their origins in Alberta, Saskatchewan, and Manitoba, respectively, and are distinguished by their speed and limited moisture content. Alberta Clippers are the most common of the three and typically travel southeastward across the northern Plains, Midwest, and Great Lakes region, often bringing light amounts of snow, though localized areas can receive higher totals. Saskatchewan Screamers and Manitoba Maulers follow similar tracks but are less frequent. Due to their rapid movement, these storms rarely bring heavy snowfall, but their strong winds can create blowing snow and reduced visibility, occasionally leading to blizzard conditions. Additionally, they often usher in frigid Arctic air, leading to significant temperature drops that can be anomalous for impacted regions. These systems are a defining feature of winter weather across the northern United States and contribute heavily to the region's cold and snowy climatology, as in more active years handfuls of these systems can occur in quick succession.
+  </Prose>
+<Figure>
+  <Map
+    center={[-98,50]}
+    zoom={2.5}
+    datasetId='blizzard-clipper'
+    layerId='blizzard-clipper'
+    dateTime='1950-01-01'
+  />
+    <Caption
+      attrAuthor='NASA'
+      attrUrl='https://nasa.gov/'
+    >
+      Climatologically favored region of the USA that experiences snowfall from Alberta Clipper, Saskatchewan Screamer, and Manitoba Mauler cyclones.
+    </Caption>
+  </Figure>
+</Block>
+
+<Block>
+  <Prose>
+  ## Blizzard Alley
+  - **Spatial Extent:** Northern Plains<br />
+  <br /> Blizzard Alley is a term used to describe a region in the north-central United States, particularly the eastern Dakotas, western Minnesota, and parts of Nebraska and Iowa, that experiences blizzards regularly. This region is among the most blizzard-prone areas in North America. This specific dataset shows the Blizzard Alley region as interpolated from the National Centers for Environmental Information's (NCEI's) Storm Events Database. The Storm Events Database contains reports of officially confirmed blizzard conditions across the United States, beginning in 1950.
+
+  </Prose>
+<Figure>
+  <Map
+    center={[-98,50]}
+    zoom={2.5}
+    datasetId='blizzard-alley'
+    layerId='blizzard-alley'
+    dateTime='1950-01-01'
+  />
+    <Caption
+      attrAuthor='NASA'
+      attrUrl='https://nasa.gov/'
+    >
+      Climatologically favored region of the Central USA that experiences regular blizzards, known as Blizzard Alley.
+    </Caption>
+  </Figure>
+</Block>
+
+
+<Block>
+  <Prose>
+  ## Denver Cyclones
+  - **Spatial Extent:** Central United States<br />
+  <br />Denver Cyclones, or Colorado Lows, are low pressure systems that form on the lee side of the Rocky Mountains, often along the Colorado Front Range. These systems form when moist air from the Gulf of America converges with cold Arctic air descending from Canada, creating sharp temperature gradients. The interaction between these air masses and the region’s complex terrain promotes the development of cyclonic systems that can bring heavy snowfall or blizzard conditions to the Colorado Front Range, including Denver, as well as parts of the Central and Northern Great Plains and Midwest. As these cyclones intensify and move eastward, they can bring severe winter weather to Blizzard Alley, making them a key contributor to the high frequency of blizzards in this region. The open terrain of the Great Plains amplifies wind speeds, further reducing visibility and exacerbating blizzard conditions.
+  </Prose>
+<Figure>
+  <Map
+    center={[-98,50]}
+    zoom={2.5}
+    datasetId='blizzard-co-low'
+    layerId='blizzard-co-low'
+    dateTime='1950-01-01'
+  />
+    <Caption
+      attrAuthor='NASA'
+      attrUrl='https://nasa.gov/'
+    >
+      Climatologically favored region of the USA that experiences snowfall from Colorado Low cyclones.
+    </Caption>
+  </Figure>
+</Block>
+
+
+<Block>
+  <Prose>
+  ## Miller A
+  - **Spatial Extent:** Eastern United States<br />
+  <br />Miller Type A cyclones form along the Gulf Coast or in the southern United States, where warm, moist air from the Gulf of America meets colder Arctic air descending from the north. These storms then travel along the East Coast, often intensifying as they near the Northeast U.S., as they tap into additional moisture from the Atlantic Ocean. Type A cyclones tend to bring widespread, heavy snowfall to the densely populated I-95 corridor or interior Northeast. Their direct development along the Gulf provides an abundant moisture source, resulting in potentially significant impacts for the Southeastern U.S., the Mid-Atlantic, and the Northeast.
+
+  </Prose>
+<Figure>
+  <Map
+    center={[-98,50]}
+    zoom={2.5}
+    datasetId='blizzard-millera'
+    layerId='blizzard-millera'
+    dateTime='1950-01-01'
+  />
+    <Caption
+      attrAuthor='NASA'
+      attrUrl='https://nasa.gov/'
+    >
+      Climatologically favored region of the USA that experiences snowfall from Miller A cyclones.
+    </Caption>
+  </Figure>
+</Block>
+
+
+<Block>
+  <Prose>
+  ## Miller B
+  - **Spatial Extent:** Eastern United States<br />
+  <br />Miller Type B cyclones are more complex, involving the interaction of two distinct low pressure systems. A primary low forms over the Midwest or Great Lakes regions, often producing light to moderate snowfall. As the primary low weakens, energy transfers to a secondary low-pressure system that develops near the Mid-Atlantic coast. This secondary low rapidly intensifies as it moves up the East Coast, often producing heavy snow for the Northeast and Mid-Atlantic regions. Type B cyclones tend to bring mixed precipitation and ice to areas farther inland before transitioning to snow along the coast. 
+
+  </Prose>
+<Figure>
+  <Map
+    center={[-98,50]}
+    zoom={2.5}
+    datasetId='blizzard-millerb'
+    layerId='blizzard-millerb'
+    dateTime='1950-01-01'
+  />
+    <Caption
+      attrAuthor='NASA'
+      attrUrl='https://nasa.gov/'
+    >
+      Climatologically favored region of the USA that experiences snowfall from Miller B cyclones.
+    </Caption>
+  </Figure>
+</Block>
+
+
+<Block>
+  <Prose>
+  ## Nor'easter
+  - **Spatial Extent:** Eastern United States<br />
+  <br />Nor’easters are perhaps the most notorious system that can bring blizzard conditions. Nor’easters frequent blizzard conditions to the I-95 corridor, can be either Miller Type A or B cyclones (but are more commonly Type B), and are often tracked using a coordinate benchmark known as the "40°N, 70°W rule." This location, just southeast of Cape Cod, Massachusetts, serves as a critical reference point for meteorologists. If the center of a nor’easter passes near or over this benchmark as it moves to the northeast, it frequently results in significant snow and wind impacts for the densely populated I-95 corridor from Washington, D.C., to Boston. This position aligns the storm to draw in cold Arctic air from the northwest while tapping into moist Atlantic air, creating the perfect setup for heavy snowfall and blizzard conditions.
+
+  </Prose>
+<Figure>
+  <Map
+    center={[-98,50]}
+    zoom={2.5}
+    datasetId='blizzard-noreaster'
+    layerId='blizzard-noreaster'
+    dateTime='1950-01-01'
+  />
+    <Caption
+      attrAuthor='NASA'
+      attrUrl='https://nasa.gov/'
+    >
+      Climatologically favored region of the USA that experiences snowfall from Nor'easter cyclones.
+    </Caption>
+  </Figure>
+</Block>
+
+<Block>
+  <Prose>
+
+  ### About
+
+  
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ### Access the Data
+
+  This dataset was interpolated from confirmed blizzard reports from the [Storm Events Database](https://www.ncdc.noaa.gov/stormevents/), between 1950-2021. 
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## Disclaimer
+
+  All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
+  
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+
+  ### Key Publications
+  
+  Coleman, J. S. M., and R. M. Schwartz, 2017: An Updated Blizzard Climatology of the Contiguous United States (1959–2014): An Examination of Spatiotemporal Trends. J. Appl. Meteor. Climatol., 56, 173–187, https://doi.org/10.1175/JAMC-D-15-0350.1.
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## Data Stories Using This Dataset
+  
+  **<Link to={"/stories/blizzards"}>When Winter Rages</Link>**
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## License
+  
+  [Creative Commons Attribution 1.0 International](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC BY 1.0)
+
+  </Prose>
+</Block>
