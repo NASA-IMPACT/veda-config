@@ -2,3 +2,14 @@
 @forward 'uswds';
 
 @use 'uswds-core' as *;
+
+
+.usa-banner__header {
+    .usa-banner__button:after {
+        top: 0;
+    }
+
+    .usa-accordion__button {
+        height: auto;
+    }
+}

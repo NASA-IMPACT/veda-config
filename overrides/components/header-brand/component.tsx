@@ -3,6 +3,8 @@ import styled from "$veda-ui/styled-components";
 import { glsp, themeVal } from "$veda-ui/@devseed-ui/theme-provider";
 import { Link } from "$veda-ui/react-router-dom";
 
+import '/common/styles.scss';
+
 const Brand = styled.div`
   position: relative;
   display: flex;
