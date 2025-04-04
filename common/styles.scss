@@ -37,3 +37,20 @@
 .font-size-md-deprecated {
   font-size: calc(1rem + var(--base-text-increment, 0rem));
 }
+
+.usa-banner__button:after {
+  top: 0;
+}
+
+.banner--left-aligned {
+  & .usa-banner__inner,
+  & .usa-banner__content {
+    margin: auto;
+  }
+}
+
+// hardcoded to override the USWDS styles coming from veda-ui, until
+// https://github.com/NASA-IMPACT/veda-ui/issues/1573 is resolved
+li.usa-card {
+  margin-bottom: 2.5rem !important;
+}
