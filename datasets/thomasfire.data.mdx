@@ -1,7 +1,7 @@
 ---
-id: frp-max-thomasfire
-name: "Maximum Fire Radiative Power for Thomas Fire"
-description: "Maximum Fire Radiative Power recorded by the Suomi NPP VIIRS sensor per 12hr fire line segment for the Thomas Fire of 2017"
+id: thomasfire
+name: "Thomas Fire Analysis"
+description: "Maximum Fire Radiative Power and Burned Area Reflectance for the Thomas Fire of 2017"
 media:
   src: ::file ./media/mtbs-burn-severity--dataset-cover.jpg
   alt: Hillside engulfed by wildfire
@@ -35,8 +35,8 @@ layers:
         - 1080
       nodata: nan
     compare:
-      datasetId: barc-thomasfire  
-      layerId: barc-thomasfire
+      datasetId: thomasfire  
+      layerId: frp-max-thomasfire
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `FRP: ${dateFns.format(datetime, 'yyyy')} VS BARC: ${dateFns.format(compareDatetime, 'yyyy')}`;
@@ -86,6 +86,13 @@ layers:
       spatialExtent: Thomas Fire Area
       temporalResolution: Annual 
       unit: Categorical
+    compare:
+      datasetId: thomasfire  
+      layerId: barc-thomasfire
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `FRP: ${dateFns.format(datetime, 'yyyy')} VS BARC: ${dateFns.format(compareDatetime, 'yyyy')}`;
+        }
 ---
 
 <Block>
@@ -93,7 +100,8 @@ layers:
     ## About
     
     Maximum Fire Radiative Power recorded by the Suomi NPP VIIRS sensor per 12hr fire line segment for the Thomas Fire of 2017
-     
+    Burn Area Reflectance Classification (BARC) from the Burned Area Emergency Response (BAER) program for the Thomas Fire of 2017.
+    
  
   </Prose>
 </Block>
