@@ -42,13 +42,6 @@
   top: 0;
 }
 
-.banner--left-aligned {
-  & .usa-banner__inner,
-  & .usa-banner__content {
-    margin: auto;
-  }
-}
-
 // hardcoded to override the USWDS styles coming from veda-ui, until
 // https://github.com/NASA-IMPACT/veda-ui/issues/1573 is resolved
 li.usa-card {
