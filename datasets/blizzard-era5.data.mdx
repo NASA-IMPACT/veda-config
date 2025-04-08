@@ -162,86 +162,88 @@ layers:
 ---
 <Block>
   <Prose>
-  ## Dataset Details
-  - **Temporal Extent:** 1950-1978
-  - **Temporal Resolution:** Inconsistent
-  - **Spatial Extent:** Global
-  - **Spatial Resolution:** 0.25 degree
-  - **Data Units:** Temperature - Kelvin; Wind - m/s; MSLP - hPa; Cloud Fraction - fraction 
-  - **Data Type:** Research
-  - **Data Latency:** N/A
+    ## Dataset Details
+    
+    - **Temporal Extent:** 1950-1978
+    - **Temporal Resolution:** Inconsistent
+    - **Spatial Extent:** Global
+    - **Spatial Resolution:** 0.25 degree
+    - **Data Units:** Temperature - Kelvin; Wind - m/s; MSLP - hPa; Cloud Fraction - fraction 
+    - **Data Type:** Research
   </Prose>
-<Figure>
-  <Map
-    center={[-84, 43]}
-    zoom={3.5}
-    datasetId='blizzard-era5-mslp'
-    layerId='blizzard-era5-mslp'
-    dateTime='1978-01-26'
-  />
-  <Caption
-    attrAuthor='NASA'
-    attrUrl='https://nasa.gov/'
-  >
-  ERA5 reanalysis mean sea level pressure from the strongest timeframe of the Great Blizzard of 1978 in the Great Lakes region of the USA.
-  </Caption>
-</Figure>
+  <Figure>
+    <Map
+      center={[-84, 43]}
+      zoom={3.5}
+      datasetId='blizzard-era5-mslp'
+      layerId='blizzard-era5-mslp'
+      dateTime='1978-01-26'
+    />
+    <Caption
+      attrAuthor='NASA'
+      attrUrl='https://nasa.gov/'
+    >
+    ERA5 reanalysis mean sea level pressure from the strongest timeframe of the Great Blizzard of 1978 in the Great Lakes region of the USA.
+    </Caption>
+  </Figure>
 </Block>
 
 <Block>
   <Prose>
+    ### About
 
-  ### About
-
-  ERA5 reanalysis, produced by the European Centre for Medium-Range Weather Forecasts (ECMWF), is a high-resolution global atmospheric dataset that provides historical climate and weather information from 1940 to the present. It combines observations from satellites, weather stations, and other sources with advanced numerical weather prediction models to generate a consistent, spatially complete representation of past atmospheric conditions. ERA5 offers hourly data at a 0.25 degree spatial resolution with multiple atmospheric variables, including temperature, wind speed, cloud coverage, and pressure, along with uncertainty estimates. It is widely used in climate research, meteorology, and environmental studies. 
-  </Prose>
-</Block>
-
-<Block>
-  <Prose>
-  
-  ### Access the Data
-
-  Visit ECMWF's [Climate Data Store](https://cds.climate.copernicus.eu/datasets?q=era5&kw=Variable+domain%3A+Atmosphere+%28surface%29&kw=Variable+domain%3A+Atmosphere+%28upper+air%29&kw=Variable+domain%3A+Atmosphere+%28upper+level%29&kw=Variable+domain%3A+Ocean+%28physics%29) to explore options for data access.
-
+    ERA5 reanalysis, produced by the European Centre for Medium-Range Weather Forecasts (ECMWF), is a high-resolution global atmospheric dataset that provides historical climate and weather information from 1940 to the present. It combines observations from satellites, weather stations, and other sources with advanced numerical weather prediction models to generate a consistent, spatially complete representation of past atmospheric conditions. ERA5 offers hourly data at a 0.25 degree spatial resolution with multiple atmospheric variables, including temperature, wind speed, cloud coverage, and pressure, along with uncertainty estimates. It is widely used in climate research, meteorology, and environmental studies. 
   </Prose>
 </Block>
 
 <Block>
   <Prose>
-  
-  ## Disclaimer
+    ### Access the Data
 
-  All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
-  
+    Visit ECMWF's [Climate Data Store](https://cds.climate.copernicus.eu/datasets?q=era5&kw=Variable+domain%3A+Atmosphere+%28surface%29&kw=Variable+domain%3A+Atmosphere+%28upper+air%29&kw=Variable+domain%3A+Atmosphere+%28upper+level%29&kw=Variable+domain%3A+Ocean+%28physics%29) to explore options for data access.
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+    ## Disclaimer
+
+    All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+    ### Key Publications
+    
+    Hersbach, H., Bell, B., Berrisford, P., et al. (2020). The ERA5 global reanalysis. Quarterly Journal of the Royal Meteorological Society, 146(730), 1999–2049. https://doi.org/10.1002/qj.3803
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+    ## Data Stories Using This Dataset
+    
+    **<Link to={"/stories/blizzards"}>When Winter Rages</Link>**
   </Prose>
 </Block>
 
 <Block>
   <Prose>
+    ## Limitations of use
 
-  ### Key Publications
-  
-  Hersbach, H., Bell, B., Berrisford, P., et al. (2020). The ERA5 global reanalysis. Quarterly Journal of the Royal Meteorological Society, 146(730), 1999–2049. https://doi.org/10.1002/qj.3803
+    NASA data and products are freely available to federal, state, public, non-profit and commercial users. This information can be experimental- or research-grade data products and may not be appropriate for operational use. These NASA data products, services, and the Disasters Mapping Portal are intended to aid decision makers and enhance situational awareness, but these data are not guaranteed to be consistently available or routinely updated. Please cite the information according to the direction provided in the metadata.
   </Prose>
 </Block>
 
-<Block>
-  <Prose>
-  
-  ## Data Stories Using This Dataset
-  
-  **<Link to={"/stories/blizzards"}>When Winter Rages</Link>**
-
-  </Prose>
-</Block>
 
 <Block>
   <Prose>
-  
-  ## License
-  
-  [Creative Commons Attribution 1.0 International](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC BY 1.0)
+    ## License
 
+    [Creative Commons Attribution 1.0 International](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC BY 1.0)
   </Prose>
 </Block>
