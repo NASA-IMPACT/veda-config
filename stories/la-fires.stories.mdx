@@ -141,7 +141,7 @@ taxonomy:
     </p>
      <Figure>
       <Image
-      src={new URL('./la-fires-LA_nlcd_percentages_by_year.png', import.meta.url).href}
+      src={new URL('./LA_nlcd_percentages_by_year.png', import.meta.url).href}
       style={{ maxWidth: '200%'}}
     />
     <Caption>
@@ -160,7 +160,7 @@ taxonomy:
   >
   ### Fire Suppression and the Accumulation of Fuel
   <p>
-    Although chaparral shrublands are adapted to fire cycles, decades of aggressive fire suppression, coupled with worsening drought, have heightened wildfire vulnerability. Similarly, grasslands, which are dominated by fine fuels, are highly susceptible to rapid ignition and fast-moving fires. Without periodic low-intensity burns to clear excess vegetation, modern wildfires are far more destructive than those in natural fire cycles. The figure below presents NLCD analysis for Palisades, indicating that approximately 70% of the region consists of shrublands.
+    Although chaparral shrublands are adapted to fire cycles, decades of aggressive fire suppression, coupled with worsening drought, have heightened wildfire vulnerability. Similarly, grasslands, which are dominated by fine fuels, are highly susceptible to rapid ignition and fast-moving fires. The figure below presents NLCD analysis for Palisades, indicating that approximately 70% of the region consists of shrublands.
    </p>
    <Figure>
       <Image
@@ -184,12 +184,48 @@ taxonomy:
     <p>
     * **Dates:**   January 7-31, 2025 (0% containment >55 hours)
     * **Acres Burned:**   23,707
-    * **Structures Destroyed:**   6,837
     * **Highest Wind Gust:**   38 mph
     * **Fire Personnel On Sire:** 5,677 (including 551 engines and 43 helicopters)
     * **Evacuations:** >30,000 people
     * **Fatalities:**   12    
     </p>
+  </Chapter>
+
+  <Chapter
+    center={[-118.8, 34.0623]}
+    zoom={10.5}
+    datasetId='la-fires-HLS'
+    layerId='la-fires-HLS'
+    datetime='2025-01-14'
+  >
+  ### Palisades Fire Structure Damage Assessments
+  <p>
+      [CAL FIRE](https://laedc.org/wildfirereport/) assessed a total of 12,066 structures following the fire. Of these, ~56.3% were completely destroyed, with ~ 8.6% affected and remaining 35.1% were undamaged.    
+    * **Residential:**   ~55.8% of single-family homes and ~94.5% of mobile homes were destroyed.
+    * **Commercial**   ~43.9% of buildings were destroyed.
+    * **Community:**   ~51 % of schools and ~46.2 % of churches were lost or damaged.  
+    * **Utilities & Infrastructure:**   ~62.4 % of utility structures were destroyed.
+  </p>
+  </Chapter>
+
+  <Chapter
+    center={[-118.25, 34.2123]}
+    zoom={11.3}
+    datasetId='la-fires-HLS'
+    layerId='la-fires-HLS'
+    datetime='2025-01-14'
+  >
+  ### Factors Influencing Containment
+    The Eaton Fire impacted a mix of shrublands (~55%), evergreen forests (~20%), and developed land (~11%). The higher moisture content of evergreen forests compared to shrublands likely slowed the fire's progression and aided containment efforts. Additionally, the slightly lower proportion of shrublands compared to the Palisades Fire may have contributed to a reduction in the fire's overall intensity.   
+  <Figure>
+      <Image
+      src={new URL('./la-fires-Eaton_nlcd_percentages_by_year.png', import.meta.url).href}
+      style={{ maxWidth: '200%'}}
+    />
+    <Caption>
+      The NLCD land cover changes within the Eaton Region, Los Angeles from 2001-2021 show significant shrublands.
+    </Caption>
+  </Figure>
   </Chapter>
 
   <Chapter
@@ -203,12 +239,28 @@ taxonomy:
     <p>
     * **Dates:**   January 7-31, 2025 (0% containment >100 hours)
     * **Acres Burned:**   14,021
-    * **Structures Destroyed:**   9,418
     * **Highest Wind Gust:**   100 mph (in the mountains)
     * **Fire Personnel On Sire:** 3,408 (including 248 engines and 15 helicopters)
     * **Evacuations:** >100,000 people
     * **Fatalities:**   18    
     </p>
+  </Chapter>
+
+  <Chapter
+    center={[-118.25, 34.2123]}
+    zoom={11.3}
+    datasetId='la-fires-HLS'
+    layerId='la-fires-HLS'
+    datetime='2025-01-14'
+  >
+  ### Eaton Fire Structure Damage Assessments
+  <p>
+    Out of 18,421 structures assessed following the fire, ~50.9% were completely destroyed, with ~ 5.8% affected and remaining 42.7% were intact.    
+    * **Residential:**   ~50.6% of single-family homes and ~60% of mobile homes were destroyed.
+    * **Commercial**   ~36.3% of buildings were destroyed.
+    * **Community:**   ~42.9 % of churches and ~37.4 % of schools were lost or damaged.  
+    * **Utilities & Infrastructure:**   ~55.1 % of utility structures were destroyed.
+   </p>
   </Chapter>
 
 </ScrollytellingBlock>
@@ -477,7 +529,7 @@ taxonomy:
 
      **Developers**: Maheshwari Neelam, Andrew Blackford, and Nidhi Jha
 
-     **Science and Content Contributors**: Maheshwari Neelam, Nidhi Jha, and Brian Freitag
+     **Science and Content Contributors**: Maheshwari Neelam, Andrew Blackford, Nidhi Jha, and Brian Freitag
 
      **Questions / Feedback (email address)**: veda@uah.edu
 
