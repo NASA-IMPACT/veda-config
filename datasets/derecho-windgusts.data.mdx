@@ -1,0 +1,151 @@
+---
+id: windgusts-derecho
+name: 'NCEI Interpolated Wind Gusts for the May 12th, 2022 Derecho'
+description: "NCEI Storm Events Database Wind Gusts that are Interpolated for the Derecho of May 12th, 2022"
+media:
+  src: ::file ./derecho-background.jpg
+  alt: Intense derecho thunderstorm as it sweeps across farmland on September 23, 2018
+  author:
+    name: Jim Reed
+    url: https://fineartamerica.com/featured/4-derecho-thunderstorm-jim-reed-photographyscience-photo-library.html
+taxonomy:
+  - name: Topics
+    values:
+      - Natural Disasters
+      - Air Quality
+      - Agriculture
+  - name: Source
+    values:
+      - NCEI
+infoDescription: |
+  ::markdown
+  - **Temporal Extent:** May 12, 2022
+  - **Temporal Resolution:** Daily
+  - **Spatial Extent:** Northern Plains region
+  - **Spatial Resolution:** N/A
+  - **Data Units:** Miles Per Hour (mph)
+  - **Data Type:** Research
+  - **Data Latency:** N/A 
+
+layers:
+  - id: windgusts-derecho
+    stacCol: windgusts-derecho
+    name: Interpolated NCEI Wind Gust Reports for the Derecho of May 12th, 2022
+    type: raster
+    description: "NCEI Storm Events Database Wind Gusts that are Interpolated for the Derecho of May 12th, 2022"
+    initialDatetime: newest
+    zoomExtent:
+        - 0
+        - 20
+    sourceParams:
+      colormap_name: bupu
+      rescale:
+        - 75
+        - 100
+    legend:
+      type: gradient
+      unit:
+        label: mph
+      min: 70
+      max: 95
+      stops:
+        - "#f7fcfd" #Very Pale Cyan 
+        - "#bfd3e6" #Pastel Blue
+        - "#8c95c6" #Muted Lavender Blue
+        - "#88409c" #Deep Violet
+        - "#4d004b" #Dark Purple
+    info:
+      source: UAH
+      spatialExtent: Northern Plains region
+      temporalResolution: Daily
+      unit: Miles Per Hour (mph)
+
+---
+<Block>
+  <Prose>
+  ## Dataset Details
+  - **Temporal Extent:** May 12, 2022
+  - **Temporal Resolution:** Daily
+  - **Spatial Extent:** Northern Plains region
+  - **Spatial Resolution:** N/A
+  - **Data Units:** Miles Per Hour (mph)
+  - **Data Type:** Research
+  - **Data Latency:** N/A
+  </Prose>
+  <Figure>
+  <Map
+    center={[-97, 44]}
+    zoom={5.5}
+    datasetId='windgusts-derecho'
+    layerId='windgusts-derecho'
+    dateTime='2022-05-12'
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+  NCEI Storm Events Database wind gusts that are interpolated for the Derecho of May 12th, 2022 within the Northern Plains region.
+  </Caption>
+</Figure>
+</Block>
+
+<Block>
+  <Prose>
+
+  ### About
+
+  The National Centers for Environmental Information (NCEI) Storm Events Database is a comprehensive archive of severe weather reports across the United States, including wind gust data collected from various sources. This dataset compiles observations from the National Weather Service (NWS), trained storm spotters, and automated surface observing systems (ASOS), providing detailed records of wind events, including peak gust speeds, locations, and associated impacts.
+
+  By analyzing wind gust reports from the NCEI Storm Events Database, researchers can assess the spatial and temporal distribution of high-wind events, identify trends in extreme wind occurrences, and evaluate their impacts on infrastructure, transportation, and public safety. This dataset is particularly valuable for studying severe convective wind events, derechos, and other high-impact wind phenomena, helping to inform mitigation strategies and improve forecasting efforts.
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ### Access the Data
+
+  This dataset was interpolated from confirmed derecho reports from the [Storm Events Database](https://www.ncdc.noaa.gov/stormevents/), on May 12th, 2022.
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## Disclaimer
+
+  All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
+  
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+
+  ### Key Publications
+  
+  Li, J., Geiss, A., Feng, Z., Leung, L. R., Qian, Y., and Cui, W., 2024: A derecho climatology (2004–2021) in the United States based on machine learning identification of bow echoes. Earth Syst. Sci. Data Discuss., https://doi.org/10.5194/essd-2024-112.
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## Data Stories Using This Dataset
+  
+  **<Link to={"/stories/derecho-impacts"}>NASA Data Fusion Analysis of Derechos and Their Impact on Rural America</Link>**
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## License
+  
+  [Creative Commons Attribution 1.0 International](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC BY 1.0)
+
+  </Prose>
+</Block>
