@@ -1,0 +1,188 @@
+---
+id: la-fires-parcels
+name: 'LA County Parcel Damage - Eaton and Palisades Fires (2025)'
+description: "Percent damage of parcels impacted by the 2025 Eaton and Palisades Fires, as determined by the LA County Assessor's Office."
+media:
+  src: ::file ./LA-Fires-background.png
+  alt: Planet Labs Commercial Satellite Imagery of the Eaton Fire (January 9, 2025).
+  author:
+    name: NASA CDSA - Planet Labs
+taxonomy:
+  - name: Topics
+    values:
+      - Disasters
+      - Land Cover
+      - Wildfire
+  - name: Source
+    values:
+      - Los Angeles County Assessor
+infoDescription: |
+  ::markdown
+    - **Temporal Extent:** January 9, 2025
+    - **Temporal Resolution:** N/A
+    - **Spatial Extent:** LA County, CA
+    - **Spatial Resolution:** 30 m
+    - **Data Units:** N/A
+    - **Data Type:** Research
+    - **Data Latency:** N/A
+
+layers:
+  - id: la-fires-parcels
+    stacCol: la-fires-parcels
+    name: LA County Parcel Damage - Eaton and Palisades Fires (2025)
+    type: raster
+    description: "Percent damage of parcels impacted by the 2025 Eaton and Palisades Fires, as determined by the LA County Assessor's Office."
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      resampling: bilinear
+      bidx: 1
+      colormap: '{"1":[255,255,255,255],"2":[79,1,6,255],"3":[122,191,54,255],"4":[214,88,30,255],"5":[214,190,30,255],"6":[99,95,65,255]}'
+    legend:
+      type: categorical
+      min: "1"
+      max: "6"
+      stops:
+        - color: "#ffffff"
+          label: "No Damage"
+        - color: "#7bbf36"
+          label: "Affected (1-9%)"
+        - color: "#d6bd1e"
+          label: "Minor (10-25%)" 
+        - color: "#d6581e"
+          label: "Major (26-50%)" 
+        - color: "#4f0106"
+          label: "Destroyed (>50%)"
+        - color: "#635f41"
+          label: "Inaccessible" 
+    compare:
+      datasetId: la-fires-maxar
+      layerId: la-fires-maxar
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'dd LLL yyyy')}`;        
+        }
+    info:
+        source: Los Angeles County Assessor
+        spatialExtent: LA County, CA
+        temporalResolution: N/A
+        unit: percent
+
+---
+
+<Block>
+  <Prose>
+  ## Dataset Details
+    - **Temporal Extent:** January 9, 2025
+    - **Temporal Resolution:** N/A
+    - **Spatial Extent:** LA County, CA
+    - **Spatial Resolution:** 30 m
+    - **Data Units:** N/A
+    - **Data Type:** Research
+    - **Data Latency:** N/A
+  </Prose>
+<Figure>
+  <Map
+    datasetId='la-fires-parcels'
+    layerId='la-fires-parcels'
+    dateTime='2025-01-09'
+    zoom={12.75}
+    center={[-118.1341, 34.1925]}
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+    Percent damage by parcel from the 2025 Eaton Fire in Altadena, California as determined by the LA County Assessor's Office.
+  </Caption>
+</Figure>
+</Block>
+
+<Block>
+  <Prose>
+
+  ### About
+
+  This dataset provides an assessment of parcel-level structural damage caused by the 2025 Eaton and Palisades Fires in Los Angeles County, CA. The Los Angeles County Assessor's Office evaluated damage percentages based on field assessments, aerial imagery, and satellite data. The dataset categorizes each parcel into different levels of damage severity, supporting post-disaster impact analysis and recovery planning.
+  
+  </Prose>
+</Block>
+
+<Block>
+  
+  <Prose>
+
+  ### What This Data Offers
+
+  * Detailed Damage Assessments: Provides parcel-level classification of wildfire impact ranging from "No Damage" to "Destroyed" (>50% damage).
+  * Support for Disaster Recovery Efforts: Used by local agencies to assess financial losses and prioritize rebuilding efforts.
+  * Integration with Other Datasets: Can be combined with satellite imagery, topography, and fire behavior models for enhanced post-fire analysis.
+  * Public and Governmental Use: Valuable for emergency managers, policymakers, researchers, and insurance assessments.
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ### Access the Data
+
+  The LA County Parcel Damage dataset can be accessed through:
+
+  * [Los Angeles County Assessor's Office](https://assessor.lacounty.gov/)
+
+  * [California Statewide Parcel Data](https://gis.data.ca.gov/)
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    
+  ### Citing this Dataset
+
+  Los Angeles County Assessor’s Office, 2025. Wildfire Parcel Damage Assessment for Eaton and Palisades Fires.
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## Disclaimer
+
+  All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
+  
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+
+  ### Key Publications
+  
+  FEMA (2022). Post-Wildfire Damage Assessment and Recovery Planning Guide. https://www.fema.gov/emergency-managers/national-preparedness/plan
+  
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## Data Stories Using This Dataset
+  
+  **<Link to={"/stories/la-fires"}>Fanning the Flames</Link>**
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## License
+  
+  [Creative Commons Attribution 1.0 International](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC BY 1.0)
+
+  </Prose>
+</Block>
+
