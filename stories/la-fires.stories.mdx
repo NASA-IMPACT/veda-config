@@ -7,7 +7,7 @@ media:
   alt: Flying sparks in the Pacific Palisades neighborhood of Los Angeles on January 7.
   author:
     name: Ethan Swope/AP
-pubDate: 2025-04-04T00:00
+pubDate: 2025-04-10T00:00
 taxonomy:
   - name: Topics
     values:
@@ -60,7 +60,7 @@ taxonomy:
    <Prose style={{ textAlign: 'justify', flex: '1', alignItems: 'center', marginLeft: '0.2rem'}}>
      <p>
     ### Devastating Wildfires in Los Angeles
-    In early January 2025, Los Angeles faced devastating wildfires that claimed at least 29 lives, forced over 200,000 evacuations, and destroyed more than 18,000 structures. The Palisades and Eaton fires, the two largest blazes, scorched over 37,000 acres combined. While the exact causes remain under investigation, extreme environmental conditions—particularly Santa Ana winds, prolonged dry periods, and the accumulation of flammable vegetation—were critical in fueling the fires' intensity and swift progression. 
+    In early [January 2025, Los Angeles faced devastating wildfires](https://www.fire.ca.gov/incidents/2025) that claimed at least 29 lives, forced over 200,000 evacuations, and destroyed more than 18,000 structures. The Palisades and Eaton fires, the two largest blazes, scorched over 37,000 acres combined. While the exact causes remain under investigation, extreme environmental conditions—particularly Santa Ana winds, prolonged dry periods, and the accumulation of flammable vegetation—were critical in fueling the fires' intensity and swift progression. 
      </p>
   </Prose>
 </Block>
@@ -148,7 +148,24 @@ taxonomy:
       The NLCD land cover changes within Los Angeles County from 2001-2021.
     </Caption>
   </Figure>
+  </Chapter>
 
+  <Chapter
+    center={[-118.8, 34.0623]}
+    zoom={10.5}
+    datasetId='nlcd-annual-conus'
+    layerId='nlcd-annual-conus'
+    datetime='2021-01-01'
+  >
+  ### Palisades Fire Overview
+    <p>
+    * **Dates:**   January 7-31, 2025 (0% containment >55 hours)
+    * **Acres Burned:**   23,707
+    * **Highest Wind Gust:**   38 mph
+    * **Fire Personnel On Sire:** 5,677 (including 551 engines and 43 helicopters)
+    * **Evacuations:** >30,000 people
+    * **Fatalities:**   12    
+    </p>
   </Chapter>
 
   <Chapter
@@ -160,7 +177,7 @@ taxonomy:
   >
   ### Fire Suppression and the Accumulation of Fuel
   <p>
-    Although chaparral shrublands are adapted to fire cycles, decades of aggressive fire suppression, coupled with worsening drought, have heightened wildfire vulnerability. Similarly, grasslands, which are dominated by fine fuels, are highly susceptible to rapid ignition and fast-moving fires. The figure below presents NLCD analysis for Palisades, indicating that approximately 70% of the region consists of shrublands.
+    Although chaparral shrublands are adapted to fire cycles, decades of aggressive fire suppression, coupled with worsening drought, have heightened wildfire vulnerability. Similarly, grasslands, which are dominated by fine fuels, are highly susceptible to rapid ignition and fast-moving fires. The figure below presents NLCD analysis for Palisades, indicating that ~70% of the region consists of shrublands.
    </p>
    <Figure>
       <Image
@@ -171,24 +188,6 @@ taxonomy:
       The NLCD land cover changes within the Palisade Region, Los Angeles from 2001-2021 show significant shrublands.
     </Caption>
   </Figure>
-  </Chapter>
-
-  <Chapter
-    center={[-118.8, 34.0623]}
-    zoom={10.5}
-    datasetId='la-fires-HLS'
-    layerId='la-fires-HLS'
-    datetime='2025-01-14'
-  >
-  ### Palisades Fire Overview
-    <p>
-    * **Dates:**   January 7-31, 2025 (0% containment >55 hours)
-    * **Acres Burned:**   23,707
-    * **Highest Wind Gust:**   38 mph
-    * **Fire Personnel On Sire:** 5,677 (including 551 engines and 43 helicopters)
-    * **Evacuations:** >30,000 people
-    * **Fatalities:**   12    
-    </p>
   </Chapter>
 
   <Chapter
@@ -211,10 +210,28 @@ taxonomy:
   <Chapter
     center={[-118.25, 34.2123]}
     zoom={11.3}
-    datasetId='la-fires-HLS'
-    layerId='la-fires-HLS'
-    datetime='2025-01-14'
+    datasetId='nlcd-annual-conus'
+    layerId='nlcd-annual-conus'
+    datetime='2021-01-01'
   >
+  ### Eaton Fire Overview
+    <p>
+    * **Dates:**   January 7-31, 2025 (0% containment >100 hours)
+    * **Acres Burned:**   14,021
+    * **Highest Wind Gust:**   100 mph (in the mountains)
+    * **Fire Personnel On Sire:** 3,408 (including 248 engines and 15 helicopters)
+    * **Evacuations:** >100,000 people
+    * **Fatalities:**   18    
+    </p>
+  </Chapter>
+
+  <Chapter
+    center={[-118.25, 34.2123]}
+    zoom={11.3}
+    datasetId='nlcd-annual-conus'
+    layerId='nlcd-annual-conus'
+    datetime='2021-01-01'
+  >  
   ### Factors Influencing Containment
     The Eaton Fire impacted a mix of shrublands (~55%), evergreen forests (~20%), and developed land (~11%). The higher moisture content of evergreen forests compared to shrublands likely slowed the fire's progression and aided containment efforts. Additionally, the slightly lower proportion of shrublands compared to the Palisades Fire may have contributed to a reduction in the fire's overall intensity.   
   <Figure>
@@ -226,24 +243,6 @@ taxonomy:
       The NLCD land cover changes within the Eaton Region, Los Angeles from 2001-2021 show significant shrublands.
     </Caption>
   </Figure>
-  </Chapter>
-
-  <Chapter
-    center={[-118.25, 34.2123]}
-    zoom={11.3}
-    datasetId='la-fires-HLS'
-    layerId='la-fires-HLS'
-    datetime='2025-01-14'
-  >
-  ### Eaton Fire Overview
-    <p>
-    * **Dates:**   January 7-31, 2025 (0% containment >100 hours)
-    * **Acres Burned:**   14,021
-    * **Highest Wind Gust:**   100 mph (in the mountains)
-    * **Fire Personnel On Sire:** 3,408 (including 248 engines and 15 helicopters)
-    * **Evacuations:** >100,000 people
-    * **Fatalities:**   18    
-    </p>
   </Chapter>
 
   <Chapter
