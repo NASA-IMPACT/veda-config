@@ -164,26 +164,75 @@ layers:
     - **Temporal Extent:** 2015-2022<br />
     - **Spatial Extent:** Butte County, California<br />
     - **Spatial Resolution:** ~750 kilometers<br />
-    - **Data Units:** Albedo & NDVI (unitless); LST (percentage)<br />
+    - **Data Units:** Albedo & NDVI (unitless); LST (°C)<br />
     - **Data Type:** Research<br />
     </Prose>
+  <Figure>
+    <Map
+      center={[-121.5678, 39.7558]}
+      zoom={9.5}
+      datasetId='campfire_albedo_wsa_difference_2015_2022'
+      layerId='modis-lst-night-diff-2015-2022'
+      dateTime='2015-01-01'
+    />
+    <Caption
+      attrAuthor='NASA'
+      attrUrl='https://nasa.gov/'
+    >
+    Satellite observations show that loss of vegetation caused by the Camp Fire leads to an average decrease in night time LST of 0.35 &deg;C (0.64 &deg;F). Locally, decreases in night time LST can be as much as 1.5 &deg;C.
+    </Caption>
+  </Figure>
 </Block>
+
 
 <Block>
   <Prose>
-    In order to examine how the fire event affected the changes in surface properties, we utilized the MODIS-derived Normalized Difference Vegetation Index (NDVI), albedo, and land surface temperature (LST) products for a six-year period centered on the Camp Fire event (2015-2022). We used these products which are available at 16-day intervals to compute monthly averaged spatial maps of NDVI, albedo, and LST. The monthly average spatial maps were then averaged over the areas affected by the Camp Fire to compute monthly mean values. This dataset is the Albedo WSA difference portion of that analysis.
+    ## About
+
+    In order to examine how the fire event affected the changes in surface properties, we utilized the MODIS-derived Normalized Difference Vegetation Index (NDVI), albedo, and land surface temperature (LST) products for a six-year period centered on the Camp Fire event (2015-2022). We used these products which are available at 16-day intervals to compute monthly averaged spatial maps of NDVI, albedo, and LST. The monthly average spatial maps were then averaged over the areas affected by the Camp Fire to compute monthly mean values. 
+
+    [Normalized Difference Vegetation Index](https://www.earthdata.nasa.gov/topics/land-surface/land-use-land-cover/land-use-land-cover-classification/vegetation-index-0): A numerical value used to predict or assess vegetative characteristics such as plant leaf area, total biomass, and general health and vigor of the surface vegetation.
+
+    [White Sky Albedo (WSA)](https://www.earthdata.nasa.gov/topics/land-surface/surface-radiative-properties/albedo): The ratio of sunlight reflected from the land surface to sunlight reaching the land surface.
+
+    [Land Surface Temperature](https://www.earthdata.nasa.gov/topics/land-surface/surface-thermal-properties/land-surface-temperature): How hot the “surface” of Earth would feel to the touch in a particular location.
+
   </Prose>
 </Block>
 
+
 <Block>
   <Prose>
-    ## Disclaimer
-    All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs (COG). Careful quality checks are used to ensure data transformation has been performed correctly.
+  
+  ## Data Stories Using This Dataset
+  
+  **<Link to={"/stories/burn-scar"}>Wildfires Affect Local Weather, Climate, and Hydrology</Link>**
+  </Prose>
+</Block>
 
-    ## Limitations of Use
+
+<Block>
+  <Prose>
+    ## Limitations of use
+
     NASA data and products are freely available to federal, state, public, non-profit and commercial users. This information can be experimental- or research-grade data products and may not be appropriate for operational use. These NASA data products, services, and the Disasters Mapping Portal are intended to aid decision makers and enhance situational awareness, but these data are not guaranteed to be consistently available or routinely updated. Please cite the information according to the direction provided in the metadata.
+  </Prose>
+</Block>
 
+
+<Block>
+  <Prose>
+  ## Disclaimer
+
+  All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
     ## License
+
     [Creative Commons Zero v1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC0 1.0)
   </Prose>
 </Block>
