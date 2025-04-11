@@ -86,13 +86,84 @@ layers:
 ---
 
 <Block>
+  <Prose>   
+    ## Dataset Details
+    - **Temporal Extent:** 2017 - 2020<br />
+    - **Spatial Extent:** Western United States<br />
+    - **Spatial Resolution:** ~1 km<br />
+    - **Data Unit: Standardized anomaly
+    - **Data Type:** Research<br />
+  </Prose>
+<Figure>
+  <Map
+    datasetId='disalexi-etsuppression'
+    layerId='disalexi-etsuppression'
+    dateTime='2020-01-01'
+    compareDateTime='2020-01-01'
+    zoom={4}
+    center={[-116,36]}
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+    High resolution observations of ET from OpenET (DisALEXI model) captures the impact of fires on vegetation. Large declines in post-fire standardized ET anomalies are observed (left) that correspond well with burn scars from the MTBS burn severity dataset (right) during the fire year 2020.
+  </Caption>
+</Figure>
+</Block>
+
+
+<Block>
   <Prose>
     ## About
     
     Impact of fires on changes in evapotranspiration, obtained OpenET observations (DisALEXI model) for 2017-20 fires
     
     Changes in ET are calculated as the difference of ET in the immediate post-fire water year from ET in the immediate pre-fire water year. The difference is normalized by pre-fire ET and negative values denote vegetation disturbance induced by fire or by a climatological anomaly resulting in the decline in ET 
+  </Prose>
+</Block>
 
+
+<Block>
+  <Prose>
+  
+  ## Data Stories Using This Dataset
+  
+  **<Link to={"/stories/eis-coastal-risks"}>Unraveling the Components of Coastal Risk</Link>**
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+    ## Limitations of use
+
+    NASA data and products are freely available to federal, state, public, non-profit and commercial users. This information can be experimental- or research-grade data products and may not be appropriate for operational use. These NASA data products, services, and the Disasters Mapping Portal are intended to aid decision makers and enhance situational awareness, but these data are not guaranteed to be consistently available or routinely updated. Please cite the information according to the direction provided in the metadata.
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+  ## Disclaimer
+
+  All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+    ## License
+
+    [Creative Commons Zero v1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC0 1.0)
+  </Prose>
+</Block>
+
+
+
+<Block>
+  <Prose>
     ## Additional Resources
 
     * [OpenET Product](https://openetdata.org/)
