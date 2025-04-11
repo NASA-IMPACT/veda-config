@@ -68,6 +68,20 @@ layers:
     - **Spatial Resolution:** ~1 kilometer<br />
     - **Data Type:** Research<br />
   </Prose>
+  <Figure>
+    <Map
+      datasetId='houston-aod'
+      layerId='houston-aod'
+      dateTime='2000-01-01'
+      compareDateTime='2010-01-01'
+      compareLabel='2000-2009 mean / 2010-2019 mean'
+      center={[-95.35, 29.8]}
+      zoom={8.75}
+    />
+    <Caption>
+      Aerosol Optical Depth Compared Decadally from 2000-2009 & 2010-2019. The map shown shows the change in AOD over the last 20 years over the Houston metropolitan area.
+    </Caption>
+  </Figure>
 </Block>
 
 
@@ -103,9 +117,10 @@ layers:
 
 <Block>
   <Prose>
-    ## Additional Resources
-    
-    [MODIS Aerosol Product](https://modis.gsfc.nasa.gov/data/dataprod/mod04.php)
+  
+  ## Data Stories Using This Dataset
+  
+  **<Link to={"/stories/houston-aod"}>Aerosols and Their Impacts on Houston, TX</Link>**
   </Prose>
 </Block>
 
@@ -133,5 +148,14 @@ layers:
     ## License
 
     [Creative Commons Zero v1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC0 1.0)
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+    ## Additional Resources
+    
+    [MODIS Aerosol Product](https://modis.gsfc.nasa.gov/data/dataprod/mod04.php)
   </Prose>
 </Block>
