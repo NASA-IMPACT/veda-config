@@ -178,30 +178,81 @@ layers:
       unit: mm
 
 ---
+
 <Block>
-<Prose>
-## Overview
-Snow water equivalent (SWE) is defined as the amount of water in the snow. Here, we present the projected SWE and percent-change to projected snow in future periods, relative to the historical period (1995 - 2014). 
-
-</Prose>
-
+  <Prose>
+    ## Dataset Details
+    - **Temporal Extent:** 2025-2085<br />
+    - **Spatial Extent:** Western United States<br />
+    - **Spatial Resolution:** 25 kilometers<br />
+    - **Data Units:** Percentage (%)<br />
+    - **Data Type:** Research<br />
+    </Prose>
 </Block>
 
 
 <Block>
-<Prose>
-## Modeling SWE
-SWE is modeled using Noah-MP land surface model (LSM) within LIS framework. A baseline simulation was developed to represent 20-year median snow evolution between 1995 and 2014. The baseline simulation was then perturbed using monthly climate change signals to air temperature, precipitation, humidity, radiation, wind, and surface pressure. SWE projections in future timeframes represent the median of a 23-member ensemble of simulations performed using climate change signals from the Coupled Model Intercomparison Project, phase 6 (CMIP6) with downscaling from the NASA Earth Exchange Global Daily Downscaled Projections (NEX-GDDP-CMIP6). The modeled SWE is produced at 1 km spatial resolutions. 
-</Prose>
+  <Prose>
+  ## About
+  Snow water equivalent (SWE) is defined as the amount of water in the snow. Here, we present the projected SWE and percent-change to projected snow in future periods, relative to the historical period (1995 - 2014). 
+
+  We have examined two different Shared Socioeconomic Pathways (SSPs) which describe potential future scenarios based on decisions in climate policies and actions as well as human infrastructure and governance. We have gathered the SSP2-4.5 which represents an intermediate radiative forcing pathway and the SSP5-8.5 representing a future with a high radiative forcing.
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+  ## Scientific Details
+  SWE is modeled using Noah-MP land surface model (LSM) within LIS framework. A baseline simulation was developed to represent 20-year median snow evolution between 1995 and 2014. The baseline simulation was then perturbed using monthly climate change signals to air temperature, precipitation, humidity, radiation, wind, and surface pressure. SWE projections in future timeframes represent the median of a 23-member ensemble of simulations performed using climate change signals from the Coupled Model Intercomparison Project, phase 6 (CMIP6) with downscaling from the NASA Earth Exchange Global Daily Downscaled Projections (NEX-GDDP-CMIP6). The modeled SWE is produced at 1 km spatial resolutions. 
+  </Prose>
 </Block>
 
 <Block>
-<Prose>
-## Additional resources
-* [EIS Freshwater](https://freshwater.eis.smce.nasa.gov/)
+  <Prose>
+  
+  ## Data Stories Using This Dataset
+  
+  **<Link to={"/stories/eis-snow-projections"}>Future Projections of Western US Montane Snowpack</Link>**
+  </Prose>
+</Block>
 
-* [Land Information System](https://lis.gsfc.nasa.gov/)
 
-* [Global Daily Downscaled Projections](https://www.nasa.gov/nex/gddp)
-</Prose>
+<Block>
+  <Prose>
+    ## Limitations of use
+
+    NASA data and products are freely available to federal, state, public, non-profit and commercial users. This information can be experimental- or research-grade data products and may not be appropriate for operational use. These NASA data products, services, and the Disasters Mapping Portal are intended to aid decision makers and enhance situational awareness, but these data are not guaranteed to be consistently available or routinely updated. Please cite the information according to the direction provided in the metadata.
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+  ## Disclaimer
+
+  All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+    ## License
+
+    [Creative Commons Zero v1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC0 1.0)
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+  ## Additional Resources
+
+  [EIS Freshwater](https://freshwater.eis.smce.nasa.gov/)<br />
+  [Global Daily Downscaled Projections](https://www.nasa.gov/nex/gddp)<br />
+  [Land Information System](https://lis.gsfc.nasa.gov/)<br />
+  [Shared Socioeconomic Pathways](https://earth.gov/sealevel/faq/124/what-are-shared-socioeconomic-pathways-or-ssps/#:~:text=Shared%20Socioeconomic%20Pathways%20(SSPs)%20are,gas%20emissions%20and%20climate%20change.)
+  
+  </Prose>
 </Block>
