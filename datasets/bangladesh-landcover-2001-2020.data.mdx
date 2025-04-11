@@ -60,9 +60,89 @@ layers:
 ---
 
 <Block>
-  <Prose>
+  <Prose>   
+    ## Dataset Details
+    - **Temporal Extent:** 2001 and 2020<br />
+    - **Spatial Extent:** Bangladesh, Asia<br />
+    - **Spatial Resolution:** 500 meters<br />
+    - **Data Type:** Research<br />
+  </Prose>
+<Figure>
+    <Map
+      datasetId='bangladesh-landcover-2001-2020'
+      layerId='bangladesh-landcover-2001-2020'
+      dateTime='2001-01-01'
+      compareDateTime='2020-01-01'
+      zoom={7}
+      center={[90.43,23.74]}
+    />
+    <Caption
+      attrAuthor='NASA'
+      attrUrl='https://nasa.gov/'
+    >
+    Comparison of MODIS-derived land cover in Bangladesh between 2001 and 2020.
+    </Caption>
+  </Figure>
+</Block>
 
+
+<Block>
+  <Prose>
+    ## About
     The annual land cover maps of 2001 and 2021 were captured using combined Moderate Resolution Imaging Spectroradiometer (MODIS) Annual Land Cover Type dataset (MCD12Q1 V6, dataset link: [https://lpdaac.usgs.gov/products/mcd12q1v006/](https://lpdaac.usgs.gov/products/mcd12q1v006/)).  The actual data product provides global land cover types at yearly intervals (2001-2020) at 500 meters with six different types of land cover classification. Among six different schemes, The International Geosphere–Biosphere Programme (IGBP) land cover classification selected and further simplified to dominant land cover classes (water, urban, cropland, native vegetation) for two different years to illustrate the changes in land use and land cover of the country.
 
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+    ## Key Publications
+
+    Friedl, M., Sulla-Menashe, D. (2019). MCD12Q1 MODIS/Terra+Aqua Land Cover Type Yearly L3 Global 500m SIN Grid V006 [Data set]. NASA EOSDIS Land Processes Distributed Active Archive Center. Accessed 2025-03-05 from https://doi.org/10.5067/MODIS/MCD12Q1.006
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## Data Stories Using This Dataset
+  
+  **<Link to={"/stories/eis-coastal-risks"}>Unraveling the Components of Coastal Risk</Link>**
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+    ## Limitations of use
+
+    NASA data and products are freely available to federal, state, public, non-profit and commercial users. This information can be experimental- or research-grade data products and may not be appropriate for operational use. These NASA data products, services, and the Disasters Mapping Portal are intended to aid decision makers and enhance situational awareness, but these data are not guaranteed to be consistently available or routinely updated. Please cite the information according to the direction provided in the metadata.
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+  ## Disclaimer
+
+  All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+    ## License
+
+    [Creative Commons Zero v1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC0 1.0)
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+    ## Additional Resources
+    [MODIS Land Cover Data Quality Guide](https://lpdaac.usgs.gov/documents/101/MCD12_User_Guide_V6.pdf)
   </Prose>
 </Block>
