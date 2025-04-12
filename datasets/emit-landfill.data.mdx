@@ -77,10 +77,9 @@ layers:
       unit: ppm m
 ---
 
-<Block type='wide'>
+<Block>
     <Prose>
-      This dataset focuses on large methane (CH4) emissions from Landfills in the Stockton, CA and Dallas, TX regions. For more information on EMIT please visit NASA's [Land Processing Distributed Active Archive Center](https://lpdaac.usgs.gov/data/get-started-data/collection-overview/missions/emit-overview/#emit-metadata) (LP DAAC) and the EMIT Dataset Overview page on the U.S. [Greenhouse Gas Center](https://earth.gov/ghgcenter/data-catalog/emit-ch4plume-v1).
-
+      ## Dataset Details
       - **Temporal Extent:** June 22, and August 25, 2023
       - **Temporal Resolution:** Inconsistent
       - **Spatial Extent:** Stockton, CA and Dallas, TX
@@ -90,14 +89,39 @@ layers:
     </Prose>
 </Block>
 
+
+<Block>
+    <Prose>
+    ## About
+
+    This dataset focuses on large methane (CH4) emissions from Landfills in the Stockton, CA and Dallas, TX regions. For more information on EMIT please visit NASA's [Land Processing Distributed Active Archive Center](https://lpdaac.usgs.gov/data/get-started-data/collection-overview/missions/emit-overview/#emit-metadata) (LP DAAC) and the EMIT Dataset Overview page on the U.S. [Greenhouse Gas Center](https://earth.gov/ghgcenter/data-catalog/emit-ch4plume-v1).
+    </Prose>
+</Block>
+
+
 <Block>
     <Prose>
       ## Disclaimer
-      Uncertainty in the methane (ppm-m) depends on instrument, observation, and surface factors as described in the [ATBD](https://lpdaac.usgs.gov/documents/1696/EMIT_GHG_ATBD_V1.pdf) by Broderick, et al. 2023. An uncertainty value (ppm-m) is calculated and reported for each plume complex. As described in the ATBD, EMIT plume complexes are manually identified and reviewed. While we publish high confidence examples, false positives can occur and when identified these cases are removed from subsequent data releases.
 
+      Uncertainty in the methane (ppm-m) depends on instrument, observation, and surface factors as described in the [ATBD](https://lpdaac.usgs.gov/documents/1696/EMIT_GHG_ATBD_V1.pdf) by Broderick, et al. 2023. An uncertainty value (ppm-m) is calculated and reported for each plume complex. As described in the ATBD, EMIT plume complexes are manually identified and reviewed. While we publish high confidence examples, false positives can occur and when identified these cases are removed from subsequent data releases.<br />
+
+      All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
+
+    </Prose>
+</Block>
+
+
+<Block>
+    <Prose>
       ## Source Data Product Citation
-      Green, R., Thorpe, A., Brodrick, P., Chadwick, D., Elder, C., Villanueva-Weeks, C., Fahlen, J., Coleman, R., Jensen, D., Olsen-Duvall, W., Lundeen, S., Lopez, A., Thompson, D. (2023). EMIT L2B Estimated Methane Plume Complexes 60 m V001 [Data set]. Distributed by NASA EOSDIS Land Processes Distributed Active Archive Center. Accessed from https://doi.org/10.5067/EMIT/EMITL2BCH4PLM.001.   
 
+      Green, R., Thorpe, A., Brodrick, P., Chadwick, D., Elder, C., Villanueva-Weeks, C., Fahlen, J., Coleman, R., Jensen, D., Olsen-Duvall, W., Lundeen, S., Lopez, A., Thompson, D. (2023). EMIT L2B Estimated Methane Plume Complexes 60 m V001 [Data set]. Distributed by NASA EOSDIS Land Processes Distributed Active Archive Center. Accessed from https://doi.org/10.5067/EMIT/EMITL2BCH4PLM.001.   
+    </Prose>
+</Block>
+
+
+<Block>
+    <Prose>
       ## Key Publications
 
       Thorpe, A.K., et al., Attribution of individual methane and carbon dioxide emission sources using EMIT observations from space, Science Advances (in review).
@@ -107,11 +131,30 @@ layers:
       D. R. Thompson, I. Leifer, H. Bovensmann, M. Eastwood, M. Fladeland, C. Frankenberg, K. Gerilowski, R. O. Green, S. Kratwurst, T. Krings, B. Luna, A. K. Thorpe, Real-time remote detection and measurement for airborne imaging spectroscopy: A case study with methane. Atmospheric Measurement Techniques. 8, 4383–4397 (2015).
 
       Brodrick, P. G. , Thorpe, A.K., Villaneuva-Weeks, C. S., Elder, C., Fahlen, J., Thompson, D.R. (2023). EMIT Greenhouse Gas Algorithms: Greenhouse Gas Point Source Mapping and Related Products, Theoretical Basis, v1.0, August 2023, NASA Jet Propulsion Laboratory, California Institute of Technology, Pasadena, CA, https://lpdaac.usgs.gov/documents/1696/EMIT_GHG_ATBD_V1.pdf
+    </Prose>
+</Block>
 
+
+<Block>
+  <Prose>
+    ## Limitations of use
+
+    NASA data and products are freely available to federal, state, public, non-profit and commercial users. This information can be experimental- or research-grade data products and may not be appropriate for operational use. These NASA data products, services, and the Disasters Mapping Portal are intended to aid decision makers and enhance situational awareness, but these data are not guaranteed to be consistently available or routinely updated. Please cite the information according to the direction provided in the metadata.
+  </Prose>
+</Block>
+
+
+<Block>
+    <Prose>
       ## License
 
       [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/legalcode) (CC BY 4.0).
+    </Prose>
+</Block>
 
+
+<Block>
+    <Prose>
       ## Additional Resources
 
       For information on the full EMIT dataset, please also see the [EMIT Methane Point Source Plume Complexes](https://earth.gov/ghgcenter/data-catalog/emit-ch4plume-v1) dataset overview page hosted on the [U.S. Greenhouse Gas Center](https://earth.gov/ghgcenter). 
