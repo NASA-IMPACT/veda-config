@@ -49,15 +49,81 @@ layers:
 ---
 
 <Block>
+  <Prose>   
+    ## Dataset Details
+    - **Temporal Extent:** 2018 - 2021<br />
+    - **Spatial Extent:** Northern latitudes<br />
+    - **Spatial Resolution:** ~10 km<br />
+    - **Data Units:** meters (m)<br />
+    - **Data Type:** Research<br />
+  </Prose>
+<Figure>
+    <Map
+      datasetId='is2sitmogr4'
+      layerId='IS2SITMOGR4-cog'
+      center={[-60.4743, 82.5651]}
+      zoom={1}
+      dateTime='2018-12-01'
+    />
+    <Caption
+      attrAuthor='NASA'
+      attrUrl='https://nasa.gov/'
+    >
+    Monthly sea ice thickness over the Northern Hemisphere.
+    </Caption>
+  </Figure>
+</Block>
+
+
+<Block>
   <Prose>
     ## About
 
     This data set reports monthly, gridded winter sea ice thickness across the Arctic Ocean. Sea ice thickness is estimated using ATLAS/ICESat-2 L3A Sea Ice Freeboard (ATL10), Version 5 data and NASA Eulerian Snow On Sea Ice Model (NESOSIM) snow loading.
+  </Prose>
+</Block>
 
-    Access this dataset at the [National Snow & Ice Data Center](https://nsidc.org/data/IS2SITMOGR4/versions/2)
 
-    ### Reference:
+<Block>
+  <Prose>
+    ## Reference
 
-    - Petty, A. A., N. Kurtz, R. Kwok, T. Markus, T. A. Neumann, and N. Keeney. 2022. ICESat-2 L4 Monthly Gridded Sea Ice Thickness, Version 2. Boulder, Colorado USA. NASA National Snow and Ice Data Center Distributed Active Archive Center. doi: https://doi.org/10.5067/OE8BDP5KU30Q.
+    Petty, A. A., N. Kurtz, R. Kwok, T. Markus, T. A. Neumann, and N. Keeney. 2022. ICESat-2 L4 Monthly Gridded Sea Ice Thickness, Version 2. Boulder, Colorado USA. NASA National Snow and Ice Data Center Distributed Active Archive Center. doi: https://doi.org/10.5067/OE8BDP5KU30Q.
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+  ## Data Access
+
+  Access this dataset at the [National Snow & Ice Data Center](https://nsidc.org/data/IS2SITMOGR4/versions/2)
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+    ## Limitations of use
+
+    NASA data and products are freely available to federal, state, public, non-profit and commercial users. This information can be experimental- or research-grade data products and may not be appropriate for operational use. These NASA data products, services, and the Disasters Mapping Portal are intended to aid decision makers and enhance situational awareness, but these data are not guaranteed to be consistently available or routinely updated. Please cite the information according to the direction provided in the metadata.
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+  ## Disclaimer
+
+  All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+    ## License
+
+    [Creative Commons Zero v1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC0 1.0)
   </Prose>
 </Block>
