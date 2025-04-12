@@ -43,7 +43,7 @@ layers:
       layerId: SoilMoi00_10cm_tavg
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `${dateFns.format(datetime, 'dd LLL yyyy')}`;        
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'dd LLL yyyy')} VS ${dateFns.format(compareDatetime, 'dd LLL yyyy')}`;
         }
     legend:
       unit:
@@ -65,42 +65,104 @@ layers:
       unit: mm3/mm3
 ---
 
-<Block type='wide'>
-  	<Prose>
-FLDAS is the Famine Early Warning Systems Network (FEWS NET) Land Data Assimilation System. The goal of FLDAS is to use observational and forecast datasets and advanced modeling methods to generate high quality fields of land surface states and fluxes used for FEWS NET decision support. The FLDAS systems are custom instances of the NASA Land Information System (LIS) that have been adapted to work with the domains, data streams, and monitoring and forecast requirements associated with food security assessment in data-sparse, developing countries. Surface soil moisture anomalies are an indicator of wet and dry extremes that have the potential to impact agricultural and food security outcomes.
 
-- **Temporal Extent:** January 1982 - June 2023
-- **Temporal Resolution:** Monthly
-- **Spatial Extent:** Quasi-Global ( -180.0,-60.0,180.0,90.0)
-- **Spatial Resolution:** 10 km x 10 km
-- **Data Units:** Fraction Soil moisture anomaly (mm3/mm3) difference from 1982-2016 monthly mean
-- **Data Type:** Research
-- **Data Latency:** Monthly
+<Block>
+  <Prose>
+  ## Dataset Details
+  - **Temporal Extent:** January 1982 - June 2023
+  - **Temporal Resolution:** Monthly
+  - **Spatial Extent:** Quasi-Global ( -180.0,-60.0,180.0,90.0)
+  - **Spatial Resolution:** 10 km x 10 km
+  - **Data Units:** Fraction Soil moisture anomaly (mm3/mm3) difference from 1982-2016 monthly mean
+  - **Data Type:** Research
+  - **Data Latency:** Monthly
+  </Prose>
+<Figure>
+    <Map
+      datasetId='fldas-soil-moisture-anomalies'
+      layerId='SoilMoi00_10cm_tavg'
+      center={[13.4664,  9.3155]}
+      zoom={2}
+      dateTime='2020-06-01'
+      compareDateTime='2022-06-01'
+    />
+    <Caption
+      attrAuthor='NASA'
+      attrUrl='https://nasa.gov/'
+    >
+    Comparison of 0-10cm soil moisture anomalies across Africa between June 1, 2020 and June 1, 2022.
+    </Caption>
+  </Figure>
+</Block>
 
-**Scientific Details:**  
-The Famine Early Warning Systems Network (FEWS NET) Land Data Assimilation System (FLDAS) contains a series of land surface parameters simulated from the Noah 3.6.1 model. The data are in 0.10 degree resolution and range from January 1982 to present. The temporal resolution is monthly and the spatial coverage is global (60S, 180W, 90N, 180E). The simulation was forced by a combination of the Modern-Era Retrospective analysis for Research and Applications version 2 (MERRA-2) data and Climate Hazards Group InfraRed Precipitation with Station (CHIRPS) daily rainfall data that has been temporally downscaled using the NASA Land Data Toolkit. The simulation was initialized on January 1, 1982 using soil moisture and other state fields from a FLDAS/Noah model climatology for that day of the year. Soil moisture anomalies are computed based on monthly averages from 1982-2016.
+
+<Block>
+  <Prose>
+  ## Scientific Details
+  The Famine Early Warning Systems Network (FEWS NET) Land Data Assimilation System (FLDAS) contains a series of land surface parameters simulated from the Noah 3.6.1 model. The data are in 0.10 degree resolution and range from January 1982 to present. The temporal resolution is monthly and the spatial coverage is global (60S, 180W, 90N, 180E). The simulation was forced by a combination of the Modern-Era Retrospective analysis for Research and Applications version 2 (MERRA-2) data and Climate Hazards Group InfraRed Precipitation with Station (CHIRPS) daily rainfall data that has been temporally downscaled using the NASA Land Data Toolkit. The simulation was initialized on January 1, 1982 using soil moisture and other state fields from a FLDAS/Noah model climatology for that day of the year. Soil moisture anomalies are computed based on monthly averages from 1982-2016.
 
   </Prose>
 </Block>
+
 <Block>
   <Prose>
-## Source Data Product Citation
-Amy McNally, NASA/GSFC/HSL (2018), FLDAS Noah Land Surface Model L4 Global Monthly Anomaly 0.1 x 0.1 degree (MERRA-2 and CHIRPS), Greenbelt, Maryland, USA, Goddard Earth Sciences Data and Information Services Center (GES DISC), Accessed: [Data Access Date], [10.5067/GNKZZBAYDF4W](https://doi.org/10.5067/GNKZZBAYDF4W)
-    
-## Dataset Accuracy
-This dataset uses CHIRPS precipitation inputs and MERRA-2 reanalysis. While regional, relative, comparisons to remotely sensed estimates and other model products are favorable, users should verify that the data accuracy meets the requirements of their specific application, and interpret results accordingly.
+  ## Source Data Product Citation
 
-## Key Publications
+  Amy McNally, NASA/GSFC/HSL (2018), FLDAS Noah Land Surface Model L4 Global Monthly Anomaly 0.1 x 0.1 degree (MERRA-2 and CHIRPS), Greenbelt, Maryland, USA, Goddard Earth Sciences Data and Information Services Center (GES DISC), Accessed: [Data Access Date], [10.5067/GNKZZBAYDF4W](https://doi.org/10.5067/GNKZZBAYDF4W)
+  </Prose>
+</Block>
 
-McNally, A., Arsenault, K., Kumar, S. et al. A land data assimilation system for sub-Saharan Africa food and water security applications. Sci Data 4, 170012 (2017). https://doi.org/10.1038/sdata.2017.12
 
-## Acknowledgment
+<Block>
+  <Prose>
+  ## Dataset Accuracy
 
-We gratefully acknowledge the financial support from the NASA Earth Science Applications: Water Resources program award 13-WATER13-0010, and USAID FEWS NET and NASA Participating Agency Program Agreement and NASA Harvest. Computing was supported by the resources at the NASA Center for Climate Simulation (NCCS). Distribution of data from the Goddard Earth Sciences Data and Information Services Center (GES DISC) is funded by NASA's Science Mission Directorate (SMD).
+  This dataset uses CHIRPS precipitation inputs and MERRA-2 reanalysis. While regional, relative, comparisons to remotely sensed estimates and other model products are favorable, users should verify that the data accuracy meets the requirements of their specific application, and interpret results accordingly.
+  </Prose>
+</Block>
 
-## License
 
-[Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/legalcode) (CC BY 4.0).
+<Block>
+  <Prose>
+  ## Key Publications
 
+  This dataset uses CHIRPS precipitation inputs and MERRA-2 reanalysis. While regional, relative, comparisons to remotely sensed estimates and other model products are favorable, users should verify that the data accuracy meets the requirements of their specific application, and interpret results accordingly.
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+  
+  ## Acknowledgment
+
+  We gratefully acknowledge the financial support from the NASA Earth Science Applications: Water Resources program award 13-WATER13-0010, and USAID FEWS NET and NASA Participating Agency Program Agreement and NASA Harvest. Computing was supported by the resources at the NASA Center for Climate Simulation (NCCS). Distribution of data from the Goddard Earth Sciences Data and Information Services Center (GES DISC) is funded by NASA's Science Mission Directorate (SMD).
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+    ## Limitations of use
+
+    NASA data and products are freely available to federal, state, public, non-profit and commercial users. This information can be experimental- or research-grade data products and may not be appropriate for operational use. These NASA data products, services, and the Disasters Mapping Portal are intended to aid decision makers and enhance situational awareness, but these data are not guaranteed to be consistently available or routinely updated. Please cite the information according to the direction provided in the metadata.
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+  ## Disclaimer
+
+  All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+  ## License
+
+  [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/legalcode) (CC BY 4.0).
   </Prose>
 </Block>
