@@ -130,47 +130,14 @@ layers:
       unit: N/A 
 ---
 
-<Block type='full'>
-<Prose>
-## Overview
 
-On August 8th, 2023, a devastating wildfire rapidly spread through the city of Lahaina, Hawai’i, which is located on the island of Maui and home to over 13,000 residents. This destructive wildfire was initially ignited by a downed powerline on Lahainaluna Road and was later fueled by intense wind gusts that persisted throughout the day. The National Weather Service recorded wind gusts as high as 67 mph in the area, contributing to the rapid spread of the wildfire across much of Lahaina during the afternoon hours of August 8th.
-
-</Prose>
-
-<Figure>
-  <Map
-    center={[-156.6727, 20.8766]}
-    zoom={13.5}
-    datasetId='lahaina-fire'
-    layerId='hls-swir-falsecolor-composite'
-    dateTime='2023-08-13'
-  />
-  <Caption
-    attrAuthor='NASA'
-    attrUrl='https://nasa.gov/'
-  >
-    SWIR False color HLS imagery showing the burned area along Front Street in Lahaina, HI after the wildfire (2023 August 13).
-  </Caption>
-</Figure>
-
-</Block>
-
-<Block type='wide'>
-<Prose>
-## Scientific Research
-
-Three datasets were utilized in the analysis of the Lahaina Fire. The first dataset is an experimental index was calculated using HLS imagery captured after the fire on August 13th, 2023. This innovative Burned Area Index (BAIS2) offers superior accuracy in delineating the burned areas compared to traditional Normalized Burn Ratio Indices 1 and 2. It particularly excels in identifying severely scorched fields situated just uphill from the city.
-
-The second dataset utilized is a three-band HLS composite image generated from the shortwave infrared, narrow near-infrared, and red bands of pre and post-fire HLS data. These scenes were acquired on August 8 and 13, 2023. The SWIR false color composite provides a visually compelling representation of the extent of the burned area resulting from the Lahaina Fire.
-
-The third dataset utilized is thermal  infrared imagery collected from Landsat-8 on the night of August 8, 2023, offers essential insights into the intensity of the fire and the identification of hotspots within the affected area.
-
-These datasets support ongoing scientific research and analysis of the Lahaina Fire and its aftermath, including assessing the fire's impact on the local vegetation cover, the monitoring of long-term recovery of the local environment and ecosystem, and even evaluation of the effectiveness of fire mitigation and suppression efforts.
-</Prose>
-</Block>
-
-<Block type = 'full'>
+<Block>
+  <Prose>   
+    ## Dataset Details
+    - **Temporal Extent:** August 8 - August 13, 2023<br />
+    - **Spatial Extent:** Hawaii<br />
+    - **Data Type:** Research<br />
+  </Prose>
 <Figure>
   <Map
     center={[-156.67934, 20.87459]}
@@ -186,43 +153,98 @@ These datasets support ongoing scientific research and analysis of the Lahaina F
     BAIS2 burned area calculations show the most highly impacted and highest probability of scorched areas along Front Street in Lahaina, HI after the wildfire (2023 August 13).
   </Caption>
 </Figure>
-
-<Prose>
-## Interpreting the Data
-
-These three datasets concerning the Lahaina Fire should be interpreted with a special consideration of the temporal, spatial, and environmental aspects.
-
-Temporal Aspects: The HLS SWIR FalseColor composite images were taken at 10:30 AM LST on August 8 and 13, 2023, which correspond to pre and post-fire times. The Landsat8 Thermal imagery was taken at 10:30 PM LST on August 8, 2023 as the wildfire was ongoing in the city of Lahaiana. The BAIS2 calculation was taken from the red band of the August 13, 2023 HLS imagery.
-
-Spatial Aspects: All three datasets are at 30 meter resolution, so as to ensure ease of comparison between the datasets.
-
-Environmental Aspects: When interpreting the data, it is essential to consider the local topography and land cover. Lahaina lies along the west coast of Maui, with rapidly rising terrain just to its east.
-
-</Prose>
 </Block>
 
 <Block>
+  <Prose>
+  ## Overview
+
+  On August 8th, 2023, a devastating wildfire rapidly spread through the city of Lahaina, Hawai’i, which is located on the island of Maui and home to over 13,000 residents. This destructive wildfire was initially ignited by a downed powerline on Lahainaluna Road and was later fueled by intense wind gusts that persisted throughout the day. The National Weather Service recorded wind gusts as high as 67 mph in the area, contributing to the rapid spread of the wildfire across much of Lahaina during the afternoon hours of August 8th.
+  </Prose>
+</Block>
+
+
+
+<Block type='wide'>
 <Prose>
+## Scientific Research
 
-## Additional Resources
+Three datasets were utilized in the analysis of the Lahaina Fire. The first dataset is an experimental index was calculated using HLS imagery captured after the fire on August 13th, 2023. This innovative Burned Area Index (BAIS2) offers superior accuracy in delineating the burned areas compared to traditional Normalized Burn Ratio Indices 1 and 2. It particularly excels in identifying severely scorched fields situated just uphill from the city.
 
-* [Harmonized Landsat-Sentinel](https://hls.gsfc.nasa.gov/)
+The second dataset utilized is a three-band HLS composite image generated from the shortwave infrared, narrow near-infrared, and red bands of pre and post-fire HLS data. These scenes were acquired on August 8 and 13, 2023. The SWIR false color composite provides a visually compelling representation of the extent of the burned area resulting from the Lahaina Fire.
 
-* [Landsat8](https://landsat.gsfc.nasa.gov/satellites/landsat-8/)
+The third dataset utilized is thermal  infrared imagery collected from Landsat-8 on the night of August 8, 2023, offers essential insights into the intensity of the fire and the identification of hotspots within the affected area.
 
-* [Landsat8 Nighttime Data Acquisition](https://www.usgs.gov/faqs/how-do-i-search-and-download-ascending-nighttime-landsat-scenes)
-
-* [PDC/FEMA Report on the Lahaina Fire](https://www.mauicounty.gov/CivicAlerts.aspx?AID=12683)
-
+These datasets support ongoing scientific research and analysis of the Lahaina Fire and its aftermath, including assessing the fire's impact on the local vegetation cover, the monitoring of long-term recovery of the local environment and ecosystem, and even evaluation of the effectiveness of fire mitigation and suppression efforts.
 </Prose>
 </Block>
 
+
 <Block>
-<Prose>
+  <Prose>
+  ## Interpreting the Data
 
-## Data Story
- 
-* [The Devastating August 8th, 2023 Lahaina, Hawai'i Wildfire](https://www.earthdata.nasa.gov/dashboard/stories/lahaina-fire)
+  These three datasets concerning the Lahaina Fire should be interpreted with a special consideration of the temporal, spatial, and environmental aspects.
 
-</Prose>
+  Temporal Aspects: The HLS SWIR FalseColor composite images were taken at 10:30 AM LST on August 8 and 13, 2023, which correspond to pre and post-fire times. The Landsat8 Thermal imagery was taken at 10:30 PM LST on August 8, 2023 as the wildfire was ongoing in the city of Lahaiana. The BAIS2 calculation was taken from the red band of the August 13, 2023 HLS imagery.
+
+  Spatial Aspects: All three datasets are at 30 meter resolution, so as to ensure ease of comparison between the datasets.
+
+  Environmental Aspects: When interpreting the data, it is essential to consider the local topography and land cover. Lahaina lies along the west coast of Maui, with rapidly rising terrain just to its east.
+
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+  
+  ## Data Stories Using This Dataset
+  
+  **<Link to={"/stories/lahaina-fire"}>Lahaina Fire</Link>**
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+    ## Limitations of use
+
+    NASA data and products are freely available to federal, state, public, non-profit and commercial users. This information can be experimental- or research-grade data products and may not be appropriate for operational use. These NASA data products, services, and the Disasters Mapping Portal are intended to aid decision makers and enhance situational awareness, but these data are not guaranteed to be consistently available or routinely updated. Please cite the information according to the direction provided in the metadata.
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+  ## Disclaimer
+
+  All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+    ## License
+
+    [Creative Commons Zero v1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC0 1.0)
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+
+  ## Additional Resources
+
+  * [Harmonized Landsat-Sentinel](https://hls.gsfc.nasa.gov/)
+
+  * [Landsat8](https://landsat.gsfc.nasa.gov/satellites/landsat-8/)
+
+  * [Landsat8 Nighttime Data Acquisition](https://www.usgs.gov/faqs/how-do-i-search-and-download-ascending-nighttime-landsat-scenes)
+
+  * [PDC/FEMA Report on the Lahaina Fire](https://www.mauicounty.gov/CivicAlerts.aspx?AID=12683)
+
+  </Prose>
 </Block>
