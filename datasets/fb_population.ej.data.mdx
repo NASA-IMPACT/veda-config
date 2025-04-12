@@ -52,20 +52,15 @@ layers:
       - "#800026"
 ---
 
-<Block>
-<Prose>
-In partnership with the Center for International Earth Science Information Network (CIESIN) at Columbia University, Meta [formerly known as Facebook] used census data and computer vision techniques (Convolutional Neural Networks) to identify buildings from publicly accessible mapping services to create population density datasets. These high-resolution maps estimate the number of individuals living within 30-meter grid tiles on a global scale. The population estimates are based on data from the Gridded Population of the World (GPWv4) data collection.
-</Prose>
-</Block>
-
-<Block>
-<Prose>
-## Scientific research
-The 30-meter resolution population density dataset uses machine learning techniques to produce global population maps using building footprints and census population data from CIESIN. The high resolution population data can be used to support the applications community when assessing the impacts of natural disasters or assessing risk at near global coverage.
-</Prose>
-</Block>
-
 <Block type='full'>
+  <Prose>   
+    ## Dataset Details
+    - **Temporal Extent:** 2015<br />
+    - **Spatial Extent:** Global<br />
+    - **Spatial Resolution:** 30 meters<br />
+    - **Data Units:** Number of people (density)
+    - **Data Type:** Research<br />
+  </Prose>
 <Figure>
   <Map
     datasetId='facebook_population_density'
@@ -81,19 +76,68 @@ The 30-meter resolution population density dataset uses machine learning techniq
     Population density in units of people per square meter for New York, NY, USA for 2015
   </Caption>
 </Figure>
-<Prose>
-## Interpreting the data
-Population density is provided in units of people per square meter, at the near global scale and is available for the year 2015. The data is gridded at 30m resolution and is only available in locations where buildings are present (i.e. there will be no data over large parks or industrial areas). Higher population density regions (shaded in red) typically correspond to urban centers and lower population (in yellow) to rural and suburban locations.
+</Block>
+
+
+<Block>
+  <Prose>
+  ## About 
+
+  In partnership with the Center for International Earth Science Information Network (CIESIN) at Columbia University, Meta [formerly known as Facebook] used census data and computer vision techniques (Convolutional Neural Networks) to identify buildings from publicly accessible mapping services to create population density datasets. These high-resolution maps estimate the number of individuals living within 30-meter grid tiles on a global scale. The population estimates are based on data from the Gridded Population of the World (GPWv4) data collection.
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+  ## Interpreting the data
+  Population density is provided in units of people per square meter, at the near global scale and is available for the year 2015. The data is gridded at 30m resolution and is only available in locations where buildings are present (i.e. there will be no data over large parks or industrial areas). Higher population density regions (shaded in red) typically correspond to urban centers and lower population (in yellow) to rural and suburban locations.
 </Prose>
 </Block>
 
+
 <Block>
-<Prose>
-## Credits
-1. https://dataforgood.facebook.com/dfg/docs/methodology-high-resolution-population-density-maps
+  <Prose>
+    ## Scientific research
 
-2. https://dataforgood.facebook.com/dfg/tools/high-resolution-population-density-maps
+    The 30-meter resolution population density dataset uses machine learning techniques to produce global population maps using building footprints and census population data from CIESIN. The high resolution population data can be used to support the applications community when assessing the impacts of natural disasters or assessing risk at near global coverage.
+  </Prose>
+</Block>
 
-3. T. G. Tiecke et al., ‘Mapping the world population one building at a time’, CoRR, https://arxiv.org/abs/1712.05839, 2017.
-</Prose>
+
+<Block>
+  <Prose>
+    ## Limitations of use
+
+    NASA data and products are freely available to federal, state, public, non-profit and commercial users. This information can be experimental- or research-grade data products and may not be appropriate for operational use. These NASA data products, services, and the Disasters Mapping Portal are intended to aid decision makers and enhance situational awareness, but these data are not guaranteed to be consistently available or routinely updated. Please cite the information according to the direction provided in the metadata.
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+  ## Disclaimer
+
+  All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+    ## License
+
+    [Creative Commons Zero v1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC0 1.0)
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  ## Credits
+  1. https://dataforgood.facebook.com/dfg/docs/methodology-high-resolution-population-density-maps
+
+  2. https://dataforgood.facebook.com/dfg/tools/high-resolution-population-density-maps
+
+  3. T. G. Tiecke et al., ‘Mapping the world population one building at a time’, CoRR, https://arxiv.org/abs/1712.05839, 2017.
+  </Prose>
 </Block>
