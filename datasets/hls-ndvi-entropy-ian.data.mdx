@@ -43,7 +43,7 @@ layers:
       - "#006837"
     compare:
         datasetId: hls-ndvi-ian
-        layerId: hls-ndvi
+        layerId: ndvi
   - id: ndvi_difference
     stacCol: hls-ndvi-difference
     name: NDVI Difference
@@ -106,28 +106,56 @@ layers:
   - **Data Units:** Surface Reflectance
   - **Data Type:** Research
   - **Data Latency:** 2 to 3 days
-
   </Prose>
+  <Figure>
+    <Map
+      datasetId='hls-ndvi-ian'
+      layerId='ndvi'
+      dateTime='2022-09-05'
+      zoom={10}
+      center={[-82.1476,26.5101]}
+      compareDateTime='2022-09-30'
+    />
+    <Caption
+      attrAuthor='Harmonized Landsat and Sentinel-2'
+      attrUrl='https://hls.gsfc.nasa.gov/'
+    >
+    HLS NDVI pre/post-Ian over Sanibel Island, Cape Coral, and portions of Fort Myers.
+    </Caption>
+  </Figure>
 </Block>
+
 
 <Block>
   <Prose>
+  ## About
+
   Harmonized Landsat Sentinel-2 (HLS) project from NASA is designed to integrate and harmonize data from multiple satellite sources, specifically the Operation Land Imager (OLI) on Landsat-8/9 and the Mult-Spectral Instrument (MSI) on Sentinel-2A/B satellites. This project aims to create a seamless surface reflectance record that is essential for various Earth Observation and monitoring tasks. HLS project incorporates several advanced scientific methodologies and technologies to harmonize data from the Landsat and Sentinel-2 satellites such as atmospheric correction, geographic co-registration and common gridding, bidirectional reflectance distribution normalization, and cloud-shadow masking.
-
   </Prose>
 </Block>
 
 
 <Block>
   <Prose>
-  **Scientific Details (NDVI):**<br />
+  ## Scientific Details (NDVI)
   To calculate the Normalized Difference Vegetation Index (NDVI) from the HLS-2 Dataset, we utilize the red and near-infrared bands to assess vegetation health by applyin the formula NDVI = NIR - Red / NIR + Red, where 'NIR' refers to the near-infrared surface reflectance, and 'Red' denotes the red light surface reflectance, both harmonized from the Landsat and Sentinel satellites.
 
-  **Scientific Details (Entropy):**<br />
+  ## Scientific Details (Entropy)
   The calculation of entropy can be accomplished using the 'entropy' function from the 'scipy.stats' module, which computes the entropy of a distribution for given probability values. This function calculates the Shannon entropy. This metric quantifies the randomness or unpredictability inherent in the dataset's distribution from one time point to another.
 
   </Prose>
 </Block>
+
+
+<Block>
+  <Prose>
+  
+  ## Data Stories Using This Dataset
+  
+  **<Link to={"/stories/hurricane-ian"}>Hurricane Ian and Impacts on Vegetation</Link>**
+  </Prose>
+</Block>
+
 
 <Block>
   <Prose>
@@ -147,6 +175,16 @@ layers:
 
   </Prose>
 </Block>
+
+
+<Block>
+  <Prose>
+    ## Limitations of use
+
+    NASA data and products are freely available to federal, state, public, non-profit and commercial users. This information can be experimental- or research-grade data products and may not be appropriate for operational use. These NASA data products, services, and the Disasters Mapping Portal are intended to aid decision makers and enhance situational awareness, but these data are not guaranteed to be consistently available or routinely updated. Please cite the information according to the direction provided in the metadata.
+  </Prose>
+</Block>
+
 
 <Block>
   <Prose>
