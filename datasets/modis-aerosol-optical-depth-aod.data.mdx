@@ -1,6 +1,6 @@
 ---
-id: houston-aod
-name: "MODIS Aerosol Optical Depth"
+id: modis-aod
+name: "MODIS Aerosol Optical Depth (AOD)"
 description: "Using MODIS MCD19A2 to Analyze impacts of Aerosols in Urban Areas"
 media:
   src: ::file ./media/smog-city.png
@@ -54,11 +54,82 @@ layers:
       spatialExtent: Houston, Texas
       temporalResolution: Annual 
       unit: Unitless
+
+  - id: houston-aod-diff
+    stacCol: houston-aod-diff
+    name: AOD Difference (2010-2019) - (2000-2009)
+    type: raster
+    description: "This figure shows the difference in AOD in the form of a raster when subtracting the two decades from the original AOD Dataset"
+    initialDatetime: newest
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      colormap_name: bwr
+      rescale:
+        - -0.1
+        - 0.1
+      nodata: 0
+    compare:
+      datasetId: nlcd-annual-conus
+      layerId: nlcd-new-urbanization
+      mapLabel: |
+        ::js ({dateFns, datetime, compareDatetime}) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      type: gradient
+      min: "-0.1"
+      max: "0.1"
+      stops:
+        - "#4575b4"
+        - "#91bfdb"
+        - "#e0f3f8"
+        - "#ffffff"
+        - "#fee090"
+        - "#fc8d59"
+        - "#d73027"
+    info:
+      source: NASA
+      spatialExtent: Regional
+      temporalResolution: Annual
+      unit: Percent Difference
+
+  - id: modis-derecho
+    stacCol: modis-derecho
+    name: MODIS AOD - May 12th, 2022
+    type: raster
+    description: "Mosaiced MODIS infrared satellite imagery of AOD for May 12th, 2022 derecho."
+    initialDatetime: newest
+    zoomExtent:
+        - 0
+        - 20
+    sourceParams:
+      colormap_name: ylorbr    
+      rescale:
+        - 0
+        - 0.2
+    legend:
+      type: gradient
+      min: 2.5e-05
+      max: 0.1855
+      stops:
+        - "#ffffe5"  # Pale Yellow
+        - "#feeba2"  # Pastel Yellow-Orange
+        - "#febb47"  # Bright Orange-Yellow
+        - "#f07818"  # Deep Orange
+        - "#b84203"  # Dark Burnt Orange
+        - "#662506"  # Dark Brown
+    info:
+        source: MODIS
+        spatialExtent: Regional
+        temporalResolution: Daily
+        unit: N/A
 ---
 
 <Block>
   <Prose>   
-    ## Dataset Details
+    ## Dataset Details <br />(Houston, TX AOD)
     - **Temporal Extent:** 2000 - 2019<br />
     - **Spatial Extent:** Houston, TX<br />
     - **Spatial Resolution:** 1 km<br />
@@ -75,13 +146,62 @@ layers:
       zoom={8.75}
     />
     <Caption>
-      Aerosol Optical Depth Compared Decadally from 2000-2009 & 2010-2019. The map shown shows the change in AOD over the last 20 years over the Houston metropolitan area.
+      Figure 2: Aerosol Optical Depth Compared Decadally from 2000-2009 & 2010-2019. The map shown shows the change in AOD over the last 20 years over the Houston metropolitan area.
     </Caption>
   </Figure>
 </Block>
 
 
+<Block>
+  <Prose>
+    ## Dataset Details <br />(Houston, TX AOD Difference)
+    - **Temporal Extent:** 2000-2019<br />
+    - **Spatial Extent:** Houston metro area<br />
+    - **Spatial Resolution:** 1 km<br />
+    - **Data Type:** Research<br />
+  </Prose>
+  <Figure>
+    <Map
+      datasetId='houston-aod-diff'
+      layerId='houston-aod-diff'
+      dateTime='2000-01-01'
+      compareDateTime='2001-01-01'
+      compareLabel='AOD Difference vs Houston Urbanization'
+      center={[-95.35, 29.8]}
+      zoom={8.75}
+      />
+    <Caption>
+      Aerosol Optical Depth Compared Decadally from 2000-2009 & 2010-2019 vs the Urbanization of the Houston metro from 2000-2019. The left portion of the map shows the subtracted difference in AOD over the last 20 years over the Houston metropolitan area.
+    </Caption>
+  </Figure>
+</Block>
 
+
+<Block>
+  <Prose>
+  ## Dataset Details <br />(Derecho AOD)
+  - **Temporal Extent:** May 12th 2022
+  - **Temporal Resolution:** Daily
+  - **Spatial Extent:** Regional
+  - **Spatial Resolution:** 1 km
+  - **Data Type:** Research
+  </Prose>
+<Figure>
+  <Map
+    center={[-97, 44]}
+    zoom={6}
+    datasetId='modis-aod'
+    layerId='modis-derecho'
+    dateTime='2022-05-12'
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+  Mosaiced MODIS Infrared satellite imagery of AOD showing elevated values along the leading edge of the Serial Derecho on May 12th, 2022.
+  </Caption>
+</Figure>
+</Block>
 
 
 
@@ -90,7 +210,7 @@ layers:
 
   ### About 
 
-  The MCD19A2 product represents a dataset that offers insights into aerosol optical thickness over land surfaces, grounded in the Multi-Angle Implementation of Atmospheric Correction (MAIAC) algorithm. Originating from both the Terra and Aqua MODIS satellites, this dataset is remarkable for its fusion of information from multiple satellite platforms. Generated daily, the data has a high spatial resolution of 1 km per pixel, allowing detailed observiations.
+  The MCD19A2 data products offer insights into aerosol optical (AOD) thickness over land surfaces, grounded in the Multi-Angle Implementation of Atmospheric Correction (MAIAC) algorithm. Originating from both the Terra and Aqua MODIS satellites, this dataset is remarkable for its fusion of information from multiple satellite platforms. Generated daily, the data has a high spatial resolution of 1 km per pixel, allowing detailed observiations.
 
   The primary purpose of the MCD19A2 product is to provide a comprehensive set of atmospheric and geometric properties or parameters. These parameters are integral in producing the land surface Bidirectional Reflectance Factor, another important component derived usiung the MAIAC algorithm.
 
@@ -128,8 +248,9 @@ layers:
 <Block>
   <Prose>
   ## Accessing the Data
+  Visit the NASA [LAADS DAAC](https://ladsweb.modaps.eosdis.nasa.gov/search/) to explore options for data access.<br />
 
-  Google Earth Engine (GEE) provides an efficient way to harness the capabilities of the MODIS MCD19A2 dataset.
+  Alternatively, Google Earth Engine (GEE) provides an efficient way to harness the capabilities of the MODIS MCD19A2 dataset.
 
   1. Initialize Google Earth Engine: Before you can access any datasets on GEE, ensure you've signed up for a Google Earth Engine account and initialized the GEE API in your programming environment.
 
@@ -145,7 +266,9 @@ layers:
   
   ## Data Stories Using This Dataset
   
-  **<Link to={"/stories/houston-aod"}>Aerosols and Their Impacts on Houston, TX</Link>**
+  - **<Link to={"/stories/houston-aod"}>Aerosols and Their Impacts on Houston, TX</Link>**<br />
+  - **<Link to={"/stories/derecho-impacts"}>NASA Data Fusion Analysis of Derechos and Their Impact on Rural America</Link>**
+
   </Prose>
 </Block>
 
@@ -157,6 +280,21 @@ layers:
 
   Alexi Lyapustin - NASA GSFC, Yujie Wang - Univeristy of Maryland Baltimore County and MODAPS SIPS - NASA. (2015). MCD19A2 MODIS/Terra+Aqua Aerosol Optical Thickness Daily L2G Global 1km SIN Grid. NASA LP DAAC. http://doi.org/10.5067/MODIS/MCD19A2.006
 
+
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+
+  ### Key Publications
+  
+  Remer, L. A., and Coauthors, 2005: The MODIS Aerosol Algorithm, Products, and Validation. J. Atmos. Sci., 62, 947–973, https://doi.org/10.1175/JAS3385.1.<br />
+
+  Wei,J., Li, Z., Peng, Y., and Sun, L. (2019) MODIS Collection 6.1 aerosol optical depth products over land and ocean: validation and comparison. Atmospheric Environment (201) 428-440. https://doi.org/10.1016/j.atmosenv.2018.12.004<br />
+  
+  Mehta, M., Singh, R., Singh, A., Singh, N., and Anshumali. (2016) Recent global aerosol optical depth variations and trends — A comparative study using MODIS and MISR level 3 datasets. Remote Sensing of Environment (181) 137-150. https://doi.org/10.1016/j.rse.2016.04.004
 
   </Prose>
 </Block>
