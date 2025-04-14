@@ -59,7 +59,34 @@ layers:
 ---
 
 <Block>
+  <Prose>   
+    ## Dataset Details
+    - **Temporal Extent:** January 1 - December 31, 2020<br />
+    - **Spatial Extent:** Global<br />
+    - **Spatial Resolution:** 5 km<br />
+    - **Data Units:**  Mg C/m²/day
+    - **Data Type:** Research<br />
+  </Prose>
+  <Figure>
+    <Map
+      datasetId='npp'
+      layerId='MO_NPP_npp_vgpm'
+      dateTime='2020-01-01'
+      zoom={4}
+      center={[-87.4079, 24.9318]}
+    />
+    <Caption
+      attrAuthor='NASA'
+      attrUrl='https://nasa.gov/'
+    >
+    Gulf of America net primary productivity during January 2020.
+    </Caption>
+  </Figure>
+</Block>
+
+<Block>
   <Prose>
+    ## Additional Resources
     Find information at the [Ocean Productivity website](https://sites.science.oregonstate.edu/ocean.productivity/index.php)
   </Prose>
 </Block>
