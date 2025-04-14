@@ -39,7 +39,6 @@
     "@trussworks/react-uswds": "^9.1.0",
     "@uswds/uswds": "^3.8.1",
     "autoprefixer": "^10.4.19",
-    "date-fns": "^4.1.0",
     "postcss": "^8.5.2",
     "postcss-import": "^16.1.0",
     "postcss-url": "^10.1.3",
