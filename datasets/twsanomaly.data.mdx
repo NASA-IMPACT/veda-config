@@ -57,11 +57,18 @@ layers:
       unit: N/A 
 
 ---
-<Block type='full'>
-<Prose>
-## Overview
-Terrestrial water storage (TWS) is defined as the summation of all water on the land surface and in the subsurface. It includes surface soil moisture, root zone soil moisture, groundwater, snow, ice, water stored in the vegetation, river and lake water.
-</Prose>
+
+
+<Block>
+  <Prose>   
+    ## Dataset Details
+    - **Temporal Extent:** Sept. 1, 2002 - Dec. 1, 2021<br />
+    - **Temporal Resolution:** Daily
+    - **Spatial Extent:** Global<br />
+    - **Spatial Resolution:** 10 km<br />
+    - **Data Units:** Millimeters (mm)
+    - **Data Type:** Research<br />
+  </Prose>
   <Figure>
   <Map
     datasetId='tws-anomaly'
@@ -75,10 +82,16 @@ Terrestrial water storage (TWS) is defined as the summation of all water on the 
     attrAuthor='NASA'
     attrUrl='https://nasa.gov/'
   >
-  Depleting TWS over CA between 2002 (left) and 2021 (right), captured by LIS modeled TWS anomalies
+  Depleting TWS over California between 2002 (left) and 2021 (right), captured by LIS modeled TWS anomalies.
 </Caption>
   </Figure>
+</Block>
 
+<Block>
+  <Prose>
+  ## Overview
+  Terrestrial water storage (TWS) is defined as the summation of all water on the land surface and in the subsurface. It includes surface soil moisture, root zone soil moisture, groundwater, snow, ice, water stored in the vegetation, river and lake water.
+  </Prose>
 </Block>
 
 
@@ -112,18 +125,55 @@ The TWS anomalies are calculated as differences of raw TWS with the climatology 
 </Prose>
 </Block>
 
+
 <Block>
-<Prose>
-## Additional resources
-* [EIS Freshwater](https://freshwater.eis.smce.nasa.gov/)
+  <Prose>
+  
+  ## Data Stories Using This Dataset
+  
+  **<Link to={"/stories/eis-coastal-risks"}>Unraveling the Components of Coastal Risk</Link>**
+  </Prose>
+</Block>
 
-* [Land Information System](https://lis.gsfc.nasa.gov/)
 
-### Explore the Missions
-* [GRACE-FO](https://gracefo.jpl.nasa.gov/data/grace-fo-data/)
+<Block>
+  <Prose>
+    ## Limitations of use
 
-* [SMAP](https://smap.jpl.nasa.gov/)
+    NASA data and products are freely available to federal, state, public, non-profit and commercial users. This information can be experimental- or research-grade data products and may not be appropriate for operational use. These NASA data products, services, and the Disasters Mapping Portal are intended to aid decision makers and enhance situational awareness, but these data are not guaranteed to be consistently available or routinely updated. Please cite the information according to the direction provided in the metadata.
+  </Prose>
+</Block>
 
-* [MODIS](https://modis.gsfc.nasa.gov/)
-</Prose>
+
+<Block>
+  <Prose>
+  ## Disclaimer
+
+  All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+    ## License
+
+    [Creative Commons Zero v1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC0 1.0)
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  ## Additional resources
+  * [EIS Freshwater](https://freshwater.eis.smce.nasa.gov/)
+
+  * [Land Information System](https://lis.gsfc.nasa.gov/)
+
+  ### Explore the Missions
+  * [GRACE-FO](https://gracefo.jpl.nasa.gov/data/grace-fo-data/)
+
+  * [SMAP](https://smap.jpl.nasa.gov/)
+
+  * [MODIS](https://modis.gsfc.nasa.gov/)
+  </Prose>
 </Block>
