@@ -101,19 +101,70 @@ layers:
       unit: Percent Diff  
 ---
 
+
+<Block>
+  <Prose>   
+    ## Dataset Details
+    - **Temporal Extent:** 2020<br />
+    - **Spatial Extent:** Western United States<br />
+    - **Spatial Resolution:** 1 km<br />
+    - **Data Units:** Standardized anomalies
+    - **Data Type:** Research<br />
+  </Prose>
+<Figure>
+  <Map
+    datasetId='disalexi-etsuppression'
+    layerId='disalexi-etsuppression'
+    dateTime='2020-01-01'
+    zoom={4}
+    center={[-117.9283, 41.7758]}
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+    High resolution observations of ET anomalies from OpenET (DisALEXI model).
+  </Caption>
+</Figure>
+</Block>
+
+
 <Block>
   <Prose>
     ## About
     
-  	Change in evapotranspiration (ET) and vegetation transpiration for 2020 fires using model outputs from Land Information System (LIS) framework that synthesizes multiple remote sensing observations within the Noah-MP land surface model. Change in ET is calculated as the difference of ET in the immediate post-fire water year from that in the immediate pre-fire water year. The difference is normalized by pre-fire ET and negative values denote vegetation disturbance induced by fire or by a climatological anomaly resulting in the decline in ET. Change in vegetation transpiration is calculated as the difference of transpiration in the immediate post-fire water year from that in the immediate pre-fire water year. The difference is normalized by pre-fire transpiration and negative values denote vegetation disturbance induced by fire or by a climatological anomaly resulting in the decline in transpiration.
+  	Change in evapotranspiration (ET) and vegetation transpiration for 2020 fires using model outputs from Land Information System (LIS) framework that synthesizes multiple remote sensing observations within the Noah-MP land surface model.
 	
-    ## Additional Resources
-
-    * [OpenET Product](https://openetdata.org/)
-    * [MTBS - Project overview](https://www.mtbs.gov/project-overview)
-    * [Interactive MTBS Viewer for Continental US](https://www.mtbs.gov/viewer/?region=conus)
   </Prose>
 </Block>
+
+
+<Block>
+  <Prose>
+  ## Scientific Details
+  Change in ET is calculated as the difference of ET in the immediate post-fire water year from that in the immediate pre-fire water year. The difference is normalized by pre-fire ET and negative values denote vegetation disturbance induced by fire or by a climatological anomaly resulting in the decline in ET. Change in vegetation transpiration is calculated as the difference of transpiration in the immediate post-fire water year from that in the immediate pre-fire water year. The difference is normalized by pre-fire transpiration and negative values denote vegetation disturbance induced by fire or by a climatological anomaly resulting in the decline in transpiration.
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+  
+  ## Data Stories Using This Dataset
+  
+  **<Link to={"/stories/fire-life-cycle"}>Hydrological Drivers and Impacts of Fire</Link>**
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+    ## Limitations of use
+
+    NASA data and products are freely available to federal, state, public, non-profit and commercial users. This information can be experimental- or research-grade data products and may not be appropriate for operational use. These NASA data products, services, and the Disasters Mapping Portal are intended to aid decision makers and enhance situational awareness, but these data are not guaranteed to be consistently available or routinely updated. Please cite the information according to the direction provided in the metadata.
+  </Prose>
+</Block>
+
 
 <Block>
   <Prose>
@@ -122,9 +173,21 @@ layers:
   </Prose>
 </Block>
 
+
 <Block>
   <Prose>
   ## License
   [Creative Commons Attribution 1.0 International](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC BY 1.0)
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+    ## Additional Resources
+
+    * [OpenET Product](https://openetdata.org/)
+    * [MTBS - Project overview](https://www.mtbs.gov/project-overview)
+    * [Interactive MTBS Viewer for Continental US](https://www.mtbs.gov/viewer/?region=conus)
   </Prose>
 </Block>
