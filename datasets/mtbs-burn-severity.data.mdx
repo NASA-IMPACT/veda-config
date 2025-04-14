@@ -58,6 +58,35 @@ layers:
       unit: Categorical  
 ---
 
+
+<Block>
+  <Prose>   
+    ## Dataset Details
+    - **Temporal Extent:** 2016 - 2020<br />
+    - **Spatial Extent:** Western United States<br />
+    - **Spatial Resolution:** ~ 100 meters<br />
+    - **Data Type:** Research<br />
+  </Prose>
+<Figure>
+    <Map
+      datasetId='mtbs-burn-severity'
+      layerId='mtbs-burn-severity'
+      dateTime='2020-01-01'
+      zoom={7}
+      center={[-122.487, 44.8796]}
+    />
+    <Caption
+      attrAuthor='NASA'
+      attrUrl='https://nasa.gov/'
+    >
+    Monitoring Trends in Burn Severity (MTBS) impacted areas during the year 2020 around Salem, Oregon.
+    </Caption>
+  </Figure>
+</Block>
+
+
+
+
 <Block>
   <Prose>
     ## About
@@ -66,6 +95,49 @@ layers:
     
     MTBS is an interagency program whose goal is to consistently map the burn severity and extent of large fires across all lands of the United States from 1984 to present. This includes all fires 1000 acres or greater in the western United States and 500 acres or greater in the eastern Unites States. The extent of coverage includes the continental U.S., Alaska, Hawaii and Puerto Rico. 
 
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+  
+  ## Data Stories Using This Dataset
+  
+  **<Link to={"/stories/fire-life-cycle"}>Hydrological Drivers and Impacts of Fire</Link>**
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+    ## Limitations of use
+
+    NASA data and products are freely available to federal, state, public, non-profit and commercial users. This information can be experimental- or research-grade data products and may not be appropriate for operational use. These NASA data products, services, and the Disasters Mapping Portal are intended to aid decision makers and enhance situational awareness, but these data are not guaranteed to be consistently available or routinely updated. Please cite the information according to the direction provided in the metadata.
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+  ## Disclaimer
+
+  All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+    ## License
+
+    [Creative Commons Zero v1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC0 1.0)
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
     ## Additional Resources
 
     * [MTBS - Project overview](https://www.mtbs.gov/project-overview)
