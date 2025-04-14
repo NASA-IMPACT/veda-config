@@ -57,6 +57,35 @@ layers:
 ---
 
 <Block>
+  <Prose>   
+    ## Dataset Details
+    - **Temporal Extent:** 2000 - 2019<br />
+    - **Spatial Extent:** Houston, TX<br />
+    - **Spatial Resolution:** 1 km<br />
+    - **Data Type:** Research<br />
+  </Prose>
+  <Figure>
+    <Map
+      datasetId='houston-aod'
+      layerId='houston-aod'
+      dateTime='2000-01-01'
+      compareDateTime='2010-01-01'
+      compareLabel='2000-2009 mean / 2010-2019 mean'
+      center={[-95.35, 29.8]}
+      zoom={8.75}
+    />
+    <Caption>
+      Aerosol Optical Depth Compared Decadally from 2000-2009 & 2010-2019. The map shown shows the change in AOD over the last 20 years over the Houston metropolitan area.
+    </Caption>
+  </Figure>
+</Block>
+
+
+
+
+
+
+<Block>
   <Prose>
 
   ### About 
@@ -92,11 +121,13 @@ layers:
 
   * The Relative Azimuth Angle gives the position between the sun and the observing satellite.
 
-  ### Citing the Data
+  </Prose>
+</Block>
 
-  Alexi Lyapustin - NASA GSFC, Yujie Wang - Univeristy of Maryland Baltimore County and MODAPS SIPS - NASA. (2015). MCD19A2 MODIS/Terra+Aqua Aerosol Optical Thickness Daily L2G Global 1km SIN Grid. NASA LP DAAC. http://doi.org/10.5067/MODIS/MCD19A2.006
 
-  ### Accessing the Data
+<Block>
+  <Prose>
+  ## Accessing the Data
 
   Google Earth Engine (GEE) provides an efficient way to harness the capabilities of the MODIS MCD19A2 dataset.
 
@@ -105,8 +136,54 @@ layers:
   2. Search for the Dataset: Navigate to the Google Earth Engine Data Catalog. In the search bar, type "MCD19A2" to locate the Multi-Angle Implementation of Atmospheric Correction (MAIAC) dataset.
 
   4. Scripting in GEE Code Editor: Open the GEE Code Editor and use the Correct Dataset ID. In this case, use "MODIS/006/MCD19A2/Optical_Depth_047"
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+  
+  ## Data Stories Using This Dataset
+  
+  **<Link to={"/stories/houston-aod"}>Aerosols and Their Impacts on Houston, TX</Link>**
+  </Prose>
+</Block>
+
+
+
+<Block>
+  <Prose>
+  ### Citing the Data
+
+  Alexi Lyapustin - NASA GSFC, Yujie Wang - Univeristy of Maryland Baltimore County and MODAPS SIPS - NASA. (2015). MCD19A2 MODIS/Terra+Aqua Aerosol Optical Thickness Daily L2G Global 1km SIN Grid. NASA LP DAAC. http://doi.org/10.5067/MODIS/MCD19A2.006
+
 
   </Prose>
 </Block>
 
 
+<Block>
+  <Prose>
+    ## Limitations of use
+
+    NASA data and products are freely available to federal, state, public, non-profit and commercial users. This information can be experimental- or research-grade data products and may not be appropriate for operational use. These NASA data products, services, and the Disasters Mapping Portal are intended to aid decision makers and enhance situational awareness, but these data are not guaranteed to be consistently available or routinely updated. Please cite the information according to the direction provided in the metadata.
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+  ## Disclaimer
+
+  All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+    ## License
+
+    [Creative Commons Zero v1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC0 1.0)
+  </Prose>
+</Block>
