@@ -1,0 +1,352 @@
+---
+id: nighttime-lights
+name: 'Black Marble Night Lights (Select Events)'
+description: "NASA’s Black Marble night lights dataset provides satellite images of Earth at night, capturing the light pollution from cities, roads, and other human activity"
+media:
+  src: ::file ./media/nighttime-lights--dataset-cover.jpg
+  alt: Satellite image of Earth at night.
+  author:
+    name: NASA Earth Observatory
+    url: https://earthobservatory.nasa.gov/images/90008/night-light-maps-open-up-new-applications
+taxonomy:
+  - name: Topics
+    values:
+      - COVID 19
+  - name: Source
+    values:
+      - Black Marble
+
+infoDescription: |
+  ::markdown
+    Nightlights data are collected by the [Visible Infrared Radiometer Suite (VIIRS) Day/Night Band (DNB)](https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/) on the Suomi-National Polar-Orbiting Partnership (Suomi-NPP) platform, a joint National Oceanic and Atmospheric Administration (NOAA) and NASA satellite. The images are produced by [NASA’s Black Marble](https://blackmarble.gsfc.nasa.gov/) products suite. All data are calibrated daily, corrected, and validated with ground measurements for science-ready analysis.
+layers:
+  - id: nightlights-hd-monthly-covid-19
+    stacCol: nightlights-hd-monthly
+    name: Black Marble Night Lights (COVID-19)
+    type: raster
+    description: 'Black Marble night lights imagery averaged over 1 month across major cities between 2019 and 2022'
+    zoomExtent:
+      - 8
+      - 16
+    sourceParams:
+      bidx: 1
+      colormap_name: inferno
+      rescale:
+        - 0
+        - 255
+    compare:
+      datasetId: nighttime-lights
+      layerId: nightlights-hd-monthly-covid-19
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'dd LLL yyyy')} VS ${dateFns.format(compareDatetime, 'dd LLL yyyy')}`;
+        }
+    legend:
+      type: gradient
+      min: Less
+      max: More
+      stops:
+        - '#08041d'
+        - '#1f0a46'
+        - '#52076c'
+        - '#f57c16'
+        - '#f7cf39'
+    info:
+      source: NOAA & NASA
+      spatialExtent: Global
+      temporalResolution: Monthly 
+      unit: N/A
+
+  - id: nightlights-derecho
+    stacCol: nightlights-derecho
+    name: Black Marble Night Lights (Northern Plains Derecho Damage)
+    type: raster
+    description: 'Black Marble night lights imagery of derecho damage in the Northern Plains region that occured May 12th, 2022.'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      colormap_name: bwr
+      rescale:
+        - -255
+        - 255
+    legend:
+      type: gradient
+      min: "-255"
+      max: "255"
+      stops:
+        - "#ff0000" #Pure Red
+        - "#ff5454" #Bright Coral Red
+        - "#ffaaaa" #Soft Pinkish-Red
+        - "#fffefe" #Near White
+        - "#aaaaff" #Pale Blue-Violet
+        - "#5454ff" #Bright Periwinkle
+        - "#0000ff" #Pure Blue
+    info:
+      source: NASA VIIRS
+      spatialExtent: Regional
+      temporalResolution: N/A
+      unit: Artificial Light Emissions Difference (W cm^-2 sr^-1)
+
+
+  - id: greenville-nightlights-tornadoes-2024
+    stacCol: greenville-nightlights-tornadoes-2024
+    name: Black Marble Night Lights (Greenville OH Tornado Damage)
+    type: raster
+    description: 'Black Marble night lights imagery of tornado damage at Greenville, Ohio in the spring 2024 tornado season.'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      rescale:
+        - 0,255
+      resampling: bilinear
+      asset_bidx: cog_default|1,2,3   
+    compare:
+      datasetId: nighttime-lights
+      layerId: greenville-nightlights-tornadoes-2024
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
+        }
+    info:
+      source: NASA Black Marble
+      spatialExtent: Regional
+      temporalResolution: N/A
+      unit: Artificial Light Emissions (W cm^-2 sr^-1)
+---
+
+<Block>
+  <Prose>
+  ## About
+  Images of Earth at night give us an extraordinary view of human activity over time. The nighttime environment illuminates Earth features, including city infrastructure, lightning flashes, fishing boats navigating open water, gas flares, aurora, and natural hazards, such as lava flowing from an active volcano. Paired with the moonlight, researchers can also spot snow and ice, as well as other reflective surfaces that allow nighttime land and ocean analysis.
+
+  During the COVID-19 pandemic, researchers are using night light observations to track variations in energy use, migration, and transportation in response to social distancing and lockdown measures.
+  </Prose>
+</Block>
+
+
+
+<Block>
+  <Prose>   
+    ## Dataset Details <br />(COVID-19 Night Lights)
+    - **Temporal Extent:** January 1, 2019 - March 31, 2021<br />
+    - **Spatial Extent:** Global<br />
+    - **Spatial Resolution:** 10 meters<br />
+    - **Data Type:** Research<br />
+  </Prose>
+<Figure>
+    <Map
+      datasetId='nighttime-lights'
+      layerId='nightlights-hd-monthly-covid-19'
+      dateTime='2020-08-01'
+      zoom={10}
+      center={[139.7006, 35.6648]}
+    />
+    <Caption
+      attrAuthor='NASA'
+      attrUrl='https://nasa.gov/'
+    >
+    Monthly averaged night-time lights over Tokyo, Japan in August 2020.
+    </Caption>
+  </Figure>
+</Block>
+
+
+<Block>
+  <Prose>
+  ## Dataset Details <br />(Derechos Night Lights)
+  - **Temporal Extent:** March 12th, 2022
+  - **Temporal Resolution:** Daily
+  - **Spatial Extent:** Northern Plains Region
+  - **Spatial Resolution:** 750 meters
+  - **Data Units:** W cm^-2 sr^-1
+  - **Data Type:** Research
+  - **Data Latency:** N/A
+  </Prose>
+<Figure>
+  <Map
+    datasetId='nightlights-derecho'
+    layerId='nightlights-derecho'
+    dateTime='2022-05-10'
+    zoom={9}
+    center={[-96.7319, 43.5416]}
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+    Change of artificial light emissions in Sioux Falls, SD from before and after the serial derecho of May 12th, 2022.
+  </Caption>
+  </Figure>
+</Block>
+
+
+<Block>
+  <Prose>
+  ## Dataset Details <br />(2024 Tornado Outbreak Night Lights)
+  - **Temporal Extent:** March 1 - May 31, 2024
+  - **Temporal Resolution:** Inconsistent
+  - **Spatial Extent:** Select sites across CONUS
+  - **Spatial Resolution:** 500 meters
+  - **Data Units:** W cm^-2 sr^-1
+  - **Data Type:** Research
+  </Prose>
+<Figure>
+  <Map
+    datasetId='nighttime-lights'
+    layerId='greenville-nightlights-tornadoes-2024'
+    dateTime='2024-05-07'
+    zoom={11}
+    center={[-84.621, 40.107]}
+    compareDateTime='2024-05-08'
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+    Comparison of artificial light emissions in Greenville, Ohio before and after a tornado strike on May 7, 2024.
+  </Caption>
+  </Figure>
+</Block>
+
+
+
+
+<Block>
+  <Prose>
+
+  ### What Night Lights Data Offers
+
+  * High-Resolution Nighttime Imagery: Captures detailed views of light emissions at night, providing a clear picture of human activities and their distribution across the landscape.
+  
+  * Temporal Change Analysis: Enables examination of changes in night lights over time, which is crucial for understanding the impacts of disasters, urban growth, and other factors on nighttime visibility.
+  
+  * Disaster Impact Assessment: Particularly useful for assessing the effects of natural disasters, this dataset highlights areas affected by power outages, offering insights into recovery dynamics and areas in need of intervention.
+    
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+  ## Interpreting the data
+  Each spotlight city has a slider for turning night lights on and off. The darker purple indicates fewer night lights, while the lighter yellow indicates more. By comparing regions before and after guidelines to shelter-in-place began, researchers are able to visualize the extent to which social distancing measures affected various economic activities based on whether light pollution increased or decreased, which highways were shut down, and which cities stayed the same.
+
+  The products featured are 500-meter (VNP46) and 30-meter Black Marble High Definition (HD) nighttime lights. Black Marble HD downscales radiances from the 500-meter product to street level using optical imagery from Landsat 8, a NASA and U.S. Geological Survey (USGS) satellite, along with OpenStreetMap ancillary layers. This helps visualize neighborhoods and commercial centers that have less activity – or closures – due to social distancing restrictions.
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ### Access the Data
+
+  Visit NASA's [Black Marble home page](https://blackmarble.gsfc.nasa.gov) to explore options for data access.
+  
+  </Prose>
+</Block>
+
+<Block>
+<Prose>
+## Scientific research
+Nightlights data are collected by the [Visible Infrared Radiometer Suite (VIIRS) Day/Night Band (DNB)](https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/) on the Suomi-National Polar-Orbiting Partnership (Suomi-NPP) platform, a joint National Oceanic and Atmospheric Administration (NOAA) and NASA satellite. The images are produced by [NASA’s Black Marble](https://blackmarble.gsfc.nasa.gov/) products suite. All data are calibrated daily, corrected, and validated with ground measurements for science-ready analysis.
+
+[New research](https://science.nasa.gov/earth-science/rrnes-awards) funded by NASA’s Rapid Response and Novel Research in the Earth Sciences (RRNES) program seeks to discover what nightlights can tell us about the impacts of novel coronavirus-related shutdowns.
+</Prose>
+<Figure>
+  <Image
+  src={new URL('./media/nighttime-lights--wuhan-bef-after.png', import.meta.url).href}
+  alt='Lighting changes in Jianghan District'
+  />
+  <Caption 
+    attrAuthor='NASA' 
+    attrUrl='https://nasa.gov/'
+  >
+    Lighting changes in Jianghan District, a commercial area of Wuhan, and nearby residential areas.
+  </Caption> 
+</Figure>
+</Block>
+
+
+
+
+<Block>
+  <Prose>
+
+  ### Key Publications
+  
+  Román, M. O., Z. Wang, Q. Sun, V. Kalb, S. D. Miller, A. Molthan, L. Schultz, J. Bell, E. C. Stokes, B. Pandey, K. C. Seto, D. Hall, T. Oda, R. E. Wolfe, G. Lin, N. Golpayegani, S. Devadiga, C. Davidson, S. Sarkar, C. Praderas, and E. J. Masuoka, 2018: NASA's Black Marble nighttime lights product suite. *Remote Sensing of Environment*, 210, 113–143. https://doi.org/10.1016/j.rse.2018.03.017  
+  Wang, Z., M. O. Román, V. L. Kalb, S. D. Miller, J. Zhang, and R. M. Shrestha, 2021: Quantifying uncertainties in nighttime light retrievals from Suomi-NPP and NOAA-20 VIIRS Day/Night Band data. *Remote Sensing of Environment*, 267, 112557.   
+  
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## Data Stories Using This Dataset
+  
+  - **<Link to={"/stories/air-quality-and-covid-19"}>Air Quality and COVID-19</Link>**<br />
+  
+  - **<Link to={"/stories/derecho-impacts"}>NASA Data Fusion Analysis of Derechos and Their Impact on Rural America</Link>**<br />
+
+  - **<Link to={"/stories/2024-tornadoes"}>The Hyperactive Spring 2024 Tornado Season</Link>**<br />
+  </Prose>
+</Block>
+
+
+
+
+<Block>
+  <Prose>
+  ## Credits
+  Black Marble data courtesy of [Universities Space Research Association (USRA) Earth from Space Institute (EfSI)](https://www.usra.edu/efsi-our-mission) and NASA Goddard Space Flight Center’s [Terrestrial Information Systems Laboratory](https://science.gsfc.nasa.gov/earth/terrestrialinfo/) using VIIRS day-night band data from the Suomi National Polar-orbiting Partnership and Landsat-8 Operational Land Imager (OLI) data from the U.S. Geological Survey.
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+    ## Limitations of use
+
+    NASA data and products are freely available to federal, state, public, non-profit and commercial users. This information can be experimental- or research-grade data products and may not be appropriate for operational use. These NASA data products and services are intended to aid decision makers and enhance situational awareness, but these data are not guaranteed to be consistently available or routinely updated. Please cite the information according to the direction provided in the metadata.
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+  ## Disclaimer
+
+  All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+    ## License
+
+    [Creative Commons Zero v1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC0 1.0)
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+  ## Additional resources
+  ##### NASA Features
+
+  * [Nighttime Images Capture Change In China](https://earthobservatory.nasa.gov/images/146481/nighttime-images-capture-change-in-china)
+
+  ##### Explore the data
+
+  * [Nighttime Images Show Changes In Human Activity](https://earthdata.nasa.gov/learn/articles/feature-articles/nighttime-images-wuhan)
+
+  ##### Explore the Missions
+
+  * [NASA’s Black Marble](https://blackmarble.gsfc.nasa.gov/)
+  * [Suomi National Polar-orbiting Partnership (Suomi NPP)](https://www.nasa.gov/mission_pages/NPP/main/index.html)
+  </Prose>
+</Block>
