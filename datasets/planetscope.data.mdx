@@ -1,0 +1,625 @@
+---
+id: planetscope
+name: 'PlanetScope Satellite Imagery (Select Events)'
+description: "Commercial SmallSat Planet Satellite Imagery of select locations that experienced derecho damage on May 12th, 2022 in the United States."
+media:
+  src: ::file ./derecho-background.jpg
+  alt: Intense derecho thunderstorm as it sweeps across farmland on September 23, 2018
+  author:
+    name: Jim Reed
+    url: https://fineartamerica.com/featured/4-derecho-thunderstorm-jim-reed-photographyscience-photo-library.html
+taxonomy:
+  - name: Topics
+    values:
+      - Natural Disasters
+      - Air Quality
+      - Agriculture
+  - name: Source
+    values:
+      - Planet
+infoDescription: |
+  ::markdown
+    - **Temporal Resolution:** Daily
+    - **Spatial Extent:** Select sites across CONUS
+    - **Spatial Resolution:** 3 meters
+    - **Data Type:** Research
+
+layers:
+  - id: derecho-planet-rockvalley
+    stacCol: derecho-planet-rockvalley
+    name: Planet TrueColor Satellite Imagery (Rock Valley IA Derecho Damage)
+    type: raster
+    description: 'Commercial SmallSat Planet Satellite Imagery of derecho damage in Rock Valley, Iowa on May 13th, 2022.'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      resampling: bilinear
+      asset_bidx: cog_default|1,2,3
+    legend:
+      type: categorical
+      stops:
+        - color: "rgba(0, 0, 0, 0)" # using transparent for now to fix the issues with scrollytelling
+          label: "Imagery"
+    info:
+        source: Planet
+        spatialExtent: Local
+        temporalResolution: N/A
+        unit: Radiance
+
+  - id: derecho-planet-hartington
+    stacCol: derecho-planet-hartington
+    name: Planet TrueColor Satellite Imagery (Hartington NE Derecho Damage)
+    type: raster
+    description: 'Commercial SmallSat Planet Satellite Imagery of derecho damage in Hartington, Nebraska on May 13th, 2022.'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      resampling: bilinear
+      asset_bidx: cog_default|1,2,3
+    legend:
+      type: categorical
+      stops:
+        - color: "rgba(0, 0, 0, 0)" # using transparent for now to fix the issues with scrollytelling
+          label: "Imagery"
+    info:
+        source: Planet
+        spatialExtent: Local
+        temporalResolution: N/A
+        unit: Radiance
+
+  - id: ps-lakeview-winchester-tornadoes-2024
+    stacCol: ps-lakeview-winchester-tornadoes-2024
+    name: Planet TrueColor Satellite Imagery (Winchester IN, Lakeview OH Tornado Damage)
+    type: raster
+    description: 'Commercial SmallSat Planet Satellite Imagery of tornado damage at Winchester, Indiana and Lakeview, Ohio in the spring 2024 tornado season.'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      rescale:
+        - 0,2500
+      resampling: bilinear
+      asset_bidx: cog_default|3,2,1
+    legend:
+      type: categorical
+      stops:
+        - color: "rgba(0, 0, 0, 0)" # using transparent for now to fix the issues with scrollytelling
+          label: "Imagery"
+    info:
+        source: Planet
+        spatialExtent: Local
+        temporalResolution: N/A
+        unit: Radiance
+
+  - id: ps-greenfield-pre-tornadoes-2024
+    stacCol: ps-greenfield-pre-tornadoes-2024
+    name: Planet TrueColor Satellite Imagery (Greenfield IA Tornado Damage - Pre)
+    type: raster
+    description: 'Commercial SmallSat Planet Satellite Imagery of tornado damage at Greenfield, Iowa in the spring 2024 tornado season.'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      rescale:
+        - 0,2500
+      resampling: bilinear
+      asset_bidx: cog_default|3,2,1    
+    compare:
+      datasetId: planetscope
+      layerId: ps-greenfield-post-tornadoes-2024
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'dd LLL yyyy')}`;        
+        }
+    legend:
+      type: categorical
+      stops:
+        - color: "rgba(0, 0, 0, 0)" # using transparent for now to fix the issues with scrollytelling
+          label: "Imagery"
+    info:
+        source: Planet
+        spatialExtent: Local
+        temporalResolution: N/A
+        unit: Radiance
+
+  - id: ps-greenfield-post-tornadoes-2024
+    stacCol: ps-greenfield-post-tornadoes-2024
+    name: Planet TrueColor Satellite Imagery (Greenfield IA Tornado Damage - Post)
+    type: raster
+    description: 'Commercial SmallSat Planet Satellite Imagery of tornado damage at Greenfield, Iowa in the spring 2024 tornado season.'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      rescale:
+        - 0,255
+      resampling: bilinear
+      asset_bidx: cog_default|1,2,3
+    compare:
+      datasetId: planetscope
+      layerId: ps-greenfield-pre-tornadoes-2024
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'dd LLL yyyy')}`;        
+        }
+    legend:
+      type: categorical
+      stops:
+        - color: "rgba(0, 0, 0, 0)" # using transparent for now to fix the issues with scrollytelling
+          label: "Imagery"
+    info:
+        source: Planet
+        spatialExtent: Local
+        temporalResolution: N/A
+        unit: Radiance
+
+  - id: ps-barnsdall-tornadoes-2024
+    stacCol: ps-barnsdall-tornadoes-2024
+    name: Planet TrueColor Satellite Imagery (Barnsdall OK Tornado Damage)
+    type: raster
+    description: 'Commercial SmallSat Planet Satellite Imagery of tornado damage at Barnsdall, Oklahoma in the spring 2024 tornado season.'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      rescale:
+        - 0,255
+      resampling: bilinear
+      asset_bidx: cog_default|1,2,3
+    legend:
+      type: categorical
+      stops:
+        - color: "rgba(0, 0, 0, 0)" # using transparent for now to fix the issues with scrollytelling
+          label: "Imagery"
+    info:
+        source: Planet
+        spatialExtent: Local
+        temporalResolution: N/A
+        unit: Radiance
+
+  - id: ps-portage-tornadoes-2024
+    stacCol: ps-portage-tornadoes-2024
+    name: Planet TrueColor Satellite Imagery (Portage MI Tornado Damage)
+    type: raster
+    description: 'Commercial SmallSat Planet Satellite Imagery of tornado damage at Portage, Michigan in the spring 2024 tornado season.'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      rescale:
+        - 0,255
+      resampling: bilinear
+      asset_bidx: cog_default|1,2,3
+    legend:
+      type: categorical
+      stops:
+        - color: "rgba(0, 0, 0, 0)" # using transparent for now to fix the issues with scrollytelling
+          label: "Imagery"
+    info:
+        source: Planet
+        spatialExtent: Local
+        temporalResolution: N/A
+        unit: Radiance
+
+  - id: ps-tornadoes-2024-difference
+    stacCol: ps-tornadoes-2024-difference
+    name: Planet TrueColor Satellite Imagery Difference (Greenfield IA Tornado Damage)
+    type: raster
+    description: 'Commercial SmallSat Planet Satellite Imagery difference of tornado damage at Greenfield, Iowa in the spring 2024 tornado season.'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      rescale:
+        - 0,255
+      resampling: bilinear
+      asset_bidx: cog_default|4,3,2
+    compare:
+      datasetId: planetscope
+      layerId: tornadoes-2024-dow-vmax-greenfield
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'dd LLL yyyy')}`;        
+        }
+    legend:
+      type: categorical
+      stops:
+        - color: "rgba(0, 0, 0, 0)" # using transparent for now to fix the issues with scrollytelling
+          label: "Imagery"
+    info:
+        source: Planet
+        spatialExtent: Local
+        temporalResolution: N/A
+        unit: Change in Radiance
+
+  - id: marsh-ida
+    stacCol: marsh-ida
+    name: Salt Marsh
+    type: raster
+    description: 'Salt Marsh Classification Pre-Ida (Southern Louisiana)'
+    initialDatetime: newest
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      colormap_name: reds
+      nodata: 0
+      rescale:
+        - 0
+        - 1
+    legend:
+      type: categorical
+      stops:
+        - color: "#ffffff"
+          label: Non-Salt Marsh
+        - color: "#d73027"
+          label: Salt Marsh
+    compare:
+      datasetId: planetscope
+      layerId: marsh-ida
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'dd LLL yyyy')} VS ${dateFns.format(compareDatetime, 'dd LLL yyyy')}`;
+        }
+    info:
+      source: UNEP-WCMC
+      spatialExtent: Southern Louisiana
+      temporalResolution: Monthly 
+      unit: Binary
+
+  - id: marsh-difference
+    stacCol: marsh-difference
+    name: Salt Marsh Difference
+    type: raster
+    description: "Difference in Salt Marshes Pre- and Post-Ida"
+    initialDatetime: newest
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      colormap_name: bwr
+      nodata: 0
+      rescale:
+        - -1
+        - 1
+    legend:
+      type: categorical
+      stops:
+        - color: "#FF0000"
+          label: Loss of Marsh
+        - color: "#0000FF"
+          label: Gain of Marsh
+
+  - id: ida-ndvi
+    stacCol: ida-ndvi
+    name: NDVI
+    type: raster
+    description: 'Planet NDVI (Southern Louisiana)'
+    initialDatetime: newest
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      colormap_name: rdylgn
+      nodata: -999
+      rescale:
+        - -1
+        - 1
+    legend:
+      type: gradient
+      min: "-1"
+      max: "1"
+      stops:
+      - "#a50026"
+      - "#f46d43"
+      - "#fee08b"
+      - "#d9ef8b"
+      - "#66bd63"
+      - "#006837"
+    compare:
+      datasetId: planetscope
+      layerId: ida-ndvi
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'dd LLL yyyy')} VS ${dateFns.format(compareDatetime, 'dd LLL yyyy')}`;
+        }
+    info:
+      source: PlanetScope
+      spatialExtent: Southern Louisiana
+      temporalResolution: Monthly 
+      unit: Binary
+
+  - id: ida-ndwi
+    stacCol: ida-ndwi
+    name: NDWI
+    type: raster
+    description: 'Planet NDWI (Southern Louisiana)'
+    initialDatetime: newest
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      colormap_name: rdylbu
+      nodata: -999
+      rescale:
+        - -1
+        - 1
+    legend:
+      type: gradient
+      min: "0"
+      max: "1"
+      stops:
+      - "#a50026"
+      - "#f46d43"
+      - "#fee08b"
+      - "#d9ef8b"
+      - "#66bd63"
+      - "#006837"
+    compare:
+      datasetId: planetscope
+      layerId: ida-ndwi
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'dd LLL yyyy')} VS ${dateFns.format(compareDatetime, 'dd LLL yyyy')}`;
+        }
+    info:
+      source: PlanetScope
+      spatialExtent: Southern Louisiana
+      temporalResolution: Monthly 
+      unit: Binary
+
+  - id: ida-ndwi-difference
+    stacCol: ida-ndwi-difference
+    name: NDWI Difference
+    type: raster
+    description: 'Planet NDWI Difference (Southern Louisiana)'
+    initialDatetime: newest
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      colormap_name: rdbu
+      rescale:
+        - -1
+        - 1
+    legend:
+      type: gradient
+      min: "-1"
+      max: "1"
+      stops:
+      - "#67001f"
+      - "#d6604d"
+      - "#fddbc7"
+      - "#d1e5f0"
+      - "#4393c3"
+      - "#053061"
+    info:
+      source: PlanetScope
+      spatialExtent: Southern Louisiana
+      temporalResolution: Monthly 
+      unit: Binary
+
+  - id: ida-ndvi-difference
+    stacCol: ida-ndvi-difference
+    name: NDVI Difference
+    type: raster
+    description: 'Planet NDVI Difference (Southern Louisiana)'
+    initialDatetime: newest
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      colormap_name: rdbu
+      rescale:
+        - -1
+        - 1
+    legend:
+      type: gradient
+      min: "-1"
+      max: "1"
+      stops:
+      - "#67001f"
+      - "#d6604d"
+      - "#fddbc7"
+      - "#d1e5f0"
+      - "#4393c3"
+      - "#053061"
+    info:
+      source: PlanetScope
+      spatialExtent: Southern Louisiana
+      temporalResolution: Monthly 
+      unit: Binary
+
+---
+
+<Block>
+  <Prose>
+  ## Dataset Details<br /> (Derechos Story)
+  - **Temporal Extent:** May 13th, 2022
+  - **Temporal Resolution:** Daily
+  - **Spatial Extent:** Select sites across CONUS
+  - **Spatial Resolution:** 3 meters
+  - **Data Units:** N/A
+  - **Data Type:** Research
+  - **Data Latency:** N/A
+  </Prose>
+<Figure>
+  <Map
+    center={[-97.265, 42.635]}
+    zoom={15}
+    datasetId='planetscope'
+    layerId='derecho-planet-hartington'
+    dateTime='2022-05-13'
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+  A downed 311-ft cell tower in Hartington, Nebraska as a result of the Serial Derecho on May 12th, 2022.
+  </Caption>
+</Figure>
+</Block>
+
+
+
+<Block>
+  <Prose>
+  ## Dataset Details<br /> (Tornadoes Story)
+  - **Temporal Extent:** March 1 - May 31, 2024
+  - **Temporal Resolution:** Inconsistent
+  - **Spatial Extent:** Select sites across CONUS
+  - **Spatial Resolution:** 3 meters
+  - **Data Units:** N/A
+  - **Data Type:** Research
+  - **Data Latency:** N/A
+  </Prose>
+<Figure>
+  <Map
+    datasetId='planetscope'
+    layerId='ps-greenfield-pre-tornadoes-2024'
+    dateTime='2024-05-20'
+    zoom={13}
+    center={[-94.4604, 41.3050]}
+    compareDateTime='2024-05-22'
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+    Planet satellite imagery Greenfield, Iowa before and after a deadly EF-4 struck the town.
+  </Caption>
+</Figure>
+</Block>
+
+
+<Block>
+  <Prose>
+  ## Dataset Details <br /> (Salt Marsh Story)
+  - **Temporal Extent:** August 23 - September 9, 2021
+  - **Temporal Resolution:** Inconsistent
+  - **Spatial Extent:** Southern Louisiana
+  - **Spatial Resolution:** 3 meters
+  - **Data Units:** N/A
+  - **Data Type:** Research
+  - **Data Latency:** N/A
+  </Prose>
+<Figure>
+  <Map
+    datasetId='planetscope'
+    layerId='marsh-ida'
+    dateTime='2021-08-23'
+    zoom={10}
+    center={[-90.45, 29.386]}
+    compareDateTime='2021-09-09'
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+    Planet satellite imagery classification of salt marshes pre- and post-Ida for southern Louisiana.
+  </Caption>
+</Figure>
+</Block>
+
+
+<Block>
+  <Prose>
+
+  ### About
+
+  Planet Labs’ SmallSat imagery, captured by the PlanetScope Dove satellite constellation, is a highly valuable commercial satellite remote sensing product, frequently leveraged for rapid damage assessment and environmental monitoring. Known for its frequent overpasses, with revisit times on the order of a couple of days, and an impressive spatial resolution of 3 meters, this imagery offers exceptional capabilities for monitoring changes in landscapes and infrastructure. The PlanetScope constellation has near-global coverage daily across the visible and near-infrared channels, providing extensive data for timely and precise analysis of up to 140-150 million square kilometers.
+  
+  </Prose>
+</Block>
+
+<Block>
+  
+  <Prose>
+
+  ### What PlanetScope Data Offers
+
+  * High-Resolution Imagery: With a 3-meter spatial resolution, the PlanetScope Dove satellite imagery provides detailed views of landscapes, enabling precise assessments of building and vegetation damage.
+  
+  * Frequent Revisit Times: The satellite constellation’s ability to capture imagery on the order of every couple of days makes it highly effective for monitoring rapid changes, such as those caused by natural disasters.
+  
+  * Extensive Coverage: Collecting up to 140-150 million square kilometers of imagery, the Dove constellation ensures broad coverage across visible and near-infrared channels.
+
+  * Building and Vegetation Damage Assessment: The high-resolution and frequent imagery facilitate quick identification and analysis of damage to infrastructure and vegetation, aiding in damage determination and response efforts.
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ### Access the Data
+
+  Visit Planet's [home page](https://www.planet.com) to explore options for data access. This data was made available through the NASA [Commercial Satellite Data Acquisition (CSDA) Program](https://earthdata.nasa.gov/about/csda/vendor-planet). You can access the CDSA data explorer [**HERE**](https://csdap.earthdata.nasa.gov).
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    
+  ### Citing this Dataset
+
+  Image © 2024 Planet Labs PBC. Planet Application Program Interface: In Space for Life on Earth. https://api.planet.com.
+  
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## Disclaimer
+
+  All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
+  
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+
+  ### Key Publications
+  
+  Marshall, W and C. Boshuizen, 2013: Planet Labs' Remote Sensing Satellite System. Proc. of the 2013 Small Satellite Conference, Utah State University. https://digitalcommons.usu.edu/smallsat/2013/all2013/7/
+ 
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+
+  ### Other Publications
+  
+  Molthan, A., L. A. Schultz, K. M. McGrath, J. E. Burks, J. P. Camp, K. Angle, J. R. Bell, and G. J. Jedlovec, 2020: Earth Remote Sensing in NWS Severe Weather Damage Assessments. *Bull. Amer. Meteor. Soc.*, **101**, 221–226. https://www.jstor.org/stable/27028125 
+  
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## Data Stories Using This Dataset
+  
+  - **<Link to={"/stories/derecho-impacts"}>NASA Data Fusion Analysis of Derechos and Their Impact on Rural America</Link>**<br />
+  - **<Link to={"/stories/wetland-impacts"}>How Hurricane Ida’s Impact on Wetlands Endangers Inland Communities</Link>**<br />
+  - **<Link to={"/stories/2024-tornadoes"}>The Hyperactive Spring 2024 Tornado Season</Link>**
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## License
+  
+  [Creative Commons Attribution 1.0 International](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC BY 1.0)
+
+  </Prose>
+</Block>
+
