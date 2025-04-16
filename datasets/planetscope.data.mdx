@@ -435,6 +435,32 @@ layers:
       temporalResolution: Monthly 
       unit: Binary
 
+  - id: la-fires-planet
+    stacCol: la-fires-planet
+    name: Planet TrueColor Satellite Imagery (2025 Eaton Fire)
+    type: raster
+    description: 'Commercial SmallSat Planet Satellite Imagery of the ongoing Eaton Fire in Los Angeles County, California on January 9, 2025.'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      rescale:
+        - 0
+        - 255
+      resampling: bilinear
+      asset_bidx: cog_default|1,2,3
+    legend:
+      type: categorical
+      stops:
+        - color: "rgba(0, 0, 0, 0)" # using transparent for now to fix the issues with scrollytelling
+          label: "Imagery"
+    info:
+        source: Planet
+        spatialExtent: Local
+        temporalResolution: N/A
+        unit: Radiance
+
+
 ---
 
 <Block>
@@ -444,9 +470,7 @@ layers:
   - **Temporal Resolution:** Daily
   - **Spatial Extent:** Select sites across CONUS
   - **Spatial Resolution:** 3 meters
-  - **Data Units:** N/A
   - **Data Type:** Research
-  - **Data Latency:** N/A
   </Prose>
 <Figure>
   <Map
@@ -474,9 +498,7 @@ layers:
   - **Temporal Resolution:** Inconsistent
   - **Spatial Extent:** Select sites across CONUS
   - **Spatial Resolution:** 3 meters
-  - **Data Units:** N/A
   - **Data Type:** Research
-  - **Data Latency:** N/A
   </Prose>
 <Figure>
   <Map
@@ -504,9 +526,7 @@ layers:
   - **Temporal Resolution:** Inconsistent
   - **Spatial Extent:** Southern Louisiana
   - **Spatial Resolution:** 3 meters
-  - **Data Units:** N/A
   - **Data Type:** Research
-  - **Data Latency:** N/A
   </Prose>
 <Figure>
   <Map
@@ -525,6 +545,33 @@ layers:
   </Caption>
 </Figure>
 </Block>
+
+<Block>
+  <Prose>
+  ## Dataset Details <br /> (Eaton Fire Story)
+    - **Temporal Extent:** January 9, 2025
+    - **Temporal Resolution:** Inconsistent
+    - **Spatial Extent:** Local
+    - **Spatial Resolution:** 3 meters
+    - **Data Type:** Research
+  </Prose>
+<Figure>
+  <Map
+    datasetId='planetscope'
+    layerId='la-fires-planet'
+    dateTime='2025-01-09'
+    zoom={9.5}
+    center={[-118.1041, 34.1966]}
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+    Planet satellite imagery of the Eaton Fire on January 9, 2025.
+  </Caption>
+</Figure>
+</Block>
+
 
 
 <Block>
@@ -564,6 +611,7 @@ layers:
   </Prose>
 </Block>
 
+
 <Block>
   <Prose>
     
@@ -574,6 +622,16 @@ layers:
   </Prose>
 </Block>
 
+
+<Block>
+  <Prose>
+    ## Limitations of use
+
+    NASA data and products are freely available to federal, state, public, non-profit and commercial users. This information can be experimental- or research-grade data products and may not be appropriate for operational use. These NASA data products and services are intended to aid decision makers and enhance situational awareness, but these data are not guaranteed to be consistently available or routinely updated. Please cite the information according to the direction provided in the metadata.
+  </Prose>
+</Block>
+
+
 <Block>
   <Prose>
   
@@ -583,6 +641,7 @@ layers:
   
   </Prose>
 </Block>
+
 
 <Block>
   <Prose>
@@ -604,6 +663,7 @@ layers:
   </Prose>
 </Block>
 
+
 <Block>
   <Prose>
   
@@ -611,7 +671,8 @@ layers:
   
   - **<Link to={"/stories/derecho-impacts"}>NASA Data Fusion Analysis of Derechos and Their Impact on Rural America</Link>**<br />
   - **<Link to={"/stories/wetland-impacts"}>How Hurricane Ida’s Impact on Wetlands Endangers Inland Communities</Link>**<br />
-  - **<Link to={"/stories/2024-tornadoes"}>The Hyperactive Spring 2024 Tornado Season</Link>**
+  - **<Link to={"/stories/2024-tornadoes"}>The Hyperactive Spring 2024 Tornado Season</Link>**<br />
+  - **<Link to={"/stories/la-fires"}>Fanning the Flames</Link>**
 
   </Prose>
 </Block>
