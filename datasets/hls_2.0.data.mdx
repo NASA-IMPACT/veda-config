@@ -1,0 +1,172 @@
+---
+id: HLS_2.0
+name: "Harmonized Landsat Sentinel-2 (HLS)"
+description: "The Harmonized Landsat Sentinel-2 (HLS) project provides consistent surface reflectance data from the Operational Land Imager (OLI) aboard the joint NASA/USGS Landsat 8 satellite and the Multi-Spectral Instrument (MSI) aboard Europe’s Copernicus Sentinel-2A, Sentinel-2B, and Sentinel-2C satellites."
+media:
+  src: ::file ./media/hls_20241004_true_color.jpg
+  alt: HLS L30 and S30 true color composite from October 4, 2024 over Lake Superior
+  author:
+    name: NASA
+    url:
+taxonomy:
+  - name: Topics
+    values:
+      - Satellite Imagery
+  - name: Source
+    values:
+      - NASA
+      - USGS
+      - ESA
+infoDescription: |
+  ::markdown
+    The Landsat (HLSL30) and Sentinel-2 (HLSS30) collections are processed separately and can be viewed in an orbit-wise fashion by selecting a date. There will not be imagery for all areas on every day so you may need to toggle between several days to find suitable imagery for your area of interest.
+
+    ## Dataset Details:
+
+    - Temporal Extent: 
+      - HLSL30: 2013 - present    
+      - HLSS30: 2015 - present
+    - Temporal Resolution: revisit ~2-3 days    
+    - Spatial Extent: global  
+    - Spatial Resolution: 30 x 30 meters    
+    - Data Latency: <5 days
+
+
+layers:
+  - id: HLSL30_2.0_true_color
+    media:
+      src: ::file ./media/hls_20241004_true_color.jpg
+      alt: HLS L30 and S30 true color composite from October 4, 2024 over Lake Superior
+    type: cmr
+    stacCol: HLSL30_2.0
+    stacApiEndpoint: "https://cmr.earthdata.nasa.gov/stac/LPCLOUD"
+    tileApiEndpoint: "https://dev-titiler-cmr.delta-backend.com/WebMercatorQuad/tilejson.json"
+    name: "HLS Landsat 8/9 True Color Composite"
+    description: "True color composite image from Landsat 8/9 bands B04, B03, B02"
+    time_density: day
+    zoomExtent:
+      - 7
+      - 18
+    sourceParams:
+      concept_id:	C2021957657-LPCLOUD
+      backend: rasterio
+      bands_regex: B[0-9][0-9]
+      bands:
+        - B04
+        - B03
+        - B02
+      minzoom: 7
+      maxzoom: 18
+      color_formula: Gamma RGB 3.5 Saturation 1.2 Sigmoidal RGB 15 0.35
+  - id: HLSL30_2.0_false_color
+    media:
+      src: ::file ./media/hls_20241004_false_color.jpg
+      alt: HLS L30 and S30 false color composite from October 4, 2024 over Lake Superior
+    type: cmr
+    stacCol: HLSL30_2.0
+    stacApiEndpoint: "https://cmr.earthdata.nasa.gov/stac/LPCLOUD"
+    tileApiEndpoint: "https://dev-titiler-cmr.delta-backend.com/WebMercatorQuad/tilejson.json"
+    name: "HLS Landsat 8/9 False Color Composite"
+    description: "False color composite image from Landsat 8/9 bands B05, B03, B02"
+    time_density: day
+    zoomExtent:
+      - 7
+      - 18
+    sourceParams:
+      concept_id:	C2021957657-LPCLOUD
+      backend: rasterio
+      bands_regex: B[0-9][0-9]
+      bands:
+        - B05
+        - B03
+        - B02
+      minzoom: 7
+      maxzoom: 18
+      color_formula: Gamma RGB 2.5 Saturation 1.2 Sigmoidal RGB 10 0.35
+  - id: HLSS30_2.0_true_color
+    media:
+      src: ::file ./media/hls_20241004_true_color.jpg
+      alt: HLS L30 and S30 true color composite from October 4, 2024 over Lake Superior
+    type: cmr
+    stacCol: HLSS30_2.0
+    stacApiEndpoint: "https://cmr.earthdata.nasa.gov/stac/LPCLOUD"
+    tileApiEndpoint: "https://dev-titiler-cmr.delta-backend.com/WebMercatorQuad/tilejson.json"
+    name: "HLS Sentinel-2 True Color Composite"
+    description: "True color composite image from Sentinel-2 bands B04, B03, B02"
+    time_density: day
+    zoomExtent:
+      - 7
+      - 18
+    sourceParams:
+      concept_id:	C2021957295-LPCLOUD
+      backend: rasterio
+      bands_regex: B[0-9][0-9A-Za-z]
+      bands:
+        - B04
+        - B03
+        - B02
+      minzoom: 7
+      maxzoom: 18
+      color_formula: Gamma RGB 3.5 Saturation 1.2 Sigmoidal RGB 15 0.35
+  - id: HLSS30_2.0_false_color
+    media:
+      src: ::file ./media/hls_20241004_false_color.jpg
+      alt: HLS L30 and S30 false color composite from October 4, 2024 over Lake Superior
+    type: cmr
+    stacCol: HLSS30_2.0
+    stacApiEndpoint: "https://cmr.earthdata.nasa.gov/stac/LPCLOUD"
+    tileApiEndpoint: "https://dev-titiler-cmr.delta-backend.com/WebMercatorQuad/tilejson.json"
+    name: "HLS Sentinel-2 False Color Composite"
+    description: "False color composite image from Sentinel-2 bands B8A, B03, B02"
+    time_density: day
+    zoomExtent:
+      - 7
+      - 18
+    sourceParams:
+      concept_id:	C2021957295-LPCLOUD
+      backend: rasterio
+      bands_regex: B[0-9][0-9A-Za-z]
+      bands:
+        - B8A
+        - B03
+        - B02
+      minzoom: 7
+      maxzoom: 18
+      color_formula: Gamma RGB 2.5 Saturation 1.2 Sigmoidal RGB 10 0.35
+---
+
+<Block>
+  <Prose>
+  The Harmonized Landsat and Sentinel-2 (HLS) project is an extension of research conducted at NASA's Goddard Space Flight Center in Greenbelt, MD, that takes input data from the joint NASA/USGS Landsat 8 and Landsat 9 and the ESA (European Space Agency) Sentinel-2A, Sentinel-2B, and Sentinel-2C satellites to generate a harmonized, analysis-ready surface reflectance data product with observations every two to three days.
+
+  The HLS project is a major outcome of the [Satellite Needs Working Group](https://www.earthdata.nasa.gov/about/nasa-support-snwg) assessment in 2016. In that assessment, federal agencies and end users identified a need for more frequent Landsat-like observations to track short-term changes in vegetation and other land components to support agricultural monitoring and land cover classification at moderate to high resolution in both the visible and thermal components of the electromagnetic spectrum. Spectral similarities between the Landsat 8 Operational Land Imager ([OLI](https://www.earthdata.nasa.gov/data/instruments/oli)), the Landsat 9 OLI-2, and the Sentinel-2 MultiSpectral Instrument ([MSI](https://www.earthdata.nasa.gov/data/instruments/sentinel-2-msi)) present an opportunity to harmonize data from these sensors to generate higher-frequency imagery products for land surface monitoring and applications.
+
+  Previous versions of HLS data products produced by the HLS Science Team at Goddard had limited spatial coverage — only covering North America and other select global locations. The current version of the HLS algorithm is a cloud-based software stack that expands the spatial coverage to include all land masses globally, outside of Antarctica.
+
+  Two data products are generated as part of the HLS project: the L30 data product generated with Landsat 8 and Landsat 9 data, and the S30 product generated using Sentinel-2 data. These data are available through [Earthdata Search](https://search.earthdata.nasa.gov/search?q=HLS) as well as through NASA's Land Processes Distributed Active Archive Center ([LP DAAC](https://www.earthdata.nasa.gov/centers/lp-daac)). Feedback or questions about HLS data products can be made in the [Earthdata Forum for HLS](https://forum.earthdata.nasa.gov/viewtopic.php?f=7&t=618&sid=6c381c5ceb5d223e9910f8f6e7dce06e).
+
+  ## Dataset Details
+  - **Temporal Extent:** 
+      - HLSL30: April 2013 - present    
+      - HLSS30: December 2015 - present
+  - **Temporal Resolution:** revisit ~2-3 days
+  - **Spatial Extent:** Global
+  - **Spatial Resolution:** 30 x 30 meters
+  - **Data Latency:** ~5 days
+  </Prose>
+<Figure>
+  <Map
+    datasetId='HLS_2.0'
+    layerId='HLSL30_2.0_true_color'
+    dateTime='2024-10-01'
+    zoom={11}
+    center={[-90.977,47.5905]}
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+  HLSL30 imagery from October 1, 2024 showing fall foliage in the North Shore Highlands in Northern Minnesota, US
+  </Caption>
+</Figure>
+</Block>
