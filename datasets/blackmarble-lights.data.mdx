@@ -121,76 +121,11 @@ layers:
       unit: Artificial Light Emissions (W cm^-2 sr^-1)
 ---
 
-<Block>
-  <Prose>
-  ## About
-  Images of Earth at night give us an extraordinary view of human activity over time. The nighttime environment illuminates Earth features, including city infrastructure, lightning flashes, fishing boats navigating open water, gas flares, aurora, and natural hazards, such as lava flowing from an active volcano. Paired with the moonlight, researchers can also spot snow and ice, as well as other reflective surfaces that allow nighttime land and ocean analysis.
-
-  During the COVID-19 pandemic, researchers are using night light observations to track variations in energy use, migration, and transportation in response to social distancing and lockdown measures.
-  </Prose>
-</Block>
-
-
-
-<Block>
-  <Prose>   
-    ## Dataset Details <br />(COVID-19 Night Lights)
-    - **Temporal Extent:** January 1, 2019 - March 31, 2021<br />
-    - **Spatial Extent:** Global<br />
-    - **Spatial Resolution:** 10 meters<br />
-    - **Data Type:** Research<br />
-  </Prose>
-<Figure>
-    <Map
-      datasetId='nighttime-lights'
-      layerId='nightlights-hd-monthly-covid-19'
-      dateTime='2020-08-01'
-      zoom={10}
-      center={[139.7006, 35.6648]}
-    />
-    <Caption
-      attrAuthor='NASA'
-      attrUrl='https://nasa.gov/'
-    >
-    Monthly averaged night-time lights over Tokyo, Japan in August 2020.
-    </Caption>
-  </Figure>
-</Block>
-
 
 <Block>
   <Prose>
-  ## Dataset Details <br />(Derechos Night Lights)
-  - **Temporal Extent:** March 12th, 2022
-  - **Temporal Resolution:** Daily
-  - **Spatial Extent:** Northern Plains Region
-  - **Spatial Resolution:** 750 meters
-  - **Data Units:** W cm^-2 sr^-1
-  - **Data Type:** Research
-  - **Data Latency:** N/A
-  </Prose>
-<Figure>
-  <Map
-    datasetId='nightlights-derecho'
-    layerId='nightlights-derecho'
-    dateTime='2022-05-10'
-    zoom={9}
-    center={[-96.7319, 43.5416]}
-  />
-  <Caption
-    attrAuthor='NASA'
-    attrUrl='https://nasa.gov/'
-  >
-    Change of artificial light emissions in Sioux Falls, SD from before and after the serial derecho of May 12th, 2022.
-  </Caption>
-  </Figure>
-</Block>
-
-
-<Block>
-  <Prose>
-  ## Dataset Details <br />(2024 Tornado Outbreak Night Lights)
-  - **Temporal Extent:** March 1 - May 31, 2024
+  ## Dataset Details
+  - **Temporal Extent:** 2022-2024
   - **Temporal Resolution:** Inconsistent
   - **Spatial Extent:** Select sites across CONUS
   - **Spatial Resolution:** 500 meters
@@ -215,6 +150,14 @@ layers:
   </Figure>
 </Block>
 
+
+<Block>
+  <Prose>
+  ## About
+  Images of Earth at night give us an extraordinary view of human activity over time. The nighttime environment illuminates Earth features, including city infrastructure, lightning flashes, fishing boats navigating open water, gas flares, aurora, and natural hazards, such as lava flowing from an active volcano. Paired with the moonlight, researchers can also spot snow and ice, as well as other reflective surfaces that allow nighttime land and ocean analysis.
+
+  </Prose>
+</Block>
 
 
 
@@ -281,7 +224,7 @@ Nightlights data are collected by the [Visible Infrared Radiometer Suite (VIIRS)
 
   ### Key Publications
   
-  Román, M. O., Z. Wang, Q. Sun, V. Kalb, S. D. Miller, A. Molthan, L. Schultz, J. Bell, E. C. Stokes, B. Pandey, K. C. Seto, D. Hall, T. Oda, R. E. Wolfe, G. Lin, N. Golpayegani, S. Devadiga, C. Davidson, S. Sarkar, C. Praderas, and E. J. Masuoka, 2018: NASA's Black Marble nighttime lights product suite. *Remote Sensing of Environment*, 210, 113–143. https://doi.org/10.1016/j.rse.2018.03.017  
+  Román, M. O., Z. Wang, Q. Sun, V. Kalb, S. D. Miller, A. Molthan, L. Schultz, J. Bell, E. C. Stokes, B. Pandey, K. C. Seto, D. Hall, T. Oda, R. E. Wolfe, G. Lin, N. Golpayegani, S. Devadiga, C. Davidson, S. Sarkar, C. Praderas, and E. J. Masuoka, 2018: NASA's Black Marble nighttime lights product suite. *Remote Sensing of Environment*, 210, 113–143. https://doi.org/10.1016/j.rse.2018.03.017<br />  
   Wang, Z., M. O. Román, V. L. Kalb, S. D. Miller, J. Zhang, and R. M. Shrestha, 2021: Quantifying uncertainties in nighttime light retrievals from Suomi-NPP and NOAA-20 VIIRS Day/Night Band data. *Remote Sensing of Environment*, 267, 112557.   
   
   </Prose>
@@ -294,9 +237,10 @@ Nightlights data are collected by the [Visible Infrared Radiometer Suite (VIIRS)
   
   - **<Link to={"/stories/air-quality-and-covid-19"}>Air Quality and COVID-19</Link>**<br />
   
+  - **<Link to={"/stories/2024-tornadoes"}>The Hyperactive Spring 2024 Tornado Season</Link>**<br />
+
   - **<Link to={"/stories/derecho-impacts"}>NASA Data Fusion Analysis of Derechos and Their Impact on Rural America</Link>**<br />
 
-  - **<Link to={"/stories/2024-tornadoes"}>The Hyperactive Spring 2024 Tornado Season</Link>**<br />
   </Prose>
 </Block>
 
