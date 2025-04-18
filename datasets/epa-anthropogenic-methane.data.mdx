@@ -1,5 +1,6 @@
 ---
 id: epa-ch4emission-yeargrid-v2express-manure
+isHidden: true
 name: U.S. Gridded Anthropogenic Methane Emissions Inventory
 description: Spatially disaggregated 0.1°x 0.1° maps of annual U.S. anthropogenic methane emissions from over 25 emission sources, consistent with the U.S. Inventory of Greenhouse Gas Emissions and Sinks.
 media:
@@ -11,6 +12,10 @@ taxonomy:
   - name: Topics
     values:
       - Air Quality
+  - name: Subtopics
+    values:
+      - Surface Meteorology
+      - Urban
   - name: Source
     values:
       - EPA
@@ -2654,7 +2659,7 @@ layers:
     **Spatial Resolution:** 0.1° x 0.1°    
     **Data Units:** Megagrams of methane per square kilometer per year (Mg CH₄/km²/yr)    
     **Data type:** Research (v2 express extension)<br />
-    **Data Latency:** N/A
+    
     
     The gridded EPA U.S. anthropogenic methane greenhouse gas inventory (gridded GHGI) includes spatially disaggregated (0.1 deg x 0.1 deg or approximately 10 x 10 km resolution) maps of annual anthropogenic methane emissions for the contiguous United States (CONUS), consistent with national annual U.S. anthropogenic methane emissions reported in the U.S. EPA [Inventory of U.S. Greenhouse Gas Emissions and Sinks](https://www.epa.gov/ghgemissions/inventory-us-greenhouse-gas-emissions-and-sinks) (U.S. GHGI). This dataset contains methane emissions provided as fluxes, in units of molecules of methane per square cm per second, for manure management. The data have been converted from their original NetCDF format to Cloud-Optimized GeoTIFF (COG) and scaled to Megagrams of CH4 per km2 per year (Mg/km²/yr).
     
@@ -2710,6 +2715,10 @@ layers:
 
     ## Acknowledgment
     This dataset was developed in collaboration between researchers at the U.S. EPA, Netherlands Institute for Space Research (SRON), Harvard University, and Lawrence Berkeley National Laboratory.
+
+    ## Limitations of use
+    NASA data and products are freely available to federal, state, public, non-profit and commercial users. This information can be experimental- or research-grade data products and may not be appropriate for operational use. These NASA data products and services are intended to aid decision makers and enhance situational awareness, but these data are not guaranteed to be consistently available or routinely updated. Please cite the information according to the direction provided in the metadata.
+
 
     ## License
     [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/legalcode) (CC BY 4.0)

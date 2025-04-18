@@ -9,6 +9,15 @@ media:
     name: Clay Banks
     url: https://unsplash.com/photos/EdscD_R28bM
 taxonomy:
+  - name: Topics
+    values:
+      - Water Resources
+      - Agriculture
+  - name: Subtopics
+    values:
+      - Drought
+      - Hydrology
+      - Soil Moisture
   - name: Source
     values:
       - NASA EIS
@@ -58,7 +67,35 @@ layers:
 ---
 
 <Block>
+  <Prose>   
+    ## Dataset Details
+    - **Temporal Extent:** Sept. 6, 2016 and Nov. 29, 2016<br />
+    - **Spatial Extent:** Contiguous United States<br />
+    - **Spatial Resolution:** 3 km<br />
+    - **Data Type:** Research<br />
+  </Prose>
+<Figure>
+    <Map
+      datasetId='soil-moisture'
+      layerId='sport-lis-vsm0_100cm-percentile'
+      dateTime='2016-09-06'
+      compareDateTime='2016-11-29'
+      zoom={5}
+      center={[-110.9224, 38.3705]}
+    />
+    <Caption
+      attrAuthor='NASA'
+      attrUrl='https://nasa.gov/'
+    >
+    Comparison of soil moisture percentile over Utah between September 6, 2016 and November 29, 2016.
+    </Caption>
+  </Figure>
+</Block>
+
+
+<Block>
   <Prose>
+  ## About
   The NASA Land Information System (LIS) is a high-performance land surface modeling and data assimilation system used to characterize land surface states and fluxes by integrating satellite-derived datasets, ground-based observations, and model re-analyses. The NASA SPoRT Center at MSFC developed a real-time configuration of the LIS (“SPoRT-LIS”), which is designed for use in experimental operations by domestic and international users. SPoRT-LIS is an observations-driven, historical and real-time modeling setup that runs the Noah land surface model over a full CONUS domain. It provides soil moisture estimates at approximately 3-km horizontal grid spacing over a 2-meter-deep soil column and has been validated for regional applications.
 
   SPoRT-LIS consists of a 33-year soil moisture climatology spanning from 1981 to 2013, which is extended to the present time and forced by atmospheric analyses from the operational North American Land Data Assimilation System-Phase 2. The 33-year soil moisture climatology also provides the database for real-time soil moisture percentiles evaluated for all U.S. counties and at each modeled grid point. The present-day soil moisture analyses are compared to daily historical distributions to determine the soil wet/dry anomalies for the specific time of year. Soil moisture percentile maps are constructed for the model integrated layers, and these data are frequently referenced by scientists and operational agencies contributing to the weekly U.S. Drought Monitor product.  
@@ -94,6 +131,47 @@ Meanwhile, the soil moisture percentiles depict where the current analysis value
 
   </Prose>
 </Block>
+
+
+<Block>
+  <Prose>
+  
+  ## Data Stories Using This Dataset
+  
+  **<Link to={"/stories/sat-data-agriculture"}>The Value of Data in Monitoring The Health of Crops</Link>**<br />
+
+  **<Link to={"/stories/nldas"}>Mapping Water Availability over North America</Link>**
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+    ## Limitations of use
+
+    NASA data and products are freely available to federal, state, public, non-profit and commercial users. This information can be experimental- or research-grade data products and may not be appropriate for operational use. These NASA data products and services are intended to aid decision makers and enhance situational awareness, but these data are not guaranteed to be consistently available or routinely updated. Please cite the information according to the direction provided in the metadata.
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+  ## Disclaimer
+
+  All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+    ## License
+
+    [Creative Commons Zero v1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC0 1.0)
+  </Prose>
+</Block>
+
+
 
 <Block>
   <Prose>
