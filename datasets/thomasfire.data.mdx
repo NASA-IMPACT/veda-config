@@ -42,7 +42,7 @@ layers:
       nodata: nan
     compare:
       datasetId: thomasfire  
-      layerId: frp-max-thomasfire
+      layerId: barc-thomasfire
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `FRP: ${dateFns.format(datetime, 'yyyy')} VS BARC: ${dateFns.format(compareDatetime, 'yyyy')}`;
@@ -62,6 +62,7 @@ layers:
       spatialExtent: Thomas Fire Area
       temporalResolution: Annual 
       unit: Watts
+
   - id: barc-thomasfire
     stacCol: barc-thomasfire
     name: Burn Area Reflectance Classification for Thomas Fire

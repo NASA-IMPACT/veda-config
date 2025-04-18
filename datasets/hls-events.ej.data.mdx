@@ -80,64 +80,6 @@ layers:
       temporalResolution: Daily 
       unit: N/A  
 
-  - id: darnah-flood
-    stacCol: darnah-flood
-    name: HLS SWIR FalseColor Composite
-    type: raster
-    description: 'HLS falsecolor composite imagery using S30 Bands 12, 8A, and 4, over Darnah, Libya.'
-    zoomExtent:
-      - 0
-      - 20
-    sourceParams:
-      rescale:
-        - 0
-        - 5000
-      resampling: bilinear
-      asset_bidx: cog_default|1,2,3
-    compare:
-      datasetId: hls_events
-      layerId: darnah-flood
-      mapLabel: |
-        ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `${dateFns.format(datetime, 'LLL dd, yyyy')} VS ${dateFns.format(compareDatetime, 'LLL dd, yyyy')}`;        
-        }
-    metadata:
-      source: HLS
-
-  - id: darnah-gpm-daily
-    stacCol: darnah-gpm-daily
-    name: GPM Accumulated Rainfall
-    type: raster
-    description: 'Accumulated Rainfall (mm) over the eastern Mediterranean Sea from Medicane Daniel (4 - 16 September, 2023).'
-    initialDatetime: newest
-    zoomExtent:
-      - 0
-      - 20
-
-    sourceParams:
-      colormap_name: inferno
-      nodata: 0
-      resampling: bilinear
-      bidx: 1
-      rescale:
-        - 0.1
-        - 500
-            
-    legend:
-      type: gradient
-      min: "0.1 mm"
-      max: "500 mm"
-      stops:
-        - '#08041d'
-        - '#1f0a46'
-        - '#52076c'
-        - '#f57c16'
-        - '#f7cf39'
-        
-    metadata:
-      source: GPM
-
-
   - id: ndvi
     stacCol: hls-ndvi
     name: NDVI
@@ -191,6 +133,7 @@ layers:
       - "#d1e5f0"
       - "#4393c3"
       - "#053061"
+
   - id: entropy-difference
     stacCol: hls-entropy-difference
     name: Entropy Difference
@@ -232,7 +175,7 @@ layers:
   </Prose>
   <Figure>
     <Map
-      datasetId='hls-events'
+      datasetId='hls_events'
       layerId='ndvi'
       dateTime='2022-09-05'
       zoom={10}
