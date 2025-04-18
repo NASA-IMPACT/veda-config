@@ -1,6 +1,6 @@
 ---
 id: hls_events
-name: 'Harmonized Landsat Sentinel-2 (Selected Events)'
+name: 'Harmonized Landsat and Sentinel-2 (Selected Events)'
 description: '30-meter resolution harmonized Landsat 8/9 and Sentinel-2A/B data products'
 usage:
   - url: "https://nasa-impact.github.io/veda-docs/notebooks/quickstarts/hls-visualization.html"
@@ -165,6 +165,7 @@ layers:
     compare:
         datasetId: hls_events
         layerId: ndvi
+
   - id: ndvi_difference
     stacCol: hls-ndvi-difference
     name: NDVI Difference
@@ -219,19 +220,49 @@ layers:
 
 ---
 
-<Block>
-<Prose>
-Input data from Landsat 8/9 and Sentinel-2A/B is reprojected and Sentinel-2 data adjusted so that the output data products, HLSL30 (Landsat-derived) and HLSS30 (Sentinel-2-derived) can be used interchangeably. The harmonization of the Optical Land Imager (OLI) on Landsat 8/9 and Multispectral Imager (MSI) on Sentinel-2A/B increases the time series density of plot-scale observations such that data is available every 2-4 days over a given location.
 
-The data currently in this dashboard represents a subset of the available data. Data will continue to be added to this dashboard over time.
-</Prose>
+<Block>
+  <Prose>
+  ## Dataset Details
+  - **Temporal Extent:** Sept. 1, 2017 - Sept. 22, 2023
+  - **Spatial Resolution:** 30 m x 30 m
+  - **Data Units:** Surface Reflectance
+  - **Data Type:** Research
+  - **Data Latency:** 2 to 3 days
+  </Prose>
+  <Figure>
+    <Map
+      datasetId='hls-events'
+      layerId='ndvi'
+      dateTime='2022-09-05'
+      zoom={10}
+      center={[-82.1476,26.5101]}
+      compareDateTime='2022-09-30'
+    />
+    <Caption
+      attrAuthor='Harmonized Landsat and Sentinel-2'
+      attrUrl='https://hls.gsfc.nasa.gov/'
+    >
+    HLS normalized difference vegetation index (NDVI) pre/post-Ian over Sanibel Island, Cape Coral, and portions of Fort Myers.
+    </Caption>
+  </Figure>
+</Block>
+
+
+<Block>
+  <Prose>
+  ## About
+  Input data from Landsat 8/9 and Sentinel-2A/B is reprojected and Sentinel-2 data adjusted so that the output data products, HLSL30 (Landsat-derived) and HLSS30 (Sentinel-2-derived) can be used interchangeably. The harmonization of the Optical Land Imager (OLI) on Landsat 8/9 and Multispectral Imager (MSI) on Sentinel-2A/B increases the time series density of plot-scale observations such that data is available every 2-4 days over a given location.
+
+  The data currently in this dashboard represents a subset of the available data. Data will continue to be added to this dashboard over time.
+  </Prose>
 </Block>
 
 <Block>
-<Prose>
-## Scientific research
-The production of atmospherically corrected HLS products is a collaborative effort between NASA, the U.S. Geological Survey (USGS), and the European Space Agency (ESA). Bandpass adjustments applied to Sentinel-2 data spectral bands match surface reflectance values in corresponding spectral bands in Landsat 8 and 9. This adjustment allows for 30m observation of the land surface every 2-4 days. HLSL30 and HLSS30 products are typically used for land use land cover applications including land use change, land use classification, fire monitoring, agricultural monitoring, and flooding, among others.
-</Prose>
+  <Prose>
+  ## Scientific research
+  The production of atmospherically corrected HLS products is a collaborative effort between NASA, the U.S. Geological Survey (USGS), and the European Space Agency (ESA). Bandpass adjustments applied to Sentinel-2 data spectral bands match surface reflectance values in corresponding spectral bands in Landsat 8 and 9. This adjustment allows for 30m observation of the land surface every 2-4 days. HLSL30 and HLSS30 products are typically used for land use land cover applications including land use change, land use classification, fire monitoring, agricultural monitoring, and flooding, among others.
+  </Prose>
 </Block>
 
 <Block type='full'>
@@ -262,7 +293,35 @@ HLS imagery shows the impact of flooding for Hurricanes Maria and Ida that made 
   <Prose>
   ## Data Stories Using This Dataset
   
-  **<Link to={"/stories/darnah-flood"}>The Deadliest Flood of the 21st Century</Link>**
+  - **<Link to={"/stories/darnah-flood"}>The Deadliest Flood of the 21st Century</Link>**
+
+  - **<Link to={"/stories/hurricane-ian"}>Hurricane Ian and Impacts on Vegetation</Link>**
+  </Prose>
+</Block>
+
+
+
+<Block>
+  <Prose>
+  ## Source Data Product Citation
+  Claverie, M., Ju, J., Masek, J. G., Dungan, J. L., Vermote, E. F., Roger, J.-C., Skakun, S. V., & Justice, C. (2018). The Harmonized Landsat and Sentinel-2 surface reflectance data set. Remote Sensing of Environment, 219, 145-161.
+
+  ## Key Publications
+  Su Ye, John Rogan, Zhe Zhu, J. Ronald Eastman, A near-real-time approach for monitoring forest disturbance using Landsat time series: stochastic continuous change detection, Remote Sensing of Environment, Volume 252, 2021,112167, ISSN 0034-4257, (https://doi.org/10.1016/j.rse.2020.112167)[https://doi.org/10.1016/j.rse.2020.112167].
+
+  Su Ye, Zhe Zhu, Guofeng Cao, Object-based continuous monitoring of land disturbances from dense Landsat time series, Remote Sensing of Environment, Volume 287, 2023, 113462, ISSN 0034-4257, (https://doi.org/10.1016/j.rse.2023.113462)[https://doi.org/10.1016/j.rse.2023.113462].
+
+  ### Other Relevant Publications
+  Ye, S., Zhu, Z., & Suh, J. W. (2024). Leveraging past information and machine learning to accelerate land disturbance monitoring. Remote Sensing of Environment, 305, 114071.
+
+  Masek, J., Ju, J., Roger, J., Skakun, S., Vermote, E., Claverie, M., Dungan, J., Yin, Z., Freitag, B., Justice, C. (2021). <i>HLS Sentinel-2 Multi-spectral Instrument Surface Reflectance Daily Global 30m v2.0</i> [Data set]. NASA EOSDIS Land Processes DAAC. Accessed 2022-06-16 from https://doi.org/10.5067/HLS/HLSS30.002
+
+  Masek, J., Ju, J., Roger, J., Skakun, S., Vermote, E., Claverie, M., Dungan, J., Yin, Z., Freitag, B., Justice, C. (2021). <i>HLS Operational Land Imager Surface Reflectance and TOA Brightness Daily Global 30m v2.0</i> [Data set]. NASA EOSDIS Land Processes DAAC. Accessed 2022-06-16 from https://doi.org/10.5067/HLS/HLSL30.002
+
+
+  ## Acknowledgment
+  This work has been supported by the USGS-NASA Landsat Science Team (LST) Program for Toward Near Real-time Monitoring and Characterization of Land Surface Change for the Conterminous US (140G0119C0008)
+
   </Prose>
 </Block>
 
@@ -293,18 +352,6 @@ HLS imagery shows the impact of flooding for Hurricanes Maria and Ida that made 
   </Prose>
 </Block>
 
-
-
-<Block>
-<Prose>
-## Credits
-1. Citation for HLS data set: Claverie, M., Ju, J., Masek, J. G., Dungan, J. L., Vermote, E. F., Roger, J.-C., Skakun, S. V., & Justice, C. (2018). The Harmonized Landsat and Sentinel-2 surface reflectance data set. Remote Sensing of Environment, 219, 145-161.
-
-2. Masek, J., Ju, J., Roger, J., Skakun, S., Vermote, E., Claverie, M., Dungan, J., Yin, Z., Freitag, B., Justice, C. (2021). <i>HLS Sentinel-2 Multi-spectral Instrument Surface Reflectance Daily Global 30m v2.0</i> [Data set]. NASA EOSDIS Land Processes DAAC. Accessed 2022-06-16 from https://doi.org/10.5067/HLS/HLSS30.002
-
-3. Masek, J., Ju, J., Roger, J., Skakun, S., Vermote, E., Claverie, M., Dungan, J., Yin, Z., Freitag, B., Justice, C. (2021). <i>HLS Operational Land Imager Surface Reflectance and TOA Brightness Daily Global 30m v2.0</i> [Data set]. NASA EOSDIS Land Processes DAAC. Accessed 2022-06-16 from https://doi.org/10.5067/HLS/HLSL30.002
-</Prose>
-</Block>
 
 <Block>
   <Prose>
