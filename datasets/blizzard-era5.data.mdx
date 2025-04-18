@@ -4,10 +4,10 @@ name: 'ERA5 Reanalysis (Select Events)'
 description: "ERA5 reanalysis data of surface temperature, wind, mean sea level pressure, and cloud fraction for two select blizzard events."
 
 media:
-  src: ::file media/blizzards-cover.png
-  alt: Near-blizzard conditions in Maria Stein, Ohio on December 23, 2022.
+  src: ::file ./media/CERES_NETFLUX_M_2006-07.jpeg
+  alt: Net radiation across the globe.
   author: 
-    name: Andrew Blackford
+    name: NASA Earth Observatory
 taxonomy:
   - name: Topics
     values:
@@ -64,6 +64,12 @@ layers:
       spatialExtent: Global
       temporalResolution: 1950-1978; Inconsistent
       unit: Kelvin
+    media:
+      src: ::file media/blizzards-cover.png
+      alt: Near-blizzard conditions in Maria Stein, Ohio on December 23, 2022.
+      author: 
+        name: Andrew Blackford
+
   - id: blizzard-era5-10m-wind
     stacCol: blizzard-era5-10m-wind
     name: ERA5 10 Meter Wind
@@ -97,6 +103,12 @@ layers:
       spatialExtent: Global
       temporalResolution: 1950-1978; Inconsistent
       unit: m/s
+    media:
+      src: ::file media/blizzards-cover.png
+      alt: Near-blizzard conditions in Maria Stein, Ohio on December 23, 2022.
+      author: 
+        name: Andrew Blackford
+
   - id: blizzard-era5-cfrac
     stacCol: blizzard-era5-cfrac
     name: ERA5 Cloud Fraction
@@ -128,6 +140,12 @@ layers:
       spatialExtent: Global
       temporalResolution: 1950-1978; Inconsistent
       unit: fraction; 1 = 100% coverage
+    media:
+      src: ::file media/blizzards-cover.png
+      alt: Near-blizzard conditions in Maria Stein, Ohio on December 23, 2022.
+      author: 
+        name: Andrew Blackford
+
   - id: blizzard-era5-mslp
     stacCol: blizzard-era5-mslp
     name: ERA5 Mean Sea Level Pressure
@@ -163,6 +181,11 @@ layers:
       spatialExtent: Global
       temporalResolution: 1950-1978; Inconsistent
       unit: hPa
+    media:
+      src: ::file media/blizzards-cover.png
+      alt: Near-blizzard conditions in Maria Stein, Ohio on December 23, 2022.
+      author: 
+        name: Andrew Blackford
 ---
 <Block>
   <Prose>
