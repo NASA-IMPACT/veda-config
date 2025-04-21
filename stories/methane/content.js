@@ -170,19 +170,19 @@ export const trainings = [
 
 
 export const datasets = [
-    {
-        "title": "U.S. Gridded Anthropogenic Methane Emissions Inventory",
-        "desc": "Spatially disaggregated 0.1°x 0.1° maps of annual U.S. anthropogenic methane emissions from over 25 emission sources, consistent with the U.S. Inventory of Greenhouse Gas Emissions and Sinks",
-        "img": {
-          "src": new URL('../../datasets/media/epa-annual--cover.jpg', import.meta.url).href,
-          "alt": "Total Gridded Methane Emissions from the U.S. Inventory of Greenhouse Gas Emissions and Sinks"
-        },
-        "link": {
-          "url": "/data-catalog/epa-ch4emission-yeargrid-v2express",
-          "text": "See more"
-        },
-        "footer": null
-    },
+    // {
+    //     "title": "U.S. Gridded Anthropogenic Methane Emissions Inventory",
+    //     "desc": "Spatially disaggregated 0.1°x 0.1° maps of annual U.S. anthropogenic methane emissions from over 25 emission sources, consistent with the U.S. Inventory of Greenhouse Gas Emissions and Sinks",
+    //     "img": {
+    //       "src": new URL('../../datasets/media/epa-annual--cover.jpg', import.meta.url).href,
+    //       "alt": "Total Gridded Methane Emissions from the U.S. Inventory of Greenhouse Gas Emissions and Sinks"
+    //     },
+    //     "link": {
+    //       "url": "/data-catalog/epa-ch4emission-yeargrid-v2express",
+    //       "text": "See more"
+    //     },
+    //     "footer": null
+    // },
     {
         "title": "Geostationary Satellite Observations of Extreme and Transient Methane Emissions from Oil and Gas Infrastructure",
         "desc": "A sample of methane plumes from point sources observed since 2019 by the U.S. Geostationary Operational Environmental Satellites (GOES) over North and South America",
