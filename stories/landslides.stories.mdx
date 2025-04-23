@@ -1,0 +1,109 @@
+---
+id: 'landslides'
+name: Landslide Risks and Impacts
+description: "A Case Study of 2024's Hurricane Helene"
+media:
+  src: ::file ./media/landslides-background.png
+  alt: Landslide closes I-40 in western North Carolina.
+  author:
+    name: CNN Newsource
+pubDate: 2025-05-20
+taxonomy:
+  - name: Topics
+    values:
+      - Natural Disasters
+      - Tropical
+  - name: Subtopics
+      - x
+  - name: Source
+    values:
+      - Community Contributed
+---
+
+<Block>
+  <Prose>
+
+    **Authors:** 
+    
+    Andrew Blackford<sup>[1]</sup>
+
+    <sup>[1]</sup> The University of Alabama in Huntsville (UAH)
+    
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  ### Introduction
+
+  x
+  </Prose>
+</Block>
+
+<ScrollytellingBlock>
+  <Chapter
+    center={[-82.5515, 35.5951]}
+    zoom={5}
+    datasetId='GPM_3IMERGDF.v07'
+    layerId='GPM_3IMERGDF.v07'
+    datetime='2024-06-01'
+  >
+    
+  ### Asheville, NC
+
+  x  
+  
+  <Figure>
+    <Chart
+      dataPath={new URL('./landslides-precip-asheville.csv', import.meta.url).href}
+      dateFormat="%m/%d/%Y %H:%M"
+      idKey='Source'
+      xKey='datetime'
+      yKey='Rainfall'
+      yAxisLabel='Accumulated Rainfall (in)'
+    />
+    <Caption>
+       Comparison of satellite remote sensing and ground observational data from the IMERG sensor and ASOS stations of total precipitation in Asheville, NC from Hurricane Helene.
+    </Caption>
+  </Figure>
+
+  </Chapter>
+
+</ScrollytellingBlock>
+
+
+
+<Block>
+  <Prose>
+    ### References
+    x
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    ### Data Access
+
+    * [FILL OUT](https://cds.climate.copernicus.eu/)
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+
+    **Editors**: Andrew Blackford
+
+    **Developers**: Andrew Blackford
+
+    **Science and Content Contributors**: Andrew Blackford
+
+    **Questions / Feedback**: Email veda@uah.edu
+
+    ### Additional Resources
+
+    * [FILL OUT](https://www.weather.gov/fgz/WinterStorms)
+
+  </Prose>
+</Block>
+
