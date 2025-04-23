@@ -43,7 +43,7 @@ taxonomy:
 <ScrollytellingBlock>
   <Chapter
     center={[-82.5515, 35.5951]}
-    zoom={5}
+    zoom={8}
     datasetId='GPM_3IMERGDF.v07'
     layerId='GPM_3IMERGDF.v07'
     datetime='2024-06-01'
@@ -68,6 +68,94 @@ taxonomy:
   </Figure>
 
   </Chapter>
+
+
+  <Chapter
+    center={[-83.3206, 35.4743]}
+    zoom={8}
+    datasetId='GPM_3IMERGDF.v07'
+    layerId='GPM_3IMERGDF.v07'
+    datetime='2024-06-01'
+  >
+    
+  ### Cherokee, NC
+
+  x  
+  
+  <Figure>
+    <Chart
+      dataPath={new URL('./landslides-precip-cherokee.csv', import.meta.url).href}
+      dateFormat="%m/%d/%Y %H:%M"
+      idKey='Source'
+      xKey='datetime'
+      yKey='Rainfall'
+      yAxisLabel='Accumulated Rainfall (in)'
+    />
+    <Caption>
+       Comparison of satellite remote sensing and ground observational data from the IMERG sensor and ASOS stations of total precipitation in Cherokee, NC from Hurricane Helene.
+    </Caption>
+  </Figure>
+
+  </Chapter>
+
+
+  <Chapter
+    center={[-83.1874, 35.9676]}
+    zoom={5}
+    datasetId='GPM_3IMERGDF.v07'
+    layerId='GPM_3IMERGDF.v07'
+    datetime='2024-06-01'
+  >
+    
+  ### Newport, TN
+
+  x  
+  
+  <Figure>
+    <Chart
+      dataPath={new URL('./landslides-precip-newport.csv', import.meta.url).href}
+      dateFormat="%m/%d/%Y %H:%M"
+      idKey='Source'
+      xKey='datetime'
+      yKey='Rainfall'
+      yAxisLabel='Accumulated Rainfall (in)'
+    />
+    <Caption>
+       Comparison of satellite remote sensing and ground observational data from the IMERG sensor and ASOS stations of total precipitation in Newport, TN from Hurricane Helene.
+    </Caption>
+  </Figure>
+
+  </Chapter>
+
+
+  <Chapter
+    center={[-82.3535, 36.3134]}
+    zoom={5}
+    datasetId='GPM_3IMERGDF.v07'
+    layerId='GPM_3IMERGDF.v07'
+    datetime='2024-06-01'
+  >
+    
+  ### Johnson City, TN
+
+  x  
+  
+  <Figure>
+    <Chart
+      dataPath={new URL('./landslides-precip-johnson-city.csv', import.meta.url).href}
+      dateFormat="%m/%d/%Y %H:%M"
+      idKey='Source'
+      xKey='datetime'
+      yKey='Rainfall'
+      yAxisLabel='Accumulated Rainfall (in)'
+    />
+    <Caption>
+       Comparison of satellite remote sensing and ground observational data from the IMERG sensor and ASOS stations of total precipitation in Johnson City, TN from Hurricane Helene.
+    </Caption>
+  </Figure>
+
+  </Chapter>
+
 
 </ScrollytellingBlock>
 
