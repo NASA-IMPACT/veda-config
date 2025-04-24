@@ -1,8 +1,8 @@
 ---
-id: landslides-inventory
-name: 'USGS Landslides Inventory - Hurricane Helene'
+id: landslides-kd-impactful
+name: 'Impactful Landslides Kernel Density - Hurricane Helene'
 isHidden: true
-description: "Locations of confirmed landslides per the USGS that occurred as a result of Hurricane Helene."
+description: "Kernel density analysis of confirmed landslides that per the USGS directly impacted structures, roads, or rivers and occurred as a result of Hurricane Helene."
 media:
   src: ::file ../stories/media/landslides-background.png
   alt: Landslide closes I-40 in western North Carolina.
@@ -27,18 +27,18 @@ infoDescription: |
     - **Data Latency:** N/A
 
 layers:
-  - id: landslides-inventory
-    stacCol: landslides-inventory
-    name: USGS Landslides Inventory - Hurricane Helene
+  - id: landslides-kd-impactful
+    stacCol: landslides-kd-impactful
+    name: Impactful Landslides Kernel Density - Hurricane Helene
     type: raster
-    description: "Locations of confirmed landslides per the USGS that occurred as a result of Hurricane Helene."
+    description: "Kernel density analysis of confirmed landslides that per the USGS directly impacted structures, roads, or rivers and occurred as a result of Hurricane Helene."
     zoomExtent:
       - 0
       - 20
     sourceParams:
-      colormap_name: turbo
+      colormap_name: thermal
       resampling: bilinear
-      rescale: 0,7 
+      rescale: 0,10000 
     legend:
       type: gradient
       min: "0 in"
@@ -52,5 +52,4 @@ layers:
           - "#efed00"
           - "#fe0000"
           - "#cccccc"
-
 ---

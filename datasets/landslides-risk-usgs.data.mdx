@@ -1,0 +1,56 @@
+---
+id: landslides-risk-usgs
+name: 'USGS Landslide Hazard Estimate Model - Hurricane Helene'
+isHidden: true
+description: "The two modeling approaches used were adapted from existing models and were run in early October 2024 using initial precipitation estimates to produce rapid event-specific landslide hazard estimate maps. These preliminary maps were initially released provisionally to meet the need for timely best science during the emergency response (version 1.0). The outputs were used to provide early situational awareness of what areas may have been more severely impacted by landslides and debris flows. These results were also used in planning reconnaissance."
+media:
+  src: ::file ../stories/media/landslides-background.png
+  alt: Landslide closes I-40 in western North Carolina.
+  author:
+    name: CNN Newsource
+taxonomy:
+  - name: Topics
+    values:
+      - Disasters
+      - Tropical
+  - name: Source
+    values:
+      - USGS
+infoDescription: |
+  ::markdown
+    - **Temporal Extent:** September 29, 2024
+    - **Temporal Resolution:** N/A
+    - **Spatial Extent:** Southern Appalachia
+    - **Spatial Resolution:** 6 km
+    - **Data Units:** N/A
+    - **Data Type:** Research
+    - **Data Latency:** N/A
+
+layers:
+  - id: landslides-risk-usgs
+    stacCol: landslides-risk-usgs
+    name: USGS Landslide Hazard Estimate Model - Hurricane Helene
+    type: raster
+    description: "The two modeling approaches used were adapted from existing models and were run in early October 2024 using initial precipitation estimates to produce rapid event-specific landslide hazard estimate maps. These preliminary maps were initially released provisionally to meet the need for timely best science during the emergency response (version 1.0). The outputs were used to provide early situational awareness of what areas may have been more severely impacted by landslides and debris flows. These results were also used in planning reconnaissance."
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      colormap_name: gist_stern
+      resampling: bilinear
+      rescale: 0.01,1 
+    legend:
+      type: gradient
+      min: "0 in"
+      max: "18 in"
+      stops:
+          - "#000000"
+          - "#870098"
+          - "#0078dd"
+          - "#00aa88"
+          - "#00dc00"
+          - "#efed00"
+          - "#fe0000"
+          - "#cccccc"
+
+---
