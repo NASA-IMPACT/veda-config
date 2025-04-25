@@ -72,13 +72,13 @@ taxonomy:
     
   ### Devastating Landslides
 
-  x
+  The United States Geological Survey’s (USGS) landslide inventory created in response to Hurricane Helene’s far-reaching disaster in the Southern Appalachia region logs over 2,200 landslides over the four day period of September 25-29th, 2024. The vast majority of these landslides occurred on the eastern side of the Appalachian Mountains in areas just east of a stretch from Asheville, NC to Johnson City, TN. This dataset is visualized here based on what human impact the landslide caused- whether it impacted the flow of rivers, damaged structures, or blocked/damaged road networks. 
 
   </Chapter>
 
   <Chapter
-    center={[-84.0515, 35.5951]}
-    zoom={7}
+     center={[-83.6515, 35.7951]}
+    zoom={7.75}
     datasetId='landslides-kd-impacted-structures'
     layerId='landslides-kd-impacted-structures'
     datetime='2024-09-29'
@@ -86,13 +86,13 @@ taxonomy:
     
   ### Devastating Landslides
 
-  x
+  Out of the over 2,200 landslides observed by the USGS, nearly 1,300 of them impacted roads, damaged structures, or interrupted river flows. Kernel density analysis was performed on these, which is a way to create a smoothed map to show higher concentrations of human impact from these landslides. The areas that saw the most direct human impact by landslides caused by Hurricane Helene were in the Lake Lure/Chimney Rock to Gasson Creek, North Carolina region and in Boone, North Carolina and surrounding communities. 
 
   </Chapter>
 
   <Chapter
-    center={[-84.0515, 35.5951]}
-    zoom={7}
+    center={[-82.7, 35.7951]}
+    zoom={8}
     datasetId='landslides-risk-usgs'
     layerId='landslides-risk-usgs'
     datetime='2024-09-29'
@@ -100,7 +100,7 @@ taxonomy:
     
   ### Devastating Landslides
 
-  x
+  In order to plan quick reconnaissance for rescue missions and other emergency response in the wake of Helene, the USGS also created a modeled relative landslide hazard estimate product in early October 2024. This data was used in conjunction with the identified landslides in order to both meet the need of scientists in near-real time during support for post-storm recovery efforts as well as provide an early situational assessment of areas that may otherwise be isolated from ongoing emergency response efforts.
 
   </Chapter>
 
@@ -115,7 +115,7 @@ taxonomy:
     
   ### Asheville, NC
 
-  x  
+  The most populous city to have been drastically impacted by the effects of Hurricane Helene was Asheville, North Carolina. Though the city itself did not see many landslides, the landslides that did occur upstream of the French Broad and Swannanoa Rivers increased debris flow in an already record-setting flood event as a result of 12-18” of rainfall - the majority of which fell within a 24 hour period. These rivers both flow through heavily populated areas of the city, and massive damage occurred.  
   
   <Figure>
     <Chart
@@ -143,7 +143,22 @@ taxonomy:
   >
   ### Asheville, NC
 
-  x  
+  The combination of debris flows into the rivers from landslides as well as the torrential rainfall in the Asheville area led the French Broad River to crest at 24.82 ft and the Swannanoa river to crest at 27.33 ft. These crests are 15.32 and 17.33 ft above flood stage and beat the previous disastrous 1916 flood benchmark by 1.72 and 6.63 ft, respectively. 
+  
+  <Figure>
+    <Chart
+      dataPath={new URL('./landslides-stream-gauges-asheville.csv', import.meta.url).href}
+      dateFormat="%m/%d/%Y %H:%M"
+      idKey='source'
+      xKey='datetime'
+      yKey='stream_height'
+      yAxisLabel='Stage (ft)'
+    />
+    <Caption>
+    Stream gauge height data from the National Water Prediction Service showing the French Broad and Swannanoa Rivers well above flood stage in Ashville, North Carolina the week of September 23-30, 2024.
+    </Caption>
+  </Figure>
+
   </Chapter>
 
  <Chapter
