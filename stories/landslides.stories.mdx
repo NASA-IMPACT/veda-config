@@ -435,6 +435,21 @@ taxonomy:
   ### Embreeville, TN
 
   x  
+
+  <Figure>
+    <Chart
+      dataPath={new URL('./landslides-stream-gauges-embreeville.csv', import.meta.url).href}
+      dateFormat="%m/%d/%Y %H:%M"
+      idKey='source'
+      xKey='datetime'
+      yKey='stream_height'
+      yAxisLabel='Stage (ft)'
+    />
+    <Caption>
+    Stream gauge height data from the National Water Prediction Service showing the Nolichucky River well above flood stage in Embreeville, Tennessee the week of September 23-30, 2024. Flood stage is 12 ft.
+    </Caption>
+  </Figure>
+
   
   </Chapter>
 
