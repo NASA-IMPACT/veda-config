@@ -1,7 +1,7 @@
 ---
 id: modis-aod
-name: "MODIS Aerosol Optical Depth (AOD)"
-description: "Using MODIS MCD19A2 to Analyze impacts of Aerosols in Urban Areas"
+name: "MODIS Aerosol Optical Depth (AOD) (Select Events)"
+description: "Using MODIS MCD19A2 to Analyze Impacts of Aerosols in Urban Areas"
 media:
   src: ::file ./media/smog-city.png
   alt: Smog Located In City.
@@ -132,9 +132,9 @@ layers:
 
 <Block>
   <Prose>   
-    ## Dataset Details <br />(Houston, TX AOD)
+    ## Dataset Details <br />
     - **Temporal Extent:** 2000 - 2019<br />
-    - **Spatial Extent:** Houston, TX<br />
+    - **Spatial Extent:** Select sites across CONUS<br />
     - **Spatial Resolution:** 1 km<br />
     - **Data Type:** Research<br />
   </Prose>
@@ -149,62 +149,12 @@ layers:
       zoom={8.75}
     />
     <Caption>
-      Figure 2: Aerosol Optical Depth Compared Decadally from 2000-2009 & 2010-2019. The map shown shows the change in AOD over the last 20 years over the Houston metropolitan area.
+      Aerosol Optical Depth Compared Decadally from 2000-2009 & 2010-2019. The map shown shows the change in AOD over the last 20 years over the Houston metropolitan area.
     </Caption>
   </Figure>
 </Block>
 
 
-<Block>
-  <Prose>
-    ## Dataset Details <br />(Houston, TX AOD Difference)
-    - **Temporal Extent:** 2000-2019<br />
-    - **Spatial Extent:** Houston metro area<br />
-    - **Spatial Resolution:** 1 km<br />
-    - **Data Type:** Research<br />
-  </Prose>
-  <Figure>
-    <Map
-      datasetId='houston-aod-diff'
-      layerId='houston-aod-diff'
-      dateTime='2000-01-01'
-      compareDateTime='2001-01-01'
-      compareLabel='AOD Difference vs Houston Urbanization'
-      center={[-95.35, 29.8]}
-      zoom={8.75}
-      />
-    <Caption>
-      Aerosol Optical Depth Compared Decadally from 2000-2009 & 2010-2019 vs the Urbanization of the Houston metro from 2000-2019. The left portion of the map shows the subtracted difference in AOD over the last 20 years over the Houston metropolitan area.
-    </Caption>
-  </Figure>
-</Block>
-
-
-<Block>
-  <Prose>
-  ## Dataset Details <br />(Derecho AOD)
-  - **Temporal Extent:** May 12th 2022
-  - **Temporal Resolution:** Daily
-  - **Spatial Extent:** Regional
-  - **Spatial Resolution:** 1 km
-  - **Data Type:** Research
-  </Prose>
-<Figure>
-  <Map
-    center={[-97, 44]}
-    zoom={6}
-    datasetId='modis-aod'
-    layerId='modis-derecho'
-    dateTime='2022-05-12'
-  />
-  <Caption
-    attrAuthor='NASA'
-    attrUrl='https://nasa.gov/'
-  >
-  Mosaiced MODIS Infrared satellite imagery of AOD showing elevated values along the leading edge of the Serial Derecho on May 12th, 2022.
-  </Caption>
-</Figure>
-</Block>
 
 
 
