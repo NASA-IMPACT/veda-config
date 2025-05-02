@@ -1,7 +1,7 @@
 ---
 id: tws-anomaly
-name: 'Terrestrial Water Storage Anomalies'
-description: "TWS anomalies modeled using data assimilation within Land Information System framework"
+name: 'Terrestrial Water Storage Anomaly and Trend'
+description: "TWS anomalies and trends modeled using data assimilation within Land Information System framework"
 media:
   src: ::file ./media/twsanomaly-globe.png
   alt: TWS anomalies from LIS outputs.
@@ -61,6 +61,40 @@ layers:
       source: NASA
       spatialExtent: Global
       temporalResolution: Daily 
+      unit: N/A 
+
+
+  - id: lis-tws-trend
+    stacCol: lis-tws-trend
+    name: 'TWS Anomaly Trend'
+    type: raster
+    description: 'Trends in TWS anomalies from LIS outputs'
+    zoomExtent:
+      - 0
+      - 11
+    sourceParams:
+      bidx: 1
+      colormap_name: rdylbu
+      rescale:
+        - -1
+        - 1
+      nodata: -9999
+    legend:
+      type: gradient
+      label: Trend in TWS Anomaly 
+      min: "-1"
+      max: "1"
+      stops:
+      - "#a50026"
+      - "#f46d43"
+      - "#fee090"
+      - "#e0f3f8"
+      - "#74add1"
+      - "#313695"
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Annual 
       unit: N/A 
 
 ---
@@ -128,7 +162,7 @@ TWS is modeled using Noah-MP land surface model (LSM) within LIS framework by as
   </Figure>
 <Prose>
 ## Interpreting the data
-The TWS anomalies are calculated as differences of raw TWS with the climatology obtained over 2001-2021. Negative anomalies denote lower than normal TWS and vice-versa. The trend over time is thus deseasonalized and reflective of changes due to human impacts.
+The TWS anomalies are calculated as differences of raw TWS with the climatology obtained over 2002-2021. Negative anomalies (blue values) denote lower than normal TWS and positive anomalies (red) indicate higher than normal TWS. The trend over time is thus deseasonalized and reflective of changes due to human impacts.
 </Prose>
 </Block>
 
@@ -139,6 +173,7 @@ The TWS anomalies are calculated as differences of raw TWS with the climatology 
   ## Data Stories Using This Dataset
   
   **<Link to={"/stories/eis-coastal-risks"}>Unraveling the Components of Coastal Risk</Link>**
+  **<Link to={"/stories/tws-trends"}>A New View of the Global Water Cycle</Link>**
   </Prose>
 </Block>
 
