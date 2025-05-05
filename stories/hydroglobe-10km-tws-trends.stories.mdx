@@ -1,0 +1,172 @@
+---
+id: 'hydroglobe-10km-tws-trends'
+name: HydroGlobe 10km Version - A New View of the Global Water Cycle
+description: "NASA's land and freshwater model helps monitor drought and floods and study changes in the  global water cycle"
+featured: true
+media:
+  src: ::file ./jordan_image.jpg
+  alt: Meandering wadis combine to form dense, branching networks across the stark, arid landscape of southeastern Jordan. The Arabic word "wadi" means a gulley or streambed that typically remains dry except after drenching, seasonal rains.
+  author:
+    name: USGS/NASA
+    url: https://eros.usgs.gov/media-gallery/earth-as-art/2/jordan
+pubDate: 2023-03-01
+taxonomy:
+  - name: Topics
+    values:
+      - Water Resources
+      - Hydrology 
+      - Drought
+      - Precipitation 
+      - Soil Moisture 
+      - Evapotranspiration
+  - name: Source
+    values: 
+      - NASA WaterInSight
+---
+<Block>
+  <Prose>
+  **Authors**: Wanshu Nie, Melissa Wrzesien, Shahryar Ahmad, Sujay Kumar, Kim Locke, Rishi Anand, Siddharth Chaudhary
+
+  ## Introduction
+
+  Freshwater is what makes Earth habitable, sustaining ecosystems and human civilization. The global water cycle supplies water and regulates weather patterns. The cycling of water links the changes on land with the ocean and atmosphere. Understanding the variability and availability of freshwater is challenging because of the multiple earth processes that continually interact with each other, including those that govern precipitation, soil moisture retention in the ground, snow accumulation and melt, evapotranspiration and vegetation dynamics. Such processes become even more complex under human water resource management. 
+
+  The WaterInSight team integrates the Noah-MP land surface model within [NASA’s LIS framework](https://lis.gsfc.nasa.gov/) and Earth observations by assimilating soil moisture from the Climate Change Initiative Program released by European Space Agency  ([ESA CCI](https://esa-soilmoisture-cci.org/)), leaf area index from Moderate Resolution Imaging Spectroradiometer ([MODIS](https://lpdaac.usgs.gov/products/mcd15a2hv006/)), and terrestrial water storage anomalies from Gravity Recovery and Climate Experiment and the follow-on satellites ([GRACE/GRACE-FO](https://earth.gsfc.nasa.gov/geo/data/grace-mascons)). Using this data assimilation approach, the team provides a daily global water cycle reanalysis product for 2003-2021 at a 10 km spatial resolution. This allows us to better monitor and quantify surface variables, groundwater, human management influences, and hydrological extremes such as droughts and floods. These resulting reanalysis datasets are publicly available via this NASA VEDA platform, including key water, energy, and carbon fluxes such as terrestrial water storage (TWS), evapotranspiration (ET), and gross primary production (GPP). For more information, please visit the corresponding [VEDA dataset page](https://www.earthdata.nasa.gov/dashboard/data-catalog?taxonomy=%7B%22Topics%22%3A%22eis%22%7D). 
+  
+  Join the discussion and provide comments on this Data Story at https://github.com/orgs/Earth-Information-System/discussions.
+  
+  Authors: Wanshu Nie, Melissa Wrzesien, Shahryar Ahmad, Sujay Kumar, Kim Locke, Rishi Anand, Siddharth Chaudhary
+
+  </Prose>
+</Block>
+
+<ScrollytellingBlock>
+  <Chapter
+    center={[77.63,24.27]}
+    zoom={2}
+    datasetId='lis-global-da-trends'
+    layerId='lis-global-da-tws-trend'
+    datetime='2003-01-01'
+  >
+    ## Freshwater storage is depleting
+    Over the globe, terrestrial water storage in many places is decreasing, driven by the independent or combined impacts of natural variability, groundwater pumping, and other human impacts.
+  </Chapter>
+  <Chapter
+    center={[105.5001,30.7899]}
+    zoom={3.8}
+    datasetId='lis-global-da-trends'
+    layerId='lis-global-da-tws-trend'
+    datetime='2003-01-01'
+  >
+    ## Irrigation induced groundwater depletion
+    The vast agricultural regions of the North China Plain and Northwestern India rely heavily on groundwater pumping for irrigation. By integrating GRACE/GRACE-FO terrestrial water storage anomaly data into the global reanalysis, we are able to identify possible “hotspot” depletion areas.
+  </Chapter>
+  <Chapter
+    center={[77.63,24.27]}
+    zoom={2}
+    datasetId='lis-global-da-trends'
+    layerId='lis-global-da-gpp-trend'
+    datetime='2003-01-01'
+  >
+    ## The Earth is greening
+    Meanwhile, data from our model simulations shown here and from [other satellite observations](https://doi.org/10.1038/s41893-019-0220-7) indicate increasing greenness from vegetation over the Earth in recent decades, highlighting the influence of human land use in shaping these greening patterns.
+  </Chapter>
+  <Chapter
+    center={[105.5001,30.7899]}
+    zoom={3.8}
+    datasetId='lis-global-da-trends'
+    layerId='lis-global-da-gpp-trend'
+    datetime='2003-01-01'
+  >
+    ## Agricultural practices are the dominant drivers of the greening Earth:
+    Cropland greening from the expansion of croplands and increased use of fertilizer and irrigation contribute the most to the net increase in global leaf area index and gross primary production. Our reanalysis-based gross primary production data reveal strong increasing trends in parts of China’s and India’s croplands.
+  </Chapter>
+</ScrollytellingBlock>
+
+<Block>
+  <Prose>
+  ## Comparing the trends in water and carbon cycles
+  We applied a seasonal and trend decomposition algorithm to get trend estimates for terrestrial water storage and gross primary production. This method can better help to deal with [nonstationarities](https://doi.org/10.1073/pnas.2403707121) and seasonal shifts and provide a more robust estimate of trends. These trend data sets are also provided in the [VEDA dataset page](https://www.earthdata.nasa.gov/dashboard/data-catalog?taxonomy=%7B%22Topics%22%3A%22eis%22%7D).
+  </Prose>
+</Block>
+
+<Block type='wide'>
+  <Figure>
+     <Map
+     datasetId='lis-global-da-trends'
+     layerId='lis-global-da-tws-trend'
+     dateTime='2003-01-01'
+     compareDateTime='2003-01-01'
+     zoom={2}
+     center={[0,0]}
+     />
+    <Caption
+     attrAuthor='NASA'
+     attrUrl='https://nasa.gov/'
+   >
+    Theil-Sen Slope estimation of the decomposed trend  component of terrestrial water storage (mm/yr) and gross primary production (gC/m2/yr) for 2003-2021 from the global reanalysis dataset.
+    </Caption>
+  </Figure>
+</Block>
+
+<Block>
+    <Figure>
+    <Chart
+      dataPath={new URL('./SouthAsia_TWS_annual_data.csv', import.meta.url).href}
+      dateFormat="%Y"
+      idKey='Data Type'
+      xKey='Year'
+      yKey='Water Components'
+      yAxisLabel='TWS Annual Change (mm)'
+    />
+
+     <Chart
+       dataPath={new URL('./SouthAsia_GPP_annual_data.csv', import.meta.url).href}
+       dateFormat="%Y"
+       idKey='Data Type'
+       xKey='Year'
+       yKey='GPP'
+       yAxisLabel='GPP Annual Change (gC/m2/yr)'
+     />
+
+    <Chart
+      dataPath={new URL('./SouthAsia_ET_annual_data.csv', import.meta.url).href}
+      dateFormat="%Y"
+      idKey='Data Type'
+      xKey='Year'
+      yKey='Water Components'
+      yAxisLabel='ET Annual Change (mm)'
+    />
+    </Figure>
+    <Prose>
+    ## Annual Changes for the South Asia Hotspot
+    Taking a closer look at water, energy, and carbon cycle changes for the South Asia “hot spot” region,the time series shows the annual average anomalies for terrestrial water storage and evapotranspiration, as well as the annual total anomalies for gross primary production. This analysis reveals a TWS decrease at a rate of -3.6 mm/yr and GPP increase at a rate of 4.4 gC/m2/yr. Groundwater depletion is reducing the interaction between the groundwater reservoir and deep layer soil moisture, leading to reduced deep soil evaporation. Enhanced vegetation growth may lead to increased transpiration. The TWS and GPP trends oppositely impact ET, resulting in ET with no significant long-term trend for these regions. Assimilating multi-source remote sensing products has constrained both freshwater changes and the human impact on water-vegetation interactions.
+
+
+    Analyze the global water availability data further in this [interactive notebook](https://nasa-veda.2i2c.cloud/hub/user-redirect/lab/tree/veda-eis-global-reanalysis/analysing_trend_from_global_DA.ipynb)
+
+    </Prose>
+ </Block>
+
+<Block>
+  <Prose>
+    ## Read More:
+    - [PNAS Paper](https://doi.org/10.1073/pnas.2403707121)
+    - [OneEarth Paper](https://doi.org/10.1016/j.oneear.2025.101196) 
+
+    ## Visualize the Data: 
+	  - [TWS Nonstationarity Visualization]( https://svs.gsfc.nasa.gov/5442/) 
+	  - [TWS Dataset Regional View](https://svs.gsfc.nasa.gov/5444/) 
+
+
+    ## Additional resources
+    * [Land Data Assimilation System: About HydroGlobe](https://ldas.gsfc.nasa.gov/hydroglobe)
+    * [Land Information System](https://lis.gsfc.nasa.gov/)
+
+    ## Explore the remote sensing data sets
+    * [GRACE-FO](https://gracefo.jpl.nasa.gov/data/grace-fo-data/)
+    * [ESA CCI](https://esa-soilmoisture-cci.org/)
+    * [MODIS](https://modis.gsfc.nasa.gov/)
+    * [NASA HydroGlobe]( https://ldas.gsfc.nasa.gov/hydroglobe)
+  </Prose>
+</Block>
