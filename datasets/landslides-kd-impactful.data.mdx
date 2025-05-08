@@ -1,0 +1,55 @@
+---
+id: landslides-kd-impacted-structures
+name: 'Impactful Landslides Kernel Density - Hurricane Helene'
+isHidden: true
+description: "Kernel density analysis of confirmed landslides that per the USGS directly impacted structures, roads, or rivers and occurred as a result of Hurricane Helene."
+media:
+  src: ::file ../stories/media/landslides-background.png
+  alt: Landslide closes I-40 in western North Carolina.
+  author:
+    name: CNN Newsource
+taxonomy:
+  - name: Topics
+    values:
+      - Disasters
+      - Tropical
+  - name: Source
+    values:
+      - USGS
+infoDescription: |
+  ::markdown
+    - **Temporal Extent:** September 29, 2024
+    - **Temporal Resolution:** N/A
+    - **Spatial Extent:** Southern Appalachia
+    - **Spatial Resolution:** 1 km
+    - **Data Units:** N/A
+    - **Data Type:** Research
+    - **Data Latency:** N/A
+
+layers:
+  - id: landslides-kd-impacted-structures
+    stacCol: landslides-kd-impacted-structures
+    name: Impactful Landslides Kernel Density - Hurricane Helene
+    type: raster
+    description: "Kernel density analysis of confirmed landslides that per the USGS directly impacted structures, roads, or rivers and occurred as a result of Hurricane Helene."
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      colormap_name: thermal
+      resampling: bilinear
+      rescale: 0,10000 
+    legend:
+      type: gradient
+      min: "0"
+      max: "10000"
+      stops:
+        - "#000004" 
+        - "#2c1176"
+        - "#4f03a1" 
+        - "#7e03a8" 
+        - "#c51b7d" 
+        - "#f1605d"  
+        - "#fdc328" 
+        - "#fcffa4" 
+---
