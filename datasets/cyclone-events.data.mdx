@@ -12,7 +12,11 @@ media:
 taxonomy:
   - name: Topics
     values:
-      - Disasters
+      - Natural Disasters
+  - name: Subtopics
+    values:
+      - Habitat
+      - Surface Meteorology
       - Tropical
   - name: Source
     values:
@@ -246,7 +250,7 @@ layers:
 <Block>
   <Prose>
   
-  ### Access the Data
+  ## Access the Data
 
   MODIS - Visit the NASA [LAADS DAAC](https://ladsweb.modaps.eosdis.nasa.gov/search/) to explore options for data access.
 
@@ -257,20 +261,11 @@ layers:
   </Prose>
 </Block>
 
-<Block>
-  <Prose>
-  
-  ## Disclaimer
-
-  All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
-  
-  </Prose>
-</Block>
 
 <Block>
   <Prose>
 
-  ### Key Publications
+  ## Key Publications
   Carl F. Schueler, John E. Clement, Philip E. Ardanuy, Carol Welsch, Frank DeLuccia, and Hilmer Swenson "NPOESS VIIRS sensor design overview", Proc. SPIE 4483, Earth Observing Systems VI, (18 January 2002); https://doi.org/10.1117/12.453451
 
   Petitcolin, F. and E. Vermote, 2002. Land surface reflectance, emissivity, and temperature from MODIS middle and thermal infrared data. Remote Sensing of Environment, 83(1). https://doi.org/10.1016/S0034-4257(02)00094-9
@@ -280,15 +275,34 @@ layers:
   </Prose>
 </Block>
 
+
 <Block>
   <Prose>
   
   ## Data Stories Using This Dataset
   
   **<Link to={"/stories/cyclones-beryl"}>Hurricane Beryl</Link>**
-
   </Prose>
 </Block>
+
+
+<Block>
+  <Prose>
+    ## Limitations of use
+
+    NASA data and products are freely available to federal, state, public, non-profit and commercial users. This information can be experimental- or research-grade data products and may not be appropriate for operational use. These NASA data products and services are intended to aid decision makers and enhance situational awareness, but these data are not guaranteed to be consistently available or routinely updated. Please cite the information according to the direction provided in the metadata.
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+  ## Disclaimer
+
+  All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
+  </Prose>
+</Block>
+
 
 <Block>
   <Prose>
@@ -296,6 +310,5 @@ layers:
   ## License
   
   [Creative Commons Attribution 1.0 International](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC BY 1.0)
-
   </Prose>
 </Block>
