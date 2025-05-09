@@ -1,0 +1,62 @@
+---
+id: landslides-imerg
+name: 'IMERG Total Precipitation - Hurricane Helene'
+isHidden: true
+description: "Total accumulated precipitation from IMERG Final over September 23-30, 2024 to cover precipitation related to Hurricane Helene in the Southeast US."
+media:
+  src: ::file ../stories/media/landslides-background.png
+  alt: Landslide closes I-40 in western North Carolina.
+  author:
+    name: CNN Newsource
+taxonomy:
+  - name: Topics
+    values:
+      - Disasters
+      - Tropical
+  - name: Source
+    values:
+      - GPM
+infoDescription: |
+  ::markdown
+    - **Temporal Extent:** September 23-30, 2024
+    - **Temporal Resolution:** 30 min
+    - **Spatial Extent:** Southeast US
+    - **Spatial Resolution:** 0.1 x 0.1 degree
+    - **Data Units:** inches
+    - **Data Type:** Research
+    - **Data Latency:** 30 min
+
+layers:
+  - id: landslides-imerg
+    stacCol: landslides-imerg
+    name: IMERG Total Precipitation - Hurricane Helene
+    type: raster
+    description: "Total accumulated precipitation from IMERG Final over September 23-30, 2024 to cover precipitation related to Hurricane Helene in the Southeast US."
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      colormap_name: nipy_spectral
+      resampling: bilinear
+      bidx: 1
+      rescale: 0,18 
+    legend:
+      type: gradient
+      min: "0 in"
+      max: "18 in"
+      stops:
+          - "#000000"
+          - "#870098"
+          - "#0078dd"
+          - "#00aa88"
+          - "#00dc00"
+          - "#efed00"
+          - "#fe0000"
+          - "#cccccc"
+    info:
+        source: GPM
+        spatialExtent: Southeast US
+        temporalResolution: 30 min
+        unit: inches
+
+---
