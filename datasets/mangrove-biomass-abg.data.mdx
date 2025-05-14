@@ -1,0 +1,56 @@
+---
+id: mangrove-biomass-abg
+name: 'Global Mangrove Aboveground Biomass'
+description: "Global above ground biomass of mangrove-forested wetlands based on remotely sensed and in situ field measurement data"
+media:
+  src: ::file ./media/twsanomaly-globe.png
+  alt: TWS trend of anomalies from LIS outputs.
+  author:
+    name: NASA LIS
+    url:
+taxonomy:
+  - name: Topics
+    values:
+    - Water Resources
+    - Water Model
+    - Precipitation
+    - Groundwater
+    - Hydrology
+    - Water Storage Trends
+  - name: Source
+    values:
+    - NASA EIS
+infoDescription: |
+  ::markdown
+     Realistic estimates of water and energy cycle variables are necessary for accurate understanding of earth system processes. We develop a 10 km global reanalysis product of water, energy, and carbon fluxes by assimilating satellite observed surface soil moisture, leaf area index, and terrestrial water storage anomalies into a land surface model within NASA Land Information System Framework. We applied a seasonal and trend decomposition algorithm to get the trend estimates for terrestrial water storage and gross primary production. The method can better help to deal with [nonstationarities](https://github.com/Earth-Information-System/sea-level-and-coastal-risk/blob/main/AMS_2023_Wanshu_Nie_for_VEDA_Discovery.pdf) and seasonal shifts and provide a more robust estimate of trends.
+layers:
+  - id: mangrove-biomass-abg
+    stacCol: mangrove-biomass-abg
+    name: 'Global Mangrove Aboveground Biomass'
+    stacApiEndpoint: https://dev.openveda.cloud/api/stac
+    rasterApiEndpoint: https://dev.openveda.cloud/api/raster
+    type: raster
+    description: 'Global Mangrove Aboveground Biomass'
+    zoomExtent:
+      - 0
+      - 11
+    sourceParams:
+      asset_bidx: cog_default|1
+      colormap_name: "viridis"
+      nodata: -9999.
+    legend:
+      type: gradient
+      min: "0"
+      max: "911"
+      unit:
+        label: (Mg ha-1)
+      label: (Mg ha-1)
+    info:
+      source: NASA
+      spatialExtent: United States
+      temporalResolution: Annual 
+
+---
+
+
+
