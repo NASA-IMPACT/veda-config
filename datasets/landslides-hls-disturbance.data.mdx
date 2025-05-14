@@ -1,0 +1,63 @@
+---
+id: landslides-hls-disturbance
+name: 'HLS Disturbance Product - Hurricane Helene'
+isHidden: true
+description: "Difference between historical and current year observed vegetation cover at the date of maximum decrease (vegetation loss of 0-100%). This layer can be used to threshold vegetation disturbance per a given sensitivity (e.g. disturbance of a 20% vegetation cover loss). The sum of the historical percent vegetation and the anomaly value will be the vegetation cover estimate for the current year."
+media:
+  src: ::file ../stories/media/landslides-background.png
+  alt: Landslide closes I-40 in western North Carolina.
+  author:
+    name: CNN Newsource
+taxonomy:
+  - name: Topics
+    values:
+      - Disasters
+      - Tropical
+  - name: Source
+    values:
+      - HLS
+infoDescription: |
+  ::markdown
+    - **Temporal Extent:** October 2, 2024
+    - **Temporal Resolution:** N/A
+    - **Spatial Extent:** Southern Appalachia
+    - **Spatial Resolution:** 30 m
+    - **Data Units:** percent
+    - **Data Type:** Research
+    - **Data Latency:** N/A
+
+layers:
+  - id: landslides-hls-disturbance
+    stacCol: landslides-hls-disturbance
+    name: HLS Disturbance Product - Hurricane Helene
+    type: raster
+    description: "Difference between historical and current year observed vegetation cover at the date of maximum decrease (vegetation loss of 0-100%). This layer can be used to threshold vegetation disturbance per a given sensitivity (e.g. disturbance of a 20% vegetation cover loss). The sum of the historical percent vegetation and the anomaly value will be the vegetation cover estimate for the current year."
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      colormap_name: ylorbr
+      resampling: bilinear
+      bidx: 1
+      rescale: 1,100 
+      nodata: 0
+    legend:
+      type: gradient
+      min: "1%"
+      max: "100%"
+      stops:
+        - "#ffffe5"
+        - "#fff7bc"
+        - "#fee391"
+        - "#fec44f"
+        - "#fe9929"
+        - "#ec7014"
+        - "#cc4c02"
+        - "#8c2d04"
+    info:
+        source: HLS
+        spatialExtent: Southern Appalachia
+        temporalResolution: N/A
+        unit: percent
+
+---
