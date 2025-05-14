@@ -1,0 +1,49 @@
+---
+id: nighttime-flare
+name: 'Nighttime Combustion Dataset from NASA’s Black Marble Product Suite'
+description: "Detections of combustion (fires and gas flaring) using anomalous thermal and light emission over land."
+
+media:
+  src: ::file ./derecho-background.jpg
+  alt: Intense derecho thunderstorm as it sweeps across farmland on September 23, 2018
+  author:
+    name: Jim Reed
+    url: https://fineartamerica.com/featured/4-derecho-thunderstorm-jim-reed-photographyscience-photo-library.html
+taxonomy:
+  - name: Topics
+    values:
+      - Emissions
+  - name: Source
+    values:
+      - UAH
+layers:
+  - id: nighttime-flare
+    stacCol: nighttime-flare
+    stacApiEndpoint: https://dev.openveda.cloud/api/stac
+    rasterApiEndpoint: https://dev.openveda.cloud/api/raster
+    name: Nighttime Flare
+    type: raster
+    initialDatetime: newest
+    description: "Detections of combustion (fires and gas flaring) using anomalous thermal and light emission over land."
+    bidx: 1
+    zoomExtent:
+        - 0
+        - 20
+    sourceParams:
+      rescale:
+        - 0
+        - 1
+      colormap: 'viridis'
+      minzoom: 4
+      maxzoom: 10
+    legend:
+      type: categorical
+      stops:
+        - color: "#FDE724"
+          label: Nighttime Flare
+    info:
+      source: UAH
+      unit: Binary
+
+ 
+---
