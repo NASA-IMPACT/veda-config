@@ -1,0 +1,57 @@
+---
+id: mangrove-height-tandemx
+name: 'Canopy heights of mangrove-forested wetlands globally'
+description: "Canopy heights of mangrove-forested wetlands globally for 2015 at 12-m resolution"
+media:
+  src: ::file ./media/twsanomaly-globe.png
+  alt: TWS trend of anomalies from LIS outputs.
+  author:
+    name: NASA LIS
+    url:
+taxonomy:
+  - name: Topics
+    values:
+    - Water Resources
+    - Water Model
+    - Precipitation
+    - Groundwater
+    - Hydrology
+    - Water Storage Trends
+  - name: Source
+    values:
+    - NASA EIS
+infoDescription: |
+  ::markdown
+     Realistic estimates of water and energy cycle variables are necessary for accurate understanding of earth system processes. We develop a 10 km global reanalysis product of water, energy, and carbon fluxes by assimilating satellite observed surface soil moisture, leaf area index, and terrestrial water storage anomalies into a land surface model within NASA Land Information System Framework. We applied a seasonal and trend decomposition algorithm to get the trend estimates for terrestrial water storage and gross primary production. The method can better help to deal with [nonstationarities](https://github.com/Earth-Information-System/sea-level-and-coastal-risk/blob/main/AMS_2023_Wanshu_Nie_for_VEDA_Discovery.pdf) and seasonal shifts and provide a more robust estimate of trends.
+layers:
+  - id: mangrove-height-tandemx
+    stacCol: mangrove-height-tandemx
+    name: 'Global Mangrove Canopy Heights'
+    stacApiEndpoint: https://dev.openveda.cloud/api/stac
+    rasterApiEndpoint: https://dev.openveda.cloud/api/raster
+    type: raster
+    description: 'Canopy heights of mangrove-forested wetlands globally for 2015 at 12-m resolution'
+    zoomExtent:
+      - 0
+      - 11
+    sourceParams:
+      asset_bidx: cog_default|1
+      colormap_name: "Set1"
+      nodata: -9999.
+    legend:
+      type: gradient
+      min: "0"
+      max: "63"
+      unit:
+        label: (meters)
+      label: (meters)
+    info:
+      source: NASA
+      spatialExtent: United States
+      temporalResolution: Annual 
+
+ 
+---
+
+
+
