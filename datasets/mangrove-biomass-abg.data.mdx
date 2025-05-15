@@ -1,7 +1,7 @@
 ---
 id: mangrove-biomass-abg
-name: 'Global Mangrove Aboveground Biomass'
-description: "Global above ground biomass of mangrove-forested wetlands based on remotely sensed and in situ field measurement data"
+name: 'Global Mangrove Distribution, Aboveground Biomass, and Canopy Height'
+description: "Global distribution, biomass, and canopy height of mangrove-forested wetlands based on remotely sensed and in situ field measurement data"
 media:
   src: ::file ./media/twsanomaly-globe.png
   alt: TWS trend of anomalies from LIS outputs.
@@ -50,6 +50,57 @@ layers:
       spatialExtent: United States
       temporalResolution: Annual 
 
+  - id: mangrove-basal-area-height
+    stacCol: mangrove-basal-area-height
+    name: 'Global Mangrove Basal-Area Weighted Height'
+    stacApiEndpoint: https://dev.openveda.cloud/api/stac
+    rasterApiEndpoint: https://dev.openveda.cloud/api/raster
+    type: raster
+    description: 'Mangrove basal-area weighted height (individual tree heights weighted in proportion to their basal area)'
+    zoomExtent:
+      - 0
+      - 11
+    sourceParams:
+      asset_bidx: cog_default|1
+      colormap_name: "viridis"
+      nodata: -9999.
+    legend:
+      type: gradient
+      min: "0"
+      max: "40"
+      unit:
+        label: (meters)
+      label: (meters)
+    info:
+      source: NASA
+      spatialExtent: United States
+      temporalResolution: Annual 
+
+  - id: mangrove-max-height
+    stacCol: mangrove-max-height
+    name: 'Mangrove Canopy Maximum Height '
+    stacApiEndpoint: https://dev.openveda.cloud/api/stac
+    rasterApiEndpoint: https://dev.openveda.cloud/api/raster
+    type: raster
+    description: 'Mangrove canopy maximum height (height of the tallest tree)'
+    zoomExtent:
+      - 0
+      - 11
+    sourceParams:
+      asset_bidx: cog_default|1
+      colormap_name: "viridis"
+      nodata: -9999.
+    legend:
+      type: gradient
+      min: "0"
+      max: "63"
+      unit:
+        label: (meters)
+      label: (meters)
+    info:
+      source: NASA
+      spatialExtent: United States
+      temporalResolution: Annual 
 ---
 
 
