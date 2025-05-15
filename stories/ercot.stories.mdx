@@ -53,9 +53,20 @@ taxonomy:
 </Block>
 
 <Block>
+  <Figure>
+    <Chart
+      dataPath={new URL('./ERCOT_power_outages_Texas.csv', import.meta.url).href}
+      dateFormat="%m/%d/%Y %H:%M"
+      idKey='State'
+      xKey='Date'
+      yKey='Total_Power_Outages'
+      yAxisLabel='Maximum Power Outages Recorded Hourly'
+    />
+    <Caption>
+      **Figure 2.** Hourly power outages across Texas before, during, and after the 2021 Deep Freeze, as recorded by EAGLE-I data.
+    </Caption>
+  </Figure>
   <Prose>
-   <mark>Eagle-I Power Outage data (map and time series) needs to be added here</mark>
-
    The human toll was devastating. Official state estimates report 246 deaths, but independent analyses place the number as high as 702. Nighttime satellite imagery before and during the blackout reveals dramatic drops in urban light emissions, reflecting widespread power loss across cities and rural areas alike.
   </Prose>
 </Block>
