@@ -36,8 +36,11 @@ layers:
       - 11
     sourceParams:
       asset_bidx: cog_default|1
-      colormap_name: "viridis"
-      nodata: -9999.
+      colormap_name: "greens"
+      rescale:
+        - 0
+        - 911
+      nodata: "0."
     legend:
       type: gradient
       min: "0"
@@ -47,8 +50,9 @@ layers:
       label: (Mg ha-1)
     info:
       source: NASA
-      spatialExtent: United States
-      temporalResolution: Annual 
+      spatialExtent: Coastal Zones
+      temporalResolution: Decadal
+      unit: Mg ha-1
 
   - id: mangrove-basal-area-height
     stacCol: mangrove-basal-area-height
@@ -62,8 +66,11 @@ layers:
       - 11
     sourceParams:
       asset_bidx: cog_default|1
-      colormap_name: "viridis"
-      nodata: -9999.
+      colormap_name: "greens"
+      rescale:
+        - 0
+        - 40
+      nodata: 0
     legend:
       type: gradient
       min: "0"
@@ -73,8 +80,9 @@ layers:
       label: (meters)
     info:
       source: NASA
-      spatialExtent: United States
-      temporalResolution: Annual 
+      spatialExtent: Coastal Zones
+      temporalResolution: Decadal
+      unit: meters
 
   - id: mangrove-max-height
     stacCol: mangrove-max-height
@@ -88,8 +96,11 @@ layers:
       - 11
     sourceParams:
       asset_bidx: cog_default|1
-      colormap_name: "viridis"
-      nodata: -9999.
+      colormap_name: "greens"
+      rescale:
+        - 0
+        - 63
+      nodata: 0
     legend:
       type: gradient
       min: "0"
@@ -99,8 +110,9 @@ layers:
       label: (meters)
     info:
       source: NASA
-      spatialExtent: United States
-      temporalResolution: Annual 
+      spatialExtent: Coastal Zones
+      temporalResolution: Decadal
+      unit: meters
 ---
 
 
