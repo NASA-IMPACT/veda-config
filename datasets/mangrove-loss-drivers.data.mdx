@@ -1,0 +1,99 @@
+---
+id: mangrove-loss-drivers
+name: 'Global Mangrove Loss Extent, Land Cover Change, and Loss Drivers'
+description: "salt marsh gain for five-year periods from 2000-2019. Salt marsh gain at a 30 m spatial resolution were estimated with Normalized Difference Vegetation Index (NDVI) anomaly algorithm using Landsat 5, 7, and 8 collections within the known extent of salt marshes."
+media:
+  src: ::file ./media/twsanomaly-globe.png
+  alt: TWS trend of anomalies from LIS outputs.
+  author:
+    name: NASA LIS
+    url:
+taxonomy:
+  - name: Topics
+    values:
+    - Water Resources
+    - Water Model
+    - Precipitation
+    - Groundwater
+    - Hydrology
+    - Water Storage Trends
+  - name: Source
+    values:
+    - NASA EIS
+infoDescription: |
+  ::markdown
+     Realistic estimates of water and energy cycle variables are necessary for accurate understanding of earth system processes. We develop a 10 km global reanalysis product of water, energy, and carbon fluxes by assimilating satellite observed surface soil moisture, leaf area index, and terrestrial water storage anomalies into a land surface model within NASA Land Information System Framework. We applied a seasonal and trend decomposition algorithm to get the trend estimates for terrestrial water storage and gross primary production. The method can better help to deal with [nonstationarities](https://github.com/Earth-Information-System/sea-level-and-coastal-risk/blob/main/AMS_2023_Wanshu_Nie_for_VEDA_Discovery.pdf) and seasonal shifts and provide a more robust estimate of trends.
+layers:
+  - id: mangrove-loss_epoch
+    stacCol: mangrove-loss_epoch
+    name: 'Mangrove Loss by Epoch'
+    stacApiEndpoint: https://dev.openveda.cloud/api/stac
+    rasterApiEndpoint: https://dev.openveda.cloud/api/raster
+    type: raster
+    description: "This dataset provides estimates of the extent of mangrove loss, land cover change, and its anthropogenic or climatic drivers in three periods: 2000–2005, 2005–2010, and 2010–2016. Landsat-based Normalized Difference Vegetation Index (NDVI) anomalies were used to determine loss extent in each epoch"
+    zoomExtent:
+      - 0
+      - 11
+    sourceParams:
+      resampling: bilinear
+      bidx: 1
+      colormap: '{"0":[18,94,135,255],"1":[12,110,20,255],"2":[73,230,86,255]}'
+      nodata: -9999.
+    legend:
+      type: categorical
+      min: "0"
+      max: "2"
+      stops:
+        - color: "#49e656"
+          label: "Lost between 2000-2005" 
+        - color: "#0c6e14"
+          label: "Lost between 2005-2010"
+        - color: "#498de6"
+          label: "Lost between 2010-2016" 
+      unit:
+        label: (year of loss)
+      label: (year of loss)
+    info:
+      source: NASA
+      spatialExtent: Coastal Zones
+      temporalResolution: Annual 
+      unit: year of loss
+
+  - id: mangrove-land-change
+    stacCol: mangrove-land-change
+    name: 'Mangrove Land Cover Change'
+    stacApiEndpoint: https://dev.openveda.cloud/api/stac
+    rasterApiEndpoint: https://dev.openveda.cloud/api/raster
+    type: raster
+    description: "This dataset provides estimates of the extent of mangrove loss, land cover change, and its anthropogenic or climatic drivers in three periods: 2000–2005, 2005–2010, and 2010–2016. Landsat-based Normalized Difference Vegetation Index (NDVI) anomalies were used to determine loss extent in each epoch"
+    zoomExtent:
+      - 0
+      - 11
+    sourceParams:
+      resampling: bilinear
+      bidx: 1
+      colormap: '{"0":[18,94,135,255],"1":[12,110,20,255],"2":[73,230,86,255]}'
+      nodata: 0
+    legend:
+      type: categorical
+      min: "0"
+      max: "2"
+      stops:
+        - color: "#49e656"
+          label: "To dry soil" 
+        - color: "#0c6e14"
+          label: "To Water"
+        - color: "#498de6"
+          label: "To wet soil" 
+      unit:
+        label: (class change)
+      label: (class change)
+    info:
+      source: NASA
+      spatialExtent: Coastal Zones
+      temporalResolution: Annual 
+      unit: class change
+---
+
+
+
