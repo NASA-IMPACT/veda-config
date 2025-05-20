@@ -41,7 +41,7 @@ layers:
       type: categorical
       min: "0"
       max: "2015"
-      nodata: -2147483648.
+      nodata: -2147483648
       stops:
         - color: "#49e656"
           label: "No gain" 
@@ -70,18 +70,19 @@ layers:
     type: raster
     description: "Salt marsh loss for five-year periods from 2000-2019. Loss at a 30 m spatial resolution were estimated with Normalized Difference Vegetation Index (NDVI) anomaly algorithm using Landsat 5, 7, and 8 collections within the known extent of salt marshes."
     zoomExtent:
-      - 0
-      - 11
+      - 10
+      - 20
     sourceParams:
       bidx: 1
       colormap: '{"0":[18,94,135,255],"2000":[12,110,20,255],"2005":[73,230,86,255],"2010":[73,141,230,255],"2015":[73,230,227,255]}'
+      nodata: 0
     legend:
       type: categorical
       min: "0"
       max: "2015"
       stops:
         - color: "#49e656"
-          label: "0" 
+          label: "No loss" 
         - color: "#0c6e14"
           label: "2000"
         - color: "#498de6"
