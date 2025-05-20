@@ -93,6 +93,45 @@ layers:
       spatialExtent: Coastal Zones
       temporalResolution: Annual 
       unit: class change
+
+  - id: mangrove-loss-driver-class
+    stacCol: mangrove-loss-driver-class
+    name: 'Mangrove Loss by Drivers'
+    stacApiEndpoint: https://dev.openveda.cloud/api/stac
+    rasterApiEndpoint: https://dev.openveda.cloud/api/raster
+    type: raster
+    description: "This dataset provides estimates of the extent of mangrove loss, land cover change, and its anthropogenic or climatic drivers in three periods: 2000–2005, 2005–2010, and 2010–2016. Landsat-based Normalized Difference Vegetation Index (NDVI) anomalies were used to determine loss extent in each epoch"
+    zoomExtent:
+      - 10
+      - 20
+    sourceParams:
+      resampling: bilinear
+      bidx: 1
+      nodata: 0
+    legend:
+      type: categorical
+      min: "0"
+      max: "4"
+      stops:
+        - color: rgb(1,113,178)
+          label: "Erosion" 
+        - color: rgb(0,157,115)
+          label: "Extreme Weather"
+        - color: rgb(238,158,0)
+          label: "Commodoties"
+        - color: rgb(208,96,1)
+          label: "Settlement"
+        - color: rgb(238,227,69)
+          label: "Non-productive Conversion" 
+      unit:
+        label: (class change)
+      label: (class change)
+    info:
+      source: NASA
+      spatialExtent: Coastal Zones
+      temporalResolution: Annual 
+      unit: class change
+
 ---
 
 
