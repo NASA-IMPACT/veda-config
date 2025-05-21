@@ -27,7 +27,6 @@ layers:
     description: "Detections of combustion (fires and gas flaring) using anomalous thermal and light emission over land."
     projection:
       id: 'equirectangular'
-    bidx: 1
     zoomExtent:
         - 5
         - 20
@@ -35,11 +34,11 @@ layers:
       rescale:
         - 0
         - 1
-      colormap: 'viridis'
       minzoom: 0
       maxzoom: 10
+      nodata: 0
     legend:
-      type: categorical
+      type: gradient
       stops:
         - color: "#FDE724"
           label: Nighttime Flare
