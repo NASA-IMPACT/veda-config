@@ -36,6 +36,7 @@ layers:
       colormap: 'viridis'
       minzoom: 4
       maxzoom: 10
+      nodata: 65535
     legend:
       type: categorical
       stops:
@@ -45,5 +46,30 @@ layers:
       source: UAH
       unit: Binary
 
- 
+  - id: nighttime-flare-combined
+    stacCol: nighttime-flare-combined
+    stacApiEndpoint: https://dev.openveda.cloud/api/stac
+    rasterApiEndpoint: https://dev.openveda.cloud/api/raster
+    name: Nighttime Flare (2 Tiles)
+    type: raster
+    initialDatetime: newest
+    description: "Detections of combustion (fires and gas flaring) using anomalous thermal and light emission over land."
+    bidx: 1
+    zoomExtent:
+        - 10
+        - 20
+    sourceParams:
+      rescale:
+        - 0
+        - 1
+      colormap: 'viridis'
+      nodata: 65535
+    legend:
+      type: categorical
+      stops:
+        - color: "#FDE724"
+          label: Nighttime Flare
+    info:
+      source: UAH
+      unit: Binary
 ---
