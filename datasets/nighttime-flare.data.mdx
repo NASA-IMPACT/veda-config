@@ -55,7 +55,8 @@ layers:
     type: raster
     initialDatetime: newest
     description: "Detections of combustion (fires and gas flaring) using anomalous thermal and light emission over land."
-    bidx: 1
+    projection:
+      id: 'equirectangular'
     zoomExtent:
         - 5
         - 20
@@ -63,8 +64,8 @@ layers:
       rescale:
         - 0
         - 1
-      colormap: 'viridis'
-      nodata: 65535
+      nodata: 0
+      colormap_name: "viridis"
     legend:
       type: categorical
       stops:
