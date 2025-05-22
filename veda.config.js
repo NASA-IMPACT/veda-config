@@ -1,3 +1,44 @@
+
+const dataCatalogNavItem = {
+  id: 'data-catalog',
+  title: 'Data Catalog',
+  to: '/data-catalog',
+  type: 'internalLink'
+};
+
+const explorationNavItem = {
+  id: 'exploration',
+  title: 'Exploration Tools',
+  type: 'dropdown',
+  children: [
+    {
+      id: 'time-series-analysis',
+      title: 'Time-Series Analysis',
+      to: '/exploration',
+      type: 'internalLink'
+    },
+    {
+      id: 'fire-events-visualization',
+      title: 'Wildfire Visualization',
+      to: '/tools/fire-exploration',
+      type: 'internalLink'
+    }
+  ]
+};
+
+const storiesNavItem = {
+  id: 'stories',
+  title: 'Stories',
+  to: '/stories',
+  type: 'internalLink'
+};
+
+let headerNavItems = [
+  dataCatalogNavItem,
+  explorationNavItem,
+  storiesNavItem
+];
+
 module.exports = {
   /**
    * Glob path for the datasets.
@@ -15,6 +56,8 @@ module.exports = {
     // Content for the about page.
     // Type: Content override
     aboutContent: "./overrides/about.mdx",
+    "/tools/fire-exploration": "./custom-pages/wildfire-visualization/index.mdx",
+
   },
 
   strings: {
@@ -22,6 +65,9 @@ module.exports = {
       one: " Data Story",
       other: "Data Stories",
     },
+  },
+  navItems: {
+    headerNavItems: headerNavItems
   },
   cookieConsentForm: {
     title: "Cookie Consent",
