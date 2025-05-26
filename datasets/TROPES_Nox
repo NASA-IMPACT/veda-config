@@ -1,7 +1,7 @@
 ---
 id: so2
-name: 'Sulfur Dioxide'
-description: "NASA OMI/Aura Sulfur Dioxide (SO2) Total Column"
+name: 'TROPESS Anthropogenic NOx'
+description: "TROPESS Chemical Reanalysis Surface Anthropogenic NOx emissions Monthly 2-dimensional Product V1 (TRPSCRENOXAM2D)"
 media:
   src: ::file ./media/so2--dataset-cover.jpg
   alt: OMI SO2 data visualized in a map
@@ -18,18 +18,18 @@ taxonomy:
       - Urban
   - name: Source
     values:
-      - OMI
+      - Renalysis
       - Aura
       
 infoDescription: |
   ::markdown
     The OMI Sulfur Dioxide (SO2) Total Column layer indicates the column density of sulfur dioxide and is measured in Dobson Units (DU). Sulfur Dioxide and Aerosol Index products are used to monitor volcanic clouds and detect pre-eruptive volcanic degassing globally. This information is used by the Volcanic Ash Advisory Centers in advisories to airlines for operational decision
 layers:
-  - id: OMSO2PCA-COG
-    stacCol: OMSO2PCA-COG
-    name: 'Sulfur Dioxide'
+  - id: TROPESS_reanalysis_mon_emi_nox_anth
+    stacCol: TROPESS_reanalysis_mon_emi_nox_anth
+    name: 'nitrogen oxides (NO and NO2)'
     type: raster
-    description: 'NASA OMI/Aura Sulfur Dioxide (SO2) Total Column'
+    description: 'Monthly Surface Anthropogenic NOx Emissions'
     zoomExtent:
       - 0
       - 11
@@ -42,7 +42,7 @@ layers:
         - 1
     compare:
       datasetId: so2
-      layerId: OMSO2PCA-COG
+      layerId: TROPESS_reanalysis_mon_emi_nox_anth
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
@@ -69,9 +69,9 @@ layers:
 <Block>
   <Prose>   
     ## Dataset Details
-    - **Temporal Extent:** 2005 - 2021<br />
+    - **Temporal Extent:** 2005 - Present<br />
     - **Spatial Extent:** Global<br />
-    - **Spatial Resolution:** 30 km<br />
+    - **Spatial Resolution:** 1.125 x 1.125 degrees <br />
     - **Data Type:** Research<br />
   </Prose>
   <Figure>
@@ -101,9 +101,9 @@ layers:
 <Block>
   <Prose>
   ## Scientific Details
-  The OMI Sulfur Dioxide (SO2) Total Column layer indicates the column density of sulfur dioxide and is measured in Dobson Units (DU). Sulfur Dioxide and Aerosol Index products are used to monitor volcanic clouds and detect pre-eruptive volcanic degassing globally. This information is used by the Volcanic Ash Advisory Centers in advisories to airlines for operational decisions.<br />
+The TROPESS Chemical Reanalysis Surface Anthropogenic NOx emissions Monthly 2-dimensional Product contains nitrogen oxides (NO and NO2) emissions from anthropogenic sources. The data are part of the Tropospheric Chemical Reanalysis v2 (TCR-2) for the period 2005-2021. TCR-2 uses JPL's Multi-mOdel Multi-cOnstituent Chemical (MOMO-Chem) data assimilation framework that simultaneously optimizes both concentrations and emissions of multiple species from multiple satellite sensors.
 
-  Sulfur/Sulphur Dioxide (SO2) is one of the US Environmental Protection Agency's (EPA) six major regulated criteria pollutants (Tropospheric Ozone, Nitrogen Dioxide, Sulfur Dioxide, Lead, PM2.5 and PM 10 particulates). It irritates the eyes, nose, and lungs. High concentrations of SO2 can result in temporary breathing impairment. It is produced by combustion of coal, fuel oil, and gasoline, since these fuels contain sulfur in the combustion, and in the oxidation of naturally occurring sulfur gases. It is a precursor to sulfuric acid, which is a major constituent of acid rain. SO2 is injected into the stratosphere by volcanic eruptions. SO2 also is a major precursor to PM2.5, which is a significant health concern, and a main contributor to poor visibility.
+The data files are written in the netCDF version 4 file format, and each file contains a year of data at monthly resolution, and a spatial resolution of 1.125 x 1.125 degrees. The principal investigator for the TCR-2 data is Miyazaki, Kazuyuki.
   </Prose>
 </Block>
 
