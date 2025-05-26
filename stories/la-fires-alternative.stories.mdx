@@ -1,3 +1,209 @@
+---
+id: 'la-fireline-story'
+name: The Line Between Burned and Spared
+description: Personal reflections on wildfire, loss, and what the data couldn’t stop.
+media:
+  src: ::file ./la-fireline-cover.png
+  alt: A single home untouched while everything around it burned.
+  author:
+    name: Maxar Technologies
+pubDate: 2025-05-25T00:00
+taxonomy:
+  - name: Topics
+    values:
+      - Wildfire
+      - Biodiversity
+  - name: Subtopics
+    values:
+      - Biomass Loss
+      - Climate Resilience
+---
+
+<Block style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
+   <Prose style={{ textAlign: 'center', width: '100%' }}>
+     <p style={{ marginBottom: '0.5em' }}>
+       Author: Anthony Boyd
+     </p>
+  </Prose>
+</Block>
+
+<Block type='wide'>
+<Figure>
+  <Map
+    datasetId='la-fires-parcels'
+    layerId='la-fires-parcels'
+    dateTime='2025-01-09'
+    zoom={14.5}
+    center={[-118.1041, 34.1966]}
+    compareDateTime='2025-01-08'
+  />
+  <Caption attrAuthor='NASA' attrUrl='https://nasa.gov/'>
+    Parcel-level damage from the 2025 Eaton Fire, showing abrupt firelines between burned and spared properties.
+  </Caption>
+</Figure>
+</Block>
+
+<Block style={{ justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
+  <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
+    <p>
+    I still don’t understand why the fire turned when it did. My house is standing. Alan's, just two lots away, isn’t. We both evacuated the same day. Same wind, same canyon. 
+    </p>
+    <p>
+    I’ve walked the burn scar a dozen times. I’m a volunteer land steward for the Upper Arroyo Reserve—I've spent weekends cutting back invasives, repairing trail signs, counting seedlings after the rains. The trail is gone now. So are the seedlings. But my house is fine.
+    </p>
+  </Prose>
+</Block>
+
+<ScrollytellingBlock>
+  <Chapter
+    center={[-118.0897, 34.207]}
+    zoom={12}
+    datasetId='nlcd-annual-conus'
+    layerId='nlcd-annual-conus'
+    datetime='2021-01-01'
+  >
+  ### What Was There
+  <p>
+    Before the fire, the reserve James tended was a patchwork of chaparral, pine, and open trail. Land cover data from the National Land Cover Database (NLCD) shows the area was composed of about 55% shrublands, 20% evergreen forest, and 11% developed land. The rest was mixed grassland and bare earth.
+  </p>
+  <p>
+    When the fire came through, the chaparral went up fast. The forest tried to hold. But nothing really did.
+  </p>
+  </Chapter>
+</ScrollytellingBlock>
+
+<Block>
+<Figure>
+  <Map
+    datasetId='la-fires-gedi'
+    layerId='la-fires-gedi'
+    dateTime='2025-01-07'
+    zoom={12.1}
+    center={[-118.0897, 34.207]}
+  />
+  <Caption attrAuthor='NASA' attrUrl='https://nasa.gov/'>
+    Aboveground biomass density (AGBD; Mg/ha) from NASA's GEDI mission, showing areas of high carbon storage lost to the Eaton Fire.
+  </Caption>
+</Figure>
+<Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
+  <p>
+  I checked the dashboard. Biomass in the upper ravine averaged over 80 megagrams per hectare. That’s decades of growth gone. Oaks, sycamores, manzanita. Gone.  
+  </p>
+  <p>
+  When I went to check on the reserve, the hillside looked like a war zone. And then I ran into Alan in the street. He was digging through the wreckage of what used to be his garage. 
+  </p>
+  <p>
+  “I’m not looking for anything big,” he said. “Just one of Chloe’s baby photos. Just one.”
+  </p>
+</Prose>
+</Block>
+
+<Block type='wide'>
+<Figure>
+  <Map
+    datasetId='la-fires-frp'
+    layerId='la-fires-frp'
+    dateTime='2025-01-08'
+    zoom={12}
+    center={[-118.0897, 34.207]}
+  />
+  <Caption attrAuthor='NASA' attrUrl='https://nasa.gov/'>
+    Maximum daily fire radiative power (FRP) across the Eaton Fire area on January 8, 2025, showing where the fire burned hottest.
+  </Caption>
+</Figure>
+<Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
+  <p>
+  The dashboard showed red spikes of fire radiative power over the ravine—some of the hottest zones in the burn. The hill wasn’t just charred. It was incinerated.
+  </p>
+</Prose>
+</Block>
+
+<Block>
+  <Figure>
+    <Image
+      src={new URL('./la-fires-hrrr_wind.gif', import.meta.url).href}
+      alt='Modeled wind gusts near the fire start.'
+      attrAuthor='Andrew Blackford'
+    />
+    <Caption>
+      HRRR model wind gusts during the ignition period of the Eaton Fire. A sharp shift drove the fire across the canyon.
+    </Caption>
+  </Figure>
+  <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
+    <p>
+    The wind changed that morning. I looked it up later on the dashboard. A sharp gust from the northeast cut across the ridge and spared my block. The flames jumped the ravine and landed on Alan’s street instead. 
+    </p>
+    <p>
+    It’s strange, seeing your fate drawn in weather data. My home still smells like smoke. I still check the satellite maps every few days. I’m not sure what I’m looking for.
+    </p>
+  </Prose>
+</Block>
+
+<Block type='wide'>
+  <Figure>
+    <Map
+      datasetId='la-fires-HLS'
+      layerId='la-fires-HLS'
+      dateTime='2025-01-14'
+      compareDateTime='2025-01-06'
+      center={[-118.0897, 34.207]}
+      zoom={12}
+    />
+    <Caption>
+    Before-and-after imagery from NASA’s Harmonized Landsat-Sentinel data showing the burn scar around Altadena, California.
+    </Caption>
+  </Figure>
+</Block>
+
+<Block>
+<Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
+  <p>
+  At night I sit at the kitchen table and toggle between maps. Wind. Biomass. Damage. FRP. I tell myself that if I can understand how it happened, maybe I’ll stop replaying it.
+  </p>
+  <p>
+  The dashboard has answers. But they don’t always feel like the right ones.
+  </p>
+</Prose>
+</Block>
+
+<Block>
+  <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
+    <p>
+    I planted a few native saplings along the trail last week. Just to mark that something might come back.  
+    </p>
+    <p>
+    Alan says he’ll rebuild, but I don’t know if he really means it. When I asked if he needed anything, he just said, “Not unless you can print memories.”
+    </p>
+    <p>
+    I didn’t lose my house. But I lost the hillside. I lost the trail. And I think we both lost the way things were before the fire drew that line between us.
+    </p>
+    <p>
+    The reserve stored enough carbon to offset the emissions of thousands of homes. Now that’s up in the air, too. I guess some things don’t leave a scar you can see.
+    </p>
+  </Prose>
+</Block>
+
+<Block>
+  <div style={{ 
+    background: 'linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%)',
+    border: '2px solid #6c757d',
+    borderRadius: '16px',
+    padding: '24px',
+    margin: '32px 0',
+    boxShadow: '0 8px 32px rgba(0,0,0,0.1)',
+    fontFamily: 'system-ui, -apple-system, sans-serif'
+  }}>
+    <div style={{ 
+      display: 'flex',
+      alignItems: 'center',
+      marginBottom: '20px',
+      paddingBottom: '16px',
+      borderBottom: '1px solid #dee2e6'
+    }}>
+      <div style={{
+        width: '60px',
+        height: '60px',
+        borderRadius: '50%',
         marginRight: '16px',
         background: 'linear-gradient(135deg, #4a90e2, #357abd)',
         display: 'flex',
