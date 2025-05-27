@@ -5,7 +5,6 @@ import '@dsio/wildfire-explorer/dist/wildfire-explorer.css';
 import '../../styles/_custom.scss';
 
 export default function Component() {
-
   return (
     <div style={{ width: "100%", height: "100%" }}>
       <WildfireExplorer
