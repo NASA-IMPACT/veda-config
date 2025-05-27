@@ -1,7 +1,7 @@
 ---
 id: TROPESS Anthropogenic NOx
 name: 'TROPESS Anthropogenic NOx'
-description: "TROPESS Chemical Reanalysis Surface Anthropogenic NOx emissions Monthly 2-dimensional Product V1 (TRPSCRENOXAM2D)"
+description: "TROPESS Chemical Reanalysis Surface Anthropogenic NOx emissions Monthly 2-dimensional Product V1"
 media:
   src: ::file ./media/so2--dataset-cover.jpg
   alt: TROPESS NOx data visualized in a map
@@ -41,7 +41,7 @@ layers:
       rescale:
         - 0
         - 1
-      maxzoom: 12
+      maxzoom:12
     legend:
       type: gradient
       label: NOx (mg/Nm³)
@@ -62,124 +62,137 @@ layers:
 ---
 
 <Block>
-  <Prose>   
-    ## Dataset Details
-    - **Temporal Extent:** 2005 - Present<br />
-    - **Spatial Extent:** Global<br />
-    - **Spatial Resolution:** 1.125 x 1.125 degrees <br />
-    - **Data Type:** Research<br />
-  </Prose>
-  <Figure>
-  <Map
-    datasetId='TROPESS_reanalysis_mon_emi_nox_anth'
-    layerId='TROPESS_reanalysis_mon_emi_nox_anth'
-    dateTime='2005-01-01'
-    zoom={4}
-    center={[77.63,24.27]}
-    compareDateTime='2021-01-01'
-  />
-  <Caption
-    attrAuthor='NASA'
-    attrUrl='https://nasa.gov/'
+  <Prose
+    style={{
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'flex-start',
+      gap: '32px',
+      width: '100%'
+    }}
   >
-  Comparison of total column NOx for India for 2005 and 2021
-  </Caption>
-  </Figure>
-</Block>
-
-
-<Block>
-  <Prose>
+    {/* Main Centered Text */}
+    <Prose
+      style={{
+        backgroundColor: '#f0f0f0',
+        padding: '18px',
+        borderRadius: '8px',
+        flex: 1,
+        maxWidth: '800px',
+        boxShadow: '0 2px 8px rgba(0,0,0,0.05)',
+        textAlign: 'justify',
+        border: '1px solid #ccc'
+      }}
+    >
+      <p>
+        <strong>Source:</strong> Tropospheric Ozone and Precursors from Earth System Sounding (TROPESS) Project<br />
+        <strong>Temporal Extent:</strong> January 2005 to January 2021<br />
+        <strong>Temporal Resolution:</strong> Monthly measurements<br />
+        <strong>Spatial Extent:</strong> Global<br />
+        <strong>Spatial Resolution:</strong> 1.125 x 1.125 degree <br />
+        <strong>Data Units:</strong> Mass of pollutant (in mg) per normal cubic meter of air (mg/Nm³) <br />
+        <strong>File Format:</strong> NetCDF <br />
+       <strong>Applications:</strong> Industrial emissions tracking, urban air quality studies, regulatory assessment, and climate research related to NOx
+      </p>
+    </Prose>
   </Prose>
 </Block>
 
-<Block>
-  <Prose>
-  ## Scientific Details
-The TROPESS Chemical Reanalysis Surface Anthropogenic NOx emissions Monthly 2-dimensional Product contains nitrogen oxides (NO and NO2) emissions from anthropogenic sources. The data are part of the Tropospheric Chemical Reanalysis v2 (TCR-2) for the period 2005-2021. TCR-2 uses JPL's Multi-mOdel Multi-cOnstituent Chemical (MOMO-Chem) data assimilation framework that simultaneously optimizes both concentrations and emissions of multiple species from multiple satellite sensors.
-
-The data files are written in the netCDF version 4 file format, and each file contains a year of data at monthly resolution, and a spatial resolution of 1.125 x 1.125 degrees. The principal investigator for the TCR-2 data is Miyazaki, Kazuyuki.
+<Block style={{ justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
+  <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
+    <p>
+      ## Introduction
+      <p style={{ marginBottom: '0.4em' }}>
+      Nitrogen oxides (NOx, including NO and NO₂) are critical air pollutants linked to respiratory and cardiovascular health risks, as well as environmental impacts like smog and acid rain. NOx is primarily emitted by fossil fuel combustion in transportation, power generation, and industry. Monitoring NOx emissions is essential for air quality management, regulatory compliance, and understanding atmospheric chemistry.
+      </p>
+      <p style={{ marginBottom: '0.4em' }}>
+      The TROPESS Chemical Reanalysis Surface Total NOx Emissions Monthly 2-dimensional Product provides global, monthly gridded estimates of surface-level nitrogen oxides (NOx) emissions from anthropogenic sources. Developed using JPL’s Multi-mOdel Multi-cOnstituent Chemical (MOMO-Chem) data assimilation system, the dataset integrates satellite observations with chemical transport models to produce accurate, observation-constrained emission fields. This reanalysis uses satellite measurements, such as tropospheric NO2 column retrievals from OMI and TROPOMI, to refine NOx emissions estimates.
+      </p>
+    </p>
   </Prose>
 </Block>
 
-<Block type='full'>
-  <Figure>
-  <Map
-    datasetId='TROPESS_reanalysis_mon_emi_nox_anth'
-    layerId='TROPESS_reanalysis_mon_emi_nox_anth'
-    dateTime='2006-01-01'
-    zoom={4}
-    center={[117.22,35.66]}
-    compareDateTime='2021-01-01'
-  />
-  <Caption
-    attrAuthor='NASA'
-    attrUrl='https://nasa.gov/'
-  >
-  Comparison of total column SO2 for China for 2006 and 2021
-</Caption>
-  </Figure>
-<Prose>
-## Interpreting the data
-Global total column SO2 observations are generated using a principal component analysis algorithm using a single observation in the planetary boundary layer. The single observation is obtained from the "best pixel" of the level-2 OMI/Aura SO2 total column observations for the observation day. SO2 observations in support of air quality are available from 2005-2021 at 0.25 x 0.25 degree spatial resolution. Higher concentrations of SO2 are shaded in yellow and lower concentrations in purple.
-</Prose>
-</Block>
-
-<Block>
-<Prose>
-## Credits
-1. Can Li, Nickolay A. Krotkov, and Peter Leonard (2020), OMI/Aura Sulfur Dioxide (SO2) Total Column L3 1 day Best Pixel in 0.25 degree x 0.25 degree V3, Greenbelt, MD, USA, Goddard Earth Sciences Data and Information Services Center (GES DISC), 10.5067/Aura/OMI/DATA3008
-</Prose>
-</Block>
-
-
-<Block>
-  <Prose>
-  
-  ## Data Stories Using This Dataset
-  
-  **<Link to={"/stories/so2-volcanoes"}>Monitoring Volcanic Sulfur Dioxide Emissions</Link>**<br />
-  
-  **<Link to={"/stories/air-quality-and-covid-19"}>Air Quality and COVID-19</Link>**
+<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
+   <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
+      <p>
+    ## Data Preparation
+        These products are rigorously validated using uncertainty analysis in conjunction with independent measurements. These steps quantify the accuracies needed to make long-term trends through multi-satellite records and chemical data assimilation.
+    </p>
   </Prose>
 </Block>
 
-
-<Block>
-  <Prose>
-    ## Limitations of use
-
-    NASA data and products are freely available to federal, state, public, non-profit and commercial users. This information can be experimental- or research-grade data products and may not be appropriate for operational use. These NASA data products and services are intended to aid decision makers and enhance situational awareness, but these data are not guaranteed to be consistently available or routinely updated. Please cite the information according to the direction provided in the metadata.
+<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
+   <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
+   <p>
+    ## Applications and Use Cases
+      - Tracking industrial and urban NOx emissions for air quality management
+      - Supporting atmospheric chemistry and climate modeling studies
+      - Assessing the effectiveness of emission reduction policies and regulations
+      - Supporting air quality forecasting and public health advisories
+  </p>
   </Prose>
 </Block>
 
-
-<Block>
-  <Prose>
-  ## Disclaimer
-
-  All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
+<Block style={{ justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
+  <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center', flexDirection: 'column' }}>
+  <p>
+    ## Frequently Asked Questions (FAQs)
+    <p style={{ marginBottom: '0.9em' }}>
+      <strong>What is NOx?</strong><br />
+      NOx refers to nitrogen oxides (NO and NO₂), which are harmful air pollutants mainly produced by combustion processes.
+    </p>
+    <p style={{ marginBottom: '0.9em' }}>
+      <strong>How is the data reported?</strong><br />
+      NOx concentrations are given in mg/Nm³, which means milligrams of NOx per normal cubic meter of air.
+    </p>
+    <p style={{ marginBottom: '0.9em' }}>
+      <strong>How can I use this dataset?</strong><br />
+      The data is suitable for tracking emission trends, evaluating air quality interventions, and supporting scientific research in atmospheric chemistry and climate science.
+    </p>
+    <p style={{ marginBottom: '0.9em' }}>
+      <strong>What tools are available for data analysis?</strong><br />
+      Tools such as Jupyter Notebooks (TBD), the <a href="#">VEDA visualization platform</a>, and <a href="https://search.earthdata.nasa.gov/">Earthdata Search</a> can be used to analyze this dataset.
+    </p>
+  </p>
   </Prose>
 </Block>
 
 
-<Block>
-  <Prose>
+<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
+   <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
+     <p> 
+    ## Scientific Resources
+      - [User guide for dataset navigation](https://disc.gsfc.nasa.gov/datasets?page=1&source=AURA%20OMI)
+      - Algorithm theoretical basis documents [ATBD](https://eospso.nasa.gov/atbd-category/49) detailing data processing methods
+      - Key publication: [Ozone Monitoring Instrument (OMI) Aura nitrogen dioxide standard product version 4.0 with improved surface and cloud treatments](https://amt.copernicus.org/articles/14/455/2021/)
+      - User Jupyter Notebook: TBD
+    </p>
+  </Prose>
+</Block>
+
+<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
+   <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
+      <p>  
+    ## Disclaimer 
+      The users are encouraged to verify its suitability and accuracy for their intended purposes. Careful quality checks are used to ensure data transformation has been performed correctly.
+    </p>
+  </Prose>
+</Block>
+
+<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
+   <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
+    <p>  
     ## License
-
-    [Creative Commons Zero v1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC0 1.0)
+    This data is published for research academic and related non-commercial purposes. [Creative Commons Zero v1.0 Universal (CC0 1.0).](https://creativecommons.org/publicdomain/zero/1.0/deed.en)
+    </p>
   </Prose>
 </Block>
 
-
-<Block>
-  <Prose>
-  ## Additional resources
-  [OMI Aura Sulfur Dioxide (SO2) Total Column Dataset Access](https://disc.gsfc.nasa.gov/datasets/OMSO2e_003/summary)
-
-  ### Explore the Missions
-  [SO2 Monitoring Home Page](https://so2.gsfc.nasa.gov/)
-
-  [Aura Project Home Page](https://aura.gsfc.nasa.gov/)
+<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
+   <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
+   <p>
+    ## Acknowledgements
+       NASA JPL's Multi-mOdel Multi-cOnstituent Chemical (MOMO-Chem) science team.
+  </p>
   </Prose>
 </Block>
