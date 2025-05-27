@@ -27,6 +27,7 @@ infoDescription: |
 layers:
   - id: TROPESS_reanalysis_mon_emi_nox_anth
     stacCol: TROPESS_reanalysis_mon_emi_nox_anth
+    tileApiEndpoint: "https://staging.openveda.cloud/api/titiler-cmr/WebMercatorQuad/tilejson.json"
     name: 'nitrogen oxides (NO and NO2)'
     type: raster
     description: 'Monthly Surface Anthropogenic NOx Emissions'
@@ -40,13 +41,7 @@ layers:
       rescale:
         - 0
         - 1
-    compare:
-      datasetId: TROPESS_reanalysis_mon_emi_nox_anth
-      layerId: TROPESS_reanalysis_mon_emi_nox_anth
-      mapLabel: |
-        ::js ({ dateFns, datetime, compareDatetime }) => {
-          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
-        }
+      maxzoom:12
     legend:
       type: gradient
       label: NOx (mg/Nm³)
