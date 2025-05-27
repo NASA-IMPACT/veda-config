@@ -4,7 +4,7 @@ name: 'TROPESS Anthropogenic NOx'
 description: "TROPESS Chemical Reanalysis Surface Anthropogenic NOx emissions Monthly 2-dimensional Product V1 (TRPSCRENOXAM2D)"
 media:
   src: ::file ./media/so2--dataset-cover.jpg
-  alt: OMI SO2 data visualized in a map
+  alt: TROPESS NOx data visualized in a map
   author:
     name: NASA
     url: 
@@ -23,7 +23,7 @@ taxonomy:
       
 infoDescription: |
   ::markdown
-    The OMI Sulfur Dioxide (SO2) Total Column layer indicates the column density of sulfur dioxide and is measured in Dobson Units (DU). Sulfur Dioxide and Aerosol Index products are used to monitor volcanic clouds and detect pre-eruptive volcanic degassing globally. This information is used by the Volcanic Ash Advisory Centers in advisories to airlines for operational decision
+    The TROPESS Chemical Reanalysis Surface Anthropogenic NOx emissions Monthly 2-dimensional Product contains nitrogen oxides (NO and NO2) emissions from anthropogenic sources. The data are part of the Tropospheric Chemical Reanalysis v2 (TCR-2) for the period 2005-2021.
 layers:
   - id: TROPESS_reanalysis_mon_emi_nox_anth
     stacCol: TROPESS_reanalysis_mon_emi_nox_anth
@@ -41,7 +41,7 @@ layers:
         - 0
         - 1
     compare:
-      datasetId: so2
+      datasetId: TROPESS_reanalysis_mon_emi_nox_anth
       layerId: TROPESS_reanalysis_mon_emi_nox_anth
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
@@ -49,7 +49,7 @@ layers:
         }
     legend:
       type: gradient
-      label: SO2 Total column (DU)
+      label: NOx (mg/Nm³)
       min: "0"
       max: "1"
       stops:
@@ -76,8 +76,8 @@ layers:
   </Prose>
   <Figure>
   <Map
-    datasetId='so2'
-    layerId='OMSO2PCA-COG'
+    datasetId='TROPESS_reanalysis_mon_emi_nox_anth'
+    layerId='TROPESS_reanalysis_mon_emi_nox_anth'
     dateTime='2005-01-01'
     zoom={4}
     center={[77.63,24.27]}
@@ -87,7 +87,7 @@ layers:
     attrAuthor='NASA'
     attrUrl='https://nasa.gov/'
   >
-  Comparison of total column SO2 for India for 2005 and 2021
+  Comparison of total column NOx for India for 2005 and 2021
   </Caption>
   </Figure>
 </Block>
@@ -110,8 +110,8 @@ The data files are written in the netCDF version 4 file format, and each file co
 <Block type='full'>
   <Figure>
   <Map
-    datasetId='so2'
-    layerId='OMSO2PCA-COG'
+    datasetId='TROPESS_reanalysis_mon_emi_nox_anth'
+    layerId='TROPESS_reanalysis_mon_emi_nox_anth'
     dateTime='2006-01-01'
     zoom={4}
     center={[117.22,35.66]}
