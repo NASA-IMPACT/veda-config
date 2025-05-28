@@ -47,6 +47,23 @@ taxonomy:
 
 <Block>
   <Figure>
+    <Image
+      src={new URL('./ERCOT_Texas_Outages.png', import.meta.url).href}
+      alt='Maximum number of Texans without power'
+    />
+    <Caption>
+    **Figure 2.** Maximum number of individuals per county enduring power outages as a result of the 2021 Texas Deep Freeze, as recorded by EAGLE-I data.
+    </Caption>
+  </Figure>
+
+  <Prose>
+    ## February 2021 Deep Freeze
+    Between February 10–27, 2021, Texas faced one of its most catastrophic weather events in modern history. Better known as “The Great Texas Freeze,” a winter storm brought prolonged subfreezing temperatures, heavy snow, and ice that crippled infrastructure statewide. Every county in Texas was under a Winter Storm Warning during the Valentine's Day storm — a rare event for a state most notable for its summer heat. At the storm's peak, the hourly time series shows approximately 4.5 million customers without power simultaneously. However, EAGLE-I data indicate that when accounting for the maximum number of customers without power in each county over the course of the entire event, the total number of unique customers affected reached as high as 5.2 million. This is out of 14.9 million customers tracked statewide. According to ERCOT, the grid came within just four minutes and 37 seconds of total collapse, which could have led to a blackout lasting weeks or even months.
+  </Prose>
+</Block>
+
+<Block>
+  <Figure>
     <Chart
       dataPath={new URL('./ERCOT_power_outages_Texas.csv', import.meta.url).href}
       dateFormat="%m/%d/%Y %H:%M"
@@ -56,13 +73,9 @@ taxonomy:
       yAxisLabel='Maximum Power Outages Recorded Hourly'
     />
     <Caption>
-      **Figure 2.** Total hourly power outages across Texas before, during, and after the 2021 Deep Freeze, as recorded by EAGLE-I data.
+      **Figure 3.** Total hourly power outages across Texas before, during, and after the 2021 Deep Freeze, as recorded by EAGLE-I data.
     </Caption>
   </Figure>
-  <Prose>
-    ## February 2021 Deep Freeze
-    Between February 10–27, 2021, Texas faced one of its most catastrophic weather events in modern history. Better known as “The Great Texas Freeze,” a winter storm brought prolonged subfreezing temperatures, heavy snow, and ice that crippled infrastructure statewide. Every county in Texas was under a Winter Storm Warning during the Valentine's Day storm — a rare event for a state most notable for its summer heat. At the storm's peak, the hourly time series shows approximately 4.5 million customers without power simultaneously. However, EAGLE-I data indicate that when accounting for the maximum number of customers without power in each county over the course of the entire event, the total number of unique customers affected reached as high as 5.2 million. This is out of 14.9 million customers tracked statewide. According to ERCOT, the grid came within just four minutes and 37 seconds of total collapse, which could have led to a blackout lasting weeks or even months.
-  </Prose>
 </Block>
 
 <Block>
@@ -84,12 +97,15 @@ taxonomy:
       yAxisLabel='Cost of Natural Gas in U.S. Dollars'
       highlightStart = '02/10/2021'
       highlightEnd = '02/26/2021'
-      highlightLabel = 'Texas Deep Freeze'
+      highlightLabel = 'Deep Freeze'
     />
     <Caption>
-      **Figure 3.** Daily natural gas prices within the United States from 1997 to 2025 in U.S. Dollars, as recorded by [EIA](https://www.eia.gov/dnav/ng/hist/rngwhhdd.htm).
+      **Figure 4.** Daily natural gas prices within the United States from 1997 to 2025 in U.S. Dollars, as recorded by [EIA](https://www.eia.gov/dnav/ng/hist/rngwhhdd.htm).
     </Caption>
   </Figure>
+</Block>
+
+<Block>
   <Prose>
    In the wake of the freeze, questions were raised about the lack of winterization standards for natural gas infrastructure, wind turbines, and even power plants that had shut down due to cold-related failures. The event was a solemn reminder of how grid resilience and energy sustainability are critical — not just for comfort, but for survival in harsh conditions.
   </Prose>
@@ -100,7 +116,7 @@ taxonomy:
     ## Recent Summer Heat Waves
     In the summers of 2022-2024, Texas experienced persistent heat waves with record-breaking temperatures, pushing electricity demand to all-time highs. Unlike the winter season, where supply failures dominate headlines, the challenge during the summer is demand driven. As air conditioners ramp up across millions of homes, the strain on generation and transmission infrastructure becomes enormous. On multiple days, ERCOT issued conservation appeals to customers, urging residents to reduce electricity use during peak afternoon hours to avoid rolling blackouts.
     
-    <mark>Possibly show Land Surface Temperature (LST) from MODIS for heatwave visualization</mark>
+    <mark>Show Land Surface Temperature (LST) from MODIS for heatwave visualization</mark>
    </Prose>
 </Block>
 
