@@ -18,9 +18,9 @@ const explorationNavItem = {
       type: 'internalLink'
     },
     {
-      id: 'fire-events-visualization',
-      title: 'Wildfire Visualization',
-      to: '/tools/fire-exploration',
+      id: 'wildfire-explorer',
+      title: 'Wildfire Explorer',
+      to: '/tools/wildfire-explorer',
       type: 'internalLink'
     }
   ]
@@ -56,7 +56,7 @@ module.exports = {
     // Content for the about page.
     // Type: Content override
     aboutContent: "./overrides/about.mdx",
-    "/tools/fire-exploration": "./custom-pages/wildfire-visualization/index.mdx",
+    "/tools/wildfire-explorer": "./custom-pages/wildfire-explorer/index.mdx",
 
   },
 
