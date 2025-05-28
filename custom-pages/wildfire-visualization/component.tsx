@@ -45,7 +45,7 @@ export default function Component() {
   return (
     <div style={{ width: "100%", height: "100%" }}>
       <WildfireExplorer
-        mapboxAccessToken={process.env.MAPBOX_TOKEN_FIRE_TOOL_STYLES}
+        mapboxAccessToken={process.env.MAPBOX_TOKEN}
         featuresApiEndpoint={process.env.FEATURES_API_ENDPOINT_PROD}
       />
     </div>
