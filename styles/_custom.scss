@@ -1,3 +1,15 @@
-.range-slider {
-    background: none;
+.wildfire-explorer {
+    // Few instance-level CSS styles are interfering with the tool
+    // so we need to override them here, to make sure the layout looks good
+    .range-slider {
+        background: none;
+    }
+
+    &__legend-item {
+        margin-right: 16px !important;
+    }
+
+    &__modal-description {
+        margin: 16px 0;
+    }
 }
