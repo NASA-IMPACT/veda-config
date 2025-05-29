@@ -6,21 +6,23 @@ media:
   src: ::file ./media/tropess_tcr_optimized_news.jpg
   alt: TROPESS NOx data visualized in a map
   author:
-    name: NASA
-    url: 
+    name: Maheshwari Neelam
 taxonomy:
   - name: Topics
     values:
       - Air Quality
   - name: Subtopics
     values:
-      - Surface Meteorology
-      - Urban
+      - Anthropogenic Emissions
   - name: Source
     values:
-      - Renalysis
-      - Aura
-      
+      - NASA
+ - name: Gas
+    values:
+      - NOx
+  - name: Product Type
+    values:
+      - Model Output      
 infoDescription: |
   ::markdown
     The TROPESS Chemical Reanalysis Surface Anthropogenic NOx emissions Monthly 2-dimensional Product contains nitrogen oxides (NO and NO2) emissions from anthropogenic sources. The data are part of the Tropospheric Chemical Reanalysis v2 (TCR-2) for the period 2005-2021.
@@ -32,22 +34,29 @@ layers:
     tileApiEndpoint: "https://staging.openveda.cloud/api/titiler-cmr/WebMercatorQuad/tilejson.json"
     name: 'nitrogen oxides (NO and NO2)'
     description: 'Monthly Surface Anthropogenic NOx Emissions'
+    time_density: month
     zoomExtent:
       - 0
       - 11
     sourceParams:
       concept_id: C2837624964-GES_DISC
       backend: xarray
-      resampling: bilinear
-      bidx: 1
       colormap_name: rdylbu_r
       rescale:
         - 0
         - 1
       maxzoom: 12
+      tile_scale: 3
+    compare:
+      datasetId: TROPESS_reanalysis_mon_emi_nox_anth
+      layerId: TROPESS_reanalysis_mon_emi_nox_anth
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
     legend:
       type: gradient
-      label: NOx (mg/Nm³)
+      label: NOx 
       min: "0"
       max: "1"
       stops:
@@ -60,8 +69,8 @@ layers:
     info:
       source: NASA
       spatialExtent: Global
-      temporalResolution: Annual 
-      unit: N/A
+      temporalResolution: Monthly 
+      unit: mg/Nm³
 ---
 
 <Block>
@@ -167,7 +176,7 @@ layers:
     ## Scientific Resources
       - [User guide for dataset navigation](https://cmr.earthdata.nasa.gov/search/concepts/C2837624983-GES_DISC.html)
       - Algorithm theoretical basis documents [ATBD](https://tropess.gesdisc.eosdis.nasa.gov/data/TCR2_MON_EMISSIONS/TRPSCRENOXTM2D.1/doc/TROPESS_ChemReanalysis_Forward_Stream_README.pdf) detailing data processing methods
-      - Key publication: [Updated tropospheric chemistry reanalysis and emission estimates, TCR-2, for 2005–2018 (https://essd.copernicus.org/articles/12/2223/2020/)
+      - Key publication: Updated tropospheric chemistry reanalysis and emission estimates, TCR-2, for 2005–2018 (https://essd.copernicus.org/articles/12/2223/2020/)
       - User Jupyter Notebook: TBD
     </p>
   </Prose>
