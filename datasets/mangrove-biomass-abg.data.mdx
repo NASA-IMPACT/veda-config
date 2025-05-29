@@ -32,7 +32,7 @@ layers:
     type: raster
     description: 'Global Mangrove Aboveground Biomass'
     zoomExtent:
-      - 10
+      - 5
       - 20
     sourceParams:
       asset_bidx: cog_default|1
@@ -41,6 +41,8 @@ layers:
         - 0
         - 911
       nodata: "0."
+      minzoom: 5
+      maxzoom: 20
     legend:
       type: gradient
       min: "0"
@@ -62,7 +64,7 @@ layers:
     type: raster
     description: 'Mangrove basal-area weighted height (individual tree heights weighted in proportion to their basal area)'
     zoomExtent:
-      - 10
+      - 5
       - 20
     sourceParams:
       asset_bidx: cog_default|1
@@ -71,6 +73,8 @@ layers:
         - 0
         - 40
       nodata: 0
+      minzoom: 5
+      maxzoom: 20
     legend:
       type: gradient
       min: "0"
@@ -92,7 +96,7 @@ layers:
     type: raster
     description: 'Mangrove canopy maximum height (height of the tallest tree)'
     zoomExtent:
-      - 10
+      - 5
       - 20
     sourceParams:
       asset_bidx: cog_default|1
@@ -101,6 +105,8 @@ layers:
         - 0
         - 63
       nodata: 0
+      minzoom: 5
+      maxzoom: 20
     legend:
       type: gradient
       min: "0"
