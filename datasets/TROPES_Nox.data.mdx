@@ -27,6 +27,7 @@ infoDescription: |
 layers:
   - id: TROPESS_reanalysis_mon_emi_nox_anth
     stacCol: TROPESS_reanalysis_mon_emi_nox_anth
+    type: cmr
     tileApiEndpoint: "https://staging.openveda.cloud/api/titiler-cmr/WebMercatorQuad/tilejson.json"
     name: 'nitrogen oxides (NO and NO2)'
     type: raster
@@ -35,6 +36,8 @@ layers:
       - 0
       - 11
     sourceParams:
+      concept_id: C2837624964-GES_DISC
+      backend: xarray
       resampling: bilinear
       bidx: 1
       colormap_name: rdylbu_r
@@ -162,9 +165,9 @@ layers:
    <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
      <p> 
     ## Scientific Resources
-      - [User guide for dataset navigation](https://disc.gsfc.nasa.gov/datasets?page=1&source=AURA%20OMI)
-      - Algorithm theoretical basis documents [ATBD](https://eospso.nasa.gov/atbd-category/49) detailing data processing methods
-      - Key publication: [Ozone Monitoring Instrument (OMI) Aura nitrogen dioxide standard product version 4.0 with improved surface and cloud treatments](https://amt.copernicus.org/articles/14/455/2021/)
+      - [User guide for dataset navigation](https://cmr.earthdata.nasa.gov/search/concepts/C2837624983-GES_DISC.html)
+      - Algorithm theoretical basis documents [ATBD](https://tropess.gesdisc.eosdis.nasa.gov/data/TCR2_MON_EMISSIONS/TRPSCRENOXTM2D.1/doc/TROPESS_ChemReanalysis_Forward_Stream_README.pdf) detailing data processing methods
+      - Key publication: [Updated tropospheric chemistry reanalysis and emission estimates, TCR-2, for 2005–2018 (https://essd.copernicus.org/articles/12/2223/2020/)
       - User Jupyter Notebook: TBD
     </p>
   </Prose>
