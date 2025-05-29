@@ -1,0 +1,106 @@
+---
+id: mangrove-salt-marsh
+name: 'Salt Marsh gains and losses between 2000-2019'
+description: "salt marsh gain for five-year periods from 2000-2019. Salt marsh gain at a 30 m spatial resolution were estimated with Normalized Difference Vegetation Index (NDVI) anomaly algorithm using Landsat 5, 7, and 8 collections within the known extent of salt marshes."
+media:
+  src: ::file ./media/twsanomaly-globe.png
+  alt: TWS trend of anomalies from LIS outputs.
+  author:
+    name: NASA LIS
+    url:
+taxonomy:
+  - name: Topics
+    values:
+    - Water Resources
+    - Water Model
+    - Precipitation
+    - Groundwater
+    - Hydrology
+    - Water Storage Trends
+  - name: Source
+    values:
+    - NASA EIS
+infoDescription: |
+  ::markdown
+     Realistic estimates of water and energy cycle variables are necessary for accurate understanding of earth system processes. We develop a 10 km global reanalysis product of water, energy, and carbon fluxes by assimilating satellite observed surface soil moisture, leaf area index, and terrestrial water storage anomalies into a land surface model within NASA Land Information System Framework. We applied a seasonal and trend decomposition algorithm to get the trend estimates for terrestrial water storage and gross primary production. The method can better help to deal with [nonstationarities](https://github.com/Earth-Information-System/sea-level-and-coastal-risk/blob/main/AMS_2023_Wanshu_Nie_for_VEDA_Discovery.pdf) and seasonal shifts and provide a more robust estimate of trends.
+layers:
+  - id: salt-marsh-gain
+    stacCol: salt-marsh-gain
+    name: 'Salt Marsh Gain'
+    stacApiEndpoint: https://dev.openveda.cloud/api/stac
+    rasterApiEndpoint: https://dev.openveda.cloud/api/raster
+    type: raster
+    description: "Salt marsh gain for five-year periods from 2000-2019. Gain at a 30 m spatial resolution were estimated with Normalized Difference Vegetation Index (NDVI) anomaly algorithm using Landsat 5, 7, and 8 collections within the known extent of salt marshes. No data values -2147483648"
+    zoomExtent:
+      - 10
+      - 20
+    sourceParams:
+      bidx: 1
+      colormap: '{"0":[18,94,135,255],"2000":[12,110,20,255],"2005":[73,230,86,255],"2010":[73,141,230,255],"2015":[73,230,227,255]}'
+    legend:
+      type: categorical
+      min: "0"
+      max: "2015"
+      nodata: -2147483648
+      stops:
+        - color: "#49e656"
+          label: "No gain" 
+        - color: "#0c6e14"
+          label: "2000"
+        - color: "#498de6"
+          label: "2005" 
+        - color: "#125e87"
+          label: "2010"
+        - color: "#49e6e3"
+          label: "2015"
+      unit:
+        label: (year of gain)
+      label: (year of gain)
+    info:
+      source: NASA
+      spatialExtent: Coastal Zones
+      temporalResolution: Annual 
+      unit: year of gain
+
+  - id: salt-marsh-loss
+    stacCol: salt-marsh-loss
+    name: 'Salt Marsh Loss'
+    stacApiEndpoint: https://dev.openveda.cloud/api/stac
+    rasterApiEndpoint: https://dev.openveda.cloud/api/raster
+    type: raster
+    description: "Salt marsh loss for five-year periods from 2000-2019. Loss at a 30 m spatial resolution were estimated with Normalized Difference Vegetation Index (NDVI) anomaly algorithm using Landsat 5, 7, and 8 collections within the known extent of salt marshes."
+    zoomExtent:
+      - 10
+      - 20
+    sourceParams:
+      bidx: 1
+      colormap: '{"0":[18,94,135,255],"2000":[12,110,20,255],"2005":[73,230,86,255],"2010":[73,141,230,255],"2015":[73,230,227,255]}'
+      nodata: 0
+    legend:
+      type: categorical
+      min: "0"
+      max: "2015"
+      stops:
+        - color: "#49e656"
+          label: "No loss" 
+        - color: "#0c6e14"
+          label: "2000"
+        - color: "#498de6"
+          label: "2005" 
+        - color: "#125e87"
+          label: "2010"
+        - color: "#49e6e3"
+          label: "2015"
+      unit:
+        label: (year of loss)
+      label: (year of loss)
+    info:
+      source: NASA
+      spatialExtent: Coastal Zones
+      temporalResolution: Annual 
+      unit: year of loss
+
+---
+
+
+
