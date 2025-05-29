@@ -49,7 +49,6 @@ layers:
       tile_scale: 3
     compare:
       datasetId: TROPESS_reanalysis_mon_emi_nox_anth
-      layerId: TROPESS_reanalysis_mon_emi_nox_anth
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
