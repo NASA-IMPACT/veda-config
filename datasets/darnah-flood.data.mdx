@@ -1,6 +1,7 @@
 ---
 id: darnah-flood
 name: 'Darnah, Libya Flood'
+isHidden: true
 description: "HLS (SWIR FalseColor composites) imagery supporting the Darnah Flood Story"
 media:
   src: ::file media/darnah-flood-background.jpg
@@ -29,7 +30,8 @@ layers:
       - 20
     sourceParams:
       rescale:
-        - 0,5000
+        - 0
+        - 5000
       resampling: bilinear
       asset_bidx: cog_default|1,2,3
     compare:
@@ -37,7 +39,7 @@ layers:
       layerId: darnah-flood
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `${dateFns.format(datetime, 'dd LLL yyyy')}`;        
+        return `${dateFns.format(datetime, 'LLL dd, yyyy')} VS ${dateFns.format(compareDatetime, 'LLL dd, yyyy')}`;        
         }
     metadata:
       source: HLS

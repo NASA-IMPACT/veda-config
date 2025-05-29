@@ -12,6 +12,10 @@ taxonomy:
   - name: Topics
     values:
       - Air Quality
+  - name: Subtopics
+    values:
+      - Surface Meteorology
+      - Urban
   - name: Source
     values:
       - OMI
@@ -61,7 +65,15 @@ layers:
       temporalResolution: Annual 
       unit: N/A
 ---
-<Block type='full'>
+
+<Block>
+  <Prose>   
+    ## Dataset Details
+    - **Temporal Extent:** 2005 - 2021<br />
+    - **Spatial Extent:** Global<br />
+    - **Spatial Resolution:** 30 km<br />
+    - **Data Type:** Research<br />
+  </Prose>
   <Figure>
   <Map
     datasetId='so2'
@@ -78,16 +90,21 @@ layers:
   Comparison of total column SO2 for India for 2005 and 2021
   </Caption>
   </Figure>
-<Prose>
-The OMI Sulfur Dioxide (SO2) Total Column layer indicates the column density of sulfur dioxide and is measured in Dobson Units (DU). Sulfur Dioxide and Aerosol Index products are used to monitor volcanic clouds and detect pre-eruptive volcanic degassing globally. This information is used by the Volcanic Ash Advisory Centers in advisories to airlines for operational decision
-</Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+  </Prose>
 </Block>
 
 <Block>
-<Prose>
-## Scientific research
-Sulfur/Sulphur Dioxide (SO2) is one of the US Environmental Protection Agency's (EPA) six major regulated criteria pollutants (Tropospheric Ozone, Nitrogen Dioxide, Sulfur Dioxide, Lead, PM2.5 and PM 10 particulates). It irritates the eyes, nose, and lungs. High concentrations of SO2 can result in temporary breathing impairment. It is produced by combustion of coal, fuel oil, and gasoline, since these fuels contain sulfur in the combustion, and in the oxidation of naturally occurring sulfur gases. It is a precursor to sulfuric acid, which is a major constituent of acid rain. SO2 is injected into the stratosphere by volcanic eruptions. SO2 also is a major precursor to PM2.5, which is a significant health concern, and a main contributor to poor visibility.
-</Prose>
+  <Prose>
+  ## Scientific Details
+  The OMI Sulfur Dioxide (SO2) Total Column layer indicates the column density of sulfur dioxide and is measured in Dobson Units (DU). Sulfur Dioxide and Aerosol Index products are used to monitor volcanic clouds and detect pre-eruptive volcanic degassing globally. This information is used by the Volcanic Ash Advisory Centers in advisories to airlines for operational decisions.<br />
+
+  Sulfur/Sulphur Dioxide (SO2) is one of the US Environmental Protection Agency's (EPA) six major regulated criteria pollutants (Tropospheric Ozone, Nitrogen Dioxide, Sulfur Dioxide, Lead, PM2.5 and PM 10 particulates). It irritates the eyes, nose, and lungs. High concentrations of SO2 can result in temporary breathing impairment. It is produced by combustion of coal, fuel oil, and gasoline, since these fuels contain sulfur in the combustion, and in the oxidation of naturally occurring sulfur gases. It is a precursor to sulfuric acid, which is a major constituent of acid rain. SO2 is injected into the stratosphere by volcanic eruptions. SO2 also is a major precursor to PM2.5, which is a significant health concern, and a main contributor to poor visibility.
+  </Prose>
 </Block>
 
 <Block type='full'>
@@ -120,14 +137,54 @@ Global total column SO2 observations are generated using a principal component a
 </Prose>
 </Block>
 
+
 <Block>
-<Prose>
-## Additional resources
-* [OMI Aura Sulfur Dioxide (SO2) Total Column Dataset Access](https://disc.gsfc.nasa.gov/datasets/OMSO2e_003/summary)
+  <Prose>
+  
+  ## Data Stories Using This Dataset
+  
+  **<Link to={"/stories/so2-volcanoes"}>Monitoring Volcanic Sulfur Dioxide Emissions</Link>**<br />
+  
+  **<Link to={"/stories/air-quality-and-covid-19"}>Air Quality and COVID-19</Link>**
+  </Prose>
+</Block>
 
-### Explore the Missions
-* [SO2 Monitoring Home Page](https://so2.gsfc.nasa.gov/)
 
-* [Aura Project Home Page](https://aura.gsfc.nasa.gov/)
-</Prose>
+<Block>
+  <Prose>
+    ## Limitations of use
+
+    NASA data and products are freely available to federal, state, public, non-profit and commercial users. This information can be experimental- or research-grade data products and may not be appropriate for operational use. These NASA data products and services are intended to aid decision makers and enhance situational awareness, but these data are not guaranteed to be consistently available or routinely updated. Please cite the information according to the direction provided in the metadata.
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+  ## Disclaimer
+
+  All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+    ## License
+
+    [Creative Commons Zero v1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC0 1.0)
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+  ## Additional resources
+  [OMI Aura Sulfur Dioxide (SO2) Total Column Dataset Access](https://disc.gsfc.nasa.gov/datasets/OMSO2e_003/summary)
+
+  ### Explore the Missions
+  [SO2 Monitoring Home Page](https://so2.gsfc.nasa.gov/)
+
+  [Aura Project Home Page](https://aura.gsfc.nasa.gov/)
+  </Prose>
 </Block>

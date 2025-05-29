@@ -1,5 +1,6 @@
 ---
 id: damage_probability_2022-10-03
+isHidden: true
 name: "NRT HLS-Derived Damage Probability Index"
 description: "Near real-time monitoring of land disturbances for CONUS based on the 30-m Harmonized Landsat Sentinel-2 (HLS) dataset."
 media:
@@ -11,7 +12,11 @@ media:
 taxonomy:
   - name: Topics
     values:
-      - Disasters
+      - Natural Disasters
+  - name: Subtopics
+    values:
+      - Habitat
+      - Surface Meteorology
   - name: Source
     values:
       - HLS
@@ -46,17 +51,39 @@ layers:
         - '#f0f921'
 ---
 
+<Block>
+  <Prose>
+  - **Temporal Extent:** January 1, 2022 - October 3, 2022 
+  - **Temporal Resolution:** Daily 
+  - **Spatial Extent:** Continental United States
+  - **Spatial Resolution:** 30 m x 30 m 
+  - **Data Units:** Disturbance probability from 0 to 1 
+  - **Data Type:** Research
+  - **Data Latency:** Daily 
+  </Prose>
+    <Figure>
+    <Map
+      datasetId='damage_probability_2022-10-03'
+      layerId='damage_probability_2022-10-03'
+      dateTime='2022-10-03'
+      zoom={11}
+      center={[-82.12000,26.55185]}
+    />
+    <Caption
+      attrAuthor='NASA'
+      attrUrl='https://gerslab.uconn.edu/'
+    >
+    Damage Probability from UCONN GERS lab for Lee and Charlotte counties in Florida. This product is on a scale of 0 to 99 with 0 indicating 0 probability of damage and 99 indicating the highest probability of damage.  
+    </Caption>
+  </Figure>
+</Block>
+
+
+
 <Block type='wide'>
 <Prose>
+## Overview
 The contiguous United States (CONUS) Disturbance Watcher system was built based on time-series analysis and machine learning techniques. The system consisted of two components. The first component, the retrospective disturbance analysis, extracted disturbance predictors from historical open access disturbance products and satellite datasets and built a series of machine learning models respectively for different lag stages. The second component, namely the near real-time monitoring, recursively updates per-pixel time-series models and outputted current vectors of disturbance predictor using Stochastic Continuous Change Detection (S-CCD) algorithm, and then applied the offline machine learning models from the first component to map disturbance probabilities and patches. The system could be updated regularly in an interval of one week, or updated as an user-defined interval, such as one day that was used for Hurricane Ian monitoring. The per-day updating interval provided the quickest mapping response and the most extensive damage region as some would be recovered after days, while the highest computational resources were needed.   
-
-- **Temporal Extent:** January 1, 2022 - October 3, 2022 
-- **Temporal Resolution:** Daily 
-- **Spatial Extent:** Continental United States
-- **Spatial Resolution:** 30 m x 30 m 
-- **Data Units:** Disturbance probability from 0 to 1 
-- **Data Type:** Research
-- **Data Latency:** Daily 
 
 
 **Scientific Details:**  
@@ -65,12 +92,18 @@ The Hurricane Ian disturbance probability layer shows the likelihood impacted by
 </Block>
 
 <Block>
-<Prose>
+  <Prose>
+  
+  ## Data Stories Using This Dataset
+  
+  **<Link to={"/stories/hurricane-ian"}>Hurricane Ian and Impacts on Vegetation</Link>**
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
 ## Source Data Product Citation
 Ye, S, Zhu, Z, 2023, Near Real-time Hurricane Ian Disturbance Probability Map:  Global Environmental Remote Sensing Laboratory release
-
-## Disclaimer
-All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFF ([COG](https://www.cogeo.org/)). Careful quality checks are used to ensure data transformation has been performed correctly.
 
 ## Key Publications
 Ye, S., Zhu, Z., & Suh, J. W. (2024). Leveraging past information and machine learning to accelerate land disturbance monitoring. Remote Sensing of Environment, 305, 114071, [https://doi.org/10.31223/X5WT2H](https://doi.org/10.31223/X5WT2H) .
@@ -79,12 +112,49 @@ Ye, S., Zhu, Z., & Suh, J. W. (2024). Leveraging past information and machine le
 Ye, S., Rogan, J., Zhu, Z., & Eastman, J. R. (2021). A near-real-time approach for monitoring forest disturbance using Landsat time series: Stochastic continuous change detection. Remote Sensing of Environment, 252, 112167, [https://doi.org/10.1016/j.rse.2020.112167](https://doi.org/10.1016/j.rse.2020.112167). 
 
 Ye, S., Zhu, Z., & Cao, G. (2023). Object-based continuous monitoring of land disturbances from dense Landsat time series. Remote Sensing of Environment, 287, 113462, [https://doi.org/10.1016/j.rse.2023.113462](https://doi.org/10.1016/j.rse.2023.113462).
-    
- ## Acknowledgment
-This work has been supported by the USGS-NASA Landsat Science Team (LST) Program for Toward Near Real-time Monitoring and Characterization of Land Surface Change for the Conterminous US (140G0119C0008)
+  </Prose>
+</Block>
 
+
+<Block>
+  <Prose>
+  ## Acknowledgment
+  This work has been supported by the USGS-NASA Landsat Science Team (LST) Program for Toward Near Real-time Monitoring and Characterization of Land Surface Change for the Conterminous US (140G0119C0008)
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
 ## License
 [Creative Commons Attribution 1.0 International](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC BY 1.0)
 
 </Prose>
+</Block>
+
+
+
+<Block>
+  <Prose>
+    ## Limitations of use
+
+    NASA data and products are freely available to federal, state, public, non-profit and commercial users. This information can be experimental- or research-grade data products and may not be appropriate for operational use. These NASA data products and services are intended to aid decision makers and enhance situational awareness, but these data are not guaranteed to be consistently available or routinely updated. Please cite the information according to the direction provided in the metadata.
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+  ## Disclaimer
+
+  All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+    ## License
+
+    [Creative Commons Zero v1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC0 1.0)
+  </Prose>
 </Block>

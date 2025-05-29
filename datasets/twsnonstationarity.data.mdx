@@ -11,10 +11,10 @@ media:
 taxonomy:
   - name: Topics
     values:
-      - Water Resources 
-      - Water Model
-      - Precipitation
-      - Groundwater
+      - Water Resources
+  - name: Subtopics
+    values:
+      - Water Cycle
       - Hydrology
   - name: Source
     values:
@@ -59,6 +59,32 @@ layers:
 ---
 
 <Block>
+  <Prose>   
+    ## Dataset Details
+    - **Temporal Extent:** Jan. 1, 2003 - Jan. 1, 2020<br />
+    - **Spatial Extent:** Global<br />
+    - **Spatial Resolution:** 10 km<br />
+    - **Data Units:** Standardized anomaly
+    - **Data Type:** Research<br />
+  </Prose>
+  <Figure>
+  <Map
+    datasetId='lis-tws-nonstationarity-index'
+    layerId='lis-tws-nonstationarity-index'
+    dateTime='2003-01-01'
+    zoom={4}
+    center={[-116,36]}
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+  Terrestrial water storage (TWS) and Gross Primary Productivity (GPP) trends between 2003-2020.
+</Caption>
+  </Figure>
+</Block>
+
+<Block>
   <Prose>
     ## Overview
     Terrestrial water storage (TWS) is defined as the summation of all water on the land surface and in the subsurface. It includes surface soil moisture, root zone soil moisture, groundwater, snow, ice, water stored in the vegetation, river and lake water. 
@@ -67,3 +93,54 @@ layers:
   </Prose>
 </Block>
 
+<Block>
+  <Prose>
+  
+  ## Data Stories Using This Dataset
+  
+  **<Link to={"/stories/eis-coastal-risks"}>Unraveling the Components of Coastal Risk</Link>**
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+    ## Limitations of use
+
+    NASA data and products are freely available to federal, state, public, non-profit and commercial users. This information can be experimental- or research-grade data products and may not be appropriate for operational use. These NASA data products and services are intended to aid decision makers and enhance situational awareness, but these data are not guaranteed to be consistently available or routinely updated. Please cite the information according to the direction provided in the metadata.
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+  ## Disclaimer
+
+  All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+    ## License
+
+    [Creative Commons Zero v1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC0 1.0)
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  ## Additional resources
+  * [EIS Freshwater](https://freshwater.eis.smce.nasa.gov/)
+
+  * [Land Information System](https://lis.gsfc.nasa.gov/)
+
+  ### Explore the Missions
+  * [GRACE-FO](https://gracefo.jpl.nasa.gov/data/grace-fo-data/)
+
+  * [SMAP](https://smap.jpl.nasa.gov/)
+
+  * [MODIS](https://modis.gsfc.nasa.gov/)
+  </Prose>
+</Block>
