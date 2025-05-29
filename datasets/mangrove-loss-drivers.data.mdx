@@ -43,6 +43,8 @@ layers:
       type: categorical
       min: "0"
       max: "2"
+      minzoom: 5
+      maxzoom: 20
       stops:
         - color: "#49e656"
           label: "Lost between 2000-2005" 
@@ -78,6 +80,8 @@ layers:
       type: categorical
       min: "0"
       max: "2"
+      minzoom: 5
+      maxzoom: 20
       stops:
         - color: "#49e656"
           label: "To dry soil" 
@@ -102,13 +106,15 @@ layers:
     type: raster
     description: "This dataset provides estimates of the extent of mangrove loss, land cover change, and its anthropogenic or climatic drivers in three periods: 2000–2005, 2005–2010, and 2010–2016. Landsat-based Normalized Difference Vegetation Index (NDVI) anomalies were used to determine loss extent in each epoch"
     zoomExtent:
-      - 10
+      - 5
       - 20
     sourceParams:
       resampling: bilinear
       bidx: 1
       nodata: 0
       colormap: '{"0":[1,113,178,255],"1":[0,157,115,255],"2":[238,158,0,255],"3":[208,96,1,255],"4":[238,227,69,255]}'
+      minzoom: 5
+      maxzoom: 20
     legend:
       type: categorical
       min: "0"
