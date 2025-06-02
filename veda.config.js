@@ -1,43 +1,38 @@
-
 const dataCatalogNavItem = {
-  id: 'data-catalog',
-  title: 'Data Catalog',
-  to: '/data-catalog',
-  type: 'internalLink'
+  id: "data-catalog",
+  title: "Data Catalog",
+  to: "/data-catalog",
+  type: "internalLink",
 };
 
 const explorationNavItem = {
-  id: 'exploration',
-  title: 'Exploration Tools',
-  type: 'dropdown',
+  id: "exploration",
+  title: "Exploration Tools",
+  type: "dropdown",
   children: [
     {
-      id: 'time-series-analysis',
-      title: 'Time-Series Analysis',
-      to: '/exploration',
-      type: 'internalLink'
+      id: "time-series-analysis",
+      title: "Time-Series Analysis",
+      to: "/exploration",
+      type: "internalLink",
     },
     {
-      id: 'wildfire-explorer',
-      title: 'Wildfire Explorer',
-      to: '/tools/wildfire-explorer',
-      type: 'internalLink'
-    }
-  ]
+      id: "fire-evnt-explorer",
+      title: "Fire Event Explorer",
+      to: "/tools/fire-event-explorer",
+      type: "internalLink",
+    },
+  ],
 };
 
 const storiesNavItem = {
-  id: 'stories',
-  title: 'Stories',
-  to: '/stories',
-  type: 'internalLink'
+  id: "stories",
+  title: "Stories",
+  to: "/stories",
+  type: "internalLink",
 };
 
-let headerNavItems = [
-  dataCatalogNavItem,
-  explorationNavItem,
-  storiesNavItem
-];
+let headerNavItems = [dataCatalogNavItem, explorationNavItem, storiesNavItem];
 
 module.exports = {
   /**
@@ -56,8 +51,7 @@ module.exports = {
     // Content for the about page.
     // Type: Content override
     aboutContent: "./overrides/about.mdx",
-    "/tools/wildfire-explorer": "./custom-pages/wildfire-explorer/index.mdx",
-
+    "/tools/fire-event-explorer": "./custom-pages/wildfire-explorer/index.mdx",
   },
 
   strings: {
@@ -67,10 +61,10 @@ module.exports = {
     },
   },
   navItems: {
-    headerNavItems: headerNavItems
+    headerNavItems: headerNavItems,
   },
   cookieConsentForm: {
     title: "Cookie Consent",
     copy: "We use cookies to enhance your browsing experience and to help us understand how our website is used. These cookies allow us to collect data on site usage and improve our services based on your interactions. To learn more about it, see our [Privacy Policy](https://www.nasa.gov/privacy/#cookies).",
-  }
+  },
 };
