@@ -1,7 +1,7 @@
 ---
 id: tws-anomaly
-name: 'Terrestrial Water Storage Anomalies'
-description: "TWS anomalies modeled using data assimilation within Land Information System framework"
+name: 'Terrestrial Water Storage Anomaly and Trend'
+description: "TWS anomalies and trends modeled using data assimilation within Land Information System framework"
 media:
   src: ::file ./media/twsanomaly-globe.png
   alt: TWS anomalies from LIS outputs.
@@ -9,6 +9,13 @@ media:
     name: NASA LIS
     url:
 taxonomy:
+  - name: Topics
+    values:
+      - Water Resources
+  - name: Subtopics
+    values:
+      - Water Cycle
+      - Hydrology
   - name: Source
     values:
       - NASA EIS
@@ -56,12 +63,53 @@ layers:
       temporalResolution: Daily 
       unit: N/A 
 
+
+  - id: lis-tws-trend
+    stacCol: lis-tws-trend
+    name: 'TWS Anomaly Trend'
+    type: raster
+    description: 'Trends in TWS anomalies from LIS outputs'
+    zoomExtent:
+      - 0
+      - 11
+    sourceParams:
+      bidx: 1
+      colormap_name: rdylbu
+      rescale:
+        - -1
+        - 1
+      nodata: -9999
+    legend:
+      type: gradient
+      label: Trend in TWS Anomaly 
+      min: "-1"
+      max: "1"
+      stops:
+      - "#a50026"
+      - "#f46d43"
+      - "#fee090"
+      - "#e0f3f8"
+      - "#74add1"
+      - "#313695"
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Annual 
+      unit: N/A 
+
 ---
-<Block type='full'>
-<Prose>
-## Overview
-Terrestrial water storage (TWS) is defined as the summation of all water on the land surface and in the subsurface. It includes surface soil moisture, root zone soil moisture, groundwater, snow, ice, water stored in the vegetation, river and lake water.
-</Prose>
+
+
+<Block>
+  <Prose>   
+    ## Dataset Details
+    - **Temporal Extent:** Sept. 1, 2002 - Dec. 1, 2021<br />
+    - **Temporal Resolution:** Daily
+    - **Spatial Extent:** Global<br />
+    - **Spatial Resolution:** 10 km<br />
+    - **Data Units:** Millimeters (mm)
+    - **Data Type:** Research<br />
+  </Prose>
   <Figure>
   <Map
     datasetId='tws-anomaly'
@@ -75,10 +123,16 @@ Terrestrial water storage (TWS) is defined as the summation of all water on the 
     attrAuthor='NASA'
     attrUrl='https://nasa.gov/'
   >
-  Depleting TWS over CA between 2002 (left) and 2021 (right), captured by LIS modeled TWS anomalies
+  Depleting TWS over California between 2002 (left) and 2021 (right), captured by LIS modeled TWS anomalies.
 </Caption>
   </Figure>
+</Block>
 
+<Block>
+  <Prose>
+  ## Overview
+  Terrestrial water storage (TWS) is defined as the summation of all water on the land surface and in the subsurface. It includes surface soil moisture, root zone soil moisture, groundwater, snow, ice, water stored in the vegetation, river and lake water.
+  </Prose>
 </Block>
 
 
@@ -108,22 +162,60 @@ TWS is modeled using Noah-MP land surface model (LSM) within LIS framework by as
   </Figure>
 <Prose>
 ## Interpreting the data
-The TWS anomalies are calculated as differences of raw TWS with the climatology obtained over 2001-2021. Negative anomalies denote lower than normal TWS and vice-versa. The trend over time is thus deseasonalized and reflective of changes due to human impacts.
+The TWS anomalies are calculated as differences of raw TWS with the climatology obtained over 2002-2021. Negative anomalies (blue values) denote lower than normal TWS and positive anomalies (red) indicate higher than normal TWS. The trend over time is thus deseasonalized and reflective of changes due to human impacts.
 </Prose>
 </Block>
 
+
 <Block>
-<Prose>
-## Additional resources
-* [EIS Freshwater](https://freshwater.eis.smce.nasa.gov/)
+  <Prose>
+  
+  ## Data Stories Using This Dataset
+  
+  **<Link to={"/stories/eis-coastal-risks"}>Unraveling the Components of Coastal Risk</Link>**
+  **<Link to={"/stories/tws-trends"}>A New View of the Global Water Cycle</Link>**
+  </Prose>
+</Block>
 
-* [Land Information System](https://lis.gsfc.nasa.gov/)
 
-### Explore the Missions
-* [GRACE-FO](https://gracefo.jpl.nasa.gov/data/grace-fo-data/)
+<Block>
+  <Prose>
+    ## Limitations of use
 
-* [SMAP](https://smap.jpl.nasa.gov/)
+    NASA data and products are freely available to federal, state, public, non-profit and commercial users. This information can be experimental- or research-grade data products and may not be appropriate for operational use. These NASA data products and services are intended to aid decision makers and enhance situational awareness, but these data are not guaranteed to be consistently available or routinely updated. Please cite the information according to the direction provided in the metadata.
+  </Prose>
+</Block>
 
-* [MODIS](https://modis.gsfc.nasa.gov/)
-</Prose>
+
+<Block>
+  <Prose>
+  ## Disclaimer
+
+  All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+    ## License
+
+    [Creative Commons Zero v1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC0 1.0)
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  ## Additional resources
+  * [EIS Freshwater](https://freshwater.eis.smce.nasa.gov/)
+
+  * [Land Information System](https://lis.gsfc.nasa.gov/)
+
+  ### Explore the Missions
+  * [GRACE-FO](https://gracefo.jpl.nasa.gov/data/grace-fo-data/)
+
+  * [SMAP](https://smap.jpl.nasa.gov/)
+
+  * [MODIS](https://modis.gsfc.nasa.gov/)
+  </Prose>
 </Block>
