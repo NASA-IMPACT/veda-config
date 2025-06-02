@@ -20,6 +20,43 @@ infoDescription: |
   ::markdown
     Nightlights data are collected by the [Visible Infrared Radiometer Suite (VIIRS) Day/Night Band (DNB)](https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/viirs/) on the Suomi-National Polar-Orbiting Partnership (Suomi-NPP) platform, a joint National Oceanic and Atmospheric Administration (NOAA) and NASA satellite. The images are produced by [NASA’s Black Marble](https://blackmarble.gsfc.nasa.gov/) products suite. All data are calibrated daily, corrected, and validated with ground measurements for science-ready analysis.
 layers:
+  - id: ercot-houston-nightlights-freeze
+    stacCol: ercot-houston-nightlights-freeze
+    name: Nightlights For 2021 Texas Deep Freeze
+    type: raster
+    description: 'Nightlights data are collected by the Visible Infrared Radiometer Suite (VIIRS) Day/Night Band (DNB) on the Suomi-National Polar-Orbiting Partnership (Suomi-NPP) platform, a joint National Oceanic and Atmospheric Administration (NOAA) and NASA satellite.'
+    zoomExtent:
+      - 8
+      - 16
+    sourceParams:
+      bidx: 1
+      colormap_name: inferno
+      rescale:
+        - 0
+        - 255
+    compare:
+      datasetId: nighttime-lights
+      layerId: ercot-houston-nightlights-freeze
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      type: gradient
+      min: Less
+      max: More
+      stops:
+        - '#08041d'
+        - '#1f0a46'
+        - '#52076c'
+        - '#f57c16'
+        - '#f7cf39'
+    info:
+      source: NOAA & NASA
+      spatialExtent: Global
+      temporalResolution: Monthly 
+      unit: N/A
+
   - id: nightlights-hd-monthly
     stacCol: nightlights-hd-monthly
     name: Nightlights Monthly
