@@ -35,7 +35,7 @@
     "stream-browserify": "^3.0.0"
   },
   "dependencies": {
-    "@dsio/wildfire-explorer": "0.3.9",
+    "@dsio/wildfire-explorer": "0.3.10",
     "@parcel/transformer-sass": "^2.13.3",
     "@trussworks/react-uswds": "^9.1.0",
     "@uswds/uswds": "^3.8.1",
