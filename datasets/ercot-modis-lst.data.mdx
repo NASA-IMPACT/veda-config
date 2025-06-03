@@ -1,0 +1,66 @@
+---
+id: ercot-heatwave
+isHidden: true
+name: MODIS Land Surface Temperatures
+description: MODIS LST dataset for the 2023 heatwave in Texas on June 23, 2023.
+media:
+  src: ::file ./media/urban-heat.jpg
+  alt: Sunset over Tokyo
+  author:
+    name: Arto Marttinen
+    url: https://unsplash.com/photos/6xh7H5tWj9c
+taxonomy:
+  - name: Subtopics
+    values:
+      - Air Quality
+      - Heat
+      - Surface Meteorology
+  - name: Source
+    values:
+      - MODIS
+
+infoDescription: |
+  ::markdown
+     Terra MODIS has been instrumental in capturing LST data. This platform, orbiting Earth, scans our planet in multiple spectral bands, allowing for a detailed analysis of LST values. 
+layers:
+  - id: ERCOT-MODIS
+    stacCol: ERCOT-MODIS
+    name: Texas LST Day
+    type: raster
+    description: "The Land Surface Temperature (LST) data is MODIS-derived daily data, measured at 1 km spatial resolution."
+    zoomExtent:
+      - 2
+      - 16
+    sourceParams:
+     colormap_name: surface_temperature    
+     nodata: 999
+     rescale:
+         - 30
+         - 110
+    legend:
+         type: gradient
+         unit:
+             label: F
+         min: 55
+         max: 136
+         stops: 
+             - "#3CCBCE"
+             - "#C5F8FF"   
+             - "#FEC5FF"   
+             - "#E079FB"   
+             - "#094FC9"   
+             - "#009FFF"   
+             - "#44E2FF"  
+             - "#147F4F"   
+             - "#79B32C"   
+             - "#FDFE00"   
+             - "#FF8700"   
+             - "#FF0F00"   
+             - "#9D0F2B"   
+             - "#4D0000"   
+             - "#BA2E6D" 
+    info:
+      source: NASA
+      spatialExtent: Texas
+      temporalResolution: Annual
+      unit: Fahrenheit
