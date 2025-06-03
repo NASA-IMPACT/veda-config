@@ -29,11 +29,9 @@ layers:
       - 8
       - 16
     sourceParams:
-      bidx: 1
-      colormap_name: inferno
-      rescale:
-        - 0
-        - 255
+    sourceParams:
+      resampling: bilinear
+      asset_bidx: cog_default|1,2,3
     compare:
       datasetId: nighttime-lights
       layerId: ercot-houston-nightlights-freeze
@@ -43,8 +41,10 @@ layers:
         }
     legend:
       type: gradient
-      min: Less
-      max: More
+      unit:
+        label:W cm-2 sr-1
+      min: 0
+      max: 255
       stops:
         - '#08041d'
         - '#1f0a46'
@@ -53,9 +53,9 @@ layers:
         - '#f7cf39'
     info:
       source: NOAA & NASA
-      spatialExtent: Global
-      temporalResolution: Monthly 
-      unit: N/A
+      spatialExtent: Regional
+      temporalResolution: N/A
+      unit: Artificial Light Emissions (W cm^-2 sr^-1)
 
   - id: nightlights-hd-monthly
     stacCol: nightlights-hd-monthly
