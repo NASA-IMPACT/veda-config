@@ -35,7 +35,6 @@ layers:
       - 16
     sourceParams:
      colormap_name: surface_temperature    
-     bidx: 1
      nodata: 999
      rescale:
          - -30
@@ -44,28 +43,28 @@ layers:
          type: gradient
          unit:
              label: F
-         min: 55
-         max: 136
+         min: -30
+         max: 110
          stops: 
-             - "#3CCBCE"
-             - "#C5F8FF"   
-             - "#FEC5FF"   
-             - "#E079FB"   
-             - "#094FC9"   
-             - "#009FFF"   
-             - "#44E2FF"  
-             - "#147F4F"   
-             - "#79B32C"   
-             - "#FDFE00"   
-             - "#FF8700"   
-             - "#FF0F00"   
-             - "#9D0F2B"   
-             - "#4D0000"   
-             - "#BA2E6D" 
+            - "#3CCBCE"
+            - "#C5F8FF"   
+            - "#FEC5FF"   
+            - "#E079FB"   
+            - "#094FC9"   
+            - "#009FFF"   
+            - "#44E2FF"  
+            - "#147F4F"   
+            - "#79B32C"   
+            - "#FDFE00"   
+            - "#FF8700"   
+            - "#FF0F00"   
+            - "#9D0F2B"   
+            - "#4D0000"   
+            - "#BA2E6D" 
     info:
       source: NASA
       spatialExtent: Texas
-      temporalResolution: Annual
+      temporalResolution: Daily
       unit: Fahrenheit
 
 ---
