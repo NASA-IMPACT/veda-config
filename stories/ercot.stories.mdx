@@ -112,7 +112,7 @@ taxonomy:
       idKey='Source'
       xKey='Date'
       yKey='Price'
-      yAxisLabel='Cost of Natural Gas (USD))'
+      yAxisLabel='Cost of Natural Gas (USD)'
       highlightStart = '12/01/2020'
       highlightEnd = '04/30/2021'
       highlightLabel = 'Deep Freeze'
@@ -157,6 +157,22 @@ taxonomy:
    In August 2023, ERCOT recorded an all-time peak demand of 85,508 megawatts, indicating that the grid was operating near its limits. Just one year later, the all-time peak demand record was broken again, with a peak demand of 85,558.98 megawatts being recorded. NASA’s Black Marble Night Lights dataset shows how major metro areas such as Dallas - Fort Worth, Houston, and Austin maintain high light levels through the heat, but the sustainability of this energy use is questionable as heat waves continue to pose a threat in years to come.
 
   </Prose>
+</Block>
+
+<Block>
+  <Figure>
+    <Chart
+      dataPath={new URL('./Ercot_Gas_Usage_2023.csv', import.meta.url).href}
+      dateFormat="%m/%d/%Y %H:%M"
+      idKey='Source'
+      xKey='Date'
+      yKey='Load'
+      yAxisLabel='ERCOT Natural Gas Consumption (Megawatts)'
+    />
+    <Caption>
+      **Figure 7.** Hourly natural gas usage in megawatts for the state of Texas during 2023, as recorded by [ERCOT](https://www.ercot.com/gridinfo/load/load_hist/index.html).
+    </Caption>
+  </Figure>
 </Block>
 
 <Block>
