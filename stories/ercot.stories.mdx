@@ -8,11 +8,15 @@ media:
   author: 
     name: Yelantsevv
     url: https://stock.adobe.com/contributor/206006333/yelantsevv
-pubDate: 2025-05-30T00:00
+pubDate: 2025-06-11T00:00
 taxonomy:
   - name: Topics
     values:
       - Sustainable Energy
+  - name: Subtopics
+    values:
+      - Cold
+      - Heat
   - name: Source
     values:
       - Community Contributed
@@ -20,11 +24,10 @@ taxonomy:
 
 <Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
   <Prose>
-    **Authors:** Andrew Blackford<sup>[1]</sup>\, Madison Wallner<sup>[1]</sup>\, Udaysankar Nair<sup>[1]</sup>
+    **Authors:** Andrew Blackford<sup>1</sup>\, Madison Wallner<sup>1</sup>\, Udaysankar Nair<sup>1</sup>
    
-    <sup>[1]</sup> The University of Alabama in Huntsville (UAH)
+    <sup>1</sup> The University of Alabama in Huntsville (UAH)
 
-    <mark>🚧 This Data Story presents work in progress and not peer-reviewed results! 🚧</mark>
   </Prose>
 </Block>
 
@@ -52,7 +55,7 @@ taxonomy:
       alt='Maximum number of Texans without power'
     />
     <Caption>
-    **Figure 2.** Maximum number of individuals per county enduring power outages as a result of the 2021 Texas Deep Freeze, as recorded by EAGLE-I data.
+    **Figure 2.** Maximum number of customers per county enduring power outages as a result of the 2021 Texas Deep Freeze, as recorded by EAGLE-I data.
     </Caption>
   </Figure>
 
@@ -62,7 +65,7 @@ taxonomy:
   </Prose>
 </Block>
 
-<Block>
+<Block type='wide'>
   <Figure>
     <Chart
       dataPath={new URL('./ERCOT_power_outages_Texas.csv', import.meta.url).href}
@@ -96,7 +99,7 @@ taxonomy:
     attrAuthor='NASA'
     attrUrl='https://nasa.gov/'
   >
-    **Figure 4.** Comparison of artificial light emissions in Houston, Texas before and after the 2021 Deep Freeze on February 10, 2021 and February 16, 2021.
+    **Figure 4.** Comparison of artificial light emissions in Houston, Texas before and during the 2021 Deep Freeze on February 10 and 16, 2021.
    </Caption>
   </Figure>
 </Block>
@@ -109,9 +112,9 @@ taxonomy:
       idKey='Source'
       xKey='Date'
       yKey='Price'
-      yAxisLabel='Cost of Natural Gas in U.S. Dollars'
-      highlightStart = '01/01/2021'
-      highlightEnd = '03/31/2021'
+      yAxisLabel='Cost of Natural Gas (USD))'
+      highlightStart = '12/01/2020'
+      highlightEnd = '04/30/2021'
       highlightLabel = 'Deep Freeze'
     />
     <Caption>
@@ -122,7 +125,7 @@ taxonomy:
 
 <Block>
   <Prose>
-   In the wake of the freeze, questions were raised about the lack of winterization standards for natural gas infrastructure, wind turbines, and even power plants that had shut down due to cold-related failures. The event was a solemn reminder of how grid resilience and energy sustainability are critical — not just for comfort, but for survival in harsh conditions.
+   In the wake of the freeze, questions were raised about the lack of winterization standards for natural gas infrastructure, wind turbines, and even power plants that had shut down due to cold-related failures. The event was a solemn reminder of how grid resilience and energy sustainability are critical - not just for comfort, but for survival in harsh conditions.
   </Prose>
 </Block>
 
@@ -153,7 +156,6 @@ taxonomy:
   <Prose>
    In August 2023, ERCOT recorded an all-time peak demand of 85,508 megawatts, indicating that the grid was operating near its limits. Just one year later, the all-time peak demand record was broken again, with a peak demand of 85,558.98 megawatts being recorded. NASA’s Black Marble Night Lights dataset shows how major metro areas such as Dallas - Fort Worth, Houston, and Austin maintain high light levels through the heat, but the sustainability of this energy use is questionable as heat waves continue to pose a threat in years to come.
 
-   <mark>Possibly show that BM NL does not show reduction in power (check out August 2023 and 2024)</mark>
   </Prose>
 </Block>
 
@@ -206,11 +208,11 @@ taxonomy:
 <Block>
   <Prose>
 
-    **Editors**: Andrew Blackford, Madison Wallner, Chelsea Aaron
+    **Editors**: Andrew Blackford, Madison Wallner, and Chelsea Aaron
 
-    **Developers**: Andrew Blackford and Madison Wallner
+    **Developers**: Madison Wallner and Andrew Blackford
 
-    **Science and Content Contributors**: Madison Wallner and Andrew Blackford
+    **Science and Content Contributors**: Andrew Blackford, Madison Wallner, Udaysankar Nair, and Brian Freitag
 
     **Questions / Feedback**: Email veda@uah.edu 
 
