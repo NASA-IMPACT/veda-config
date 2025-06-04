@@ -159,7 +159,7 @@ taxonomy:
   </Prose>
 </Block>
 
-<Block>
+<Block type='wide'>
   <Figure>
     <Chart
       dataPath={new URL('./Ercot_Gas_Usage_2023.csv', import.meta.url).href}
@@ -167,10 +167,10 @@ taxonomy:
       idKey='Source'
       xKey='Date'
       yKey='Load'
-      yAxisLabel='ERCOT Natural Gas Consumption (Megawatts)'
+      yAxisLabel='ERCOT Natural Gas Consumption (Gigawatts)'
     />
     <Caption>
-      **Figure 7.** Hourly natural gas usage in megawatts for the state of Texas during 2023, as recorded by [ERCOT](https://www.ercot.com/gridinfo/load/load_hist/index.html).
+      **Figure 7.** Hourly natural gas usage in gigawatts for the state of Texas during 2023, as recorded by [ERCOT](https://www.ercot.com/gridinfo/load/load_hist/index.html).
     </Caption>
   </Figure>
 </Block>
