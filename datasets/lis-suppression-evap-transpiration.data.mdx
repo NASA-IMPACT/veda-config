@@ -1,0 +1,196 @@
+---
+id: lis-etsuppression
+name: "LIS Modeled Suppression"
+description: "Change in Transpiration and Evapotranspiration for 2020 fires using Land Information System outputs"
+media:
+  src: ::file media/lis_modeled_et_and_transpiration_suppression.thumbnail.jpg
+  alt: Aerial View of East Troublesome wildfire burn scar
+  author:
+    name: Kent
+    url: https://as2.ftcdn.net/v2/jpg/04/56/61/87/1000_F_456618759_78z9x3cJLCb2FKh5DpoFwiI6t1iTLbik.jpg
+taxonomy:
+  - name: Topics
+    values:
+      - Wildfires
+      - Natural Disasters
+  - name: Subtopics
+    values:
+      - Habitat
+      - Evapotranspiration
+      - Water Cycle
+  - name: Source
+    values:
+      - NASA EIS
+infoDescription: |
+  ::markdown
+    Change in ET for 2020 fires using model outputs from Land Information System (LIS) framework that synthesizes multiple remote sensing observations within the Noah-MP land surface model. Change is calculated as the difference of ET in the immediate post-fire water year from that in the immediate pre-fire water year. The difference is normalized by pre-fire ET and negative values denote vegetation disturbance induced by fire or by a climatological anomaly resulting in the decline in ET.
+layers:
+  - id: lis-etsuppression
+    stacCol: lis-etsuppression
+    name: Evapotranspiration (ET) Anomalies
+    type: raster
+    description: "ET anomaly for 2020 fires using model outputs from Land Information System (LIS) framework that synthesizes multiple remote sensing observations within the Noah-MP land surface model."
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      asset_bidx: cog_default|1
+      colormap_name: rdylbu
+      rescale:
+        - -0.6
+        - 0.6
+    compare:
+      datasetId: mtbs-burn-severity  
+      layerId: mtbs-burn-severity  
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `ET Anomalies: ${dateFns.format(datetime, 'yyyy')} VS MTBS: ${dateFns.format(compareDatetime, 'yyyy')}`;
+        }
+    legend:
+      type: gradient
+      label: ET Anomalies 
+      min: "-0.6"
+      max: "0.6"
+      stops:
+      - "#a50026"
+      - "#f46d43"
+      - "#fee090"
+      - "#e0f3f8"
+      - "#74add1"
+      - "#313695"
+    info:
+      source: NASA
+      spatialExtent: Western United States
+      temporalResolution: Annual 
+      unit: Percentage Diff
+
+  - id: lis-tvegsuppression
+    stacCol: lis-tvegsuppression
+    name: Transpiration Anomalies
+    type: raster
+    description: "Standardized transpiration anomalies for 2020 fires using model outputs from Land Information System (LIS) framework that synthesizes multiple remote sensing observations within the Noah-MP land surface model."
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      asset_bidx: cog_default|1
+      colormap_name: rdylbu
+      rescale:
+        - -0.6
+        - 0.6
+    compare:
+      datasetId: mtbs-burn-severity  
+      layerId: mtbs-burn-severity  
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `Transpiration Anomalies: ${dateFns.format(datetime, 'yyyy')} VS MTBS: ${dateFns.format(compareDatetime, 'yyyy')}`;
+        }
+    legend:
+      type: gradient
+      label: Transpiration Anomalies 
+      min: "-0.6"
+      max: "0.6"
+      stops:
+      - "#a50026"
+      - "#f46d43"
+      - "#fee090"
+      - "#e0f3f8"
+      - "#74add1"
+      - "#313695"
+    info:
+      source: NASA
+      spatialExtent: Western United States
+      temporalResolution: Annual 
+      unit: Percent Diff  
+---
+
+
+<Block>
+  <Prose>   
+    ## Dataset Details
+    - **Temporal Extent:** 2020<br />
+    - **Spatial Extent:** Western United States<br />
+    - **Spatial Resolution:** 1 km<br />
+    - **Data Units:** Standardized anomalies
+    - **Data Type:** Research<br />
+  </Prose>
+<Figure>
+  <Map
+    datasetId='disalexi-etsuppression'
+    layerId='disalexi-etsuppression'
+    dateTime='2020-01-01'
+    zoom={4}
+    center={[-117.9283, 41.7758]}
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+    High resolution observations of ET anomalies from OpenET (DisALEXI model).
+  </Caption>
+</Figure>
+</Block>
+
+
+<Block>
+  <Prose>
+    ## About
+    
+  	Change in evapotranspiration (ET) and vegetation transpiration for 2020 fires using model outputs from Land Information System (LIS) framework that synthesizes multiple remote sensing observations within the Noah-MP land surface model.
+	
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+  ## Scientific Details
+  Change in ET is calculated as the difference of ET in the immediate post-fire water year from that in the immediate pre-fire water year. The difference is normalized by pre-fire ET and negative values denote vegetation disturbance induced by fire or by a climatological anomaly resulting in the decline in ET. Change in vegetation transpiration is calculated as the difference of transpiration in the immediate post-fire water year from that in the immediate pre-fire water year. The difference is normalized by pre-fire transpiration and negative values denote vegetation disturbance induced by fire or by a climatological anomaly resulting in the decline in transpiration.
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+  
+  ## Data Stories Using This Dataset
+  
+  **<Link to={"/stories/fire-life-cycle"}>Hydrological Drivers and Impacts of Fire</Link>**
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+    ## Limitations of use
+
+    NASA data and products are freely available to federal, state, public, non-profit and commercial users. This information can be experimental- or research-grade data products and may not be appropriate for operational use. These NASA data products and services are intended to aid decision makers and enhance situational awareness, but these data are not guaranteed to be consistently available or routinely updated. Please cite the information according to the direction provided in the metadata.
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+  ## Disclaimer
+  All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+  ## License
+  [Creative Commons Attribution 1.0 International](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC BY 1.0)
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+    ## Additional Resources
+
+    * [OpenET Product](https://openetdata.org/)
+    * [MTBS - Project overview](https://www.mtbs.gov/project-overview)
+    * [Interactive MTBS Viewer for Continental US](https://www.mtbs.gov/viewer/?region=conus)
+  </Prose>
+</Block>

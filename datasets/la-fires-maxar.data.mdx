@@ -1,17 +1,22 @@
 ---
 id: la-fires-maxar
+isHidden: true
 name: 'MAXAR Commercial Satellite Imagery - 2025 Eaton Fire'
 description: "Commercial MAXAR Satellite Imagery of the 2025 Eaton Fire while it was active on January 8, 2025."
 media:
-  src: ::file ./LA-Fires-background.png
+  src: ::file ./media/LA-Fires-background.png
   alt: Planet Labs Commercial Satellite Imagery of the Eaton Fire (January 9, 2025).
   author:
     name: NASA CDSA - Planet Labs
 taxonomy:
   - name: Topics
     values:
-      - Disasters
-      - Wildfire
+      - Wildfires
+  - name: Subtopics
+    values:
+      - Habitat
+      - Agriculture
+      - Natural Disasters
   - name: Source
     values:
       - MAXAR Technologies
@@ -50,7 +55,7 @@ layers:
       layerId: la-fires-parcels
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `${dateFns.format(datetime, 'dd LLL yyyy')}`;        
+          return `${dateFns.format(datetime, 'dd LLL yyyy')} VS ${dateFns.format(compareDatetime, 'dd LLL yyyy')}`;
         }
     info:
         source: MAXAR

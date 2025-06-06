@@ -1,0 +1,79 @@
+{
+    "id": "lis-global-da-gpp-5",
+    "description": "Gridded gross primary productivity (in g m-2 s-1) from 5km global LIS with assimilation",
+    "stac_version": "1.0.0",
+    "links": [
+      {
+        "href": "https://dev.openveda.cloud/api/stac/collections/lis-global-da-gpp-5/queryables",
+        "rel": "string",
+        "type": "image/tiff; application=geotiff",
+        "title": "string",
+        "additionalProp1": {}
+      }
+    ],
+    "stac_extensions": ["https://stac-extensions.github.io/render/v1.0.0/schema.json","https://stac-extensions.github.io/item-assets/v1.0.0/schema.json"],
+    "title": "Gross Primary Productivity - Global DA (5km)",
+    "type": "Collection",
+    "assets": {},
+    "license": "CC0-1.0",
+    "extent": {
+      "spatial": {
+        "bbox": [
+          [
+            -179.950000015724,
+            -59.9822487136459,
+            179.997398050378,
+            89.9999999874719
+          ]
+        ]
+      },
+      "temporal": {
+        "interval": [
+          [
+            "2002-09-01T00:00:00+00:00",
+            "2024-12-31T00:00:00+00:00"
+          ]
+        ]
+      }
+    },
+    "providers": [
+      {
+        "name": "NASA",
+        "description": "Gridded gross primary productivity (in g m-2 s-1) from 5km global LIS with assimilation",
+        "roles": [
+          "host",
+          "producer",
+          "processor",
+          "licensor"
+        ],
+        "url": "https://www.earthdata.nasa.gov/dashboard/"
+      }
+    ],
+    "dashboard:is_periodic": true,
+    "dashboard:time_density": "day",
+    "item_assets": {
+        "cog_default": {
+          "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+          "roles": [
+            "data",
+            "layer"
+          ],
+          "title": "Default COG Layer",
+          "description": "Cloud optimized default layer to display on map"
+        }
+      },
+      "renders": {
+        "dashboard": {
+          "bidx": [1],
+          "title": "VEDA Dashboard Render Parameters",
+          "assets": [
+            "cog_default"
+          ],
+          "rescale": [
+            [0, 100]
+          ],
+          "resampling": "bilinear",
+          "colormap_name": "viridis"
+        }
+      }
+  }
