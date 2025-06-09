@@ -51,11 +51,11 @@ taxonomy:
 <Block>
   <Figure>
     <Image
-      src={new URL('./ERCOT_Texas_Outages.png', import.meta.url).href}
+      src={new URL('./ERCOT_Texas_Outages.jpg', import.meta.url).href}
       alt='Maximum number of Texans without power'
     />
     <Caption>
-    **Figure 2.** Maximum number of customers per county enduring power outages as a result of the 2021 Texas Deep Freeze, as recorded by EAGLE-I data.
+    **Figure 2.** Maximum number of customers per county enduring power outages as a result of the 2021 Texas Deep Freeze. Source: [EAGLE-I](https://smc-datachallenge.ornl.gov/eagle/).
     </Caption>
   </Figure>
 
@@ -77,7 +77,7 @@ taxonomy:
       yAxisLabel='Maximum Power Outages Recorded Hourly'
     />
     <Caption>
-      **Figure 3.** Total hourly power outages across Texas before, during, and after the 2021 Deep Freeze, as recorded by EAGLE-I data.
+      **Figure 3.** Total hourly power outages across Texas before, during, and after the 2021 Deep Freeze. Source: [EAGLE-I](https://smc-datachallenge.ornl.gov/eagle/).
     </Caption>
   </Figure>
 </Block>
@@ -90,7 +90,7 @@ taxonomy:
 
 <Block>
   <Prose>
-   The human toll was devastating. The state reported 246 deaths, but other analyses suggest the real number may have been as high as 702 — nearly three times the death toll from Hurricane Harvey. One way to see the scale of the blackout is through satellite data. NASA’s Black Marble imagery of Houston shows a major drop in nighttime light between February 10 and 16, reflecting how widespread and long-lasting the outages were in both urban and rural areas.
+   The human toll was devastating. The state reported 246 deaths, but other analyses suggest the real number may have been as high as 702 — nearly three times the death toll from Hurricane Harvey. One way to see the scale of the blackout is through satellite data. NASA’s Black Marble imagery of Houston shows a major drop in nighttime artificial light emissions between February 10 and 16, reflecting how widespread and long-lasting the outages were in both urban and rural areas.
   </Prose>
 
   <Figure>
@@ -131,7 +131,7 @@ taxonomy:
       highlightLabel = 'Deep Freeze'
     />
     <Caption>
-      **Figure 5.** Daily natural gas prices within the United States from 1997 to 2025 in U.S. Dollars, as recorded by [EIA](https://www.eia.gov/dnav/ng/hist/rngwhhdd.htm).
+      **Figure 5.** Daily natural gas prices within the United States from 1997 to 2025 in U.S. Dollars. Source: [EIA](https://www.eia.gov/dnav/ng/hist/rngwhhdd.htm).
     </Caption>
   </Figure>
 </Block>
@@ -167,7 +167,7 @@ taxonomy:
 
 <Block>
   <Prose>
-   On multiple days in 2023, ERCOT issued conservation alerts, asking Texans to reduce electricity use during peak afternoon hours to help prevent rolling blackouts. On June 23, 2023, MODIS satellite data recorded land surface temperatures exceeding 110°F across large portions of eastern Texas, highlighting the extreme conditions that drove energy use higher. That summer, ERCOT reported a record peak electricity demand of 85.51 megawatts in August - the highest in state history at the time. Just one year later, that record was broken again, with demand reaching 85.56 megawatts.
+   On multiple days in 2023, ERCOT issued conservation alerts, asking Texans to reduce electricity use during peak afternoon hours to help prevent rolling blackouts. On June 23, 2023, MODIS satellite data recorded land surface temperatures exceeding 110°F across large portions of eastern Texas, highlighting the extreme conditions that drove energy use higher. That summer, ERCOT reported a record peak electricity demand of 85.51 gigawatts in August — the highest in state history at the time. Just one year later, that record was broken again, with demand reaching 85.56 gigawatts.
   </Prose>
 </Block>
 
@@ -182,14 +182,14 @@ taxonomy:
       yAxisLabel='ERCOT Natural Gas Consumption (Gigawatts)'
     />
     <Caption>
-      **Figure 7.** Hourly natural gas usage in gigawatts for the state of Texas during 2023, as recorded by [ERCOT](https://www.ercot.com/gridinfo/load/load_hist/index.html).
+      **Figure 7.** Hourly natural gas usage in gigawatts for the state of Texas during 2023. Source: [ERCOT](https://www.ercot.com/gridinfo/load/load_hist/index.html).
     </Caption>
   </Figure>
 </Block>
 
 <Block>
   <Prose>
-   This spike in electricity use also led to a sharp rise in natural gas consumption, as shown in the ERCOT usage data. The hourly time series data reveals how demand steadily increased through the summer months, peaking alongside the hottest weeks of the year. These heatwaves tested the limits of the ERCOT grid, reinforcing the need to prepare for prolonged periods of high demand during extreme heat.
+   This spike in electricity use also led to a sharp rise in natural gas consumption, as shown in the ERCOT natural gas usage data. The hourly time series reveals how demand steadily increased through the summer months, peaking alongside the hottest weeks of the year. These heatwaves tested the limits of the ERCOT grid, reinforcing the need to prepare for prolonged periods of high demand during extreme heat.
   </Prose>
 </Block>
 
@@ -205,7 +205,7 @@ taxonomy:
 <Block>
   <Prose>
     ## Conclusion
-    The events of recent years have highlighted the operational limits of the ERCOT grid under extreme weather conditions, continuing to direct the public’s attention to the importance of a reliable and flexible power infrastructure. Texas’s energy system must be equipped to handle peak demand, regardless of season, without risking large-scale blackouts or cascading failures. Advances in satellite remote sensing and ground observational monitoring, grid forecasting, and diversified energy strategies can support better decision-making and emergency response. By applying lessons from past disruptions and investing in resilient, forward-looking strategies, ERCOT can strengthen its ability to meet the future needs of Texas’s residents, industries, and communities.
+    The events of recent years have highlighted the operational limits of the ERCOT grid under extreme weather conditions, continuing to direct the public’s attention to the importance of a reliable and flexible power infrastructure. Texas’ energy system must be equipped to handle peak demand, regardless of season, without risking large-scale blackouts or cascading failures. Advances in satellite remote sensing and ground observational monitoring, grid forecasting, and diversified energy strategies can support better decision-making and emergency response. By applying lessons from past disruptions and investing in resilient, forward-looking strategies, ERCOT can strengthen its ability to meet the future needs of Texas residents, industries, and communities.
   </Prose>
 </Block>
 
@@ -234,6 +234,7 @@ taxonomy:
   <Prose>
     ### Data Access
 
+    * [EAGLE-I Poweroutage Dataset](https://smc-datachallenge.ornl.gov/eagle/)
     * [MODIS LST and Emissivity](https://modis.gsfc.nasa.gov/data/dataprod/mod11.php)
     * [NASA's HD Black Marble Nightlights](https://blackmarble.gsfc.nasa.gov/)
   </Prose>
