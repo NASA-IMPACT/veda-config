@@ -667,6 +667,17 @@ layers:
       src: ::file ./media/vulcan-co2-yeargrid-v4.thumbnails.total.png
       alt: Rendered Fossil Fuel CO₂ Emissions                                                    
 ---
+<Block>
+  <Prose>
+    <div style={{ border: '2px solid red', padding: '10px', display: 'inline-block', color: '#1b2631' }}>
+      <span style={{ color: 'red', fontWeight: 'bold' }}>Notice:</span>
+      <span style={{ color: '#1b2631', marginLeft: '4px' }}>
+        See Version History below for an update affecting data accessed prior to June 2025. If data downloaded from the US GHG Center prior to June 17, 2025 was previously used, re-accessing the data is advised.
+      </span>
+    </div>
+  </Prose>
+</Block>
+
 
 <Block>
   <Prose>
@@ -696,6 +707,10 @@ layers:
   <Prose>
     ## Source Data Product Citation
     This data product will soon be available at the NASA Oak Ridge National Laboratory Distributed Active Archive Center (ORNL DAAC). Once available, the data product citation will be provided here. In the meantime, please refer to the [Gurney et al. 2020 publication](https://doi.org/10.1029/2020JD032974) for more information.
+    
+    ## Version History
+    The current version is v4.0, which was added to the US GHG Center in September 2024.
+    - In May 2025, an error was detected in the Vulcan data presented in the GHG Center [Exploration and Analysis environment](https://earth.gov/ghgcenter/exploration?search=vulcan-ffco2-yeargrid-v4&datasets=%5B%5D&taxonomy=%7B%7D). The data presented was off by a scaling factor of 44/12. This error was not present in the data displayed in the [Urban Dashboard tool](https://earth.gov/ghgcenter/custom-interfaces/urban-dashboard/?dataset=vulcan). On June 17, 2025 the error was resolved. If Vulcan v4.0 data were downloaded directly from the US GHG Center between September 24, 2024 - June 17, 2025, re-accessing the data is advised. 
     
     ## Disclaimer
     This dataset has been transformed from the original format (GeoTIFF) into Cloud Optimized GeoTIFF ([COG](https://www.cogeo.org/)) for display in the US GHG Center. Careful quality checks are used to ensure data transformation has been performed correctly.
