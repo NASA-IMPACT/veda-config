@@ -1,0 +1,60 @@
+---
+id: pace-L3-oceancolor
+name: 'PACE OCI Level-3 Chlorophyll and Downwelling Diffuse Attenuation Coefficient'
+description: "The primary sensor aboard the PACE spacecraft is the Ocean Color Instrument (OCI) and is utilized to provide information on chlorophyll and downwelling diffuse attenuation coefficients.  It is a highly advanced optical spectrometer that will be used to measure properties  of light over portions of the electromagnetic spectrum."
+media:
+  src: ::file ./media/twsanomaly-globe.png
+  alt: TWS trend of anomalies from LIS outputs.
+  author:
+    name: NASA LIS
+    url:
+taxonomy:
+  - name: Topics
+    values:
+    - Water Resources
+  - name: Source
+    values:
+    - NASA EIS
+infoDescription: |
+  ::markdown
+     Realistic estimates of water and energy cycle variables are necessary for accurate understanding of earth system processes. We develop a 10 km global reanalysis product of water, energy, and carbon fluxes by assimilating satellite observed surface soil moisture, leaf area index, and terrestrial water storage anomalies into a land surface model within NASA Land Information System Framework. We applied a seasonal and trend decomposition algorithm to get the trend estimates for terrestrial water storage and gross primary production. The method can better help to deal with [nonstationarities](https://github.com/Earth-Information-System/sea-level-and-coastal-risk/blob/main/AMS_2023_Wanshu_Nie_for_VEDA_Discovery.pdf) and seasonal shifts and provide a more robust estimate of trends.
+layers:
+  - id: pace-oci-L3-chlorophyll
+    stacCol: pace-oci-L3-chlorophyll
+    name: 'PACE Chlorophyll Concentration, OCI Algorithm'
+    stacApiEndpoint: https://dev.openveda.cloud/api/stac
+    rasterApiEndpoint: https://dev.openveda.cloud/api/raster
+    type: raster
+    description: 'PACE Chlorophyll Concentration, OCI Algorithm'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      asset_bidx: cog_default|1
+      colormap_name: "greens"
+      rescale:
+        - 0
+        - 100
+      nodata: "-9999.0"
+      minzoom: 0
+      maxzoom: 20
+    info:
+      source: NASA
+      spatialExtent: Ocean
+      temporalResolution: Daily
+      unit: mg m^-3
+    compare:
+      datasetId: pace-oci-L3-chlorophyll
+      layerId: pace-oci-L3-chlorophyll
+      mapLabel: |
+        ::js ({dateFns, datetime, compareDatetime}) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      type: gradient
+
+
+---
+
+
+
