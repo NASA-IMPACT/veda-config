@@ -32,7 +32,7 @@ taxonomy:
       - Model Output
 infoDescription: |
   ::markdown
-    - Temporal Extent: January 1, 2001 - December 31, 2023
+    - Temporal Extent: January 1, 2001 - Ongoing
     - Temporal Resolution: Daily and Monthly Averages
     - Spatial Extent: Global
     - Spatial Resolution: 0.1° x 0.1°
@@ -771,7 +771,7 @@ layers:
 
 <Block>
   <Prose>
-    **Temporal Extent:** January 1, 2001 - December 31, 2023<br />
+    **Temporal Extent:** January 1, 2001 - Ongoing<br />
     **Temporal Resolution:** Daily and Monthly Averages<br />
     **Spatial Extent:** Global<br />
     **Spatial Resolution:** 0.1° x 0.1°<br />
@@ -779,7 +779,7 @@ layers:
     **Data Type:** Research<br />
     **Data Latency:** Less than a year, typically 6 months<br />
 
-    This dataset presents a variety of carbon flux parameters derived from the Más Informada Carnegie-Ames-Stanford-Approach (MiCASA) model. The model’s input data includes air temperature, precipitation, incident solar radiation, a soil classification map, and several satellite derived products. All model calculations are driven by analyzed meteorological data from NASA’s Modern-Era Retrospective analysis for Research and Application, Version 2 (MERRA-2). The resulting product provides global, daily and monthly mean data at 0.1 degree resolution from January 2001 through December 2023. It includes carbon flux variables expressed in units of grams of carbon per square meter per day (g Carbon/m²/day) from net primary production (NPP), heterotrophic respiration (Rh), wildfire emissions (FIRE), fuel wood burning emissions (FUEL), net ecosystem exchange (NEE), and net biosphere exchange (NBE). The latter two are derived from the first four (see Scientific Details below). An atmospheric correction variable (ATMC) is also provided to account for long term historical changes in the uptake of carbon dioxide (CO₂) from the atmosphere to the biosphere. Monthly mean layers are computed by taking the mean carbon flux of all days in the month. MiCASA is an extensive revision of the CASA – Global Fire Emissions Database, version 3 (CASA-GFED3) product. CASA-GFED3 and earlier versions of MERRA-driven CASA-GFED carbon fluxes have been used in several atmospheric CO₂ transport studies, serve as a community standard for priors of flux inversion systems, and through the support of NASA’s Carbon Monitoring System (CMS), help characterize, quantify, understand and predict the evolution of global carbon sources and sinks.
+    This dataset presents a variety of carbon flux parameters derived from the Más Informada Carnegie-Ames-Stanford-Approach (MiCASA) model. The model’s input data includes air temperature, precipitation, incident solar radiation, a soil classification map, and several satellite derived products. All model calculations are driven by analyzed meteorological data from NASA’s Modern-Era Retrospective analysis for Research and Application, Version 2 (MERRA-2). The resulting product provides global, daily and monthly mean data at 0.1 degree resolution from January 2001 through present. It includes carbon flux variables expressed in units of grams of carbon per square meter per day (g Carbon/m²/day) from net primary production (NPP), heterotrophic respiration (Rh), wildfire emissions (FIRE), fuel wood burning emissions (FUEL), net ecosystem exchange (NEE), and net biosphere exchange (NBE). The latter two are derived from the first four (see Scientific Details below). An atmospheric correction variable (ATMC) is also provided to account for long term historical changes in the uptake of carbon dioxide (CO₂) from the atmosphere to the biosphere. Monthly mean layers are computed by taking the mean carbon flux of all days in the month. MiCASA is an extensive revision of the CASA – Global Fire Emissions Database, version 3 (CASA-GFED3) product. CASA-GFED3 and earlier versions of MERRA-driven CASA-GFED carbon fluxes have been used in several atmospheric CO₂ transport studies, serve as a community standard for priors of flux inversion systems, and through the support of NASA’s Carbon Monitoring System (CMS), help characterize, quantify, understand and predict the evolution of global carbon sources and sinks.
 
   </Prose>
 </Block>
@@ -794,7 +794,7 @@ layers:
     - MiCASA is an extensive revision of CASA-GFED3, which uses updated input data sources for improved spatial and temporal resolution (see Scientific Details above for information on input data)
     - Spatial resolution increase from 0.5° to 0.1°
     - Temporal resolution increase from monthly to daily
-    - Additional data added with availability from January 2001–December 2023 (previous version data was only available from January 2003–December 2017)
+    - Additional data added with availability from January 2001–Ongoing (previous version data was only available from January 2003–December 2017)
     - Inclusion of the Net Biosphere Exchange (NBE) and Atmospheric Correction (ATMC) data layers
     - MiCASA v1 data was delivered to the US GHG Center in Cloud Optimized GeoTIFF (COG) format, whereas CASA-GFED3 data was delivered in NetCDF format and then transformed into COG
 
