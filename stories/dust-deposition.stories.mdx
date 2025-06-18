@@ -45,7 +45,7 @@ taxonomy:
       Image 2: Dust storm moving off of Africa. Source: NASA
     </Caption>
   </Figure>
-  <Prose>
+
 </Block>
 
 <Block>
@@ -60,46 +60,36 @@ taxonomy:
   </Figure>
 </Block>
 
-<Block type="wide">
-  <Figure>
-    <Chart
-      dataPath={new URL('./dust-deposition-trendline.csv', import.meta.url).href}
-      dateFormat="%Y-%m-%d"
-      idKey='source'
-      xKey='Date'
-      yKey='Chlorophyll'
-      yAxisLabel='Chlorophyll-a concentration (mg/m^3)'
-    />
-    <Caption>
-      Figure 1. Time series of monthly mean chlorophyll-a concentration over the Tropical North Atlantic (TNA) as derived from MODIS.
-    </Caption>
-  </Figure>
-</Block>
 
 <Block>
-    ## Meteorological Variables in Analyzing Phytoplankton
-    
-    The different meteorological variables that may impact and affect phytoplankton across the TNAO include:  
-      <ul>
-        <ls>Aerosol Optical Depth (AOD): A measure of how much sunlight is blocked or scattered by aerosols (tiny particles in the atmosphere)</ls>
-        <ls>Cloud Cover: Fraction or percentage of the sky covered by clouds</ls>
-        <ls>Sea-Surface Temperatures (SST): The temperature at the top layer of the ocean</ls>
-        <ls>Wind Speed: The rate at which the wind is moving on the ocean surface</ls>
-        <ls>Dust Concentration: The amount of dust present in a volume of the atmosphere</ls>
-      </ul>
- 
-  </Prose>
+    <Prose>
+      ## Meteorological Variables in Analyzing Phytoplankton
+    </Prose>
+
+    <Prose>
+      The different meteorological variables that may impact and affect phytoplankton across the TNAO include: 
+    </Prose> 
+    <ul>
+      <li>Aerosol Optical Depth (AOD): A measure of how much sunlight is blocked or scattered by aerosols (tiny particles in the atmosphere)</li>
+      <li>Cloud Cover: Fraction or percentage of the sky covered by clouds</li>
+      <li>Sea-Surface Temperatures (SST): The temperature at the top layer of the ocean</li>
+      <li>Wind Speed: The rate at which the wind is moving on the ocean surface</li>
+      <li>Dust Concentration: The amount of dust present in a volume of the atmosphere</li>
+    </ul>
+
 
   <Prose> 
     <p> Satellite data, specifically from NASA’s Plankton, Aerosol, Cloud, and ocean Ecosystem (PACE) satellite, plays a massive role when it comes to analyzing dust and its effects on phytoplankton. Additionally, NASA’s Modern Era Retrospective analysis for Research and Applications Version 2 (MERRA-2) was heavily used as a source of historical weather data, and products from the MODerate resolution Imaging Spectroradiometer (MODIS) - a satellite-based Earth observation sensor - were used as a means to obtain observations of different variables on the Earth’s surface. </p>
     <p> These variables were studied using data from the different NASA data products. AOD and cloud cover were mainly measured using Terra and Aqua satellites. SST were also obtained using MODIS. Wind Speed and dust concentration were analyzed using MERRA-2 data. Lastly, chlorophyll-a used PACE satellite data for analysis. </p>
-    <P> PACE data shows that chlorophyll-a concentrations are increasing across the TNAO over the previous decade (Figure 1). Chlorophyll-a concentration is a reasonable approximation for phytoplankton because similar to plants, phytoplankton undergo photosynthesis to convert sunlight into oxygen. </P>
-
+    <p> PACE data shows that chlorophyll-a concentrations are increasing across the TNAO over the previous decade (Figure 1). Chlorophyll-a concentration is a reasonable approximation for phytoplankton because similar to plants, phytoplankton undergo photosynthesis to convert sunlight into oxygen. </p>
+  </Prose>
 </Block>
 
 
-<Block> 
-  Insert cartoon here 
+<Block>
+  <Prose>
+    [Illustrative cartoon goes here: concept of dust fertilization and phytoplankton bloom]
+  </Prose>
 </Block>
 
 
@@ -124,14 +114,6 @@ taxonomy:
 
 </Block>
 
-<Block>
-  <Prose>
-    including the amount of sunlight, nutrient availability, sea surface temperature (SST) and ocean acidity. Cloud cover and aerosols in the atmosphere both block sunlight and thus affect the ocean chlorophyll amount. Studies show that when the amount of sunlight is reduced by clouds, the deeper layers of the ocean are most affected and thus plankton growth is concentrated at the surface and can lead to an increase in chlorophyll near the ocean surface. Nutrient availability can be affected by atmospheric aerosols, especially dust which can directly fall into the ocean or may get washed out by rain into the ocean. However, when rain washes out dust from the atmosphere, it can also bring other particles and soluble gases present in the atmosphere which can affect ocean acidity. Sea surface temperature influence on chlorophyll is complex, with chlorophyll concentration increasing with SST in some regions of the globe and vice versa in other regions.
-
-     We used datasets for cloud cover, direct deposition and rain washout of dust, sea surface temperature and rain generated by the NASA Modern Era Retrospective analysis for Research and Applications Version 2 (MERRA2) dataset to examine which factors are important for explaining increasing chlorophyll trends over TNA. Our statistical modeling shows that cloud cover, direct dust fallout and SST all have a positive influence on chlorophyll concentrations in the TNA region. However, rain and dust washed out by rain on to ocean, both have a negative influence. While increases in cloud cover and SST will cause chlorophyll concentration to increase, monthly average time series over the TNA region obtained from NASA MERRA show no increasing trend during 2015-2023 (Figure 2 and 3). However, the time series of direct dust fallout obtained from NASA MERRA shows an increasing trend during the same time period (Figure 4). Both rain and rain washout of dust show a decreasing trend during the 2015-2023 time period. This implies that the detrimental effect of rain on plankton growth is reduced during this time period. Thus our analysis shows that increasing chlorophyll and plankton growth is driven by increasing dust deposits and decreasing rainfall in the TNA region.
-
-  </Prose>
-</Block>
 
 <Block>
   Example 1: 5/23/24 -> 5/31/24 (Middle Trop. Atlantic) (PACE)
