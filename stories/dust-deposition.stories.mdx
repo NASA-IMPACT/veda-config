@@ -23,7 +23,7 @@ taxonomy:
   <Prose>
 
     ## Introduction
-    The Earth system is a vast and complex system that involves many interconnected parts from land, ocean, and atmosphere. They all influence one another in different ways that impacts many disciplines across earth sciences. These effects don’t just impact the Earth-system, but potentially the greater global economy. One such example of this is phytoplankton. This tiny, but mighty organism is considered to be one of the most important organisms in the ocean. This is largely due to its influence on the carbon cycle and the larger marine ecosystem around the globe. Fish and other marine organisms typically feed on phytoplankton. This makes understanding how phytoplankton react to different conditions, such as dust deposition and other factors vitally important. This, in turn, can affect the larger global fish market, economically. This means several billions of dollars can be affected depending on meteorological factors that can influence phytoplankton. There are many different oceanic basins that can be observed for such phenomena. However, this work will focus specifically on the Tropical Northern Atlantic Ocean (TNAO) and analyzing its effects on the phytoplankton there. Dust plumes like the one shown in video 1 are very common across the TNAO and are very easily tracked. 
+    The Earth system is large and complicated, involving many interconnected parts of the land, ocean, and atmosphere. They all influence one another in different ways and impact many disciplines across Earth science. These effects are not limited to the Earth system, but potentially extend to the greater global economy. One primary example of this is phytoplankton. This tiny, but mighty organism is one of the most important organisms in the ocean. Fish and other marine organisms typically feed on phytoplankton, making them the first step of energy in the food chain and the foundation for marine ecosystems around the globe. This makes understanding how phytoplankton react to various conditions,  including dust deposition and meteorological factors, vitally important. The Tropical Northern Atlantic Ocean (TNAO) is an ocean basin that can be observed to analyze these effects. Dust plumes in this region typically begin in the Saharan Desert, in Northern Africa, and frequently gets carried across the Atlantic Ocean.
   </Prose>
   
   <Figure>
@@ -74,17 +74,12 @@ taxonomy:
       Figure 1. Time series of monthly mean chlorophyll-a concentration over the Tropical North Atlantic (TNA) as derived from MODIS.
     </Caption>
   </Figure>
-
-  <Prose>
-    Dust is important, though other meteorological variables may have important effects as well. 
-  </Prose>
-
 </Block>
 
 <Block>
     ## Meteorological Variables in Analyzing Phytoplankton
     
-    This work analyzes different meteorological variables that may impact and affect phytoplankton across the TNAO. These variables include: 
+    The different meteorological variables that may impact and affect phytoplankton across the TNAO include:  
       <ul>
         <ls>Aerosol Optical Depth (AOD): A measure of how much sunlight is blocked or scattered by aerosols (tiny particles in the atmosphere)</ls>
         <ls>Cloud Cover: Fraction or percentage of the sky covered by clouds</ls>
@@ -94,6 +89,39 @@ taxonomy:
       </ul>
  
   </Prose>
+
+  <Prose> 
+    <p> Satellite data, specifically from NASA’s Plankton, Aerosol, Cloud, and ocean Ecosystem (PACE) satellite, plays a massive role when it comes to analyzing dust and its effects on phytoplankton. Additionally, NASA’s Modern Era Retrospective analysis for Research and Applications Version 2 (MERRA-2) was heavily used as a source of historical weather data, and products from the MODerate resolution Imaging Spectroradiometer (MODIS) - a satellite-based Earth observation sensor - were used as a means to obtain observations of different variables on the Earth’s surface. </p>
+    <p> These variables were studied using data from the different NASA data products. AOD and cloud cover were mainly measured using Terra and Aqua satellites. SST were also obtained using MODIS. Wind Speed and dust concentration were analyzed using MERRA-2 data. Lastly, chlorophyll-a used PACE satellite data for analysis. </p>
+    <P> PACE data shows that chlorophyll-a concentrations are increasing across the TNAO over the previous decade (Figure 1). Chlorophyll-a concentration is a reasonable approximation for phytoplankton because similar to plants, phytoplankton undergo photosynthesis to convert sunlight into oxygen. </P>
+
+</Block>
+
+
+<Block> 
+  Insert cartoon here 
+</Block>
+
+
+<Block type="wide">
+  <Figure>
+    <Chart
+      dataPath={new URL('./dust-deposition-trendline.csv', import.meta.url).href}
+      dateFormat="%Y-%m-%d"
+      idKey='source'
+      xKey='Date'
+      yKey='Chlorophyll'
+      yAxisLabel='Chlorophyll-a concentration (mg/m^3)'
+    />
+    <Caption>
+      Figure 1. Time series of monthly mean chlorophyll-a concentration over the Tropical North Atlantic (TNA) as derived from MODIS.
+    </Caption>
+  </Figure>
+
+  <Prose>
+    This data suggests that there is an increase in phytoplankton, as chlorophyll-a concentrations have been steadily increasing. The observed increase in phytoplankton compared to previous years suggests a potential meteorological influence that warrants further investigation. 
+  </Prose>
+
 </Block>
 
 <Block>
@@ -106,98 +134,54 @@ taxonomy:
 </Block>
 
 <Block>
+  Example 1: 5/23/24 -> 5/31/24 (Middle Trop. Atlantic) (PACE)
+</Block>
+
+<Block>
+  Example 2: 7/17/24 -> 8/1/24 (E. Carr.) (PACE/NOAA-21/Suomi)
+</Block>
+
+<Block>
+  Example 3: 4/13/25 -> 5/7/25 (Middle Trop. Atlantic) (PACE)
+</Block>
+
+<Block>
+  <Prose>
+    AOD and Chlorophyll-a
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    Cloud Cover and Chlorophyll-a
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    SST and Chlorophyll-a
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    Wind Speed and Chlorophyll-a
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    Dust Surface Mass Concentration and Chlorophyll-a
+  </Prose>
+</Block>
+
+<Block>
   <Prose>
 
     ## Conclusion
-    Implications of our analysis are that the changes in climate occurring over the TNA region and the Sahel are leading to an increase in plankton growth in the TNA region. This in turn leads to the added removal of carbon dioxide from the atmosphere, which is a greenhouse and the major driver of human-induced climate change.
+    With utilizing MODIS, PACE, and MERRA-2 data, we are able to analyze the effects caused by different meteorological variables onto phytoplankton across the TNAO. By reviewing these variables, we can better understand exactly how phytoplankton reacts to each one of these variables over time. The analyzed data suggests that the primary drivers of phytoplankton growth across the TNAO are largely due to a decrease in rainfall and an increase in dust deposition over the open ocean. In essence, nutrients would be supplied to the phytoplankton and continue to grow in population, since rainfall wouldn’t wash out as many nutrients from the incoming dust plumes. This wouldn’t assume that other variables such SST, AOD, and wind speed couldn’t have impacts, rather their influence less comparatively. With increasing phytoplankton populations across the TNAO, it would likely bring an increase in marine biodiversity, with many oceanside communities around the Atlantic Ocean relying on fishing as a dominant part of their economies.
   
   </Prose>
-  <Figure>
-      <Image
-      src={new URL('./dust.gif', import.meta.url).href}
-    />
-    <Caption attrAuthor='GEOSTATIONARY OPERATIONAL ENVIRONMENTAL SATELLITES—R SERIES' attrUrl='https://www.goes-r.gov/spacesegment/abi.html'>
-      Animation of Saharan Duststorm in June 2020. 
-    </Caption>
-  </Figure>
+  
 </Block>
 
-<Block type="wide">
-  <Figure>
-    <Chart
-      dataPath={new URL('./sst-dust.csv', import.meta.url).href}
-      dateFormat="%Y-%m-%d"
-      idKey='source'
-      xKey='Date'
-      yKey='Sea Surface Temperature'
-      yAxisLabel='Temperature (Celsius)'
-    />
-    <Caption>
-      Figure 2. Time series of monthly mean sea surface temperature over the Tropical North Atlantic (TNA) as measured from MERRA-2.
-    </Caption>
-  </Figure>
-</Block>
-
-<Block type="wide">
-  <Figure>
-    <Chart
-      dataPath={new URL('./cld-dust.csv', import.meta.url).href}
-      dateFormat="%Y-%m-%d"
-      idKey='source'
-      xKey='Date'
-      yKey='Cloud Cover'
-      yAxisLabel='Cloud Cover (0 to 1)'
-    />
-    <Caption>
-      Figure 3. Time series of monthly mean cloud cover over the Tropical North Atlantic (TNA) as derived from MERRA-2.
-    </Caption>
-  </Figure>
-</Block>
-
-<Block type="wide">
-  <Figure>
-    <Chart
-      dataPath={new URL('./dry-dust.csv', import.meta.url).href}
-      dateFormat="%Y-%m-%d"
-      idKey='source'
-      xKey='Date'
-      yKey='Dry Dust Deposition'
-      yAxisLabel='Dry Dust Deposition (mg/m^3)'
-    />
-    <Caption>
-      Figure 4. Time series of monthly mean dry dust deposition concentration over the Tropical North Atlantic (TNA) as derived from MODIS.
-    </Caption>
-  </Figure>
-</Block>
-
-<Block type="wide">
-  <Figure>
-    <Chart
-      dataPath={new URL('./wet-dust.csv', import.meta.url).href}
-      dateFormat="%Y-%m-%d"
-      idKey='source'
-      xKey='Date'
-      yKey='Wet Dust Deposition'
-      yAxisLabel='Wet Dust Deposition'
-    />
-    <Caption>
-      Figure 5. Time series of monthly mean wet dust deposition concentration over the Tropical North Atlantic (TNA) as derived from MODIS.
-    </Caption>
-  </Figure>
-</Block>
-
-<Block type="wide">
-  <Figure>
-    <Chart
-      dataPath={new URL('./rainfall-dust-dep.csv', import.meta.url).href}
-      dateFormat="%Y-%m-%d"
-      idKey='source'
-      xKey='Date'
-      yKey='Precipitation'
-      yAxisLabel='Total Precipitation (mm)'
-    />
-    <Caption>
-      Figure 6. Time series of total rainfall accumulation monthly mean over the Tropical North Atlantic (TNA) as derived from MERRA-2.
-    </Caption>
-  </Figure>
-</Block>
