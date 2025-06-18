@@ -1,6 +1,6 @@
 ---
 id: ghrsst-sea-surface-anomaly
-name: "GHRSST Sea Surface Temperature Anomalies"
+name: "GHRSST  Sea Surface Temperature Anomalies"
 description: "High Resolution Sea Surface Temperature (GHRSST) Level 4 sea surface temperature anomalies."
 media:
   src: ::file ./media/twsanomaly-globe.png
@@ -16,7 +16,7 @@ taxonomy:
     values:
     - NASA
 infoDescription: |
-  ::markdown
+  ::markdownS
      <insert info here>
 layers:
   - id: ghrsst-sea-surface-anomaly
@@ -25,39 +25,38 @@ layers:
     stacApiEndpoint: https://dev.openveda.cloud/api/stac
     rasterApiEndpoint: https://dev.openveda.cloud/api/raster
     type: raster
+    initialDatetime: newest
     description: 'High Resolution Sea Surface Temperature (GHRSST) Level 4 sea surface temperature anomalies.'
     zoomExtent:
       - 0
       - 20
     sourceParams:
       resampling: bilinear
-      bidx: 1
+      asset_bidx: cog_default|1
       colormap_name: viridis
       rescale:
         - "-11"
         - "13.5"
       nodata: -9999
-      minzoom: 0
-      maxzoom: 20
     compare:
       datasetId: ghrsst-sea-surface-anomaly
       layerId: ghrsst-sea-surface-anomaly
       mapLabel: |
-        ::js ({ dateFns, datetime, compareDatetime }) => {
-          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'dd LLL yyyy')}`;
+        ::js ({dateFns, datetime, compareDatetime}) => {
+          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }
     legend:
-      unit:
-        label: Kelvin
       type: gradient
-      min: -11
-      max: 13.5
-      label: SST Anomalies
+      min: "-11"
+      max: "13.5"
+      unit:
+        label: SST Anomalies (Kelvin)
+      label:  SST Anomalies (Kelvin)
     info:
       source: NASA
       spatialExtent: Global
       temporalResolution: Daily 
-      unit: Kelvin
+      unit:  SST Anomalies (Kelvin)
 
 ---
 
