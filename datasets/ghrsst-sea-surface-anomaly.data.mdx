@@ -1,10 +1,10 @@
 ---
-id: ghrsst-sea-surface-anomaly
-name: "GHRSST  Sea Surface Temperature Anomalies"
-description: "High Resolution Sea Surface Temperature (GHRSST) Level 4 sea surface temperature anomalies."
+id: ghrsst-sea-surface-nrt
+name: "GHRSST Sea Surface Temperature (sample)"
+description: "High Resolution Sea Surface Temperature (GHRSST) Level 4 Data."
 media:
-  src: ::file ./media/twsanomaly-globe.png
-  alt: TWS trend of anomalies from LIS outputs.
+  src: ::file ./media/gsfc_ocean_eddies.jpg
+  alt: Ocean eddies over the Drake Passage in the Southern Ocean.
   author:
     name: NASA LIS
     url:
@@ -33,32 +33,275 @@ layers:
     sourceParams:
       resampling: bilinear
       asset_bidx: cog_default|1
-      colormap_name: viridis
+      colormap_name: rdbu
       rescale:
-        - "-11"
-        - "13.5"
+        - -11
+        - 13.5
       nodata: -9999
     compare:
-      datasetId: ghrsst-sea-surface-anomaly
+      datasetId: ghrsst-sea-surface-nrt
       layerId: ghrsst-sea-surface-anomaly
       mapLabel: |
         ::js ({dateFns, datetime, compareDatetime}) => {
-          return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+          return `${dateFns.format(datetime, 'LLL dd yyyy')} VS ${dateFns.format(compareDatetime, 'LLL dd yyyy')}`;
         }
     legend:
       type: gradient
-      min: "-11"
-      max: "13.5"
+      min: -11
+      max: 13.5
       unit:
         label: SST Anomalies (Kelvin)
       label:  SST Anomalies (Kelvin)
+      stops:
+          - rgb(19,100,209)
+          - rgb(40,129,240)
+          - rgb(79,165,245)
+          - rgb(149,209,250)
+          - rgb(225,255,255)
+          - rgb(199,199,199)
+          - rgb(255,254,102)
+          - rgb(255,179,102)
+          - rgb(235,116,1)
+          - rgb(235,0,0)
+          - rgb(106,0,0)
     info:
       source: NASA
       spatialExtent: Global
       temporalResolution: Daily 
       unit:  SST Anomalies (Kelvin)
 
+
+  - id: ghrsst-sea-surface-temperature
+    stacCol: ghrsst-sea-surface-temperature
+    name: 'GHRSST Sea Surface Temperature'
+    stacApiEndpoint: https://dev.openveda.cloud/api/stac
+    rasterApiEndpoint: https://dev.openveda.cloud/api/raster
+    type: raster
+    initialDatetime: newest
+    description: 'High Resolution Sea Surface Temperature (GHRSST) Level 4 sea surface temperature anomalies.'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      resampling: bilinear
+      asset_bidx: cog_default|1
+      colormap_name: viridis
+      rescale:
+        - 271
+        - 306.5
+      nodata: -9999
+    compare:
+      datasetId: ghrsst-sea-surface-nrt
+      layerId: ghrsst-sea-surface-temperature
+      mapLabel: |
+        ::js ({dateFns, datetime, compareDatetime}) => {
+          return `${dateFns.format(datetime, 'LLL dd yyyy')} VS ${dateFns.format(compareDatetime, 'LLL dd yyyy')}`;
+        }
+    legend:
+      type: gradient
+      min: 271
+      max: 306.5
+      unit:
+        label: SST (Kelvin)
+      label:  SST (Kelvin)
+      stops:
+        - "#440154"
+        - "#482878"
+        - "#3e4989"
+        - "#31688e"
+        - "#26828e"
+        - "#1f9e89"
+        - "#35b779"
+        - "#6ece58"
+        - "#b5de2b"
+        - "#fde725"
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Daily 
+      unit:  SST (Kelvin)
+
+  - id: ghrsst-sea-ice-fraction
+    stacCol: ghrsst-sea-ice-fraction
+    name: 'GHRSST Sea Ice Fraction'
+    stacApiEndpoint: https://dev.openveda.cloud/api/stac
+    rasterApiEndpoint: https://dev.openveda.cloud/api/raster
+    type: raster
+    initialDatetime: newest
+    description: 'High Resolution Sea Surface Temperature (GHRSST) Level 4 sea ice fraction.'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      resampling: bilinear
+      asset_bidx: cog_default|1
+      colormap_name: gnbu
+      rescale:
+        - 0
+        - 1
+      nodata: -9999
+    compare:
+      datasetId: ghrsst-sea-surface-nrt
+      layerId: ghrsst-sea-surface-temperature
+      mapLabel: |
+        ::js ({dateFns, datetime, compareDatetime}) => {
+          return `${dateFns.format(datetime, 'LLL dd yyyy')} VS ${dateFns.format(compareDatetime, 'LLL dd yyyy')}`;
+        }
+    legend:
+      type: gradient
+      min: 0
+      max: 1
+      unit:
+        label: Percentage (%)
+      label:  Percentage (%)
+      stops:
+        - "#f7fcf0"
+        - "#e0f3db"
+        - "#ccebc5"
+        - "#a8ddb5"
+        - "#7bccc4"
+        - "#4eb3d3"
+        - "#2b8cbe"
+        - "#0868ac"
+        - "#084081"
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Daily 
+      unit:  Percentage (%)
+
+  - id: ghrsst-sst-analysis-error
+    stacCol: ghrsst-sst-analysis-error
+    name: 'GHRSST SST Estimated Error'
+    stacApiEndpoint: https://dev.openveda.cloud/api/stac
+    rasterApiEndpoint: https://dev.openveda.cloud/api/raster
+    type: raster
+    initialDatetime: newest
+    description: 'High Resolution Sea Surface Temperature (GHRSST) Level 4 estimated error standard deviation of sea surface temperatures.'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      resampling: bilinear
+      asset_bidx: cog_default|1
+      colormap_name: gnbu
+      rescale:
+        - 0.34
+        - 0.42
+      nodata: -9999
+    compare:
+      datasetId: ghrsst-sea-surface-nrt
+      layerId: ghrsst-sst-analysis-error
+      mapLabel: |
+        ::js ({dateFns, datetime, compareDatetime}) => {
+          return `${dateFns.format(datetime, 'LLL dd yyyy')} VS ${dateFns.format(compareDatetime, 'LLL dd yyyy')}`;
+        }
+    legend:
+      type: gradient
+      min: 0.34
+      max: 0.42
+      unit:
+        label: Standard deviation error
+      label:  Standard deviation error
+      stops:
+        - "#f7fcf0"
+        - "#e0f3db"
+        - "#ccebc5"
+        - "#a8ddb5"
+        - "#7bccc4"
+        - "#4eb3d3"
+        - "#2b8cbe"
+        - "#0868ac"
+        - "#084081"
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Daily 
+      unit:  Standard deviation error
+
 ---
 
+<Block>
+  <Prose>
+  ## Dataset Details
+  - **Temporal Extent:** Jan. 01, 2024 - April 12, 2024
+  - **Temporal Resolution:** Daily
+  - **Spatial Extent:** Global
+  - **Spatial Resolution:** 4km
+  - **Data Type:** Research
+  </Prose>
+<Figure>
+  <Map
+    datasetId='ghrsst-sea-surface-nrt'
+    layerId='ghrsst-sea-surface-anomaly'
+    center={[-50, 42.8478]}
+    zoom={3}
+    dateTime='2024-01-01'
+    compareDateTime='2024-04-01'
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+  Sea surface temperature anomalies over the North Atlantic (Kelvin).
+  </Caption>
+</Figure>
+</Block>
+
+<Block>
+  <Prose>
+
+  ### About
+
+  A Group for High Resolution Sea Surface Temperature (GHRSST) Level 4 sea surface temperature analysis produced as a retrospective dataset (four day latency) and near-real-time dataset (one day latency) at the JPL Physical Oceanography DAAC using wavelets as basis functions in an optimal interpolation approach on a global 0.01 degree grid. <br/>
+  
+  The version 4 Multiscale Ultrahigh Resolution (MUR) L4 analysis is based upon nighttime GHRSST L2P skin and subskin SST observations from several instruments including the NASA Advanced Microwave Scanning Radiometer-EOS (AMSR-E), the JAXA Advanced Microwave Scanning Radiometer 2 on GCOM-W1, the Moderate Resolution Imaging Spectroradiometers (MODIS) on the NASA Aqua and Terra platforms, the US Navy microwave WindSat radiometer, the Advanced Very High Resolution Radiometer (AVHRR) on several NOAA satellites, and in situ SST observations from the NOAA iQuam project. The ice concentration data are from the archives at the EUMETSAT Ocean and Sea Ice Satellite Application Facility (OSI SAF) High Latitude Processing Center and are also used for an improved SST parameterization for the high-latitudes.<br/>
+  
+  The dataset also contains additional variables for some granules including a SST anomaly derived from a MUR climatology and the temporal distance to the nearest IR measurement for each pixel.This dataset is funded by the NASA MEaSUREs program ( http://earthdata.nasa.gov/our-community/community-data-system-programs/measures-projects ), and created by a team led by Dr. Toshio M. Chin from JPL. It adheres to the GHRSST Data Processing Specification (GDS) version 2 format specifications. Use the file global metadata "history:" attribute to determine if a granule is near-realtime or retrospective.
+  </Prose>
+</Block>
+
+
+
+<Block>
+  <Prose>
+  
+  ### Access the Data
+  
+  GHRSST sea surface data can be directly obtained from [Earthdata Search](https://search.earthdata.nasa.gov/search/granules?p=C1996881146-POCLOUD).
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    
+  ### Citing this Dataset
+
+ JPL MUR MEaSUREs Project. 2015. GHRSST Level 4 MUR Global Foundation Sea Surface Temperature Analysis. Ver. 4.1. PO.DAAC, CA, USA. Dataset accessed [YYYY-MM-DD] at https://doi.org/10.5067/GHGMR-4FJ04
+  
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## Disclaimer
+
+  All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
+  
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+  
+  ## License
+  
+  [Creative Commons Attribution 1.0 International](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC BY 1.0)
+
+  </Prose>
+</Block>
 
 
