@@ -1,13 +1,13 @@
 ---
 id: OCI_PACE_Chlorophyll_a
-name: Aboveground Biomass (L4B, v2.1, 2019 APR - 2023 MAR)
+name: Chlorophyll a (L2)PACE / OCI
 featured: true
-description: The Aboveground Biomass Density Mean (L4B, v2.1, 2019 APR to 2023 MAR) layer is the estimated mean aboveground biomass density, including forest and non-forest, within the 1 km x 1 km grid cell. 
+description: The Chlorophyll a layer provides the near-surface concentration of chlorophyll a in milligrams of chlorophyll pigment per cubic meter (mg/m3) in the ocean. 
 media:
   src: https://earthdata.nasa.gov/s3fs-public/styles/hds_hero_half/public/2024-08/gedi-agbd-us-cloudfree--2-07-2023.jpg?VersionId=E_Zx.ti84WTiK8GB2XWD5VqrwZi7QNDl&itok=cjabduMn
 infoDescription: |
   ::markdown    
-    - Temporal Extent: April 2019 - March 2023
+    - Temporal Extent: 2024 Feb 25 - Present
     - Temporal Resolution: Daily
 layers:
   - id: OCI_PACE_Chlorophyll_a
@@ -43,8 +43,11 @@ layers:
 <Block>
 <Prose>
 
-## About GEDI L4B Aboveground Biomass Density
-The Global Ecosystem Dynamics Investigation (GEDI) Level 4B (L4B) dataset provides estimates of aboveground biomass density (AGBD) and associated uncertainty per 1 km x 1 km EASE-Grid 2.0 grid cells globally within -52 and 52 degrees latitude. GEDI L4B uses a hybrid model-based inference, accounting for uncertainty due to GEDI's sampling of the 1km grid area and Level 4A footprint-level biomass modeling. Accurate estimation of AGBD helps assess the carbon sequestration potential of forests and the impacts of land-use changes on atmospheric carbon dioxide concentrations.
+## About OCI
+The Ocean Color Instrument (OCI) is a spectrometer used to measure intensity of light over portions of the electromagnetic spectrum: ultraviolet (UV), visible, near infrared, and several shortwave infrared bands. It will enable continuous measurement of light at finer wavelength resolution than previous NASA ocean color sensors, providing detailed information on the global ocean. The color of the ocean is determined by the interaction of sunlight with substances or particles present in seawater such as chlorophyll, a green photosynthetic pigment found in phytoplankton and land plants.
+
+## About PACE
+PACE is NASA's Plankton, Aerosol, Cloud, ocean Ecosystem mission. The mission carries the Ocean Color Instrument (OCI), the Spectro-Polarimeter for Planetary Exploration (SPEXone), and the Hyper Angular Research Polarimeter (HARP2). OCI,PACE’s primary instrument, is an optical spectrometer that measures the intensity of light over portions of the electromagnetic spectrum. SPEXone and HARP2 are multi-angle polarimeters and they will be used to measure how the oscillation of sunlight within a geometric plane - known as its polarization - is changed by passing through clouds, aerosols, and the ocean. Measuring polarization states of UV-to-shortwave light at various angles provides detailed information on the atmosphere and ocean, such as particle size and composition. PACE will cover the entire globe every two days and at a spatial resolution of 1.2 km.
 
 </Prose>
 </Block>
