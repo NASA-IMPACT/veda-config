@@ -1,0 +1,178 @@
+---
+id: la-fires-sea
+isHidden: true
+name: 'LA County Significant Ecological Areas (SEAs)'
+description: "Significant Ecological Areas and Coastal Resource Areas in Los Angeles County, California."
+media:
+  src: ::file ./media/LA-Fires-background.png
+  alt: Planet Labs Commercial Satellite Imagery of the Eaton Fire (January 9, 2025).
+  author:
+    name: NASA CDSA - Planet Labs
+taxonomy:
+  - name: Topics
+    values:
+      - Wildfires
+  - name: Subtopics
+    values:
+      - Habitat
+      - Agriculture
+      - Natural Disasters
+  - name: Source
+    values:
+      - LA County Dept. of Regional Planning
+infoDescription: |
+  ::markdown
+    - **Temporal Extent:** January 1, 2025
+    - **Temporal Resolution:** N/A
+    - **Spatial Extent:** LA County, CA
+    - **Spatial Resolution:** 30 m
+    - **Data Units:** N/A
+    - **Data Type:** Research
+    - **Data Latency:** N/A
+
+layers:
+  - id: la-fires-sea
+    stacCol: la-fires-sea
+    name: LA County Significant Ecological Areas (SEAs)
+    type: raster
+    description: "Significant Ecological Areas (SEAs) and Coastal Resource Areas (CRAs) in Los Angeles County, California."
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      resampling: bilinear
+      bidx: 1
+      colormap: '{"1":[18,94,135,255],"2":[12,110,20,255],"3":[73,230,86,255],"4":[73,141,230,255],"5":[73,230,227,255]}'
+    legend:
+      type: categorical
+      min: "1"
+      max: "5"
+      stops:
+        - color: "#49e656"
+          label: "SEA" 
+        - color: "#0c6e14"
+          label: "SEA (Urban)"
+        - color: "#498de6"
+          label: "CRA" 
+        - color: "#125e87"
+          label: "CRA (Urban)"
+        - color: "#49e6e3"
+          label: "CRA (Ocean)"
+    info:
+        source: LA County Dept. of Regional Planning
+        spatialExtent: LA County, CA
+        temporalResolution: N/A
+        unit: N/A
+
+---
+
+<Block>
+  <Prose>
+  ## Dataset Details
+    - **Temporal Extent:** January 1, 2025
+    - **Temporal Resolution:** N/A
+    - **Spatial Extent:** LA County, CA
+    - **Spatial Resolution:** 30 m
+    - **Data Units:** N/A
+    - **Data Type:** Research
+    - **Data Latency:** N/A
+  </Prose>
+<Figure>
+  <Map
+    datasetId='la-fires-sea'
+    layerId='la-fires-sea'
+    dateTime='2025-01-01'
+    zoom={10}
+    center={[-118.55, 34.05]}
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+  LA County's Significant Ecological Areas (SEAs) in the area impacted by the 2025 Palisades Fire. 
+  </Caption>
+</Figure>
+</Block>
+
+<Block>
+  <Prose>
+
+  ### About
+
+  The Significant Ecological Areas (SEAs) and Coastal Resource Areas (CRAs) dataset identifies ecologically valuable and environmentally sensitive regions in Los Angeles County. These areas are designated based on biodiversity, habitat connectivity, and ecological function. SEAs support native plant and animal species, while CRAs include coastal habitats vital for marine and terrestrial ecosystems.
+  
+  </Prose>
+</Block>
+
+<Block>
+  
+  <Prose>
+
+  ### What This Data Offers
+
+  * Biodiversity Protection: SEAs highlight areas critical for wildlife, native vegetation, and ecosystem services.
+  * Coastal Resource Management: CRAs include coastal wetlands, dunes, and estuaries, providing resilience against sea-level rise and erosion.
+  * Land Use Planning & Conservation: Supports environmental protection policies and planning efforts in Los Angeles County.
+  * Wildfire Risk and Recovery Analysis: Helps assess how ecological areas are impacted by fire and guides post-fire restoration efforts.
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ### Access the Data
+
+  The Significant Ecological Areas dataset is available through the [LA County Department of Regional Planning](https://planning.lacounty.gov/sea).
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    
+  ### Citing this Dataset
+
+  LA County Dept. of Regional Planning, 2025. Significant Ecological Areas and Coastal Resource Areas Dataset.
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## Disclaimer
+
+  All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
+  
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+
+  ### Key Publications
+  
+  LA County Dept. of Regional Planning (2022). Significant Ecological Areas Program: Conservation Guidelines and Land Use Planning in LA County. https://planning.lacounty.gov/sea .
+  
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## Data Stories Using This Dataset
+  
+  **<Link to={"/stories/la-fires"}>Fanning the Flames</Link>**
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## License
+  
+  [Creative Commons Attribution 1.0 International](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC BY 1.0)
+
+  </Prose>
+</Block>
+

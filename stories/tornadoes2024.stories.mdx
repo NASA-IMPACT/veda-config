@@ -1,0 +1,1370 @@
+---
+id: '2024-tornadoes'
+name: The Hyperactive Spring 2024 Tornado Season
+description: "A detailed overview of the historic season."
+media:
+  src: ::file ./tornado-2024-cover.png
+  alt: Wedge tornado passing southeast of Wapakoneta, Ohio on March 14, 2024.
+  author:
+    name: Jonny Glessner
+    url: https://x.com/JonnyGlessner/status/1768424574855610777/photo/4
+pubDate: 2024-12-09T00:00
+taxonomy:
+  - name: Topics
+    values:
+      - Natural Disasters
+  - name: Source
+    values:
+      - Community Contributed
+---
+
+<style>{`
+  .data-table {
+    display: flex;
+    gap: 2rem;
+    justify-content: center; /* Center the table */
+    margin: 0 auto; /* Center the table */
+  }
+  .data-table thead th,
+  .data-table tbody td {
+    text-align: center;
+    white-space: nowrap;
+    padding: 0 1rem; /* Add horizontal padding */
+  }
+  .data-table thead th {
+    font-size: 1.2rem; /* Increase the font size of the title row */
+  }
+  .ef5 {
+    background: #F61FDC; /* EF-5 */
+  }
+  .ef4 {
+    background: #F6251F; /* EF-4 */
+  }
+  .ef3 {
+    background: #F7753B; /* EF-3 */
+  }
+  .ef2 {
+    background: #F6DC1F; /* EF-2 */  
+  }
+  .ef1 {
+    background: #44E112; /* EF-1 */  
+  }
+  .ef0 {
+    background: #28DFF3; /* EF-0 */  
+  }
+  .efunk {
+    background: #A1AEB0; /* EF-UNK */  
+  }
+  .total {
+    background: #EEEEEE; /* Total Count */  
+  }
+  .bold-row {
+    font-weight: bold; /* Bold the row */
+  }
+  @media only screen and (max-width: 544px) {
+    .data-table {
+      flex-flow: column;
+    }
+  }
+`}</style>
+
+
+<Block>
+  <Prose>
+
+    **Authors:** 
+    
+    Andrew Blackford<sup>[1]</sup>, Trent Cowan<sup>[1]</sup>, Udaysankar Nair<sup>[1]</sup>, Josh Wurman<sup>[2]</sup>, Karen Kosiba<sup>[2]</sup>, David Roueche<sup>[3]</sup>, Catherine Finley<sup>[4]</sup>, and Jana Houser<sup>[5]</sup>
+
+    <sup>[1]</sup> The University of Alabama in Huntsville (UAH)
+
+    <sup>[2]</sup> Colorado State University
+    
+    <sup>[3]</sup> Auburn University
+    
+    <sup>[4]</sup> The University of North Dakota
+    
+    <sup>[5]</sup> The Ohio State University
+
+
+    **Disclaimer:** 
+    
+    <mark>🚧 This Data Story presents work in progress and not peer-reviewed results. The Greenfield portion of this data story is being expanded into an article that will undergo peer review and publication in 2025. 🚧</mark>
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+
+    ### Overview
+
+    The Spring 2024 tornado season was one of the most active on record in the United States. As of May 31st, there were 1,176 tornadoes confirmed in the United States. The vast majority of these occurred in the meteorological spring months of March-May (Table 1), placing this period within the 90th percentile of activity compared to climatological averages. This three-month period was responsible for 36 fatalities, hundreds of injuries, and was the second most prolific tornado season since at least 1950–second only to the deadly 2011 tornado season. Through the end of May, severe thunderstorms alone accounted for nearly $42 billion in damage across the United States, with four tornado outbreaks during the spring attributing over $1 billion in damage each. Four tornadoes were rated violent EF-4s on the [Enhanced Fujita Scale](https://www.weather.gov/oun/efscale) with wind speeds from 166-200 mph, and 27 were rated as intense EF-3s with wind speeds from 136-165 mph.
+
+  </Prose>
+
+  <Figure>
+    <Chart
+      dataPath={new URL('./tornadoes-2024-spc-counts.csv', import.meta.url).href}
+      dateFormat="%m/%d"
+      idKey='Source'
+      xKey='Date'
+      yKey='Tornado_Count'
+      yAxisLabel='Count'
+      colors={{ Tornado_Count: 'red' }}
+    />
+    <Caption>
+    Cumulative unfiltered tornado reports in the United States from January through May 2024 as logged by the Storm Prediction Center. The 2005-2015 average total tornado count in the United States by May 31st is only ~800 tornadoes.
+    </Caption>
+  </Figure>
+</Block>
+
+<Block>
+<Figure style={{ display: 'block' }}>
+  <div className='data-table'>
+    <table>
+      <thead>
+        <tr>
+          <th>   Month   </th>
+          <th>   EF-UNK   </th>
+          <th>   EF-0   </th>
+          <th>   EF-1   </th>
+          <th>   EF-2  </th>
+          <th>   EF-3   </th>
+          <th>   EF-4   </th>
+          <th>   EF-5   </th>
+          <th>   Total   </th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td>Windspeeds</td>
+          <td>-</td>
+          <td>65-85 mph</td>
+          <td>86-110 mph</td>
+          <td>111-135 mph</td>
+          <td>136-165 mph</td>
+          <td>166-200 mph</td>
+          <td>>200 mph</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>March</td>
+          <td class='efunk'>8</td>
+          <td class='ef0'>18</td>
+          <td class='ef1'>18</td>
+          <td class='ef2'>8</td>
+          <td class='ef3'>2</td>
+          <td class='ef4'>0</td>
+          <td class='ef5'>0</td>
+          <td class='total'>55</td>
+        </tr>
+        <tr>
+          <td>April</td>
+          <td class='efunk'>48</td>
+          <td class='ef0'>92</td>
+          <td class='ef1'>171</td>
+          <td class='ef2'>35</td>
+          <td class='ef3'>8</td>
+          <td class='ef4'>2</td>
+          <td class='ef5'>0</td>
+          <td class='total'>356</td>
+        </tr>
+        <tr>
+          <td>May</td>
+          <td class='efunk'>51</td>
+          <td class='ef0'>160</td>
+          <td class='ef1'>222</td>
+          <td class='ef2'>44</td>
+          <td class='ef3'>17</td>
+          <td class='ef4'>2</td>
+          <td class='ef5'>0</td>
+          <td class='total'>496</td>
+        </tr>   
+        <tr class='bold-row'>
+          <td>Spring Total</td>
+          <td class='efunk'>107</td>
+          <td class='ef0'>270</td>
+          <td class='ef1'>411</td>
+          <td class='ef2'>87</td>
+          <td class='ef3'>27</td>
+          <td class='ef4'>4</td>
+          <td class='ef5'>0</td>
+          <td class='total'>907</td>
+        </tr>      
+
+      </tbody>
+    </table>
+  </div>
+<Caption>
+  Table 1: Official total Spring 2024 tornado count in the United States by month and EF rating. UNK indicates the EF rating is unknown. The first row explains tornadic windspeed thresholds for each EF rating.
+</Caption>  
+</Figure>
+</Block>
+
+<Block type='wide'>
+<Figure>
+  <Map
+    center={[-94.5, 41.25]}
+    zoom={8.3}
+    datasetId='tornadoes-2024-paths'
+    layerId='tornadoes-2024-paths'
+    dateTime='2024-05-31'
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+    This interactive map displays all official NWS-surveyed tornado tracks in the United States from March - May 2024. Zoom and pan on the map to see individual tracks across the country.
+  </Caption>
+</Figure>
+</Block>
+
+<Block>
+  <Prose>
+  The National Weather Service (NWS) issued  1,728 tornado warnings across the United States from March to May, with several of these being upgraded to Particularly Dangerous Situation (PDS) Tornado Warnings if confirmed to be large and actively damaging structures. An even smaller subset was upgraded further from PDS to Tornado Emergencies if the tornado was confirmed to be large and was directly threatening a larger population center. As a result, millions of Americans were impacted by tornado warnings during the Spring of 2024, with the vast majority of counties in the Midwest, Southeast, and Southern Great Plains seeing a warning at least once during the three-month period. Compared to average spring severe weather seasons, the Southeast United States saw a less active season, while the Great Plains and Midwest saw a more active season. 
+  </Prose>
+</Block>
+
+<Block type = 'wide'>
+  <Figure>
+      <Image
+      src={new URL('./tornadoes-2024-torwarns-MAM.jpg', import.meta.url).href}
+      alt='NWS-issued tornado warnings from March-May 2024.'
+    />
+    <Caption>
+    All tornado warning polygons issued by the National Weather Service from March to May 2024 and the counties that the warnings impacted. Central California also had six tornado warnings that impacted nine counties during this time period.
+    </Caption>
+  </Figure>
+</Block> 
+
+<Block>
+<Prose>
+Intense tornadoes are defined as those that receive an EF-3 rating or higher. From March through May of 2024, there were a total of 31 intense tornadoes (Table 2). About half of these intense tornadoes inflicted fatalities, and the majority of them caused injuries. The combined damage paths of these tornadoes exceeded an astounding 630 miles throughout the Midwest, Southeast, and Great Plains. 
+</Prose>
+</Block>
+
+<Block>
+<Figure style={{ display: 'block' }}>
+  <div className='data-table'>
+    <table>
+      <thead>
+        <tr>
+          <th>   Date   </th>
+          <th>   EF Rating   </th>
+          <th>   Counties   </th>
+          <th>   States   </th>
+          <th>   Track Length (mi)  </th>
+          <th>   Max Width (yd)   </th>
+          <th>   Start Time (UTC)   </th>
+          <th>   FAT/INJ   </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class='bold-row'>
+          <td>March 14</td>
+          <td class='ef3'>3</td>
+          <td>Auglaize, Logan</td>
+          <td>Ohio</td>
+          <td>31.33</td>
+          <td>1000</td>
+          <td>23:29</td>
+          <td>3/27</td>
+        </tr>
+        <tr class='bold-row'>
+          <td>March 14</td>
+          <td class='ef3'>3</td>
+          <td>Randolph IN, Darke, Miami OH</td>
+          <td>Indiana, Ohio</td>
+          <td>41.34</td>
+          <td>700</td>
+          <td>23:50</td>
+          <td>1/39</td>
+        </tr>
+        <tr>
+          <td>April 26</td>
+          <td class='ef3'>3</td>
+          <td>Howard</td>
+          <td>Nebraska</td>
+          <td>8.65</td>
+          <td>600</td>
+          <td>17:58</td>
+          <td>0/0</td>
+        </tr>
+        <tr>
+          <td>April 26</td>
+          <td class='ef3'>3</td>
+          <td>Lancaster</td>
+          <td>Nebraska</td>
+          <td>8.55</td>
+          <td>700</td>
+          <td>19:52</td>
+          <td>0/3</td>
+        </tr>
+        <tr>
+          <td>April 26</td>
+          <td class='ef4'>4</td>
+          <td>Douglas, Washington NE, Harrison IA</td>
+          <td>Nebraska, Iowa</td>
+          <td>32.50</td>
+          <td>1900</td>
+          <td>20:30</td>
+          <td>0/4</td>
+        </tr>
+        <tr>
+          <td>April 26</td>
+          <td class='ef3'>3</td>
+          <td>Pottawattamie IA, Douglas NE, Harrison IA</td>
+          <td>Iowa, Nebraska</td>
+          <td>19.06</td>
+          <td>550</td>
+          <td>21:54</td>
+          <td>0/0</td>
+        </tr>
+        <tr>
+          <td>April 26</td>
+          <td class='ef3'>3</td>
+          <td>Pottawattamie</td>
+          <td>Iowa</td>
+          <td>13.31</td>
+          <td>900</td>
+          <td>22:08</td>
+          <td>0/0</td>
+        </tr>
+        <tr class='bold-row'>
+          <td>April 26</td>
+          <td class='ef3'>3</td>
+          <td>Pottawattamie, Harrison, Shelby</td>
+          <td>Iowa</td>
+          <td>40.91</td>
+          <td>1900</td>
+          <td>22:25</td>
+          <td>1/3</td>
+        </tr>
+        <tr class='bold-row'>
+          <td>April 27</td>
+          <td class='ef3'>3</td>
+          <td>Murray, Pontotoc</td>
+          <td>Oklahoma</td>
+          <td>9.96</td>
+          <td>440</td>
+          <td>03:24</td>
+          <td>1/30</td>
+        </tr>
+        <tr class='bold-row'>
+          <td>April 27</td>
+          <td class='ef3'>3</td>
+          <td>Hughes, Okfuskee</td>
+          <td>Oklahoma</td>
+          <td>27.98</td>
+          <td>1760</td>
+          <td>03:36</td>
+          <td>2/UNK</td>
+        </tr>
+        <tr class='bold-row'>
+          <td>April 27</td>
+          <td class='ef4'>4</td>
+          <td>Love, Carter</td>
+          <td>Oklahoma</td>
+          <td>26.85</td>
+          <td>900</td>
+          <td>04:08</td>
+          <td>1/UNK</td>
+        </tr>
+        <tr class='bold-row'>
+          <td>April 30</td>
+          <td class='ef3'>3</td>
+          <td>Pottawatomie</td>
+          <td>Kansas</td>
+          <td>2.24</td>
+          <td>100</td>
+          <td>21:40</td>
+          <td>1/3</td>
+        </tr>
+        <tr>
+          <td>May 2</td>
+          <td class='ef3'>3</td>
+          <td>Jones</td>
+          <td>Texas</td>
+          <td>3.29</td>
+          <td>210</td>
+          <td>00:06</td>
+          <td>0/4</td>
+        </tr>
+        <tr class='bold-row'>
+          <td>May 6</td>
+          <td class='ef4'>4</td>
+          <td>Osage, Washington</td>
+          <td>Oklahoma</td>
+          <td>40.81</td>
+          <td>1700</td>
+          <td>02:12</td>
+          <td>2/33</td>
+        </tr>
+        <tr class='bold-row'>
+          <td>May 8</td>
+          <td class='ef3'>3</td>
+          <td>Maury, Marshall</td>
+          <td>Tennessee</td>
+          <td>12.16</td>
+          <td>900</td>
+          <td>22:37</td>
+          <td>1/12</td>
+        </tr>
+        <tr>
+          <td>May 8</td>
+          <td class='ef3'>3</td>
+          <td>Lawrence, Limestone</td>
+          <td>Alabama</td>
+          <td>3.76</td>
+          <td>228</td>
+          <td>01:23</td>
+          <td>0/0</td>
+        </tr>
+        <tr>
+          <td>May 8</td>
+          <td class='ef3'>3</td>
+          <td>Jackson, DeKalb</td>
+          <td>Alabama</td>
+          <td>12.34</td>
+          <td>880</td>
+          <td>03:57</td>
+          <td>0/7</td>
+        </tr>
+        <tr>
+          <td>May 21</td>
+          <td class='ef3'>3</td>
+          <td>Page, Montgomery, Adams</td>
+          <td>Iowa</td>
+          <td>34.62</td>
+          <td>1300</td>
+          <td>19:43</td>
+          <td>0/0</td>
+        </tr>
+        <tr class='bold-row'>
+          <td>May 21</td>
+          <td class='ef4'>4</td>
+          <td>Page, Taylor, Adams, Adair</td>
+          <td>Iowa</td>
+          <td>43.04</td>
+          <td>1300</td>
+          <td>19:57</td>
+          <td>5/35</td>
+        </tr>
+        <tr>
+          <td>May 22</td>
+          <td class='ef3'>3</td>
+          <td>Sterling, Tom Green</td>
+          <td>Texas</td>
+          <td>4.79</td>
+          <td>400</td>
+          <td>20:29</td>
+          <td>0/0</td>
+        </tr>
+        <tr class='bold-row'>
+          <td>May 25</td>
+          <td class='ef3'>3</td>
+          <td>Montague, Cooke, Denton</td>
+          <td>Texas</td>
+          <td>47.31</td>
+          <td>1200</td>
+          <td>02:39</td>
+          <td>7/100</td>
+        </tr>
+        <tr class='bold-row'>
+          <td>May 25</td>
+          <td class='ef3'>3</td>
+          <td>Rogers, Mayes</td>
+          <td>Oklahoma</td>
+          <td>23.88</td>
+          <td>2000</td>
+          <td>04:19</td>
+          <td>2/23</td>
+        </tr>
+        <tr>
+          <td>May 25</td>
+          <td class='ef3'>3</td>
+          <td>Denton, Collin</td>
+          <td>Texas</td>
+          <td>0.71</td>
+          <td>175</td>
+          <td>04:23</td>
+          <td>0/0</td>
+        </tr>
+        <tr>
+          <td>May 26</td>
+          <td class='ef3'>3</td>
+          <td>Delaware OK, Benton AR</td>
+          <td>Oklahoma, Arkansas</td>
+          <td>7.90</td>
+          <td>3200</td>
+          <td>05:59</td>
+          <td>0/2</td>
+        </tr>
+        <tr class='bold-row'>
+          <td>May 26</td>
+          <td class='ef3'>3</td>
+          <td>Boone, Marion</td>
+          <td>Arkansas</td>
+          <td>22.00</td>
+          <td>2000</td>
+          <td>08:27</td>
+          <td>4/1</td>
+        </tr>
+        <tr class='bold-row'>
+          <td>May 26</td>
+          <td class='ef3'>3</td>
+          <td>Marion, Baxter, Fulton</td>
+          <td>Arkansas</td>
+          <td>36.30</td>
+          <td>1760</td>
+          <td>08:59</td>
+          <td>1/17</td>
+        </tr>
+        <tr class='bold-row'>
+          <td>May 26</td>
+          <td class='ef3'>3</td>
+          <td>Stoddard, New Madrid, Scott</td>
+          <td>Missouri</td>
+          <td>19.58</td>
+          <td>300</td>
+          <td>12:15</td>
+          <td>1/0</td>
+        </tr>
+        <tr>
+          <td>May 26</td>
+          <td class='ef3'>3</td>
+          <td>Howell, Shannon</td>
+          <td>Missouri</td>
+          <td>12.71</td>
+          <td>750</td>
+          <td>22:41</td>
+          <td>0/1</td>
+        </tr>
+        <tr>
+          <td>May 26</td>
+          <td class='ef3'>3</td>
+          <td>Johnson</td>
+          <td>Illinois</td>
+          <td>5.07</td>
+          <td>300</td>
+          <td>23:38</td>
+          <td>0/1</td>
+        </tr>
+        <tr class='bold-row'>
+          <td>May 26</td>
+          <td class='ef3'>3</td>
+          <td>Lyon, Caldwell, Hopkins</td>
+          <td>Kentucky</td>
+          <td>35.49</td>
+          <td>700</td>
+          <td>01:01</td>
+          <td>1/21</td>
+        </tr>
+        <tr>
+          <td>May 30</td>
+          <td class='ef3'>3</td>
+          <td>Midland, Upton</td>
+          <td>Texas</td>
+          <td>5.44</td>
+          <td>250</td>
+          <td>23:40</td>
+          <td>0/0</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+<Caption>
+  Table 2: List of all intense (EF-3+) tornadoes that occurred from March to May of 2024 in the contiguous United States. FAT/INJ indicates the number of fatalities and injuries that occurred from the tornado. If the tornado caused fatalities, its entry has been bolded in the table. UNK indicates that the statistic has an unknown value at the time of data story publication.
+</Caption>  
+</Figure>
+</Block>
+
+<Block>
+  <Prose>
+
+    ### Datasets Utilized
+    The far-reaching impacts of the Spring 2024 tornado season can be seen in analyzing several dataset types, including satellite remote sensing, ground-based observations, and post-storm damage survey data.
+  </Prose>
+</Block>
+
+<Block type='wide'>
+  <Prose>
+    
+    [**PlanetScope**](https://www.earthdata.nasa.gov/dashboard/data-catalog/planetscope)
+    
+    Planet Labs’ commercial SmallSat imagery provides high-resolution satellite data crucial for assessing areas heavily damaged by tornadoes. With frequent overpasses, it allows for quick identification of destroyed buildings, vegetation damage, and blocked roads. If skies are clear directly after a tornado strike, first responders can use this data to better serve affected communities. This imagery was also used in this story to analyze reflectance changes in visible bands before and after a tornado, pinpointing areas of intense damage—even down to the building level, thanks to Planet's high spatial resolution.
+
+    [**NWS Damage Assessment Toolkit**](https://www.earthdata.nasa.gov/dashboard/data-catalog/tornadoes-2024-tracks)
+    
+    The NWS Damage Assessment Toolkit (DAT) is a geographic information system (GIS)-hosted dataset where post-storm damage survey results are uploaded and referenced to the location where each description of damage occurred. This dataset includes center lines of all tornado tracks, polygons that break down the EF rating at each point along the path, descriptions of the damage at each survey location, and ground damage pictures of the damage at most entry points. 
+ 
+    [**WSR-88D**](https://www.weather.gov/iwx/wsr_88d) **and** [**Doppler On Wheels**](http://www.cswr.org/contents/aboutdows.php)  
+    
+    The Weather Surveillance Radar (WSR-88D) is a network of radars used by the NWS to monitor weather patterns, including tornadoes, across large areas. In addition, the Doppler on Wheels (DOW) radar, which is mounted on vehicles and can get closer to storms, was examined in cases where it was deployed in order to gather more detailed information. DOW radars are typically used for research and can capture clearer, higher-resolution data on tornadoes, while WSR-88D provides a wider view but with slightly less detail.
+
+    [**Black Marble Night Lights**](https://www.earthdata.nasa.gov/dashboard/data-catalog/nighttime-lights-SE) 
+    
+    NASA’s Black Marble night lights dataset provides satellite images of Earth at night, capturing the light pollution from cities, roads, and other human activity. These images are collected by the Visible Infrared Imaging Radiometer Suite (VIIRS) sensor on the Suomi National Polar-orbiting Partnership (NPP) satellite, and can be used to examine changes in illumination over time. In this story, night lights data is used to assess changes before and after a tornado impacts a town, highlighting areas affected by power outages that may cause recovery slowdowns.
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  ### Event Highlights
+  A select handful of tornadic episodes during the Spring 2024 tornado season have been isolated for deeper investigation, utilizing these datasets to visualize the extent of impact these events had on the communities that the tornadoes impacted. 
+  </Prose>
+
+</Block>
+
+<Block>
+  <Prose>
+
+    ### March 14
+
+    On Thursday, March 14th, 2024, 11 tornadoes carved paths of destruction across eastern Indiana and Western and Central Ohio, resulting in 4 fatalities and 68 injuries. Two tornadoes were rated as intense EF-3s and were responsible for all of the fatalities. The cause of most of these tornadoes were two supercell thunderstorms that formed in central Indiana and moved eastward. The first, located further north, produced five tornadoes during its more than 120-mile path from Adams County, Indiana to Licking County, Ohio. The second storm, situated further south, produced two tornadoes along its more than 75-mile path from Delaware County, Indiana to Miami County, Ohio. In addition, two other cyclic thunderstorms produced a combined three tornadoes in northern Ohio from this event. 
+  </Prose>
+
+  <Figure>
+      <Image
+      src={new URL('./tornado-2024-indian-lake-wedge.jpg', import.meta.url).href}
+      alt='Wedge tornado approaching Lakeview, Ohio on March 14, 2024.'
+    />
+    <Caption>
+    A large, high-end EF-3 tornado approaches the small town of Lakeview, Ohio, situated on the western shore of Indian Lake.
+    </Caption>
+  </Figure> 
+
+</Block>
+
+<ScrollytellingBlock>
+  <Chapter
+    center={[-85.2053, 40.1638]}
+    zoom={9.2}
+    datasetId='tornadoes-2024-tracks'
+    layerId='tornadoes-2024-paths'
+    datetime='2024-05-31'
+  >
+   ## Winchester, Indiana EF-3
+    
+   Tornado Rating: EF3
+
+   Location: Randolph County, Indiana and Darke and Miami Counties, Ohio
+
+   Start Time: 7:50 PM EDT
+
+   End Time: 9:00 PM EDT
+
+   Path Length: 41.44 miles (17.14 miles in Indiana, 24.3 miles in Ohio)
+
+   Maximum Wind Speed: 165 mph
+
+   Maximum Path Width: 700 yards
+
+   Fatalities: 1
+
+   Injuries: 39
+
+  </Chapter>
+  
+  <Chapter
+    center={[-85.1394, 40.1787]}
+    zoom={14}
+    datasetId='tornadoes-2024-tracks'
+    layerId='tornadoes-2024-paths'
+    datetime='2024-05-31'
+  >
+   The tornado touched down south of Farmland, IN, causing damage to utility poles and a wind turbine.
+  <Figure>
+    <Image
+      src={new URL('./tornadoes-2024-mar14-winchester-damage1.jpg', import.meta.url).href}
+      alt='NWS DAT photo of wind turbine damage.'
+    />
+    <Caption>
+    Damaged wind turbines southeast of Farmland, Indiana ([NWS DAT](https://apps.dat.noaa.gov/stormdamage/damageviewer/)).
+    </Caption>
+  </Figure> 
+  </Chapter>
+
+  <Chapter
+    center={[-85.0005, 40.1645]}
+    zoom={13.7}
+    datasetId='planetscope'
+    layerId='ps-lakeview-winchester-tornadoes-2024'
+    datetime='2024-03-16'
+  >
+    At its strongest, the tornado caused severe damage to homes and trees in Winchester. There was also evidence of rotational circulation via ground scouring. 
+    <Figure>
+    <Image
+      src={new URL('./tornadoes-2024-mar14-winchester-damage2.jpg', import.meta.url).href}
+      alt='NWS DAT photo of destroyed Taco Bell.'
+    />
+    <Caption>
+    Taco Bell leveled at high-end EF-3 intensity in Winchester, Indiana ([NWS DAT](https://apps.dat.noaa.gov/stormdamage/damageviewer/)).
+    </Caption>
+    </Figure> 
+    Maximum damage occurred in the southern portion of the city at a Taco Bell and a nearby church, which were both destroyed at high-end EF3 intensity.
+    <Figure>
+    <Image
+      src={new URL('./tornadoes-2024-mar14-winchester-damage3.jpg', import.meta.url).href}
+      alt='NWS DAT photo of destroyed church.'
+    />
+    <Caption>
+    Church destroyed at high-end EF-3 intensity in Winchester, Indiana ([NWS DAT](https://apps.dat.noaa.gov/stormdamage/damageviewer/)).
+    </Caption>
+    </Figure> 
+  </Chapter>
+
+  <Chapter
+    center={[-84.95, 40.1667]}
+    zoom={14}
+    datasetId='planetscope'
+    layerId='ps-lakeview-winchester-tornadoes-2024'
+    datetime='2024-03-16'
+  >
+   The tornado weakened as it exited Winchester, with EF2 to low-end EF-3 damage noted to farmsteads south and east of the Randolph County Airport.
+  <Figure>
+    <Image
+      src={new URL('./tornadoes-2024-mar14-winchester-damage4.jpg', import.meta.url).href}
+      alt='NWS DAT photo of destroyed home.'
+    />
+    <Caption>
+    Destroyed house outside of Winchester, Indiana ([NWS DAT](https://apps.dat.noaa.gov/stormdamage/damageviewer/)).
+    </Caption>
+  </Figure>    
+  </Chapter>
+
+  <Chapter
+    center={[-84.73, 40.149]}
+    zoom={11}
+    datasetId='tornadoes-2024-tracks'
+    layerId='tornadoes-2024-polygons'
+    datetime='2024-05-31'
+  >
+  As it entered Ohio, high-end EF-1 damage to homes south of Union City was observed, inflicting two injuries here. EF-1 damage to farmsteads occurred throughout all of Darke County.
+  <Figure>
+    <Image
+      src={new URL('./tornadoes-2024-mar14-oh-damage1.jpg', import.meta.url).href}
+      alt='NWS DAT photo of damaged homes southeast of Union City, OH.'
+    />
+    <Caption>
+    Row of damaged homes southeast of Union City, Ohio ([NWS DAT](https://apps.dat.noaa.gov/stormdamage/damageviewer/)).
+    </Caption>
+  </Figure>   
+  <Figure>
+    <Image
+      src={new URL('./tornadoes-2024-mar14-oh-damage2.jpg', import.meta.url).href}
+      alt='NWS DAT photo of a damaged home near Greenville, OH.'
+    />
+    <Caption>
+    Heavily damaged property east of Greenville, Ohio ([NWS DAT](https://apps.dat.noaa.gov/stormdamage/damageviewer/)).
+    </Caption>
+  </Figure>    
+  </Chapter>
+
+  <Chapter
+    center={[-84.389, 40.1438]}
+    zoom={14}
+    datasetId='tornadoes-2024-tracks'
+    layerId='tornadoes-2024-polygons'
+    datetime='2024-05-31'
+  >
+   The tornado entered Miami County and briefly intensified to a low-end EF-2, causing significant roof and wall removal from homes and severe damage to outbuildings. Shortly after this, the tornado lifted north of the town of Covington.
+  <Figure>
+    <Image
+      src={new URL('./tornadoes-2024-mar14-oh-damage3.jpg', import.meta.url).href}
+      alt='NWS DAT photo of damaged home near Covington, OH.'
+    />
+    <Caption>
+    Significantly damaged home north of Covington, Ohio ([NWS DAT](https://apps.dat.noaa.gov/stormdamage/damageviewer/)).
+    </Caption>
+  </Figure>    
+  </Chapter>
+
+  <Chapter
+    center={[-84.18744, 40.51339]}
+    zoom={9.6}
+    datasetId='tornadoes-2024-tracks'
+    layerId='tornadoes-2024-paths'
+    datetime='2024-05-31'
+  >
+   ## Lakeview, Ohio EF-3
+    
+   Tornado Rating: EF3
+
+   Location: Auglaize and Logan Counties, Ohio
+
+   Start Time: 7:29 PM EDT
+
+   End Time: 8:16 PM EDT
+
+   Path Length: 31.9 miles
+
+   Maximum Wind Speed: 155 mph
+
+   Maximum Path Width: 1000 yards
+
+   Fatalities: 3
+
+   Injuries: 27
+
+  </Chapter>
+  
+  <Chapter
+    center={[-84.16382, 40.52382]}
+    zoom={14}
+    datasetId='tornadoes-2024-tracks'
+    layerId='tornadoes-2024-polygons'
+    datetime='2024-05-31'
+  >
+    The tornado began south of Wapakoneta, OH, causing initial damage to a farm near Cemetery Road, then quickly strengthened west of Glacier Hill Lakes RV Resort, severely damaging trees and lofting campers, heavily damaging residential homes and the resort clubhouse along Wapak-Freyburg Road.
+  <Figure>
+    <Image
+      src={new URL('./tornadoes-2024-mar14-glacierhills-damage1.jpg', import.meta.url).href}
+      alt='Leveled two-story clubhouse.'
+    />
+    <Caption>
+    The two-story clubhouse at the campground was leveled at EF-3 intensity. Photo provided by Andrew Blackford. 
+    </Caption>
+  </Figure> 
+  <Figure>
+    <Image
+      src={new URL('./tornadoes-2024-mar14-glacierhills-damage2.jpg', import.meta.url).href}
+      alt='Glacier Hills Campground was destroyed.'
+    />
+    <Caption>
+    The Glacier Hills campground was shredded at EF-3 intensity. Photo provided by Andrew Blackford. 
+    </Caption>
+  </Figure> 
+  <Figure>
+    <Image
+      src={new URL('./tornadoes-2024-mar14-glacierhills-damage3.jpg', import.meta.url).href}
+      alt='Glacier Hills Campground was destroyed.'
+    />
+    <Caption>
+    The Glacier Hills campground was shredded at EF-3 intensity. Photo provided by Andrew Blackford. 
+    </Caption>
+  </Figure> 
+  </Chapter>
+
+  <Chapter
+    center={[-84.02659, 40.49832]}
+    zoom={13}
+    datasetId='tornadoes-2024-tracks'
+    layerId='tornadoes-2024-polygons'
+    datetime='2024-05-31'
+  >
+    The tornado briefly weakened to EF-1 before intensifying again between State Route 65 and Valley Road, damaging homes and trees.
+  <Figure>
+    <Image
+      src={new URL('./tornadoes-2024-mar14-lakeview-damage6.jpg', import.meta.url).href}
+      alt='Grove of trees torn apart west of Lakeview, OH.'
+    />
+    <Caption>
+    Groves of trees that were directly hit by this tornado were torn apart, such as this grove west of Lakeview. Photo provided by Andrew Blackford.
+    </Caption>
+  </Figure> 
+  </Chapter>
+
+  <Chapter
+    center={[-83.95124, 40.49046]}
+    zoom={13}
+    datasetId='planetscope'
+    layerId='ps-lakeview-winchester-tornadoes-2024'
+    datetime='2024-03-16'
+  >
+    The tornado moved southeast into Logan County, causing extensive damage in Lakeview, including total wall collapse of structures on Poplar Court and Main Street.
+  <Figure>
+    <Image
+      src={new URL('./tornadoes-2024-mar14-lakeview-strong.jpg', import.meta.url).href}
+      alt='Lakeview Strong.'
+    />
+    <Caption>
+    Despite the massive destruction, the residents of Lakeview are resilient. Photo provided by Andrew Blackford.
+    </Caption>
+  </Figure> 
+  <Figure>
+    <Image
+      src={new URL('./tornadoes-2024-mar14-lakeview-damage-aerial.jpg', import.meta.url).href}
+      alt='Aerial shot of leveled lakeshore cottages the morning of March 15, 2024..'
+    />
+    <Caption>
+    This aerial photo from the Sidney Daily News shows leveled lakeside cottages at Lakeview in the first light of March 15th, 2024.
+    </Caption>
+  </Figure> 
+  <Figure>
+    <Image
+      src={new URL('./tornadoes-2024-mar14-lakeview-damage5.jpg', import.meta.url).href}
+      alt='EF-3 damage to a home in the west side of Lakeview.'
+    />
+    <Caption>
+    Several homes such as this one sustained EF-3 damage in Lakeview. Photo provided by Andrew Blackford.
+    </Caption>
+  </Figure> 
+  </Chapter>
+
+  <Chapter
+    center={[-83.90124, 40.47546]}
+    zoom={13}
+    datasetId='planetscope'
+    layerId='ps-lakeview-winchester-tornadoes-2024'
+    datetime='2024-03-16'
+  >
+    The tornado then crossed the southern portion of Indian Lake, destroying numerous manufactured homes on Orchard Island.
+  <Figure>
+    <Image
+      src={new URL('./tornadoes-2024-mar14-lakeview-damage3.jpg', import.meta.url).href}
+      alt='Damage on Orchard Island.'
+    />
+    <Caption>
+    The Yacht Club on Orchard Island was heavily damaged. Photo provided by Andrew Blackford.
+    </Caption>
+  </Figure> 
+  </Chapter>
+
+  <Chapter
+    center={[-83.76548, 40.43860]}
+    zoom={11}
+    datasetId='tornadoes-2024-tracks'
+    layerId='tornadoes-2024-polygons'
+    datetime='2024-05-31'
+  >
+    The tornado continued to the southeast, affecting communities along the southern portion of the lake, with notable roof damage. It weakened as it entered rural Logan County, causing minor damage for several miles before dissipating near West Mansfield.
+  <Figure>
+    <Image
+      src={new URL('./tornadoes-2024-mar14-lakeview-damage2.jpg', import.meta.url).href}
+      alt='Damage on the southeast shore of Indian Lake.'
+    />
+    <Caption>
+    More minor damage occurred southeast of Indian Lake, but boats and campers were still tossed around. Photo provided by Andrew Blackford.
+    </Caption>
+  </Figure> 
+  </Chapter>
+
+  <Chapter
+    center={[-83.9388, 40.49860]}
+    zoom={12.2}
+    datasetId='nighttime-lights-SE'
+    layerId='lakeview-nightlights-tornadoes-2024'
+    datetime='2024-03-14'
+  >
+  The EF-3 tornado that struck the Indian Lake area caused widespread damage to over 1,500 properties and businesses, with a total of 239 homes destroyed. NASA’s Black Marble Night Lights satellite dataset shows the impact the tornado had on Indian Lake’s power grid, where the majority of the island lost access to power for days. 
+  </Chapter>
+
+</ScrollytellingBlock>
+
+
+
+
+<Block>
+  <Prose>
+
+    ### April 26
+
+    After a relatively calm period of weather in the United States, the tornado outbreak on April 26th triggered an extremely active phase of severe weather with 76 confirmed tornadoes across the United States, resulting in 1 fatality and 16 injuries. On the day before the tornado outbreak, the Storm Prediction Center issued a Level 3/5 Enhanced Risk of severe weather, including tornadoes, over eastern Nebraska, western Iowa, and the Kansas City metropolitan area. This risk delineation was maintained into the day of the outbreak. A broken line of supercell thunderstorms produced several significant tornadoes in the Enhanced risk zone, with the strongest being an EF-4 that resulted in the issuance of a rare Tornado Emergency for West Elkhorn, Nebraska. In the Omaha, Nebraska NWS County Warning Area, this tornado outbreak was responsible for the second largest daily tornado count since at least 1950, and produced the strongest tornadoes for the region since 2014. 
+
+  </Prose>
+
+  <Figure>
+    <Image
+      src={new URL('./tornadoes-2024-elkhorn-radar.gif', import.meta.url).href}
+      alt='Radar reflectivity of the Elkhorn tornado.'
+      style={{ height: '900px', width: 'auto' }}
+    />
+    <Caption>
+    WSR-88D radar reflectivity of the West Elkhorn, Nebraska EF-4 tornado at its strongest. Courtesy of RadarScope.
+    </Caption>
+  </Figure> 
+
+</Block>
+
+<Block>
+  <Figure>
+    <iframe width="750" height="423" src="https://www.youtube.com/embed/qW8ezwFXO7I?si=3zvtdgd8QxYz7MOv&amp;start=13" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>        
+    <figcaption>Dashcam footage of the EF-3 Lincoln, NE tornado striking a manufacturing building at maximum intensity.</figcaption>
+  </Figure>
+  
+  <Prose>
+    ##### Lincoln, NE EF-3
+    The first intense tornado of the day struck near 84th Street in Lincoln, Nebraska, carving an 8.6-mile path through Lancaster County with winds up to 158 mph. Touching down around 2:52 PM and lifting at 3:04 PM, the tornado caused significant damage, 3 injuries, and no fatalities. Shortly after forming, it hit a business and large transmission line, severely damaged a manufacturing plant, and threw cars up to 100 yards. It continued causing significant damage by derailing a train, snapping tree trunks, and scattering debris before weakening near 141st Street.
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>  
+    ##### West Elkhorn, NE EF-4
+    Shortly after the Lincoln EF-3 tornado lifted, a more violent tornado struck the northwestern Omaha suburbs, moving through Douglas and Washington Counties in Nebraska and into Harrison County, Iowa. On the ground for over 31 miles with winds up to 170 mph, the tornado caused extensive damage. It began near West Q Road, quickly intensifying as it crossed highways, damaging homes, and overturning farm equipment. After crossing the Elkhorn River, it leveled four houses in western Elkhorn and expanded to one mile in width, snapping power poles and trees. The tornado then moved through residential areas, causing damage in Bennington and inflicting severe damage to rural homes in Washington County before weakening and lifting near Modale, Iowa. Although there were no fatalities reported, there were multiple injuries.
+  </Prose>
+
+<Figure>
+  <video
+    width="750"
+    height="423"
+    controls
+    autoplay
+    muted
+>
+    <source src="https://packaged-media.redd.it/5g2n9q09w3xc1/pb/m2-res_692p.mp4?m=DASHPlaylist.mpd&v=1&e=1729188000&s=c264a5ba4d7b893b844205db513d6b76b5aa454d" type="video/mp4"/>
+    Your browser does not support the video tag.
+</video>
+<figcaption>Eyewitness video footage of the EF-4 West Elkhorn, Nebraska tornado when it was near its most violent stage.</figcaption>
+</Figure>
+</Block>
+
+<Block>
+  <Figure>
+        <iframe width="750" height="423" src="https://www.youtube.com/embed/mZ27T04dNno?si=E5756UdoTdlCOKrG&amp;start=63" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <figcaption>Storm chaser footage of the likely violent Minden-Harlan, IA tornado as it traversed the rural landscape.</figcaption>
+  </Figure>
+
+  <Prose>
+    ##### Minden-Harlan, IA EF-3
+    The final intense tornado of the day, likely stronger than its official rating, hit Pottawattamie and Shelby Counties in Iowa, covering 40.9 miles with peak winds of 160 mph. Beginning at 5:25 PM and lifting at 6:29 PM, the tornado caused one fatality and three injuries. Starting east of McClelland, the tornado intensified near Sycamore Road and grew to 800 yards wide as it approached Minden, causing severe EF-3 damage to homes and buildings. Multiple vortices were observed in Minden, where it caused the most destruction, leading to all of the reported casualties. Northeast of Minden, it widened to nearly a mile, flipping a semi-truck on Interstate 80 and damaging homes, trees, and vehicles along the way. Near Harlan, Doppler radar detected wind speeds up to 224 mph just above the ground, suggesting potential for EF-5 damage. The tornado weakened near Defiance, eventually dissipating at the Crawford-Shelby county line, with radar indicating it may have continued briefly into Crawford County.
+  </Prose>
+</Block>
+
+<Block type='wide'>
+<Figure>
+  <Map
+    datasetId='tornadoes-2024-dow'
+    layerId='tornadoes-2024-dow-refl-harlan'
+    dateTime='2024-04-26'
+    zoom={13.1}
+    center={[-95.3742193, 41.6605688]}
+    compareDateTime='2024-04-26'
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+  Comparison of DOW-collected reflectivity and velocity values from the Minden-Harlan, Iowa EF-3 tornado on April 26, 2024 as it passed northwest of Harlan. Negative velocity values indicate the wind is moving towards the radar, while positive values indicate the wind is moving away from the radar.
+  </Caption>
+</Figure>
+</Block>
+
+<Block>
+  <Prose>
+
+    ### May 6-8
+
+    Multiple rounds of severe thunderstorms occurred across much of the eastern two thirds of CONUS from May 6-8th, 2024, with significant tornadoes occurring in several states. On May 6th, a rare High Risk (Level 5/5) for severe thunderstorms, including tornadoes, was issued by the Storm Prediction Center for much of Oklahoma. Thankfully, many of the storms did not produce the expected numerous intense tornadoes, but one storm to the northwest of Tulsa was able to tap into the volatile environment and spawn a violent and deadly EF-4 tornado. On May 7th, the more favorable conditions for tornadic storms moved into portions of the Lower Great Lakes, with the highest threat centered from Eastern Indiana and Southern Lower Michigan into Western Ohio. Several tornadoes occurred in these areas, with some classified as significant EF-2+ tornadoes. On May 8th, the threat shifted to the south, and the southern Middle Tennessee and northern Alabama area experienced a regional tornado outbreak from the mid-afternoon into the evening hours. 
+    
+  </Prose>
+</Block>
+
+<Block type='wide' style={{ maxWidth: '70%', margin: '0 auto' }}>
+  <Figure>
+    <CompareImage 
+      leftImageSrc={new URL('./tornadoes-2024-may678-spc.jpg', import.meta.url).href}
+      leftImageAlt='Categorical SPC Severe Weather Outlooks May 6-8, 2024.'
+      leftImageLabel='SPC Categorical Outlooks May 6-8, 2024'
+      rightImageSrc={new URL('./tornadoes-2024-may678-reports.jpg', import.meta.url).href}
+      rightImageAlt='Unfiltered SPC tornado reports May 6-8, 2024'
+      rightImageLabel='SPC Tornado Reports May 6-8, 2024'
+    />
+    <Caption>
+    Comparison of the SPC Categorical severe weather outlooks issued from 12 UTC on May 6th - 0 UTC on May 9th, 2024 and all unfiltered tornado reports logged by them.
+    </Caption>
+  </Figure>
+</Block>
+
+<Block>
+<Figure>
+  <Map
+    datasetId='ps-barnsdall-tornadoes-2024'
+    layerId='ps-barnsdall-tornadoes-2024'
+    dateTime='2024-05-07'
+    zoom={13}
+    center={[-96.1623, 36.5612]}
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+  Planet TrueColor satellite imagery of tornado damage at Barnsdall, Oklahoma after an EF-4 struck the town on May 6, 2024.
+  </Caption>
+</Figure>
+
+  <Prose>
+    ##### May 6: Barnsdall, OK EF-4
+    The only notable tornado on May 6th was a violent EF-4 that impacted the town of Barnsdall, Oklahoma. The tornado caused severe damage to homes and the wax plant on the town’s east side, with winds estimated at 150-175 mph. As it moved northeast, the storm continued damaging trees, homes, and outbuildings. By the time it reached Bartlesville, the tornado weakened to EF-2, but still caused impactful damage in the city. The storm eventually dissipated northeast of Bartlesville after traveling around 40 miles, causing two fatalities and injuring 33 people.
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    ##### May 7: Michigan and Ohio Significant Tornadoes
+    During the mid-afternoon of May 7th in southwest Lower Michigan, several intense storms impacted areas south of Kalamazoo, prompting the first Tornado Emergency issuance in Michigan history. The storm system produced two EF-2s, two EF-1s, and a brief EF-UNK just inside the northern Indiana border. The first EF-2 touched down near Centreville, causing extensive tree and property damage and destroying parts of several homes north of Sherwood. At its peak, video confirmed the tornado to be of multiple-vortex type - a tornado with smaller circulations orbiting the main funnel, intensifing local damage along the tornado's path. The second EF-2 tornado struck Portage, traveling 11 miles through the city. It damaged homes, businesses, mobile home parks, and apartment complexes, uprooting hundreds of trees and causing a section of an industrial warehouse roof to collapse. Sixteen people were injured, making it Michigan's strongest tornado since the Gaylord EF-3 in 2022.
+  </Prose>
+
+<Figure>
+  <Map
+    datasetId='ps-portage-tornadoes-2024'
+    layerId='ps-portage-tornadoes-2024'
+    dateTime='2024-05-13'
+    zoom={12.7}
+    center={[-85.6228, 42.2018]}
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+  Planet TrueColor satellite imagery of tornado damage at Portage, Michigan after an EF-2 struck the town on May 7, 2024.
+  </Caption>
+</Figure>
+</Block>
+
+<Block>
+<Figure>
+  <Image
+    src={new URL('./tornadoes-2024-greenville-damage.jpg', import.meta.url).href}
+    alt='Damage in Greenville City Park.'
+  />
+  <Caption>
+  Significant tree damage at the Greenville, Ohio City Park also caused damage to surrounding buildings. Photo provided by Andrew Blackford.
+  </Caption>
+</Figure>
+
+<Prose>
+In central and eastern Indiana, the storms on May 7th had difficulty producing tornadoes initially. However, as the storms moved from southeastern Indiana through Ohio into western Pennsylvania, 29 tornadoes were spawned. The strongest were in west-central and far eastern Ohio, where three EF-2 and several high-end EF-1 tornadoes touched down. One storm led to a PDS tornado warning for the Oxford, Ohio area, north of Cincinnati.
+</Prose>
+</Block>
+
+<Block>
+<Prose>
+Ohio's first significant tornado of the day formed west of Coldwater, Ohio and was rated an EF-2. This large, wedge-shaped tornado caused major tree damage along the Wabash River, destroying barns and outbuildings in Mercer County before it weakened and lifted near Coldwater. Shortly after, another EF-2 tornado touched down north of Chickasaw, damaging fields, tearing up two farm properties, and causing roof and wall damage. Just to the south in Darke County, a high-end EF-1 tornado moved into Greenville, causing minor damage to homes and trees. The tornado was at peak intensity when it moved into the Greenville City Park, destroying trees and damaging the nearby high school’s football stadium before weakening and lifting north of Gettysburg.
+
+</Prose>
+
+<Figure>
+  <Map
+    datasetId='nighttime-lights-SE'
+    layerId='greenville-nightlights-tornadoes-2024'
+    dateTime='2024-05-07'
+    zoom={11}
+    center={[-84.621, 40.107]}
+    compareDateTime='2024-05-08'
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+    Comparison of artificial light emissions in Greenville, Ohio before and after a tornado strike on May 7, 2024.
+  </Caption>
+</Figure>
+
+</Block>
+
+<Block>
+ <Prose>
+    ##### May 8: Tennessee Valley Regional Tornado Outbreak
+    May 8 was the most prolific tornado producer of the storm system’s three-day period of activity, where a regional tornado outbreak affected south-central Tennessee and northern Alabama. One of the strongest tornadoes of the day, an EF-3, struck Columbia, TN, damaging homes along its 12.5-mile path through Maury and Marshall counties. With peak winds of 140 mph and a width of 900 yards, the tornado destroyed multiple homes, resulting in one fatality and 12 injuries before lifting near Lively, TN. 
+</Prose>
+</Block>
+
+<Block>
+   <Figure>
+    <Image
+      src={new URL('./tornadoes-2024-huntsville-WSR88D.gif', import.meta.url).href}
+      alt='Radar reflectivity of the Huntsville EF-2 tornado.'
+      style={{ height: '423px', width: 'auto' }}
+    />
+    <Caption>
+    WSR-88D radar reflectivity of the Huntsville, Alabama EF-2 tornado as it passed over the downtown portion of the city. Courtesy of RadarScope.
+    </Caption>
+  </Figure> 
+  <Prose>
+    In northern Alabama, the Huntsville area experienced its third-largest recorded tornado outbreak, with 20 tornadoes, including two EF-3s and one EF-2. The event unfolded in two waves: the first, from supercell storms around 8 PM until midnight, and the second, from a line of storms between 3 and 5:15 AM on May 9. Notable tornadoes included the Melton Bluff EF-3, which damaged homes along its 3.8-mile path, the Huntsville/Monte Sano EF-2, which struck highly populated areas, and the Henegar EF-3, which caused seven injuries—the highest for the event. Despite the widespread destruction, northern Alabama reported no fatalities, though eight people were injured across the state.
+  </Prose>
+</Block>
+
+
+
+<Block>
+  <Prose>
+
+    ### May 21
+
+    May 19-21st was an incredibly active stretch of severe weather in the central portion of the country, with May 21st being the worst tornadic day. The SPC issued a Moderate risk for severe weather across Iowa, Missouri, Minnesota, Wisconsin, and Illinois on this day, with a 15% risk for significant tornadoes. An organized cluster of thunderstorms moved into western Iowa from Nebraska in the morning, bringing severe wind gusts, while additional storms developed along the Kansas-Nebraska border. A rare Particularly Dangerous Situation Tornado Watch was issued at midday for the majority of Iowa in anticipation of possible significant tornadoes in the state. By mid-afternoon, several supercells in southwestern Iowa moved northeast towards the Des Moines area. Multiple tornadoes were reported, including a violent and well-documented tornado near Corning and Greenfield, Iowa, where several fatalities and injuries occurred.
+    
+  </Prose>
+
+ <Figure>
+      <Image
+      src={new URL('./tornadoes-2024-Greenfield_windspeed_swath_NWS_ratings.jpg', import.meta.url).href}
+      alt='NWS-estimated windspeed contours of the May 21, 2024 Greenfield, Iowa EF-4 tornado.'
+    />
+    <Caption>
+    Manually interpolated windspeed contours derived from NWS post-storm survey data of the May 21, 2024 Greenfield, Iowa EF-4 tornado. These contours are only shown for the portion of the tornado that impacted Greenfield. 
+    </Caption>
+  </Figure> 
+
+</Block>
+
+<Block>
+
+<Figure>
+  <Map
+    datasetId='ps-greenfield-pre-tornadoes-2024'
+    layerId='ps-greenfield-pre-tornadoes-2024'
+    dateTime='2024-05-20'
+    zoom={13}
+    center={[-94.4604, 41.3050]}
+    compareDateTime='2024-05-22'
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+    Planet satellite imagery Greenfield, Iowa before and after a deadly EF-4 struck the town.
+  </Caption>
+</Figure>
+
+<Prose>
+##### Greenfield, IA EF-4
+
+The strongest tornado of the day (and also of the year), was a violent EF-4 tornado that tore through Iowa’s Page, Taylor, Adams, and Adair counties during the mid-afternoon. The tornado first touched down near Villisca in Page County, causing EF-1 damage before clipping Taylor County and entering Adams County. North of Corning, the tornado reached EF-2 strength, destroying an outbuilding and part of a home, with a car being tossed on Iowa 148, resulting in one fatality. The storm intensified to high-end EF-3 near 150th Street in Adams County, where it leveled a cinder block home and toppled wind turbines, all while being captured by storm chasers documenting its intense, multiple vortex structure.
+
+</Prose>
+</Block>
+
+<Block>
+  <Figure>    
+    <iframe width="900" height="525" src="https://www.youtube.com/embed/IEFGKMWYD-E?si=HMt6-3sqf41CQYlg&amp;start=43" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <figcaption>Drone footage of the violent May 21, 2024 Greenfield, IA tornado shredding windmills southwest of the town.</figcaption>
+  </Figure>
+</Block>
+
+<Block>
+<Prose>
+
+As the tornado moved into Adair County, it strengthened to low-end EF-4, leveling homes and outbuildings before turning toward Greenfield, where it inflicted mid-range EF-4 damage with peak winds estimated by the NWS to be 185 mph. In Greenfield, dozens of homes and mobile homes were destroyed, resulting in four additional fatalities and 35 injuries. After devastating Greenfield, the tornado rapidly weakened and lifted just east of the municipal airport, leaving behind a 44-mile path of destruction, five fatalities, and 35 injuries.
+
+</Prose>
+
+<Figure>
+  <Map
+    datasetId='planetscope'
+    layerId='ps-tornadoes-2024-difference'
+    dateTime='2024-05-21'
+    zoom={13.3}
+    center={[-94.4604, 41.3050]}
+    compareDateTime='2024-05-21'
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+    Difference in satellite imagery before vs. after a tornado strike over Greenfield via Planet compared to derived maximum velocities as measured by a nearby DOW vehicle.
+  </Caption>
+</Figure>
+</Block>
+
+<Block>
+<Figure>
+  <Map
+    datasetId='tornadoes-2024-dow'
+    layerId='tornadoes-2024-dow-vg-greenfield'
+    dateTime='2024-05-21'
+    zoom={13.3}
+    center={[-94.4604, 41.3050]}
+    compareDateTime='2024-05-21'
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+  Comparison of DOW-collected ground-based velocities and correlation coefficient values from the Greenfield, Iowa EF-4 tornado on May 21, 2024. Negative velocity values indicate the wind is moving towards the radar, while positive values indicate the wind is moving away from the radar. Lower values of correlation coefficient indicate the the radar beam is being returned by non-meteorological targets (not precipitiation), which in this case is debris being thrown into the air by the violent tornado.
+  </Caption>
+</Figure>
+
+<Prose>
+
+A nearby DOW vehicle initially recorded winds possibly reaching 290 mph at only 44 meters above the ground in the eastern part of Greenfield. Further investigation into this data revealed that a brief one-second gust within the vortex contained astonishingly high winds of 308-319 mph. This DOW data suggests that the Greenfield, Iowa EF-4 tornado produced the third-highest measured winds recorded in history.
+
+</Prose>
+</Block>
+
+<Block>
+  <Prose>
+
+    ### A Spring of Records
+
+    The Spring 2024 tornado season broke several local, regional, and national records in the meteorology community, further cementing its place in U.S. severe weather history. Some of these records include:
+
+    * The state of Ohio tied its previous annual record of 62 tornadoes by early June and has since well surpassed it by the time of this publication.
+    * The state of Oklahoma experienced the most April tornadoes ever recorded, with 55 tornadoes confirmed. Several event-specific records were broken as well. 
+    * Charleston, West Virginia’s NWS County Warning Area set a new record for tornadoes in a single event on April 2nd. 
+    * The state of Arkansas witnessed a state record for tornado width on May 25th. 
+    * Omaha, Nebraska’s NWS County Warning Area saw the most tornado warnings ever issued in a single day on April 26th.
+    * Huntsville, Alabama’s NWS County Warning Area  saw its third most tornadoes in a day in their coverage area on May 7th. 
+    * The Greenfield, Iowa tornadic winds measured by DOW are the third-highest measured winds in history, just behind the infamous 1999 Moore and 2013 El Reno, Oklahoma tornadoes
+
+    Overall, the March-May period saw the second-highest tornado count in the United States since 1950, with only the historic 2011 season surpassing it. This historic season will be remembered not only for its destructive tornadoes but also for its unprecedented numbers, significantly impacting both communities and weather forecasting records across the United States.
+
+  </Prose>
+
+</Block>
+
+
+<Block>
+  <Prose>
+    ### References
+    National Centers for Environmental Information. *Billion-Dollar Weather and Climate Disasters.* National Oceanic and Atmospheric Administration, 2024. https://www.ncei.noaa.gov/access/billions/
+    
+    National Weather Service. *March 14, 2024 Severe Storms and Tornadoes.* ILN WFO, National Oceanic and Atmospheric Administration; 2024. https://www.weather.gov/iln/20240314
+    
+    National Weather Service. *Summary of March 14 2024 Severe Storms.* IND WFO, National Oceanic and Atmospheric Administration; 2024. https://www.weather.gov/ind/March142024Severe
+    
+    National Weather Service. *Tornado Outbreak of April 26, 2024.* OAX WFO, National Oceanic and Atmospheric Administration; 2024. https://www.weather.gov/oax/april262024
+    
+    National Weather Service. *2024 April 26 Tornadoes.* GID WFO, National Oceanic and Atmospheric Administration; 2024. https://www.weather.gov/media/gid/events/2024/April26/TornadoSummary.pdf
+    
+    National Weather Service. *The May 6-7, 2024 Severe Weather and Tornado Outbreak.* OUN WFO, National Oceanic and Atmospheric Administration; 2024. https://www.weather.gov/oun/events-20240506
+    
+    National Weather Service. *May 7, 2024 Severe Weather.* GRR WFO, National Oceanic and Atmospheric Administration; 2024. https://www.weather.gov/grr/7_May_2024_SevereWeather
+    
+    National Weather Service. *May 7, 2024 Tornadoes & Severe Weather Summary.* IWX WFO, National Oceanic and Atmospheric Administration; 2024. https://www.weather.gov/iwx/20240507_TornadoesSevereWx
+    
+    National Weather Service. *May 7-8, 2024 – Tornadoes and Flash Flooding.* ILN WFO, National Oceanic and Atmospheric Administration; 2024. https://www.weather.gov/iln/20240507
+    
+    National Weather Service. *May 8-9, 2024 Tornadoes, Severe Storms, and Flooding.* OHX WFO, National Oceanic and Atmospheric Administration; 2024. https://www.weather.gov/ohx/20240508
+    
+    National Weather Service. *Preliminary Survey Results for May 8-9.* HUN WFO, National Oceanic and Atmospheric Administration; 2024. https://www.weather.gov/media/hun/May_8-9_2024.pdf
+    
+    National Weather Service. *Event Summary May 21, 2024 Tornadoes, Winds, and Flash Flooding.* DMX WFO, National Oceanic and Atmospheric Administration; 2024. https://www.weather.gov/dmx/2024-May-21-Iowa-TornadoesWindsFlooding
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    ### Data Access
+
+    * [National Weather Service Damage Assessment Toolkit](https://apps.dat.noaa.gov/stormdamage/damageviewer/)
+    * [National Weather Service Text Product Archive](https://mesonet.agron.iastate.edu/wx/afos/#)
+    * [Storm Prediction Center Event Archive](https://www.spc.noaa.gov/exper/archive/)
+    * [PlanetScope](https://www.planet.com/explorer/)
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+
+    **Editors**: Andrew Blackford, Derek Koehl, Jerika Chung, Taylor DuPre, Grace Stewart, and Christopher Phillips
+
+    **Developers**: Andrew Blackford and Trent Cowan
+
+    **Science and Content Contributors**: Andrew Blackford, Trent Cowan, Udaysankar Nair, Brian Freitag, Aaron Kaulfus, Josh Wurman, and Karen Kosiba
+
+    **Acknowledgements**: The following collaborators have been a huge resource in expanding the Greenfield, Iowa analysis portion of this story into ongoing research that will be propagated into a peer-reviewed article by 2025: Dr. Josh Wurman, Dr. Karen Kosiba, Dr. David Roueche, Dr. Catherine Finley, Dr. Jana Houser, Dr. Christopher Phillips, and David Haliczer.
+
+    **Questions / Feedback**: Email Andrew.Blackford@uah.edu
+
+    ### Additional Resources
+
+    * [Apply for Federal Assistance](https://www.fema.gov/assistance/individual)
+
+  </Prose>
+</Block>

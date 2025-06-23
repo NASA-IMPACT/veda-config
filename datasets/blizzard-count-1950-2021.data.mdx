@@ -1,0 +1,145 @@
+---
+id: blizzard-count
+name: 'Blizzard Count 1950-2021'
+description: "Nearest neighbor interpolation of NCEI Storm Events Database confirmed blizzard reports from 1950-2021 in the United States, clipped to the Northern Plains, Midwest, and Northeast."
+
+media:
+  src: ::file media/blizzards-cover.png
+  alt: Near-blizzard conditions in Maria Stein, Ohio on December 23, 2022.
+  author: 
+    name: Andrew Blackford
+taxonomy:
+  - name: Topics
+    values:
+      - Water Resources
+  - name: Subtopics
+    values:
+      - Water Cycle
+      - Snow
+      - Climate
+      - Hydrology
+  - name: Source
+    values:
+      - NCEI
+layers:
+  - id: blizzard-count
+    stacCol: blizzard-count
+    name: Blizzard Count 1950-2021
+    type: raster
+    description: "Nearest neighbor interpolation of NCEI Storm Events Database confirmed blizzard reports from 1950-2021 in the United States, clipped to the Northern Plains, Midwest, and Northeast."
+    initialDatetime: newest
+    zoomExtent:
+        - 0
+        - 20
+    sourceParams:
+      colormap_name: turbo    
+      nodata: -999
+      rescale:
+        - 1
+        - 50
+    legend:
+      type: gradient
+      min: 1
+      max: 50
+      stops:
+        - "#30123b"
+        - "#4146d1"
+        - "#23d775"
+        - "#f9f510"
+        - "#fa6b02"
+        - "#900c00"
+    info:
+      source: NCEI
+      spatialExtent: Northern and Eastern United States
+      temporalResolution: 1950-2021 Climatology
+      unit: Count
+
+---
+<Block>
+  <Prose>
+  ## Dataset Details
+  - **Temporal Extent:** 1950-2021
+  - **Temporal Resolution:** Single Climatology
+  - **Spatial Extent:** Northern and Eastern United States
+  - **Data Type:** Research
+  </Prose>
+<Figure>
+  <Map
+    center={[-96,44]}
+    zoom={4.5}
+    datasetId='blizzard-count'
+    layerId='blizzard-count'
+    dateTime='2021-12-31'
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+    Number of confirmed blizzards from 1950-2021 in the northern Plains.
+  </Caption>
+</Figure>
+</Block>
+
+
+<Block>
+  <Prose>
+  ## About
+
+  In the United States, blizzards occur most frequently in the northern Great Plains, but they have been reported in every state except Hawaii. While blizzards are traditionally associated with winter, records show they can happen any time between October and June. Advances in weather monitoring and forecasting have improved our ability to detect and report these events, which has led to an increase in reported blizzard activity over the past several decades. On average, 13 blizzards occur annually across CONUS, but the past few decades have seen this number inflate to 19. The geographic spread of these storms has also widened, with more blizzards occurring outside their historical hotspots. Although the intensity of impact by individual storms has generally decreased due to better forecasting, their economic and societal impacts have risen, with associated losses now exceeding $1 billion per year. Understanding blizzards and preparing for their impacts is critical for communities in regions prone to extreme winter weather.
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+  ## Access the Data
+
+  This dataset was interpolated from confirmed blizzard reports from the [Storm Events Database](https://www.ncdc.noaa.gov/stormevents/), between 1950-2021. 
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+  ### Key Publications
+
+  Coleman, J. S. M., and R. M. Schwartz, 2017: An Updated Blizzard Climatology of the Contiguous United States (1959–2014): An Examination of Spatiotemporal Trends. J. Appl. Meteor. Climatol., 56, 173–187, https://doi.org/10.1175/JAMC-D-15-0350.1.
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+  ## Data Stories Using This Dataset
+  
+  **<Link to={"/stories/blizzards"}>When Winter Rages</Link>**
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+    ## Limitations of use
+
+    NASA data and products are freely available to federal, state, public, non-profit and commercial users. This information can be experimental- or research-grade data products and may not be appropriate for operational use. These NASA data products and services are intended to aid decision makers and enhance situational awareness, but these data are not guaranteed to be consistently available or routinely updated. Please cite the information according to the direction provided in the metadata.
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+  ## Disclaimer
+
+  All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+  
+  ## License
+  
+  [Creative Commons Attribution 1.0 International](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC BY 1.0)
+  </Prose>
+</Block>

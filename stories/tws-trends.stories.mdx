@@ -9,12 +9,34 @@ media:
   author:
     name: USGS/NASA
     url: https://eros.usgs.gov/media-gallery/earth-as-art/2/jordan
-pubDate: 2023-03-01
+pubDate: 2023-03-01T00:00
 taxonomy:
   - name: Topics
     values:
-      - EIS
+      - Water Resources
+  - name: Topics
+    values:
+      - Hydrology 
+      - Drought
+      - Precipitation 
+      - Soil Moisture 
+      - Evapotranspiration
+  - name: Source
+    values: 
+      - NASA EIS
 ---
+
+<Block>
+  <Prose>
+  <mark>🚧 This Discovery presents work in progress and not peer-reviewed results! 🚧</mark>
+
+  Authors: Wanshu Nie, Melissa Wrzesien, Shahryar Ahmad, Sujay Kumar, Kim Locke
+
+  [Join the discussion](https://github.com/orgs/Earth-Information-System/discussions) and provide comments on this Data Story.
+
+  </Prose>
+</Block>
+
 <Block>
   <Prose>
   ## Introduction
@@ -22,11 +44,7 @@ taxonomy:
   
   Freshwater is what makes Earth habitable, sustaining ecosystems and human civilization. The global water cycle supplies water and regulates weather patterns. The cycling of water links the changes on land with the ocean and atmosphere. Understanding the variability and availability of freshwater is challenging because of multiple earth processes that continually interact with each other, including those that govern precipitation, ground soil moisture retention, snow accumulation and melt, evapotranspiration and vegetation dynamics. Such processes become even more complex under human water resources management.
 
-  The EIS team integrates the Noah-MP land surface model within [NASA’s LIS framework](https://lis.gsfc.nasa.gov/) and Earth observations by assimilating soil moisture from the Climate Change Initiative Program released by European Space Agency  ([ESA CCI](https://esa-soilmoisture-cci.org/)), leaf area index from Moderate Resolution Imaging Spectroradiometer ([MODIS](https://lpdaac.usgs.gov/products/mcd15a2hv006/)), and terrestrial water storage anomalies from Gravity Recovery and Climate Experiment and the follow-on satellites ([GRACE/GRACE-FO](https://earth.gsfc.nasa.gov/geo/data/grace-mascons)). Using this data assimilation approach, the team provides a daily global water cycle reanalysis product for 2003-2021 at a 10 km spatial resolution. This allows us to better quantify surface variables and groundwater, human management influence, and hydrological extremes. These resulting reanalysis datasets are publicly available and interactable via this NASA VEDA platform, including key water, energy, and carbon fluxes such as terrestrial water storage (TWS) and gross primary production (GPP). For more information, please visit the corresponding [VEDA dataset page](https://www.earthdata.nasa.gov/dashboard/eis/datasets).
-
-  Join the discussion and provide comments on this Discovery at https://github.com/orgs/Earth-Information-System/discussions.
-
-  Authors: Wanshu Nie, Melissa Wrzesien, Shahryar Ahmad, Sujay Kumar, Kim Locke
+  The EIS team integrates the Noah-MP land surface model within [NASA’s LIS framework](https://lis.gsfc.nasa.gov/) and Earth observations by assimilating soil moisture from the Climate Change Initiative Program released by European Space Agency  ([ESA CCI](https://esa-soilmoisture-cci.org/)), leaf area index from Moderate Resolution Imaging Spectroradiometer ([MODIS](https://lpdaac.usgs.gov/products/mcd15a2hv006/)), and terrestrial water storage anomalies from Gravity Recovery and Climate Experiment and the follow-on satellites ([GRACE/GRACE-FO](https://earth.gsfc.nasa.gov/geo/data/grace-mascons)). Using this data assimilation approach, the team provides a daily global water cycle reanalysis product for 2003-2021 at a 10 km spatial resolution. This allows us to better quantify surface variables and groundwater, human management influence, and hydrological extremes. These resulting reanalysis datasets are publicly available and interactable via this NASA VEDA platform, including key water, energy, and carbon fluxes such as terrestrial water storage (TWS) and gross primary production (GPP). For more information, please visit the corresponding [VEDA dataset page](https://www.earthdata.nasa.gov/dashboard/data-catalog?taxonomy=%7B%22Topics%22%3A%22eis%22%7D).
 
   </Prose>
 </Block>
@@ -77,7 +95,7 @@ taxonomy:
 <Block>
   <Prose>
   ## Comparing the trends in water and carbon cycles
-  We applied a seasonal and trend decomposition algorithm to get the trend estimates for terrestrial water storage and gross primary production. The method can better help to deal with [nonstationarities](https://github.com/Earth-Information-System/sea-level-and-coastal-risk/blob/main/AMS_2023_Wanshu_Nie_for_VEDA_Discovery.pdf) and seasonal shifts and provide a more robust estimate of trends. These trend data sets are also provided in the [VEDA dataset page](https://www.earthdata.nasa.gov/dashboard/eis/datasets).
+  We applied a seasonal and trend decomposition algorithm to get the trend estimates for terrestrial water storage and gross primary production. The method can better help to deal with [nonstationarities](https://github.com/Earth-Information-System/sea-level-and-coastal-risk/blob/main/AMS_2023_Wanshu_Nie_for_VEDA_Discovery.pdf) and seasonal shifts and provide a more robust estimate of trends. These trend data sets are also provided in the [VEDA dataset page](https://www.earthdata.nasa.gov/dashboard/data-catalog?taxonomy=%7B%22Topics%22%3A%22eis%22%7D).
 
 ⚠️  Our results of the GPP trends for some areas are contradictory to the greening trends reported by [Chen et al. 2019](https://doi.org/10.1038/s41893-019-0220-7), which may stem from uncertainties and discrepancies of data sources and the limitation of the model physics. This requires a more in-depth assessment. ⚠️
 

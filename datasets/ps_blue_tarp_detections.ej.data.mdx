@@ -1,9 +1,10 @@
 ---
 id: ps_blue_tarp_detections
-name: "Blue tarp detections"
-description: "Machine learning generated blue tarp detections using Planetscope 3-band RGB imagery"
+isHidden: true
+name: "PlanetScope Blue tarp Detections"
+description: "Machine learning generated blue tarp detections using PlanetScope 3-band RGB imagery"
 media:
-  src: ::file ./ps-bluetarp--dataset-cover.jpg
+  src: ::file ./media/ps-bluetarp--dataset-cover.jpg
   alt: Blue tarp detections for Jefferson Parish, LA on February 12, 2022
   author:
     name: NASA
@@ -11,7 +12,23 @@ media:
 taxonomy:
   - name: Topics
     values:
-      - Environmental Justice
+      - Natural Disasters
+  - name: Subtopics
+    values:
+      - Habitat
+      - Urban
+  - name: Source
+    values:
+      - Planet
+infoDescription: |
+  ::markdown
+    PlanetScope provides 3-band RGB imagery at 3-meter ground resolution which
+    can support building-scale analysis of the land surface. In the aftermath of
+    natural disasters associated with high wind speeds, homes with damaged roofs
+    typically are covered with blue tarps to protect the interior of the home
+    from further damage. Using machine learning, blue tarps can be detected from
+    the PlanetScope imagery using pre-event cloud free images to detect blue
+    pixels and potential impacts after a natural disaster.
 layers:
   - id: blue-tarp-detection
     stacCol: blue-tarp-detection
@@ -28,11 +45,17 @@ layers:
       rescale:
         - 0
         - 400
+    info:
+      source: NASA
+      spatialExtent: Puerto Rico
+      temporalResolution: Sub-Annual 
+      unit: N/A
+
   - id: blue-tarp-planetscope
     stacCol: blue-tarp-planetscope
-    name: Planetscope input RGB imagery used for blue tarp detection
+    name: PlanetScope input RGB imagery used for blue tarp detection
     type: raster
-    description: "Planetscope input RGB imagery used for blue tarp detection. Includes copyrighted material of Planet. All rights reserved."
+    description: "PlanetScope input RGB imagery used for blue tarp detection. Includes copyrighted material of Planet. All rights reserved."
     zoomExtent:
       - 14
     compare:
@@ -42,25 +65,44 @@ layers:
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
         }
+    info:
+      source: NASA
+      spatialExtent: Puerto Rico
+      temporalResolution: Sub-Annual 
+      unit: N/A
+
 ---
+
+
+<Block>
+  <Prose>   
+    ## Dataset Details
+    - **Temporal Extent:** February 2017 - February 2022<br />
+    - **Spatial Extent:** Jefferson Parish, Louisiana<br />
+    - **Spatial Resolution:** 3 meters<br />
+    - **Data Type:** Research<br />
+  </Prose>
+</Block>
+
 
 <Block>
   <Prose>
-    Planetscope provides 3-band RGB imagery at 3-meter ground resolution which
+    PlanetScope provides 3-band RGB imagery at 3-meter ground resolution which
     can support building-scale analysis of the land surface. In the aftermath of
     natural disasters associated with high wind speeds, homes with damaged roofs
     typically are covered with blue tarps to protect the interior of the home
     from further damage. Using machine learning, blue tarps can be detected from
-    the Planetscope imagery using pre-event cloud free images to detect blue
+    the PlanetScope imagery using pre-event cloud free images to detect blue
     pixels and potential impacts after a natural disaster.
   </Prose>
 </Block>
 
 <Block>
   <Prose>
-    ## Scientific research Detection of blue tarps from high resolution imagery
+    ## Scientific Details<br /> 
+    Detection of blue tarps from high resolution imagery
     can inform disaster response of the most impacted locations. Additionally,
-    given the frequency with which Planetscope scenes are retrieved from the
+    given the frequency with which PlanetScope scenes are retrieved from the
     satellite, the rate of recovery for a given location can also be tracked
     over time. This can also support disaster response to provide aid to
     specific locations where recovery efforts are lacking.
@@ -82,13 +124,15 @@ layers:
     </Caption>
   </Figure>
   <Prose>
-    ## Interpreting the data Machine learning-based detections of blue tarps are
+    ## Interpreting the data<br />
+    Machine learning-based detections of blue tarps are
     displayed as red pixels on the basemap and are available for both Hurricane
     Maria (2017) and Hurricane Ida (2021). The input true color imagery used to
     produce the detections are also added as an additional layer and can be used
     for qualitative validation of the detections.
   </Prose>
 </Block>
+
 
 <Block>
   <Prose>
@@ -97,6 +141,34 @@ layers:
     1. Source data made available through the NASA Commercial Smallsat Data Acquisition (CSDA) Program
    </Prose>
 </Block>
+
+<Block>
+  <Prose>
+    ## Limitations of use
+
+    NASA data and products are freely available to federal, state, public, non-profit and commercial users. This information can be experimental- or research-grade data products and may not be appropriate for operational use. These NASA data products and services are intended to aid decision makers and enhance situational awareness, but these data are not guaranteed to be consistently available or routinely updated. Please cite the information according to the direction provided in the metadata.
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+  ## Disclaimer
+
+  All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+    ## License
+
+    [Creative Commons Zero v1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC0 1.0)
+  </Prose>
+</Block>
+
+
 
 <Block>
   <Prose>

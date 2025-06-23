@@ -1,0 +1,154 @@
+---
+id: crystal-lake-mercury
+name: Wildfires Affect Water Quality
+description: "A Mercury Deposition Analysis of Crystal Lake in Southern California"
+media:
+  src: ::file ./crystal-lake-background-sat.jpg
+  alt: GOES-West Imagery from 9 September, 2020.
+  author: 
+    name: NOAA-NASA
+    url: https://www.goes-r.gov/multimedia/dataAndImageryImagesGoes-17.html
+pubDate: 2023-08-21T00:00
+taxonomy:
+  - name: Topics
+    values:
+      - Water Resources
+      - Wildfires
+  - name: Topics
+    values:
+      - Water Quality
+  - name: Source
+    values:
+      - Community Contributed
+---
+
+<Block>
+  <Prose>
+    Authors: Trent Cowan<sup>[1]</sup>, Andrew Blackford<sup>[1]</sup>, Udaysankar Nair<sup>[1]</sup>\
+    <sup>[1]</sup> University of Alabama in Huntsville(UAH)
+
+    <mark>🚧 This Data Story presents work in progress and not peer-reviewed results! 🚧</mark>
+  
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    ## Introduction
+
+    Over the last five decades, the land area burned by forest fires in the western United States has increased tenfold. This trend is expected to continue and even accelerate under the influence of climate change. Given this scenario, the societal impacts of wildfires are of interest. While the impact of wildfires on the loss of human life, property, and air pollution is obvious, less understood are secondary environmental impacts that affect regions remote from the location of the fires. Recent studies show that smoke from wildfires is expected to become the major air pollutant in the United States. However, the potential impact of wildfires on water quality, especially mercury contamination, is not well studied. 
+  
+  <Figure>
+    <video style={{ width: '100%', aspectRatio: "16/9" }} controls>
+      <source
+        src={new URL('./crystal-lake-location.mp4', import.meta.url).href} type="video/mp4"
+      />
+      Your browser does not support the video tag.
+    </video>
+
+    <Caption>
+      Location of Crystal Lake in Southern California, from a regional to local view.
+    </Caption>
+  </Figure>
+  
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    ## Wildfires Lead to Deposition
+    As organic matter is consumed during wildfires, nutrients (phosphorus, nitrogen, carbon) and a variety of heavy metals such as mercury, arsenic, and lead are released into the soil and air. Following wildfires, subsurface infiltration of water is often reduced due to the removal of surface leaf litter and organic matter from the topsoil layer. This leads to an increase in surface runoff. Further, the removal of leaf litter exposes the soil layer to the direct impacts of rainfall, which coupled with the loss of vegetation root structure to keep soil in place, leads to a higher potential for soil erosion after the occurrence of wildfires. A combination of these factors can lead to higher nutrient and heavy metal inputs into nearby water bodies. 
+    
+    Similarly, nutrients and heavy metals transported in smoke plumes can also affect remotely-located water bodies. Wet removal or the washout of particulate and soluble gasses by rainfall can deposit nutrients and heavy metals onto soil and water surfaces. Particulate and gaseous emissions from fires can also reach soil and water surfaces through dry deposition, which is their removal from the atmosphere through the action of gravitational settling and diffusion. 
+
+    Pollution of water bodies by nutrients removed from the atmosphere by wet and dry deposition can have significant consequences. Increased cloudiness in water can block sunlight needed by aquatic plants and harm their growth. Higher concentrations of phosphorus and nitrogen in water bodies can fertilize and stimulate algal growth. The overabundance of algae can deplete dissolved oxygen leading to the death of aquatic animals. Fertilization can also lead to harmful algal blooms, which release toxins and can cause death. 
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    ## Consequences of Mercury Deposition
+    Heavy metal pollution in water bodies caused by wet and dry deposition can have serious consequences. Once the mercury present in smoke emissions enters water bodies, the mercury is absorbed by plankton in the water. As the plankton is consumed by aquatic animals, mercury accumulates in concentrations proportionate to the level of hierarchy that the animal occupies in the food chain. Thus, mercury concentrations are high in fish and other aquatic animals consumed by humans such as marlin and tuna which occupy the top levels of the aquatic food chain. Mercury is especially toxic to humans during the gestational period and can cause serious disabilities during the early stages of development. For this reason, mercury contamination of fish is a serious concern. 
+    
+    Water quality monitoring in the U.S. has occasionally detected elevated levels of mercury in distant water bodies, which cannot be solely attributed to human sources like coal-fired power plants, a significant emitter of mercury. Transport of mercury by smoke plumes from wildfires and prescribed burning has been suspected to be the source of heavy metal pollution on such occasions. 
+
+    Crystal Lake, located in Los Angeles County, California, is one such water body that is affected by mercury transported by wildfires. Analysis of 150 years of sediment deposit from the lake bed shows episodic spikes in mercury concentration. Since there are no known sources of mercury emissions in the vicinity of the lake, wildfire emission is thought to be the primary source of mercury contamination. 
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    ## Satellite Analysis of Crystal Lake, Los Angeles County, CA
+    We utilized the NASA  Moderate Resolution Imaging Spectroradiometer (MODIS) aerosol optical depth (AOD) product over the time period of 2000-2023 to examine if Crystal Lake is, indeed, affected by smoke plumes from wildfires. AOD is an indicator of the total amount of particulate matter present in the atmosphere over a given location observed by the satellite sensor. Higher values of AOD are indicative of the occurrence of particulate matter in the region. The time series of AOD averaged over the Crystal Lake region for the 2000-2023 time period (Figure 1) shows seasonally varying values with the maximum occurring during summertime. While the long-term trend of AOD shows a statistically insignificant decreasing trend, anomalously high values have occurred in recent years. 
+   </Prose>
+</Block>
+
+<Block type="wide">
+  <Figure>
+    <Chart
+      dataPath={new URL('./crystal-lake-aod-trend.csv', import.meta.url).href}
+      dateFormat="%Y-%m"
+      idKey='source'
+      xKey='Date'
+      yKey='Mean AOD'
+      yAxisLabel='Aerosol Optical Depth'
+      highlightStart = '2020-7'
+      highlightEnd = '2020-11'
+      highlightLabel = '2020 Outbreak'
+
+    />
+    <Caption>
+      Figure 1. Time series of monthly and spatially averaged MODIS AOD over Crystal Lake, LA County, CA.
+    </Caption>
+  </Figure>
+</Block>
+
+<Block>
+  <Prose>
+    While the summertime increase in atmospheric particulate matter is indicative of smoke pollution, the role of human-induced particulate pollution cannot be ruled out. Therefore, we utilized smoke plumes tracked by sensors aboard the Geostationary Operational Environmental Satellite (GOES) to confirm if the high particulate matter loading observed from NASA MODIS sensors coincides with occurrences of smoke plumes over the lake. Using the smoke plumes detected by GOES and made available through the Hazard Mapping System (HMS) product, we plotted the monthly occurrences of smoke plumes over the lake (Figure 2). The time series of smoke occurrences available since 2005 shows the frequent occurrence of smoke plumes over the lake during summer months when the particulate matter load is maximized. The time series of smoke occurrences shows a statistically significant increasing trend with anomalously high values of particulate matter loading occurring over the lake in recent years. 
+  </Prose>
+</Block>
+
+<Block type="wide">
+  <Figure>
+    <Chart
+      dataPath={new URL('./smoke_count_annual_with_trend.csv', import.meta.url).href}
+      dateFormat="%Y"
+      idKey='source'
+      xKey='Year'
+      yKey='smoke'
+      yAxisLabel='Smoke Count (Annual)'
+    />
+    <Caption>
+      Figure 2. Time series of total number of days with smoke over Crystal Lake, LA County, CA by year.
+    </Caption>
+  </Figure>
+</Block>
+
+<Block>
+  <Prose>
+    September 2020 was a particularly anomalous month for smoke occurrence over Crystal Lake, with 27 days being impacted. Additionally, the monthly average AOD was at its highest value during any point of the 22-year time series, with a mean value of 0.413. Below is GOES-West imagery from September 9th, 2020 of California's Central Valley. This imagery shows thick, heavy smoke cover over much of the scene as a result of a large wildfire outbreak that would continue for several days across the United States West Coast.  
+  </Prose>
+</Block>
+
+<Block>
+  <Figure>
+     <video style={{ width: '100%', aspectRatio: "16/9" }} controls>
+      <source
+        src={new URL('./crystal-lake-sept2020.mp4', import.meta.url).href} type="video/mp4"
+      />
+      Your browser does not support the video tag.
+    </video>
+
+    <Caption>
+      GOES-17 TrueColor imagery the morning of September 9, 2020 of ongoing wildfires in California's Central Valley. These fires led to extensive smoke cover in the vicinity of Crystal Lake.
+    </Caption>
+  </Figure>
+</Block>
+
+<Block>
+  <Prose>
+    ## Conclusion
+    A major implication of this discovery is that waterbodies in the western U.S. could be subject to increased mercury pollution if the increasing frequency and intensity of wildfire smoke plumes continues to occur. High average values of AOD associated with the smoke plumes from the fires in recent years are reflective of increases in fire intensity and smoke emissions.    
+  </Prose>
+</Block>

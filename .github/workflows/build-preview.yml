@@ -1,0 +1,71 @@
+name: Preview build with VEDA UI
+
+on:
+  workflow_dispatch:
+    inputs:
+      VERSION_NUMBER:
+        type: string
+  repository_dispatch:
+    types: [update-version]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+env:
+  SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+
+jobs:
+  makepr:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+      with:
+        submodules: recursive
+        ref: develop
+        fetch-depth: 0
+    - name: Use Node.js ${{ env.NODE }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ env.NODE }}
+
+    - name: Set Version Variable
+      id: set-version
+      run: echo "VERSION=${{ github.event.client_payload.VERSION_NUMBER || inputs.VERSION_NUMBER }}" >> $GITHUB_ENV
+  
+    - name: git config
+      shell: bash
+      run: |
+        git config user.name "${GITHUB_ACTOR}"
+        git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+    - name: Update Submodule
+      shell: bash
+      run: |
+        git submodule update --init --recursive
+        git submodule update --recursive --remote
+        cd ./.veda/ui
+        git fetch --tags
+        git checkout ${{ env.VERSION }}
+        cd -
+    - name: Create Pull Request
+      id: making-pr
+      uses: peter-evans/create-pull-request@v7
+      with:
+        commit-message: "Update UI to ${{ env.VERSION }}"
+        title: "ci: Update submodule to version ${{ env.VERSION }}"
+        body: "This is an automatic PR that updates the submodule to version `${{ env.VERSION }}`."
+        base: develop
+        branch: ci-update-${{ env.VERSION }}
+    - name: Notify release through Slack
+      uses: slackapi/slack-github-action@v2.0.0
+      with:
+        webhook: ${{ secrets.SLACK_WEBHOOK_URL }}
+        webhook-type: incoming-webhook
+        payload: |
+          text: "*VEDA UI Release ${{ env.VERSION }}*: ${{ job.status }}\n Preview link: ${{ steps.making-pr.outputs.pull-request-url }}"
+          blocks:
+            - type: "section"
+              text:
+                type: "mrkdwn"
+                text:  "*VEDA UI Release ${{ env.VERSION }}*: ${{ job.status }}\n Preview link: ${{ steps.making-pr.outputs.pull-request-url }}"

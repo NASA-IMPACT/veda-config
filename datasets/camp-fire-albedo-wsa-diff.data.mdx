@@ -1,0 +1,242 @@
+---
+id: campfire_albedo_wsa_difference_2015_2022
+name: "California Camp Fire Impacts observed from MODIS"
+isHidden: true
+description: "3-year average difference (2018-2022) - (2015-2018) of albedo, land surface temperature, and vegetation from MODIS for the 2018 California Camp Fire." 
+media:
+  src: ::file media/camp_fire_burn_scar_all.thumbnail.jpg
+  alt: Brush and Tree Landscape Burning with Flames and Smoke During California Wildfire
+  author:
+    name: Erin
+    url: https://as2.ftcdn.net/v2/jpg/02/33/05/25/1000_F_233052573_5Xpiw48FkuBnLzxopKwKHo2boD5QaZJW.jpg
+taxonomy:
+  - name: Topics
+    values:
+      - Wildfires
+  - name: Subtopics
+    values:
+      - Habitat
+      - Agriculture
+      - Natural Disasters
+  - name: Source
+    values:
+      - MODIS
+infoDescription: |
+  ::markdown
+    In order to examine how the fire event affected the changes in surface properties, we utilized the MODIS-derived Normalized Difference Vegetation Index (NDVI), albedo (WSA), and land surface temperature (LST) products for a six-year period centered on the Camp Fire event (2015-2022). We used these products which are available at 16-day intervals to compute monthly averaged spatial maps of NDVI, albedo, and LST. The monthly average spatial maps were then averaged over the areas affected by the Camp Fire to compute monthly mean values. This dataset is the Albedo WSA difference portion of that analysis.
+layers:
+  - id: modis-albedo-wsa-diff-2015-2022
+    stacCol: campfire-albedo-wsa-diff
+    name: White Sky Albedo (WSA) Difference
+    type: raster
+    description: "3-year average difference (2018-2022) - (2015-2018) MODIS-derived Albedo over the 2018 Camp Fire burn scar domain."
+    initialDatetime: newest
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      colormap_name: bwr
+      rescale:
+        - -0.1
+        - 0.1
+      nodata: -9999
+    legend:
+      type: gradient
+      min: "-0.1"
+      max: "0.1"
+      stops:
+        - "#4575b4"
+        - "#91bfdb"
+        - "#e0f3f8"
+        - "#ffffff"
+        - "#fee090"
+        - "#fc8d59"
+        - "#d73027"
+    info:
+      source: NASA
+      spatialExtent: Regional
+      temporalResolution: Annual
+      unit: Percent Difference
+
+  - id: modis-lst-day-diff-2015-2022
+    stacCol: campfire-lst-day-diff
+    name: Daytime Land Surface Temperature (LST) Difference
+    type: raster
+    description: "3-year average difference (2018-2022) - (2015-2018) MODIS-derived daytime land surface temperature over the 2018 Camp Fire burn scar domain."
+    initialDatetime: newest
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      colormap_name: bwr
+      rescale:
+        - -7.5
+        - 7.5
+      nodata: -9999
+    legend:
+      unit:
+        label: °C
+      type: gradient
+      min: "-7.5"
+      max: "7.5"
+      stops:
+        - "#4575b4"
+        - "#91bfdb"
+        - "#e0f3f8"
+        - "#ffffff"
+        - "#fee090"
+        - "#fc8d59"
+        - "#d73027"
+    info:
+      source: NASA
+      spatialExtent: Regional
+      temporalResolution: Annual
+      unit: Percent Difference
+
+  - id: modis-lst-night-diff-2015-2022
+    stacCol: campfire-lst-night-diff
+    name: Nighttime Land Surface Temperature (LST) Difference
+    type: raster
+    description: "3-year average difference (2018-2022) - (2015-2018) MODIS-derived nighttime land surface temperature over the 2018 Camp Fire burn scar domain."
+    initialDatetime: newest
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      colormap_name: bwr
+      rescale:
+        - -1.75
+        - 1.75
+      nodata: -9999
+    legend:
+      unit:
+        label: °C
+      type: gradient
+      min: "-1.75"
+      max: "1.75"
+      stops:
+        - "#4575b4"
+        - "#91bfdb"
+        - "#e0f3f8"
+        - "#ffffff"
+        - "#fee090"
+        - "#fc8d59"
+        - "#d73027"
+    info:
+      source: NASA
+      spatialExtent: Regional
+      temporalResolution: Annual
+      unit: Percent Difference
+
+  - id: modis-ndvi-diff-2015-2022
+    stacCol: campfire-ndvi-diff
+    name: Normalized Difference Vegetation Index (NDVI) Difference
+    type: raster
+    description: "3-year average difference (2018-2022) - (2015-2018) MODIS-derived normalized difference vegetation index over the 2018 Camp Fire burn scar domain."
+    initialDatetime: newest
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      colormap_name: bwr
+      rescale:
+        - -0.5
+        - 0.5
+      nodata: -9999
+    legend:
+      type: gradient
+      min: "-0.5"
+      max: "0.5"
+      stops:
+        - "#4575b4"
+        - "#91bfdb"
+        - "#e0f3f8"
+        - "#ffffff"
+        - "#fee090"
+        - "#fc8d59"
+        - "#d73027"
+    info:
+      source: NASA
+      spatialExtent: Regional
+      temporalResolution: Annual
+      unit: Percent Difference
+---
+
+<Block>
+  <Prose>
+    ## Dataset Details
+    - **Temporal Extent:** 2015-2022<br />
+    - **Spatial Extent:** Butte County, California<br />
+    - **Spatial Resolution:** 1 km<br />
+    - **Data Units:** Albedo & NDVI (unitless); LST (°C)<br />
+    - **Data Type:** Research<br />
+    </Prose>
+  <Figure>
+    <Map
+      center={[-121.5678, 39.7558]}
+      zoom={9.5}
+      datasetId='campfire_albedo_wsa_difference_2015_2022'
+      layerId='modis-lst-night-diff-2015-2022'
+      dateTime='2015-01-01'
+    />
+    <Caption
+      attrAuthor='NASA'
+      attrUrl='https://nasa.gov/'
+    >
+    Satellite observations show that loss of vegetation caused by the Camp Fire leads to an average decrease in night time LST of 0.35 &deg;C (0.64 &deg;F). Locally, decreases in night time LST can be as much as 1.5 &deg;C.
+    </Caption>
+  </Figure>
+</Block>
+
+
+<Block>
+  <Prose>
+    ## About
+
+    In order to examine how the fire event affected the changes in surface properties, we utilized the MODIS-derived Normalized Difference Vegetation Index (NDVI), albedo, and land surface temperature (LST) products for a six-year period centered on the Camp Fire event (2015-2022). We used these products which are available at 16-day intervals to compute monthly averaged spatial maps of NDVI, albedo, and LST. The monthly average spatial maps were then averaged over the areas affected by the Camp Fire to compute monthly mean values. 
+
+    [Normalized Difference Vegetation Index](https://www.earthdata.nasa.gov/topics/land-surface/land-use-land-cover/land-use-land-cover-classification/vegetation-index-0): A numerical value used to predict or assess vegetative characteristics such as plant leaf area, total biomass, and general health and vigor of the surface vegetation.
+
+    [White Sky Albedo (WSA)](https://www.earthdata.nasa.gov/topics/land-surface/surface-radiative-properties/albedo): The ratio of sunlight reflected from the land surface to sunlight reaching the land surface.
+
+    [Land Surface Temperature](https://www.earthdata.nasa.gov/topics/land-surface/surface-thermal-properties/land-surface-temperature): How hot the “surface” of Earth would feel to the touch in a particular location.
+
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+  
+  ## Data Stories Using This Dataset
+  
+  **<Link to={"/stories/burn-scar"}>Wildfires Affect Local Weather, Climate, and Hydrology</Link>**
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+    ## Limitations of use
+
+    NASA data and products are freely available to federal, state, public, non-profit and commercial users. This information can be experimental- or research-grade data products and may not be appropriate for operational use. These NASA data products and services are intended to aid decision makers and enhance situational awareness, but these data are not guaranteed to be consistently available or routinely updated. Please cite the information according to the direction provided in the metadata.
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+  ## Disclaimer
+
+  All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+    ## License
+
+    [Creative Commons Zero v1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC0 1.0)
+  </Prose>
+</Block>

@@ -1,0 +1,202 @@
+---
+id: cyclones-beryl
+name: Hurricane Beryl (2024)
+description: "The Strongest July Hurricane in Atlantic Basin History"
+media:
+  src: ::file ./cyclones_beryl_background.png
+  alt: GOES-16 Band 2 visible satellite imagery of the eye of Hurricane Beryl at Category 5 intensity.
+  author:
+    name: CIRA
+    url: https://satlib.cira.colostate.edu/event/hurricane-beryl/
+pubDate: 2025-03-07T00:00
+taxonomy:
+  - name: Topics
+    values:
+      - Natural Disasters
+      - Tropical
+  - name: Source
+    values:
+      - Community Contributed
+---
+
+<Block>
+  <Prose>
+
+  Authors: Andrew Blackford<sup>1</sup>, Siddharth Chaudhary<sup>1</sup>\
+  <sup>1</sup> The University of Alabama in Huntsville
+  
+  <mark>🚧 This Data Story presents work in progress and not peer-reviewed results! 🚧</mark>
+
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+    ## Overview    
+    Hurricane Beryl was an extremely powerful hurricane that occurred in the Northern Atlantic Ocean in June and July of 2024. Beryl rapidly intensified to a Category 4 hurricane as it approached the Lesser Antilles, making landfall on Grenada’s Carriacou Island and causing significant damage. Once Beryl made its way into the Caribbean Sea, it reached Category 5 status - the highest rating on the Saffir-Simpson scale. The storm did not make any more landfalls until it weakened in the western Caribbean and struck Mexico’s Yucatan Peninsula as a Category 2. It then moved into the Gulf of America and made one final landfall near Matagorda, Texas as a Category 1 hurricane and moved over the Houston metro area before dissipating. 
+  
+    Beryl was the strongest hurricane ever observed in the Atlantic Ocean before July 4th since records began in 1851, with peak sustained winds estimated at 165 mph. Beryl was also the first Atlantic hurricane on record to reach Category 4 strength or higher during the month of June and just the second Category 5 hurricane to occur during the month of July. Beryl inflicted 71 direct fatalities and was responsible for over $8 Billion USD in damages. 
+  </Prose>
+
+  <Figure>
+    <Image
+      src={new URL('./cyclones_beryl_track.jpg', import.meta.url).href}
+      alt='Official NHC track and intensity intervals for Hurricane Beryl.'
+      align='left'
+    />
+    <Caption>
+    Official National Hurricane Center (NHC) best track, intensity, and position updates for the entire life cycle of Hurricane Beryl. 
+    </Caption>
+  </Figure>
+</Block>
+
+<Block>
+  <Figure>
+    <Image
+      src={new URL('./cyclones-beryl-goes-20240701_compressed.gif', import.meta.url).href}
+      alt='GOES visible satellite imagery of the eye of Hurricane Beryl at Category 5 intensity on July 1, 2024. Imagery courtesy of CIRA.'
+      align='left'
+    />
+    <Caption>
+      GOES visible satellite imagery of the eye of Hurricane Beryl at Category 5 intensity on July 1, 2024. Imagery courtesy of CIRA.
+    </Caption>
+  </Figure>
+  <Prose>
+    ## Satellite Analysis
+
+    ##### Visible Satellite
+    The evolution of Hurricane Beryl can be examined with great detail using visible satellite imagery datasets such as the Geostationary Operational Environmental Satellite (GOES), Moderate Resolution Imaging Spectroradiometer (MODIS), and Visible Infrared Imaging Radiometer Suite (VIIRS) platforms. All three of these satellite platforms have ties to NASA and their data are readily publicly available. GOES and MODIS visible data products have a spatial resolution of 0.5 to 1 km, while the VIIRS visible imagery has an even higher spatial resolution of 375 m, and all three platforms have at least daily temporal resolution. This quick return of high-resolution data allows for near-real-time analysis of the complexities of Hurricane Beryl’s structure as well as its track and intensity changes.
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    ##### Infrared Satellite
+    In addition to the visible data from GOES, MODIS, and VIIRS, all three of these platforms collect data in the infrared channels. This infrared data is crucial in not only examining the hurricane during the overnight hours due to visible data only being usable during the daytime, but also in analyzing the temperature of cloud tops in the storm. The temperature of the hurricane’s cloud tops can tell atmospheric scientists a great deal about whether the hurricane is experiencing strengthening or weakening and to what degree and speed that change in intensity may be occurring. Cloud top temperatures that quickly become colder in the eyewall region of the hurricane indicates that the storm may be rapidly intensifying, which would increase the risk to life and property should this occur as the storm is nearing a landfall. 
+  </Prose>
+  <Figure>
+    <Map
+      center={[-62, 13.5]}
+      zoom={5.25}
+      datasetId='cyclones-modis-sport-viirs'
+      layerId='viirs_mosaic-cyclone-beryl'
+      dateTime='2024-07-01'
+    />
+    <Caption
+      attrAuthor='NASA'
+      attrUrl='https://nasa.gov/'
+    >
+    Mosaiced VIIRS Infrared satellite imagery of Hurricane Beryl nearing the Caribbean Sea on July 1, 2024.
+    </Caption>
+  </Figure>
+</Block>
+
+<Block>
+  <Figure>
+    <Map
+      datasetId='GPM_3IMERGDF.v07'
+      layerId='GPM_3IMERGDF.v07'
+      dateTime='2024-07-01'
+      center={[-59, 12]}
+      zoom={5.25}
+    />
+    <Caption
+      attrAuthor='NASA'
+      attrUrl='https://nasa.gov/'
+    >
+    GPM IMERG daily peak rainfall rates over the Lesser Antilles from Hurricane Beryl's passage on July 1, 2024.
+    </Caption>
+  </Figure>
+  <Prose>
+    ##### Surface Weather
+    Several satellite remote sensing-based datasets can also be quite useful in providing near-surface meteorological data to atmospheric scientists in areas where surface observing stations may not be present, such as over a large body of water. The Integrated Multisatellite Retrievals (IMERG) product of the Global Precipitation Measurement (GPM) provides both total precipitation accumulation and precipitation rate data at 30 minute intervals worldwide. IMERG data can be used by National Weather Service and National Hurricane Center meteorologists to help hone predictions of what flooding threat the hurricane may pose while it is still offshore. Additionally, the Cyclone Global Navigation Satellite System (CYGNSS) platform provides estimates of surface wind speeds over the world’s oceans, which can be crucial for determining the size and intensity of a hurricane’s wind field before it reaches land. CYGNSS can also help meteorologists distinguish how big of a threat storm surge may be along the coasts that a hurricane may be predicted to impact. 
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    Further, NASA’s Short-term Prediction Research and Transition (SPoRT) team provides a twice daily state of the art global Sea Surface Temperature (SST) product. SSTs are essential to hurricane forecasters in determining where a hurricane may be able to form and sustain itself, or even where it may be susceptible to weakening or strengthening. SSTs of approximately 26 °C (~80 °F) are the typical expected threshold of the amount of energy a hurricane requires from the surface of the ocean to form and sustain itself, and in Hurricane Beryl’s case SSTs were well above that, pushing 30 °C (86 °F) along some portions of its long track. 
+  </Prose>
+<Figure>
+    <Map
+      center={[-62, 13.5]}
+      zoom={5.25}
+      datasetId='cyclones-modis-sport-viirs'
+      layerId='sst-cyclone-beryl'
+      dateTime='2024-07-01'
+      compareDateTime='2024-07-05'
+    />
+    <Caption
+      attrAuthor='NASA'
+      attrUrl='https://nasa.gov/'
+    >
+    Satellite-derived sea surface temperatures during Hurricane Beryl's peak intensity nearing the Caribbean Sea on July 1, 2024, compared to July 5, 2024 after its passage revealing a cold wake.
+    </Caption>
+  </Figure>
+</Block>
+
+
+
+<Block>
+  <Prose>
+    ## Conclusion
+    By combining data from VIIRS, MODIS, and GOES (Infrared band), we were able to track the storm's cloud structure, eye formation, and overall intensity with high spatial and temporal resolution. These observations provided crucial insights into the storm's morphology and its evolution over time. Complementing this, IMERG precipitation rate data revealed the distribution and intensity of rainfall associated with Beryl, highlighting areas of heavy precipitation and potential flooding. This information is critical for disaster preparedness and response efforts.
+
+    Furthermore, incorporating SPoRT SST data allowed us to examine the underlying ocean conditions that fueled Beryl's development. Sea surface temperature plays a vital role in cyclone intensification, and visualizing this data alongside the storm's track helped us understand the energy source driving its dynamics. Finally, CYGNSS wind speed data provided a unique perspective, revealing the surface wind field beneath the storm's clouds. This information is crucial for understanding the storm's strength and its potential for storm surge.
+
+    Visualizing all these datasets in a single, integrated platform offers significant advantages for researchers and forecasters. It allows for:
+
+    * Comprehensive Understanding: By seeing all the relevant parameters simultaneously, we gain a more holistic understanding of the storm's behavior, including its structure, intensity, and environment. The interplay between these factors becomes much clearer when viewed in a combined context.
+
+    * Improved Forecasting: Access to this multi-faceted view can lead to more accurate forecasts of the storm's track, intensity, and potential impacts. Forecasters can identify key trends and patterns more easily, leading to better predictions.
+
+    * Effective Disaster Preparedness: Real-time visualization of these datasets enables emergency management agencies to better prepare for the storm's impacts. Information on rainfall rates, wind speeds, and storm surge potential can be used to direct resources and evacuate vulnerable populations.
+
+    In conclusion, the ability to visualize diverse datasets like those used in this analysis—VIIRS, MODIS, GOES, IMERG, SPoRT SST, and CYGNSS—in a unified environment is essential for advancing our understanding of hurricanes like Beryl 2024. This integrated approach provides invaluable insights for forecasting, research, and disaster preparedness, ultimately contributing to the safety and well-being of communities in hurricane-prone regions. Moving forward, continued development and refinement of such visualization platforms will be crucial for improving our ability to monitor, predict, and respond to these devastating weather events.
+
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+    ### References
+    * [CIRA GOES Imagery](https://satlib.cira.colostate.edu/event/hurricane-beryl/)
+    
+    * [NHC Report on Hurricane Beryl](https://www.nhc.noaa.gov/data/tcr/AL022024_Beryl.pdf)
+
+    * S. L. Haines, G. J. Jedlovec and S. M. Lazarus, "A MODIS Sea Surface Temperature Composite for Regional Applications," in IEEE Transactions on Geoscience and Remote Sensing, vol. 45, no. 9, pp. 2919-2927, Sept. 2007, doi: 10.1109/TGRS.2007.898274.
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    ### Data Access
+
+    * [GOES](https://registry.opendata.aws/noaa-goes/)
+    * [MODIS and VIIRS- LAADS DAAC](https://ladsweb.modaps.eosdis.nasa.gov/search/)
+    * [SPoRT SST](https://weather.ndc.nasa.gov/sport/sst/)
+    * [NHC Data on Beryl](https://www.nhc.noaa.gov/gis/archive_besttrack_results.php?id=al02&year=2024&name=Hurricane%20BERYL)
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+
+    **Editors**: Andrew Blackford and Siddharth Chaudhary
+
+    **Developers**: Andrew Blackford, Siddharth Chaudhary, Sanjog Thapa, and Paridhi Parajuli 
+
+    **Science and Content Contributors**: Andrew Blackford, Siddharth Chaudhary, and Brian Freitag
+
+    **Questions / Feedback**: Email Andrew.Blackford@uah.edu
+
+    ### Additional Resources
+
+    * [VEDA Cyclones Interface](http://cyclone-interface-veda.s3-website-us-west-2.amazonaws.com/)
+
+  </Prose>
+</Block>

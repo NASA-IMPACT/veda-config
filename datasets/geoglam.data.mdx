@@ -3,7 +3,7 @@ id: geoglam
 name: "GEOGLAM Crop Conditions"
 description: Open, timely, science-driven information on crop conditions
 media:
-  src: ::file ./geoglam--dataset-cover.jpg
+  src: ::file ./media/geoglam--dataset-cover.jpg
   alt: Bird's eye view of fields
   author:
     name: Jean Wimmerlin
@@ -12,9 +12,15 @@ taxonomy:
   - name: Topics
     values:
       - Agriculture
+  - name: Subtopics
+    values:
+      - Land Use
   - name: Source
     values:
       - GEOGLAM
+infoDescription: |
+  ::markdown
+    The Group on Earth Observation's Global Agricultural Monitoring Initiative (GEOGLAM) Global Crop Monitor uses remote sensing data like global precipitation and soil moisture measurements to help reduce uncertainty, promote market transparency, and provide early warning for crop failures through multi-agency collaboration.
 layers:
   - id: geoglam
     stacCol: geoglam
@@ -49,6 +55,11 @@ layers:
           label: "Out of season"
         - color: "#804115"
           label: "No data"
+    info:
+      source: GEOGLAM
+      spatialExtent: Global
+      temporalResolution: Monthly 
+      unit: Categorical
 ---
 
 <Block>
@@ -61,7 +72,7 @@ layers:
   </Prose>
   <Figure>
     <Image
-      src={new URL('./geoglam1.png', import.meta.url).href}
+      src={new URL('./media/geoglam1.png', import.meta.url).href}
       alt='Global crop conditions as of July 28, 2020'
     />
     <Caption attrAuthor='GEOGLAM Crop Monitor'>
@@ -85,7 +96,7 @@ layers:
 <Block>
   <Figure>
     <Image
-      src={new URL('./geoglam2.png', import.meta.url).href}
+      src={new URL('./media/geoglam2.png', import.meta.url).href}
       alt='Maize 1 conditions across East Africa as of July 28, 2020'
     />
     <Caption attrAuthor='GEOGLAM Crop Monitor'>
@@ -113,7 +124,7 @@ layers:
   </Prose>
   <Figure>
     <Image
-      src={new URL('./geoglam3.png', import.meta.url).href}
+      src={new URL('./media/geoglam3.png', import.meta.url).href}
       alt='Rice conditions across Southeast Asia as of July 28, 2020'
     />
     <Caption attrAuthor='GEOGLAM Crop Monitor'>
@@ -121,3 +132,33 @@ layers:
     </Caption>
   </Figure>
 </Block>
+
+
+
+<Block>
+  <Prose>
+    ## Limitations of use
+
+    NASA data and products are freely available to federal, state, public, non-profit and commercial users. This information can be experimental- or research-grade data products and may not be appropriate for operational use. These NASA data products and services are intended to aid decision makers and enhance situational awareness, but these data are not guaranteed to be consistently available or routinely updated. Please cite the information according to the direction provided in the metadata.
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+  ## Disclaimer
+
+  All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+    ## License
+
+    [Creative Commons Zero v1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC0 1.0)
+  </Prose>
+</Block>
+
+

@@ -3,7 +3,7 @@ id: conus-reach
 name: "Stream network across the Contiguous United States"
 description: "This dataset describes the Stream network across the Contiguous United States delineated using Soil and Water Assessment Tool"
 media:
-  src: ::file ./CONUS_Nitrate_07012018.png
+  src: ::file media/CONUS_Nitrate_07012018.png
   alt: A map showing nitrate loads in the rivers of the United States on 07/01/2018
   author:
     name: NASA
@@ -12,7 +12,16 @@ pubDate: 2023-03-03
 taxonomy:
   - name: Topics
     values:
-      - EIS
+      - Water Resources
+  - name: Subtopics
+    values:
+      - Hydrology
+  - name: Source
+    values:
+      - NASA EIS
+infoDescription: |
+  ::markdown
+    This dataset describes the Stream network across the Contiguous United States delineated using Soil and Water Assessment Tool
 layers:
   - id: conus-reach
     stacCol: conus-reach
@@ -28,14 +37,89 @@ layers:
         - 1
         - 1
       nodata: 65535
-
+    info:
+      source: NASA
+      spatialExtent: Contiguous US
+      temporalResolution: Annual
+      unit: N/A
 ---
+
+<Block>
+  <Prose>   
+    ## Dataset Details
+    - **Spatial Extent:** United States<br />
+    - **Spatial Resolution:** 100 meters<br />
+    - **Data Type:** Research<br />
+  </Prose>
+<Figure>
+    <Map
+      center={[-86.3345, 32.4595]}
+      zoom={4}
+      datasetId='conus-reach'
+      layerId='conus-reach'
+      dateTime='2020-01-01'
+    />
+    <Caption
+      attrAuthor='NASA'
+      attrUrl='https://nasa.gov/'
+    >
+    River network across the Southeast United States.
+    </Caption>
+  </Figure>
+</Block>
+
 
 <Block>
   <Prose>
     ## About
     
-	This dataset describes the Stream network across the Contiguous United States delineated using Soil and Water Assessment Tool
+	This dataset describes the Stream network across the Contiguous United States delineated using Soil and Water Assessment Tool. 
+  <br />
+  The Soil & Water Assessment Tool is a small watershed to river basin-scale model used to simulate the quality and quantity of surface and ground water and predict the environmental impact of land use, land management practices, and climate change. SWAT is widely used in assessing soil erosion prevention and control, non-point source pollution control and regional management in watersheds.
+  </Prose>
+</Block>
 
+
+<Block>
+  <Prose>
+  
+  ## Data Stories Using This Dataset
+  
+  **<Link to={"/stories/wq-models"}>A New NASA Model Brings Open Science to Target Water Quality Problems</Link>**
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+    ## Limitations of use
+
+    NASA data and products are freely available to federal, state, public, non-profit and commercial users. This information can be experimental- or research-grade data products and may not be appropriate for operational use. These NASA data products and services are intended to aid decision makers and enhance situational awareness, but these data are not guaranteed to be consistently available or routinely updated. Please cite the information according to the direction provided in the metadata.
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+  ## Disclaimer
+
+  All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+    ## License
+
+    [Creative Commons Zero v1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC0 1.0)
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+    ## Additional Resources
+    [Soil & Water Assessment Tool](https://swat.tamu.edu/)
   </Prose>
 </Block>

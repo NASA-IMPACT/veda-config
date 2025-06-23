@@ -1,0 +1,12 @@
+@use 'uswds-core' as * with (
+  $theme-image-path: '/img',
+  $theme-font-path: '/fonts',
+  $theme-show-notifications: false,
+  $utilities-use-important: true,
+  $theme-font-weight-semibold: '600',
+  $theme-type-scale-md: 8,
+  $theme-utility-breakpoints: (
+    'mobile-lg': true,
+    'desktop': true
+  )
+);

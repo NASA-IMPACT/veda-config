@@ -1,0 +1,391 @@
+---
+id: burn-scar
+name: Wildfires Affect Local Weather, Climate, and Hydrology
+description: "A study on the lasting impacts of the November 2018 Camp Fire in Northern California"
+media:
+  src: ::file ./camp-fire-background.jpg
+  alt: Engulfed hillside in California, 2021.
+  author:
+    name: Mike Newbry
+    url: https://unsplash.com/photos/DwtX9mMHBJ0
+pubDate: 2023-12-08T00:00
+taxonomy:
+  - name: Topics
+    values:
+      - Natural Disasters
+      - Wildfires
+  - name: Source
+    values:
+      - Community Contributed
+---
+
+<Block>
+  <Prose>
+
+  Authors: Andrew Blackford<sup>1</sup>, Trent Cowan<sup>1</sup>, Udaysankar Nair<sup>1</sup>
+  <sup>1</sup> The University of Alabama in Huntsville
+
+  <mark>🚧 This Data Story presents work that has grown into a Master's thesis, and a peer-reviewed article is currently being prepared. 🚧</mark>
+
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+    ## Introduction: The 2018 Camp Fire
+    
+    Wildfires burn thousands of acres of land every year, resulting in drastic changes in land use and land cover (LULC). The burn scars left behind by these wildfires have the potential to alter local weather, climate, and hydrology. A typical example of the drastic change in LULC is the burn scar that resulted from the November 2018 Camp Fire that devastated Paradise, California. 
+
+    The Camp Fire occurred from November 8 to 25, 2018, burning over 153,000 acres and causing $16.65 billion (2018 USD) in damages. The fire was initiated by a faulty transmission line maintained by Pacific Gas and Electric (PG&E), and resulted in 85 fatalities and 17 injuries. The Camp Fire was the most expensive natural disaster in the world in 2018 and remains the seventh deadliest wildfire in U.S. history as of October 2023. Among several communities impacted by the fire, the city of Paradise was the most severely impacted, with 95% of the city burned and 18,804 of the city’s buildings destroyed.     
+  </Prose>
+
+  <Figure>
+      <Image
+      src={new URL('./camp-fire-sentinel-20181111.jpg', import.meta.url).href}
+      alt='Camp Fire on November 11, 2018'
+    />
+    <Caption>
+    Harmonized Landsat and Sentinel-2 (HLS) true-color imagery from November 11, 2018, of the Camp Fire impacting the Paradise, CA, area. The thick black outline is the extent of the burn scar on November 25, 2018, once the fire was 100% contained.
+    </Caption>
+  </Figure>
+</Block>
+
+<Block>
+  <Prose>
+     A dominant pathway through which wildfires affect local weather, climate, and hydrology is via alteration of land-atmosphere interactions. Removal of vegetation by wildfires causes surface albedo (proportion of sunlight reaching the surface to that which is reflected) to increase, which reduces the amount of energy deposited by sunlight at the surface. The emissivity of the surface (efficiency for emitting/absorbing infrared radiation) can decrease following a wildfire, leading to a reduction in loss of energy from the surface in the form of infrared radiation. The net radiative energy deposited at the surface is transported as heat and moisture (through evaporation and transpiration) into the atmosphere and the rest as heat flow into deeper layers of the surface. The presence of vegetation at the surface influences how the radiative energy deposited at the surface is partitioned into heat and moisture fluxes into the atmosphere. When vegetation is present at the surface, it increases resistance to airflow and increases the efficiency of heat and moisture transport to the atmosphere. Further, vegetation roots can access water from over a deeper layer of the soil. Thus, removal of vegetation by wildfires alters the amount of heat and moisture removed from the surface, as well as land surface temperature (LST).
+
+    After wildfires, soil water repellency (soil hydrophobicity) is altered and surface debris is removed, leading to a reduction in water infiltration and an increase in runoff. In addition, vegetation removal causes an increase in soil erosion. Immediately following the fires, runoff can transport ash deposits in addition to soil. If water bodies are present near fire-damaged locations, then an increase in sediments and ash in runoff can lead to higher turbidity or cloudiness in water bodies and cause water pollution. 
+  </Prose>
+
+  <Figure>
+      <Image
+      src={new URL('./camp-fire-sentinel-20181111-falsecolor.jpg', import.meta.url).href}
+      alt='Camp Fire on November 11, 2018'
+    />
+    <Caption>
+    HLS false-color composite imagery from November 11, 2018, of the same scene shown in Figure 1. False color composite imagery is useful in fire analysis in that it makes it easier to see the contrast of healthy vegetation (reds) and burned, bare ground (browns).
+    </Caption>
+  </Figure>
+</Block>
+
+<Block>
+  <Prose>
+  Wildfires affect local weather, climate, and water bodies by modifying how the land surface interacts with the atmosphere. Removal of dark vegetation leads to more sunlight reaching the surface being reflected back to the atmosphere. However, since plants provide a cooling effect through conversion of water to water vapor, the main impact of vegetation loss is an increase in air temperature. Since rainwater flows more easily over bare ground, rains following a fire more easily transport soil and ash to nearby streams and lakes, making them less clear and more polluted. Below, it will be shown how data from NASA and other sources can be used to detect these changes and identify impacts from these rapid changes in land cover.
+  </Prose>
+</Block>
+
+<Block>
+  <Figure>
+     <video style={{ width: '100%', aspectRatio: "16/9" }} controls>
+      <source
+        src={new URL('./camp-fire-perimeter-progression.mp4', import.meta.url).href} type="video/mp4"
+      />
+      Your browser does not support the video tag.
+    </video>
+
+    <Caption>
+    The expansion of the perimeter of the 2018 Camp Fire from its inception on November 8 to 100% containment on November 25. Note the rapid expansion of the burned area within the first couple of days that the fire was active. This product is satellite-derived from Visible Infrared Imaging Radiometer Suite (VIIRS) thermal sensors using the Frequency Envelope Distribution (FEDs) algorithm, and is considered experimental. The solid black outline is the official Monitoring Trends in Burn Severity (MTBS) burn scar extent from the Camp Fire.
+    </Caption>
+  </Figure>
+</Block>
+
+
+<Block>
+  <Prose>
+    ## Satellite Data Analysis of Changes in Surface Properties caused by the Camp Fire
+    The [National Land Cover Dataset](https://www.earthdata.nasa.gov/dashboard/data-catalog/campfire-nlcd) (NLCD) provides land cover classification at 30-meter spatial resolution over the contiguous United States (CONUS) and can be used to assess the impacts of the Camp Fire. The NLCD is derived from Landsat satellite sensor data and is available at approximately three-year time intervals. With the Camp Fire occurring in 2018, NLCD maps for the years 2016 and 2019 were utilized to examine changes in land cover. The dataset shows the dominant pre-wildfire vegetation cover type was evergreen forest and shrub/scrub cover, while the post-wildfire cover type is predominantly grasslands and herbaceous vegetation (Figure 4).
+  </Prose>
+</Block>
+
+<Block>
+  <Figure>
+    <Map
+        center={[-121.6198, 39.7558]}
+      zoom={10}
+      datasetId='nlcd-annual-conus'
+      layerId='nlcd-annual-conus'
+      dateTime='2016-01-01'
+      compareDateTime='2019-01-01'
+
+    />
+    <Caption>
+    NLCD land use-land cover classifications over the burn scar domain for 2016 (pre-fire) and 2019 (post-fire). Note the large area of dense vegetation pre-fire that is now grassland/barren land post-fire.
+    </Caption>
+  </Figure>
+</Block>
+
+<Block>
+  <Prose>
+    To examine how the fire affected the changes in surface properties, Moderate Resolution Imaging Spectroradiometer (MODIS)-derived Normalized Difference Vegetation Index (NDVI), albedo, and land surface temperature (LST) products were acquired for a six-year period (2015 to 2022) over the Camp Fire burn scar extent, temporally centered on the period that the fire was active. First, some definitions from the American Meteorological Society Glossary of Meteorology and NASA’s Earth Observatory are provided:
+  
+    [Normalized Difference Vegetation Index](https://www.earthdata.nasa.gov/topics/land-surface/land-use-land-cover/land-use-land-cover-classification/vegetation-index-0): A numerical value used to predict or assess vegetative characteristics such as plant leaf area, total biomass, and general health and vigor of the surface vegetation.
+
+    [Albedo](https://www.earthdata.nasa.gov/topics/land-surface/surface-radiative-properties/albedo): The ratio of sunlight reflected from the land surface to sunlight reaching the land surface.
+
+    [Land Surface Temperature](https://www.earthdata.nasa.gov/topics/land-surface/surface-thermal-properties/land-surface-temperature): How hot the “surface” of Earth would feel to the touch in a particular location.
+
+    These products are available at 16-day intervals and were temporally averaged to compute monthly averaged NDVI, albedo, and LST. 
+
+    Monthly mean NDVI was clipped to the region affected by Camp Fire, and the spatially averaged NDVI decreased from 0.65 to 0.45 following the event. Note that NDVI indicates green vegetation cover over a given location, with the values of 0 and 1 indicative of bare ground and complete green vegetation cover, respectively. This change in NDVI shows a 20% decrease in green vegetation cover over the region burned by the Camp Fire.
+  </Prose>
+</Block>    
+
+<Block>
+  <Figure>
+    <Chart
+      dataPath={new URL('./camp-fire-ndvi.csv', import.meta.url).href}
+      dateFormat="%m/%d/%Y"
+      xKey='Date'
+      yKey='NDVI'
+      yAxisLabel='NDVI'
+      highlightStart = '11/8/2018'
+      highlightEnd = '11/25/2018'
+      highlightLabel = 'Camp Fire'
+    />
+    <Caption>
+      Monthly-averaged MODIS-derived NDVI values over the Camp Fire domain from 2002 to 2022. The highlighted portion of the time series indicates when the Camp Fire was active.
+    </Caption>
+  </Figure>
+</Block>
+
+<Block>
+  <Prose>  
+    The reduction in green vegetation cover caused by the wildfire leads to exposure of brighter underlying bare soil. In order to quantify this increase in surface brightness, the monthly mean value of MODIS-derived albedo for the area affected by the Camp Fire was examined. 
+
+    The monthly mean albedo increased from 0.123 to 0.125 following the fire, or an increase of 0.002. Note that albedo values of 0 and 1 indicate none or all of the incoming sunlight is being reflected back to the atmosphere, respectively. Thus, the alteration of the surface by the wildfire resulted in a nearly 0.2% reduction of energy deposited by sunlight onto the land surface. Even though the amount of energy deposited by the sunlight is reduced after the fire, the reduction in green vegetation cover affects how the deposited energy is utilized. 
+  </Prose>
+</Block>
+
+<Block>
+  <Figure>
+    <Chart
+      dataPath={new URL('./camp-fire-albedo.csv', import.meta.url).href}
+      dateFormat="%m/%d/%Y"
+      idKey='Sources'
+      xKey='Date'
+      yKey='Albedo'
+      yAxisLabel='Albedo- White Sky (WSA)'
+      highlightStart = '11/8/2018'
+      highlightEnd = '11/25/2018'
+      highlightLabel = 'Camp Fire'
+    />
+    <Caption>
+      Monthly-averaged MODIS-derived albedo values over the Camp Fire domain from 2002 to 2022. The highlighted portion of the time series indicates when the Camp Fire was active.
+    </Caption>
+  </Figure>
+</Block>
+
+<Block>
+  <Prose>   
+    Before the Camp Fire, part of the energy deposited is utilized by green vegetation cover for transpiration. However, after the fire, more of the energy deposited at the surface goes into heating and raising the temperature of the land surface. Thus, during the daytime, loss of vegetation caused by the fire results in an increase in land surface temperature and a reduction of moisture flux to the atmosphere. The MODIS-derived LST Day and Night products were utilized to determine whether such changes in LST were observed following the fire. Indeed, the mean daytime LST over the fire-affected areas increased by 2.5 &deg;C (4.5 &deg;F) following the Camp Fire.
+
+    However, during nighttime, when sunlight is not warming the surface, the change in surface emissivity (efficiency in emitting infrared radiation) caused by the wildfire is the major factor that influences nighttime LST. Generally, green vegetation cover has similar emissivity in comparison to bare ground, depending on soil wetness. Removal of vegetation can lead to either an increase or reduction in the loss of energy to the atmosphere in the form of infrared radiation and an increase in nighttime LST, depending upon the nature of surface emissivity. The monthly mean value of emissivity and nighttime LST over the fire scar region for periods before and after the fire were examined. A very slight increase in the mean emissivity, from 97.66% to 97.96% with a corresponding decrease of 0.34 &deg;C (0.64 &deg;F) in nighttime LST was observed over the fire scar.
+  </Prose>
+</Block>
+
+<Block>
+  <Figure>
+    <Chart
+      dataPath={new URL('./camp-fire-lst-celsius.csv', import.meta.url).href}
+      dateFormat="%m/%d/%Y"
+      idKey='Sources'
+      xKey='Date'
+      yKey='LST'
+      yAxisLabel='Land Surface Temperature (&deg;C)'
+      highlightStart = '11/8/2018'
+      highlightEnd = '11/25/2018'
+      highlightLabel = 'Camp Fire'
+    />
+    <Caption>
+      Monthly-averaged MODIS-derived LST Day and Night values over the Camp Fire domain from 2002 to 2022. The highlighted portion of the time series indicates when the Camp Fire was active.
+    </Caption>
+  </Figure>
+</Block>
+
+<Block>
+  <Prose>  
+    The analysis of the satellite data described above implies the Camp Fire caused significant alterations in the interactions between the land and the atmosphere. As explained earlier, the modifications in vegetation cover resulted in increased heat and decreased moisture movement from the land into the atmosphere. These alterations within the fire-affected area created a noticeable distinction in the land-atmosphere energy exchanges when compared to the adjacent unaffected regions. This particular response in airflow could bring about variations in wind patterns and cloud formation, a phenomenon akin to the well-known sea breeze effect commonly observed along land-ocean boundaries. Further exploration using computer models and additional data analysis is necessary to fully understand these processes.
+  </Prose>
+</Block>
+
+<ScrollytellingBlock>
+  <Chapter
+    center={[-121.8198, 39.7558]}
+    zoom={10}
+    datasetId='campfire_albedo_wsa_difference_2015_2022'
+    layerId='modis-ndvi-diff-2015-2022'
+    datetime='2015-01-01'
+  >
+    ## MODIS NDVI Difference
+    ## (2019-2022) - (2015-2018)
+    
+    The average Normalized Difference Vegetation Index (NDVI) over the region decreased from 0.65 to 0.45 following the Camp Fire, signifying a 20% reduction in green vegetation cover.
+  </Chapter>
+
+  <Chapter
+    center={[-121.8198, 39.7558]}
+    zoom={10}
+    datasetId='campfire_albedo_wsa_difference_2015_2022'
+    layerId='modis-lst-day-diff-2015-2022'
+    datetime='2015-01-01'
+  >
+    ## MODIS LST Day Difference
+    ## (2019-2022) - (2015-2018)
+    
+    On average, satellite observations show that daytime land surface temperature (LST) increased by 2.5 &deg;C over the area affected by the Camp Fire. Satellite observations also show that local changes in daytime LST within the burnscar region can increase by as much as 6 &deg;C, which implies correspondingly large increases in maximum air temperatures as well.
+
+  </Chapter>
+
+  <Chapter
+    center={[-121.8198, 39.7558]}
+    zoom={10}
+    datasetId='campfire_albedo_wsa_difference_2015_2022'
+    layerId='modis-lst-night-diff-2015-2022'
+    datetime='2015-01-01'
+  >
+    ## MODIS LST Night Difference
+    ## (2019-2022) - (2015-2018)
+    
+    Satellite observations show that loss of vegetation caused by the Camp Fire leads to an average decrease in night time LST of 0.35 &deg;C (0.64 &deg;F). Locally, decreases in night time LST can be as much as 1.5 &deg;C. Satellite observations also show that decreases in nighttime LST is due to increase in efficiency of loss of energy from the surface in the form of infrared radiation.
+
+  </Chapter>
+
+  <Chapter
+    center={[-121.8198, 39.7558]}
+    zoom={10}
+    datasetId='campfire_albedo_wsa_difference_2015_2022'
+    layerId='modis-albedo-wsa-diff-2015-2022'
+    datetime='2015-01-01'
+  >
+    ## MODIS Albedo WSA Difference
+    ## (2019-2022) - (2015-2018)
+    
+    Satellite observations show that there is a nearly 0.2% increase in average albedo following the wildfire and thus a greater proportion of incoming sunlight reflected back by the surface.
+
+  </Chapter>
+
+</ScrollytellingBlock>
+
+
+<Block>
+  <Prose>
+    ## Satellite Data Analysis of Fire Impacts on Surface Hydrology
+    Wildfires can impact surface hydrology through multiple mechanisms. Vegetation adds organic material to the soil, which increases the pore space within which water can reside, thereby enhancing infiltration. Roots of vegetation in the soil also enhance infiltration and reduce soil erosion. Plant litter also increases infiltration by storing water and allowing increments to be released to the soil layer over extended time periods. The litter layer also buffers the soil layer from direct impact via precipitation. Thus, vegetation removal by fire leads to reduced infiltration, increased runoff, and soil erosion. Further, fires can also impact soil properties, such as altering soil water repellency or hydrophobic tendency, which can also contribute to decreases in infiltration and enhancement in runoff. 
+  
+    An increase in runoff and soil erosion following a wildfire can cause enhancement in sediment flows to water bodies present within or surrounding the region affected by the wildfire. Turbidity or cloudiness of a water body can be affected by sediment flows into it from the surrounding regions. Lake Oroville is a prominent water body located downstream of the location where the Camp Fire occurred and was potentially affected by subsequent changes in sediment flows.
+  
+ </Prose>
+
+  <Figure>
+    <video style={{ width: '100%', aspectRatio: "16/9" }} controls>
+      <source
+        src={new URL('./camp-fire-oroville-location.mp4', import.meta.url).href} type="video/mp4"
+      />
+      Your browser does not support the video tag.
+    </video>
+
+    <Caption>
+    Location of Lake Oroville compared to the Camp Fire burn scar (black outline), from a regional to local view.
+    </Caption>
+  </Figure>
+</Block>
+
+<Block>
+  <Prose>
+    The normalized difference turbidity index (NDTI) was utilized to examine if the turbidity of Lake Oroville was affected following the Camp Fire. NDTI was computed using the NASA Harmonized Landsat Sentinel-2 (HLS) dataset using surface reflectance at a geographical location estimated from satellite sensor observations at red and green wavelengths. Denoting the reflectance values at red and green wavelengths as r and g, the NDTI is given by the ratio of (r-g) to (r+g). The reflectance of clear water is higher in green than red wavelengths; however, when the water is turbid, the reflectance of water in the red wavelengths becomes higher than the green wavelengths. Thus NDTI has negative values when the water is clear and becomes positive when it is turbid. It is important to note that the above-described interpretation of NDTI is valid only for water bodies, and thus it needs to be determined if water is indeed present at a location.
+  
+    The normalized difference water index (NDWI) was then used to determine if water is present at a given location in an HLS scene. The NDWI is computed using reflectance at the green (g) and near-infrared (nir) wavelengths as the ratio of (g-nir) and (g+nir). The near-infrared reflectance of water is lower compared to that at the green wavelength while the opposite is true for vegetation and bare ground. Thus, the NDWI values are positive for water bodies, and locations in the satellite imagery with values greater than 0.03 were identified as water for this analysis. The NDTI for surface water locations in the cloud-free HLS scenes was computed over the study area between the years 2017 to 2022. A time-series of mean NDTI for Lake Oroville was derived for this time period, which shows a noticeable increase in NDTI following the Camp Fire before returning to a more typical variability after approximately one year. 
+  </Prose>
+</Block>
+
+<Block>
+  <Figure>
+    <Chart
+      dataPath={new URL('./camp-fire-oroville-ndti.csv', import.meta.url).href}
+      dateFormat="%Y%j"
+      idKey='Source'
+      xKey='Date'
+      yKey='NDTI'
+      yAxisLabel='NDTI'
+      highlightStart = '2018312'
+      highlightEnd = '2018329'
+      highlightLabel = 'Camp Fire'
+    />
+    <Caption>
+    Spatially-averaged Normalized Difference Turbidity Index (NDTI) values over Lake Oroville from 2017 to 2022. Days are given as the day of year (1-365).
+    </Caption>
+  </Figure>
+
+  <Prose>
+  <Figure>
+     <video style={{ width: '100%', aspectRatio: "16/9" }} controls>
+      <source
+        src={new URL('./camp-fire-oroville-ndti.mp4', import.meta.url).href} type="video/mp4"
+      />
+      Your browser does not support the video tag.
+    </video>
+
+    <Caption>
+    HLS computed Normalized Difference Turbidity Index (NDTI) values over Lake Oroville from 2017 to 2022.
+    </Caption>
+  </Figure>
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+    ## Conclusion
+    Our satellite data analysis shows a drastic change in land surface characteristics following the Camp Fire. Associated alterations in land-atmosphere interactions have the potential to impact local circulations and cloud and precipitation formation. Our analysis also shows noteworthy changes in the turbidity of Lake Oroville following the Camp Fire. This could be an indication of changes in surface hydrology and increased sediment flow. Since the combustion of organic matter during wildfires releases both nutrients (phosphorus, nitrogen, carbon) and a variety of heavy metals such as mercury, arsenic, and lead, nutrients and heavy metal inputs into Lake Oroville may also have increased following the Camp Fire. Enhanced nutrient input can promote algal growth while mercury pollution can contaminate fish consumed by both humans and wildlife. Since the occurrence of wildfires is expected to increase in the future, atmospheric and hydrological effects must be considered when investigating post-fire impacts as well as when conducting pre-fire mitigation strategies.
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    ### References
+    Anthes, R.A. 1984. Enhancement of convective precipitation by mesoscale variations in vegetative covering in semiarid regions. Journal of Climate and Applied Meteorology, 23, 541-554. doi:10.1175/1520-0450(1984)023%3C0541:EOCPBM%3E2.0.CO;2  
+    
+    McCumber, M.C. 1980. A numerical simulation of the influence of heat and moisture fluxes upon mesoscale circulations. Ph.D. dissertation, University of Virginia. 255pp.
+  
+    Pielke, R., and R. Avissar. 1990. Influence of landscape structure on local and regional climate. Landscape Ecology, 4, 133-155. doi:10.1007/BF00132857
+  
+    Santanello Jr., J. A. et al. 2017: Land-Atmosphere Interactions: The LoCo Perspective. Bulletin of the American Meteorological Society, 99, 1253–1272. doi:10.1175/BAMS-D-17-0001.1
+  
+    Wittenberg, L., et al. 2007: Spatial and temporal patterns of vegetation recovery following sequences of forest fires in a Mediterranean landscape, Mt Carmel Israel. Catena, 71, 76-83. doi:10.1016/j.catena.2006.10.007
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    ### Data Access
+
+    * [Dataset landing page for MODIS LST](https://modis.gsfc.nasa.gov/data/dataprod/mod11.php)
+
+    * [Dataset landing page for MODIS NDVI](https://modis.gsfc.nasa.gov/data/dataprod/mod13.php)
+
+    * [Dataset landing page for MODIS Albedo](https://lpdaac.usgs.gov/products/mcd43c3v006/)
+
+    * [Dataset landing page for Harmonized Landsat Sentinel-2 data](https://lpdaac.usgs.gov/data/get-started-data/collection-overview/missions/harmonized-landsat-sentinel-2-hls-overview/) 
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+
+    **Editors**: Andrew Blackford, Derek Koehl, Joshua Blumenfeld, Jerika Chung, Brian Freitag, and Udaysankar Nair
+
+    **Developers**: Andrew Blackford
+
+    **Science and Content Contributors**: Andrew Blackford, Brian Freitag, and Udaysankar Nair
+
+    **Questions / Feedback**: Email Andrew.Blackford@uah.edu
+
+    ### Additional Resources
+
+    * Blackford, Andrew C., "The impact of the 2018 camp fire on land-atmosphere interactions" (2024). Theses. 658. https://louis.uah.edu/uah-theses/658
+
+  </Prose>
+</Block>

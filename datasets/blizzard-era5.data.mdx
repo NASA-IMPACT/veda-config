@@ -1,0 +1,280 @@
+---
+id: blizzard-era5
+name: 'ERA5 Reanalysis (Select Events)'
+description: "ERA5 reanalysis data of surface temperature, wind, mean sea level pressure, and cloud fraction for two select blizzard events."
+
+media:
+  src: ::file ./media/CERES_NETFLUX_M_2006-07.jpeg
+  alt: Net radiation across the globe.
+  author: 
+    name: NASA Earth Observatory
+taxonomy:
+  - name: Topics
+    values:
+      - Water Resources
+  - name: Subtopics
+    values:
+      - Water Cycle
+      - Snow
+      - Weather
+      - Hydrology
+  - name: Source
+    values:
+      - ECMWF
+layers:
+  - id: blizzard-era5-2m-temp
+    stacCol: blizzard-era5-2m-temp
+    name: ERA5 2 Meter Temperature
+    type: raster
+    description: "ERA5 2-meter temperature reanalysis data for two select blizzards."
+    initialDatetime: newest
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      colormap_name: surface_temperature    
+      nodata: -999
+      rescale:
+        - 240
+        - 315
+    legend:
+      type: gradient
+      unit:
+        label: K
+      min: 240
+      max: 315
+      stops: 
+        - "#3CCBCE"
+        - "#C5F8FF"   
+        - "#FEC5FF"   
+        - "#E079FB"   
+        - "#094FC9"   
+        - "#009FFF"   
+        - "#44E2FF"  
+        - "#147F4F"   
+        - "#79B32C"   
+        - "#FDFE00"   
+        - "#FF8700"   
+        - "#FF0F00"   
+        - "#9D0F2B"   
+        - "#4D0000"   
+        - "#BA2E6D"  
+    info:
+      source: ECMWF
+      spatialExtent: Global
+      temporalResolution: 1950-1978; Inconsistent
+      unit: Kelvin
+    media:
+      src: ::file media/blizzards-cover.png
+      alt: Near-blizzard conditions in Maria Stein, Ohio on December 23, 2022.
+      author: 
+        name: Andrew Blackford
+
+  - id: blizzard-era5-10m-wind
+    stacCol: blizzard-era5-10m-wind
+    name: ERA5 10 Meter Wind
+    type: raster
+    description: "ERA5 10-meter wind reanalysis data for two select blizzards."
+    initialDatetime: newest
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      colormap_name: ylorrd    
+      nodata: -999
+      rescale:
+        - 0
+        - 25
+    legend:
+      type: gradient
+      unit:
+        label: m/s
+      min: 0
+      max: 25
+      stops:
+        - "#ffffcc"
+        - "#fee187"
+        - "#feab49"
+        - "#fc5b2e"
+        - "#d41020"
+        - "#800026"
+    info:
+      source: ECMWF
+      spatialExtent: Global
+      temporalResolution: 1950-1978; Inconsistent
+      unit: m/s
+    media:
+      src: ::file media/blizzards-cover.png
+      alt: Near-blizzard conditions in Maria Stein, Ohio on December 23, 2022.
+      author: 
+        name: Andrew Blackford
+
+  - id: blizzard-era5-cfrac
+    stacCol: blizzard-era5-cfrac
+    name: ERA5 Cloud Fraction
+    type: raster
+    description: "ERA5 cloud fraction reanalysis data for two select blizzards."
+    initialDatetime: newest
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      colormap_name: greys_r    
+      nodata: -999
+      rescale:
+        - 0
+        - 1
+    legend:
+      type: gradient
+      min: 0
+      max: 1
+      stops:
+        - "#000000"
+        - "#404040"
+        - "#7a7a7a"
+        - "#b5b5b5"
+        - "#e2e2e2"
+        - "#ffffff"
+    info:
+      source: ECMWF
+      spatialExtent: Global
+      temporalResolution: 1950-1978; Inconsistent
+      unit: fraction; 1 = 100% coverage
+    media:
+      src: ::file media/blizzards-cover.png
+      alt: Near-blizzard conditions in Maria Stein, Ohio on December 23, 2022.
+      author: 
+        name: Andrew Blackford
+
+  - id: blizzard-era5-mslp
+    stacCol: blizzard-era5-mslp
+    name: ERA5 Mean Sea Level Pressure
+    type: raster
+    description: "ERA5 mean sea level pressure (MSLP) reanalysis data for two select blizzards."
+    initialDatetime: newest
+    zoomExtent:
+        - 0
+        - 20
+    sourceParams:
+      colormap_name: nipy_spectral    
+      nodata: -999
+      rescale:
+        - 972
+        - 1040
+    legend:
+      unit:
+        label: hPa
+      type: gradient
+      min: 972
+      max: 1040
+      stops:
+          - "#000000"
+          - "#870098"
+          - "#0078dd"
+          - "#00aa88"
+          - "#00dc00"
+          - "#efed00"
+          - "#fe0000"
+          - "#cccccc"
+    info:
+      source: ECMWF
+      spatialExtent: Global
+      temporalResolution: 1950-1978; Inconsistent
+      unit: hPa
+    media:
+      src: ::file media/blizzards-cover.png
+      alt: Near-blizzard conditions in Maria Stein, Ohio on December 23, 2022.
+      author: 
+        name: Andrew Blackford
+---
+<Block>
+  <Prose>
+  ## Dataset Details
+  - **Temporal Extent:** 1950-1978
+  - **Temporal Resolution:** Inconsistent
+  - **Spatial Extent:** Global
+  - **Spatial Resolution:** 0.25 degree
+  - **Data Units:** Temperature - Kelvin; Wind - m/s; MSLP - hPa; Cloud Fraction - fraction 
+  - **Data Type:** Research
+  </Prose>
+<Figure>
+  <Map
+    center={[-84, 43]}
+    zoom={3.5}
+    datasetId='blizzard-era5-mslp'
+    layerId='blizzard-era5-mslp'
+    dateTime='1978-01-26'
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+  ERA5 reanalysis mean sea level pressure from the strongest timeframe of the Great Blizzard of 1978 in the Great Lakes region of the USA.
+  </Caption>
+</Figure>
+</Block>
+
+<Block>
+  <Prose>
+  ## About
+
+  ERA5 reanalysis, produced by the European Centre for Medium-Range Weather Forecasts (ECMWF), is a high-resolution global atmospheric dataset that provides historical climate and weather information from 1940 to the present. It combines observations from satellites, weather stations, and other sources with advanced numerical weather prediction models to generate a consistent, spatially complete representation of past atmospheric conditions. ERA5 offers hourly data at a 0.25 degree spatial resolution with multiple atmospheric variables, including temperature, wind speed, cloud coverage, and pressure, along with uncertainty estimates. It is widely used in climate research, meteorology, and environmental studies. 
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+  
+  ## Access the Data
+
+  Visit ECMWF's [Climate Data Store](https://cds.climate.copernicus.eu/datasets?q=era5&kw=Variable+domain%3A+Atmosphere+%28surface%29&kw=Variable+domain%3A+Atmosphere+%28upper+air%29&kw=Variable+domain%3A+Atmosphere+%28upper+level%29&kw=Variable+domain%3A+Ocean+%28physics%29) to explore options for data access.
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+
+  ### Key Publications
+  
+  Hersbach, H., Bell, B., Berrisford, P., et al. (2020). The ERA5 global reanalysis. Quarterly Journal of the Royal Meteorological Society, 146(730), 1999–2049. https://doi.org/10.1002/qj.3803
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+  
+  ## Data Stories Using This Dataset
+  
+  **<Link to={"/stories/blizzards"}>When Winter Rages</Link>**
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+    ## Limitations of use
+
+    NASA data and products are freely available to federal, state, public, non-profit and commercial users. This information can be experimental- or research-grade data products and may not be appropriate for operational use. These NASA data products and services are intended to aid decision makers and enhance situational awareness, but these data are not guaranteed to be consistently available or routinely updated. Please cite the information according to the direction provided in the metadata.
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+  ## Disclaimer
+
+  All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+  
+  ## License
+  
+  [Creative Commons Attribution 1.0 International](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC BY 1.0)
+  </Prose>
+</Block>

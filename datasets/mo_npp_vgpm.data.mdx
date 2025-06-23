@@ -10,7 +10,7 @@ usage:
     label: Run example notebook
     title: 'Interactive session in VEDA 2i2c JupyterHub (requires account)'
 media:
-  src: ::file ./ocean-production--dataset-cover.jpg
+  src: ::file ./media/ocean-production--dataset-cover.jpg
   alt: Rocky ocean shore
   author:
     name: Karl Callwood
@@ -18,7 +18,18 @@ media:
 taxonomy:
   - name: Topics
     values:
+      - Water Resources
+  - name: Subtopics
+    values:
       - Water Quality
+      - Hydrology
+  - name: Source
+    values:
+      - Oregon State University
+
+infoDescription: |
+  ::markdown
+    Find information at the [Ocean Productivity website](https://sites.science.oregonstate.edu/ocean.productivity/index.php)
 layers:
   - id: MO_NPP_npp_vgpm
     stacCol: MO_NPP_npp_vgpm
@@ -44,10 +55,67 @@ layers:
         - "#ffff00"
         - "#fa0000"
         - "#800000"
+    info:
+      source: Oregon State University
+      spatialExtent: Global
+      temporalResolution: Monthly 
+      unit: Mg C/m²/day  
 ---
 
 <Block>
+  <Prose>   
+    ## Dataset Details
+    - **Temporal Extent:** January 1 - December 31, 2020<br />
+    - **Spatial Extent:** Global<br />
+    - **Spatial Resolution:** 5 km<br />
+    - **Data Units:**  Mg C/m²/day
+    - **Data Type:** Research<br />
+  </Prose>
+  <Figure>
+    <Map
+      datasetId='npp'
+      layerId='MO_NPP_npp_vgpm'
+      dateTime='2020-01-01'
+      zoom={4}
+      center={[-87.4079, 24.9318]}
+    />
+    <Caption
+      attrAuthor='NASA'
+      attrUrl='https://nasa.gov/'
+    >
+    Gulf of America net primary productivity during January 2020.
+    </Caption>
+  </Figure>
+</Block>
+
+
+<Block>
   <Prose>
+    ## Limitations of use
+
+    NASA data and products are freely available to federal, state, public, non-profit and commercial users. This information can be experimental- or research-grade data products and may not be appropriate for operational use. These NASA data products and services are intended to aid decision makers and enhance situational awareness, but these data are not guaranteed to be consistently available or routinely updated. Please cite the information according to the direction provided in the metadata.
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+  ## Disclaimer
+  All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  ## License
+  [Creative Commons Attribution 1.0 International](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC BY 1.0)
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+    ## Additional Resources
     Find information at the [Ocean Productivity website](https://sites.science.oregonstate.edu/ocean.productivity/index.php)
   </Prose>
 </Block>

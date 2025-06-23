@@ -8,13 +8,27 @@ media:
   author:
     name: Maxim Tolchinskiy
     url: https://unsplash.com/photos/W3y2crFkVIs
-pubDate: 2023-10-31
+pubDate: 2023-10-31T00:00
 taxonomy:
   - name: Topics
     values:
-      - Environmental Justice
       - Air Quality
+      - Greenhouse Gases
+  - name: Subtopics
+    values:
+      - Urban
+  - name: Source
+    values:
+      - Community Contributed
 ---
+
+<Block> 
+  <Prose>
+
+    ###### This story is part of a study conducted on both heat and pollution stress in the Houston Metropolitan Area. <Link to={"/stories/urban-heating"}>The data story that higlights heat stress can be found here</Link>
+    
+  </Prose>
+</Block>
 
 <Block>
   <Prose>
@@ -22,8 +36,6 @@ taxonomy:
     Authors: Trent Cowan<sup>[1]</sup>, Andrew Blackford<sup>[1]</sup>, Udaysankar Nair<sup>[1]</sup>
 
     <sup>[1]</sup> University of Alabama in Huntsville(UAH)
-
-    **Disclaimer**: Correlation of satellite-derived AOD and surface air quality varies by location meaning the proposed correlations in this data story require further investigation to be deemed science-quality
 
     ### Introduction
     The Houston metropolitan area is the fourth most populous city in the United States and top-10 in terms of spatial extent. It’s well known that the impact cities can have on the surrounding environment correlates with the architectural characteristics and spatial extent of the city. Houston’s notably large spatial extent and high population pave the way for high levels of human-produced emissions within its transportation infrastructure. These emissions and its proximity to the Gulf of Mexico, make Houston especially susceptible to environmental changes related to urban development.
@@ -41,11 +53,13 @@ taxonomy:
 <Block type="full">
   <Figure>
     <Map
-      datasetId='houston-aod'
+      datasetId='modis-aod'
       layerId='houston-aod'
       dateTime='2000-01-01'
       compareDateTime='2010-01-01'
       compareLabel='2000-2009 mean / 2010-2019 mean'
+      center={[-95.35, 29.8]}
+      zoom={8.75}
     />
     <Caption>
       Figure 2: Aerosol Optical Depth Compared Decadally from 2000-2009 & 2010-2019. The map shown shows the change in AOD over the last 20 years over the Houston metropolitan area.
@@ -68,12 +82,14 @@ taxonomy:
   </Prose>
   <Figure>
     <Map
-      datasetId='houston-aod-diff'
+      datasetId='modis-aod'
       layerId='houston-aod-diff'
       dateTime='2000-01-01'
       compareDateTime='2001-01-01'
       compareLabel='AOD Difference vs Houston Urbanization'
-    />
+      center={[-95.35, 29.8]}
+      zoom={8.75}
+      />
     <Caption>
       Figure 3: Aerosol Optical Depth Compared Decadally from 2000-2009 & 2010-2019 vs the Urbanization of the Houston metro from 2000-2019. The left portion of the map shows the subtracted difference in AOD over the last 20 years over the Houston metropolitan area.
     </Caption>
@@ -86,11 +102,11 @@ taxonomy:
   <Chapter
     center={[-95.268361, 29.231816]}
     zoom={9}
-    datasetId='houston-aod-diff'
+    datasetId='modis-aod'
     layerId='houston-aod-diff'
     datetime='2000-01-01'
   >
-    ## AOD Timeseries for Galveston Bay
+    ## AOD Time series for Galveston Bay
     The monthly and spatially averaged time series of AOD for Galveston Bay (just east of downtown Houston) show a statistically significant (p < 0.005) decreasing trend in AOD from 2000 to 2019. Note the measure of statistical significance of p < 0.005 indicates that there is very high confidence the decreasing trend in AOD is real and not due to chance. This decreasing trend in AOD could potentially be attributed to air quality regulations implemented as a part of the Clean Air Act between 2010 and 2019.
 
     <Chart
@@ -106,11 +122,11 @@ taxonomy:
   <Chapter
     center={[-95.983866, 29.746860]}
     zoom={9}
-    datasetId='houston-aod-diff'
+    datasetId='modis-aod'
     layerId='houston-aod-diff'
     datetime='2000-01-01'
   >
-    ## AOD Timeseries for Western Houston
+    ## AOD Time series for Western Houston
     Unlike the Galveston Bay area, the monthly and spatially averaged time series of AOD for the Western Suburbs of Houston, TX shows a trend where there is a small, statistically insignificant increase over the time period of 2000 to 2019. Note that the spatial pattern of difference in decadal mean AOD between the second and first decade of this century shows a localized increase that correlates to urbanization. The small increase in AOD concentrations could be potentially explained by vehicular and other urban sources of pollution counteracting the effects of the Clean Air Act.
 
     <Chart
@@ -126,7 +142,7 @@ taxonomy:
   <Chapter
     center={[-95.361, 29.984]}
     zoom={11}
-    datasetId='houston-aod-diff'
+    datasetId='modis-aod'
     layerId='houston-aod-diff'
     datetime='2000-01-01'
   >
@@ -147,16 +163,10 @@ taxonomy:
 </ScrollytellingBlock>
 
 <Block>
-  <Prose>
-    ### Socioeconomic Disparities
-
-    The use of interdisciplinary data sources can further shed light on the intricate relationships between urbanization, socioeconomic disparities, and environmental effects. Within newly urbanized areas of Harris County, nearly 10% of a given census tract’s population meet the threshold of 150% poverty. In regions of highest AOD concentrations, this average percentage increases to 12%, indicating the potential for socioeconomic impacts of urban development in areas with higher pollution levels.
-
-    Transportation is another metric that can provide insight into disproportionate socioeconomic impacts of urbanization. Within the newly urbanized areas of Harris County, an average of 3.8% of a given census tract’s population do not own vehicles. This percentage rises to 4.2% within newly urbanized regions marked by increased AOD concentration from 2000-2009 to 2010-2019. Such data underscores the broader challenges of transportation and accessibility for the economically disadvantaged in these urbanized and potentially more polluted zones.
-
-    It should be noted that this initial analysis does not necessarily imply that urbanization causes disproportionate socioeconomic impacts. An alternative takeaway could be that urbanization is planned in regions of lower socioeconomic status, a potential indicator of locations where gentrification has occurred in the Houston metropolitan area.
-
-  </Prose>
+<Prose>
+  ## How to Cite This Work
+  Blackford, A., Cowan, T., Nair, U., Phillips, C., Kaulfus, A., and Freitag, B. (2024). Synergy of urban heat, pollution, and social vulnerability in one of America's most rapidly growing cities: Houston, we have a problem. *GeoHealth, 8*, e2024GH001079. https://doi.org/10.1029/2024GH001079
+</Prose>
 </Block>
 
 <Block>

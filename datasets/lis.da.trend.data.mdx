@@ -3,7 +3,7 @@ id: lis-global-da-trends
 name: 'Global Water Cycle Reanalysis Trends'
 description: "Trend in TWS and GPP modeled using data assimilation within Land Information System framework"
 media:
-  src: ::file ./twsanomaly-globe.png
+  src: ::file ./media/twsanomaly-globe.png
   alt: TWS trend of anomalies from LIS outputs.
   author:
     name: NASA LIS
@@ -11,7 +11,17 @@ media:
 taxonomy:
   - name: Topics
     values:
-      - EIS
+      - Water Resources
+  - name: Subtopics
+    values:
+      - Water Cycle
+      - Hydrology
+  - name: Source
+    values:
+    - NASA EIS
+infoDescription: |
+  ::markdown
+     Realistic estimates of water and energy cycle variables are necessary for accurate understanding of earth system processes. We develop a 10 km global reanalysis product of water, energy, and carbon fluxes by assimilating satellite observed surface soil moisture, leaf area index, and terrestrial water storage anomalies into a land surface model within NASA Land Information System Framework. We applied a seasonal and trend decomposition algorithm to get the trend estimates for terrestrial water storage and gross primary production. The method can better help to deal with [nonstationarities](https://github.com/Earth-Information-System/sea-level-and-coastal-risk/blob/main/AMS_2023_Wanshu_Nie_for_VEDA_Discovery.pdf) and seasonal shifts and provide a more robust estimate of trends.
 layers:
   - id: lis-global-da-tws-trend
     stacCol: lis-global-da-tws-trend
@@ -49,6 +59,12 @@ layers:
       - "#e0f3f8"
       - "#74add1"
       - "#313695"
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Annual 
+      unit: mm/yr
+
   - id: lis-global-da-gpp-trend
     stacCol: lis-global-da-gpp-trend
     name: 'LIS DA GPP Trend'
@@ -78,19 +94,94 @@ layers:
       - "#e0f3f8"
       - "#74add1"
       - "#313695"
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Annual 
+      unit: mm/yr
+
 ---
+
+<Block>
+  <Prose>   
+    ## Dataset Details
+    - **Temporal Extent:** 2003 - 2021<br />
+    - **Spatial Extent:** Global<br />
+    - **Spatial Resolution:** 10 km<br />
+    - **Data Type:** Research<br />
+  </Prose>
+  <Figure>
+     <Map
+     datasetId='lis-global-da-trends'
+     layerId='lis-global-da-tws-trend'
+     dateTime='2003-01-01'
+     compareDateTime='2003-01-01'
+     zoom={2}
+     center={[0,0]}
+     />
+    <Caption
+     attrAuthor='NASA'
+     attrUrl='https://nasa.gov/'
+   >
+    Theil-Sen Slope estimation of the decomposed trend  component of terrestrial water storage (mm/yr) and gross primary production (gC/m2/yr) for 2003-2021 from global reanalysis dataset.
+    </Caption>
+  </Figure>
+</Block>
+
 
 <Block>
    <Prose>
      ## About
 
      Realistic estimates of water and energy cycle variables are necessary for accurate understanding of earth system processes. We develop a 10 km global reanalysis product of water, energy, and carbon fluxes by assimilating satellite observed surface soil moisture, leaf area index, and terrestrial water storage anomalies into a land surface model within NASA Land Information System Framework. We applied a seasonal and trend decomposition algorithm to get the trend estimates for terrestrial water storage and gross primary production. The method can better help to deal with [nonstationarities](https://github.com/Earth-Information-System/sea-level-and-coastal-risk/blob/main/AMS_2023_Wanshu_Nie_for_VEDA_Discovery.pdf) and seasonal shifts and provide a more robust estimate of trends.
+   </Prose>
+ </Block>
 
+
+<Block>
+  <Prose>
+  
+  ## Data Stories Using This Dataset
+  
+  **<Link to={"/stories/tws-trends"}>A New View of the Global Water Cycle</Link>**
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+    ## Limitations of use
+
+    NASA data and products are freely available to federal, state, public, non-profit and commercial users. This information can be experimental- or research-grade data products and may not be appropriate for operational use. These NASA data products and services are intended to aid decision makers and enhance situational awareness, but these data are not guaranteed to be consistently available or routinely updated. Please cite the information according to the direction provided in the metadata.
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+  ## Disclaimer
+
+  All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+    ## License
+
+    [Creative Commons Zero v1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC0 1.0)
+  </Prose>
+</Block>
+
+
+<Block>
+   <Prose>
      ## Additional Resources
 
      * [EIS Freshwater](https://freshwater.eis.smce.nasa.gov/)
      * [Land Information System](https://lis.gsfc.nasa.gov/)
-     * [Global Reanalysis Dataset page](https://www.earthdata.nasa.gov/dashboard/eis/datasets)
+     * [Global Reanalysis Dataset page](https://www.earthdata.nasa.gov/dashboard/data-catalog?taxonomy=%7B%22Topics%22%3A%22eis%22%7D)
    </Prose>
  </Block>
 

@@ -3,7 +3,7 @@ id: co2
 name: "Carbon Dioxide"
 description: "The Impact of the COVID-19 Pandemic on Atmospheric CO2"
 media:
-  src: ::file ./co2--dataset-cover.jpg
+  src: ::file media/co2--dataset-cover.jpg
   alt: Power plant shooting steam at the sky.
   author:
     name: Marek Piwnicki
@@ -12,7 +12,17 @@ taxonomy:
   - name: Topics
     values:
       - Air Quality
-      - EIS
+      - Greenhouse Gases
+  - name: Subtopics
+    values:
+      - COVID-19
+  - name: Source
+    values:
+      - GOSAT
+
+infoDescription: |
+  ::markdown
+    The Impact of the COVID-19 Pandemic on Atmospheric CO2
 layers:
   - id: co2-mean
     stacCol: co2-mean
@@ -47,6 +57,11 @@ layers:
         - "#fee090"
         - "#fc8d59"
         - "#d73027"
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Daily
+      unit: ppm
   - id: co2-diff
     stacCol: co2-diff
     name: Difference CO2
@@ -77,7 +92,39 @@ layers:
         - "#f39779"
         - "#db5c48"
         - "#b50021"
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Daily
+      unit: ppm
 ---
+
+<Block>
+  <Prose>
+    ## Dataset Details
+    - **Temporal Extent:** January 01, 2015 - February 13, 2022<br />
+    - **Spatial Extent:** Global<br />
+    - **Spatial Resolution:** 50 kilometers<br />
+    - **Data Units:** Parts per million (ppm)<br />
+    - **Data Type:** Research<br />
+  </Prose>
+  <Figure>
+    <Map
+      datasetId='co2'
+      layerId='co2-mean'
+      dateTime='2021-06-01'
+      zoom={3}
+      center={[-97.0667, 37.9392]}
+    />
+    <Caption
+      attrAuthor='Harmonized Landsat and Sentinel-2'
+      attrUrl='https://hls.gsfc.nasa.gov/'
+    >
+    Mean CO2 (parts per million) over the United States on June 1, 2021.
+    </Caption>
+  </Figure>
+</Block>  
+
 
 <Block type='wide'>
 <Prose>
@@ -112,7 +159,7 @@ To track atmospheric CO2 changes resulting from the lockdowns, observations coll
 <Block>
 <Figure>
   <Image
-  src={new URL('./co2_figure1.png', import.meta.url).href}
+  src={new URL('./media/co2_figure1.png', import.meta.url).href}
   alt='Atmospheric CO2 differences in ppm'
   />
   <Caption 
@@ -127,7 +174,7 @@ To track atmospheric CO2 changes resulting from the lockdowns, observations coll
 <Block>
 <Figure>
   <Image
-  src={new URL('./co2_figure2.png', import.meta.url).href}
+  src={new URL('./media/co2_figure2.png', import.meta.url).href}
   alt='Bar chart of CO2 concentration in Beijing for years 2017 through 2020'
   />
   <Caption 
@@ -151,4 +198,31 @@ To track atmospheric CO2 changes resulting from the lockdowns, observations coll
 
   Similar results were derived for the other cities. Shanghai shows reduced CO2 enhancements from February through April 2020. For New York, CO2 values were higher in January 2020, close to normal for February, and lower in March, as lockdowns were imposed. There is no data for New York in April due to cloud cover. In New Delhi, Mumbai and Dhaka, the story is somewhat more mixed. The CO2 enhancements are smaller or almost the same in February, reflecting the large role of natural processes, such as year-to-year differences in CO2 uptake and release by forests and crops. In March 2020, CO2 enhancements are higher than in earlier years in New Delhi, and lower in Mumbai and Dhaka. The CO2 enhancements decrease across all three cities in April, as lockdowns are implemented. However, these changes are very difficult to attribute to the pandemic because of the large-scale natural CO2 changes seen across India during this season.
 </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+    ## Limitations of use
+
+    NASA data and products are freely available to federal, state, public, non-profit and commercial users. This information can be experimental- or research-grade data products and may not be appropriate for operational use. These NASA data products and services are intended to aid decision makers and enhance situational awareness, but these data are not guaranteed to be consistently available or routinely updated. Please cite the information according to the direction provided in the metadata.
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+  ## Disclaimer
+
+  All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+    ## License
+
+    [Creative Commons Zero v1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC0 1.0)
+  </Prose>
 </Block>

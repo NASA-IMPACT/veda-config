@@ -1,0 +1,893 @@
+---
+id: 'landslides-helene'
+name: Landslide Risks and Impacts
+description: "A Case Study of 2024's Hurricane Helene"
+media:
+  src: ::file ./media/landslides-background.png
+  alt: Landslide closes I-40 in western North Carolina.
+  author:
+    name: CNN Newsource
+pubDate: 2025-05-20T00:00
+taxonomy:
+  - name: Topics
+    values:
+      - Natural Disasters
+      - Tropical
+  - name: Subtopics
+    values:
+      - Debris Flow
+      - Floods 
+      - Landslides
+      - Precipitation
+  - name: Source
+    values:
+      - Community Contributed
+---
+
+<style>{`
+  .data-table {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .data-table table {
+    border-collapse: collapse;
+  }
+  .data-table thead th,
+  .data-table tbody td {
+    text-align: center;
+    white-space: nowrap;
+    padding: 0.5rem 1rem;
+    border: 1px solid #ccc;
+  }
+  .data-table thead th {
+    font-size: 1.2rem;
+    background-color: #f9f9f9;
+  }
+  .low {
+    background: #45c0ed;
+  }
+  .med {
+    background: #edd445;
+  }
+  .med-high {
+    background: #f27029;
+  }
+  .high {
+    background: #F6251F;
+  }
+  .extreme {
+    background: #eb34e1;
+  }
+  @media only screen and (max-width: 544px) {
+    .data-table {
+      flex-flow: column;
+    }
+  }
+`}</style>
+
+<Block>
+  <Prose>
+
+    **Authors:** 
+    
+    Andrew Blackford<sup>[1]</sup>
+
+    <sup>[1]</sup> The University of Alabama in Huntsville (UAH)
+    
+  </Prose>
+</Block>
+
+<Block>
+  <Figure>
+    <Image
+      src={new URL('./media/landslides-schematic.png', import.meta.url).href}
+      alt='Schematic of a translational landslide.'
+      attrAuthor = 'USGS'
+      attrUrl = 'https://pubs.usgs.gov/circ/1325/pdf/C1325_508.pdf'
+    />
+    <Caption>
+    Schematic of a translational landslide, which commonly occur due to intense rainfall or increases in groundwater. 
+    </Caption>
+  </Figure>
+
+  <Prose>
+  ### Introduction
+
+  Landslides are powerful and often sudden movements of rock, soil, and debris down a slope. These slides are driven primarily by gravity. While they can occur without warning, they’re often triggered by intense rainfall, rapid snowmelt, earthquakes, or human activity like deforestation and construction. In tropical and mountainous regions, the risk of landslides significantly increases during and after major storms–especially hurricanes–when saturated soils lose cohesion. Understanding where and when these events are likely to occur is critical for protecting vulnerable communities and infrastructure. With advanced Earth observation tools and platforms, we can now better visualize, analyze, and anticipate the conditions that lead to these hazardous events.
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  ##### Case Study - Hurricane Helene
+
+  A powerful example of how hurricanes can lead to dangerous landslides is 2024’s Hurricane Helene. Helene formed in the northwestern Caribbean Sea on September 23, 2024, and moved into the Gulf of America as a Category 1 hurricane. Over the next three days, it quickly strengthened into a Category 4 storm with winds reaching 140 miles per hour before making landfall near Perry, Florida.While the storm caused major damage along the Florida coast, its most lasting impact happened farther inland. Although the coast faced strong winds and storm surge, the storm’s heaviest rainfall impacted the southern Appalachian Mountains region. The rainfall in this region was a combination of Hurricane Helene’s direct impact as well as from a Predecessor Rain Event (PRE), which is a heavy rainfall event that can occur ahead of a hurricane when moisture from the outer bands of a hurricane interacts with a stationary front. Over the period of four days, the heavy and consistent rainfall overwhelmed rivers and soaked steep hillsides in western North Carolina, eastern Tennessee, upstate South Carolina, and southwestern Virginia. In North Carolina alone, more than 2,000 landslides were reported. These slides damaged roads, isolated communities, and showed how a hurricane’s impact can continue long after it passes, especially when it moves over areas with complex terrain.
+
+  </Prose>
+
+  <Figure>
+    <Image
+      src={new URL('./media/landslides-helene-map.png', import.meta.url).href}
+      alt='Official NHC track and intensity intervals for Hurricane Helene.'
+    />
+    <Caption>
+    Official National Hurricane Center (NHC) best track and intensity for the entire life cycle of Hurricane Helene. The upper right inset shows WPC interpolated rainfall totals over the Southern Appalachian region - pinks are areas where more than two feet of rain fell. The lower right inset shows more than 2,000 confirmed landslides that occurred in the same area, per USGS.
+    </Caption>
+  </Figure>
+</Block>
+
+<ScrollytellingBlock>
+
+  <Chapter
+    center={[-83.6515, 35.7951]}
+    zoom={7.75}
+    datasetId='landslides-inventory'
+    layerId='landslides-inventory'
+    datetime='2024-09-29'
+  >
+    
+  ### Devastating Landslides
+
+  The United States Geological Survey’s (USGS) landslide inventory created in response to Hurricane Helene’s far-reaching disaster in the Southern Appalachia region logs over 2,200 landslides over the four day period of September 25-29th, 2024. The vast majority of these landslides occurred on the eastern side of the Appalachian Mountains in areas just east of a stretch from Asheville, NC to Johnson City, TN. This dataset is visualized here based on what human impact the landslide caused- whether it impacted the flow of rivers, damaged structures, or blocked/damaged road networks. 
+
+  </Chapter>
+
+  <Chapter
+     center={[-83.6515, 35.7951]}
+    zoom={7.75}
+    datasetId='landslides-kd-impacted-structures'
+    layerId='landslides-kd-impacted-structures'
+    datetime='2024-09-29'
+  >
+    
+  ### Devastating Landslides
+
+  Out of the over 2,200 landslides observed by the USGS, nearly 1,300 of them impacted roads, damaged structures, or interrupted river flows. Kernel density analysis is a way to create a smoothed map to show higher concentrations of human impact from these landslides. This analysis shows the areas that saw the most direct human impact by landslides caused by Hurricane Helene were in the Lake Lure/Chimney Rock to Gasson Creek, North Carolina region and in Boone, North Carolina and surrounding communities. 
+
+  </Chapter>
+
+  <Chapter
+    center={[-82.7, 35.7951]}
+    zoom={8}
+    datasetId='landslides-risk-usgs'
+    layerId='landslides-risk-usgs'
+    datetime='2024-09-29'
+  >
+    
+  ### Emergency Response
+
+  In order to plan quick reconnaissance for rescue missions and other emergency response in the wake of Helene, the USGS also created a modeled relative landslide hazard estimate product in early October 2024. This data was used in conjunction with the identified landslides in order to both meet the need of scientists in near-real time during support for post-storm recovery efforts and to provide an early situational assessment of areas that may otherwise be isolated from ongoing emergency response efforts.
+
+  </Chapter>
+
+
+  <Chapter
+    center={[-83.0515, 35.5951]}
+    zoom={9}
+    datasetId='landslides-imerg'
+    layerId='landslides-imerg'
+    datetime='2024-09-29'
+  >
+    
+  ### Asheville, NC
+
+  The most populous city to have been drastically impacted by the effects of Hurricane Helene was Asheville, North Carolina. Though the city itself did not see many landslides, the landslides that did occur upstream of the French Broad and Swannanoa Rivers increased debris flow in an already record-setting flood event as a result of 12-18” of rainfall - the majority of which fell within a 24 hour period. These rivers both flow through heavily populated areas of the city, and massive damage occurred.  
+  
+  <Figure>
+    <Chart
+      dataPath={new URL('./landslides-precip-asheville.csv', import.meta.url).href}
+      dateFormat="%m/%d/%Y %H:%M"
+      idKey='Source'
+      xKey='datetime'
+      yKey='Rainfall'
+      yAxisLabel='Accumulated Rainfall (in)'
+    />
+    <Caption>
+       Comparison of satellite remote sensing and ground observational data from the IMERG sensor and ASOS stations of total precipitation in Asheville, NC from Hurricane Helene.
+    </Caption>
+  </Figure>
+
+  </Chapter>
+
+
+  <Chapter
+    center={[-82.6015, 35.5951]}
+    zoom={12}
+    datasetId='landslides-nc-flood'
+    layerId='landslides-nc-flood'
+    datetime='2024-09-29'
+  >
+  ### Asheville, NC
+
+  The combination of debris flows into the rivers from landslides as well as the torrential rainfall in the Asheville area caused the French Broad River to crest at 24.82 ft and the Swannanoa river to crest at 27.33 ft. These crests are 15.32 and 17.33 ft above flood stage and beat the previous disastrous 1916 flood benchmark by 1.72 and 6.63 ft, respectively. 
+  
+  <Figure>
+    <Chart
+      dataPath={new URL('./landslides-stream-gauges-asheville.csv', import.meta.url).href}
+      dateFormat="%m/%d/%Y %H:%M"
+      idKey='source'
+      xKey='datetime'
+      yKey='stream_height'
+      yAxisLabel='Stage (ft)'
+    />
+    <Caption>
+    Stream gauge height data from the National Water Prediction Service showing the French Broad and Swannanoa Rivers well above flood stage in Ashville, North Carolina the week of September 23-30, 2024. Flood stage is 9.5 ft for the French Broad River and 10 ft for the Swannanoa River.
+    </Caption>
+  </Figure>
+
+  </Chapter>
+
+ <Chapter
+    center={[-82.5685, 35.5651]}
+    zoom={13.5}
+    datasetId='landslides-planet'
+    layerId='landslides-planet-during'
+    datetime='2024-09-28'
+  >
+
+  ### Biltmore Village, NC
+
+  One area of Asheville that experienced particularly devastating impacts from Helene was the Biltmore Village area south of downtown. Biltmore Village is very near the confluence of the French Broad and Swannanoa Rivers, and buildings nearest the river banks were completely inundated up to their roofs. This commercial satellite scene from Planet Labs shows ongoing record flooding on September 28, 2024 during the height of Hurricane Helene’s impact on the area.
+  
+  <Figure>
+    <Image
+      src={new URL('./media/landslides-biltmore1.png', import.meta.url).href}
+      alt='Catastrophic flooding in Biltmore Village, NC.'
+      attrAuthor = 'Reggie Grant'
+      attrUrl = 'https://scontent-atl3-2.cdninstagram.com/v/t51.29350-15/461535740_8219670881495234_3978243179822633617_n.jpg?stp=dst-jpg_e35_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InRocmVhZHMuRkVFRC5pbWFnZV91cmxnZW4uMTIwMHg3OTkuc2RyLmYyOTM1MC5kZWZhdWx0X2ltYWdlIn0&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_cat=102&_nc_oc=Q6cZ2QFmddnmTWP8PhISte2VNuhVPfOa53p-QhJIM0hKgCy3_bCqjNM5SdzJN_Dzu_CBIX8&_nc_ohc=Yw7mFYD4M6QQ7kNvwHAOPRT&_nc_gid=5He3pyfNdEKeumBJi6a6nw&edm=APs17CUBAAAA&ccb=7-5&ig_cache_key=MzQ2Nzc2MDkyMDQ3MjE4MjM0Ng%3D%3D.3-ccb7-5&oh=00_AfE2_bc0gxDPPoXo0zF7-OBnYyfP1yWdI3_yKPfp60AK3Q&oe=6811C7C1&_nc_sid=10d13b'
+    />
+    <Caption>
+    Catastrophic flooding in Biltmore Village, North Carolina as a result of torrential rainfall and landslide-induced debris flows from Hurricane Helene.
+    </Caption>
+  </Figure>
+
+  </Chapter>
+
+   <Chapter
+    center={[-82.5685, 35.5651]}
+    zoom={13.5}
+    datasetId='landslides-ndvi'
+    layerId='landslides-ndvi'
+    datetime='2024-10-12'
+  >
+
+  ### Biltmore Village, NC
+
+  Landslides outside of Asheville caused portions of I-26 and I-40 to shut down, majorly interrupting evacuation routes, and I-74 was also impacted by floodwaters. In Buncombe County alone, 43 fatalities had been confirmed as of October 30, 2024, with over 200 still missing. This dataset shows the change in greenness after Helene, highlighting areas where floodwaters washed away topsoil along the banks of the rivers in Asheville. 
+
+  <Figure>
+    <Image
+      src={new URL('./media/landslides-biltmore2.png', import.meta.url).href}
+      alt='Catastrophic flooding in Biltmore Village, NC.'
+      attrAuthor = 'Colby Rabon/The Carolina Public Press'
+      attrUrl = 'https://www.nhc.noaa.gov/data/tcr/AL092024_Helene.pdf'
+    />
+    <Caption>
+    Catastrophic flooding in Biltmore Village, North Carolina as a result of torrential rainfall and landslide-induced debris flows from Hurricane Helene.
+    </Caption>
+  </Figure>
+
+  </Chapter>
+
+<Chapter
+    center={[ -82.4085, 35.5294]}
+    zoom={12.5}
+    datasetId='landslides-planet'
+    layerId='landslides-planet-pre'
+    datetime='2024-09-21'
+  >
+    
+  ### Garren Creek, NC
+
+  The Garren Creek and Fairview areas southeast of Asheville experienced some of the worst landslide activity during Hurricane Helene’s catastrophic inland impact. This rural, hilly region received between 15–20 inches of rainfall in less than 24 hours, overwhelming the thin soils and steep slopes common in the area. Dozens of landslides were triggered along Garren Creek Road and surrounding valleys, cutting off access routes and burying portions of small farms and homes. This satellite imagery from Planet Labs shows the densely vegetated and settled landscape prior to the storm’s arrival.
+  
+  <Figure>
+    <Image
+      src={new URL('./media/landslides-garren-creek1.png', import.meta.url).href}
+      alt='Catastrophic damage in Garren Creek, NC.'
+      attrAuthor = 'WLOS Staff'
+      attrUrl = 'https://wlos.com/news/local/helene-devastates-garren-creek-craigtown-killing-13-including-11-from-one-family-shane-ron-harris-gofundme-skyland'
+    />
+    <Caption>
+    Catastrophic damage in Garren Creek, North Carolina as a result of record flooding and landslide-induced debris flows from Hurricane Helene.
+    </Caption>
+  </Figure>
+
+  </Chapter>
+
+<Chapter
+    center={[ -82.4085, 35.5294]}
+    zoom={12.5}
+    datasetId='landslides-planet'
+    layerId='landslides-planet-post'
+    datetime='2024-10-05'
+  >
+    
+  ### Garren Creek, NC
+
+  In the immediate aftermath of Helene, major slope failures scarred the hillsides of Garren Creek and Fairview. Entire sections of road were sheared away by debris flows, while creeks became clogged with mud and broken trees, leading to localized flash flooding even after the rain subsided. This satellite image captured by Planet Labs after Helene’s passing reveals multiple new landslide scars across the region and shows widespread vegetation removal in the brown colors- where the combination of landslides and record flooding caused destructive debris flows.
+  
+  <Figure>
+    <Image
+      src={new URL('./media/landslides-garren-creek2.png', import.meta.url).href}
+      alt='Catastrophic damage in Garren Creek, NC.'
+      attrAuthor = 'WLOS Staff'
+      attrUrl = 'https://wlos.com/news/local/helene-devastates-garren-creek-craigtown-killing-13-including-11-from-one-family-shane-ron-harris-gofundme-skyland'
+    />
+    <Caption>
+    Catastrophic damage in Garren Creek, North Carolina as a result of record flooding and landslide-induced debris flows from Hurricane Helene.
+    </Caption>
+  </Figure>
+
+
+  </Chapter>
+
+<Chapter
+    center={[ -82.4085, 35.5294]}
+    zoom={12.5}
+    datasetId='landslides-ndvi'
+    layerId='landslides-ndvi'
+    datetime='2024-10-12'
+  >
+    
+  ### Garren Creek, NC
+
+  The landslide activity also dramatically altered the ecological health of the area. Normalized Difference Vegetation Index (NDVI) analysis shows a stark decrease in vegetation health and coverage following the storm, with some slopes showing near-total loss of plant life. This loss of vegetation not only worsened subsequent erosion but also threatened water quality in Garren Creek and the upper Cane Creek watershed. The red streaks seen in this dataset are representative of where the worst landslides and flooding occurred.
+  
+  <Figure>
+    <Image
+      src={new URL('./media/landslides-garren-creek3.png', import.meta.url).href}
+      alt='Catastrophic damage in Garren Creek, NC.'
+      attrAuthor = 'Mekenzie Craig/Google Earth'
+      attrUrl = 'https://avlwatchdog.org/the-lives-we-lost-fairview-landslides-from-helene-that-killed-13-were-among-worst-in-north-carolina-history/'
+    />
+    <Caption>
+    Catastrophic damage in Garren Creek, North Carolina as a result of record flooding and landslide-induced debris flows from Hurricane Helene. Tragically, 11 people from the same family were killed in this community.
+    </Caption>
+  </Figure>
+
+
+  </Chapter>
+
+
+<Chapter
+    center={[-82.26868, 35.44368]}
+    zoom={12.5}
+    datasetId='landslides-planet'
+    layerId='landslides-planet-pre'
+    datetime='2024-09-21'
+  >
+    
+  ### Lake Lure, NC
+
+  The Chimney Rock and Lake Lure area, situated along the steep eastern slopes of the Blue Ridge Escarpment, was severely impacted by landslides triggered during Hurricane Helene. Rainfall totals reached 18–22 inches across the region, overwhelming the rugged terrain and initiating hundreds of slope failures. Numerous landslides along US-64 and the surrounding cliffs disrupted access to Chimney Rock Village and damaged structures along the Broad River. This Planet Labs satellite image shows the lush, heavily forested slopes and the iconic rock outcrops prior to the devastation.  
+  
+  <Figure>
+    <Image
+      src={new URL('./media/landslides-lake-lure1.png', import.meta.url).href}
+      alt='Beautiful Chimney Rock and Lake Lure, NC.'
+      attrAuthor = 'Tom Moors'
+      attrUrl = 'https://www.ourstate.com/chimney-rock-the-mountaintop-experience/'
+    />
+    <Caption>
+    The beautiful scenery of the Chimney Rock and Lake Lure, North Carolina area prior to Hurricane Helene's devastation. 
+    </Caption>
+  </Figure>
+
+
+  </Chapter>
+
+<Chapter
+    center={[-82.26868, 35.44368]}
+    zoom={12.5}
+    datasetId='landslides-planet'
+    layerId='landslides-planet-post'
+    datetime='2024-10-05'
+  >
+    
+  ### Lake Lure, NC
+
+  After Helene’s torrential rains, the Chimney Rock and Lake Lure region was transformed by massive slope failures and debris flows. Sections of US-64 and NC-9 were closed for weeks, and landslides along the Broad River canyon funneled a massive amount of mud and debris into Lake Lure, discoloring the water and causing secondary flooding. This Planet Labs satellite image clearly reveals the extensive landslide scars across the steep terrain, as well as sediment plumes extending into the lake from upstream washouts.  
+
+  <Figure>
+    <Image
+      src={new URL('./media/landslides-lake-lure2.png', import.meta.url).href}
+      alt='Massive debris piles in Lake Lure, NC following hundreds of landslides in the area.'
+      attrAuthor = 'AP'
+      attrUrl = 'https://apnews.com/article/hurricane-helene-chimney-rock-north-carolina-da802219b70161816b73b24482b50684'
+    />
+    <Caption>
+    Masive debris pileup in Lake Lure, North Carolina following hundreds of landslides in the Chimney Rock and Lake Lure areas, funneling debris and mud into the lake. 
+    </Caption>
+  </Figure>
+
+  <Figure>
+    <Image
+      src={new URL('./media/landslides-lake-lure3.png', import.meta.url).href}
+      alt='A before and after scene of Chimney Rock, NC.'
+      attrAuthor = 'Nash County Sheriffs Office/Google Earth'
+      attrUrl = 'https://myfox8.com/news/damage-is-unimaginable-in-chimney-rock-after-images-show-half-of-village-wiped-out/'
+    />
+    <Caption>
+    Incredible devastation in Chimney Rock, North Carolina as landslides into the Broad River washed away large portions of the town. The bottom frame is how the area looked prior to Helene's arrival. 
+    </Caption>
+  </Figure>
+
+  
+  </Chapter>
+
+<Chapter
+    center={[-82.26868, 35.44368]}
+    zoom={12.5}
+    datasetId='landslides-ndvi'
+    layerId='landslides-ndvi'
+    datetime='2024-10-12'
+  >
+
+### Lake Lure, NC
+
+Vegetation losses were dramatic following the landslides in Chimney Rock and Lake Lure. NDVI change analysis highlights significant drops in vegetative health along the escarpment slopes and along river corridors feeding into Lake Lure. These losses increased erosion risk for months afterward, causing dangerous conditions for search and rescue operations.
+
+<Figure>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/zrnBCmzckj0?si=AypL_PtjlcCb74JA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <figcaption>Viedo showing the magnitude of devastation at Lake Lure following Hurricane Helene.</figcaption>
+</Figure>
+
+</Chapter>
+
+<Chapter
+    center={[-82.26868, 35.44368]}
+    zoom={12.5}
+    datasetId='landslides-hls-disturbance'
+    layerId='landslides-hls-disturbance'
+    datetime='2024-10-02'
+  >
+
+### Lake Lure, NC
+
+NASA’s Harmonized Landsat-Sentinel2 (HLS) disturbance product shows the percentage of vegetation loss compared to historic vegetation cover at the same time of year. This product helps reveal the areas most significantly impacted by landslides and debris flows, where in some cases up to 100% of the vegetation was removed. 
+
+  <Figure>
+    <Image
+      src={new URL('./media/landslides-lake-lure4.png', import.meta.url).href}
+      alt='Damage to the bridge at Lake Lure and Chimney Rock, NC.'
+      attrAuthor = 'The charlotte Observer'
+      attrUrl = 'https://www.yahoo.com/news/just-nothing-left-helene-wipes-203757311.html?guccounter=1'
+    />
+    <Caption>
+    Significant damage and debris pileups on the bridge that connects Lake Lure and Chimney Rock, North Carolina after hundreds of landslides devastated the area. 
+    </Caption>
+  </Figure>
+
+</Chapter>
+
+  <Chapter
+    center={[-83.8206, 35.4743]}
+    zoom={9}
+    datasetId='landslides-imerg'
+    layerId='landslides-imerg'
+    datetime='2024-09-29'
+  >
+    
+  ### Cherokee, NC
+
+  Even in the far southwestern reaches of North Carolina, Hurricane Helene’s extreme rainfall produced significant impacts in the Smoky Mountains National Park. This area received less rainfall than in the Asheville area, but still measured 10–18 inches. Though farther from the storm’s main area of destruction, the combination of steep mountain slopes and saturated soils still triggered scattered landslides and debris flows across the Qualla Boundary and adjacent parklands. Some secondary roads near Cherokee were blocked by mud and rockfalls, temporarily isolating small communities and hindering access to the Great Smoky Mountains National Park during peak tourist season.   
+  
+  <Figure>
+    <Chart
+      dataPath={new URL('./landslides-precip-cherokee.csv', import.meta.url).href}
+      dateFormat="%m/%d/%Y %H:%M"
+      idKey='Source'
+      xKey='datetime'
+      yKey='Rainfall'
+      yAxisLabel='Accumulated Rainfall (in)'
+    />
+    <Caption>
+       Comparison of satellite remote sensing and ground observational data from the IMERG sensor and ASOS stations of total precipitation in Cherokee, NC from Hurricane Helene.
+    </Caption>
+  </Figure>
+
+  </Chapter>
+
+<Chapter
+    center={[-82.6937, 35.7969]}
+    zoom={15}
+    datasetId='landslides-planet'
+    layerId='landslides-planet-post'
+    datetime='2024-10-05'
+  >
+    
+  ### Marshall, NC
+
+  The town of Marshall, located along the narrow banks of the French Broad River in Madison County, North Carolina, was heavily impacted by flooding during Hurricane Helene. Though landslides were less numerous here compared to areas farther south, the extreme rainfall (totaling over 15 inches in less than 24 hours) caused the French Broad to overflow its banks and inundate much of the historic downtown. Entire city blocks were submerged, and swift floodwaters damaged bridges, homes, and businesses - some of these structures were even swept away.  
+  
+  <Figure>
+    <Image
+      src={new URL('./media/landslides-marshall1.png', import.meta.url).href}
+      alt='Record flooding at Marshall, NC.'
+      attrAuthor = 'Old Marshall Jail Hotel, taken from the North Carolina State Climate Office'
+      attrUrl = 'https://www.nhc.noaa.gov/data/tcr/AL092024_Helene.pdf'
+    />
+    <Caption>
+    Devastating flooding at Marshall, North Carolina following Hurricane Helene's onslaught.
+    </Caption>
+  </Figure>
+
+  </Chapter>
+
+  <Chapter
+    center={[-83.6874, 35.9676]}
+    zoom={9}
+    datasetId='landslides-imerg'
+    layerId='landslides-imerg'
+    datetime='2024-09-29'
+  >
+    
+  ### Newport, TN
+
+  Even in areas northwest of the main rainfall axis, impacts from Hurricane Helene were still significant. Newport, Tennessee, located in the rain shadow of the Blue Ridge Mountains for this event, received 6–8 inches of rain. Though much lower than the extreme totals observed in western North Carolina, the saturated soils and already elevated river levels led to a few landslides in the area.
+  
+  <Figure>
+    <Chart
+      dataPath={new URL('./landslides-precip-newport.csv', import.meta.url).href}
+      dateFormat="%m/%d/%Y %H:%M"
+      idKey='Source'
+      xKey='datetime'
+      yKey='Rainfall'
+      yAxisLabel='Accumulated Rainfall (in)'
+    />
+    <Caption>
+       Comparison of satellite remote sensing and ground observational data from the IMERG sensor and ASOS stations of total precipitation in Newport, TN from Hurricane Helene.
+    </Caption>
+  </Figure>
+
+  </Chapter>
+
+<Chapter
+    center={[ -83.085, 35.7598]}
+    zoom={14}
+    datasetId='landslides-planet'
+    layerId='landslides-planet-post'
+    datetime='2024-10-05'
+  >
+    
+  ### Interstate 40
+
+  Hurricane Helene’s extreme rainfall and landslide activity caused catastrophic infrastructure failures along the North Carolina-Tennessee border, including a major collapse of Interstate 40 through the Pigeon River Gorge. This critical east-west corridor was completely severed for weeks, forcing long detours and severely impacting emergency response. This Planet Labs satellite image shows a long stretch of the interstate collapsed in the wake of Helene, and some landslide scars can also be seen in the mountains uphill of the interstate.
+  
+  <Figure>
+    <Image
+      src={new URL('./media/landslides-i40.png', import.meta.url).href}
+      alt='Interstate 40 collapsed due to Helene.'
+      attrAuthor = 'David Wortham, Daniel Ross, and Kevin Keister'
+      attrUrl = 'https://www.newsobserver.com/news/state/north-carolina/article294466314.html'
+    />
+    <Caption>
+    Large portions of Interstate 40 collapsed due to flooding and landslides along the Pigeon River near the Tennessee-North Carolina border.
+    </Caption>
+  </Figure>
+
+  </Chapter>
+
+  <Chapter
+    center={[-82.8535, 36.3134]}
+    zoom={9}
+    datasetId='landslides-imerg'
+    layerId='landslides-imerg'
+    datetime='2024-09-29'
+  >
+    
+  ### Tri-Cities, TN/VA
+
+  While the Tri-Cities area was outside the worst flooding zones of Hurricane Helene, scattered landslides still occurred along steep slopes in Johnson City, Bristol, and Kingsport. Heavy rain loosened hillsides along roads and riverbanks, causing minor slope failures that disrupted travel and damaged infrastructure, particularly in the hillier parts of Johnson City and along the South Fork Holston River, and a few fatalities did still occur in this area.  
+  
+  <Figure>
+    <Chart
+      dataPath={new URL('./landslides-precip-johnson-city.csv', import.meta.url).href}
+      dateFormat="%m/%d/%Y %H:%M"
+      idKey='Source'
+      xKey='datetime'
+      yKey='Rainfall'
+      yAxisLabel='Accumulated Rainfall (in)'
+    />
+    <Caption>
+       Comparison of satellite remote sensing and ground observational data from the IMERG sensor and ASOS stations of total precipitation in Johnson City, TN from Hurricane Helene.
+    </Caption>
+  </Figure>
+
+  </Chapter>
+
+ <Chapter
+    center={[ -82.4566, 36.1177]}
+    zoom={13.5}
+    datasetId='landslides-ndvi'
+    layerId='landslides-ndvi'
+    datetime='2024-10-12'
+  >
+
+  ### Erwin, TN
+
+  In Erwin, Tennessee, Hurricane Helene’s heavy rainfall triggered multiple landslides along the steep ridges surrounding the town, with particularly severe impacts near the Unicoi County Hospital. Slopes behind the hospital complex gave way during the height of the flooding of the Nolichucky River, forcing emergency evacuations as debris flows threatened the inundated building. Several roads leading to the hospital were blocked or washed out (including I-26), complicating rescue and operations, but 54 people were able to be rescued from the roof of the hospital via helicopter.
+  
+  
+  <Figure>
+    <Image
+      src={new URL('./media/landslides-erwin1.png', import.meta.url).href}
+      alt='The Unicoi County Hospital was completely inundated and aerial rescues had to take place.'
+      attrAuthor = 'Alderman Michael Baker / ABC News'
+      attrUrl = 'https://www.nhc.noaa.gov/data/tcr/AL092024_Helene.pdf'
+    />
+    <Caption>
+    The Unicoi County Hospital was completely inundated by the Nolichucky River with heavy debris in the waters threatening the building, leading to 54 staff and patients being rescued via helicopter.
+    </Caption>
+  </Figure>
+
+  </Chapter>
+
+<Chapter
+    center={[ -82.530, 36.1877]}
+    zoom={12.5}
+    datasetId='landslides-planet'
+    layerId='landslides-planet-post'
+    datetime='2024-10-08'
+  >
+    
+  ### Embreeville, TN
+
+  The Nolichucky River at Embreeville, Tennessee rose rapidly to catastrophic levels, surpassing its previous record by nearly 10 feet. At its height, the river crested at 33.88 ft before the gauge stopped reporting, putting the river at nearly 22 ft above flood stage. Large parts of the surrounding communities were flooded and homes, roads, and farmland were washed away. Steep slopes along the river corridor also gave way in several locations, with landslides contributing to debris jams and worsening the already severe flooding. The Planet Labs satellite image seen here reveals massive washout in the browns along the river banks. 
+  
+  <Figure>
+    <Chart
+      dataPath={new URL('./landslides-stream-gauges-embreeville.csv', import.meta.url).href}
+      dateFormat="%m/%d/%Y %H:%M"
+      idKey='source'
+      xKey='datetime'
+      yKey='stream_height'
+      yAxisLabel='Stage (ft)'
+    />
+    <Caption>
+    Stream gauge height data from the National Water Prediction Service showing the Nolichucky River well above flood stage in Embreeville, Tennessee the week of September 23-30, 2024. Flood stage is 12 ft.
+    </Caption>
+  </Figure>
+
+  <Figure>
+    <Image
+      src={new URL('./media/landslides-embreeville.png', import.meta.url).href}
+      alt='Flooding of the Nolichucky River left unimaginable destruction.'
+      attrAuthor = 'AP / George Walker IV'
+      attrUrl = 'https://www.kron4.com/news/national/ap-dozens-dead-and-millions-without-power-after-helenes-deadly-march-across-southeastern-us/'
+    />
+    <Caption>
+    The Nolichucky River left unimaginable destruction across the Embreeville area and surrounding communities in Greene County, Tennessee.
+    </Caption>
+  </Figure>
+
+  
+  </Chapter>
+
+</ScrollytellingBlock>
+
+<Block>
+<Prose>
+### Conclusion
+
+Hurricane Helene’s passage through the Southern Appalachian region in late September 2024 triggered one of the largest inland landslide disasters in recent U.S. history. More than 2,200 landslides were documented across western North Carolina, eastern Tennessee, southwestern Virginia, and upstate South Carolina. These landslides damaged roads, severed major highways, flooded river corridors, and isolated communities from critical services. Areas from the Asheville, NC to Tri-Cities, TN/VA regions experienced some of the most devastating impacts, where slope failures and debris flows transformed entire landscapes within hours. The ability to rapidly map and assess these hazards using satellite remote sensing played a key role in understanding the scale of the disaster and supporting emergency response operations. 
+
+</Prose>
+</Block>
+
+
+<Block>
+<Figure style={{ display: 'block' }}>
+  <div className='data-table'>
+    <table>
+      <thead>
+        <tr>
+          <th colSpan="2">North Carolina</th>
+          <th colSpan="2">South Carolina</th>
+          <th colSpan="2">Tennessee</th>
+          <th colSpan="2">Virginia</th>
+        </tr>
+        <tr>
+          <th>County</th><th>Fatalities</th>
+          <th>County</th><th>Fatalities</th>
+          <th>County</th><th>Fatalities</th>
+          <th>County</th><th>Fatalities</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td>Ashe</td><td class='low'>1</td>
+          <td>Aiken</td><td class='high'>10</td>
+         <td>Cocke</td><td class='med'>2</td>
+          <td>Craig</td><td class='low'>1</td>
+        </tr>
+        <tr>
+          <td>Avery</td><td class='med-high'>6</td>
+          <td>Anderson</td><td class='med-high'>5</td>
+          <td>Greene</td><td class='low'>1</td>
+          <td>Tazewell</td><td class='low'>1</td>
+        </tr>
+        <tr>
+          <td>Buncombe</td><td class='extreme'>43</td>
+          <td>Chesterfield</td><td class='low'>1</td>
+          <td>Johnson</td><td class='low'>1</td>
+          <td></td><td></td>
+        </tr>
+        <tr>
+          <td>Burke</td><td class='low'>1</td>
+          <td>Greenville</td><td class='med-high'>7</td>
+          <td>Knox</td><td class='low'>1</td>
+          <td></td><td></td>
+        </tr>
+        <tr>
+          <td>Catawba</td><td class='low'>1</td>
+          <td>Greenwood</td><td class='low'>1</td>
+          <td>Unicoi</td><td class='med-high'>9</td>          
+          <td></td><td></td>
+        </tr>
+        <tr>
+          <td>Cleveland</td><td class='med'>2</td>
+          <td>Laurens</td><td class='med'>3</td>
+          <td>Washington</td><td class='med'>4</td>          
+          <td></td><td></td>
+        </tr>
+        <tr>
+          <td>Gaston</td><td class='low'>1</td>
+          <td>Lee</td><td class='low'>1</td>          
+          <td></td><td></td>
+          <td></td><td></td>
+        </tr>
+        <tr>
+          <td>Haywood</td><td class='med-high'>5</td>
+          <td>Newberry</td><td class='med-high'>5</td>
+          <td></td><td></td>
+          <td></td><td></td>
+        </tr>
+        <tr>
+          <td>Henderson</td><td class='high'>12</td>
+          <td>Richland</td><td class='low'>1</td>
+          <td></td><td></td>
+          <td></td><td></td>
+        </tr>
+        <tr>
+          <td>Macon</td><td class='med'>2</td>
+          <td>Saluda</td><td class='med'>3</td>
+          <td></td><td></td>
+          <td></td><td></td>
+        </tr>
+        <tr>
+          <td>Madison</td><td class='med'>4</td>
+          <td>Spartanburg</td><td class='med-high'>8</td>
+          <td></td><td></td>
+          <td></td><td></td>
+        </tr>
+        <tr>
+          <td>McDowell</td><td class='low'>1</td>
+          <td>Chesterfield</td><td class='med'>2</td>
+          <td></td><td></td>
+          <td></td><td></td>
+        </tr>
+        <tr>
+          <td>Mecklenburg</td><td class='med'>3</td>
+          <td>York</td><td class='low'>1</td>
+          <td></td><td></td>
+          <td></td><td></td>
+        </tr>
+        <tr>
+          <td>Mitchell</td><td class='med'>3</td>
+          <td></td><td></td>
+          <td></td><td></td>
+          <td></td><td></td>
+        </tr>
+        <tr>
+          <td>Polk</td><td class='low'>1</td>
+          <td></td><td></td>
+          <td></td><td></td>
+          <td></td><td></td>
+        </tr>
+        <tr>
+          <td>Rowan</td><td class='low'>1</td>
+          <td></td><td></td>
+          <td></td><td></td>
+          <td></td><td></td>
+        </tr>
+        <tr>
+          <td>Rutherford</td><td class='med'>4</td>
+          <td></td><td></td>
+          <td></td><td></td>
+          <td></td><td></td>
+        </tr>
+        <tr>
+          <td>Watauga</td><td class='med'>2</td>
+          <td></td><td></td>
+          <td></td><td></td>
+          <td></td><td></td>
+        </tr>
+        <tr>
+          <td>Wilkes</td><td class='low'>1</td>
+          <td></td><td></td>
+          <td></td><td></td>
+          <td></td><td></td>
+        </tr>
+        <tr>
+          <td>Yadkin</td><td class='low'>1</td>
+          <td></td><td></td>
+          <td></td><td></td>
+          <td></td><td></td>
+        </tr>
+        <tr>
+          <td>Yancey</td><td class='high'>11</td>
+          <td></td><td></td>
+          <td></td><td></td>
+          <td></td><td></td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+<Caption>
+  Table 1: Fatalities by county from Hurricane Helene (2024) in the Southern Appalachian region.
+</Caption>  
+</Figure>
+</Block>
+
+<Block>
+  <Prose>
+    ### References
+    
+    National Hurricane Center. Tropical Cyclone Report: Hurricane Helene (AL092024). National Oceanic and Atmospheric Administration. https://www.nhc.noaa.gov/data/tcr/AL092024_Helene.pdf.
+
+    WLOS News 13 Staff. Helene devastates Garren Creek, Craigtown, killing 13, including 11 from one family. WLOS. https://wlos.com/news/local/helene-devastates-garren-creek-craigtown-killing-13-including-11-from-one-family-shane-ron-harris-gofundme-skyland.
+    
+    Motsinger M. The lives we lost: Fairview landslides from Helene that killed 13 were among worst in North Carolina history. AVL Watchdog. https://avlwatchdog.org/the-lives-we-lost-fairview-landslides-from-helene-that-killed-13-were-among-worst-in-north-carolina-history/.
+    
+    Anderson H. Hurricane Helene: Deaths, destruction in Chimney Rock, North Carolina. Associated Press. https://apnews.com/article/hurricane-helene-chimney-rock-north-carolina-da802219b70161816b73b24482b50684.
+    
+    FOX8 WGHP. ‘Damage is unimaginable’ in Chimney Rock after images show half of village wiped out. FOX8. https://myfox8.com/news/damage-is-unimaginable-in-chimney-rock-after-images-show-half-of-village-wiped-out/.
+    
+    Associated Press. ‘Just nothing left’: Helene wipes out communities in southeastern U.S. Yahoo News. https://www.yahoo.com/news/just-nothing-left-helene-wipes-203757311.html.
+    
+    Price M. Helene aftermath: Officials assess damage across NC; millions still without power. The News & Observer. https://www.newsobserver.com/news/state/north-carolina/article294466314.html.
+    
+    Associated Press. Dozens dead and millions without power after Helene’s deadly march across Southeastern US. KRON4. https://www.kron4.com/news/national/ap-dozens-dead-and-millions-without-power-after-helenes-deadly-march-across-southeastern-us/.
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    ### Data Access
+
+    * [USGS Hurricane Helene Landslide Dashboard](https://www.arcgis.com/apps/dashboards/01b4f51fc0b64002bf7722a9acfc181d)
+    * [USGS Hurricane Helene Landslide Response Datasets](https://www.sciencebase.gov/catalog/item/66fc243cd34e3d9dd5de00f2)
+    * [NC DHHS Hurricane Helene Dashboard](https://nu.maps.arcgis.com/apps/dashboards/c3695f162e274d318f5fcb431726a58f)
+    * [NASA JPL Hurricane Helene Datasets](https://aria-share.jpl.nasa.gov/20240926-Hurricane_Helene/)
+
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+
+    **Editors**: Andrew Blackford and Derek Koehl
+
+    **Developers**: Andrew Blackford
+
+    **Science and Content Contributors**: Andrew Blackford
+
+    **Questions / Feedback**: Email veda@uah.edu
+
+    ### Additional Resources
+
+    * [The Landslide Handbook - USGS](https://pubs.usgs.gov/circ/1325/pdf/C1325_508.pdf)
+    * [NASA Earth Observatory - Helene's Rainfall](https://earthobservatory.nasa.gov/images/153387/devastating-rainfall-from-hurricane-helene)
+    * [NOAA Hurricane Helene Rainfall Map](https://noaa.maps.arcgis.com/apps/mapviewer/index.html?webmap=22ac70f963cc46718501d1d9d3fb116a)
+
+  </Prose>
+</Block>
+

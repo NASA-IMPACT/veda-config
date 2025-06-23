@@ -1,0 +1,725 @@
+---
+id: 'blizzards'
+name: When Winter Rages
+description: "Exploring the Power and Impact of Blizzards"
+media:
+  src: ::file ./blizzards-cover.png
+  alt: Near-blizzard conditions in Maria Stein, Ohio on December 23, 2022.
+  author:
+    name: Andrew Blackford
+pubDate: 2025-02-28T00:00
+taxonomy:
+  - name: Topics
+    values:
+      - Natural Disasters
+  - name: Subtopics
+    values:
+      - Snow
+  - name: Source
+    values:
+      - Community Contributed
+---
+
+<Block>
+  <Prose>
+
+    **Authors:** 
+    
+    Andrew Blackford<sup>[1]</sup>
+
+    <sup>[1]</sup> The University of Alabama in Huntsville (UAH)
+
+    **Disclaimer:** 
+    
+    <mark>🚧 This Data Story presents work in progress and not peer-reviewed results. 🚧</mark>
+  </Prose>
+</Block>
+
+<ScrollytellingBlock>
+  <Chapter
+    center={[-110,40]}
+    zoom={3.5}
+    datasetId='blizzard-count'
+    layerId='blizzard-count'
+    datetime='2021-12-31'
+  >
+    
+  ### Introduction
+
+  Blizzards are extreme winter weather events defined by the National Weather Service (NWS) as a combination of heavy falling or blowing snow, strong winds sustained at 35 mph or higher, and reduced visibility (less than a quarter of a mile) lasting for at least three contiguous hours. These powerful storms can bring everyday life to a standstill by disrupting travel, damaging infrastructure, and exposing people and animals to dangerous elements.  
+  
+  <Figure>
+    <Image
+      src={new URL('./blizzard-art-conditions.gif', import.meta.url).href}
+      alt='Artistic rendition of a winter storm intensifying to blizzard conditions.'
+      attrAuthor = 'Jennifer Geary'
+    />
+    <Caption>
+    Artisitic rendition of a winter storm intensifying to blizzard conditions. Credit Jennifer Geary.
+    </Caption>
+  </Figure> 
+      
+  In the United States, blizzards occur most frequently in the northern Great Plains, but they have been reported in every state except Hawaii. While blizzards are traditionally associated with winter, records show they can happen any time between October and June. Advances in weather monitoring and forecasting have improved our ability to detect and report these events, which has led to an increase in reported blizzard activity over the past several decades. [On average, 13 blizzards occur annually across CONUS, but the past few decades have seen this number inflate to 19](https://static1.squarespace.com/static/58b98f7bd1758e4cc271d365/t/5c5b279c24a69469aa5a4d44/1549477788244/Colemanandschwartz.pdf). The geographic spread of these storms has also widened, with more blizzards occurring outside their historical hotspots. Although the intensity of impact by individual storms has generally decreased due to better forecasting, their economic and societal impacts have risen, with associated losses now exceeding $1 billion per year. Understanding blizzards and preparing for their impacts is critical for communities in regions prone to extreme winter weather.
+
+  </Chapter>
+
+  <Chapter
+    center={[-106,44]}
+    zoom={4.8}
+    datasetId='blizzard-snowfall-footprint'
+    layerId='blizzard-alley'
+    datetime='1950-01-01'
+  >
+    
+  ### Climatology of Blizzards
+
+  In the United States, blizzards predominantly affect a region often referred to as "Blizzard Alley”, encompassing parts of North Dakota, South Dakota, Minnesota, Iowa, Nebraska, southeastern Wyoming, and eastern Colorado. The flat terrain and scarcity of natural windbreaks, such as forests or mountains, allow cold Arctic air masses to sweep down from Canada unimpeded, leading to frequent blizzard conditions, far more than any other region in the country. 
+      
+  Several key factors contribute to the high frequency of blizzards in this region:
+  * Flat Topography: The expansive Great Plains offer little resistance to wind, enabling strong gusts to develop and sustain.
+  * Lack of Vegetation: The absence of significant tree cover means there are few obstacles to slow down or block wind flow.
+  * Proximity to Arctic Air Masses: The region's location allows cold air from the Arctic to move southward easily, interacting with moist air masses to produce snow.
+  * Frequent Storm Systems: Low-pressure systems often develop east of the Rocky Mountains, intensifying as they move into the Plains, bringing heavy snowfall and high winds. 
+
+  <Figure>
+    <Image
+      src={new URL('./blizzards-climo-1959-2014.png', import.meta.url).href}
+      alt='U.S. blizzard climatology, 1959-2014.'
+      attrAuthor = 'Jill Coleman and Robert Schewartz'
+      attrUrl = 'https://static1.squarespace.com/static/58b98f7bd1758e4cc271d365/t/5c5b279c24a69469aa5a4d44/1549477788244/Colemanandschwartz.pdf'
+    />
+    <Caption>
+    Number of blizzard warnings by county from 1959-2014.
+    </Caption>
+  </Figure> 
+
+  While Blizzard Alley is the most blizzard-prone area, other parts of the United States also experience these severe storms: The Northeastern U.S. is known as a secondary Blizzard Alley, as this region frequently experiences nor'easters—powerful storms that can produce blizzard conditions. Additionally, the Front Range of the Rocky Mountains is susceptible to blizzards due to storm systems intensifying as they descend from higher elevations.
+
+  </Chapter>
+
+  <Chapter
+    center={[-85,40]}
+    zoom={4}
+    datasetId='blizzard-snowfall-footprint'
+    layerId='blizzard-millera'
+    datetime='1950-01-01'
+  >
+    
+  ### Meteorology of Blizzards
+
+  #### Miller Types A and B
+
+  Winter storms in the United States are often associated with two types of cyclones, classified as Miller Type A and Miller Type B, based on their formation and evolution. These storm types describe the pathways and interactions of low-pressure systems that can bring heavy snowfall and blizzard conditions to different regions of the country.
+
+  ##### ***Miller Type A Cyclones***
+
+  Miller Type A cyclones form along the Gulf Coast or in the southern United States, where warm, moist air from the Gulf of America meets colder Arctic air descending from the north. These storms then travel along the East Coast, often intensifying as they near the Northeast U.S., as they tap into additional moisture from the Atlantic Ocean. Type A cyclones tend to bring widespread, heavy snowfall to the densely populated I-95 corridor or interior Northeast. Their direct development along the Gulf provides an abundant moisture source, resulting in potentially significant impacts for the Southeastern U.S., the Mid-Atlantic, and the Northeast.
+
+
+  </Chapter>
+
+  <Chapter
+    center={[-97,40]}
+    zoom={4}
+    datasetId='blizzard-snowfall-footprint'
+    layerId='blizzard-millerb'
+    datetime='1950-01-01'
+  >
+    
+  ##### ***Miller Type B Cyclones***
+
+  Miller Type B cyclones are more complex, involving the interaction of two distinct low pressure systems. A primary low forms over the Midwest or Great Lakes regions, often producing light to moderate snowfall. As the primary low weakens, energy transfers to a secondary low-pressure system that develops near the Mid-Atlantic coast. This secondary low rapidly intensifies as it moves up the East Coast, often producing heavy snow for the Northeast and Mid-Atlantic regions. Type B cyclones tend to bring mixed precipitation and ice to areas farther inland before transitioning to snow along the coast. 
+
+  </Chapter>
+
+  <Chapter
+    center={[-80,43]}
+    zoom={5}
+    datasetId='blizzard-snowfall-footprint'
+    layerId='blizzard-noreaster'
+    datetime='1950-01-01'
+  >
+    
+  ##### ***Nor'easters***
+
+  Nor’easters are perhaps the most notorious system that can bring blizzard conditions. Nor’easters frequent blizzard conditions to the I-95 corridor, can be either Miller Type A or B cyclones (but are more commonly Type B), and are often tracked using a coordinate benchmark known as the "40°N, 70°W rule." This location, just southeast of Cape Cod, Massachusetts, serves as a critical reference point for meteorologists. If the center of a nor’easter passes near or over this benchmark as it moves to the northeast, it frequently results in significant snow and wind impacts for the densely populated I-95 corridor from Washington, D.C., to Boston. This position aligns the storm to draw in cold Arctic air from the northwest while tapping into moist Atlantic air, creating the perfect setup for heavy snowfall and blizzard conditions.
+
+  </Chapter>
+
+  <Chapter
+    center={[-78.8,41]}
+    zoom={4.75}
+    datasetId='blizzard-goes-bombogenesis'
+    layerId='blizzard-goes-bombogenesis'
+    datetime='2018-01-04'
+  >
+  ###### ***Bomb Cyclogenesis***
+
+  A defining feature of many nor’easters is bomb cyclogenesis, or "bombogenesis", which occurs when a storm's central low pressure drops by at least 24 millibars in 24 hours, signifying rapid intensification of the system. The process is driven by the clash of cold air from the north and warm, humid air over the Atlantic. As the storm deepens, powerful winds spiral inward towards the central low pressure, enhancing snowfall rates and creating whiteout conditions. Bomb cyclogenesis often results in some of the most impactful nor’easters, which have been historically responsible for bringing record-breaking snowfall and hurricane-force winds to parts of the Northeast. The map shows GOES satellite imagery of one example of a Nor'easter undergoing bomb cyclogenesis off the East Coast of the USA on January 4, 2018. 
+
+  </Chapter>
+
+  <Chapter
+    center={[-110,44]}
+    zoom={4}
+    datasetId='blizzard-snowfall-footprint'
+    layerId='blizzard-co-low'
+    datetime='1950-01-01'
+  >
+    
+  ##### ***Colorado/Denver Cyclones***
+
+  Denver Cyclones, or Colorado Cyclones, are low pressure systems that form on the lee side of the Rocky Mountains, often along the Colorado Front Range. These systems form when moist air from the Gulf of America converges with cold Arctic air descending from Canada, creating sharp temperature gradients. The interaction between these air masses and the region’s complex terrain promotes the development of cyclonic systems that can bring heavy snowfall or blizzard conditions to the Colorado Front Range, including Denver, as well as parts of the Central and Northern Great Plains and Midwest. As these cyclones intensify and move eastward, they can bring severe winter weather to Blizzard Alley, making them a key contributor to the high frequency of blizzards in this region. The open terrain of the Great Plains amplifies wind speeds, further reducing visibility and exacerbating blizzard conditions.
+
+  </Chapter>
+
+  <Chapter
+    center={[-105.4,40]}
+    zoom={6.7}
+    datasetId='blizzard-count'
+    layerId='blizzard-count'
+    datetime='2021-12-31'
+  >
+    
+  A critical factor in the formation of Denver cyclones is the Denver Convergence Vorticity Zone (DCVZ)—a mesoscale atmospheric feature unique to the area. The DCVZ forms due to easterly upslope winds interacting with the Rocky Mountains, creating a zone of cyclonic rotation just east of Denver. This zone can serve as a focal point for the development or intensification of low pressure systems, often enhancing snowfall near Denver and the eastern Colorado Plains. This enhancement of snowfall often carries eastward as the storm moves into the Great Plains, but typically weakens by the time it reaches the Midwest (though there have been a few notable blizzards in the Midwest that can be attributed to Denver Cyclones). 
+
+  </Chapter>
+
+  <Chapter
+    center={[-110,40]}
+    zoom={4.1}
+    datasetId='blizzard-snowfall-footprint'
+    layerId='blizzard-panhandle-hooker'
+    datetime='1950-01-01'
+  >
+    
+  ##### ***Panhandle Hookers***
+
+  Panhandle Hookers are another type of low pressure system that can bring blizzard conditions to portions of CONUS. These cyclones originate in the Texas and Oklahoma Panhandles and are known for their distinctive ‘hooking’ storm track - hence their unique name. These systems typically form when a strong blast of cold Arctic air from the north (known as Blue Northers) collides with warm, moist air from the Gulf of America in the southern Plains. As the storm intensifies, it takes a northeastward "hook-shaped" trajectory, moving across the central Plains, the Midwest, and into the Great Lakes region. Panhandle Hookers most often bring heavy snow and blizzard conditions to parts of the central Great Plains, Upper Midwest, and Great Lakes, while the southern Plains and Ohio Valley may experience mixed precipitation or severe weather on the warmer side of the storm. These systems are a major source of snow for the central United States and, depending on their exact track, can also more uncommonly impact the northeastern U.S. with snow or ice. The strong winds and rapid intensification of these storms make them a hallmark of winter weather in the Plains and Midwest.
+
+  </Chapter>
+
+  <Chapter
+    center={[-117, 49]}
+    zoom={3.7}
+    datasetId='blizzard-snowfall-footprint'
+    layerId='blizzard-clipper'
+    datetime='1950-01-01'
+  >
+    
+  ##### ***Alberta Clippers, Saskatchewan Screamers, and Manitoba Maulers***
+
+  Alberta Clippers, Saskatchewan Screamers, and Manitoba Maulers are fast-moving low pressure systems that originate in the Canadian Prairies and bring cold, dry air and light to moderate snowfall to parts of the United States. These systems are named for their origins in Alberta, Saskatchewan, and Manitoba, respectively, and are distinguished by their speed and limited moisture content. Alberta Clippers are the most common of the three and typically travel southeastward across the northern Plains, Midwest, and Great Lakes region, often bringing light amounts of snow, though localized areas can receive higher totals. Saskatchewan Screamers and Manitoba Maulers follow similar tracks but are less frequent. Due to their rapid movement, these storms rarely bring heavy snowfall, but their strong winds can create blowing snow and reduced visibility, occasionally leading to blizzard conditions. Additionally, they often usher in frigid Arctic air, leading to significant temperature drops that can be anomalous for impacted regions. These systems are a defining feature of winter weather across the northern United States and contribute heavily to the region's cold and snowy climatology, as in more active years handfuls of these systems can occur in quick succession.
+
+  </Chapter>
+
+  <Chapter
+    center={[-89.5, 41.5]}
+    zoom={5}
+    datasetId='blizzard-snowfall'
+    layerId='blizzard-snowfall'
+    datetime='1950-11-26'
+  >
+  ### Historic Blizzards
+  
+  #### ***The Great Appalachian Storm of 1950 (Snow Bowl Blizzard)***
+
+  The Great Appalachian Blizzard of 1950 is remembered as one of the most extraordinary and impactful winter storms in U.S. history. Occurring over Thanksgiving weekend, from November 24 to 30, the storm wreaked havoc across 22 states, bringing record snowfall, hurricane-force winds, and freezing temperatures. Snowfall totals reached unprecedented levels, with Coburn Creek, West Virginia, reporting 62 inches, and widespread accumulations exceeding 30 inches across parts of Ohio, Pennsylvania, and West Virginia. Accompanying winds gusted up to 110 mph in Concord, New Hampshire, and 160 mph at Mount Washington, causing severe damage and widespread power outages. In total, the storm claimed 353 lives and caused an estimated $66.7 million in damages (equivalent to about $845 million today).
+  
+  </Chapter>
+
+  <Chapter
+    center={[-87, 41]}
+    zoom={6.75}
+    datasetId='blizzard-era5'
+    layerId='blizzard-era5-10m-wind'
+    datetime='1950-11-26'
+  >
+  ### Historic Blizzards
+  
+  #### ***The Great Appalachian Storm of 1950 (Snow Bowl Blizzard)***
+
+  A notable event during this historic blizzard was the infamous ‘Snow Bowl’. The Snow Bowl was the  annual edition of ‘The Game’ - the Ohio State-Michigan football game, played on November 25 in Columbus, Ohio. Under heavy snowfall and freezing winds, players and fans braved the elements as snowplows were used to clear the field mid-game. The extreme weather rendered passing nearly impossible, and Michigan was able to pull out a 9-3 win. This edition of ‘The Game’ remains one of the most memorable contests ever played in all of collegiate athletics.
+
+   <Figure>
+    <Image
+      src={new URL('./blizzards-1950-the-game.png', import.meta.url).href}
+      alt="The 1950 edition of the Ohio State - Michigan rivalry football game was played during the height of the blizzard."
+      attrAuthor = 'WolverineHistorian (YouTube)'
+      attrUrl = 'https://youtu.be/tP1ZfZMbarI?feature=shared'
+    />
+    <Caption>
+    The 1950 edition of the Ohio State - Michigan rivalry football game was played during the height of the blizzard
+    </Caption>
+  </Figure> 
+
+  </Chapter>
+
+  <Chapter
+    center={[-86, 41]}
+    zoom={5}
+    datasetId='blizzard-era5'
+    layerId='blizzard-era5-mslp'
+    datetime='1950-11-26'
+  >
+  ### Historic Blizzards
+  
+  #### ***The Great Appalachian Storm of 1950 (Snow Bowl Blizzard)***
+
+  The societal impact of the 1950 blizzard is highlighted quite well by its ranking as the second-highest storm on the Regional Snowfall Index (RSI), a NOAA metric that measures the effects of major snowstorms based on snowfall totals, geographic area covered, and population impact. Transportation networks were paralyzed, millions were left without power, and freezing temperatures caused significant agricultural losses, especially in the southeastern U.S., where unseasonable cold destroyed crops. 
+
+  
+  </Chapter>
+
+  <Chapter
+    center={[-90, 43]}
+    zoom={4.25}
+    datasetId='blizzard-era5'
+    layerId='blizzard-era5-mslp'
+    datetime='1978-01-26'
+  >
+  ### Historic Blizzards
+  
+  #### ***The Great Blizzard of ‘78 (Cleveland Superbomb)***
+
+  The Great Blizzard of ‘78, also known as the "Cleveland Superbomb," remains one of the most catastrophic winter storms in U.S. history, and is one of the worst natural disasters to ever impact Ohio, Indiana, and Michigan. Occurring from January 25 to 27, the storm developed as an intense low-pressure system surged northward from the Gulf of America, colliding with Arctic air on the heels of a small clipper system. This convergence created a rapid drop in atmospheric pressure, with Cleveland recording a barometric pressure of 28.28 inches (958 millibars)—one of the lowest ever observed in the continental United States. The rapid intensification, known as bomb cyclogenesis, led to blizzard conditions of unprecedented severity.
+
+  <Figure>
+    <Image
+      src={new URL('./Blizzard78_ShelbyCo_Shoveling.png', import.meta.url).href}
+      alt="Residents of Shelby County, Ohio with shovels in hand post-blizzard."
+      attrAuthor = 'Ross Historical Society'
+    />
+    <Caption>
+    Residents of Shelby County, Ohio walk down a cleared road with shovels in hand post-blizzard, surrounded by walls of snow. 
+    </Caption>
+  </Figure> 
+
+  </Chapter>
+
+  <Chapter
+    center={[-88, 40]}
+    zoom={6.25}
+    datasetId='blizzard-era5'
+    layerId='blizzard-era5-10m-wind'
+    datetime='1978-01-26'
+  >
+  ### Historic Blizzards
+  
+  #### ***The Great Blizzard of ‘78 (Cleveland Superbomb)***
+
+  Wind gusts during the storm were that of hurricane force on the east side of the low pressure system, with a boat on Lake Erie recording an impressive 111 mph gust and Cleveland experiencing gusts up to 82 mph. These winds combined with heavy snowfall to create whiteout conditions, with visibility reduced to zero in many areas. Snowfall totals ranged from 10 to 30 inches across affected states, but drifts created by the strong winds piled snow 20 to 40 feet high in some locations. These monster drifts buried cars, blocked nearly every road (including Interstate 75, trapping truckers for days), and isolating communities. 
+
+  <Figure>
+    <Image
+      src={new URL('./Blizzard78_I75.png', import.meta.url).href}
+      alt="Stranded motorists on I-75 in western Ohio."
+      attrAuthor = 'Garst Museum'
+    />
+    <Caption>
+    The powerful winds of the blizzard caused massive drifts to overtake motorists on I-75 in western Ohio, stranding them for hours to days.
+    </Caption>
+  </Figure> 
+  
+  </Chapter>
+
+  <Chapter
+    center={[-85.5, 40.5]}
+    zoom={6.5}
+    datasetId='blizzard-snowfall'
+    layerId='blizzard-snowfall'
+    datetime='1978-01-26'
+  >
+  ### Historic Blizzards
+  
+  #### ***The Great Blizzard of ‘78 (Cleveland Superbomb)***
+
+  Indiana and Michigan saw the highest snow totals, pushing over 30” in a large swath from Fort Wayne and South Bend northward into Grand Rapids and Traverse City. While western Ohio recorded less snow totals, ranging from 12-24 inches, this deep snow accumulation fell atop an already significant snowpack of 18-24” or more from earlier storms. With Ohio falling on the east side of the low pressure system and thus experiencing higher wind gusts, the Buckeye State took the brunt of the significant impacts from the Blizzard of ‘78.  
+
+  <Figure>
+    <Image
+      src={new URL('./Blizzard78_Drift_UnionCity_Beamsville_Rd.png', import.meta.url).href}
+      alt="Massive drifts in rural areas of Ohio, Indiana, and Michigan covered roads and even stop signs."
+      attrAuthor = 'Garst Museum'
+    />
+    <Caption>
+    The full power of the blizzard is shown here, with a massive drift covering even the road signs in rural Darke County, Ohio between Union City and Beamsville.
+    </Caption>
+  </Figure> 
+
+  </Chapter>
+
+
+  <Chapter
+    center={[-100, 43]}
+    zoom={4.5}
+    datasetId='blizzard-era5'
+    layerId='blizzard-era5-2m-temp'
+    datetime='1978-01-26'
+  >
+  ### Historic Blizzards
+  
+  #### ***The Great Blizzard of ‘78 (Cleveland Superbomb)***
+
+  The storm’s human impact was devastating. Approximately 70 fatalities were reported, including 51 in Ohio, many of which were due to exposure, heart attacks from snow removal, and traffic accidents. Thousands of motorists were stranded on highways and rural roads, and emergency responders struggled to reach those in need. The National Guard was deployed to assist with search and rescue operations, clearing roads, and delivering essential supplies, such as food and medicine, to isolated residents. Entire towns were cut off for days, and power outages left countless homes without heat in subzero temperatures. 
+
+  <Figure>
+    <Image
+      src={new URL('./Blizzard78_Sidney_Aerial.png', import.meta.url).href}
+      alt="Aerial view of Sidney, Ohio post-blizzard."
+      attrAuthor = 'Ross Historical Society'
+    />
+    <Caption>
+    This aerial view of Sidney, Ohio after the Blizzard of '78 is just one example of the many towns and cities that were essentially cut off for days due to the extreme impacts of the storm.
+    </Caption>
+  </Figure> 
+
+  </Chapter>
+
+  <Chapter
+    center={[-99, 40]}
+    zoom={3}
+    datasetId='blizzard-era5'
+    layerId='blizzard-era5-cfrac'
+    datetime='1978-01-26'
+  >
+  ### Historic Blizzards
+  
+  #### ***The Great Blizzard of ‘78 (Cleveland Superbomb)***
+
+  The economic toll of the blizzard was immense. Transportation networks, including major interstates, railroads, and airports, were paralyzed for days. Businesses, schools, and government offices shut down for over two weeks in some places, and grocery stores quickly ran out of supplies due to panic buying before the storm. Livestock losses were substantial, particularly in Indiana and Ohio, where farmers were unable to reach or feed their animals. Additionally, structural damage from the storm was widespread, with roofs collapsing under the weight of snow and wind damage tearing through homes and businesses.
+
+  <Figure>
+    <Image
+      src={new URL('./Blizzard78_ShelbyCo_Road_Truck.png', import.meta.url).href}
+      alt="Aerial view of a rural Shelby County, Ohio road."
+      attrAuthor = 'Ross Historical Society'
+    />
+    <Caption>
+    This is just one example of the state of the road network in rural areas of Ohio, Indiana, and Michigan after the blizzard. This image is out of rural Shelby County, Ohio, in the hard-hit western portion of the state.
+    </Caption>
+  </Figure> 
+  
+  </Chapter>
+
+  <Chapter
+    center={[-90, 43]}
+    zoom={5.5}
+    datasetId='blizzard-snowfall'
+    layerId='blizzard-snowfall'
+    datetime='1978-01-26'
+  >
+  ### Historic Blizzards
+  
+  #### ***The Great Blizzard of ‘78 (Cleveland Superbomb)***
+
+  The Great Blizzard of 1978 remains the worst blizzard in United States history, with an RSI score of 39.07. The highest category in the RSI scale begins at a score of 18.0. This blizzard remains the benchmark for extreme winter weather in the Midwest and Great Lakes regions, and its unprecedented ferocity led to increased storm preparedness, emergency response coordination, and infrastructure resilience nationwide.
+
+  <Figure>
+    <Image
+      src={new URL('./Blizzard78_BeforeAfter_House_PascoMontra.png', import.meta.url).href}
+      alt="A side-by-side comparison of a home before and after the blizzard struck western Ohio."
+      attrAuthor = 'Ross Historical Society'
+    />
+    <Caption>
+    This home outside of Sidney, Ohio was completely buried in massive drifts over 10' tall from the Blizzard of '78. 
+    </Caption>
+  </Figure> 
+
+  </Chapter>
+
+  <Chapter
+    center={[-110, 44]}
+    zoom={4.5}
+    datasetId='blizzard-snowfall'
+    layerId='blizzard-snowfall'
+    datetime='1991-11-01'
+  >
+  ### Historic Blizzards
+  
+  #### ***1991 Halloween Blizzard / The Perfect Storm***
+
+  The 1991 Halloween Blizzard struck the Upper Midwest from October 31 to November 3, and brought unprecedented snowfall and ice accumulation - particularly affecting Minnesota, Iowa, and Wisconsin. In Minnesota, snowfall began on Halloween morning and intensified over the following days, resulting in record-breaking accumulations. The Twin Cities (Minneapolis-St. Paul) experienced 8.2 inches of snow on October 31, with a storm total of 28.4 inches, marking it as the largest single snowstorm in the city's history. Duluth, Minnesota recorded an astonishing 36.9 inches, and nearby areas along the coast of Lake Superior saw up to 45 inches. 
+
+  <Figure>
+    <Image
+      src={new URL('./blizzards-1991-goes.gif', import.meta.url).href}
+      alt="GOES satellite imagery of the 1991 Halloween Blizzard at peak strength (NOAA)."
+      attrAuthor = 'NOAA'
+      attrUrl = 'https://cimss.ssec.wisc.edu/satellite-blog/archives/3719'
+    />
+    <Caption>
+    GOES-7 satellite imagery of the 1991 Halloween Blizzard in the visible and infrared channels, showing the cyclone at peak strength.
+    </Caption>
+  </Figure> 
+
+  </Chapter>
+
+  <Chapter
+    center={[-100, 45]}
+    zoom={5.25}
+    datasetId='blizzard-merra2'
+    layerId='blizzard-merra2-10m-wind'
+    datetime='1991-11-01'
+  >
+  ### Historic Blizzards
+  
+  #### ***1991 Halloween Blizzard / The Perfect Storm***
+
+  The blizzard's impact was compounded by strong winds, creating snowdrifts up to 10 feet high, which paralyzed transportation and led to widespread power outages. In Iowa, the storm began with a mix of snow, sleet, and freezing rain, resulting in significant ice accumulation that downed power lines and trees, leaving thousands without electricity. The hazardous conditions caused numerous traffic accidents and at least 20 fatalities across the affected regions. 
+
+  </Chapter>
+
+  <Chapter
+    center={[-105, 45]}
+    zoom={3}
+    datasetId='blizzard-merra2'
+    layerId='blizzard-merra2-mslp'
+    datetime='1991-11-01'
+  >
+  ### Historic Blizzards
+  
+  #### ***1991 Halloween Blizzard / The Perfect Storm***
+
+  This blizzard coincided with the meteorological conditions that produced the infamous "Perfect Storm" over the North Atlantic. While the Halloween Blizzard impacted the Upper Midwest, the Perfect Storm—a rare confluence of a nor'easter and Hurricane Grace—ravaged the East Coast with massive waves and coastal flooding. The simultaneous occurrence of both of these significant storms caused prolonged impacts and strains on infrastructure across a large portion of the country. The 1991 Halloween Blizzard remains a benchmark for ‘early-season’ winter storms in the United States, reminding us of the potential for significant snowfall and disruption even before the official start of winter. 
+
+  </Chapter>
+
+  <Chapter
+    center={[-92, 42]}
+    zoom={4}
+    datasetId='blizzard-merra2'
+    layerId='blizzard-merra2-mslp'
+    datetime='1993-03-14'
+  >
+  ### Historic Blizzards
+  
+  #### ***The 1993 Storm of the Century***
+
+  The 1993 Storm of the Century, also known as the "Superstorm of 1993," was a massive cyclonic storm that impacted a vast portion of the United States from March 12 to 15, 1993. This unprecedented weather event brought record-breaking snowfall, severe weather, and coastal flooding, affecting areas from the Deep South to the Northeast. In the Appalachian Mountains, the storm produced extraordinary snowfall totals. Mount LeConte in Tennessee recorded nearly five feet of snow, while Mount Mitchell in North Carolina saw 49 inches. These heavy snowfalls led to significant disruptions, including impassable roads and widespread power outages. 
+
+  </Chapter>
+
+  <Chapter
+    center={[-92, 42]}
+    zoom={3.5}
+    datasetId='blizzard-merra2'
+    layerId='blizzard-merra2-cfrac'
+    datetime='1993-03-14'
+  >
+  ### Historic Blizzards
+  
+  #### ***The 1993 Storm of the Century***
+
+  Some of the most infamous satellite imagery was collected during this blizzard by NASA and NOAA, as it displayed a perfect example of the classic large comma-head shape of a mature mid-latitude cyclone.
+
+  <Figure>
+    <Image
+      src={new URL('./blizzards-1993-goes-Storm-of-the-Century.gif', import.meta.url).href}
+      alt="GOES imagery of the progression of the Storm of the Century (NOAA)."
+      attrAuthor = 'NOAA'
+      attrUrl = 'https://www.nesdis.noaa.gov/news/the-storm-of-the-century-look-back-noaa-satellites'
+    />
+    <Caption>
+    GOES-7 color-enhanced infrared satellite imagery of the progression of the mid-latitude cyclone responsible for the Storm of the Century.
+    </Caption>
+  </Figure> 
+
+  </Chapter>
+
+  <Chapter
+    center={[-90, 31]}
+    zoom={5.5}
+    datasetId='blizzard-snowfall'
+    layerId='blizzard-snowfall'
+    datetime='1993-03-14'
+  >
+  ### Historic Blizzards
+  
+  #### ***The 1993 Storm of the Century***
+
+  The storm's impact extended into the Southeastern United States, where snowfall is typically rare. Cities like Birmingham, Alabama, experienced up to 13 inches of snow, and even the Florida Panhandle saw measurable snowfall. The unpreparedness of these regions for such conditions resulted in substantial disruptions to daily life and infrastructure. In Florida, the storm's effects were particularly severe. A powerful squall line associated with the system moved swiftly across the Florida Peninsula, producing hurricane-force wind gusts exceeding 90 mph and spawning tornadoes. The west coast of Florida experienced a devastating storm surge associated with the squall line (known as a meteotsunami), with water levels rising 9 to 12 feet above normal, leading to extensive coastal flooding and damage. The Storm of the Century remains the pinnacle of winter storms in the Southeast.
+
+  </Chapter>
+
+  <Chapter
+    center={[-90, 40]}
+    zoom={3.8}
+    datasetId='blizzard-merra2'
+    layerId='blizzard-merra2-cfrac'
+    datetime='2016-01-23'
+  >
+  ### Historic Blizzards
+  
+  #### ***January 2016 Blizzard (Winter Storm Jonas)***
+
+  Winter Storm Jonas, also known as the Blizzard of 2016, was a powerful and far-reaching nor'easter that impacted the Eastern United States from January 22 to 24, 2016. The storm brought record-breaking snowfall, severe coastal flooding, and widespread disruptions across multiple states, and is the most recent RSI-ranked Category 5 Blizzard to impact the United States.
+  
+  </Chapter>
+
+  <Chapter
+    center={[-81, 40]}
+    zoom={5.6}
+    datasetId='blizzard-snowfall'
+    layerId='blizzard-snowfall'
+    datetime='2016-01-23'
+  >
+  ### Historic Blizzards
+  
+  #### ***January 2016 Blizzard (Winter Storm Jonas)***
+
+  Snowfall totals were impressive in several areas in the Eastern U.S.. Glengary, West Virginia, recorded the highest accumulation at 42 inches.  Seven states reported snowfall exceeding 30 inches, and several major cities experienced significant snowfall. Washington, D.C., received 17.8 inches, while New York City's Central Park recorded 26.8 inches, marking one of the highest totals in the city's history. 
+  
+  </Chapter>
+
+  <Chapter
+    center={[-76, 40]}
+    zoom={6.75}
+    datasetId='blizzard-merra2'
+    layerId='blizzard-merra2-10m-wind'
+    datetime='2016-01-23'
+  >
+  ### Historic Blizzards
+  
+  #### ***January 2016 Blizzard (Winter Storm Jonas)***
+
+  Beyond the effects of snowfall, coastal areas faced severe flooding due to storm surges, with some locations in New Jersey experiencing water levels surpassing those recorded during 2012’s highly impactful Superstorm Sandy. High winds accompanied the storm, with gusts exceeding 50 mph, leading to power outages for over 300,000 customers.  The combination of heavy snow and strong winds created blizzard conditions, resulting in hazardous travel and the stranding of thousands of motorists. 
+  
+  </Chapter>
+
+  <Chapter
+    center={[-80, 40]}
+    zoom={5}
+    datasetId='blizzard-merra2'
+    layerId='blizzard-merra2-2m-temp'
+    datetime='2016-01-23'
+  >
+  ### Historic Blizzards
+  
+  #### ***January 2016 Blizzard (Winter Storm Jonas)***
+
+  The societal and economic impacts were substantial. Approximately 85 million people were affected by the storm, with at least 48 fatalities reported.  Economic losses, including lost wages and disrupted economic activity, were estimated between $500 million and $3 billion.  The storm led to the cancellation of nearly 12,000 flights and widespread closures of businesses, schools, and government offices. 
+  
+  <Figure>
+    <Image
+      src={new URL('./blizzards-2016-jonas-snowpack.png', import.meta.url).href}
+      alt="Suomi NPP TrueColor satellite imagery of the snowfall footprint left behind by Winter Storm Jonas (NASA/NOAA)."
+      attrAuthor = 'NASA/NOAA'
+      attrUrl = 'https://www.vox.com/science-and-health/2016/1/25/10827358/east-coast-blizzard-space-photos-nasa'
+    />
+    <Caption>
+    GOES-7 satellite imagery of the 1991 Halloween Blizzard in the visible and infrared channels, showing the cyclone at peak strength.
+    </Caption>
+  </Figure> 
+
+  </Chapter>
+
+</ScrollytellingBlock>
+
+<Block>
+  <Prose>
+  ### Societal Impacts of Blizzards
+
+  Blizzards have far-reaching societal impacts that go beyond the immediate disruption of snowfall. Travel interruptions are among the most visible effects, as snow-covered roads and closed airports bring infrastructure and commerce to a standstill. These disruptions not only delay daily commutes but also impede supply chains and emergency response efforts. Energy stressors often emerge during blizzards, with power outages caused by heavy snow, ice, and strong winds straining utility grids. For many households, blizzards can also lead to increased heating costs, compounding financial burdens during prolonged cold spells that often come with these systems. 
+
+  The economic impacts of blizzards ripple through communities, with grocery stores and retailers seeing surges in panic buying before storms, followed by declines in consumer activity during the aftermath. Agriculture also suffers, particularly in the Plains and Midwest, where heavy snow can damage harvests or delay planting, and in the South, where hard freezes can devastate fruit yields. Additionally, city and state workers - especially those clearing roads or repairing power lines - face increased risks of injury or accidents in these hazardous conditions.
+  </Prose>
+  <Figure>
+    <Image
+      src={new URL('./Blizzard78_WestMilton_Snow.png', import.meta.url).href}
+      alt="Typical road conditions in western Ohio during the Blizzard of '78."
+      attrAuthor = 'Garst Museum'
+    />
+    <Caption>
+    Infrastructure and travel becomes significantly impacted by blizzards, such as this road in western Ohio after the Blizzard of '78.
+    </Caption>
+  </Figure>   
+</Block>
+
+<Block>
+  <Figure>
+    <Image
+      src={new URL('./blizzards-burst-pipe.jpeg', import.meta.url).href}
+      alt="Burst pipe in Texas during the 2021 freeze causes damage to a home."
+      attrAuthor = 'Thomas Black'
+      attrUrl = 'https://www.usatoday.com/story/news/nation/2021/02/17/ice-hangs-off-ceiling-fan-texas-one-many-surreal-winter-photos/6781681002/'
+    />
+    <Caption>
+    Burst pipes are a huge concern in the South, and can easily damage homes and businesses. This is one example of a pipe bursting in Texas during the 2021 Great Texas Freeze.
+    </Caption>
+  </Figure> 
+  <Prose>
+   Blizzards also pose serious health risks, including increased respiratory problems from cold exposure and higher risks for cardiac episodes caused by overexertion during snow removal. The insurance sector often sees a spike in claims for vehicle accidents, home damages, and burst pipes, especially in the Southeast U.S., where homes are often poorly insulated and not designed to handle below-freezing temperatures. The combinations of these impacts can cascade quickly, and highlight the need for pre-emptive planning measures and upgrading fragile infrastructures to mitigate the multifaceted challenges posed by blizzards.
+   
+   ### Conclusion 
+
+   Blizzards are more than just an awe-inducing meteorological phenomenon; they are a reminder of the interconnected vulnerabilities within our communities. These complex weather events have significant impacts on infrastructure, economies, agriculture, and even health. Understanding their patterns and risks, along with learning lessons from historic events, is essential for improving preparedness and mitigating the longevity and harshness of their effects.
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    ### References
+    Coleman, J. and R. Schwartz. *An Updated U.S. Blizzard Climatology: 1959-2014.* 73rd Eastern Snow Conference, Columbus, Ohio, 2016. https://static1.squarespace.com/static/58b98f7bd1758e4cc271d365/t/5c5b279c24a69469aa5a4d44/1549477788244/Colemanandschwartz.pdf
+
+    Glossary of Meteorology. *Meteotsunami.* American Meteorological Society. https://glossary.ametsoc.org/wiki/Meteotsunami
+
+    Insurance Journal. *Georgia Saw Most Frozen-Pipe Claims in 2022-2023, State Farm Says.* https://www.insurancejournal.com/news/southeast/2024/01/18/756137.htm
+    
+    James, B. *How a Blizzard Made the 1950 Michigan/Ohio State Snow Bowl Most Unusual.* WBCKFM. https://wbckfm.com/michigan-ohio-state-snow-bowl-1950/
+
+    National Centers for Environmental Information. *The Great Appalachian Storm in Historical Context.* National Oceanic and Atmospheric Administration. https://www.ncei.noaa.gov/news/great-appalachian-snowstorm-november-1950 
+
+    National Environmental Satellite, Data, and Information Service. *The Storm of the Century: A Look Back from NOAA Satellites.* National Oceanic and Atmospheric Administration. https://www.nesdis.noaa.gov/news/the-storm-of-the-century-look-back-noaa-satellites
+
+    National Weather Service. *The Great Appalachian Storm of 1950.* JKL WFO, National Oceanic and Atmospheric Administration. https://www.weather.gov/jkl/appalachianstorm1950 
+
+    National Weather Service. *The Great Blizzard of 1978.* ILN WFO, National Oceanic and Atmospheric Administration. https://www.weather.gov/iln/19780126 
+
+    National Weather Service. *The Halloween Blizzard of 1991.* DLH WFO, National Oceanic and Atmospheric Administration. https://www.weather.gov/dlh/1991halloweenblizzard
+
+    National Weather Service. *The Halloween Blizzard of 1993.* JAN WFO, National Oceanic and Atmospheric Administration. https://www.weather.gov/jan/superstorm_march_1993 
+
+    National Weather Service. *Service Assessment - The Historical Nor'easter of January 2016.* National Oceanic and Atmospheric Administration. https://www.weather.gov/media/publications/assessments/16Northeast_Blizzard.pdf
+    
+    Nichols, R.B., McIntyre, W.F., Chan, S. et al. Snow-shoveling and the risk of acute coronary syndromes.Clin Res Cardiol 101, 11–15 (2012). https://doi.org/10.1007/s00392-011-0356-6
+
+    Schmidlin, T. W. and Jeanne A., 1996: Thunder in the Heartland: a Chronicle of Outstanding Weather Events in Ohio. Kent State University Press, Kent, Ohio.https://doi.org/10.1175/BAMS-D-13-00101.1
+  
+    Squires, M., Lawrimore, J., Heim Jr., R., Robinson, D., Gerbush, M., and T. Estilow, 2014. The Regional Snowfall Index. Bulletin of the American Meteorological Society. 95(12). 
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    ### Data Access
+
+    * [Copernicus CDS ERA5 Reanalysis](https://cds.climate.copernicus.eu/)
+    * [NASA MERRA-2 Reanalysis](https://gmao.gsfc.nasa.gov/reanalysis/merra-2/)
+    * [NOAA NWS NCEP Reanalysis Data Display](https://www.wpc.ncep.noaa.gov/ncepreanal/)
+    * [NCEI Regional Snowfall Index Archive](https://www.ncei.noaa.gov/maps/rsi/)
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+
+    **Editors**: Andrew Blackford, Derek Koehl, Jerika Chung, and Taylor DuPre
+
+    **Developers**: Andrew Blackford
+
+    **Science and Content Contributors**: Andrew Blackford, Brian Freitag, and Jennifer Geary
+
+    **Acknowledgements**: The Garst Museum in Greenville, Ohio, Mercer County Historical Society in Celina, Ohio, and Ross Historical Society in Sidney, Ohio were extremely helpful in providing material during the researching of the Blizzards of 1950 and 1978, which are highlighted in this data story.
+
+    **Questions / Feedback**: Email Andrew.Blackford@uah.edu
+
+    ### Additional Resources
+
+    * [NWS Info on Blizzards](https://www.weather.gov/fgz/WinterStorms)
+
+  </Prose>
+</Block>
+

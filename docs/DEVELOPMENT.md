@@ -7,7 +7,7 @@ You can see the version running:
 ./.veda/veda --info
 ```
 
-The commit you may want to pin the `veda-ui` to will depend, but to get the latest changes from the `main` branch you could do:
+The commit you may want to pin the `veda-ui` to will depend, but to update veda-ui you can do:
 ```
 # Go into the submodule
 cd .veda/ui
@@ -15,12 +15,10 @@ cd .veda/ui
 # Update the submodule info
 git fetch
 
-# Switch to the branch you want.
-# You can also choose a specific tag.
-git switch main
+# Switch to the release you want.
+# You can see the list of releases on https://github.com/NASA-IMPACT/veda-ui/releases
 
-# Get the latest changes
-git pull
+git checkout vx.x.x 
 
 # Get back to the root directory
 cd -

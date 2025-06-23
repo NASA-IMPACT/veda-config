@@ -1,0 +1,168 @@
+---
+id: 'wetland-impacts'
+name: How Hurricane Ida’s Impact on Wetlands Endangers Inland Communities
+description: "A look into the impacts of Hurricane Ida on wetlands in southern Louisiana"
+media:
+  src: ::file ../datasets/media/louisiana-marsh.jpg
+  alt: Wetland landscape across southenr Louisiana.
+  author:
+    name: Bridget Besaw
+    url: https://www.nature.org/en-us/get-involved/how-to-help/places-we-protect/the-nature-conservancy-in-louisiana-gulf-coast-prairies-and-marshes/
+pubDate: 2025-02-01T00:00
+taxonomy:
+  - name: Topics
+    values:
+      - Natural Disasters
+      - Tropical
+  - name: Source
+    values:
+      - Community Contributed
+---
+
+<Block>
+  <Prose>
+
+    Authors: Trent Cowan<sup>[1]</sup>, Andrew Blackford<sup>[1]</sup>, Udaysankar Nair<sup>[1]</sup>
+
+    <sup>[1]</sup> The University of Alabama in Huntsville (UAH)
+
+    **Disclaimer:** 
+   
+    <mark>🚧 This Data Story presents work in progress and not peer-reviewed results, but is being expanded into an article that will undergo peer review and publication in 2025. 🚧</mark>
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    ### Introduction
+    When Hurricane Ida barreled through the Gulf Coast in August 2021 as a Category 4 hurricane, it left a trail of destruction in its wake, devastating communities and reshaping landscapes. While much of the focus has been on the immediate impacts (e.g. flooded homes, downed power lines, and displaced families) there’s a quieter, yet equally important story to be told: the damage inflicted on the region’s wetlands and salt marshes. These coastal ecosystems play a pivotal role in shielding inland areas from the worst effects of hurricanes. As was with Ida, when these natural barriers are compromised, the consequences can ripple far inland, threatening lives, property, and livelihoods.
+
+    Some of the data used in this story includes Planet’s PlanetScope satellites and the United Nations Environment Programme World Conservation Monitoring Centre (UNEP-WCMC) salt marsh dataset to analyze salt marshes prior to Hurricane Ida and predict the changes to the salt marsh coverage using a supervised classification technique. A supervised classification allows us to select training samples in an image and classify an image based on the training samples that we chose. However, we can utilize PlanetScope to analyze variables such a Normalized Difference Vegetation Index (NDVI) and Normalized Difference Water Index (NDWI) to determine where the greatest changes occur to vegetation health and water content.
+
+  </Prose>
+</Block>
+
+<Block>
+  <Figure>
+  <Map
+    datasetId='planetscope'
+    layerId='ida-ndvi'
+    dateTime='2021-08-23'
+    zoom={10}
+    center={[-90.45, 29.386]}
+    compareDateTime='2021-09-09'
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+    Planet satellite imagery Normalized Difference Vegetation Index (NDVI) calculations over salt marshes pre- and post-Ida for southern Louisiana.
+  </Caption>
+</Figure>
+<Prose>
+    ### The Role of Wetlands in Coastal Protection
+
+   Wetlands and salt marshes are nature’s first line of defense against hurricanes. Acting as sponges, these ecosystems absorb the brunt of storm surges, dissipating wave energy and reducing the force with which water hits the shore. They also help in trapping sediments, stabilizing shorelines, and providing a critical buffer that protects inland areas from flooding. The dense vegetation found in salt marshes, such as Spartina alterniflora, not only slows down water but also strengthens the soil, reducing erosion.
+
+   However, when hurricanes as catastrophic as Ida occur, the very ecosystems designed to protect us can be severely damaged. High winds, storm surges, and saltwater intrusion can lead to the destruction of vegetation, the erosion of soil, and the alteration of these landscapes. This degradation doesn’t just impact the environment, it leaves coastal and even inland communities more vulnerable to future storms.
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+   ### Hurricane Ida’s Impact on Louisiana’s Salt Marshes
+
+   Hurricane Ida provided a stark example of the destructive potential of hurricanes on wetlands. In southern Louisiana, where salt marshes are abundant, the storm’s powerful surge and high winds led to significant erosion and vegetation loss. Satellite imagery and supervised classification techniques revealed substantial declines in vegetation health, with areas like Port Fourchon and Houma witnessing the breakdown of marshes that had once served as natural flood defenses.
+
+   The consequences of this ecological damage are far-reaching. As the marshes break down, the inland areas they once protected are left exposed to higher risks of flooding and storm surges. This not only increases the likelihood of property damage but also endangers lives in these communities. Moreover, the economic impact is profound, both in terms of cost of rebuilding and the loss of ecosystem services that these wetlands provide.
+  </Prose>
+  <Figure>
+  <Map
+    datasetId='planetscope'
+    layerId='marsh-ida'
+    dateTime='2021-08-23'
+    zoom={10}
+    center={[-90.45, 29.386]}
+    compareDateTime='2021-09-09'
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+    Planet satellite imagery classification of salt marshes pre- and post-Ida for southern Louisiana.
+  </Caption>
+</Figure>
+</Block>
+
+<Block>
+  <Prose>
+   ### The Ripple Effect: From Coastal to Inland Vulnerability
+   
+   The destruction of wetlands and salt marshes has a domino effect on inland communities. Without these natural barriers, storm surges can penetrate further inland, exacerbating the severity of flooding. This was evident in the aftermath of Hurricane Ida, where areas that had previously been shielded by healthy wetlands experienced unprecedented flooding. Furthermore, as climate change continues to drive more intense and frequent hurricanes, the degradation of these protective ecosystems could lead to a vicious cycle of increased vulnerability and more severe impacts. The loss of wetlands not only removes a critical line of defense but also diminishes the region’s ability to recover from future storms.
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+    ### References
+    Alawadi, W., Raheem, Z. A., &amp; Yaseen, D. A. (2023). Use of Remote Sensing Techniques to Assess Water Storage Variations and Flood-Related Inows for the Hawizeh Wetland. https://doi.org/10.21203/rs.3.rs-2748808/v1
+
+    Chuang, W. C., Eason, T., Garmestani, A., &amp; Roberts, C. (2019). Impact of hurricane katrina on the coastal systems of southern Louisiana. Frontiers in Environmental Science, 7(JUN). https://doi.org/10.3389/fenvs.2019.00068
+  
+    Guimond, J., &amp; Tamborski, J. (2021). Salt marsh hydrogeology: A review. Water (Switzerland), 13(4). https://doi.org/10.3390/w13040543
+  
+    Hladik, C., &amp; Alber, M. (2014). Classification of salt marsh vegetation using edaphic and remote sensing-derived variables. Estuarine, Coastal and Shelf Science, 141, 47–57. https://doi.org/10.1016/j.ecss.2014.01.011
+
+    Howes, N. C., FitzGerald, D. M., Hughes, Z. J., Georgiou, I. Y., Kulp, M. A., Miner, M. D., Smith, J. M., &amp; Barras, J. A. (2010). Hurricane-induced failure of low salinity wetlands. Proceedings of the National Academy of Sciences, 107(32), 14014–14019. https://doi.org/10.1073/pnas.0914582107
+
+    Rezaie, A. M., Loerzel, J., &amp; Ferreira, C. M. (2020). Valuing natural habitats for enhancing coastal resilience: Wetlands reduce property damage from storm surge and sea level rise. PLoS ONE, 15(1). https://doi.org/10.1371/journal.pone.0226275
+
+    Richards, D. F., Milewski, A. M., Becker, S., Donaldson, Y., Davidson, L. J., Zowam, F. J., Mrazek, J., &amp; Durham, M. (2024). Evaluation and Analysis of Remote Sensing-Based Approach for Salt Marsh Monitoring. Remote Sensing, 16(1). https://doi.org/10.3390/rs16010002
+
+    Stagg, C. L., Osland, M. J., Moon, J. A., Feher, L. C., Laurenzano, C., Lane, T. C., Jones, W. R., &amp; Hartley, S. B. (2021). Extreme precipitation and flooding contribute to sudden vegetation dieback in a coastal salt marsh. Plants, 10(9). https://doi.org/10.3390/plants10091841
+
+    Sun, C., Fagherazzi, S., &amp; Liu, Y. (2018). Classification mapping of salt marsh vegetation by flexible monthly Ndvi Time-series using landsat imagery. Estuarine, Coastal and Shelf Science, 213, 61–80. https://doi.org/10.1016/j.ecss.2018.08.007
+
+    Sun, C., Liu, Y., Zhao, S., Zhou, M., Yang, Y., &amp; Li, F. (2016). Classification mapping and species identification of salt marshes based on a short-time interval Ndvi Time-series from HJ-1 optical imagery. International Journal of Applied Earth Observation and Geoinformation, 45, 27–41. https://doi.org/10.1016/j.jag.2015.10.008
+
+    Yeo, S., Lafon, V., Alard, D., Curti, C., Dehouck, A., &amp; Benot, M.-L. (2020). Classification and mapping of saltmarsh vegetation combining multispectral images with field data. Estuarine, Coastal and Shelf Science, 236, 106643. https://doi.org/10.1016/j.ecss.2020.106643
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    ### Data Access
+
+    * [PlanetScope](https://www.planet.com/explorer/)
+
+    * [Salt Marsh Dataset](https://data.unep-wcmc.org/datasets/43)
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+
+    **Editors**: Trent Cowan, Andrew Blackford, and Derek Koehl
+
+    **Developers**: Trent Cowan and Andrew Blackford
+
+    **Science and Content Contributors**: Trent Cowan, Andrew Blackford, Udaysankar Nair, Brian Freitag, and Aaron Kaulfus
+
+    **Questions / Feedback**: Email twc0011@uah.edu
+
+    ### Additional Resources
+
+    Frazier, A. E., &amp; Hemingway, B. L. (2021). A technical review of planet smallsat data: Practical considerations for processing and using planetscope imagery. Remote Sensing, 13(19). https://doi.org/10.3390/rs13193930
+ 
+    Mcowen, C. J., Weatherdon, L. V., Van Bochove, J. W., Sullivan, E., Blyth, S., Zockler, C., Stanwell-Smith, D., Kingston, N., Martin, C. S., Spalding, M., &amp; Fletcher, S. (2017). A global map of saltmarshes. Biodiversity Data Journal, 5(1). https://doi.org/10.3897/BDJ.5.e11764
+
+    Odum, W. E. (1988). Comparative Ecology of Tidal Freshwater and Salt Marshes. In Source: Annual Review of Ecology and Systematics (Vol. 19). https://www.jstor.org/stable/2097151?seq=1&amp;cid=pdf-
+
+    Roy, D. P., Huang, H., Houborg, R., &amp; Martins, V. S. (2021). A global analysis of the temporal availability of PlanetScope high spatial resolution multi-spectral imagery. Remote Sensing of Environment, 264. https://doi.org/10.1016/j.rse.2021.112586
+
+    Zhu, Y. J., Collins, J. M., Klotzbach, P. J., &amp; Schreck, C. J. (2022). Hurricane Ida (2021) Rapid Intensification Followed by Slow Inland Decay. Bulletin of the American Meteorological Society, 103(10), E2354–E2368. https://doi.org/10.1175/BAMS-D-21-0240.1
+
+  </Prose>
+</Block>
