@@ -32,21 +32,20 @@ layers:
     type: raster
     description: 'Canopy heights of mangrove-forested wetlands globally for 2015 at 12-m resolution'
     zoomExtent:
-      - 5
+      - 0
       - 20
     sourceParams:
       asset_bidx: cog_default|1
-      colormap_name: "greens"
+      colormap_name: "ylgnbu"
       rescale:
         - 0
-        - 63
+        - 45
       nodata: 0
-      minzoom: 5
-      maxzoom: 20
+      tile_scale: 1
     legend:
       type: gradient
       min: "0"
-      max: "63"
+      max: "45"
       unit:
         label: (meters)
       label: (meters)
