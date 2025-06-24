@@ -205,31 +205,75 @@ taxonomy:
   <Prose>
     ## AOD and Chlorophyll-a
 
-    There is a slight increasing trend in AOD over time, based on statistical analysis across the TNAO (Figure 2). This rise in dust leads to more sunlight being scattered or absorbed, which reduces the amount of light reaching the ocean surface.
+    There is a slight increasing trend in AOD over time, based on statistical analysis across the TNAO (Figure 2). This rise in dust leads to more sunlight being scattered or absorbed, which reduces the amount of light reaching the ocean surface. 
 
-    This trend would seem to imply that the more dust deposition there is, the more abundant the phytoplankton are. However, when comparing AOD directly to chlorophyll-a, a negative trend is revealed - suggesting that dust alone cannot be the sole cause of increasing phytoplankton concentrations across the TNAO (Figure 3). 
 
+    <Figure>
+      <Chart
+        dataPath={new URL('./DustInfo1.csv', import.meta.url).href}
+        dateFormat="%Y-%m-%d"
+        idKey="Source"
+        xKey="Date"
+        yKey="Value"
+        filterId="AOD"
+        yAxisLabel="AOD Concentration"
+      />
+      <Caption>Figure 2: Positive trend of AOD in time across the TNAO. Data derived from MERRA-2.</Caption>
+    </Figure>
+
+    This trend would seem to imply that the more dust deposition there is, the more abundant the phytoplankton are. However, when comparing AOD directly to chlorophyll-a, a negative trend is revealed, suggesting that dust alone cannot be the sole cause of increasing phytoplankton concentrations across the TNAO (Figure 3). 
   </Prose>
 </Block>
+
 
 <Block>
   <Prose>
     ## Cloud Cover and Chlorophyll-a
 
-    One notable observation is that the phytoplankton population has flourished in recent years, despite an overall increase in cloud cover (Figures 4, 5). Typically, increased cloudiness reduces the amount of sunlight reaching the ocean surface, thus limiting photosynthesis. However, chlorophyll-a concentrations have continued to rise, suggesting that cloud cover alone is not a limiting factor for phytoplankton growth.
+    <p>One notable observation is that the phytoplankton population has flourished in recent years, despite an overall increase in cloud cover (Figures 4, 5). Typically, increased cloudiness reduces the amount of sunlight reaching the ocean surface, thus limiting photosynthesis. However, chlorophyll-a concentrations have continued to rise, suggesting that cloud cover alone is not a limiting factor for phytoplankton growth.</p>
 
-    Looking more closely at cloud cover, there is a positive trend observed across the TNAO when examining MERRA-2-derived monthly mean values. While clouds can reduce light availability, rainfall—which can frequently accompany increased cloudiness—shows a decreasing trend in this region (Figure 6). Rainfall can negatively affect phytoplankton by washing atmospheric dust (a key nutrient source) out of the air. Therefore, the decline in rainfall may be contributing to more favorable conditions for phytoplankton, helping to explain the observed increase in chlorophyll-a concentrations despite higher cloud cover.
+    <p>Looking more closely at cloud cover, there is a positive trend observed across the TNAO when examining MERRA-2-derived monthly mean values. While clouds can reduce light availability, rainfall—which can frequently accompany increased cloudiness—shows a decreasing trend in this region (Figure 6). Rainfall can negatively affect phytoplankton by washing atmospheric dust (a key nutrient source) out of the air. Therefore, the decline in rainfall may be contributing to more favorable conditions for phytoplankton, helping to explain the observed rise in chlorophyll-a concentrations, despite increased cloud cover.</p>
+
+
+    <Figure>
+      <Chart
+        dataPath={new URL('./DustInfo1.csv', import.meta.url).href}
+        dateFormat="%Y-%m-%d"
+        idKey="Source"
+        xKey="Date"
+        yKey="Value"
+        filterId="CLD"
+        yAxisLabel="CLD Concentration"
+      />
+      <Caption>Figure 4: Positive trend of Cloud Cover in time across the TNAO. Data derived from MERRA-2.</Caption>
+    </Figure>
 
   </Prose>
 </Block>
+
 
 <Block>
   <Prose>
     ## SST and Chlorophyll-a
 
-    There is a slightly positive trend in SST in time in the TNAO. This would suggest a slight reduction of phytoplankton, as decreasing SSTs through time is typically a sign that there is increased mixing and upwelling. This in turn allows   nutrients located deeper in the ocean to mix towards the surface, giving phytoplankton access to them.
+    There is a slightly positive trend in SSTs over time in the TNAO. This would suggest a slight reduction of phytoplankton as decreasing SSTs are typically a sign of increased mixing and upwelling. This allows nutrients located deeper in the ocean to mix towards the surface, giving phytoplankton easier access.
 
-    However, when taking a look at how phytoplankton responds to this increasing trend, the opposite effect occurs (Figure 8). Chlorophyll-a concentrations show an increasing trend  as SST increases. This would suggest that SST likely doesn’t play a significant role in increasing phytoplankton production in the TNAO across the time of interest. 
+    <Figure>
+      <Chart
+        dataPath={new URL('./DustInfo1.csv', import.meta.url).href}
+        dateFormat="%Y-%m-%d"
+        idKey="Source"
+        xKey="Date"
+        yKey="Value"
+        filterId="SST"
+        yAxisLabel="SST Concentration"
+      />
+      <Caption>Figure 7: Positive trend of SST in time across the TNAO. Data derived from MERRA-2.</Caption>
+    </Figure>
+
+
+
+    However, when taking a look at how phytoplankton responds to this increasing trend, the opposite effect occurs (Figure 8). Chlorophyll-a concentrations show an increasing trend as SST increases. This would suggest that SSTs likely don't play a significant role in increasing phytoplankton production in the TNAO. 
 
   </Prose>
 </Block>
@@ -238,9 +282,23 @@ taxonomy:
   <Prose>
     ## Wind Speed and Chlorophyll-a
 
-    Wind speed is also a factor that typically heavily influences nutrient mixing, similar to the effects of  SST trends . Higher windspeeds would promote stronger mixing of the nutrients that the phytoplankton are able to use. Our analysis shows that trends of MERRA-2-derived monthly mean windspeed show that windspeeds have  slightly decreased across the TNAO (Figure 9).
+    Wind speed is also a factor that heavily influences nutrient mixing, similar to the effects of SST trends. Higher wind speeds would promote stronger mixing of the nutrients that the phytoplankton are able to use. Based on trends associated with MERRA-2-derived monthly mean values, wind speeds have slightly decreased across the TNAO (Figure 9). 
 
-    However, the effect of wind speed on phytoplankton is consistent with the previously discussed rationale of upwelling nutrients for phytoplankton (Figure 10). This indicates  that when winds are strong mixing processes can still occur. 
+    <Figure>
+      <Chart
+        dataPath={new URL('./DustInfo1.csv', import.meta.url).href}
+        dateFormat="%Y-%m-%d"
+        idKey="Source"
+        xKey="Date"
+        yKey="Value"
+        filterId="WS"
+        yAxisLabel="Wind Speed"
+      />
+      <Caption>Figure 9: Slight negative trend of wind speed in time across the TNAO. Data derived from MERRA-2.</Caption>
+    </Figure>
+
+
+    However, the effect of wind speed on phytoplankton is consistent with the previously discussed rationale of upwelling nutrients for phytoplankton (Figure 10). This indicates that when winds are relatively strong, mixing processes can still occur.
 
   </Prose>
 </Block>
@@ -249,9 +307,20 @@ taxonomy:
   <Prose>
     ## Dust Surface Mass Concentration and Chlorophyll-a
 
-    Dust concentration over the past several years has increased across the TNAO (Figure 11). Higher concentrations of Saharan dust are being carried across the Atlantic and deposited into the ocean.  
+    <Figure>
+      <Chart
+        dataPath={new URL('./DustInfo1.csv', import.meta.url).href}
+        dateFormat="%Y-%m-%d"
+        idKey="Source"
+        xKey="Date"
+        yKey="Value"
+        filterId="DSC"
+        yAxisLabel="DSMC"
+      />
+      <Caption>Figure 11: Positive trend of dust in time across the TNAO. Data derived from MERRA-2.</Caption>
+    </Figure>
 
-    Dust surface mass concentration (DSMC) is a measure of the amount of dust deposited onto the ocean surface. In this case, DSMC has a positive influence on chlorophyll-a levels, indicating that phytoplankton are responding to increased dust deposition across the  TNAO (Figure 12).
+   Higher concentrations of Saharan dust are being transported and deposited across the surface of the Atlantic Ocean over the time period examined (Figure 11). This variable has a positive influence on chlorophyll-a levels, indicating that phytoplankton are responding to increased dust deposition across the surface of the TNAO (Figure 12).
 
   </Prose>
 </Block>
@@ -261,7 +330,8 @@ taxonomy:
 
     ## Conclusion
     NASA Earth observation data products revealed that phytoplankton growth across the TNAO is primarily associated with decreasing trends in rainfall and increasing concentrations of dust deposition on the ocean surface. These environmental conditions provide an abundant supply of crucial nutrients to the phytoplankton from incoming dust plumes, allowing them to flourish. Ultimately, sustainability practices of phytoplankton populations are essential to the neighboring coastal communities within this region, including Senegal, The Gambia, Guinea-Bissau, Guinea, and Sierra Leone. Fisheries are a dominant part of these countries’ food supply, economy, and overall, livelihood. Specifically, the fishing industries of  these West African countries make up as much as 30% of national revenue. This includes the exportation of fish around the world, making up a several billion dollar industry. In 2008, exports to the European Union alone made up about $1.75 billion in revenue to West Africa. As phytoplankton productivity increases across the TNAO, so does marine biodiversity, thus maintaining easier routes to sustainable livelihoods for West Africa. 
-  
+
+
   </Prose>
   
 </Block>
