@@ -210,13 +210,12 @@ taxonomy:
 
     <Figure>
       <Chart
-        dataPath={new URL('./DustInfo1.csv', import.meta.url).href}
+        dataPath={new URL('./Dust_AOD.csv', import.meta.url).href}
         dateFormat="%Y-%m-%d"
         idKey="Source"
         xKey="Date"
         yKey="Value"
-        filterId="AOD"
-        yAxisLabel="AOD Concentration"
+        yAxisLabel="AOD"
       />
       <Caption>Figure 2: Positive trend of AOD in time across the TNAO. Data derived from MERRA-2.</Caption>
     </Figure>
@@ -237,13 +236,12 @@ taxonomy:
 
     <Figure>
       <Chart
-        dataPath={new URL('./DustInfo1.csv', import.meta.url).href}
+        dataPath={new URL('./Dust_CLD.csv', import.meta.url).href}
         dateFormat="%Y-%m-%d"
         idKey="Source"
         xKey="Date"
         yKey="Value"
-        filterId="CLD"
-        yAxisLabel="CLD Concentration"
+        yAxisLabel="CLD"
       />
       <Caption>Figure 4: Positive trend of Cloud Cover in time across the TNAO. Data derived from MERRA-2.</Caption>
     </Figure>
@@ -260,13 +258,12 @@ taxonomy:
 
     <Figure>
       <Chart
-        dataPath={new URL('./DustInfo1.csv', import.meta.url).href}
+        dataPath={new URL('./Dust_SST.csv', import.meta.url).href}
         dateFormat="%Y-%m-%d"
         idKey="Source"
         xKey="Date"
         yKey="Value"
-        filterId="SST"
-        yAxisLabel="SST Concentration"
+        yAxisLabel="SST"
       />
       <Caption>Figure 7: Positive trend of SST in time across the TNAO. Data derived from MERRA-2.</Caption>
     </Figure>
@@ -286,13 +283,12 @@ taxonomy:
 
     <Figure>
       <Chart
-        dataPath={new URL('./DustInfo1.csv', import.meta.url).href}
+        dataPath={new URL('./Dust_WS.csv', import.meta.url).href}
         dateFormat="%Y-%m-%d"
         idKey="Source"
         xKey="Date"
         yKey="Value"
-        filterId="WS"
-        yAxisLabel="Wind Speed"
+        yAxisLabel="WS"
       />
       <Caption>Figure 9: Slight negative trend of wind speed in time across the TNAO. Data derived from MERRA-2.</Caption>
     </Figure>
@@ -309,12 +305,11 @@ taxonomy:
 
     <Figure>
       <Chart
-        dataPath={new URL('./DustInfo1.csv', import.meta.url).href}
+        dataPath={new URL('./Dust_DSC.csv', import.meta.url).href}
         dateFormat="%Y-%m-%d"
         idKey="Source"
         xKey="Date"
         yKey="Value"
-        filterId="DSC"
         yAxisLabel="DSMC"
       />
       <Caption>Figure 11: Positive trend of dust in time across the TNAO. Data derived from MERRA-2.</Caption>
