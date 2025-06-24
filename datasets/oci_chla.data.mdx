@@ -38,7 +38,13 @@ layers:
       - rgb(123,204,96)
       - rgb(201,228,49)
       - rgb(253,231,37) 
-
+    compare:
+      datasetId: OCI_PACE_Chlorophyll_a
+      layerId: OCI_PACE_Chlorophyll_a
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'dd LLL yyyy')} VS ${dateFns.format(compareDatetime, 'dd LLL yyyy')}`;
+        }
 ---
 <Block>
 <Prose>
