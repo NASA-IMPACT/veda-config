@@ -1,0 +1,166 @@
+---
+id: mangrove-biomass-abg
+name: 'Global Mangrove Distribution, Aboveground Biomass, and Canopy Height'
+description: "Global distribution, biomass, and canopy height of mangrove-forested wetlands based on remotely sensed and in situ field measurement data"
+media:
+  src: ::file ./media/Gulf-of-Carpentaria-fc-768x272-1.png
+  alt: A false color Landsat image showing a small portion of Australia's Gulf of Carpentaria, February 2009. Vegetation, including mangroves, stands out in bright green.
+  author:
+    name: Leo Lymburner
+    url:
+taxonomy:
+  - name: Topics
+    values:
+    - Water Resources
+    - Water Model
+    - Precipitation
+    - Groundwater
+    - Hydrology
+    - Water Storage Trends
+  - name: Source
+    values:
+    - NASA EIS
+infoDescription: |
+  ::markdown
+     Global distribution, biomass, and canopy height of mangrove-forested wetlands based on remotely sensed and in situ field measurement data.
+layers:
+  - id: mangrove-biomass-abg
+    stacCol: mangrove-biomass-abg
+    name: 'Global Mangrove Aboveground Biomass'
+    stacApiEndpoint: https://dev.ghg.center/api/stac
+    rasterApiEndpoint: https://dev.ghg.center/api/raster
+    type: raster
+    description: 'Global Mangrove Aboveground Biomass'
+    projection:
+      id: 'equirectangular'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      asset_bidx: cog_default|1
+      colormap_name: reds
+      rescale:
+        - 0
+        - 911
+      nodata: "0."
+      minzoom: 0
+      maxzoom: 20
+      tile_scale: 1
+    legend:
+      type: gradient
+      min: "0"
+      max: "911"
+      stops:
+        - rgb(255, 247, 236)
+        - rgb(254, 232, 200)
+        - rgb(253, 212, 158)
+        - rgb(253, 187, 132)
+        - rgb(252, 141, 89)   
+        - rgb(239, 101, 72)
+        - rgb(215, 48, 31)
+        - rgb(179, 1, 0)
+        - rgb(127, 0, 0)
+      unit:
+        label: (Mg ha-1)
+      label: (Mg ha-1)
+
+    info:
+      source: NASA
+      spatialExtent: Coastal Zones
+      temporalResolution: Decadal
+      unit: Mg ha-1
+
+
+  - id: mangrove-basal-area-height
+    stacCol: mangrove-basal-area-height
+    name: 'Global Mangrove Basal-Area Weighted Height'
+    stacApiEndpoint: https://dev.ghg.center/api/stac
+    rasterApiEndpoint: https://dev.ghg.center/api/raster
+    type: raster
+    description: 'Mangrove basal-area weighted height (individual tree heights weighted in proportion to their basal area)'
+    zoomExtent:
+      - 0
+      - 20
+    projection:
+      id: 'equirectangular'
+    sourceParams:
+      asset_bidx: cog_default|1
+      colormap_name: "magma"
+      rescale:
+        - 0
+        - 40
+      nodata: 0
+      minzoom: 0
+      maxzoom: 20
+      tile_scale: 1
+    legend:
+      type: gradient
+      min: "0"
+      max: "40"
+      unit:
+        label: (meters)
+      label: (meters)
+      stops:
+        - '#FFFED9'
+        - '#EDF8B1'
+        - '#C7E9B4'
+        - '#7FCDBB'
+        - '#41B7C4'    
+        - '#1D91C0'
+        - '#225EA8'
+        - '#253494'
+        - '#081D58'
+    info:
+      source: NASA
+      spatialExtent: Coastal Zones
+      temporalResolution: Decadal
+      unit: meters
+
+  - id: mangrove-max-height
+    stacCol: mangrove-max-height
+    name: 'Mangrove Canopy Maximum Height '
+    stacApiEndpoint: https://dev.ghg.center/api/stac
+    rasterApiEndpoint: https://dev.ghg.center/api/raster
+    type: raster
+    description: 'Mangrove canopy maximum height (height of the tallest tree)'
+    zoomExtent:
+      - 0
+      - 20
+    projection:
+      id: 'equirectangular'
+    sourceParams:
+      asset_bidx: cog_default|1
+      colormap_name: "greens"
+      rescale:
+        - 0
+        - 63
+      nodata: 0
+      minzoom: 0
+      maxzoom: 20
+      tile_scale: 1
+    legend:
+      type: gradient
+      min: "0"
+      max: "63"
+      unit:
+        label: (meters)
+      label: (meters)
+      stops:
+        - '#FFFED9'
+        - '#EDF8B1'
+        - '#C7E9B4'
+        - '#7FCDBB'
+        - '#41B7C4'    
+        - '#1D91C0'
+        - '#225EA8'
+        - '#253494'
+        - '#081D58'
+    info:
+      source: NASA
+      spatialExtent: Coastal Zones
+      temporalResolution: Decadal
+      unit: meters
+---
+
+
+
