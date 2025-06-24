@@ -45,17 +45,6 @@ taxonomy:
   </Figure>
 </Block>
 
-<Block>
-  <Figure>
-      <Image
-      src={new URL('./dust_img2.jpg', import.meta.url).href}
-    />
-    <Caption attrAuthor='NASA' attrUrl='https://www.nasa.gov/image-article/saharan-dust-in-the-wind/'>
-      Image 2: Dust storm moving off of Africa. Source: NASA
-    </Caption>
-  </Figure>
-
-</Block>
 
 <Block>
   <Figure>
@@ -71,30 +60,26 @@ taxonomy:
 
 
 <Block>
-    <Prose>
-      ## Meteorological Variables in Analyzing Phytoplankton
-    </Prose>
-</Block>
+  <Prose>
+    ## Meteorological Variables in Analyzing Phytoplankton
 
-<Block>
-    <Prose>
-      The different meteorological variables that may impact and affect phytoplankton across the TNAO include: 
-    </Prose> 
-    <ul>
-      <li>Aerosol Optical Depth (AOD): A measure of how much sunlight is blocked or scattered by aerosols (tiny particles in the atmosphere)</li>
-      <li>Cloud Cover: Fraction or percentage of the sky covered by clouds</li>
-      <li>Sea-Surface Temperatures (SST): The temperature at the top layer of the ocean</li>
-      <li>Wind Speed: The rate at which the wind is moving on the ocean surface</li>
-      <li>Dust Concentration: The amount of dust present in a volume of the atmosphere</li>
-    </ul>
-</Block>
+    The different meteorological variables that may impact and affect phytoplankton across the TNAO include: 
 
-<Block>
-  <Prose> 
-    <p> Satellite data, specifically from NASA’s Plankton, Aerosol, Cloud, and ocean Ecosystem (PACE) satellite, plays a massive role when it comes to analyzing dust and its effects on phytoplankton. Additionally, NASA’s Modern Era Retrospective analysis for Research and Applications Version 2 (MERRA-2) was heavily used as a source of historical weather data, and products from the MODerate resolution Imaging Spectroradiometer (MODIS) - a satellite-based Earth observation sensor - were used as a means to obtain observations of different variables on the Earth’s surface. </p>
-    <p> These variables were studied using data from the different NASA data products. AOD and cloud cover were mainly measured using Terra and Aqua satellites. SST were also obtained using MODIS. Wind Speed and dust concentration were analyzed using MERRA-2 data. Lastly, chlorophyll-a used PACE satellite data for analysis. </p>
-    <p> PACE data shows that chlorophyll-a concentrations are increasing across the TNAO over the previous decade (Figure 1). Chlorophyll-a concentration is a reasonable approximation for phytoplankton because similar to plants, phytoplankton undergo photosynthesis to convert sunlight into oxygen. </p>
-  </Prose>
+    <li>Aerosol Optical Depth (AOD): A measure of how much sunlight is blocked or scattered by aerosols (tiny particles in the atmosphere)</li>
+    <li>Cloud Cover: Fraction or percentage of the sky covered by clouds</li>
+    <li>Sea-Surface Temperatures (SST): The temperature at the top layer of the ocean</li>
+    <li>Wind Speed: The rate at which the wind is moving on the ocean surface</li>
+    <li>Dust Concentration: The amount of dust present in a volume of the atmosphere</li>
+  </Prose> 
+
+  <Figure>
+      <Image
+      src={new URL('./dust_img2.jpg', import.meta.url).href}
+    />
+    <Caption attrAuthor='NASA' attrUrl='https://www.nasa.gov/image-article/saharan-dust-in-the-wind/'>
+      Image 2: Dust storm moving off of Africa. Source: NASA
+    </Caption>
+  </Figure>
 </Block>
 
 <Block>
@@ -107,9 +92,17 @@ taxonomy:
     </Caption>
   </Figure>
 
+  <Prose> 
+    Satellite data, specifically from NASA’s Plankton, Aerosol, Cloud, and ocean Ecosystem (PACE) satellite, plays a massive role when it comes to analyzing dust and its effects on phytoplankton. Additionally, NASA’s Modern Era Retrospective analysis for Research and Applications Version 2 (MERRA-2) was heavily used as a source of historical weather data, and products from the MODerate resolution Imaging Spectroradiometer (MODIS) - a satellite-based Earth observation sensor - were used as a means to obtain observations of different variables on the Earth’s surface. 
+  </Prose>
 </Block>
 
+
 <Block>
+  <Prose> 
+    These variables were studied using data from the different NASA data products. AOD and cloud cover were mainly measured using Terra and Aqua satellites. SST were also obtained using MODIS. Wind Speed and dust concentration were analyzed using MERRA-2 data. Lastly, chlorophyll-a used PACE satellite data for analysis. 
+  </Prose>
+
   <Figure>
       <Image
       src={new URL('./Dust_Depot_Cartoon2.png', import.meta.url).href}
@@ -118,7 +111,6 @@ taxonomy:
       Visual 1b. Graphic design of dust and its effects on phytoplankton over the TNAO. Credit Jennifer Geary
     </Caption>
   </Figure>
-
 </Block>
 
 <Block>
@@ -131,11 +123,18 @@ taxonomy:
     </Caption>
   </Figure>
 
+  <Prose> 
+    PACE data shows that chlorophyll-a concentrations are increasing across the TNAO over the previous decade (Figure 1). Chlorophyll-a concentration is a reasonable approximation for phytoplankton because similar to plants, phytoplankton undergo photosynthesis to convert sunlight into oxygen. 
+  </Prose>
 </Block>
 
 
-<Block type="wide">
-  <Figure>
+<Block>
+  <Prose>
+    This data suggests that there is an increase in phytoplankton, as chlorophyll-a concentrations have been steadily increasing. The observed increase in phytoplankton compared to previous years suggests a potential meteorological influence that warrants further investigation.
+  </Prose>
+
+    <Figure>
     <Chart
       dataPath={new URL('./dust-deposition-trendline.csv', import.meta.url).href}
       dateFormat="%Y-%m-%d"
@@ -145,14 +144,9 @@ taxonomy:
       yAxisLabel='Chlorophyll-a concentration (mg/m^3)'
     />
     <Caption>
-      Figure 1. Time series of monthly mean chlorophyll-a concentration over the Tropical North Atlantic (TNA) as derived from MODIS.
+      Figure 1. Time series of monthly mean chlorophyll-a concentration over the Tropical North Atlantic Ocean (TNAO) as derived from MODIS.
     </Caption>
-  </Figure>
-
-  <Prose>
-    This data suggests that there is an increase in phytoplankton, as chlorophyll-a concentrations have been steadily increasing. The observed increase in phytoplankton compared to previous years suggests a potential meteorological influence that warrants further investigation. 
-  </Prose>
-
+    </Figure>
 </Block>
 
 
