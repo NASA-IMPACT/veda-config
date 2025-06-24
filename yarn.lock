@@ -73,10 +73,10 @@
   dependencies:
     tslib "^2.0.0"
 
-"@dsio/wildfire-explorer@0.3.12":
-  version "0.3.12"
-  resolved "https://registry.npmjs.org/@dsio/wildfire-explorer/-/wildfire-explorer-0.3.12.tgz#c36c7cc4027df4a99346913ac70d81b32284cfa6"
-  integrity sha512-PSvf2Reu0N4IZywnzSX/VrVV1e+9cjlRul/9BOwwsdkgEkh8DHd/SCCR8oAhlYIl1MvKR1TKFnC7qqot2cCRaw==
+"@dsio/wildfire-explorer@0.4.1":
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/@dsio/wildfire-explorer/-/wildfire-explorer-0.4.1.tgz#3a5be8054010a426c6e7362a893fd801486bc408"
+  integrity sha512-JwkIYpktVzkJudPD8VhG/TwxrfWKZw78I05g1igSlkyJ78KHIt0t7O4HSnEqBP7RYwh75fCTbMlgK0+BdlBx+w==
   dependencies:
     "@deck.gl/extensions" "^9.1.4"
     "@deck.gl/react" "^9.1.4"
@@ -90,8 +90,10 @@
     "@uswds/uswds" "^3.11.0"
     autoprefixer "^10.4.20"
     date-fns "^4.1.0"
+    file-saver "^2.0.5"
     focus-trap-react "^11.0.3"
     hubble.gl "^1.4.0"
+    jszip "^3.10.1"
     lodash "^4.17.21"
     lucide-react "^0.477.0"
     mapbox-gl "^3.10.0"
@@ -1914,6 +1916,11 @@ fecha@^4.2.0:
   resolved "https://registry.yarnpkg.com/fecha/-/fecha-4.2.3.tgz#4d9ccdbc61e8629b259fdca67e65891448d569fd"
   integrity sha512-OP2IUU6HeYKJi3i0z4A19kHMQoLVs4Hc+DPqqxI2h/DPZHTm/vjsfC6P0b4jCMy14XizLBqvndQ+UilD7707Jw==
 
+file-saver@^2.0.5:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/file-saver/-/file-saver-2.0.5.tgz#d61cfe2ce059f414d899e9dd6d4107ee25670c38"
+  integrity sha512-P9bmyZ3h/PRG+Nzga+rbdI4OEpNDzAVyy74uVO9ATgzLK6VtAsYybF/+TOCvrc0MO793d6+42lLyZTw7/ArVzA==
+
 fill-range@^7.0.1:
   version "7.0.1"
   resolved "https://registry.yarnpkg.com/fill-range/-/fill-range-7.0.1.tgz#1919a6a7c75fe38b2c7c77e5198535da9acdda40"
@@ -2243,7 +2250,7 @@ json5@^2.2.1:
   resolved "https://registry.yarnpkg.com/json5/-/json5-2.2.3.tgz#78cd6f1a19bdc12b73db5ad0c61efd66c1e29283"
   integrity sha512-XmOWe7eyHYH14cLdVPoyg+GOH3rYX++KpzrylJwSW98t3Nk+U8XOl8FWKOgwtzdb8lXGf6zYwDUzeHMWfxasyg==
 
-jszip@^3.1.5:
+jszip@^3.1.5, jszip@^3.10.1:
   version "3.10.1"
   resolved "https://registry.yarnpkg.com/jszip/-/jszip-3.10.1.tgz#34aee70eb18ea1faec2f589208a157d1feb091c2"
   integrity sha512-xXDvecyTpGLrqFrvkrUSoxxfJI5AH7U8zxxtVclpsUtMCq4JQ290LY8AW5c7Ggnr/Y/oK+bQMbqK2qmtk3pN4g==
