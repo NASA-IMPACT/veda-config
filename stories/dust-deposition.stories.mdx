@@ -1,7 +1,7 @@
 ---
 id: dust-deposition
 name: Dust in the Wind, Life in the Water
-description: "Effect of African Dust on Plankton Growth in the Tropical North Atlantic Region"
+description: "Effects of African Dust on Plankton Growth in the Tropical North Atlantic Region"
 media:
   src: ::file ./dust-deposition-background.png
   alt: Phytoplankton in the North Atlantic Ocean as viewed by NASA's MODIS sensor.
@@ -22,7 +22,7 @@ taxonomy:
 
 <Block>
   <Prose>
-    Authors: Aaron Serre<sup>1</sup>, Madison Wallner<sup>1</sup>, Trent Cowan<sup>1</sup>, Andrew Blackford<sup>1</sup>, and Udaysankar Nair<sup>1</sup>
+    Authors: Aaron Serre<sup>1</sup>, Madison Wallner<sup>1</sup>, Andrew Blackford<sup>1</sup>, Trent Cowan<sup>1</sup>, and Udaysankar Nair<sup>1</sup>
 
     <sup>1</sup> The University of Alabama in Huntsville
   </Prose>
@@ -40,7 +40,7 @@ taxonomy:
       src={new URL('./dust-saharan-europe.jpg', import.meta.url).href}
     />
     <Caption attrAuthor='NASA Earth Observatory' attrUrl='https://earthobservatory.nasa.gov/images/152384/saharan-dust-blows-toward-europe'>
-      Image 1: Dust moving over the Atlantic Ocean. Source: NASA Earth Observatory 
+      **Image 1:** Dust moving over the Atlantic Ocean. Source: NASA Earth Observatory 
     </Caption>
   </Figure>
 </Block>
@@ -52,8 +52,7 @@ taxonomy:
       src={new URL('./dust.gif', import.meta.url).href}
     />
     <Caption attrAuthor='GEOSTATIONARY OPERATIONAL ENVIRONMENTAL SATELLITES—R SERIES' attrUrl='https://www.goes-r.gov/spacesegment/abi.html'>
-      Animation 1. Animation of Saharan Dust Storm in June 2020. Source: GOES-R
- 
+      **Animation 1:** GOES-R TrueColor satellite imagery of Saharan dust moving across the Atlantic Ocean in June 2020. Credit Trent Cowan.
     </Caption>
   </Figure>
 </Block>
@@ -77,7 +76,7 @@ taxonomy:
       src={new URL('./dust_img2.jpg', import.meta.url).href}
     />
     <Caption attrAuthor='NASA' attrUrl='https://www.nasa.gov/image-article/saharan-dust-in-the-wind/'>
-      Image 2: Dust storm moving off of Africa. Source: NASA
+      **Image 2:** Dust storm moving off of Africa. Source: NASA
     </Caption>
   </Figure>
 </Block>
@@ -87,13 +86,13 @@ taxonomy:
       <Image
       src={new URL('./Dust_Depot_Cartoon1.png', import.meta.url).href}
     />
-    <Caption attrAuthor='NASA' attrUrl='https://www.nasa.gov/image-article/saharan-dust-in-the-wind/'>
-      Visual 1a. Graphic design of Atmospheric Light/Radiation its effects on phytoplankton over the TNAO. Credit Jennifer Geary
+    <Caption>
+      **Visual 1a:** Graphic design of Atmospheric Light/Radiation and its effects on phytoplankton over the TNAO. Credit Jennifer Geary.
     </Caption>
   </Figure>
 
   <Prose> 
-    Satellite data, specifically from NASA’s **P**lankton, **A**erosol, **C**loud, and ocean **E**cosystem (PACE) satellite, plays a massive role when it comes to analyzing dust and its effects on phytoplankton. Additionally, NASA’s **M**odern **E**ra **R**etrospective analysis for **R**esearch and **A**pplications Version **2** (MERRA-2) was heavily used as a source of historical weather data, and products from the **MOD**erate resolution **I**maging **S**pectroradiometer (MODIS) - a satellite-based Earth observation sensor - were used as a means to obtain observations of different variables on the Earth’s surface. 
+    Satellite data, specifically from NASA’s **P**lankton, **A**erosol, **C**loud, and ocean **E**cosystem (**PACE**) satellite, plays a massive role when it comes to analyzing dust and its effects on phytoplankton. Additionally, NASA’s **M**odern **E**ra **R**etrospective analysis for **R**esearch and **A**pplications Version **2** (**MERRA-2**) was heavily used as a source of historical weather data, and products from the **MOD**erate resolution **I**maging **S**pectroradiometer (**MODIS**) - a satellite-based Earth observation sensor - were used as a means to obtain observations of different variables on the Earth’s surface. 
   </Prose>
 </Block>
 
@@ -107,8 +106,8 @@ taxonomy:
       <Image
       src={new URL('./Dust_Depot_Cartoon2.png', import.meta.url).href}
     />
-    <Caption attrAuthor='NASA' attrUrl='https://www.nasa.gov/image-article/saharan-dust-in-the-wind/'>
-      Visual 1b. Graphic design of dust and its effects on phytoplankton over the TNAO. Credit Jennifer Geary
+    <Caption>
+      **Visual 1b:** Graphic design of dust and its effects on phytoplankton over the TNAO. Credit Jennifer Geary.
     </Caption>
   </Figure>
 </Block>
@@ -118,16 +117,31 @@ taxonomy:
       <Image
       src={new URL('./Dust_Depot_Cartoon3.png', import.meta.url).href}
     />
-    <Caption attrAuthor='NASA' attrUrl='https://www.nasa.gov/image-article/saharan-dust-in-the-wind/'>
-      Visual 1c. Graphic design of Ocean Mixing and its effects on phytoplankton over the TNAO. Credit Jennifer Geary
+    <Caption>
+      **Visual 1c:** Graphic design of Ocean Mixing and its effects on phytoplankton over the TNAO. Credit Jennifer Geary.
     </Caption>
   </Figure>
 
   <Prose> 
-    PACE data shows that chlorophyll-a concentrations are increasing across the TNAO over the previous decade (Figure 1). Chlorophyll-a concentration is a reasonable approximation for phytoplankton because similar to plants, phytoplankton undergo photosynthesis to convert sunlight into oxygen. 
+    PACE and MODIS data shows that chlorophyll-a concentrations are increasing across the TNAO over the previous decade (Figure 1; Map 1). Chlorophyll-a concentration is a reasonable approximation for phytoplankton because similar to plants, phytoplankton undergo photosynthesis to convert sunlight into oxygen. 
   </Prose>
 </Block>
 
+<Block type ='wide'>
+  <Figure>
+    <Map
+      center={[-50, 17]}
+      zoom={3}
+      datasetId=' OCI_PACE_Chlorophyll_a'
+      layerId='OCI_PACE_Chlorophyll_a'
+      dateTime='2025-04-13'
+      compareDateTime='2025-05-07'
+    />
+    <Caption>
+    **Map 1:** PACE-derived Chlorophyll-A data from April 13 and May 7, 2025 showing increasing chlorophyll near the West African coast and then in the Caribbean Sea directly following the passage of a Saharan dust storm.
+    </Caption>
+  </Figure>
+</Block>
 
 <Block>
   <Prose>
@@ -144,60 +158,9 @@ taxonomy:
       yAxisLabel='Chlorophyll-a concentration (mg/m^3)'
     />
     <Caption>
-      Figure 1. Time series of monthly mean chlorophyll-a concentration over the Tropical North Atlantic Ocean (TNAO) as derived from MODIS.
+      **Figure 1:** Time series of monthly mean chlorophyll-a concentration over the Tropical North Atlantic Ocean (TNAO) as derived from MODIS.
     </Caption>
     </Figure>
-</Block>
-
-
-<Block>
-  <Figure>
-    <Map
-      center={[-50, 17]}
-      zoom={3}
-      datasetId=' OCI_PACE_Chlorophyll_a'
-      layerId='OCI_PACE_Chlorophyll_a'
-      dateTime='2024-05-23'
-      compareDateTime='2024-05-31'
-    />
-    <Caption>
-    Example 1: 5/23/24 -> 5/31/24 (Middle Trop. Atlantic) (PACE)
-    </Caption>
-  </Figure>
-</Block>
-
-
-<Block>
-  <Figure>
-    <Map
-      center={[-50, 17]}
-      zoom={3}
-      datasetId=' OCI_PACE_Chlorophyll_a'
-      layerId='OCI_PACE_Chlorophyll_a'
-      dateTime='2024-07-17'
-      compareDateTime='2024-08-01'
-    />
-    <Caption>
-    Example 2: 7/17/24 -> 8/1/24 (E. Carr.) (PACE/NOAA-21/Suomi)
-    </Caption>
-  </Figure>
-</Block>
-
-
-<Block>
-  <Figure>
-    <Map
-      center={[-50, 17]}
-      zoom={3}
-      datasetId=' OCI_PACE_Chlorophyll_a'
-      layerId='OCI_PACE_Chlorophyll_a'
-      dateTime='2025-04-13'
-      compareDateTime='2025-05-07'
-    />
-    <Caption>
-    Example 3: 4/13/25 -> 5/7/25 (Middle Trop. Atlantic) (PACE)
-    </Caption>
-  </Figure>
 </Block>
 
 
@@ -217,7 +180,9 @@ taxonomy:
         yKey="Value"
         yAxisLabel="Aerosol Optical Depth"
       />
-      <Caption>Figure 2: Positive trend of AOD in time across the TNAO. Data derived from MERRA-2.</Caption>
+      <Caption>
+      **Figure 2:** Time series of monthly mean AOD across the TNAO, showing a slightly increasing trend. Data derived from MERRA-2.
+      </Caption>
     </Figure>
 
     This trend would seem to imply that the more dust deposition there is, the more abundant the phytoplankton are. However, when comparing AOD directly to chlorophyll-a, a negative trend is revealed, suggesting that dust alone cannot be the sole cause of increasing phytoplankton concentrations across the TNAO (Figure 3). 
@@ -229,10 +194,10 @@ taxonomy:
   <Prose>
     ## Cloud Cover and Chlorophyll-a
 
-    <p>One notable observation is that the phytoplankton population has flourished in recent years, despite an overall increase in cloud cover (Figures 4, 5). Typically, increased cloudiness reduces the amount of sunlight reaching the ocean surface, thus limiting photosynthesis. However, chlorophyll-a concentrations have continued to rise, suggesting that cloud cover alone is not a limiting factor for phytoplankton growth.</p>
+    One notable observation is that the phytoplankton population has flourished in recent years, despite an overall increase in cloud cover (Figures 4, 5). Typically, increased cloudiness reduces the amount of sunlight reaching the ocean surface, thus limiting photosynthesis. However, chlorophyll-a concentrations have continued to rise, suggesting that cloud cover alone is not a limiting factor for phytoplankton growth.
 
-    <p>Looking more closely at cloud cover, there is a positive trend observed across the TNAO when examining MERRA-2-derived monthly mean values. While clouds can reduce light availability, rainfall—which can frequently accompany increased cloudiness—shows a decreasing trend in this region (Figure 6). Rainfall can negatively affect phytoplankton by washing atmospheric dust (a key nutrient source) out of the air. Therefore, the decline in rainfall may be contributing to more favorable conditions for phytoplankton, helping to explain the observed rise in chlorophyll-a concentrations, despite increased cloud cover.</p>
-
+    Looking more closely at cloud cover, there is a positive trend observed across the TNAO when examining MERRA-2-derived monthly mean values. While clouds can reduce light availability, rainfall—which can frequently accompany increased cloudiness—shows a decreasing trend in this region (Figure 6). Rainfall can negatively affect phytoplankton by washing atmospheric dust (a key nutrient source) out of the air. Therefore, the decline in rainfall may be contributing to more favorable conditions for phytoplankton, helping to explain the observed rise in chlorophyll-a concentrations, despite increased cloud cover.
+  </Prose>
 
     <Figure>
       <Chart
@@ -243,10 +208,8 @@ taxonomy:
         yKey="Value"
         yAxisLabel="Cloud Fraction"
       />
-      <Caption>Figure 4: Positive trend of Cloud Cover in time across the TNAO. Data derived from MERRA-2.</Caption>
+      <Caption>**Figure 4:** Monthly mean time series showing a positive trend of Cloud Cover across the TNAO. Data derived from MERRA-2.</Caption>
     </Figure>
-
-  </Prose>
 </Block>
 
 
@@ -265,10 +228,10 @@ taxonomy:
         yKey="Value"
         yAxisLabel="Sea Surface Temperature (C)"
       />
-      <Caption>Figure 7: Positive trend of SST in time across the TNAO. Data derived from MERRA-2.</Caption>
+      <Caption>
+      **Figure 7:**  Monthly mean time series showing a positive trend of SST across the TNAO. Data derived from MERRA-2.
+      </Caption>
     </Figure>
-
-
 
     However, when taking a look at how phytoplankton responds to this increasing trend, the opposite effect occurs (Figure 8). Chlorophyll-a concentrations show an increasing trend as SST increases. This would suggest that SSTs likely don't play a significant role in increasing phytoplankton production in the TNAO. 
 
@@ -290,7 +253,7 @@ taxonomy:
         yKey="Value"
         yAxisLabel="Wind Speed (mph)"
       />
-      <Caption>Figure 9: Slight negative trend of wind speed in time across the TNAO. Data derived from MERRA-2.</Caption>
+      <Caption>**Figure 9:** Monthly mean time series showing a slightly negative trend of wind speed across the TNAO. Data derived from MERRA-2.</Caption>
     </Figure>
 
 
@@ -301,7 +264,7 @@ taxonomy:
 
 <Block>
   <Prose>
-    ## Dust Surface Mass Concentration and Chlorophyll-a
+    ## Dust Concentration and Chlorophyll-a
 
     <Figure>
       <Chart
@@ -312,7 +275,7 @@ taxonomy:
         yKey="Value"
         yAxisLabel="Dust Surface Mass Concentration (µg/m³)"
       />
-      <Caption>Figure 11: Positive trend of dust in time across the TNAO. Data derived from MERRA-2.</Caption>
+      <Caption>**Figure 11:** Monthly mean time series showing a positive trend of dust concentration across the TNAO. Data derived from MERRA-2.</Caption>
     </Figure>
 
    Higher concentrations of Saharan dust are being transported and deposited across the surface of the Atlantic Ocean over the time period examined (Figure 11). This variable has a positive influence on chlorophyll-a levels, indicating that phytoplankton are responding to increased dust deposition across the surface of the TNAO (Figure 12).
@@ -324,7 +287,7 @@ taxonomy:
   <Prose>
 
     ## Conclusion
-    NASA Earth observation data products revealed that phytoplankton growth across the TNAO is primarily associated with decreasing trends in rainfall and increasing concentrations of dust deposition on the ocean surface. These environmental conditions provide an abundant supply of crucial nutrients to the phytoplankton from incoming dust plumes, allowing them to flourish. Ultimately, sustainability practices of phytoplankton populations are essential to the neighboring coastal communities within this region, including Senegal, The Gambia, Guinea-Bissau, Guinea, and Sierra Leone. Fisheries are a dominant part of these countries’ food supply, economy, and overall, livelihood. Specifically, the fishing industries of  these West African countries make up as much as 30% of national revenue. This includes the exportation of fish around the world, making up a several billion dollar industry. In 2008, exports to the European Union alone made up about $1.75 billion in revenue to West Africa. As phytoplankton productivity increases across the TNAO, so does marine biodiversity, thus maintaining easier routes to sustainable livelihoods for West Africa. 
+    NASA Earth observation data products revealed that phytoplankton growth across the TNAO is primarily associated with decreasing trends in rainfall and increasing concentrations of dust deposition on the ocean surface. These environmental conditions provide an abundant supply of crucial nutrients to the phytoplankton from incoming dust plumes, allowing them to flourish. Ultimately, sustainability practices of phytoplankton populations are essential to the neighboring coastal communities within this region, including Senegal, The Gambia, Guinea-Bissau, Guinea, and Sierra Leone (Map 2}. Fisheries are a dominant part of these countries’ food supply, economy, and overall, livelihood. Specifically, the fishing industries of  these West African countries make up as much as 30% of national revenue. This includes the exportation of fish around the world, making up a several billion dollar industry. In 2008, exports to the European Union alone made up about $1.75 billion in revenue to West Africa. As phytoplankton productivity increases across the TNAO, so does marine biodiversity, thus maintaining easier routes to sustainable livelihoods for West Africa. 
 
   </Prose>
   
@@ -333,7 +296,7 @@ taxonomy:
       src={new URL('./dust-deposition-africa-map.jpg', import.meta.url).href}
     />
     <Caption>
-      Map 1. Western African countries most directly impacted by dust deposition's effects on phytoplankton. Credit Andrew Blackford.
+      **Map 2:** Western African countries most directly impacted by dust deposition's effects on phytoplankton. Credit Andrew Blackford.
     </Caption>
   </Figure>
 </Block>
