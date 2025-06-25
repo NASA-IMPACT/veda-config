@@ -85,7 +85,6 @@ layers:
       id: 'equirectangular'
     sourceParams:
       asset_bidx: cog_default|1
-      colormap_name: "magma"
       rescale:
         - 0
         - 40
@@ -95,8 +94,8 @@ layers:
       tile_scale: 1
     legend:
       type: gradient
-      min: "0"
-      max: "40"
+      min: 0
+      max: 40
       unit:
         label: (meters)
       label: (meters)
@@ -162,5 +161,82 @@ layers:
       unit: meters
 ---
 
+
+<Block>
+  <Prose>
+    **Temporal Extent:** January 1, 2000 - December 31, 2009    
+    **Temporal Resolution:**  Single date   
+    **Spatial Extent:** Tropical Coastal Areas<br /> 
+    **Spatial Resolution:** 30 meters    
+    **Data Units:** Biomass (Megagrams per hectare (Mg ha-1)); Height (meters (m))<br />
+    **Data Type:** Research<br />
+
+      
+    Mangrove wetlands are among the most productive and carbon-dense ecosystems in the world. Their structural attributes vary considerably across
+    spatial scales, yielding large uncertainties in regional and global estimates of carbon stocks. This study offers a baseline to monitor national and regional
+    trends in mangrove carbon stocks [Simard et al., 2019](https://doi.org/10.1038/s41561-018-0279-1).
+
+    This dataset characterizes the global distribution, biomass, and canopy height of mangrove-forested wetlands based on remotely sensed and in situ field
+    measurement data. Estimates of (1) mangrove aboveground biomass (AGB), (2) maximum canopy height (height of the tallest tree), and (3) basal-area
+    weighted height (individual tree heights weighted in proportion to their basal area) for the nominal year 2000 were derived across a 30-meter resolution
+    global mangrove ecotype extent map using remotely-sensed canopy height measurements and region-specific allometric models. Within designated plots, selected trees were identified to species and diameter at breast height (DBH) and tree height was
+    measured using a laser rangefinder or clinometer. Tree density (the number of stems) can be estimated for each plot and expressed per unit area. These
+    data were used to derive plot-level allometry among AGB, basal area weighted height (Hba), and maximum canopy height (Hmax) and to validate the
+    remotely sensed estimates.
+
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    ## Disclaimer
+    This dataset has been transformed from its original format (GeoTIFF) into Cloud Optimized GeoTIFF (COG) for display in the US GHG Center. Careful quality checks are used to ensure data transformation has been performed correctly. 
+    
+
+    ## Scientific Details
+
+    Uncertainty was addressed by calibration with [ICESat/GLAS Spaceborne Lidar](https://icesat.gsfc.nasa.gov/icesat/glas.php) mission data, refining the range of elevation data identified as mangrove
+    cover, and subsequent validation by field data. The study only included areas with Shuttle Radar Topography Mission (SRTM) elevation values ranging
+    from 0 to 55 m to eliminate inland areas over-classified as mangrove wetlands.<br/>
+
+    The relationship between SRTM and Basal Area Weighted Height (Hba) had a correlation coefficient R2 value of 0.78 and RMSE of 3.60 m at global
+    scales. Additionally, SRTM values versus field measurements of max height (Hmax) had a correlation coefficient R2 of 0.70 and RMSE of 5.80 m
+    globally. Analysis of canopy height variance obtained from SRTM, lidar, and field measurements demonstrated that SRTM height characterizes mean
+    overstory canopy height and maintains consistency over time when measuring canopy height in established mangrove forests. Regional biomass
+    allometric models developed for this study had a combined RMSE of 57.2 Mg ha-1 (ranging from 46.6 Mg ha-1 to 72.0 Mg ha-1) and an R2 of 0.77. The
+    global biomass allometric model had a root mean square error (RMSE) of 87.9 and correlation coefficient R2 of 0.62. See Simard et al. (2019) for more
+    details.
+
+
+    ## Key Publications
+    Simard, M., L. Fatpyinbo, C. Smetanka, V.H. Rivera-Monroy, E. Castaneda-Moya, N. Thomas, and T. Van der Stocken. 2019. Mangrove canopy heightglobally related to precipitation, temperature and cyclone frequency. Nature Geoscience, 12: 40–45. https://doi.org/10.1038/s41561-018-0279-1
+
+    ## Other Relevant Publications
+    Lagomasino, D., T. Fatoyinbo, S. Lee, E. Feliciano, M. Simard, and C. Trettin. 2016. CMS: Mangrove Canopy Height Estimates from Remote Imagery,
+    Zambezi Delta, Mozambique. ORNL DAAC, Oak Ridge, Tennessee, USA. http://dx.doi.org/10.3334/ORNLDAAC/1357
+
+    Fatoyinbo, T., E. Feliciano, D. Lagomasino, S. Lee, and C. Trettin. 2017. CMS: Aboveground Biomass for Mangrove Forest, Zambezi River Delta,
+    Mozambique. ORNL DAAC, Oak Ridge, Tennessee, USA. https://doi.org/10.3334/ORNLDAAC/1522
+
+    Lagomasino, D., T. Fatoyinbo, S. Lee, E. Feliciano, C. Trettin, A. Shapiro, and M. Mwita. 2019. CMS: Mangrove Forest Cover Extent and Change
+    across Major River Deltas, 2000-2016. ORNL DAAC, Oak Ridge, Tennessee, USA. https://doi.org/10.3334/ORNLDAAC/1670
+
+    ## Learn More
+    For additional information, visit ORNL DAAC [Carbon Monitoring System User Guide](https://daac.ornl.gov/daacdata/cms/CMS_Global_Map_Mangrove_Canopy/comp/CMS_Global_Map_Mangrove_Canopy.pdf)
+    
+    ## Acknowledgment
+    Carbon Monitoring Systems grant N4-CMS14-0028.
+
+    ## License
+    [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/legalcode) (CC BY 4.0)
+
+    ## Data Stewardship (be sure to change once the documents are in their final location)
+    - [Data Workflow]()
+    - [Data Transformation Code]()
+    - [US GHG Center Data Intake Processing and Verification Report]()
+
+  </Prose>
+</Block>
 
 
