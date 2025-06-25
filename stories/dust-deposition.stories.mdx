@@ -189,6 +189,23 @@ taxonomy:
   </Prose>
 </Block>
 
+<Block>
+  <Figure>
+    <Chart
+      dataPath={new URL('./AOD_vs_CHL_regression.csv', import.meta.url).href}
+      xKey="AOD"
+      yKey="Chlorophyll-a"
+      yAxisLabel="Chlorophyll-a (mg/m³)"
+      xAxisLabel="AOD"
+      type="scatter"
+    />
+  <Caption>
+      **Figure 3:** Negative trend of chlorophyll-a with increasing AOD across the TNAO
+
+      </Caption>
+</Figure>
+
+
 
 <Block>
   <Prose>
