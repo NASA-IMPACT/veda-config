@@ -165,14 +165,6 @@ taxonomy:
 
 
 <Block>
-  <Prose>
-    ## AOD and Chlorophyll-a
-
-    There is a slight increasing trend in AOD over time, based on statistical analysis across the TNAO (Figure 2). This rise in dust leads to more sunlight being scattered or absorbed, which reduces the amount of light reaching the ocean surface. 
-
-    This trend would seem to imply that the more dust deposition there is, the more abundant the phytoplankton are. However, when comparing AOD directly to chlorophyll-a, a negative trend is revealed, suggesting that dust alone cannot be the sole cause of increasing phytoplankton concentrations across the TNAO (Figure 3). 
-  </Prose>
-
     <Figure>
       <Chart
         dataPath={new URL('./Dust_AOD.csv', import.meta.url).href}
@@ -186,6 +178,14 @@ taxonomy:
       **Figure 2:** Time series of monthly mean AOD across the TNAO, showing a slightly increasing trend. Data derived from MERRA-2.
       </Caption>
     </Figure>
+
+  <Prose>
+    ## AOD and Chlorophyll-a
+
+    There is a slight increasing trend in AOD over time, based on statistical analysis across the TNAO (Figure 2). This rise in dust leads to more sunlight being scattered or absorbed, which reduces the amount of light reaching the ocean surface. 
+
+    This trend would seem to imply that the more dust deposition there is, the more abundant the phytoplankton are. However, when comparing AOD directly to chlorophyll-a, a negative trend is revealed, suggesting that dust alone cannot be the sole cause of increasing phytoplankton concentrations across the TNAO (Figure 3). 
+  </Prose>
 </Block>
 
 <Block>
@@ -229,13 +229,6 @@ taxonomy:
 
 
 <Block>
-  <Prose>
-    ## SST and Chlorophyll-a
-
-    There is a slightly positive trend in SSTs over time in the TNAO. This would suggest a slight reduction of phytoplankton as decreasing SSTs are typically a sign of increased mixing and upwelling. This allows nutrients located deeper in the ocean to mix towards the surface, giving phytoplankton easier access.
-
-    However, when taking a look at how phytoplankton responds to this increasing trend, the opposite effect occurs (Figure 8). Chlorophyll-a concentrations show an increasing trend as SST increases. This would suggest that SSTs likely don't play a significant role in increasing phytoplankton production in the TNAO.
-  </Prose>
     <Figure>
       <Chart
         dataPath={new URL('./Dust_SST.csv', import.meta.url).href}
@@ -247,6 +240,14 @@ taxonomy:
       />
       <Caption>**Figure 7:**  Monthly mean time series showing a positive trend of SST across the TNAO. Data derived from MERRA-2.</Caption>
     </Figure>
+
+  <Prose>
+    ## SST and Chlorophyll-a
+
+    There is a slightly positive trend in SSTs over time in the TNAO. This would suggest a slight reduction of phytoplankton as decreasing SSTs are typically a sign of increased mixing and upwelling. This allows nutrients located deeper in the ocean to mix towards the surface, giving phytoplankton easier access.
+
+    However, when taking a look at how phytoplankton responds to this increasing trend, the opposite effect occurs (Figure 8). Chlorophyll-a concentrations show an increasing trend as SST increases. This would suggest that SSTs likely don't play a significant role in increasing phytoplankton production in the TNAO.
+  </Prose>
 </Block>
 
 <Block>
@@ -271,11 +272,6 @@ taxonomy:
 </Block>
 
 <Block>
-  <Prose>
-    ## Dust Concentration and Chlorophyll-a
-
-    Higher concentrations of Saharan dust are being transported and deposited across the surface of the Atlantic Ocean over the time period examined (Figure 11). This variable has a positive influence on chlorophyll-a levels, indicating that phytoplankton are responding to increased dust deposition across the surface of the TNAO (Figure 12).
-  </Prose>
     <Figure>
       <Chart
         dataPath={new URL('./Dust_DSC.csv', import.meta.url).href}
@@ -287,6 +283,11 @@ taxonomy:
       />
       <Caption>**Figure 11:** Monthly mean time series showing a positive trend of dust concentration across the TNAO. Data derived from MERRA-2.</Caption>
     </Figure>
+  <Prose>
+    ## Dust Concentration and Chlorophyll-a
+
+    Higher concentrations of Saharan dust are being transported and deposited across the surface of the Atlantic Ocean over the time period examined (Figure 11). This variable has a positive influence on chlorophyll-a levels, indicating that phytoplankton are responding to increased dust deposition across the surface of the TNAO (Figure 12).
+  </Prose>
 </Block>
 
 <Block>
