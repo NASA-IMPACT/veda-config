@@ -1,0 +1,62 @@
+---
+id: mangrove-height-tandemx
+name: 'Canopy heights of mangrove-forested wetlands globally'
+description: "Canopy heights of mangrove-forested wetlands globally for 2015 at 12-m resolution"
+media:
+  src: ::file ./media/twsanomaly-globe.png
+  alt: TWS trend of anomalies from LIS outputs.
+  author:
+    name: NASA LIS
+    url:
+taxonomy:
+  - name: Topics
+    values:
+    - Water Resources
+    - Water Model
+    - Precipitation
+    - Groundwater
+    - Hydrology
+    - Water Storage Trends
+  - name: Source
+    values:
+    - NASA EIS
+infoDescription: |
+  ::markdown
+     <insert info here>
+layers:
+  - id: mangrove-height-tandemx
+    stacCol: mangrove-height-tandemx
+    name: 'Global Mangrove Canopy Heights'
+    stacApiEndpoint: https://dev.openveda.cloud/api/stac
+    rasterApiEndpoint: https://dev.openveda.cloud/api/raster
+    type: raster
+    description: 'Canopy heights of mangrove-forested wetlands globally for 2015 at 12-m resolution'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      asset_bidx: cog_default|1
+      colormap_name: "ylgnbu"
+      rescale:
+        - 0
+        - 45
+      nodata: 0
+      tile_scale: 1
+      minzoom: 0
+    legend:
+      type: gradient
+      min: "0"
+      max: "45"
+      unit:
+        label: (meters)
+      label: (meters)
+    info:
+      source: NASA
+      spatialExtent: Coastal Zones
+      temporalResolution: Annual 
+      unit: meters
+
+---
+
+
+
