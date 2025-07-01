@@ -32,7 +32,7 @@ taxonomy:
   <Prose>
 
     ## Introduction
-    The Earth system is large and complicated, involving many interconnected parts of the land, ocean, and atmosphere. They all influence one another in different ways and impact many disciplines across Earth science. These effects are not limited to the Earth system, but potentially extend to the greater global economy. One primary example of this is phytoplankton. This tiny, but mighty organism is one of the most important organisms in the ocean. Fish and other marine organisms typically feed on phytoplankton, making them the first step of energy in the food chain and the foundation for marine ecosystems around the globe. This makes understanding how phytoplankton react to various conditions, including dust deposition and meteorological factors, vitally important. The Tropical Northern Atlantic Ocean (TNAO) is an ocean basin that can be observed to analyze these effects. Dust plumes in this region typically begin in the Saharan Desert in Northern Africa and are frequently carried across the Atlantic Ocean.
+    The Earth system is large and complex, made up of many interconnected parts involving the land, ocean, and atmosphere. These parts affect each other in many ways and can even influence the greater global economy. One primary example of this is phytoplankton. This tiny, but mighty organism is one of the most important organisms in the ocean. Phytoplankton are the base of the ocean food chain, feeding fish and other marine life. This makes understanding how phytoplankton react to various conditions, including dust deposition and meteorological factors, vitally important. A specific region that can be observed to analyze these effects is the Tropical Northern Atlantic Ocean (TNAO), where frequent dust plumes are carried after originating from the Saharan Desert in Northern Africa. Dust from these plumes eventually settles onto the ocean surface and deposition can be enhanced through rainfall. This process adds key nutrients to the water, helping phytoplankton grow quickly and large in number.
   </Prose>
   
   <Figure>
@@ -60,7 +60,7 @@ taxonomy:
 
 <Block>
   <Prose>
-    ## Meteorological Variables in Analyzing Phytoplankton
+    ## Understanding the Way Dust Connects Land, Ocean, and Life Through NASA Earth Observing Tools 
 
     The different meteorological variables that may impact and affect phytoplankton across the TNAO include: 
 
@@ -196,37 +196,36 @@ taxonomy:
 
     Looking more closely at cloud cover, there is a positive trend observed across the TNAO when examining MERRA-2-derived monthly mean values. While clouds can reduce light availability, rainfall—which can frequently accompany increased cloudiness—shows a decreasing trend in this region. Rainfall can negatively affect phytoplankton by washing atmospheric dust (a key nutrient source) out of the air. Therefore, the decline in rainfall may be contributing to more favorable conditions for phytoplankton, helping to explain the observed rise in chlorophyll-a concentrations, despite increased cloud cover.
   </Prose>
-
 </Block>
 
 <Block>
-    <Figure>
-      <Chart
-        dataPath={new URL('./Dust_CLD_trendline.csv', import.meta.url).href}
-        dateFormat="%Y-%m-%d"
-        idKey='source'
-        xKey='Date'
-        yKey='Chlorophyll'
-        yAxisLabel="Cloud Fraction"
-      />
-      <Caption>
+  <Figure>
+    <Chart
+      dataPath={new URL('./Dust_CLD_trendline.csv', import.meta.url).href}
+      dateFormat="%Y-%m-%d"
+      idKey="source"
+      xKey="Date"
+      yKey="CloudFraction"
+      yAxisLabel="Cloud Fraction"
+    />
+    <Caption>
       **Figure 3:** Monthly mean time series showing a positive trend of Cloud Cover across the TNAO. Data derived from MERRA-2.
-      </Caption>
-    </Figure>
+    </Caption>
+  </Figure>
 
-    <Figure>
-      <Chart
-        dataPath={new URL('./Dust_RAIN_trendline.csv', import.meta.url).href}
-        dateFormat="%Y-%m-%d"
-        idKey='source'
-        xKey='Date'
-        yKey='Chlorophyll'
-        yAxisLabel="Rainfall"
-      />
-      <Caption>
-      **Figure 4:** Negative trend of rainfall across the TNAO
-      </Caption>
-    </Figure>
+  <Figure>
+    <Chart
+      dataPath={new URL('./Dust_RAIN_trendline.csv', import.meta.url).href}
+      dateFormat="%Y-%m-%d"
+      idKey="source"
+      xKey="Date"
+      yKey="Rainfall"
+      yAxisLabel="Rainfall"
+    />
+    <Caption>
+      **Figure 4:** Negative trend of rainfall across the TNAO.
+    </Caption>
+  </Figure>
 </Block>
 
 <Block>
