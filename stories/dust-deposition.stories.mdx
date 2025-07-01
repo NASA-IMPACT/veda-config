@@ -210,6 +210,20 @@ taxonomy:
       **Figure 3:** Monthly mean time series showing a positive trend of Cloud Cover across the TNAO. Data derived from MERRA-2.
       </Caption>
     </Figure>
+
+    <Figure>
+      <Chart
+        dataPath={new URL('./Dust_RAIN_trendline.csv', import.meta.url).href}
+        dateFormat="%Y-%m-%d"
+        idKey='source'
+        xKey='Date'
+        yKey='Chlorophyll'
+        yAxisLabel="Rainfall"
+      />
+      <Caption>
+      **Figure 4:** Negative trend of rainfall across the TNAO
+      </Caption>
+    </Figure>
 </Block>
 
 <Block>
