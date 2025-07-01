@@ -199,11 +199,11 @@ taxonomy:
 
     <Figure>
       <Chart
-        dataPath={new URL('./Dust_CLD.csv', import.meta.url).href}
+        dataPath={new URL('./Dust_CLD_trendline.csv', import.meta.url).href}
         dateFormat="%Y-%m-%d"
-        idKey="Source"
-        xKey="Date"
-        yKey="Value"
+        idKey='source'
+        xKey='Date'
+        yKey='Chlorophyll'
         yAxisLabel="Cloud Fraction"
       />
       <Caption>
@@ -212,15 +212,15 @@ taxonomy:
     </Figure>
 </Block>
 
-
 <Block>
+
     <Figure>
       <Chart
-        dataPath={new URL('./Dust_SST.csv', import.meta.url).href}
+        dataPath={new URL('./Dust_SST_trendline.csv', import.meta.url).href}
         dateFormat="%Y-%m-%d"
-        idKey="Source"
-        xKey="Date"
-        yKey="Value"
+        idKey='source'
+        xKey='Date'
+        yKey='Chlorophyll'
         yAxisLabel="Sea Surface Temperature (C)"
       />
       <Caption>
@@ -245,13 +245,14 @@ taxonomy:
 
     However, the effect of wind speed on phytoplankton is consistent with the previously discussed rationale of upwelling nutrients for phytoplankton. This indicates that when winds are relatively strong, mixing processes can still occur.
   </Prose>
+
     <Figure>
       <Chart
-        dataPath={new URL('./Dust_WS.csv', import.meta.url).href}
+        dataPath={new URL('./Dust_WS_trendline.csv', import.meta.url).href}
         dateFormat="%Y-%m-%d"
-        idKey="Source"
-        xKey="Date"
-        yKey="Value"
+        idKey='source'
+        xKey='Date'
+        yKey='Chlorophyll'
         yAxisLabel="Wind Speed (mph)"
       />
       <Caption>
@@ -263,11 +264,11 @@ taxonomy:
 <Block>
     <Figure>
       <Chart
-        dataPath={new URL('./Dust_DSC.csv', import.meta.url).href}
+        dataPath={new URL('./Dust_WS_trendline.csv', import.meta.url).href}
         dateFormat="%Y-%m-%d"
-        idKey="Source"
-        xKey="Date"
-        yKey="Value"
+        idKey='source'
+        xKey='Date'
+        yKey='Chlorophyll'
         yAxisLabel="Dust Surface Mass Concentration (µg/m³)"
       />
       <Caption>
