@@ -148,6 +148,10 @@ taxonomy:
     This data suggests that there is an increase in phytoplankton, as chlorophyll-a concentrations have been steadily increasing. The observed increase in phytoplankton compared to previous years suggests a potential meteorological influence that warrants further investigation.
   </Prose>
 
+</Block>
+
+<Block>
+
     <Figure>
     <Chart
       dataPath={new URL('./dust-deposition-trendline.csv', import.meta.url).href}
@@ -196,37 +200,38 @@ taxonomy:
 
     Looking more closely at cloud cover, there is a positive trend observed across the TNAO when examining MERRA-2-derived monthly mean values. While clouds can reduce light availability, rainfall—which can frequently accompany increased cloudiness—shows a decreasing trend in this region. Rainfall can negatively affect phytoplankton by washing atmospheric dust (a key nutrient source) out of the air. Therefore, the decline in rainfall may be contributing to more favorable conditions for phytoplankton, helping to explain the observed rise in chlorophyll-a concentrations, despite increased cloud cover.
   </Prose>
-</Block>
 
-<Block>
   <Figure>
     <Chart
       dataPath={new URL('./Dust_CLD_trendline.csv', import.meta.url).href}
       dateFormat="%Y-%m-%d"
-      idKey="source"
-      xKey="Date"
+      idKey='source'
+      xKey='Date'
       yKey='Chlorophyll'
-      yAxisLabel="Cloud Fraction"
+      yAxisLabel='Cloud Fraction'
     />
     <Caption>
       **Figure 3:** Monthly mean time series showing a positive trend of Cloud Cover across the TNAO. Data derived from MERRA-2.
     </Caption>
   </Figure>
+</Block>
 
+<Block>
   <Figure>
     <Chart
       dataPath={new URL('./Dust_RAIN_trendline.csv', import.meta.url).href}
       dateFormat="%Y-%m-%d"
-      idKey="source"
-      xKey="Date"
+      idKey='source'
+      xKey='Date'
       yKey='Chlorophyll'
-      yAxisLabel="Rainfall"
+      yAxisLabel='Rainfall'
     />
     <Caption>
       **Figure 4:** Negative trend of rainfall across the TNAO.
     </Caption>
   </Figure>
 </Block>
+
 
 <Block>
 
