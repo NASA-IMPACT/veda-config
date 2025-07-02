@@ -1,10 +1,10 @@
 ---
 id: 'heat_cattle'
 name:  Do cows get heat strokes too? 
-description: Unraveling the Causes of the 2025 Los Angeles Area Wildfires 
+description: Understanding Heat Stress in Cattle
 media:
-  src: ::file ./la-fires-010825_NO_cali-fires_feat.png
-  alt: Flying sparks in the Pacific Palisades neighborhood of Los Angeles on January 7.
+  src: ::file ./cover_cattle_heat.jpg
+  alt: Cow quenching thirst under heat.
   author:
     name: Ethan Swope/AP
 pubDate: 2025-04-10T00:00
@@ -25,7 +25,7 @@ taxonomy:
 <Block style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
    <Prose style={{ textAlign: 'center', width: '100%' }}>
      <p style={{ marginBottom: '0.5em' }}>
-       Authors: Maheshwari Neelam <sup>[1]</sup>, Andrew Blackford <sup>[2]</sup>, Nidhi Jha <sup>[2]</sup>, and Brian Freitag <sup>[3]</sup>
+       Authors: Maheshwari Neelam <sup>[1]</sup>, Kyle Lesinger Blackford <sup>[2]</sup>, and Brian Freitag <sup>[3]</sup>
      </p>
      <p style={{ marginBottom: '0.5em' }}>
        <sup>[1]</sup> Universities Space Research Association (USRA)
@@ -61,22 +61,21 @@ taxonomy:
 <Block style={{justifyContent: 'space-between', alignItems: 'center', margin: '0 auto', width: '100%' }}>
    <Prose style={{ textAlign: 'justify', flex: '1', alignItems: 'center', marginLeft: '0.2rem'}}>
      <p>
-    ### Devastating Wildfires in Los Angeles
-    In early [January 2025, Los Angeles faced devastating wildfires](https://www.fire.ca.gov/incidents/2025) that claimed at least 29 lives, forced over 200,000 evacuations, and destroyed more than 18,000 structures. The Palisades and Eaton fires, the two largest blazes, scorched over 37,000 acres combined. While the exact causes remain under investigation, extreme environmental conditions—particularly Santa Ana winds, prolonged dry periods, and the accumulation of flammable vegetation—were critical in fueling the fires' intensity and swift progression. 
-     </p>
+    ### The Overlooked Cost of Heat Stress on Cattle: Beyond the Thermometer
+     When considering the impacts of heat waves, we often focus on human health. However, livestock, particularly cattle, can also be severely affected by extreme heat. Heat stress in cattle is an important and growing concern in both traditionally hot and cooler regions of the United States, with profound economic consequences for the dairy and beef industries.     </p>
   </Prose>
 </Block>
 
 <Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
    <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
     <p>
-   ### The Role of Santa Ana Winds
-    The Santa Ana winds, a key factor in these wildfires, are characterized by their strength, dryness, and heat. These katabatic winds originate from high-pressure air masses in the Great Basin, an elevated region encompassing Nevada and parts of Utah. Typically occurring between September and May, they bring hot, dry weather to coastal Southern California. As these winds flow westward, they interact with the mountainous terrain, creating mountain waves and funneling through passes, which increases their speed and temperature while decreasing humidity. The winds were particularly intense in Ventura County and Orange County, but unusually, they also traveled over the San Gabriel Mountains to affect Pasadena and Altadena, where the Eaton Fire is located.
+   ### Why Cattle Are So Vulnerable to Heat
+     Cattle are particularly sensitive to extreme temperatures. Their comfort zone, known as the thermoneutral zone, is relatively narrow. For our analysis, we considered critical thresholds for the Temperature Humidity Index (THI) at 75, 82, and 94 (Lee et al., 2025) which correspond to increasing levels of heat stress risk. When temperatures and humidity push the THI above these values, cattle begin to suffer physiologically. Outside of their thermoneutral zone (roughly 41°F to 77°F, or THI above 75), cattle experience reduced feed intake, slower liveweight gain, lower milk yield, and impaired fertility. Unlike humans, cattle have a limited ability to sweat. To cool down, they rely on increased breathing, radiating heat, and reducing their feed intake. But as they eat less to stay cool, their energy and milk or weight gain also declines. When the heat load surpasses what their bodies can handle, the result is heat stress, or in severe cases, death. 
    </p>
   </Prose> 
     <Figure>
       <Image
-      src={new URL('./la-fires-santa_winds.png', import.meta.url).href}
+      src={new URL('./cows_heat.jpg', import.meta.url).href}
       style={{ maxWidth: '80%', height: 'auto' }}
     />
     <Caption>
@@ -98,8 +97,8 @@ taxonomy:
   </Figure> 
   <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
     <p>
-   ### Unprecedented Winter Wildfires
-    These wildfires differ significantly from past fire disasters in California, primarily due to their timing and intensity. Unlike the typical wildfire season in the West, which peaks in late summer when extreme heat and dry conditions elevate the risk of ignition, these fires occurred in the middle of winter, driven by the powerful Santa Ana winds. This makes them some of the most destructive winter wildfires in over four decades. In some areas, wind speeds have surged up to 100 mph—equivalent to hurricane-force gusts—rapidly spreading the flames and making containment efforts exceptionally difficult.
+   ### Variability Matters: More Than Just the Mean
+     Our findings indicate that it is the variability in THI—especially seasonal swings—rather than just the mean THI that most strongly impacts cattle mortality. Notably, increased variability in THI has been observed to raise mortality during cooler months and, paradoxically, decrease mortality in summer months in hotter states like Texas and Nebraska (see Fig). This suggests that cattle may be less able to adapt to unexpected swings in thermal stress outside the traditional summer peak, making year-round management and monitoring increasingly important.
   </p>
   </Prose>
 </Block>
@@ -137,9 +136,12 @@ taxonomy:
     layerId='nlcd-annual-conus'
     datetime='2001-01-01'
   >  
-  ### Land Cover Changes and Rising Fire Risks
-    <p>
-    A key factor contributing to the increasing intensity of wildfires is the transformation of Southern California’s landscape over the years. Analysis of the National Land Cover Database (NLCD) data from 2000 to 2021 for Los Angeles County reveals significant shifts in land use, particularly an expansion of shrublands and grasslands, a decline in forests, and growth in urban regions. During wet years, shrublands and grasslands grow densely, creating substantial fuel loads, while prolonged drought conditions leave behind dry, highly flammable vegetation. Meanwhile, the expansion of residential areas into fire-prone zones has further heightened wildfire risks. The figure below presents NLCD analysis, showing that grasslands in the region have increased from 6% to 12%, while forests have declined from 8% to 3.4%. Additionally, a significant portion of the region—approximately 40% is now dominated by shrublands.
+  ### Climate Drivers: The Slow Aggravators
+    <p> 
+       While temperature and humidity are the primary drivers of heat stress, other climate variables such as solar radiation (SRAD), vapor pressure deficit (VPD), and precipitation also play critical roles. It is not just the mean levels of these factors, but their variability that exerts a larger impact on cattle mortality. For example: 
+       - Drought conditions reduce pasture quality and water availability, leaving cattle more vulnerable to heat stress.
+       - Sudden heavy rains can spike humidity, pushing the THI above critical thresholds and compounding heat risk.
+       - Persistent drought has already contributed to shrinking cattle herds and higher feed costs, further straining producers.
     </p>
      <Figure>
       <Image
@@ -332,122 +334,16 @@ taxonomy:
 </Block>
 
 <Block>
-  <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
-    <p>
-   ### EPA AirNow: Local Air Quality Conditions
-   To complement TEMPO’s satellite-based observations, we utilized ground-based air quality data from the EPA’s AirNow system. During peak wildfire activity, particulate matter (PM) levels in Los Angeles reached alarming heights, with daily PM10 concentrations as high as 140 μg/m³ and PM2.5 levels reaching 35 μg/m³.
-   </p>
-   </Prose>
-<Figure>
-  <Chart
-    dataPath={new URL('./la-fires-pm25_pm10.csv', import.meta.url).href}
-    dateFormat="%m/%d/%Y"
-    idKey='Source'
-    xKey='Date'
-    yKey='Value'
-    yAxisLabel='PM'
-    highlightStart='01/07/25'
-    highlightEnd='01/11/25'
-    highlightLabel='Peak of LA Fires'
-    fontFamily="'Arial', sans-serif"
-    fontSize={14}
-    fontWeight={700}
-    titleFontSize={18}
-    axisLabelFontSize={16}
-    legendFontSize={14}
-    highlightColor="#FF4136"
-    lineColors={['#0074D9', '#FF851B']}
-    gridColor="#E0E0E0"
-  />
-  <Caption style={{ fontWeight: 'bold', fontSize: '16px', marginTop: '10px' }}>
-    Daily PM2.5 and PM10 taken from EPA's Air Now sensors across Los Angeles County, California.
-  </Caption>
-</Figure>
-</Block>
-
-<Block>
-  <Figure>
-  <Map
-    datasetId='la-fires-gedi'
-    layerId='la-fires-gedi'
-    dateTime='2025-01-07'
-    zoom={12.1}
-    center={[-118.0897, 34.207]}
-  />
-  <Caption
-    attrAuthor='NASA'
-    attrUrl='https://nasa.gov/'
-  >
-  Aboveground biomass density (AGBD; Mg ha-1) predictions from NASA's GEDI Level-4A footprint product over Eaton Fire perimeter.
-  </Caption>
-</Figure>
-    <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
-     <p>   
-   ### Quantifying Carbon Loss from the LA Wildfires Using NASA’s Global Ecosystem Dynamics Investigation (GEDI)
-    NASA’s GEDI footprint Above-Ground Biomass Density (AGBD) Level-4 (L4A) product is innovatively used to estimate the carbon loss and associated CO₂ emissions for the Palisades and Eaton Fires. The GEDI L4A dataset provides above-ground biomass density predictions in units of megagrams per hectare (Mg/ha), enabling quantification of biomass loss due to wildfires. Based on the availability of GEDI data (2019-2023), we calculated pre-fire above-ground forest biomass and derived emissions under two scenarios, Scenario 1: All above-ground forest biomass is assumed lost, Scenario 2: Burn rates from USGS fire data are applied.
-    1 Teragram (Tg) of CO₂ is equivalent to 1 million metric tons of CO₂. 
-     </p>
-  </Prose>
-</Block>   
-
-<Block>
-    <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
-     <p>   
-      This massive amount of carbon dioxide can be compared to everyday activities and global emissions:
-
-      <u>The Eaton Fire emissions:</u>
-      - Scenario 1 (1.062951 Tg CO₂): Comparable to the CO₂ absorbed by about 17.5 million tree seedlings grown for 10 years.
-      - Scenario 2 (0.8718654 Tg CO₂): Equivalent to the carbon sequestered by approximately 1.1 million acres of U.S. forests in one year.
-
-      <u>The Palisades Fire emissions:</u>
-      - Scenario 1 (0.8074 Tg CO₂): Equivalent to the annual CO₂ emissions of about 174,000 average passenger vehicles.
-      - Scenario 2 (0.6973 Tg CO₂): Similar to the yearly CO₂ emissions from electricity use in approximately 120,000 homes.
-
-      These emissions from just two fires represent a significant portion of a small country's annual CO₂ emissions or the amount of carbon dioxide sequestered by millions of trees over several years. This highlights the substantial impact wildfires can have on carbon release and underscores the importance of forest management and fire prevention strategies. 
-    </p>
-  </Prose>
-  <Figure style={{ width: '100%', maxWidth: '800px' }}> 
-      <Image
-      src={new URL('./la-fires-CO.png', import.meta.url).href}
-      style={{ width: '100%', height: 'auto' }} 
-    />
-    <Caption attrUrl='https://www.jpl.nasa.gov/missions/atmospheric-infrared-sounder-airs/'>
-      Carbon monoxide (CO) levels detected by the Atmospheric Infrared Sounder (AIRS) on NASA's Aqua satellite over Los Angeles, comparing pre-wildfire conditions on January 6, 2025, to post-wildfire conditions on January 9, 2025.
-    </Caption>
-  </Figure>
-</Block>
-
-<Block>
-<Figure>
-  <Map
-    datasetId='la-fires-sea'
-    layerId='la-fires-sea'
-    dateTime='2025-01-01'
-    zoom={10}
-    center={[-118.74, 34.06]}
-  />
-  <Caption
-    attrAuthor='NASA'
-    attrUrl='https://nasa.gov/'
-  >
-  LA County's Significant Ecological Areas (SEAs) in the area impacted by the 2025 Palisades Fire. 
-  </Caption>
-</Figure>
-<Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
-    <p>
-   ### Wildfires Encroaching on Critical Habitats
-    Significant Ecological Areas (SEAs) and Coastal Resource Areas are critical designations in LA County aimed at preserving irreplaceable biological and coastal resources. Los Angeles County has identified 62 SEAs, which are officially designated zones that support biodiversity by maintaining genetic and physical diversity essential for sustaining ecosystems. These areas include habitats for rare and endangered species, wildlife corridors, and natural biotic communities, such as the Santa Clara River SEA—the last major unchanneled river in the county. Coastal Resource Areas encompass vital coastal ecosystems such as wetlands, dunes, beaches, and significant portions of the Santa Monica Mountains. These areas provide essential services like biodiversity support, water quality maintenance, and climate regulation. LA County's beaches stretch approximately 25 miles and attract more than 50 million annual visitors, playing a major role in the region's economy. However, the recent wildfires in LA have encroached upon SEA habitats, disrupting species migration and weakening ecosystem resilience. The destruction of these habitats, particularly in regions already vulnerable due to drought and urbanization, further reduces the SEAs' ability to provide crucial ecosystem services.  
-    </p>
-</Prose>
-</Block>
-
-<Block>
   <Prose>
-     ### To mitigate and prevent wildfires risks, several safeguards can be implemented:
-     - Avoid fire-related activities: Refrain from any activities involving fire or sparks during hot, dry, and windy conditions.
-     - Urban planning: Limit residential expansion into fire-prone regions and forest areas.
-     - Create Defensible Spaces: Clear vegetation and combustible materials around homes and structures to act as a buffer zone against wildfires.
-     - Controlled burns: Periodic low-intensity fires speed up the process of forest decomposition, create open patches for new plants to grow, and improve habitat.
+     ### The Path Forward: Adaptation and Resilience
+     If livestock are to adapt to new thermal environments and maintain productivity, infrastructural investments and management adjustments are essential. These include:
+     - Increase water access points and keep water sources shaded
+     - Offer natural or artificial shade (trees, shade cloths, portable structures)
+     - Improve ventilation and air movement (fans, open barns, windbreaks)
+     - Reduce stocking density to minimize crowding and heat buildup
+     - Adjust feeding times to cooler parts of the day (early morning or late evening)
+     - Rotate pastures and maintain vegetative cover for cooler surfaces
+     - Develop and implement a heat stress management plan, including early warning systems
   </Prose>
 </Block>
 
