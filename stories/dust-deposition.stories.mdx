@@ -61,26 +61,13 @@ taxonomy:
 <Block>
   <Prose>
     ## Understanding the Way Dust Connects Land, Ocean, and Life Through NASA Earth Observing Tools 
-
-    A variety of NASA satellite observations and models help scientists explore the complex interactions between land and ocean that are influenced by dust. NASA's **MOD**erate Resolution **I**maging **S**pectroradiometer **(MODIS)**, an Earth-observing satellite sensor, detects these changes by measuring ocean chlorophyll—a pigment that indicates the presence of phytoplankton. Additionally, NASA’s **P**lankton, **A**erosol, **C**loud, and ocean **E**cosystem **(PACE)** mission, launched in 2024, continues to monitor ocean biology through the amount of sunlight reflected back to space that may be affected by atmospheric dust or other aerosols.
-
-    While satellite sensors allow for monitoring both dust and phytoplankton activity, meteorological variables are needed to analyze this interconnected relationship. NASA’s **M**odern-**E**ra **R**etrospective analysis for **R**esearch and **A**pplications, **Version 2 (MERRA-2)** provides detailed, three-dimensional wind, temperature, and moisture data, which is essential when determining the influences between dust transport and ocean productivity.
-
   </Prose>
 </Block>
 
 <Block>
   <Prose>
 
-    The different meteorological variables that may impact and affect phytoplankton across the TNAO include: 
-
-    <li>**Aerosol Optical Depth (AOD):** A measure of how much sunlight is blocked or scattered by aerosols (tiny particles in the atmosphere)</li>
-    <li>**Cloud Cover:** Fraction or percentage of the sky covered by clouds</li>
-    <li>**Sea-Surface Temperatures (SST):** The temperature at the top layer of the ocean</li>
-    <li>**Wind Speed:** The rate at which the wind is moving on the ocean surface</li>
-    <li>**Dust Concentration:** The amount of dust present in a volume of the atmosphere</li>
-
-    MODIS data shows that chlorophyll-a concentrations are increasing across the TNAO over the previous decade (Figure 1). 
+    A variety of NASA satellite observations and models help scientists explore the complex interactions between land and ocean that are influenced by dust. NASA's **MOD**erate Resolution **I**maging **S**pectroradiometer **(MODIS)**, an Earth-observing satellite sensor, detects these changes by measuring ocean chlorophyll—a pigment that indicates the presence of phytoplankton. Additionally, NASA’s **P**lankton, **A**erosol, **C**loud, and ocean **E**cosystem **(PACE)** mission, launched in 2024, continues to monitor ocean biology through the amount of sunlight reflected back to space that may be affected by atmospheric dust or other aerosols.
   </Prose> 
 
   <Figure>
@@ -104,14 +91,21 @@ taxonomy:
   </Figure>
 
   <Prose> 
-    Satellite data, specifically from NASA’s **P**lankton, **A**erosol, **C**loud, and ocean **E**cosystem (**PACE**) satellite, plays a massive role when it comes to analyzing dust and its effects on phytoplankton. Additionally, NASA’s **M**odern **E**ra **R**etrospective analysis for **R**esearch and **A**pplications Version **2** (**MERRA-2**) was heavily used as a source of historical weather data, and products from the **MOD**erate resolution **I**maging **S**pectroradiometer (**MODIS**) - a satellite-based Earth observation sensor - were used as a means to obtain observations of different variables on the Earth’s surface. 
+    While satellite sensors allow for monitoring both dust and phytoplankton activity, meteorological variables are needed to analyze this interconnected relationship. NASA’s **M**odern-**E**ra **R**etrospective analysis for **R**esearch and **A**pplications, **Version 2 (MERRA-2)** provides detailed, three-dimensional wind, temperature, and moisture data, which is essential when determining the influences between dust transport and ocean productivity.
   </Prose>
 </Block>
 
 
 <Block>
   <Prose> 
-    These variables were studied using data from the different NASA data products. AOD and cloud cover were mainly measured using Terra and Aqua satellites. SST were also obtained using MODIS. Wind Speed and dust concentration were analyzed using MERRA-2 data. Lastly, chlorophyll-a used PACE satellite data for analysis. 
+    
+    The different meteorological variables that may impact and affect phytoplankton across the TNAO include: 
+
+    <li>**Aerosol Optical Depth (AOD):** A measure of how much sunlight is blocked or scattered by aerosols (tiny particles in the atmosphere)</li>
+    <li>**Cloud Cover:** Fraction or percentage of the sky covered by clouds</li>
+    <li>**Sea-Surface Temperatures (SST):** The temperature at the top layer of the ocean</li>
+    <li>**Wind Speed:** The rate at which the wind is moving on the ocean surface</li>
+    <li>**Dust Concentration:** The amount of dust present in a volume of the atmosphere</li>
   </Prose>
 
   <Figure>
@@ -135,31 +129,8 @@ taxonomy:
   </Figure>
 
   <Prose> 
-    PACE and MODIS data shows that chlorophyll-a concentrations are increasing across the TNAO over the previous decade (Figure 1; Map 2). Chlorophyll-a concentration is a reasonable approximation for phytoplankton because similar to plants, phytoplankton undergo photosynthesis to convert sunlight into oxygen. 
+    Over the past 20 years, data has shown that chlorophyll-a levels – which is a direct indicator of phytoplankton – have been rising in the TNAO (Figure 1). The observed increase in phytoplankton compared to previous years alludes to a potential meteorological influence.
   </Prose>
-</Block>
-
-<Block type ='wide'>
-  <Figure>
-    <Map
-      center={[-50, 17]}
-      zoom={3}
-      datasetId=' OCI_PACE_Chlorophyll_a'
-      layerId='OCI_PACE_Chlorophyll_a'
-      dateTime='2025-04-13'
-      compareDateTime='2025-05-07'
-    />
-    <Caption>
-    **Map 2:** PACE-derived Chlorophyll-A data from April 13 and May 7, 2025 showing increasing chlorophyll near the West African coast and then in the Caribbean Sea directly following the passage of a Saharan dust storm.
-    </Caption>
-  </Figure>
-</Block>
-
-<Block>
-  <Prose>
-    This data suggests that there is an increase in phytoplankton, as chlorophyll-a concentrations have been steadily increasing. The observed increase in phytoplankton compared to previous years suggests a potential meteorological influence that warrants further investigation.
-  </Prose>
-
 </Block>
 
 <Block>
@@ -174,9 +145,26 @@ taxonomy:
       yAxisLabel='Chlorophyll-a concentration (mg/m^3)'
     />
     <Caption>
-      **Figure 1:** Time series of monthly mean chlorophyll-a concentration over the Tropical North Atlantic Ocean (TNAO) as derived from MODIS.
+      **Figure 1:** Interactive time series of monthly mean chlorophyll-a concentration over the TNAO as derived from MODIS.
     </Caption>
     </Figure>
+</Block>
+
+<Block type ='wide'>
+  <Figure>
+    <Map
+      center={[-50, 17]}
+      zoom={3}
+      datasetId=' OCI_PACE_Chlorophyll_a'
+      layerId='OCI_PACE_Chlorophyll_a'
+      dateTime='2025-04-13'
+      compareDateTime='2025-05-07'
+    />
+    <Caption>
+    **Map 2:** Interactive slider map 4/13/25 -> 5/7/25(PACE chlorophyll-a)
+
+    </Caption>
+  </Figure>
 </Block>
 
 <Block>
@@ -195,9 +183,9 @@ taxonomy:
     </Figure>
 
   <Prose>
-    ## AOD and Chlorophyll-a
+    ## AOD and Phytoplankton 
 
-    There is a slight increasing trend in AOD over time, based on statistical analysis across the TNAO (Figure 2). This rise in dust leads to more sunlight being scattered or absorbed, which reduces the amount of light reaching the ocean surface. 
+    At the same time, long-term satellite observations from MODIS sensors as well as MERRA-2 reanalysis data have recorded slightly higher levels of aerosols over the same 20-year period, which in this region are mostly caused by dust (Figure 2). The fact that both aerosols and chlorophyll-a have increased together points to a possible connection: more dust blowing into the ocean may be helping fertilize the water, leading to more phytoplankton growth.
 
     This trend would seem to imply that the more dust deposition there is, the more abundant the phytoplankton are. However, when comparing AOD directly to chlorophyll-a, a negative trend is revealed, suggesting that dust alone cannot be the sole cause of increasing phytoplankton concentrations across the TNAO. 
   </Prose>
@@ -206,11 +194,11 @@ taxonomy:
 
 <Block>
   <Prose>
-    ## Cloud Cover and Chlorophyll-a
+    ## Cloud Cover and Phytoplankton
 
-    One notable observation is that the phytoplankton population has flourished in recent years, despite an overall increase in cloud cover (Figure 3). Typically, increased cloudiness reduces the amount of sunlight reaching the ocean surface, thus limiting photosynthesis. However, chlorophyll-a concentrations have continued to rise, suggesting that cloud cover alone is not a limiting factor for phytoplankton growth.
+    However, phytoplankton growth depends on many factors besides dust. Even when dust adds nutrients to the ocean, it doesn’t always lead to more phytoplankton if the water already has enough nutrients. In fact, dust in the air can block some sunlight from reaching the ocean surface, which can reduce photosynthesis and slow plankton growth. Clouds have a similar effect by cutting down the amount of sunlight.
 
-    Looking more closely at cloud cover, there is a positive trend observed across the TNAO when examining MERRA-2-derived monthly mean values. While clouds can reduce light availability, rainfall—which can frequently accompany increased cloudiness—shows a decreasing trend in this region. Rainfall can negatively affect phytoplankton by washing atmospheric dust (a key nutrient source) out of the air. Therefore, the decline in rainfall may be contributing to more favorable conditions for phytoplankton, helping to explain the observed rise in chlorophyll-a concentrations, despite increased cloud cover.
+    Interestingly, though, recent data shows that phytoplankton populations have still increased in recent years, even though cloud cover has also shown an increasing trend (Figure 3). Normally, more clouds would limit the sunlight needed for photosynthesis, leading to less phytoplankton. But the steady rise in chlorophyll-a levels suggests that cloudiness by itself has not been enough to hold back phytoplankton growth.
   </Prose>
 
   <Figure>
@@ -239,13 +227,30 @@ taxonomy:
       yAxisLabel='Rainfall'
     />
     <Caption>
-      **Figure 4:** Negative trend of rainfall across the TNAO.
+      **Figure 4:** Monthly mean time series showing a negative trend of rainfall across the TNAO. Data derived from MERRA-2.          
     </Caption>
   </Figure>
+
+  <Prose>
+    ## Rainfall and Phytoplankton
+
+    Although more cloud cover has shown an increasing trend over the past two decades, rainfall in this region has actually decreased over time. This decline in rain could be changing how dust gets deposited onto the ocean surface. Usually, rain helps wash dust out of the air—a process called wet deposition. But with less rain, more dust may be settling straight onto the ocean surface (dry deposition), bringing nutrients that encourage phytoplankton growth. This change in how dust is delivered could help explain why chlorophyll-a levels keep rising despite more cloud cover.
+
+    Rainfall itself also plays an important role. It can carry dust and nutrients into the ocean, which sometimes supports plankton growth. On the other hand, rain can also wash away gases like carbon dioxide or change the chemistry of seawater in ways that might limit plankton activity.
+  </Prose>
+
 </Block>
 
 
 <Block>
+
+    <Prose>
+    ## Vertical Mixing and Phytoplankton
+
+    There is a slightly increasing trend in SST over the past two decades in the TNAO (Figure 5). In general, cooler SSTs can be a sign that mixing and upwelling are bringing nutrients from deeper layers up to the surface, which supports phytoplankton growth. Warmer SSTs, on the other hand, often indicate less mixing and fewer nutrients reaching the surface.
+
+    However, when looking at how phytoplankton respond to rising SST in this region, chlorophyll-a concentrations have still increased over time. This suggests that SST itself isn’t directly controlling phytoplankton growth. Instead, SST acts more like an indicator of underlying ocean processes happening below the surface, such as upwelling, that affect how many nutrients are available for phytoplankton to use.
+  </Prose>
 
     <Figure>
       <Chart
@@ -260,25 +265,9 @@ taxonomy:
       **Figure 5:**  Monthly mean time series showing a positive trend of SST across the TNAO. Data derived from MERRA-2.
       </Caption>
     </Figure>
-
-  <Prose>
-    ## SST and Chlorophyll-a
-
-    There is a slightly positive trend in SSTs over time in the TNAO (Figure 4). This would suggest a slight reduction of phytoplankton as decreasing SSTs are typically a sign of increased mixing and upwelling. This allows nutrients located deeper in the ocean to mix towards the surface, giving phytoplankton easier access.
-
-    However, when taking a look at how phytoplankton responds to this increasing trend, the opposite effect occurs. Chlorophyll-a concentrations show an increasing trend as SST increases. This would suggest that SSTs likely don't play a significant role in increasing phytoplankton production in the TNAO.
-  </Prose>
 </Block>
 
 <Block>
-  <Prose>
-    ## Wind Speed and Chlorophyll-a
-
-    Wind speed is also a factor that heavily influences nutrient mixing, similar to the effects of SST trends. Higher wind speeds would promote stronger mixing of the nutrients that the phytoplankton are able to use. Based on trends associated with MERRA-2-derived monthly mean values, wind speeds have slightly decreased across the TNAO (Figure 5). 
-
-    However, the effect of wind speed on phytoplankton is consistent with the previously discussed rationale of upwelling nutrients for phytoplankton. This indicates that when winds are relatively strong, mixing processes can still occur.
-  </Prose>
-
     <Figure>
       <Chart
         dataPath={new URL('./Dust_WS_trendline.csv', import.meta.url).href}
@@ -292,9 +281,23 @@ taxonomy:
       **Figure 6:** Monthly mean time series showing a slightly negative trend of wind speed across the TNAO. Data derived from MERRA-2.
       </Caption>
     </Figure>
+
+    <Prose>
+    ## Wind Speed and Phytoplankton 
+
+    Wind speed directly influences nutrient mixing in the ocean, which supports phytoplankton growth. Stronger winds cause more mixing, bringing nutrients from deeper waters to the surface. Sea surface temperature (SST) can reflect the effects of this mixing but does not cause it. According to MERRA-2-derived monthly mean values, wind speeds have slightly decreased across the TNAO (Figure 6).
+
+    However, the effect of wind speed on phytoplankton is consistent with the previously discussed rationale of upwelling nutrients for phytoplankton. This indicates that when winds are relatively strong, mixing processes can still occur. 
+  </Prose>
 </Block>
 
 <Block>
+    <Prose>
+    ## Dust Concentration and Phytoplankton
+
+    Higher concentrations of Saharan dust are being transported and deposited across the surface of the TNAO over the time period examined (Figure 7). This has a positive influence on chlorophyll-a levels, indicating that phytoplankton are responding to increased dust deposition across the surface of the TNAO. Additionally, the rate of direct dust deposition settling into the ocean has shown an increasing trend.
+  </Prose>
+
     <Figure>
       <Chart
         dataPath={new URL('./Dust_WS_trendline.csv', import.meta.url).href}
@@ -308,19 +311,18 @@ taxonomy:
       **Figure 7:** Monthly mean time series showing a positive trend of dust concentration across the TNAO. Data derived from MERRA-2.
       </Caption>
     </Figure>
-  <Prose>
-    ## Dust Concentration and Chlorophyll-a
 
-    Higher concentrations of Saharan dust are being transported and deposited across the surface of the Atlantic Ocean over the time period examined (Figure 6). This variable has a positive influence on chlorophyll-a levels, indicating that phytoplankton are responding to increased dust deposition across the surface of the TNAO.
-  </Prose>
 </Block>
 
 <Block>
   <Prose>
 
     ## Conclusion
-    NASA Earth observation data products revealed that phytoplankton growth across the TNAO is primarily associated with decreasing trends in rainfall and increasing concentrations of dust deposition on the ocean surface. These environmental conditions provide an abundant supply of crucial nutrients to the phytoplankton from incoming dust plumes, allowing them to flourish. Ultimately, sustainability practices of phytoplankton populations are essential to the neighboring coastal communities within this region, including Senegal, The Gambia, Guinea-Bissau, Guinea, and Sierra Leone. Fisheries are a dominant part of these countries’ food supply, economy, and overall, livelihood. Specifically, the fishing industries of  these West African countries make up as much as 30% of national revenue. This includes the exportation of fish around the world, making up a several billion dollar industry. In 2008, exports to the European Union alone made up about $1.75 billion in revenue to West Africa. More recently, the United States imported nearly [$30 million](https://www.google.com/url?q=https://apps.fas.usda.gov/newgainapi/api/Report/DownloadReportByFileName?fileName%3DFisheries%2Band%2BAquaculture%2Bin%2BSenegal_Dakar_Senegal_SG2022-0015.pdf%26utm_source%3Dchatgpt.com&sa=D&source=docs&ust=1750872771310161&usg=AOvVaw1QZHzFBra_Phxf1ljPJH0r) worth of tuna, mollusks, octopus, and shrimp from Senegal during 2019.  As phytoplankton productivity increases across the TNAO, so does marine biodiversity, which in turn supports the sustainable livelihoods of West African communities that depend on marine resources. 
+    NASA Earth observation data products revealed that phytoplankton growth across the TNAO is primarily associated with decreasing trends in rainfall and increasing concentrations of dust deposition on the ocean surface. While rising dust and phytoplankton trends have been studied before, the role of decreasing rainfall and how dust delivered directly versus washed out by rain differently affects ocean biology, adds new understanding to these complex interactions. These environmental conditions provide an abundant supply of crucial nutrients to the phytoplankton from incoming dust plumes, allowing them to flourish. 
 
+    These changing environmental conditions appear to have created an abundant supply of nutrients for phytoplankton. Specifically, less rainfall means less dust is removed by rain and more dust settles straight onto the ocean surface, supporting higher phytoplankton growth. While past studies have explored how dust fertilizes the ocean, this research adds new understanding by highlighting the importance of declining rainfall and shifts in how dust is delivered.
+
+    Ultimately, sustainability practices of phytoplankton populations are essential to the neighboring coastal communities within this region, including Senegal, The Gambia, Guinea-Bissau, Guinea, and Sierra Leone (Map 3). Fisheries are a dominant part of these countries’ food supply, economy, and overall, livelihood. Specifically, the fishing industries of  these West African countries make up as much as 30% of national revenue. This includes the exportation of fish around the world, making up a several billion dollar industry. In 2008, exports to the European Union alone made up about $1.75 billion in revenue to West Africa. More recently, the United States imported nearly $30 million worth of tuna, mollusks, octopus, and shrimp from Senegal during 2019. As phytoplankton productivity increases across the TNAO, so does marine biodiversity, which in turn supports the sustainable livelihoods of West African communities that depend on marine resources. Understanding what drives phytoplankton productivity in this region is essential for protecting local ecosystems and supporting seafood supply chains that benefit consumers worldwide.
 
   </Prose>
   
