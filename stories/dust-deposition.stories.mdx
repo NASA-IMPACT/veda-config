@@ -169,11 +169,11 @@ taxonomy:
 <Block>
     <Figure>
       <Chart
-        dataPath={new URL('./Dust_AOD_trendline.csv', import.meta.url).href}
+        dataPath={new URL('./Dust_AOD_trendline1.csv', import.meta.url).href}
         dateFormat="%Y-%m-%d"
         idKey='source'
         xKey='Date'
-        yKey='Chlorophyll'
+        yKey='AOD'
         yAxisLabel="Aerosol Optical Depth"
       />
       <Caption>
@@ -202,11 +202,11 @@ taxonomy:
 
   <Figure>
     <Chart
-      dataPath={new URL('./Dust_CLD_trendline.csv', import.meta.url).href}
+      dataPath={new URL('./Dust_CLD_trendline1.csv', import.meta.url).href}
       dateFormat="%Y-%m-%d"
       idKey='source'
       xKey='Date'
-      yKey='Chlorophyll'
+      yKey='CLD'
       yAxisLabel='Cloud Fraction'
     />
     <Caption>
@@ -218,11 +218,11 @@ taxonomy:
 <Block>
   <Figure>
     <Chart
-      dataPath={new URL('./Dust_RAIN_trendline.csv', import.meta.url).href}
+      dataPath={new URL('./Dust_RAIN_trendline1.csv', import.meta.url).href}
       dateFormat="%Y-%m-%d"
       idKey='source'
       xKey='Date'
-      yKey='Chlorophyll'
+      yKey='RAIN'
       yAxisLabel='Rainfall'
     />
     <Caption>
@@ -253,11 +253,11 @@ taxonomy:
 
     <Figure>
       <Chart
-        dataPath={new URL('./Dust_SST_trendline.csv', import.meta.url).href}
+        dataPath={new URL('./Dust_SST_trendline1.csv', import.meta.url).href}
         dateFormat="%Y-%m-%d"
         idKey='source'
         xKey='Date'
-        yKey='Chlorophyll'
+        yKey='SST'
         yAxisLabel="Sea Surface Temperature (C)"
       />
       <Caption>
@@ -269,11 +269,11 @@ taxonomy:
 <Block>
     <Figure>
       <Chart
-        dataPath={new URL('./Dust_WS_trendline.csv', import.meta.url).href}
+        dataPath={new URL('./Dust_WS_trendline1.csv', import.meta.url).href}
         dateFormat="%Y-%m-%d"
         idKey='source'
         xKey='Date'
-        yKey='Chlorophyll'
+        yKey='WS'
         yAxisLabel="Wind Speed (mph)"
       />
       <Caption>
@@ -299,15 +299,15 @@ taxonomy:
 
     <Figure>
       <Chart
-        dataPath={new URL('./Dust_WS_trendline.csv', import.meta.url).href}
+        dataPath={new URL('./Dust_DSC_trendline1.csv', import.meta.url).href}
         dateFormat="%Y-%m-%d"
         idKey='source'
         xKey='Date'
-        yKey='Chlorophyll'
+        yKey='DSC'
         yAxisLabel="Dust Surface Mass Concentration (µg/m³)"
       />
       <Caption>
-      **Figure 7:** Monthly mean time series showing a negative trend of dust concentration across the TNAO. Data derived from MERRA-2.
+      **Figure 7:** Monthly mean time series showing a positive trend of dust concentration across the TNAO. Data derived from MERRA-2.
       </Caption>
     </Figure>
 
