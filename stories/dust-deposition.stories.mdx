@@ -158,10 +158,10 @@ taxonomy:
       datasetId=' OCI_PACE_Chlorophyll_a'
       layerId='OCI_PACE_Chlorophyll_a'
       dateTime='2025-04-13'
-      compareDateTime='2025-05-22'
+      compareDateTime='2025-07-01'
     />
     <Caption>
-    **Map 2:** Interactive slider map showing an increase in chloropyll-a east of the Caribbean Sea after large dust storms (April 13, 2025 to May 22, 2025).
+    **Map 2:** Interactive slider map showing an increase in chloropyll-a east of the Caribbean Sea after several large dust storms (April 13, 2025 to July 1, 2025).
     </Caption>
   </Figure>
 </Block>
@@ -269,11 +269,11 @@ taxonomy:
 <Block>
     <Figure>
       <Chart
-        dataPath={new URL('./Dust_WS_trendline3.csv', import.meta.url).href}
+        dataPath={new URL('./Dust_WS_trendline2.csv', import.meta.url).href}
         dateFormat="%Y-%m-%d"
         idKey='source'
         xKey='Date'
-        yKey= 'WS'
+        yKey= 'MWS'
         yAxisLabel="Wind Speed (mph)"
       />
       <Caption>
