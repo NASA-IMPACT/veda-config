@@ -70,7 +70,7 @@ taxonomy:
 <Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
    <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
     <p>
-   ### Why Cattle Are So Vulnerable to Heat
+      ### Why Cattle Are So Vulnerable to Heat
      Cattle are particularly sensitive to extreme temperatures. Their comfort zone, known as the thermoneutral zone, is relatively narrow. For our analysis, we considered critical thresholds for the Temperature Humidity Index (THI) at 75, 82, and 94 (Lee et al., 2025) which correspond to increasing levels of heat stress risk. When temperatures and humidity push the THI above these values, cattle begin to suffer physiologically. Outside of their thermoneutral zone (roughly 41°F to 77°F, or THI above 75), cattle experience reduced feed intake, slower liveweight gain, lower milk yield, and impaired fertility. Unlike humans, cattle have a limited ability to sweat. To cool down, they rely on increased breathing, radiating heat, and reducing their feed intake. But as they eat less to stay cool, their energy and milk or weight gain also declines. When the heat load surpasses what their bodies can handle, the result is heat stress, or in severe cases, death. 
    </p>
   </Prose> 
@@ -88,7 +88,7 @@ taxonomy:
 <Block>
   <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
     <p>
-   ### Heat Stress Risks in Small vs. Large Cattle Operations
+      ### Heat Stress Risks in Small vs. Large Cattle Operations
      To better understand how cattle operations are affected by heat stress, we combined USDA Census data on animal feeding operation (AFO) sizes with pasture and grassland percentages from the National Land Cover Database (NLCD). 
      - Small AFOs (as defined by the USDA Census) are most commonly located in counties or areas with the highest percentage of pasture land. These smaller operations typically rely on pasture-based systems and often lack the resources for intensive cooling or heat abatement infrastructure. As a result, their herds are especially vulnerable to both direct heat stress and the added challenges of drought and pasture degradation.
      - Large AFOs, on the other hand, are most closely associated with areas that have the highest percentage of grassland. These larger operations tend to keep more of their herd in confined or semi-confined settings and generally have greater access to capital for investing in heat abatement technologies and advanced management practices. Nevertheless, large operations still face significant risks during prolonged or extreme heat events, since grassland systems are also susceptible to drought and wildfires.
@@ -109,26 +109,10 @@ taxonomy:
 <Block>
   <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
      <p>
-   ### Prolonged Dry Conditions
-   Los Angeles County, characterized by its Mediterranean climate with hot, dry summers and mild, wet winters, has experienced an extended period of dry conditions over the past year. As illustrated in the figure, which presents rainfall data from in-situ observations at ASOS (Automated Surface Observing System) stations across the region. One year ago, Los Angeles faced severe flooding and landslides due to a series of intense storms in early 2023, which effectively ended a long-term drought that had persisted for several years. The sudden influx of moisture led to widespread vegetation growth, as plants rapidly absorbed the available water. However, with limited rainfall over the past year, much of this vegetation has dried out, transforming into highly flammable fuel. This prolonged period of arid conditions, combined with the abundance of dried vegetation, has greatly increased the region’s wildfire risk. 
+      ### Climate Drivers: The Slow Aggravators
+       While temperature is the primary driver of heat stress in cattle, other climate variables such as vapor pressure deficit, relative humidity, and precipitation also play critical roles. It is not just the average levels of these factors, but their variability that has a greater impact on cattle mortality. For example, increased variability in relative humidity exposes cattle to frequent and unpredictable shifts between dry and humid conditions, challenging their ability to acclimate, disrupting thermoregulation, and increasing physiological stress. Rapid changes in humidity can also interact with temperature extremes, as reflected in the THI, amplifying heat load during hot, humid spikes and raising mortality risk. Similarly, in dry states like Nebraska, Oklahoma, Texas, and Kansas, it is precipitation variability rather than average precipitation that is strongly correlated with cattle mortality. High variability in precipitation, whether within a season or between years, disrupts forage growth, water availability, and pasture quality, making it difficult for cattle to maintain condition and for producers to plan resources. Sudden droughts can cause acute shortages of feed and water, leading to spikes in mortality, while heavy rains can increase humidity and push THI above critical thresholds, compounding heat stress. 
     </p>
    </Prose>
-  <Figure>
-    <Chart
-      dataPath={new URL('./la-fires-precip.csv', import.meta.url).href}
-      dateFormat="%m/%d/%y"
-      idKey='source'
-      xKey='date'
-      yKey='daily_precipitation'
-      yAxisLabel='Precipitation (mm)'
-      highlightStart = '01/07/25'
-      highlightEnd = '01/11/25'
-      highlightLabel = 'Peak of LA Fires'
-    />
-    <Caption>
-    Daily precipitation data taken from Automated Surface Observing System (ASOS) stations across Los Angeles County, California. 
-    </Caption>
-  </Figure>
 </Block>
 
 <ScrollytellingBlock>
@@ -139,12 +123,9 @@ taxonomy:
     layerId='nlcd-annual-conus'
     datetime='2001-01-01'
   >  
-  ### Climate Drivers: The Slow Aggravators
+  ### Hot States: A Familiar but Escalating Problem
     <p> 
-       While temperature and humidity are the primary drivers of heat stress, other climate variables such as solar radiation (SRAD), vapor pressure deficit (VPD), and precipitation also play critical roles. It is not just the mean levels of these factors, but their variability that exerts a larger impact on cattle mortality. For example: 
-       - Drought conditions reduce pasture quality and water availability, leaving cattle more vulnerable to heat stress.
-       - Sudden heavy rains can spike humidity, pushing the THI above critical thresholds and compounding heat risk.
-       - Persistent drought has already contributed to shrinking cattle herds and higher feed costs, further straining producers.
+      In places like Kansas, Texas, and Oklahoma, heat stress is a recurring challenge but it’s getting worse. Kansas, the third-largest cattle-producing state, was hit especially hard in 2022, exacerbating an industry already struggling with the smallest U.S. herd in decades due to persistent drought and high feed costs. (GIF with THI for Kansas.) 
     </p>
      <Figure>
       <Image
@@ -182,9 +163,9 @@ taxonomy:
     layerId='nlcd-annual-conus'
     datetime='2021-01-01'
   >
-  ### Fire Suppression and the Accumulation of Fuel
+  ### Cold States: Not as Safe as They Seem
      <p>
-    Although chaparral shrublands are adapted to fire cycles, decades of aggressive fire suppression, coupled with worsening drought, have heightened wildfire vulnerability. Similarly, grasslands, which are dominated by fine fuels, are highly susceptible to rapid ignition and fast-moving fires. The figure below presents NLCD analysis for Palisades, indicating that ~70% of the region consists of shrublands.
+      States like Montana, Idaho, and Colorado, often associated with cooler temperatures, are not immune. Cattle here may be less acclimated to heat and can still carry winter coats into summer, making sudden high temperatures even more dangerous. Sharp temperature spikes in these regions can catch both animals and producers off guard. Colorado and Idaho are generally considered cooler, more temperate, and often semi-arid or mountainous states. Their cattle are more likely to experience dry air and rapid dehydration during heat events, especially at higher elevations or during summer droughts. In these settings, a higher average relative humidity can indeed help reduce dehydration and moderate temperature swings, which is beneficial for cattle health. (Analysis png maps).
    </p>
    <Figure>
       <Image
@@ -230,43 +211,6 @@ taxonomy:
     * **Evacuations:** >100,000 people
     * **Fatalities:**   18    
     </p>
-  </Chapter>
-
-  <Chapter
-    center={[-118.25, 34.2123]}
-    zoom={11.3}
-    datasetId='nlcd-annual-conus'
-    layerId='nlcd-annual-conus'
-    datetime='2021-01-01'
-  >  
-  ### Factors Influencing Containment
-    The Eaton Fire impacted a mix of shrublands (~55%), evergreen forests (~20%), and developed land (~11%). The higher moisture content of evergreen forests compared to shrublands likely slowed the fire's progression and aided containment efforts. Additionally, the slightly lower proportion of shrublands compared to the Palisades Fire may have contributed to a reduction in the fire's overall intensity.   
-  <Figure>
-      <Image
-      src={new URL('./la-fires-Eaton_nlcd_percentages_by_year.png', import.meta.url).href}
-      style={{ maxWidth: '200%'}}
-    />
-    <Caption>
-      The NLCD land cover changes within the Eaton Region, Los Angeles from 2001-2021 show significant shrublands.
-    </Caption>
-  </Figure>
-  </Chapter>
-
-  <Chapter
-    center={[-118.25, 34.2123]}
-    zoom={11.3}
-    datasetId='la-fires-HLS'
-    layerId='la-fires-HLS'
-    datetime='2025-01-14'
-  >
-  ### Eaton Fire Structure Damage Assessments
-  <p>
-    Out of 18,421 structures assessed following the fire, ~50.9% were completely destroyed, with ~ 5.8% affected and remaining 42.7% were intact.    
-    * **Residential:**   ~50.6% of single-family homes and ~60% of mobile homes were destroyed.
-    * **Commercial**   ~36.3% of buildings were destroyed.
-    * **Community:**   ~42.9 % of churches and ~37.4 % of schools were lost or damaged.  
-    * **Utilities & Infrastructure:**   ~55.1 % of utility structures were destroyed.
-   </p>
   </Chapter>
 
 </ScrollytellingBlock>
