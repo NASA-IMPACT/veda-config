@@ -83,6 +83,40 @@ layers:
       spatialExtent: Regional
       temporalResolution: N/A
       unit: Artificial Light Emissions (W cm^-2 sr^-1)
+
+
+  - id: lakeview-nightlights-tornadoes-2024
+    stacCol: lakeview-nightlights-tornadoes-2024
+    name: Black Marble Night Lights (Lakeview OH Tornado Damage; Difference)
+    type: raster
+    description: 'Black Marble night lights imagery of tornado damage at Lakeview, Ohio in the spring 2024 tornado season.'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      colormap_name: bwr
+      rescale:
+        - -150
+        - 150
+      nodata: -999
+    legend:
+      type: gradient
+      min: "-150"
+      max: "150"
+      stops:
+        - "#4575b4"
+        - "#91bfdb"
+        - "#e0f3f8"
+        - "#ffffff"
+        - "#fee090"
+        - "#fc8d59"
+        - "#d73027"
+    info:
+      source: NASA Black Marble
+      spatialExtent: Regional
+      temporalResolution: N/A
+      unit: Artificial Light Emissions Difference (W cm^-2 sr^-1)
+
 ---
 
 

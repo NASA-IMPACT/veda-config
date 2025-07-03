@@ -1,0 +1,59 @@
+---
+id: OCI_PACE_Chlorophyll_a
+name: Chlorophyll a (L2)PACE / OCI
+featured: true
+description: The Chlorophyll a layer provides the near-surface concentration of chlorophyll a in milligrams of chlorophyll pigment per cubic meter (mg/m3) in the ocean. 
+media:
+  src: https://earthdata.nasa.gov/s3fs-public/styles/hds_hero_half/public/2024-08/gedi-agbd-us-cloudfree--2-07-2023.jpg?VersionId=E_Zx.ti84WTiK8GB2XWD5VqrwZi7QNDl&itok=cjabduMn
+infoDescription: |
+  ::markdown    
+    - Temporal Extent: 2024 Feb 25 - Present
+    - Temporal Resolution: Daily
+layers:
+  - id: OCI_PACE_Chlorophyll_a
+    stacApiEndpoint: https://dev.openveda.cloud/api/stac/
+    stacCol: OCI_PACE_Chlorophyll_a
+    name: Chlorophyll a (L2) (from Worldview/GIBS)
+    type: wmts 
+    description: The Chlorophyll a layer provides the near-surface concentration of chlorophyll a in milligrams of chlorophyll pigment per cubic meter (mg/m3) in the ocean.
+    sourceParams:
+      layers: 1
+      version: 1.3.0
+      crs: EPSG:3857
+      styles:
+    zoomExtent:
+      - 0
+      - 5
+    analysis:
+      exclude: true
+    legend:
+      type: gradient
+      min: 0
+      max: 20
+      stops:
+        - rgb(72, 0, 130)     
+        - rgb(0, 0, 255)     
+        - rgb(0, 255, 255)    
+        - rgb(0, 255, 0)      
+        - rgb(255, 255, 0)   
+        - rgb(255, 165, 0)  
+        - rgb(255, 0, 0)     
+    compare:
+      datasetId: OCI_PACE_Chlorophyll_a
+      layerId: OCI_PACE_Chlorophyll_a
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'dd LLL yyyy')} VS ${dateFns.format(compareDatetime, 'dd LLL yyyy')}`;
+        }
+---
+<Block>
+<Prose>
+
+## About OCI
+The Ocean Color Instrument (OCI) is a spectrometer used to measure intensity of light over portions of the electromagnetic spectrum: ultraviolet (UV), visible, near infrared, and several shortwave infrared bands. It will enable continuous measurement of light at finer wavelength resolution than previous NASA ocean color sensors, providing detailed information on the global ocean. The color of the ocean is determined by the interaction of sunlight with substances or particles present in seawater such as chlorophyll, a green photosynthetic pigment found in phytoplankton and land plants.
+
+## About PACE
+PACE is NASA's Plankton, Aerosol, Cloud, ocean Ecosystem mission. The mission carries the Ocean Color Instrument (OCI), the Spectro-Polarimeter for Planetary Exploration (SPEXone), and the Hyper Angular Research Polarimeter (HARP2). OCI,PACE’s primary instrument, is an optical spectrometer that measures the intensity of light over portions of the electromagnetic spectrum. SPEXone and HARP2 are multi-angle polarimeters and they will be used to measure how the oscillation of sunlight within a geometric plane - known as its polarization - is changed by passing through clouds, aerosols, and the ocean. Measuring polarization states of UV-to-shortwave light at various angles provides detailed information on the atmosphere and ocean, such as particle size and composition. PACE will cover the entire globe every two days and at a spatial resolution of 1.2 km.
+
+</Prose>
+</Block>
