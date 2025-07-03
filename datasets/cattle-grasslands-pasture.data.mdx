@@ -1,0 +1,342 @@
+---
+id: cattle-grasslands-pasture
+isHidden: false
+name: 'Cattle grasslands and pasture county level data'
+description: "Cattle grasslands and pasture county level data"
+media:
+  src: ::file media/CMIP-winter-median.jpeg
+  alt: Photo of Nisqually glacier
+  author:
+    name: Justin Pflug
+    url: 
+taxonomy:
+  - name: Topics
+    values:
+      - Water Resources
+  - name: Subtopics
+    values:
+      - Snow
+      - Precipitation
+      - Water Cycle
+      - Hydrology
+  - name: Source
+    values:
+      - NASA EIS
+      - CMIP6
+infoDescription: |
+  ::markdown
+    Future changes to air temperature are expected to influence the phase of winter precipitation (snowfall or rainfall) and the timing and amount of snowmelt and streamflow, while changes to precipitation are expected to alter the volume and timing of snow water resources. Here, we present the projected percent-change to Western US air tempeature and cumulative winter precipitation at quarter-degree spatial resoutions across 20-year time periods between 2016 and 2095. Projections are averaged from an ensemble of 23 downscaled climate models from the CMIP6 NASA Earth Exchange Global Daily Downscaled Projections.
+layers:
+  - id: county_grasslands_2019_pastu
+    stacCol: county_grasslands_2019_pastu
+    tileApiEndpoint: "https://dev.openveda.cloud/api/raster"
+    stacApiEndpoint: "https://dev.openveda.cloud/api/stac"
+    name: 'County grasslands'
+    type: raster
+    description: 'Percent difference in projected winter (January, February, March) cumulative precipitation, relative to a historical timeframe between 1995 and 2014. Outputs represent the median of 23 member ensembles from CMIP6 (SSP 2-4.5) with downscaling performed by NASA Earth Exchange'
+    sourceParams:
+      resampling: bilinear
+      bidx: 1
+      nodata: -9999
+      colormap_name: ylorrd
+      rescale:
+        - 0
+        - 88
+    legend:
+      type: gradient
+      label: Precipitation percent-difference
+      min: "0"
+      max: "88"
+      stops:
+        - "#ffffcc"
+        - "#fee187"
+        - "#feab49"
+        - "#fc5b2e"
+        - "#d41020"
+        - "#800026" 
+    info:
+      source: NASA
+      spatialExtent: Regional
+      temporalResolution: Annual
+      unit: Percent Difference
+
+
+  - id: county_pasture_2019_pastu
+    stacCol: county_pasture_2019_pastu
+    tileApiEndpoint: "https://dev.openveda.cloud/api/raster"
+    stacApiEndpoint: "https://dev.openveda.cloud/api/stac"
+    name: 'County pasture'
+    type: raster
+    description: 'Percent difference in projected winter (January, February, March) cumulative precipitation, relative to a historical timeframe between 1995 and 2014. Outputs represent the median of 23 member ensembles from CMIP6 (SSP 2-4.5) with downscaling performed by NASA Earth Exchange'
+    sourceParams:
+      resampling: bilinear
+      bidx: 1
+      nodata: -9999
+      colormap_name: ylorrd
+      rescale:
+        - 0
+        - 67
+    legend:
+      type: gradient
+      label: Precipitation percent-difference
+      min: "0"
+      max: "67"
+      stops:
+        - "#ffffcc"
+        - "#fee187"
+        - "#feab49"
+        - "#fc5b2e"
+        - "#d41020"
+        - "#800026" 
+    info:
+      source: NASA
+      spatialExtent: Regional
+      temporalResolution: Annual
+      unit: Percent Difference
+
+
+  - id: usda_cattle_large_AFOs_2017
+    stacCol: usda_cattle_large_AFOs_2017
+    tileApiEndpoint: "https://dev.openveda.cloud/api/raster"
+    stacApiEndpoint: "https://dev.openveda.cloud/api/stac"
+    name: 'usda_cattle_large_AFOs_2017'
+    type: raster
+    description: 'Percent difference in projected winter (January, February, March) cumulative precipitation, relative to a historical timeframe between 1995 and 2014. Outputs represent the median of 23 member ensembles from CMIP6 (SSP 2-4.5) with downscaling performed by NASA Earth Exchange'
+    sourceParams:
+      resampling: bilinear
+      bidx: 1
+      nodata: -9999
+      colormap_name: ylorrd
+      rescale:
+        - 0
+        - 304
+    legend:
+      type: gradient
+      label: Precipitation percent-difference
+      min: "0"
+      max: "304"
+      stops:
+        - "#ffffcc"
+        - "#fee187"
+        - "#feab49"
+        - "#fc5b2e"
+        - "#d41020"
+        - "#800026" 
+    info:
+      source: NASA
+      spatialExtent: Regional
+      temporalResolution: Annual
+      unit: Percent Difference
+
+  - id: usda_cattle_medium_AFOs_2017
+    stacCol: usda_cattle_medium_AFOs_2017
+    tileApiEndpoint: "https://dev.openveda.cloud/api/raster"
+    stacApiEndpoint: "https://dev.openveda.cloud/api/stac"
+    name: 'usda_cattle_medium_AFOs_2017'
+    type: raster
+    description: 'Percent difference in projected winter (January, February, March) cumulative precipitation, relative to a historical timeframe between 1995 and 2014. Outputs represent the median of 23 member ensembles from CMIP6 (SSP 2-4.5) with downscaling performed by NASA Earth Exchange'
+    sourceParams:
+      resampling: bilinear
+      bidx: 1
+      nodata: -9999
+      colormap_name: ylorrd
+      rescale:
+        - 0
+        - 1508
+    legend:
+      type: gradient
+      label: Precipitation percent-difference
+      min: "0"
+      max: "1508"
+      stops:
+        - "#ffffcc"
+        - "#fee187"
+        - "#feab49"
+        - "#fc5b2e"
+        - "#d41020"
+        - "#800026" 
+    info:
+      source: NASA
+      spatialExtent: Regional
+      temporalResolution: Annual
+      unit: Percent Difference
+
+
+  - id: usda_cattle_small_AFOs_2017
+    stacCol: usda_cattle_small_AFOs_2017
+    tileApiEndpoint: "https://dev.openveda.cloud/api/raster"
+    stacApiEndpoint: "https://dev.openveda.cloud/api/stac"
+    name: 'usda_cattle_small_AFOs_2017'
+    type: raster
+    description: 'Percent difference in projected winter (January, February, March) cumulative precipitation, relative to a historical timeframe between 1995 and 2014. Outputs represent the median of 23 member ensembles from CMIP6 (SSP 2-4.5) with downscaling performed by NASA Earth Exchange'
+    sourceParams:
+      resampling: bilinear
+      bidx: 1
+      nodata: -9999
+      colormap_name: ylorrd
+      rescale:
+        - 0
+        - 2312.0
+    legend:
+      type: gradient
+      label: Precipitation percent-difference
+      min: "0"
+      max: "2312.0"
+      stops:
+        - "#ffffcc"
+        - "#fee187"
+        - "#feab49"
+        - "#fc5b2e"
+        - "#d41020"
+        - "#800026" 
+    info:
+      source: NASA
+      spatialExtent: Regional
+      temporalResolution: Annual
+      unit: Percent Difference
+
+
+  - id: usda_cattle_total_heads_2017
+    stacCol: usda_cattle_total_heads_2017
+    tileApiEndpoint: "https://dev.openveda.cloud/api/raster"
+    stacApiEndpoint: "https://dev.openveda.cloud/api/stac"
+    name: 'usda_cattle_total_heads_2017'
+    type: raster
+    description: 'Percent difference in projected winter (January, February, March) cumulative precipitation, relative to a historical timeframe between 1995 and 2014. Outputs represent the median of 23 member ensembles from CMIP6 (SSP 2-4.5) with downscaling performed by NASA Earth Exchange'
+    sourceParams:
+      resampling: bilinear
+      bidx: 1
+      nodata: -9999
+      colormap_name: ylorrd
+      rescale:
+        - 0
+        - 1057272.0
+    legend:
+      type: gradient
+      label: Precipitation percent-difference
+      min: "0"
+      max: "1057272.0"
+      stops:
+        - "#ffffcc"
+        - "#fee187"
+        - "#feab49"
+        - "#fc5b2e"
+        - "#d41020"
+        - "#800026" 
+    info:
+      source: NASA
+      spatialExtent: Regional
+      temporalResolution: Annual
+      unit: Percent Difference
+
+---
+
+<Block>
+  <Figure>
+    <Map
+      datasetId='cattle-grasslands-pasture'
+      layerId='county_grasslands_2019_pastu'
+      dateTime='2019-01-01'
+      zoom={3.0}
+      center={[-98.8209,38.174]}
+    />
+    <Caption
+      attrAuthor='NASA'
+      attrUrl='https://nasa.gov/'
+    >
+    County grassland
+  </Caption>  
+  </Figure>
+</Block>
+
+<Block>
+  <Figure>
+    <Map
+      datasetId='cattle-grasslands-pasture'
+      layerId='county_pasture_2019_pastu'
+      dateTime='2019-01-01'
+      zoom={3.0}
+      center={[-98.8209,38.174]}
+    />
+    <Caption
+      attrAuthor='NASA'
+      attrUrl='https://nasa.gov/'
+    >
+    County pasture
+  </Caption>  
+  </Figure>
+</Block>
+
+
+<Block>
+  <Figure>
+    <Map
+      datasetId='cattle-grasslands-pasture'
+      layerId='usda_cattle_large_AFOs_2017'
+      dateTime='2017-01-01'
+      zoom={3.0}
+      center={[-98.8209,38.174]}
+    />
+    <Caption
+      attrAuthor='NASA'
+      attrUrl='https://nasa.gov/'
+    >
+    usda_cattle_large_AFOs_2017
+  </Caption>  
+  </Figure>
+</Block>
+
+<Block>
+  <Figure>
+    <Map
+      datasetId='cattle-grasslands-pasture'
+      layerId='usda_cattle_medium_AFOs_2017'
+      dateTime='2017-01-01'
+      zoom={3.0}
+      center={[-98.8209,38.174]}
+    />
+    <Caption
+      attrAuthor='NASA'
+      attrUrl='https://nasa.gov/'
+    >
+    usda_cattle_medium_AFOs_2017
+  </Caption>  
+  </Figure>
+</Block>
+
+<Block>
+  <Figure>
+    <Map
+      datasetId='cattle-grasslands-pasture'
+      layerId='usda_cattle_small_AFOs_2017'
+      dateTime='2017-01-01'
+      zoom={3.0}
+      center={[-98.8209,38.174]}
+    />
+    <Caption
+      attrAuthor='NASA'
+      attrUrl='https://nasa.gov/'
+    >
+    usda_cattle_small_AFOs_2017
+  </Caption>  
+  </Figure>
+</Block>
+
+<Block>
+  <Figure>
+    <Map
+      datasetId='cattle-grasslands-pasture'
+      layerId='usda_cattle_total_heads_2017'
+      dateTime='2017-01-01'
+      zoom={3.0}
+      center={[-98.8209,38.174]}
+    />
+    <Caption
+      attrAuthor='NASA'
+      attrUrl='https://nasa.gov/'
+    >
+    usda_cattle_total_heads_2017
+  </Caption>  
+  </Figure>
+</Block>
+

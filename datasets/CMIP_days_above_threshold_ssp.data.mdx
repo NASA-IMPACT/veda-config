@@ -1,0 +1,71 @@
+---
+id: climdex-tmaxxf-access-cm2
+isHidden: true
+name: 'CMIP Days above 90 degrees climdex-tmaxxf-access-cm2'
+description: "CMIP Days above 90 degrees F climdex-tmaxxf-access-cm2"
+media:
+  src: ::file media/CMIP-winter-median.jpeg
+  alt: Photo of Nisqually glacier
+  author:
+    name: Justin Pflug
+    url: 
+taxonomy:
+  - name: Topics
+    values:
+      - Water Resources
+  - name: Subtopics
+    values:
+      - Snow
+      - Precipitation
+      - Water Cycle
+      - Hydrology
+  - name: Source
+    values:
+      - NASA EIS
+      - CMIP6
+infoDescription: |
+  ::markdown
+    CMIP Days above 90 degrees climdex-tmaxxf-access-cm2
+layers:
+  - id: climdex-tmaxxf-access-cm2
+    stacCol: climdex-tmaxxf-access-cm2-ssp126
+    tileApiEndpoint: "https://openveda.cloud/api/raster"
+    stacApiEndpoint: "https://openveda.cloud/api/stac"
+    name: 'Days above 90 Degrees F SSP126'
+    type: raster
+    description: 'Days above 90 degrees F'
+    sourceParams:
+      resampling: bilinear
+      bidx: 1
+      nodata: nan
+      colormap_name: ylorrd
+      rescale:
+        - 0
+        - 365
+    compare:
+      datasetId: climdex-tmaxxf-access-cm2
+      layerId: climdex-tmaxxf-access-cm2-ssp585
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      unit: 
+        label: Days
+      type: gradient
+      min: 0
+      max: 365
+      stops:
+      - "#E4FF7A"
+      - "#FAED2D"
+      - "#FFCE0A"
+      - "#FFB100"
+      - "#FE9900"
+      - "#FC7F00"
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Annual
+      unit: Days
+
+---
