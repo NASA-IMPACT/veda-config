@@ -298,12 +298,12 @@ taxonomy:
 
     <Figure>
       <Chart
-        dataPath={new URL('./Dust_DSC_trendline1.csv', import.meta.url).href}
+        dataPath={new URL('./WandD_Dust_trendline.csv', import.meta.url).href}
         dateFormat="%Y-%m-%d"
         idKey='source'
         xKey='Date'
-        yKey='DSC'
-        yAxisLabel="Dust Surface Mass Concentration (µg/m³)"
+        yKey='dustdata'
+        yAxisLabel="Dust Deposition (kg m^-2 s^-1)"
       />
       <Caption>
       **Figure 7:** Monthly mean time series showing a positive trend of dust concentration across the TNAO. Data derived from MERRA-2.
