@@ -25,15 +25,15 @@ taxonomy:
       - CMIP6
 infoDescription: |
   ::markdown
-    Future changes to air temperature are expected to influence the phase of winter precipitation (snowfall or rainfall) and the timing and amount of snowmelt and streamflow, while changes to precipitation are expected to alter the volume and timing of snow water resources. Here, we present the projected percent-change to Western US air tempeature and cumulative winter precipitation at quarter-degree spatial resoutions across 20-year time periods between 2016 and 2095. Projections are averaged from an ensemble of 23 downscaled climate models from the CMIP6 NASA Earth Exchange Global Daily Downscaled Projections.
+    Cattle and Vegetation Changes.
 layers:
   - id: county_grasslands_2019_pastu
     stacCol: county_grasslands_2019_pastu
     tileApiEndpoint: "https://dev.openveda.cloud/api/raster"
     stacApiEndpoint: "https://dev.openveda.cloud/api/stac"
-    name: 'County grasslands'
+    name: 'Grassland percentage'
     type: raster
-    description: 'Percent difference in projected winter (January, February, March) cumulative precipitation, relative to a historical timeframe between 1995 and 2014. Outputs represent the median of 23 member ensembles from CMIP6 (SSP 2-4.5) with downscaling performed by NASA Earth Exchange'
+    description: 'County-level percentage of grassland estimated from NLCD land cover data'
     sourceParams:
       resampling: bilinear
       bidx: 1
@@ -41,7 +41,7 @@ layers:
       colormap_name: ylorrd
       rescale:
         - 0
-        - 88
+        - 100
     legend:
       type: gradient
       label: Precipitation percent-difference
@@ -55,10 +55,10 @@ layers:
         - "#d41020"
         - "#800026" 
     info:
-      source: NASA
+      source: Maheshwari Neelam 
       spatialExtent: Regional
       temporalResolution: Annual
-      unit: Percent Difference
+      unit: Percent
 
 
   - id: county_pasture_2019_pastu
@@ -67,7 +67,7 @@ layers:
     stacApiEndpoint: "https://dev.openveda.cloud/api/stac"
     name: 'County pasture'
     type: raster
-    description: 'Percent difference in projected winter (January, February, March) cumulative precipitation, relative to a historical timeframe between 1995 and 2014. Outputs represent the median of 23 member ensembles from CMIP6 (SSP 2-4.5) with downscaling performed by NASA Earth Exchange'
+    description: 'County-level percentage of pasture estimated from NLCD land cover data'
     sourceParams:
       resampling: bilinear
       bidx: 1
@@ -75,7 +75,7 @@ layers:
       colormap_name: ylorrd
       rescale:
         - 0
-        - 67
+        - 100
     legend:
       type: gradient
       label: Precipitation percent-difference
@@ -89,7 +89,7 @@ layers:
         - "#d41020"
         - "#800026" 
     info:
-      source: NASA
+      source: Maheshwari Neelam
       spatialExtent: Regional
       temporalResolution: Annual
       unit: Percent Difference
@@ -99,10 +99,10 @@ layers:
     stacCol: usda_cattle_large_AFOs_2017
     tileApiEndpoint: "https://dev.openveda.cloud/api/raster"
     stacApiEndpoint: "https://dev.openveda.cloud/api/stac"
-    name: 'usda_cattle_large_AFOs_2017'
+    name: 'USDA Cattle Large Animal Feeding Operations (AFO)'
     type: raster
-    description: 'Percent difference in projected winter (January, February, March) cumulative precipitation, relative to a historical timeframe between 1995 and 2014. Outputs represent the median of 23 member ensembles from CMIP6 (SSP 2-4.5) with downscaling performed by NASA Earth Exchange'
-    sourceParams:
+    description: 'Cattle: County-Level Distribution of Large (Number of operations that managed 200 or more heads) Animal Feeding Operations (AFO).'
+sourceParams:
       resampling: bilinear
       bidx: 1
       nodata: -9999
@@ -123,7 +123,7 @@ layers:
         - "#d41020"
         - "#800026" 
     info:
-      source: NASA
+      source: USDA Census
       spatialExtent: Regional
       temporalResolution: Annual
       unit: Percent Difference
@@ -132,9 +132,9 @@ layers:
     stacCol: usda_cattle_medium_AFOs_2017
     tileApiEndpoint: "https://dev.openveda.cloud/api/raster"
     stacApiEndpoint: "https://dev.openveda.cloud/api/stac"
-    name: 'usda_cattle_medium_AFOs_2017'
+    name: 'USDA Cattle Medium Animal Feeding Operations (AFO)'
     type: raster
-    description: 'Percent difference in projected winter (January, February, March) cumulative precipitation, relative to a historical timeframe between 1995 and 2014. Outputs represent the median of 23 member ensembles from CMIP6 (SSP 2-4.5) with downscaling performed by NASA Earth Exchange'
+        description: 'Cattle: County-Level Distribution of Medium (Number of operations that managed between 50 and 199 heads) Animal Feeding Operations (AFO).'
     sourceParams:
       resampling: bilinear
       bidx: 1
@@ -145,7 +145,7 @@ layers:
         - 1508
     legend:
       type: gradient
-      label: Precipitation percent-difference
+      label:  percent
       min: "0"
       max: "1508"
       stops:
@@ -156,7 +156,7 @@ layers:
         - "#d41020"
         - "#800026" 
     info:
-      source: NASA
+      source: USDA Census
       spatialExtent: Regional
       temporalResolution: Annual
       unit: Percent Difference
@@ -166,9 +166,9 @@ layers:
     stacCol: usda_cattle_small_AFOs_2017
     tileApiEndpoint: "https://dev.openveda.cloud/api/raster"
     stacApiEndpoint: "https://dev.openveda.cloud/api/stac"
-    name: 'usda_cattle_small_AFOs_2017'
+    name: 'USDA Cattle Small Animal Feeding Operations (AFO)'
     type: raster
-    description: 'Percent difference in projected winter (January, February, March) cumulative precipitation, relative to a historical timeframe between 1995 and 2014. Outputs represent the median of 23 member ensembles from CMIP6 (SSP 2-4.5) with downscaling performed by NASA Earth Exchange'
+    description: 'Cattle: County-Level Distribution of Small (Number of operations that managed less than 50 heads) Animal Feeding Operations (AFO).'
     sourceParams:
       resampling: bilinear
       bidx: 1
@@ -190,7 +190,7 @@ layers:
         - "#d41020"
         - "#800026" 
     info:
-      source: NASA
+      source: USDA Census
       spatialExtent: Regional
       temporalResolution: Annual
       unit: Percent Difference
@@ -202,7 +202,7 @@ layers:
     stacApiEndpoint: "https://dev.openveda.cloud/api/stac"
     name: 'usda_cattle_total_heads_2017'
     type: raster
-    description: 'Percent difference in projected winter (January, February, March) cumulative precipitation, relative to a historical timeframe between 1995 and 2014. Outputs represent the median of 23 member ensembles from CMIP6 (SSP 2-4.5) with downscaling performed by NASA Earth Exchange'
+        description: 'Cattle: County-Level Distribution of Total Number of Heads.'
     sourceParams:
       resampling: bilinear
       bidx: 1
@@ -224,7 +224,7 @@ layers:
         - "#d41020"
         - "#800026" 
     info:
-      source: NASA
+      source: USDA Census
       spatialExtent: Regional
       temporalResolution: Annual
       unit: Percent Difference
