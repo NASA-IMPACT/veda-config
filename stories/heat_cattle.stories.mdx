@@ -66,35 +66,23 @@ taxonomy:
   </Figure>
 </Block>
 
-<Block>
-  <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
-    <p>
-      ### Heat Stress Risks in Small vs. Large Cattle Operations
-     To better understand how cattle operations are affected by heat stress, we combined USDA Census data on animal feeding operation (AFO) sizes with pasture and grassland percentages from the National Land Cover Database (NLCD). 
-     - Small AFOs (as defined by the USDA Census) are most commonly located in counties or areas with the highest percentage of pasture land. These smaller operations typically rely on pasture-based systems and often lack the resources for intensive cooling or heat abatement infrastructure. As a result, their herds are especially vulnerable to both direct heat stress and the added challenges of drought and pasture degradation.
-     - Large AFOs, on the other hand, are most closely associated with areas that have the highest percentage of grassland. These larger operations tend to keep more of their herd in confined or semi-confined settings and generally have greater access to capital for investing in heat abatement technologies and advanced management practices. Nevertheless, large operations still face significant risks during prolonged or extreme heat events, since grassland systems are also susceptible to drought and wildfires.
-     By integrating these two data sources, we were able to assess how operation size and land cover type influence cattle vulnerability to heat stress, offering a nuanced view of land use and risk trends across U.S. agriculture.
-  </p>
-  </Prose>
-</Block>
-
 <ScrollytellingBlock>
   <Chapter
-    center={[-119.1, 34.0823]}
-    zoom={8.5}
+    center={[-99.418678,40.125466]}
+    zoom={15}
     datasetId='cattle-grasslands-pasture'
     layerId='county_pasture_2019_pastu'
-    datetime='2001-01-01'
+    datetime='2017-01-01'
   >
-  ### Mapping County Pasture and Grassland
+  ### Mapping Pasture and Grassland Coverage
   <p>
     The foundation of cattle operations is the landscape itself. The following maps show the percentage of pasture and grassland in each county, based on the National Land Cover Database (NLCD). Areas with higher percentages of pasture and grassland provide more natural forage for cattle, but are also more exposed to climate extremes. Understanding these patterns is the first step in assessing heat stress risk for cattle.
   </p>
   </Chapter>
 
   <Chapter
-    center={[-119.1, 34.0823]}
-    zoom={8.5}
+    center={[-99.418678,40.125466]}
+    zoom={15}
     datasetId='cattle-grasslands-pasture'
     layerId='usda_cattle_small_AFOs_2017'
     datetime='2017-01-01'
@@ -106,8 +94,8 @@ taxonomy:
   </Chapter>
 
   <Chapter
-    center={[-119.1, 34.0823]}
-    zoom={8.5}
+    center={[-99.418678,40.125466]}
+    zoom={15}
     datasetId='cattle-grasslands-pasture'
     layerId='usda_cattle_large_AFOs_2017'
     datetime='2017-01-01'
@@ -119,16 +107,12 @@ taxonomy:
   </Chapter>
 
   <Chapter
-    center={[-119.1, 34.0823]}
-    zoom={8.5}
+    center={[-99.418678,40.125466]}
+    zoom={15}
     datasetId='cattle-grasslands-pasture'
     layerId='county_grasslands_2019_pastu'
-    datetime='2001-01-01'
+    datetime='2017-01-01'
   >
-  ### Mapping County Grassland
-  <p>
-  Map of the grasslands
-  </p>
   </Chapter>
 </ScrollytellingBlock>
 
@@ -145,12 +129,10 @@ taxonomy:
   <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
      <p>
       ### Climate Drivers: The Slow Aggravators
-       While temperature is the primary driver of heat stress in cattle, other climate variables such as vapor pressure deficit, relative humidity, and precipitation also play critical roles. It is not just the average levels of these factors, but their variability that has a greater impact on cattle mortality. For example, increased variability in relative humidity exposes cattle to frequent and unpredictable shifts between dry and humid conditions, challenging their ability to acclimate, disrupting thermoregulation, and increasing physiological stress. Rapid changes in humidity can also interact with temperature extremes, as reflected in the THI, amplifying heat load during hot, humid spikes and raising mortality risk. Similarly, in dry states like Nebraska, Oklahoma, Texas, and Kansas, it is precipitation variability rather than average precipitation that is strongly correlated with cattle mortality. High variability in precipitation, whether within a season or between years, disrupts forage growth, water availability, and pasture quality, making it difficult for cattle to maintain condition and for producers to plan resources. Sudden droughts can cause acute shortages of feed and water, leading to spikes in mortality, while heavy rains can increase humidity and push THI above critical thresholds, compounding heat stress. 
+       While temperature is the primary driver of heat stress in cattle, other climate variables such as vapor pressure deficit, precipitation etc., also play critical roles. It is not just the average levels of these factors, but their variability that has a greater impact on cattle mortality. For example, increased variability in relative humidity exposes cattle to frequent and unpredictable shifts between dry and humid conditions, challenging their ability to acclimate, disrupting thermoregulation, and increasing physiological stress. Rapid changes in humidity can also interact with temperature extremes, as reflected in the THI, amplifying heat load during hot, humid spikes and raising mortality risk. 
     </p>
    </Prose>
 </Block>
-
-
 
 <ScrollytellingBlock>
   <Chapter
@@ -162,7 +144,7 @@ taxonomy:
   >  
   ### Hot States: A Familiar but Escalating Problem
     <p> 
-      In places like Kansas, Texas, and Oklahoma, heat stress is a recurring challenge but it’s getting worse. Kansas, the third-largest cattle-producing state, was hit especially hard in 2022, exacerbating an industry already struggling with the smallest U.S. herd in decades due to persistent drought and high feed costs. (GIF with THI for Kansas.) 
+      In places like Kansas, Texas, and Oklahoma, heat stress is a recurring challenge but it’s getting worse. Kansas, the third-largest cattle-producing state, was hit especially hard in 2022, exacerbating an industry already struggling with the smallest U.S. herd in decades due to persistent drought and high feed costs. (GIF with THI for Kansas.) Similarly, in dry states like Nebraska, Oklahoma, Texas, and Kansas, it is precipitation variability rather than average precipitation that is strongly correlated with cattle mortality. High variability in precipitation, whether within a season or between years, disrupts forage growth, water availability, and pasture quality, making it difficult for cattle to maintain condition and for producers to plan resources. Sudden droughts can cause acute shortages of feed and water, leading to spikes in mortality, while heavy rains can increase humidity and push THI above critical thresholds, compounding heat stress. 
     </p>
      <Figure>
       <Image
