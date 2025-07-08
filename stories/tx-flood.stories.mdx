@@ -16,6 +16,8 @@ taxonomy:
   - name: Subtopics
     values:
       - Drought
+      - Floods
+      - Hydrology
       - Precipitation
   - name: Source
     values:
@@ -64,6 +66,7 @@ taxonomy:
   </Figure>
 </Block>
 
+
 <Block>
     <Prose>
     ### Meteorological Overview
@@ -89,7 +92,7 @@ taxonomy:
 </Block>
 
 
-<Block type='wide'>
+<Block>
   <Figure>
     <Chart
       dataPath={new URL('./tx-flood-gauge-data.csv', import.meta.url).href}
@@ -103,25 +106,35 @@ taxonomy:
     Stream gauge height data from the National Water Prediction Service showing the Guadalupe River quickly rising well above flood stage in Kerr County, TX on July 4, 2025.
     </Caption>
   </Figure>
+  <Prose>
+  Locally intense thunderstorms produced rainfall rates exceeding 2-4 inches per hour, prompting the National Weather Service to issue urgent flash flood emergencies, including a 4:03 a.m. alert warning residents in Hunt and Ingram to seek higher ground without delay. The Guadalupe River responded with a violent surge: at Hunt, the river rose over 2 feet between 4:20 and 4:25 a.m. on July 4, and ultimately crested at 37.5 feet. The initial flood stage of the Guadalupe River is 10 feet, with major flooding beginning at 22 feet. 
+  </Prose>
 </Block>
 
+
 <Block>
-<Figure>
-  <Map
-    center={[-99.22, 30.03]}
-    zoom={7.5}
-    datasetId='soil-texture'
-    layerId='soil-texture-0cm'
-    dateTime='2017-12-31'
-  />
-  <Caption
-    attrAuthor='NASA'
-    attrUrl='https://nasa.gov/'
-  >
-    Surface soil texture in Kerr County, TX and surrounding areas. 
-  </Caption>
-</Figure>
+    <Prose>
+    ### Hydrologic Overview
+
+    Much of the Texas Hill Country is underlain by thin, rocky soils sitting atop extensive beds of limestone. These shallow soils are typically only a few inches to a foot deep before hitting nearly solid rock layers that act like a barrier, preventing water from draining through the ground. Even in average rainfall events, this characteristic leads to impressive runoffs and rapid rises in creeks. During intense storms, rainwater has nowhere to infiltrate, and instead travels down slopes almost immediately, funneling into low-lying valleys and rivers. The steep gradients of the surrounding terrain amplify this effect, causing runoff to gather speed and volume in a matter of minutes. These hydrologic conditions are one reason the Hill Country is often called the most flood-prone region in the continental United States.
+    </Prose>
+    <Figure>
+    <Map
+        center={[-99.22, 30.03]}
+        zoom={7.5}
+        datasetId='soil-texture'
+        layerId='soil-texture-0cm'
+        dateTime='2017-12-31'
+    />
+    <Caption
+        attrAuthor='NASA'
+        attrUrl='https://nasa.gov/'
+    >
+        Surface soil texture in Kerr County, TX and surrounding areas. 
+    </Caption>
+    </Figure>
 </Block>
+
 
 <Block>
     <Figure>
@@ -135,9 +148,25 @@ taxonomy:
         alt='(Top) Drought conditions in the state of Texas leading up to the July 4th, 2025 flash flood. Over half of Kerr County was under D4 exceptional drought conditions. (Bottom) Time series of the percentage coverage of each drought category in Kerr County, 2000-2025.'
         </Caption>
     </Figure>
+    <Prose>
+    The flood tragedy on July 4, 2025 was compounded and exacerbated by a prolonged drought within this region that left the landscape exceptionally vulnerable. Months of hot, dry weather hardened the soil surface into a crust-like layer, further reducing what little capacity for drainage remained. The drought also stressed vegetation, leading to patchy ground cover that would otherwise slow and help absorb rainfall. When Tropical Storm Barry’s remnants arrived, the parched ground behaved more like pavement than pasture, shedding almost all of the deluge as immediate runoff. This combination of drought-hardened soils, thin limestone layers, and steep drainage basins created a perfect recipe for a catastrophic flash flood once extreme rainfall began.
+    </Prose>
 </Block>
 
+<ScrollytellingBlock>
+<Chapter
+    center={[-99.37986708427738, 30.0049270377408]}
+    zoom={14}
+    datasetId='HLS_2.0'
+    layerId='HLSS30_2.0_false_color'
+    datetime='2025-06-29'
+  >
+   ### Tragedy at Camp Mystic 
+   
+   At Camp Mystic, the rising Guadalupe River arrived in the predawn hours of early morning when most campers and staff were asleep. Within minutes, floodwaters tore through cabins and tents, sweeping some structures entirely off their foundations. Many survivors described hearing a roar like an approaching freight train before water crashed through doors and windows. Tragically, dozens of children and counselors were caught by the surge, despite emergency evacuations, and the camp became the most concentrated site of loss during the disaster. Rescue crews worked by boat and helicopter to locate stranded survivors among debris fields that stretched hundreds of yards downstream.
+  </Chapter>
 
+</ScrollytellingBlock>
 
 <Block>
   <Prose>
