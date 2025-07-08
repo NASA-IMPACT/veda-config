@@ -34,7 +34,7 @@ taxonomy:
 <Block>
     <Prose>
     ### Introduction 
-    In the early hours of July 4, 2025, the Texas Hill Country experienced a catastrophic flash flood that would etch itself into the history books as the sixth deadliest freshwater flooding disaster in the United States. Over the course of just a few harrowing hours, intense rainfall transformed the Guadalupe River into a raging torrent that engulfed Kerr County, sweeping away cabins, homes, and vehicles from Camp Mystic to Ingram, Kerrville, and Center Point, before continuing downstream north and east of San Antonio. As of July 7, 2025, the death toll attributed to this catastrophe has surpassed the fatalities caused by freshwater flooding from Hurricane Helene. This disaster unfolded in an area already reeling from a prolonged drought that left soils hard-baked and unable to absorb water, priming the region for dangerous runoff. As rescue and recovery teams continue combing debris along the riverbanks, the event stands as a sobering reminder of the lethal intersection between extreme rainfall, vulnerable terrain, and the unique hydrology of America’s flash-flood capital.
+    In the early hours of July 4, 2025, the Texas Hill Country experienced a catastrophic flash flood that would etch itself into the history books as the sixth-deadliest freshwater flooding disaster in the United States. Over the course of a few harrowing hours, intense rainfall transformed the Guadalupe River into a raging torrent that engulfed Kerr County, sweeping away cabins, homes, and vehicles from Camp Mystic to Ingram, Kerrville, and Center Point, before continuing downstream north and east of San Antonio. As of July 7, 2025, the death toll attributed to this catastrophe has surpassed the fatalities caused by freshwater flooding from Hurricane Helene. This disaster unfolded in an area already reeling from a prolonged drought that left soils hard baked and unable to absorb water, priming the region for dangerous runoff. As rescue and recovery teams continue combing debris along the riverbanks, the event stands as a sobering reminder of the lethal intersection between extreme rainfall, vulnerable terrain, and the unique hydrology of America’s flash-flood capital.
     </Prose>
 
     <Figure>
@@ -49,6 +49,45 @@ taxonomy:
     </Caption>
     </Figure>
 </Block>
+
+
+<Block>
+<Figure>
+    <Image
+      src={new URL('./media/tx-flood-camp-mystic-map.jpg', import.meta.url).href}
+      alt='Map showing extent of the flooding at Camp Mystic compared to FEMA 100 and 500 year recurrence intervals.'
+      attrAuthor = 'Andrew Blackford'
+    />
+    <Caption>
+    Map showing extent of the flooding at Camp Mystic compared to FEMA 100 and 500 year recurrence intervals. Label a is the location of Camp Mystic - Guadalupe River and label b is Camp Mystic - Cypress Creek. Credit Andrew Blackford.
+    </Caption>
+  </Figure>
+</Block>
+
+<Block>
+    <Prose>
+    ### Meteorological Overview
+
+    The catastrophic flash flooding was set in motion by the remnants of Tropical Storm Barry, which propagated northward after making landfall in southeastern Mexico on June 29. Its mid-level circulation merged with a stalled mid-latitude trough and abundant tropical moisture from the eastern Pacific, spawning a large, organized cluster of thunderstorms that remained nearly stationary over the Texas Hill Country from July 4 to 7. This stalled system unleashed extreme rainfall: several automated rain gauges reported 5 to 11 inches within a few hours, with a staggering 20.33 inches recorded northwest of Streeter over the three-day event.
+    </Prose>
+
+    <Figure>
+    <Map
+        center={[-99.22, 30.03]}
+        zoom={7.5}
+        datasetId='GPM_3IMERGDF.v07'
+        layerId='GPM_3IMERGDF.v07'
+        dateTime='2025-07-04'
+    />
+    <Caption
+        attrAuthor='NASA'
+        attrUrl='https://nasa.gov/'
+    >
+        IMERG something...
+    </Caption>
+    </Figure>
+</Block>
+
 
 <Block type='wide'>
   <Figure>
@@ -70,7 +109,7 @@ taxonomy:
 <Figure>
   <Map
     center={[-99.22, 30.03]}
-    zoom={9}
+    zoom={7.5}
     datasetId='soil-texture'
     layerId='soil-texture-0cm'
     dateTime='2017-12-31'
@@ -98,18 +137,7 @@ taxonomy:
     </Figure>
 </Block>
 
-<Block>
-<Figure>
-    <Image
-      src={new URL('./media/tx-flood-camp-mystic-map.jpg', import.meta.url).href}
-      alt='Map showing extent of the flooding at Camp Mystic compared to FEMA 100 and 500 year recurrence intervals.'
-      attrAuthor = 'Andrew Blackford'
-    />
-    <Caption>
-    Map showing extent of the flooding at Camp Mystic compared to FEMA 100 and 500 year recurrence intervals. Label a is the location of Camp Mystic - Guadalupe River and label b is Camp Mystic - Cypress Creek. Credit Andrew Blackford.
-    </Caption>
-  </Figure>
-</Block>
+
 
 <Block>
   <Prose>
