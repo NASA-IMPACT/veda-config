@@ -1,0 +1,94 @@
+---
+id: 'tx-flood'
+name: Guadalupe River Flood Tragedy
+description: Once in a lifetime disaster in the Texas Hill Country 
+media:
+  src: ::file ../stories/media/tx-flood-background.jpg
+  alt: A search and rescue volunteer holds a T-shirt and backpack with the words Camp Mystic on them.
+  author: 
+    name: Forrest McFarland
+    url: https://www.the-sun.com/news/14645258/texas-floods-camp-mystic-pictures-victims-missing/
+pubDate: 2025-07-17T00:00
+taxonomy:
+  - name: Topics
+    values:
+      - Natural Disasters
+  - name: Subtopics
+    values:
+      - Drought
+      - Precipitation
+  - name: Source
+    values:
+      - Community Contributed
+---
+
+<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
+  <Prose>
+    **Authors:** Andrew Blackford<sup>1</sup>\ and Chelsea Aaron <sup>1</sup>\
+   
+    <sup>1</sup> The University of Alabama in Huntsville (UAH)
+
+  </Prose>
+</Block>
+
+<Block type='wide'>
+  <Figure>
+    <Chart
+      dataPath={new URL('./tx-flood-gauge-data.csv', import.meta.url).href}
+      dateFormat="%m/%d/%Y %H:%M"
+      idKey='source'
+      xKey='datetime'
+      yKey='stream_height'
+      yAxisLabel='Stage (ft)'
+    />
+    <Caption>
+    Stream gauge height data from the National Water Prediction Service showing the Guadalupe River quickly rising well above flood stage in Kerr County, TX on July 4, 2025.
+    </Caption>
+  </Figure>
+</Block>
+
+<Figure>
+    <Image
+      src={new URL('./media/tx-flood-camp-mystic-map.png', import.meta.url).href}
+      alt='Map showing extent of the flooding at Camp Mystic compared to FEMA 100 and 500 year recurrence intervals. Label a is the location of Camp Mystic - Guadalupe River and label b is Camp Mystic - Cypress Creek.'
+      attrAuthor = 'Reggie Grant'
+      attrUrl = 'https://scontent-atl3-2.cdninstagram.com/v/t51.29350-15/461535740_8219670881495234_3978243179822633617_n.jpg?stp=dst-jpg_e35_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InRocmVhZHMuRkVFRC5pbWFnZV91cmxnZW4uMTIwMHg3OTkuc2RyLmYyOTM1MC5kZWZhdWx0X2ltYWdlIn0&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_cat=102&_nc_oc=Q6cZ2QFmddnmTWP8PhISte2VNuhVPfOa53p-QhJIM0hKgCy3_bCqjNM5SdzJN_Dzu_CBIX8&_nc_ohc=Yw7mFYD4M6QQ7kNvwHAOPRT&_nc_gid=5He3pyfNdEKeumBJi6a6nw&edm=APs17CUBAAAA&ccb=7-5&ig_cache_key=MzQ2Nzc2MDkyMDQ3MjE4MjM0Ng%3D%3D.3-ccb7-5&oh=00_AfE2_bc0gxDPPoXo0zF7-OBnYyfP1yWdI3_yKPfp60AK3Q&oe=6811C7C1&_nc_sid=10d13b'
+    />
+    <Caption>
+    Catastrophic flooding in Biltmore Village, North Carolina as a result of torrential rainfall and landslide-induced debris flows from Hurricane Helene.
+    </Caption>
+  </Figure>
+
+<Block>
+  <Prose>
+    ## References
+    FILL OUT
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    ### Data Access
+
+    * [FILL OUT](https://smc-datachallenge.ornl.gov/eagle/)
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+
+    **Editors**: Andrew Blackford and Chelsea Aaron
+
+    **Developers**: Andrew Blackford
+
+    **Science and Content Contributors**: Andrew Blackford and Chelsea Aaron
+
+    **Questions / Feedback**: Email veda@uah.edu 
+
+    ### Additional Resources
+
+    * [FILL OUT](https://environmentamerica.org/texas/center/articles/the-texas-freeze-timeline-of-events/)
+
+  </Prose>
+</Block>
