@@ -32,6 +32,25 @@ taxonomy:
 </Block>
 
 <Block type='wide'>
+    <Prose>
+    ## Introduction 
+    In the early hours of July 4, 2025, the Texas Hill Country experienced a catastrophic flash flood that would etch itself into the history books as the sixth deadliest freshwater flooding disaster in the United States. Over the course of just a few harrowing hours, intense rainfall transformed the Guadalupe River into a raging torrent that engulfed Kerr County, sweeping away cabins, homes, and vehicles from Camp Mystic to Ingram, Kerrville, and Center Point, before continuing downstream north and east of San Antonio. As of July 7, 2025, the death toll attributed to this catastrophe has surpassed the fatalities caused by freshwater flooding from Hurricane Helene. This disaster unfolded in an area already reeling from a prolonged drought that left soils hard-baked and unable to absorb water, priming the region for dangerous runoff. As rescue and recovery teams continue combing debris along the riverbanks, the event stands as a sobering reminder of the lethal intersection between extreme rainfall, vulnerable terrain, and the unique hydrology of America’s flash-flood capital.
+    </Prose>
+
+    <Figure>
+    <Image
+      src={new URL('./media/tx-flood-heatmap.jpg', import.meta.url).href}
+      alt='Heatmap of deadly flash floods in the US from 2006-2020.'
+      attrAuthor = 'Weather Prediction Center'
+      attrUrl = 'https://x.com/NWSWPC/status/1352654577028517892/photo/1'
+    />
+    <Caption>
+    Heatmap showing all deadly flash flood reports in the continental United States from 2006-2020. 
+    </Caption>
+  </Figure>
+</Block>
+
+<Block type='wide'>
   <Figure>
     <Chart
       dataPath={new URL('./tx-flood-gauge-data.csv', import.meta.url).href}
@@ -51,12 +70,11 @@ taxonomy:
 <Figure>
     <Image
       src={new URL('./media/tx-flood-camp-mystic-map.jpg', import.meta.url).href}
-      alt='Map showing extent of the flooding at Camp Mystic compared to FEMA 100 and 500 year recurrence intervals. Label a is the location of Camp Mystic - Guadalupe River and label b is Camp Mystic - Cypress Creek.'
-      attrAuthor = 'Reggie Grant'
-      attrUrl = 'https://scontent-atl3-2.cdninstagram.com/v/t51.29350-15/461535740_8219670881495234_3978243179822633617_n.jpg?stp=dst-jpg_e35_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InRocmVhZHMuRkVFRC5pbWFnZV91cmxnZW4uMTIwMHg3OTkuc2RyLmYyOTM1MC5kZWZhdWx0X2ltYWdlIn0&_nc_ht=scontent-atl3-2.cdninstagram.com&_nc_cat=102&_nc_oc=Q6cZ2QFmddnmTWP8PhISte2VNuhVPfOa53p-QhJIM0hKgCy3_bCqjNM5SdzJN_Dzu_CBIX8&_nc_ohc=Yw7mFYD4M6QQ7kNvwHAOPRT&_nc_gid=5He3pyfNdEKeumBJi6a6nw&edm=APs17CUBAAAA&ccb=7-5&ig_cache_key=MzQ2Nzc2MDkyMDQ3MjE4MjM0Ng%3D%3D.3-ccb7-5&oh=00_AfE2_bc0gxDPPoXo0zF7-OBnYyfP1yWdI3_yKPfp60AK3Q&oe=6811C7C1&_nc_sid=10d13b'
+      alt='Map showing extent of the flooding at Camp Mystic compared to FEMA 100 and 500 year recurrence intervals.'
+      attrAuthor = 'Andrew Blackford'
     />
     <Caption>
-    Catastrophic flooding in Biltmore Village, North Carolina as a result of torrential rainfall and landslide-induced debris flows from Hurricane Helene.
+    Map showing extent of the flooding at Camp Mystic compared to FEMA 100 and 500 year recurrence intervals. Label a is the location of Camp Mystic - Guadalupe River and label b is Camp Mystic - Cypress Creek. Credit Andrew Blackford.
     </Caption>
   </Figure>
 </Block>
