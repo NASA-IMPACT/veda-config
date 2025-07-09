@@ -1,0 +1,129 @@
+---
+id: tx-flood-recurrence
+name: 'Texas Water Development Board Cursory Floodplain Dataset - 2025 Texas Flood AOI'
+isHidden: true
+description: "10, 100, and 500 Year Flood recurrence probability frequency over the 2025 Texas Flood area of interest."
+media:
+  src: ::file ../stories/media/tx-flood-background.jpg
+  alt: A search and rescue volunteer holds a T-shirt and backpack with the words Camp Mystic on them.
+  author:
+    name: Forrest McFarland
+    url: https://www.the-sun.com/news/14645258/texas-floods-camp-mystic-pictures-victims-missing/
+taxonomy:
+  - name: Topics
+    values:
+      - Disasters
+  - name: Source
+    values:
+      - TWDB
+infoDescription: |
+  ::markdown
+    - **Temporal Extent:** last updated in 2021
+    - **Temporal Resolution:** n/A
+    - **Spatial Extent:** Texas Hill Country
+    - **Spatial Resolution:** 3 meter
+    - **Data Units:** percent
+    - **Data Type:** Research
+    - **Data Latency:** N/A
+
+layers:
+  - id: tx-flood-recurrence
+    stacCol: tx-flood-10-yr-recurrence
+    name: exas Water Development Board Cursory Floodplain Dataset (10 Year Recurrence)- 2025 Texas Flood AOI
+    type: raster
+    description: "10 Year Flood recurrence probability frequency over the 2025 Texas Flood area of interest."
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      colormap_name: blues
+      resampling: bilinear
+      bidx: 1
+      rescale: 0,50
+    legend:
+      type: gradient
+      min: "0%"
+      max: ">50%"
+      stops:
+        - "#f7fbff"
+        - "#deebf7"
+        - "#c6dbef"
+        - "#9ecae1"
+        - "#6baed6"
+        - "#4292c6"
+        - "#2171b5"
+        - "#084594"
+    info:
+        source: TWDB
+        spatialExtent: Texas Hill Country
+        temporalResolution: N/A
+        unit: percent
+
+
+  - id: tx-flood-recurrence
+    stacCol: tx-flood-100-yr-recurrence
+    name: exas Water Development Board Cursory Floodplain Dataset (100 Year Recurrence)- 2025 Texas Flood AOI
+    type: raster
+    description: "100 Year Flood recurrence probability frequency over the 2025 Texas Flood area of interest."
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      colormap_name: blues
+      resampling: bilinear
+      bidx: 1
+      rescale: 0,50
+    legend:
+      type: gradient
+      min: "0%"
+      max: ">50%"
+      stops:
+        - "#f7fbff"
+        - "#deebf7"
+        - "#c6dbef"
+        - "#9ecae1"
+        - "#6baed6"
+        - "#4292c6"
+        - "#2171b5"
+        - "#084594"
+    info:
+        source: TWDB
+        spatialExtent: Texas Hill Country
+        temporalResolution: N/A
+        unit: percent
+
+
+  - id: tx-flood-recurrence
+    stacCol: tx-flood-500-yr-recurrence
+    name: exas Water Development Board Cursory Floodplain Dataset (500 Year Recurrence)- 2025 Texas Flood AOI
+    type: raster
+    description: "500 Year Flood recurrence probability frequency over the 2025 Texas Flood area of interest."
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      colormap_name: blues
+      resampling: bilinear
+      bidx: 1
+      rescale: 0,50
+    legend:
+      type: gradient
+      min: "0%"
+      max: ">50%"
+      stops:
+        - "#f7fbff"
+        - "#deebf7"
+        - "#c6dbef"
+        - "#9ecae1"
+        - "#6baed6"
+        - "#4292c6"
+        - "#2171b5"
+        - "#084594"
+    info:
+        source: TWDB
+        spatialExtent: Texas Hill Country
+        temporalResolution: N/A
+        unit: percent
+
+---
+
