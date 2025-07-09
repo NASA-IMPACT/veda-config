@@ -67,15 +67,22 @@ taxonomy:
 </Block>
 
 <ScrollytellingBlock>
-  <Chapter>
+  <Chapter
+    center={[-113.,40.]}
+    zoom={4}
+    datasetId='nlcd-annual-conus'
+    layerId='nlcd-annual-conus'
+    datetime='2001-01-01'
+  >  
   ### Cattle Operations and the Landscape
   <p>
   The landscape is the foundation of cattle production in the United States. From open rangelands to intensively managed feedlots, the distribution of grassland and pasture shapes where and how cattle are raised. Understanding how animal feeding operations (AFOs) align with these natural resources is essential for assessing their vulnerability to environmental stressors.
   </p>
   </Chapter>
+
   <Chapter
-    center={[-99.41,40.12]}
-    zoom={15}
+    center={[-113.,40.]}
+    zoom={4}
     datasetId='cattle-grasslands-pasture'
     layerId='county_pasture_2019_pastu'
     datetime='2017-01-01'
@@ -87,8 +94,8 @@ taxonomy:
   </Chapter>
   
   <Chapter
-    center={[-99.41,40.12]}
-    zoom={15}
+    center={[-113.,40.]}
+    zoom={4}
     datasetId='cattle-grasslands-pasture'
     layerId='usda_cattle_small_AFOs_2017'
     datetime='2017-01-01'
@@ -100,8 +107,8 @@ taxonomy:
   </Chapter>
 
   <Chapter
-    center={[-99.41,40.12]}
-    zoom={15}
+    center={[-113.,40.]}
+    zoom={4}
     datasetId='cattle-grasslands-pasture'
     layerId='usda_cattle_large_AFOs_2017'
     datetime='2017-01-01'
@@ -113,8 +120,8 @@ taxonomy:
   </Chapter>
   
   <Chapter
-    center={[-99.41,40.12]}
-    zoom={15}
+    center={[-113.,40.]}
+    zoom={4}
     datasetId='cattle-grasslands-pasture'
     layerId='usda_cattle_large_AFOs_2017'
     datetime='2017-01-01'
@@ -124,8 +131,6 @@ taxonomy:
     Large AFOs are more likely to be located in regions with extensive grassland. These operations often confine or semi-confine their herds and generally have greater resources to invest in heat abatement technologies and advanced management. However, even large AFOs face significant risks during prolonged heat waves, as grassland systems are susceptible to drought and wildfires, which can threaten both feed supply and animal welfare.
   </p>
   </Chapter>
-
-
 </ScrollytellingBlock>
 
 <Block>
