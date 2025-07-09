@@ -52,7 +52,7 @@ taxonomy:
    <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
     <p>
       ### Why Cattle Are So Vulnerable to Heat
-     Cattle are particularly sensitive to extreme temperatures. Their comfort zone, known as the thermoneutral zone, is relatively narrow. For our analysis, we considered critical thresholds for the Temperature Humidity Index (THI) at 75, 82, and 94 (Lee et al., 2025) which correspond to increasing levels of heat stress risk. When temperatures and humidity push the THI above these values, cattle begin to suffer physiologically. Outside of their thermoneutral zone (roughly 41°F to 77°F, or THI above 75), cattle experience reduced feed intake, slower liveweight gain, lower milk yield, and impaired fertility. Unlike humans, cattle have a limited ability to sweat. To cool down, they rely on increased breathing, radiating heat, and reducing their feed intake. But as they eat less to stay cool, their energy and milk or weight gain also declines. When the heat load surpasses what their bodies can handle, the result is heat stress, or in severe cases, death. 
+     Cattle are particularly sensitive to extreme temperatures. Their comfort zone, known as the thermoneutral zone, is relatively narrow. For our analysis, we considered critical thresholds for the Temperature Humidity Index (THI) at 75, 82, and 94 (Lee et al., 2025) which correspond to increasing levels of heat stress risk. When temperatures and humidity push the THI above these values, cattle begin to suffer physiologically. Outside of their thermoneutral zone, cattle experience reduced feed intake, slower liveweight gain, lower milk yield, and impaired fertility. When the heat load surpasses what their bodies can handle, the result is heat stress, or in severe cases, death. 
    </p>
   </Prose> 
     <Figure>
@@ -67,21 +67,27 @@ taxonomy:
 </Block>
 
 <ScrollytellingBlock>
+  <Chapter>
+  ### Cattle Operations and the Landscape
+  <p>
+  The landscape is the foundation of cattle production in the United States. From open rangelands to intensively managed feedlots, the distribution of grassland and pasture shapes where and how cattle are raised. Understanding how animal feeding operations (AFOs) align with these natural resources is essential for assessing their vulnerability to environmental stressors.
+  </p>
+  </Chapter>
   <Chapter
-    center={[-99.418678,40.125466]}
+    center={[-99.41,40.12]}
     zoom={15}
     datasetId='cattle-grasslands-pasture'
     layerId='county_pasture_2019_pastu'
     datetime='2017-01-01'
   >
-  ### Mapping Pasture and Grassland Coverage
+  ### Pasture: The Forage Base for Cattle
   <p>
-    The foundation of cattle operations is the landscape itself. The following maps show the percentage of pasture and grassland in each county, based on the National Land Cover Database (NLCD). Areas with higher percentages of pasture and grassland provide more natural forage for cattle, but are also more exposed to climate extremes. Understanding these patterns is the first step in assessing heat stress risk for cattle.
+    Pasture and grassland provide the primary forage base for cattle in many counties, as shown by the percentage of pasture in each county from the National Land Cover Database (NLCD). The availability and quality of pasture directly influence the viability of pasture-based cattle operations and the resilience of these systems to climate extremes.
   </p>
   </Chapter>
-
+  
   <Chapter
-    center={[-99.418678,40.125466]}
+    center={[-99.41,40.12]}
     zoom={15}
     datasetId='cattle-grasslands-pasture'
     layerId='usda_cattle_small_AFOs_2017'
@@ -89,12 +95,25 @@ taxonomy:
   >
   ### Small Cattle Operations and Pasture Reliance
   <p>
-    Small Animal Feeding Operations (AFOs), as defined by the USDA Census, are most commonly found in counties with abundant pasture land. These operations typically use pasture-based systems and have limited resources for intensive cooling or heat abatement. As a result, small AFOs are especially vulnerable to direct heat stress and to the compounding effects of drought and pasture degradation.
+    Small AFOs, as defined by the USDA Census, are most commonly found in counties with abundant pasture land. These operations typically use pasture-based systems and have limited resources for intensive cooling or heat abatement. As a result, small AFOs are especially vulnerable to direct heat stress and to the compounding effects of drought and pasture degradation.
   </p>
   </Chapter>
 
   <Chapter
-    center={[-99.418678,40.125466]}
+    center={[-99.41,40.12]}
+    zoom={15}
+    datasetId='cattle-grasslands-pasture'
+    layerId='usda_cattle_large_AFOs_2017'
+    datetime='2017-01-01'
+  >
+  ### Grasslands: Ecological Backbone of Cattle Production
+  <p>
+    Grasslands are not only the primary forage source for cattle but also play a crucial role in ecosystem health. Harvesting high quality forage from perennial grasslands is one of the cheapest ways to feed cows, and can be an effective way of reducing feed costs, one of the largest expenses on a farm.
+  </p>
+  </Chapter>
+  
+  <Chapter
+    center={[-99.41,40.12]}
     zoom={15}
     datasetId='cattle-grasslands-pasture'
     layerId='usda_cattle_large_AFOs_2017'
@@ -106,14 +125,7 @@ taxonomy:
   </p>
   </Chapter>
 
-  <Chapter
-    center={[-99.418678,40.125466]}
-    zoom={15}
-    datasetId='cattle-grasslands-pasture'
-    layerId='county_grasslands_2019_pastu'
-    datetime='2017-01-01'
-  >
-  </Chapter>
+
 </ScrollytellingBlock>
 
 <Block>
