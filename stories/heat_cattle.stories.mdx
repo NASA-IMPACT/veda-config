@@ -123,7 +123,7 @@ taxonomy:
     center={[-113.,40.]}
     zoom={4}
     datasetId='cattle-grasslands-pasture'
-    layerId='usda_cattle_large_AFOs_2017'
+    layerId='county_grasslands_2019_pastu'
     datetime='2017-01-01'
   >
   ### Large Cattle Operations and Grassland Systems
@@ -153,49 +153,127 @@ taxonomy:
 
 <ScrollytellingBlock>
   <Chapter
-    center={[-119.1, 34.0823]}
-    zoom={8.5}
-    datasetId='nlcd-annual-conus'
-    layerId='nlcd-annual-conus'
-    datetime='2001-01-01'
-  >  
-  ### Hot States: A Familiar but Escalating Problem
-    <p> 
-      In places like Kansas, Texas, and Oklahoma, heat stress is a recurring challenge but it’s getting worse. Kansas, the third-largest cattle-producing state, was hit especially hard in 2022, exacerbating an industry already struggling with the smallest U.S. herd in decades due to persistent drought and high feed costs. (GIF with THI for Kansas.) Similarly, in dry states like Nebraska, Oklahoma, Texas, and Kansas, it is precipitation variability rather than average precipitation that is strongly correlated with cattle mortality. High variability in precipitation, whether within a season or between years, disrupts forage growth, water availability, and pasture quality, making it difficult for cattle to maintain condition and for producers to plan resources. Sudden droughts can cause acute shortages of feed and water, leading to spikes in mortality, while heavy rains can increase humidity and push THI above critical thresholds, compounding heat stress. 
-    </p>
-     <Figure>
+    center={[-98.5, 38.5]}
+    zoom={6}
+    datasetId='climdex-tmaxxf-access-cm2'
+    layerId='climdex-tmaxxf-access-cm2-126'
+    datetime='2022-06-15'
+  >
+  ### Hot States: Escalating Heat Stress
+  <p>
+    In states like Kansas, Texas, and Oklahoma, heat stress has long been a challenge for cattle producers, but recent years have seen the problem intensify. Kansas, the third-largest cattle-producing state, was hit especially hard in 2022, with a devastating heat wave that led to major [cattle losses](https://www.npr.org/2022/06/16/1105482394/cattle-kansas-heat-wave). 
+  </p>
+  <Figure>
       <Image
-      src={new URL('./LA_nlcd_percentages_by_year.png', import.meta.url).href}
+        src={new URL('./cattle_THI_2022_May_June.gif', import.meta.url).href}
+        alt='Temperature Humidity Index (THI) for Kansas Summer 2022.'
+        attrAuthor = 'Maheshwari Neelam'
+      />
+      <Caption>
+        Temperature Humidity Index (THI) for Kansas Summer 2022.
+      </Caption>
+    </Figure> 
+  </Chapter>
+
+  <Chapter
+    center={[-98.5, 38.5]}
+    zoom={6}
+    datasetId='climdex-tmaxxf-access-cm2'
+    layerId='climdex-tmaxxf-access-cm2-126'
+    datetime='2022-06-15'
+  >
+  ### Cold States: Not as Safe as They Seem
+     <p>
+      States like Montana, Idaho, and Colorado, often associated with cooler temperatures, are not immune. Cattle here may be less acclimated to heat and can still carry winter coats into summer, making sudden high temperatures even more dangerous. Sharp temperature spikes in these regions can catch both animals and producers off guard. Colorado and Idaho are generally considered cooler, more temperate, and often semi-arid or mountainous states. Their cattle are more likely to experience dry air and rapid dehydration during heat events, especially at higher elevations or during summer droughts. In these settings, a higher average relative humidity can indeed help reduce dehydration and moderate temperature swings, which is beneficial for cattle health. 
+   </p>
+   <Figure>
+      <Image
+      src={new URL('./cattle_all_variables_yearly_heatmap.png', import.meta.url).href}
       style={{ maxWidth: '200%'}}
     />
     <Caption>
-      The NLCD land cover changes within Los Angeles County from 2001-2021.
+      The correlations between annual cattle deaths and climate variables.
     </Caption>
   </Figure>
   </Chapter>
 
   <Chapter
-    center={[-118.8, 34.0623]}
-    zoom={10.5}
-    datasetId='nlcd-annual-conus'
-    layerId='nlcd-annual-conus'
-    datetime='2021-01-01'
+    center={[-98.5, 38.5]}
+    zoom={6}
+    datasetId='climdex-tmaxxf-access-cm2'
+    layerId='climdex-tmaxxf-access-cm2-126'
+    datetime='2030-06-15'
   >
-  ### Cold States: Not as Safe as They Seem
-     <p>
-      States like Montana, Idaho, and Colorado, often associated with cooler temperatures, are not immune. Cattle here may be less acclimated to heat and can still carry winter coats into summer, making sudden high temperatures even more dangerous. Sharp temperature spikes in these regions can catch both animals and producers off guard. Colorado and Idaho are generally considered cooler, more temperate, and often semi-arid or mountainous states. Their cattle are more likely to experience dry air and rapid dehydration during heat events, especially at higher elevations or during summer droughts. In these settings, a higher average relative humidity can indeed help reduce dehydration and moderate temperature swings, which is beneficial for cattle health. (Analysis png maps).
-   </p>
-   <Figure>
+### Identifying Hotspots: Seasonal Average Days Above THI Threshold
+<p>
+   One primary metric for mapping county-level heat stress hotspots is the <b>seasonal average number of days above a THI threshold (such as 75 or 82). For each county, we count the number of days in a season where the daily average Temperature-Humidity Index (THI) exceeds the chosen threshold. This metric is especially valuable for tracking trends over time and for comparing the intensity of heat exposure between counties. By analyzing these seasonal averages, we can pinpoint areas where cattle are most at risk due to recurring high-THI conditions. For instance, there is signficant THI variability within counties in states like Montana, Colarado and Texas. 
+</p>
+  <Figure>
       <Image
-      src={new URL('./la-fires-palisades_nlcd_percentages_by_year.png', import.meta.url).href}
+      src={new URL('./cattle_avg_days.png', import.meta.url).href}
       style={{ maxWidth: '200%'}}
     />
     <Caption>
-      The NLCD land cover changes within the Palisade Region, Los Angeles from 2001-2021 show significant shrublands.
+      The average number of days each year that the Temperature-Humidity Index (THI) exceeds a specified threshold, calculated from 1979 to 2024.
     </Caption>
   </Figure>
-  </Chapter>
+</Chapter>
 
+<Chapter
+    center={[-98.5, 38.5]}
+    zoom={6}
+    datasetId='climdex-tmaxxf-access-cm2'
+    layerId='climdex-tmaxxf-access-cm2-126'
+    datetime='2050-06-15'
+  >
+### Hotspot Persistence: Seasonal Fraction of Days Above THI Threshold
+<p>
+  To further refine hotspot identification, we use the <b>seasonal fraction of days above a THI threshold. This metric calculates the proportion of days in a season where the THI exceeds the set threshold. High fractions indicate areas where heat stress is not only frequent but also persistent throughout the season. Such persistent exposure can have compounding effects on cattle health and productivity, making these counties priority targets for adaptation and mitigation efforts.
+</p>
+<Figure>
+  <Image
+  src={new URL('./cattle_fract_days.png', import.meta.url).href}
+  style={{ maxWidth: '200%'}}
+/>
+<Caption>
+The proportion of days on which the Temperature-Humidity Index (THI) exceeds a specified threshold, calculated from 1979 to 2024.
+</Caption>
+</Figure>
+</Chapter>
+
+<Chapter
+    center={[-98.5, 38.5]}
+    zoom={6}
+    datasetId='climdex-tmaxxf-access-cm2'
+    layerId='climdex-tmaxxf-access-cm2-126'
+    datetime='2070-06-15'
+  >
+### The Role of Precipitation Variability
+<p>
+  In dry states such as Nebraska, Oklahoma, Texas, and Kansas, it is not just the average precipitation but its variability that most strongly correlates with cattle mortality. High variability—whether within a season or between years disrupts forage growth, water availability, and pasture quality, making it difficult for cattle to maintain condition and for producers to plan resources. Sudden droughts can cause acute shortages of feed and water, while heavy rains can increase humidity and push the THI above critical thresholds, compounding heat stress.
+</p>
+  <Figure>
+      <Image
+      src={new URL('./cattle_pr_seasonal_heatmap.png', import.meta.url).href}
+      style={{ maxWidth: '200%'}}
+    />
+    <Caption>
+     Seasonal changes in both the sum and variability (standard deviation) of precipitation, analyzed from 1979 to 2024.      </Caption>
+</Figure>
+</Chapter>
+
+<Chapter
+    center={[-98.5, 38.5]}
+    zoom={6}
+    datasetId='climdex-tmaxxf-access-cm2'
+    layerId='climdex-tmaxxf-access-cm2-126'
+    datetime='2100-06-15'
+  >
+### Future Projections: More Days Above 90°F
+<p>
+  Looking ahead, climate models project a dramatic increase in the number of extremely hot days—those above 90°F—across much of the U.S. By 2100, under high emissions scenarios, the median cow in the U.S. could experience up to two additional months of heat stress conditions each year, with many regions facing nearly 70 days per year of extreme heat stress.<sup>[8][9]</sup> <b>Maps of projected future days above 90°F illustrate the scale of the challenge, underscoring the urgent need for adaptive management and heat abatement strategies to protect animal welfare and sustain cattle production in a warming climate.
+</p>
+</Chapter>
 </ScrollytellingBlock>
 
 
@@ -249,6 +327,7 @@ taxonomy:
      #### Additional Resources
      * [Increasing frequency and spatial extent of cattle heat stress conditions in the Southern plains of the USA](https://www.nature.com/articles/s41598-025-99621-5)
      * [Impacts of heat stress on global cattle production during the 21st century: a modelling study](https://www.thelancet.com/journals/lanplh/article/PIIS2542-5196(22)00002-X/fulltext)
+     * [Days of intense heat have killed thousands of cattle in Kansas](https://www.npr.org/2022/06/16/1105482394/cattle-kansas-heat-wave)
 
      <p style={{ fontSize: '0.9em', fontStyle: 'italic' }}>
      This work is actively being developed into a peer-reviewed publication.
