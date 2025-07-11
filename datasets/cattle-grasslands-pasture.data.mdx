@@ -229,6 +229,89 @@ layers:
       temporalResolution: Annual
       unit: Percent Difference
 
+
+  - id: smap-L3-soil-moisture-AM-v2
+    stacCol: smap-L3-soil-moisture-AM-v2
+    tileApiEndpoint: "https://dev.openveda.cloud/api/raster"
+    stacApiEndpoint: "https://dev.openveda.cloud/api/stac"
+    name: 'SMAP L3 Soil Moisture AM passes'
+    type: raster
+    description: 'This Level-3 (L3) soil moisture product provides a daily composite of global land surface conditions retrieved by the Soil Moisture Active Passive (SMAP) L-Band radiometer. The daily data here were collected from the descending (local solar time of 6 am) and ascending (local solar time of 6 pm) passes.'
+    initialDatetime: newest
+    sourceParams:
+      resampling: bilinear
+      bidx: 1
+      nodata: -9999
+      colormap_name: rdbu_r
+      rescale:
+        - 0.020
+        - 0.926
+    compare:
+      datasetId: cattle-grasslands-pasture
+      layerId: smap-L3-soil-moisture-AM-v2
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+    legend:
+      type: gradient
+      label: cm3/cm3
+      min: "0.020"
+      max: "0.926"
+      stops:
+        - rgb(3, 0, 255)
+        - rgb(65, 133, 4)
+        - rgb(239, 255, 7)
+        - rgb(239, 255, 7)
+        - rgb(255, 3, 3)
+    info:
+      source: NSIDC
+      spatialExtent: Global
+      temporalResolution: Daily
+      unit: cm3/cm3
+
+  - id: ndvi-global-2022
+    stacCol: ndvi-global-2022
+    tileApiEndpoint: "https://dev.openveda.cloud/api/raster"
+    stacApiEndpoint: "https://dev.openveda.cloud/api/stac"
+    name: 'NDVI'
+    type: raster
+    description: 'This Level-3 (L3) soil moisture product provides a daily composite of global land surface conditions retrieved by the Soil Moisture Active Passive (SMAP) L-Band radiometer. The daily data here were collected from the descending (local solar time of 6 am) and ascending (local solar time of 6 pm) passes.'
+    initialDatetime: newest
+    sourceParams:
+      resampling: bilinear
+      bidx: 1
+      nodata: -9999
+      colormap_name: rdbu_r
+      rescale:
+        - -0.3
+        - 0.9
+    compare:
+      datasetId: cattle-grasslands-pasture
+      layerId: ndvi-global-2022
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL dd yyyy')} VS ${dateFns.format(compareDatetime, 'LLL dd yyyy')}`;
+        }
+    legend:
+      type: gradient
+      label: NDVI
+      min: -0.3
+      max: 0.9
+      stops:
+        - rgb(3, 0, 255)
+        - rgb(65, 133, 4)
+        - rgb(239, 255, 7)
+        - rgb(239, 255, 7)
+        - rgb(255, 3, 3)
+    info:
+      source: NSIDC
+      spatialExtent: Global
+      temporalResolution: Daily
+      unit: NDVI
+
+
+
 ---
 
 <Block>
@@ -340,3 +423,40 @@ layers:
   </Figure>
 </Block>
 
+<Block>
+  <Figure>
+    <Map
+      datasetId='cattle-grasslands-pasture'
+      layerId='smap-L3-soil-moisture-AM-v2'
+      dateTime='2022-06-09'
+      zoom={3.0}
+      center={[-98.8209,38.174]}
+      compareDateTime= '2022-06-12'
+    />
+    <Caption
+      attrAuthor='NASA'
+      attrUrl='https://nasa.gov/'
+    >
+    SMAP L3 Soil Moisture
+  </Caption>  
+  </Figure>
+</Block>
+
+<Block>
+  <Figure>
+    <Map
+      datasetId='cattle-grasslands-pasture'
+      layerId='ndvi-global-2022'
+      dateTime='2022-06-08'
+      zoom={3.0}
+      center={[-98.8209,38.174]}
+      compareDateTime= '2022-06-23'
+    />
+    <Caption
+      attrAuthor='NASA'
+      attrUrl='https://nasa.gov/'
+    >
+    NDVI
+  </Caption>  
+  </Figure>
+</Block>
