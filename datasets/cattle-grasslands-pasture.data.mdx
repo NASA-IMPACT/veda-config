@@ -234,7 +234,7 @@ layers:
     stacCol: smap-L3-soil-moisture-AM-v2
     tileApiEndpoint: "https://dev.openveda.cloud/api/raster"
     stacApiEndpoint: "https://dev.openveda.cloud/api/stac"
-    name: 'SMAP L3 Soil Moisture AM passes'
+    name: 'SMAP L3 Soil Moisture AM passes (cm3/cm3)'
     type: raster
     description: 'This Level-3 (L3) soil moisture product provides a daily composite of global land surface conditions retrieved by the Soil Moisture Active Passive (SMAP) L-Band radiometer. The daily data here were collected from the descending (local solar time of 6 am) and ascending (local solar time of 6 pm) passes.'
     initialDatetime: newest
@@ -274,15 +274,15 @@ layers:
     stacCol: ndvi-global-2022
     tileApiEndpoint: "https://dev.openveda.cloud/api/raster"
     stacApiEndpoint: "https://dev.openveda.cloud/api/stac"
-    name: 'NDVI'
+    name: 'NDVI from AVHRR GIMMS-3G+'
     type: raster
-    description: 'This Level-3 (L3) soil moisture product provides a daily composite of global land surface conditions retrieved by the Soil Moisture Active Passive (SMAP) L-Band radiometer. The daily data here were collected from the descending (local solar time of 6 am) and ascending (local solar time of 6 pm) passes.'
+    description: 'This dataset holds the Global Inventory Modeling and Mapping Studies-3rd Generation V1.2 (GIMMS-3G+) data for the Normalized Difference Vegetation Index (NDVI). NDVI was based on corrected and calibrated measurements from Advanced Very High Resolution Radiometer (AVHRR) data with a spatial resolution of 0.0833 degree and global coverage for 1982 to 2022. Maximum NDVI values are reported within twice monthly compositing periods (two values per month). The dataset was assembled from different AVHRR sensors and accounts for various deleterious effects, such as calibration loss, orbital drift, and volcanic eruptions.'
     initialDatetime: newest
     sourceParams:
       resampling: bilinear
       bidx: 1
       nodata: -9999
-      colormap_name: rdbu_r
+      colormap_name: rdylgn
       rescale:
         - -0.3
         - 0.9
@@ -299,11 +299,13 @@ layers:
       min: -0.3
       max: 0.9
       stops:
-        - rgb(3, 0, 255)
-        - rgb(65, 133, 4)
-        - rgb(239, 255, 7)
-        - rgb(239, 255, 7)
-        - rgb(255, 3, 3)
+        - '#a50026'  # dark red
+        - '#d73027'  # red
+        - '#fdae61'  # orange
+        - '#ffffbf'  # pale yellow
+        - '#a6d96a'  # light green
+        - '#1a9850'  # green
+        - '#006837'   # dark green
     info:
       source: NSIDC
       spatialExtent: Global
