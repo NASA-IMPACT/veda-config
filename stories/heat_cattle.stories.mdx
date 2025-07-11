@@ -25,16 +25,13 @@ taxonomy:
 <Block style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
    <Prose style={{ textAlign: 'center', width: '100%' }}>
      <p style={{ marginBottom: '0.5em' }}>
-       Authors: Maheshwari Neelam <sup>[1]</sup>, Kyle Lesinger <sup>[2]</sup>, and Brian Freitag <sup>[3]</sup>
+       Authors: Maheshwari Neelam <sup>1</sup> and Kyle Lesinger <sup>2</sup>
      </p>
      <p style={{ marginBottom: '0.5em' }}>
        <sup>[1]</sup> Universities Space Research Association (USRA)
      </p>
      <p style={{ marginBottom: '0.5em' }}>
        <sup>[2]</sup> The University of Alabama in Huntsville (UAH)
-     </p>
-     <p style={{ marginBottom: '0.5em' }}>
-       <sup>[3]</sup> The National Aeronautics and Space Administration (NASA)
      </p>
   </Prose>
 </Block>
@@ -46,6 +43,25 @@ taxonomy:
      When considering the impacts of heat waves, we often focus on human health. However, livestock, particularly cattle, can also be severely affected by extreme heat. Heat stress in cattle is an important and growing concern in both traditionally hot and cooler regions of the United States, with profound economic consequences for the dairy and beef industries.    
     </p>
   </Prose>
+</Block>
+
+<Block>
+  <Figure>
+    <Map
+      datasetId: soil-moisture
+      layerId: sport-lis-vsm0_100cm-percentile
+      dateTime='2016-09-06'
+      center={[-113.,40.]}
+      zoom={4}
+      compareDateTime='2016-11-29'
+    />
+    <Caption
+      attrAuthor='NASA'
+      attrUrl='https://nasa.gov/'
+    >
+    Comparison of soil moisture percentile over mid-west between September 6, 2016 and November 29, 2016.
+    </Caption>
+  </Figure>
 </Block>
 
 <Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
@@ -317,9 +333,9 @@ taxonomy:
      * [USDA Census Agriculture](https://www.nass.usda.gov/AgCensus/)
      * [North American Land Data Assimilation System (NLDAS-3)](https://ldas.gsfc.nasa.gov/nldas/v3)
     
-     **Editors**: Maheshwari Neelam, Kyle Lesinger
+     **Editors**: Maheshwari Neelam, Kyle Lesinger, Brian Freitag, and Chelsea Aaron
 
-     **Developers**: Maheshwari Neelam, Kyle Lesinger
+     **Developers**: Maheshwari Neelam and Kyle Lesinger
 
      **Science and Content Contributors**: Maheshwari Neelam
 
