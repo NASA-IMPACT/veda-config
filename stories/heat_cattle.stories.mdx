@@ -49,9 +49,9 @@ taxonomy:
 </Block>
 
 <Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
-   <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
-      ### Why Cattle Are So Vulnerable to Heat
-    <p>
+   <Prose style={{ textAlign: 'justify', flex: '1', alignItems: 'center', marginLeft: '0.2rem'}}>
+     <p>      
+### Why Cattle Are So Vulnerable to Heat
      Cattle are particularly sensitive to extreme temperatures. Their comfort zone, known as the thermoneutral zone, is relatively narrow. For our analysis, we considered critical thresholds for the Temperature Humidity Index (THI) at 75, 82, and 94 (Lee et al., 2025) which correspond to increasing levels of heat stress risk. When temperatures and humidity push the THI above these values, cattle begin to suffer physiologically. Outside of their thermoneutral zone, cattle experience reduced feed intake, slower liveweight gain, lower milk yield, and impaired fertility. When the heat load surpasses what their bodies can handle, the result is heat stress, or in severe cases, death. 
    </p>
   </Prose> 
@@ -64,6 +64,82 @@ taxonomy:
       Illustrating the Consequences of Heat Stress in Cattle.
     </Caption>
   </Figure>
+</Block>
+
+<Block>
+  <Figure>
+    <Map
+      datasetId='cattle-grasslands-pasture'
+      layerId='smap-L3-soil-moisture-AM-v2'
+      dateTime='2022-06-09'
+      center={[-98.388,38.24]}
+      zoom={4}
+      compareDateTime= '2022-06-12'
+    />
+    <Caption
+      attrAuthor='NASA'
+      attrUrl='https://nasa.gov/'
+    >
+    SMAP Soil Moisture Estimates During the Kansas Heatwave of Summer 2022
+  </Caption>  
+  </Figure>
+  <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
+     <p>
+  ### Climate Drivers: The Slow Aggravators
+       While temperature is the primary driver of heat stress in cattle, other climate variables such as vapor pressure deficit, precipitation, and soil moisture also play critical roles. It is not just the average levels of these factors, but their variability that has a greater impact on cattle mortality. Soil moisture (SM) is a key indicator of both drought and heat stress. When soil moisture is depleted, the land's capacity to buffer temperature extremes is reduced, making cattle more vulnerable to the combined effects of heat and water scarcity. 
+    </p>
+   </Prose>
+</Block>
+
+<Block>
+  <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
+     <p>
+### The Role of Precipitation Variability
+  In dry states such as Nebraska, Oklahoma, Texas, and Kansas, it is not just the average precipitation but its variability that most strongly correlates with cattle mortality. High variability—whether within a season or between years disrupts forage growth, water availability, and pasture quality, making it difficult for cattle to maintain condition and for producers to plan resources.
+</p>
+</Prose>
+  <Figure>
+      <Image
+      src={new URL('./cattle_pr_seasonal_heatmap.png', import.meta.url).href}
+      style={{ maxWidth: '200%'}}
+    />
+    <Caption>
+     Seasonal changes in both the sum and variability (standard deviation) of precipitation, analyzed from 1979 to 2024.      
+    </Caption>
+  </Figure>
+</Block>
+
+<Block>
+  <Figure>
+    <Map
+      datasetId='cattle-grasslands-pasture'
+      layerId='ndvi-global-2022'
+      zoom={4}
+      center={[-98.8209,38.174]}
+      compareDateTime= '2022-06-23'
+    />
+    <Caption
+      attrAuthor='NASA'
+      attrUrl='https://nasa.gov/'
+    >
+    Normalized Difference Vegetation Index (NDVI)
+  </Caption>  
+  </Figure>
+  <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
+     <p>
+      ### NDVI: A Signal of Forage Quality and Vegetation Stress
+       Normalized Difference Vegetation Index (NDVI) is another valuable indicator in this context. NDVI measures vegetation quality and stress by assessing the "greenness" and health of plant cover. Low NDVI values signal poor or stressed vegetation, directly impacting the quality and availability of feed for cattle. Monitoring NDVI alongside climate variables provides a more complete picture of how environmental stressors affect cattle health and productivity. 
+    </p>
+   </Prose>
+</Block>
+
+<Block>
+  <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
+    <p>
+   ### Variability Matters: More Than Just the Mean
+     Our findings indicate that it is the variability in THI both within and across seasons rather than just the mean THI, that most strongly impacts cattle mortality. Notably, increased variability in THI has been observed to raise mortality during cooler months and, paradoxically, decrease mortality in summer months in hotter states like Texas and Nebraska. This suggests that cattle may be less able to adapt to unexpected swings in thermal stress outside the traditional summer peak, making year round management and monitoring increasingly important. For example, increased variability in relative humidity exposes cattle to frequent and unpredictable shifts between dry and humid conditions, challenging their ability to acclimate, disrupting thermoregulation, and increasing physiological stress. 
+  </p>
+  </Prose>
 </Block>
 
 <ScrollytellingBlock>
@@ -133,87 +209,11 @@ taxonomy:
   </Chapter>
 </ScrollytellingBlock>
 
-<Block>
-  <Figure>
-    <Map
-      datasetId='cattle-grasslands-pasture'
-      layerId='smap-L3-soil-moisture-AM-v2'
-      dateTime='2022-06-09'
-      center={[-98.388,38.24]}
-      zoom={4}
-      compareDateTime= '2022-06-12'
-    />
-    <Caption
-      attrAuthor='NASA'
-      attrUrl='https://nasa.gov/'
-    >
-    SMAP Soil Moisture Estimates During the Kansas Heatwave of Summer 2022
-  </Caption>  
-  </Figure>
-  <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
-  ### Climate Drivers: The Slow Aggravators
-     <p>
-       While temperature is the primary driver of heat stress in cattle, other climate variables such as vapor pressure deficit, precipitation, and soil moisture also play critical roles. It is not just the average levels of these factors, but their variability that has a greater impact on cattle mortality. Soil moisture (SM) is a key indicator of both drought and heat stress. When soil moisture is depleted, the land's capacity to buffer temperature extremes is reduced, making cattle more vulnerable to the combined effects of heat and water scarcity. 
-    </p>
-   </Prose>
-</Block>
-
-<Block>
-  <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
-### The Role of Precipitation Variability
-  <p>
-  In dry states such as Nebraska, Oklahoma, Texas, and Kansas, it is not just the average precipitation but its variability that most strongly correlates with cattle mortality. High variability—whether within a season or between years disrupts forage growth, water availability, and pasture quality, making it difficult for cattle to maintain condition and for producers to plan resources.
-</p>
-</Prose>
-  <Figure>
-      <Image
-      src={new URL('./cattle_pr_seasonal_heatmap.png', import.meta.url).href}
-      style={{ maxWidth: '200%'}}
-    />
-    <Caption>
-     Seasonal changes in both the sum and variability (standard deviation) of precipitation, analyzed from 1979 to 2024.      
-    </Caption>
-  </Figure>
-</Block>
-
-<Block>
-  <Figure>
-    <Map
-      datasetId='cattle-grasslands-pasture'
-      layerId='ndvi-global-2022'
-      zoom={4}
-      center={[-98.8209,38.174]}
-      compareDateTime= '2022-06-23'
-    />
-    <Caption
-      attrAuthor='NASA'
-      attrUrl='https://nasa.gov/'
-    >
-    Normalized Difference Vegetation Index (NDVI)
-  </Caption>  
-  </Figure>
-  <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
-      ### NDVI: A Signal of Forage Quality and Vegetation Stress
-     <p>
-       Normalized Difference Vegetation Index (NDVI) is another valuable indicator in this context. NDVI measures vegetation quality and stress by assessing the "greenness" and health of plant cover. Low NDVI values signal poor or stressed vegetation, directly impacting the quality and availability of feed for cattle. Monitoring NDVI alongside climate variables provides a more complete picture of how environmental stressors affect cattle health and productivity. 
-    </p>
-   </Prose>
-</Block>
-
-<Block>
-  <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
-    <p>
-   ### Variability Matters: More Than Just the Mean
-     Our findings indicate that it is the variability in THI both within and across seasons rather than just the mean THI, that most strongly impacts cattle mortality. Notably, increased variability in THI has been observed to raise mortality during cooler months and, paradoxically, decrease mortality in summer months in hotter states like Texas and Nebraska. This suggests that cattle may be less able to adapt to unexpected swings in thermal stress outside the traditional summer peak, making year round management and monitoring increasingly important. For example, increased variability in relative humidity exposes cattle to frequent and unpredictable shifts between dry and humid conditions, challenging their ability to acclimate, disrupting thermoregulation, and increasing physiological stress. 
-  </p>
-  </Prose>
-</Block>
-
 <Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
    <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
   <p>
   ### Hot States: Escalating Heat Stress
-In states like Kansas, Texas, and Oklahoma, heat stress has long been a challenge for cattle producers, but recent years have seen the problem intensify. Kansas, the third-largest cattle-producing state, was hit especially hard in 2022, with a devastating heat wave that led to major [cattle losses](https://www.npr.org/2022/06/16/1105482394/cattle-kansas-heat-wave). The Kansas Department of Health and Environment confirmed at least 2,000 cattle deaths in the southwestern part of the state, though industry estimates suggest the total could be as high as 10,000 head of cattle lost during this event. The image shows the estimated THI during May and June 2022, illustrating the extreme heat conditions.
+In states like Kansas, Texas, and Oklahoma, heat stress has long been a challenge for cattle producers, but recent years have seen the problem intensify. Kansas, the third-largest cattle-producing state, was hit especially hard in 2022, with a devastating heat wave that led to major [cattle losses](https://www.npr.org/2022/06/16/1105482394/cattle-kansas-heat-wave). The Kansas Department of Health and Environment confirmed at least 2,000 cattle deaths in the southwestern part of the state, though industry estimates suggest the total could be as high as 10,000 head of cattle lost during this event. The GIF shows the estimated THI during May and June 2022, illustrating the extreme heat conditions.
   </p>
   </Prose> 
   <Figure>
@@ -239,8 +239,8 @@ In states like Kansas, Texas, and Oklahoma, heat stress has long been a challeng
     </Caption>
   </Figure>
 <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
-  ### Cold States: Not as Safe as They Seem
   <p>
+  ### Cold States: Not as Safe as They Seem
 States like Montana, Idaho, and Colorado, often associated with cooler temperatures, are not immune. Cattle here may be less acclimated to heat and can still carry winter coats into summer, making sudden high temperatures even more dangerous. Sharp temperature spikes in these regions can catch both animals and producers off guard. Colorado and Idaho are generally considered cooler, more temperate, and often semi-arid or mountainous states. Their cattle are more likely to experience dry air and rapid dehydration during heat events, especially at higher elevations or during summer droughts. In these settings, a higher average relative humidity can indeed help reduce dehydration and moderate temperature swings, which is beneficial for cattle health. 
   </p>
   </Prose> 
@@ -252,7 +252,7 @@ States like Montana, Idaho, and Colorado, often associated with cooler temperatu
     zoom={4}
     datasetId='climdex-tmaxxf-access-cm2'
     layerId='climdex-tmaxxf-access-cm2-126'
-    datetime='2030-06-15'
+    datetime='2080-06-01'
   >
 ### Identifying Hotspots: Seasonal Average Days Above THI Threshold
 <p>
