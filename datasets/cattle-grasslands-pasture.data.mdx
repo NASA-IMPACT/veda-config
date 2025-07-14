@@ -242,7 +242,7 @@ layers:
       resampling: bilinear
       bidx: 1
       nodata: -9999
-      colormap_name: rdbu_r
+      colormap_name: rdbu
       rescale:
         - 0.020
         - 0.926
@@ -259,11 +259,13 @@ layers:
       min: "0.020"
       max: "0.926"
       stops:
-        - rgb(3, 0, 255)
-        - rgb(65, 133, 4)
-        - rgb(239, 255, 7)
-        - rgb(239, 255, 7)
         - rgb(255, 3, 3)
+        - rgb(239, 255, 7)
+        - rgb(239, 255, 7)
+        - rgb(65, 133, 4)
+        - rgb(3, 0, 255)
+
+        
     info:
       source: NSIDC
       spatialExtent: Global
@@ -281,7 +283,7 @@ layers:
     sourceParams:
       resampling: bilinear
       bidx: 1
-      nodata: -9999
+      nodata: 0
       colormap_name: rdylgn
       rescale:
         - -0.3
