@@ -31,7 +31,7 @@ layers:
     stacCol: county_grasslands_2019_pastu
     tileApiEndpoint: "https://dev.openveda.cloud/api/raster"
     stacApiEndpoint: "https://dev.openveda.cloud/api/stac"
-    name: 'Grassland percentage'
+    name: 'County Grassland Land Percentage'
     type: raster
     description: 'County-level percentage of grassland estimated from NLCD land cover data'
     sourceParams:
@@ -65,7 +65,7 @@ layers:
     stacCol: county_pasture_2019_pastu
     tileApiEndpoint: "https://dev.openveda.cloud/api/raster"
     stacApiEndpoint: "https://dev.openveda.cloud/api/stac"
-    name: 'County pasture'
+    name: 'County Pasture Land Percentage'
     type: raster
     description: 'County-level percentage of pasture estimated from NLCD land cover data'
     sourceParams:
@@ -99,7 +99,7 @@ layers:
     stacCol: usda_cattle_large_AFOs_2017
     tileApiEndpoint: "https://dev.openveda.cloud/api/raster"
     stacApiEndpoint: "https://dev.openveda.cloud/api/stac"
-    name: 'USDA Cattle Large Animal Feeding Operations (AFO)'
+    name: 'USDA Cattle Large Animal Feeding Operations'
     type: raster
     description: 'Cattle: County-Level Distribution of Large (Number of operations that managed 200 or more heads) Animal Feeding Operations (AFO).'
     sourceParams:
@@ -132,7 +132,7 @@ layers:
     stacCol: usda_cattle_medium_AFOs_2017
     tileApiEndpoint: "https://dev.openveda.cloud/api/raster"
     stacApiEndpoint: "https://dev.openveda.cloud/api/stac"
-    name: 'USDA Cattle Medium Animal Feeding Operations (AFO)'
+    name: 'USDA Cattle Medium Animal Feeding Operations'
     type: raster
     description: 'Cattle: County-Level Distribution of Medium (Number of operations that managed between 50 and 199 heads) Animal Feeding Operations (AFO).'
     sourceParams:
@@ -166,7 +166,7 @@ layers:
     stacCol: usda_cattle_small_AFOs_2017
     tileApiEndpoint: "https://dev.openveda.cloud/api/raster"
     stacApiEndpoint: "https://dev.openveda.cloud/api/stac"
-    name: 'USDA Cattle Small Animal Feeding Operations (AFO)'
+    name: 'USDA Cattle Small Animal Feeding Operations'
     type: raster
     description: 'Cattle: County-Level Distribution of Small (Number of operations that managed less than 50 heads) Animal Feeding Operations (AFO).'
     sourceParams:
@@ -200,7 +200,7 @@ layers:
     stacCol: usda_cattle_total_heads_2017
     tileApiEndpoint: "https://dev.openveda.cloud/api/raster"
     stacApiEndpoint: "https://dev.openveda.cloud/api/stac"
-    name: 'usda_cattle_total_heads_2017'
+    name: 'County Distribution of Total Number of Heads'
     type: raster
     description: 'Cattle: County-Level Distribution of Total Number of Heads.'
     sourceParams:
@@ -242,10 +242,10 @@ layers:
       resampling: bilinear
       bidx: 1
       nodata: -9999
-      colormap_name: rdbu_r
+      colormap_name: cool_r
       rescale:
-        - 0.020
-        - 0.926
+        - 0
+        - 0.5
     compare:
       datasetId: cattle-grasslands-pasture
       layerId: smap-L3-soil-moisture-AM-v2
