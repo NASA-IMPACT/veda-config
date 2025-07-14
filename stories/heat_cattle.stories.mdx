@@ -66,43 +66,6 @@ taxonomy:
   </Figure>
 </Block>
 
-<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
-   <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
-  <p>
-  ### Hot States: Escalating Heat Stress
-In states like Kansas, Texas, and Oklahoma, heat stress has long been a challenge for cattle producers, but recent years have seen the problem intensify. Kansas, the third-largest cattle-producing state, was hit especially hard in 2022, with a devastating heat wave that led to major [cattle losses](https://www.npr.org/2022/06/16/1105482394/cattle-kansas-heat-wave). The Kansas Department of Health and Environment confirmed at least 2,000 cattle deaths in the southwestern part of the state, though industry estimates suggest the total could be as high as 10,000 head of cattle lost during this event. The GIF shows the estimated THI during May and June 2022, illustrating the extreme heat conditions.
-  </p>
-  </Prose> 
-  <Figure>
-      <Image
-        src={new URL('./cattle_THI_2022_May_June.gif', import.meta.url).href}
-        alt='Temperature Humidity Index (THI) for Kansas Summer 2022.'
-        attrAuthor = 'Maheshwari Neelam'
-      />
-      <Caption>
-        Temperature Humidity Index (THI) during Kansas Heatwave June 2022.
-      </Caption>
-  </Figure> 
-</Block>
-
-<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
-   <Figure>
-      <Image
-      src={new URL('./cattle_all_variables_yearly_heatmap.png', import.meta.url).href}
-      style={{ maxWidth: '200%'}}
-    />
-    <Caption>
-      The correlations between annual cattle deaths and climate variables.
-    </Caption>
-  </Figure>
-<Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
-  <p>
-  ### Cold States: Not as Safe as They Seem
-States like Montana, Idaho, and Colorado, often associated with cooler temperatures, are not immune. Cattle here may be less acclimated to heat and can still carry winter coats into summer, making sudden high temperatures even more dangerous. Sharp temperature spikes in these regions can catch both animals and producers off guard. Colorado and Idaho are generally considered cooler, more temperate, and often semi-arid or mountainous states. Their cattle are more likely to experience dry air and rapid dehydration during heat events, especially at higher elevations or during summer droughts. In these settings, a higher average relative humidity can indeed help reduce dehydration and moderate temperature swings, which is beneficial for cattle health. 
-  </p>
-  </Prose> 
-</Block>
-
 <Block>
   <Figure>
     <Map
@@ -245,10 +208,7 @@ States like Montana, Idaho, and Colorado, often associated with cooler temperatu
     Large AFOs are more likely to be located in regions with extensive grassland. These operations often confine or semi-confine their herds and generally have greater resources to invest in heat abatement technologies and advanced management. However, even large AFOs face significant risks during prolonged heat waves, as grassland systems are susceptible to drought and wildfires, which can threaten both feed supply and animal welfare.
   </p>
   </Chapter>
-</ScrollytellingBlock>
 
-
-<ScrollytellingBlock>
   <Chapter
     center={[-113.,40.]}
     zoom={4}
@@ -294,6 +254,42 @@ States like Montana, Idaho, and Colorado, often associated with cooler temperatu
 </Chapter>
 </ScrollytellingBlock>
 
+<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
+   <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
+  <p>
+  ### Hot States: Escalating Heat Stress
+In states like Kansas, Texas, and Oklahoma, heat stress has long been a challenge for cattle producers, but recent years have seen the problem intensify. Kansas, the third-largest cattle-producing state, was hit especially hard in 2022, with a devastating heat wave that led to major [cattle losses](https://www.npr.org/2022/06/16/1105482394/cattle-kansas-heat-wave). The Kansas Department of Health and Environment confirmed at least 2,000 cattle deaths in the southwestern part of the state, though industry estimates suggest the total could be as high as 10,000 head of cattle lost during this event. The GIF shows the estimated THI during May and June 2022, illustrating the extreme heat conditions.
+  </p>
+  </Prose> 
+  <Figure>
+      <Image
+        src={new URL('./cattle_THI_2022_May_June.gif', import.meta.url).href}
+        alt='Temperature Humidity Index (THI) for Kansas Summer 2022.'
+        attrAuthor = 'Maheshwari Neelam'
+      />
+      <Caption>
+        Temperature Humidity Index (THI) during Kansas Heatwave June 2022.
+      </Caption>
+  </Figure> 
+</Block>
+
+<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
+   <Figure>
+      <Image
+      src={new URL('./cattle_all_variables_yearly_heatmap.png', import.meta.url).href}
+      style={{ maxWidth: '200%'}}
+    />
+    <Caption>
+      The correlations between annual cattle deaths and climate variables.
+    </Caption>
+  </Figure>
+<Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
+  <p>
+  ### Cold States: Not as Safe as They Seem
+States like Montana, Idaho, and Colorado, often associated with cooler temperatures, are not immune. Cattle here may be less acclimated to heat and can still carry winter coats into summer, making sudden high temperatures even more dangerous. Sharp temperature spikes in these regions can catch both animals and producers off guard. Colorado and Idaho are generally considered cooler, more temperate, and often semi-arid or mountainous states. Their cattle are more likely to experience dry air and rapid dehydration during heat events, especially at higher elevations or during summer droughts. In these settings, a higher average relative humidity can indeed help reduce dehydration and moderate temperature swings, which is beneficial for cattle health. 
+  </p>
+  </Prose> 
+</Block>
 
 <Block>
   <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
