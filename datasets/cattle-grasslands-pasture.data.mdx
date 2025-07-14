@@ -251,7 +251,7 @@ layers:
       layerId: smap-L3-soil-moisture-AM-v2
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
-          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL dd yyyy')} VS ${dateFns.format(compareDatetime, 'LLL dd yyyy')}`;
         }
     legend:
       type: gradient
