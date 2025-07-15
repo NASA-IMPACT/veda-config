@@ -1,0 +1,55 @@
+---
+id: tx-flood-maxar
+isHidden: true
+name: 'MAXAR Commercial Satellite Imagery (2025 Texas Flood - Post)'
+description: "TrueColor commercial satellite imagery from MAXAR taken on July 8, 2025 of the Guadalupe River in central Texas after a devastating flash flood on July 4, 2025. This data was made available through the NASA Commercial Satellite Data Acquisition (CSDA) Program."
+media:
+  src: ::file ../stories/media/tx-flood-background.jpg
+  alt: A search and rescue volunteer holds a T-shirt and backpack with the words Camp Mystic on them.
+  author:
+    name: Forrest McFarland
+    url: https://www.the-sun.com/news/14645258/texas-floods-camp-mystic-pictures-victims-missing/
+taxonomy:
+  - name: Topics
+    values:
+      - Disasters
+  - name: Source
+    values:
+      - MAXAR Technologies
+infoDescription: |
+  ::markdown
+    - **Temporal Extent:** July 8, 2025
+    - **Temporal Resolution:** Inconsistent
+    - **Spatial Extent:** Local
+    - **Spatial Resolution:** 1 meter
+    - **Data Units:** N/A
+    - **Data Type:** Research
+    - **Data Latency:** N/A
+
+layers:
+  - id: tx-flood-maxar-post
+    stacCol: tx-flood-maxar-post
+    name: MAXAR Commercial Satellite Imagery (2025 Texas Flood - Post)
+    type: raster
+    description: 'TrueColor commercial satellite imagery from MAXAR taken on July 8, 2025 of the Guadalupe River in central Texas after a devastating flash flood on July 4, 2025. This data was made available through the NASA Commercial Satellite Data Acquisition (CSDA) Program.'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      rescale:
+        - 0
+        - 750
+      resampling: bilinear
+      asset_bidx: cog_default|4,3,1
+    legend:
+      type: categorical
+      stops:
+        - color: "rgba(0, 0, 0, 0)" # using transparent for now to fix the issues with scrollytelling
+          label: "Imagery"
+    info:
+        source: MAXAR
+        spatialExtent: Local
+        temporalResolution: N/A
+        unit: Radiance
+
+---
