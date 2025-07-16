@@ -1,6 +1,6 @@
 ---
 id: 'heat_cattle'
-name:  Can Cattle Suffer from Heat Stroke?
+name:  Heat Waves Threatens $80 Billion Cattle Industry
 description: Understanding Heat Stress in Cattle
 media:
   src: ::file ./cover_cattle_heat.jpg
@@ -38,23 +38,25 @@ taxonomy:
      </p>
   </Prose>
 </Block>
-    
+
 <Block style={{justifyContent: 'space-between', alignItems: 'center', margin: '0 auto', width: '100%' }}>
    <Prose style={{ textAlign: 'justify', flex: '1', alignItems: 'center', marginLeft: '0.2rem'}}>
      <p>
-    ### Heat Stress on Cattle
-     When considering the impacts of heat waves, we often focus on human health. However, livestock, particularly cattle, can also be severely affected by extreme heat. Heat stress in cattle is an important and growing concern in both traditionally hot and cooler regions of the United States, with profound economic consequences for the dairy and beef industries.    
+     In June 2022, a devastating heat wave swept across Kansas, killing an estimated 10,000 cattle in a matter of days. The mass die-off raised urgent questions about the future of America’s $80 billion cattle industry—even in states once considered safe from extreme heat.
+ <br /><br />
+The Kansas Department of Health and Environment confirmed at least 2,000 [cattle deaths](https://www.npr.org/2022/06/16/1105482394/cattle-kansas-heat-wave) in the southwestern part of the state, though industry estimates suggest the total could be as high as 10,000 head lost during this single event. But Kansas was just the beginning. From the traditional heat of Texas to the surprising vulnerability of Montana, cattle across America are facing an escalating crisis that threatens both animal welfare and food security.
     </p>
-  </Prose>
+  </Prose
 </Block>
 
-<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
+<Block style={{justifyContent: 'space-between', alignItems: 'center', margin: '0 auto', width: '100%' }}>
    <Prose style={{ textAlign: 'justify', flex: '1', alignItems: 'center', marginLeft: '0.2rem'}}>
-     <p>      
-### Why Cattle Are So Vulnerable to Heat
-     Cattle are particularly sensitive to extreme temperatures. Their comfort zone, known as the thermoneutral zone, is relatively narrow. For our analysis, we considered critical thresholds for the Temperature Humidity Index (THI) at 75, 82, and 94 (Lee et al., 2025) which correspond to increasing levels of heat stress risk. When temperatures and humidity push the THI above these values, cattle begin to suffer physiologically. Outside of their thermoneutral zone, cattle experience reduced feed intake, slower liveweight gain, lower milk yield, and impaired fertility. When the heat load surpasses what their bodies can handle, the result is heat stress, or in severe cases, death. 
-   </p>
-  </Prose> 
+     <p>
+    ### The Hidden Scale of a Growing Crisis
+     When we think about heat wave impacts, human health dominates the headlines. But livestock particularly cattle face their own deadly consequences from extreme temperatures, with profound economic implications rippling through the dairy and beef industries. What makes this crisis particularly alarming is that it's no longer confined to traditionally hot regions. States like Montana, Idaho, and Colorado are discovering their cattle are equally vulnerable to sudden temperature spikes. <br /><br />
+The economic stakes couldn't be higher. Heat stress doesn't just kill cattle, it reduces feed intake, slows weight gain, decreases milk production, and impairs fertility across surviving herds. Each heat wave compounds these losses, creating a cascade of economic damage that ultimately reaches consumers through higher food prices.   
+    </p>
+  </Prose>
     <Figure>
       <Image
       src={new URL('./cows_heat.jpg', import.meta.url).href}
@@ -64,6 +66,55 @@ taxonomy:
       Illustrating the Consequences of Heat Stress in Cattle.
     </Caption>
   </Figure>
+</Block>
+
+<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
+   <Prose style={{ textAlign: 'justify', flex: '1', alignItems: 'center', marginLeft: '0.2rem'}}>
+     <p>      
+### Understanding Why Cattle Are Vulnerable to Heat
+     Understanding cattle vulnerability begins with a simple concept: just as the heat index measures human comfort, the Temperature Humidity Index (THI) measures cattle stress. But while humans can seek air conditioning, or modify their behavior, cattle have limited options.<br />
+Cattle operate within a narrow comfort zone called the thermoneutral zone. Our analysis uses critical THI thresholds of 75, 82, and 94 representing escalating levels of heat stress risk (Lee et al., 2025). Think of these as warning levels:
+
+- THI 75: Cattle begin showing mild stress signs
+- THI 82: Significant physiological stress begins
+- THI 94: Life-threatening conditions emerge
+
+When temperatures and humidity push the THI above these values, cattle begin to suffer physiologically. Outside their thermoneutral zone, they experience reduced feed intake, slower weight gain, lower milk yield, and impaired fertility. When the heat load surpasses what their bodies can handle, the result is heat stress—or in severe cases, death.
+The 2022 Kansas disaster illustrates this perfectly. The accompanying animation shows THI values during May and June 2022, revealing the extreme conditions that overwhelmed cattle across the state. What made this event particularly deadly was not just the peak temperatures, but the persistence of dangerous conditions day after day.
+</p>
+  </Prose> 
+  <Figure>
+      <Image
+        src={new URL('./cattle_THI_2022_May_June.gif', import.meta.url).href}
+        alt='Temperature Humidity Index (THI) for Kansas Summer 2022.'
+        attrAuthor = 'Maheshwari Neelam'
+      />
+      <Caption>
+        Temperature Humidity Index (THI) during Kansas Heatwave June 2022.
+      </Caption>
+  </Figure> 
+</Block>
+
+<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
+   <Prose style={{ textAlign: 'justify', flex: '1', alignItems: 'center', marginLeft: '0.2rem'}}>
+     <p>  
+   <Figure>
+      <Image
+      src={new URL('./cattle_all_variables_yearly_heatmap.png', import.meta.url).href}
+      style={{ maxWidth: '200%'}}
+    />
+    <Caption>
+      The correlations between annual cattle deaths and climate variables.
+    </Caption>
+  </Figure>
+### The Surprise Threat: "Cold" States Aren't Safe
+Perhaps most surprising is our finding that states traditionally considered cooler Montana, Idaho, and Colorado face significant cattle heat stress risks. These regions present a perfect storm of vulnerability:
+- Lack of Acclimation: Cattle in these states are less adapted to heat and may still carry winter coats into summer, making sudden high temperatures even more dangerous.
+- Rapid Dehydration: The dry air common in these semi-arid and mountainous regions accelerates dehydration during heat events, especially at higher elevations.
+- Unpredictable Timing: Sharp temperature spikes catch both animals and producers off guard, with insufficient time to implement emergency cooling measures.
+In these settings, our research shows that higher average relative humidity actually helps reduce dehydration.
+</p>
+</Prose
 </Block>
 
 <Block>
@@ -86,7 +137,9 @@ taxonomy:
   <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
      <p>
   ### Climate Drivers: The Slow Aggravators
-       While temperature is the primary driver of heat stress in cattle, other climate variables such as vapor pressure deficit, precipitation, and soil moisture also play critical roles. It is not just the average levels of these factors, but their variability that has a greater impact on cattle mortality. Soil moisture (SM) is a key indicator of both drought and heat stress. When soil moisture is depleted, the land's capacity to buffer temperature extremes is reduced, making cattle more vulnerable to the combined effects of heat and water scarcity. 
+       While temperature is the primary driver of heat stress in cattle, other climate variables such as vapor pressure deficit, precipitation, and soil moisture also play critical roles. It is not just the average levels of these factors, but their variability that has a greater impact on cattle mortality.
+### The Role of Drought and Soil Moisture
+Soil moisture emerges as a critical but often overlooked factor. When soil moisture is depleted, the land loses its capacity to buffer temperature extremes, creating a feedback loop that makes cattle more vulnerable to combined heat and water scarcity. During the 2022 Kansas heat wave, SMAP soil moisture data showed severely depleted conditions across the region, amplifying the heat stress effects on cattle. This combination of drought and heat creates the perfect conditions for mass mortality events.
     </p>
    </Prose>
 </Block>
@@ -94,8 +147,12 @@ taxonomy:
 <Block>
   <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
      <p>
-### The Role of Precipitation Variability
-  In dry states such as Nebraska, Oklahoma, Texas, and Kansas, it is not just the average precipitation but its variability that most strongly correlates with cattle mortality. High variability—whether within a season or between years disrupts forage growth, water availability, and pasture quality, making it difficult for cattle to maintain condition and for producers to plan resources.
+###   Precipitation Patterns Matter More Than Totals
+In dry states like Nebraska, Oklahoma, Texas, and Kansas, it's not average precipitation but its variability that most strongly correlates with cattle mortality. High variability whether within a season or between years—disrupts:
+- Forage Growth: Unpredictable rainfall creates feast-or-famine conditions for pasture
+- Water Availability: Inconsistent precipitation affects water source reliability
+- Pasture Quality: Variable moisture creates uneven forage nutrition and availability
+This variability makes it nearly impossible for cattle to maintain condition and for producers to plan resources effectively.
 </p>
 </Prose>
   <Figure>
@@ -109,40 +166,6 @@ taxonomy:
   </Figure>
 </Block>
 
-<Block>
-  <Figure>
-    <Map
-      datasetId='cattle-grasslands-pasture'
-      layerId='ndvi-global-2022'
-      zoom={4}
-      center={[-98.8209,38.174]}
-      dateTime= '2022-06-08'
-      compareDateTime = '2022-06-23'
-    />
-    <Caption
-      attrAuthor='NASA'
-      attrUrl='https://nasa.gov/'
-    >
-    Normalized Difference Vegetation Index (NDVI)
-  </Caption>  
-  </Figure>
-  <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
-     <p>
-      ### NDVI: A Signal of Forage Quality and Vegetation Stress
-       Normalized Difference Vegetation Index (NDVI) is another valuable indicator in this context. NDVI measures vegetation quality and stress by assessing the "greenness" and health of plant cover. Low NDVI values signal poor or stressed vegetation, directly impacting the quality and availability of feed for cattle. Monitoring NDVI alongside climate variables provides a more complete picture of how environmental stressors affect cattle health and productivity. 
-    </p>
-   </Prose>
-</Block>
-
-<Block>
-  <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
-    <p>
-   ### Variability Matters: More Than Just the Mean
-     Our findings indicate that it is the variability in THI both within and across seasons rather than just the mean THI, that most strongly impacts cattle mortality. Notably, increased variability in THI has been observed to raise mortality during cooler months and, paradoxically, decrease mortality in summer months in hotter states like Texas and Nebraska. This suggests that cattle may be less able to adapt to unexpected swings in thermal stress outside the traditional summer peak, making year round management and monitoring increasingly important. For example, increased variability in relative humidity exposes cattle to frequent and unpredictable shifts between dry and humid conditions, challenging their ability to acclimate, disrupting thermoregulation, and increasing physiological stress. 
-  </p>
-  </Prose>
-</Block>
-
 <ScrollytellingBlock>
   <Chapter
     center={[-113.,40.]}
@@ -151,9 +174,9 @@ taxonomy:
     layerId='nlcd-annual-conus'
     datetime='2001-01-01'
   >  
-  ### Cattle Operations and the Landscape
+  ### The Landscape of Vulnerability
   <p>
-  The landscape is the foundation of cattle production in the United States. From open rangelands to intensively managed feedlots, the distribution of grassland and pasture shapes where and how cattle are raised. Understanding how animal feeding operations (AFOs) align with these natural resources is essential for assessing their vulnerability to environmental stressors.
+  Understanding where cattle are most vulnerable requires examining how operations align with natural resources and climate patterns. From open rangelands to intensively managed feedlots, the distribution of grassland and pasture shapes where and how cattle are raised. 
   </p>
   </Chapter>
 
@@ -177,7 +200,7 @@ taxonomy:
     layerId='usda_cattle_small_AFOs_2017'
     datetime='2017-01-01'
   >
-  ### Small Cattle Operations and Pasture Reliance
+  ### Small Operations Face Greatest Risk
   <p>
     Small AFOs, as defined by the USDA Census, are most commonly found in counties with abundant pasture land. These operations typically use pasture-based systems and have limited resources for intensive cooling or heat abatement. As a result, small AFOs are especially vulnerable to direct heat stress and to the compounding effects of drought and pasture degradation.
   </p>
@@ -203,22 +226,45 @@ taxonomy:
     layerId='usda_cattle_large_AFOs_2017'
     datetime='2017-01-01'
   >
-  ### Large Cattle Operations and Grassland Systems
+  ### Large Operations: Resources But Still Vulnerable
   <p>
     Large AFOs are more likely to be located in regions with extensive grassland. These operations often confine or semi-confine their herds and generally have greater resources to invest in heat abatement technologies and advanced management. However, even large AFOs face significant risks during prolonged heat waves, as grassland systems are susceptible to drought and wildfires, which can threaten both feed supply and animal welfare.
   </p>
   </Chapter>
+</ScrollytellingBlock>
 
-  <Chapter
-    center={[-113.,40.]}
-    zoom={4}
-    datasetId='climdex-tmaxxf-access-cm2'
-    layerId='climdex-tmaxxf-access-cm2-126'
-    datetime='2080-06-01'
-  >
-### Identifying Hotspots: Seasonal Average Days Above THI Threshold
+<Block>
+  <Figure>
+    <Map
+      datasetId='cattle-grasslands-pasture'
+      layerId='ndvi-global-2022'
+      zoom={4}
+      center={[-98.8209,38.174]}
+      dateTime= '2022-06-08'
+      compareDateTime = '2022-06-23'
+    />
+    <Caption
+      attrAuthor='NASA'
+      attrUrl='https://nasa.gov/'
+    >
+    Normalized Difference Vegetation Index (NDVI)
+  </Caption>  
+  </Figure>
+  <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
+     <p>
+      ### The Critical Role of Vegetation Health
+Normalized Difference Vegetation Index (NDVI) provides crucial insights into forage quality and vegetation stress. NDVI measures the "greenness" and health of plant cover, low values signal poor or stressed vegetation, directly impacting feed quality and availability for cattle.
+Monitoring NDVI alongside climate variables provides a complete picture of environmental stressors affecting cattle health. During heat events, declining NDVI indicates not just immediate stress but also reduced nutritional quality of available forage, compounding the challenges cattle face. 
+    </p>
+   </Prose>
+</Block>
+
+
+<Block>
+  <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
 <p>
-   One primary metric for mapping county-level heat stress hotspots is the seasonal average number of days above a THI threshold (such as 75 or 82). For each county, we count the number of days in a season where the daily average Temperature-Humidity Index (THI) exceeds the chosen threshold. This metric is especially valuable for tracking trends over time and for comparing the intensity of heat exposure between counties. By analyzing these seasonal averages, we can pinpoint areas where cattle are most at risk due to recurring high-THI conditions. For instance, there is signficant THI variability within counties in states like Montana, Colarado and Texas. 
+### Mapping the Crisis: Current and Future Hotspots
+   One primary metric for mapping county-level heat stress hotspots is the seasonal average number of days above a THI threshold (such as 75 or 82). For each county, we count the number of days in a season where the daily average THI exceeds the chosen threshold. This metric is especially valuable for tracking trends over time and for comparing the intensity of heat exposure between counties. By analyzing these seasonal averages, we can pinpoint areas where cattle are most at risk due to recurring high-THI conditions. For instance, there is signficant THI variability within counties in states like Montana, Colarado and Texas. 
 </p>
   <Figure>
       <Image
@@ -229,15 +275,6 @@ taxonomy:
       The average number of days each year that the Temperature-Humidity Index (THI) exceeds a specified threshold, calculated from 1979 to 2024.
     </Caption>
   </Figure>
-</Chapter>
-
-<Chapter
-    center={[-113.,40.]}
-    zoom={4}
-    datasetId='climdex-tmaxxf-access-cm2'
-    layerId='climdex-tmaxxf-access-cm2-585'
-    datetime='2080-06-01'
-  >
 ### Hotspot Persistence: Seasonal Fraction of Days Above THI Threshold
 <p>
   To further refine hotspot identification, we use the seasonal fraction of days above a THI threshold. This metric calculates the proportion of days in a season where the THI exceeds the set threshold. High fractions indicate areas where heat stress is not only frequent but also persistent throughout the season. Such persistent exposure can have compounding effects on cattle health and productivity, making these counties priority targets for adaptation and mitigation efforts.
@@ -251,51 +288,38 @@ taxonomy:
       The proportion of days on which the Temperature-Humidity Index (THI) exceeds a specified threshold, calculated from 1979 to 2024.
     </Caption>
   </Figure>
-</Chapter>
-</ScrollytellingBlock>
-
-<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
-   <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
-  <p>
-  ### Hot States: Escalating Heat Stress
-In states like Kansas, Texas, and Oklahoma, heat stress has long been a challenge for cattle producers, but recent years have seen the problem intensify. Kansas, the third-largest cattle-producing state, was hit especially hard in 2022, with a devastating heat wave that led to major [cattle losses](https://www.npr.org/2022/06/16/1105482394/cattle-kansas-heat-wave). The Kansas Department of Health and Environment confirmed at least 2,000 cattle deaths in the southwestern part of the state, though industry estimates suggest the total could be as high as 10,000 head of cattle lost during this event. The GIF shows the estimated THI during May and June 2022, illustrating the extreme heat conditions.
-  </p>
-  </Prose> 
-  <Figure>
-      <Image
-        src={new URL('./cattle_THI_2022_May_June.gif', import.meta.url).href}
-        alt='Temperature Humidity Index (THI) for Kansas Summer 2022.'
-        attrAuthor = 'Maheshwari Neelam'
-      />
-      <Caption>
-        Temperature Humidity Index (THI) during Kansas Heatwave June 2022.
-      </Caption>
-  </Figure> 
+   </Prose>
 </Block>
 
-<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
-   <Figure>
+<Block>
+  <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
+<p>
+### The Accelerating Crisis in Traditional Hot States
+   States like Kansas, Texas, and Oklahoma have long dealt with cattle heat stress, but recent years show the problem intensifying dramatically. 
+Texas, the nation's largest cattle producer, faces particular challenges as heat stress conditions become more frequent and severe. Our correlation analysis shows strong relationships between cattle mortality and multiple climate variables, with temperature variability emerging as a key factor even in traditionally hot regions.
+Oklahoma and Nebraska show similar patterns, with increased variability in both temperature and humidity creating more dangerous conditions than cattle producers have historically managed.
+</p>
+  <Figure>
       <Image
-      src={new URL('./cattle_all_variables_yearly_heatmap.png', import.meta.url).href}
+      src={new URL('./cattle_avg_days.png', import.meta.url).href}
       style={{ maxWidth: '200%'}}
     />
     <Caption>
-      The correlations between annual cattle deaths and climate variables.
+      The average number of days each year that the Temperature-Humidity Index (THI) exceeds a specified threshold, calculated from 1979 to 2024.
     </Caption>
   </Figure>
-<Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
-  <p>
-  ### Cold States: Not as Safe as They Seem
-States like Montana, Idaho, and Colorado, often associated with cooler temperatures, are not immune. Cattle here may be less acclimated to heat and can still carry winter coats into summer, making sudden high temperatures even more dangerous. Sharp temperature spikes in these regions can catch both animals and producers off guard. Colorado and Idaho are generally considered cooler, more temperate, and often semi-arid or mountainous states. Their cattle are more likely to experience dry air and rapid dehydration during heat events, especially at higher elevations or during summer droughts. In these settings, a higher average relative humidity can indeed help reduce dehydration and moderate temperature swings, which is beneficial for cattle health. 
-  </p>
-  </Prose> 
+ </Prose>
 </Block>
 
 <Block>
   <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
   <p>
   ### Future Projections: More Days Above 90°F
-  Looking ahead, climate models project a dramatic increase in the number of extremely hot days—those above 90°F—across much of the U.S. Maps of projected future days above 90°F illustrate the scale of the challenge, underscoring the urgent need for adaptive management and heat abatement strategies to protect animal welfare and sustain cattle production in a warming climate.
+  Looking ahead, climate models project a dramatic increase in the number of extremely hot days—those above 90°F—across much of the U.S. Maps of projected future days above 90°F illustrate the scale of the challenge. These projections translate to:
+- Increased Mortality: More frequent mass die-off events
+- Reduced Productivity: Chronic stress affecting milk production and weight gain
+- Economic Losses: Billions in additional costs for cooling infrastructure and feed
+- Food Security Risks: Potential disruptions to beef and dairy supplies underscoring the urgent need for adaptive management and heat abatement strategies to protect animal welfare and sustain cattle production in a warming climate.
   </p>
 </Prose> 
   <Figure>
