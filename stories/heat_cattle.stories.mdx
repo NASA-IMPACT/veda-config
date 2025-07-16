@@ -95,7 +95,6 @@ The 2022 Kansas disaster illustrates this perfectly. The accompanying animation 
 </Block>
 
 <Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
-   <Prose style={{ textAlign: 'justify', flex: '1', alignItems: 'center', marginLeft: '0.2rem'}}>
    <Figure>
       <Image
       src={new URL('./cattle_all_variables_yearly_heatmap.png', import.meta.url).href}
@@ -105,6 +104,7 @@ The 2022 Kansas disaster illustrates this perfectly. The accompanying animation 
       The correlations between annual cattle deaths and climate variables.
     </Caption>
   </Figure>
+   <Prose style={{ textAlign: 'justify', flex: '1', alignItems: 'center', marginLeft: '0.2rem'}}>
     <p>  
 ### The Surprise Threat: "Cold" States Aren't Safe
 Perhaps most surprising is our finding that states traditionally considered cooler Montana, Idaho, and Colorado face significant cattle heat stress risks. These regions present a perfect storm of vulnerability:
@@ -116,7 +116,7 @@ In these settings, our research shows that higher average relative humidity actu
 </Prose
 </Block>
 
-<Block>
+<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
   <Figure>
     <Map
       datasetId='cattle-grasslands-pasture'
@@ -143,7 +143,7 @@ Soil moisture emerges as a critical but often overlooked factor. When soil moist
    </Prose>
 </Block>
 
-<Block>
+<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
   <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
      <p>
 ###   Precipitation Patterns Matter More Than Totals
@@ -232,7 +232,7 @@ This variability makes it nearly impossible for cattle to maintain condition and
   </Chapter>
 </ScrollytellingBlock>
 
-<Block>
+<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
   <Figure>
     <Map
       datasetId='cattle-grasslands-pasture'
@@ -258,13 +258,13 @@ Monitoring NDVI alongside climate variables provides a complete picture of envir
    </Prose>
 </Block>
 
-
-<Block>
-  <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
+<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
+<Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
 <p>
 ### Mapping the Crisis: Current and Future Hotspots
    One primary metric for mapping county-level heat stress hotspots is the seasonal average number of days above a THI threshold (such as 75 or 82). For each county, we count the number of days in a season where the daily average THI exceeds the chosen threshold. This metric is especially valuable for tracking trends over time and for comparing the intensity of heat exposure between counties. By analyzing these seasonal averages, we can pinpoint areas where cattle are most at risk due to recurring high-THI conditions. For instance, there is signficant THI variability within counties in states like Montana, Colarado and Texas. 
 </p>
+  </Prose>
   <Figure>
       <Image
       src={new URL('./cattle_avg_days.png', import.meta.url).href}
@@ -274,15 +274,15 @@ Monitoring NDVI alongside climate variables provides a complete picture of envir
       The average number of days each year that the Temperature-Humidity Index (THI) exceeds a specified threshold, calculated from 1979 to 2024.
     </Caption>
   </Figure>
-   </Prose>
 </Block>
 
-<Block>
-  <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
+<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
+<Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
 <p>
 ### Hotspot Persistence: Seasonal Fraction of Days Above THI Threshold
   To further refine hotspot identification, we use the seasonal fraction of days above a THI threshold. This metric calculates the proportion of days in a season where the THI exceeds the set threshold. High fractions indicate areas where heat stress is not only frequent but also persistent throughout the season. Such persistent exposure can have compounding effects on cattle health and productivity, making these counties priority targets for adaptation and mitigation efforts.
 </p>
+  </Prose>
   <Figure>
     <Image
     src={new URL('./cattle_fract_days.png', import.meta.url).href}
@@ -292,10 +292,9 @@ Monitoring NDVI alongside climate variables provides a complete picture of envir
       The proportion of days on which the Temperature-Humidity Index (THI) exceeds a specified threshold, calculated from 1979 to 2024.
     </Caption>
   </Figure>
-   </Prose>
 </Block>
 
-<Block>
+<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
 <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
 <p>
 ### The Accelerating Crisis in Traditional Hot States
@@ -303,6 +302,7 @@ Monitoring NDVI alongside climate variables provides a complete picture of envir
 Texas, the nation's largest cattle producer, faces particular challenges as heat stress conditions become more frequent and severe. Our correlation analysis shows strong relationships between cattle mortality and multiple climate variables, with temperature variability emerging as a key factor even in traditionally hot regions.
 Oklahoma and Nebraska show similar patterns, with increased variability in both temperature and humidity creating more dangerous conditions than cattle producers have historically managed.
 </p>
+</Prose>
   <Figure>
       <Image
       src={new URL('./cattle_avg_days.png', import.meta.url).href}
@@ -312,10 +312,9 @@ Oklahoma and Nebraska show similar patterns, with increased variability in both 
       The average number of days each year that the Temperature-Humidity Index (THI) exceeds a specified threshold, calculated from 1979 to 2024.
     </Caption>
   </Figure>
- </Prose>
 </Block>
 
-<Block>
+<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
   <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
   <p>
   ### Future Projections: More Days Above 90°F
@@ -344,8 +343,8 @@ Oklahoma and Nebraska show similar patterns, with increased variability in both 
   </Figure>
 </Block>
 
-<Block>
-  <Prose>
+<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
+  <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
      ### The Path Forward: Adaptation and Resilience
      If livestock are to adapt to new thermal environments and maintain productivity, infrastructural investments and management adjustments are essential. These include:
      - Increase water access points and keep water sources shaded
