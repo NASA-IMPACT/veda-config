@@ -33,7 +33,7 @@ infoDescription: |
 layers:
   - id: la-fires-maxar
     stacCol: la-fires-maxar
-    name: MAXAR False Color Satellite Imagery (2025 Eaton Fire)
+    name: MAXAR False Color Satellite Imagery (2025 Eaton Fire) - © 2025 MAXAR
     type: raster
     description: 'Commercial MAXAR Satellite Imagery of the ongoing Eaton Fire in Los Angeles County, California on January 8, 2025.'
     zoomExtent:
@@ -46,10 +46,7 @@ layers:
       resampling: bilinear
       asset_bidx: cog_default|8,6,4
     legend:
-      type: categorical
-      stops:
-        - color: "rgba(0, 0, 0, 0)" # using transparent for now to fix the issues with scrollytelling
-          label: "Imagery"
+      type: text
     compare:
       datasetId: la-fires-parcels
       layerId: la-fires-parcels
