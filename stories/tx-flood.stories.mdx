@@ -1,0 +1,535 @@
+---
+id: 'tx-flood'
+featured: true
+name: Guadalupe River Flood Tragedy
+description: Once in a lifetime disaster in the Texas Hill Country 
+media:
+  src: ::file ../stories/media/tx-flood-background.jpg
+  alt: A search and rescue volunteer holds a T-shirt and backpack with the words Camp Mystic on them.
+  author: 
+    name: Forrest McFarland
+    url: https://www.the-sun.com/news/14645258/texas-floods-camp-mystic-pictures-victims-missing/
+pubDate: 2025-07-17T00:00
+taxonomy:
+  - name: Topics
+    values:
+      - Natural Disasters
+  - name: Subtopics
+    values:
+      - Drought
+      - Floods
+      - Hydrology
+      - Precipitation
+  - name: Source
+    values:
+      - Community Contributed
+---
+
+<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
+  <Prose>
+    **Authors:** Andrew Blackford<sup>1</sup> and Chelsea Aaron <sup>1</sup>
+   
+    <sup>1</sup> The University of Alabama in Huntsville (UAH)
+
+  </Prose>
+</Block>
+
+<Block>
+    <Prose>
+    ### Introduction 
+    In the early hours of July 4, 2025, the Texas Hill Country experienced a catastrophic flash flood that would etch itself into the history books as the sixth-deadliest freshwater flooding disaster in the United States. Over the course of a few harrowing hours, intense rainfall transformed the Guadalupe River into a raging torrent that engulfed Kerr County, sweeping away cabins, homes, and vehicles from Camp Mystic to Ingram, Kerrville, and Center Point, before continuing downstream north and east of San Antonio. As of July 7, 2025, the death toll attributed to this catastrophe has surpassed the fatalities caused by freshwater flooding from Hurricane Helene. This disaster unfolded in an area already reeling from a prolonged drought that left soils hard baked and unable to absorb water, priming the region for dangerous runoff. As rescue and recovery teams continue combing debris along the riverbanks, the event stands as a sobering reminder of the lethal intersection between extreme rainfall, vulnerable terrain, and the unique hydrology of America’s flash-flood capital.
+    </Prose>
+
+    <Figure>
+    <Image
+      src={new URL('./media/tx-flood-heatmap.jpg', import.meta.url).href}
+      alt='Heatmap of deadly flash floods in the US from 2006-2020.'
+      attrAuthor = 'Weather Prediction Center'
+      attrUrl = 'https://x.com/NWSWPC/status/1352654577028517892/photo/1'
+    />
+    <Caption>
+    Heatmap showing all deadly flash flood reports in the continental United States from 2006-2020. The Guadalupe River is the main source of the highest concentration of such reports- dubbed Flash Flood Alley.
+    </Caption>
+    </Figure>
+</Block>
+
+
+<Block>
+<Figure>
+    <Image
+      src={new URL('./media/tx-flood-camp-mystic-map.jpg', import.meta.url).href}
+      alt='Map showing extent of the flooding at Camp Mystic compared to FEMA 100 and 500 year recurrence intervals.'
+      attrAuthor = 'Andrew Blackford'
+    />
+    <Caption>
+    Map showing extent of the flooding at Camp Mystic compared to FEMA 100 and 500 year recurrence intervals. Label a is the location of Camp Mystic - Guadalupe River and label b is Camp Mystic - Cypress Creek. Credit Andrew Blackford. The red dot on the bottom right inset map shows the location of Camp Mystic relative to Austin and San Antonio, TX.
+    </Caption>
+  </Figure>
+  
+  <Prose>
+  Camp Mystic, which was set to celebrate its 100th anniversary next year, became the tragic epicenter of the flood’s devastation. This beloved youth camp was one of several historic facilities lining the banks of the Guadalupe River. For generations, these camps have drawn children from across Texas and beyond to their cabins and riverside activities—despite a long history of flood risk in the area. Camp Mystic, in particular, occupies a low-lying stretch near the dangerous confluence of the South Fork Guadalupe River and Cypress Creek, where floodwaters converged with extraordinary force. The Federal Emergency Management Agency (FEMA) defines and regularly updates the surrounding flood zones and special flood hazard areas, yet even these benchmarks did not anticipate the scale of this disaster. In multiple locations, the river crested far above FEMA’s mapped 100-year and 500-year recurrence thresholds, inundating facilities long considered marginally safe and illuminating the vulnerability of these storied camps to extreme flash flooding.
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  The following camps all sustained damage from this historic flood, and all are located in Kerr and Kendall Counties, Texas:
+   
+  * Camp Mystic
+  * Heart O’ The Hills
+  * Camp La Junta
+  * Camp Waldemar
+  * Camp Stewart for Boys
+  * Camp Honey For Girls
+  * Camp Rio Vista
+  * Camp Sierra Vista
+  * Jellystone Park Guadalupe River
+  * Texas Lions Camp
+  * Camp CAMP
+  * Hermann Sons Life Camp - Hilltop
+  * His Hill Ranch Camp
+  </Prose>
+</Block>
+
+
+<Block>
+    <Prose>
+    ### Meteorological Overview
+
+    The catastrophic flash flooding was set in motion by the remnants of Tropical Storm Barry, which propagated northward after making landfall in southeastern Mexico on June 29. Its mid-level circulation merged with a stalled mid-latitude trough and abundant tropical moisture from the eastern Pacific, spawning a large, organized cluster of thunderstorms that remained nearly stationary over the Texas Hill Country from July 4 to 7. This stalled system unleashed extreme rainfall: several automated rain gauges reported 5 to 11 inches within a few hours, with a staggering 20.33 inches recorded northwest of Streeter over the three-day event.
+    </Prose>
+
+    <Figure>
+    <Map
+        center={[-99.22, 30.03]}
+        zoom={7.5}
+        datasetId='tx-flood-imerg'
+        layerId='tx-flood-imerg'
+        dateTime='2025-07-07'
+    />
+    <Caption
+        attrAuthor='NASA'
+        attrUrl='https://nasa.gov/'
+    >
+        NASA's Integrated Multi-Satellite Retrievals for GPM (IMERG) product shows heavy rainfall over much of the Texas Hill Country from July 1-7, 2025. 
+    </Caption>
+    </Figure>
+</Block>
+
+
+<Block>
+  <Figure>
+    <Chart
+      dataPath={new URL('./tx-flood-gauge-data.csv', import.meta.url).href}
+      dateFormat="%m/%d/%Y %H:%M"
+      idKey='source'
+      xKey='datetime'
+      yKey='stream_height'
+      yAxisLabel='Stage (ft)'
+      highlightStart = '7/4/2025 4:45'
+      highlightEnd = '7/4/2025 5:00'
+      highlightLabel = 'Gauge Broke'
+
+    />
+    <Caption>
+    Stream gauge height data from the National Water Prediction Service showing the Guadalupe River quickly rising well above flood stage in Kerr County, TX on July 4, 2025.
+    </Caption>
+  </Figure>
+  <Prose>
+  Locally intense thunderstorms produced rainfall rates exceeding 2-4 inches per hour, prompting the National Weather Service to issue urgent flash flood emergencies, including a 4:03 a.m. alert warning residents in Hunt and Ingram to seek higher ground without delay. The Guadalupe River responded with a violent surge: at Hunt, the river rose over 2 feet between 4:20 and 4:25 a.m. on July 4, and ultimately crested at 37.5 feet. The initial flood stage of the Guadalupe River is 10 feet, with major flooding beginning at 22 feet. 
+  </Prose>
+</Block>
+
+
+<Block>
+    <Prose>
+    ### Hydrologic Overview
+
+    Much of the Texas Hill Country is underlain by thin, rocky soils sitting atop extensive beds of limestone. These shallow soils are typically only a few inches to a foot deep before hitting nearly solid rock layers that act like a barrier, preventing water from draining through the ground. Even in average rainfall events, this characteristic leads to impressive runoffs and rapid rises in creeks. During intense storms, rainwater has nowhere to infiltrate, and instead travels down slopes almost immediately, funneling into low-lying valleys and rivers. The steep gradients of the surrounding terrain amplify this effect, causing runoff to gather speed and volume in a matter of minutes. These hydrologic conditions are one reason the Hill Country is often called the most flood-prone region in the continental United States.
+    </Prose>
+    <Figure>
+    <Map
+        center={[-99.22, 30.03]}
+        zoom={7.5}
+        datasetId='soil-texture'
+        layerId='soil-texture-0cm'
+        dateTime='2017-12-31'
+    />
+    <Caption
+        attrAuthor='NASA'
+        attrUrl='https://nasa.gov/'
+    >
+        Surface soil texture in Kerr County, TX and surrounding areas. 
+    </Caption>
+    </Figure>
+</Block>
+
+
+<Block>
+    <Figure>
+        <Image
+        src={new URL('./media/tx-flood-usdm.jpg', import.meta.url).href}
+        alt='(Top) Drought conditions in the state of Texas leading up to the July 4th, 2025 flash flood. Over half of Kerr County was under D4 exceptional drought conditions. (Bottom) Time series of the percentage coverage of each drought category in Kerr County, 2000-2025.'
+        attrAuthor = 'US Drought Monitor'
+        attrUrl = 'https://droughtmonitor.unl.edu/CurrentMap/StateDroughtMonitor.aspx?fips_48019'
+        />
+        <Caption>
+        (Top) Drought conditions in the state of Texas leading up to the July 4th, 2025 flash flood. Over half of Kerr County was under D4 exceptional drought conditions. (Bottom) Time series of the percentage coverage of each drought category in Kerr County, 2000-2025.
+        </Caption>
+    </Figure>
+    <Prose>
+    The flood tragedy on July 4, 2025 was compounded and exacerbated by a prolonged drought within this region that left the landscape exceptionally vulnerable. Months of hot, dry weather hardened the soil surface into a crust-like layer, further reducing what little capacity for drainage remained. The drought also stressed vegetation, leading to patchy ground cover that would otherwise slow and help absorb rainfall. When Tropical Storm Barry’s remnants arrived, the parched ground behaved more like pavement than pasture, shedding almost all of the deluge as immediate runoff over a watershed nearly the size of the state of Connecticut. This combination of drought-hardened soils, thin limestone layers, and steep drainage basins created a perfect recipe for a catastrophic flash flood once extreme rainfall began.
+    </Prose>
+</Block>
+
+
+
+<ScrollytellingBlock>
+<Chapter
+    center={[-99.377, 30.007]}
+    zoom={16}
+    datasetId='tx-flood-maxar'
+    layerId='tx-flood-maxar-pre'
+    datetime='2025-03-12'
+  >
+   ### Tragedy at Camp Mystic 
+   
+   Camp Mystic, a beloved summer retreat along the Guadalupe River, was in full swing as young campers enjoyed the familiarity of summer activities. Dozens of cabins and tents dotted the property, nestled among old oaks and limestone bluffs. Families across Texas and beyond had sent their children here for generations, never imagining that a catastrophic flood would soon arrive.
+  
+   <Figure>
+    <Image
+      src={new URL('./media/tx-flood-camp-mystic-1.png', import.meta.url).href}
+      alt='Foundation of a building at Camp Mystic'
+      attrAuthor = 'AP/Julio Cortez'
+      attrUrl = 'https://apnews.com/article/camp-mystic-floods-state-inspection-ef17d51dc7868fa9cc5c3076c31ed98a'
+    />
+    <Caption>
+    Foundations are all that remain of several buildings at Camp Mystic after a torrent of raging floodwaters quickly overcame the campsite on July 4, 2025.
+    </Caption>
+   </Figure>
+  </Chapter>
+
+
+<Chapter
+    center={[-99.377, 30.007]}
+    zoom={16}
+    datasetId='tx-flood-maxar'
+    layerId='tx-flood-maxar-post'
+    datetime='2025-07-08'
+  >
+   ### Tragedy at Camp Mystic 
+   
+   In the complete darkness of early morning, the river rapidly rose without enough time to act, tearing through the camp with incredible force. Many survivors recalled a deafening roar before water smashed through doors and windows. Entire cabins were swept off their foundations, and debris was carried hundreds of yards to miles downstream. Rescue crews worked by boat and helicopter to search for survivors. 
+   
+   <Figure>
+    <Image
+      src={new URL('./media/tx-flood-camp-mystic-2.png', import.meta.url).href}
+      alt='High water lines left inside buildings at Camp Mystic'
+      attrAuthor = 'Reuters/Sergio Flores'
+      attrUrl = 'https://www.reuters.com/pictures/harrowing-photos-show-flood-aftermath-camp-mystic-2025-07-07/'
+    />
+    <Caption>
+    High water lines are seen inside the buildings that remain at Camp Mystic.
+    </Caption>
+   </Figure>
+  </Chapter>
+
+
+<Chapter
+    center={[-99.377, 30.007]}
+    zoom={16}
+    datasetId='tx-flood-recurrence'
+    layerId='tx-flood-10-yr-recurrence'
+    datetime='2021-12-31'
+  >
+   ### Tragedy at Camp Mystic 
+   
+   Even a 10-year flood would have inundated parts of Camp Mystic, but this event quickly surpassed those levels. As water overtopped familiar banks, counselors raced from cabin to cabin in the dark, urging campers to climb toward higher ground. Some children scrambled up the steep bluffs, while others were caught by rising currents.
+
+
+   <Figure>
+    <Image
+      src={new URL('./media/tx-flood-camp-mystic-3.png', import.meta.url).href}
+      alt='Search and rescue efforts at Camp Mystic'
+      attrAuthor = 'AP/Julio Cortez'
+      attrUrl = 'https://apnews.com/photo-gallery/photos-texas-flooding-camp-mystic-5c3109dc79e16bac53526c4db8c8207e'
+    />
+    <Caption>
+    Search and rescue efforts underway below a destroyed building at Camp Mystic.
+    </Caption>
+   </Figure>
+  </Chapter>
+
+<Chapter
+    center={[-99.377, 30.007]}
+    zoom={16}
+    datasetId='tx-flood-recurrence'
+    layerId='tx-flood-100-yr-recurrence'
+    datetime='2021-12-31'
+  >
+   ### Tragedy at Camp Mystic 
+   
+   Within minutes, the Guadalupe surged past the thresholds of a 100-year flood. Communication systems failed, and families waited anxiously for any news. Campers clung to trees, rooftops, and debris as water continued to rise in the darkness. The scale of the flooding overwhelmed any emergency plans put in place ahead of time.
+
+   <Figure>
+    <Image
+      src={new URL('./media/tx-flood-camp-mystic-4.png', import.meta.url).href}
+      alt='Crumpled car pulled from the Guadalupe River'
+      attrAuthor = '@RandomHeroWX via X'
+      attrUrl = 'https://x.com/RandomHeroWX/status/1942329831108034835/photo/2'
+    />
+    <Caption>
+    A crumpled car pulled from the Guadalupe River downstream of Camp Mystic shows the sheer power of rushing water.
+    </Caption>
+   </Figure>
+  </Chapter>
+
+
+  <Chapter
+    center={[-99.377, 30.007]}
+    zoom={16}
+    datasetId='tx-flood-recurrence'
+    layerId='tx-flood-500-yr-recurrence'
+    datetime='2021-12-31'
+  >
+   ### Tragedy at Camp Mystic 
+
+   In only 45 minutes, the Guadalupe River rose more than 26 feet above the riverbed. By 4:30 AM, the river had risen even higher than the areas mapped as a 500-year flood event—levels so extreme they were considered nearly unimaginable. As of July 7, 2025, 27 lives have been lost at Camp Mystic, with ten campers and one counselor still missing. Camp Mystic has become the most concentrated site of loss in the region, serving as a bleak reminder of how quickly water can transform a familiar place into a scene of devastation.
+
+   <Figure>
+    <Image
+      src={new URL('./media/tx-flood-camp-mystic-5.png', import.meta.url).href}
+      alt='Water line on a wall at Camp Mystic'
+      attrAuthor = 'Reuters/Marco Bello'
+      attrUrl = 'https://www.reuters.com/pictures/harrowing-photos-show-flood-aftermath-camp-mystic-2025-07-07/ZSEP7KYS3NL7XDJWFNASGKY2XE/'
+    />
+    <Caption>
+    The water line from the height of the flood at Camp Mystic is strewn across crosses on a wall. 
+    </Caption>
+   </Figure>
+  </Chapter>
+
+
+<Chapter
+    center={[-99.3431119534165,30.061848034176062]}
+    zoom={16}
+    datasetId='tx-flood-maxar'
+    layerId='tx-flood-maxar-post'
+    datetime='2025-07-08'
+  >
+   ### Miracle at Camp La Junta 
+   
+   Just across the river, Camp La Junta also faced rapidly rising water that inundated tents and cabins within minutes. Though some scouts and leaders were able to evacuate to higher terrain before the worst of the flood arrived, several were caught by surprise when the river surpassed the banks faster than emergency crews could warn them. However, thankfully there have been no reports of fatalities or missing persons from this camp. The area between the two camps became a vast field of churning debris, with sections of wooden cabins, overturned vehicles, and personal belongings tangled in the treetops. In the aftermath, search and rescue teams described the scene as one of the most challenging and heartbreaking operations they had ever conducted, with entire buildings reduced to wreckage scattered miles downstream.
+    
+  <Figure>
+    <iframe 
+      width="560" 
+      height="315" 
+      src="https://www.youtube.com/embed/kqNA1aPyFRQ" 
+      title="YouTube video player" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      referrerpolicy="strict-origin-when-cross-origin" 
+      allowfullscreen>
+    </iframe>
+    <figcaption>Buildings floating away at Camp La Junta as campers try to evacuate.</figcaption>
+  </Figure>
+
+  </Chapter>
+
+
+<Chapter
+    center={[-99.33694383722045, 30.07058851724876]}
+    zoom={15.5}
+    datasetId='tx-flood-maxar'
+    layerId='tx-flood-maxar-post'
+    datetime='2025-07-08'
+  >
+   ### Wall of Water Reaches Hunt
+   
+   Downstream in Hunt, the river rose over two feet in just five minutes, cresting at 37.5 feet by sunrise. Homes along the riverbanks were inundated up to their rooftops, and many vehicles and small structures were carried into the treetops or lodged against bridge pylons. Several roads became impassable for over 24 hours, hampering rescue efforts and delaying medical aid to injured residents.
+  
+   <Figure>
+    <Image
+      src={new URL('./media/tx-flood-hunt.png', import.meta.url).href}
+      alt='A Sheriff’s deputy pauses while combing through the banks of the Guadalupe River, Saturday, July 5, 2025, in Hunt, Texas, after a flash flood swept through the area.'
+      attrAuthor = 'AP Photo/Julio Cortez'
+      attrUrl = 'https://apnews.com/photo-gallery/floods-extreme-weather-photos-texas-94de7aa530e1e39fdf79ede24d171fd1?utm_source=copy&utm_medium=share'
+    />
+    <Caption>
+    A Sheriff’s deputy pauses while combing through the banks of the Guadalupe River on July 5, 2025, in Hunt, Texas, after a devastating flash flood swept through the area.
+    </Caption>
+   </Figure>
+  </Chapter>
+
+
+<Chapter
+   center={[-99.235, 30.0709649 ]}
+    zoom={15.5}
+    datasetId='tx-flood-maxar'
+    layerId='tx-flood-maxar-post'
+    datetime='2025-07-08'
+  >
+   ### Inundation at Ingram
+   
+   In Ingram, the flooding overtopped low-water crossings and swept into neighborhoods near the river bend, destroying businesses and displacing dozens of families. Shelters were quickly established in schools and community centers as the rising water forced urgent evacuations. In some areas, the water exceeded record heights set during the 1978 floods, highlighting the sheer scale of the disaster.
+ 
+  <Figure>
+    <iframe 
+      width="560" 
+      height="315" 
+      src="https://www.youtube.com/embed/mnqH2f2V6MM" 
+      title="YouTube video player" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      referrerpolicy="strict-origin-when-cross-origin" 
+      allowfullscreen>
+    </iframe>
+    <figcaption>Footage of the Guadalupe River's floodwaters receding in Kerr County, TX, revealing massive devastation.</figcaption>
+  </Figure>
+
+  </Chapter>
+
+
+<Chapter
+    center={[-99.193, 30.0673813 ]}
+    zoom={15.75}
+    datasetId='tx-flood-maxar'
+    layerId='tx-flood-maxar-post'
+    datetime='2025-07-08'
+  >
+   ### Numerous Water Rescues at Kerrville 
+   
+   The city of Kerrville faced its own crisis as the Guadalupe spilled into parks, residential blocks, and parts of downtown. Emergency responders executed over a hundred water rescues in the first 12 hours, with boats navigating what had been streets just hours before. Utility outages and debris choked infrastructure, complicating recovery operations and further isolating residents.
+  
+   <Figure>
+    <Image
+      src={new URL('./media/tx-flood-kerrville.png', import.meta.url).href}
+      alt='Devastation along the banks of the Guadalupe River at Kerrville, TX'
+      attrAuthor = 'Getty/Brandon Bell'
+      attrUrl = 'https://www.nbcnews.com/news/us-news/texas-flooding-maps-photos-camp-mystic-sites-catastrophic-storm-damage-rcna217247'
+    />
+    <Caption>
+    Receding waters reveal devastation along the banks of the Guadalupe River at Kerrville, TX after a tragic flash flood on July 4, 2025.
+    </Caption>
+   </Figure>
+  </Chapter>
+
+
+<Chapter
+    center={[-99.0977522, 29.9675698 ]}
+    zoom={14.5}
+    datasetId='tx-flood-maxar'
+    layerId='tx-flood-maxar-post'
+    datetime='2025-07-08'
+  >
+   ### Torrents Enter Kendall County 
+   
+   Further downstream through Center Point and low-lying communities north and east of San Antonio, floodwaters continued to spread into pastures, subdivisions, and industrial yards. Ultimately, this forced many residents to abandon homes that had never experienced flooding before.
+  
+  <Figure>
+  <iframe 
+    width="560" 
+    height="315" 
+    src="https://www.youtube.com/embed/XxiuIXIof_w" 
+    title="YouTube video player" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" 
+    allowfullscreen>
+  </iframe>
+  <figcaption>Clips from a 37-minute video showing how quickly the Guadalupe River rose at Center Point, TX.</figcaption>
+</Figure>
+
+  </Chapter>
+
+
+  <Chapter
+    center={[-99.59549093181992, 29.989120337371013]}
+    zoom={9.75}
+    datasetId='HLS_2.0'
+    layerId='HLSS30_2.0_true_color'
+    datetime='2025-07-12'
+  >
+   ### Reflections and the Road Ahead
+
+  As of 2:40 PM CST on July 15, 2025, there have been at least 133 confirmed fatalities, and 101 remain missing across the Texas Hill Country. 
+
+  * Kerr County: **106+**
+  * Kendall County: **9**
+  * Travis County: **9**
+  * Burnet County: **5**
+  * Williamson County: **3**
+  * Tom Green County: **1**
+
+   <Figure>
+    <Image
+      src={new URL('./media/tx-flood-flag.jpg', import.meta.url).href}
+      alt='American flag found waterlogged and stained with mud after the flood'
+      attrAuthor = 'AP/Jason Fochtman'
+      attrUrl = 'https://www.nbcnews.com/news/us-news/texas-flooding-maps-photos-camp-mystic-sites-catastrophic-storm-damage-rcna217247'
+    />
+    <Caption>
+    An American flag, though found waterlogged and stained with mud after the waters receded, remains a symbol of hope depsite the tragedy in the Texas Hill Country. 
+    </Caption>
+   </Figure>
+
+   As the floodwaters receded, the scope of destruction across the Hill Country became clear: entire stretches of the Guadalupe corridor transformed, bridges damaged or swept away, and thousands of lives upended in the span of a single night. Previous record flooding in the region pales in comparison to the July 4, 2025 disaster, which stands among the most severe inland flood events in U.S. history - comparable not only to the deadly 1978 Hill Country inundation but also to nationally significant tragedies such as the 1972 Rapid City flood, Hurricane Camille in 1969, the 1976 Big Thompson Canyon flood, the Buffalo Creek dam collapse, and Hurricane Agnes. As the region begins the long road to recovery, NASA Earth observing datasets, other satellite imagery, and floodplain data will not only help document the impacts, but also inform planning and mitigation efforts to reduce risks in the future.
+  </Chapter>
+
+
+</ScrollytellingBlock>
+
+<Block>
+  <Prose>
+    ## References
+    
+    Associated Press. Death toll from catastrophic flooding in Texas over the July Fourth weekend surpasses 100. AP News. https://www.apnews.com/article/texas-flash-flood-severe-weather-camp-mystic-ef8e596833b145fef61451db92f32609
+    
+    CBS News. Camp Mystic flooding: At least 27 campers and counselors killed in Texas. CBS News. https://www.cbsnews.com/news/camp-mystic-campers-counselors-killed-texas-flooding/
+    
+    CBS News. What to know about the Texas floods and why so many deaths had no warning. CBS News. https://www.cbsnews.com/news/texas-floods-deaths-no-warning-what-to-know/
+    
+    National Hurricane Center. Tropical Cyclone Report: Tropical Storm Barry. National Oceanic and Atmospheric Administration. https://www.nhc.noaa.gov/data/tcr/
+    
+    Nielsen, N. Experts say soil, not just rainfall, played key role in devastating Kerr County floods. CBS Texas News. https://www.cbsnews.com/texas/news/experts-say-soil-not-just-rainfall-played-key-role-in-devastating-kerr-county-floods/?utm_source=chatgpt.com
+    
+    NPR. Texas floods timeline: how rapidly rising waters killed dozens. NPR, July 5, 2025. https://www.npr.org/2025/07/05/nx-s1-5457759/texas-floods-timeline
+    
+    Texas Tribune. Camp Mystic girls camp at center of Texas flooding tragedy. The Texas Tribune. https://www.texastribune.org/2025/07/07/texas-hill-country-flooding-camp-mystic/
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    ### Data Access
+
+    * [U.S. Drought Monitor](https://droughtmonitor.unl.edu/)
+    * [FEMA National Flood Hazard Layer](https://www.fema.gov/flood-maps/national-flood-hazard-layer)
+    * [ISRIC World Soil Information](https://www.isric.org/)
+    * [PlanetScope](https://www.planet.com/explorer/)
+    * [NOAA River Gauges](https://water.noaa.gov/)
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+
+    **Editors**: Andrew Blackford and Chelsea Aaron
+
+    **Developers**: Andrew Blackford
+
+    **Science and Content Contributors**: Andrew Blackford and Chelsea Aaron
+
+    **Acknowledgments**: This work utilized data made available through the NASA Commercial Satellite Data Acquisition (CSDA) Program.
+
+    **Questions / Feedback**: Email veda@uah.edu 
+
+    ### Additional Resources
+
+    * [Texas Floodplain Management Association](https://www.tfma.org)
+    * [FEMA – Disaster Assistance for Individuals and Households](https://www.disasterassistance.gov/)
+
+  </Prose>
+</Block>
