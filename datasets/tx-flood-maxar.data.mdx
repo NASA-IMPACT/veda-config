@@ -29,7 +29,7 @@ infoDescription: |
 layers:
   - id: tx-flood-maxar-post
     stacCol: tx-flood-maxar
-    name: MAXAR Commercial Satellite Imagery (2025 Texas Flood - Post)
+    name: MAXAR Commercial Satellite Imagery (2025 Texas Flood - Post) - © 2025 MAXAR
     type: raster
     description: 'TrueColor commercial satellite imagery from MAXAR taken on July 8, 2025 of the Guadalupe River in central Texas after a devastating flash flood on July 4, 2025. This data was made available through the NASA Commercial Satellite Data Acquisition (CSDA) Program.'
     zoomExtent:
@@ -43,10 +43,7 @@ layers:
       exitwhenfull: false
       skipcovered: false
     legend:
-      type: categorical
-      stops:
-        - color: "rgba(0, 0, 0, 0)" # using transparent for now to fix the issues with scrollytelling
-          label: "Imagery - © 2025 MAXAR"
+      type: text
     info:
         source: MAXAR
         spatialExtent: Local
@@ -55,7 +52,7 @@ layers:
 
   - id: tx-flood-maxar-pre
     stacCol: tx-flood-maxar-pre
-    name: MAXAR Commercial Satellite Imagery (2025 Texas Flood - Pre)
+    name: MAXAR Commercial Satellite Imagery (2025 Texas Flood - Pre) - © 2025 MAXAR
     type: raster
     description: 'TrueColor commercial satellite imagery from MAXAR taken on March 12, 2025 of the Guadalupe River in central Texas prior to a devastating flash flood on July 4, 2025. This data was made available through the NASA Commercial Satellite Data Acquisition (CSDA) Program.'
     zoomExtent:
@@ -69,10 +66,7 @@ layers:
       exitwhenfull: false
       skipcovered: false
     legend:
-      type: categorical
-      stops:
-        - color: "rgba(0, 0, 0, 0)" # using transparent for now to fix the issues with scrollytelling
-          label: "Imagery - © 2025 MAXAR"
+      type: text
     info:
         source: MAXAR
         spatialExtent: Local
