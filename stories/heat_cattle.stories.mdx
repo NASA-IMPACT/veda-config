@@ -67,31 +67,37 @@ The economic stakes couldn't be higher. Heat stress doesn't just kill cattle, it
   </Figure>
 </Block>
 
-<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
-   <Prose style={{ textAlign: 'justify', flex: '1', alignItems: 'center', marginLeft: '0.2rem'}}>
-     <p>      
-### Understanding Why Cattle Are Vulnerable to Heat
-     Understanding cattle vulnerability begins with a simple concept: just as the heat index measures human comfort, the Temperature Humidity Index (THI) measures cattle stress. But while humans can seek air conditioning, or modify their behavior, cattle have limited options.
-Cattle operate within a narrow comfort zone called the thermoneutral zone. Our analysis uses critical THI thresholds of 75, 82, and 94 representing escalating levels of heat stress risk (Lee et al., 2025). Think of these as warning levels:
-</p>
-- THI 75: Cattle begin showing mild stress signs
-- THI 82: Significant physiological stress begins
-- THI 94: Life-threatening conditions emerge
- <p> 
-When temperatures and humidity push the THI above these values, cattle begin to suffer physiologically. Outside their thermoneutral zone, they experience reduced feed intake, slower weight gain, lower milk yield, and impaired fertility. When the heat load surpasses what their bodies can handle, the result is heat stress—or in severe cases, death.
-The 2022 Kansas disaster illustrates this perfectly. The accompanying animation shows THI values during May and June 2022, revealing the extreme conditions that overwhelmed cattle across the state. What made this event particularly deadly was not just the peak temperatures, but the persistence of dangerous conditions day after day.
+<Block style={{ justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
+  <Prose style={{ textAlign: 'justify', flex: '1', alignItems: 'center', marginLeft: '0.2rem' }}>
+    <h3>Understanding Why Cattle Are Vulnerable to Heat</h3>
+    <p>
+      Understanding cattle vulnerability begins with a simple concept: just as the heat index measures human comfort, the Temperature Humidity Index (THI) measures cattle stress. But while humans can seek air conditioning, or modify their behavior, cattle have limited options.
     </p>
-  </Prose> 
+    <p>
+      Cattle operate within a narrow comfort zone called the thermoneutral zone. Our analysis uses critical THI thresholds of 75, 82, and 94—representing escalating levels of heat stress risk <em>(Lee et al., 2025)</em>. Think of these as warning levels:
+    </p>
+    <ul>
+      <li><strong>THI 75:</strong> Cattle begin showing mild stress signs</li>
+      <li><strong>THI 82:</strong> Significant physiological stress begins</li>
+      <li><strong>THI 94:</strong> Life-threatening conditions emerge</li>
+    </ul>
+    <p>
+      When temperatures and humidity push the THI above these values, cattle begin to suffer physiologically. Outside their thermoneutral zone, they experience reduced feed intake, slower weight gain, lower milk yield, and impaired fertility. When the heat load surpasses what their bodies can handle, the result is heat stress—or in severe cases, death.
+    </p>
+    <p>
+      The 2022 Kansas disaster illustrates this perfectly. The accompanying animation shows THI values during May and June 2022, revealing the extreme conditions that overwhelmed cattle across the state. What made this event particularly deadly was not just the peak temperatures, but the persistence of dangerous conditions day after day.
+    </p>
+  </Prose>
   <Figure>
-      <Image
-        src={new URL('./cattle_THI_2022_May_June.gif', import.meta.url).href}
-        alt='Temperature Humidity Index (THI) for Kansas Summer 2022.'
-        attrAuthor = 'Maheshwari Neelam'
-      />
-      <Caption>
-        Temperature Humidity Index (THI) during Kansas Heatwave June 2022.
-      </Caption>
-  </Figure> 
+    <Image
+      src={new URL('./cattle_THI_2022_May_June.gif', import.meta.url).href}
+      alt="Temperature Humidity Index (THI) for Kansas Summer 2022."
+      attrAuthor="Maheshwari Neelam"
+    />
+    <Caption>
+      Temperature Humidity Index (THI) during Kansas Heatwave June 2022.
+    </Caption>
+  </Figure>
 </Block>
 
 <Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
