@@ -74,7 +74,7 @@ The economic stakes couldn't be higher. Heat stress doesn't just kill cattle, it
       Understanding cattle vulnerability begins with a simple concept: just as the heat index measures human comfort, the Temperature Humidity Index (THI) measures cattle stress. But while humans can seek air conditioning, or modify their behavior, cattle have limited options.
     </p>
     <p>
-      Cattle operate within a narrow comfort zone called the thermoneutral zone. Our analysis uses critical THI thresholds of 75, 82, and 94—representing escalating levels of heat stress risk <em>(Lee et al., 2025)</em>. Think of these as warning levels:
+      Cattle operate within a narrow comfort zone called the thermoneutral zone. Our analysis uses critical THI thresholds of 75, 82, and 94—representing escalating levels of heat stress risk (Lee et al., 2025). Think of these as warning levels:
     </p>
     <ul>
       <li><strong>THI 75:</strong> Cattle begin showing mild stress signs</li>
@@ -100,27 +100,32 @@ The economic stakes couldn't be higher. Heat stress doesn't just kill cattle, it
   </Figure>
 </Block>
 
-<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
-   <Figure>
-      <Image
+<Block style={{ justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
+  <Figure>
+    <Image
       src={new URL('./cattle_all_variables_yearly_heatmap.png', import.meta.url).href}
-      style={{ maxWidth: '200%'}}
+      style={{ maxWidth: '200%' }}
     />
     <Caption>
       The correlations between annual cattle deaths and climate variables.
     </Caption>
   </Figure>
-   <Prose style={{ textAlign: 'justify', flex: '1', alignItems: 'center', marginLeft: '0.2rem'}}>
-    <p>  
-### The Surprise Threat: "Cold" States Aren't Safe
-Perhaps most surprising is our finding that states traditionally considered cooler Montana, Idaho, and Colorado face significant cattle heat stress risks. These regions present a perfect storm of vulnerability:
-</p>
-- Lack of Acclimation: Cattle in these states are less adapted to heat and may still carry winter coats into summer, making sudden high temperatures even more dangerous.
-- Rapid Dehydration: The dry air common in these semi-arid and mountainous regions accelerates dehydration during heat events, especially at higher elevations.
-- Unpredictable Timing: Sharp temperature spikes catch both animals and producers off guard, with insufficient time to implement emergency cooling measures.
-In these settings, our research shows that higher average relative humidity actually helps reduce dehydration.
+  <Prose style={{ textAlign: 'justify', flex: '1', alignItems: 'center', marginLeft: '0.2rem' }}>
+    <h3>The Surprise Threat: "Cold" States Aren't Safe</h3>
+    <p>
+      Perhaps most surprising is our finding that states traditionally considered cooler—such as Montana, Idaho, and Colorado—face significant cattle heat stress risks. These regions present a perfect storm of vulnerability:
+    </p>
+    <ul>
+      <li><strong>Lack of Acclimation:</strong> Cattle in these states are less adapted to heat and may still carry winter coats into summer, making sudden high temperatures even more dangerous.</li>
+      <li><strong>Rapid Dehydration:</strong> The dry air common in these semi-arid and mountainous regions accelerates dehydration during heat events, especially at higher elevations.</li>
+      <li><strong>Unpredictable Timing:</strong> Sharp temperature spikes catch both animals and producers off guard, with insufficient time to implement emergency cooling measures.</li>
+    </ul>
+    <p>
+      In these settings, our research shows that higher average relative humidity actually helps reduce dehydration.
+    </p>
   </Prose>
 </Block>
+
 
 <Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
   <Figure>
@@ -149,24 +154,28 @@ Soil moisture emerges as a critical but often overlooked factor. When soil moist
    </Prose>
 </Block>
 
-<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
+<Block style={{ justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
   <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
-     <p>
-###   Precipitation Patterns Matter More Than Totals
-In dry states like Nebraska, Oklahoma, Texas, and Kansas, it's not average precipitation but its variability that most strongly correlates with cattle mortality. High variability whether within a season or between years—disrupts:
-</p>
-- Forage Growth: Unpredictable rainfall creates feast-or-famine conditions for pasture
-- Water Availability: Inconsistent precipitation affects water source reliability
-- Pasture Quality: Variable moisture creates uneven forage nutrition and availability
-This variability makes it nearly impossible for cattle to maintain condition and for producers to plan resources effectively.
-</Prose>
+    <h3>Precipitation Patterns Matter More Than Totals</h3>
+    <p>
+      In dry states like Nebraska, Oklahoma, Texas, and Kansas, it's not average precipitation but its variability that most strongly correlates with cattle mortality. High variability—whether within a season or between years—disrupts:
+    </p>
+    <ul>
+      <li><strong>Forage Growth:</strong> Unpredictable rainfall creates feast-or-famine conditions for pasture.</li>
+      <li><strong>Water Availability:</strong> Inconsistent precipitation affects water source reliability.</li>
+      <li><strong>Pasture Quality:</strong> Variable moisture creates uneven forage nutrition and availability.</li>
+    </ul>
+    <p>
+      This variability makes it nearly impossible for cattle to maintain condition and for producers to plan resources effectively.
+    </p>
+  </Prose>
   <Figure>
-      <Image
+    <Image
       src={new URL('./cattle_pr_seasonal_heatmap.png', import.meta.url).href}
-      style={{ maxWidth: '200%'}}
+      style={{ maxWidth: '200%' }}
     />
     <Caption>
-     Seasonal changes in both the sum and variability (standard deviation) of precipitation, analyzed from 1979 to 2024.      
+      Seasonal changes in both the sum and variability (standard deviation) of precipitation, analyzed from 1979 to 2024.
     </Caption>
   </Figure>
 </Block>
@@ -329,7 +338,6 @@ Oklahoma and Nebraska show similar patterns, with increased variability in both 
 - Reduced Productivity: Chronic stress affecting milk production and weight gain
 - Economic Losses: Billions in additional costs for cooling infrastructure and feed
 - Food Security Risks: Potential disruptions to beef and dairy supplies underscoring the urgent need for adaptive management and heat abatement strategies to protect animal welfare and sustain cattle production in a warming climate.
-    
 </Prose> 
   <Figure>
     <Map
