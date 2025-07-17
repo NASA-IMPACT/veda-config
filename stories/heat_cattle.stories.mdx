@@ -49,6 +49,15 @@ The Kansas Department of Health and Environment confirmed at least 2,000 [cattle
 </Block>
 
 <Block style={{justifyContent: 'space-between', alignItems: 'center', margin: '0 auto', width: '100%' }}>
+    <Figure>
+      <Image
+      src={new URL('./cows_heat.jpg', import.meta.url).href}
+      style={{ maxWidth: '80%', height: 'auto' }}
+    />
+    <Caption>
+      Consequences of Heat Stress in Cattle.
+    </Caption>
+  </Figure>
    <Prose style={{ textAlign: 'justify', flex: '1', alignItems: 'center', marginLeft: '0.2rem'}}>
      <p>
     ### The Hidden Scale of a Growing Crisis
@@ -56,15 +65,6 @@ The Kansas Department of Health and Environment confirmed at least 2,000 [cattle
 The economic stakes couldn't be higher. Heat stress doesn't just kill cattle, it reduces feed intake, slows weight gain, decreases milk production, and impairs fertility across surviving herds. Each heat wave compounds these losses, creating a cascade of economic damage that ultimately reaches consumers through higher food prices.   
     </p>
   </Prose>
-    <Figure>
-      <Image
-      src={new URL('./cows_heat.jpg', import.meta.url).href}
-      style={{ maxWidth: '80%', height: 'auto' }}
-    />
-    <Caption>
-      Illustrating the Consequences of Heat Stress in Cattle.
-    </Caption>
-  </Figure>
 </Block>
 
 <Block style={{ justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
@@ -113,7 +113,7 @@ The economic stakes couldn't be higher. Heat stress doesn't just kill cattle, it
   <Prose style={{ textAlign: 'justify', flex: '1', alignItems: 'center', marginLeft: '0.2rem' }}>
     <h3>The Surprise Threat: "Cold" States Aren't Safe</h3>
     <p>
-      Perhaps most surprising is our finding that states traditionally considered cooler—such as Montana, Idaho, and Colorado—face significant cattle heat stress risks. These regions present a perfect storm of vulnerability:
+      Perhaps most surprising is our finding that states traditionally considered cooler such as Montana, Idaho, and Colorado, face significant cattle heat stress risks. These regions present a perfect storm of vulnerability:
     </p>
     <ul>
       <li><strong>Lack of Acclimation:</strong> Cattle in these states are less adapted to heat and may still carry winter coats into summer, making sudden high temperatures even more dangerous.</li>
@@ -158,7 +158,7 @@ Soil moisture emerges as a critical but often overlooked factor. When soil moist
   <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
     <h3>Precipitation Patterns Matter More Than Totals</h3>
     <p>
-      In dry states like Nebraska, Oklahoma, Texas, and Kansas, it's not average precipitation but its variability that most strongly correlates with cattle mortality. High variability—whether within a season or between years—disrupts:
+      In dry states like Nebraska, Oklahoma, Texas, and Kansas, it's not average precipitation but its variability that most strongly correlates with cattle mortality. High variability whether within a season or between years—disrupts:
     </p>
     <ul>
       <li><strong>Forage Growth:</strong> Unpredictable rainfall creates feast-or-famine conditions for pasture.</li>
@@ -292,12 +292,6 @@ Monitoring NDVI alongside climate variables provides a complete picture of envir
 </Block>
 
 <Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
-  <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
-    <p>
-### Hotspot Persistence: Seasonal Fraction of Days Above THI Threshold
-  To further refine hotspot identification, we use the seasonal fraction of days above a THI threshold. This metric calculates the proportion of days in a season where the THI exceeds the set threshold. High fractions indicate areas where heat stress is not only frequent but also persistent throughout the season. Such persistent exposure can have compounding effects on cattle health and productivity, making these counties priority targets for adaptation and mitigation efforts.
-    </p>
-  </Prose>
   <Figure>
     <Image
     src={new URL('./cattle_fract_days.png', import.meta.url).href}
@@ -307,6 +301,12 @@ Monitoring NDVI alongside climate variables provides a complete picture of envir
       The proportion of days on which the Temperature-Humidity Index (THI) exceeds a specified threshold, calculated from 1979 to 2024.
     </Caption>
   </Figure>
+  <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
+    <p>
+### Hotspot Persistence: Seasonal Fraction of Days Above THI Threshold
+  To further refine hotspot identification, we use the seasonal fraction of days above a THI threshold. This metric calculates the proportion of days in a season where the THI exceeds the set threshold. High fractions indicate areas where heat stress is not only frequent but also persistent throughout the season. Such persistent exposure can have compounding effects on cattle health and productivity, making these counties priority targets for adaptation and mitigation efforts.
+    </p>
+  </Prose>
 </Block>
 
 <Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
@@ -317,28 +317,21 @@ Monitoring NDVI alongside climate variables provides a complete picture of envir
 Oklahoma and Nebraska show similar patterns, with increased variability in both temperature and humidity creating more dangerous conditions than cattle producers have historically managed.
     </p>
 </Prose>
-  <Figure>
-      <Image
-      src={new URL('./cattle_avg_days.png', import.meta.url).href}
-      style={{ maxWidth: '200%'}}
-    />
-    <Caption>
-      The average number of days each year that the Temperature-Humidity Index (THI) exceeds a specified threshold, calculated from 1979 to 2024.
-    </Caption>
-  </Figure>
 </Block>
 
-<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
+<Block style={{ justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
   <Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
+    <h3>Future Projections: More Days Above 90°F</h3>
     <p>
-  ### Future Projections: More Days Above 90°F
-  Looking ahead, climate models project a dramatic increase in the number of extremely hot days—those above 90°F—across much of the U.S. Maps of projected future days above 90°F illustrate the scale of the challenge. These projections translate to:
-</p>
-- Increased Mortality: More frequent mass die-off events
-- Reduced Productivity: Chronic stress affecting milk production and weight gain
-- Economic Losses: Billions in additional costs for cooling infrastructure and feed
-- Food Security Risks: Potential disruptions to beef and dairy supplies underscoring the urgent need for adaptive management and heat abatement strategies to protect animal welfare and sustain cattle production in a warming climate.
-</Prose> 
+      Looking ahead, climate models project a dramatic increase in the number of extremely hot days—those above 90°F—across much of the U.S. Maps of projected future days above 90°F illustrate the scale of the challenge. These projections translate to:
+    </p>
+    <ul>
+      <li><strong>Increased Mortality:</strong> More frequent mass die-off events</li>
+      <li><strong>Reduced Productivity:</strong> Chronic stress affecting milk production and weight gain</li>
+      <li><strong>Economic Losses:</strong> Billions in additional costs for cooling infrastructure and feed</li>
+      <li><strong>Food Security Risks:</strong> Potential disruptions to beef and dairy supplies—underscoring the urgent need for adaptive management and heat abatement strategies to protect animal welfare and sustain cattle production in a warming climate.</li>
+    </ul>
+  </Prose>
   <Figure>
     <Map
       datasetId='climdex-tmaxxf-access-cm2'
