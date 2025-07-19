@@ -3,7 +3,7 @@ id: 'ercot-sustainability'
 name: Preparing ERCOT for Weather Extremes in Texas
 description: Concerns of Sustainable Energy in the Lone Star State
 media:
-  src: ::file ../stories/media/ercot-story-background.jpg
+  src: ::file ./media/ercot/ercot-story-background.jpg
   alt: Power transmission towers standing against a colorful Texas sunset.
   author: 
     name: Yelantsevv
@@ -39,7 +39,7 @@ taxonomy:
 
   <Figure>
     <Image
-      src={new URL('./ercot-map.jpg', import.meta.url).href}
+      src={new URL('./media/ercot/ercot-map.jpg', import.meta.url).href}
       alt='ERCOT Coverage vs CONUS'
     />
     <Caption>
@@ -51,7 +51,7 @@ taxonomy:
 <Block>
   <Figure>
     <Image
-      src={new URL('./ERCOT_Texas_Outages.jpg', import.meta.url).href}
+      src={new URL('./media/ercot/ERCOT_Texas_Outages.jpg', import.meta.url).href}
       alt='Maximum number of Texans without power'
     />
     <Caption>
@@ -69,7 +69,7 @@ taxonomy:
 <Block type='wide'>
   <Figure>
     <Chart
-      dataPath={new URL('./ERCOT_power_outages_Texas.csv', import.meta.url).href}
+      dataPath={new URL('./media/ercot/ERCOT_power_outages_Texas.csv', import.meta.url).href}
       dateFormat="%m/%d/%Y %H:%M"
       idKey='State'
       xKey='Date'
@@ -120,7 +120,7 @@ taxonomy:
 <Block type='wide'>
   <Figure>
     <Chart
-      dataPath={new URL('./Ercot_Gas_Prices.csv', import.meta.url).href}
+      dataPath={new URL('./media/ercot/Ercot_Gas_Prices.csv', import.meta.url).href}
       dateFormat="%m/%d/%Y"
       idKey='Source'
       xKey='Date'
@@ -174,7 +174,7 @@ taxonomy:
 <Block type='wide'>
   <Figure>
     <Chart
-      dataPath={new URL('./Ercot_Gas_Usage_2023.csv', import.meta.url).href}
+      dataPath={new URL('./media/ercot/Ercot_Gas_Usage_2023.csv', import.meta.url).href}
       dateFormat="%m/%d/%Y %H:%M"
       idKey='Source'
       xKey='Date'
