@@ -4,7 +4,7 @@ featured: true
 name: Fanning the Flames 
 description: Unraveling the Causes of the 2025 Los Angeles Area Wildfires 
 media:
-  src: ::file ./la-fires-010825_NO_cali-fires_feat.png
+  src: ::file ./media/la-fires/la-fires-010825_NO_cali-fires_feat.png
   alt: Flying sparks in the Pacific Palisades neighborhood of Los Angeles on January 7.
   author:
     name: Ethan Swope/AP
@@ -80,7 +80,7 @@ taxonomy:
   </Prose> 
     <Figure>
       <Image
-      src={new URL('./la-fires-santa_winds.png', import.meta.url).href}
+      src={new URL('./media/la-fires/la-fires-santa_winds.png', import.meta.url).href}
       style={{ maxWidth: '80%', height: 'auto' }}
     />
     <Caption>
@@ -92,7 +92,7 @@ taxonomy:
 <Block>
   <Figure>
     <Image
-      src={new URL('./la-fires-hrrr_wind.gif', import.meta.url).href}
+      src={new URL('./media/la-fires/la-fires-hrrr_wind.gif', import.meta.url).href}
       alt='Modeled 10 meter wind gusts from the HRRR.'
       attrAuthor = 'Andrew Blackford'
     />
@@ -117,7 +117,7 @@ taxonomy:
    </Prose>
   <Figure>
     <Chart
-      dataPath={new URL('./la-fires-precip.csv', import.meta.url).href}
+      dataPath={new URL('./media/la-fires/la-fires-precip.csv', import.meta.url).href}
       dateFormat="%m/%d/%y"
       idKey='source'
       xKey='date'
@@ -147,7 +147,7 @@ taxonomy:
     </p>
      <Figure>
       <Image
-      src={new URL('./LA_nlcd_percentages_by_year.png', import.meta.url).href}
+      src={new URL('./media/la-fires/LA_nlcd_percentages_by_year.png', import.meta.url).href}
       style={{ maxWidth: '200%'}}
     />
     <Caption>
@@ -187,7 +187,7 @@ taxonomy:
    </p>
    <Figure>
       <Image
-      src={new URL('./la-fires-palisades_nlcd_percentages_by_year.png', import.meta.url).href}
+      src={new URL('./media/la-fires/la-fires-palisades_nlcd_percentages_by_year.png', import.meta.url).href}
       style={{ maxWidth: '200%'}}
     />
     <Caption>
@@ -242,7 +242,7 @@ taxonomy:
     The Eaton Fire impacted a mix of shrublands (~55%), evergreen forests (~20%), and developed land (~11%). The higher moisture content of evergreen forests compared to shrublands likely slowed the fire's progression and aided containment efforts. Additionally, the slightly lower proportion of shrublands compared to the Palisades Fire may have contributed to a reduction in the fire's overall intensity.   
   <Figure>
       <Image
-      src={new URL('./la-fires-Eaton_nlcd_percentages_by_year.png', import.meta.url).href}
+      src={new URL('./media/la-fires/la-fires-Eaton_nlcd_percentages_by_year.png', import.meta.url).href}
       style={{ maxWidth: '200%'}}
     />
     <Caption>
@@ -322,7 +322,7 @@ taxonomy:
 <Block>
   <Figure>
     <Image
-      src={new URL('./la-fires-TEMPO_NO2_animation.gif', import.meta.url).href}
+      src={new URL('./media/la-fires/la-fires-TEMPO_NO2_animation.gif', import.meta.url).href}
       alt='TEMPO NO2 throughout the tropospheric column during the Eaton and Palisades Fires (2025).'
       attrAuthor = 'Maheshwari Neelam'
     />
@@ -344,7 +344,7 @@ taxonomy:
    </Prose>
 <Figure>
   <Chart
-    dataPath={new URL('./la-fires-pm25_pm10.csv', import.meta.url).href}
+    dataPath={new URL('./media/la-fires/la-fires-pm25_pm10.csv', import.meta.url).href}
     dateFormat="%m/%d/%Y"
     idKey='Source'
     xKey='Date'
@@ -412,7 +412,7 @@ taxonomy:
   </Prose>
   <Figure style={{ width: '100%', maxWidth: '800px' }}> 
       <Image
-      src={new URL('./la-fires-CO.png', import.meta.url).href}
+      src={new URL('./media/la-fires/la-fires-CO.png', import.meta.url).href}
       style={{ width: '100%', height: 'auto' }} 
     />
     <Caption attrUrl='https://www.jpl.nasa.gov/missions/atmospheric-infrared-sounder-airs/'>

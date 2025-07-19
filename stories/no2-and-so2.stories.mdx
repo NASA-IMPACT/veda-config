@@ -3,7 +3,7 @@ id: 'no2-and-so2'
 name: Nitrogen Dioxide and Sulfur Dioxide
 description: "A picture diary of air quality in the northeastern regions of India, China, and the United States."
 media:
-  src: ::file ./air-quality-and-covid-19--discovery-cover.jpg
+  src: ::file ../datasets/media/no2--dataset-cover.jpg
   alt: Clear nightsky with crescent moon above the mountains
   author:
     name: Benjamin Voros
@@ -36,7 +36,7 @@ taxonomy:
   </Prose>
   <Figure>
     <Chart
-      dataPath={new URL('./no2-and-so2-charts.csv', import.meta.url).href}
+      dataPath={new URL('./media/no2-and-so2/no2-and-so2-charts.csv', import.meta.url).href}
       dateFormat="%Y" 
       idKey='Data Type' 
       xKey='Year' 
@@ -56,7 +56,7 @@ taxonomy:
   </Prose>
   <Figure>
     <Chart
-      dataPath={new URL('./no2-and-so2-charts.csv', import.meta.url).href}
+      dataPath={new URL('./media/no2-and-so2/no2-and-so2-charts.csv', import.meta.url).href}
       dateFormat="%Y" 
       idKey='Data Type' 
       xKey='Year' 
@@ -93,7 +93,7 @@ taxonomy:
   </Prose> 
   <Figure>
     <Chart
-      dataPath={new URL('./no2-and-so2-charts.csv', import.meta.url).href}
+      dataPath={new URL('./media/no2-and-so2/no2-and-so2-charts.csv', import.meta.url).href}
       dateFormat="%Y" 
       idKey='Data Type' 
       xKey='Year' 

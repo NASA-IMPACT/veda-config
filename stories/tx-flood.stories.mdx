@@ -4,7 +4,7 @@ featured: true
 name: Guadalupe River Flood Tragedy
 description: Once in a lifetime disaster in the Texas Hill Country 
 media:
-  src: ::file ../stories/media/tx-flood-background.jpg
+  src: ::file ./media/tx-flood/tx-flood-background.jpg
   alt: A search and rescue volunteer holds a T-shirt and backpack with the words Camp Mystic on them.
   author: 
     name: Forrest McFarland
@@ -42,7 +42,7 @@ taxonomy:
 
     <Figure>
     <Image
-      src={new URL('./media/tx-flood-heatmap.jpg', import.meta.url).href}
+      src={new URL('./media/tx-flood/tx-flood-heatmap.jpg', import.meta.url).href}
       alt='Heatmap of deadly flash floods in the US from 2006-2020.'
       attrAuthor = 'Weather Prediction Center'
       attrUrl = 'https://x.com/NWSWPC/status/1352654577028517892/photo/1'
@@ -57,7 +57,7 @@ taxonomy:
 <Block>
 <Figure>
     <Image
-      src={new URL('./media/tx-flood-camp-mystic-map.jpg', import.meta.url).href}
+      src={new URL('./media/tx-flood/tx-flood-camp-mystic-map.jpg', import.meta.url).href}
       alt='Map showing extent of the flooding at Camp Mystic compared to FEMA 100 and 500 year recurrence intervals.'
       attrAuthor = 'Andrew Blackford'
     />
@@ -120,7 +120,7 @@ taxonomy:
 <Block>
   <Figure>
     <Chart
-      dataPath={new URL('./tx-flood-gauge-data.csv', import.meta.url).href}
+      dataPath={new URL('./media/tx-flood/tx-flood-gauge-data.csv', import.meta.url).href}
       dateFormat="%m/%d/%Y %H:%M"
       idKey='source'
       xKey='datetime'
@@ -168,7 +168,7 @@ taxonomy:
 <Block>
     <Figure>
         <Image
-        src={new URL('./media/tx-flood-usdm.jpg', import.meta.url).href}
+        src={new URL('./media/tx-flood/tx-flood-usdm.jpg', import.meta.url).href}
         alt='(Top) Drought conditions in the state of Texas leading up to the July 4th, 2025 flash flood. Over half of Kerr County was under D4 exceptional drought conditions. (Bottom) Time series of the percentage coverage of each drought category in Kerr County, 2000-2025.'
         attrAuthor = 'US Drought Monitor'
         attrUrl = 'https://droughtmonitor.unl.edu/CurrentMap/StateDroughtMonitor.aspx?fips_48019'
@@ -198,7 +198,7 @@ taxonomy:
   
    <Figure>
     <Image
-      src={new URL('./media/tx-flood-camp-mystic-1.png', import.meta.url).href}
+      src={new URL('./media/tx-flood/tx-flood-camp-mystic-1.png', import.meta.url).href}
       alt='Foundation of a building at Camp Mystic'
       attrAuthor = 'AP/Julio Cortez'
       attrUrl = 'https://apnews.com/article/camp-mystic-floods-state-inspection-ef17d51dc7868fa9cc5c3076c31ed98a'
@@ -223,7 +223,7 @@ taxonomy:
    
    <Figure>
     <Image
-      src={new URL('./media/tx-flood-camp-mystic-2.png', import.meta.url).href}
+      src={new URL('./media/tx-flood/tx-flood-camp-mystic-2.png', import.meta.url).href}
       alt='High water lines left inside buildings at Camp Mystic'
       attrAuthor = 'Reuters/Sergio Flores'
       attrUrl = 'https://www.reuters.com/pictures/harrowing-photos-show-flood-aftermath-camp-mystic-2025-07-07/'
@@ -249,7 +249,7 @@ taxonomy:
 
    <Figure>
     <Image
-      src={new URL('./media/tx-flood-camp-mystic-3.png', import.meta.url).href}
+      src={new URL('./media/tx-flood/tx-flood-camp-mystic-3.png', import.meta.url).href}
       alt='Search and rescue efforts at Camp Mystic'
       attrAuthor = 'AP/Julio Cortez'
       attrUrl = 'https://apnews.com/photo-gallery/photos-texas-flooding-camp-mystic-5c3109dc79e16bac53526c4db8c8207e'
@@ -273,7 +273,7 @@ taxonomy:
 
    <Figure>
     <Image
-      src={new URL('./media/tx-flood-camp-mystic-4.png', import.meta.url).href}
+      src={new URL('./media/tx-flood/tx-flood-camp-mystic-4.png', import.meta.url).href}
       alt='Crumpled car pulled from the Guadalupe River'
       attrAuthor = '@RandomHeroWX via X'
       attrUrl = 'https://x.com/RandomHeroWX/status/1942329831108034835/photo/2'
@@ -298,7 +298,7 @@ taxonomy:
 
    <Figure>
     <Image
-      src={new URL('./media/tx-flood-camp-mystic-5.png', import.meta.url).href}
+      src={new URL('./media/tx-flood/tx-flood-camp-mystic-5.png', import.meta.url).href}
       alt='Water line on a wall at Camp Mystic'
       attrAuthor = 'Reuters/Marco Bello'
       attrUrl = 'https://www.reuters.com/pictures/harrowing-photos-show-flood-aftermath-camp-mystic-2025-07-07/ZSEP7KYS3NL7XDJWFNASGKY2XE/'
@@ -351,7 +351,7 @@ taxonomy:
   
    <Figure>
     <Image
-      src={new URL('./media/tx-flood-hunt.png', import.meta.url).href}
+      src={new URL('./media/tx-flood/tx-flood-hunt.png', import.meta.url).href}
       alt='A Sheriff’s deputy pauses while combing through the banks of the Guadalupe River, Saturday, July 5, 2025, in Hunt, Texas, after a flash flood swept through the area.'
       attrAuthor = 'AP Photo/Julio Cortez'
       attrUrl = 'https://apnews.com/photo-gallery/floods-extreme-weather-photos-texas-94de7aa530e1e39fdf79ede24d171fd1?utm_source=copy&utm_medium=share'
@@ -404,7 +404,7 @@ taxonomy:
   
    <Figure>
     <Image
-      src={new URL('./media/tx-flood-kerrville.png', import.meta.url).href}
+      src={new URL('./media/tx-flood/tx-flood-kerrville.png', import.meta.url).href}
       alt='Devastation along the banks of the Guadalupe River at Kerrville, TX'
       attrAuthor = 'Getty/Brandon Bell'
       attrUrl = 'https://www.nbcnews.com/news/us-news/texas-flooding-maps-photos-camp-mystic-sites-catastrophic-storm-damage-rcna217247'
@@ -464,7 +464,7 @@ taxonomy:
 
    <Figure>
     <Image
-      src={new URL('./media/tx-flood-flag.jpg', import.meta.url).href}
+      src={new URL('./media/tx-flood/tx-flood-flag.jpg', import.meta.url).href}
       alt='American flag found waterlogged and stained with mud after the flood'
       attrAuthor = 'AP/Jason Fochtman'
       attrUrl = 'https://www.nbcnews.com/news/us-news/texas-flooding-maps-photos-camp-mystic-sites-catastrophic-storm-damage-rcna217247'

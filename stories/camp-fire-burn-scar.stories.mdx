@@ -3,7 +3,7 @@ id: burn-scar
 name: Wildfires Affect Local Weather, Climate, and Hydrology
 description: "A study on the lasting impacts of the November 2018 Camp Fire in Northern California"
 media:
-  src: ::file ./camp-fire-background.jpg
+  src: ::file ./media/camp-fire-burn-scar/camp-fire-background.jpg
   alt: Engulfed hillside in California, 2021.
   author:
     name: Mike Newbry
@@ -42,7 +42,7 @@ taxonomy:
 
   <Figure>
       <Image
-      src={new URL('./camp-fire-sentinel-20181111.jpg', import.meta.url).href}
+      src={new URL('./media/camp-fire-burn-scar/camp-fire-sentinel-20181111.jpg', import.meta.url).href}
       alt='Camp Fire on November 11, 2018'
     />
     <Caption>
@@ -60,7 +60,7 @@ taxonomy:
 
   <Figure>
       <Image
-      src={new URL('./camp-fire-sentinel-20181111-falsecolor.jpg', import.meta.url).href}
+      src={new URL('./media/camp-fire-burn-scar/camp-fire-sentinel-20181111-falsecolor.jpg', import.meta.url).href}
       alt='Camp Fire on November 11, 2018'
     />
     <Caption>
@@ -79,7 +79,7 @@ taxonomy:
   <Figure>
      <video style={{ width: '100%', aspectRatio: "16/9" }} controls>
       <source
-        src={new URL('./camp-fire-perimeter-progression.mp4', import.meta.url).href} type="video/mp4"
+        src={new URL('./media/camp-fire-burn-scar/camp-fire-perimeter-progression.mp4', import.meta.url).href} type="video/mp4"
       />
       Your browser does not support the video tag.
     </video>
@@ -134,7 +134,7 @@ taxonomy:
 <Block>
   <Figure>
     <Chart
-      dataPath={new URL('./camp-fire-ndvi.csv', import.meta.url).href}
+      dataPath={new URL('./media/camp-fire-burn-scar/camp-fire-ndvi.csv', import.meta.url).href}
       dateFormat="%m/%d/%Y"
       xKey='Date'
       yKey='NDVI'
@@ -160,7 +160,7 @@ taxonomy:
 <Block>
   <Figure>
     <Chart
-      dataPath={new URL('./camp-fire-albedo.csv', import.meta.url).href}
+      dataPath={new URL('./media/camp-fire-burn-scar/camp-fire-albedo.csv', import.meta.url).href}
       dateFormat="%m/%d/%Y"
       idKey='Sources'
       xKey='Date'
@@ -187,7 +187,7 @@ taxonomy:
 <Block>
   <Figure>
     <Chart
-      dataPath={new URL('./camp-fire-lst-celsius.csv', import.meta.url).href}
+      dataPath={new URL('./media/camp-fire-burn-scar/camp-fire-lst-celsius.csv', import.meta.url).href}
       dateFormat="%m/%d/%Y"
       idKey='Sources'
       xKey='Date'
@@ -280,7 +280,7 @@ taxonomy:
   <Figure>
     <video style={{ width: '100%', aspectRatio: "16/9" }} controls>
       <source
-        src={new URL('./camp-fire-oroville-location.mp4', import.meta.url).href} type="video/mp4"
+        src={new URL('./media/camp-fire-burn-scar/camp-fire-oroville-location.mp4', import.meta.url).href} type="video/mp4"
       />
       Your browser does not support the video tag.
     </video>
@@ -302,7 +302,7 @@ taxonomy:
 <Block>
   <Figure>
     <Chart
-      dataPath={new URL('./camp-fire-oroville-ndti.csv', import.meta.url).href}
+      dataPath={new URL('./media/camp-fire-burn-scar/camp-fire-oroville-ndti.csv', import.meta.url).href}
       dateFormat="%Y%j"
       idKey='Source'
       xKey='Date'
@@ -321,7 +321,7 @@ taxonomy:
   <Figure>
      <video style={{ width: '100%', aspectRatio: "16/9" }} controls>
       <source
-        src={new URL('./camp-fire-oroville-ndti.mp4', import.meta.url).href} type="video/mp4"
+        src={new URL('./media/camp-fire-burn-scar/camp-fire-oroville-ndti.mp4', import.meta.url).href} type="video/mp4"
       />
       Your browser does not support the video tag.
     </video>
