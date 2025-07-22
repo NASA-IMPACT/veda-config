@@ -2,7 +2,7 @@
 id: MODIS_Terra_L3_NDVI_16Day
 name: MODIS Terra 16-Day NDVI
 featured: true
-description: The Vegetation Index (L3, 16-Day) layer is created from the Terra Moderate Resolution Imaging Spectroradiometer (MODIS) Vegetation Indices (MOD13Q1) data which are generated every 16 days at 250 meter (m) spatial resolution as a Level 3 product. The MOD13Q1 product provides the Normalized Difference Vegetation Index (NDVI) which is referred to as the continuity index to the existing National Oceanic and Atmospheric Administration-Advanced Very High Resolution Radiometer (NOAA-AVHRR) derived NDVI. The algorithm chooses the best available pixel value from all the acquisitions from the 16-day period. The criteria used is low clouds, low view angle, and the highest NDVI value. The MODIS Normalized Difference Vegetation Index (NDVI) complements NOAA's Advanced Very High Resolution Radiometer (AVHRR) NDVI products and provides continuity for time series historical applications. The MODIS NDVI product is computed from surface reflectances corrected for molecular scattering, ozone absorption, and aerosols.
+description: The Vegetation Index (L3, 16-Day) layer is created from the Terra Moderate Resolution Imaging Spectroradiometer (MODIS) Vegetation Indices (MOD13Q1) data which are generated every 16 days at 250 meter (m) spatial resolution as a Level 3 product.
 media:
   src: ::file ./media/modis-ndvi.jpg
   alt: MODIS NDVI over the Eastern Corn Belt of the Midwestern USA.
@@ -18,7 +18,7 @@ layers:
     stacCol: MODIS_Terra_L3_NDVI_16Day
     name: 16-Day MODIS Terra NDVI (L3) (from Worldview/GIBS)
     type: wmts 
-    description: The Vegetation Index (L3, 16-Day) layer is created from the Terra Moderate Resolution Imaging Spectroradiometer (MODIS) Vegetation Indices (MOD13Q1) data which are generated every 16 days at 250 meter (m) spatial resolution as a Level 3 product. The MOD13Q1 product provides the Normalized Difference Vegetation Index (NDVI) which is referred to as the continuity index to the existing National Oceanic and Atmospheric Administration-Advanced Very High Resolution Radiometer (NOAA-AVHRR) derived NDVI. The algorithm chooses the best available pixel value from all the acquisitions from the 16-day period. The criteria used is low clouds, low view angle, and the highest NDVI value. The MODIS Normalized Difference Vegetation Index (NDVI) complements NOAA's Advanced Very High Resolution Radiometer (AVHRR) NDVI products and provides continuity for time series historical applications. The MODIS NDVI product is computed from surface reflectances corrected for molecular scattering, ozone absorption, and aerosols.
+    description: The Vegetation Index (L3, 16-Day) layer is created from the Terra Moderate Resolution Imaging Spectroradiometer (MODIS) Vegetation Indices (MOD13Q1) data which are generated every 16 days at 250 meter (m) spatial resolution as a Level 3 product.
     sourceParams:
       layers: 1
       version: 1.3.0
@@ -52,8 +52,11 @@ layers:
 <Block>
 <Prose>
 
-## FILL OUT 
-x
+## About MODIS NDVI
+
+The Vegetation Index (L3, 16-Day) layer is created from the Terra Moderate Resolution Imaging Spectroradiometer (MODIS) Vegetation Indices (MOD13Q1) data which are generated every 16 days at 250 meter (m) spatial resolution as a Level 3 product. The MOD13Q1 product provides the Normalized Difference Vegetation Index (NDVI) which is referred to as the continuity index to the existing National Oceanic and Atmospheric Administration-Advanced Very High Resolution Radiometer (NOAA-AVHRR) derived NDVI. The algorithm chooses the best available pixel value from all the acquisitions from the 16-day period. The criteria used is low clouds, low view angle, and the highest NDVI value. The MODIS Normalized Difference Vegetation Index (NDVI) complements NOAA's Advanced Very High Resolution Radiometer (AVHRR) NDVI products and provides continuity for time series historical applications. The MODIS NDVI product is computed from surface reflectances corrected for molecular scattering, ozone absorption, and aerosols. 
+
+References: MOD13Q1 doi:10.5067/MODIS/MOD13Q1.061
 
 </Prose>
 </Block>
