@@ -28,13 +28,14 @@ infoDescription: |
     Cattle and Vegetation Changes.
 layers:
   - id: county_grasslands_2019_pastu
-    stacCol: county_grasslands_2019_pastu
-    tileApiEndpoint: "https://dev.openveda.cloud/api/raster"
-    stacApiEndpoint: "https://dev.openveda.cloud/api/stac"
+    stacCol: county_grasslands_pasture_2019-v1
+    tileApiEndpoint: "https://staging.openveda.cloud/api/raster"
+    stacApiEndpoint: "https://staging.openveda.cloud/api/stac"
     name: 'County Grassland Land Percentage'
     type: raster
     description: 'County-level percentage of grassland estimated from NLCD land cover data'
     sourceParams:
+      assets: grasslands
       resampling: bilinear
       bidx: 1
       nodata: -9999
@@ -44,7 +45,9 @@ layers:
         - 100
     legend:
       type: gradient
-      label: Precipitation percent-difference
+      label: Percentage of grassland
+      unit:
+        label: Percentage(%)
       min: "0"
       max: "88"
       stops:
@@ -58,27 +61,30 @@ layers:
       source: Maheshwari Neelam 
       spatialExtent: Regional
       temporalResolution: Annual
-      unit: Percent
+      unit: Percentage
 
 
   - id: county_pasture_2019_pastu
-    stacCol: county_pasture_2019_pastu
-    tileApiEndpoint: "https://dev.openveda.cloud/api/raster"
-    stacApiEndpoint: "https://dev.openveda.cloud/api/stac"
+    stacCol: county_grasslands_pasture_2019-v1
+    tileApiEndpoint: "https://staging.openveda.cloud/api/raster"
+    stacApiEndpoint: "https://staging.openveda.cloud/api/stac"
     name: 'County Pasture Land Percentage'
     type: raster
     description: 'County-level percentage of pasture estimated from NLCD land cover data'
     sourceParams:
+      assets: pasture
       resampling: bilinear
       bidx: 1
       nodata: -9999
       colormap_name: ylorrd
       rescale:
         - 0
-        - 100
+        - 67
     legend:
       type: gradient
-      label: Precipitation percent-difference
+      label: Percentage of pasture
+      unit:
+        label: Percentage (%)
       min: "0"
       max: "67"
       stops:
@@ -92,17 +98,18 @@ layers:
       source: Maheshwari Neelam
       spatialExtent: Regional
       temporalResolution: Annual
-      unit: Percent Difference
+      unit: Percentage
 
 
   - id: usda_cattle_large_AFOs_2017
-    stacCol: usda_cattle_large_AFOs_2017
-    tileApiEndpoint: "https://dev.openveda.cloud/api/raster"
-    stacApiEndpoint: "https://dev.openveda.cloud/api/stac"
+    stacCol: usda_cattle_AFOs_2017-v1
+    tileApiEndpoint: "https://staging.openveda.cloud/api/raster"
+    stacApiEndpoint: "https://staging.openveda.cloud/api/stac"
     name: 'USDA Cattle Large Animal Feeding Operations'
     type: raster
     description: 'Cattle: County-Level Distribution of Large (Number of operations that managed 200 or more heads) Animal Feeding Operations (AFO).'
     sourceParams:
+      assets: large_AFOs
       resampling: bilinear
       bidx: 1
       nodata: -9999
@@ -112,7 +119,9 @@ layers:
         - 304
     legend:
       type: gradient
-      label: Precipitation percent-difference
+      label: Number of large AFOs
+      unit: 
+        label: Number of large AFOs
       min: "0"
       max: "304"
       stops:
@@ -126,16 +135,17 @@ layers:
       source: USDA Census
       spatialExtent: Regional
       temporalResolution: Annual
-      unit: Percent Difference
+      unit: Number of large AFOs
 
   - id: usda_cattle_medium_AFOs_2017
-    stacCol: usda_cattle_medium_AFOs_2017
-    tileApiEndpoint: "https://dev.openveda.cloud/api/raster"
-    stacApiEndpoint: "https://dev.openveda.cloud/api/stac"
+    stacCol: usda_cattle_AFOs_2017-v1
+    tileApiEndpoint: "https://staging.openveda.cloud/api/raster"
+    stacApiEndpoint: "https://staging.openveda.cloud/api/stac"
     name: 'USDA Cattle Medium Animal Feeding Operations'
     type: raster
     description: 'Cattle: County-Level Distribution of Medium (Number of operations that managed between 50 and 199 heads) Animal Feeding Operations (AFO).'
     sourceParams:
+      assets: medium_AFOs
       resampling: bilinear
       bidx: 1
       nodata: -9999
@@ -145,7 +155,9 @@ layers:
         - 1508
     legend:
       type: gradient
-      label:  percent
+      label: Number of medium AFOs
+      unit: 
+        label: Number of medium AFOs
       min: "0"
       max: "1508"
       stops:
@@ -159,17 +171,18 @@ layers:
       source: USDA Census
       spatialExtent: Regional
       temporalResolution: Annual
-      unit: Percent Difference
+      unit: Number of medium AFOs
 
 
   - id: usda_cattle_small_AFOs_2017
-    stacCol: usda_cattle_small_AFOs_2017
-    tileApiEndpoint: "https://dev.openveda.cloud/api/raster"
-    stacApiEndpoint: "https://dev.openveda.cloud/api/stac"
+    stacCol: usda_cattle_AFOs_2017-v1
+    tileApiEndpoint: "https://staging.openveda.cloud/api/raster"
+    stacApiEndpoint: "https://staging.openveda.cloud/api/stac"
     name: 'USDA Cattle Small Animal Feeding Operations'
     type: raster
     description: 'Cattle: County-Level Distribution of Small (Number of operations that managed less than 50 heads) Animal Feeding Operations (AFO).'
     sourceParams:
+      assets: small_AFOs
       resampling: bilinear
       bidx: 1
       nodata: -9999
@@ -178,8 +191,9 @@ layers:
         - 0
         - 2312.0
     legend:
-      type: gradient
-      label: Precipitation percent-difference
+      label: Number of small AFOs
+      unit: 
+        label: Number of small AFOs
       min: "0"
       max: "2312.0"
       stops:
@@ -193,17 +207,18 @@ layers:
       source: USDA Census
       spatialExtent: Regional
       temporalResolution: Annual
-      unit: Percent Difference
+      unit: Number of small AFOs
 
 
   - id: usda_cattle_total_heads_2017
-    stacCol: usda_cattle_total_heads_2017
-    tileApiEndpoint: "https://dev.openveda.cloud/api/raster"
-    stacApiEndpoint: "https://dev.openveda.cloud/api/stac"
+    stacCol: usda_cattle_AFOs_2017-v1
+    tileApiEndpoint: "https://staging.openveda.cloud/api/raster"
+    stacApiEndpoint: "https://staging.openveda.cloud/api/stac"
     name: 'County Distribution of Total Number of Heads'
     type: raster
     description: 'Cattle: County-Level Distribution of Total Number of Heads.'
     sourceParams:
+      assets: total_heads
       resampling: bilinear
       bidx: 1
       nodata: -9999
@@ -213,7 +228,9 @@ layers:
         - 1057272.0
     legend:
       type: gradient
-      label: Precipitation percent-difference
+      label: Total number of cattle heads
+      unit: 
+        label: Total number of cattle heads
       min: "0"
       max: "1057272.0"
       stops:
@@ -227,13 +244,13 @@ layers:
       source: USDA Census
       spatialExtent: Regional
       temporalResolution: Annual
-      unit: Percent Difference
+      unit: Total number of cattle heads
 
 
-  - id: smap-L3-soil-moisture-AM-v2
-    stacCol: smap-L3-soil-moisture-AM-v2
-    tileApiEndpoint: "https://dev.openveda.cloud/api/raster"
-    stacApiEndpoint: "https://dev.openveda.cloud/api/stac"
+  - id: smap-L3-soil-moisture-AM-v1
+    stacCol: smap-L3-soil-moisture-AM-v1
+    tileApiEndpoint: "https://staging.openveda.cloud/api/raster"
+    stacApiEndpoint: "https://staging.openveda.cloud/api/stac"
     name: 'SMAP L3 Soil Moisture AM passes (cm3/cm3)'
     type: raster
     description: 'This Level-3 (L3) soil moisture product provides a daily composite of global land surface conditions retrieved by the Soil Moisture Active Passive (SMAP) L-Band radiometer. The daily data here were collected from the descending (local solar time of 6 am) and ascending (local solar time of 6 pm) passes.'
@@ -248,7 +265,7 @@ layers:
         - 0.926
     compare:
       datasetId: cattle-grasslands-pasture
-      layerId: smap-L3-soil-moisture-AM-v2
+      layerId: smap-L3-soil-moisture-AM-v1
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL dd yyyy')} VS ${dateFns.format(compareDatetime, 'LLL dd yyyy')}`;
@@ -256,6 +273,8 @@ layers:
     legend:
       type: gradient
       label: cm3/cm3
+      unit:
+        label: cm3/cm3
       min: "0.020"
       max: "0.926"
       stops:
@@ -264,8 +283,6 @@ layers:
         - rgb(239, 255, 7)
         - rgb(65, 133, 4)
         - rgb(3, 0, 255)
-
-        
     info:
       source: NSIDC
       spatialExtent: Global
@@ -274,8 +291,8 @@ layers:
 
   - id: ndvi-global-2022
     stacCol: ndvi-global-2022
-    tileApiEndpoint: "https://dev.openveda.cloud/api/raster"
-    stacApiEndpoint: "https://dev.openveda.cloud/api/stac"
+    tileApiEndpoint: "https://staging.openveda.cloud/api/raster"
+    stacApiEndpoint: "https://staging.openveda.cloud/api/stac"
     name: 'NDVI from AVHRR GIMMS-3G+'
     type: raster
     description: 'This dataset holds the Global Inventory Modeling and Mapping Studies-3rd Generation V1.2 (GIMMS-3G+) data for the Normalized Difference Vegetation Index (NDVI). NDVI was based on corrected and calibrated measurements from Advanced Very High Resolution Radiometer (AVHRR) data with a spatial resolution of 0.0833 degree and global coverage for 1982 to 2022. Maximum NDVI values are reported within twice monthly compositing periods (two values per month). The dataset was assembled from different AVHRR sensors and accounts for various deleterious effects, such as calibration loss, orbital drift, and volcanic eruptions.'
@@ -431,7 +448,7 @@ layers:
   <Figure>
     <Map
       datasetId='cattle-grasslands-pasture'
-      layerId='smap-L3-soil-moisture-AM-v2'
+      layerId='smap-L3-soil-moisture-AM-v1'
       dateTime='2022-06-09'
       zoom={3.0}
       center={[-98.8209,38.174]}
