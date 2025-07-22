@@ -12,23 +12,22 @@ export default function Component() {
   const { state: toolState, setState: setToolState } = useToolState();
   const [urlState, setUrlState] = useAtom(toolStateAtom);
 
-  const debouncedSetToolState = useCallback(
-    debounce((state) => {
-      setToolState(state);
-    }, 100),
-    [setToolState]
-  );
-
   const debouncedSetUrlState = useCallback(
     debounce((state) => {
-      setUrlState(state);
-    }, 100),
+      setUrlState({
+        ...state,
+        viewState: state.viewStateForUrl,
+      });
+    }, 500),
     [setUrlState]
   );
 
   useEffect(() => {
     if (urlState && Object.keys(urlState).length > 0) {
-      debouncedSetToolState(urlState);
+      setToolState({
+        ...urlState,
+        viewStateForUrl: urlState.viewState,
+      });
     }
   }, []);
 

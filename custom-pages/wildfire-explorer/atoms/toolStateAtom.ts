@@ -11,10 +11,9 @@ export const toolStateAtom = atomWithUrlValueStability<any>({
     showNewFirepix: false,
     viewMode: 'explorer',
     timeRange: {
-      start: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000),
+      start: new Date(Date.now() - 60 * 24 * 60 * 60 * 1000),
       end: new Date()
     },
-    layerOpacity: 100,
     viewState: {
       longitude: -95.7129,
       latitude: 37.0902,
@@ -36,7 +35,7 @@ export const toolStateAtom = atomWithUrlValueStability<any>({
       return {
         ...parsed,
         timeRange: {
-          start: new Date(parsed.timeRange?.start || Date.now() - 30 * 24 * 60 * 60 * 1000),
+          start: new Date(parsed.timeRange?.start || Date.now() - 60 * 24 * 60 * 60 * 1000),
           end: new Date(parsed.timeRange?.end || Date.now())
         },
         viewState: {
@@ -64,10 +63,9 @@ export const toolStateAtom = atomWithUrlValueStability<any>({
         showNewFirepix: false,
         viewMode: 'explorer',
         timeRange: {
-          start: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000),
+          start: new Date(Date.now() - 60 * 24 * 60 * 60 * 1000),
           end: new Date()
         },
-        layerOpacity: 100,
         viewState: {
           longitude: -95.7129,
           latitude: 37.0902,
