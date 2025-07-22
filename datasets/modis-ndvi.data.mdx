@@ -1,0 +1,59 @@
+---
+id: MODIS_Terra_L3_NDVI_16Day
+name: MODIS Terra 16-Day NDVI
+featured: true
+description: The Vegetation Index (L3, 16-Day) layer is created from the Terra Moderate Resolution Imaging Spectroradiometer (MODIS) Vegetation Indices (MOD13Q1) data which are generated every 16 days at 250 meter (m) spatial resolution as a Level 3 product. The MOD13Q1 product provides the Normalized Difference Vegetation Index (NDVI) which is referred to as the continuity index to the existing National Oceanic and Atmospheric Administration-Advanced Very High Resolution Radiometer (NOAA-AVHRR) derived NDVI. The algorithm chooses the best available pixel value from all the acquisitions from the 16-day period. The criteria used is low clouds, low view angle, and the highest NDVI value. The MODIS Normalized Difference Vegetation Index (NDVI) complements NOAA's Advanced Very High Resolution Radiometer (AVHRR) NDVI products and provides continuity for time series historical applications. The MODIS NDVI product is computed from surface reflectances corrected for molecular scattering, ozone absorption, and aerosols. References: MOD13Q1 doi:10.5067/MODIS/MOD13Q1.061
+media:
+  src: ::file ./media/modis-ndvi.jpg
+  alt: MODIS NDVI over the Eastern Corn Belt of the Midwestern USA.
+  author:
+    name: Andrew Blackford
+  ::markdown    
+    - Temporal Extent: 2000 March 5 - Present
+    - Temporal Resolution: Daily
+layers:
+  - id: MODIS_Terra_L3_NDVI_16Day
+    stacApiEndpoint: https://dev.openveda.cloud/api/stac/
+    stacCol: MODIS_Terra_L3_NDVI_16Day
+    name: 16-Day MODIS Terra NDVI (L3) (from Worldview/GIBS)
+    type: wmts 
+    description: The Vegetation Index (L3, 16-Day) layer is created from the Terra Moderate Resolution Imaging Spectroradiometer (MODIS) Vegetation Indices (MOD13Q1) data which are generated every 16 days at 250 meter (m) spatial resolution as a Level 3 product. The MOD13Q1 product provides the Normalized Difference Vegetation Index (NDVI) which is referred to as the continuity index to the existing National Oceanic and Atmospheric Administration-Advanced Very High Resolution Radiometer (NOAA-AVHRR) derived NDVI. The algorithm chooses the best available pixel value from all the acquisitions from the 16-day period. The criteria used is low clouds, low view angle, and the highest NDVI value. The MODIS Normalized Difference Vegetation Index (NDVI) complements NOAA's Advanced Very High Resolution Radiometer (AVHRR) NDVI products and provides continuity for time series historical applications. The MODIS NDVI product is computed from surface reflectances corrected for molecular scattering, ozone absorption, and aerosols. References: MOD13Q1 doi:10.5067/MODIS/MOD13Q1.061
+    sourceParams:
+      layers: 1
+      version: 1.3.0
+      crs: EPSG:3857
+      styles:
+    zoomExtent:
+      - 0
+      - 5
+    analysis:
+      exclude: true
+    legend:
+      type: gradient
+      min: 0
+      max: 1
+    stops:
+        - rgb(215, 210, 210)
+        - rgb(187, 175, 159)
+        - rgb(151, 129, 108)
+        - rgb(144, 168, 63)
+        - rgb(87, 133, 41)
+        - rgb(46, 96, 28)
+        - rgb(10, 26, 8)  
+    compare:
+      datasetId: MODIS_Terra_L3_NDVI_16Day
+      layerId: MODIS_Terra_L3_NDVI_16Day
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'dd LLL yyyy')} VS ${dateFns.format(compareDatetime, 'dd LLL yyyy')}`;
+        }
+---
+<Block>
+<Prose>
+
+## FILL OUT 
+x
+
+</Prose>
+</Block>
+
