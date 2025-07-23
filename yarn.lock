@@ -73,10 +73,10 @@
   dependencies:
     tslib "^2.0.0"
 
-"@dsio/wildfire-explorer@0.4.5":
-  version "0.4.5"
-  resolved "https://registry.yarnpkg.com/@dsio/wildfire-explorer/-/wildfire-explorer-0.4.5.tgz#0ce5eb30f369fdcab001a368329e6c5c1f9a7d3b"
-  integrity sha512-CL7uwdheamgRaaBylriz5RKEQJp6Dchun1NTlH5eIx+4gyUghpYKk/ZlWcj+XE8ZHUy5B3Kpok5jGobDBfHtSA==
+"@dsio/wildfire-explorer@0.4.9":
+  version "0.4.9"
+  resolved "https://registry.yarnpkg.com/@dsio/wildfire-explorer/-/wildfire-explorer-0.4.9.tgz#27859eb5862e3dfbaa9375253ddaaa7ebd94a8f5"
+  integrity sha512-od6L8Jx0OnYu7Xj3NQ3gQoRDxdT2aPu76xBT1C0fAdL4EIq72CRv9Ho4NodTHjunyqJzNfDSe3fF0Rd9Ijzt1g==
   dependencies:
     "@deck.gl/extensions" "^9.1.4"
     "@deck.gl/react" "^9.1.4"
@@ -110,6 +110,7 @@
     sass "^1.85.1"
     weatherlayers-gl "^2025.3.0"
     webm-writer "^1.0.0"
+    zustand "^5.0.6"
 
 "@emotion/is-prop-valid@1.2.1":
   version "1.2.1"
@@ -3675,3 +3676,8 @@ xxhashjs@~0.2.2:
   integrity sha512-AkTuIuVTET12tpsVIQo+ZU6f/qDmKuRUcjaqR+OIvm+aCBsZ95i7UVY5WJ9TMsSaZ0DA2WxoZ4acu0sPH+OKAw==
   dependencies:
     cuint "^0.2.2"
+
+zustand@^5.0.6:
+  version "5.0.6"
+  resolved "https://registry.yarnpkg.com/zustand/-/zustand-5.0.6.tgz#a2da43d8dc3d31e314279e5baec06297bea70a5c"
+  integrity sha512-ihAqNeUVhe0MAD+X8M5UzqyZ9k3FFZLBTtqo6JLPwV53cbRB/mJwBI0PxcIgqhBBHlEs8G45OTDTMq3gNcLq3A==
