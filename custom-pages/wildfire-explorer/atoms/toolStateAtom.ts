@@ -1,33 +1,35 @@
 // @ts-ignore
 import { atomWithUrlValueStability } from '$veda-ui-scripts/utils/params-location-atom/atom-with-url-value-stability';
 
-export const toolStateAtom = atomWithUrlValueStability<any>({
-  initialValue: {
-    selectedEventId: null,
-    windLayerType: null,
-    show3DMap: false,
-    showPerimeterNrt: true,
-    showFireline: false,
-    showNewFirepix: false,
-    viewMode: 'explorer',
-    timeRange: {
-      start: new Date(Date.now() - 60 * 24 * 60 * 60 * 1000),
-      end: new Date()
-    },
-    viewState: {
-      longitude: -95.7129,
-      latitude: 37.0902,
-      zoom: 3,
-      pitch: 0,
-      bearing: 0,
-      padding: {
-        top: undefined,
-        bottom: undefined,
-        left: undefined,
-        right: undefined,
-      },
+const defaultToolState = {
+  selectedEventId: null,
+  windLayerType: null,
+  show3DMap: false,
+  showPerimeterNrt: true,
+  showFireline: false,
+  showNewFirepix: false,
+  viewMode: 'explorer',
+  timeRange: {
+    start: new Date(Date.now() - 60 * 24 * 60 * 60 * 1000),
+    end: new Date(),
+  },
+  viewState: {
+    longitude: -95.7129,
+    latitude: 37.0902,
+    zoom: 3,
+    pitch: 0,
+    bearing: 0,
+    padding: {
+      top: undefined,
+      bottom: undefined,
+      left: undefined,
+      right: undefined,
     },
   },
+};
+
+export const toolStateAtom = atomWithUrlValueStability<any>({
+  initialValue: defaultToolState,
   urlParam: 'fireEventExplorer',
   hydrate: (serialized: string): any => {
     try {
@@ -35,15 +37,15 @@ export const toolStateAtom = atomWithUrlValueStability<any>({
       return {
         ...parsed,
         timeRange: {
-          start: new Date(parsed.timeRange?.start || Date.now() - 60 * 24 * 60 * 60 * 1000),
-          end: new Date(parsed.timeRange?.end || Date.now())
+          start: new Date(parsed.timeRange?.start || defaultToolState.timeRange.start),
+          end: new Date(parsed.timeRange?.end || defaultToolState.timeRange.end),
         },
         viewState: {
-          longitude: parsed.viewState?.longitude ?? -95.7129,
-          latitude: parsed.viewState?.latitude ?? 37.0902,
-          zoom: parsed.viewState?.zoom ?? 3,
-          pitch: parsed.viewState?.pitch ?? 0,
-          bearing: parsed.viewState?.bearing ?? 0,
+          longitude: parsed.viewState?.longitude ?? defaultToolState.viewState.longitude,
+          latitude: parsed.viewState?.latitude ?? defaultToolState.viewState.latitude,
+          zoom: parsed.viewState?.zoom ?? defaultToolState.viewState.zoom,
+          pitch: parsed.viewState?.pitch ?? defaultToolState.viewState.pitch,
+          bearing: parsed.viewState?.bearing ?? defaultToolState.viewState.bearing,
           padding: {
             top: parsed.viewState?.padding?.top ?? undefined,
             bottom: parsed.viewState?.padding?.bottom ?? undefined,
@@ -54,32 +56,7 @@ export const toolStateAtom = atomWithUrlValueStability<any>({
       };
     } catch (error) {
       console.warn('Failed to parse tool state from URL:', error);
-      return {
-        selectedEventId: null,
-        windLayerType: null,
-        show3DMap: false,
-        showPerimeterNrt: true,
-        showFireline: false,
-        showNewFirepix: false,
-        viewMode: 'explorer',
-        timeRange: {
-          start: new Date(Date.now() - 60 * 24 * 60 * 60 * 1000),
-          end: new Date()
-        },
-        viewState: {
-          longitude: -95.7129,
-          latitude: 37.0902,
-          zoom: 3,
-          pitch: 0,
-          bearing: 0,
-          padding: {
-            top: undefined,
-            bottom: undefined,
-            left: undefined,
-            right: undefined,
-          },
-        },
-      };
+      return defaultToolState;
     }
   },
   dehydrate: (value: any): string => {
@@ -88,7 +65,7 @@ export const toolStateAtom = atomWithUrlValueStability<any>({
         ...value,
         timeRange: {
           start: value.timeRange.start.toISOString(),
-          end: value.timeRange.end.toISOString()
+          end: value.timeRange.end.toISOString(),
         },
         viewState: {
           longitude: value.viewState?.longitude,
@@ -105,5 +82,5 @@ export const toolStateAtom = atomWithUrlValueStability<any>({
       console.warn('Failed to serialize tool state:', error);
       return '';
     }
-  }
+  },
 });
