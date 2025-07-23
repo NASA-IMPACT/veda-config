@@ -1,10 +1,40 @@
-import React, { useEffect } from "react";
-// @ts-ignore Types are not available for this package yet
-import { WildfireExplorer } from '@dsio/wildfire-explorer';
+import React, { useEffect, useCallback } from "react";
+import { WildfireExplorer, useToolState } from '@dsio/wildfire-explorer';
 import '@dsio/wildfire-explorer/dist/wildfire-explorer.css';
+import { toolStateAtom } from "./atoms/toolStateAtom";
+// @ts-ignore
+import { useAtom } from '$veda-ui/jotai';
+import { debounce } from 'lodash';
+
 import '../../styles/_custom.scss';
 
 export default function Component() {
+  const { state: toolState, setState: setToolState } = useToolState();
+  const [urlState, setUrlState] = useAtom(toolStateAtom);
+
+  const debouncedSetUrlState = useCallback(
+    debounce((state) => {
+      setUrlState({
+        ...state,
+        viewState: state.viewStateForUrl,
+      });
+    }, 500),
+    [setUrlState]
+  );
+
+  useEffect(() => {
+    if (urlState && Object.keys(urlState).length > 0) {
+      setToolState({
+        ...urlState,
+        viewStateForUrl: urlState.viewState,
+      });
+    }
+  }, []);
+
+  useEffect(() => {
+    debouncedSetUrlState(toolState);
+  }, [toolState, debouncedSetUrlState]);
+
   useEffect(() => {
     // We're conditionally injecting Google Tag Manager here only for this custom tool page,
     // and this does not interfere with the GTM code on other pages.
