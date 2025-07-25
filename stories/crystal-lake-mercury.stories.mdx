@@ -3,7 +3,7 @@ id: crystal-lake-mercury
 name: Wildfires Affect Water Quality
 description: "A Mercury Deposition Analysis of Crystal Lake in Southern California"
 media:
-  src: ::file ./crystal-lake-background-sat.jpg
+  src: ::file ./media/crystal-lake-mercury/crystal-lake-background-sat.jpg
   alt: GOES-West Imagery from 9 September, 2020.
   author: 
     name: NOAA-NASA
@@ -41,7 +41,7 @@ taxonomy:
   <Figure>
     <video style={{ width: '100%', aspectRatio: "16/9" }} controls>
       <source
-        src={new URL('./crystal-lake-location.mp4', import.meta.url).href} type="video/mp4"
+        src={new URL('./media/crystal-lake-mercury/crystal-lake-location.mp4', import.meta.url).href} type="video/mp4"
       />
       Your browser does not support the video tag.
     </video>
@@ -86,7 +86,7 @@ taxonomy:
 <Block type="wide">
   <Figure>
     <Chart
-      dataPath={new URL('./crystal-lake-aod-trend.csv', import.meta.url).href}
+      dataPath={new URL('./media/crystal-lake-mercury/crystal-lake-aod-trend.csv', import.meta.url).href}
       dateFormat="%Y-%m"
       idKey='source'
       xKey='Date'
@@ -112,7 +112,7 @@ taxonomy:
 <Block type="wide">
   <Figure>
     <Chart
-      dataPath={new URL('./smoke_count_annual_with_trend.csv', import.meta.url).href}
+      dataPath={new URL('./media/crystal-lake-mercury/smoke_count_annual_with_trend.csv', import.meta.url).href}
       dateFormat="%Y"
       idKey='source'
       xKey='Year'
@@ -135,7 +135,7 @@ taxonomy:
   <Figure>
      <video style={{ width: '100%', aspectRatio: "16/9" }} controls>
       <source
-        src={new URL('./crystal-lake-sept2020.mp4', import.meta.url).href} type="video/mp4"
+        src={new URL('./media/crystal-lake-mercury/crystal-lake-sept2020.mp4', import.meta.url).href} type="video/mp4"
       />
       Your browser does not support the video tag.
     </video>
