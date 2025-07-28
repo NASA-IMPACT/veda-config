@@ -163,16 +163,32 @@ Soil moisture emerges as a critical but often overlooked factor. When soil moist
       This variability makes it nearly impossible for cattle to maintain condition and for producers to plan resources effectively.
     </p>
   </Prose>
-  <Figure>
+</Block>
+
+<Block style={{justifyContent: 'space-between', alignItems: 'flex-start', margin: '0 auto', width: '100%' }}>
+  <Figure style={{ flex: 1 }}>
     <Image
-      src={new URL('./cattle_pr_seasonal_heatmap.png', import.meta.url).href}
-      style={{ maxWidth: '200%' }}
+      src={new URL('./cattle_Idaho_precipitation_anomaly_JJA.gif', import.meta.url).href}
+      alt="Temperature Humidity Index (THI) for Kansas Summer 2022."
+      style={{ width: '100%', height: 'auto' }}
     />
     <Caption>
-      Seasonal changes in both the sum and variability (standard deviation) of precipitation, analyzed from 1979 to 2024.
+      Summer total precipitation anomaly for Idaho, calculated using the 1980–2010 base period.
+    </Caption>
+  </Figure>
+
+  <Figure style={{ flex: 1 }}>
+    <Image
+      src={new URL('./cattle_US_precipitation_anomaly_JJA.gif', import.meta.url).href} 
+      alt="Temperature Humidity Index (THI) for Kansas Summer 2022."
+      style={{ width: '100%', height: 'auto' }}
+    />
+    <Caption>
+      Summer total precipitation anomaly for CONUS, calculated using the 1980–2010 base period.
     </Caption>
   </Figure>
 </Block>
+
 
 <ScrollytellingBlock>
   <Chapter
