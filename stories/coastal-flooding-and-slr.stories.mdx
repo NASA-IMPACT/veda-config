@@ -3,7 +3,7 @@ id: 'eis-coastal-risks'
 name: Unraveling the components of coastal risk
 description: 'NASA measurements and models shed light on present and future coastal risks'
 media:
-  src: ::file ./coastal-flooding-and-slr-cover.jpg
+  src: ::file ./media/coastal-flooding-and-slr/coastal-flooding-and-slr-cover.jpg
   alt: Flooding in York, UK - February 2020.
   author:
     name: Don Lodge
@@ -101,7 +101,7 @@ taxonomy:
   </Prose>
   <Figure>
     <Chart
-      dataPath={new URL('./TWS_time_series.csv', import.meta.url).href}
+      dataPath={new URL('./media/coastal-flooding-and-slr/TWS_time_series.csv', import.meta.url).href}
       dateFormat="%b-%Y"
       idKey='type'
       xKey='date'
@@ -123,7 +123,7 @@ taxonomy:
   </Prose>
   <Figure>
     <Chart
-      dataPath={new URL('./groundwater_time_series.csv', import.meta.url).href}
+      dataPath={new URL('./media/coastal-flooding-and-slr/groundwater_time_series.csv', import.meta.url).href}
       dateFormat="%b-%y"
       idKey='type'
       xKey='date'
@@ -173,7 +173,7 @@ taxonomy:
   </Prose>
   <Figure>
     <Chart
-      dataPath={new URL('./coastal_land_loss_time_series.csv', import.meta.url).href}
+      dataPath={new URL('./media/coastal-flooding-and-slr/coastal_land_loss_time_series.csv', import.meta.url).href}
       dateFormat="%Y"
       idKey='type'
       xKey='year'
@@ -218,7 +218,7 @@ taxonomy:
   </Prose>
   <Figure>
     <Chart
-      dataPath={new URL('./ecco_ssh.csv', import.meta.url).href}
+      dataPath={new URL('./media/coastal-flooding-and-slr/ecco_ssh.csv', import.meta.url).href}
       dateFormat="%m/%Y"
       idKey='source'
       xKey='date'

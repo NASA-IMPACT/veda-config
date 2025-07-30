@@ -3,7 +3,7 @@ id: 'houston-aod'
 name: Aerosols and Their Impacts on Houston, TX
 description: "A look into how aerosols affect those in and around Houston, TX."
 media:
-  src: ::file ./steam-power-plant.png
+  src: ::file ./media/houston-aod/steam-power-plant.png
   alt: Smokestack from Power Plants
   author:
     name: Maxim Tolchinskiy
@@ -110,7 +110,7 @@ taxonomy:
     The monthly and spatially averaged time series of AOD for Galveston Bay (just east of downtown Houston) show a statistically significant (p < 0.005) decreasing trend in AOD from 2000 to 2019. Note the measure of statistical significance of p < 0.005 indicates that there is very high confidence the decreasing trend in AOD is real and not due to chance. This decreasing trend in AOD could potentially be attributed to air quality regulations implemented as a part of the Clean Air Act between 2010 and 2019.
 
     <Chart
-      dataPath={new URL('./baytown_adjusted.csv', import.meta.url).href}
+      dataPath={new URL('./media/houston-aod/baytown_adjusted.csv', import.meta.url).href}
       dateFormat="%Y-%m"
       idKey='source'
       xKey='Date'
@@ -130,7 +130,7 @@ taxonomy:
     Unlike the Galveston Bay area, the monthly and spatially averaged time series of AOD for the Western Suburbs of Houston, TX shows a trend where there is a small, statistically insignificant increase over the time period of 2000 to 2019. Note that the spatial pattern of difference in decadal mean AOD between the second and first decade of this century shows a localized increase that correlates to urbanization. The small increase in AOD concentrations could be potentially explained by vehicular and other urban sources of pollution counteracting the effects of the Clean Air Act.
 
     <Chart
-      dataPath={new URL('./west_houston_adjusted.csv', import.meta.url).href}
+      dataPath={new URL('./media/houston-aod/west_houston_adjusted.csv', import.meta.url).href}
       dateFormat="%Y-%m"
       idKey='source'
       xKey='Date'
@@ -150,7 +150,7 @@ taxonomy:
     Over a 20-year observational period from 2000 to 2019, the area around George Bush Intercontinental Airport (IAH) in Houston maintained high aerosol concentrations, possibly due to air traffic. Consistently high aerosol concentrations in this region serve as a good example that changes in AOD do not correlate to air quality directly.
 
     <Chart
-      dataPath={new URL('./Houston_IAH.csv', import.meta.url).href}
+      dataPath={new URL('./media/houston-aod/Houston_IAH.csv', import.meta.url).href}
       dateFormat="%Y-%m"
       idKey='source'
       xKey='Date'

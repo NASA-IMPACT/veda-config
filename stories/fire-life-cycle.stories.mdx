@@ -5,7 +5,7 @@ id: "fire-life-cycle"
 name: Hydrological Drivers and Impacts of Fire
 description: "NASA's Earth Information System investigates pre-fire hydrological conditions and post-fire impacts on eco-hydrology"
 media:
-  src: ::file ./fire-cover.png
+  src: ::file ./media/fire-life-cycle/fire-cover.png
   alt: Satellite imagery (false color) of East Troublesome fire spreading to the Rockies
   author:
     name: Lauren Dauphin/Landsat 8
@@ -59,7 +59,7 @@ taxonomy:
 <Block>
   <Figure>
     <Image
-      src={new URL("./dixie_burn_2.png", import.meta.url).href}
+      src={new URL("./media/fire-life-cycle/dixie_burn_2.png", import.meta.url).href}
       alt="dixie fire Aug 4, 2021"
     />
     <Caption
@@ -85,7 +85,7 @@ taxonomy:
 <Block type="wide">
   <Figure>
     <Chart
-      dataPath={new URL('./Burnarea_timeseries_WUS.csv', import.meta.url).href}
+      dataPath={new URL('./media/fire-life-cycle/Burnarea_timeseries_WUS.csv', import.meta.url).href}
       dateFormat="%Y"
       idKey='source'
       xKey='year'
@@ -135,7 +135,7 @@ taxonomy:
   <Figure>
      <video style={{ width: '100%', aspectRatio: "16/9" }} controls>
       <source
-        src={new URL('./fire_hyro_VIZ01_final_HD_1080p59.94.mp4', import.meta.url).href} type="video/mp4"
+        src={new URL('./media/fire-life-cycle/fire_hyro_VIZ01_final_HD_1080p59.94.mp4', import.meta.url).href} type="video/mp4"
       />
       Your browser does not support the video tag.
     </video>
@@ -159,7 +159,7 @@ taxonomy:
   </Prose>
   <Figure>
     <Image
-      src={new URL("./cv_irrig.jpeg", import.meta.url).href}
+      src={new URL("./media/fire-life-cycle/cv_irrig.jpeg", import.meta.url).href}
       alt="Irrigation in California’s Central Valley"
     />
     <Caption
@@ -215,7 +215,7 @@ taxonomy:
     Ignited on July 24, 2017, the Preacher fire burned ~5000 ac of grassland with moderate severity. OpenET data show vegetation responded with declining ET, but transpiration recovered within a couple of post-fire seasons.
 
     <Chart
-      dataPath={new URL('./ET_timeseries_PreacherNV.csv', import.meta.url).href}
+      dataPath={new URL('./media/fire-life-cycle/ET_timeseries_PreacherNV.csv', import.meta.url).href}
       dateFormat="%m/%d/%y"
       idKey='source'
       xKey='Date'
@@ -237,7 +237,7 @@ taxonomy:
     The Natchez fire started on July 15, 2018 and burned a massive 38,800 ac of forested landscape with high severity. Post-fire ET data show that vegetation sustained the impact on ET for a longer period of time, with incomplete recovery even after three post-fire seasons.
 
     <Chart
-      dataPath={new URL('./ET_timeseries_NatchezCA.csv', import.meta.url).href}
+      dataPath={new URL('./media/fire-life-cycle/ET_timeseries_NatchezCA.csv', import.meta.url).href}
       dateFormat="%m/%d/%y"
       idKey='source'
       xKey='Date'
@@ -262,7 +262,7 @@ taxonomy:
 
 
     <Chart
-      dataPath={new URL('./ET_timeseries_ThomasCA.csv', import.meta.url).href}
+      dataPath={new URL('./media/fire-life-cycle/ET_timeseries_ThomasCA.csv', import.meta.url).href}
       dateFormat="%m/%d/%y"
       idKey='source'
       xKey='Date'
@@ -362,7 +362,7 @@ taxonomy:
   </Prose>
   <Figure>
     <Image
-      src={new URL("./frp_barc_plot.png", import.meta.url).href}
+      src={new URL("./media/fire-life-cycle/frp_barc_plot.png", import.meta.url).href}
       alt="FRP compared to BARC"
     />
     <Caption
