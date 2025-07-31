@@ -42,9 +42,42 @@ taxonomy:
     ## Introduction
 
     In 2019, a slow-moving, silent disaster unfolded across the Mississippi Delta. More than half a million acres of land remained underwater for months from what became known as the Yazoo Backwater Flood—a prolonged and largely overlooked catastrophe that devastated communities, ecosystems, and economies across the region. The water lingered for up to 219 days in some places, destroying homes, drowning farmland, and leaving behind residual soil stress and degradation that would ripple well into the future.
-    
-    While the floodwaters eventually receded, its repercussions endured. Years after being inundated for months, on March 24, 2023, the town of Rolling Fork, Mississippi was struck by a powerful high-end EF-4 tornado, flattening entire neighborhoods and causing catastrophic damage. Though seemingly disconnected by time and type of disaster, the impacts of the two events are certainly connected. The lasting environmental, infrastructural, and psychological impacts of the 2019 flood played a critical role in amplifying the destruction and trauma caused by the tornado.
+  </Prose>
 
+  <Figure>
+    <Image
+      src={new URL('./media/delta-disasters/delta-disasters-backwater-flooding.jpg', import.meta.url).href}
+      alt='Backwater flooding surrounds a farm in the lower Mississippi Delta in June 2019.'
+      attrAuthor = 'Boyce Upholt'
+      attrUrl = 'https://mississippitoday.org/2019/10/18/the-promise-of-the-yazoo-pumps-floods-revive-debate-but-will-project-help-communities-that-need-it-most/'
+    />
+    <Caption>
+    Backwater flooding surrounds a farm in the lower Mississippi Delta in June 2019.
+    </Caption>
+  </Figure> 
+</Block>
+
+<Block>
+
+  <Figure>
+    <Image
+      src={new URL('./media/delta-disasters/delta-disasters-rolling-fork-wedge.jpg', import.meta.url).href}
+      alt='Large, violent tornado nearing Rolling Fork, MS on March 24, 2023.'
+      attrAuthor = 'Aaron Rigsby'
+      attrUrl = 'https://x.com/aaronrigsbyosc/status/1639473946809581571'
+    />
+    <Caption>
+    Large, violent tornado nearing Rolling Fork, MS on March 24, 2023.
+    </Caption>
+  </Figure> 
+
+  <Prose>
+    While the floodwaters eventually receded, its repercussions endured. Years after being inundated for months, on March 24, 2023, the town of Rolling Fork, Mississippi was struck by a powerful high-end EF-4 tornado, flattening entire neighborhoods and causing catastrophic damage. Though seemingly disconnected by time and type of disaster, the impacts of the two events are certainly connected. The lasting environmental, infrastructural, and psychological impacts of the 2019 flood played a critical role in amplifying the destruction and trauma caused by the tornado.
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
     Ultimately, these compounding disasters substantially affected the livelihood of already vulnerable and less resilient communities. Environmental stressors, repeated long-term flooding, and delays in mitigation efforts are contributing to an elevated disaster risk in this region. NASA Earth-observing satellite data provides valuable insight into how past events continue to shape the area’s ability to withstand future hazards.
   </Prose>
 </Block>
@@ -73,12 +106,9 @@ taxonomy:
 
 
 <Block>
-<Prose>
-Mid-May NDWI values show saturated conditions aligned with persistent backwater inundation, particularly in Sharkey and Issaquena counties. HLS False Color Composite imagery from the height of the Yazoo Backwater Flood highlights extensive flooding across cropland, with inundated areas clearly distinguishable in blue-green colors, whereas healthy vegetation appears red.
-</Prose>
   <Figure>
     <Map
-        center={[-90.88, 32.84]}
+      center={[-90.88, 32.84]}
       zoom={9}
       datasetId='HLS_2.0'
       layerId='HLSS30_2.0_false_color'
@@ -88,7 +118,52 @@ Mid-May NDWI values show saturated conditions aligned with persistent backwater 
     HLS False Color Composite (FCC) showing the extent of the Yazoo Backwater Flood near its peak on May 26, 2019. Darker blue/greens indicate water, where reds indicate healthy vegetation. 
     </Caption>
   </Figure>
+
+    <Prose>
+        Mid-May NDWI values show saturated conditions aligned with persistent backwater inundation, particularly in Sharkey and Issaquena counties. HLS False Color Composite imagery from the height of the Yazoo Backwater Flood highlights extensive flooding across cropland, with inundated areas clearly distinguishable in blue-green colors, whereas healthy vegetation appears red.
+    </Prose>
 </Block>
+
+<Block>
+    <Prose>
+    ## Soil Moisture and Groundwater Disruption
+
+    The 2019 flood not only destroyed crops but also left behind prolonged soil saturation and disrupted groundwater storage patterns. Using NASA’s Famine Early Warning Systems Network (FEWS NET) Land Data Assimilation System (FLDAS) observed surface soil moisture anomaly data, conditions in May 2019 show above average anomalies across much of the Mississippi River watershed, reflecting excess water trapped in the soil long after precipitation had ended.
+    </Prose>
+
+  <Figure>
+    <Map
+      center={[-91, 34]}
+      zoom={4.5}
+      datasetId='fldas-soil-moisture-anomalies'
+      layerId='SoilMoi00_10cm_tavg'
+      dateTime='2019-05-27'
+    />
+    <Caption>
+    FLDAS surface soil moisture anomalies were positive for much of the Lower Mississippi River Valley in late May 2019.
+    </Caption>
+  </Figure>
+</Block>
+
+<Block>
+  <Figure>
+    <Map
+      center={[-90.88, 32.84]}
+      zoom={5}
+      datasetId='global-reanalysis-da'
+      layerId='lis-global-da-qsb'
+      dateTime='2019-04-17'
+    />
+    <Caption>
+    NASA LIS subsurface runoff shows heightened values in the Lower Mississippi River Valley in the spring of 2019. 
+    </Caption>
+  </Figure>
+
+    <Prose>
+    In addition, NASA LIS (Land Information System) data reveals elevated evapotranspiration (ET) and subsurface runoff in the spring of 2019 when floodwaters from the Midwest and Great Plains funneled downstream. These runoff surges overwhelmed an already oversaturated Delta, expanding the flood’s reach. The combined effects of these anomalies suggest long-term impacts on aquifers, particularly for farmers relying on well systems for irrigation. In some of the hardest-hit areas, recovery of groundwater equilibrium has been delayed for years.
+    </Prose>
+</Block>
+
 
 
 <Block>
