@@ -1,6 +1,10 @@
 // @ts-ignore
 import { atomWithUrlValueStability } from '$veda-ui-scripts/utils/params-location-atom/atom-with-url-value-stability';
 
+const HOUR = 60 * 60 * 1000;
+const DAY = 24 * HOUR;
+const MONTH = 30 * DAY;
+
 const defaultToolState = {
   selectedEventId: null,
   windLayerType: null,
@@ -10,7 +14,7 @@ const defaultToolState = {
   showNewFirepix: false,
   viewMode: 'explorer',
   timeRange: {
-    start: new Date(Date.now() - 60 * 24 * 60 * 60 * 1000),
+    start: new Date(Date.now() - MONTH),
     end: new Date(),
   },
   viewState: {
