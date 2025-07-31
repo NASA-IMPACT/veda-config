@@ -39,9 +39,55 @@ taxonomy:
 
 <Block>
   <Prose>
-    ## Overview
-    x
+    ## Introduction
+
+    In 2019, a slow-moving, silent disaster unfolded across the Mississippi Delta. More than half a million acres of land remained underwater for months from what became known as the Yazoo Backwater Flood—a prolonged and largely overlooked catastrophe that devastated communities, ecosystems, and economies across the region. The water lingered for up to 219 days in some places, destroying homes, drowning farmland, and leaving behind residual soil stress and degradation that would ripple well into the future.
+    
+    While the floodwaters eventually receded, its repercussions endured. Years after being inundated for months, on March 24, 2023, the town of Rolling Fork, Mississippi was struck by a powerful high-end EF-4 tornado, flattening entire neighborhoods and causing catastrophic damage. Though seemingly disconnected by time and type of disaster, the impacts of the two events are certainly connected. The lasting environmental, infrastructural, and psychological impacts of the 2019 flood played a critical role in amplifying the destruction and trauma caused by the tornado.
+
+    Ultimately, these compounding disasters substantially affected the livelihood of already vulnerable and less resilient communities. Environmental stressors, repeated long-term flooding, and delays in mitigation efforts are contributing to an elevated disaster risk in this region. NASA Earth-observing satellite data provides valuable insight into how past events continue to shape the area’s ability to withstand future hazards.
   </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    ## Agricultural Loss in the Delta
+
+    In spring 2019, as the Mississippi River and its tributaries swelled, hundreds of thousands of acres in the Delta remained submerged for months, and cropland bore the brunt of the impact. Using the United States Department of Agriculture’s (USDA) Cropland Data Layer and Harmonized Landsat-Sentinel (HLS)-derived Normalized Difference Water Index (NDWI), we can visualize the extent and persistence of surface water over key agricultural zones. USDA data shows that flooded areas were dominated by soybeans, corn, and cotton — high-value crops typically planted in April or May. However, planting had to be delayed or canceled altogether across vast stretches, forcing farmers to file lengthy insurance claims to compensate for their desolate yields. Farmers who missed federal insurance deadlines faced severe economic losses that lingered into subsequent growing seasons.
+  </Prose>
+
+  <Figure>
+    <CompareImage 
+      leftImageSrc={new URL('./media/delta-disasters/delta-disasters-hls-ndwi.png', import.meta.url).href}
+      leftImageAlt='HLS NDWI-Derived Water Extent (May 26, 2019)'
+      leftImageLabel='HLS NDWI-Derived Water Extent (May 26, 2019)'
+      rightImageSrc={new URL('./media/delta-disasters/delta-disasters-usda-crops.png', import.meta.url).href}
+      rightImageAlt='USDA Primary Crop Type'
+      rightImageLabel='USDA Primary Crop Type'
+    />
+    <Caption>
+    NDWI-derived water extent as computed from HLS scenes over the Mississippi Delta on May 26, 2019, compared to USDA primary crop types across the region. 
+    </Caption>
+  </Figure>
+</Block>
+
+
+<Block>
+<Prose>
+Mid-May NDWI values show saturated conditions aligned with persistent backwater inundation, particularly in Sharkey and Issaquena counties. HLS False Color Composite imagery from the height of the Yazoo Backwater Flood highlights extensive flooding across cropland, with inundated areas clearly distinguishable in blue-green colors, whereas healthy vegetation appears red.
+</Prose>
+  <Figure>
+    <Map
+        center={[-90.88, 32.84]}
+      zoom={9}
+      datasetId='HLS_2.0'
+      layerId='HLSS30_2.0_false_color'
+      dateTime='2019-05-26'
+    />
+    <Caption>
+    HLS False Color Composite (FCC) showing the extent of the Yazoo Backwater Flood near its peak on May 26, 2019. Darker blue/greens indicate water, where reds indicate healthy vegetation. 
+    </Caption>
+  </Figure>
 </Block>
 
 
