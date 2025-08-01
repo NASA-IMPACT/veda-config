@@ -1,7 +1,7 @@
 ---
 id: nlcd-annual-conus
 name: 'National Land Cover Database LULC Classifications'
-description: "National Land Cover Database Land Use - Land Cover classifications for CONUS, 2001-2021 at 30 m resolution."
+description: "National Land Cover Database Land Use - Land Cover classifications for CONUS, 2001-2023 at 30 m resolution."
 
 media:
   src: ::file media/nlcd_land_cover_identification_2016_2019.thumbnail.jpg
@@ -23,7 +23,9 @@ taxonomy:
       - MRLC
 layers:
   - id: nlcd-annual-conus
-    stacCol: nlcd-annual-conus
+    stacApiEndpoint: https://dev.ghg.center/api/stac/
+    tileApiEndpoint: https://dev.ghg.center/api/raster
+    stacCol: nlcd-annual-conus-v2
     name: NLCD Land Use - Land Cover Classification
     type: raster
     description: "30 meter LULC classification provided by the NLCD."
@@ -94,7 +96,7 @@ layers:
     info:
       source: MRLC
       spatialExtent: United States
-      temporalResolution: Bi- to Tri-Annual 
+      temporalResolution: Annual
       unit: N/A 
 
   - id: nlcd-new-urbanization
@@ -128,8 +130,8 @@ layers:
 <Block>
   <Prose>
   ## Dataset Details
-  - **Temporal Extent:** 2001-2021
-  - **Temporal Resolution:** Inconsistent (every 2-3 years)
+  - **Temporal Extent:** 2001-2023
+  - **Temporal Resolution:** Annual
   - **Spatial Extent:** CONUS
   - **Spatial Resolution:** 30 m
   - **Data Type:** Research
