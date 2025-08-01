@@ -189,12 +189,6 @@ taxonomy:
 
 
 <Block>
-    <Prose>
-    ## Health and Housing Impacts
-
-    With homes submerged for months, hazardous mold outbreaks became widespread. Residents of the Delta region reported persistent respiratory problems, and health care sites in the area struggled to meet these growing needs. Numerous homes already vulnerable due to poor construction and old age now faced structural degradation from prolonged inundation leading to the rapid growth of mold in their foundations and walls. 
-    </Prose>
-
   <Figure>
     <Image
       src={new URL('./media/delta-disasters/delta-disasters-goose-lake-home.jpeg', import.meta.url).href}
@@ -206,6 +200,12 @@ taxonomy:
     Residence in Goose Lake, Mississippi after backwater receded, leaving the home uninhabitable.
     </Caption>
   </Figure> 
+
+    <Prose>
+    ## Health and Housing Impacts
+
+    With homes submerged for months, hazardous mold outbreaks became widespread. Residents of the Delta region reported persistent respiratory problems, and health care sites in the area struggled to meet these growing needs. Numerous homes already vulnerable due to poor construction and old age now faced structural degradation from prolonged inundation leading to the rapid growth of mold in their foundations and walls. 
+    </Prose>
 </Block>
 
 
@@ -221,9 +221,37 @@ taxonomy:
 
     On March 24, 2023, a violent high-end EF-4 tornado tore through the town of Rolling Fork after dusk, leading to devastating impacts in an already strained area trying to recover from the 2019 flood. Commercial satellite imagery from Planet Labs reveals entire neighborhoods flattened adjacent to or in the same areas that were inundated for months in 2019. National Weather Service (NWS) post-storm surveys confirmed that this tornado traveled for nearly 60 miles through an area heavily impacted by the 2019 flooding of the Delta. With maximum windspeeds reaching 195 mph, this tornado was the strongest in the United States since 2020. The NWS found that 78% of Rolling Fork sustained some degree of damage, with the town of Silver Fork seeing 96% of its structures sustaining damage. 
     </Prose>
+
+  <Figure>
+    <Map
+      center={[-90.8785, 32.9069]}
+      zoom={12.5}
+      datasetId='planetscope'
+      layerId='delta-disasters-planet-flood'
+      dateTime='2019-05-23'
+      compareDateTime='2023-03-25'
+    />
+    <Caption>
+    False color composite (FCC) commerical satellite imagery from Planet Labs shows the Rolling Fork, MS area being impacted by flooding in 2019 and a violent tornado in 2023.
+    </Caption>
+  </Figure>
 </Block>
 
 <Block>
+  <Figure>
+    <Map
+      center={[-90.8785, 32.9069]}
+      zoom={12.5}
+      datasetId='planetscope'
+      layerId='delta-disasters-hd-blackmarble-nightlights'
+      dateTime='2023-03-15'
+      compareDateTime='2023-03-25'
+    />
+    <Caption>
+    NASA's HD Black Marble Nightlights shows a drastic 75% reduction in nighttime light emissions from Rolling Fork after the tornado strike in 2023. 
+    </Caption>
+  </Figure>
+
     <Prose>
     NASA’s high-definition Black Marble night lights dataset shows a drastic 75% reduction in nighttime light emissions from Rolling Fork after the tornado strike, illuminating the extensive infrastructure damage across the region. Recurring disasters only made matters worse by increasing the strain on infrastructure within the impacted areas, resulting in progressively slower recovery timelines after each event. 
     </Prose>
