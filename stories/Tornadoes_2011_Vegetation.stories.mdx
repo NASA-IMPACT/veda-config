@@ -34,9 +34,9 @@ taxonomy:
   <Prose>
     ## Introduction
 
-    Tornadoes are among the most destructive forces in nature, capable of tearing through communities with little warning and leaving behind shattered homes, toppled infrastructure, and tragic loss of life. While these immediate human impacts are often the focus, tornadoes also leave lasting marks on the landscape, particularly on vegetation. In mere minutes, a tornado can flatten forests, shred croplands, and strip away natural ground cover, altering the appearance and structure of the land in ways that satellites can detect from space.
+    Tornadoes are among the most destructive forces of nature, capable of tearing through communities with little to no warning and leaving behind shattered homes, toppled infrastructure, and tragic loss of life. While these human impacts are often the immediate focus, tornadoes also leave lasting marks on the landscape—particularly on vegetation. In mere minutes, a tornado can flatten forests, shred croplands, and strip away natural ground cover, fundamentally altering the structure of the land. Because vegetation plays a critical role in stabilizing soil, supporting biodiversity, and regulating water and carbon cycles, its loss can trigger broader environmental disruption that extends long after the storm has passed.
 
-    These changes are often dramatic and highly localized, creating clear visual scars across the terrain. Satellite imagery and vegetation indices allow us to track these impacts with precision, revealing where and how ecosystems have been disrupted. In this story, we turn our attention to two of the most powerful tornadoes from the April 2011 Super Outbreak—an EF-5 tornado that devastated Hackleburg and an EF-4 tornado that tore through Tuscaloosa. Using data from NASA Earth observation systems and the National Weather Service, we analyze how these storms transformed the landscape and what those transformations can tell us about the relationship between severe weather and vegetation.
+    These changes are typically dramatic and highly localized, creating clear visual scars across the terrain. Satellite imagery and vegetation indices allow us to track these impacts with precision, revealing where and how ecosystems have been disrupted. In this story, we turn our attention to two of the most powerful tornadoes from the April 2011 Super Outbreak, including an EF-5 (Enhanced Fujita Scale) tornado that devastated Hackleburg, Alabama, and an EF-4 tornado that tore through Tuscaloosa, Alabama. Using data from NASA Earth observation systems and the National Weather Service (NWS), we analyze how these storms transformed the landscape and what insights these transformations can provide to further illuminate the relationship between severe weather and vegetation.
   </Prose>
 
   <Figure>
@@ -57,7 +57,7 @@ taxonomy:
       alt='Super Outbreak AL Tornado Tracks'
     />
     <Caption>
-    **Figure 2.** Tornado damage swaths and their estimated widths on April 27th, 2011 in the state of Alabama. Source: [NWS BMX](https://www.weather.gov/bmx/event_04272011).
+    **Figure 2.** Tornado damage swaths and their estimated widths on April 27th, 2011 in the state of Alabama. Source: [NWS Birmingham](https://www.weather.gov/bmx/event_04272011).
     </Caption>
   </Figure>
 
@@ -66,7 +66,7 @@ taxonomy:
 
     Between April 25 and 28, 2011, a massive and deadly tornado outbreak swept across the southeastern United States. Over the course of just four days, 362 tornadoes touched down across 21 states, resulting in 324 fatalities and more than 3,100 injuries. April 27 was the deadliest single tornado day in the U.S. since 1925, with 219 confirmed tornadoes occurring within a 24-hour period.
 
-    Alabama was the hardest-hit state, experiencing 62 tornadoes that day alone. Two of the most powerful and destructive storms carved paths through the state: an EF-5 tornado that devastated Hackleburg and Phil Campbell in the northwest, and a long-track EF-4 tornado that tore through Tuscaloosa and continued northeast into Birmingham. These tornadoes left behind extensive damage across both urban and rural areas, caused billions of dollars in losses, and forever changed the communities and landscapes in their paths.
+    Alabama was the hardest-hit state, experiencing 62 tornadoes that day alone. Two of the most powerful and destructive storms carved paths through the state: an EF-5 tornado that devastated Hackleburg and Phil Campbell, and a long-track EF-4 tornado that tore through Tuscaloosa and continued northeast into Birmingham. These tornadoes left behind extensive damage across both urban and rural areas, caused billions of dollars in losses, and forever changed the communities and landscapes in their paths.
 
     While the human toll was staggering, the environmental damage was also severe. Using satellite data, we can study how these tornadoes altered vegetation, stripped forests, and disrupted ecosystems—impacts that lingered long after the storms passed.
     </Prose>
@@ -74,11 +74,176 @@ taxonomy:
 
 <Block>
   <Prose>
-    ## Scrollytelling block
-
-    <mark>This info will be inserted soon, currently in draft found [here](https://docs.google.com/document/d/1-Kzt5nuLV8Pl_KGZ8FliPvGu0y4aUgOrNkJ_nh71tbI/edit?tab=t.0)</mark>
-    </Prose>
+    ## Hackleburg EF-5 Tornado and Tuscaloosa-Birmingham EF-4 Tornado Case Studies
+  </Prose>
 </Block>
+
+<ScrollytellingBlock>
+  <Chapter
+    center={[-87.96685, 34.2076]}
+    zoom={8}
+    datasetId='wldas-derecho-sm'
+    layerId='wldas-derecho-sm'
+    datetime='2022-05-11'
+  >
+  ### Hackleburg EF-5 Tornado
+
+  The Hackleburg tornado was among the most powerful ever recorded in Alabama. Rated EF-5 on the Enhanced Fujita scale, this tornado:
+  * Traveled **132 miles** across Northwest Alabama and into Southern-Middle Tennessee
+  * Stayed on the ground for **2 hours and 53 minutes**
+  * Reached **maximum wind speeds of 210 mph**
+  * Caused **72 fatalities** and **injured over 145 people**
+  * Established a maximum damage path width of **1.25 miles**
+
+  The National Weather Service’s Damage Assessment Toolkit (DAT) provided a detailed track of this tornado, documenting its full path and confirming the extreme nature of the event. This track is critical for identifying the exact areas where vegetation was most severely impacted. Along the DAT-defined corridor, entire sections of forest were flattened, tree canopies were stripped, and the landscape was visibly altered. The DAT track serves as a spatial reference for pinpointing ecological damage zones and understanding how a powerful tornado reshaped the natural environment along its path.
+  </Chapter>
+
+  <Chapter
+    center={[-87.96685, 34.2076]}
+    zoom={8}
+    datasetId='wldas-derecho-sm'
+    layerId='wldas-derecho-sm'
+    datetime='2022-05-11'
+  >
+  ### Hackleburg EF-5 Tornado: NLCD
+
+  The National Land Cover Database (NLCD) helps reveal the types of landscapes impacted along the Hackleburg EF-5 tornado’s 132-mile path. This tornado primarily tore through forested and rural areas, including regions classified by NLCD as deciduous forest, mixed forest, and pasture/hay. The most severe vegetation damage occurred in densely wooded zones, where entire canopies were leveled and ground cover was stripped away. By referencing NLCD classifications, we can better understand why recovery has been slow in certain sections of the path since forests take far longer to regenerate than open fields or low vegetation. NLCD provides important ecological context, helping identify which ecosystems were most disrupted by the storm’s extreme wind speeds.
+  </Chapter>
+  </Chapter>
+
+  <Chapter
+    center={[-87.96685, 34.2076]}
+    zoom={8}
+    datasetId='wldas-derecho-sm'
+    layerId='wldas-derecho-sm'
+    datetime='2022-05-11'
+  >
+  ### Hackleburg EF-5 Tornado: MODIS NDVI
+
+   The Normalized Difference Vegetation Index from NASA’s Moderate Resolution Imaging Spectroradiometer (MODIS NDVI) captures a stark decline in vegetation health immediately following the passage of the Hackleburg EF-5 tornado. Along its 132-mile path through rural Northwest Alabama—including heavily forested areas near Hackleburg and Phil Campbell—the tornado’s footprint appears as a thin strip surrounded by otherwise healthy green vegetation. This contrast reflects widespread tree loss and canopy stress caused by extreme wind damage and uprooting. NDVI values dropped sharply in this corridor, clearly outlining the extent of ecological disruption. The MODIS view provides a consistent, large-scale perspective on the storm’s impact to natural systems in Alabama.
+   
+   <mark>insert NDVI time series graph</mark>
+  </Chapter>
+
+  <Chapter
+    center={[-87.96685, 34.2076]}
+    zoom={8}
+    datasetId='wldas-derecho-sm'
+    layerId='wldas-derecho-sm'
+    datetime='2022-05-11'
+  >
+  ### Hackleburg EF-5 Tornado: GEDI
+
+   Although the GEDI (Global Ecosystem Dynamics Investigation) instrument launched in 2018—seven years after the 2011 Super Outbreak—it still captures lasting signs of vegetation damage from the Hackleburg EF-5 tornado. Along the tornado’s path, GEDI shows where canopy heights remain significantly reduced compared to surrounding forests. In locations that once supported dense tree cover with heights of 25–30 meters, GEDI now records lower canopy heights or complete absence of vertical structure. This persistent loss reflects just how intense and widespread the damage extended. The fact that reduced canopy height is still measurable nearly a decade later underscores the storm’s long-term ecological impact and the slow pace of forest recovery in the region.
+  </Chapter>
+
+  <Chapter
+    center={[-87.96685, 34.2076]}
+    zoom={8}
+    datasetId='wldas-derecho-sm'
+    layerId='wldas-derecho-sm'
+    datetime='2022-05-11'
+  >
+  ### Hackleburg EF-5 Tornado: NCEI Wind reports
+
+   According to reports from the National Centers for Environmental Information (NCEI) Storm Events Database, the Hackleburg EF-5 tornado produced catastrophic wind damage across large stretches of rural Northwest Alabama. Wind estimates exceeded 200 mph–strong enough to completely debark trees, uproot mature hardwoods, and snap pines in half. Observers documented “entire forested areas flattened” and noted that large swaths of trees were “stripped bare with nothing but stumps remaining.” These field-level accounts validate the extreme force of the wind speeds and the widespread deforestation along the tornado’s path. When paired with satellite data, these NCEI reports confirm that the observed vegetation loss was consistent with maximum-scale EF-5 wind impacts, leaving behind a transformed and scarred landscape.
+  </Chapter>
+
+  <Chapter
+    center={[-87.96685, 34.2076]}
+    zoom={8}
+    datasetId='wldas-derecho-sm'
+    layerId='wldas-derecho-sm'
+    datetime='2022-05-11'
+  >
+  ### Hackleburg EF-5 Tornado: NCEI Hail reports
+
+   In addition to destructive winds, NCEI reports indicate that areas impacted by the Hackleburg EF-5 tornado also experienced hailstones ranging from 1.75 to 2.75 inches in diameter (between golf ball and baseball size) along portions of its path. Hail of this size can cause severe damage to vegetation by shredding leaves, stripping bark from branches, and bruising or breaking plant stems. In forested zones already stressed by wind, large hail likely worsened the destruction by damaging younger understory growth and reducing the chance for quick ecological recovery. Combined with treefall and canopy loss from high winds, hail further contributed to the widespread vegetation disruption visible in post-event satellite observations.
+  </Chapter>
+
+  <Chapter
+    center={[-87.9, 33.33]}
+    zoom={8}
+    datasetId='wldas-derecho-sm'
+    layerId='wldas-derecho-sm'
+    datetime='2022-05-11'
+  >
+  ### Tuscaloosa-Birmingham EF-4 Tornado
+
+   Later that same day, another long-track tornado struck West and Central Alabama, beginning just southwest of Tuscaloosa. This EF-4 tornado:
+
+   * Traveled **80.3 miles** from Tuscaloosa to northeast of Birmingham
+   * Stayed on the ground for **1 hour and 31 minutes**
+   * Reached estimated **peak winds of 190 mph**
+   * Caused **64 fatalities** and **injured over 1,500 people**
+   * Carved a damage path up to **1.5 miles wide**
+   * Was the costliest in US history with **$2.4 billion in damages**, until the Joplin, Missouri EF-5 tornado dethroned it later that year
+
+    The NWS DAT track for this tornado traces its full trajectory from Tuscaloosa through the Birmingham metro area. It provides essential spatial context for evaluating vegetation loss, especially through wooded suburbs, city parks, and riparian corridors. The clearly defined track helps identify where trees were uprooted, hillsides were stripped bare, and natural buffers along roads and rivers were destroyed. As with Hackleburg, the DAT tornado path highlights the direct connection between storm damage and the transformation of Alabama’s vegetated landscape.
+  </Chapter>
+
+  <Chapter
+    center={[-87.9, 33.33]}
+    zoom={8}
+    datasetId='wldas-derecho-sm'
+    layerId='wldas-derecho-sm'
+    datetime='2022-05-11'
+  >
+  ### Tuscaloosa-Birmingham EF-4 Tornado: NLCD
+
+    The Tuscaloosa-Birmingham EF-4 tornado passed through a complex area of land cover types, as defined by the NLCD. In addition to heavily urbanized zones, the tornado also swept across developed open space, woody wetlands, and deciduous forest on the city’s outskirts. Vegetation loss was most significant in these natural and semi-natural areas—especially parks, greenways, and riparian corridors that previously provided tree cover and habitat. The NLCD highlights how the storm’s impact varied across different land cover types: lawns and open fields in urban areas may recover quickly, while forested zones and wetlands continue to show signs of stress. This spatial understanding helps illustrate the uneven ecological recovery still underway more than a decade later.
+  </Chapter>
+
+  <Chapter
+    center={[-87.9, 33.33]}
+    zoom={8}
+    datasetId='wldas-derecho-sm'
+    layerId='wldas-derecho-sm'
+    datetime='2022-05-11'
+  >
+  ### Tuscaloosa-Birmingham EF-4 Tornado: MODIS NDVI
+
+    For the Tuscaloosa-Birmingham EF-4 tornado, MODIS NDVI reveals a broad swath of vegetation stress extending from the outskirts of Tuscaloosa into rural and wooded areas northeast of the city. While much of the tornado’s devastation occurred in urban neighborhoods, NDVI is especially effective at highlighting damage to the surrounding greenbelt where hillsides, parks, and forested buffers were stripped. In these areas, NDVI values dropped dramatically, indicating significant vegetation loss and stress. 
+    
+    <mark>insert NDVI time series graph</mark>
+  </Chapter>
+
+  <Chapter
+    center={[-87.9, 33.33]}
+    zoom={8}
+    datasetId='wldas-derecho-sm'
+    layerId='wldas-derecho-sm'
+    datetime='2022-05-11'
+  >
+  ### Tuscaloosa-Birmingham EF-4 Tornado: GEDI
+
+    Though GEDI did not exist when the Tuscaloosa-Birmingham EF-4 tornado struck in April 2011, data collected years later still reveal the lingering effects of vegetation damage. GEDI’s lidar-based canopy height measurements show that many urban green spaces, wooded neighborhoods, and forested corridors along the tornado’s path continue to exhibit depressed vertical structure. Areas that once supported 15–20 meter tree canopies now show shortened or fragmented coverage–a clear sign that full recovery is still ongoing. This delayed regeneration, observable even after seven years, speaks to the intensity of the tornado and the resilience required for forests and urban tree systems to return to pre-storm conditions.
+  </Chapter>
+
+  <Chapter
+    center={[-87.9, 33.33]}
+    zoom={8}
+    datasetId='wldas-derecho-sm'
+    layerId='wldas-derecho-sm'
+    datetime='2022-05-11'
+  >
+  ### Tuscaloosa-Birmingham EF-4 Tornado: NCEI Wind reports
+
+    For the Tuscaloosa-Birmingham EF-4 tornado, NCEI reports highlight the devastating wind impacts not only on structures, but also on natural vegetation. With wind speeds estimated near 190 mph, the tornado shredded trees, destroyed green buffers along major roadways, and left parks and wooded corridors strewn with debris. In some cases, wind-driven projectiles and flying branches caused secondary vegetation damage, compounding the initial deforestation. Witness accounts describe tree trunks snapped like matchsticks and entire hillsides stripped of their canopy. These narrative details help ground truth the satellite-observed damage and emphasize that vegetation loss was not incidental, but rather a defining characteristic of the storm’s passage through both urban and natural areas.
+  </Chapter>
+
+  <Chapter
+    center={[-87.9, 33.33]}
+    zoom={8}
+    datasetId='wldas-derecho-sm'
+    layerId='wldas-derecho-sm'
+    datetime='2022-05-11'
+  >
+  ### Tuscaloosa-Birmingham EF-4 Tornado: NCEI Hail reports
+
+    NCEI storm reports associated with the Tuscaloosa-Birmingham EF-4 tornado document hail sizes up to 2.5 inches in diameter (or tennis ball size) near the beginning of the storm’s track. This large hail likely added a damaging layer to already extreme wind impacts, particularly in wooded neighborhoods and city parks. Vegetation in the storm’s path—especially broadleaf trees and shrubs—would have suffered from leaf shredding, limb scarring, and defoliation. In urban green spaces, hail damage compounded the effect of tree uprooting, resulting in more extensive canopy thinning and long-term stress to plant communities. These hail reports highlight how multiple storm hazards conspired together to damage the landscape.
+  </Chapter>
+</ScrollytellingBlock>
 
 <Block>
   <Prose>
@@ -86,9 +251,9 @@ taxonomy:
 
     When tornadoes destroy vegetation, the consequences extend far beyond the immediate damage. Trees and plant life provide critical ecosystem services: they stabilize soil, regulate water flow, filter air and water, support wildlife, store carbon, and help moderate local climates. Their sudden loss can accelerate erosion, increase sediment and runoff into nearby rivers and lakes, reduce air quality due to dust and debris, and disrupt habitats across the landscape.
 
-    Unlike buildings that can be rebuilt relatively quickly, forests and natural vegetation can take years (or even decades) to fully recover, especially in remote or heavily wooded areas. These environmental impacts ripple through ecosystems and human communities alike, affecting agriculture, biodiversity, and long-term land stability.
+    Unlike man-made structures that can be rebuilt relatively quickly, forests and natural vegetation can take years (or even decades) to fully recover, especially in remote or heavily wooded areas. These environmental impacts ripple through ecosystems and human communities alike, affecting agriculture, biodiversity, and long-term land stability.
 
-    By monitoring these effects with satellite data, scientists, emergency planners, and land managers can better understand both the immediate and long-term consequences of severe storms. This insight is essential not only for tracking recovery but also for preparing for a future in which extreme weather events may become more frequent and intense due to climate change. Satellite-based tools like those available through NASA offer a powerful way to assess damage, guide restoration efforts, and build more resilient landscapes.
+    By monitoring these effects with satellite data, scientists, emergency planners, and land managers can better understand both the immediate and long-term consequences of severe storms. This insight is essential not only for tracking recovery, but also when preparing for a future in which extreme weather events may become more frequent and intense due to changes in the earth system. Satellite-based tools like those available through NASA offer a powerful way to assess damage, guide restoration efforts, and build more resilient landscapes.
     </Prose>
 </Block>
 
@@ -96,21 +261,23 @@ taxonomy:
   <Prose>
     ### References
     
-    Knupp, Kevin R., et al. *“Tornado Damage Paths in Forested and Rural Landscapes: Examples from Postevent Remote Sensing.”* Journal of Operational Meteorology, vol. 2, 2014, pp. 20–35, https://doi.org/10.15191/nwajom.2014.0203.
+    Alabama Department of Economic and Community Affairs. “2011 Tornadoes.” *ADECA Disaster Recovery*, https://adeca.alabama.gov/cdbg-disaster-recovery/2011-tornadoes/.
     
-    NASA Earth Observatory. *“Tornado Tracks across the South.”* NASA Earth Observatory, 2011, https://earthobservatory.nasa.gov/images/50588/tornado-tracks-across-the-south.
+    Burow, Daniel C., et al. “Damage Analysis of Three Long‑Track Tornadoes Using High‑Resolution Satellite Imagery.” Atmosphere, vol. 11, no. 6, 2020, article 613. *MDPI*, https://www.mdpi.com/2073-4433/11/6/613.
     
-    National Weather Service. *Service Assessment: The Historic Tornadoes of April 2011.* NOAA, 2011, https://www.weather.gov/media/publications/assessments/2011_tornadoes.pdf. 
+    Molthan, Andrew L., et al. “Satellite-Based Identification of Tornado Damage Tracks from the 27 April 2011 Severe Weather Outbreak.” Journal of Operational Meteorology, vol. 2, no. 16, 2014, pp. 191–208. *National Weather Association*, https://www.researchgate.net/publication/274231355_Satellite-based_identification_of_tornado_damage_tracks_from_the_27_April_2011_severe_weather_outbreak.
     
-    National Weather Service Birmingham. *“April 27, 2011 Tornado Event Summary – Birmingham, AL.”* National Weather Service, NOAA, https://www.weather.gov/bmx/event_04272011.
+    Molthan, Andrew L. “Incorporation and Use of Earth Remote Sensing Imagery in Tornado Damage Assessment.” Bulletin of the American Meteorological Society, vol. 101, no. 3, 2020, pp. E297–E312. *American Meteorological Society*, https://journals.ametsoc.org/view/journals/bams/101/3/bams-d-19-0097.1.xml. 
     
-    National Weather Service Huntsville. *“April 27, 2011 Tornado Event Summary – Huntsville, AL.”* National Weather Service, NOAA, https://www.weather.gov/hun/2011_04_27_event.
+    NASA SPoRT/University of Alabama Huntsville. “Tornado Damage Tracks Seminar.” *NASA SPoRT Seminar Series*, 28 Jun. 2011, https://weather.ndc.nasa.gov/sport/library/sport_science_seminars/20110628_SPoRT_Seminar_TornadoDamageTracks.pdf.
     
-    NOAA National Centers for Environmental Information. *“Storm Events Database – April 27, 2011.”* NOAA NCEI, https://www.ncdc.noaa.gov/stormevents/. 
+    National Weather Service. "Service Assessment: Historic Tornadoes of April 2011." *NOAA/NWS*, 2011, https://www.weather.gov/media/publications/assessments/historic_tornadoes.pdf.
     
-    Schaefer, Joseph T., John S. Evans, and Arthur R. Dean. *“The Deadliest, Costliest, and Most Intense United States Tornadoes: 2011.”* NOAA/NWS Storm Prediction Center, 2012, https://www.spc.noaa.gov/wcm/2011_tornadoes.pdf. 
+    National Weather Service Birmingham. “Historic Outbreak of April 27, 2011.” *NOAA/NWS Birmingham Office*, https://www.weather.gov/bmx/event_04272011.
     
-    Sims, Andrew, and Laura J. Maloney. *“Tornado Outbreaks and Forest Disturbance: Multitemporal NDVI Analysis of the April 2011 Super Outbreak in Alabama.”* Remote Sensing, vol. 13, no. 17, 2021, article 3371, https://doi.org/10.3390/rs13173371.
+    National Weather Service Damage Assessment Toolkit. “Tornado Database 2011.” *NOAA/NWS Birmingham Office*, https://www.weather.gov/bmx/tornadodb_2011.
+
+    National Weather Service Huntsville. “April 27, 2011 Tornado Tracks – Huntsville Forecast Area.” *NOAA/NWS Huntsville Office*, https://www.weather.gov/hun/hunsur_2011-04-27_tracksmap.
   </Prose>
 </Block>
 
@@ -129,11 +296,11 @@ taxonomy:
 <Block>
   <Prose>
 
-    **Editors**: Madison Wallner, Andrew Blackford, Chelsea Aaron
+    **Editors**: Madison Wallner, Andrew Blackford, and Chelsea Aaron
 
-    **Developers**: Madison Wallner and Andrew Blackford
+    **Developers**: Madison Wallner
 
-    **Science and Content Contributors**: Madison Wallner, Andrew Blackford, Udaysankar Nair, 
+    **Science and Content Contributors**: Madison Wallner, Andrew Blackford, and Udaysankar Nair 
 
     **Questions / Feedback**: Email veda@uah.edu 
 
