@@ -38,7 +38,23 @@ taxonomy:
     Many urban areas across the United States have seen major population growth over the past several decades. As a result, cities have been required to build more residential, commercial, industrial, and network infrastructure to accommodate the growing population. A primary example of these compounding influences exist in the Houston metropolitan area, which has seen significant growth between 2000 and 2025. Specifically, increasing artificial surfaces such as buildings and transportation networks (such as roads), can affect the weather in the area. This can include many variables such as heat, rainfall, as well as pollution.
 
   </Prose>
-  </Block>
+</Block>
+
+<Block type="wide">
+  <Figure>
+    <Map
+      center={[-95.36, 29.76]}  // Centered on Houston
+      zoom={8}
+      datasetId="nlcd-annual-conus"
+      layerId="nlcd-annual-conus"
+      dateTime="2001-01-01"
+      compareDateTime="2021-01-01"
+    />
+    <Caption>
+      **Map 1:** Slider showing the change in land use over Houston from 2001 to 2021
+    </Caption>
+  </Figure>
+</Block>
 
 <Block>
   <Prose>
