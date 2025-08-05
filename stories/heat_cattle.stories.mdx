@@ -42,6 +42,41 @@ taxonomy:
   </Prose>
 </Block>
 
+
+<Block>
+  <Figure>
+    <Map
+      center={[-110,40]}
+      zoom={3.5}
+      datasetId='blizzard-count'
+      layerId='blizzard-count'
+      dateTime='2021-12-31'
+
+    />
+    <Caption>
+    Nearest neighbor interpolation of NCEI Storm Events Database confirmed blizzard reports from 1950-2021 in the United States, clipped to the Northern Plains, Midwest, and Northeast.
+    </Caption>
+  </Figure>
+</Block>
+
+
+<Block>
+  <Figure>
+    <Map
+      center={[-110,40]}
+      zoom={3.5}
+      datasetId='blizzard-snowfall-footprint'
+      layerId='blizzard-alley'
+      dateTime='1950-01-01'
+
+    />
+    <Caption>
+    Single value raster displaying the region of the USA known as Blizzard Alley, where at least 10-20 blizzards have occurred since 1950. Eastern North Dakota seen 50-100+ in the same time period.
+    </Caption>
+  </Figure>
+</Block>
+
+
 <Block style={{justifyContent: 'space-between', alignItems: 'center', margin: '0 auto', width: '100%' }}>
    <Prose style={{ textAlign: 'justify', flex: '1', alignItems: 'center', marginLeft: '0.2rem'}}>
      <p>
@@ -69,6 +104,8 @@ The economic stakes couldn't be higher. Heat stress doesn't just kill cattle, it
     </p>
   </Prose>
 </Block>
+
+
 
 <Block style={{ justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
   <Prose style={{ textAlign: 'justify', flex: '1', alignItems: 'center', marginLeft: '0.2rem' }}>
@@ -202,7 +239,7 @@ Normalized Difference Vegetation Index (NDVI) provides crucial insights into for
     zoom={4}
     datasetId='nlcd-annual-conus'
     layerId='nlcd-annual-conus'
-    datetime='2001-01-01'
+    datetime='2021-01-01'
   >  
   ### The Landscape of Vulnerability
     <p>
