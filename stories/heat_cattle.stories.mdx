@@ -43,86 +43,18 @@ taxonomy:
 </Block>
 
 
-<Block>
-  <Figure>
-    <Map
-      center={[-110,40]}
-      zoom={3.5}
-      datasetId='blizzard-count'
-      layerId='blizzard-count'
-      dateTime='2021-12-31'
-
-    />
-    <Caption>
-    Nearest neighbor interpolation of NCEI Storm Events Database confirmed blizzard reports from 1950-2021 in the United States, clipped to the Northern Plains, Midwest, and Northeast.
-    </Caption>
-  </Figure>
-</Block>
-
-
-<Block>
-  <Figure>
-    <Map
-      center={[-110,40]}
-      zoom={3.5}
-      datasetId='blizzard-snowfall-footprint'
-      layerId='blizzard-alley'
-      dateTime='1950-01-01'
-
-    />
-    <Caption>
-    Single value raster displaying the region of the USA known as Blizzard Alley, where at least 10-20 blizzards have occurred since 1950. Eastern North Dakota seen 50-100+ in the same time period.
-    </Caption>
-  </Figure>
-</Block>
-
-
 <Block style={{justifyContent: 'space-between', alignItems: 'center', margin: '0 auto', width: '100%' }}>
    <Prose style={{ textAlign: 'justify', flex: '1', alignItems: 'center', marginLeft: '0.2rem'}}>
      <p>
-     In June 2022, a devastating heat wave swept across Kansas, killing an estimated 10,000 cattle in a matter of days. The mass die-off raised urgent questions about the future of America’s $80 billion cattle industry, even in states once considered safe from extreme heat.
-The Kansas Department of Health and Environment confirmed at least 2,000 [cattle deaths](https://www.npr.org/2022/06/16/1105482394/cattle-kansas-heat-wave) in the southwestern part of the state, though industry estimates suggest the total could be as high as 10,000 head lost during this single event. But Kansas was just the beginning. From the traditional heat of Texas to the surprising vulnerability of Montana, cattle across America are facing an escalating challenges that threatens both animal welfare and food security.
+   Livestock producers across rural America are facing growing challenges due to the increasing frequency of severe heat and cold events. In states like North Dakota, prolonged cold periods and wind chills place significant stress on cattle, threatening their [health and survival](https://sentientmedia.org/farmers-face-frostbitten-cows-dead-calves-and-harsh-financial-consequences/). Meanwhile, in southern states such as Texas, extended episodes of high daytime and nighttime temperatures push the Temperature-Humidity Index (THI) beyond safe levels, leading to heat stress, reduced productivity, and avoidable livestock losses. These challenges have considerable [economic impacts](https://www.ncei.noaa.gov/access/billions/events); for instance, winter cold events in the Northern Plains resulted in over $20 million in cattle losses in 2023 alone, while heat stress nationwide causes an estimated $370 million in annual losses to feedlot operations. 
     </p>
   </Prose>
 </Block>
 
 <Block style={{justifyContent: 'space-between', alignItems: 'center', margin: '0 auto', width: '100%' }}>
-    <Figure>
-      <Image
-      src={new URL('./cows_heat.jpg', import.meta.url).href}
-      style={{ maxWidth: '200%', height: 'auto' }}
-    />
-    <Caption>
-      Consequences of Heat Stress in Cattle.
-    </Caption>
-  </Figure>
    <Prose style={{ textAlign: 'justify', flex: '1', alignItems: 'center', marginLeft: '0.2rem'}}>
      <p>
-    ### The Growing Challenge of Stress on Livestock
-     When we think about heatwaves or blizzards, human health usually dominates the headlines. But livestock particularly cattle face their own deadly consequences from extreme temperatures, with profound economic implications rippling through the dairy and beef industries. In the summer, heat stress threatens cattle in places like Texas and Oklahoma, while in the winter, states like Montana, North Dakota see rising cases of [cold stress](https://extension.sdstate.edu/sites/default/files/2021-05/S-0013-08.pdf) and even hypothermia during blizzards and wind chills in the winter.
-The economic stakes couldn't be higher. Heat stress doesn't just kill cattle, it reduces feed intake, slows weight gain, decreases milk production, and impairs fertility across surviving herds. Each heat wave compounds these losses, creating a cascade of economic damage that ultimately reaches consumers through higher [food prices](https://www.agriculture.com/partners-beef-prices-soar-to-record-highs-in-june-11775697).   
-    </p>
-  </Prose>
-</Block>
-
-
-
-<Block style={{ justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
-  <Prose style={{ textAlign: 'justify', flex: '1', alignItems: 'center', marginLeft: '0.2rem' }}>
-    <h3>Understanding Why Cattle Are Vulnerable to Heat</h3>
-    <p>
-      Understanding cattle vulnerability begins with a simple concept: just as the heat index measures human comfort, the Temperature Humidity Index (THI) measures cattle stress. But while humans can seek air conditioning, or modify their behavior, cattle have limited options.
-    </p>
-    <p>
-      Cattle operate within a narrow comfort zone called the [thermoneutral zone](https://en.wikipedia.org/wiki/Thermal_neutral_zone). Our analysis uses critical THI thresholds of 75, 82, and 94, representing escalating levels of heat stress (Lee et al., 2025). Think of these as warning levels:
-    </p>
-    <ul>
-      <li><strong>THI 75:</strong> Cattle begin showing mild stress signs</li>
-      <li><strong>THI 82:</strong> Significant physiological stress begins</li>
-      <li><strong>THI 94:</strong> Life-threatening conditions emerge</li>
-    </ul>
-    <p>
-      The 2022 Kansas disaster illustrates this perfectly. The accompanying animation shows THI values during June 2022, revealing the extreme conditions that overwhelmed cattle across the state. What made this event particularly deadly was not just the peak temperatures, but the persistence of dangerous conditions day after day.
+     The severity of these events became eveident in June 2022, when an intense heat wave swept across Kansas, killing thousands of cattle within days. The Kansas Department of Health and Environment confirmed at least 2,000 [cattle deaths](https://www.npr.org/2022/06/16/1105482394/cattle-kansas-heat-wave), though industry estimates suggest the toll could have reached as high as 10,000 head during that single event. Temperatures soared above 100°F with high humidity and little nighttime cooling, creating lethal conditions for the herds. This mass die-off raised urgent questions about the future of America’s $80 billion cattle industry, even in areas once considered less vulnerable. From the ongoing heat stress in southern states to rising cases of [cold stress](https://extension.sdstate.edu/sites/default/files/2021-05/S-0013-08.pdf) and hypothermia during harsh winters in states such as Montana and North Dakota, cattle producers nationwide are navigating evolving challenges. These severe weather events impact both animal welfare and national food security, demanding urgent attention and adaptive solutions across the country.
     </p>
   </Prose>
   <Figure>
@@ -137,18 +69,70 @@ The economic stakes couldn't be higher. Heat stress doesn't just kill cattle, it
   </Figure>
 </Block>
 
-<Block style={{ justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
-  <Prose style={{ textAlign: 'justify', flex: '1', alignItems: 'center', marginLeft: '0.2rem' }}>
-    <h3>The Overlooked Challenge: "Cold" States Aren't Safe</h3>
+<Block style={{justifyContent: 'space-between', alignItems: 'center', margin: '0 auto', width: '100%' }}>
+    <Figure>
+      <Image
+      src={new URL('./cattle_dakota_THI.png', import.meta.url).href}
+      style={{ maxWidth: '200%', height: 'auto' }}
+    />
+    <Caption>
+      Impact of Temperature on Cattle Wellbeing
+    </Caption>
+  </Figure>
+   <Prose style={{ textAlign: 'justify', flex: '1', alignItems: 'center', marginLeft: '0.2rem'}}>
+     <p>
+    ### Managing Temperature Challenges in Livestock
+     When weather events such as heatwaves or blizzards occur, human health often takes center stage in the headlines. However, livestock, particularly cattle, face serious consequences from severe temperatures that significantly impact their energy needs and overall well-being. In cold stress conditions, like the harsh winters experienced in states such as North Dakota, cattle must increase their maintenance energy to generate enough body heat to survive temperatures below their lower critical threshold. Conversely, during hot summers in states like Texas and Oklahoma, cattle suffer heat stress when temperatures exceed their upper critical threshold. To understand how heat affects them, we use something called the Temperature Humidity Index (THI), which is similar to the heat index people use to measure how hot it feels.
+</p>
     <p>
-      States such as Idaho, the Dakotas, and Colorado experience cattle stress due to both cold extremes. These regions face unique vulnerabilities:
+      Cattle operate within a narrow comfort zone called the thermoneutral zone. Cattle operate within a narrow comfort range known as the thermoneutral zone, where energy needs for maintenance are minimal.  In our analysis, we use critical THI thresholds of 75, 82, and 94, representing escalating levels of heat stress (Lee et al., 2025). Think of these as warning levels:
     </p>
     <ul>
-      <li><strong>Lack of Acclimation:</strong> These regions experience wide fluctuations in the THI, creating unstable thermal conditions that can strain livestock and complicate herd management.</li>
-      <li><strong>Lower Minimum Temperatures:</strong> When temperatures fall below the lower critical temperature, animals must expend more energy to maintain body heat. This cold stress is intensified by wind chill, which can make the perceived temperature significantly colder than the actual air temperature.</li>
+      <li><strong>THI 75:</strong> Cattle begin showing mild stress signs</li>
+      <li><strong>THI 82:</strong> Significant physiological stress begins</li>
+      <li><strong>THI 94:</strong> Life-threatening conditions emerge</li>
     </ul>
+    <p>
+Each episode of temperature stress diverts energy away from vital production functions including growth, reproduction, and milk yield. Repeated heat or cold stress events compound these effects, triggering cascading economic losses that ultimately impact consumers through higher [food prices](https://www.agriculture.com/partners-beef-prices-soar-to-record-highs-in-june-11775697).   
+    </p>
   </Prose>
 </Block>
+
+<ScrollytellingBlock>
+  <Chapter
+      center={[-110,40]}
+      zoom={3.5}
+      datasetId='blizzard-count'
+      layerId='blizzard-count'
+      dateTime='2021-12-31'
+    >
+    <Caption>
+    Nearest neighbor interpolation of NCEI Storm Events Database confirmed blizzard reports from 1950-2021 in the United States, clipped to the Northern Plains, Midwest, and Northeast.
+    </Caption>
+### Livestock in Harsh Winters
+<p> 
+<ul> 
+<li><strong>Lack of Acclimation:</strong> The Northern Plains and Midwest experience large fluctuations in temperaturea, leading to unstable thermal conditions that can increase pressure on livestock and complicate herd management.</li> 
+<li><strong>Lower Minimum Temperatures:</strong> When temperatures fall below cattle’s lower critical temperature, they must expend more energy to maintain body heat. Wind chill often makes conditions feel even colder, intensifying cold stress risks.</li> 
+</ul> 
+</p>
+  </Chapter>
+
+  <Chapter
+      center={[-110,40]}
+      zoom={3.5}
+      datasetId='blizzard-snowfall-footprint'
+      layerId='blizzard-alley'
+      dateTime='1950-01-01'
+    >
+    <Caption>
+    Single value raster displaying the region of the USA known as Blizzard Alley, where at least 10-20 blizzards have occurred since 1950. Eastern North Dakota seen 50-100+ in the same time period.
+    </Caption>
+    <p>
+    <li><strong>Blizzard Count and Vulnerability:</strong> Blizzard frequency data confirms that the Dakota have experienced over 100 blizzards since 1950, with many counties averaging one or more blizzards annually. This high blizzard count in the Dakotas significantly increases cold stress challenges for livestock and adds operational risks for producers in these regions.</li> 
+    </p>
+  </Chapter>
+</ScrollytellingBlock>
 
 
 <Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
