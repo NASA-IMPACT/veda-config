@@ -98,42 +98,30 @@ Each episode of temperature stress diverts energy away from vital production fun
   </Prose>
 </Block>
 
-<ScrollytellingBlock>
-  <Chapter
+<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
+<Prose style={{ textAlign: 'justify', display: 'flex', alignItems: 'center' }}>
+<p>
+### Livestock in Harsh Winters
+<ul> 
+<li><strong>Lack of Acclimation:</strong> The Northern Plains and Midwest experience large fluctuations in temperaturea, leading to unstable thermal conditions that can increase pressure on livestock and complicate herd management.</li> 
+<li><strong>Lower Minimum Temperatures:</strong> When temperatures fall below cattle’s lower critical temperature, they must expend more energy to maintain body heat. Wind chill often makes conditions feel even colder, intensifying cold stress risks.</li> 
+<li><strong>Blizzard Count and Vulnerability:</strong> Blizzard frequency data confirms that the Dakota have experienced over 100 blizzards since 1950, with many counties averaging one or more blizzards annually. This high blizzard count in the Dakotas significantly increases cold stress challenges for livestock and adds operational risks for producers in these regions.</li> 
+</ul> 
+    </p>
+   </Prose>
+  <Figure>
+    <Map
       center={[-110,40]}
       zoom={3.5}
       datasetId='blizzard-count'
       layerId='blizzard-count'
       dateTime='2021-12-31'
-    >
+    />
     <Caption>
     Nearest neighbor interpolation of NCEI Storm Events Database confirmed blizzard reports from 1950-2021 in the United States, clipped to the Northern Plains, Midwest, and Northeast.
-    </Caption>
-### Livestock in Harsh Winters
-<p> 
-<ul> 
-<li><strong>Lack of Acclimation:</strong> The Northern Plains and Midwest experience large fluctuations in temperaturea, leading to unstable thermal conditions that can increase pressure on livestock and complicate herd management.</li> 
-<li><strong>Lower Minimum Temperatures:</strong> When temperatures fall below cattle’s lower critical temperature, they must expend more energy to maintain body heat. Wind chill often makes conditions feel even colder, intensifying cold stress risks.</li> 
-</ul> 
-</p>
-  </Chapter>
-
-  <Chapter
-      center={[-110,40]}
-      zoom={3.5}
-      datasetId='blizzard-snowfall-footprint'
-      layerId='blizzard-alley'
-      dateTime='1950-01-01'
-    >
-    <Caption>
-    Single value raster displaying the region of the USA known as Blizzard Alley, where at least 10-20 blizzards have occurred since 1950. Eastern North Dakota seen 50-100+ in the same time period.
-    </Caption>
-    <p>
-    <li><strong>Blizzard Count and Vulnerability:</strong> Blizzard frequency data confirms that the Dakota have experienced over 100 blizzards since 1950, with many counties averaging one or more blizzards annually. This high blizzard count in the Dakotas significantly increases cold stress challenges for livestock and adds operational risks for producers in these regions.</li> 
-    </p>
-  </Chapter>
-</ScrollytellingBlock>
-
+    </Caption>  
+  </Figure>
+</Block>
 
 <Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '100%' }}>
   <Figure>
