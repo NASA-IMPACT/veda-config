@@ -73,10 +73,10 @@
   dependencies:
     tslib "^2.0.0"
 
-"@dsio/wildfire-explorer@0.6.0":
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/@dsio/wildfire-explorer/-/wildfire-explorer-0.6.0.tgz#1c4c8dc3781326e797876632a7ba1ce267bc3dcc"
-  integrity sha512-PP4qrlrb14zaLSBrCn+JF2dDJa2/CBrRVKak2PyKRWkpd6qvvcA3JXFb+UirnmW2jYyt9JXQaEInR96PhOmLsQ==
+"@dsio/wildfire-explorer@0.6.2":
+  version "0.6.2"
+  resolved "https://registry.yarnpkg.com/@dsio/wildfire-explorer/-/wildfire-explorer-0.6.2.tgz#5ce110e485171427817f8cd349a31393423b96c5"
+  integrity sha512-Ne46L2ADhiSDGpTHeuseBZ6jVAJxnZIiFG1+4YHEb3imgYJLYixfGIsPn8t3VsGxQk0GlWoWf8kmV/BKt4ojSA==
   dependencies:
     "@deck.gl/extensions" "^9.1.4"
     "@deck.gl/react" "^9.1.4"

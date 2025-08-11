@@ -17,6 +17,7 @@ const defaultToolState = {
     start: new Date(Date.now() - MONTH),
     end: new Date(),
   },
+  selectedDuration: { label: '1 month', value: MONTH },
   viewState: {
     longitude: -95.7129,
     latitude: 37.0902,
@@ -44,6 +45,7 @@ export const toolStateAtom = atomWithUrlValueStability<any>({
           start: new Date(parsed.timeRange?.start || defaultToolState.timeRange.start),
           end: new Date(parsed.timeRange?.end || defaultToolState.timeRange.end),
         },
+        selectedDuration: parsed.selectedDuration || defaultToolState.selectedDuration,
         viewState: {
           longitude: parsed.viewState?.longitude ?? defaultToolState.viewState.longitude,
           latitude: parsed.viewState?.latitude ?? defaultToolState.viewState.latitude,
@@ -71,6 +73,7 @@ export const toolStateAtom = atomWithUrlValueStability<any>({
           start: value.timeRange.start.toISOString(),
           end: value.timeRange.end.toISOString(),
         },
+        selectedDuration: value.selectedDuration,
         viewState: {
           longitude: value.viewState?.longitude,
           latitude: value.viewState?.latitude,
@@ -80,7 +83,6 @@ export const toolStateAtom = atomWithUrlValueStability<any>({
           padding: value.viewState?.padding,
         },
       };
-
       return JSON.stringify(serializable);
     } catch (error) {
       console.warn('Failed to serialize tool state:', error);
