@@ -56,21 +56,6 @@ taxonomy:
   </Figure>
 </Block>
 
-<Block type="wide">
-  <Figure>
-    <Map
-      center={[-95.36, 29.76]} 
-      zoom={8}
-      datasetId="nlcd-new-urbanization"
-      layerId="nlcd-new-urbanization"
-      dateTime="2001-01-01"
-      />
-    <Caption>
-      **Map 2:** Showing the change in land use over Houston from 2001 to 2021
-    </Caption>
-  </Figure>
-</Block>
-
 <Block>
   <Prose>
     ## Background
@@ -123,20 +108,23 @@ taxonomy:
       compareDateTime="2025-06-23"
       />
     <Caption>
-      **Map 3:** Slider showing cumulus clouds, comparing August 4th, 2014 to June 15th, 2025
+      **Map 2:** Slider showing cumulus clouds, comparing August 4th, 2014 to June 15th, 2025
     </Caption>
   </Figure>
 </Block>
 
 <Block>
   <Prose>
-    ## Results over Houston
+    ## Results over Houston and Miami
 
     Several case studies have investigated how urban areas modify weather, particularly in large metropolitan regions like Houston, Atlanta, and New York City. Here, we mainly look over Houston and how its dense urban sprawl has affected cloud formation, circulation, and precipitation for the local area. 
 
   </Prose>
 </Block>
     
+
+
+
 <Block>
   <Prose>
     For Houston in particular, there appears to be a correlation between urban regions and cloud formation using GOES-16. Animation 1 shows how clouds form over the Houston metro area during the day throughout June 2024. There is a cloud frequency peak over the metropolitan area.
@@ -288,6 +276,156 @@ taxonomy:
     Modeling studies using WRF with urban canopy schemes have been particularly effective at showing how detailed urban information (like building height and land use) improves predictions of temperature, wind, and rainfall in urban settings.
   </Prose>
 </Block>
+
+
+<ScrollytellingBlock>
+  <Chapter
+    center={[-95.36, 29.76]}
+    zoom={8}
+    datasetId="nlcd-new-urbanization"
+    layerId="nlcd-new-urbanization"
+    dateTime="2001-01-01"
+  >
+  For Houston in particular, there appears to be a correlation between urban regions and cloud formation using GOES-16. Animation 1 shows how clouds form over the Houston metro area during the day throughout June 2024. There is a cloud frequency peak over the metropolitan area.
+
+  <Figure>
+      <Image
+      src={new URL('./HoustonJune2024.gif', import.meta.url).href}
+    />
+    <Caption attrAuthor='GEOSTATIONARY OPERATIONAL ENVIRONMENTAL SATELLITES—R SERIES' attrUrl='https://www.goes-r.gov/spacesegment/abi.html'>
+      **Animation 1:** GIF of Houston June 2024 cloud frequency.
+    </Caption>
+  </Figure>
+
+  <Figure>
+    <Image
+      src={new URL('./CLDFRA_151500.png', import.meta.url).href}
+    />
+    <Caption attrAuthor='NASA' attrUrl='https://www.nasa.gov/image-article/saharan-dust-in-the-wind/'>
+      **Figure 1a:** Vertical slice, showing cloud fraction at 1550z: WRF
+    </Caption>
+  </Figure>
+
+  <Figure>
+    <Image
+      src={new URL('./CLDFRA_200000.png', import.meta.url).href}
+    />
+    <Caption attrAuthor='NASA' attrUrl='https://www.nasa.gov/image-article/saharan-dust-in-the-wind/'>
+      **Figure 1b:** Vertical slice, showing cloud fraction at 2000z: WRF
+    </Caption>
+  </Figure>
+
+  <Figure>
+    <Image
+      src={new URL('./CLDFRA_231500.png', import.meta.url).href}
+    />
+    <Caption attrAuthor='NASA' attrUrl='https://www.nasa.gov/image-article/saharan-dust-in-the-wind/'>
+      **Figure 1c:** Vertical slice, showing cloud fraction at 2315z: WRF
+    </Caption>
+  </Figure>
+
+  <Figure>
+      <Image
+      src={new URL('./HoustonJune2024.gif', import.meta.url).href}
+    />
+    <Caption attrAuthor='GEOSTATIONARY OPERATIONAL ENVIRONMENTAL SATELLITES—R SERIES' attrUrl='https://www.goes-r.gov/spacesegment/abi.html'>
+      **Animation 1:** GIF of Houston June 2024 cloud frequency.
+    </Caption>
+  </Figure>
+  As for the circulation, WRF simulations for a summer day in June depicts rising motion along a seabreeze throughout the day moving inland. However, persistent convection (rising and sinking air) occurs around the Houston metro area, centered at about -95.36, as seen in Animation 2. This would suggest that there is an effect of the city that is forcing air to rise. This would explain the relative maximum in cloud formation over Houston seen in Animation 1. Figure 2 also shows horizontal wind. There is a notable decrease in wind where the Houston metro area is located, which would be caused by buildings and other structures slowing down the wind.
+  
+  <Figure>
+    <Image
+      src={new URL('./W_151500.png', import.meta.url).href}
+    />
+    <Caption attrAuthor='NASA' attrUrl='https://www.nasa.gov/image-article/saharan-dust-in-the-wind/'>
+      **Figure 2a:** Vertical slice, showing convection at 1550z: WRF
+    </Caption>
+  </Figure>
+
+  <Figure>
+    <Image
+      src={new URL('./W_200000.png', import.meta.url).href}
+    />
+    <Caption attrAuthor='NASA' attrUrl='https://www.nasa.gov/image-article/saharan-dust-in-the-wind/'>
+      **Figure 2b:** Vertical slice, showing convection at 2000z: WRF
+    </Caption>
+  </Figure>
+
+  <Figure>
+    <Image
+      src={new URL('./W_231500.png', import.meta.url).href}
+    />
+    <Caption attrAuthor='NASA' attrUrl='https://www.nasa.gov/image-article/saharan-dust-in-the-wind/'>
+      **Figure 2c:** Vertical slice, showing convection at 2315z: WRF
+    </Caption>
+  </Figure>
+
+  <Figure>
+    <Image
+      src={new URL('./wind_151500.png', import.meta.url).href}
+    />
+    <Caption attrAuthor='NASA' attrUrl='https://www.nasa.gov/image-article/saharan-dust-in-the-wind/'>
+      **Figure 3a:** Vertical slice, showing cloud fraction at 1550z: WRF
+    </Caption>
+  </Figure>
+
+  <Figure>
+    <Image
+      src={new URL('./wind_200000.png', import.meta.url).href}
+    />
+    <Caption attrAuthor='NASA' attrUrl='https://www.nasa.gov/image-article/saharan-dust-in-the-wind/'>
+      **Figure 3b:** Vertical slice, showing cloud fraction at 2000z: WRF
+    </Caption>
+  </Figure>
+
+  <Figure>
+    <Image
+      src={new URL('./wind_231500.png', import.meta.url).href}
+    />
+    <Caption attrAuthor='NASA' attrUrl='https://www.nasa.gov/image-article/saharan-dust-in-the-wind/'>
+      **Figure 3c:** Vertical slice, showing cloud fraction at 2315z: WRF
+    </Caption>
+  </Figure>
+
+  Rainfall shows the transition throughout the day from over the ocean to the land. However unlike cloud formation or circulation, there doesn’t appear to be a significant affect due to the Houston metro area.
+  
+  <Figure>
+      <Image
+      src={new URL('./HoustonJune2024.gif', import.meta.url).href}
+    />
+    <Caption attrAuthor='GEOSTATIONARY OPERATIONAL ENVIRONMENTAL SATELLITES—R SERIES' attrUrl='https://www.goes-r.gov/spacesegment/abi.html'>
+      **Animation 1:** GIF of Houston June 2024 cloud frequency.
+    </Caption>
+  </Figure>
+
+  Modeling studies using WRF with urban canopy schemes have been particularly effective at showing how detailed urban information (like building height and land use) improves predictions of temperature, wind, and rainfall in urban settings.
+  
+  </Chapter>
+
+  <Chapter
+    center={[-80.1918, 25.7617]}
+    zoom={8}
+    datasetId="nlcd-new-urbanization"
+    layerId="nlcd-new-urbanization"
+    dateTime="2001-01-01"
+  >
+
+  Over Miami, preliminary results show a similar conclusion as Houston, specifically with urbanization and cloud cover.
+
+  <Figure>
+      <Image
+      src={new URL('./HoustonJune2024.gif', import.meta.url).href}
+    />
+    <Caption attrAuthor='GEOSTATIONARY OPERATIONAL ENVIRONMENTAL SATELLITES—R SERIES' attrUrl='https://www.goes-r.gov/spacesegment/abi.html'>
+      **Animation 2:** GIF of Miami June 2024 cloud frequency.
+    </Caption>
+  </Figure>
+
+  Here, you can see that Miami has had an increase in cloud coverage between 1500z and 2100z. This, in addition to the seabreeze has allowed for greater cloud coverage across the metropolitan area in Miami.
+
+  </Chapter>
+</ScrollytellingBlock>
 
 <Block>
   <Prose>
