@@ -8,5 +8,23 @@
   $theme-utility-breakpoints: (
     'mobile-lg': true,
     'desktop': true
+  ),
+  $flex-direction-settings: (
+    responsive: true,
+  ),
+  $flex-wrap-settings: (
+    responsive: true,
+  ),
+  $align-items-settings: (
+    responsive: true,
+  ),
+  $align-self-settings: (
+    responsive: true,
+  ),
+  $justify-content-settings: (
+    responsive: true,
+  ),
+  $z-index-settings: (
+    responsive: true,
   )
 );
