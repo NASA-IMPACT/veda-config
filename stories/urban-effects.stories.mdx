@@ -1,0 +1,312 @@
+---
+id: urban-effects
+name: Urban Effects
+description: "Urban Effects on Cloud Formation, Circulation and Rainfall"
+media:
+  src: ::file ./urban-effects-background.jpg
+  alt: Picture of the Houston city skyline.
+  author: 
+    name: Image courtesy HDR
+    url: https://www.nasa.gov/history/60-years-ago-nasas-manned-spacecraft-center-opens-moving-to-houston/
+pubDate: 2025-07-08T00:00
+taxonomy:
+  - name: Topics
+    values: 
+      - Agriculture
+  - name: Subtopics 
+    values: 
+      - Agriculture
+      - Land Use
+      - Precipitation
+      - Surface Meteorology
+      - Urban
+---
+
+<Block>
+  <Prose>
+    Authors: Aaron Serre<sup>1</sup>, Udaysankar Nair<sup>1</sup>
+
+    <sup>1</sup> The University of Alabama in Huntsville
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    ## Introduction
+
+    Many urban areas across the United States have seen major population growth over the past several decades. As a result, cities have been required to build more residential, commercial, industrial, and network infrastructure to accommodate the growing population. The rapid expansion of artificial surfaces and structures associated with urbanization not only significantly alters the landscape, but also has profound meteorological effects. A primary example of these compounding influences exist in the Houston metropolitan area, ranking only second to New York City for the largest numeric population growth between 2023 and 2024, according to the U.S. Census Bureau. Here, the devastating flooding caused by Hurricane Harvey in August 2017 was largely exacerbated by urbanization across the Houston metropolitan area. Devastating events like this make the need to understand how urbanization affects local weather, crucial to saving lives and property. By studying areas like Houston with both observations and models, researchers can better understand how urban growth influences weather and climate, insights that are increasingly important for city planning, public health, and climate resilience.
+
+  </Prose>
+</Block>
+
+<Block type="wide">
+  <Figure>
+    <Map
+      center={[-95.36, 29.76]} 
+      zoom={8}
+      datasetId="nlcd-annual-conus"
+      layerId="nlcd-annual-conus"
+      dateTime="2001-01-01"
+      compareDateTime="2021-01-01"
+      />
+    <Caption>
+      **Map 1:** Slider showing the change in land use over Houston from 2001 to 2021
+    </Caption>
+  </Figure>
+</Block>
+
+<Block>
+  <Prose>
+    ## Background
+
+    As cities like Houston continue to expand, the physical structure of the land surface changes dramatically. Natural landscapes such as forests, grasslands, and wetlands are often replaced by buildings, roads, and other man-made materials. These artificial surfaces absorb and retain heat differently than natural ones, often leading to a phenomenon known as the Urban Heat Island (UHI) effect, where urban areas become significantly warmer than their rural surroundings.
+  
+    In addition to temperature changes, urbanization also influences other aspects of weather and climate. For example, buildings and paved surfaces can alter wind patterns, change how clouds form, and even affect when and where rain falls. Tall structures can block or redirect airflow, while increased surface roughness and heat can enhance or suppress local convection. Moreover, increased emissions from vehicles and industries introduce more aerosols and pollutants into the atmosphere, which may further affect cloud microphysics and precipitation.
+    
+    To better understand how urbanization changes the atmosphere, scientists use tools like computer models and satellite data. In particular, numerical weather models such as the Weather Research and Forecasting (WRF) model can simulate how different urban characteristics, like surface type, building height, and energy use, affect local weather. These models often incorporate Urban Canopy Models (UCMs) to represent the influence of buildings and urban surfaces more realistically. Satellites such as the Geostationary Operational Environmental Satellite-16 (GOES-16) can be used in analyzing changes in cloud patterns as well. 
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    ## How Urban Areas Affect Weather
+
+    Urban areas influence weather through both thermal and mechanical effects. Thermally, cities produce and retain more heat due to human activity and the prevalence of heat-absorbing materials like concrete and asphalt. This intensifies the Urban Heat Island effect, where urban centers are warmer than surrounding rural regions, especially at night. The added heat can lead to increased instability in the lower atmosphere, potentially enhancing convective cloud development and localized thunderstorms.
+    
+    Mechanically, the rougher surface of cities, due to high-rise buildings and dense infrastructure, disrupts the wind flow. This can reduce wind speeds at the surface, but it can also create turbulence and vertical mixing that alters the vertical structure of temperature and moisture in the boundary layer. The boundary layer (or planetary boundary layer), is the lowest layer of the atmosphere, closest to the ground, meaning changes would affect the greater population. Additionally, the geometry of city blocks can create and change the wind patterns that affect cloud formation.
+    
+    Urban areas also tend to have higher concentrations of aerosols, which can influence cloud formation. Aerosols act as cloud condensation nuclei (CCN), allowing more but smaller cloud droplets to form. This can delay precipitation by preventing droplets from growing large enough to fall as rain, a process known as the aerosol indirect effect. An effect of this would mean less rainfall, which would increase the likelihood of drought in this scenario.
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    ## Data Used 
+
+    To investigate the influence of urbanization on weather, scientists use a combination of satellite observations, ground-based measurements, and numerical models.
+
+    <li>Satellite data provides valuable information on surface temperature, cloud cover, rainfall patterns, and aerosol concentrations over time. Instruments like those on the GOES-16, MODIS (MODerate Resolution Imaging Spectroradiometer), or Landsat platforms can track changes in land surface characteristics and cloud properties</li>
+    <li>Ground observations, including Automated Surface Observing System (ASOS) and air quality sensors, give precise point measurements of temperature, humidity, wind, and pollutant levels. These data are essential for validating model output and observing real-time conditions</li>
+    <li>Numerical weather models, such as WRF, allow researchers to simulate urban effects under controlled conditions. Urban Canopy Models (UCMs) built into WRF can represent the thermal properties of city surfaces, building geometry, and even human energy use</li>
+
+    Together, these tools help researchers understand both short-term weather impacts and long-term climate trends associated with urban growth
+
+  </Prose>
+</Block>
+
+<Block type="wide">
+  <Figure>
+    <Map
+      center={[-95.36, 29.76]} 
+      zoom={8}
+      datasetId="HLSL30_2.0_true_color"
+      layerId="HLSL30_2.0_true_color"
+      dateTime="2014-08-04"
+      compareDateTime="2025-06-23"
+      />
+    <Caption>
+      **Map 2:** Slider showing cumulus clouds, comparing August 4th, 2014 to June 15th, 2025
+    </Caption>
+  </Figure>
+</Block>
+
+<Block>
+  <Prose>
+    ## Results over Houston and Miami
+
+    Several case studies have investigated how urban areas modify weather, particularly in large metropolitan regions like Houston, Atlanta, and New York City. Here, we mainly look over Houston and how its dense urban sprawl has affected cloud formation, circulation, and precipitation for the local area. 
+
+  </Prose>
+</Block>
+
+<ScrollytellingBlock>
+  <Chapter
+    center={[-96.46, 29.76]}
+    zoom={8}
+    datasetId="nlcd-annual-conus"
+    layerId="nlcd-new-urbanization"
+    datetime="2001-01-01"
+  >
+  For Houston in particular, there appears to be a correlation between urban regions and cloud formation using GOES-16. Animation 1 shows how clouds form over the Houston metro area during the day throughout June 2024. There is a cloud frequency peak over the metropolitan area.
+
+  <Figure>
+      <Image
+      src={new URL('./HoustonJune2024.gif', import.meta.url).href}
+    />
+    <Caption attrAuthor='GEOSTATIONARY OPERATIONAL ENVIRONMENTAL SATELLITES—R SERIES' attrUrl='https://www.goes-r.gov/spacesegment/abi.html'>
+      **Animation 1:** GIF of Houston June 2024 cloud frequency.
+    </Caption>
+  </Figure>
+
+  <Figure>
+    <Image
+      src={new URL('./CLDFRA_151500.png', import.meta.url).href}
+    />
+    <Caption attrAuthor='NASA' attrUrl='https://www.nasa.gov/image-article/saharan-dust-in-the-wind/'>
+      **Figure 1a:** Vertical slice, showing cloud fraction at 1550z: WRF
+    </Caption>
+  </Figure>
+
+  <Figure>
+    <Image
+      src={new URL('./CLDFRA_200000.png', import.meta.url).href}
+    />
+    <Caption attrAuthor='NASA' attrUrl='https://www.nasa.gov/image-article/saharan-dust-in-the-wind/'>
+      **Figure 1b:** Vertical slice, showing cloud fraction at 2000z: WRF
+    </Caption>
+  </Figure>
+
+  <Figure>
+    <Image
+      src={new URL('./CLDFRA_231500.png', import.meta.url).href}
+    />
+    <Caption attrAuthor='NASA' attrUrl='https://www.nasa.gov/image-article/saharan-dust-in-the-wind/'>
+      **Figure 1c:** Vertical slice, showing cloud fraction at 2315z: WRF
+    </Caption>
+  </Figure>
+
+  <Figure>
+      <Image
+      src={new URL('./HoustonJune2024.gif', import.meta.url).href}
+    />
+    <Caption attrAuthor='GEOSTATIONARY OPERATIONAL ENVIRONMENTAL SATELLITES—R SERIES' attrUrl='https://www.goes-r.gov/spacesegment/abi.html'>
+      **Animation 1:** GIF of Houston June 2024 cloud frequency.
+    </Caption>
+  </Figure>
+  As for the circulation, WRF simulations for a summer day in June depicts rising motion along a seabreeze throughout the day moving inland. However, persistent convection (rising and sinking air) occurs around the Houston metro area, centered at about -95.36, as seen in Animation 2. This would suggest that there is an effect of the city that is forcing air to rise. This would explain the relative maximum in cloud formation over Houston seen in Animation 1. Figure 2 also shows horizontal wind. There is a notable decrease in wind where the Houston metro area is located, which would be caused by buildings and other structures slowing down the wind.
+  
+  <Figure>
+    <Image
+      src={new URL('./W_151500.png', import.meta.url).href}
+    />
+    <Caption attrAuthor='NASA' attrUrl='https://www.nasa.gov/image-article/saharan-dust-in-the-wind/'>
+      **Figure 2a:** Vertical slice, showing convection at 1550z: WRF
+    </Caption>
+  </Figure>
+
+  <Figure>
+    <Image
+      src={new URL('./W_200000.png', import.meta.url).href}
+    />
+    <Caption attrAuthor='NASA' attrUrl='https://www.nasa.gov/image-article/saharan-dust-in-the-wind/'>
+      **Figure 2b:** Vertical slice, showing convection at 2000z: WRF
+    </Caption>
+  </Figure>
+
+  <Figure>
+    <Image
+      src={new URL('./W_231500.png', import.meta.url).href}
+    />
+    <Caption attrAuthor='NASA' attrUrl='https://www.nasa.gov/image-article/saharan-dust-in-the-wind/'>
+      **Figure 2c:** Vertical slice, showing convection at 2315z: WRF
+    </Caption>
+  </Figure>
+
+  <Figure>
+    <Image
+      src={new URL('./wind_151500.png', import.meta.url).href}
+    />
+    <Caption attrAuthor='NASA' attrUrl='https://www.nasa.gov/image-article/saharan-dust-in-the-wind/'>
+      **Figure 3a:** Vertical slice, showing cloud fraction at 1550z: WRF
+    </Caption>
+  </Figure>
+
+  <Figure>
+    <Image
+      src={new URL('./wind_200000.png', import.meta.url).href}
+    />
+    <Caption attrAuthor='NASA' attrUrl='https://www.nasa.gov/image-article/saharan-dust-in-the-wind/'>
+      **Figure 3b:** Vertical slice, showing cloud fraction at 2000z: WRF
+    </Caption>
+  </Figure>
+
+  <Figure>
+    <Image
+      src={new URL('./wind_231500.png', import.meta.url).href}
+    />
+    <Caption attrAuthor='NASA' attrUrl='https://www.nasa.gov/image-article/saharan-dust-in-the-wind/'>
+      **Figure 3c:** Vertical slice, showing cloud fraction at 2315z: WRF
+    </Caption>
+  </Figure>
+
+  Rainfall shows the transition throughout the day from over the ocean to the land. However unlike cloud formation or circulation, there doesn’t appear to be a significant affect due to the Houston metro area.
+  
+  <Figure>
+      <Image
+      src={new URL('./HoustonJune2024.gif', import.meta.url).href}
+    />
+    <Caption attrAuthor='GEOSTATIONARY OPERATIONAL ENVIRONMENTAL SATELLITES—R SERIES' attrUrl='https://www.goes-r.gov/spacesegment/abi.html'>
+      **Animation 1:** GIF of Houston June 2024 cloud frequency.
+    </Caption>
+  </Figure>
+
+  Modeling studies using WRF with urban canopy schemes have been particularly effective at showing how detailed urban information (like building height and land use) improves predictions of temperature, wind, and rainfall in urban settings.
+  
+  </Chapter>
+
+  <Chapter
+    center={[-81.35, 26.7617]}
+    zoom={8}
+    datasetId="nlcd-annual-conus"
+    layerId="nlcd-new-urbanization"
+    datetime="2001-01-01"
+  >
+
+  Over Miami, preliminary results show a similar conclusion as Houston, specifically with urbanization and cloud cover.
+
+  <Figure>
+      <Image
+      src={new URL('./HoustonJune2024.gif', import.meta.url).href}
+    />
+    <Caption attrAuthor='GEOSTATIONARY OPERATIONAL ENVIRONMENTAL SATELLITES—R SERIES' attrUrl='https://www.goes-r.gov/spacesegment/abi.html'>
+      **Animation 2:** GIF of Miami June 2024 cloud frequency.
+    </Caption>
+  </Figure>
+
+  Here, you can see that Miami has had an increase in cloud coverage between 1500z and 2100z. This, in addition to the seabreeze has allowed for greater cloud coverage across the metropolitan area in Miami.
+
+  </Chapter>
+</ScrollytellingBlock>
+
+<Block>
+  <Prose>
+    ## Conclusion
+
+    Understanding how urbanization affects weather patterns, especially cloud formation, rainfall, and air circulation, is essential for several reasons. In cities like Houston, which are prone to both heavy rainfall events and air quality issues, urban-induced changes to the atmosphere can amplify existing hazards. For instance, enhanced cloud formation can cause an increased possibility of precipitation, increasing the threat for localized thunderstorms and urban flash flooding.Changes to wind and moisture transport near the surface can also shift where rain forms and falls, potentially impacting water resources and stormwater infrastructure planning. The altered vertical mixing in the boundary layer can trap pollutants and limit dispersion, degrading air quality and threatening public health.
+
+    Urban areas like Houston do more than just alter the landscape, they reshape the local atmosphere in complex ways. Increased heat retention, surface roughness, and pollution all contribute to modified circulation patterns, cloud development, and precipitation behavior over and around urban centers. Studies combining satellite observations, ground data, and urban-scale models show that Houston’s rapid urban growth has likely contributed to changes in local convection and rainfall distribution. In some cases, enhanced rainfall downwind of the city has been linked to urban-driven convergence and surface heating. Meanwhile, pollutants and aerosols emitted from urban activity can delay or modify precipitation processes and alter cloud microphysics.
+
+    By using NASA Earth science data provided through platforms like VEDA (Visualization, Exploration, and Data Analysis), city planners, emergency managers, and educators can access and explore high-resolution satellite data and model outputs. These tools allow stakeholders to visualize where clouds form most frequently, how surface heating varies across the urban landscape, and where wind convergence may enhance rainfall or stagnation. As cities grow, these insights are increasingly valuable for designing climate-resilient infrastructure and managing environmental risks. As tools like NASA VEDA make it easier to explore, analyze, and visualize Earth system data, researchers, educators, and decision-makers can better understand the relationship between cities and the atmosphere. This improved understanding is vital not only for forecasting short-term, but long-term as well. 
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    ## References
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    ### Data Access
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+
+    **Editors**: Aaron Serre, Andrew Blackford, and Chelsea Aaron
+
+    **Developers**: Aaron Serre
+
+    **Science and Content Contributors**: Aaron Serre and Udaysankar Nair
+
+    **Questions / Feedback**: Email veda@uah.edu
+
+    ### Additional Resources
+  </Prose>
+</Block>
