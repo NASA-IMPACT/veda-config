@@ -35,10 +35,10 @@
     "stream-browserify": "^3.0.0"
   },
   "dependencies": {
-    "@dsio/wildfire-explorer": "0.6.2",
+    "@dsio/wildfire-explorer": "0.7.4",
     "@parcel/transformer-sass": "^2.13.3",
     "@trussworks/react-uswds": "^9.1.0",
-    "@uswds/uswds": "^3.8.1",
+    "@uswds/uswds": "3.11.0",
     "autoprefixer": "^10.4.19",
     "lodash": "^4.17.21",
     "postcss": "^8.5.2",
