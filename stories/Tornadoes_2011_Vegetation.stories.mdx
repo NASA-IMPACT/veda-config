@@ -94,7 +94,7 @@ taxonomy:
    * Reached **maximum wind speeds of 210 mph**
    * Caused **72 fatalities** and **injured over 145 people**
    * Established a maximum damage path width of **1.25 miles**
- 
+
    The National Weather Service’s Damage Assessment Toolkit (DAT) provided a detailed track of this tornado, documenting its full path and confirming the extreme nature of the event. This track is critical for identifying the exact areas where vegetation was most severely impacted. Along the DAT-defined corridor, entire sections of forest were flattened, tree canopies were stripped, and the landscape was visibly altered. The DAT track serves as a spatial reference for pinpointing ecological damage zones and understanding how a powerful tornado reshaped the natural environment along its path.
   </Chapter>
 
@@ -120,7 +120,7 @@ taxonomy:
    ### Hackleburg EF-5 Tornado: MODIS NDVI
 
    The Normalized Difference Vegetation Index from NASA’s Moderate Resolution Imaging Spectroradiometer (MODIS NDVI) captures a stark decline in vegetation health immediately following the passage of the Hackleburg EF-5 tornado. Along its 132-mile path through rural Northwest Alabama—including heavily forested areas near Hackleburg and Phil Campbell—the tornado’s footprint appears as a thin strip surrounded by otherwise healthy green vegetation. This contrast reflects widespread tree loss and canopy stress caused by extreme wind damage and uprooting. NDVI values dropped sharply in this corridor, clearly outlining the extent of ecological disruption. The MODIS view provides a consistent, large-scale perspective on the storm’s impact to natural systems in Alabama.
-   
+
    <mark>insert NDVI time series graph</mark>
   </Chapter>
 
@@ -202,8 +202,8 @@ taxonomy:
   >
    ### Tuscaloosa-Birmingham EF-4 Tornado: MODIS NDVI
 
-    For the Tuscaloosa-Birmingham EF-4 tornado, MODIS NDVI reveals a broad swath of vegetation stress extending from the outskirts of Tuscaloosa into rural and wooded areas northeast of the city. While much of the tornado’s devastation occurred in urban neighborhoods, NDVI is especially effective at highlighting damage to the surrounding greenbelt where hillsides, parks, and forested buffers were stripped. In these areas, NDVI values dropped dramatically, indicating significant vegetation loss and stress. 
-    
+    For the Tuscaloosa-Birmingham EF-4 tornado, MODIS NDVI reveals a broad swath of vegetation stress extending from the outskirts of Tuscaloosa into rural and wooded areas northeast of the city. While much of the tornado’s devastation occurred in urban neighborhoods, NDVI is especially effective at highlighting damage to the surrounding greenbelt where hillsides, parks, and forested buffers were stripped. In these areas, NDVI values dropped dramatically, indicating significant vegetation loss and stress.
+
     <mark>insert NDVI time series graph</mark>
   </Chapter>
 
@@ -231,6 +231,7 @@ taxonomy:
     For the Tuscaloosa-Birmingham EF-4 tornado, NCEI reports highlight the devastating wind impacts not only on structures, but also on natural vegetation. With wind speeds estimated near 190 mph, the tornado shredded trees, destroyed green buffers along major roadways, and left parks and wooded corridors strewn with debris. In some cases, wind-driven projectiles and flying branches caused secondary vegetation damage, compounding the initial deforestation. Witness accounts describe tree trunks snapped like matchsticks and entire hillsides stripped of their canopy. These narrative details help ground truth the satellite-observed damage and emphasize that vegetation loss was not incidental, but rather a defining characteristic of the storm’s passage through both urban and natural areas.
   </Chapter>
 
+
   <Chapter
     center={[-87.9, 33.33]}
     zoom={8}
@@ -238,25 +239,28 @@ taxonomy:
     layerId='wldas-derecho-sm'
     datetime='2022-05-11'
   >
-
-<Block>
-  <Prose>    
-    ### Test Sid
-  </Prose>
-    Test
-  <Figure>
-    <Map
-      center={[0,0]}
-      zoom={1}
-      datasetId='MODIS_Terra_L3_NDVI_16Day'
-      layerId='MODIS_Terra_L3_NDVI_16Day'
-      dateTime='2011-04-28'
-    />
+    <Figure>
+      <Map
+        center={[0,0]}
+        zoom={1}
+        datasetId='MODIS_Terra_L3_NDVI_16Day'
+        layerId='MODIS_Terra_L3_NDVI_16Day'
+        dateTime='2011-04-28'
+      />
     </Figure>
-</Block>    
-   ### Tuscaloosa-Birmingham EF-4 Tornado: NCEI Hail reports
 
-    NCEI storm reports associated with the Tuscaloosa-Birmingham EF-4 tornado document hail sizes up to 2.5 inches in diameter (or tennis ball size) near the beginning of the storm’s track. This large hail likely added a damaging layer to already extreme wind impacts, particularly in wooded neighborhoods and city parks. Vegetation in the storm’s path—especially broadleaf trees and shrubs—would have suffered from leaf shredding, limb scarring, and defoliation. In urban green spaces, hail damage compounded the effect of tree uprooting, resulting in more extensive canopy thinning and long-term stress to plant communities. These hail reports highlight how multiple storm hazards conspired together to damage the landscape.
+    ### Tuscaloosa-Birmingham EF-4 Tornado: NCEI Hail reports
+
+    NCEI storm reports associated with the Tuscaloosa-Birmingham EF-4 tornado
+    document hail sizes up to **2.5 inches in diameter** (tennis ball size) near
+    the beginning of the storm’s track. This large hail likely added a damaging
+    layer to already extreme wind impacts, particularly in wooded neighborhoods
+    and city parks. Vegetation in the storm’s path—especially broadleaf trees and
+    shrubs—would have suffered from leaf shredding, limb scarring, and
+    defoliation. In urban green spaces, hail damage compounded the effect of tree
+    uprooting, resulting in more extensive canopy thinning and long-term stress
+    to plant communities. These hail reports highlight how multiple storm hazards
+    conspired together to damage the landscape.
   </Chapter>
 </ScrollytellingBlock>
 
@@ -275,21 +279,21 @@ taxonomy:
 <Block>
   <Prose>
     ### References
-    
+
     Alabama Department of Economic and Community Affairs. “2011 Tornadoes.” *ADECA Disaster Recovery*, https://adeca.alabama.gov/cdbg-disaster-recovery/2011-tornadoes/.
-    
+
     Burow, Daniel C., et al. “Damage Analysis of Three Long‑Track Tornadoes Using High‑Resolution Satellite Imagery.” Atmosphere, vol. 11, no. 6, 2020, article 613. *MDPI*, https://www.mdpi.com/2073-4433/11/6/613.
-    
+
     Molthan, Andrew L., et al. “Satellite-Based Identification of Tornado Damage Tracks from the 27 April 2011 Severe Weather Outbreak.” Journal of Operational Meteorology, vol. 2, no. 16, 2014, pp. 191–208. *National Weather Association*, https://www.researchgate.net/publication/274231355_Satellite-based_identification_of_tornado_damage_tracks_from_the_27_April_2011_severe_weather_outbreak.
-    
-    Molthan, Andrew L. “Incorporation and Use of Earth Remote Sensing Imagery in Tornado Damage Assessment.” Bulletin of the American Meteorological Society, vol. 101, no. 3, 2020, pp. E297–E312. *American Meteorological Society*, https://journals.ametsoc.org/view/journals/bams/101/3/bams-d-19-0097.1.xml. 
-    
+
+    Molthan, Andrew L. “Incorporation and Use of Earth Remote Sensing Imagery in Tornado Damage Assessment.” Bulletin of the American Meteorological Society, vol. 101, no. 3, 2020, pp. E297–E312. *American Meteorological Society*, https://journals.ametsoc.org/view/journals/bams/101/3/bams-d-19-0097.1.xml.
+
     NASA SPoRT/University of Alabama Huntsville. “Tornado Damage Tracks Seminar.” *NASA SPoRT Seminar Series*, 28 Jun. 2011, https://weather.ndc.nasa.gov/sport/library/sport_science_seminars/20110628_SPoRT_Seminar_TornadoDamageTracks.pdf.
-    
+
     National Weather Service. "Service Assessment: Historic Tornadoes of April 2011." *NOAA/NWS*, 2011, https://www.weather.gov/media/publications/assessments/historic_tornadoes.pdf.
-    
+
     National Weather Service Birmingham. “Historic Outbreak of April 27, 2011.” *NOAA/NWS Birmingham Office*, https://www.weather.gov/bmx/event_04272011.
-    
+
     National Weather Service Damage Assessment Toolkit. “Tornado Database 2011.” *NOAA/NWS Birmingham Office*, https://www.weather.gov/bmx/tornadodb_2011.
 
     National Weather Service Huntsville. “April 27, 2011 Tornado Tracks – Huntsville Forecast Area.” *NOAA/NWS Huntsville Office*, https://www.weather.gov/hun/hunsur_2011-04-27_tracksmap.
@@ -315,9 +319,9 @@ taxonomy:
 
     **Developers**: Madison Wallner
 
-    **Science and Content Contributors**: Madison Wallner, Andrew Blackford, and Udaysankar Nair 
+    **Science and Content Contributors**: Madison Wallner, Andrew Blackford, and Udaysankar Nair
 
-    **Questions / Feedback**: Email veda@uah.edu 
+    **Questions / Feedback**: Email veda@uah.edu
 
     ### Additional Resources
 
