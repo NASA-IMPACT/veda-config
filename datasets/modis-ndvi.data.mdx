@@ -49,6 +49,34 @@ layers:
           return `${dateFns.format(datetime, 'dd LLL yyyy')} VS ${dateFns.format(compareDatetime, 'dd LLL yyyy')}`;
         }
 ---
+
+<Block>
+  <Prose>
+  ## Dataset Details
+  - **Temporal Extent:** 2000-Present
+  - **Temporal Resolution:** Every 16 Days
+  - **Spatial Extent:** Global
+  - **Spatial Resolution:** 250 m
+  - **Data Type:** Research
+  </Prose>
+<Figure>
+  <Map
+    datasetId=' MODIS_Terra_L3_NDVI_16Day'
+    layerId=' MODIS_Terra_L3_NDVI_16Day'
+    dateTime='2011-04-28'
+    zoom={8}
+    center={[-95.37,29.76]}
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+  Example of MODIS Terra NDVI showing the 2011 Super Outbreak tornado paths in Alabama.
+  </Caption>
+</Figure>
+</Block>
+
+
 <Block>
 <Prose>
 

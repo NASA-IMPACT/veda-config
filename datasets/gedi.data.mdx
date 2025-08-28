@@ -1,0 +1,105 @@
+---
+id: GEDI_ISS_L3_Canopy_Height_Mean_RH100_201904-202303
+name: GEDI Canopy Height AGL
+featured: true
+description: The Global Ecosystem Dynamics Investigation ([GEDI](https://gedi.umd.edu/)) mission aims to characterize ecosystem structure and dynamics to enable radically improved quantification and understanding of the Earth’s carbon cycle and biodiversity. The GEDI instrument produces high resolution laser ranging observations of the 3-dimensional structure of the Earth. GEDI is attached to the International Space Station (ISS) and collects data globally between 51.6° N and 51.6° S latitudes at the highest resolution and densest sampling of any light detection and ranging (lidar) instrument in orbit to date. Each GEDI Version 2 granule encompasses one-fourth of an ISS orbit and includes georeferenced metadata to allow for spatial querying and subsetting.
+media:
+  src: ::file ./media/modis-ndvi.jpg
+  alt: MODIS NDVI over the Eastern Corn Belt of the Midwestern USA.
+  author:
+    name: Andrew Blackford
+infoDescription: |
+  ::markdown
+    - Temporal Extent: 2019 Apr 18
+    - Temporal Resolution: N/A
+layers:
+  - id: GEDI_ISS_L3_Canopy_Height_Mean_RH100_201904-202303
+    stacApiEndpoint: https://staging.openveda.cloud/api/stac
+    stacCol: GEDI_ISS_L3_Canopy_Height_Mean_RH100_201904-202303
+    name: GEDI Canopy Height AGL
+    type: wmts
+    description: The Global Ecosystem Dynamics Investigation ([GEDI](https://gedi.umd.edu/)) mission aims to characterize ecosystem structure and dynamics to enable radically improved quantification and understanding of the Earth’s carbon cycle and biodiversity. The GEDI instrument produces high resolution laser ranging observations of the 3-dimensional structure of the Earth. GEDI is attached to the International Space Station (ISS) and collects data globally between 51.6° N and 51.6° S latitudes at the highest resolution and densest sampling of any light detection and ranging (lidar) instrument in orbit to date. Each GEDI Version 2 granule encompasses one-fourth of an ISS orbit and includes georeferenced metadata to allow for spatial querying and subsetting.
+    sourceParams:
+      layers: 1
+      version: 1.3.0
+      crs: EPSG:3857
+      styles:
+    zoomExtent:
+      - 0
+      - 5
+    analysis:
+      exclude: true
+    legend:
+      type: gradient
+      min: 0
+      max: 1
+      stops:
+          - rgb(215, 210, 210)
+          - rgb(144, 168, 63)
+          - rgb(87, 133, 41)
+          - rgb(46, 96, 28)
+          - rgb(10, 26, 8)
+---
+
+<Block>
+  <Prose>
+  ## Dataset Details
+  - **Temporal Extent:** 2000-Present
+  - **Temporal Resolution:** Every 16 Days
+  - **Spatial Extent:** Global
+  - **Spatial Resolution:** 250 m
+  - **Data Type:** Research
+  </Prose>
+<Figure>
+  <Map
+    datasetId=' GEDI_ISS_L3_Canopy_Height_Mean_RH100_201904-202303'
+    layerId=' GEDI_ISS_L3_Canopy_Height_Mean_RH100_201904-202303'
+    dateTime='2019-04-18'
+    zoom={8}
+    center={[-95.37,29.76]}
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+  Example of GEDI Canopy Height.
+  </Caption>
+</Figure>
+</Block>
+
+
+<Block>
+<Prose>
+
+## About GEDI
+
+The Global Ecosystem Dynamics Investigation ([GEDI](https://gedi.umd.edu/)) mission aims to characterize ecosystem structure and dynamics to enable radically improved quantification and understanding of the Earth’s carbon cycle and biodiversity. The GEDI instrument produces high resolution laser ranging observations of the 3-dimensional structure of the Earth. GEDI is attached to the International Space Station (ISS) and collects data globally between 51.6° N and 51.6° S latitudes at the highest resolution and densest sampling of any light detection and ranging (lidar) instrument in orbit to date. Each GEDI Version 2 granule encompasses one-fourth of an ISS orbit and includes georeferenced metadata to allow for spatial querying and subsetting.
+
+The GEDI instrument was removed from the ISS and placed into storage on March 17, 2023. No data were acquired during the hibernation period from March 17, 2023, to April 24, 2024. GEDI has since been reinstalled on the ISS and resumed operations as of April 26, 2024.
+
+The purpose of the GEDI Level 2B Canopy Cover and Vertical Profile Metrics product (GEDI02_B) is to extract biophysical metrics from each GEDI waveform. These metrics are based on the directional gap probability profile derived from the L1B waveform. Metrics provided include canopy cover, Plant Area Index (PAI), Plant Area Volume Density (PAVD), and Foliage Height Diversity (FHD). The GEDI02_B product is provided in HDF5 format and has a spatial resolution (average footprint) of 25 meters.
+
+The GEDI02_B data product contains 96 layers for each of the eight-beam ground transects (or laser footprints located on the land surface). Datasets provided include precise latitude, longitude, elevation, height, canopy cover, and vertical profile metrics. Additional information for the layers can be found in the GEDI Level 2B Data Dictionary.
+
+##### Known Issues
+
+* Data acquisition gaps: GEDI data acquisitions were suspended on December 19, 2019 (2019 Day 353) and resumed on January 8, 2020 (2020 Day 8).
+* Incorrect Reference Ground Track (RGT) number in the filename for select GEDI files: GEDI Science Data Products for six orbits on August 7, 2020, and November 12, 2021, had the incorrect RGT number in the filename. There is no impact to the science data, but users should reference this [document](https://lpdaac.usgs.gov/documents/2236/GEDI_CORRECTED_RGT_FILENAMES.pptx) for the correct RGT numbers.
+* Known Issues: Section 8 of the User Guide provides additional information on known issues.
+
+##### Improvements/Changes from Previous Versions
+
+* Metadata has been updated to include spatial coordinates.
+* Granule size has been reduced from one full ISS orbit (~1.19 GB) to four segments per orbit (~0.30 GB).
+* Filename has been updated to include segment number and version number.
+* Improved geolocation for an orbital segment.
+* Added elevation from the SRTM digital elevation model for comparison.
+* Modified the method to predict an optimum algorithm setting group per laser shot.
+* Added additional land cover datasets related to phenology, urban infrastructure, and water persistence.
+* Added selected_mode_flag dataset to root beam group using selected algorithm.
+* Removed shots when the laser is not firing.
+* Modified file name to include segment number and dataset version.
+
+</Prose>
+</Block>
+
