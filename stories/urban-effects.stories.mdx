@@ -284,6 +284,23 @@ taxonomy:
 
   Here, you can see that Miami has had an increase in cloud coverage between 1500z and 2100z. This, in addition to the seabreeze has allowed for greater cloud coverage across the metropolitan area in Miami.
 
+  Insert Heat Fluxes for Houston
+
+  <Figure>
+    <Chart
+      dataPath={new URL('./miamiheat.csv', import.meta.url).href}
+      dateFormat="%Y-%m-%d"
+      idKey='source'
+      xKey='Date'
+      yKey='fluxdata'
+      yAxisLabel="Heat Flux (W m^-2)"
+    />
+    <Caption>
+      **Figure 5:** Monthly mean time series showing sensible and latent heat flux over Miami (NLDAS).
+    </Caption>
+  </Figure>
+
+
   </Chapter>
 </ScrollytellingBlock>
 
