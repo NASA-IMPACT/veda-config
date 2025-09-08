@@ -243,6 +243,22 @@ taxonomy:
     </Caption>
   </Figure>
 
+  Insert Heat Fluxes for Houston
+
+  <Figure>
+    <Chart
+      dataPath={new URL('./houstonheat.csv', import.meta.url).href}
+      dateFormat="%Y-%m-%d"
+      idKey='source'
+      xKey='Date'
+      yKey='fluxdata'
+      yAxisLabel="Dust Deposition (kg m^-2 s^-1)"
+    />
+    <Caption>
+    **Figure 4:** Monthly mean time series showing sensible and lantent heat over Houston. Data derived from NLDAS.
+    </Caption>
+  </Figure>
+
   Modeling studies using WRF with urban canopy schemes have been particularly effective at showing how detailed urban information (like building height and land use) improves predictions of temperature, wind, and rainfall in urban settings.
   
   </Chapter>
