@@ -67,6 +67,14 @@ taxonomy:
     To better understand how urbanization changes the atmosphere, scientists use tools like computer models and satellite data. In particular, numerical weather models such as the Weather Research and Forecasting (WRF) model can simulate how different urban characteristics, like surface type, building height, and energy use, affect local weather. These models often incorporate Urban Canopy Models (UCMs) to represent the influence of buildings and urban surfaces more realistically. Satellites such as the Geostationary Operational Environmental Satellite-16 (GOES-16) can be used in analyzing changes in cloud patterns as well. 
 
   </Prose>
+  <Figure>
+      <Image
+      src={new URL('./UrbanEffects_1.jpg', import.meta.url).href}
+      />
+    <Caption>
+      **Visual 1:** Visual showing how urbanized areas can affect wind flow and create clouds over cities. Credit Jennifer Geary.
+    </Caption>
+  </Figure>
 </Block>
 
 <Block>
@@ -168,14 +176,6 @@ taxonomy:
     </Caption>
   </Figure>
 
-  <Figure>
-      <Image
-      src={new URL('./HoustonJune2024.gif', import.meta.url).href}
-    />
-    <Caption attrAuthor='GEOSTATIONARY OPERATIONAL ENVIRONMENTAL SATELLITES—R SERIES' attrUrl='https://www.goes-r.gov/spacesegment/abi.html'>
-      **Animation 1:** GIF of Houston June 2024 cloud frequency.
-    </Caption>
-  </Figure>
   As for the circulation, WRF simulations for a summer day in June depicts rising motion along a seabreeze throughout the day moving inland. However, persistent convection (rising and sinking air) occurs around the Houston metro area, centered at about -95.36, as seen in Animation 2. This would suggest that there is an effect of the city that is forcing air to rise. This would explain the relative maximum in cloud formation over Houston seen in Animation 1. Figure 2 also shows horizontal wind. There is a notable decrease in wind where the Houston metro area is located, which would be caused by buildings and other structures slowing down the wind.
   
   <Figure>
@@ -235,11 +235,16 @@ taxonomy:
   Rainfall shows the transition throughout the day from over the ocean to the land. However unlike cloud formation or circulation, there doesn’t appear to be a significant affect due to the Houston metro area.
   
   <Figure>
-      <Image
-      src={new URL('./HoustonJune2024.gif', import.meta.url).href}
+    <Chart
+      dataPath={new URL('./Houstonrainfall.csv', import.meta.url).href}
+      dateFormat="%Y-%m-%d"
+      idKey='source'
+      xKey='Date'
+      yKey='Value'
+      yAxisLabel="Monthly average rainfall rate (mm/day)"
     />
-    <Caption attrAuthor='GEOSTATIONARY OPERATIONAL ENVIRONMENTAL SATELLITES—R SERIES' attrUrl='https://www.goes-r.gov/spacesegment/abi.html'>
-      **Animation 1:** GIF of Houston June 2024 cloud frequency.
+    <Caption>
+      **Figure 4:** Avergae trend for rainfall in Houston.
     </Caption>
   </Figure>
 
@@ -257,7 +262,7 @@ taxonomy:
       yAxisLabel="Heat Flux (W m^-2)"
     />
     <Caption>
-      **Figure 4:** Monthly mean time series showing sensible and latent heat flux over Houston (NLDAS).
+      **Figure 5:** Monthly mean time series showing sensible and latent heat flux over Houston (NLDAS).
     </Caption>
   </Figure>
 
@@ -277,14 +282,29 @@ taxonomy:
 
   <Figure>
       <Image
-      src={new URL('./HoustonJune2024.gif', import.meta.url).href}
+      src={new URL('./MiamiJuly2024.gif', import.meta.url).href}
     />
     <Caption attrAuthor='GEOSTATIONARY OPERATIONAL ENVIRONMENTAL SATELLITES—R SERIES' attrUrl='https://www.goes-r.gov/spacesegment/abi.html'>
-      **Animation 2:** GIF of Miami June 2024 cloud frequency.
+      **Animation 2:** GIF of Miami July 2024 cloud frequency.
     </Caption>
   </Figure>
 
   Here, you can see that Miami has had an increase in cloud coverage between 1500z and 2100z. This, in addition to the seabreeze has allowed for greater cloud coverage across the metropolitan area in Miami.
+
+  <Figure>
+    <Chart
+      dataPath={new URL('./Miamirainfall.csv', import.meta.url).href}
+      dateFormat="%Y-%m-%d"
+      idKey='source'
+      xKey='Date'
+      yKey='Value'
+      yAxisLabel="Monthly average rainfall rate (mm/day)"
+    />
+    <Caption>
+      **Figure 6:** Avergae trend for rainfall in Miami.
+    </Caption>
+  </Figure>
+
 
   Over Miami, sensible heat is increasing while latent heat is decreasing similarly to Houston. This implications do exist here, with the air getting warmer and a little drier. However, the rainfall trend over Miami shows a little to slightly increasing trend across the Miami metropolitan area.
 
