@@ -170,11 +170,11 @@ module.exports = {
     defaultIsOpen: false,
     contentId: 'gov-banner-content'
   },
-  // siteAlert: {
-  //   content: `[Discover insights on how the COVID-19 pandemic](stories/life-of-water) impacted air quality worldwide, observed through NASA's satellite data.`,
-  //   expires: '2026-08-03T12:00:00-04:00',
-  //   type: 'info',
-  //   slim: true,
-  //   showIcon: true
-  // },
+  siteAlert: {
+    content: `Due to the lapse in federal government funding, the U.S. Greenhouse Gas Center is not updating this website. We sincerely regret this inconvenience.`,
+    expires: '2026-08-03T12:00:00-04:00',
+    type: 'emergency',
+    slim: true,
+    showIcon: true
+  },
 };
