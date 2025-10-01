@@ -108,8 +108,9 @@ module.exports = {
         "Read the new story on using EMIT and AVIRIS-3 for monitoring large methane emission events.",
     tempBannerUrl:
       "stories/emit-and-aviris-3",
+        "Due to the lapse in federal government funding, the U.S. Greenhouse Gas Center is not updating this website. We sincerely regret this inconvenience.",
     tempBannerExpires:
-        "2024-07-03T12:00:00-04:00"
+        "2025-12-01T12:00:00-04:00"
   },
 
   theme: {
