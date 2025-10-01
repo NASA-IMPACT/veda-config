@@ -28,7 +28,7 @@ module.exports = {
     copy: "We use cookies to enhance your browsing experience and to help us understand how our website is used. These cookies allow us to collect data on site usage and improve our services based on your interactions. To learn more about it, see our [Privacy Policy](https://www.nasa.gov/privacy/#cookies).",
   },
   siteAlert: {
-    content: `TO BE REPLACED WITH GOVERNMENT SHUTDOWN TEXT`,
+    content: `Due to the lapse in federal government funding, NASA is not updating this website. We sincerely regret this inconvenience.`,
     expires: '2026-08-03T12:00:00-04:00',
     type: 'emergency',
     slim: true,
