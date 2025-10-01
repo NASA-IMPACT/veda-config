@@ -56,10 +56,10 @@ Get your Mapbox access token from Mapbox Dashboard. Put the key in `.env.local` 
 To preview the app use:
 
 ```
-yarn serve
+./.veda/veda serve
 ```
 
 This will start the app and make it available at <http://localhost:9000>.
 
-If the application is not working properly or erroring when it starts, try cleaning the cache with `yarn clean`.  
+If the application is not working properly or erroring when it starts, try cleaning the cache with `./.veda/veda clean`.  
 If the errors persist [open an issue](https://github.com/NASA-IMPACT/veda-config/issues/new) with the problem description.

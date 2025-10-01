@@ -1,0 +1,263 @@
+---
+id: 'ercot-sustainability'
+name: Preparing ERCOT for Weather Extremes in Texas
+description: Concerns of Sustainable Energy in the Lone Star State
+media:
+  src: ::file ./media/ercot/ercot-story-background.jpg
+  alt: Power transmission towers standing against a colorful Texas sunset.
+  author: 
+    name: Yelantsevv
+    url: https://stock.adobe.com/contributor/206006333/yelantsevv
+pubDate: 2025-06-11T00:00
+taxonomy:
+  - name: Topics
+    values:
+      - Sustainable Energy
+  - name: Subtopics
+    values:
+      - Cold
+      - Heat
+  - name: Source
+    values:
+      - Community Contributed
+---
+
+<Block style={{justifyContent: 'center', alignItems: 'center', margin: '0 auto', width: '80%' }}>
+  <Prose>
+    **Authors:** Andrew Blackford<sup>1</sup>\, Madison Wallner<sup>1</sup>\, Udaysankar Nair<sup>1</sup>
+   
+    <sup>1</sup> The University of Alabama in Huntsville (UAH)
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    ## Overview
+    Texas operates a largely independent power grid through the Electric Reliability Council of Texas (ERCOT), serving approximately 90% of the state’s electric load. This isolation, combined with limited cold and heat weatherization, makes the ERCOT grid uniquely vulnerable to extreme weather events. In recent years, Texans have experienced firsthand how both deep freezes and miserable heat waves can stress this grid to its limits. With an increasing population, understanding these dual threats are essential for building a more resilient energy future for the state. ERCOT has been tested by historical extremes that have made national headlines, including the 2021 winter storm and summer heatwaves in 2022-2024. Despite plenty of exposure to this problem, implementing better mitigation practices remains a priority to sustain the grid.
+  </Prose>
+
+  <Figure>
+    <Image
+      src={new URL('./media/ercot/ercot-map.jpg', import.meta.url).href}
+      alt='ERCOT Coverage vs CONUS'
+    />
+    <Caption>
+    **Figure 1.** A map showing the coverage of ERCOT in comparison to other interconnections across the Contiguous United States. Source: [ERCOT](https://www.ercot.com/news/mediakit/maps).
+    </Caption>
+  </Figure>
+</Block>
+
+<Block>
+  <Figure>
+    <Image
+      src={new URL('./media/ercot/ERCOT_Texas_Outages.jpg', import.meta.url).href}
+      alt='Maximum number of Texans without power'
+    />
+    <Caption>
+    **Figure 2.** Maximum number of customers per county enduring power outages as a result of the 2021 Texas Deep Freeze. Source: [EAGLE-I](https://smc-datachallenge.ornl.gov/eagle/).
+    </Caption>
+  </Figure>
+
+  <Prose>
+    ## February 2021 Deep Freeze
+    Between February 10 and 27, 2021, Texas experienced one of its most damaging weather events in recent history. Known as “The Great Texas Freeze,” a long-lasting winter storm brought freezing temperatures, snow, and ice that overwhelmed much of the state. All counties in Texas were placed under a Winter Storm Warning during the event — something rarely seen in a state better known for its extreme heat.
+  </Prose>
+</Block>
+
+
+<Block type='wide'>
+  <Figure>
+    <Chart
+      dataPath={new URL('./media/ercot/ERCOT_power_outages_Texas.csv', import.meta.url).href}
+      dateFormat="%m/%d/%Y %H:%M"
+      idKey='State'
+      xKey='Date'
+      yKey='Total_Power_Outages'
+      yAxisLabel='Maximum Power Outages Recorded Hourly'
+    />
+    <Caption>
+      **Figure 3.** Total hourly power outages across Texas before, during, and after the 2021 Deep Freeze. Source: [EAGLE-I](https://smc-datachallenge.ornl.gov/eagle/).
+    </Caption>
+  </Figure>
+</Block>
+
+<Block>
+  <Prose>
+    At the peak of the storm, hourly data showed that about 4.5 million customers were without power at the same time. However, this does not reflect the full impact. When looking at the maximum number of customers without power in each county over the course of the event, a total of 5.2 million unique customers were affected across the state, according to EAGLE-I data. Out of 14.9 million tracked customers, that means more than one-third experienced an outage at some point. ERCOT later reported that the grid came within four minutes and 37 seconds of total failure — an outcome that could have left parts of the state in the dark for weeks.
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+   The human toll was devastating. The state reported 246 deaths, but other analyses suggest the real number may have been as high as 702 — nearly three times the death toll from Hurricane Harvey. One way to see the scale of the blackout is through satellite data. NASA’s Black Marble imagery of Houston shows a major drop in nighttime artificial light emissions between February 10 and 16, reflecting how widespread and long-lasting the outages were in both urban and rural areas.
+  </Prose>
+
+  <Figure>
+   <Map
+    datasetId='nighttime-lights'
+    layerId='ercot-houston-nightlights-freeze'
+    dateTime='2021-02-10'
+    zoom={8.5}
+    center={[-95.3834, 29.8286]}
+    compareDateTime='2021-02-16'
+  />
+   <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+    **Figure 4.** Comparison of artificial light emissions in Houston, Texas before and during the 2021 Deep Freeze on February 10 and 16, 2021.
+   </Caption>
+  </Figure>
+</Block>
+
+<Block>
+  <Prose>
+    The freeze raised urgent questions about how energy systems in Texas are prepared for extreme cold. Natural gas pipelines, wind turbines, and power plants failed due to freezing conditions. Meanwhile, demand for energy soared. Natural gas prices across the U.S. spiked sharply in February 2021, reaching levels not seen in more than a decade.
+  </Prose>
+</Block>
+
+<Block type='wide'>
+  <Figure>
+    <Chart
+      dataPath={new URL('./media/ercot/Ercot_Gas_Prices.csv', import.meta.url).href}
+      dateFormat="%m/%d/%Y"
+      idKey='Source'
+      xKey='Date'
+      yKey='Price'
+      yAxisLabel='Cost of Natural Gas (USD)'
+      highlightStart = '12/01/2020'
+      highlightEnd = '04/30/2021'
+      highlightLabel = 'Deep Freeze'
+    />
+    <Caption>
+      **Figure 5.** Daily natural gas prices within the United States from 1997 to 2025 in U.S. Dollars. Source: [EIA](https://www.eia.gov/dnav/ng/hist/rngwhhdd.htm).
+    </Caption>
+  </Figure>
+</Block>
+
+<Block>
+  <Prose>
+   The 2021 storm showed how extreme cold can put serious stress on the electric grid. Equipment failures and fuel shortages during freezing conditions revealed gaps in how energy systems respond to winter weather. Preparing for future cold events will help reduce the risk of widespread outages and protect public safety when temperatures drop again.
+  </Prose>
+</Block>
+
+<Block>
+ <Figure> 
+  <Map
+    center={[-97.8728, 30.989]}
+    zoom={4}
+    datasetId='ercot-heatwave'
+    layerId='ERCOT-MODIS'
+    dateTime='2023-06-23'
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+    **Figure 6.** This interactive map displays MODIS Land Surface Temperatures for Texas on June 23, 2023 during the 2023 Heatwave.
+  </Caption>
+ </Figure>
+  
+  <Prose>
+    ## Recent Summer Heat Waves
+    From 2022 through 2024, Texas faced a series of intense summer heatwaves, with record-breaking temperatures across much of the state. Unlike winter events, where energy supply can be interrupted by freezing conditions, the main challenge during summer is extremely high demand. As temperatures soared, millions of homes and businesses increased their use of air conditioning, placing heavy stress on the state’s power generation and transmission systems.
+   </Prose>
+</Block>
+
+<Block>
+  <Prose>
+   On multiple days in 2023, ERCOT issued conservation alerts, asking Texans to reduce electricity use during peak afternoon hours to help prevent rolling blackouts. On June 23, 2023, MODIS satellite data recorded land surface temperatures exceeding 110°F across large portions of western Texas, highlighting the extreme conditions that drove energy use higher. That summer, ERCOT reported a record peak electricity demand of 85.51 gigawatts in August - the highest in state history at the time. Just one year later, that record was broken again, with demand reaching 85.56 gigawatts.
+  </Prose>
+</Block>
+
+<Block type='wide'>
+  <Figure>
+    <Chart
+      dataPath={new URL('./media/ercot/Ercot_Gas_Usage_2023.csv', import.meta.url).href}
+      dateFormat="%m/%d/%Y %H:%M"
+      idKey='Source'
+      xKey='Date'
+      yKey='Load'
+      yAxisLabel='ERCOT Natural Gas Consumption (Gigawatts)'
+    />
+    <Caption>
+      **Figure 7.** Hourly natural gas usage in gigawatts for the state of Texas during 2023. Source: [ERCOT](https://www.ercot.com/gridinfo/load/load_hist/index.html).
+    </Caption>
+  </Figure>
+</Block>
+
+<Block>
+  <Prose>
+   This spike in electricity use also led to a sharp rise in natural gas consumption, as shown in the ERCOT natural gas usage data. The hourly time series reveals how demand steadily increased through the summer months, peaking alongside the hottest weeks of the year. These heatwaves tested the limits of the ERCOT grid, reinforcing the need to prepare for prolonged periods of high demand during extreme heat.
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    ## Moving Forward: Building a Resilient Grid
+    The future of energy in Texas hinges on preparing for both cold and hot extremes. After the 2021 Deep Freeze, ERCOT and state regulators implemented limited reforms, including mandatory winterization of some infrastructure and increased communication protocols. However, experts argue that more still needs to be done.
+
+    Diversifying energy sources will be critical, especially by expanding battery storage, grid interconnectivity, and demand response systems. Enhanced real-time monitoring using satellite remote sensing and ground observations can also provide early warning for periods of peak stress. Further, integrating renewable energy like wind and solar with resilient backup systems can help balance supply and demand during volatile weather conditions. Without significant investment and modernization, the risk of future blackouts remains.
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    ## Conclusion
+    The events of recent years have highlighted the operational limits of the ERCOT grid under extreme weather conditions, continuing to direct the public’s attention to the importance of a reliable and flexible power infrastructure. Texas’ energy system must be equipped to handle peak demand, regardless of season, without risking large-scale blackouts or cascading failures. Advances in satellite remote sensing and ground observational monitoring, grid forecasting, and diversified energy strategies can support better decision-making and emergency response. By applying lessons from past disruptions and investing in resilient, forward-looking strategies, ERCOT can strengthen its ability to meet the future needs of Texas residents, industries, and communities.
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    ## References
+    ArcGIS StoryMaps. (2021). The Great Texas Freeze: A Timeline of the Winter Storm Crisis. https://storymaps.arcgis.com/stories/2f9f9fa4b8a44959bde679091a1ef43e.
+
+    Electric Reliability Council of Texas (ERCOT). (2023). ERCOT Monthly Operational Overview (August 2023). https://www.ercot.com/files/docs/2023/09/18/ERCOT-Monthly-Operational-Overview-August-2023.pdf.
+
+    Environment America. (2021). The Texas Freeze: Timeline of Events. https://environmentamerica.org/texas/center/articles/the-texas-freeze-timeline-of-events/.
+
+    Houston Chronicle. (2022). How Texas Leaders Let Winter Storm Uri Freeze the State’s Power Grid. https://www.houstonchronicle.com/politics/texas/article/How-Texas-leaders-let-winter-storm-freeze-state-16909408.php.
+    
+    Rajbhandari, A., Gurung, A., Li, H., & Mostafavi, A. (2021). Resilience of Energy Infrastructure and Services: Modeling, Data Analytics, and Metrics. Energy Research & Social Science, 80, 102232. https://doi.org/10.1016/j.erss.2021.102232.
+    
+    Reuters. (2024). Texas Power Demand Breaks Record During Heat Wave, Grid Operator Says. https://www.reuters.com/business/energy/texas-power-demand-set-break-record-during-heat-wave-grid-operator-says-2024-08-20/.
+    
+    Texas Division of Emergency Management (TDEM). (2021). Winter Storm Uri Disaster Resources. https://tdem.texas.gov/disasters/winter-storm-uri.
+
+    Utility Dive. (2024). ERCOT Successfully Navigates Heat Wave, New Peak Demand Record. https://www.utilitydive.com/news/ercot-successfully-navigates-heat-wave-new-peak-demand-record/725197/.
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    ### Data Access
+
+    * [EAGLE-I Poweroutage Dataset](https://smc-datachallenge.ornl.gov/eagle/)
+    * [MODIS LST and Emissivity](https://modis.gsfc.nasa.gov/data/dataprod/mod11.php)
+    * [NASA's HD Black Marble Nightlights](https://blackmarble.gsfc.nasa.gov/)
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+
+    **Editors**: Andrew Blackford, Madison Wallner, and Chelsea Aaron
+
+    **Developers**: Madison Wallner and Andrew Blackford
+
+    **Science and Content Contributors**: Andrew Blackford, Madison Wallner, Udaysankar Nair, and Brian Freitag
+
+    **Questions / Feedback**: Email veda@uah.edu 
+
+    ### Additional Resources
+
+    * [Texas Freeze Timeline](https://environmentamerica.org/texas/center/articles/the-texas-freeze-timeline-of-events/)
+    * [2021 Winter Storm - TDEM](https://tdem.texas.gov/disasters/winter-storm-uri)
+    * [Extreme Cold in Texas Storymap](https://storymaps.arcgis.com/stories/2f9f9fa4b8a44959bde679091a1ef43e)
+    * [Understanding the 2021 Winter Blackout in Texas](https://www.sciencedirect.com/science/article/pii/S2214629621001997)
+    * [Houston Chronicles](https://www.houstonchronicle.com/politics/texas/article/How-Texas-leaders-let-winter-storm-freeze-state-16909408.php)
+
+  </Prose>
+</Block>

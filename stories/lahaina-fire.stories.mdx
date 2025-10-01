@@ -3,17 +3,17 @@ id: lahaina-fire
 name: The Devastating August 8th, 2023 Lahaina, Hawai'i Wildfire
 description: "A Satellite-Based Overview of the Lahaina Wildfire"
 media:
-  src: ::file ./lahaina-fire-background.jpg
+  src: ::file ./media/lahaina-fire/lahaina-fire-background.jpg
   alt: Fire erupting over Lahaina, HI.
   author:
     name: Matthew Thayer/AP
     url: https://www.sfchronicle.com/travel/article/hawaii-fire-maui-lahaina-18289213.php
-pubDate: 2023-12-01
+pubDate: 2023-12-01T00:00
 taxonomy:
   - name: Topics
     values:
-      - Wildfire
       - Natural Disasters
+      - Wildfires
   - name: Source
     values:
       - Community Contributed
@@ -21,8 +21,9 @@ taxonomy:
 
 <Block>
   <Prose>
-    Authors: Andrew Blackford<sup>[1]</sup>, Trent Cowan<sup>[1]</sup>, Udaysankar Nair<sup>[1]</sup>\
-    <sup>[1]</sup> University of Alabama in Huntsville(UAH)
+    Authors: Andrew Blackford<sup>[1]</sup>, Trent Cowan<sup>[1]</sup>, Udaysankar Nair<sup>[1]</sup>
+    
+    <sup>[1]</sup> The University of Alabama in Huntsville (UAH)
 
     <mark>🚧 This Data Story presents work in progress and not peer-reviewed results! 🚧</mark>
     
@@ -42,7 +43,7 @@ taxonomy:
 <Block>
   <Figure>
     <Image
-      src={new URL('./lahaina-fire-drought-monitor.jpg', import.meta.url).href}
+      src={new URL('./media/lahaina-fire/lahaina-fire-drought-monitor.jpg', import.meta.url).href}
       alt='US Drought Monitor, August 8th, 2023.'
       align='left'
     />
@@ -84,7 +85,7 @@ taxonomy:
       center={[-156.68108, 20.88130]}
       zoom={12}
       datasetId='lahaina-fire'
-      layerId='hls-swir-falsecolor-composite'
+      layerId='swir-falsecolor-composite'
       dateTime='2023-08-08'
       compareDateTime='2023-08-13'
     />
@@ -102,18 +103,40 @@ taxonomy:
 
 <Block>
   <Prose>
-    ## Additional Resources
-    [HLS Landing Page](https://lpdaac.usgs.gov/data/get-started-data/collection-overview/missions/harmonized-landsat-sentinel-2-hls-overview/)
-    
+    ### References
     [PDC/FEMA report](https://www.mauicounty.gov/CivicAlerts.aspx?AID=12683)
     
     [Glossary of Meteorology on gap wind](https://glossary.ametsoc.org/wiki/Gap_wind)
 
     [List of Deadliest Wildfires](https://www.npr.org/2023/08/15/1193710165/maui-wildfires-deadliest-us-history)
 
-    [NASA's Fire Information for Resourse Management System (FIRMS)](https://www.earthdata.nasa.gov/learn/articles/firms-lfta-data)
+  </Prose>
+</Block>
 
-    [AI Aiding in Lahaina Fire Recovery](https://www.earthdata.nasa.gov/news/access-maui-fire-recovery)
+<Block>
+  <Prose>
+    ### Data Access
+
+    * [HLS Landing Page](https://lpdaac.usgs.gov/data/get-started-data/collection-overview/missions/harmonized-landsat-sentinel-2-hls-overview/)
+    * [NASA's Fire Information for Resourse Management System (FIRMS)](https://www.earthdata.nasa.gov/learn/articles/firms-lfta-data)
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+
+    **Editors**: Andrew Blackford, Trent Cowan, Derek Koehl, Jerika Chung, Brian Freitag, and Udaysankar Nair
+
+    **Developers**: Andrew Blackford and Trent Cowan
+
+    **Science and Content Contributors**: Andrew Blackford, Trent Cowan, Udaysankar Nair, and Brian Freitag
+
+    **Questions / Feedback**: Email Andrew.Blackford@uah.edu
+
+    ### Additional Resources
+
+    * [AI Aiding in Lahaina Fire Recovery](https://www.earthdata.nasa.gov/news/access-maui-fire-recovery)
 
   </Prose>
 </Block>

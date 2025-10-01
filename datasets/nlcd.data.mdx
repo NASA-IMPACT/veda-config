@@ -1,7 +1,7 @@
 ---
 id: nlcd-annual-conus
 name: 'National Land Cover Database LULC Classifications'
-description: "National Land Cover Database Land Use - Land Cover classifications for CONUS, 2001-2021 at 30 m resolution."
+description: "National Land Cover Database Land Use - Land Cover classifications for CONUS, 2001-2023 at 30 m resolution."
 
 media:
   src: ::file media/nlcd_land_cover_identification_2016_2019.thumbnail.jpg
@@ -13,27 +13,30 @@ taxonomy:
   - name: Topics
     values:
       - Agriculture
-      - Biomass
-      - Land Cover
+      - Biodiversity
+  - name: Subtopics
+    values:
+      - Habitat
+      - Land use
   - name: Source
     values:
       - MRLC
 layers:
   - id: nlcd-annual-conus
-    stacCol: nlcd-annual-conus
+    stacApiEndpoint: https://dev.ghg.center/api/stac/
+    tileApiEndpoint: https://dev.ghg.center/api/raster
+    stacCol: nlcd-annual-conus-v2
     name: NLCD Land Use - Land Cover Classification
-    type: raster
+    type: wms
     description: "30 meter LULC classification provided by the NLCD."
     initialDatetime: newest
     zoomExtent:
         - 0
         - 20
     sourceParams:
-        assets: landcover
-        bidx: [1]
-        nodata: 0
-        resampling: nearest
-        colormap_name: nlcd
+      layers: mrlc_Land-Cover_conus_year_data:Land-Cover_conus_year_data
+      version: 1.3.0
+      srs: EPSG:3857  
     legend:
       type: categorical
       min: "0"
@@ -65,7 +68,7 @@ layers:
         - color: "#D1BB82"
           label: "Shrub/Scrub"
         - color: "#EDECCD"
-          label : "Grassland/Herbaceous"
+          label: "Grassland/Herbaceous"
         - color: "#D0D181"
           label: "Sedge/Herbaceous"
         - color: "#A4CC51"
@@ -91,7 +94,7 @@ layers:
     info:
       source: MRLC
       spatialExtent: United States
-      temporalResolution: Bi- to Tri-Annual 
+      temporalResolution: Annual
       unit: N/A 
 
   - id: nlcd-new-urbanization
@@ -125,13 +128,11 @@ layers:
 <Block>
   <Prose>
   ## Dataset Details
-  - **Temporal Extent:** 2001-2021
-  - **Temporal Resolution:** Inconsistent (every 2-3 years)
+  - **Temporal Extent:** 2001-2023
+  - **Temporal Resolution:** Annual
   - **Spatial Extent:** CONUS
   - **Spatial Resolution:** 30 m
-  - **Data Units:** N/A
   - **Data Type:** Research
-  - **Data Latency:** N/A
   </Prose>
 <Figure>
   <Map
@@ -156,11 +157,11 @@ layers:
 
   ### About
 
-  The National Land Cover Database (NLCD) stands as a paramount dataset offering an in-depth overview of the land cover characteristics in the United States. Spearheaded by the Earth Resources Observation and Science (EROS) Center, this database is renewed every two to three years to provide updated and accurate data for the nation.
+  The National Land Cover Database (NLCD) stands as a paramount dataset offering an in-depth overview of the land cover characteristics in the United States. Spearheaded by the Earth Resources Observation and Science (EROS) Center, this database is renewed every year to provide updated and accurate data for the nation.
 
   This is a collective effort between the U.S. Geological Survey (USGS) and the Multi-Resolution Land Characteristics (MRLC) Consortium. The MRLC, composed of various federal agencies, has a rich legacy spanning over 30 years of generating consistent and pertinent land cover information on a national scale. The NLCD is a testament to their dedication and has emerged as one of the most frequently utilized geospatial datasets within the U.S., catering to an extensive audience ranging from scientists, land managers, city planners, to students.
 
-  As of its latest release, the NLCD showcases land cover data and related changes across nine specific epochs, starting from 2001 and culminating in 2021. These datasets are meticulously crafted, ensuring continuity and consistency with the past releases (from 2001-2019). This methodological consistency ensures that the datasets from the different epochs are directly comparable and well-suited for mult-temporal analyses.
+  As of its latest release, the NLCD showcases land cover data and related changes starting from 2001 and culminating in 2023. These datasets are meticulously crafted, ensuring continuity and consistency with the past releases. This methodological consistency ensures that the datasets from the different epochs are directly comparable and well-suited for mult-temporal analyses.
   
   </Prose>
 </Block>
@@ -214,6 +215,14 @@ layers:
 
   U.S. Geological Survey (USGS) & Multi-Resolution Land Characteristics (MRLC) Consortium. (2021). National Land Cover Database (NLCD) 2021: Conterminous U.S. Land Cover. Earth Resources Observation and Science (EROS) Center. Retrieved from https://www.mrlc.gov/data
   
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    ## Limitations of use
+
+    NASA data and products are freely available to federal, state, public, non-profit and commercial users. This information can be experimental- or research-grade data products and may not be appropriate for operational use. These NASA data products and services are intended to aid decision makers and enhance situational awareness, but these data are not guaranteed to be consistently available or routinely updated. Please cite the information according to the direction provided in the metadata.
   </Prose>
 </Block>
 

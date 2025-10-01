@@ -4,16 +4,20 @@ name: 'ERA5 Reanalysis (Select Events)'
 description: "ERA5 reanalysis data of surface temperature, wind, mean sea level pressure, and cloud fraction for two select blizzard events."
 
 media:
-  src: ::file media/blizzards-cover.png
-  alt: Near-blizzard conditions in Maria Stein, Ohio on December 23, 2022.
+  src: ::file ./media/CERES_NETFLUX_M_2006-07.jpeg
+  alt: Net radiation across the globe.
   author: 
-    name: Andrew Blackford
+    name: NASA Earth Observatory
 taxonomy:
   - name: Topics
     values:
-      - Climate
-      - Disasters
+      - Water Resources
+  - name: Subtopics
+    values:
+      - Water Cycle
       - Snow
+      - Weather
+      - Hydrology
   - name: Source
     values:
       - ECMWF
@@ -60,6 +64,12 @@ layers:
       spatialExtent: Global
       temporalResolution: 1950-1978; Inconsistent
       unit: Kelvin
+    media:
+      src: ::file media/blizzards-cover.png
+      alt: Near-blizzard conditions in Maria Stein, Ohio on December 23, 2022.
+      author: 
+        name: Andrew Blackford
+
   - id: blizzard-era5-10m-wind
     stacCol: blizzard-era5-10m-wind
     name: ERA5 10 Meter Wind
@@ -93,6 +103,12 @@ layers:
       spatialExtent: Global
       temporalResolution: 1950-1978; Inconsistent
       unit: m/s
+    media:
+      src: ::file media/blizzards-cover.png
+      alt: Near-blizzard conditions in Maria Stein, Ohio on December 23, 2022.
+      author: 
+        name: Andrew Blackford
+
   - id: blizzard-era5-cfrac
     stacCol: blizzard-era5-cfrac
     name: ERA5 Cloud Fraction
@@ -124,6 +140,12 @@ layers:
       spatialExtent: Global
       temporalResolution: 1950-1978; Inconsistent
       unit: fraction; 1 = 100% coverage
+    media:
+      src: ::file media/blizzards-cover.png
+      alt: Near-blizzard conditions in Maria Stein, Ohio on December 23, 2022.
+      author: 
+        name: Andrew Blackford
+
   - id: blizzard-era5-mslp
     stacCol: blizzard-era5-mslp
     name: ERA5 Mean Sea Level Pressure
@@ -159,6 +181,11 @@ layers:
       spatialExtent: Global
       temporalResolution: 1950-1978; Inconsistent
       unit: hPa
+    media:
+      src: ::file media/blizzards-cover.png
+      alt: Near-blizzard conditions in Maria Stein, Ohio on December 23, 2022.
+      author: 
+        name: Andrew Blackford
 ---
 <Block>
   <Prose>
@@ -169,7 +196,6 @@ layers:
   - **Spatial Resolution:** 0.25 degree
   - **Data Units:** Temperature - Kelvin; Wind - m/s; MSLP - hPa; Cloud Fraction - fraction 
   - **Data Type:** Research
-  - **Data Latency:** N/A
   </Prose>
 <Figure>
   <Map
@@ -190,30 +216,19 @@ layers:
 
 <Block>
   <Prose>
-
-  ### About
+  ## About
 
   ERA5 reanalysis, produced by the European Centre for Medium-Range Weather Forecasts (ECMWF), is a high-resolution global atmospheric dataset that provides historical climate and weather information from 1940 to the present. It combines observations from satellites, weather stations, and other sources with advanced numerical weather prediction models to generate a consistent, spatially complete representation of past atmospheric conditions. ERA5 offers hourly data at a 0.25 degree spatial resolution with multiple atmospheric variables, including temperature, wind speed, cloud coverage, and pressure, along with uncertainty estimates. It is widely used in climate research, meteorology, and environmental studies. 
   </Prose>
 </Block>
 
+
 <Block>
   <Prose>
   
-  ### Access the Data
+  ## Access the Data
 
   Visit ECMWF's [Climate Data Store](https://cds.climate.copernicus.eu/datasets?q=era5&kw=Variable+domain%3A+Atmosphere+%28surface%29&kw=Variable+domain%3A+Atmosphere+%28upper+air%29&kw=Variable+domain%3A+Atmosphere+%28upper+level%29&kw=Variable+domain%3A+Ocean+%28physics%29) to explore options for data access.
-
-  </Prose>
-</Block>
-
-<Block>
-  <Prose>
-  
-  ## Disclaimer
-
-  All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
-  
   </Prose>
 </Block>
 
@@ -226,15 +241,34 @@ layers:
   </Prose>
 </Block>
 
+
 <Block>
   <Prose>
   
   ## Data Stories Using This Dataset
   
   **<Link to={"/stories/blizzards"}>When Winter Rages</Link>**
-
   </Prose>
 </Block>
+
+
+<Block>
+  <Prose>
+    ## Limitations of use
+
+    NASA data and products are freely available to federal, state, public, non-profit and commercial users. This information can be experimental- or research-grade data products and may not be appropriate for operational use. These NASA data products and services are intended to aid decision makers and enhance situational awareness, but these data are not guaranteed to be consistently available or routinely updated. Please cite the information according to the direction provided in the metadata.
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+  ## Disclaimer
+
+  All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
+  </Prose>
+</Block>
+
 
 <Block>
   <Prose>
@@ -242,6 +276,5 @@ layers:
   ## License
   
   [Creative Commons Attribution 1.0 International](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC BY 1.0)
-
   </Prose>
 </Block>

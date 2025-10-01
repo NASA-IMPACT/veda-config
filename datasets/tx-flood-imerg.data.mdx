@@ -1,0 +1,62 @@
+---
+id: tx-flood-imerg
+name: 'IMERG Total Precipitation - 2025 Texas Flood'
+isHidden: true
+description: "Total accumulated precipitation from IMERG Final over July 1-7, 2025 to cover precipitation related to the remnants of Tropical Storm Barry in Texas."
+media:
+  src: ::file ../stories/media/tx-flood/tx-flood-background.jpg
+  alt: A search and rescue volunteer holds a T-shirt and backpack with the words Camp Mystic on them.
+  author:
+    name: Forrest McFarland
+    url: https://www.the-sun.com/news/14645258/texas-floods-camp-mystic-pictures-victims-missing/
+taxonomy:
+  - name: Topics
+    values:
+      - Disasters
+  - name: Source
+    values:
+      - GPM
+infoDescription: |
+  ::markdown
+    - **Temporal Extent:** July 1-7, 2025
+    - **Temporal Resolution:** 30 min
+    - **Spatial Extent:** Texas
+    - **Spatial Resolution:** 0.1 x 0.1 degree
+    - **Data Units:** inches
+    - **Data Type:** Research
+    - **Data Latency:** 30 min
+
+layers:
+  - id: tx-flood-imerg
+    stacCol: tx-flood-imerg
+    name: IMERG Total Precipitation - 2025 Texas Flood
+    type: raster
+    description: "Total accumulated precipitation from IMERG Final over July 1-7, 2025 to cover precipitation related to the remnants of Tropical Storm Barry in Texas."
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      colormap_name: nipy_spectral
+      resampling: bilinear
+      bidx: 1
+      rescale: 0,12
+    legend:
+      type: gradient
+      min: "0 in"
+      max: "12 in"
+      stops:
+          - "#000000"
+          - "#870098"
+          - "#0078dd"
+          - "#00aa88"
+          - "#00dc00"
+          - "#efed00"
+          - "#fe0000"
+          - "#cccccc"
+    info:
+        source: GPM
+        spatialExtent: Texas
+        temporalResolution: 30 min
+        unit: inches
+
+---

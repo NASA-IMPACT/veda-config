@@ -1,0 +1,154 @@
+---
+id: Tornado_Hail_2011
+isHidden: true
+name: 'NCEI Interpolated Hail Reports for the April 27th, 2011 Super Outbreak'
+description: "NCEI Storm Events Database Hail Reports that are Interpolated for the Super Outbreak of April 27th, 2011"
+media:
+  src: ::file ./media/tornado_2011_NDVI_Background.jpg
+  alt: Aerial View of Scope of 2011 Tuscaloosa Tornado Damage Path
+  author:
+    name: NWS BMX
+    url: https://www.weather.gov/bmx/event_04272011tuscbirm
+taxonomy:
+  - name: Topics
+    values:
+      - Natural Disasters
+  - name: Subtopics
+    values:
+      - Habitat
+      - Surface Meteorology
+  - name: Source
+    values:
+      - NCEI
+infoDescription: |
+  ::markdown
+  - **Temporal Extent:** April 27, 2011
+  - **Temporal Resolution:** Daily
+  - **Spatial Extent:** Northern and Central Alabama
+  - **Spatial Resolution:** N/A
+  - **Data Units:** Inches (In)
+  - **Data Type:** Research
+  - **Data Latency:** N/A 
+
+layers:
+  - id: Tornado_Hail_2011
+    stacCol: Tornado_Hail_2011
+    name: Interpolated NCEI Hail Size Reports for the Super Outbreak of April 27th, 2011
+    type: raster
+    description: "NCEI Storm Events Database Hail reports that are Interpolated for the Super Outbreak of April 27th, 2011"
+    initialDatetime: newest
+    zoomExtent:
+        - 0
+        - 20
+    sourceParams:
+      colormap_name: greens
+      rescale:
+        - 1
+        - 2.75
+    legend:
+      type: gradient
+      unit:
+        label: In
+      min: 1
+      max: 2.75
+      stops:
+       - "#f7fcf5"  # Very Pale Green
+       - "#c7e9c0"  # Light Mint Green
+       - "#74c476"  # Medium Green
+       - "#238b45"  # Dark Green
+       - "#00441b"  # Deep Forest Green
+    info:
+      source: UAH
+      spatialExtent: Northern and Central Alabama
+      temporalResolution: Daily
+      unit: Inches (In)
+
+---
+<Block>
+  <Prose>
+  ## Dataset Details
+  - **Temporal Extent:** April 27, 2011
+  - **Temporal Resolution:** Daily
+  - **Spatial Extent:** Northern and Central Alabama
+  - **Spatial Resolution:** N/A
+  - **Data Units:** Inches (In)
+  - **Data Type:** Research
+  - **Data Latency:** N/A
+  </Prose>
+  <Figure>
+  <Map
+    center={[-87, 33.8]}
+    zoom={6.8}
+    datasetId="Tornado_Hail_2011"
+    layerId="Tornado_Hail_2011"
+    dateTime='2011-04-27'
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+  NCEI Storm Events Database hail size reports that are interpolated for the Super Outbreak of April 27th, 2011 within Northern and Central Alabama.
+  </Caption>
+</Figure>
+</Block>
+
+<Block>
+  <Prose>
+
+  ### About
+
+  The National Centers for Environmental Information (NCEI) Storm Events Database is a comprehensive archive of severe weather reports across the United States, including wind gust data collected from various sources. This dataset compiles observations from the National Weather Service (NWS), trained storm spotters, and automated surface observing systems (ASOS), providing detailed records of wind events, including peak gust speeds, locations, and associated impacts.
+
+  By analyzing wind gust reports from the NCEI Storm Events Database, researchers can assess the spatial and temporal distribution of high-wind events, identify trends in extreme wind occurrences, and evaluate their impacts on infrastructure, transportation, and public safety. This dataset is particularly valuable for studying severe convective wind events, derechos, and other high-impact wind phenomena, helping to inform mitigation strategies and improve forecasting efforts.
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ### Access the Data
+
+  This dataset was interpolated from confirmed derecho reports from the [Storm Events Database](https://www.ncdc.noaa.gov/stormevents/), on May 12th, 2022.
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## Disclaimer
+
+  All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
+  
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+
+  ### Key Publications
+  
+  Li, J., Geiss, A., Feng, Z., Leung, L. R., Qian, Y., and Cui, W., 2024: A derecho climatology (2004–2021) in the United States based on machine learning identification of bow echoes. Earth Syst. Sci. Data Discuss., https://doi.org/10.5194/essd-2024-112.
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## Data Stories Using This Dataset
+  
+  **<Link to={"/stories/Tornadoes_2011_Vegetation"}>How the 2011 Tornadoes Transformed Alabama’s Vegetation</Link>**
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## License
+  
+  [Creative Commons Attribution 1.0 International](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC BY 1.0)
+
+  </Prose>
+</Block>

@@ -1,0 +1,190 @@
+---
+id: la-fires-maxar
+isHidden: true
+name: 'MAXAR Commercial Satellite Imagery - 2025 Eaton Fire'
+description: "Commercial MAXAR Satellite Imagery of the 2025 Eaton Fire while it was active on January 8, 2025."
+media:
+  src: ::file ./media/LA-Fires-background.png
+  alt: Planet Labs Commercial Satellite Imagery of the Eaton Fire (January 9, 2025).
+  author:
+    name: NASA CDSA - Planet Labs
+taxonomy:
+  - name: Topics
+    values:
+      - Wildfires
+  - name: Subtopics
+    values:
+      - Habitat
+      - Agriculture
+      - Natural Disasters
+  - name: Source
+    values:
+      - MAXAR Technologies
+infoDescription: |
+  ::markdown
+    - **Temporal Extent:** January 8, 2025
+    - **Temporal Resolution:** Inconsistent
+    - **Spatial Extent:** Local
+    - **Spatial Resolution:** 1 meter
+    - **Data Units:** N/A
+    - **Data Type:** Research
+    - **Data Latency:** N/A
+
+layers:
+  - id: la-fires-maxar
+    stacCol: la-fires-maxar
+    name: MAXAR False Color Satellite Imagery (2025 Eaton Fire) - © 2025 MAXAR
+    type: raster
+    description: 'Commercial MAXAR Satellite Imagery of the ongoing Eaton Fire in Los Angeles County, California on January 8, 2025.'
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      rescale:
+        - 0
+        - 500
+      resampling: bilinear
+      asset_bidx: cog_default|8,6,4
+    legend:
+      type: text
+    compare:
+      datasetId: la-fires-parcels
+      layerId: la-fires-parcels
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'dd LLL yyyy')} VS ${dateFns.format(compareDatetime, 'dd LLL yyyy')}`;
+        }
+    info:
+        source: MAXAR
+        spatialExtent: Local
+        temporalResolution: N/A
+        unit: Radiance
+
+---
+
+<Block>
+  <Prose>
+  ## Dataset Details
+    - **Temporal Extent:** January 8, 2025
+    - **Temporal Resolution:** Inconsistent
+    - **Spatial Extent:** Local
+    - **Spatial Resolution:** 1 meter
+    - **Data Units:** N/A
+    - **Data Type:** Research
+    - **Data Latency:** N/A
+  </Prose>
+<Figure>
+  <Map
+    datasetId='la-fires-maxar'
+    layerId='la-fires-maxar'
+    dateTime='2025-01-08'
+    zoom={15}
+    center={[-118.15241, 34.1986]}
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+    MAXAR satellite imagery of the Eaton Fire on January 8, 2025.
+  </Caption>
+</Figure>
+</Block>
+
+<Block>
+  <Prose>
+
+  ### About
+
+  MAXAR Technologies’ high-resolution 8-band satellite imagery provides critical multispectral remote sensing data used for disaster response, environmental monitoring, and infrastructure assessment. The dataset includes imagery captured by MAXAR’s WorldView and GeoEye satellites, offering spectral analysis across visible, near-infrared (NIR), and red-edge bands. These capabilities allow for advanced land cover classification, vegetation health monitoring, and damage assessments following disasters.
+
+  The imagery has a spatial resolution ranging from 30 cm to 1.2 meters, making it one of the most detailed commercially available satellite datasets. MAXAR’s revisit capabilities allow for frequent monitoring, providing valuable insights for rapid response efforts.
+
+  </Prose>
+</Block>
+
+<Block>
+  
+  <Prose>
+
+  ### What MAXAR Data Offers
+
+  * Ultra-High-Resolution Imagery: With resolutions between 30 cm and 1.2 meters, MAXAR imagery provides detailed views of the Earth's surface, enabling precise damage assessment and environmental monitoring.
+  * Multispectral Analysis: The 8-band spectral capabilities (Blue, Green, Red, NIR1, NIR2, Coastal Blue, Yellow, and Red Edge) support applications such as vegetation health assessment, water body analysis, and change detection.
+  * Frequent Revisit Times: MAXAR satellites provide near-daily revisits, supporting rapid disaster response and recovery monitoring.
+  * Disaster Response & Infrastructure Analysis: The high-resolution and spectral diversity facilitate assessments of urban areas, infrastructure damage, and land cover changes.
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ### Access the Data
+
+  Visit MAXAR’s [home page](https://www.maxar.com/) to explore data access options. 
+  
+  This data was made available through the NASA [Commercial Satellite Data Acquisition (CSDA) Program](https://earthdata.nasa.gov/about/csda/vendor-planet). You can access the CDSA data explorer [**HERE**](https://csdap.earthdata.nasa.gov).
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    
+  ### Citing this Dataset
+
+  Image © 2025 MAXAR Technologies. MAXAR SecureWatch: High-Resolution Satellite Imagery for Critical Analysis.
+  
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## Disclaimer
+
+  All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
+  
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+
+  ### Key Publications
+  
+  Montesano, P., Neigh, C., Macander, M., Caraballo-Vega, J., Frost, G., and G. Tamkin (2023). Producing a science-ready commercial data archive: a workflow for estimating surface reflectance for high resolution multispectral imagery. IGARSS 2023 - 2023 IEEE International Geoscience and Remote Sensing Symposium. https://doi.org/10.1109/IGARSS52108.2023.10281820 . 
+ 
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+
+  ### Other Publications
+  
+  Choi, M., Lyapustin, A., Wang, Y., Tucker, C., Khan, Ml, and F. Policelli (2024). Calibration of Maxar constellation over Libya-4 site using MAIAC technique. IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing. 17. https://doi.org/10.1109/JSTARS.2024.3367250 .
+  
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## Data Stories Using This Dataset
+  
+  **<Link to={"/stories/la-fires"}>Fanning the Flames</Link>**
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ## License
+  
+  [Creative Commons Attribution 1.0 International](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC BY 1.0)
+
+  </Prose>
+</Block>
+

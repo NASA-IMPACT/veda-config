@@ -4,29 +4,33 @@ name: A New NASA Model Brings Open Science to Target Water Quality Problems
 description: "NASA’s Earth observations and Models Can Inform Water Quality and Resource Protection Decisions"
 featured: true
 media:
-  src: ::file ./CONUS_Nitrate_07012018.png
+  src: ::file ./media/wq-models/CONUS_Nitrate_07012018.png
   alt: A map showing nitrate loads in the rivers of the United States on 07/01/2018
   author:
     name: NASA
     url: https://www.nasa.gov
-pubDate: 2023-03-01
+pubDate: 2023-03-01T00:00
 taxonomy:
   - name: Source
     values:
       - NASA EIS
   - name: Topics
     values:
+      - Water Resources
+  - name: Subtopics
+    values:
       - Water Quality
+
 ---
 
 <Block>
   <Prose>
-  <mark>This Discovery presents work in progress and not peer-reviewed results!</mark>
-  
-  
-  Join the discussion and provide comments on this Discovery at https://github.com/orgs/Earth-Information-System/discussions.
+    Authors: Adnan Rajib, Qianjin Zheng, Krutikkumar Patel, Sujay Kumar, Christopher Hain and Kim Locke 
+    
+    <mark>🚧 This Data Story presents work in progress and not peer-reviewed results! 🚧</mark>
+      
+    Join the discussion and provide comments on this [Data Story](https://github.com/orgs/Earth-Information-System/discussions).
 
-  Authors: Adnan Rajib, Qianjin Zheng, Krutikkumar Patel, Sujay Kumar, Christopher Hain and Kim Locke 
   </Prose>
 </Block>
 
@@ -48,7 +52,7 @@ taxonomy:
   </Prose>
   <Figure>
     <Image
-      src={new URL("./AlgalBlooms_LakeErie.jpg", import.meta.url).href}
+      src={new URL("./media/wq-models/AlgalBlooms_LakeErie.jpg", import.meta.url).href}
       alt="Image of hypoxic zone at the mouth of Mississippi river in Gulf of Mexico."
     />
     <Caption
@@ -64,7 +68,7 @@ taxonomy:
 <Block>
   <Figure>
     <Image
-      src={new URL("./Hypoxic_Mississippi.jpg", import.meta.url).href}
+      src={new URL("./media/wq-models/Hypoxic_Mississippi.jpg", import.meta.url).href}
       alt="Image of hypoxic zone at the mouth of Mississippi river in Gulf of Mexico."
     />
     <Caption
@@ -93,7 +97,7 @@ taxonomy:
   </Prose>
   <Figure>
     <Image
-      src={new URL("./dead_chum_salmon.jpeg", import.meta.url).href}
+      src={new URL("./media/wq-models/dead_chum_salmon.jpeg", import.meta.url).href}
       alt="Picture of a dead Alaska Salmon due to increasing temperatures."
     />
     <Caption
@@ -118,7 +122,7 @@ taxonomy:
 <Block type='wide'>
   <Figure>
     <Image
-      src={new URL("./USGS_WQSites.png", import.meta.url).href}
+      src={new URL("./media/wq-models/USGS_WQSites.png", import.meta.url).href}
       alt="Real Time USGS Nitrate Monitoring Stations"
     />
     <Caption
@@ -154,7 +158,7 @@ taxonomy:
   >
     <Figure>
       <Image
-        src={new URL("./WQ_TS1.png", import.meta.url).href}
+        src={new URL("./media/wq-models/WQ_TS1.png", import.meta.url).href}
         alt="Model performance at USGS Gage 05484000"
       />
       <Caption>
@@ -172,7 +176,7 @@ taxonomy:
   >
     <Figure>
       <Image
-        src={new URL("./WQ_TS2.png", import.meta.url).href}
+        src={new URL("./media/wq-models/WQ_TS2.png", import.meta.url).href}
         alt="Model performance at USGS Gage 03346500"
       />
       <Caption>
@@ -190,7 +194,7 @@ taxonomy:
   >
     <Figure>
       <Image
-        src={new URL("./WQ_TS3.png", import.meta.url).href}
+        src={new URL("./media/wq-models/WQ_TS3.png", import.meta.url).href}
         alt="Model performance at USGS Gage 03339000"
       />
       <Caption>
@@ -208,7 +212,7 @@ taxonomy:
   >
     <Figure>
       <Image
-        src={new URL("./WQ_TS4.png", import.meta.url).href}
+        src={new URL("./media/wq-models/WQ_TS4.png", import.meta.url).href}
         alt="Model performance at USGS Gage 06934500"
       />
       <Caption>
@@ -229,7 +233,7 @@ taxonomy:
   <Figure>
      <video style={{ width: '100%', aspectRatio: "16/9" }} controls>
       <source
-        src={new URL('./animated-no3-2018.mp4', import.meta.url).href} type="video/mp4"
+        src={new URL('./media/wq-models/animated-no3-2018.mp4', import.meta.url).href} type="video/mp4"
       />
       Your browser does not support the video tag.
     </video>
@@ -248,9 +252,9 @@ taxonomy:
 <Block type='wide'>
   <Figure>
     <CompareImage
-      leftImageSrc={new URL("./pre_flood.png", import.meta.url).href}
+      leftImageSrc={new URL("./media/wq-models/pre_flood.png", import.meta.url).href}
       leftImageAlt="Changes in nitrate loads before flooding in 2016"
-      rightImageSrc={new URL("./post_flood.png", import.meta.url).href}
+      rightImageSrc={new URL("./media/wq-models/post_flood.png", import.meta.url).href}
       rightImageAlt="Changes in nitrate loads after flooding in 2016"
     />
     <Caption>
@@ -267,7 +271,7 @@ taxonomy:
   </Prose>
   <Figure>
     <Image
-      src={new URL("./StreamTemp_WesternUS.png", import.meta.url).href}
+      src={new URL("./media/wq-models/StreamTemp_WesternUS.png", import.meta.url).href}
       alt="Stream Temperature Trends of the rivers of Western US"
     />
     <Caption>

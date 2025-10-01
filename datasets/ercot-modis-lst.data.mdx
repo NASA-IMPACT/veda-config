@@ -1,0 +1,143 @@
+---
+id: ercot-heatwave
+isHidden: true
+name: MODIS Land Surface Temperatures
+description: MODIS LST dataset for the 2023 heatwave in Texas on June 23, 2023.
+media:
+  src: ::file ./media/urban-heat.jpg
+  alt: Sunset over Tokyo
+  author:
+     name: Arto Marttinen
+     url: https://unsplash.com/photos/6xh7H5tWj9c
+taxonomy:
+  - name: Topics
+    values:
+      - Air Quality
+      - Sustainable Energy
+  - name: Subtopics
+    values:
+      - Heat
+      - Surface Meteorology
+  - name: Source
+    values:
+         - MODIS
+
+infoDescription: |
+  ::markdown
+     Terra MODIS has been instrumental in capturing LST data. This platform, orbiting Earth, scans our planet in multiple spectral bands, allowing for a detailed analysis of LST values. 
+layers:
+  - id: ERCOT-MODIS
+    stacCol: ERCOT-MODIS
+    name: Texas LST Day During the 2023 Heatwave
+    type: raster
+    description: "The Land Surface Temperature (LST) data is MODIS-derived daily data, measured at 1 km spatial resolution."
+    zoomExtent:
+      - 2
+      - 16
+    sourceParams:
+     colormap_name: surface_temperature    
+     nodata: 999
+     rescale:
+         - -30
+         - 110
+    legend:
+         type: gradient
+         unit:
+             label: Fahrenheit
+         min: -30
+         max: 110
+         stops: 
+            - "#3CCBCE"
+            - "#C5F8FF"   
+            - "#FEC5FF"   
+            - "#E079FB"   
+            - "#094FC9"   
+            - "#009FFF"   
+            - "#44E2FF"  
+            - "#147F4F"   
+            - "#79B32C"   
+            - "#FDFE00"   
+            - "#FF8700"   
+            - "#FF0F00"   
+            - "#9D0F2B"   
+            - "#4D0000"   
+            - "#BA2E6D" 
+    info:
+      source: NASA
+      spatialExtent: Texas
+      temporalResolution: Daily
+      unit: Fahrenheit
+
+---
+<Block>
+  <Prose>
+  ## Dataset Details
+  ##### Land Surface Temperature 
+  - **Temporal Extent:** 2000-Present
+  - **Temporal Resolution:** Daily
+  - **Spatial Extent:** Texas
+  - **Spatial Resolution:** 1 km
+  - **Data Units:** Fahrenheit (F) 
+  - **Data Type:** Research
+  - **Data Latency:** N/A
+  </Prose>
+</Block>
+
+<Block>
+  <Prose> 
+  ## Overview
+  During the extreme heatwaves from 2022 to 2024, satellite data from NASA’s Moderate Resolution Imaging Spectroradiometer (MODIS) helped reveal how hot the ground became in Texas. MODIS measures land surface temperature (LST), which shows how hot the surface of the Earth is—such as roads, rooftops, and soil—rather than the air temperature we normally feel. These measurements are taken twice a day from the Terra and Aqua satellites and have a resolution of about 1 kilometer, giving a detailed view of surface heating.
+ 
+  Looking at this LST data during each heatwave shows how much hotter the surface got compared to normal. It also helps identify where the heat was most intense and how long it lasted. This is especially useful in areas like West Texas, where ground weather stations are spread out. MODIS makes it possible to track and compare heatwave patterns over time and across different parts of the region, providing a clearer picture of how severe these heat events really were.
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  ## Data Acquisition
+
+  NASA’s Terra satellite has played a key role in collecting land surface temperature (LST) data. Orbiting Earth since 1999, Terra uses its MODIS instrument to scan the planet in several wavelengths of light, helping researchers measure how hot the ground gets across different regions. By comparing LST data from the 2000s and 2010s, scientists can see how surface temperatures have changed over time.
+
+  For example, in Texas, MODIS data makes it possible to detect long-term warming trends and analyze how land use or environmental conditions may be contributing to hotter surface temperatures. These comparisons show clear increases in heat at the surface during recent years, especially when viewed alongside short-term events like the 2022–2024 heatwaves.
+
+  Users can access MODIS data for anywhere across the globe [here](https://modis.gsfc.nasa.gov/data/), or click 'Explore Data' at the top of this page for a quick examination of the specific data used in this study.
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  ## Importance of Heat Stress Datasets
+  MODIS LST data is a powerful tool for tracking surface temperatures over time. It helps researchers understand how heat builds up and changes across different landscapes. During major heat events, like the ones from 2022 to 2024, this satellite data allows for clear comparisons of how severe the surface heating is and where it is most intense. With this information, scientists can better monitor extreme heat conditions and study how they develop across regions like Texas.
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  ## Disclaimer
+  All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  ## Key Publications
+
+  Wan, Z. (2014). New refinements and validation of the collection-6 MODIS land-surface temperature/emissivity product. *Remote Sensing of the Environment, 140*, 36-45. https://doi.org/10.1016/j.rse.2013.08.027
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  ## Data Stories Using This Dataset
+  **[Preparing ERCOT for Weather Extremes in Texas](https://www.earthdata.nasa.gov/dashboard/stories/ercot-sustainability)**
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  ## License
+  [Creative Commons Attribution 1.0 International](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC BY 1.0)
+
+  </Prose>
+</Block>

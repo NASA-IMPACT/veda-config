@@ -1,0 +1,68 @@
+// Scoped style overrides for the Fire Event Tool
+// Few instance-level CSS styles are interfering with the tool
+// so we need to override them here, to make sure the layout looks good
+
+.wildfire-explorer {
+  .range-slider {
+    background: none;
+  }
+
+  &__legend-item {
+    margin-right: 10px !important;
+  }
+
+  &__modal-description {
+    margin: 16px 0;
+    font-weight: 400;
+  }
+
+  &__modal-list {
+    font-weight: 400;
+  }
+
+  .usa-select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M12 5.83 15.17 9l1.41-1.41L12 3 7.41 7.59 8.83 9 12 5.83zm0 12.34L8.83 15l-1.41 1.41L12 21l4.59-4.59L15.17 15 12 18.17z'/%3E%3C/svg%3E");
+  }
+
+  .usa-checkbox__input:checked + [class*="__label"]:before,
+  .usa-checkbox__input:checked:disabled + [class*="__label"]:before,
+  .usa-checkbox__input:checked[aria-disabled="true"] + [class*="__label"]:before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='65' height='50' viewBox='0 0 65 50'%3E%3Ctitle%3Ecorrect8%3C/title%3E%3Cpath fill='%23FFF' fill-rule='evenodd' d='M63.268 7.063l-5.616-5.61C56.882.685 55.946.3 54.845.3s-2.038.385-2.808 1.155L24.951 28.552 12.81 16.385c-.77-.77-1.707-1.155-2.808-1.155-1.1 0-2.037.385-2.807 1.154l-5.616 5.61C.81 22.764.425 23.7.425 24.8s.385 2.035 1.155 2.805l14.947 14.93 5.616 5.61c.77.77 1.706 1.154 2.807 1.154s2.038-.384 2.808-1.154l5.616-5.61 29.894-29.86c.77-.77 1.157-1.707 1.157-2.805 0-1.101-.385-2.036-1.156-2.805l-.001-.002z'/%3E%3C/svg%3E");
+  }
+
+  .layer-switcher {
+    width: 175px;
+  }
+
+  .layer-switcher > div {
+    height: 22px;
+  }
+}
+
+.wildfire-explorer .range-slider {
+  background: none;
+}
+
+.wildfire-explorer__legend-item {
+  margin-right: 10px !important;
+}
+
+.wildfire-explorer__modal-description,
+.wildfire-explorer__modal-list {
+  margin: 16px 0;
+  font-weight: 400;
+}
+
+.wildfire-explorer__modal-content h2:first-of-type {
+  margin-top: 24px;
+}
+
+.wildfire-explorer__modal-content h3 {
+  margin-top: 16px;
+}
+
+.wildfire-explorer,
+.wildfire-explorer *,
+.wildfire-explorer__modal-main * {
+  font-family: "Public Sans", sans-serif !important;
+}

@@ -3,17 +3,19 @@ id: darnah-flood
 name: The Deadliest Flood of the 21st Century
 description: "An Overview of the September 11, 2023 Darnah, Libya Flood"
 media:
-  src: ::file ./darnah-flood-background.jpg
+  src: ::file ./media/darnah-flood/darnah-flood-background.jpg
   alt: Aerial view over the Wadi Darnah River post-flood in Derna, Libya on September 14, 2023.
   author:
     name: Marwan Alfaituri (Reuters)
     url: https://abcnews.go.com/International/casualties-libya-floods-avoided-world-meteorological-organization-chief/story?id=103200104
-pubDate: 2024-07-22
+pubDate: 2024-07-22T00:00
 taxonomy:
   - name: Topics
     values:
-      - Floods
       - Natural Disasters
+  - name: Subtopics
+    values:
+      - Floods
   - name: Source
     values:
       - Community Contributed
@@ -35,7 +37,7 @@ taxonomy:
 
   <Figure>
     <Image
-      src={new URL('./darnah-flood-extent.jpg', import.meta.url).href}
+      src={new URL('./media/darnah-flood/darnah-flood-extent.jpg', import.meta.url).href}
       alt='Estimated extent of floodwaters over Darnah, Libya.'
       align='left'
     />
@@ -60,7 +62,7 @@ taxonomy:
 
   <Figure>
     <Image
-      src={new URL('./darnah-daniel-satellite.jpg', import.meta.url).href}
+      src={new URL('./media/darnah-flood/darnah-daniel-satellite.jpg', import.meta.url).href}
       alt='Medicane Daniel VIIRS imagery, 9 September 2023.'
       align='left'
     />
@@ -225,7 +227,7 @@ taxonomy:
   <Figure>
     <Map
       center={[22.6408, 32.7616]}
-      zoom={12}
+      zoom={11}
       datasetId='darnah-flood'
       layerId='darnah-flood'
       dateTime='2023-09-07'
@@ -257,7 +259,7 @@ taxonomy:
 
   <Figure>
     <Image
-      src={new URL('./darnah-building-footprint.jpg', import.meta.url).href}
+      src={new URL('./media/darnah-flood/darnah-building-footprint.jpg', import.meta.url).href}
       alt='Google OpenBuildings Footprint over Darnah, Libya.'
       align='left'
     />

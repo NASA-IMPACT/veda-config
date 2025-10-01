@@ -20,7 +20,10 @@ taxonomy:
   - name: Topics
     values:
       - Air Quality
-      - COVID 19
+      - Greenhouse Gases
+  - name: Subtopics
+    values:
+      - COVID-19
 infoDescription: |
   ::markdown
     OMI, which launched in 2004, preceded TROPOMI, which launched in 2017. While TROPOMI provides higher resolution information, the longer OMI data record provides context for the TROPOMI observations.
@@ -134,7 +137,14 @@ layers:
 
 ---
 
-<Block type='full'>
+<Block>
+  <Prose>   
+    ## Dataset Details
+    - **Temporal Extent:** January 2016 - September 2023<br />
+    - **Spatial Extent:** Global<br />
+    - **Spatial Resolution:** 10 km<br />
+    - **Data Type:** Research<br />
+  </Prose>
   <Figure>
     <CompareImage
       leftImageSrc={new URL('./media/no2_east_coast_mar_avg.jpg', import.meta.url).href}
@@ -145,16 +155,23 @@ layers:
       rightImageLabel='March 2020'
     />
   </Figure>
-<Prose>
-Nitrogen dioxide (NO2) is a common air pollutant primarily emitted from the burning of fossil fuels in cars and power plants. Lower to the ground, nitrogen dioxide can directly irritate the lungs and contributes to the production of particulate pollution and smog when it reacts with sunlight.
-
-During the COVID-19 pandemic, scientists have observed considerable decreases in nitrogen dioxide levels around the world. These decreases are predominantly associated with changing human behavior in response to the spread of COVID-19. As communities worldwide have implemented lockdown restrictions in an attempt to stem the spread of the virus, the reduction in human transportation activity has resulted in less NO2 being emitted into the atmosphere.
-
-These changes are particularly apparent over large urban areas and economic corridors, which typically have high levels of automobile traffic, airline flights, and other related activity.
-
-NASA has observed subsequent rebounds in nitrogen dioxide levels as the lockdown restrictions ease.
-</Prose>
 </Block>
+
+
+
+<Block>
+  <Prose>
+  ## About
+  Nitrogen dioxide (NO2) is a common air pollutant primarily emitted from the burning of fossil fuels in cars and power plants. Lower to the ground, nitrogen dioxide can directly irritate the lungs and contributes to the production of particulate pollution and smog when it reacts with sunlight.
+
+  During the COVID-19 pandemic, scientists have observed considerable decreases in nitrogen dioxide levels around the world. These decreases are predominantly associated with changing human behavior in response to the spread of COVID-19. As communities worldwide have implemented lockdown restrictions in an attempt to stem the spread of the virus, the reduction in human transportation activity has resulted in less NO2 being emitted into the atmosphere.
+
+  These changes are particularly apparent over large urban areas and economic corridors, which typically have high levels of automobile traffic, airline flights, and other related activity.
+
+  NASA has observed subsequent rebounds in nitrogen dioxide levels as the lockdown restrictions ease.
+  </Prose>
+</Block>
+
 <Block type='wide'>
 <Prose>
 ## Scientific research
@@ -190,6 +207,45 @@ Because nitrogen dioxide is primarily emitted from burning fossil fuels, changes
 Interpreting satellite NO2 data must be done carefully, as the quantity observed by satellite is not exactly the same as the abundance at ground level, and natural variations in weather (e.g., temperature, wind speed, solar intensity) influence the amount of NO2 in the atmosphere. In addition, the OMI and TROPOMI instruments cannot observe the NO2 abundance underneath clouds. For more information on processing and cautions related to interpreting this data, please click [here](https://airquality.gsfc.nasa.gov/caution-interpretation).
 </Prose>
 </Block>
+
+
+
+<Block>
+  <Prose>
+  
+  ## Data Stories Using This Dataset
+  
+  **<Link to={"/stories/air-quality-and-covid-19"}>Air Quality and COVID-19</Link>**
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+    ## Limitations of use
+
+    NASA data and products are freely available to federal, state, public, non-profit and commercial users. This information can be experimental- or research-grade data products and may not be appropriate for operational use. These NASA data products and services are intended to aid decision makers and enhance situational awareness, but these data are not guaranteed to be consistently available or routinely updated. Please cite the information according to the direction provided in the metadata.
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+  ## Disclaimer
+
+  All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+    ## License
+
+    [Creative Commons Zero v1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC0 1.0)
+  </Prose>
+</Block>
+
 
 <Block>
 <Prose>

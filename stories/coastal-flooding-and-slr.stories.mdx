@@ -2,37 +2,51 @@
 id: 'eis-coastal-risks'
 name: Unraveling the components of coastal risk
 description: 'NASA measurements and models shed light on present and future coastal risks'
-featured: true
 media:
-  src: ::file ./coastal-flooding-and-slr-cover.jpg
+  src: ::file ./media/coastal-flooding-and-slr/coastal-flooding-and-slr-cover.jpg
   alt: Flooding in York, UK - February 2020.
   author:
     name: Don Lodge
     url: https://unsplash.com/photos/P8PuYidUYMw
-pubDate: 2022-11-15
+pubDate: 2022-11-15T00:00
 taxonomy:
   - name: Topics
     values:
+      - Sea Level Change
+      - Water Resources 
+  - name: Subtopics
+    values:
       - Coastal Risk
-      - Sea Level Rise
-      - Water Cycle
-      - Groundwater
       - Glaciers
+      - Groundwater
       - Land Use
+      - Water Cycle
+      
   - name: Source
     values:
       - NASA EIS
 ---
 <Block>
   <Prose>
+  **Authors:** 
+
+  Augusto Getirana, Wanshu Nie, Nishan Biswas, Kim Locke, Sujay Kumar, Denis Felikson
+
+  **Disclaimer:** 
+
+  <mark>🚧 This Data Story presents work in progress and not peer-reviewed results! 🚧</mark>
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
   ## Introduction
-  <mark>🚧 This Discovery presents work in progress and not peer-reviewed results! 🚧</mark>
 
   Climate change poses unique risks to coastal areas around the world. Many factors contribute to coastal risk including (1) changes in the water cycle, (2) changes to the landscape, including the gain or loss of coastal land and vertical land motion, and (3) changes to sea level. This Discovery presents these components and shows how NASA data and models can be used to measure and study these processes. The purpose of this Discovery is to serve as a starting point for further exploration for researchers.
 
   Join the discussion and provide comments on this Discovery in [EIS GitHub Discussions](https://github.com/orgs/Earth-Information-System/discussions/5).
 
-  <u>Authors:</u> [Augusto Getirana](mailto:augusto.getirana@nasa.gov), Wanshu Nie, Nishan Biswas, Kim Locke, Sujay Kumar, Denis Felikson
   </Prose>
 </Block>
 
@@ -87,7 +101,7 @@ taxonomy:
   </Prose>
   <Figure>
     <Chart
-      dataPath={new URL('./TWS_time_series.csv', import.meta.url).href}
+      dataPath={new URL('./media/coastal-flooding-and-slr/TWS_time_series.csv', import.meta.url).href}
       dateFormat="%b-%Y"
       idKey='type'
       xKey='date'
@@ -109,7 +123,7 @@ taxonomy:
   </Prose>
   <Figure>
     <Chart
-      dataPath={new URL('./groundwater_time_series.csv', import.meta.url).href}
+      dataPath={new URL('./media/coastal-flooding-and-slr/groundwater_time_series.csv', import.meta.url).href}
       dateFormat="%b-%y"
       idKey='type'
       xKey='date'
@@ -159,7 +173,7 @@ taxonomy:
   </Prose>
   <Figure>
     <Chart
-      dataPath={new URL('./coastal_land_loss_time_series.csv', import.meta.url).href}
+      dataPath={new URL('./media/coastal-flooding-and-slr/coastal_land_loss_time_series.csv', import.meta.url).href}
       dateFormat="%Y"
       idKey='type'
       xKey='year'
@@ -204,7 +218,7 @@ taxonomy:
   </Prose>
   <Figure>
     <Chart
-      dataPath={new URL('./ecco_ssh.csv', import.meta.url).href}
+      dataPath={new URL('./media/coastal-flooding-and-slr/ecco_ssh.csv', import.meta.url).href}
       dateFormat="%m/%Y"
       idKey='source'
       xKey='date'

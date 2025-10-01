@@ -1,0 +1,55 @@
+---
+id: landslides-inventory
+name: 'USGS Landslides Inventory - Hurricane Helene'
+isHidden: true
+description: "Locations of confirmed landslides per the USGS that occurred as a result of Hurricane Helene."
+media:
+  src: ::file ../stories/media/landslides-helene/landslides-background.png
+  alt: Landslide closes I-40 in western North Carolina.
+  author:
+    name: CNN Newsource
+taxonomy:
+  - name: Topics
+    values:
+      - Disasters
+      - Tropical
+  - name: Source
+    values:
+      - USGS
+infoDescription: |
+  ::markdown
+    - **Temporal Extent:** September 29, 2024
+    - **Temporal Resolution:** N/A
+    - **Spatial Extent:** Southern Appalachia
+    - **Spatial Resolution:** 1 km
+    - **Data Units:** N/A
+    - **Data Type:** Research
+    - **Data Latency:** N/A
+
+layers:
+  - id: landslides-inventory
+    stacCol: landslides-inventory
+    name: USGS Landslides Inventory - Hurricane Helene
+    type: raster
+    description: "Locations of confirmed landslides per the USGS that occurred as a result of Hurricane Helene."
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      colormap: '{"1":[75,128,140,255],"2":[206,210,211,255],"3":[206,210,211,255],"4":[202,34,84,255],"5":[0,173,255,255],"6":[206,210,211,255],"7":[195,139,105,255]}'
+      resampling: bilinear
+
+    legend:
+      type: categorical
+      stops:
+        - color: "#4B7F8C"
+          label: Road
+        - color: "#CA2254"
+          label: Building
+        - color: "#00ADFF"
+          label: River
+        - color: "#CED2D3"
+          label: Other
+        - color: "#C38B69"
+          label: None
+---

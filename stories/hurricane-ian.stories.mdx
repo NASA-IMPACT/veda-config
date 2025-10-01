@@ -3,12 +3,12 @@ id: hurricane-ian
 name: Hurricane Ian and Impacts on Vegetation
 description: "A in-depth look on how hurricane Ian impacted vegetation on Sanibel Island near Fort Myers."
 media:
-  src: ::file ./ian_goes_cover.jpg
+  src: ::file ./media/hurricane-ian/ian_goes_cover.jpg
   alt: Hurricane Ian as seen from space as it makes landfall with the state of Florida. NASA Earth Observatory image.
   author: 
     name: Joshua Stevens, using GOES 16 imagery courtesy of NOAA and the National Environmental Satellite, Data, and Information Service (NESDIS)
     url: https://visibleearth.nasa.gov/images/150408/hurricane-ian-reaches-florida 
-pubDate: 2024-07-22
+pubDate: 2024-07-22T00:00
 taxonomy:
   - name: Topics
     values:
@@ -54,7 +54,7 @@ taxonomy:
   </Prose>
   <Figure>
       <Image
-      src={new URL('./comp_surge_track_figure.jpg', import.meta.url).href}
+      src={new URL('./media/hurricane-ian/comp_surge_track_figure.jpg', import.meta.url).href}
     />
     <Caption attrAuthor='National Hurricane Center' attrUrl='https://www.nhc.noaa.gov/data/tcr/AL092022_Ian.pdf'>
       Figure 1: National Hurricane Center analysis of the storm surge from Hurricane Ian. Black line indicates Ian’s path. Red/magenta colors indicate areas of highest storm surge. Credit: National Hurricane Center. 
@@ -65,8 +65,8 @@ taxonomy:
 <Block>
   <Figure>
     <Map
-      datasetId='hls-ndvi-ian'
-      layerId='hls-ndvi'
+      datasetId='hls_events'
+      layerId='ndvi'
       dateTime='2022-09-05'
       zoom={10}
       center={[-82.1476,26.5101]}
@@ -92,7 +92,7 @@ taxonomy:
 <Block>
   <Figure>
     <Map
-      datasetId='hls-ndvi-ian'
+      datasetId='hls_events'
       layerId='ndvi_difference'
       dateTime='2022-09-30'
       zoom={10}
@@ -120,8 +120,8 @@ taxonomy:
   </Prose>
   <Figure>
     <Map
-      datasetId='hls-entropy-difference'
-      layerId='hls-entropy-difference'
+      datasetId='hls_events'
+      layerId='entropy-difference'
       dateTime='2022-09-30'
       zoom={11}
       center={[-82.0976,26.5101]}
@@ -168,8 +168,8 @@ taxonomy:
   <Chapter
     center={[-82.03655, 26.45382]}
     zoom={14}
-      datasetId='hls-ndvi-ian'
-      layerId='ndvi_difference'
+    datasetId='hls_events'
+    layerId='ndvi_difference'
     datetime='2022-09-30'
   >
     ## Damage on the Sanibel Causeway
@@ -178,7 +178,7 @@ taxonomy:
 
     <Figure>
       <Image
-      src={new URL('./comp_sanibel_causeway.jpg', import.meta.url).href}
+      src={new URL('./media/hurricane-ian/comp_sanibel_causeway.jpg', import.meta.url).href}
     />
     <Caption attrAuthor='https://abc7.com/hurricane-ian-photos-storm-damage-sanibel-causeway-pictures-of-florida-after/12279883/'>
       Damage to the Sanibel Causeway. Credit to the Wilfredo Lee - Associated Press.
@@ -188,8 +188,8 @@ taxonomy:
   <Chapter
     center={[-81.95095, 26.45126]}
     zoom={14}
-      datasetId='hls-ndvi-ian'
-      layerId='ndvi_difference'
+    datasetId='hls_events'
+    layerId='ndvi_difference'
     datetime='2022-09-30'
   >
     ## Fort Myers Beach
@@ -198,7 +198,7 @@ taxonomy:
 
     <Figure>
       <Image
-      src={new URL('./comp_fort_meyers_dmg.jpg', import.meta.url).href}
+      src={new URL('./media/hurricane-ian/comp_fort_meyers_dmg.jpg', import.meta.url).href}
     />
     <Caption attrAuthor='https://www.pbs.org/newshour/nation/watch-live-desantis-holds-press-conference-amid-rescue-efforts-after-ian'>
     Damage to a portion of Fort Myers Beach. Credit to Kevin Fogarty - REUTERS. 
@@ -208,8 +208,8 @@ taxonomy:
   <Chapter
     center={[-82.17453, 26.44751]}
     zoom={12}
-      datasetId='hls-ndvi-ian'
-      layerId='ndvi_difference'
+    datasetId='hls_events'
+    layerId='ndvi_difference'
     datetime='2022-09-30'
   >
     ## Sanibel Island
@@ -218,7 +218,7 @@ taxonomy:
 
     <Figure>
       <Image
-      src={new URL('./comp_damage_sanibel.jpg', import.meta.url).href}
+      src={new URL('./media/hurricane-ian/comp_damage_sanibel.jpg', import.meta.url).href}
     />
     <Caption attrAuthor='https://abc7ny.com/hurricane-ian-photos-storm-damage-sanibel-causeway-pictures-of-florida-after/12279883/'>
     Damage to a portion of Sanibel Island. Credit to Wilfredo Lee - Associated Press. 

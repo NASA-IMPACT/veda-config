@@ -3,25 +3,25 @@ id: 'changing-landscapes'
 name: Changing landscapes
 description: "COVID-19 related restrictions impacted the way people travelled, and as a result the ways in which we interact with the human-made and natural environments have changed"
 media:
-  src: ::file ./changing-landscapes--cover.jpg
+  src: ::file ./media/changing-landscapes/changing-landscapes--cover.jpg
   alt: Aerial view of highway intersections
   author:
     name: Jared Murray
     url: https://unsplash.com/photos/NSuufgf-BME
-pubDate: 2020-12-01
+pubDate: 2020-12-01T00:00
 taxonomy:
   - name: Topics
     values:
-      - Covid 19
+      - Sustainable Energy
 ---
 
 <Block>
   <Prose>
-    Throughout the COVID-19 pandemic, governments have implemented, eased, and re-implemented restrictions limiting mobility and international travel to help slow the spread of the novel coronavirus. As a result, people have largely stayed home, and the ways in which we interact with the human-made and natural environments have changed. These changes have reverberated throughout Earth's systems and are observed in different ways by NASA satellites.
+    Throughout the COVID-19 pandemic, governments implemented, eased, and re-implemented restrictions limiting mobility and international travel to help slow the spread of the novel coronavirus. As a result, people largely stayed home, and the ways in which we interacted with the human-made and natural environments have changed. These changes have reverberated throughout Earth's systems and are observed in different ways by NASA satellites.
   </Prose>
 </Block>
 
-<Block type='wide'>
+<Block>
   <Prose>
     ## A dimmer world during the pandemic
 
@@ -31,9 +31,7 @@ taxonomy:
     
     From January through February 2020, nighttime lights in the central commercial district of Wuhan dimmed as people stayed home instead of shopping or socializing. Even highways, represented by the bright lines in the satellite imagery, darkened with less activity during shutdown periods.
   </Prose>
-</Block>
 
-<Block type='full'>
   <Figure>
     <Map
       datasetId='nighttime-lights'
@@ -55,7 +53,7 @@ taxonomy:
 <Block type='full'>
   <Figure>
       <Image
-        src={new URL('./changes-parking-lot.png', import.meta.url).href}
+        src={new URL('./media/changing-landscapes/changes-parking-lot.png', import.meta.url).href}
         alt='Satellite view of Los Angeles with blue patches indicating reduced car activity'
       />
     <Caption >
@@ -83,7 +81,7 @@ taxonomy:
   </Prose>
   <Figure>
       <Image
-        src={new URL('./changes-ports.png', import.meta.url).href}
+        src={new URL('./media/changing-landscapes/changes-ports.png', import.meta.url).href}
         alt='Satellite of Long Beach harbour with ships outlined by Machine Learning detection'
       />
     <Caption >
@@ -95,7 +93,7 @@ taxonomy:
 <Block type='full'>
   <Figure>
       <Image
-        src={new URL('./changes-heat.png', import.meta.url).href}
+        src={new URL('./media/changing-landscapes/changes-heat.png', import.meta.url).href}
         alt='Satellite of Oakland Airport with blue patches indicating reduced car activity'
       />
     <Caption >
@@ -122,10 +120,10 @@ taxonomy:
 <Block type='wide'>
   <Figure>
     <CompareImage 
-      leftImageSrc={new URL('./changes-surf-temp-2018-04.png', import.meta.url).href}
+      leftImageSrc={new URL('./media/changing-landscapes/changes-surf-temp-2018-04.png', import.meta.url).href}
       leftImageAlt='Satellite view of the bay area indicating surface temperature in April 2018'
       leftImageLabel='April 2018'
-      rightImageSrc={new URL('./changes-surf-temp-2020-04.png', import.meta.url).href}
+      rightImageSrc={new URL('./media/changing-landscapes/changes-surf-temp-2020-04.png', import.meta.url).href}
       rightImageAlt='Satellite view of the bay area indicating surface temperature in April 2020'
       rightImageLabel='April 2020'
     />
@@ -152,7 +150,7 @@ taxonomy:
 <Block type='wide'>
   <Figure>
       <Image
-        src={new URL('./changes-fires.png', import.meta.url).href}
+        src={new URL('./media/changing-landscapes/changes-fires.png', import.meta.url).href}
         alt='Multi map composition of the US dated from March 2020 to August 2020 showing change in active fires.'
       />
     <Caption >
@@ -165,7 +163,7 @@ taxonomy:
 
 <Block>
   <Prose>
-  ## What have we learned and what opportunities are there for this research in the future?
+  ## What have we learned?
 
   How we interact with the environment has a noticeable effect on the land, air, and water. Scientists will continue to monitor the social and environmental changes associated with the pandemic, which provides a unique opportunity to characterize and study the effect we have on our planet.
   </Prose>

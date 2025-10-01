@@ -1,14 +1,15 @@
 ---
 id: '2024-tornadoes'
+featured: true
 name: The Hyperactive Spring 2024 Tornado Season
 description: "A detailed overview of the historic season."
 media:
-  src: ::file ./tornado-2024-cover.png
+  src: ::file ./media/tornadoes2024/tornado-2024-cover.png
   alt: Wedge tornado passing southeast of Wapakoneta, Ohio on March 14, 2024.
   author:
     name: Jonny Glessner
     url: https://x.com/JonnyGlessner/status/1768424574855610777/photo/4
-pubDate: 2024-12-09
+pubDate: 2024-12-09T00:00
 taxonomy:
   - name: Topics
     values:
@@ -104,7 +105,7 @@ taxonomy:
 
   <Figure>
     <Chart
-      dataPath={new URL('./tornadoes-2024-spc-counts.csv', import.meta.url).href}
+      dataPath={new URL('./media/tornadoes2024/tornadoes-2024-spc-counts.csv', import.meta.url).href}
       dateFormat="%m/%d"
       idKey='Source'
       xKey='Date'
@@ -229,7 +230,7 @@ taxonomy:
 <Block type = 'wide'>
   <Figure>
       <Image
-      src={new URL('./tornadoes-2024-torwarns-MAM.jpg', import.meta.url).href}
+      src={new URL('./media/tornadoes2024/tornadoes-2024-torwarns-MAM.jpg', import.meta.url).href}
       alt='NWS-issued tornado warnings from March-May 2024.'
     />
     <Caption>
@@ -592,7 +593,7 @@ Intense tornadoes are defined as those that receive an EF-3 rating or higher. Fr
 <Block type='wide'>
   <Prose>
     
-    [**PlanetScope**](https://www.earthdata.nasa.gov/dashboard/data-catalog/ps-tornadoes-2024)
+    [**PlanetScope**](https://www.earthdata.nasa.gov/dashboard/data-catalog/planetscope)
     
     Planet Labs’ commercial SmallSat imagery provides high-resolution satellite data crucial for assessing areas heavily damaged by tornadoes. With frequent overpasses, it allows for quick identification of destroyed buildings, vegetation damage, and blocked roads. If skies are clear directly after a tornado strike, first responders can use this data to better serve affected communities. This imagery was also used in this story to analyze reflectance changes in visible bands before and after a tornado, pinpointing areas of intense damage—even down to the building level, thanks to Planet's high spatial resolution.
 
@@ -604,7 +605,7 @@ Intense tornadoes are defined as those that receive an EF-3 rating or higher. Fr
     
     The Weather Surveillance Radar (WSR-88D) is a network of radars used by the NWS to monitor weather patterns, including tornadoes, across large areas. In addition, the Doppler on Wheels (DOW) radar, which is mounted on vehicles and can get closer to storms, was examined in cases where it was deployed in order to gather more detailed information. DOW radars are typically used for research and can capture clearer, higher-resolution data on tornadoes, while WSR-88D provides a wider view but with slightly less detail.
 
-    [**Black Marble Night Lights**](https://www.earthdata.nasa.gov/dashboard/data-catalog/nightlights-tornadoes-2024) 
+    [**Black Marble Night Lights**](https://www.earthdata.nasa.gov/dashboard/data-catalog/nighttime-lights-SE) 
     
     NASA’s Black Marble night lights dataset provides satellite images of Earth at night, capturing the light pollution from cities, roads, and other human activity. These images are collected by the Visible Infrared Imaging Radiometer Suite (VIIRS) sensor on the Suomi National Polar-orbiting Partnership (NPP) satellite, and can be used to examine changes in illumination over time. In this story, night lights data is used to assess changes before and after a tornado impacts a town, highlighting areas affected by power outages that may cause recovery slowdowns.
 
@@ -629,7 +630,7 @@ Intense tornadoes are defined as those that receive an EF-3 rating or higher. Fr
 
   <Figure>
       <Image
-      src={new URL('./tornado-2024-indian-lake-wedge.jpg', import.meta.url).href}
+      src={new URL('./media/tornadoes2024/tornado-2024-indian-lake-wedge.jpg', import.meta.url).href}
       alt='Wedge tornado approaching Lakeview, Ohio on March 14, 2024.'
     />
     <Caption>
@@ -679,7 +680,7 @@ Intense tornadoes are defined as those that receive an EF-3 rating or higher. Fr
    The tornado touched down south of Farmland, IN, causing damage to utility poles and a wind turbine.
   <Figure>
     <Image
-      src={new URL('./tornadoes-2024-mar14-winchester-damage1.jpg', import.meta.url).href}
+      src={new URL('./media/tornadoes2024/tornadoes-2024-mar14-winchester-damage1.jpg', import.meta.url).href}
       alt='NWS DAT photo of wind turbine damage.'
     />
     <Caption>
@@ -691,14 +692,14 @@ Intense tornadoes are defined as those that receive an EF-3 rating or higher. Fr
   <Chapter
     center={[-85.0005, 40.1645]}
     zoom={13.7}
-    datasetId='ps-tornadoes-2024'
+    datasetId='planetscope'
     layerId='ps-lakeview-winchester-tornadoes-2024'
     datetime='2024-03-16'
   >
     At its strongest, the tornado caused severe damage to homes and trees in Winchester. There was also evidence of rotational circulation via ground scouring. 
     <Figure>
     <Image
-      src={new URL('./tornadoes-2024-mar14-winchester-damage2.jpg', import.meta.url).href}
+      src={new URL('./media/tornadoes2024/tornadoes-2024-mar14-winchester-damage2.jpg', import.meta.url).href}
       alt='NWS DAT photo of destroyed Taco Bell.'
     />
     <Caption>
@@ -708,7 +709,7 @@ Intense tornadoes are defined as those that receive an EF-3 rating or higher. Fr
     Maximum damage occurred in the southern portion of the city at a Taco Bell and a nearby church, which were both destroyed at high-end EF3 intensity.
     <Figure>
     <Image
-      src={new URL('./tornadoes-2024-mar14-winchester-damage3.jpg', import.meta.url).href}
+      src={new URL('./media/tornadoes2024/tornadoes-2024-mar14-winchester-damage3.jpg', import.meta.url).href}
       alt='NWS DAT photo of destroyed church.'
     />
     <Caption>
@@ -720,14 +721,14 @@ Intense tornadoes are defined as those that receive an EF-3 rating or higher. Fr
   <Chapter
     center={[-84.95, 40.1667]}
     zoom={14}
-    datasetId='ps-tornadoes-2024'
+    datasetId='planetscope'
     layerId='ps-lakeview-winchester-tornadoes-2024'
     datetime='2024-03-16'
   >
    The tornado weakened as it exited Winchester, with EF2 to low-end EF-3 damage noted to farmsteads south and east of the Randolph County Airport.
   <Figure>
     <Image
-      src={new URL('./tornadoes-2024-mar14-winchester-damage4.jpg', import.meta.url).href}
+      src={new URL('./media/tornadoes2024/tornadoes-2024-mar14-winchester-damage4.jpg', import.meta.url).href}
       alt='NWS DAT photo of destroyed home.'
     />
     <Caption>
@@ -746,7 +747,7 @@ Intense tornadoes are defined as those that receive an EF-3 rating or higher. Fr
   As it entered Ohio, high-end EF-1 damage to homes south of Union City was observed, inflicting two injuries here. EF-1 damage to farmsteads occurred throughout all of Darke County.
   <Figure>
     <Image
-      src={new URL('./tornadoes-2024-mar14-oh-damage1.jpg', import.meta.url).href}
+      src={new URL('./media/tornadoes2024/tornadoes-2024-mar14-oh-damage1.jpg', import.meta.url).href}
       alt='NWS DAT photo of damaged homes southeast of Union City, OH.'
     />
     <Caption>
@@ -755,7 +756,7 @@ Intense tornadoes are defined as those that receive an EF-3 rating or higher. Fr
   </Figure>   
   <Figure>
     <Image
-      src={new URL('./tornadoes-2024-mar14-oh-damage2.jpg', import.meta.url).href}
+      src={new URL('./media/tornadoes2024/tornadoes-2024-mar14-oh-damage2.jpg', import.meta.url).href}
       alt='NWS DAT photo of a damaged home near Greenville, OH.'
     />
     <Caption>
@@ -774,7 +775,7 @@ Intense tornadoes are defined as those that receive an EF-3 rating or higher. Fr
    The tornado entered Miami County and briefly intensified to a low-end EF-2, causing significant roof and wall removal from homes and severe damage to outbuildings. Shortly after this, the tornado lifted north of the town of Covington.
   <Figure>
     <Image
-      src={new URL('./tornadoes-2024-mar14-oh-damage3.jpg', import.meta.url).href}
+      src={new URL('./media/tornadoes2024/tornadoes-2024-mar14-oh-damage3.jpg', import.meta.url).href}
       alt='NWS DAT photo of damaged home near Covington, OH.'
     />
     <Caption>
@@ -822,7 +823,7 @@ Intense tornadoes are defined as those that receive an EF-3 rating or higher. Fr
     The tornado began south of Wapakoneta, OH, causing initial damage to a farm near Cemetery Road, then quickly strengthened west of Glacier Hill Lakes RV Resort, severely damaging trees and lofting campers, heavily damaging residential homes and the resort clubhouse along Wapak-Freyburg Road.
   <Figure>
     <Image
-      src={new URL('./tornadoes-2024-mar14-glacierhills-damage1.jpg', import.meta.url).href}
+      src={new URL('./media/tornadoes2024/tornadoes-2024-mar14-glacierhills-damage1.jpg', import.meta.url).href}
       alt='Leveled two-story clubhouse.'
     />
     <Caption>
@@ -831,7 +832,7 @@ Intense tornadoes are defined as those that receive an EF-3 rating or higher. Fr
   </Figure> 
   <Figure>
     <Image
-      src={new URL('./tornadoes-2024-mar14-glacierhills-damage2.jpg', import.meta.url).href}
+      src={new URL('./media/tornadoes2024/tornadoes-2024-mar14-glacierhills-damage2.jpg', import.meta.url).href}
       alt='Glacier Hills Campground was destroyed.'
     />
     <Caption>
@@ -840,7 +841,7 @@ Intense tornadoes are defined as those that receive an EF-3 rating or higher. Fr
   </Figure> 
   <Figure>
     <Image
-      src={new URL('./tornadoes-2024-mar14-glacierhills-damage3.jpg', import.meta.url).href}
+      src={new URL('./media/tornadoes2024/tornadoes-2024-mar14-glacierhills-damage3.jpg', import.meta.url).href}
       alt='Glacier Hills Campground was destroyed.'
     />
     <Caption>
@@ -859,7 +860,7 @@ Intense tornadoes are defined as those that receive an EF-3 rating or higher. Fr
     The tornado briefly weakened to EF-1 before intensifying again between State Route 65 and Valley Road, damaging homes and trees.
   <Figure>
     <Image
-      src={new URL('./tornadoes-2024-mar14-lakeview-damage6.jpg', import.meta.url).href}
+      src={new URL('./media/tornadoes2024/tornadoes-2024-mar14-lakeview-damage6.jpg', import.meta.url).href}
       alt='Grove of trees torn apart west of Lakeview, OH.'
     />
     <Caption>
@@ -871,14 +872,14 @@ Intense tornadoes are defined as those that receive an EF-3 rating or higher. Fr
   <Chapter
     center={[-83.95124, 40.49046]}
     zoom={13}
-    datasetId='ps-tornadoes-2024'
+    datasetId='planetscope'
     layerId='ps-lakeview-winchester-tornadoes-2024'
     datetime='2024-03-16'
   >
     The tornado moved southeast into Logan County, causing extensive damage in Lakeview, including total wall collapse of structures on Poplar Court and Main Street.
   <Figure>
     <Image
-      src={new URL('./tornadoes-2024-mar14-lakeview-strong.jpg', import.meta.url).href}
+      src={new URL('./media/tornadoes2024/tornadoes-2024-mar14-lakeview-strong.jpg', import.meta.url).href}
       alt='Lakeview Strong.'
     />
     <Caption>
@@ -887,7 +888,7 @@ Intense tornadoes are defined as those that receive an EF-3 rating or higher. Fr
   </Figure> 
   <Figure>
     <Image
-      src={new URL('./tornadoes-2024-mar14-lakeview-damage-aerial.jpg', import.meta.url).href}
+      src={new URL('./media/tornadoes2024/tornadoes-2024-mar14-lakeview-damage-aerial.jpg', import.meta.url).href}
       alt='Aerial shot of leveled lakeshore cottages the morning of March 15, 2024..'
     />
     <Caption>
@@ -896,7 +897,7 @@ Intense tornadoes are defined as those that receive an EF-3 rating or higher. Fr
   </Figure> 
   <Figure>
     <Image
-      src={new URL('./tornadoes-2024-mar14-lakeview-damage5.jpg', import.meta.url).href}
+      src={new URL('./media/tornadoes2024/tornadoes-2024-mar14-lakeview-damage5.jpg', import.meta.url).href}
       alt='EF-3 damage to a home in the west side of Lakeview.'
     />
     <Caption>
@@ -908,14 +909,14 @@ Intense tornadoes are defined as those that receive an EF-3 rating or higher. Fr
   <Chapter
     center={[-83.90124, 40.47546]}
     zoom={13}
-    datasetId='ps-tornadoes-2024'
+    datasetId='planetscope'
     layerId='ps-lakeview-winchester-tornadoes-2024'
     datetime='2024-03-16'
   >
     The tornado then crossed the southern portion of Indian Lake, destroying numerous manufactured homes on Orchard Island.
   <Figure>
     <Image
-      src={new URL('./tornadoes-2024-mar14-lakeview-damage3.jpg', import.meta.url).href}
+      src={new URL('./media/tornadoes2024/tornadoes-2024-mar14-lakeview-damage3.jpg', import.meta.url).href}
       alt='Damage on Orchard Island.'
     />
     <Caption>
@@ -934,7 +935,7 @@ Intense tornadoes are defined as those that receive an EF-3 rating or higher. Fr
     The tornado continued to the southeast, affecting communities along the southern portion of the lake, with notable roof damage. It weakened as it entered rural Logan County, causing minor damage for several miles before dissipating near West Mansfield.
   <Figure>
     <Image
-      src={new URL('./tornadoes-2024-mar14-lakeview-damage2.jpg', import.meta.url).href}
+      src={new URL('./media/tornadoes2024/tornadoes-2024-mar14-lakeview-damage2.jpg', import.meta.url).href}
       alt='Damage on the southeast shore of Indian Lake.'
     />
     <Caption>
@@ -946,7 +947,7 @@ Intense tornadoes are defined as those that receive an EF-3 rating or higher. Fr
   <Chapter
     center={[-83.9388, 40.49860]}
     zoom={12.2}
-    datasetId='nightlights-tornadoes-2024'
+    datasetId='nighttime-lights-SE'
     layerId='lakeview-nightlights-tornadoes-2024'
     datetime='2024-03-14'
   >
@@ -969,7 +970,7 @@ Intense tornadoes are defined as those that receive an EF-3 rating or higher. Fr
 
   <Figure>
     <Image
-      src={new URL('./tornadoes-2024-elkhorn-radar.gif', import.meta.url).href}
+      src={new URL('./media/tornadoes2024/tornadoes-2024-elkhorn-radar.gif', import.meta.url).href}
       alt='Radar reflectivity of the Elkhorn tornado.'
       style={{ height: '900px', width: 'auto' }}
     />
@@ -1057,10 +1058,10 @@ Intense tornadoes are defined as those that receive an EF-3 rating or higher. Fr
 <Block type='wide' style={{ maxWidth: '70%', margin: '0 auto' }}>
   <Figure>
     <CompareImage 
-      leftImageSrc={new URL('./tornadoes-2024-may678-spc.jpg', import.meta.url).href}
+      leftImageSrc={new URL('./media/tornadoes2024/tornadoes-2024-may678-spc.jpg', import.meta.url).href}
       leftImageAlt='Categorical SPC Severe Weather Outlooks May 6-8, 2024.'
       leftImageLabel='SPC Categorical Outlooks May 6-8, 2024'
-      rightImageSrc={new URL('./tornadoes-2024-may678-reports.jpg', import.meta.url).href}
+      rightImageSrc={new URL('./media/tornadoes2024/tornadoes-2024-may678-reports.jpg', import.meta.url).href}
       rightImageAlt='Unfiltered SPC tornado reports May 6-8, 2024'
       rightImageLabel='SPC Tornado Reports May 6-8, 2024'
     />
@@ -1119,7 +1120,7 @@ Intense tornadoes are defined as those that receive an EF-3 rating or higher. Fr
 <Block>
 <Figure>
   <Image
-    src={new URL('./tornadoes-2024-greenville-damage.jpg', import.meta.url).href}
+    src={new URL('./media/tornadoes2024/tornadoes-2024-greenville-damage.jpg', import.meta.url).href}
     alt='Damage in Greenville City Park.'
   />
   <Caption>
@@ -1140,7 +1141,7 @@ Ohio's first significant tornado of the day formed west of Coldwater, Ohio and w
 
 <Figure>
   <Map
-    datasetId='greenville-nightlights-tornadoes-2024'
+    datasetId='nighttime-lights-SE'
     layerId='greenville-nightlights-tornadoes-2024'
     dateTime='2024-05-07'
     zoom={11}
@@ -1167,7 +1168,7 @@ Ohio's first significant tornado of the day formed west of Coldwater, Ohio and w
 <Block>
    <Figure>
     <Image
-      src={new URL('./tornadoes-2024-huntsville-WSR88D.gif', import.meta.url).href}
+      src={new URL('./media/tornadoes2024/tornadoes-2024-huntsville-WSR88D.gif', import.meta.url).href}
       alt='Radar reflectivity of the Huntsville EF-2 tornado.'
       style={{ height: '423px', width: 'auto' }}
     />
@@ -1193,7 +1194,7 @@ Ohio's first significant tornado of the day formed west of Coldwater, Ohio and w
 
  <Figure>
       <Image
-      src={new URL('./tornadoes-2024-Greenfield_windspeed_swath_NWS_ratings.jpg', import.meta.url).href}
+      src={new URL('./media/tornadoes2024/tornadoes-2024-Greenfield_windspeed_swath_NWS_ratings.jpg', import.meta.url).href}
       alt='NWS-estimated windspeed contours of the May 21, 2024 Greenfield, Iowa EF-4 tornado.'
     />
     <Caption>
@@ -1246,7 +1247,7 @@ As the tornado moved into Adair County, it strengthened to low-end EF-4, levelin
 
 <Figure>
   <Map
-    datasetId='ps-tornadoes-2024'
+    datasetId='planetscope'
     layerId='ps-tornadoes-2024-difference'
     dateTime='2024-05-21'
     zoom={13.3}
@@ -1360,7 +1361,7 @@ A nearby DOW vehicle initially recorded winds possibly reaching 290 mph at only 
 
     **Acknowledgements**: The following collaborators have been a huge resource in expanding the Greenfield, Iowa analysis portion of this story into ongoing research that will be propagated into a peer-reviewed article by 2025: Dr. Josh Wurman, Dr. Karen Kosiba, Dr. David Roueche, Dr. Catherine Finley, Dr. Jana Houser, Dr. Christopher Phillips, and David Haliczer.
 
-    **Questions / Feedback**: Email acb0068@uah.edu
+    **Questions / Feedback**: Email Andrew.Blackford@uah.edu
 
     ### Additional Resources
 
