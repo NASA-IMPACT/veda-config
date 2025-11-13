@@ -69,7 +69,7 @@ module.exports = {
   },
   siteAlert: {
     content: `Due to the lapse in federal government funding, NASA is not updating this website. We sincerely regret this inconvenience.`,
-    expires: '2026-08-03T12:00:00-04:00',
+    expires: '2025-11-12T12:00:00-04:00',
     type: 'emergency',
     slim: true,
     showIcon: true
