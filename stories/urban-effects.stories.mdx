@@ -160,15 +160,15 @@ taxonomy:
 <Block>
   <Figure>
     <Chart
-      dataPath={new URL('./miamiheat.csv', import.meta.url).href}
+      dataPath={new URL('./miamicld.csv', import.meta.url).href}
       dateFormat="%Y-%m-%d"
       idKey='source'
       xKey='Date'
-      yKey='fluxdata'
+      yKey='cldfrac'
       yAxisLabel="Heat Flux (W m^-2)"
     />
     <Caption>
-      **Figure 1:** Total cloud area fraction from 1980 to 2025. CHANGE WITH ACTUAL CSV GRAPH
+      **Figure 1:** Total cloud area fraction from 1980 to 2025. 
     </Caption>
   </Figure>
 
@@ -192,7 +192,7 @@ taxonomy:
       yAxisLabel="Heat Flux (W m^-2)"
     />
     <Caption>
-      **Figure 2:** Latent Heat flux over Miami CHANGE WITH LATENT FLUX CSV
+      **Figure 2:** Latent Heat flux over Miami 
     </Caption>
   </Figure>
 
@@ -209,7 +209,7 @@ taxonomy:
       yAxisLabel="Heat Flux (W m^-2)"
     />
     <Caption>
-      **Figure 3:** Sensible Heat flux over Miami CHANGE WITH SENSIBLE FLUX CSV
+      **Figure 3:** Sensible Heat flux over Miami 
     </Caption>
   </Figure>
 
