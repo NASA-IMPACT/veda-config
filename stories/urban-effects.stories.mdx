@@ -181,7 +181,22 @@ taxonomy:
     Figure 1 however, shows a long-term decreasing trend in cloud coverage over the MMR from 1980-2025.
 
   </Prose>
+</Block>
 
+<Block>
+  <Figure>
+      <Image
+      src={new URL('./UrbanEffects_1.jpg', import.meta.url).href}
+      />
+    <Caption>
+      **Visual 2:** HRRR Example of the sea breeze, including the boundary
+    </Caption>
+  </Figure>
+</Block>
+
+
+
+<Block>
   <Figure>
     <Chart
       dataPath={new URL('./miamilatent_stacked.csv', import.meta.url).href}
@@ -192,13 +207,13 @@ taxonomy:
       yAxisLabel="Heat Flux (W m^-2)"
     />
     <Caption>
-      **Figure 2:** Latent Heat flux over Miami 
+      **Figure 3:** Latent Heat flux over Miami 
     </Caption>
   </Figure>
-
 </Block>
 
 <Block>
+
   <Figure>
     <Chart
       dataPath={new URL('./miamisensible_stacked.csv', import.meta.url).href}
@@ -209,10 +224,13 @@ taxonomy:
       yAxisLabel="Heat Flux (W m^-2)"
     />
     <Caption>
-      **Figure 3:** Sensible Heat flux over Miami 
+      **Figure 4:** Sensible Heat flux over Miami 
     </Caption>
   </Figure>
 
+</Block>
+
+<Block>
   <Prose>
 
     We examined the long-term trend of surface-to-atmosphere exchange of heat and moisture over the coastal urban zone using NASA North America Land Data Assimilation System (NLDAS). The time series of energy fluxes show an increase in heat and a reduction in moisture transferred to the atmosphere.
@@ -235,7 +253,7 @@ taxonomy:
       yAxisLabel="Monthly average rainfall rate (mm/day)"
     />
     <Caption>
-      **Figure 4:** Avergae trend for rainfall in Miami.
+      **Figure 5:** Avergae trend for rainfall in Miami.
     </Caption>
   </Figure>
 
