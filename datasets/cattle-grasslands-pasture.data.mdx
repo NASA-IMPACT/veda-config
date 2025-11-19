@@ -1,6 +1,6 @@
 ---
 id: cattle-grasslands-pasture
-isHidden: false
+isHidden: true
 name: 'Cattle grasslands and pasture county level data'
 description: "Cattle grasslands and pasture county level data"
 media:
@@ -29,8 +29,6 @@ infoDescription: |
 layers:
   - id: county_grasslands_2019_pastu
     stacCol: county_grasslands_pasture_2019-v1
-    tileApiEndpoint: "https://staging.openveda.cloud/api/raster"
-    stacApiEndpoint: "https://staging.openveda.cloud/api/stac"
     name: 'County Grassland Land Percentage'
     type: raster
     description: 'County-level percentage of grassland estimated from NLCD land cover data'
@@ -66,8 +64,6 @@ layers:
 
   - id: county_pasture_2019_pastu
     stacCol: county_grasslands_pasture_2019-v1
-    tileApiEndpoint: "https://staging.openveda.cloud/api/raster"
-    stacApiEndpoint: "https://staging.openveda.cloud/api/stac"
     name: 'County Pasture Land Percentage'
     type: raster
     description: 'County-level percentage of pasture estimated from NLCD land cover data'
@@ -103,8 +99,6 @@ layers:
 
   - id: usda_cattle_large_AFOs_2017
     stacCol: usda_cattle_AFOs_2017-v1
-    tileApiEndpoint: "https://staging.openveda.cloud/api/raster"
-    stacApiEndpoint: "https://staging.openveda.cloud/api/stac"
     name: 'USDA Cattle Large Animal Feeding Operations'
     type: raster
     description: 'Cattle: County-Level Distribution of Large (Number of operations that managed 200 or more heads) Animal Feeding Operations (AFO).'
@@ -139,8 +133,6 @@ layers:
 
   - id: usda_cattle_medium_AFOs_2017
     stacCol: usda_cattle_AFOs_2017-v1
-    tileApiEndpoint: "https://staging.openveda.cloud/api/raster"
-    stacApiEndpoint: "https://staging.openveda.cloud/api/stac"
     name: 'USDA Cattle Medium Animal Feeding Operations'
     type: raster
     description: 'Cattle: County-Level Distribution of Medium (Number of operations that managed between 50 and 199 heads) Animal Feeding Operations (AFO).'
@@ -176,8 +168,6 @@ layers:
 
   - id: usda_cattle_small_AFOs_2017
     stacCol: usda_cattle_AFOs_2017-v1
-    tileApiEndpoint: "https://staging.openveda.cloud/api/raster"
-    stacApiEndpoint: "https://staging.openveda.cloud/api/stac"
     name: 'USDA Cattle Small Animal Feeding Operations'
     type: raster
     description: 'Cattle: County-Level Distribution of Small (Number of operations that managed less than 50 heads) Animal Feeding Operations (AFO).'
@@ -212,8 +202,6 @@ layers:
 
   - id: usda_cattle_total_heads_2017
     stacCol: usda_cattle_AFOs_2017-v1
-    tileApiEndpoint: "https://staging.openveda.cloud/api/raster"
-    stacApiEndpoint: "https://staging.openveda.cloud/api/stac"
     name: 'County Distribution of Total Number of Heads'
     type: raster
     description: 'Cattle: County-Level Distribution of Total Number of Heads.'
@@ -249,13 +237,12 @@ layers:
 
   - id: smap-L3-soil-moisture-AM-v1
     stacCol: smap-L3-soil-moisture-AM-v1
-    tileApiEndpoint: "https://staging.openveda.cloud/api/raster"
-    stacApiEndpoint: "https://staging.openveda.cloud/api/stac"
     name: 'SMAP L3 Soil Moisture AM passes (cm3/cm3)'
     type: raster
     description: 'This Level-3 (L3) soil moisture product provides a daily composite of global land surface conditions retrieved by the Soil Moisture Active Passive (SMAP) L-Band radiometer. The daily data here were collected from the descending (local solar time of 6 am) and ascending (local solar time of 6 pm) passes.'
     initialDatetime: newest
     sourceParams:
+      assets: cog_default
       resampling: bilinear
       bidx: 1
       nodata: -9999
@@ -296,13 +283,12 @@ layers:
 
   - id: ndvi-global-2022
     stacCol: ndvi-global-2022
-    tileApiEndpoint: "https://staging.openveda.cloud/api/raster"
-    stacApiEndpoint: "https://staging.openveda.cloud/api/stac"
     name: 'NDVI from AVHRR GIMMS-3G+'
     type: raster
     description: 'This dataset holds the Global Inventory Modeling and Mapping Studies-3rd Generation V1.2 (GIMMS-3G+) data for the Normalized Difference Vegetation Index (NDVI). NDVI was based on corrected and calibrated measurements from Advanced Very High Resolution Radiometer (AVHRR) data with a spatial resolution of 0.0833 degree and global coverage for 1982 to 2022. Maximum NDVI values are reported within twice monthly compositing periods (two values per month). The dataset was assembled from different AVHRR sensors and accounts for various deleterious effects, such as calibration loss, orbital drift, and volcanic eruptions.'
     initialDatetime: newest
     sourceParams:
+      assets: cog_default
       resampling: bilinear
       bidx: 1
       nodata: 0
