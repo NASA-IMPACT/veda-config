@@ -1,0 +1,121 @@
+---
+id: climdex-tmaxxf-access-cm2
+isHidden: false
+name: 'CMIP Days above 90 degrees climdex-tmaxxf-access-cm2'
+description: "CMIP Days above 90 degrees F climdex-tmaxxf-access-cm2"
+media:
+  src: ::file media/CMIP-winter-median.jpeg
+  alt: Photo of Nisqually glacier
+  author:
+    name: Justin Pflug
+    url: 
+taxonomy:
+  - name: Topics
+    values:
+      - Water Resources
+  - name: Subtopics
+    values:
+      - Snow
+      - Precipitation
+      - Water Cycle
+      - Hydrology
+  - name: Source
+    values:
+      - NASA EIS
+      - CMIP6
+infoDescription: |
+  ::markdown
+    CMIP Days above 90 degrees climdex-tmaxxf-access-cm2
+layers:
+
+  - id: climdex-tmaxxf-access-cm2-585
+    stacCol: climdex-tmaxxf-access-cm2-ssp585
+    name: 'Days above 90 Degrees F SSP585'
+    type: raster
+    description: 'Days above 90 degrees F'
+    sourceParams:
+      assets: tmax_above_90
+      resampling: bilinear
+      bidx: 1
+      nodata: nan
+      colormap_name: ylorrd
+      rescale:
+        - 0
+        - 365
+    legend:
+      unit: 
+        label: Days
+      type: gradient
+      min: 0
+      max: 365
+      stops:
+      - "#E4FF7A"
+      - "#FAED2D"
+      - "#FFCE0A"
+      - "#FFB100"
+      - "#FE9900"
+      - "#FC7F00"
+    info:
+      source: NASA
+      spatialExtent: Global
+      temporalResolution: Annual
+      unit: Days
+
+
+  - id: climdex-tmaxxf-access-cm2-126
+    stacCol: climdex-tmaxxf-access-cm2-ssp126
+    name: 'Days above 90 Degrees F SSP126'
+    type: raster
+    description: 'Days above 90 degrees F'
+    sourceParams:
+      assets: tmax_above_90
+      resampling: bilinear
+      bidx: 1
+      nodata: nan
+      colormap_name: ylorrd
+      rescale:
+        - 0
+        - 365
+    legend:
+      unit: 
+        label: Days
+      type: gradient
+      min: 0
+      max: 365
+      stops:
+      - "#E4FF7A"
+      - "#FAED2D"
+      - "#FFCE0A"
+      - "#FFB100"
+      - "#FE9900"
+      - "#FC7F00"
+    compare:
+      datasetId: climdex-tmaxxf-access-cm2
+      layerId: climdex-tmaxxf-access-cm2-585
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
+        }
+
+
+---
+
+
+<Block>
+  <Figure>
+    <Map
+      datasetId='climdex-tmaxxf-access-cm2'
+      layerId='climdex-tmaxxf-access-cm2-126'
+      dateTime='2080-06-01'
+      zoom={4.0}
+      center={[-113.,40.]}
+      compareDateTime='2080-06-01'
+    />
+    <Caption
+      attrAuthor='NASA'
+      attrUrl='https://nasa.gov/'
+    >
+    Comparison of days above 90 degrees Fahrenheit in CMIP6 models between SSP-126 (left) and SSP-585 (right).
+  </Caption>  
+  </Figure>
+</Block>
