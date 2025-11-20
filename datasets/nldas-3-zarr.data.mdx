@@ -1,0 +1,124 @@
+---
+id: nldas-3-zarr-test
+name: "NLDAS-3"
+description: "NLDAS Forcing Data L4 Daily 0.01 x 0.01 degree V3.0 - *BETA*"
+media:
+  src: ::file ./media/gpmimergdaily.png
+  alt: NLDAS
+  author:
+    name: NASA
+    url:
+taxonomy:
+  - name: Topics
+    values:
+      - Water Resources
+  - name: Subtopics
+    values:
+      - Precipitation
+      - Snow
+      - Floods
+      - Drought
+layers:
+  - id: nldas-3-zarr-test
+    type: cmr
+    stacCol: nldas-3-zarr-test
+    tileApiEndpoint: "https://syonjbeb09.execute-api.us-west-2.amazonaws.com/tilejson.json"
+    name: NLDAS-3
+    description: ""NLDAS-3"
+    time_density: day
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      variable: Rainf
+      sel_method=nearest
+      decode_times=true
+      colormap_name: coolwarm
+      rescale:
+        - 0
+        - 25
+      maxzoom: 12
+    legend:
+      unit:
+        label: kg m-2
+      type: gradient
+      min: 0
+      max: 25
+      stops:
+        - '#3b4cc0'
+        - '#7b9ff9'
+        - '#c0d4f5'
+        - '#f2cbb7'
+        - '#ee8468'
+        - '#b40426'
+---
+
+<Block>
+  <Prose>
+  ## Dataset Details
+  - **Temporal Extent:** 2000-2024
+  - **Temporal Resolution:** Daily
+  - **Spatial Extent:** North America
+  - **Spatial Resolution:** 0.01 x 0.01 degree
+  - **Data Units:** kg m-2
+  - **Data Type:** Research
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+
+  ### About
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ### Access the Data
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  ### Citing This Dataset
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ### Disclaimer
+
+  All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
+  
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+
+  ### Key Publications
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+    ## Limitations of use
+
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+  
+  ## License
+  
+  [Creative Commons Attribution 1.0 International](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC BY 1.0)
+
+  </Prose>
+</Block>
