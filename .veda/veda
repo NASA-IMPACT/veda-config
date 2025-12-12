@@ -41,7 +41,7 @@ if (inputCmd === '--info') {
 const rootDir = path.join(__dirname, '../');
 
 const parentThemeFile = path.join(__dirname, 'styles/_uswds-theme.scss');
-const submoduleThemeFile = path.join(__dirname, '.veda/ui/app/scripts/styles/_uswds-theme.scss');
+const submoduleThemeFile = path.join(__dirname, '.veda/ui/packages/veda-ui/src/styles/_uswds-theme.scss');
 let originalSubmoduleTheme = '';
 
 // Temporarily swap the USWDS theme file from the veda-ui with the one from veda-config
