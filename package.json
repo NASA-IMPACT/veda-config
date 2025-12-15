@@ -50,7 +50,7 @@
     "react": "./.veda/ui/node_modules/react",
     "@mdx-js/react": "./.veda/ui/node_modules/@mdx-js/react",
     "$veda-ui": "./.veda/ui/node_modules",
-    "$veda-ui-scripts": "./.veda/ui/app/scripts"
+    "$veda-ui-scripts": "./.veda/ui/packages/veda-ui/src"
   },
   "parcelIgnore": [
     ".*/meta/"
