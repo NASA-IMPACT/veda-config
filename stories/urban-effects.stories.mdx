@@ -158,12 +158,12 @@ taxonomy:
 <Block>
   <Figure>
     <Chart
-      dataPath={new URL('./miamicld.csv', import.meta.url).href}
+      dataPath={new URL('./miamicld_stacked.csv', import.meta.url).href}
       dateFormat="%Y-%m-%d"
       idKey='source'
       xKey='Date'
       yKey='cldfrac'
-      yAxisLabel="Heat Flux (W m^-2)"
+      yAxisLabel="Cloud Fraction"
     />
     <Caption>
       **Figure 1:** Total cloud area fraction from 1980 to 2025. 
@@ -290,5 +290,46 @@ taxonomy:
     **Questions / Feedback**: Email veda@uah.edu
 
     ### Additional Resources
+  </Prose>
+</Block>
+
+
+
+
+
+
+
+
+
+<Block>
+  <Prose>
+    ### References
+    Fry, R., and P. Taylor, 2012: The Rise of Residential Segregation by Income. Pew Research Center, 25 pp.
+    
+    Logan, J. R., C. Fischer, and C. Buchmann, 2013: US2010: Discovery America in a New Century. 1–62. http://www.s4.brown.edu/us2010/Data/data.htm.
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    ### Data Access
+
+    * [NASA Extreme Heat Data - Pathfinders](https://www.earthdata.nasa.gov/learn/pathfinders/disasters/extreme-heat-data-pathfinder) 
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+
+    **Editors**: Andrew Blackford, Trent Cowan, Jerika Chung, Derek Koehl, Hanbyul Jo, Yaitza Luna-Cruz, and Udaysankar Nair
+
+    **Developers**: Andrew Blackford and Trent Cowan
+
+    **Science and Content Contributors**: Andrew Blackford, Trent Cowan, Udaysankar Nair, and Brian Freitag
+
+    **Questions / Feedback**: Email Andrew.Blackford@uah.edu
+
   </Prose>
 </Block>
