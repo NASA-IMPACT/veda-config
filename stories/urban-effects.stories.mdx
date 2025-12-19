@@ -51,7 +51,7 @@ taxonomy:
       compareDateTime="2021-01-01"
       />
     <Caption>
-      **Map 1:** Slider showing the change in land use over Houston from 2001 to 2021
+      **Map 1:** Slider showing the change in land use over the MMR 2001 to 2021 (NLCD)
     </Caption>
   </Figure>
 </Block>
@@ -78,10 +78,10 @@ taxonomy:
 <Block>
   <Figure>
       <Image
-      src={new URL('./UrbanEffects_1.jpg', import.meta.url).href}
+      src={new URL('./MMRmap.png', import.meta.url).href}
       />
     <Caption>
-      **Map 2:** Map of the study area (Miami Metropolitan Region - MMR). CHANGE WITH ACTUAL MAP  
+      **Map 2:** Map of the study area (MMR map)
     </Caption>
   </Figure>
 
@@ -112,11 +112,10 @@ taxonomy:
       zoom={7}
       datasetId="HLSL30_2.0_true_color"
       layerId="HLSL30_2.0_true_color"
-      dateTime="2014-08-04"
-      compareDateTime="2025-06-23"
+      dateTime="2025-08-20"
       />
     <Caption>
-      **Map 3:** Slider showing cumulus clouds, comparing August 4th, 2014 to June 15th, 2025
+      **Map 3:** Cumulus clouds over the MMR on August 20, 2025 (Landsat 8/9)
     </Caption>
   </Figure>
 </Block>
@@ -131,7 +130,7 @@ taxonomy:
       dateTime="2001-01-01"
       />
     <Caption>
-      **Map 3:** New Urbanization over Miami from 2001 through 2024
+      **Map 3:** New Urbanization over the MMR from 2001 through 2024 (NLCD)
     </Caption>
   </Figure>
   <Prose>
@@ -150,7 +149,7 @@ taxonomy:
       src={new URL('./MiamiJuly2024.gif', import.meta.url).href}
     />
     <Caption attrAuthor='GEOSTATIONARY OPERATIONAL ENVIRONMENTAL SATELLITES—R SERIES' attrUrl='https://www.goes-r.gov/spacesegment/abi.html'>
-      **Animation 1:** GIF of Miami July 2024 cloud frequency.
+      **Animation 1:** GIF of Miami July 2024 cloud frequency (GOES-16).
     </Caption>
   </Figure>
 </Block>
@@ -166,7 +165,7 @@ taxonomy:
       yAxisLabel="Cloud Fraction"
     />
     <Caption>
-      **Figure 1:** Total cloud area fraction from 1980 to 2025. 
+      **Figure 1:** Total cloud area fraction from 1980 to 2025 (MERRA-2)
     </Caption>
   </Figure>
 
@@ -179,7 +178,7 @@ taxonomy:
       src={new URL('./MiamiSB.gif', import.meta.url).href}
       />
     <Caption>
-      **Figure 2:** HRRR Example of the sea breeze, including the boundary
+      **Figure 2:** High-Resoluition Rapid Refresh (HRRR) Example of the sea breeze, including the sea-breeze boundary (Made on Python)
     </Caption>
   </Figure>
 </Block>
@@ -197,7 +196,7 @@ taxonomy:
       yAxisLabel="Heat Flux (W m^-2)"
     />
     <Caption>
-      **Figure 3:** Latent Heat flux over Miami 
+      **Figure 3:** Latent Heat flux over the MMR from 1980 to 2025 (NLDAS) 
     </Caption>
   </Figure>
 </Block>
@@ -214,7 +213,7 @@ taxonomy:
       yAxisLabel="Heat Flux (W m^-2)"
     />
     <Caption>
-      **Figure 4:** Sensible Heat flux over Miami 
+      **Figure 4:** Sensible Heat flux over the MMR from 1980 to 2025 (NLDAS)  
     </Caption>
   </Figure>
 
@@ -243,7 +242,7 @@ taxonomy:
       yAxisLabel="Monthly average rainfall rate (mm/day)"
     />
     <Caption>
-      **Figure 5:** Avergae trend for rainfall in Miami.
+      **Figure 5:** Avergae rainfall trend for the MMR from 1998 to 2025 (MERRA-2).
     </Caption>
   </Figure>
 
