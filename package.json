@@ -1,7 +1,7 @@
 {
   "name": "veda-config",
   "description": "Configuration for Veda",
-  "version": "0.21.1",
+  "version": "0.21.2",
   "source": "./.veda/ui/app/index.html",
   "license": "Apache-2.0",
   "scripts": {
@@ -50,7 +50,7 @@
     "react": "./.veda/ui/node_modules/react",
     "@mdx-js/react": "./.veda/ui/node_modules/@mdx-js/react",
     "$veda-ui": "./.veda/ui/node_modules",
-    "$veda-ui-scripts": "./.veda/ui/app/scripts"
+    "$veda-ui-scripts": "./.veda/ui/packages/veda-ui/src"
   },
   "parcelIgnore": [
     ".*/meta/"
