@@ -1,0 +1,89 @@
+---
+id: landsat-demo
+name: A-landsat-demo
+description: landsat-demo
+
+media:
+  src: ::file ./media/LA-Fires-background.png
+  alt: Planet Labs Commercial Satellite Imagery of the Eaton Fire (January 9, 2025).
+  author:
+    name:  Earth Observatory NASA
+    url:  https://earthobservatory.nasa.gov
+taxonomy:
+  - name: Disaster
+    values:
+      - Hurricanes and Cyclones
+  - name: Source
+    values:
+      - NASA
+  - name: Event
+    values:
+      - 2024 Hurricane Milton
+      
+infoDescription: |
+  ::markdown 
+    - Temporal Extent: October 10, 2023 - Ongoing
+    - Temporal Resolution: Daily
+    - Spatial Extent: Global    
+    - Spatial Resolution: 500m   
+    - Data Units: Watts per square centimeter per steradian (W/cm²/sr)       
+    - Data Type: Operational
+    - Data Latency: Updated daily       
+layers:
+
+  - id: landsat-demo
+    stacApiEndpoint: https://dev.openveda.cloud/api/stac
+    tileApiEndpoint: https://dev.openveda.cloud/api/raster
+    stacCol:  landsat-demo
+    name: landsat-demo
+    type: raster 
+    initialDatetime: newest
+    description: 'landsat-demo'
+    media:
+      src: ::file ./media/LA-Fires-background.png
+      alt: Hurricane Milton layer
+    sourceParams:
+      assets: swir
+      bidx: 
+        - 1
+        - 2
+        - 3
+      resampling: nearest
+      nodata: 0
+    zoomExtent:
+      - 0
+      - 20
+    analysis:
+      exclude: true
+    info:
+      source: NASA
+      spatialExtent: Global 
+      temporalResolution: Daily
+
+---
+
+<Block>
+  <Figure>
+    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '1rem', width: '100%' }}>
+      <a href="/events/hurricane-milton-2024" style={{ display: 'block', borderRadius: '1rem', overflow: 'hidden', boxShadow: '0 4px 6px rgba(0,0,0,0.1)', textDecoration: 'none' }}>
+        <img src="/images/event/data-catalog.png" alt="Dataset" style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
+        <div style={{ padding: '1rem', textAlign: 'center', fontSize: '1.25rem', fontWeight: '600', color: '#2c3d4f' }}>Event Summary</div>
+      </a>
+      <a href="/individual-datasets/hurricane-milton-2024" style={{ display: 'block', borderRadius: '1rem', overflow: 'hidden', boxShadow: '0 4px 6px rgba(0,0,0,0.1)', textDecoration: 'none' }}>
+        <img src="/images/event/data-view.png" alt="View Data" style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
+        <div style={{ padding: '1rem', textAlign: 'center', fontSize: '1.25rem', fontWeight: '600', color: '#2c3d4f' }}>Dataset Gallery</div>
+      </a>
+      <a href="https://gis.earthdata.nasa.gov/gis05/rest/services/DISASTERS_202410_HURRICANE_MILTON" style={{ display: 'block', borderRadius: '1rem', overflow: 'hidden', boxShadow: '0 4px 6px rgba(0,0,0,0.1)', textDecoration: 'none' }}>
+        <img src="/images/event/download-data.png" alt="Download Data" style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
+        <div style={{ padding: '1rem', textAlign: 'center', fontSize: '1.25rem', fontWeight: '600', color: '#2c3d4f' }}>Access GIS Data</div>
+      </a>
+    </div>
+  </Figure>
+</Block>
+
+
+<Block>
+  <Prose>
+    Landsat demo  
+  </Prose>
+</Block>
