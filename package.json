@@ -2,7 +2,7 @@
   "name": "veda-config",
   "description": "Configuration for Veda",
   "version": "0.21.2",
-  "source": "./.veda/ui/apps/dashboard-parcel/index.html",
+  "source": "./.veda/ui/app/index.html",
   "license": "Apache-2.0",
   "scripts": {
     "dev": "yarn clean && yarn serve",
@@ -15,7 +15,7 @@
   },
   "targets": {
     "veda-app": {
-      "source": "./.veda/ui/apps/dashboard-parcel/index.html",
+      "source": "./.veda/ui/app/index.html",
       "context": "browser"
     }
   },
@@ -50,7 +50,7 @@
     "react": "./.veda/ui/node_modules/react",
     "@mdx-js/react": "./.veda/ui/node_modules/@mdx-js/react",
     "$veda-ui": "./.veda/ui/node_modules",
-    "$veda-ui-scripts": "./.veda/ui/packages/veda-ui/src"
+    "$veda-ui-scripts": "./.veda/ui/app/scripts"
   },
   "parcelIgnore": [
     ".*/meta/"
