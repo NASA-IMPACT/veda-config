@@ -346,9 +346,8 @@ export default function StacCollectionMap({
           </Source>
         )}
       </Map>
-
       {/* Info overlay */}
-      {collection && (
+      {/*{collection && (
         <div
           style={{
             position: 'absolute',
@@ -367,8 +366,8 @@ export default function StacCollectionMap({
               Item: {firstItem.id}
             </div>
           )}
-        </div>
-      )}
+        </div> 
+      )}*/}
     </div>
   );
 }
