@@ -20,13 +20,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout Repository
-      uses: actions/checkout@v4
+      uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
       with:
         submodules: recursive
         ref: develop
         fetch-depth: 0
     - name: Use Node.js ${{ env.NODE }}
-      uses: actions/setup-node@v4
+      uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
       with:
         node-version: ${{ env.NODE }}
 
@@ -50,7 +50,7 @@ jobs:
         cd -
     - name: Create Pull Request
       id: making-pr
-      uses: peter-evans/create-pull-request@v7
+      uses: peter-evans/create-pull-request@22a9089034f40e5a961c8808d113e2c98fb63676 # v7
       with:
         commit-message: "Update UI to ${{ env.VERSION }}"
         title: "ci: Update submodule to version ${{ env.VERSION }}"
@@ -58,7 +58,7 @@ jobs:
         base: develop
         branch: ci-update-${{ env.VERSION }}
     - name: Notify release through Slack
-      uses: slackapi/slack-github-action@v2.0.0
+      uses: slackapi/slack-github-action@485a9d42d3a73031f12ec201c457e2162c45d02d # v2.0.0
       with:
         webhook: ${{ secrets.SLACK_WEBHOOK_URL }}
         webhook-type: incoming-webhook
