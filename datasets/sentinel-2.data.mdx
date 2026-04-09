@@ -1,0 +1,380 @@
+---
+id: sentinel-2
+name: "Sentinel-2 Burn Indices and Color Infrared"
+description: "High-resolution multispectral imagery from Sentinel-2 providing Normalized Burn Ratio (NBR), Differenced Normalized Burn Ratio (dNBR), and color infrared composites for fire damage assessment and vegetation monitoring."
+media:
+  src: ::file ./media/fire--dataset-cover.jpg
+  alt: Sentinel-2 satellite imagery
+  author:
+    name: NASA
+    url: https://nasa.gov/
+taxonomy:
+  - name: Topics
+    values:
+      - Wildfires
+      - Satellite Imagery
+  - name: Subtopics
+    values:
+      - Natural Disasters
+      - Vegetation Monitoring
+  - name: Source
+    values:
+      - NASA VEDA
+      - ESA
+infoDescription: |
+  ::markdown
+    This collection provides high-resolution multispectral imagery from Sentinel-2 for disaster monitoring and environmental assessment. It includes derived indices such as NBR and dNBR for fire damage assessment and color infrared composites for vegetation monitoring. Data is provided as Cloud-Optimized GeoTIFFs for efficient visualization and analysis.
+
+    ## Dataset Details:
+
+    **Sentinel-2 dNBR (Daily):**
+    - Temporal Extent: January 2024 - December 2024
+    - Spatial Extent: Southern California
+    - Spatial Resolution: 10-20 meters
+    - Data Type: Single-band raster (scale: -1 to 1)
+
+    **Sentinel-2 dNBR (Monthly):**
+    - Temporal Extent: January 2025
+    - Spatial Extent: Southern California
+    - Spatial Resolution: 10-20 meters
+    - Data Type: Single-band raster (scale: -1 to 1)
+
+    **Sentinel-2 NBR (Daily):**
+    - Temporal Extent: January 2025
+    - Spatial Extent: California
+    - Spatial Resolution: 10-20 meters
+    - Data Type: Single-band raster (scale: -1 to 1)
+
+    **Sentinel-2 Color Infrared (Daily):**
+    - Temporal Extent: October 2023 - July 2025
+    - Spatial Extent: North and South America
+    - Spatial Resolution: 10-20 meters
+    - Data Type: 3-band composite
+
+    **Sentinel-2 Color Infrared (Subdaily):**
+    - Temporal Extent: July 2023 - October 2025
+    - Spatial Extent: North America
+    - Spatial Resolution: 10-20 meters
+    - Data Type: 3-band composite
+
+layers:
+  - id: sentinel2-dnbr-daily
+    stacApiEndpoint: https://dev.disasters.openveda.cloud/api/stac
+    tileApiEndpoint: https://dev.disasters.openveda.cloud/api/raster
+    stacCol: sentinel2-dnbr-daily
+    name: Sentinel-2 dNBR (Daily)
+    type: raster
+    description: "Differenced Normalized Burn Ratio measuring burn severity by comparing pre-fire and post-fire vegetation indices. Higher values indicate more severe burn damage."
+    assets: "dnbr"
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      colormap_name: turbo
+      resampling: bilinear
+      nodata: -9999
+      rescale:
+        - -1
+        - 1
+    legend:
+      type: gradient
+      min: "-1"
+      max: "1"
+      stops:
+        - "#30123b"
+        - "#28bbec"
+        - "#a2fc3c"
+        - "#fb8022"
+        - "#7a0403"
+    info:
+      source: NASA VEDA
+      spatialExtent: Southern California
+      temporalResolution: Daily
+      unit: Index (-1 to 1)
+
+  - id: sentinel2-dnbr-monthly
+    stacApiEndpoint: https://dev.disasters.openveda.cloud/api/stac
+    tileApiEndpoint: https://dev.disasters.openveda.cloud/api/raster
+    stacCol: sentinel2-dnbr-monthly
+    name: Sentinel-2 dNBR (Monthly)
+    type: raster
+    description: "Monthly aggregated Differenced Normalized Burn Ratio measuring burn severity. Higher values indicate more severe burn damage."
+    assets: "dnbr"
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      colormap_name: turbo
+      resampling: bilinear
+      nodata: -9999
+      rescale:
+        - -1
+        - 1
+    legend:
+      type: gradient
+      min: "-1"
+      max: "1"
+      stops:
+        - "#30123b"
+        - "#28bbec"
+        - "#a2fc3c"
+        - "#fb8022"
+        - "#7a0403"
+    info:
+      source: NASA VEDA
+      spatialExtent: Southern California
+      temporalResolution: Monthly
+      unit: Index (-1 to 1)
+
+  - id: sentinel2-nbr-daily
+    stacApiEndpoint: https://dev.disasters.openveda.cloud/api/stac
+    tileApiEndpoint: https://dev.disasters.openveda.cloud/api/raster
+    stacCol: sentinel2-nbr-daily
+    name: Sentinel-2 NBR (Daily)
+    type: raster
+    description: "Normalized Burn Ratio derived from Sentinel-2 NIR and SWIR bands, calculated as (NIR - SWIR) / (NIR + SWIR). Lower values indicate greater burn damage intensity."
+    assets: "nbr"
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      colormap_name: turbo
+      resampling: bilinear
+      nodata: -9999
+      rescale:
+        - -1
+        - 1
+    legend:
+      type: gradient
+      min: "-1"
+      max: "1"
+      stops:
+        - "#30123b"
+        - "#28bbec"
+        - "#a2fc3c"
+        - "#fb8022"
+        - "#7a0403"
+    info:
+      source: NASA VEDA
+      spatialExtent: California
+      temporalResolution: Daily
+      unit: Index (-1 to 1)
+
+  - id: sentinel2-colorir-daily
+    stacApiEndpoint: https://dev.disasters.openveda.cloud/api/stac
+    tileApiEndpoint: https://dev.disasters.openveda.cloud/api/raster
+    stacCol: sentinel2-colorir-daily
+    name: Sentinel-2 Color Infrared (Daily)
+    type: raster
+    description: "Daily false color infrared composite combining near-infrared, red, and green bands for vegetation and land cover analysis."
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      asset_bidx: ColorIR|1,2,3
+      nodata: 0
+    legend:
+      type: categorical
+      stops:
+        - color: "rgba(0, 0, 0, 0)"
+          label: "Imagery"
+    info:
+      source: NASA VEDA
+      spatialExtent: North and South America
+      temporalResolution: Daily
+      unit: Reflectance
+
+  - id: sentinel2-colorir-subdaily
+    stacApiEndpoint: https://dev.disasters.openveda.cloud/api/stac
+    tileApiEndpoint: https://dev.disasters.openveda.cloud/api/raster
+    stacCol: sentinel2-colorir-subdaily
+    name: Sentinel-2 Color Infrared (Subdaily)
+    type: raster
+    description: "Subdaily per-tile false color infrared composite with precise acquisition timestamps, combining near-infrared, red, and green bands."
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      asset_bidx: ColorIR|1,2,3
+      nodata: 0
+    legend:
+      type: categorical
+      stops:
+        - color: "rgba(0, 0, 0, 0)"
+          label: "Imagery"
+    info:
+      source: NASA VEDA
+      spatialExtent: North America
+      temporalResolution: Subdaily
+      unit: Reflectance
+---
+
+<Block>
+  <Prose>
+    ## Sentinel-2 for Disaster Monitoring
+
+    This collection provides high-resolution multispectral imagery from the European Space Agency's Sentinel-2 satellites for disaster monitoring and environmental assessment. The data has been processed by NASA VEDA to provide specialized products including burn ratio indices for fire damage assessment and color infrared composites for vegetation monitoring.
+
+    Sentinel-2 is a constellation of two polar-orbiting satellites (Sentinel-2A and Sentinel-2B) that provide high-resolution optical imagery with a revisit time of 5 days. The Multi-Spectral Instrument (MSI) onboard captures imagery in 13 spectral bands from visible to shortwave infrared wavelengths.
+
+    ## Normalized Burn Ratio (NBR)
+
+    The Normalized Burn Ratio (NBR) is a spectral index calculated from Sentinel-2's near-infrared (NIR) and shortwave infrared (SWIR) bands as: `(NIR - SWIR) / (NIR + SWIR)`. Lower NBR values indicate greater burn damage intensity, while higher values represent healthy vegetation.
+
+    ## Differenced Normalized Burn Ratio (dNBR)
+
+    The Differenced Normalized Burn Ratio (dNBR) measures burn severity by comparing NBR values before and after a fire event: `NBR_prefire - NBR_postfire`. Higher dNBR values indicate more severe burn damage. Available at both daily and monthly temporal resolutions.
+
+    ## Color Infrared Composite
+
+    Color infrared (CIR) composites use the near-infrared band in combination with visible bands to create false-color imagery where vegetation appears in shades of red. Available at daily and subdaily temporal resolutions.
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    ## dNBR Daily Visualization
+
+    Daily differenced burn ratio showing burn severity across Southern California. Higher values (warmer colors) indicate more severe burn damage.
+  </Prose>
+  <Figure>
+    <Map
+      datasetId='sentinel-2'
+      layerId='sentinel2-dnbr-daily'
+      dateTime='2024-12-18'
+      zoom={5}
+      center={[-118.5, 33.8]}
+    />
+    <Caption
+      attrAuthor='NASA VEDA'
+      attrUrl='https://nasa.gov/'
+    >
+      Sentinel-2 dNBR (Daily) over Southern California showing fire burn severity.
+    </Caption>
+  </Figure>
+</Block>
+
+<Block>
+  <Prose>
+    ## dNBR Monthly Visualization
+
+    Monthly aggregated differenced burn ratio providing a broader temporal view of burn severity.
+  </Prose>
+  <Figure>
+    <Map
+      datasetId='sentinel-2'
+      layerId='sentinel2-dnbr-monthly'
+      dateTime='2025-01-01'
+      zoom={5}
+      center={[-118.5, 33.8]}
+    />
+    <Caption
+      attrAuthor='NASA VEDA'
+      attrUrl='https://nasa.gov/'
+    >
+      Sentinel-2 dNBR (Monthly) over Southern California showing aggregated burn severity.
+    </Caption>
+  </Figure>
+</Block>
+
+<Block>
+  <Prose>
+    ## NBR Daily Visualization
+
+    Daily Normalized Burn Ratio showing burn damage intensity across California. Lower values (cooler colors) indicate greater burn damage.
+  </Prose>
+  <Figure>
+    <Map
+      datasetId='sentinel-2'
+      layerId='sentinel2-nbr-daily'
+      dateTime='2025-01-12'
+      zoom={5}
+      center={[-118.5, 34.2]}
+    />
+    <Caption
+      attrAuthor='NASA VEDA'
+      attrUrl='https://nasa.gov/'
+    >
+      Sentinel-2 NBR (Daily) over California showing burn damage intensity.
+    </Caption>
+  </Figure>
+</Block>
+
+<Block>
+  <Prose>
+    ## Color Infrared (Daily) Visualization
+
+    Daily color infrared composite highlighting vegetation health and land cover patterns. Healthy vegetation appears in shades of red, while urban areas and bare soil appear in gray or brown tones.
+  </Prose>
+  <Figure>
+    <Map
+      datasetId='sentinel-2'
+      layerId='sentinel2-colorir-daily'
+      dateTime='2025-07-10'
+      zoom={8}
+      center={[-100.5559, 31.982]}
+    />
+    <Caption
+      attrAuthor='NASA VEDA'
+      attrUrl='https://nasa.gov/'
+    >
+      Sentinel-2 Color Infrared (Daily) composite showing vegetation patterns.
+    </Caption>
+  </Figure>
+</Block>
+
+<Block>
+  <Prose>
+    ## Color Infrared (Subdaily) Visualization
+
+    Subdaily per-tile color infrared composite with precise acquisition timestamps, providing the highest temporal resolution for vegetation monitoring.
+  </Prose>
+  <Figure>
+    <Map
+      datasetId='sentinel-2'
+      layerId='sentinel2-colorir-subdaily'
+      dateTime='2025-10-21'
+      zoom={9}
+      center={[-164.0176, 62.2963]}
+    />
+    <Caption
+      attrAuthor='NASA VEDA'
+      attrUrl='https://nasa.gov/'
+    >
+      Sentinel-2 Color Infrared (Subdaily) composite showing vegetation patterns.
+    </Caption>
+  </Figure>
+</Block>
+
+<Block>
+  <Prose>
+    ## Limitations of use
+
+    NASA data and products are freely available to federal, state, public, non-profit and commercial users. This information can be experimental- or research-grade data products and may not be appropriate for operational use. These NASA data products and services are intended to aid decision makers and enhance situational awareness, but these data are not guaranteed to be consistently available or routinely updated. Please cite the information according to the direction provided in the metadata.
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  ## Disclaimer
+
+  All data provided in VEDA has been transformed from the original format into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    ## License
+
+    [Creative Commons Zero v1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC0 1.0)
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    ## Additional Resources
+
+    * [Sentinel-2 Mission Overview](https://sentinel.esa.int/web/sentinel/missions/sentinel-2)
+    * [NASA VEDA Data Portal](https://www.earthdata.nasa.gov/veda)
+  </Prose>
+</Block>
