@@ -12,7 +12,7 @@ on:
     - 'main'
 
 env:
-  NODE: 20
+  NODE: 22
   DOMAIN_PROD: /dashboard
   DEPLOY_BUCKET_PROD: climatedashboard
   DEPLOY_BUCKET_PROD_REGION: us-east-1
