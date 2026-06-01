@@ -1,5 +1,5 @@
 ---
-id: OCI_PACE_Chlorophyll_a
+id: PACE_OCI_L3M_CHL
 name: Chlorophyll a (L2)PACE / OCI
 featured: true
 description: The Chlorophyll a layer provides the near-surface concentration of chlorophyll a in milligrams of chlorophyll pigment per cubic meter (mg/m3) in the ocean. 
@@ -11,26 +11,30 @@ infoDescription: |
     - Temporal Extent: 2024 Feb 25 - Present
     - Temporal Resolution: Daily
 layers:
-  - id: OCI_PACE_Chlorophyll_a
-    stacApiEndpoint: https://dev.openveda.cloud/api/stac/
-    stacCol: OCI_PACE_Chlorophyll_a
+  - id: PACE_OCI_L3M_CHL
+    type: cmr
+    tileApiEndpoint: "https://staging.openveda.cloud/api/titiler-cmr/WebMercatorQuad/tilejson.json"
+    stacCol: PACE_OCI_L3M_CHL
     name: Chlorophyll a (L2) (from Worldview/GIBS)
-    type: wmts 
     description: The Chlorophyll a layer provides the near-surface concentration of chlorophyll a in milligrams of chlorophyll pigment per cubic meter (mg/m3) in the ocean.
-    sourceParams:
-      layers: 1
-      version: 1.3.0
-      crs: EPSG:3857
-      styles:
+    time_density: day
+      tile_scale: 3
+      resampling: bilinear
+      variable: chlor_a
+      colormap_name: turbo
+      rescale:
+        - 0.01
+        - 50
+      maxzoom: 12
+      concept_id: C3620140256-OB_CLOUD
+      backend: xarray
     zoomExtent:
       - 0
-      - 5
-    analysis:
-      exclude: true
+      - 20
     legend:
       type: gradient
       min: 0
-      max: 20
+      max: 50
       stops:
         - rgb(72, 0, 130)     
         - rgb(0, 0, 255)     
@@ -39,13 +43,6 @@ layers:
         - rgb(255, 255, 0)   
         - rgb(255, 165, 0)  
         - rgb(255, 0, 0)     
-    compare:
-      datasetId: OCI_PACE_Chlorophyll_a
-      layerId: OCI_PACE_Chlorophyll_a
-      mapLabel: |
-        ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `${dateFns.format(datetime, 'dd LLL yyyy')} VS ${dateFns.format(compareDatetime, 'dd LLL yyyy')}`;
-        }
 ---
 <Block>
 <Prose>
