@@ -28,85 +28,8 @@ infoDescription: |
   ::markdown
     OMI, which launched in 2004, preceded TROPOMI, which launched in 2017. While TROPOMI provides higher resolution information, the longer OMI data record provides context for the TROPOMI observations.
 layers:
-  - id: no2-monthly
-    stacCol: no2-monthly
-    name: Nitrogen Dioxide (monthly)
-    type: raster
-    description: 'Global nitrogen dioxide (NO₂) data organized into monthly metrics'
-    zoomExtent:
-      - 0
-      - 20
-    sourceParams:
-      resampling: bilinear
-      bidx: 1
-      color_formula: gamma r 1.05
-      colormap_name: rdbu_r
-      rescale:
-        - 0
-        - 1.5e16
-    compare:
-      datasetId: no2
-      layerId: no2-monthly
-      mapLabel: |
-        ::js ({ dateFns, datetime, compareDatetime }) => {
-          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
-        }
-    legend:
-      type: gradient
-      min: "Less"
-      max: "More"
-      stops:
-        - "#3A88BD"
-        - "#C9E0ED"
-        - "#E4EEF3"
-        - "#FDDCC9"
-        - "#DD7059"
-    info:
-      source: NASA
-      spatialExtent: Global
-      temporalResolution: Monthly 
-      unit: N/A
-
-  - id: no2-monthly-diff
-    stacCol: no2-monthly-diff
-    name: Nitrogen Dioxide (monthly difference)
-    type: raster
-    description: 'Global nitrogen dioxide (NO₂) data which displays the difference from the same time 1 month ago'
-    zoomExtent:
-      - 0
-      - 20
-    sourceParams:
-      resampling: bilinear
-      bidx: 1
-      colormap_name: rdbu_r
-      rescale:
-        - -3e15
-        - 3e15
-    compare:
-      datasetId: no2
-      layerId: no2-monthly-diff
-      mapLabel: |
-        ::js ({ dateFns, datetime, compareDatetime }) => {
-          if (dateFns && datetime && compareDatetime) return `${dateFns.format(datetime, 'LLL yyyy')} VS ${dateFns.format(compareDatetime, 'LLL yyyy')}`;
-        }
-    legend:
-      type: gradient
-      min: "< -3"
-      max: "> 3"
-      stops:
-        - "#3A88BD"
-        - "#C9E0ED"
-        - "#E4EEF3"
-        - "#FDDCC9"
-        - "#DD7059"
-    info:
-      source: NASA
-      spatialExtent: Global
-      temporalResolution: Monthly 
-      unit: N/A
-
-  - id: OMI_trno2-COG
-    stacCol: OMI_trno2-COG
+  - id: OMI_tropospheric_no2
+    stacCol: OMI_tropospheric_no2
     name: Nitrogen Dioxide Total and Tropospheric Column (NASA OMI/Aura)
     type: raster
     description: "NASA OMI/Aura Nitrogen Dioxide (NO₂) Total and Tropospheric Column"
