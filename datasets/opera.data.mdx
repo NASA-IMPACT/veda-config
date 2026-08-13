@@ -1,0 +1,126 @@
+---
+id: OPERA_L3_DIST-ANN-HLS_V1
+name: "OPERA Land Surface Disturbance Annual from HLS"
+description: "OPERA Land Surface Disturbance Annual from HLS"
+media:
+  src: ::file ./media/gpmimergdaily.png
+  alt: GPM IMERG Final Precipitation
+  author:
+    name: NASA
+    url:
+taxonomy:
+  - name: Topics
+    values:
+      - Water Resources
+  - name: Subtopics
+    values:
+      - Precipitation
+      - Snow
+      - Floods
+      - Drought
+layers:
+  - id: OPERA_L3_DIST-ANN-HLS_V1
+    type: cmr
+    stacCol: OPERA_L3_DIST-ANN-HLS_V1
+    tileApiEndpoint: "https://staging.openveda.cloud/api/titiler-cmr/WebMercatorQuad/tilejson.json"
+    name: OPERA_L3_DIST-ANN-HLS_V1
+    description: "GPM Level 3 IMERG Final Daily 10 x 10 km (OPERA_L3_DIST-ANN-HLS_V1) accumulated precipitation"
+    time_density: day
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      tile_scale: 3
+      resampling: bilinear
+      variable: vegetation_disturbance_status
+      colormap_name: gnbu
+      rescale:
+        - 0
+        - 4
+      maxzoom: 12
+      concept_id: C3310310221-LPCLOUD
+      backend: xarray
+    legend:
+      unit:
+        label: "mm/hr"
+      type: gradient
+      min: 0
+      max: 4
+      stops:
+        [
+          "#f7fcf0",
+          "#e6f5e1",
+          "#abdeb6",
+          "#3193c2",
+          "#084081",
+        ]
+---
+
+<Block>
+  <Prose>
+  ## Dataset Details
+  - **Temporal Extent:** 2000-2024
+  - **Temporal Resolution:** Daily
+  - **Spatial Extent:** Global
+  - **Spatial Resolution:** 0.1 x 0.1 degree
+  - **Data Units:** mm/hr
+  - **Data Type:** Research
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+
+  ### About
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ### Access the Data
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ### Disclaimer
+
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+
+  ### Key Publications
+  
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+  
+  ## License
+  
+  [Creative Commons Attribution 1.0 International](https://creativecommons.org/publicdomain/zero/1.0/legalcode) (CC BY 1.0)
+
+  </Prose>
+</Block>
