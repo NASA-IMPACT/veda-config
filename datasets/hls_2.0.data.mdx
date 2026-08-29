@@ -83,6 +83,38 @@ layers:
       minzoom: 7
       maxzoom: 18
       color_formula: Gamma RGB 2.5 Saturation 1.2 Sigmoidal RGB 10 0.35
+  - id: HLSL30_2.0_ndvi
+    type: cmr
+    stacCol: HLSL30_2.0
+    stacApiEndpoint: "https://cmr.earthdata.nasa.gov/stac/LPCLOUD"
+    tileApiEndpoint: "https://staging.openveda.cloud/api/titiler-cmr/WebMercatorQuad/tilejson.json"
+    name: "HLS Landsat 8/9 NDVI"
+    description: "Normalized Difference Vegetation Index (NDVI) from Landsat 8/9. NDVI = (NIR - Red) / (NIR + Red)"
+    time_density: day
+    zoomExtent:
+      - 7
+      - 18
+    sourceParams:
+      concept_id: C2021957657-LPCLOUD
+      backend: rasterio
+      bands_regex: B[0-9][0-9]
+      assets:
+        - B05
+        - B04
+      expression: (B05-B04)/(B05+B04)
+      minzoom: 7
+      maxzoom: 18
+      rescale: -0.5,1
+      colormap_name: summer_r
+    legend:
+      type: gradient
+      min: "-0.5"
+      max: "1"
+      stops:
+        - "#ffff66"
+        - "#99cc44"
+        - "#339933"
+        - "#006633"
   - id: HLSS30_2.0_true_color
     media:
       src: ::file ./media/hls_20241004_true_color.jpg
@@ -133,6 +165,38 @@ layers:
       minzoom: 7
       maxzoom: 18
       color_formula: Gamma RGB 2.5 Saturation 1.2 Sigmoidal RGB 10 0.35
+  - id: HLSS30_2.0_ndvi
+    type: cmr
+    stacCol: HLSS30_2.0
+    stacApiEndpoint: "https://cmr.earthdata.nasa.gov/stac/LPCLOUD"
+    tileApiEndpoint: "https://staging.openveda.cloud/api/titiler-cmr/WebMercatorQuad/tilejson.json"
+    name: "HLS Sentinel-2 NDVI"
+    description: "Normalized Difference Vegetation Index (NDVI) from Sentinel-2. NDVI = (NIR - Red) / (NIR + Red)"
+    time_density: day
+    zoomExtent:
+      - 7
+      - 18
+    sourceParams:
+      concept_id: C2021957295-LPCLOUD
+      backend: rasterio
+      bands_regex: B[0-9][0-9A-Za-z]
+      assets:
+        - B8A
+        - B04
+      expression: (B8A-B04)/(B8A+B04)
+      minzoom: 7
+      maxzoom: 18
+      rescale: -0.5,1
+      colormap_name: summer_r
+    legend:
+      type: gradient
+      min: "-0.5"
+      max: "1"
+      stops:
+        - "#ffff66"
+        - "#99cc44"
+        - "#339933"
+        - "#006633"
 ---
 
 <Block>
