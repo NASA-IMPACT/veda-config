@@ -1,6 +1,6 @@
 ---
 id: bangladesh-landcover-2001-2020
-isHidden: true
+isHidden: false
 name: 'Land Cover - Bangladesh'
 description: 'Annual land cover maps for 2001 and 2020 (Bangladesh)'
 media:
@@ -15,7 +15,7 @@ taxonomy:
       - Biodiversity
   - name: Subtopics
     values:
-      - Land Use  
+      - Land Use
   - name: Source
     values:
       - MODIS
@@ -63,8 +63,10 @@ layers:
       unit: Categorical
 ---
 
+import StacCollectionMap from '../components/StacCollectionMap.tsx'; 
+
 <Block>
-  <Prose>   
+  <Prose>
     ## Dataset Details
     - **Temporal Extent:** 2001 and 2020<br />
     - **Spatial Extent:** Bangladesh, Asia<br />
@@ -72,20 +74,12 @@ layers:
     - **Data Type:** Research<br />
   </Prose>
 <Figure>
-    <Map
-      datasetId='bangladesh-landcover-2001-2020'
-      layerId='bangladesh-landcover-2001-2020'
-      dateTime='2001-01-01'
-      compareDateTime='2020-01-01'
-      zoom={7}
-      center={[90.43,23.74]}
+    <StacCollectionMap
+      collectionId="bangladesh-landcover-2001-2020"
+      stacUrl="https://openveda.cloud/api/stac"
+      tilerUrl="https://openveda.cloud/api/raster"
+      height={500}
     />
-    <Caption
-      attrAuthor='NASA'
-      attrUrl='https://nasa.gov/'
-    >
-    Comparison of MODIS-derived land cover in Bangladesh between 2001 and 2020.
-    </Caption>
   </Figure>
 </Block>
 
