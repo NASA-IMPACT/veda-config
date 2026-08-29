@@ -1,0 +1,57 @@
+---
+id: TEMPO_L3_Formaldehyde_Vertical_Column
+name: Formaldehyde (L3, Vertical Column, Subdaily, TEMPO)
+featured: true
+description: tbd
+media:
+  src: ::file ./media/pace-chlorophyll-background.jpg
+  alt: Chlorophyll-A data off the coast of North Carolina.
+infoDescription: |
+  ::markdown    
+    - Temporal Extent: 2023-08-02 to 2025-09-16
+    - Temporal Resolution: Subdaily
+layers:
+  - id: TEMPO_L3_Formaldehyde_Vertical_Column
+    stacApiEndpoint: https://dev.openveda.cloud/api/stac/
+    stacCol: TEMPO_L3_Formaldehyde_Vertical_Column
+    name: ormaldehyde (L3, Vertical Column, Subdaily, TEMPO) (from Worldview/GIBS)
+    type: wmts 
+    description: tbd
+    sourceParams:
+      layers: 1
+      version: 1.3.0
+      crs: EPSG:3857
+      styles:
+    zoomExtent:
+      - 0
+      - 5
+    analysis:
+      exclude: true
+    legend:
+      type: gradient
+      min: 0
+      max: 3e16
+      stops:
+        - rgb(72, 0, 130)     
+        - rgb(0, 0, 255)     
+        - rgb(0, 255, 255)    
+        - rgb(0, 255, 0)      
+        - rgb(255, 255, 0)   
+        - rgb(255, 165, 0)  
+        - rgb(255, 0, 0)     
+    compare:
+      datasetId: TEMPO_L3_Formaldehyde_Vertical_Column
+      layerId: TEMPO_L3_Formaldehyde_Vertical_Column
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'dd LLL yyyy')} VS ${dateFns.format(compareDatetime, 'dd LLL yyyy')}`;
+        }
+---
+<Block>
+<Prose>
+
+## About TEMPO
+Test
+
+</Prose>
+</Block>
