@@ -1,0 +1,159 @@
+---
+id: fldas-et-eie
+name: "FLDAS Monthly Evapotranspiration Anomaly"
+description: "FLDAS Noah Land Surface Model L4 Global Monthly Evapotranspiration Anomaly 0.1 x 0.1 degree"
+media:
+  src: https://thumbnails.openveda.cloud/fldas-et-eie.png
+  alt: FLDAS monthly global evapotranspiration anomaly
+taxonomy:
+  - name: Topics
+    values:
+      - Water Resources
+  - name: Subtopics
+    values:
+      - Evapotranspiration
+      - Water Resources
+      - Floods
+      - Drought
+layers:
+  - id: fldas-et-eie
+    type: cmr
+    stacCol: fldas-et-eie
+    tileApiEndpoint: "https://staging.openveda.cloud/api/titiler-cmr/WebMercatorQuad/tilejson.json"
+    name: FLDAS Noah Land Surface Model L4 Global Monthly Evapotranspiration Anomaly
+    description: "Monthly total evapotranspiration anomaly from the FLDAS Noah Land Surface Model"
+    time_density: month
+    zoomExtent:
+      - 0
+      - 20
+    sourceParams:
+      tile_scale: 3
+      resampling: bilinear
+      variable: Evap_tavg
+      colormap_name: rdbu
+      rescale:
+        - -4.2e-5
+        - 4.2e-5
+      maxzoom: 12
+      concept_id: C1563092281-GES_DISC
+      backend: xarray
+    legend:
+      unit:
+        label: "kg m-2 s-1"
+      type: gradient
+      min: -4.2e-5
+      max: 4.2e-5
+      stops:
+        [
+          "#053061",
+          "#2166ac",
+          "#4393c3",
+          "#92c5de",
+          "#d1e5f0",
+          "#f7f7f7",
+          "#fddbc7",
+          "#ef8a62",
+          "#d6604d",
+          "#b2182b",
+          "#67001f",
+        ]
+---
+
+<Block>
+  <Prose>
+  ## Dataset Details
+  - **Temporal Extent:** 1982-2026
+  - **Temporal Resolution:** Monthly
+  - **Spatial Extent:** Global
+  - **Spatial Resolution:** 0.1 x 0.1 degree
+  - **Data Units:** kg m-2 s-1
+  - **Data Type:** Research
+  </Prose>
+<Figure>
+  <Map
+    datasetId='fldas-et-eie'
+    layerId='fldas-et-eie'
+    dateTime='2024-01-01'
+    zoom={2}
+    center={[0,0]}
+  />
+  <Caption
+    attrAuthor='NASA/GSFC/SED/ESD/TISL/GESDISC'
+    attrUrl='https://disc.gsfc.nasa.gov/'
+  >
+  FLDAS monthly global evapotranspiration anomaly from the Noah Land Surface Model.
+  </Caption>
+</Figure>
+</Block>
+
+<Block>
+  <Prose>
+
+  ### About
+
+  This dataset contains monthly land surface parameters simulated by the Noah 3.6.1 model in the Famine Early Warning Systems Network (FEWS NET) Land Data Assimilation System (FLDAS). Each file represents how the month's total evapotranspiration compares with the 35-year monthly climatology from 1982 to 2016.
+  
+  The data are provided at 0.1 degree resolution with global coverage from 60S to 90N and 180W to 180E. The global monthly anomaly product supersedes the former regional monthly anomaly datasets.
+
+  Applications include drought and flood monitoring, agricultural assessment, water resource management, and environmental analysis.
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ### Access the Data
+
+  Visit the [NASA GSFC](https://disc.gsfc.nasa.gov/datasets/FLDAS_NOAH01_C_GL_MA_001/summary) page to explore the FLDAS product.
+  
+  The files represented are NetCDF files in GES DISC's Earthdata Cloud bucket and discovered and tiled via a dynamic tiling service using CMR.
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  ### Citing This Dataset
+  FLDAS Noah Land Surface Model L4 Global Monthly Anomaly, 0.1 x 0.1 degree (MERRA-2 and CHIRPS), V001. NASA Goddard Earth Sciences Data and Information Services Center.
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+  
+  ### Disclaimer
+
+  All data provided in VEDA has been transformed from the original format (TIFF) into Cloud Optimized GeoTIFFs ([COG](https://www.cogeo.org)). Careful quality checks are used to ensure data transformation has been performed correctly.  
+  
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+
+  ### Key Publications
+  
+  The FLDAS documentation and product metadata are available through the [NASA GSFC Earthdata Search](https://search.earthdata.nasa.gov/search?q=FLDAS_NOAH01_C_GL_MA).
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+    ## Limitations of use
+
+    NASA data and products are freely available to federal, state, public, non-profit and commercial users. This information can be experimental- or research-grade data products and may not be appropriate for operational use. These NASA data products and services are intended to aid decision makers and enhance situational awareness, but these data are not guaranteed to be consistently available or routinely updated. Please cite the information according to the direction provided in the metadata.
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+  
+  ## License
+  
+  [MIT License](https://opensource.org/license/mit)
+
+  </Prose>
+</Block>
